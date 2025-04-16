@@ -25,7 +25,7 @@
      (base/cardlist
       (deck-books)
       (deck-rules tactics)
-      (deck-setup)
+      (deck-setup tactics)
       (deck-scenes tactics)
       (deck-encounters)
       (deck-places)
@@ -97,6 +97,7 @@
  :doc "Powers Deck")
 
 (func deck-setup : base/deck
+ [tactics : base/tactics]
  (base/deck
   :name "Setup"
   :cardmap
@@ -114,10 +115,10 @@
      (restraint/deck-restraintback)
      (wound/deck-bleeding)
      (wound/deck-bloodloss)
-     (starter/deck-player "blue")
-     (starter/deck-player "green")
-     (starter/deck-player "red")
-     (starter/deck-player "yellow")
+     (starter/deck-player tactics "blue")
+     (starter/deck-player tactics "green")
+     (starter/deck-player tactics "red")
+     (starter/deck-player tactics "yellow")
      (tarot/deck-tarot))))
  :doc "Setup Deck")
 

@@ -2685,6 +2685,82 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Welding")))
   (base/skill
+   :name "Mastermind"
+   :summary
+    "* Attempts to confuse by introducing misleading, paradoxical, or spurious logic into a discussion."
+   :titles "Mind Games"
+   :abilitymap
+    (base/abilitymap
+     "Circular Logic"
+      (base/ability
+       :name "Circular Logic"
+       :reference
+        "* If such actions were not illegal, then they would not be prohibited by the law."
+       :summary
+        "* A seemingly reasonable argument that is in fact based upon dependent information.
+         * Such arguments are logically valid. That is, the conclusion does in fact follow from the premise, since it is already contained in the premise. They do not, however, aid in the proof of the statement or the premise.")
+     :Compartmentalize
+      (base/ability
+       :name "Compartmentalize"
+       :summary "* Separate a hidden thought process away from the normal mind.")
+     :Cryptography
+      (base/ability
+       :name "Cryptography")
+     :Doublethink
+      (base/ability
+       :name "Doublethink"
+       :reference
+        "* To tell deliberate lies while genuinely believing in them, to forget any fact that has become inconvenient, and then, when it becomes necessary again, to draw it back from oblivion for just so long as it is needed. - 1984 George Orwell"
+       :summary
+        "* Doublethink is the act of simultaneously holding two mutually contradictory beliefs while fervently fooling oneself into believing both.")
+     "Master Plan"
+      (base/ability
+       :name "Master Plan")
+     "Maze of the Mind"
+      (base/ability
+       :name "Maze of the Mind"
+       :summary
+        "* Confuses the target's senses so it cannot accurately choose its direction. This can be extremely hazardous to fast moving units.
+         * [Move]: Whenever the unit moves, its direction is randomized from among its normal movement options (including diving and climbing for air units).")
+     "Maze Mastery"
+      (base/ability
+       :name "Maze Mastery"
+       :summary "* The user knows thousands of mazes and can choose an optimal course through any maze with minimal trial and error.")
+     "Mind Blank"
+      (base/ability
+       :name "Mind Blank"
+       :summary
+        "* Hide ones true thoughts.
+         * Makes an excellent poker face.
+         * Full defense against any attempt to detect the unit's mind.
+         * Full defense against any attempt to detect lies.")
+     :Misinformation
+      (base/ability
+       :name "Misinformation"
+       :summary "* Spock: Logic is a little tweeting bird chirping in a meadow. Logic is a wreath of pretty flowers which smell BAD. Are you sure your circuits are functioning correctly? Your ears are green. - I, Mudd, Star Trek")
+     :Puzzles
+      (base/ability
+       :name "Puzzles")
+     :Rationalize
+      (base/ability
+       :name "Rationalize"
+       :summary
+        "* Increases resistance to all forms of mental attack by reinterpreting and rationalizing commands to render them meaningless.")
+     "Simplify, Simplify, Simplify"
+      (base/ability
+       :name "Simplify, Simplify, Simplify"
+       :summary
+        "* Progressively breakdown a problem into simpler problems which can each be resolved separately.")
+     "Unsolvable Problem"
+      (base/ability
+       :name "Unsolvable Problem"
+       :reference
+        "* Kirk: Everything Harry says is a lie. Remember that, Norman. *Everything* he says is a lie.
+         * Mudd: Now I want you to listen to me very carefully, Norman. I'm... lying.
+         * Norman: You say you are lying, but if everything you say is a lie, then you are telling the truth, but you cannot tell the truth because you always lie... illogical! Illogical - I, Mudd, Star Trek"
+       :summary
+        "* Fool the target into trying to resolve a problem with no easy solution.")))
+  (base/skill
    :name "Medicine"
    :titles "Caregiver, Caretaker, Dentist, Doctor, EMT, Medic, Medical Examiner, Nurse, Physician, Surgeon"
    :stat "Mind"

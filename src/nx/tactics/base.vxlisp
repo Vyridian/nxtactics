@@ -2059,6 +2059,13 @@
  (unitpower<-tactics-key-lvl-abilities-items
   tactics key 0 (empty stringlist) (empty stringlist)))
 
+(func unitpower<-tactics-key-abilities : unitpower
+ [tactics   : tactics
+  key       : string
+  abilities : stringlist]
+ (unitpower<-tactics-key-lvl-abilities-items
+  tactics key 0 abilities (empty stringlist)))
+
 (func unitpower<-tactics-key-lvl-abilities : unitpower
  [tactics   : tactics
   key       : string

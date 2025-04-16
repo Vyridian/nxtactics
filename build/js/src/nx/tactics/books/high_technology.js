@@ -1193,11 +1193,11 @@ export default class nx_tactics_books_high_technology {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Ball",
+            "Ball RB-79",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Ball",
+              "Ball RB-79",
               ":image",
               "Gundam/Ball.png",
               ":titles",
@@ -1211,9 +1211,7 @@ export default class nx_tactics_books_high_technology {
               ":height",
               "12.8m",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
@@ -1229,11 +1227,11 @@ export default class nx_tactics_books_high_technology {
                 )
               )
             ),
-            ":Gundam",
+            "Gundam RX-78-2",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Gundam",
+              "Gundam RX-78-2",
               ":image",
               "Gundam/Gundam.png",
               ":summary",
@@ -1247,9 +1245,7 @@ export default class nx_tactics_books_high_technology {
               ":height",
               "18m",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
@@ -1257,21 +1253,18 @@ export default class nx_tactics_books_high_technology {
                   ":level",
                   "6",
                   ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    "60mm Vulcan Cannon",
+                  nx_tactics_base.f_unititemmap_from_unititemlist(
                     vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "60mm Vulcan Cannon", ":facing", "Turretx2", ":number", "2"),
-                    "380mm Hyper Bazooka",
                     vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "380mm Hyper Bazooka")
                   )
                 )
               )
             ),
-            "Gundam Ground Type",
+            "Gundam RX-79(G)",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Gundam Ground Type",
+              "Gundam RX-79(G)",
               ":image",
               "Gundam/GundamGroundType.png",
               ":reference",
@@ -1279,7 +1272,7 @@ export default class nx_tactics_books_high_technology {
               ":summary",
               "* Speed: 0.71 G\n* Fixed armaments: multi-launcher, mounted in chest; 2 x X.B.Sa-G-03 beam saber, stored in recharge racks in legs, hand-carried in use\n* Optional fixed armaments: RGM-S-Sh-WF/S-00109 shield, mounted on either forearm\n* Optional hand armaments: P.B.R-0079/A12 S-000011 beam rifle, powered by rechargeable energy cap; bazooka gun, clip-fed, 7 rounds per clip; 6-tube missile launcher;",
               ":titles",
-              "RX-79(G)",
+              "Gundam Ground Type, RX-79(G)",
               ":classification",
               "Med. Tank",
               ":mass",
@@ -1341,11 +1334,8 @@ export default class nx_tactics_books_high_technology {
                   ":level",
                   "4",
                   ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    "240mm Recoilless Cannon",
+                  nx_tactics_base.f_unititemmap_from_unititemlist(
                     vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "240mm Recoilless Cannon", ":facing", "FFx2", ":number", "2", ":rounds", "40"),
-                    "60mm Vulcan Cannon",
                     vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "60mm Vulcan Cannon", ":facing", "Turretx2", ":number", "2")
                   )
                 )
@@ -1371,9 +1361,7 @@ export default class nx_tactics_books_high_technology {
               ":height",
               "15.6m",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
@@ -1381,9 +1369,7 @@ export default class nx_tactics_books_high_technology {
                   ":level",
                   "4",
                   ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    "180mm Recoilless Cannon",
+                  nx_tactics_base.f_unititemmap_from_unititemlist(
                     vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "180mm Recoilless Cannon", ":facing", "FFx2", ":number", "2", ":rounds", "60")
                   )
                 )
@@ -1415,9 +1401,7 @@ export default class nx_tactics_books_high_technology {
               ":classification",
               "Med. Spacecraft",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Armor",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
@@ -1507,9 +1491,7 @@ export default class nx_tactics_books_high_technology {
               ":height",
               "18.6m",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",

@@ -429,46 +429,12 @@ export default class nx_tactics_books_advanced_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Crippled", ":image", "Tokens/CrippledToken.png", ":summary", "[Speed]:-1", ":classification", "Black Token"),
             ":Curse",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Curse", ":summary", "* [Anytime]: When unit gains a [Red Token] or a [Black Token], roll for each Curse Token.\n* For each [Hit], replace a Curse Token with a Token of any type just gained."),
-            ":Depression",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Depression"),
-            ":Insanity",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Insanity"),
             ":Petrified",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Petrified"),
             ":Radiation",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Radiation", ":image", "Tokens/RadiationToken.png"),
             ":Shapeshift",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shapeshift")
-          )
-        ),
-        "Advanced Red Tokens",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Advanced Red Tokens",
-          ":summary",
-          "* Red tokens represent conditions that can rapidly grow out of control.\n* [Activate]: Add one Stun token.",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            ":Acid",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Acid", ":summary", "* May use a [Move] to remove an Acid Token.\n* [End of Turn] - Roll Acid Tokens.  Hits do Damage.  Remove an Acid Token.")
-          )
-        ),
-        "Advanced Purple Tokens",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Advanced Purple Tokens",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            ":Apathy",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Apathy", ":classification", "Purple Token"),
-            ":Hidden",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hidden", ":summary", "* [Action]: A unit with Hidden tokens is not actually at the location shown by its unit marker.\n* [Defense]: Any unit that can see the unit marker may spend an [Action] to attempt to attack or locate the unit. This is done by the unit secretly choosing the actual location of the unit up to the number of Hidden tokens away from the unit marker where the unit lies (note: the target location may not be passed a barrier that the unit could not cross with normal movement). The opponent then tries to guess both direction and distance. The unit then reveals its actual position and moves its unit marker there. If both are guessed, the unit is discovered and loses all Hidden tokens. If either is guessed, the unit loses 1 Hidden token. If the unit has no Hidden tokens, resolve the attack normally. If the unit has Hidden tokens then the unit remains hidden and any attack fails unless it is an area effect and the unit is the effect.", ":classification", "Purple Token"),
-            ":Prepare",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Prepare", ":summary", "* [Action]: An item with Prepare may not be used until it has Prepare tokens equal to Prepare value.\n* [Action]: If unit does not move this [Turn], add a Prepare token to it.\n* Note: If the unit moves or takes a another action, then remove all Prepare tokens.")
           )
         )
       )

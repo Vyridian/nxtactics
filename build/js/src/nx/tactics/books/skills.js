@@ -46,7 +46,7 @@ export default class nx_tactics_books_skills {
           ":name",
           "Academic Skills",
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Computers", "Electronics", "Investigation", "Knowledge", "Mechanics", "Medicine", "Science: Life", "Science: Physical")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Computers", "Electronics", "Investigation", "Knowledge", "Mastermind", "Mechanics", "Medicine", "Science: Life", "Science: Physical")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

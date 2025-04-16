@@ -50,7 +50,7 @@ export default class nx_tactics_books_science_fiction_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
-          "chapter_alien___predator", 0,
+          "chapter_alien_predator", 0,
           "chapter_alternate_realties", 0,
           "chapter_archetypes", 0,
           "chapter_battlestar_galactica", 0,

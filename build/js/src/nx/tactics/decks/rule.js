@@ -136,6 +136,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Thirst", ":summary", "* Mind:-1\n* Event: IF a Unit drinks < 1 liter/day THEN Thirst:+1 ELSE Thirst:-1."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unfamiliar Item", ":summary", "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit #", ":summary", "* Place this card above a Unit.\n* [Damage] and [Target] cards are placed near this card.\n\n\n* [Action Cost]:[Speed]/2 round down\n\n\n* [Move]:[Speed]\n\n\n* [Turn]:2"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unskilled", ":summary", "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Clouds", ":image", "images/cards/rule-weather-clouds.svg", ":summary", ":image"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Humidity", ":image", "images/cards/rule-weather-humidity.svg", ":summary", ":image"),

@@ -3959,6 +3959,35 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function unitpower_from_tactics_key_abilities
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @param  {stringlist} abilities
+   * @return {unitpower}
+   */
+  static t_unitpower_from_tactics_key_abilities = {
+    vx_type: vx_core.t_type
+  }
+  static e_unitpower_from_tactics_key_abilities = {
+    vx_type: nx_tactics_base.t_unitpower_from_tactics_key_abilities
+  }
+
+  // (func unitpower<-tactics-key-abilities)
+  static f_unitpower_from_tactics_key_abilities(tactics, key, abilities) {
+    let output = nx_tactics_base.e_unitpower
+    output = nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities_items(
+      tactics,
+      key,
+      0,
+      abilities,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      )
+    )
+    return output
+  }
+
+  /**
    * @function unitpower_from_tactics_key_lvl_abilities
    * @param  {tactics} tactics
    * @param  {string} key
@@ -4758,6 +4787,7 @@ export default class nx_tactics_base {
       "unitmap<-tactics-keys": nx_tactics_base.e_unitmap_from_tactics_keys,
       "unitmap<-unitlist": nx_tactics_base.e_unitmap_from_unitlist,
       "unitpower<-tactics-key": nx_tactics_base.e_unitpower_from_tactics_key,
+      "unitpower<-tactics-key-abilities": nx_tactics_base.e_unitpower_from_tactics_key_abilities,
       "unitpower<-tactics-key-lvl-abilities": nx_tactics_base.e_unitpower_from_tactics_key_lvl_abilities,
       "unitpower<-tactics-key-lvl-abilities-items": nx_tactics_base.e_unitpower_from_tactics_key_lvl_abilities_items,
       "unitpower<-tactics-key-lvl-intensity-abilities": nx_tactics_base.e_unitpower_from_tactics_key_lvl_intensity_abilities,
@@ -4874,6 +4904,7 @@ export default class nx_tactics_base {
       "unitmap<-tactics-keys": nx_tactics_base.t_unitmap_from_tactics_keys,
       "unitmap<-unitlist": nx_tactics_base.t_unitmap_from_unitlist,
       "unitpower<-tactics-key": nx_tactics_base.t_unitpower_from_tactics_key,
+      "unitpower<-tactics-key-abilities": nx_tactics_base.t_unitpower_from_tactics_key_abilities,
       "unitpower<-tactics-key-lvl-abilities": nx_tactics_base.t_unitpower_from_tactics_key_lvl_abilities,
       "unitpower<-tactics-key-lvl-abilities-items": nx_tactics_base.t_unitpower_from_tactics_key_lvl_abilities_items,
       "unitpower<-tactics-key-lvl-intensity-abilities": nx_tactics_base.t_unitpower_from_tactics_key_lvl_intensity_abilities,
@@ -11631,6 +11662,24 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_unitpower_from_tactics_key
+    }
+
+    // (func unitpower<-tactics-key-abilities)
+    nx_tactics_base.t_unitpower_from_tactics_key_abilities['vx_value'] = {
+      name          : "unitpower<-tactics-key-abilities",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_unitpower_from_tactics_key_abilities
     }
 
     // (func unitpower<-tactics-key-lvl-abilities)

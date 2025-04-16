@@ -135,6 +135,7 @@ export default class nx_tactics_decks_starter {
 
   /**
    * @function card_unit
+   * @param  {tactics} tactics
    * @param  {string} color
    * @param  {int} num
    * @return {card}
@@ -147,24 +148,30 @@ export default class nx_tactics_decks_starter {
   }
 
   // (func card-unit)
-  static f_card_unit(color, num) {
+  static f_card_unit(tactics, color, num) {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_card},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "unit-", color, "-", num),
-      ":name",
-      vx_core.f_new({"any-1": vx_core.t_string}, "Unit #", num),
-      ":image",
-      vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
-      ":summary",
-      "* Place this card above a Unit.\n* [Damage] and [Target] cards are placed near this card.\n* [Round Start]: Set [Move]:[Speed] and [Turn]:2"
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const unit = nx_tactics_base.f_rule_from_tactics_key(tactics, "Unit #")
+        return vx_core.f_copy(
+          unit,
+          ":id",
+          vx_core.f_new({"any-1": vx_core.t_string}, "unit-", color, "-", num),
+          ":name",
+          vx_core.f_new({"any-1": vx_core.t_string}, "Unit #", num),
+          ":image",
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg")
+        )
+      })
     )
     return output
   }
 
   /**
    * @function deck_player
+   * @param  {tactics} tactics
    * @param  {string} color
    * @return {deck}
    */
@@ -176,7 +183,7 @@ export default class nx_tactics_decks_starter {
   }
 
   // (func deck-player)
-  static f_deck_player(color) {
+  static f_deck_player(tactics, color) {
     let output = nx_tactics_base.e_deck
     output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_deck},
@@ -186,11 +193,11 @@ export default class nx_tactics_decks_starter {
           {"any-1": nx_tactics_base.t_cardlist},
           nx_tactics_decks_starter.f_card_player(color, 1),
           nx_tactics_decks_starter.f_card_rotated(color, 1),
-          nx_tactics_decks_starter.f_card_unit(color, 1),
-          nx_tactics_decks_starter.f_card_unit(color, 2),
-          nx_tactics_decks_starter.f_card_unit(color, 3),
-          nx_tactics_decks_starter.f_card_unit(color, 4),
-          nx_tactics_decks_starter.f_card_unit(color, 5),
+          nx_tactics_decks_starter.f_card_unit(tactics, color, 1),
+          nx_tactics_decks_starter.f_card_unit(tactics, color, 2),
+          nx_tactics_decks_starter.f_card_unit(tactics, color, 3),
+          nx_tactics_decks_starter.f_card_unit(tactics, color, 4),
+          nx_tactics_decks_starter.f_card_unit(tactics, color, 5),
           nx_tactics_decks_starter.f_card_target(color, 1),
           nx_tactics_decks_starter.f_card_target(color, 2),
           nx_tactics_decks_starter.f_card_target(color, 3),

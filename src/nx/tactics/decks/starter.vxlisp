@@ -52,29 +52,31 @@
    "* [Round Start]: Place this card on your [Target] for the [Round]."))
 
 (func card-unit : base/card
- [color : string
-  num   : int]
- (base/card
-  :id (string "unit-" color "-" num)
-  :name (string "Unit #" num)
-  :image (string "images/card-" color ".svg")
-  :summary
-   "* Place this card above a Unit.
-    * [Damage] and [Target] cards are placed near this card.
-    * [Round Start]: Set [Move]:[Speed] and [Turn]:2"))
+ [tactics : base/tactics
+  color   : string
+  num     : int]
+ (let : base/card
+  [unit : base/rule :=
+    (base/rule<-tactics-key tactics "Unit #")]
+  (copy unit
+   :id (string "unit-" color "-" num)
+   :name (string "Unit #" num)
+   :image (string "images/card-" color ".svg")
+  )))
 
 (func deck-player : base/deck
- [color : string]
+ [tactics : base/tactics
+  color   : string]
  (let : base/deck
   [cardlist : base/cardlist :=
     (base/cardlist
      (card-player color 1)
      (card-rotated color 1)
-     (card-unit color 1)
-     (card-unit color 2)
-     (card-unit color 3)
-     (card-unit color 4)
-     (card-unit color 5)
+     (card-unit tactics color 1)
+     (card-unit tactics color 2)
+     (card-unit tactics color 3)
+     (card-unit tactics color 4)
+     (card-unit tactics color 5)
      (card-target color 1)
      (card-target color 2)
      (card-target color 3)

@@ -127,7 +127,7 @@ export default class nx_tactics_decks_deck {
               {"any-1": nx_tactics_base.t_cardlist},
               nx_tactics_decks_deck.f_deck_books(),
               nx_tactics_decks_rule.f_deck_rules(tactics),
-              nx_tactics_decks_deck.f_deck_setup(),
+              nx_tactics_decks_deck.f_deck_setup(tactics),
               nx_tactics_decks_deck.f_deck_scenes(tactics),
               nx_tactics_decks_deck.f_deck_encounters(),
               nx_tactics_decks_deck.f_deck_places(),
@@ -273,6 +273,7 @@ export default class nx_tactics_decks_deck {
   /**
    * @function deck_setup
    * Setup Deck
+   * @param  {tactics} tactics
    * @return {deck}
    */
   static t_deck_setup = {
@@ -283,7 +284,7 @@ export default class nx_tactics_decks_deck {
   }
 
   // (func deck-setup)
-  static f_deck_setup() {
+  static f_deck_setup(tactics) {
     let output = nx_tactics_base.e_deck
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_deck},
@@ -305,10 +306,10 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_restraint.f_deck_restraintback(),
           nx_tactics_decks_wound.f_deck_bleeding(),
           nx_tactics_decks_wound.f_deck_bloodloss(),
-          nx_tactics_decks_starter.f_deck_player("blue"),
-          nx_tactics_decks_starter.f_deck_player("green"),
-          nx_tactics_decks_starter.f_deck_player("red"),
-          nx_tactics_decks_starter.f_deck_player("yellow"),
+          nx_tactics_decks_starter.f_deck_player(tactics, "blue"),
+          nx_tactics_decks_starter.f_deck_player(tactics, "green"),
+          nx_tactics_decks_starter.f_deck_player(tactics, "red"),
+          nx_tactics_decks_starter.f_deck_player(tactics, "yellow"),
           nx_tactics_decks_tarot.f_deck_tarot()
         )
       )

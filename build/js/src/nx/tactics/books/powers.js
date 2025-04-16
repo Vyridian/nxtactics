@@ -73,8 +73,8 @@ export default class nx_tactics_books_powers {
           ":powermap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_powermap},
-            "Combiner",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Combiner"),
+            "Combine",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Combine"),
             "Hanger",
             nx_tactics_base.f_power_from_tactics_key(tactics, "Hanger"),
             "Mission Section",
@@ -203,6 +203,8 @@ export default class nx_tactics_books_powers {
             nx_tactics_base.f_power_from_tactics_key(tactics, "Laboratory"),
             "Life Support",
             nx_tactics_base.f_power_from_tactics_key(tactics, "Life Support"),
+            "Transform",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Transform"),
             "Vehicle Systems",
             nx_tactics_base.f_power_from_tactics_key(tactics, "Vehicle Systems")
           ),
@@ -343,47 +345,6 @@ export default class nx_tactics_books_powers {
   }
 
   /**
-   * @function chapter_enhancement_powers
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_enhancement_powers = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_enhancement_powers = {
-    vx_type: nx_tactics_books_powers.t_chapter_enhancement_powers
-  }
-
-  // (func chapter_enhancement_powers)
-  static f_chapter_enhancement_powers(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Enhancement Powers",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Physical Enhancement"),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Mental Enhancement",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Genius")
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Psychic Enhancement",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Charm", "Psychic Power")
-        )
-      )
-    )
-    return output
-  }
-
-  /**
    * @function chapter_godlike_powers
    * @param  {tactics} tactics
    * @return {chapter}
@@ -462,7 +423,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Mental Powers",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Domination", "Empathy", "Illusion", "Intuition", "Madness", "Mastermind", "Mental Combat", "Mental Connection", "Mental Fortitude", "Mental Weakness", "Mind Over Matter")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Charm", "Domination", "Empathy", "Genius", "Illusion", "Intuition", "Madness", "Mental Combat", "Mental Connection", "Mental Fortitude", "Mental Weakness", "Mind Over Matter", "Psychic Power")
         )
       )
     )
@@ -982,7 +943,6 @@ export default class nx_tactics_books_powers {
         nx_tactics_books_powers.f_chapter_physical_powers_and_weaknesses(tactics),
         nx_tactics_books_powers.f_chapter_body_powers(tactics),
         nx_tactics_books_powers.f_chapter_energy_and_forces(tactics),
-        nx_tactics_books_powers.f_chapter_enhancement_powers(tactics),
         nx_tactics_books_powers.f_chapter_alteration_powers(tactics),
         nx_tactics_books_powers.f_chapter_godlike_powers(tactics)
       )
@@ -1001,7 +961,6 @@ export default class nx_tactics_books_powers {
       "chapter_alteration_powers": nx_tactics_books_powers.e_chapter_alteration_powers,
       "chapter_body_powers": nx_tactics_books_powers.e_chapter_body_powers,
       "chapter_energy_and_forces": nx_tactics_books_powers.e_chapter_energy_and_forces,
-      "chapter_enhancement_powers": nx_tactics_books_powers.e_chapter_enhancement_powers,
       "chapter_godlike_powers": nx_tactics_books_powers.e_chapter_godlike_powers,
       "chapter_mental_powers_and_weaknesses": nx_tactics_books_powers.e_chapter_mental_powers_and_weaknesses,
       "chapter_movement_powers": nx_tactics_books_powers.e_chapter_movement_powers,
@@ -1016,7 +975,6 @@ export default class nx_tactics_books_powers {
       "chapter_alteration_powers": nx_tactics_books_powers.t_chapter_alteration_powers,
       "chapter_body_powers": nx_tactics_books_powers.t_chapter_body_powers,
       "chapter_energy_and_forces": nx_tactics_books_powers.t_chapter_energy_and_forces,
-      "chapter_enhancement_powers": nx_tactics_books_powers.t_chapter_enhancement_powers,
       "chapter_godlike_powers": nx_tactics_books_powers.t_chapter_godlike_powers,
       "chapter_mental_powers_and_weaknesses": nx_tactics_books_powers.t_chapter_mental_powers_and_weaknesses,
       "chapter_movement_powers": nx_tactics_books_powers.t_chapter_movement_powers,
@@ -1108,24 +1066,6 @@ export default class nx_tactics_books_powers {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_powers.f_chapter_energy_and_forces
-    }
-
-    // (func chapter_enhancement_powers)
-    nx_tactics_books_powers.t_chapter_enhancement_powers['vx_value'] = {
-      name          : "chapter_enhancement_powers",
-      pkgname       : "nx/tactics/books/powers",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_enhancement_powers
     }
 
     // (func chapter_godlike_powers)

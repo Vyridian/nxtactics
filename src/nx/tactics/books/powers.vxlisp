@@ -17,7 +17,6 @@
     (chapter_physical_powers_and_weaknesses tactics)
     (chapter_body_powers tactics)
     (chapter_energy_and_forces tactics)
-    (chapter_enhancement_powers tactics)
     (chapter_alteration_powers tactics)
     (chapter_godlike_powers tactics)
    )))
@@ -303,8 +302,8 @@
        * Shields"
      :powermap
       (base/powermap
-       "Combiner"
-        (base/power<-tactics-key tactics "Combiner")
+       "Combine"
+        (base/power<-tactics-key tactics "Combine")
        "Hanger"
         (base/power<-tactics-key tactics "Hanger")
        "Mission Section"
@@ -523,6 +522,8 @@
         (base/power<-tactics-key tactics "Laboratory")
        "Life Support"
         (base/power<-tactics-key tactics "Life Support")
+       "Transform"
+        (base/power<-tactics-key tactics "Transform")
        "Vehicle Systems"
         (base/power<-tactics-key tactics "Vehicle Systems"))
      :sectionmap
@@ -646,7 +647,8 @@
        "Physical Weakness"
         (base/power
          :name "Physical Weakness"
-         :summary "A being that has a great deal of power becomes increasingly inhuman as power increases. Physical powers become harder to conceal growing increasingly monstrous and mentality leans more toward megalomania, messiah complex, or detached alien."
+         :summary
+          "A being that has a great deal of power becomes increasingly inhuman as power increases. Physical powers become harder to conceal growing increasingly monstrous and mentality leans more toward megalomania, messiah complex, or detached alien."
          :titles "Aberrations, Inhumanity, The Price of Power, Taint"
          :abilitymap
           (base/abilitymap
@@ -897,17 +899,19 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
+       "Charm"
        "Domination"
        "Empathy"
+       "Genius"
        "Illusion"
        "Intuition"
        "Madness"
-       "Mastermind"
        "Mental Combat"
        "Mental Connection"
        "Mental Fortitude"
        "Mental Weakness"
-       "Mind Over Matter")))))
+       "Mind Over Matter"
+       "Psychic Power")))))
 
 (func chapter_movement_powers : base/chapter
  [tactics : base/tactics]
@@ -1036,28 +1040,6 @@
        "Sound"
        "Time"
        "Vibration")))))
-
-(func chapter_enhancement_powers : base/chapter
- [tactics : base/tactics]
- (chapter
-  :name "Enhancement Powers"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Physical Enhancement")
-    (base/section
-     :name "Mental Enhancement"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Genius"))
-    (base/section
-     :name "Psychic Enhancement"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Charm"
-       "Psychic Power")))))
 
 (func chapter_alteration_powers : base/chapter
  [tactics : base/tactics]

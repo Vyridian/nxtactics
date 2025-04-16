@@ -2083,9 +2083,9 @@
       :name "Gundam Federation"
       :unitmap
        (base/unitmap
-        :Ball
+        "Ball RB-79"
          (base/unit
-          :name "Ball"
+          :name "Ball RB-79"
           :image "Gundam/Ball.png"
           :titles "RB-79"
           :speedspace ".96g"
@@ -2093,20 +2093,19 @@
           :mass "17.2tons"
           :height "12.8m"
           :unitskillmap
-           (base/unitskillmap
-            :Gunnery
-             (base/unitskill
-              :name "Gunnery"
-              :level "3"
-              :unititemmap
-               (base/unititemmap
-                "180mm Recoilless Cannon"
-                 (base/unititem
-                  :name "180mm Recoilless Cannon"
-                  :facing "F")))))
-        :Gundam
+           (base/unitskillmap<-unitskilllist
+            (base/unitskill
+             :name "Gunnery"
+             :level "3"
+             :unititemmap
+              (base/unititemmap
+               "180mm Recoilless Cannon"
+                (base/unititem
+                 :name "180mm Recoilless Cannon"
+                 :facing "F")))))
+        "Gundam RX-78-2"
          (base/unit
-          :name "Gundam"
+          :name "Gundam RX-78-2"
           :image "Gundam/Gundam.png"
           :summary
            "* Performance: maximum thruster acceleration 0.93 G; maximum ground running speed 165 km/h
@@ -2117,24 +2116,21 @@
           :mass "43.4tons"
           :height "18m"
           :unitskillmap
-           (base/unitskillmap
-            :Gunnery
-             (base/unitskill
-              :name "Gunnery"
-              :level "6"
-              :unititemmap
-               (base/unititemmap
-                "60mm Vulcan Cannon"
-                 (base/unititem
-                  :name "60mm Vulcan Cannon"
-                  :facing "Turretx2"
-                  :number "2")
-                "380mm Hyper Bazooka"
-                 (base/unititem
-                  :name "380mm Hyper Bazooka")))))
-        "Gundam Ground Type"
+           (base/unitskillmap<-unitskilllist
+            (base/unitskill
+             :name "Gunnery"
+             :level "6"
+             :unititemmap
+              (base/unititemmap<-unititemlist
+               (base/unititem
+                :name "60mm Vulcan Cannon"
+                :facing "Turretx2"
+                :number "2")
+               (base/unititem
+                :name "380mm Hyper Bazooka")))))
+        "Gundam RX-79(G)"
          (base/unit
-          :name "Gundam Ground Type"
+          :name "Gundam RX-79(G)"
           :image "Gundam/GundamGroundType.png"
           :reference
            "The engineers at Jaburo used spare parts originally manufactured for the RX-78-2 Gundam prototype and built approximately 20 units of a specialized ground combat-model Gundam, the RX-79[G]. Twelve of these units were assigned to the Kojima Battalion stationed in Southeast Asia, particularly to the 04th and 08th MS Teams. Since the RX-79[G]'s were made primarily of spare parts leftover from 'Project V,' no replacement parts were available. This resulted in hasty field repairs"
@@ -2143,7 +2139,7 @@
             * Fixed armaments: multi-launcher, mounted in chest; 2 x X.B.Sa-G-03 beam saber, stored in recharge racks in legs, hand-carried in use
             * Optional fixed armaments: RGM-S-Sh-WF/S-00109 shield, mounted on either forearm
             * Optional hand armaments: P.B.R-0079/A12 S-000011 beam rifle, powered by rechargeable energy cap; bazooka gun, clip-fed, 7 rounds per clip; 6-tube missile launcher;"
-          :titles "RX-79(G)"
+          :titles "Gundam Ground Type, RX-79(G)"
           :classification "Med. Tank"
           :mass "52.8tons"
           :height "18.2m"
@@ -2187,18 +2183,16 @@
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (base/unititemmap
-                "240mm Recoilless Cannon"
-                 (base/unititem
-                  :name "240mm Recoilless Cannon"
-                  :facing "FFx2"
-                  :number "2"
-                  :rounds "40")
-                "60mm Vulcan Cannon"
-                 (base/unititem
-                  :name "60mm Vulcan Cannon"
-                  :facing "Turretx2"
-                  :number "2")))))
+               (base/unititemmap<-unititemlist
+                (base/unititem
+                 :name "240mm Recoilless Cannon"
+                 :facing "FFx2"
+                 :number "2"
+                 :rounds "40")
+                (base/unititem
+                 :name "60mm Vulcan Cannon"
+                 :facing "Turretx2"
+                 :number "2")))))
         :Guntank
          (base/unit
           :name "Guntank"
@@ -2212,19 +2206,17 @@
           :mass "56tons"
           :height "15.6m"
           :unitskillmap
-           (base/unitskillmap
-            :Gunnery
-             (base/unitskill
-              :name "Gunnery"
-              :level "4"
-              :unititemmap
-               (base/unititemmap
-                "180mm Recoilless Cannon"
-                 (base/unititem
-                  :name "180mm Recoilless Cannon"
-                  :facing "FFx2"
-                  :number "2"
-                  :rounds "60")))))
+           (base/unitskillmap<-unitskilllist
+            (base/unitskill
+             :name "Gunnery"
+             :level "4"
+             :unititemmap
+              (base/unititemmap<-unititemlist
+               (base/unititem
+                :name "180mm Recoilless Cannon"
+                :facing "FFx2"
+                :number "2"
+                :rounds "60")))))
         :GM
          (base/unit
           :name "GM"
@@ -2263,15 +2255,14 @@
           :image "Gundam/BigZam.png"
           :classification "Med. Spacecraft"
           :unitskillmap
-           (base/unitskillmap
-            :Armor
-             (base/unitskill
-              :name "Armored"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Hardened vs. Energy"
-                 (base/unitability
-                  :name "Hardened vs. Energy")))))
+           (base/unitskillmap<-unitskilllist
+            (base/unitskill
+             :name "Armored"
+             :unitabilitymap
+              (base/unitabilitymap
+               "Hardened vs. Energy"
+                (base/unitability
+                 :name "Hardened vs. Energy")))))
         :Dom
          (base/unit
           :name "Dom"
@@ -2326,17 +2317,16 @@
           :mass "78.6tons"
           :height "18.6m"
           :unitskillmap
-           (base/unitskillmap
-            :Gunnery
-             (base/unitskill
-              :name "Gunnery"
-              :level "4"
-              :unititemmap
-               (base/unititemmap
-                "360mm Hyper Bazooka"
-                 (base/unititem
-                  :name "360mm Hyper Bazooka"
-                  :rounds "10")))))
+           (base/unitskillmap<-unitskilllist
+            (base/unitskill
+             :name "Gunnery"
+             :level "4"
+             :unititemmap
+              (base/unititemmap
+               "360mm Hyper Bazooka"
+                (base/unititem
+                 :name "360mm Hyper Bazooka"
+                 :rounds "10")))))
         "Zaku II"
          (base/unit
           :name "Zaku II"

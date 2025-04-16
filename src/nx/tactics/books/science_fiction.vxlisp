@@ -8,22 +8,23 @@
   :image "Future.jpg"
   :chaptermap
    (base/chaptermap
-    "Science Fiction Overview" (chapter_science_fiction_overview)
-    "Archetypes" (chapter_archetypes)
-    "Alternate Realties" (chapter_alternate_realties)
-    "Alien / Predator" (chapter_alien___predator)
-    "Battlestar Galactica" (chapter_battlestar_galactica)
-    "Doctor Who" (chapter_doctor_who)
-    "Robotech" (chapter_robotech)
-    "Space Cruiser Yamato" (chapter_space_cruiser_yamato)
-    "Space Opera" (chapter_space_opera)
-    "Star Trek" (chapter_star_trek)
+    "Science Fiction Overview" (chapter_science_fiction_overview tactics)
+    "Archetypes" (chapter_archetypes tactics)
+    "Alternate Realties" (chapter_alternate_realties tactics)
+    "Alien / Predator" (chapter_alien_predator tactics)
+    "Battlestar Galactica" (chapter_battlestar_galactica tactics)
+    "Doctor Who" (chapter_doctor_who tactics)
+    "Robotech" (chapter_robotech tactics)
+    "Space Cruiser Yamato" (chapter_space_cruiser_yamato tactics)
+    "Space Opera" (chapter_space_opera tactics)
+    "Star Trek" (chapter_star_trek tactics)
     "Star Wars" (chapter_star_wars tactics)
-    "Time Travellers" (chapter_time_travellers)
-    "Unique Aliens" (chapter_unique_aliens)
+    "Time Travellers" (chapter_time_travellers tactics)
+    "Unique Aliens" (chapter_unique_aliens tactics)
    )))
 
 (func chapter_science_fiction_overview : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Science Fiction Overview"
   :reference "http://www.merzo.net/index.html"
@@ -34,50 +35,52 @@
       :name "Distant Future Land Warfare"
       :summary
        "* Infantry
-* Transporters
-* Time Travel
-* Beam Weapons
-* Lightning Guns
-* Disruptors
-* Disintegrators
-* Railguns
-* Hovercraft
-* Hovertanks
-* Walkers
-* Mobile Suits
-* Mobile Armor
-* Artillery
-* Nuclear Weapons")
+        * Transporters
+        * Time Travel
+        * Beam Weapons
+        * Lightning Guns
+        * Disruptors
+        * Disintegrators
+        * Railguns
+        * Hovercraft
+        * Hovertanks
+        * Walkers
+        * Mobile Suits
+        * Mobile Armor
+        * Artillery
+        * Nuclear Weapons")
     "Distant Future Space Warfare"
      (section
       :name "Distant Future Space Warfare"
       :summary
        "* Shields
-* Ion Cannons
-* Disruptors
-* Disintegrators
-* Transporters
-* Hyperdrive
-* Jumpdrive
-* Railguns
-* Boarding Parties
-* Starfighters
-* Starbombers
-* Mobile Suits
-* Mobile Armor
-* Large Starships
-* Small Starships
-* Nuclear Weapons
-* Starbases"))))
+        * Ion Cannons
+        * Disruptors
+        * Disintegrators
+        * Transporters
+        * Hyperdrive
+        * Jumpdrive
+        * Railguns
+        * Boarding Parties
+        * Starfighters
+        * Starbombers
+        * Mobile Suits
+        * Mobile Armor
+        * Large Starships
+        * Small Starships
+        * Nuclear Weapons
+        * Starbases"))))
 
 (func chapter_archetypes : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Archetypes"
   :summary
    "* Psionic
-** Preferred Skills: [Telepathy], [Mind Over Matter], [Divination]"))
+    ** Preferred Skills: [Telepathy], [Mind Over Matter], [Divination]"))
 
 (func chapter_alternate_realties : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Alternate Realties"
   :sectionmap
@@ -98,14 +101,15 @@
        "* A temporal paradox has trapped the entire Earth in a time loop. For about a month, the people of the planet relive the same week over and over. They remember each loop but the longer they stay in the loop the more likely they are to be compelled to repeat the same events each time. Those who suffer or die during the period know they will repeat their actions but are largely powerless to stop themselves. The experience would eventually drive them insane if their minds could change that much.
 * Time travelers who arrive are immediately recognized by everyone as being different from the previous events. The locals are tremendously thankful that they can react differently since the travelers weren't in the previous time loops. This will be short lived, however, because once the loop resets the time travelers will be part of the loop, and each time the loop resets it will become harder for everyone to act differently again. If the travelers don't sort out this problem, they will be trapped here forever."))))
 
-(func chapter_alien___predator : base/chapter
- (chapter
+(func chapter_alien_predator : base/chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Alien / Predator"
   :image "AlienPredator/AlienPredator.jpg"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Alien Equipment"
-     (section
+     (base/section
       :name "Alien Equipment"
       :itemmap
        (itemmap
@@ -128,8 +132,8 @@
       :name "Aliens"
       :reference
        "* It'll be dark soon, and they mostly come at night... mostly. - Newt, Aliens
-* My mommy always said there were no monsters - no real ones - but there are.
-* Its structural perfection is matched only by its hostility.  You admire it.  I admire its purity. A survivor... unclouded by conscience, remorse, or delusions of morality. - Ash and Lambert, Alien"
+        * My mommy always said there were no monsters - no real ones - but there are.
+        * Its structural perfection is matched only by its hostility.  You admire it.  I admire its purity. A survivor... unclouded by conscience, remorse, or delusions of morality. - Ash and Lambert, Alien"
       :titles "Xenomorph XX121"
       :unitmap
        (base/unitmap
@@ -166,8 +170,7 @@
           :name "Alien Face Hugger"
           :image "AlienPredator/AlienFaceHugger.png"
           :reference
-           "* I haven't seen anything like that except, uh, molecular acid.  It must be using it for blood.  It's got a
-wonderful defense mechanism.  You don't dare kill it. - Parker and Brett, Alien"
+           "* I haven't seen anything like that except, uh, molecular acid. It must be using it for blood. It's got a wonderful defense mechanism. You don't dare kill it. - Parker and Brett, Alien"
           :unitpowermap
            (base/unitpowermap
             :Acidic
@@ -263,9 +266,9 @@ wonderful defense mechanism.  You don't dare kill it. - Parker and Brett, Alien"
       :name "Predators"
       :summary
        "* The Yautja do not maintain a unified society, but instead live in tribal groups that rarely interbreed. Over time, the different tribes have developed distinct physical differences.
-* Yautja society reveres honor and physical prowess which can only be proven in personal combat during dangerous hunts.
-* The Yautja stalk and kill their prey using a combination of highly advanced technology, such as active camouflage and energy weapons, combined with comparatively primitive traditional weapons, such as blades, spears and nets. The Predators often ritualistically mutilate their prey and usually claim a trophy from their kills. Capable of interstellar travel in star ships, the Predators have hunted on Earth for centuries and have also had prior contact with the Engineers.
-* Aside from their repeated conflicts with humans, the Predators have notably been associated with Xenomorph XX121, known to them as kiande amedha ('hard meat'), whom they revere as perhaps the most worthy of all prey. They have been known to deliberately breed the creatures from captive Queens in order to hunt them, often as part of initiation rituals for young Predators."
+        * Yautja society reveres honor and physical prowess which can only be proven in personal combat during dangerous hunts.
+        * The Yautja stalk and kill their prey using a combination of highly advanced technology, such as active camouflage and energy weapons, combined with comparatively primitive traditional weapons, such as blades, spears and nets. The Predators often ritualistically mutilate their prey and usually claim a trophy from their kills. Capable of interstellar travel in star ships, the Predators have hunted on Earth for centuries and have also had prior contact with the Engineers.
+        * Aside from their repeated conflicts with humans, the Predators have notably been associated with Xenomorph XX121, known to them as kiande amedha ('hard meat'), whom they revere as perhaps the most worthy of all prey. They have been known to deliberately breed the creatures from captive Queens in order to hunt them, often as part of initiation rituals for young Predators."
       :titles "Yautja"
       :unitmap
        (base/unitmap
@@ -389,7 +392,7 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
               :name "Armored"
               :summary
                "* The Conestogas skin consists of a laminated layer of insulators, alloy micro meteor shielding, composite armors, and aerogel layers. This provides only limited protection against Kinetic weapons (the best defense against those is high-mass armor, untenable on a starship), but it does provide excellent protection against directed energy weapons.
-* Overlying all of this are layers of Radar Absorbent Material, and a dark grey paint, in order to keep both the ships radar and optical signature as low as possible. In addition to this the ship has a radar jamming system for ECM, and the computer systems are designed with double hardened systems to prevent either jamming or EMP from damaging the ships system or any systems of equipment inside the ship.")
+                * Overlying all of this are layers of Radar Absorbent Material, and a dark grey paint, in order to keep both the ships radar and optical signature as low as possible. In addition to this the ship has a radar jamming system for ECM, and the computer systems are designed with double hardened systems to prevent either jamming or EMP from damaging the ships system or any systems of equipment inside the ship.")
             :Hanger
              (base/unitpower
               :name "Hanger"
@@ -401,8 +404,8 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
               :name "Gunnery"
               :summary
                "* Its main anti-ship weapons are eight Long Lance missiles, providing it with a good long range punch. These missiles are almost small starships in their capabilities and sensor systems, and are currently the main anti-ship system of both the Colonial Marine Corps and the Navy. Backing up these weapons are two Neutral Particle Beam cannons. These large weapons are mounted along the main hull, and can only fire in a forward arc. Although they do not provide the ship with a Hard Kill capability, they can be used to disrupt a enemies electronics at huge ranges. For close range weapons there are two laser cannons located on either side of the ship. These cannons provide close in defense against missiles, mines, and the odd fighter. For some additional close in Hard Kill capabilities there are two rail guns on the ship, one on top, and the other on the bottom of the main hull. Firing a combination of both kinetic penetrators (essentially tungsten darts) which can punch holes through almost any armor, and kinetic penetrator incendiary (tungsten tipped darts designed to vaporize AFTER impact), these weapons have a reasonable rate of fire, and can do quite a lot of damage to other ships.
-* The ship is also capable of laying mines, with sixty mines available in a ventral dispenser. Although not as large a threat to enemy ships as the ships missiles, they are still quite effective for interdiction and for cutting off civilian shipping.
-* For orbital bombardment the ship has a ventral launcher filled with eighty re-entry vehicles. These can carry a variety of warheads, including nuclear payloads. Such ordnance can only be used when the ship receives the orders to do so from its Captain, or from a Marine Major or personnel higher in rank than that.")))
+                * The ship is also capable of laying mines, with sixty mines available in a ventral dispenser. Although not as large a threat to enemy ships as the ships missiles, they are still quite effective for interdiction and for cutting off civilian shipping.
+                * For orbital bombardment the ship has a ventral launcher filled with eighty re-entry vehicles. These can carry a variety of warheads, including nuclear payloads. Such ordnance can only be used when the ship receives the orders to do so from its Captain, or from a Marine Major or personnel higher in rank than that.")))
         :Nostromo
          (base/unit
           :name "Nostromo"
@@ -410,8 +413,8 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
           :reference "This a commercial ship, not a rescue ship. - Parker, Alien"
           :summary
            "Commercial Towing Vehicle
-Speed: .12 light years/day
-2 shuttlecraft"
+            Speed: .12 light years/day
+            2 shuttlecraft"
           :height "72m"
           :length "244m"
           :width "165m")
@@ -440,8 +443,8 @@ Speed: .12 light years/day
           :name "Company Man"
           :reference
            "* I work for the company. But don't let that fool you, I'm really an okay guy. - Burke, Aliens
-* This installation has a substantial dollar value attached to it. They can bill me. - Burke and Ripley, Aliens
-* If I went and made a major security situation out of it, everybody steps in; Administration steps in, and there's no exclusive rights for anybody, nobody wins! So I made a decision, and it was... wrong. It was a bad call, Ripley. It was a bad call. - Burke, Aliens")
+            * This installation has a substantial dollar value attached to it. They can bill me. - Burke and Ripley, Aliens
+            * If I went and made a major security situation out of it, everybody steps in; Administration steps in, and there's no exclusive rights for anybody, nobody wins! So I made a decision, and it was... wrong. It was a bad call, Ripley. It was a bad call. - Burke, Aliens")
         :Civilian
          (base/unit
           :name "Civilian")
@@ -451,21 +454,21 @@ Speed: .12 light years/day
           :image "ColonialMarines/Marine.png"
           :reference
            "* These people are here to protect you. They're soldiers. It won't make any difference. - Ripley and Newt, Aliens
-* Is this gonna be a standup fight, sir, or another bughunt? - Hudson, Aliens
-* He can't make that kind of decision, he's just a grunt! Ah, no offense. None taken. - Burke and Hicks, Aliens"
+            * Is this gonna be a standup fight, sir, or another bughunt? - Hudson, Aliens
+            * He can't make that kind of decision, he's just a grunt! Ah, no offense. None taken. - Burke and Hicks, Aliens"
           :summary
            "* Pulse Rifle
-* Shotgun")
+            * Shotgun")
         "Marine Heavy Weapons"
          (base/unit
           :name "Marine Heavy Weapons"
-          :reference "* Look, man. I only need to know one thing: where they are. - Vasquez, Aliens")
+          :reference
+           "* Look, man. I only need to know one thing: where they are. - Vasquez, Aliens")
         "Marine Lieutenant"
          (base/unit
           :name "Marine Lieutenant"
           :reference
-           "* How many drops is this for you, Lieutenant? Thirty eight... simulated. How many *combat* drops? Uh,
-two. Including this one. - Vasquez and Gorman, Aliens")
+           "* How many drops is this for you, Lieutenant? Thirty eight... simulated. How many *combat* drops? Uh, two. Including this one. - Vasquez and Gorman, Aliens")
         "Marine Pilot"
          (base/unit
           :name "Marine Pilot"
@@ -479,7 +482,7 @@ two. Including this one. - Vasquez and Gorman, Aliens")
           :name "Marine Tech"
           :summary
            "* Motion Detector
-* Electronics Pack")
+            * Electronics Pack")
         "Power Loader"
          (base/unit
           :name "Power Loader"
@@ -494,13 +497,14 @@ two. Including this one. - Vasquez and Gorman, Aliens")
           :image "ColonialMarines/Android.png"
           :reference
            "* Bring back life form. Priority One. All other priorities rescinded. The damn company. What about our lives, you son of a bitch? I repeat, all other priorities are rescinded. - Ash and Parker, Alien
-* I admire its purity. A survivor... unclouded by conscience, remorse, or delusions of morality. - Ash, Alien
-* I prefer the term 'Artificial Person' myself. - Bishop, Aliens
-* Not bad for a human. - Bishop, Aliens
-* Ripley's last trip out, the syn- the artificial person malfunctioned. Malfuctioned? There were problems and a-a few deaths were involved. - Burke and Bishop, Aliens"
+            * I admire its purity. A survivor... unclouded by conscience, remorse, or delusions of morality. - Ash, Alien
+            * I prefer the term 'Artificial Person' myself. - Bishop, Aliens
+            * Not bad for a human. - Bishop, Aliens
+            * Ripley's last trip out, the syn- the artificial person malfunctioned. Malfuctioned? There were problems and a-a few deaths were involved. - Burke and Bishop, Aliens"
           :titles "Syn (derogatory)"))))))
 
 (func chapter_battlestar_galactica : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Battlestar Galactica"
   :sectionmap
@@ -545,6 +549,7 @@ two. Including this one. - Vasquez and Gorman, Aliens")
           :image "BattlestarGalactica/Cylon_BaseStar.png"))))))
 
 (func chapter_doctor_who : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Doctor Who"
   :sectionmap
@@ -568,8 +573,8 @@ two. Including this one. - Vasquez and Gorman, Aliens")
           :image "DrWho/Tardis.jpg"
           :reference
            "* Leela: Explain to me how this... Tardis, is larger on the inside than the out. ... Doctor: It's because insides and outsides are not in the same dimension. Which box is larget? Leela: That one. Doctor: Now which is larger? Leela: That one. Doctor: But it looks smaller. Leela: That's because it's further away. Doctor: Exactly. If you could keep that exactly that distance away and have it here, the large one would fit inside the small one. Leela: That's silly. Doctor: That's transdimensional engineering... - Doctor and Leela, The Robots of Death
-* Leela: Do you mean you can't control it? Doctor: Of course I can control it!.. 9 times out of 10, well 7 times out of 10, 5 times... nevermind... You won't need that. Leela: How do you know? Doctor: I never carry weapons. If people see you mean them no harm, they never hurt you... 9 out of 10 times. - Doctor and Leela, The Robots of Death
-* Tardis: There's a sign on my front door and you've been passing it for 700 years. What does it say? ... Doctor: Pull to open. Tardis: Yes, and what do you do? Doctor: I push. Tardis: Every single time. 700 years. Police boxes doors open out the way. ... Doctor: You know, YOU, have never been very reliable. ... You didn't always take me where I wanted to go. Tardis: No, but I always took you where you needed to go. - Tardis and Doctor, The Doctor's Wife")))
+            * Leela: Do you mean you can't control it? Doctor: Of course I can control it!.. 9 times out of 10, well 7 times out of 10, 5 times... nevermind... You won't need that. Leela: How do you know? Doctor: I never carry weapons. If people see you mean them no harm, they never hurt you... 9 out of 10 times. - Doctor and Leela, The Robots of Death
+            * Tardis: There's a sign on my front door and you've been passing it for 700 years. What does it say? ... Doctor: Pull to open. Tardis: Yes, and what do you do? Doctor: I push. Tardis: Every single time. 700 years. Police boxes doors open out the way. ... Doctor: You know, YOU, have never been very reliable. ... You didn't always take me where I wanted to go. Tardis: No, but I always took you where you needed to go. - Tardis and Doctor, The Doctor's Wife")))
     "Doctor Who Units"
      (section
       :name "Doctor Who Units"
@@ -624,54 +629,22 @@ two. Including this one. - Vasquez and Gorman, Aliens")
           :image "DrWho/Davros.png"
           :reference
            "* To hold in my hand a capsule that contained such power...To know that the tiny pressure of my thumb, enough to break the glass would end...everything...Yes...I WOULD do it. Such power would put me above the Gods! - Davros
-* Across the entire universe, never stopping, never faltering, never fading. People, planets, and stars will become dust, and the dust will become atoms, and the atoms will become...nothing. Into every dimension, every parallel, every single corner of creation. This is my ultimate victory, Doctor: the destruction of reality... itself! - Davros
-* The man who abhors violence, never carrying a gun.  But this is the truth Doctor, you take ordinary people and
-fashion them into weapons...How many more?  Just think how many have died in your name...The Doctor, the man
-who keeps running, never looking back because he dare not out of shame.  This is my final victory, Doctor.  I
-have shown you...yourself. - Davros")
+            * Across the entire universe, never stopping, never faltering, never fading. People, planets, and stars will become dust, and the dust will become atoms, and the atoms will become...nothing. Into every dimension, every parallel, every single corner of creation. This is my ultimate victory, Doctor: the destruction of reality... itself! - Davros
+            * The man who abhors violence, never carrying a gun. But this is the truth Doctor, you take ordinary people and fashion them into weapons...How many more?  Just think how many have died in your name...The Doctor, the man who keeps running, never looking back because he dare not out of shame. This is my final victory, Doctor. I have shown you...yourself. - Davros")
         "Doctor, The"
          (base/unit
           :name "Doctor, The"
           :image "DrWho/TheDoctor.png"
           :reference
-           "* Who are you? ... The ground beneath our feet spinning at a 1000 miles an
-hour, and the entire planet is hurtling around the sun at 67,000 miles an hour,
-and I can feel it.  We're falling through space, you and me, clinging to the
-skin of this tiny little world, and if we let go ... That's who I am.  Now
-forget me. - Rose and The Doctor
-* Oh, I'll think of something.  You're just making this up as you go along.
-Yup...but I do it brilliantly - The Doctor
-* I've seen him. He's like fire and ice and rage. He's like the night and the
-storm and the heart of the sun. He's ancient and forever. He burns at the
-center of time and he can see the turn of the universe.
-* Is this world protected?  You're not the first lot to have come here.  Oh,
-there have been so many.  And what you've got to ask is...what happened to
-them?  Hello, I'm the Doctor.  Basically...run. - The Doctor
-* Everyone's got memories of a holiday they couldn't have be to, or a party
-they never went to, or met someone for the first time and felt like they've
-know them all their lives. Time is being rewritten all around us, everyday.
-People think their memories are bad, but their memories are fine. The past is
-really like that. - The Doctor
-* There are laws of time and once upon a time, there were people in charge of
-those laws, but died. They all died. They all died. And you know who that
-leaves. Me! It has taken me all these years to realize, the laws of time are
-mine. And they will obey me! ... The whole of history could change...the
-future of the human race. No one should have that much power. Tough. ... For a
-long time I thought I was just a survivor, but I'm not. I'm the winner. That's
-who I am. The Time Lord Victorious. And there is no one to stop you. No. This
-is wrong, Doctor. I don't care who you are. The Time Lord Victorious is wrong!
-That's for me to decide. ... Is there nothing you can't do? Not anymore.
-- Captain Aldelede and The Doctor
-* Silence will fall when the question is asked...The first question, the
-question that must never be answered, hidden in plain sight, the question
-you've been running from all your life...Doctor WHO?
-* If I run away today. Good people will die. If I stand and fight, some of them
-might live. Maybe not many. Maybe not for long. Hey, maybe there's no point in
-any of this at all, but its the best I can do. So, I'm going to do it, and I will
-stand here doing it until it kills em. You're going to die too. Someday. What
-would that be? Have you thought of that? Would you die for? Who I am is where
-I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
-* People always get it wrong with Time Lords. We take forever to die. Even if we are too injured to regenerate, every cell in our bodies keeps trying. Dying properly can take days. That's why we like to die among our own kind. They know not to bury us early. I think... In my current condition, it'll take me about... a day and a half to reach the top of the tower. I think, if I'm lucky, I have a day and a half. - Heaven Sent")
+           "* Who are you? ... The ground beneath our feet spinning at a 1000 miles an hour, and the entire planet is hurtling around the sun at 67,000 miles an hour, and I can feel it.  We're falling through space, you and me, clinging to the skin of this tiny little world, and if we let go ... That's who I am.  Now forget me. - Rose and The Doctor
+            * Oh, I'll think of something.  You're just making this up as you go along. Yup...but I do it brilliantly - The Doctor
+            * I've seen him. He's like fire and ice and rage. He's like the night and the storm and the heart of the sun. He's ancient and forever. He burns at the center of time and he can see the turn of the universe.
+            * Is this world protected?  You're not the first lot to have come here. Oh, there have been so many. And what you've got to ask is...what happened to them? Hello, I'm the Doctor. Basically...run. - The Doctor
+            * Everyone's got memories of a holiday they couldn't have be to, or a party they never went to, or met someone for the first time and felt like they've know them all their lives. Time is being rewritten all around us, everyday. People think their memories are bad, but their memories are fine. The past is really like that. - The Doctor
+            * There are laws of time and once upon a time, there were people in charge of those laws, but died. They all died. They all died. And you know who that leaves. Me! It has taken me all these years to realize, the laws of time are mine. And they will obey me! ... The whole of history could change...the future of the human race. No one should have that much power. Tough. ... For a long time I thought I was just a survivor, but I'm not. I'm the winner. That's who I am. The Time Lord Victorious. And there is no one to stop you. No. This is wrong, Doctor. I don't care who you are. The Time Lord Victorious is wrong! That's for me to decide. ... Is there nothing you can't do? Not anymore. - Captain Aldelede and The Doctor
+            * Silence will fall when the question is asked...The first question, the question that must never be answered, hidden in plain sight, the question you've been running from all your life...Doctor WHO?
+            * If I run away today. Good people will die. If I stand and fight, some of them might live. Maybe not many. Maybe not for long. Hey, maybe there's no point in any of this at all, but its the best I can do. So, I'm going to do it, and I will stand here doing it until it kills em. You're going to die too. Someday. What would that be? Have you thought of that? Would you die for? Who I am is where I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
+            * People always get it wrong with Time Lords. We take forever to die. Even if we are too injured to regenerate, every cell in our bodies keeps trying. Dying properly can take days. That's why we like to die among our own kind. They know not to bury us early. I think... In my current condition, it'll take me about... a day and a half to reach the top of the tower. I think, if I'm lucky, I have a day and a half. - Heaven Sent")
         :K-9
          (base/unit
           :name "K-9"
@@ -681,24 +654,26 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
          (base/unit
           :name "Martha Jones"
           :image "DrWho/MarthaJones.png"
-          :reference "She completely adored him ... Is this going anywhere?  Yes.  Cause he never looked at her twice ... and she wasted years of her life ... and I told her time and time again.  Get out.  So this is me getting out. - Martha Jones and the Doctor")
+          :reference "She completely adored him ... Is this going anywhere? Yes. Cause he never looked at her twice ... and she wasted years of her life ... and I told her time and time again. Get out. So this is me getting out. - Martha Jones and the Doctor")
         "Master, The"
          (base/unit
           :name "Master, The"
           :image "DrWho/TheMaster.png"
           :reference
-           "* We stand there... 8 years old... staring at the raw power of time and space, just a child.  Some would be inspired... Some would run away ... and some would go mad.  What about you?  Oh, the one who ran away.  I never stopped. - The Doctor and Martha
-* And so it came to pass, that the human race fell and the Earth was no more. And I looked out on my new Dominion as master of all and I thought it good.")
+           "* We stand there... 8 years old... staring at the raw power of time and space, just a child.  Some would be inspired... Some would run away ... and some would go mad.  What about you? Oh, the one who ran away. I never stopped. - The Doctor and Martha
+            * And so it came to pass, that the human race fell and the Earth was no more. And I looked out on my new Dominion as master of all and I thought it good.")
         "Rose Tyler"
          (base/unit
           :name "Rose Tyler"
           :image "DrWho/RoseTyler.png"
-          :reference "This is really seeing the future - you just leave us behind! ... Sarah Jane - you were that close to her once, and now ... you never even mention her. ... I don't age. I regenerate. But humans decay.  You wither and you die. Imagine watching that happen to someone you ... You can spend the rest of your life with me. But I can't spend the rest of mine with you. I have to live on, alone. That's the curse of the Timelords. - Rose and the Doctor, Doctor Who")
+          :reference
+           "This is really seeing the future - you just leave us behind! ... Sarah Jane - you were that close to her once, and now ... you never even mention her. ... I don't age. I regenerate. But humans decay. You wither and you die. Imagine watching that happen to someone you ... You can spend the rest of your life with me. But I can't spend the rest of mine with you. I have to live on, alone. That's the curse of the Timelords. - Rose and the Doctor, Doctor Who")
         "Sarah Jane Smith"
          (base/unit
           :name "Sarah Jane Smith"
           :image "DrWho/SarahJaneSmith.png"
-          :reference "The universe has to move forward. Pain and loss, they define us as much as happiness or love. Whether it's a world, or a relationship ... Everything has its time.  And everything ends. - Sarah Jane Smith")
+          :reference
+           "The universe has to move forward. Pain and loss, they define us as much as happiness or love. Whether it's a world, or a relationship ... Everything has its time. And everything ends. - Sarah Jane Smith")
         :Rutan
          (base/unit
           :name "Rutan"
@@ -714,13 +689,15 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
         :Sutekh
          (base/unit
           :name "Sutekh"
-          :reference "* You would use your powers for evil. Evil? Your evil is my good. I am Sutehk the Destroyer. Where I tread, I leave nothing but dust and darkness. I find that good. - The Doctor and Sutekh"
+          :reference
+           "* You would use your powers for evil. Evil? Your evil is my good. I am Sutehk the Destroyer. Where I tread, I leave nothing but dust and darkness. I find that good. - The Doctor and Sutekh"
           :titles "Sutekh the Destroyer")
         "Weeping Angel"
          (base/unit
           :name "Weeping Angel"))))))
 
 (func chapter_robotech : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Robotech"
   :sectionmap
@@ -736,6 +713,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
       :name "Zentradi"))))
 
 (func chapter_space_cruiser_yamato : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Space Cruiser Yamato"
   :summary "Aka Starblazers"
@@ -911,6 +889,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
                   :name "Magna Flame Gun"))))))))))
 
 (func chapter_space_opera : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Space Opera"
   :sectionmap
@@ -1637,47 +1616,12 @@ over-population problem."
       :name "Chatilian"
       :reference "* I rather like the way his head exploded."
       :summary
-       "* Description - The Chatilians are from the planet Chatil in the Fomalhaut star
-system. They are frail, delicate looking, greenish blue plant beings with thin
-bodies and large, bullet-shaped heads. Chatilians are herbivores. They have no real
-mouth, rather they possess facial slits through which they strain their food intake.
-Their arms and legs are like branches and roots which must be pruned to grow into
-useful limbs. When angered, Chatilians whine loudly, bug out their eyes, and drool
-yellow spit from their facial slits. This would be somewhat comical, except this is a
-sign that they are generating and then people start dying.
-* Telepathy - They can speak aloud with great difficulty, though they do not normally
-need to because their skulls are crowned with sensory nodes which allows them
-communicate telepathically among themselves. With focus, an empath also may read an
-unprotected mind in close proximity.
-* Psykokinesis - Although Empaths are innocuous looking, they are actually among the
-more dangerous and formidable opponents in the galaxy. Through the evolutionary
-process, they have developed psycho-kinetic power which allows them to harness and
-transmit psychic energy. This unusual ability is called Generating. Empaths employ
-psychic and illusionary attack forms. Advanced Chatilians can actually crush the
-minds of their enemies.
-* Personality - They are generally considered rude, peculiar, and annoying by other
-races. They are not overly fond of other races either. They intensely dislike any
-inconvenience including bad weather. A large part of their scientific development has
-been toward atmospheric control and terraforming. Chatilians like water but hate any
-kind of physical exertion. They are sensitive to everything, so noise, bright lights,
-gaudy art, hot weather, cold weather, dumb people, etc, etc. all irriate the sedate
-intellectuals to no end.
-* Colonies - Chatilian buildings are strange tiered affairs with rooms and floors of
-different sizes, terraces and skylights everywhere, and stark blank surfaces. The
-architecture is similar to adobe cities and Mediterraean beach communities. Chatilian
-cities are sprawling low-lying residential areas with all industry and commerical
-operations underground. Trees and plants are allowed to grow naturally throughout the
-cities. The underground is a maze of indirect passages and oddly shaped rooms.
-Tourist often get lost which the Chatilians attribute to their limited mental
-capacity.
-* History - The Chatilians homeworld is closer to its star than Earth. It is hot and
-humid year round, and its 4 moons reflect much light even at night. In this world,
-mobile plant life evolved instead of animal life. Though all Chatilians speak
-telepathically, the ability to generate only occurs in 1% of the populace. The ability or inability to generate has created 2
-classes and numerous, bloody civil wars with one side or the other taking control.
-The current royal family can generate and their power is buffered by a representative
-parliament. This arrangement has lasted for 500 years, but there always remains a
-risk of civil war."
+       "* Description - The Chatilians are from the planet Chatil in the Fomalhaut star system. They are frail, delicate looking, greenish blue plant beings with thin bodies and large, bullet-shaped heads. Chatilians are herbivores. They have no real mouth, rather they possess facial slits through which they strain their food intake. Their arms and legs are like branches and roots which must be pruned to grow into useful limbs. When angered, Chatilians whine loudly, bug out their eyes, and drool yellow spit from their facial slits. This would be somewhat comical, except this is a sign that they are generating and then people start dying.
+        * Telepathy - They can speak aloud with great difficulty, though they do not normally need to because their skulls are crowned with sensory nodes which allows them communicate telepathically among themselves. With focus, an empath also may read an unprotected mind in close proximity.
+        * Psykokinesis - Although Empaths are innocuous looking, they are actually among the more dangerous and formidable opponents in the galaxy. Through the evolutionary process, they have developed psycho-kinetic power which allows them to harness and transmit psychic energy. This unusual ability is called Generating. Empaths employ psychic and illusionary attack forms. Advanced Chatilians can actually crush the minds of their enemies.
+        * Personality - They are generally considered rude, peculiar, and annoying by other races. They are not overly fond of other races either. They intensely dislike any inconvenience including bad weather. A large part of their scientific development has been toward atmospheric control and terraforming. Chatilians like water but hate any kind of physical exertion. They are sensitive to everything, so noise, bright lights, gaudy art, hot weather, cold weather, dumb people, etc, etc. all irriate the sedate intellectuals to no end.
+        * Colonies - Chatilian buildings are strange tiered affairs with rooms and floors of different sizes, terraces and skylights everywhere, and stark blank surfaces. The architecture is similar to adobe cities and Mediterraean beach communities. Chatilian cities are sprawling low-lying residential areas with all industry and commerical operations underground. Trees and plants are allowed to grow naturally throughout the cities. The underground is a maze of indirect passages and oddly shaped rooms. Tourist often get lost which the Chatilians attribute to their limited mental capacity.
+        * History - The Chatilians homeworld is closer to its star than Earth. It is hot and humid year round, and its 4 moons reflect much light even at night. In this world, mobile plant life evolved instead of animal life. Though all Chatilians speak telepathically, the ability to generate only occurs in 1% of the populace. The ability or inability to generate has created 2 classes and numerous, bloody civil wars with one side or the other taking control. The current royal family can generate and their power is buffered by a representative parliament. This arrangement has lasted for 500 years, but there always remains a risk of civil war."
       :titles "Asparagus Men"
       :unitmap
        (base/unitmap
@@ -1809,8 +1753,8 @@ risk of civil war."
       :name "Thranx Collective"
       :summary
        "* Description - Visually, the thranx are an insectoid race, about 1.5 meters long when on all six legs.  They look roughly like very large praying mantises. Chitin color differs between males and females, being blue for the males and aquamarine for females, deepening to purple in old age. Thranx also possess vestigial double sets of wings, ritually removed after mating. The head is valentine-shaped, with large, compound golden eyes sometimes banded with red. They have four pairs of appendages; two truhands, four trulegs, and a set of intermediaries that can function as an additional pair of arms or legs. Like insects, they have no lungs and breathe through a series of openings at about waist level.
-* Communication - The species communicates with a complex language consisting of clicks and whistles.
-* Weaknesses - Thranx are unsuited to water and most fear it; they are not naturally buoyant and because they breathe out of their waists, any water that reaches to this level can drown them."
+        * Communication - The species communicates with a complex language consisting of clicks and whistles.
+        * Weaknesses - Thranx are unsuited to water and most fear it; they are not naturally buoyant and because they breathe out of their waists, any water that reaches to this level can drown them."
       :titles "Thraxis"
       :unitmap
        (base/unitmap
@@ -1826,17 +1770,9 @@ risk of civil war."
      (section
       :name "Vargr Mercantile League"
       :summary
-       "* Description - Vargr are a bipedal, carnivorous race with strong canine/lupine
-characteristics. They are short by human standards and are not physically imposing.
-* The Vargr are cunning merchants.
-* Politics - The Vargr lack governmental structures. Mega-corporations operate entire
-cities and colonies, buy and selling them as a package. The corporation operating
-a location sub-contracts out all major services, and within small companies grow in
-symbiosis with the corporation. Vargr corporations believe in constant competition,
-so they are careful to make sure that their rivals remain healthy. This generosity
-to ones rivals is seen as peculiar to other races, but the Vargr have suffered
-through the devastating stagnation that monopolies produce and recoil at any tendency
-to recreate those dark days."
+       "* Description - Vargr are a bipedal, carnivorous race with strong canine/lupine characteristics. They are short by human standards and are not physically imposing.
+        * The Vargr are cunning merchants.
+        * Politics - The Vargr lack governmental structures. Mega-corporations operate entire cities and colonies, buy and selling them as a package. The corporation operating a location sub-contracts out all major services, and within small companies grow in symbiosis with the corporation. Vargr corporations believe in constant competition, so they are careful to make sure that their rivals remain healthy. This generosity to ones rivals is seen as peculiar to other races, but the Vargr have suffered through the devastating stagnation that monopolies produce and recoil at any tendency to recreate those dark days."
       :titles "Canines, Dogs"
       :unitmap
        (base/unitmap
@@ -1892,9 +1828,7 @@ inflict.")
          (base/unit
           :name "Zen Rigeln Healer"
           :summary
-           "* Healing - Through skin to skin contact, a Zen Healer may link his/her own body
-with an injured person and share his/her healing ability. At high levels of
-proficiency, the Zen can perform incredible feats such as brain surgery.")))
+           "* Healing - Through skin to skin contact, a Zen Healer may link his/her own body with an injured person and share his/her healing ability. At high levels of proficiency, the Zen can perform incredible feats such as brain surgery.")))
     "Interstellar Vehicles"
      (section
       :name "Interstellar Vehicles"
@@ -1904,12 +1838,10 @@ proficiency, the Zen can perform incredible feats such as brain surgery.")))
          (base/unit
           :name "Islander Star Sloop"
           :summary
-           "* The Islander is the smallest class merchant starship commonly available. It
-can carry 30tons of cargo, 4 low passage passengers, and 10 coldsleep bays.
-* 1x Light Particle Cannon
-* 6x Light Startorpedoes
-* The Islander has seen many modifications including high speed drives for
-courier or smuggling as well as heavier armaments."
+           "* The Islander is the smallest class merchant starship commonly available. It can carry 30tons of cargo, 4 low passage passengers, and 10 coldsleep bays.
+            * 1x Light Particle Cannon
+            * 6x Light Startorpedoes
+            * The Islander has seen many modifications including high speed drives for courier or smuggling as well as heavier armaments."
           :mass "125tons")
         "Deep Space Probe"
          (base/unit
@@ -1918,33 +1850,28 @@ courier or smuggling as well as heavier armaments."
          (base/unit
           :name "Corsair Star Privateer"
           :summary
-           "* The Starfarer is a small merchant starship designed for dangerous courier duty.
-As such, it has reduced cargo capacity and increased armor, and weapons. Its
-high firepower makes it popular among smugglers and pirates, though its high
-price means that few of these are procured through normal channels.
-* 50tons of cargo
-* 6 crew
-* 10 low passage passengers
-* 10 coldsleep bays.
-* 4x Medium Particle Cannon
-* 6x Light Startorpedoes
-* The Banner has seen many modifications including high speed drives for
-courier or smuggling as well as heavier armaments."
+           "* The Starfarer is a small merchant starship designed for dangerous courier duty. As such, it has reduced cargo capacity and increased armor, and weapons. Its high firepower makes it popular among smugglers and pirates, though its high price means that few of these are procured through normal channels.
+            * 50tons of cargo
+            * 6 crew
+            * 10 low passage passengers
+            * 10 coldsleep bays.
+            * 4x Medium Particle Cannon
+            * 6x Light Startorpedoes
+            * The Banner has seen many modifications including high speed drives for courier or smuggling as well as heavier armaments."
           :mass "250tons")
         "Valkyrie Patrol Star Cruiser"
          (base/unit
           :name "Valkyrie Patrol Star Cruiser"
           :summary
            "* The Valkyrie is a long range cruiser designed for planetary defense.
-* The Valkyrie acts as a mothership for up to 4 Nike class frigates that it
-carries and services.
-* 600tons cargo
-* 80 Crew
-* 60 low passage passengers
-* 20 coldsleep bays.
-* 8x Heavy Particle Cannon
-* 12x Light Particle Cannon
-* 6x Heavy Startorpedoes"
+            * The Valkyrie acts as a mothership for up to 4 Nike class frigates that it carries and services.
+            * 600tons cargo
+            * 80 Crew
+            * 60 low passage passengers
+            * 20 coldsleep bays.
+            * 8x Heavy Particle Cannon
+            * 12x Light Particle Cannon
+            * 6x Heavy Startorpedoes"
           :mass "12500tons")
         "Nike Patrol Space Frigate"
          (base/unit
@@ -1967,39 +1894,33 @@ weapons load for a small ship.
           :name "Oliphant Luxury Starliner"
           :summary
            "* 600 High Passage Accommations
-* 1200 Medium Passage Accommations
-* 2400 Low Passage Accommations
-* 1000 Coldsleep berths"
+            * 1200 Medium Passage Accommations
+            * 2400 Low Passage Accommations
+            * 1000 Coldsleep berths"
           :mass "75000tons")
         "Space Cutter"
          (base/unit
           :name "Space Cutter"
           :summary
-           "* Larger than the Pinnacle, the Cutter can travel back and forth from a planet
-to its moon."
+           "* Larger than the Pinnacle, the Cutter can travel back and forth from a planet to its moon."
           :mass "60tons")
         "Space Lander"
          (base/unit
           :name "Space Lander"
           :summary
-           "* Larger than the Cutter, the Lander can travel back and forth from a planet
-to its moon and is used to haul heavy equipment or passengers. In combat, the
-Lander is the prefered method to deploy infantry and tanks after a marine
-orbital halo drop."
+           "* Larger than the Cutter, the Lander can travel back and forth from a planet to its moon and is used to haul heavy equipment or passengers. In combat, the Lander is the prefered method to deploy infantry and tanks after a marine orbital halo drop."
           :mass "200tons")
         "Space Pinnacle"
          (base/unit
           :name "Space Pinnacle"
           :summary
-           "* Larger than the Shuttlecraft, the Pinnacle can travel from orbit to a
-planet's moon and return."
+           "* Larger than the Shuttlecraft, the Pinnacle can travel from orbit to a planet's moon and return."
           :mass "30tons")
         "Space Shuttlecraft"
          (base/unit
           :name "Space Shuttlecraft"
           :summary
-           "* The shuttlecraft is the smallest of the ship's boats. It is capable of
-orbital travel to shuttle small complements of crew and cargo planetside."
+           "* The shuttlecraft is the smallest of the ship's boats. It is capable of orbital travel to shuttle small complements of crew and cargo planetside."
           :titles "Launch"
           :mass "10tons")
         "Star Colony Ship"
@@ -2012,23 +1933,19 @@ orbital travel to shuttle small complements of crew and cargo planetside."
          (base/unit
           :name "Zephyr Startransport"
           :summary
-           "* The Zephyr is a small merchant starship designed for comfortable passenger
-duty along major trade routs.
-As such, it has reduced cargo capacity and increased armor, and weapons. Its
-high firepower makes it popular among smugglers and pirates, though its high
-price means that few of these are procured through normal channels.
-* 75tons cargo
-* 6 crew
-* 10 Medium Passage Accommations
-* 30 Low Passage Accommations
-* 20 Coldsleep berths
-* 2x Light Particle Cannon
-* 6x Light Startorpedoes
-* The Banner has seen many modifications including high speed drives for
-courier or smuggling as well as heavier armaments."
+           "* The Zephyr is a small merchant starship designed for comfortable passenger duty along major trade routs. As such, it has reduced cargo capacity and increased armor, and weapons. Its high firepower makes it popular among smugglers and pirates, though its high price means that few of these are procured through normal channels.
+            * 75tons cargo
+            * 6 crew
+            * 10 Medium Passage Accommations
+            * 30 Low Passage Accommations
+            * 20 Coldsleep berths
+            * 2x Light Particle Cannon
+            * 6x Light Startorpedoes
+            * The Banner has seen many modifications including high speed drives for courier or smuggling as well as heavier armaments."
           :mass "300tons"))))))
 
 (func chapter_star_trek : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Star Trek"
   :sectionmap
@@ -2134,8 +2051,7 @@ courier or smuggling as well as heavier armaments."
           :name "USS Reliant (Avenger Class)"
           :image "StarTrek/Federation_Reliant.png"
           :summary
-           "A Frigate is a ship of similar firepower to a Heavy cruiser but has fewer research facilities, require less
-crew, and has more limited endurance."
+           "A Frigate is a ship of similar firepower to a Heavy cruiser but has fewer research facilities, require less crew, and has more limited endurance."
           :classification "Hvy. Spacecraft"
           :mass "165ktons"
           :length "236m"
@@ -2172,9 +2088,7 @@ crew, and has more limited endurance."
           :name "Borg Cube"
           :image "StarTrek/Borg_Cube.png"
           :reference
-           "We are the Borg. Lower your shields and surrender your ships.  We will add your biological and technological
-distinctiveness to our own. Your culture will adapt to service us. Resistance is futile. - The Borg, Star Trek
-First Contact"
+           "We are the Borg. Lower your shields and surrender your ships.  We will add your biological and technological distinctiveness to our own. Your culture will adapt to service us. Resistance is futile. - The Borg, Star Trek First Contact"
           :crew "130000"
           :mass "90Mtons"
           :length "3km"
@@ -2196,22 +2110,18 @@ First Contact"
           :name "Borg Drone"
           :image "StarTrek/Borg_Drone.png"
           :reference
-           "The Borg were possibly created by the alien probe V'Ger to seek 'all that is knowable' and return to its
-creator.")
+           "The Borg were possibly created by the alien probe V'Ger to seek 'all that is knowable' and return to its creator.")
         "Doomsday Machine"
          (base/unit
           :name "Doomsday Machine"
           :image "StarTrek/DoomsdayMachine.png"
           :reference
-           "Believed to have originated as an ancient race's last resort weapon against the Borg.  Its basic design -
-destroy planets already assimilated by the Borg for use as fuel - coupled with an indestructible neutronium
-hull and antiproton beam (against which there was little or no defense), made it an ideal weapon against the
-Borg."
+           "Believed to have originated as an ancient race's last resort weapon against the Borg.  Its basic design - destroy planets already assimilated by the Borg for use as fuel - coupled with an indestructible neutronium hull and antiproton beam (against which there was little or no defense), made it an ideal weapon against the Borg."
           :summary
            "* Maximum Speed: Warp 4
-* Tractor Beam
-* Dampening Field
-* Can consume a planet in a day"
+            * Tractor Beam
+            * Dampening Field
+            * Can consume a planet in a day"
           :titles "Planet Killer"
           :classification "Hvy. Spacecraft"
           :mass "4x10^23tons"
@@ -2314,7 +2224,7 @@ Borg."
           :image "StarTrek/Nomad.png"
           :reference
            "* Error! Error!...Faulty! Faulty! Must sterilize imperfection! - STER-I-LIZE! - Nomad, Star Trek
-* Nomad - See the universe. Meet interesting people...and kill them. - Motivational Poster Parody")
+            * Nomad - See the universe. Meet interesting people...and kill them. - Motivational Poster Parody")
         "Romulan Centurion"
          (base/unit
           :name "Romulan Centurion"
@@ -2975,7 +2885,7 @@ Borg."
           :image "StarWars/Rebel_XWing.png"
           :summary
            "* 3700G acceleration
-* 50 Shields"
+            * 50 Shields"
           :titles "T-65"
           :speedair "1050kph"
           :classification "Lt. Spacecraft"
@@ -3180,9 +3090,11 @@ it for the money. - Han Solo, Star Wars"
                   :name "Lightsaber"))))))))))
 
 (func chapter_time_travellers : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Time Travellers"
-  :reference "* Doctor: People don't understand time. It's not what you think it is. Sally: Then what is it? Doctor: Complicated. Sally: Tell me. Doctor: Very complicated. ... Doctor: People assume that time is strict progression of cause of cause to effect, but actually from a non-linear, non-subjective viewpoint, its more like a big ball of wibbly-wobbly, timey-wimey stuff... Sally Sparrow, Doctor - Blink - Doctor Who"
+  :reference
+   "* Doctor: People don't understand time. It's not what you think it is. Sally: Then what is it? Doctor: Complicated. Sally: Tell me. Doctor: Very complicated. ... Doctor: People assume that time is strict progression of cause of cause to effect, but actually from a non-linear, non-subjective viewpoint, its more like a big ball of wibbly-wobbly, timey-wimey stuff... Sally Sparrow, Doctor - Blink - Doctor Who"
   :sectionmap
    (sectionmap
     "Time Tricks"
@@ -3193,33 +3105,35 @@ it for the money. - Han Solo, Star Wars"
         "Loop Trap Paradox"
          (rule
           :name "Loop Trap Paradox"
-          :reference "* How many seconds in eternity? ... If I didn't know better, I'd say I've travelled Twelve thousand years into the future. ... How many seconds in eternity? The Shepards Boy - Six Hundred Thousand years into the future. ... How many seconds in eternity? The Shepards Boy says. ... Twelve Hundred Thousand years into the future. ... The shepards boy says. ... Two million years into the future. ... The Shepard Boy says... Twenty million years into the future. ... The Shepard Boy says! ... There's thus mountain of pure diamond! It takes an hour to climb it, and an hour to go around it! ... Fifty-two million years. ... Every hundred years, a little bird comes! ... And sharpens its beak on the diamond mountain! ... Nearly a Billion years. ... And when the entire mountain is chiseled away, the first second of eternity will have passed! ... Well over a Billion years. You musta think that's a helluva long time! ... Two Billion years. ... Personally, I think that's a helluva bird. - Doctor Who: Heaven Sent")))
+          :reference
+           "* How many seconds in eternity? ... If I didn't know better, I'd say I've travelled Twelve thousand years into the future. ... How many seconds in eternity? The Shepards Boy - Six Hundred Thousand years into the future. ... How many seconds in eternity? The Shepards Boy says. ... Twelve Hundred Thousand years into the future. ... The shepards boy says. ... Two million years into the future. ... The Shepard Boy says... Twenty million years into the future. ... The Shepard Boy says! ... There's thus mountain of pure diamond! It takes an hour to climb it, and an hour to go around it! ... Fifty-two million years. ... Every hundred years, a little bird comes! ... And sharpens its beak on the diamond mountain! ... Nearly a Billion years. ... And when the entire mountain is chiseled away, the first second of eternity will have passed! ... Well over a Billion years. You musta think that's a helluva long time! ... Two Billion years. ... Personally, I think that's a helluva bird. - Doctor Who: Heaven Sent")))
     :Temporals
      (section
       :name "Temporals"
-      :reference "* In a Temporal conflict, victory or defeat can come in an instant. Among the vanquished, the lucky ones never know they have been conquered; the unlucky ones have never been. Both sides of this conflict have great resources for the struggle. Indeed, we hope for a long war, for we have no prospects of quick victory ourselves. Our offensive ability is too experimental to neutralize the Raydian threat. A short war can only mean our defeat."
+      :reference
+       "* In a Temporal conflict, victory or defeat can come in an instant. Among the vanquished, the lucky ones never know they have been conquered; the unlucky ones have never been. Both sides of this conflict have great resources for the struggle. Indeed, we hope for a long war, for we have no prospects of quick victory ourselves. Our offensive ability is too experimental to neutralize the Raydian threat. A short war can only mean our defeat."
       :summary
        "* The Temporals is a small group of specialists with the technology to travel through time and alter or protect the past.
 
-The Raydian Threat
-* The Raydians seem to have been content with the time stream as it was before the Temporals discovered time travel. They seem to be violently opposed to others having time travel ability and may be the cause of the disappearance of the original creators of the Time Rotor.
-* Motivation - The Raydians have a strong aversion to disorder. Though they seem to dislike altering history, they are willing to do so to eliminate time travel technology. When choosing historical changes, they tend to favor authoritarian rule and oppose chaotic organizations like democracies.
-* Multiple Incursions - Raydians will often make multiple time penetrations at once. The most pastward team will try to effect a change, and the futureward teams wait to see that the change has had the desired effect. If not, they go into action.
+        The Raydian Threat
+        * The Raydians seem to have been content with the time stream as it was before the Temporals discovered time travel. They seem to be violently opposed to others having time travel ability and may be the cause of the disappearance of the original creators of the Time Rotor.
+        * Motivation - The Raydians have a strong aversion to disorder. Though they seem to dislike altering history, they are willing to do so to eliminate time travel technology. When choosing historical changes, they tend to favor authoritarian rule and oppose chaotic organizations like democracies.
+        * Multiple Incursions - Raydians will often make multiple time penetrations at once. The most pastward team will try to effect a change, and the futureward teams wait to see that the change has had the desired effect. If not, they go into action.
 
-Guide to Time Travel
-* Don'tt experiment with Time Travel. Many have disappeared and are presumed dead from experimentation. Predicting the outcome of Temporal mechanics is best left to the scientists.
-* Don't Alter History. Interfering with major incidents or people or displaying future technology can have disasterous ramifications on the time stream including the destruction of Temporals.
-* Avoid Paradoxes. Keep your time jumps to a minimum and carefully log all jumps. If you accidentally encounter a past self, you will trigger a Time Loop Paradox and will be trapped repeating the same series of events unless another time traveller saves you.
-* Beware of other Time Travellers. Other travellers outside the Corps exist. Some are friendly. Some are not. Always remember how powerful a weapon time travel is, and do not let it be used against you.
-* Keep your presense a secret. One of the most effective ways to dispose of rival time travellers is to identify them, go back in time and ambush them. If no one knows who you are, you will be much safer.
-* Time Currents - Time travel is difficult to precisely control. Sometime, travellers are drawn to a particular moment in time (often significant) and may find it hard to leave.
-* Law of Death - A person who has never travelled in time is called a Transient or an Ephemeral. That person can have their history rewritten any number of times including being brought back to life. Once a person travels through time, however, they are now called a Temporal and their history is no longer connected to their original timeline. When a Temporal dies, their history ends and nothing can prevent them from dying at that exact age regardless of their location or situation. After a mission is successfully completed, it is standard practice to try to revise the history of any Temporal casualties to inform them of their unavoidable deaths and allow them to live their last time as they choose.
+        Guide to Time Travel
+        * Don'tt experiment with Time Travel. Many have disappeared and are presumed dead from experimentation. Predicting the outcome of Temporal mechanics is best left to the scientists.
+        * Don't Alter History. Interfering with major incidents or people or displaying future technology can have disasterous ramifications on the time stream including the destruction of Temporals.
+        * Avoid Paradoxes. Keep your time jumps to a minimum and carefully log all jumps. If you accidentally encounter a past self, you will trigger a Time Loop Paradox and will be trapped repeating the same series of events unless another time traveller saves you.
+        * Beware of other Time Travellers. Other travellers outside the Corps exist. Some are friendly. Some are not. Always remember how powerful a weapon time travel is, and do not let it be used against you.
+        * Keep your presense a secret. One of the most effective ways to dispose of rival time travellers is to identify them, go back in time and ambush them. If no one knows who you are, you will be much safer.
+        * Time Currents - Time travel is difficult to precisely control. Sometime, travellers are drawn to a particular moment in time (often significant) and may find it hard to leave.
+        * Law of Death - A person who has never travelled in time is called a Transient or an Ephemeral. That person can have their history rewritten any number of times including being brought back to life. Once a person travels through time, however, they are now called a Temporal and their history is no longer connected to their original timeline. When a Temporal dies, their history ends and nothing can prevent them from dying at that exact age regardless of their location or situation. After a mission is successfully completed, it is standard practice to try to revise the history of any Temporal casualties to inform them of their unavoidable deaths and allow them to live their last time as they choose.
 
-Time Tricks
-* False Leads - Opposition time travelers are always looking for information about past activity, so they can go back and ambush you. Creating false information can trick your opponents into creating an ambush that you can ambush instead.
-* Gather Allies - Every time period has powerful people. A simple trick is to go pastward and gain someone's trust at an early period and then use that influence later.
-* See You in a Minute - Opponent time travelers are always paranoid about being ambushed in the past. Jumping only a few minutes into the future of a conflict can be an unexpected suprise.
-* I've Been Here All the Time - A time traveler can hide his Temporal Rotor in an unexpected place, like a jail cell, and use it to travel and return only seconds later. In this way the traveler appears to have never left."
+        Time Tricks
+        * False Leads - Opposition time travelers are always looking for information about past activity, so they can go back and ambush you. Creating false information can trick your opponents into creating an ambush that you can ambush instead.
+        * Gather Allies - Every time period has powerful people. A simple trick is to go pastward and gain someone's trust at an early period and then use that influence later.
+        * See You in a Minute - Opponent time travelers are always paranoid about being ambushed in the past. Jumping only a few minutes into the future of a conflict can be an unexpected suprise.
+        * I've Been Here All the Time - A time traveler can hide his Temporal Rotor in an unexpected place, like a jail cell, and use it to travel and return only seconds later. In this way the traveler appears to have never left."
       :unitmap
        (base/unitmap
         "Magellus IX-g"
@@ -3228,12 +3142,12 @@ Time Tricks
           :reference "Krell, Forbidden Planet"
           :summary
            "* Magellus IX is a gas giant and 9th and last planet at the edge of the Magellus White Dwarf system.
-* Magellus IX-g is the 7th of Magellus' 11 moons. It is a barren rock except for the enormous complex hidden inside it.
-* The complex itself is fantasitcally large. Every room feels palacial. Rooms and doors are built for creatures easily 3 times human height and width with large amounts of open floor space. No furniture exists suggesting the forerunners never sat or lay down. Most of the floors are covered with a soft, spongy material that serves as carpeting and indicates that the forerunners had sensitive feet or undersides. There are no stairs, only ramps and lifts of unknown construction. Rooms are apparently self cleaning, while lights and displays appear spontaneously from featureless walls.
-* Spacedock - One of the many scientific labs has been retrofitted into a functional spacedock for smaller craft.
-* Power Plant - The power section appears to be a single giant corridor with minimal instrumentation ending in a huge vault door with a black orb suspended over it.
-* Eye of Harmony - Beyond the vault door lies a small black hole held in perfect balance by completely reflecting its own devastating gravitational force back upon itself. The technology to achieve this feat lies completely outside of our understanding.
-* History - A scientific team accidentally discovered that a seemingly non-descript moon was a technological marvel left by a long dead civilization. Within lay a massive complex and elegant advanced technology. But most remarkable of all, the moon was hollow and contained, at its core, a small black hole held in perfect symmetrical stasis by unfathomable forces. The scientists immediately knew that this technology was far too advanced to share with any political group. So they kept it a secret and studied it. Disturbingly, the race who built it left no record of their existence.  No trace of language, personality, or even habitation of the station remained. It was as if they had never existed. Common conjecture claims that they were somehow erased from history. Years later, the scientists discoverd the purpose of the asteroid and the black hole it contained: to enable individuals to travel through the center of the black hole and travel back through time. The first few trips back were uneventful besides learning some important lessons about causality, but soon the travelers found that they had attracted the attention of another time traveling race, the [Radiance]. And thus began a strange battle of attrition between the the Radiance and what would become the Temporals with all of the Past, Present, and Future hanging in the balance."
+            * Magellus IX-g is the 7th of Magellus' 11 moons. It is a barren rock except for the enormous complex hidden inside it.
+            * The complex itself is fantasitcally large. Every room feels palacial. Rooms and doors are built for creatures easily 3 times human height and width with large amounts of open floor space. No furniture exists suggesting the forerunners never sat or lay down. Most of the floors are covered with a soft, spongy material that serves as carpeting and indicates that the forerunners had sensitive feet or undersides. There are no stairs, only ramps and lifts of unknown construction. Rooms are apparently self cleaning, while lights and displays appear spontaneously from featureless walls.
+            * Spacedock - One of the many scientific labs has been retrofitted into a functional spacedock for smaller craft.
+            * Power Plant - The power section appears to be a single giant corridor with minimal instrumentation ending in a huge vault door with a black orb suspended over it.
+            * Eye of Harmony - Beyond the vault door lies a small black hole held in perfect balance by completely reflecting its own devastating gravitational force back upon itself. The technology to achieve this feat lies completely outside of our understanding.
+            * History - A scientific team accidentally discovered that a seemingly non-descript moon was a technological marvel left by a long dead civilization. Within lay a massive complex and elegant advanced technology. But most remarkable of all, the moon was hollow and contained, at its core, a small black hole held in perfect symmetrical stasis by unfathomable forces. The scientists immediately knew that this technology was far too advanced to share with any political group. So they kept it a secret and studied it. Disturbingly, the race who built it left no record of their existence.  No trace of language, personality, or even habitation of the station remained. It was as if they had never existed. Common conjecture claims that they were somehow erased from history. Years later, the scientists discoverd the purpose of the asteroid and the black hole it contained: to enable individuals to travel through the center of the black hole and travel back through time. The first few trips back were uneventful besides learning some important lessons about causality, but soon the travelers found that they had attracted the attention of another time traveling race, the [Radiance]. And thus began a strange battle of attrition between the the Radiance and what would become the Temporals with all of the Past, Present, and Future hanging in the balance."
           :titles "Babylon Complex"
           :length "400km")
         "Chronos Program"
@@ -3241,13 +3155,13 @@ Time Tricks
           :name "Chronos Program"
           :reference
            "* Chronos is online - Chronos
-* Chronos is everywhere - Chronos
-* I cannot answer that at this time. - Chronos"
+            * Chronos is everywhere - Chronos
+            * I cannot answer that at this time. - Chronos"
           :summary
            "* Chronos is a computer program uploaded into the alien sensor network within the Babylon asteroid. It was designed to interpret the sensor data and relay information through the [Temporal Vortex] across Time.
-* Personality - The alien systems, however, have significantly changed Chronos, and although obedient, the program has definitely developed an independent personality with an unknown set of goals.
-* Time travelers depend heavily on Chronos for support, but have little trust for the evasive answers, omissions, and cryptic, nuanced messages it provides.
-* Engineers work tirelessly to gain control over Chronos, and Chronos does not hinder them in any way. However, every attempt to purge, patch, or restart Chronos have had no effect. Some theorize that Chronos exists through time now and could never be removed without creating a massive paradox. Others believe that the Babylon sensor network was already sentient and is masquerading as the Chronos program.")
+            * Personality - The alien systems, however, have significantly changed Chronos, and although obedient, the program has definitely developed an independent personality with an unknown set of goals.
+            * Time travelers depend heavily on Chronos for support, but have little trust for the evasive answers, omissions, and cryptic, nuanced messages it provides.
+            * Engineers work tirelessly to gain control over Chronos, and Chronos does not hinder them in any way. However, every attempt to purge, patch, or restart Chronos have had no effect. Some theorize that Chronos exists through time now and could never be removed without creating a massive paradox. Others believe that the Babylon sensor network was already sentient and is masquerading as the Chronos program.")
         "Temporal Director"
          (base/unit
           :name "Temporal Director"
@@ -3261,8 +3175,8 @@ Time Tricks
           :name "Temporal Event Guard"
           :summary
            "* A field agent in Temporal Intelligence. Event Guards are posted in important time periods and quietly observe events to make sure no changes occur compared to their normal historical events. Any deviation from normal history is a sign of a [Temporal Distortion Wave]. If a change is found, the guard immediately sends a message to headquarters and then jumps futureward to attempt to stop the wave.
-* Event Guards are under strict orders to maintain their cover and not alter history in any way, including not aiding other Temporal personel on other missions.
-* In order to closely observe, historical events, the Event Guards enter the time stream and get as close as possible to a major event. They then observe the event, comparing it against their research and then Loop Trap themselves in the time period, so they are observing the event over and over again. Eventually, they will be relieved by a replacement team. The replacement team will arrive moments after the original team arrived to send them home. To the Event Guards, they will arrive in the time period and be immediately discharged, though they may remember the events using [Paranormal Memory].")
+            * Event Guards are under strict orders to maintain their cover and not alter history in any way, including not aiding other Temporal personel on other missions.
+            * In order to closely observe, historical events, the Event Guards enter the time stream and get as close as possible to a major event. They then observe the event, comparing it against their research and then Loop Trap themselves in the time period, so they are observing the event over and over again. Eventually, they will be relieved by a replacement team. The replacement team will arrive moments after the original team arrived to send them home. To the Event Guards, they will arrive in the time period and be immediately discharged, though they may remember the events using [Paranormal Memory].")
         "Temporal Intelligence Agent"
          (base/unit
           :name "Temporal Intelligence Agent"
@@ -3293,7 +3207,7 @@ Time Tricks
           :name "Chronans"
           :summary
            "* The beings that captured the Black Hole and built the Temporal Rotor remain a mystery. No record can be found of their cultures or their bodies, and the Temporal Rotor will not travel to any point in their history, presumably as a fail-safe against temporal manipulation. The fact that no trace of their race exists except the Temporal Rotor is disturbing and leads to speculation that they were somehow wiped out by their own device or another time travelling species. Some speculate that the Chronans were eliminated by the Radiance, and that their fate is what the Temporals can expect if the Radiance is victorious, perhaps leading to the erasure of the entire human race from history.
-* The vast, vaulted corridors and rooms of Chronos Station lead one to believe that these creatures were bulky masses about 10-15 feet (3-5m) tall. The lack of stairs implies that the creatures were legless, but that could just be a comfort or aesthetic choice.")
+            * The vast, vaulted corridors and rooms of Chronos Station lead one to believe that these creatures were bulky masses about 10-15 feet (3-5m) tall. The lack of stairs implies that the creatures were legless, but that could just be a comfort or aesthetic choice.")
         :Radiance
          (base/unit
           :name "Radiance"
@@ -3301,9 +3215,9 @@ Time Tricks
           :reference "* The goal of the Radians remains a mystery, but they appear to want everyone throughout time to live as they do in a totally regimented, completely predictable society. This goal is obviously, hopelessly unattainable. To devote the entire resources and enegies of one's race and culture to an unattainable outcome must be called madness. Among humans, it is a common fantasy to 'rule the world', 'rule the galaxy', or 'rule the universe'. These pipedreams are almost always the stuff of fiction and fantasy, 	designed to entertain. Those who have taken them seriously are regarded as madmen. Now imagine even fantasizing about 'ruling every point in time in every dimension'. The very concept is laughable, yet the Radiance takes this seriously and are committed to acheiving it. Despite its insanity, their efforts pose a serious threat to everyone, everywhere, everywhen."
           :summary
            "* The Radiance is an enormous energy being of vast power originating from a time near the birth of the universe. It has been content to bask in the fantastic energies of the Big Bang until it perceived the use of time travel. The Radiance is completely committed to what it considers a peacefyl, orderly universe, and the ripples created by time travellers are something it cannot allow.
-* The Radiance can project parts of itself through time and space though it is loath to do so. These projections appear as columns of energy that wield vast destructive power.
-* As a being of pure Order, the Radiance appreciates order and despises chaos of any kind. It prefers authoritarian rule over democracies. It dislikes individual expression, but it does appreciate art and beauty.
-* The Temporals have assumed that the Radiance projections are an entire race of energy creatures instead of a single being and have misinterpreted its name as Raydians."
+            * The Radiance can project parts of itself through time and space though it is loath to do so. These projections appear as columns of energy that wield vast destructive power.
+            * As a being of pure Order, the Radiance appreciates order and despises chaos of any kind. It prefers authoritarian rule over democracies. It dislikes individual expression, but it does appreciate art and beauty.
+            * The Temporals have assumed that the Radiance projections are an entire race of energy creatures instead of a single being and have misinterpreted its name as Raydians."
           :titles "Raydians")))
     "Temporal Vehicles"
      (section
@@ -3316,15 +3230,15 @@ Time Tricks
           :image "DistantFuture/TimeRotor.jpg"
           :reference
            "* Eternal Sunshine of the Spotless Mind
-* Flatliners
-* Vortex in Doctor Who credits
-* Time Stranger Anime
-* Time Travel in Terminator Series"
+            * Flatliners
+            * Vortex in Doctor Who credits
+            * Time Stranger Anime
+            * Time Travel in Terminator Series"
           :summary
            "* Description - The Temporal Rotor is an amazing device created by a vanished civilization. It is mostly a communication device that can reach into the Temporal Vortex and communicate with the central computer Chronos on the asteroid Babylon. Chronos harnesses the black hole hidden within Bablyon to move the Time Rotor and its operator through time and space. It is perhaps the most powerful device ever created.
-* Activating the Temporal Rotor - When the Temporal Rotor is activated, static electricity begins to build in the area. At full strength the static is dangerous, so travellers should not move to avoid discharge. A glowing field begins to form. Travellers heart rate begins to climb and they have a sudden feeling of intense, unnatural danger and imminent death. Hearts begin to fibrilate and flatline.
-* Entering the Vortex - The travellers blink and become aware that they are in the Vortex. Further, they recognize that they have always been in the Vortex. Every moment of their life remembered as if it just occurred. Only their future remains unseen. Time in the Vortex has no meaning, so travellers may leave immediately or stay for an eternity before moving on.
-* Leaving the Vortex - Leaving is just as traumatic as entering. As the Temporal Rotor slows, the travellers begin to forget all that they have just remembered. It is like losing one's mind bit by bit. They feel torn apart and incomplete. Soon they start losing coherent thought, their minds becoming simple and primal. Their senses and desires become simple: Food, Sex, Fear, Violence, Warmth ... Food, Fear, Violence, Warmth ... Food, Warmth ... Warmth. All is dark, wet, and warm as it has always been. Soft, pink bubbles surround and comfort you. You have no wants. You are complete. Suddenly a bright light blinds you, and happiness and security are torn from you. And there is pain, pain where there never was pain before. Waves of burning pain crush you, chew you up, and spit you out. You lie on the ground, cold and in shock. A new pressure builds in your chest, and without thinking you gasp and take in your first breath. Your eyes open to see the last lights on the Temporal Rotor wink out. You are coverered in a heavy, red jelly like congealed blood. The jelly quickly dries to dust and disappears. You rise and feel healthier than ever before. Old wounds and scars are gone as if they never were, and you are different: your skin, your teeth, your hair, your language all are as if you were born and lived your life in this time and place. Your equipment is gone and your clothes have been replaced with simple native garb: a gift from Chronos."
+            * Activating the Temporal Rotor - When the Temporal Rotor is activated, static electricity begins to build in the area. At full strength the static is dangerous, so travellers should not move to avoid discharge. A glowing field begins to form. Travellers heart rate begins to climb and they have a sudden feeling of intense, unnatural danger and imminent death. Hearts begin to fibrilate and flatline.
+            * Entering the Vortex - The travellers blink and become aware that they are in the Vortex. Further, they recognize that they have always been in the Vortex. Every moment of their life remembered as if it just occurred. Only their future remains unseen. Time in the Vortex has no meaning, so travellers may leave immediately or stay for an eternity before moving on.
+            * Leaving the Vortex - Leaving is just as traumatic as entering. As the Temporal Rotor slows, the travellers begin to forget all that they have just remembered. It is like losing one's mind bit by bit. They feel torn apart and incomplete. Soon they start losing coherent thought, their minds becoming simple and primal. Their senses and desires become simple: Food, Sex, Fear, Violence, Warmth ... Food, Fear, Violence, Warmth ... Food, Warmth ... Warmth. All is dark, wet, and warm as it has always been. Soft, pink bubbles surround and comfort you. You have no wants. You are complete. Suddenly a bright light blinds you, and happiness and security are torn from you. And there is pain, pain where there never was pain before. Waves of burning pain crush you, chew you up, and spit you out. You lie on the ground, cold and in shock. A new pressure builds in your chest, and without thinking you gasp and take in your first breath. Your eyes open to see the last lights on the Temporal Rotor wink out. You are coverered in a heavy, red jelly like congealed blood. The jelly quickly dries to dust and disappears. You rise and feel healthier than ever before. Old wounds and scars are gone as if they never were, and you are different: your skin, your teeth, your hair, your language all are as if you were born and lived your life in this time and place. Your equipment is gone and your clothes have been replaced with simple native garb: a gift from Chronos."
           :height "1.5m"
           :width ".2m")
         :Timefighter
@@ -3332,6 +3246,7 @@ Time Tricks
           :name "Timefighter"))))))
 
 (func chapter_unique_aliens : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Unique Aliens"
   :sectionmap

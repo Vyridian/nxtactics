@@ -8,15 +8,16 @@
   :image "Superpowers.jpg"
   :chaptermap
    (base/chaptermap<-chapterlist
-    (chapter_superheroes_overview)
-    (chapter_superhero_characters)
-    (chapter_dc_universe)
-    (chapter_dragonball_z)
-    (chapter_marvel_universe)
-    (chapter_original_groups)
+    (chapter_superheroes_overview tactics)
+    (chapter_superhero_characters tactics)
+    (chapter_dc_universe tactics)
+    (chapter_dragonball_z tactics)
+    (chapter_marvel_universe tactics)
+    (chapter_original_groups tactics)
    )))
 
 (func chapter_superheroes_overview : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Superheroes Overview"
   :sectionmap
@@ -25,6 +26,7 @@
      :name "Why Tactics: Superheroes?"))))
 
 (func chapter_superhero_characters : base/chapter
+ [tactics : base/tactics]
  (base/chapter
   :name "Superhero Characters"
   :sectionmap
@@ -86,7 +88,8 @@
             * Escape Routes - Villians somehow manage to escape certain death on a regular basis. They are always well prepared, and they also seem almost as lucky as the heroes."))))))
 
 (func chapter_dc_universe : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "DC Universe"
   :sectionmap
    (base/sectionmap<-sectionlist
@@ -99,10 +102,9 @@
          :name "Batman"
          :image "Superheroes/Batman.png"
          :unitskillmap
-          (base/unitskillmap
-           :Mastermind
-            (base/unitskill
-             :name "Mastermind")))
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
        "Green Lantern"
         (base/unit
          :name "Green Lantern"
@@ -119,7 +121,8 @@
         (base/unit
          :name "Superman"
          :image "Superheroes/Superman.png"
-         :reference "* Spider-Man is actually Peter Parker. When that character wakes up in the morning, he's Peter Parker. He has to put on a costume to become Spider-Man. And it is in that characteristic Superman stands alone. Superman didn't become Superman. Superman was born Superman. When Superman wakes up in the morning, he's Superman. His alter ego is Clark Kent. His outfit with the big red 'S', that's the blanket he was wrapped in as a baby when the Kents found him. Those are his clothes.  What Kent wears - the glasses, the business suit - that's the costume. That's the costume Superman wears to blend in with us. Clark Kent is how Superman views us. And what are the characteristics of Clark Kent. He's weak... he's unsure of himself... he's a coward. Clark Kent is Superman's critique on the whole human race. - Bill, Kill Bill Vol 2."
+         :reference
+          "* Spider-Man is actually Peter Parker. When that character wakes up in the morning, he's Peter Parker. He has to put on a costume to become Spider-Man. And it is in that characteristic Superman stands alone. Superman didn't become Superman. Superman was born Superman. When Superman wakes up in the morning, he's Superman. His alter ego is Clark Kent. His outfit with the big red 'S', that's the blanket he was wrapped in as a baby when the Kents found him. Those are his clothes.  What Kent wears - the glasses, the business suit - that's the costume. That's the costume Superman wears to blend in with us. Clark Kent is how Superman views us. And what are the characteristics of Clark Kent. He's weak... he's unsure of himself... he's a coward. Clark Kent is Superman's critique on the whole human race. - Bill, Kill Bill Vol 2."
          :unitpowermap
           (base/unitpowermap
            :Strength
@@ -139,10 +142,9 @@
          :name "Brainiac"
          :image "Superheroes/Brainiac.png"
          :unitskillmap
-          (base/unitskillmap
-           :Mastermind
-            (base/unitskill
-             :name "Mastermind")))
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
        :Catwoman
         (base/unit
          :name "Catwoman"
@@ -152,10 +154,9 @@
          :name "Darkseid"
          :image "Superheroes/Darkseid.png"
          :unitskillmap
-          (base/unitskillmap
-           :Mastermind
-            (base/unitskill
-             :name "Mastermind")))
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
        :Joker
         (base/unit
          :name "Joker"
@@ -163,16 +164,16 @@
          :summary
           "* You won't kill me out of some misplaced sense of self-righteousness, and I won't kill you because you're just too much fun. I think you and I are destined to do this forever."
          :unitskillmap
-          (base/unitskillmap
-           :Mastermind
-            (base/unitskill
-             :name "Mastermind")))
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
        :Sinestro
         (base/unit
          :name "Sinestro"
          :image "Superheroes/Sinestro.png"))))))
 
 (func chapter_dragonball_z : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Dragonball Z"
   :sectionmap
@@ -181,36 +182,36 @@
      (section
       :name "Dragonball Equipment"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Battle Armor"
-         (item
+         (base/item
           :name "Battle Armor")
         "Dragon Radar"
-         (item
+         (base/item
           :name "Dragon Radar")
         "Flying Nimbus"
-         (item
+         (base/item
           :name "Flying Nimbus")
         "Power Pole"
-         (item
+         (base/item
           :name "Power Pole")
         "Regeneration Chamber"
-         (item
+         (base/item
           :name "Regeneration Chamber")
         :Scouter
-         (item
+         (base/item
           :name "Scouter"
           :summary "* +2 [Sense Power Levels] (Max 4) even if one does not have this ability.")
         "Senzu Bean"
-         (item
+         (base/item
           :name "Senzu Bean")))
     "Dragonball Rules"
      (section
       :name "Dragonball Rules"
       :powermap
-       (powermap
+       (base/powermap
         "Zenkai Attacks"
-         (power
+         (base/power
           :name "Zenkai Attacks"
           :titles "Final Power"
           :abilitymap
@@ -262,7 +263,7 @@
              (ability
               :name "Spirit Bomb")))
         "Zenkai Defense"
-         (power
+         (base/power
           :name "Zenkai Defense"
           :abilitymap
            (abilitymap
@@ -286,7 +287,7 @@
               :name "Kiai"
               :summary "By screaming very loud you disperse several weaker Ki attacks.")))
         :Zenkai
-         (power
+         (base/power
           :name "Zenkai"
           :abilitymap
            (abilitymap
@@ -395,7 +396,7 @@
                "* Unlock Potential increases combat skills to level 20.
                 * This is equal to some of the Ginyu Force (Krillin vs. Guildo)")))
         "Cell Android"
-         (power
+         (base/power
           :name "Cell Android"
           :abilitymap
            (abilitymap
@@ -424,7 +425,7 @@
                "* Combat related skills raise to level 32.
                 * Equal to Super Saiyan 2 (100% Perfect Cell vs Super Saiyan 2 Gohan)")))
         :Friezas
-         (power
+         (base/power
           :name "Friezas"
           :abilitymap
            (abilitymap
@@ -462,10 +463,10 @@
               :summary
                "* Combat related skills raise to level 26.")))
         "Gero Android"
-         (power
+         (base/power
           :name "Gero Android")
         :Majins
-         (power
+         (base/power
           :name "Majins"
           :abilitymap
            (abilitymap
@@ -491,7 +492,7 @@
               :summary
                "* Combat related skills raise to level 35.")))
         :Namekian
-         (power
+         (base/power
           :name "Namekian"
           :abilitymap
            (abilitymap
@@ -522,7 +523,7 @@
                 * Can destroy Imperfect Cell (Piccolo vs. Imperfect Cell)"
               :titles "Merge with Kami")))
         "Red Ribbon Android"
-         (power
+         (base/power
           :name "Red Ribbon Android"
           :abilitymap
            (abilitymap
@@ -543,7 +544,7 @@
               :name "Inexhaustible"
               :summary "* [Activate]: Remove all [Stun Tokens].")))
         :Saiyan
-         (power
+         (base/power
           :name "Saiyan"
           :summary
            "* Both Goku and Vegeta are seen to be able to operate unencumbered at 100x gravity before becoming Super Saiyans (carry 8 tons without penalty). After becoming Ascended Vegeta comments that 500x gravity may start to become a disadvantage for him (40tons before penalty)."
@@ -1221,6 +1222,7 @@
               :level "15"))))))))
 
 (func chapter_marvel_universe : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Marvel Universe"
   :sectionmap
@@ -1438,10 +1440,9 @@
                  (base/unitability
                   :name "Eternal Youth"))))
           :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))))
+           (base/unitskillmap<-tactics-keys
+            tactics
+            "Mastermind"))))
     :Asgardians
      (section
       :name "Asgardians"
@@ -1470,15 +1471,15 @@
          (base/unit
           :name "Beta Ray Bill"
           :image "Superheroes/BetaRayBill.png"
+          :unitskillmap
+           (base/unitskillmap<-tactics-keys
+            tactics
+            "Melee")
           :unitpowermap
-           (base/unitpowermap
-            :Strength
-             (base/unitpower
-              :name "Strength"
-              :strength "100tons")
-            :Melee
-             (base/unitpower
-              :name "Melee")))
+           (base/unitpowermap<-unitpowerlist
+            (base/unitpower
+             :name "Strength"
+             :strength "100tons")))
         "Destroyer, The"
          (base/unit
           :name "Destroyer, The"
@@ -1492,50 +1493,33 @@
             * Banner: I don't think we should be focusing on Loki. That guy's brain is a bag full of cats. You can smell crazy on him. Thor: Have a care how you speak! Loki is beyond reason, but he is of Asgard and he is my brother! Widow: He killed eighty people in two days. Thor: He...is adopted. - Bruce Banner, Thor, and Black Widow, The Avengers"
           :titles "Loki Laufeyson"
           :unitpowermap
-           (base/unitpowermap
-            :Strength
-             (base/unitpower
-              :name "Strength"
-              :strength "30tons")
-            :Longevity
-             (base/unitpower
-              :name "Longevity"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Eternal Youth"
-                 (base/unitability
-                  :name "Eternal Youth")))))
+           (base/unitpowermap<-unitpowerlist
+            (base/unitpower
+             :name "Strength"
+             :strength "30tons")
+            (base/unitpower<-tactics-key-abilities
+             tactics "Longevity"
+             (stringlist "Eternal Youth"))))
         :Odin
          (base/unit
           :name "Odin"
           :image "Superheroes/Odin.png"
           :unitpowermap
-           (base/unitpowermap
-            :Longevity
-             (base/unitpower
-              :name "Longevity"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Eternal Youth"
-                 (base/unitability
-                  :name "Eternal Youth")))))
+           (base/unitpowermap<-unitpowerlist
+            (base/unitpower<-tactics-key-abilities
+             tactics "Longevity"
+             (stringlist "Eternal Youth"))))
         :Surtur
          (base/unit
           :name "Surtur"
           :image "Superheroes/Surtur.png"
           :unitpowermap
-           (base/unitpowermap
-            :Fire
-             (base/unitpower
-              :name "Fire")
-            :Longevity
-             (base/unitpower
-              :name "Longevity"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Eternal Youth"
-                 (base/unitability
-                  :name "Eternal Youth")))))
+           (base/unitpowermap<-unitpowerlist
+            (base/unitpower<-tactics-key
+             tactics "Fire")
+            (base/unitpower<-tactics-key-abilities
+             tactics "Longevity"
+             (stringlist "Eternal Youth"))))
         :Thor
          (base/unit
           :name "Thor"
@@ -1595,17 +1579,20 @@
            "* Rogers: Arnim Zola was a German scientist who worked with the Red Skull. He's been dead for years.
             * Zola: First correction, I am Swiss. Second, look around you, I have never been more alive! In 1972, I received a terminal diagnosis. Science could not save by body. My mind, however, that was worth saving... on tow hundred thousand feet of data banks! You are standing in my brain. - Captain America: The Winter Soldier
             * Zola: I am afraid I have been stalling Captain. Admit it. It is better this way. We are both of us...out of time."
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
+         :unitskillmap
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
         "Black Widow"
          (base/unit
           :name "Black Widow"
           :image "Superheroes/BlackWidow.png"
           :reference
-           "* I've got red in my ledger, I'd like to wipe it out. ... Can you wipe out that much red? Drakov's daughter, Tugenov, the hospital fire? ... Your ledger is dripping, it's gushing red, and you think saving a man no more virtuous than yourself will change anything? ... You lie and kill in the service of liars and killers. ... No, I won't touch Barton. Not until I make him kill you! Slowly, intimately, in every way he knows you fear! ... This is my bargain, you mewling quim!  You're a monster!  No, you brought the monster.  So, Banner... that's your play. ... Thank you for your cooperation. - Loki and Black Widow, The Avengers")
+           "* I've got red in my ledger, I'd like to wipe it out. ... Can you wipe out that much red? Drakov's daughter, Tugenov, the hospital fire? ... Your ledger is dripping, it's gushing red, and you think saving a man no more virtuous than yourself will change anything? ... You lie and kill in the service of liars and killers. ... No, I won't touch Barton. Not until I make him kill you! Slowly, intimately, in every way he knows you fear! ... This is my bargain, you mewling quim!  You're a monster!  No, you brought the monster.  So, Banner... that's your play. ... Thank you for your cooperation. - Loki and Black Widow, The Avengers"
+         :unitskillmap
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
         "Captain America"
          (base/unit
           :name "Captain America"
@@ -1659,11 +1646,10 @@
          (base/unit
           :name "Mandarin, The"
           :image "Superheroes/Mandarin.png"
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
+         :unitskillmap
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
         "Red Skull, The"
          (base/unit
           :name "Red Skull, The"
@@ -1671,11 +1657,10 @@
           :reference
            "* You are deluded, Captain. You pretend to be a simple soldier, but in reality you are just afraid to admit that we have left humanity behind. Unlike you, I embrace it proudly. Without fear!
             * You could have the power of the gods! Yet you wear a flag on your chest and think you fight a battle of nations! I have seen the future, Captain! There are no flags!"
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
+         :unitskillmap
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
         :Ultron
          (base/unit
           :name "Ultron"
@@ -1695,11 +1680,10 @@
             :Endurance
              (base/unitpower
               :name "Endurance"))
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
+         :unitskillmap
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
         "Wasp, The"
          (base/unit
           :name "Wasp, The"
@@ -1972,10 +1956,9 @@
                  (base/unitability
                   :name "Reincarnation - Transference"))))
           :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
+           (base/unitskillmap<-tactics-keys
+            tactics
+            "Mastermind"))
         "Bug, Micronaut"
          (base/unit
           :name "Bug, Micronaut"
@@ -2054,11 +2037,10 @@
          (base/unit
           :name "Kingpin"
           :image "Superheroes/Kingpin.png"
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
+          :unitpowermap
+           (base/unitpowermap<-tactics-keys
+            tactics
+            "Mastermind"))
         "Lizard, The"
          (base/unit
           :name "Lizard, The"
@@ -2113,11 +2095,10 @@
                 "Eternal Youth"
                  (base/unitability
                   :name "Eternal Youth"))))
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
+         :unitskillmap
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Mastermind"))
         "Black Queen"
          (base/unit
           :name "Black Queen"
@@ -2288,12 +2269,13 @@
                   :name "Long Life"))))))))))
 
 (func chapter_original_groups : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Original Groups"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Miscellaneous Groups"
-     (section
+     (base/section
       :name "Miscellaneous Groups"
       :unitmap
        (base/unitmap

@@ -7,18 +7,19 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_books_science_fiction {
 
   /**
-   * @function chapter_alien___predator
+   * @function chapter_alien_predator
+   * @param  {tactics} tactics
    * @return {chapter}
    */
-  static t_chapter_alien___predator = {
+  static t_chapter_alien_predator = {
     vx_type: vx_core.t_type
   }
-  static e_chapter_alien___predator = {
-    vx_type: nx_tactics_books_science_fiction.t_chapter_alien___predator
+  static e_chapter_alien_predator = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_alien_predator
   }
 
-  // (func chapter_alien___predator)
-  static f_chapter_alien___predator() {
+  // (func chapter_alien_predator)
+  static f_chapter_alien_predator(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -115,7 +116,7 @@ export default class nx_tactics_books_science_fiction {
               ":image",
               "AlienPredator/AlienFaceHugger.png",
               ":reference",
-              "* I haven't seen anything like that except, uh, molecular acid.  It must be using it for blood.  It's got a\nwonderful defense mechanism.  You don't dare kill it. - Parker and Brett, Alien",
+              "* I haven't seen anything like that except, uh, molecular acid. It must be using it for blood. It's got a wonderful defense mechanism. You don't dare kill it. - Parker and Brett, Alien",
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
@@ -368,7 +369,7 @@ export default class nx_tactics_books_science_fiction {
             "Marine Heavy Weapons",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Marine Heavy Weapons", ":reference", "* Look, man. I only need to know one thing: where they are. - Vasquez, Aliens"),
             "Marine Lieutenant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Marine Lieutenant", ":reference", "* How many drops is this for you, Lieutenant? Thirty eight... simulated. How many *combat* drops? Uh,\ntwo. Including this one. - Vasquez and Gorman, Aliens"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Marine Lieutenant", ":reference", "* How many drops is this for you, Lieutenant? Thirty eight... simulated. How many *combat* drops? Uh, two. Including this one. - Vasquez and Gorman, Aliens"),
             "Marine Pilot",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Marine Pilot", ":reference", "* We're in the pipe, five by five. - Ferro, Aliens"),
             "Marine Sergeant",
@@ -390,6 +391,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_alternate_realties
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_alternate_realties = {
@@ -400,7 +402,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_alternate_realties)
-  static f_chapter_alternate_realties() {
+  static f_chapter_alternate_realties(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -420,6 +422,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_archetypes
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_archetypes = {
@@ -430,7 +433,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_archetypes)
-  static f_chapter_archetypes() {
+  static f_chapter_archetypes(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Archetypes", ":summary", "* Psionic\n** Preferred Skills: [Telepathy], [Mind Over Matter], [Divination]")
     return output
@@ -438,6 +441,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_battlestar_galactica
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_battlestar_galactica = {
@@ -448,7 +452,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_battlestar_galactica)
-  static f_chapter_battlestar_galactica() {
+  static f_chapter_battlestar_galactica(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -498,6 +502,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_doctor_who
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_doctor_who = {
@@ -508,7 +513,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_doctor_who)
-  static f_chapter_doctor_who() {
+  static f_chapter_doctor_who(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -594,19 +599,19 @@ export default class nx_tactics_books_science_fiction {
               )
             ),
             ":Davros",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Davros", ":image", "DrWho/Davros.png", ":reference", "* To hold in my hand a capsule that contained such power...To know that the tiny pressure of my thumb, enough to break the glass would end...everything...Yes...I WOULD do it. Such power would put me above the Gods! - Davros\n* Across the entire universe, never stopping, never faltering, never fading. People, planets, and stars will become dust, and the dust will become atoms, and the atoms will become...nothing. Into every dimension, every parallel, every single corner of creation. This is my ultimate victory, Doctor: the destruction of reality... itself! - Davros\n* The man who abhors violence, never carrying a gun.  But this is the truth Doctor, you take ordinary people and\nfashion them into weapons...How many more?  Just think how many have died in your name...The Doctor, the man\nwho keeps running, never looking back because he dare not out of shame.  This is my final victory, Doctor.  I\nhave shown you...yourself. - Davros"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Davros", ":image", "DrWho/Davros.png", ":reference", "* To hold in my hand a capsule that contained such power...To know that the tiny pressure of my thumb, enough to break the glass would end...everything...Yes...I WOULD do it. Such power would put me above the Gods! - Davros\n* Across the entire universe, never stopping, never faltering, never fading. People, planets, and stars will become dust, and the dust will become atoms, and the atoms will become...nothing. Into every dimension, every parallel, every single corner of creation. This is my ultimate victory, Doctor: the destruction of reality... itself! - Davros\n* The man who abhors violence, never carrying a gun. But this is the truth Doctor, you take ordinary people and fashion them into weapons...How many more?  Just think how many have died in your name...The Doctor, the man who keeps running, never looking back because he dare not out of shame. This is my final victory, Doctor. I have shown you...yourself. - Davros"),
             "Doctor, The",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Doctor, The", ":image", "DrWho/TheDoctor.png", ":reference", "* Who are you? ... The ground beneath our feet spinning at a 1000 miles an\nhour, and the entire planet is hurtling around the sun at 67,000 miles an hour,\nand I can feel it.  We're falling through space, you and me, clinging to the\nskin of this tiny little world, and if we let go ... That's who I am.  Now\nforget me. - Rose and The Doctor\n* Oh, I'll think of something.  You're just making this up as you go along.\nYup...but I do it brilliantly - The Doctor\n* I've seen him. He's like fire and ice and rage. He's like the night and the\nstorm and the heart of the sun. He's ancient and forever. He burns at the\ncenter of time and he can see the turn of the universe.\n* Is this world protected?  You're not the first lot to have come here.  Oh,\nthere have been so many.  And what you've got to ask is...what happened to\nthem?  Hello, I'm the Doctor.  Basically...run. - The Doctor\n* Everyone's got memories of a holiday they couldn't have be to, or a party\nthey never went to, or met someone for the first time and felt like they've\nknow them all their lives. Time is being rewritten all around us, everyday.\nPeople think their memories are bad, but their memories are fine. The past is\nreally like that. - The Doctor\n* There are laws of time and once upon a time, there were people in charge of\nthose laws, but died. They all died. They all died. And you know who that\nleaves. Me! It has taken me all these years to realize, the laws of time are\nmine. And they will obey me! ... The whole of history could change...the\nfuture of the human race. No one should have that much power. Tough. ... For a\nlong time I thought I was just a survivor, but I'm not. I'm the winner. That's\nwho I am. The Time Lord Victorious. And there is no one to stop you. No. This\nis wrong, Doctor. I don't care who you are. The Time Lord Victorious is wrong!\nThat's for me to decide. ... Is there nothing you can't do? Not anymore.\n- Captain Aldelede and The Doctor\n* Silence will fall when the question is asked...The first question, the\nquestion that must never be answered, hidden in plain sight, the question\nyou've been running from all your life...Doctor WHO?\n* If I run away today. Good people will die. If I stand and fight, some of them\nmight live. Maybe not many. Maybe not for long. Hey, maybe there's no point in\nany of this at all, but its the best I can do. So, I'm going to do it, and I will\nstand here doing it until it kills em. You're going to die too. Someday. What\nwould that be? Have you thought of that? Would you die for? Who I am is where\nI stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.\n* People always get it wrong with Time Lords. We take forever to die. Even if we are too injured to regenerate, every cell in our bodies keeps trying. Dying properly can take days. That's why we like to die among our own kind. They know not to bury us early. I think... In my current condition, it'll take me about... a day and a half to reach the top of the tower. I think, if I'm lucky, I have a day and a half. - Heaven Sent"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Doctor, The", ":image", "DrWho/TheDoctor.png", ":reference", "* Who are you? ... The ground beneath our feet spinning at a 1000 miles an hour, and the entire planet is hurtling around the sun at 67,000 miles an hour, and I can feel it.  We're falling through space, you and me, clinging to the skin of this tiny little world, and if we let go ... That's who I am.  Now forget me. - Rose and The Doctor\n* Oh, I'll think of something.  You're just making this up as you go along. Yup...but I do it brilliantly - The Doctor\n* I've seen him. He's like fire and ice and rage. He's like the night and the storm and the heart of the sun. He's ancient and forever. He burns at the center of time and he can see the turn of the universe.\n* Is this world protected?  You're not the first lot to have come here. Oh, there have been so many. And what you've got to ask is...what happened to them? Hello, I'm the Doctor. Basically...run. - The Doctor\n* Everyone's got memories of a holiday they couldn't have be to, or a party they never went to, or met someone for the first time and felt like they've know them all their lives. Time is being rewritten all around us, everyday. People think their memories are bad, but their memories are fine. The past is really like that. - The Doctor\n* There are laws of time and once upon a time, there were people in charge of those laws, but died. They all died. They all died. And you know who that leaves. Me! It has taken me all these years to realize, the laws of time are mine. And they will obey me! ... The whole of history could change...the future of the human race. No one should have that much power. Tough. ... For a long time I thought I was just a survivor, but I'm not. I'm the winner. That's who I am. The Time Lord Victorious. And there is no one to stop you. No. This is wrong, Doctor. I don't care who you are. The Time Lord Victorious is wrong! That's for me to decide. ... Is there nothing you can't do? Not anymore. - Captain Aldelede and The Doctor\n* Silence will fall when the question is asked...The first question, the question that must never be answered, hidden in plain sight, the question you've been running from all your life...Doctor WHO?\n* If I run away today. Good people will die. If I stand and fight, some of them might live. Maybe not many. Maybe not for long. Hey, maybe there's no point in any of this at all, but its the best I can do. So, I'm going to do it, and I will stand here doing it until it kills em. You're going to die too. Someday. What would that be? Have you thought of that? Would you die for? Who I am is where I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.\n* People always get it wrong with Time Lords. We take forever to die. Even if we are too injured to regenerate, every cell in our bodies keeps trying. Dying properly can take days. That's why we like to die among our own kind. They know not to bury us early. I think... In my current condition, it'll take me about... a day and a half to reach the top of the tower. I think, if I'm lucky, I have a day and a half. - Heaven Sent"),
             ":K-9",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "K-9", ":image", "DrWho/K9.png", ":reference", "The Doctor likes traveling with an entourage. Sometimes they're human, sometimes they're aliens and sometimes they're tin dogs. What about you? Where do you fit in the picture? Me? I'm their man in Havana. I'm their technical support. I'm... Oh my god. I'm the tin dog! - Sarah Jane Smith and Mickey Smith"),
             "Martha Jones",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Martha Jones", ":image", "DrWho/MarthaJones.png", ":reference", "She completely adored him ... Is this going anywhere?  Yes.  Cause he never looked at her twice ... and she wasted years of her life ... and I told her time and time again.  Get out.  So this is me getting out. - Martha Jones and the Doctor"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Martha Jones", ":image", "DrWho/MarthaJones.png", ":reference", "She completely adored him ... Is this going anywhere? Yes. Cause he never looked at her twice ... and she wasted years of her life ... and I told her time and time again. Get out. So this is me getting out. - Martha Jones and the Doctor"),
             "Master, The",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Master, The", ":image", "DrWho/TheMaster.png", ":reference", "* We stand there... 8 years old... staring at the raw power of time and space, just a child.  Some would be inspired... Some would run away ... and some would go mad.  What about you?  Oh, the one who ran away.  I never stopped. - The Doctor and Martha\n* And so it came to pass, that the human race fell and the Earth was no more. And I looked out on my new Dominion as master of all and I thought it good."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Master, The", ":image", "DrWho/TheMaster.png", ":reference", "* We stand there... 8 years old... staring at the raw power of time and space, just a child.  Some would be inspired... Some would run away ... and some would go mad.  What about you? Oh, the one who ran away. I never stopped. - The Doctor and Martha\n* And so it came to pass, that the human race fell and the Earth was no more. And I looked out on my new Dominion as master of all and I thought it good."),
             "Rose Tyler",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rose Tyler", ":image", "DrWho/RoseTyler.png", ":reference", "This is really seeing the future - you just leave us behind! ... Sarah Jane - you were that close to her once, and now ... you never even mention her. ... I don't age. I regenerate. But humans decay.  You wither and you die. Imagine watching that happen to someone you ... You can spend the rest of your life with me. But I can't spend the rest of mine with you. I have to live on, alone. That's the curse of the Timelords. - Rose and the Doctor, Doctor Who"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rose Tyler", ":image", "DrWho/RoseTyler.png", ":reference", "This is really seeing the future - you just leave us behind! ... Sarah Jane - you were that close to her once, and now ... you never even mention her. ... I don't age. I regenerate. But humans decay. You wither and you die. Imagine watching that happen to someone you ... You can spend the rest of your life with me. But I can't spend the rest of mine with you. I have to live on, alone. That's the curse of the Timelords. - Rose and the Doctor, Doctor Who"),
             "Sarah Jane Smith",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sarah Jane Smith", ":image", "DrWho/SarahJaneSmith.png", ":reference", "The universe has to move forward. Pain and loss, they define us as much as happiness or love. Whether it's a world, or a relationship ... Everything has its time.  And everything ends. - Sarah Jane Smith"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sarah Jane Smith", ":image", "DrWho/SarahJaneSmith.png", ":reference", "The universe has to move forward. Pain and loss, they define us as much as happiness or love. Whether it's a world, or a relationship ... Everything has its time. And everything ends. - Sarah Jane Smith"),
             ":Rutan",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rutan", ":image", "DrWho/Rutan.png"),
             ":Sontaran",
@@ -626,6 +631,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_robotech
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_robotech = {
@@ -636,7 +642,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_robotech)
-  static f_chapter_robotech() {
+  static f_chapter_robotech(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -658,6 +664,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_science_fiction_overview
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_science_fiction_overview = {
@@ -668,7 +675,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_science_fiction_overview)
-  static f_chapter_science_fiction_overview() {
+  static f_chapter_science_fiction_overview(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -690,6 +697,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_space_cruiser_yamato
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_space_cruiser_yamato = {
@@ -700,7 +708,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_space_cruiser_yamato)
-  static f_chapter_space_cruiser_yamato() {
+  static f_chapter_space_cruiser_yamato(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -918,6 +926,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_space_opera
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_space_opera = {
@@ -928,7 +937,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_space_opera)
-  static f_chapter_space_opera() {
+  static f_chapter_space_opera(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1217,7 +1226,7 @@ export default class nx_tactics_books_science_fiction {
           ":reference",
           "* I rather like the way his head exploded.",
           ":summary",
-          "* Description - The Chatilians are from the planet Chatil in the Fomalhaut star\nsystem. They are frail, delicate looking, greenish blue plant beings with thin\nbodies and large, bullet-shaped heads. Chatilians are herbivores. They have no real\nmouth, rather they possess facial slits through which they strain their food intake.\nTheir arms and legs are like branches and roots which must be pruned to grow into\nuseful limbs. When angered, Chatilians whine loudly, bug out their eyes, and drool\nyellow spit from their facial slits. This would be somewhat comical, except this is a\nsign that they are generating and then people start dying.\n* Telepathy - They can speak aloud with great difficulty, though they do not normally\nneed to because their skulls are crowned with sensory nodes which allows them\ncommunicate telepathically among themselves. With focus, an empath also may read an\nunprotected mind in close proximity.\n* Psykokinesis - Although Empaths are innocuous looking, they are actually among the\nmore dangerous and formidable opponents in the galaxy. Through the evolutionary\nprocess, they have developed psycho-kinetic power which allows them to harness and\ntransmit psychic energy. This unusual ability is called Generating. Empaths employ\npsychic and illusionary attack forms. Advanced Chatilians can actually crush the\nminds of their enemies.\n* Personality - They are generally considered rude, peculiar, and annoying by other\nraces. They are not overly fond of other races either. They intensely dislike any\ninconvenience including bad weather. A large part of their scientific development has\nbeen toward atmospheric control and terraforming. Chatilians like water but hate any\nkind of physical exertion. They are sensitive to everything, so noise, bright lights,\ngaudy art, hot weather, cold weather, dumb people, etc, etc. all irriate the sedate\nintellectuals to no end.\n* Colonies - Chatilian buildings are strange tiered affairs with rooms and floors of\ndifferent sizes, terraces and skylights everywhere, and stark blank surfaces. The\narchitecture is similar to adobe cities and Mediterraean beach communities. Chatilian\ncities are sprawling low-lying residential areas with all industry and commerical\noperations underground. Trees and plants are allowed to grow naturally throughout the\ncities. The underground is a maze of indirect passages and oddly shaped rooms.\nTourist often get lost which the Chatilians attribute to their limited mental\ncapacity.\n* History - The Chatilians homeworld is closer to its star than Earth. It is hot and\nhumid year round, and its 4 moons reflect much light even at night. In this world,\nmobile plant life evolved instead of animal life. Though all Chatilians speak\ntelepathically, the ability to generate only occurs in 1% of the populace. The ability or inability to generate has created 2\nclasses and numerous, bloody civil wars with one side or the other taking control.\nThe current royal family can generate and their power is buffered by a representative\nparliament. This arrangement has lasted for 500 years, but there always remains a\nrisk of civil war.",
+          "* Description - The Chatilians are from the planet Chatil in the Fomalhaut star system. They are frail, delicate looking, greenish blue plant beings with thin bodies and large, bullet-shaped heads. Chatilians are herbivores. They have no real mouth, rather they possess facial slits through which they strain their food intake. Their arms and legs are like branches and roots which must be pruned to grow into useful limbs. When angered, Chatilians whine loudly, bug out their eyes, and drool yellow spit from their facial slits. This would be somewhat comical, except this is a sign that they are generating and then people start dying.\n* Telepathy - They can speak aloud with great difficulty, though they do not normally need to because their skulls are crowned with sensory nodes which allows them communicate telepathically among themselves. With focus, an empath also may read an unprotected mind in close proximity.\n* Psykokinesis - Although Empaths are innocuous looking, they are actually among the more dangerous and formidable opponents in the galaxy. Through the evolutionary process, they have developed psycho-kinetic power which allows them to harness and transmit psychic energy. This unusual ability is called Generating. Empaths employ psychic and illusionary attack forms. Advanced Chatilians can actually crush the minds of their enemies.\n* Personality - They are generally considered rude, peculiar, and annoying by other races. They are not overly fond of other races either. They intensely dislike any inconvenience including bad weather. A large part of their scientific development has been toward atmospheric control and terraforming. Chatilians like water but hate any kind of physical exertion. They are sensitive to everything, so noise, bright lights, gaudy art, hot weather, cold weather, dumb people, etc, etc. all irriate the sedate intellectuals to no end.\n* Colonies - Chatilian buildings are strange tiered affairs with rooms and floors of different sizes, terraces and skylights everywhere, and stark blank surfaces. The architecture is similar to adobe cities and Mediterraean beach communities. Chatilian cities are sprawling low-lying residential areas with all industry and commerical operations underground. Trees and plants are allowed to grow naturally throughout the cities. The underground is a maze of indirect passages and oddly shaped rooms. Tourist often get lost which the Chatilians attribute to their limited mental capacity.\n* History - The Chatilians homeworld is closer to its star than Earth. It is hot and humid year round, and its 4 moons reflect much light even at night. In this world, mobile plant life evolved instead of animal life. Though all Chatilians speak telepathically, the ability to generate only occurs in 1% of the populace. The ability or inability to generate has created 2 classes and numerous, bloody civil wars with one side or the other taking control. The current royal family can generate and their power is buffered by a representative parliament. This arrangement has lasted for 500 years, but there always remains a risk of civil war.",
           ":titles",
           "Asparagus Men",
           ":unitmap",
@@ -1313,7 +1322,7 @@ export default class nx_tactics_books_science_fiction {
           ":name",
           "Vargr Mercantile League",
           ":summary",
-          "* Description - Vargr are a bipedal, carnivorous race with strong canine/lupine\ncharacteristics. They are short by human standards and are not physically imposing.\n* The Vargr are cunning merchants.\n* Politics - The Vargr lack governmental structures. Mega-corporations operate entire\ncities and colonies, buy and selling them as a package. The corporation operating\na location sub-contracts out all major services, and within small companies grow in\nsymbiosis with the corporation. Vargr corporations believe in constant competition,\nso they are careful to make sure that their rivals remain healthy. This generosity\nto ones rivals is seen as peculiar to other races, but the Vargr have suffered\nthrough the devastating stagnation that monopolies produce and recoil at any tendency\nto recreate those dark days.",
+          "* Description - Vargr are a bipedal, carnivorous race with strong canine/lupine characteristics. They are short by human standards and are not physically imposing.\n* The Vargr are cunning merchants.\n* Politics - The Vargr lack governmental structures. Mega-corporations operate entire cities and colonies, buy and selling them as a package. The corporation operating a location sub-contracts out all major services, and within small companies grow in symbiosis with the corporation. Vargr corporations believe in constant competition, so they are careful to make sure that their rivals remain healthy. This generosity to ones rivals is seen as peculiar to other races, but the Vargr have suffered through the devastating stagnation that monopolies produce and recoil at any tendency to recreate those dark days.",
           ":titles",
           "Canines, Dogs",
           ":unitmap",
@@ -1342,7 +1351,7 @@ export default class nx_tactics_books_science_fiction {
             "Zen Rigeln Anarch",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Zen Rigeln Anarch", ":summary", "* Anarchs are a small sect of Zen that turned their back on the Zen philosophy of\npeace and moderation. Instead, they believe that the Zen must face the other races\non their own terms: with strength. Anarchs are naturally seen as dangerous rebels\nand terrorists by the Zen government and populace. Captured Anarchs should expect\nlife imprisonment.\n* Disruption - Through skin to skin contact, a Zen Anarch may link his/her own\nbody with another person and disrupt the bodily functions of the target. Pain,\nnausea, and heart failure are only a few of the effects that a skilled Anarch can\ninflict."),
             "Zen Rigeln Healer",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Zen Rigeln Healer", ":summary", "* Healing - Through skin to skin contact, a Zen Healer may link his/her own body\nwith an injured person and share his/her healing ability. At high levels of\nproficiency, the Zen can perform incredible feats such as brain surgery.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Zen Rigeln Healer", ":summary", "* Healing - Through skin to skin contact, a Zen Healer may link his/her own body with an injured person and share his/her healing ability. At high levels of proficiency, the Zen can perform incredible feats such as brain surgery.")
           )
         ),
         "Interstellar Vehicles",
@@ -1354,31 +1363,31 @@ export default class nx_tactics_books_science_fiction {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             "Islander Star Sloop",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Islander Star Sloop", ":summary", "* The Islander is the smallest class merchant starship commonly available. It\ncan carry 30tons of cargo, 4 low passage passengers, and 10 coldsleep bays.\n* 1x Light Particle Cannon\n* 6x Light Startorpedoes\n* The Islander has seen many modifications including high speed drives for\ncourier or smuggling as well as heavier armaments.", ":mass", "125tons"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Islander Star Sloop", ":summary", "* The Islander is the smallest class merchant starship commonly available. It can carry 30tons of cargo, 4 low passage passengers, and 10 coldsleep bays.\n* 1x Light Particle Cannon\n* 6x Light Startorpedoes\n* The Islander has seen many modifications including high speed drives for courier or smuggling as well as heavier armaments.", ":mass", "125tons"),
             "Deep Space Probe",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Deep Space Probe"),
             "Corsair Star Privateer",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Corsair Star Privateer", ":summary", "* The Starfarer is a small merchant starship designed for dangerous courier duty.\nAs such, it has reduced cargo capacity and increased armor, and weapons. Its\nhigh firepower makes it popular among smugglers and pirates, though its high\nprice means that few of these are procured through normal channels.\n* 50tons of cargo\n* 6 crew\n* 10 low passage passengers\n* 10 coldsleep bays.\n* 4x Medium Particle Cannon\n* 6x Light Startorpedoes\n* The Banner has seen many modifications including high speed drives for\ncourier or smuggling as well as heavier armaments.", ":mass", "250tons"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Corsair Star Privateer", ":summary", "* The Starfarer is a small merchant starship designed for dangerous courier duty. As such, it has reduced cargo capacity and increased armor, and weapons. Its high firepower makes it popular among smugglers and pirates, though its high price means that few of these are procured through normal channels.\n* 50tons of cargo\n* 6 crew\n* 10 low passage passengers\n* 10 coldsleep bays.\n* 4x Medium Particle Cannon\n* 6x Light Startorpedoes\n* The Banner has seen many modifications including high speed drives for courier or smuggling as well as heavier armaments.", ":mass", "250tons"),
             "Valkyrie Patrol Star Cruiser",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valkyrie Patrol Star Cruiser", ":summary", "* The Valkyrie is a long range cruiser designed for planetary defense.\n* The Valkyrie acts as a mothership for up to 4 Nike class frigates that it\ncarries and services.\n* 600tons cargo\n* 80 Crew\n* 60 low passage passengers\n* 20 coldsleep bays.\n* 8x Heavy Particle Cannon\n* 12x Light Particle Cannon\n* 6x Heavy Startorpedoes", ":mass", "12500tons"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valkyrie Patrol Star Cruiser", ":summary", "* The Valkyrie is a long range cruiser designed for planetary defense.\n* The Valkyrie acts as a mothership for up to 4 Nike class frigates that it carries and services.\n* 600tons cargo\n* 80 Crew\n* 60 low passage passengers\n* 20 coldsleep bays.\n* 8x Heavy Particle Cannon\n* 12x Light Particle Cannon\n* 6x Heavy Startorpedoes", ":mass", "12500tons"),
             "Nike Patrol Space Frigate",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nike Patrol Space Frigate", ":summary", "* The Nike is a short range frigate designed for planetary defense. As a\nplanetary defense ship it is highly maneuverable and carries a heavy\nweapons load for a small ship.\n* The Nike is transported longer distances by the larger Nemesis class.\n* 30tons cargo\n* 4 Low Passage passengers\n* 10 coldsleep bays.\n* 2x Medium Particle Cannon\n* 6x Light Particle Cannon\n* 6x Medium Startorpedoes\n* 10x Heavy Startorpedoes", ":mass", "375tons"),
             "Oliphant Luxury Starliner",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Oliphant Luxury Starliner", ":summary", "* 600 High Passage Accommations\n* 1200 Medium Passage Accommations\n* 2400 Low Passage Accommations\n* 1000 Coldsleep berths", ":mass", "75000tons"),
             "Space Cutter",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Space Cutter", ":summary", "* Larger than the Pinnacle, the Cutter can travel back and forth from a planet\nto its moon.", ":mass", "60tons"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Space Cutter", ":summary", "* Larger than the Pinnacle, the Cutter can travel back and forth from a planet to its moon.", ":mass", "60tons"),
             "Space Lander",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Space Lander", ":summary", "* Larger than the Cutter, the Lander can travel back and forth from a planet\nto its moon and is used to haul heavy equipment or passengers. In combat, the\nLander is the prefered method to deploy infantry and tanks after a marine\norbital halo drop.", ":mass", "200tons"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Space Lander", ":summary", "* Larger than the Cutter, the Lander can travel back and forth from a planet to its moon and is used to haul heavy equipment or passengers. In combat, the Lander is the prefered method to deploy infantry and tanks after a marine orbital halo drop.", ":mass", "200tons"),
             "Space Pinnacle",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Space Pinnacle", ":summary", "* Larger than the Shuttlecraft, the Pinnacle can travel from orbit to a\nplanet's moon and return.", ":mass", "30tons"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Space Pinnacle", ":summary", "* Larger than the Shuttlecraft, the Pinnacle can travel from orbit to a planet's moon and return.", ":mass", "30tons"),
             "Space Shuttlecraft",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Space Shuttlecraft", ":summary", "* The shuttlecraft is the smallest of the ship's boats. It is capable of\norbital travel to shuttle small complements of crew and cargo planetside.", ":titles", "Launch", ":mass", "10tons"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Space Shuttlecraft", ":summary", "* The shuttlecraft is the smallest of the ship's boats. It is capable of orbital travel to shuttle small complements of crew and cargo planetside.", ":titles", "Launch", ":mass", "10tons"),
             "Star Colony Ship",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Star Colony Ship"),
             "Sub-light Sleeper Ship - Ark",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sub-light Sleeper Ship - Ark"),
             "Zephyr Startransport",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Zephyr Startransport", ":summary", "* The Zephyr is a small merchant starship designed for comfortable passenger\nduty along major trade routs.\nAs such, it has reduced cargo capacity and increased armor, and weapons. Its\nhigh firepower makes it popular among smugglers and pirates, though its high\nprice means that few of these are procured through normal channels.\n* 75tons cargo\n* 6 crew\n* 10 Medium Passage Accommations\n* 30 Low Passage Accommations\n* 20 Coldsleep berths\n* 2x Light Particle Cannon\n* 6x Light Startorpedoes\n* The Banner has seen many modifications including high speed drives for\ncourier or smuggling as well as heavier armaments.", ":mass", "300tons")
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Zephyr Startransport", ":summary", "* The Zephyr is a small merchant starship designed for comfortable passenger duty along major trade routs. As such, it has reduced cargo capacity and increased armor, and weapons. Its high firepower makes it popular among smugglers and pirates, though its high price means that few of these are procured through normal channels.\n* 75tons cargo\n* 6 crew\n* 10 Medium Passage Accommations\n* 30 Low Passage Accommations\n* 20 Coldsleep berths\n* 2x Light Particle Cannon\n* 6x Light Startorpedoes\n* The Banner has seen many modifications including high speed drives for courier or smuggling as well as heavier armaments.", ":mass", "300tons")
           )
         )
       )
@@ -1388,6 +1397,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_star_trek
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_star_trek = {
@@ -1398,7 +1408,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_star_trek)
-  static f_chapter_star_trek() {
+  static f_chapter_star_trek(tactics) {
     let output = nx_tactics_base.e_chapter
     vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1507,7 +1517,7 @@ export default class nx_tactics_books_science_fiction {
               ":image",
               "StarTrek/Federation_Reliant.png",
               ":summary",
-              "A Frigate is a ship of similar firepower to a Heavy cruiser but has fewer research facilities, require less\ncrew, and has more limited endurance.",
+              "A Frigate is a ship of similar firepower to a Heavy cruiser but has fewer research facilities, require less crew, and has more limited endurance.",
               ":classification",
               "Hvy. Spacecraft",
               ":mass",
@@ -1561,7 +1571,7 @@ export default class nx_tactics_books_science_fiction {
               ":image",
               "StarTrek/Borg_Cube.png",
               ":reference",
-              "We are the Borg. Lower your shields and surrender your ships.  We will add your biological and technological\ndistinctiveness to our own. Your culture will adapt to service us. Resistance is futile. - The Borg, Star Trek\nFirst Contact",
+              "We are the Borg. Lower your shields and surrender your ships.  We will add your biological and technological distinctiveness to our own. Your culture will adapt to service us. Resistance is futile. - The Borg, Star Trek First Contact",
               ":crew",
               "130000",
               ":mass",
@@ -1582,7 +1592,7 @@ export default class nx_tactics_books_science_fiction {
               )
             ),
             "Borg Drone",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Borg Drone", ":image", "StarTrek/Borg_Drone.png", ":reference", "The Borg were possibly created by the alien probe V'Ger to seek 'all that is knowable' and return to its\ncreator."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Borg Drone", ":image", "StarTrek/Borg_Drone.png", ":reference", "The Borg were possibly created by the alien probe V'Ger to seek 'all that is knowable' and return to its creator."),
             "Doomsday Machine",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -1591,7 +1601,7 @@ export default class nx_tactics_books_science_fiction {
               ":image",
               "StarTrek/DoomsdayMachine.png",
               ":reference",
-              "Believed to have originated as an ancient race's last resort weapon against the Borg.  Its basic design -\ndestroy planets already assimilated by the Borg for use as fuel - coupled with an indestructible neutronium\nhull and antiproton beam (against which there was little or no defense), made it an ideal weapon against the\nBorg.",
+              "Believed to have originated as an ancient race's last resort weapon against the Borg.  Its basic design - destroy planets already assimilated by the Borg for use as fuel - coupled with an indestructible neutronium hull and antiproton beam (against which there was little or no defense), made it an ideal weapon against the Borg.",
               ":summary",
               "* Maximum Speed: Warp 4\n* Tractor Beam\n* Dampening Field\n* Can consume a planet in a day",
               ":titles",
@@ -2773,6 +2783,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_time_travellers
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_time_travellers = {
@@ -2783,7 +2794,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_time_travellers)
-  static f_chapter_time_travellers() {
+  static f_chapter_time_travellers(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2875,6 +2886,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_unique_aliens
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_unique_aliens = {
@@ -2885,7 +2897,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_unique_aliens)
-  static f_chapter_unique_aliens() {
+  static f_chapter_unique_aliens(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2942,31 +2954,31 @@ export default class nx_tactics_books_science_fiction {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_chaptermap},
         "Science Fiction Overview",
-        nx_tactics_books_science_fiction.f_chapter_science_fiction_overview(),
+        nx_tactics_books_science_fiction.f_chapter_science_fiction_overview(tactics),
         "Archetypes",
-        nx_tactics_books_science_fiction.f_chapter_archetypes(),
+        nx_tactics_books_science_fiction.f_chapter_archetypes(tactics),
         "Alternate Realties",
-        nx_tactics_books_science_fiction.f_chapter_alternate_realties(),
+        nx_tactics_books_science_fiction.f_chapter_alternate_realties(tactics),
         "Alien / Predator",
-        nx_tactics_books_science_fiction.f_chapter_alien___predator(),
+        nx_tactics_books_science_fiction.f_chapter_alien_predator(tactics),
         "Battlestar Galactica",
-        nx_tactics_books_science_fiction.f_chapter_battlestar_galactica(),
+        nx_tactics_books_science_fiction.f_chapter_battlestar_galactica(tactics),
         "Doctor Who",
-        nx_tactics_books_science_fiction.f_chapter_doctor_who(),
+        nx_tactics_books_science_fiction.f_chapter_doctor_who(tactics),
         "Robotech",
-        nx_tactics_books_science_fiction.f_chapter_robotech(),
+        nx_tactics_books_science_fiction.f_chapter_robotech(tactics),
         "Space Cruiser Yamato",
-        nx_tactics_books_science_fiction.f_chapter_space_cruiser_yamato(),
+        nx_tactics_books_science_fiction.f_chapter_space_cruiser_yamato(tactics),
         "Space Opera",
-        nx_tactics_books_science_fiction.f_chapter_space_opera(),
+        nx_tactics_books_science_fiction.f_chapter_space_opera(tactics),
         "Star Trek",
-        nx_tactics_books_science_fiction.f_chapter_star_trek(),
+        nx_tactics_books_science_fiction.f_chapter_star_trek(tactics),
         "Star Wars",
         nx_tactics_books_science_fiction.f_chapter_star_wars(tactics),
         "Time Travellers",
-        nx_tactics_books_science_fiction.f_chapter_time_travellers(),
+        nx_tactics_books_science_fiction.f_chapter_time_travellers(tactics),
         "Unique Aliens",
-        nx_tactics_books_science_fiction.f_chapter_unique_aliens()
+        nx_tactics_books_science_fiction.f_chapter_unique_aliens(tactics)
       )
     )
     return output
@@ -2979,7 +2991,7 @@ export default class nx_tactics_books_science_fiction {
       
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "chapter_alien___predator": nx_tactics_books_science_fiction.e_chapter_alien___predator,
+      "chapter_alien_predator": nx_tactics_books_science_fiction.e_chapter_alien_predator,
       "chapter_alternate_realties": nx_tactics_books_science_fiction.e_chapter_alternate_realties,
       "chapter_archetypes": nx_tactics_books_science_fiction.e_chapter_archetypes,
       "chapter_battlestar_galactica": nx_tactics_books_science_fiction.e_chapter_battlestar_galactica,
@@ -2995,7 +3007,7 @@ export default class nx_tactics_books_science_fiction {
       "tacticsbook": nx_tactics_books_science_fiction.e_tacticsbook
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "chapter_alien___predator": nx_tactics_books_science_fiction.t_chapter_alien___predator,
+      "chapter_alien_predator": nx_tactics_books_science_fiction.t_chapter_alien_predator,
       "chapter_alternate_realties": nx_tactics_books_science_fiction.t_chapter_alternate_realties,
       "chapter_archetypes": nx_tactics_books_science_fiction.t_chapter_archetypes,
       "chapter_battlestar_galactica": nx_tactics_books_science_fiction.t_chapter_battlestar_galactica,
@@ -3022,9 +3034,9 @@ export default class nx_tactics_books_science_fiction {
     })
     vx_core.vx_global_package_set(pkg)
 
-    // (func chapter_alien___predator)
-    nx_tactics_books_science_fiction.t_chapter_alien___predator['vx_value'] = {
-      name          : "chapter_alien___predator",
+    // (func chapter_alien_predator)
+    nx_tactics_books_science_fiction.t_chapter_alien_predator['vx_value'] = {
+      name          : "chapter_alien_predator",
       pkgname       : "nx/tactics/books/science_fiction",
       extends       : ":func",
       idx           : 0,
@@ -3037,7 +3049,7 @@ export default class nx_tactics_books_science_fiction {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_books_science_fiction.f_chapter_alien___predator
+      fn            : nx_tactics_books_science_fiction.f_chapter_alien_predator
     }
 
     // (func chapter_alternate_realties)
