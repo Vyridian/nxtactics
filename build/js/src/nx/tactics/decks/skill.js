@@ -399,37 +399,7 @@ export default class nx_tactics_decks_skill {
         ":titles",
         "Animal Trainer, Breeder, Driver, Herder, Horse Whisperer, Houndmaster, Shepherd, Zoologist",
         ":abilitymap",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_abilitymap},
-          ":Falconry",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Falconry"),
-          ":Herding",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Herding", ":titles", "Cowboy, Pig Farmer, Rancher, Shepherd"),
-          ":Husbandry",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Husbandry"),
-          "Livestock",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Livestock"),
-          "Stare Down",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stare Down"),
-          "Guard Training",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Guard Training"),
-          ":Retrieve",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Retrieve"),
-          "Seeing Eye Training",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Seeing Eye Training"),
-          "Snake Charming",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Snake Charming"),
-          "Train Dog",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Train Dog"),
-          "Train Elephant",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Train Elephant"),
-          "Train Horse",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Train Horse"),
-          "Venom Extraction",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Venom Extraction"),
-          "War Training",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "War Training")
-        )
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Falconry", "Guard Training", "Harvest Poison", "Herding", "Husbandry", "Livestock", "Retrieve", "Seeing Eye Training", "Snake Charming", "Stare Down", "Train Dog", "Train Elephant", "Train Horse", "War Training")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_skill},
@@ -442,23 +412,7 @@ export default class nx_tactics_decks_skill {
         ":stat",
         "Spirit",
         ":abilitymap",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_abilitymap},
-          "Art Imitates Life",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Art Imitates Life", ":reference", "Dorian Gray", ":summary", "Artwork become real"),
-          ":Calligraphy",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Calligraphy"),
-          ":Crafts",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Crafts"),
-          ":Drawing",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Drawing"),
-          ":Painting",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Painting"),
-          ":Photoshopping",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Photoshopping", ":summary", "* Modify an image to improve or mislead."),
-          ":Sculpture",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sculpture")
-        )
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Calligraphy", "Art Imitates Life", "Crafts", "Drawing", "Painting", "Photoshopping", "Sculpture")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_skill},

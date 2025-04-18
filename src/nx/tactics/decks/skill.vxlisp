@@ -1220,81 +1220,38 @@ x +1DMG vs. Crouching."
    :titles
     "Animal Trainer, Breeder, Driver, Herder, Horse Whisperer, Houndmaster, Shepherd, Zoologist"
    :abilitymap
-    (base/abilitymap
-     :Falconry
-      (base/ability
-       :name "Falconry")
-     :Herding
-      (base/ability
-       :name "Herding"
-       :titles "Cowboy, Pig Farmer, Rancher, Shepherd")
-     :Husbandry
-      (base/ability
-       :name "Husbandry")
-     "Livestock"
-     (base/ability
-      :name "Livestock")
-     "Stare Down"
-      (base/ability
-       :name "Stare Down")
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Falconry"
      "Guard Training"
-      (base/ability
-       :name "Guard Training")
-     :Retrieve
-      (base/ability
-       :name "Retrieve")
+     "Harvest Poison"
+     "Herding"
+     "Husbandry"
+     "Livestock"
+     "Retrieve"
      "Seeing Eye Training"
-      (base/ability
-       :name "Seeing Eye Training")
      "Snake Charming"
-      (base/ability
-       :name "Snake Charming")
+     "Stare Down"
      "Train Dog"
-      (base/ability
-       :name "Train Dog")
      "Train Elephant"
-      (base/ability
-       :name "Train Elephant")
      "Train Horse"
-      (base/ability
-       :name "Train Horse")
-     "Venom Extraction"
-      (base/ability
-       :name "Venom Extraction")
-     "War Training"
-      (base/ability
-       :name "War Training")))
+     "War Training"))
   (base/skill
    :name "Art"
-   :reference "* Art requires a certain... cruelty. - Jhin, Runeterra"
+   :reference
+    "* Art requires a certain... cruelty. - Jhin, Runeterra"
    :titles "Artist, Artisan"
    :stat "Spirit"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Calligraphy"
      "Art Imitates Life"
-      (base/ability
-       :name "Art Imitates Life"
-       :reference "Dorian Gray"
-       :summary "Artwork become real")
-     :Calligraphy
-      (base/ability
-       :name "Calligraphy")
-     :Crafts
-      (base/ability
-       :name "Crafts")
-     :Drawing
-      (base/ability
-       :name "Drawing")
-     :Painting
-      (base/ability
-       :name "Painting")
-     :Photoshopping
-      (base/ability
-       :name "Photoshopping"
-       :summary "* Modify an image to improve or mislead.")
-     :Sculpture
-      (base/ability
-       :name "Sculpture")))
+     "Crafts"
+     "Drawing"
+     "Painting"
+     "Photoshopping"
+     "Sculpture"))
   (base/skill
    :name "Assassination"
    :reference

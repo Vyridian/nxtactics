@@ -1490,6 +1490,7 @@ export default class nx_tactics_base {
         const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":image")
         const imgmirror = vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": nx_tactics_base.t_card}, card, ":imgmirror")
         const id = vx_core.f_new({"any-1": vx_core.t_string}, name, "-image")
+        const imgname = id
         return vx_core.f_new({"any-1": nx_tactics_base.t_cardimage}, ":id", id, ":name", name, ":origcard", card, ":image", image, ":imgmirror", imgmirror)
       })
     )
@@ -1567,11 +1568,18 @@ export default class nx_tactics_base {
   static f_cardimagelist_from_tactics_unitkeys(tactics, ...keys) {
     let output = nx_tactics_base.e_cardimagelist
     keys = vx_core.f_new_from_type(vx_core.t_stringlist, ...keys)
-    output = vx_core.f_list_from_list_1(
-      {"any-1": nx_tactics_base.t_cardimage, "any-2": vx_core.t_string, "list-1": nx_tactics_base.t_cardimagelist, "list-2": vx_core.t_stringlist},
-      keys,
-      vx_core.f_new_from_type(vx_core.t_any_from_any, (key) => 
-        nx_tactics_base.f_unit_from_tactics_key(tactics, key))
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_cardimagelist, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardimagelist, "list-2": nx_tactics_base.t_unitlist},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const unitlist = nx_tactics_base.f_unitlist_from_tactics_keys(tactics, ...keys)
+        return vx_core.f_list_from_list_1(
+          {"any-1": nx_tactics_base.t_cardimage, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardimagelist, "list-2": nx_tactics_base.t_unitlist},
+          unitlist,
+          vx_core.f_new_from_type(vx_core.t_any_from_any, (unit) => 
+            nx_tactics_base.f_cardimage_from_card(unit))
+        )
+      })
     )
     return output
   }
@@ -8924,8 +8932,8 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
-        "gender": {
-          "name" : "gender",
+        "traits": {
+          "name" : "traits",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -8941,11 +8949,6 @@ export default class nx_tactics_base {
         },
         "length": {
           "name" : "length",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "race": {
-          "name" : "race",
           "type" : vx_core.t_string,
           "multi": false
         },

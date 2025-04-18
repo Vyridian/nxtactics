@@ -62,6 +62,12 @@
      * [Skill]: [Ranged]
      * [Requires]: Bow or Javelin")
   (base/ability
+   :name "Art Imitates Life"
+   :reference "Dorian Gray"
+   :summary
+    "* [Power]: [Papercraft]
+     * Artwork become real")
+  (base/ability
    :name "Artificial Gills"
    :summary
     "* Can breathe underwater for 15min/lvl.
@@ -210,6 +216,10 @@
   (base/ability
    :name "Calculator Mind")
   (base/ability
+   :name "Calligraphy"
+   :summary
+    "* [Skill]: [Art]")
+  (base/ability
    :name "Call of the Hunt")
   (base/ability
    :name "Call to Arms"
@@ -299,6 +309,10 @@
    :name "Cooping"
    :summary "* Make Sealable Barrel"
    :titles "Cooper")
+  (base/ability
+   :name "Crafts"
+   :summary
+    "* [Skill]: [Art]")
   (base/ability
    :name "Create Chimera"
    :summary "A Chimera is an imaginary creation. It exists only to the user, though those with magical abilities, young children and the mentally impaired may see them. They only can affect those who can see them.")
@@ -449,6 +463,10 @@
     "* [Skill]: [Close Combat]
      * [Requires]: You must have a [Hold] on the target.
      * [Action]: You may at an additional Move:-1/space while dragging the target behind you.")
+  (base/ability
+   :name "Drawing"
+   :summary
+    "* [Skill]: [Art]")
   (base/ability
    :name "Dream Effectively"
    :reference
@@ -614,6 +632,10 @@
    :summary
     "[Downtime]: Surgically swap appearances with another unit.")
   (base/ability
+   :name "Falconry"
+   :summary
+    "* [Skill]: [Animal Handling]")
+  (base/ability
    :name "Feather Blades"
    :summary "* Feathers become as hard as steel and may be used as swords.")
   (base/ability
@@ -660,7 +682,8 @@
      +1 Damage")
   (base/ability
    :name "Fletching"
-   :summary "* The art of making arrows. High quality or specialized arrows are quickly used up and often impractical to buy. Creating your own is often a very practical solution."
+   :summary
+    "* The art of making arrows. High quality or specialized arrows are quickly used up and often impractical to buy. Creating your own is often a very practical solution."
    :titles "Bowyer")
   (base/ability
    :name "Floation Device"
@@ -679,7 +702,8 @@
     "* [Action]: When unit has [Line of Sight] on a opponent, any number of units with [Indirect Fire] may attack that unit even if they do not have [Line of Sight].")
   (base/ability
    :name "Gateway"
-   :summary "* Open a portal to another location.")
+   :summary
+    "* Open a portal to another location.")
   (base/ability
    :name "Glassblowing"
    :summary
@@ -696,6 +720,10 @@
    :summary
     "* A grappling dart that is fired into stone or hooked onto any uneven surface. The attached winch can then pull the wearer to the target or vis versa depending on relative weight. This can be used for climbing or towing. The darts can be recovered and reused, but they are often not recoverable. 2 replacement darts are included.")
   (base/ability
+   :name "Guard Training"
+   :summary
+    "* [Skill]: [Animal Handling]")
+  (base/ability
    :name "Hamstring"
    :summary
     "* Attack the legs to slow the opponent.
@@ -703,7 +731,14 @@
      -1 Accuracy
      Criticals - [Cripple]")
   (base/ability
-   :name "Harvest Poison")
+   :name "Harvest Poison"
+   :summary
+    "* [Skill]: [Animal Handling]")
+  (base/ability
+   :name "Herding"
+   :titles "Cowboy, Pig Farmer, Rancher, Shepherd"
+   :summary
+    "* [Skill]: [Animal Handling]")
   (base/ability
    :name "Hide"
    :summary
@@ -730,6 +765,10 @@
    :name "Hunter's Mark"
    :summary
     "* [Continuous]: Place a mark on target. Initiative:+1 vs. marked target.")
+  (base/ability
+   :name "Husbandry"
+   :summary
+    "* [Skill]: [Animal Handling]")
   (base/ability
    :name "Hyperdrive"
    :image "Units/SpaceAndTime/Hyperspace.jpg"
@@ -867,13 +906,18 @@
   (base/ability
    :name "Lightning Warp"
    :summary
-    "* Near instantaneous travel in a flash of lightning.
+    "* [Power]: [Electricity] or [Electro]
+     * Near instantaneous travel in a flash of lightning.
      * Level determines distance travelled.")
   (base/ability
    :name "Line Swinging"
    :titles "Web Swinging")
   (base/ability
    :name "Linguistic Genius")
+ (base/ability
+  :name "Livestock"
+   :summary
+    "* [Skill]: [Animal Handling]")
   (base/ability
    :name "Living Nightmare"
    :summary "* A chimerical monster formed from nightmares or madness."
@@ -950,6 +994,10 @@
   (base/ability
    :name "Overwhelm")
   (base/ability
+   :name "Painting"
+   :summary
+    "* [Skill]: [Art]")
+  (base/ability
    :name "Paralyzing Bite")
   (base/ability
    :name "Paralyzing Spit")
@@ -971,13 +1019,18 @@
   (base/ability
    :name "Petrification"
    :summary
-    "* [Focus]: vs. Spirit and place [Petrification] counters on the target body location.
+    "* [Skill]: [Transformation] vs. [Spirit] and place [Petrification] counters on the target body location.
      * Any body location with a [Petrification] is encased in stone. It requires an [Action] to remove a [Petrification]. Any area that suffers 3 [Petrification] turns completely to stone. If any other area is so petrified, then complete petrification immediately spreads across the entire body and then the body and all its gear immediately converts to a stone statue.
-     * Additional Effects: A petrified arm cannot move. A petrified leg reduces Move by half. A petrified head is unable to see or hear. Other petrifed areas have no additional effect. Petrified Arms or legs can break off like a clean amputation without blood loss. 
+     * Additional Effects: A petrified arm cannot move. A petrified leg reduces Move by half. A petrified head is unable to see or hear. Other petrifed areas have no additional effect. Petrified Arms or legs can break off like a clean amputation without blood loss.
      * This ability can also be used to restore a petrified target back to its original form if the skill is at least equal to the original. Lost limbs may also be restored by reattaching the limb before restoration.
      * This ability can also be used on any sort of earth to harden the earth to equivalent stone.")
   (base/ability
    :name "Photographic Memory")
+  (base/ability
+   :name "Photoshopping"
+   :summary
+    "* [Skill]: [Art]
+     * Modify an image to improve or mislead.")
   (base/ability
    :name "Pick Pocket"
    :summary
@@ -1005,7 +1058,8 @@
   (base/ability
    :name "Poison Bite"
    :summary
-    "[Close Combat]: Crits are [Poisoned] instead of increasing damage.")
+    "* [Skill]: [Close Combat]
+     * [Crits] are [Poisoned] instead of increasing damage.")
   (base/ability
    :name "Poison Blood")
   (base/ability
@@ -1039,9 +1093,11 @@
    :name "Poisoning")
   (base/ability
    :name "Polymorph"
+   :reference
+    "* She turned me into a newt. A newt? Well I got better. - Monty Python and the Holy Grail"
    :summary
-    "* [Action]: Roll vs. Spirit and place Black [Shapeshift] Tokens on target.
-     * A unit with 0 Spirit due to polymorph changes into any creature desired of equal Body.  When the last Shapeshift Token is removed, a polymorphed unit returns to normal.")
+    "* [Skill]: [Transmutation] vs. [Spirit].
+     * A unit with 0 Spirit due to polymorph changes into any creature desired of equal Body. When the damage inflicted by Polymorph is removed, the unit returns to normal.")
   (base/ability
    :name "Porting"
    :summary
@@ -1210,6 +1266,10 @@
    :summary
     "Ensure restful sleep for levelx2 hours.")
   (base/ability
+   :name "Retrieve"
+   :summary
+    "* [Skill]: [Animal Handling]")
+  (base/ability
    :name "Returning Throw")
   (base/ability
    :name "Reverie"
@@ -1258,6 +1318,14 @@
   (base/ability
    :name "Scouting"
    :titles "Reconnaissance")
+  (base/ability
+   :name "Sculpture"
+   :summary
+    "* [Skill]: [Art]")
+  (base/ability
+   :name "Seeing Eye Training"
+   :summary
+    "* [Skill]: [Animal Handling]")
   (base/ability
    :name "Seeming"
    :summary "* Take on the appearance of another.")
@@ -1312,6 +1380,10 @@
     "* Alert allied units by sending a prearranged signal. This can be flaming arrow at night, smoking arrow, singing arrow, etc.
      * [Requires]: Bow or Crossbow
      * [Action]: For the rest of the turn, other units adjacent to this unit may be treated as if under the [Sphere of Command] of any allied Commander.")
+  (base/ability
+   :name "Snake Charming"
+   :summary
+    "* [Skill]: [Animal Handling]")
   (base/ability
    :name "Snare")
   (base/ability
@@ -1380,6 +1452,11 @@
     "* The ability to move carefully to avoid detection.
      * [Requires]: No other action may be performed this turn.
      * [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail.")
+  (base/ability
+   :name "Stare Down"
+   :summary
+    "* [Skill]: [Animal Handling] vs. [Will]
+     * Causes an animal to hesitate or back down.")
   (base/ability
    :name "Sting")
   (base/ability
@@ -1499,6 +1576,18 @@
   (base/ability
    :name "Tracked")
   (base/ability
+   :name "Train Dog"
+   :summary
+    "* [Skill]: [Animal Handling]")
+  (base/ability
+   :name "Train Elephant"
+   :summary
+    "* [Skill]: [Animal Handling]")
+  (base/ability
+   :name "Train Horse"
+   :summary
+    "* [Skill]: [Animal Handling]")
+  (base/ability
    :name "Trample")
   (base/ability
    :name "True Immortality"
@@ -1541,6 +1630,10 @@
   (base/ability
    :name "Wall Running"
    :summary "* Requires: [Wall Crawling]")
+  (base/ability
+   :name "War Training"
+   :summary
+    "* [Skill]: [Animal Handling]")
   (base/ability
    :name "Water Walking")
   (base/ability

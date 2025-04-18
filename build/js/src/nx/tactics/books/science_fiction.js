@@ -2151,95 +2151,17 @@ export default class nx_tactics_books_science_fiction {
               )
             ),
             "Tie Advanced",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Tie Advanced",
-              ":image",
-              "StarWars/Imperial_TieAdvanced.png",
-              ":titles",
-              "Tie Avenger",
-              ":classification",
-              "Lt. Spacecraft",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
-                  "Gunnery",
-                  ":level",
-                  "4",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    ":Turbolaser",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Turbolaser", ":facing", "Fx2")
-                  )
-                )
-              )
-            ),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Advanced"),
             "Tie Bomber",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tie Bomber", ":image", "StarWars/Imperial_TieBomber.png", ":classification", "Lt. Spacecraft"),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Bomber"),
             "Tie Defender",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tie Defender", ":image", "StarWars/Imperial_TieDefender.png", ":classification", "Lt. Spacecraft"),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Defender"),
             "Tie Fighter",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Tie Fighter",
-              ":image",
-              "StarWars/Imperial_TieFighter.png",
-              ":classification",
-              "Lt. Spacecraft",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
-                  "Gunnery",
-                  ":level",
-                  "4",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    ":Turbolaser",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Turbolaser", ":facing", "Fx2")
-                  )
-                )
-              )
-            ),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Fighter"),
             "Tie Interceptor",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Tie Interceptor",
-              ":image",
-              "StarWars/Imperial_TieInterceptor.png",
-              ":classification",
-              "Lt. Spacecraft",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
-                  "Gunnery",
-                  ":level",
-                  "4",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    ":Turbolaser",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Turbolaser", ":facing", "Fx4")
-                  )
-                )
-              )
-            ),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Interceptor"),
+            "Tie Phantom",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Phantom"),
             "Imperator Star Destroyer",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -2251,6 +2173,8 @@ export default class nx_tactics_books_science_fiction {
               "Hvy. Spacecraft",
               ":crew",
               "34,285",
+              ":body",
+              "2.5x9",
               ":mass",
               "25Mtons",
               ":length",

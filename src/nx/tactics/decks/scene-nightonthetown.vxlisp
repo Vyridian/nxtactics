@@ -3,238 +3,63 @@
        (lib data :path nx/tactics/decks/data)
  :doc  "Night On The Town scene")
 
-(func place-clinic : base/place
- (base/place
-  :name "Clinic"
-  :image "images/cards/place-clinic.svg"))
-
-(func place-store-convenience : base/place
- (base/place
-  :name "Store: Convenience"
-  :image "images/cards/place-store-convenience.svg"))
-
-(func place-gasstation : base/place
- (base/place
-  :name "Gas Station"
-  :image "images/cards/place-gasstation.svg"))
-
-(func place-store-gun : base/place
- (base/place
-  :name "Store: Gun"
-  :image "images/cards/place-store-gun.svg"))
-
-(func place-policestation : base/place
- (base/place
-  :name "Police Station"
-  :image "images/cards/place-policestation.svg"))
-
-(func place-street : base/place
- (base/place
-  :name "Street"
-  :image "images/cards/place-street.svg"))
-
-(func rule-zombie : base/rule
- (base/rule
-  :name "Zombie"
-  :summary
-   "* [Undead]: Immune to [Bleeding] and [Fear]. Never targets [Undead].
-    * [Mindless]: Does not avoid [Hazard].
-    * [Prey]: [Bleeding], [Prone] within 2 Moves. Will [Disengage] for prey.
-    * [Zombie Plague]:
-    ** IF a unit suffers a [Pierce] [Bite]
-    ** THEN at the beginning of each [Turn], take [Fatigue]:+1 or [Stress]:+1 until cured."))
-
-(func unit-theprofessor : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "The Professor"
-  :image "images/cards/unit-theprofessor.svg"
-  :body "7x2"
-  :mind "7x1"
-  :will "3x1"
-  :speed "7x0"
-  :speedland "7kph/4.5mph"
-  :mass "70kg/155lb"
-  :height "1.7m/5'6"
-  :demeanor "Foolish"
-  :nature "Cowardly"
-  :summary ""
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Ranged")
-     :level "1"
-     :unititemmap
-      (base/unititemmap<-unititemlist
-        (base/unititem
-         :item (base/item<-tactics-key tactics "Bow: Short"))))
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Investigation")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Detail Oriented")))
-     :unititemmap
-      (base/unititemmap<-unititemlist
-        (base/unititem
-         :item (base/item<-tactics-key tactics "Accessory: Monocle")))))))
-
-(func unit-zombie-crawler : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Zombie: Crawler"
-  :image "images/cards/unit-zombie-crawler.svg"
-  :body "8x1"
-  :mind "5x-1"
-  :will "2x1"
-  :speed "3x0"
-  :speedland "3kph/2mph"
-  :mass "80kg/175"
-  :summary
-   "[Zombie]"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Close Combat")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability
-         (base/ability<-tactics-key tactics "Grab")))))
-  :unitpowermap
-   (base/unitpowermap<-unitpowerlist
-    (base/unitpower
-     :power
-      (base/power<-tactics-key tactics "Natural Weaponry")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Bite")))))))
-
-(func unit-zombie-dog : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Zombie: Dog"
-  :image "images/cards/unit-zombie-dog.svg"
-  :body "2x1"
-  :mind "8x-1"
-  :will "4x1"
-  :speed "7x0"
-  :speedland "7kph/4.5mph"
-  :mass "22kg/50lb"
-  :height "76cm/30in"
-  :nature "Dogged"
-  :summary
-   "[Zombie]"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Close Combat")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Grab")))))
-  :unitpowermap
-   (base/unitpowermap<-unitpowerlist
-    (base/unitpower
-     :power
-      (base/power<-tactics-key tactics "Natural Weaponry")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Bite")))))))
-
-(func unit-zombie-runner : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Zombie: Runner"
-  :image "images/cards/unit-zombierunner.svg"
-  :body "7x1"
-  :mind "5x-1"
-  :will "2x1"
-  :speed "5x0"
-  :speedland "5kph/3mph"
-  :mass "70kg/155lb"
-  :height "1.8m/6ft"
-  :demeanor "Aloof"
-  :summary
-   "[Zombie]"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Close Combat")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Grab")))))
-  :unitpowermap
-   (base/unitpowermap<-unitpowerlist
-    (base/unitpower
-     :power
-      (base/power<-tactics-key tactics "Natural Weaponry")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Bite")))))))
-
 (func deck-nightonthetown : base/deck
  [tactics : base/tactics]
- (let : base/deck
-  [professor : base/card := (unit-theprofessor tactics)
-   professori : base/cardimage := (base/cardimage<-card professor)]
-  (base/deck
-   :name "Night on the Town"
-   :cardmap
-    (base/cardmap<-cardlist
-     (base/cardlist
-      professor
-      professori
-      (list<-list : base/cardlist
-       (base/unitlist<-tactics-keys
-        tactics
-        "Zombie: Walker"))
-      (list<-list : base/cardlist
-       (base/abilitylist<-tactics-keys
-        tactics
-        "Bite"
-        "Detail Oriented"
-        "Grab"))
-      (list<-list : base/cardlist
-       (base/itemlist<-tactics-keys
-        tactics
-        "Ammo: Revolver"
-        "Ammo: Rifle"
-        "Ammo: Shotgun"
-        "Axe: Fire"
-        "Bare Handed"
-        "Bottle: Liquor"
-        "Bottle: Molotov Cocktail"
-        "Bow: Short"
-        "Jerry Can"
-        "Keys"
-        "Knife"
-        "Accessory: Monocle"
-        "Paper: Lock Combination"
-        "Pistol: Revolver"
-        "Rifle"
-        "Shotgun"
-        "Spear"))
-      (unit-zombie-crawler tactics)
-      (unit-zombie-dog tactics)
-      (base/cardimage<-card (unit-zombie-dog tactics))
-      (unit-zombie-runner tactics)
-      (base/cardimage<-card (unit-zombie-runner tactics))
-      (place-clinic)
-      (place-store-convenience)
-      (place-gasstation)
-      (place-store-gun)
-      (place-policestation)
-      (place-street)
-     )))))
+ (base/deck
+  :name "Night on the Town"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist
+     (list<-list : base/cardlist
+      (base/unitlist<-tactics-keys
+       tactics
+       "The Professor"
+       "Zombie: Crawler"
+       "Zombie: Dog"
+       "Zombie: Runner"
+       "Zombie: Walker"))
+     (list<-list : base/cardlist
+      (base/cardimagelist<-tactics-unitkeys
+       tactics
+       "The Professor"
+       "Zombie: Crawler"
+       "Zombie: Dog"
+       "Zombie: Runner"
+       "Zombie: Walker"))
+     (list<-list : base/cardlist
+      (base/abilitylist<-tactics-keys
+       tactics
+       "Bite"
+       "Detail Oriented"
+       "Grab"))
+     (list<-list : base/cardlist
+      (base/itemlist<-tactics-keys
+       tactics
+       "Ammo: Revolver"
+       "Ammo: Rifle"
+       "Ammo: Shotgun"
+       "Axe: Fire"
+       "Bare Handed"
+       "Bottle: Liquor"
+       "Bottle: Molotov Cocktail"
+       "Bow: Short"
+       "Jerry Can"
+       "Keys"
+       "Knife"
+       "Accessory: Monocle"
+       "Paper: Lock Combination"
+       "Pistol: Revolver"
+       "Rifle"
+       "Shotgun"
+       "Spear"))
+     (list<-list : base/cardlist
+      (base/placelist<-tactics-keys
+       tactics
+       "Clinic"
+       "Gas Station"
+       "Police Station"
+       "Store: Convenience"
+       "Store: Gun"
+       "Street"
+      ))
+    ))))

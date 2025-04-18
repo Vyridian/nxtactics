@@ -34,6 +34,60 @@
         tactics
         "Salvo"))))
   (base/unit
+   :name "Automaton")
+  (base/unit
+   :name "Bandit"
+   :image "images/cards/unit-bandit.svg"
+   :summary
+    "A highwayman."
+   :traits "Human Male"
+   :body "8x1"
+   :mind "5x1"
+   :will "5x1"
+   :speed "6x0"
+   :speedland "6kph/4mph"
+   :mass "80kg/180"
+   :height "1.8m/6ft"
+   :mass "80kg/220lb"
+   :height "1.9m/6'3ft"
+   :demeanor "Opportunistic"
+   :nature "Ruthless"
+   :beast "2x0"
+   :shadow "5x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Melee" 3
+      (stringlist "Sword: Short"))
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Stealth" 1
+      (stringlist "Ambush"))))
+  (base/unit
+   :name "Bear: Black"
+   :image "images/cards/unit-bear-black.svg"
+   :reference
+    "* Apex predator. High on cocaine. Out of its mind. - Cocaine Bear"
+   :body "2x2"
+   :mass "200kg")
+  (base/unit
+   :name "Bear: Brown"
+   :image "images/cards/unit-bear-brown.svg"
+   :body "4x2"
+   :mass "400kg")
+  (base/unit
+   :name "Bear: Grizzly"
+   :image "images/cards/unit-bear-grizzly.svg"
+   :reference
+    "* It has been estimated that a bite from a grizzly could crush a bowling ball."
+   :body "6x2"
+   :mass "600kg")
+  (base/unit
+   :name "Bear: Polar"
+   :image "images/cards/unit-bear-polar.svg"
+   :body "5x2"
+   :mass "500kg")
+  (base/unit
    :name "Boba Fett"
    :image "images/starwars/unit-bobafett.png"
    :reference
@@ -47,14 +101,132 @@
    :summary
     "A male Trandoshan bounty hunter and the son of Cradossk who was known for hunting Wookiees. During the Clone Wars, Bossk worked alongside fellow hunters Aurra Sing and Castas to mentor the orphaned Boba Fett. Their scheme to kill Fett's hated enemy, the Jedi Master Mace Windu, resulted in Fett and Bossk's arrest.")
   (base/unit
+   :name "Bronze Bull")
+  (base/unit
+   :name "Bronze Horse")
+  (base/unit
+   :name "Bruiser"
+   :image "images/cards/unit-bruiser.svg"
+   :summary
+    "A burly, intimidating man."
+   :traits "Human Male"
+   :body "10x1"
+   :mind "3x1"
+   :will "5x1"
+   :speed "5x0"
+   :speedland "5kph/3mph"
+   :mass "100kg/220lb"
+   :height "1.9m/6'3ft"
+   :demeanor "Glaring"
+   :nature "Callous"
+   :beast "5x0"
+   :shadow "1x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Close Combat" 2
+      (stringlist "Grab"))
+     (base/unitskill<-tactics-key-lvl
+      tactics "Intimidation" 1)))
+  (base/unit
    :name "Butterfly: Giant")
+  (base/unit
+   :name "Cart: Wooden"
+   :image "images/cards/unit-cart-wooden.svg"
+   :imgmirror true
+   :body "2x2"
+   :mass "200kg/440lb")
   (base/unit
    :name "Caterpillar: Giant")
   (base/unit
+   :name "Clockwork Avian")
+  (base/unit
+   :name "Clockwork Cobra"
+   :titles "Iron Cobra")
+  (base/unit
+   :name "Clockwork Dragon"
+   :titles "Iron Dragon")
+  (base/unit
+   :name "Clockwork Golem"
+   :titles "Ruin Grader, Ruin Guard")
+  (base/unit
+   :name "Clockwork Owl"
+   :reference "* Bubo - Clash of the Titans"
+   :summary
+    "* Clockwork Owls have excellent vision and make fair spys and messengers. However, they are not at all fast, stealthy, or agile, so some feel that they are far from practical.")
+  (base/unit
+   :name "Clockwork Minotaur"
+   :reference
+    "* Minoton - Sinbad and the Eye of the Tiger")
+  (base/unit
+   :name "Clockwork Scorpion"
+   :titles "Iron Scorpion")
+  (base/unit
+   :name "Clockwork Spider"
+   :titles "Iron Spider, Spiderbot")
+  (base/unit
+   :name "Clockwork Steed"
+   :titles "Iron Horse")
+  (base/unit
+   :name "Cthonian"
+   :image "Cthulhu/Cthonian.png")
+  (base/unit
+   :name "Dhole"
+   :titles "Bhole"
+   :summary
+    "* Huge slimy, worm-like creatures several hundred meters long.")
+  (base/unit
+   :name "Dog: Wild"
+   :image "images/cards/unit-dog-wild.svg"
+   :summary
+    "The Wild Dog is one of the fastest runners in the animal kingdom."
+   :body "2x1"
+   :mind "8x-1"
+   :will "4x1"
+   :speed "4x1"
+   :mass "22kg/50lb"
+   :height "76cm/30in"
+   :speedland "40kph/25mph"
+   :nature "Dogged"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Close Combat" 1
+      (stringlist
+       "Bite"
+       "Grab"
+       "Drag"))))
+  (base/unit
+   :name "Dragon Engine"
+   :titles "Steam Engine")
+  (base/unit
+   :name "Dragon: Apophis"
+   :reference "Egyptian Mythology")
+  (base/unit
+   :name "Dragon: Ladon")
+  (base/unit
+   :name "Dragon: Midgard Serpent"
+   :reference "Norse Mythology")
+  (base/unit
+   :name "Dragon: Pytho")
+  (base/unit
+   :name "Dragon: Stoorworm")
+  (base/unit
+   :name "Dragon: Tiamat"
+   :reference "Babylonian Mythology"
+   :titles "Avatar of Chaos, Avatar of the Wyrm, The Beast, Mother of All Life")
+  (base/unit
+   :name "Elder Thing"
+   :image "Cthulhu/ElderThing.png"
+   :reference
+    "* The toughness of the things was almost incredible. Even the terrific pressure of the deepest sea bottoms appeared powerless to harm them. Very few seemed to die at all except for violence, and their burial places were very limited. - At the Mountains of Madness"
+   :summary
+    "* Their metabolism is based on carbon dioxide instead of oxygen; their blood is dark green in color. The nervous system of the Elder Things is quite complex, with five-lobed brains and many ganglial centers. The prismatic cilia on top of the creatures' head suggest that they have senses other than sight, smell, touch, hearing, and taste. Elder Things reproduce through spores. They can derive nourishment from inorganic substances, but prefer to feed on organic life.")
+  (base/unit
    :name "Flint (Early)"
    :image "images/cards/unit-flint.svg"
-   :race "Half-elven"
-   :gender "M"
+   :traits "Half-elven Male"
    :age 17
    :body "7x1"
    :mind "5x1"
@@ -85,12 +257,11 @@
   (base/unit
    :name "Goblin: Scout"
    :image "images/cards/unit-goblin-scout.svg"
-   :gender "Male"
    :demeanor "Depraved"
    :nature "Cowardly Envious"
    :conscience "1x1"
    :beast "1x0"
-   :race "Goblin"
+   :traits "Goblin Male"
    :body "2x1"
    :mind "6x1"
    :will "2x1"
@@ -115,6 +286,32 @@
        (base/unitabilitymap<-unitabilitylist
         (base/unitability
          :ability (base/ability<-tactics-key tactics "Sneak"))))))
+  (base/unit
+   :name "Guardsman"
+   :image "images/cards/unit-guardsman.svg"
+   :summary
+    "A typical member of a city watch or to keep lookout."
+   :traits "Human Male"
+   :body "8x1"
+   :mind "5x1"
+   :will "5x1"
+   :speed "5x0"
+   :speedland "5kph/3mph"
+   :mass "80kg/175"
+   :height "1.8m/6ft"
+   :height "1.9m/6'3ft"
+   :demeanor "Indifferent"
+   :nature "Lazy"
+   :beast "1x0"
+   :shadow "2x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Melee" 2
+      (stringlist "Spear"))
+     (base/unitskill<-tactics-key-lvl
+      tactics "Investigation" 1)))
   (base/unit
    :name "Hare"
    :image "images/cards/unit-hare.svg"
@@ -153,18 +350,122 @@
    :demeanor "Aloof"
    :nature "Skitish")
   (base/unit
+   :name "Iron Maiden"
+   :summary
+    "* A semi-humanoid automaton whose lower body is a giant spiked maw that engulfs its target. It is used as an intimidation and torture device.")
+  (base/unit
    :name "Jabba the Hutt"
    :image "images/starwars/unit-jabbathehutt.png")
+  (base/unit
+   :name "Jes Aveer"
+   :titles "Jessana Aveer"
+   :image "images/cards/unit-jesaveer.svg"
+   :summary
+    "A resilient, young woman with a love of blacksmithing."
+   :traits "Human Female"
+   :age 24
+   :body "6x1"
+   :mind "6x1"
+   :will "6x1"
+   :speed "5x0"
+   :speedland "5kph/3mph"
+   :mass "63kg"
+   :height "1.72m/5ft7"
+   :demeanor "Willful"
+   :nature "Nuturing"
+   :beast "1x0"
+   :shadow "1x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Melee" 1
+      (stringlist "Hammer"))
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Tradeskills" 1
+      (stringlist "Blacksmithing"))))
+  (base/unit
+   :name "Jon Aveer"
+   :titles "Ajona Aveer"
+   :image "images/cards/unit-jonaveer.svg"
+   :summary
+    "A clever, young man trying to make his fortune."
+   :traits "Human Male"
+   :age 23
+   :body "7x1"
+   :mind "6x1"
+   :will "5x1"
+   :speed "4x0"
+   :speedland "4kph/2.5mph"
+   :mass "75kg"
+   :height "1.78m/5ft10"
+   :demeanor "Frivolous"
+   :nature "Loyal"
+   :beast "1x0"
+   :shadow "1x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Melee" 1
+      (stringlist "Spear"))
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Business" 1
+      (stringlist "Bargain"))))
+  (base/unit
+   :name "Juggernaut")
+  (base/unit
+   :name "Lili Ducon"
+   :image "images/cards/unit-liliducon.svg"
+   :summary
+    "A pleasant and perceptive young lady, who moved with her father Wilm. She took her mother's death hard, and is having a difficult time adapting."
+   :traits "Human Female"
+   :age 11
+   :body "4x1"
+   :mind "4x1"
+   :will "4x1"
+   :speed "3x0"
+   :speedland "3kph/2mph"
+   :mass "40kg/88lb"
+   :height "1.5m/5ft"
+   :demeanor "Pleasant"
+   :nature "Anxious"
+   :beast "1x0"
+   :shadow "1x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Survival" 1
+      (stringlist "Foraging"))))
+  (base/unit
+   :name "Phantasmal Force")
+  (base/unit
+   :name "Phantasmal Mount")
+  (base/unit
+   :name "Phantasmal Monster")
+  (base/unit
+   :name "Phantasmal Warrior")
+  (base/unit
+   :name "Pit Fiend"
+   :titles "Balrog, Fiend, Lord of the Pit"
+   :traits "Devil")
   (base/unit
    :name "Raideen"
    :image "images/daikaiju/unit-raideen.png"
    :summary "Flight: Mach 10 in God Bird form"
+   :body "3.5x5"
    :mass "350tons"
    :height "52m"
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl
-      tactics "Gunnery" 5)))
+      tactics "Gunnery" 5))
+   :unitpowermap
+    (base/unitpowermap<-tactics-keys
+      tactics
+      "Flight"
+      "Transform"))
   (base/unit
    :name "Shub-Niggurath"
    :image "cthulhu/shubniggurath.png"
@@ -203,6 +504,241 @@
      (base/unitpower<-tactics-key-lvl-intensity-abilities
       tactics "Toxins" 2 "2x2"
       (stringlist "Poison Bite"))))
+  (base/unit
+   :name "The Professor"
+   :image "images/cards/unit-theprofessor.svg"
+   :body "7x2"
+   :mind "7x1"
+   :will "3x1"
+   :speed "7x0"
+   :speedland "7kph/4.5mph"
+   :mass "70kg/155lb"
+   :height "1.7m/5'6"
+   :demeanor "Foolish"
+   :nature "Cowardly"
+   :summary ""
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Ranged" 1
+      (stringlist "Bow: Short"))
+     (base/unitskill<-tactics-key-lvl-abilities-items
+      tactics "Investigation" 1
+      (stringlist "Detail Oriented")
+      (stringlist "Accessory: Monocle"))))
+  (base/unit
+   :name "Tie Advanced"
+   :image "StarWars/Imperial_TieAdvanced.png"
+   :titles "Tie Avenger"
+   :classification "Lt. Spacecraft"
+   :summary
+    "* Equipped with Hyperdrive and Deflector Shields"
+   :unitskillmap
+    (base/unitskillmap
+     :Gunnery
+      (base/unitskill
+       :name "Gunnery"
+       :level "4"
+       :unititemmap
+        (base/unititemmap
+         :Turbolaser
+          (base/unititem
+           :name "SFS L-s1 Laser Cannon"
+           :facing "Fx2")))))
+  (base/unit
+   :name "Tie Bomber"
+   :image "StarWars/Imperial_TieBomber.png"
+   :classification "Lt. Spacecraft"
+   :summary
+    "* Much heavier than the Tie Fighter
+     * Carries Concussion Missiles or Proton Bombs")
+  (base/unit
+   :name "Tie Defender"
+   :image "StarWars/Imperial_TieDefender.png"
+   :classification "Lt. Spacecraft"
+   :summary
+    "* Equipped with Hyperdrive and Deflector Shields"
+   :unitskillmap
+    (base/unitskillmap
+     :Gunnery
+      (base/unitskill
+       :name "Gunnery"
+       :level "4"
+       :unititemmap
+        (base/unititemmap<-unititemlist
+         (base/unititem
+          :name "SFS L-s1 Laser Cannon"
+          :facing "Fx4")
+         (base/unititem
+          :name "Ion Cannon"
+          :facing "Fx2")))))
+  (base/unit
+   :name "Tie Fighter"
+   :image "StarWars/Imperial_TieFighter.png"
+   :titles "Twin Ion Engine Fighter"
+   :classification "Lt. Spacecraft"
+   :unitskillmap
+    (base/unitskillmap
+     :Gunnery
+      (base/unitskill
+       :name "Gunnery"
+       :level "4"
+       :unititemmap
+        (base/unititemmap
+         :Turbolaser
+          (base/unititem
+           :name "SFS L-s1 Laser Cannon"
+           :facing "Fx2")))))
+  (base/unit
+   :name "Tie Interceptor"
+   :image "StarWars/Imperial_TieInterceptor.png"
+   :classification "Lt. Spacecraft"
+   :unitskillmap
+    (base/unitskillmap
+     :Gunnery
+      (base/unitskill
+       :name "Gunnery"
+       :level "4"
+       :unititemmap
+        (base/unititemmap
+         :Turbolaser
+          (base/unititem
+           :name "SFS L-s1 Laser Cannon"
+           :facing "Fx4")))))
+  (base/unit
+   :name "Tie Phantom"
+   :summary
+    "* Cloaking Device"
+   :unitskillmap
+    (base/unitskillmap<-tactics-keys
+     tactics
+     "Gunnery")
+   :unitpowermap
+    (base/unitpowermap<-tactics-keys
+     tactics
+     "Stealth"))
+  (base/unit
+   :name "Valusian Primitive"
+   :image "images/cards/unit-valusian-primitive.svg")
+  (base/unit
+   :name "Valusian Sorcerer"
+   :image "images/cards/unit-valusian-warrior.svg")
+  (base/unit
+   :name "Valusian Warrior"
+   :image "images/cards/unit-valusian-warrior.svg")
+  (base/unit
+   :name "Wilm Ducon"
+   :image "images/cards/unit-wilmducon.svg"
+   :summary
+    "A proud, prickly huntsman who lost his wife in a violent raid and moved away with his daughter, Lily, to restart his life."
+   :traits "Human Male"
+   :age 30
+   :body "8x1"
+   :mind "5x1"
+   :will "5x1"
+   :speed "5x0"
+   :speedland "5kph/3mph"
+   :mass "80kg/180"
+   :height "1.8m/6ft"
+   :demeanor "Gruff"
+   :nature "Tortured"
+   :beast "1x0"
+   :shadow "1x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Melee" 1
+      (stringlist "Axe: Wood"))
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Hunting" 1
+      (stringlist "Snare"))))
+  (base/unit
+   :name "Xeib Honower"
+   :image "images/cards/unit-xeibhanower.svg"
+   :traits "Human Male"
+   :age 23
+   :body "8x1"
+   :mind "5x1"
+   :will "6x1"
+   :speed "4x0"
+   :speedland "4kph/2.5mph"
+   :mass "80kg"
+   :height "1.78m/5'10"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Animal Handling" 3
+      (stringlist
+       "Harvest Poison"
+       "Snake Charming"))))
+  (base/unit
+   :name "Zombie: Crawler"
+   :image "images/cards/unit-zombie-crawler.svg"
+   :body "8x1"
+   :mind "5x-1"
+   :will "2x1"
+   :speed "3x0"
+   :speedland "3kph/2mph"
+   :mass "80kg/175"
+   :summary
+    "[Zombie]"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Close Combat" 1
+      (stringlist "Grab")))
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl-abilities
+      tactics "Natural Weaponry" 1
+      (stringlist "Bite"))))
+  (base/unit
+   :name "Zombie: Dog"
+   :image "images/cards/unit-zombie-dog.svg"
+   :body "2x1"
+   :mind "8x-1"
+   :will "4x1"
+   :speed "7x0"
+   :speedland "7kph/4.5mph"
+   :mass "22kg/50lb"
+   :height "76cm/30in"
+   :nature "Dogged"
+   :summary
+    "[Zombie]"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Close Combat" 1
+      (stringlist "Grab")))
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl-abilities
+      tactics "Natural Weaponry" 1
+      (stringlist "Bite"))))
+  (base/unit
+   :name "Zombie: Runner"
+   :image "images/cards/unit-zombie-runner.svg"
+   :body "7x1"
+   :mind "5x-1"
+   :will "2x1"
+   :speed "5x0"
+   :speedland "5kph/3mph"
+   :mass "70kg/155lb"
+   :height "1.8m/6ft"
+   :demeanor "Aloof"
+   :summary
+    "[Zombie]"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Close Combat" 1
+      (stringlist "Grab")))
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl-abilities
+      tactics "Natural Weaponry" 1
+      (stringlist "Bite"))))
  (base/unit
   :name "Zombie: Walker"
   :image "images/cards/unit-zombie-walker.svg"

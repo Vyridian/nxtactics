@@ -292,11 +292,6 @@ of skill.  This has no game effect but add great flavor to the game.")
          (rule
           :name "Cold"
           :summary "* [Critical Hits] may be used for [Slow Tokens]")
-        :Electricity
-         (rule
-          :name "Electricity"
-          :summary "* [Critical Hits] may be used to place 2 [Stun] each (or 2 [Damage] each if the target is [Mechanical])"
-          :titles "Electric Shock, Lightning")
         :Flame
          (rule
           :name "Flame"

@@ -26,11 +26,11 @@ export default class nx_tactics_decks_scene_nightonthetown_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/scene-nightonthetown", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 12), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 12), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 12), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -51,18 +51,7 @@ export default class nx_tactics_decks_scene_nightonthetown_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
-          "deck-nightonthetown", 0,
-          "place-clinic", 0,
-          "place-gasstation", 0,
-          "place-policestation", 0,
-          "place-store-convenience", 0,
-          "place-store-gun", 0,
-          "place-street", 0,
-          "rule-zombie", 0,
-          "unit-theprofessor", 0,
-          "unit-zombie-crawler", 0,
-          "unit-zombie-dog", 0,
-          "unit-zombie-runner", 0
+          "deck-nightonthetown", 0
         )
     )
     return output

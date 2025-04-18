@@ -25,11 +25,11 @@ export default class nx_tactics_decks_scene_murintrail_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/scene-murintrail", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 13), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 12), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 2), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 13), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -52,17 +52,7 @@ export default class nx_tactics_decks_scene_murintrail_test {
         vx_core.f_new_from_type(
           vx_core.t_intmap,
           "deck-murintrail", 0,
-          "scene-murintrail", 0,
-          "unit-bandit", 0,
-          "unit-bruiser", 0,
-          "unit-guardsman", 0,
-          "unit-jesaveer", 0,
-          "unit-jonaveer", 0,
-          "unit-liliducon", 0,
-          "unit-wilddog", 0,
-          "unit-wilmducon", 0,
-          "unit-woodencart", 0,
-          "unit-xeibhanower", 0
+          "scene-murintrail", 0
         )
     )
     return output

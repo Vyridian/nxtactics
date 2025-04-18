@@ -113,8 +113,6 @@ export default class nx_tactics_books_advanced_rules {
             {"any-1": nx_tactics_base.t_rulemap},
             ":Cold",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Cold", ":summary", "* [Critical Hits] may be used for [Slow Tokens]"),
-            ":Electricity",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Electricity", ":summary", "* [Critical Hits] may be used to place 2 [Stun] each (or 2 [Damage] each if the target is [Mechanical])", ":titles", "Electric Shock, Lightning"),
             ":Flame",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Flame", ":summary", "* [Critical Hits] may be used for [Fire Tokens]"),
             ":Infection",

@@ -2037,9 +2037,11 @@
          (base/unit
           :name "Kingpin"
           :image "Superheroes/Kingpin.png"
-          :unitpowermap
-           (base/unitpowermap<-tactics-keys
+          :unitskillmap
+           (base/unitskillmap<-tactics-keys
             tactics
+            "Close Combat"
+            "Crime"
             "Mastermind"))
         "Lizard, The"
          (base/unit

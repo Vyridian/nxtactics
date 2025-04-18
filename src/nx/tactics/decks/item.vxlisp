@@ -70,7 +70,7 @@
    :titles "Splitting Maul"
    :image "images/cards/item-axe-wood.svg"
    :summary
-    "* [Fight]: [Melee]:-1
+    "* [Skill]: [Melee]:-1
      * [Damage]: [Body]:+3 [Hack] [Slash]
      * [Location]: [2-hand]
      * [Armor]: 1x1"
@@ -80,7 +80,7 @@
    :name "Bare Handed"
    :image "images/cards/item-barehanded.svg"
    :summary
-    "* [Fight]: [Close Combat] or [Melee]
+    "* [Skill]: [Close Combat] or [Melee]
      * [Arc]: [Arc:Front]
      * [Damage]: [Body] [Bash]")
   (item
@@ -106,7 +106,7 @@
   (base/item
    :name "Bow: Composite"
    :summary
-    "* [Fight]: [Ranged]
+    "* [Skill]: [Ranged]
      * [Damage]: 10x1 [Pierce] [Slash]
      * [Range]: 10x1 100m/300ft
      * [Location]: [2-hand]
@@ -119,7 +119,7 @@
    :name "Bow: Long"
    :titles "Daikyu"
    :summary
-    "* [Fight]: [Ranged]
+    "* [Skill]: [Ranged]
      * [Damage]: 10x1 [Pierce] [Slash]
      * [Range]: 10x1 100m/300ft
      * [Location]: [2-hand]"
@@ -130,7 +130,7 @@
    :titles "Hankyu, Recurve Bow"
    :reference "Can fire about 6 aimed shots or 12 unaimed shots per minute."
    :summary
-    "* [Fight]: [Ranged]
+    "* [Skill]: [Ranged]
      * [Damage]: 8x1 [Pierce] [Slash]
      * [Range]: 2x1 20m/60ft
      * [Location]: [2-hand]

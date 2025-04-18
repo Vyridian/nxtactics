@@ -2270,8 +2270,8 @@ export default class nx_tactics_books_superheroes {
               "Kingpin",
               ":image",
               "Superheroes/Kingpin.png",
-              ":unitpowermap",
-              nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Mastermind")
+              ":unitskillmap",
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Close Combat", "Crime", "Mastermind")
             ),
             "Lizard, The",
             vx_core.f_new(

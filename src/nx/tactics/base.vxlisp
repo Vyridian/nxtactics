@@ -346,11 +346,10 @@
    age             : int
    classification  : string
    crew            : string
-   gender          : string
+   traits          : string
    mass            : string
    height          : string
    length          : string
-   race            : string
    range           : string
    speedair        : string
    speedland       : string
@@ -1103,7 +1102,8 @@
   [name  : string := (:name card)
    image : string := (:image card)
    imgmirror : boolean := (:imgmirror card)
-   id : string := (string name "-image")]
+   id : string := (string name "-image")
+   imgname : string := id]
   (cardimage
    :id id
    :name name
@@ -1132,11 +1132,14 @@
 (func cardimagelist<-tactics-unitkeys : cardimagelist
  [tactics : tactics
   keys    : stringlist :...]
- (list<-list : cardimagelist
-  keys
-  (fn : cardimage
-   [key : string]
-   (unit<-tactics-key tactics key)))
+ (let : cardimagelist
+  [unitlist : unitlist :=
+    (unitlist<-tactics-keys tactics keys)]
+  (list<-list : cardimagelist
+   unitlist
+   (fn : cardimage
+    [unit : unit]
+    (cardimage<-card unit))))
  :doc "Returns a cardimagelist from a given tactics and unit keys.")
 
 (func item<-tactics-key : item

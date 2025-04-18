@@ -22,317 +22,6 @@
     * A priest (Xeib) in town makes and sells anti-venom.
     * Xeib is travelling to Murintown, but he does not want to travel unguarded."))
 
-(func unit-bandit : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Bandit"
-  :image "images/cards/unit-bandit.svg"
-  :summary
-   "A highwayman."
-  :race "Human"
-  :gender "M"
-  :body "8x1"
-  :mind "5x1"
-  :will "5x1"
-  :speed "6x0"
-  :speedland "6kph/4mph"
-  :mass "80kg/180"
-  :height "1.8m/6ft"
-  :mass "80kg/220lb"
-  :height "1.9m/6'3ft"
-  :demeanor "Opportunistic"
-  :nature "Ruthless"
-  :beast "2x0"
-  :shadow "5x0"
-  :value "1x0"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill<-tactics-key-lvl-items
-     tactics "Melee" 3
-     (stringlist "Sword: Short"))
-    (base/unitskill<-tactics-key-lvl-abilities
-     tactics "Stealth" 1
-     (stringlist "Ambush")))))
-
-(func unit-bruiser : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Bruiser"
-  :image "images/cards/unit-bruiser.svg"
-  :summary
-   "A burly, intimidating man."
-  :race "Human"
-  :gender "M"
-  :body "10x1"
-  :mind "3x1"
-  :will "5x1"
-  :speed "5x0"
-  :speedland "5kph/3mph"
-  :mass "100kg/220lb"
-  :height "1.9m/6'3ft"
-  :demeanor "Glaring"
-  :nature "Callous"
-  :beast "5x0"
-  :shadow "1x0"
-  :value "1x0"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill<-tactics-key-lvl-abilities
-     tactics "Close Combat" 2
-     (stringlist "Grab"))
-    (base/unitskill<-tactics-key-lvl
-     tactics "Intimidation" 1))))
-
-(func unit-guardsman : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Guardsman"
-  :image "images/cards/unit-guardsman.svg"
-  :summary
-   "A typical member of a city watch or to keep lookout."
-  :race "Human"
-  :gender "M"
-  :body "8x1"
-  :mind "5x1"
-  :will "5x1"
-  :speed "5x0"
-  :speedland "5kph/3mph"
-  :mass "80kg/175"
-  :height "1.8m/6ft"
-  :height "1.9m/6'3ft"
-  :demeanor "Indifferent"
-  :nature "Lazy"
-  :beast "1x0"
-  :shadow "2x0"
-  :value "1x0"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Melee")
-     :level "2"
-     :unititemmap
-      (base/unititemmap<-unititemlist
-        (base/unititem
-         :item (base/item<-tactics-key tactics "Spear"))))
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Investigation")
-     :level "1"))))
-
-(func unit-jesaveer : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Jes Aveer"
-  :titles "Jessana Aveer"
-  :image "images/cards/unit-jesaveer.svg"
-  :summary
-   "A resilient, young woman with a love of blacksmithing."
-  :race "Human"
-  :gender "F"
-  :age 24
-  :body "6x1"
-  :mind "6x1"
-  :will "6x1"
-  :speed "5x0"
-  :speedland "5kph/3mph"
-  :mass "63kg"
-  :height "1.72m/5ft7"
-  :demeanor "Willful"
-  :nature "Nuturing"
-  :beast "1x0"
-  :shadow "1x0"
-  :value "1x0"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Melee")
-     :level "1"
-     :unititemmap
-      (base/unititemmap<-unititemlist
-        (base/unititem
-         :item (base/item<-tactics-key tactics "Hammer"))))
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Tradeskills")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Blacksmithing")))))))
-
-(func unit-jonaveer : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Jon Aveer"
-  :titles "Ajona Aveer"
-  :image "images/cards/unit-jonaveer.svg"
-  :summary
-   "A clever, young man trying to make his fortune."
-  :race "Human"
-  :gender "M"
-  :age 23
-  :body "7x1"
-  :mind "6x1"
-  :will "5x1"
-  :speed "4x0"
-  :speedland "4kph/2.5mph"
-  :mass "75kg"
-  :height "1.78m/5ft10"
-  :demeanor "Frivolous"
-  :nature "Loyal"
-  :beast "1x0"
-  :shadow "1x0"
-  :value "1x0"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Melee")
-     :level "1"
-     :unititemmap
-      (base/unititemmap<-unititemlist
-        (base/unititem
-         :item (base/item<-tactics-key tactics "Spear"))))
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Business")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Bargain")))))))
-
-(func unit-liliducon : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Lili Ducon"
-  :image "images/cards/unit-liliducon.svg"
-  :summary
-   "A pleasant and perceptive young lady, who moved with her father Wilm. She took her mother's death hard, and is having a difficult time adapting."
-  :race "Human"
-  :gender "F"
-  :age 11
-  :body "4x1"
-  :mind "4x1"
-  :will "4x1"
-  :speed "3x0"
-  :speedland "3kph/2mph"
-  :mass "40kg/88lb"
-  :height "1.5m/5ft"
-  :demeanor "Pleasant"
-  :nature "Anxious"
-  :beast "1x0"
-  :shadow "1x0"
-  :value "1x0"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Survival")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Foraging")))))))
-
-(func unit-wilddog : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Wild Dog"
-  :image "images/cards/unit-wilddog.svg"
-  :summary
-   "The Wild Dog is one of the fastest runners in the animal kingdom."
-  :body "2x1"
-  :mind "8x-1"
-  :will "4x1"
-  :speed "4x1"
-  :mass "22kg/50lb"
-  :height "76cm/30in"
-  :speedland "40kph/25mph"
-  :nature "Dogged"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Close Combat")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Bite"))
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Grab"))
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Drag")))))))
-
-(func unit-wilmducon : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Wilm Ducon"
-  :image "images/cards/unit-wilmducon.svg"
-  :summary
-   "A proud, prickly huntsman who lost his wife in a violent raid and moved away with his daughter, Lily, to restart his life."
-  :race "Human"
-  :gender "M"
-  :age 30
-  :body "8x1"
-  :mind "5x1"
-  :will "5x1"
-  :speed "5x0"
-  :speedland "5kph/3mph"
-  :mass "80kg/180"
-  :height "1.8m/6ft"
-  :demeanor "Gruff"
-  :nature "Tortured"
-  :beast "1x0"
-  :shadow "1x0"
-  :value "1x0"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Melee")
-     :level "1"
-     :unititemmap
-      (base/unititemmap<-unititemlist
-        (base/unititem
-         :item (base/item<-tactics-key tactics "Axe: Wood"))))
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Hunting")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Snare")))))))
-
-(func unit-woodencart : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Wooden Cart"
-  :image "images/cards/unit-woodencart.svg"
-  :imgmirror true
-  :body "2x2"
-  :mass "200kg/440lb"))
-
-(func unit-xeibhanower : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Xeib Honower"
-  :image "images/cards/unit-xeibhanower.svg"
-  :race "Human"
-  :gender "M"
-  :age 23
-  :body "8x1"
-  :mind "5x1"
-  :will "6x1"
-  :speed "4x0"
-  :speedland "4kph/2.5mph"
-  :mass "80kg"
-  :height "1.78m/5'10"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Animal Handling")
-     :level "3"
-     :unitabilitymap
-      (base/unitabilitymap<-tactics-keys
-       tactics
-       "Snake Charming"
-       "Venom Extraction")))))
-
 (func deck-murintrail : base/deck
  [tactics : base/tactics]
  (base/deck
@@ -344,24 +33,38 @@
       (base/unitlist<-tactics-keys
        tactics
        "Flint (Early)"
+       "Jes Aveer"
+       "Jon Aveer"
+       "Xeib Hanower"
+       "Wilm Ducon"
+       "Lili Ducon"
        "Goblin: Scout"
-       "Horse"))
+       "Bandit"
+       "Bruiser"
+       "Guardsman"
+       "Dog: Wild"
+       "Horse"
+       "Cart: Wooden"))
      (list<-list : base/cardlist
       (base/cardimagelist<-tactics-unitkeys
        tactics
        "Flint (Early)"
+       "Jes Aveer"
+       "Jon Aveer"
+       "Xeib Hanower"
+       "Wilm Ducon"
+       "Lili Ducon"
        "Goblin: Scout"
-       "Horse"))
-     (unit-bandit tactics)
-     (unit-bruiser tactics)
-     (unit-guardsman tactics)
-     (unit-jesaveer tactics)
-     (unit-jonaveer tactics)
-     (unit-xeibhanower tactics)
-     (unit-wilmducon tactics)
-     (unit-liliducon tactics)
-     (unit-wilddog tactics)
-     (unit-woodencart tactics)
+       "Bandit"
+       "Bruiser"
+       "Guardsman"
+       "Dog: Wild"
+       "Horse"
+       "Cart: Wooden"))
+     (list<-list : base/cardlist
+      (base/rulelist<-tactics-keys
+       tactics
+       "Zombie"))
      (list<-list : base/cardlist
       (base/skilllist<-tactics-keys
        tactics

@@ -393,27 +393,64 @@
    :summary
     ":image")
   (base/rule
+   :name "Weather: Downpour")
+  (base/rule
    :name "Weather: Humidity"
    :image "images/cards/rule-weather-humidity.svg"
    :summary
     ":image")
+  (base/rule
+   :name "Weather: Hurricane")
+  (base/rule
+   :name "Weather: Rain"
+   :summary
+    "* Dew
+     * Dizzle
+     * Rain
+     * Downpour")
+  (base/rule
+   :name "Weather: Snow"
+   :summary
+    "* Sleet
+     * Snowy
+     * Snowstorm
+     * Blizzard")
   (base/rule
    :name "Weather: Temperature"
    :image "images/cards/rule-weather-temperature.svg"
    :summary
     ":image")
   (base/rule
+   :name "Weather: Tornado")
+  (base/rule
+   :name "Weather: Thunderstorm"
+   :image "images/cards/rule-weather-thunderstorm.svg"
+   :summary
+    "* Conditions: Stormy Humid+ Windy+
+     * [Event]: Every 6 hours, [Reveal Fate].
+     ** IF a Black Wild THEN a nearby lightning strike
+     ** IF a Red Wild THEN a direct lightning strike
+     ** Effects - A lightning bolt holds 5 GigaJoules or 5x9 damage for a direct strike, but most lightning strikes go through smaller feelers or are splashes. Even a direct strike is survivable because it usually travels across the surface of the skin instead of through the body.")
+  (base/rule
    :name "Weather: Wind"
    :image "images/cards/rule-weather-wind.svg"
    :summary
     ":image")
   (base/rule
-   :id "will"
    :name "Will"
    :summary
     "* Will is the measure of a unit's grit, determination and psychological stability.
      * A unit with Will:0 is panicked.
      * It is lossly derived from an average person having a 100 score. E.g. 100 = 5x10^1 = 5x1, 140 = 9x10^1 = 9x1")
+  (base/rule
+   :name "Zombie"
+   :summary
+    "* [Undead]: Immune to [Bleeding] and [Fear]. Never targets [Undead].
+     * [Mindless]: Does not avoid [Hazard].
+     * [Prey]: [Bleeding], [Prone] within 2 Moves. Will [Disengage] for prey.
+     * [Zombie Plague]:
+     ** IF a unit suffers a [Pierce] [Bite]
+     ** THEN at the beginning of each [Turn], take [Fatigue]:+1 or [Stress]:+1 until cured.")
 ))
 
 (func deck-rules : base/deck

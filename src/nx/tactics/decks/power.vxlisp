@@ -1853,6 +1853,8 @@
    :titles "Ofuda"
    :abilitymap
     (base/abilitymap
+     "Art Imitates Life"
+      (base/ability<-tactics-key tactics "Art Imitates Life")
      "Binding Paper"
       (base/ability
        :name "Binding Paper")
@@ -2658,7 +2660,7 @@
       (base/ability
        :name "Tempest in a Teapot"
        :summary "* Hits have no effect.  Criticals change Weather Intensity.")
-     :Thunderstorm
+     "Thunderstorm"
       (base/ability
        :name "Thunderstorm")
      "Voices Carry"
@@ -2673,7 +2675,7 @@
       (base/ability
        :name "Wind Lash"
        :titles "Wind Whip")
-     :Whirlwind
+     "Whirlwind"
       (base/ability
        :name "Whirlwind"
        :titles "Cyclone, Tornado")
@@ -3583,7 +3585,8 @@
    :name "Electricity"
    :summary
     "* Electric Elementalist personalities are influenced by their link to Electricity.
-     * Energetic, Explosive, Dynamic, Animated, Spark of Life, High Strung"
+     * Energetic, Explosive, Dynamic, Animated, Spark of Life, High Strung
+     * [Crits] may be used to place 2 [Stun] each (or 2 [Damage] each if the target is [Mechanical])"
    :titles "Lightning"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -5855,8 +5858,9 @@
      "Poisonous Skin"))
   (base/power
    :name "Transfiguration"
-   :summary "* The ability to transform others."
-   :titles "Fleshcrafting, Vissisitude"
+   :summary
+    "* The ability to mold flesh."
+   :titles "Fleshcrafting, Fleshmolder, Vissisitude"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -5869,8 +5873,19 @@
      "Sensory Deprivation"
      "Sensory Overload"))
   (base/power
+   :name "Transform"
+   :reference
+    "* The Transformers
+     * Zeta Gundam
+     * Robotech
+     * Let me change into something a little more... Comfortable. - Elise, Runeterra"
+   :summary
+    "* The Unit transforms into one or more different forms.
+     * [Action]: Change into one of the Units.
+     * This [Power] is similar to [Hanger] and [Combiner], but the Units are prechosen at creation and their [Cost] is included in the Transformer Unit Cost.
+     * The Transform [Intensity] must be high enough to hold the Units [Cost].")
+  (base/power
    :name "Transformation"
-   :reference "* Let me change into something a little more... Comfortable. - Elise, Runeterra"
    :abilitymap
     (base/abilitymap
      "Change Clothing"
@@ -5902,20 +5917,9 @@
       (base/ability
        :name "Quick Change")))
   (base/power
-   :name "Transform"
-   :reference
-    "* The Transformers
-     * Zeta Gundam
-     * Robotech"
-   :summary
-    "* The Unit transforms into one or more different forms.
-     * [Action]: Change into one of the Units.
-     * This [Power] is similar to [Hanger] and [Combiner], but the Units are prechosen at creation and their [Cost] is included in the Transformer Unit Cost.
-     * The Transform [Intensity] must be high enough to hold the Units [Cost].")
-  (base/power
    :name "Transmutation"
-   :summary "* The ability to transform non-living matter."
-   :titles "Reality Warper, Shaper, Transmuter"
+   :summary "* The ability to transform others."
+   :titles "Polymorpher, Reality Warper, Shaper, Transmuter"
    :stat "Mind"
    :abilitymap
     (base/abilitymap<-tactics-keys

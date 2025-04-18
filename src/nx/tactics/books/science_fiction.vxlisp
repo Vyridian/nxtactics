@@ -112,9 +112,9 @@
      (base/section
       :name "Alien Equipment"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Alien Egg"
-         (item
+         (base/item
           :name "Alien Egg"
           :image "AlienPredator/Alien_Egg.png"
           :reference "Who's laying these eggs?  I'm not sure. It must be something we haven't seen yet.  Ripley and Bishop, Aliens"))
@@ -228,29 +228,29 @@
      (section
       :name "Predator Equipment"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Plasma Caster"
-         (item
+         (base/item
           :name "Plasma Caster"
           :image "AlienPredator/PredatorPlasmaCaster.jpg")
         "Predator Claws"
-         (item
+         (base/item
           :name "Predator Claws"
           :image "AlienPredator/PredatorClaws.jpg")
         "Predator Disc"
-         (item
+         (base/item
           :name "Predator Disc"
           :image "AlienPredator/PredatorDisc.gif")
         "Predator Smartgun"
-         (item
+         (base/item
           :name "Predator Smartgun"
           :image "AlienPredator/PredatorSmartgun.jpg")
         "Predator Stealthsuit"
-         (item
+         (base/item
           :name "Predator Stealthsuit"
           :image "AlienPredator/PredatorStealth.jpg")
         "Predator Vision"
-         (item
+         (base/item
           :name "Predator Vision"
           :image "AlienPredator/PredatorVision.jpg"))
       :unitmap
@@ -306,50 +306,50 @@
      (section
       :name "Human Equipment"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Combat Armor"
-         (item
+         (base/item
           :name "Combat Armor"
           :image "ColonialMarines/CombatArmor.jpg")
         "VP70Mk9 Pistol"
-         (item
+         (base/item
           :name "VP70Mk9 Pistol"
           :image "ColonialMarines/HK_VP70.jpg"
           :summary "18 round 9mm pistol.")
         "M41A Pulse Rifle"
-         (item
+         (base/item
           :name "M41A Pulse Rifle"
           :image "ColonialMarines/M41a01.jpg"
           :reference "That's the grenade launcher. I don't think you want to mess with that. - Hicks, Aliens")
         "Ithaca Model 37 Shotgun"
-         (item
+         (base/item
           :name "Ithaca Model 37 Shotgun"
           :image "ColonialMarines/Ithaca37Stakeout.jpg"
           :reference "Triva: The one used by Corporal Hicks was passed from father to son all the way back to marines in the Vietnam War."
           :summary "4 round 12-gauge sporting shotgun produced from 1937.  Aka Stakeout.")
         "M240 Flamethrower"
-         (item
+         (base/item
           :name "M240 Flamethrower"
           :image "ColonialMarines/M240Flamethrower.jpg")
         "M56 Smartgun MG"
-         (item
+         (base/item
           :name "M56 Smartgun MG"
           :image "ColonialMarines/M56Smartgun.jpg")
         "CN-20 Nervergas"
-         (item
+         (base/item
           :name "CN-20 Nervergas"
           :image "ColonialMarines/CN-20Nervegas.jpg")
         "Motion Tracker"
-         (item
+         (base/item
           :name "Motion Tracker"
           :image "ColonialMarines/MotionTracker.jpg"
           :reference "There's somethin' movin' and it ain't us! Tracker's off scale, man. They're all around us! - Hudson, Aliens")
         "Electronics Pack"
-         (item
+         (base/item
           :name "Electronics Pack"
           :reference "Hudson, run a bypass. - Apone, Aliens")
         :Welder
-         (item
+         (base/item
           :name "Welder"
           :image "ColonialMarines/Welder.jpg")))
     "Human Vehciles"
@@ -558,17 +558,17 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
      (section
       :name "Doctor Who Equipment"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Psychic Paper"
-         (item
+         (base/item
           :name "Psychic Paper"
           :image "DrWho/PsychicPaper.jpg")
         "Sonic Screwdriver"
-         (item
+         (base/item
           :name "Sonic Screwdriver"
           :image "DrWho/SonicScrewdriver.jpg")
         :TARDIS
-         (item
+         (base/item
           :name "TARDIS"
           :image "DrWho/Tardis.jpg"
           :reference
@@ -723,25 +723,25 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
      (section
       :name "Weapons"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Shock Cannon"
-         (item
+         (base/item
           :name "Shock Cannon")
         "Pulse Laser"
-         (item
+         (base/item
           :name "Pulse Laser")
         :Missile
-         (item
+         (base/item
           :name "Missile")
         "Smite Projector"
-         (item
+         (base/item
           :name "Smite Projector")
         "Wave Motion Gun"
-         (item
+         (base/item
           :name "Wave Motion Gun"
           :range "400Mm")
         "Magna Flame Gun"
-         (item
+         (base/item
           :name "Magna Flame Gun"
           :range "800Mm")))
     "Earth Forces"
@@ -926,9 +926,9 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
         * Alliance Research Service"
       :titles "Federation, Feddys (derogatory), Starfleet"
       :itemmap
-       (itemmap
+       (base/itemmap
         :PAX
-         (item
+         (base/item
           :name "PAX"
           :summary
            "* PAX is a chemical compound designed to be added to air processors in order to pacify a populace. An Alliance research team on Miranda discovered that the Pax was effective with 99.9% of people. Unfortunately, it was such an effective means of pacifying that the people stopped doing anything, they simply waited for death. The remaining tenth of a percent (0.1%) of the population had the opposite reaction. They became highly aggressive, committing unspeakable acts including cannibalism, rape, and self-mutilation. These people would come to be known as Reavers."
@@ -1722,9 +1722,9 @@ over-population problem."
         * Reavers are believed by most to be men that went insane at the edge of space and became savage. They stared into the void beyond and became what they saw: nothing.
         * Reavers originated from the planet Miranda. The Alliance had been testing behavioral modification on this planet through the chemical G-23 Paxilon Hydrochlorate ([PAX]), administered through the air recycling systems. The chemical was designed to weed out aggression and anger. The ultimate result was that 99.9% of the population stopped going to work, talking to each other, and eventually stopped moving, eating or breeding, and therefore died. However, the remaining tenth of a percent of the population had the opposite reaction, with their aggression and primal instincts boosted beyond simple madness into murderous rage, sadism and xenophobia."
       :itemmap
-       (itemmap
+       (base/itemmap
         :Reaver
-         (item
+         (base/item
           :name "Reaver")))
     :Replicant
      (section
@@ -1954,38 +1954,38 @@ weapons load for a small ship.
      (section
       :name "Sci-Fi Equipment"
       :itemmap
-       (itemmap
+       (base/itemmap
         :Communicator
-         (item
+         (base/item
           :name "Communicator")
         :Transporter
-         (item
+         (base/item
           :name "Transporter"
           :image "StarTrek/Transporter.jpg")
         :Tricorder
-         (item
+         (base/item
           :name "Tricorder"
           :image "StarTrek/Tricorder.jpg")))
     "Sci-Fi Weapons"
      (section
       :name "Sci-Fi Weapons"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Anti-Proton Beam"
-         (item
+         (base/item
           :name "Anti-Proton Beam"
           :image "StarTrek/AntiProtonBeam.jpg"
           :reference "It was pure Anti-Proton...Absolutely pure! - Commodore Matt Decker, Star Trek")
         "Cloaking Device"
-         (item
+         (base/item
           :name "Cloaking Device"
           :image "StarTrek/CloakingDevice.jpg")
         "Disruptor Bank"
-         (item
+         (base/item
           :name "Disruptor Bank"
           :image "StarTrek/DisruptorBank.jpg")
         "Hand Phaser"
-         (item
+         (base/item
           :name "Hand Phaser"
           :image "StarTrek/HandPhaser.jpg"
           :summary
@@ -1995,14 +1995,14 @@ weapons load for a small ship.
             * Heat
             * Disintegrate")
         "Phaser Array"
-         (item
+         (base/item
           :name "Phaser Array"
           :image "StarTrek/PhaserBank.jpg"
           :reference "http://www.ditl.org/index.php?daymain=/pagarticle.php?29"
           :energy "68PJ"
           :range "150Mm")
         "Photon Torpedo"
-         (item
+         (base/item
           :name "Photon Torpedo"
           :image "StarTrek/PhotonTorpedo.png"
           :reference "Photon Torpedo...Away! - Chekov, Star Trek The Motion Picture"
@@ -2278,28 +2278,28 @@ weapons load for a small ship.
       :name "Star Wars Equipment"
       :reference "http://www.stardestroyer.net/tlc/Power/index.html"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Blaster Pistol"
-         (item
+         (base/item
           :name "Blaster Pistol"
           :image "StarWars/BlasterPistol.jpg"
           :reference "Hokey religions and ancient weapons are no match for a good blaster at your side, kid. - Han Solo, Star Wars")
         "Blaster Rifle"
-         (item
+         (base/item
           :name "Blaster Rifle"
           :image "StarWars/BlasterRifle.jpg")
         "Ion Blaster"
-         (item
+         (base/item
           :name "Ion Blaster"
           :image "StarWars/IonBlaster.jpg"
           :summary
            "* Ion blasters, or ionization blasters, were any handheld weapons that fired ion energy instead of blaster bolts. They were commonly used in response to droids and other technology on the battlefield.
             * [Hit]: [Stun] only.  +1 [Shield Damage].")
         "Ion Cannon"
-         (item
+         (base/item
           :name "Ion Cannon")
         :Lightsaber
-         (item
+         (base/item
           :name "Lightsaber"
           :image "StarWars/Lightsaber.png"
           :reference
@@ -2307,41 +2307,41 @@ weapons load for a small ship.
           :summary
            "It is a blade of pure plasma energy suspended in a force containment field that keeps individuals from feeling the plasma's heat. Other Electromagnetic energy fields and coherent energy are repelled by lightsabers' arcs. These include most force fields, blaster bolts, and other lightsaber blades.")
         :Turbolaser
-         (item
+         (base/item
           :name "Turbolaser"
           :summary "1kton TNT"
           :energy "4TJ")
         "Turbolaser Turret"
-         (item
+         (base/item
           :name "Turbolaser Turret"
           :image "StarWars/TurbolaserTurret.jpg"
           :energy "30TJ"
           :range "1200Km")
         "Heavy Turbolaser Turret"
-         (item
+         (base/item
           :name "Heavy Turbolaser Turret"
           :image "StarWars/PlanetaryTurbolaser.jpg"
           :energy "250TJ")
         "Heavy Ion Cannon"
-         (item
+         (base/item
           :name "Heavy Ion Cannon"
           :image "StarWars/PlanetaryIonCannon.jpg"
           :energy "250TJ")
         "Tractor Beam"
-         (item
+         (base/item
           :name "Tractor Beam")
         "Proton Torpedo"
-         (item
+         (base/item
           :name "Proton Torpedo"
           :image "StarWars/ProtonTorpedo.jpg"
           :summary "1 Kiloton to Teratons."
           :energy "40TJ")
         "Shield Generator"
-         (item
+         (base/item
           :name "Shield Generator"
           :image "StarWars/ShieldGenerator.jpg")
         :Superlaser
-         (item
+         (base/item
           :name "Superlaser"
           :image "StarWars/DeathStarSuperlaser.jpg"
           :reference
@@ -2566,73 +2566,24 @@ weapons load for a small ship.
                   :name "Turbolaser"
                   :facing "Fx2")))))
         "Tie Advanced"
-         (base/unit
-          :name "Tie Advanced"
-          :image "StarWars/Imperial_TieAdvanced.png"
-          :titles "Tie Avenger"
-          :classification "Lt. Spacecraft"
-          :unitskillmap
-           (base/unitskillmap
-            :Gunnery
-             (base/unitskill
-              :name "Gunnery"
-              :level "4"
-              :unititemmap
-               (base/unititemmap
-                :Turbolaser
-                 (base/unititem
-                  :name "Turbolaser"
-                  :facing "Fx2")))))
+         (base/unit<-tactics-key tactics "Tie Advanced")
         "Tie Bomber"
-         (base/unit
-          :name "Tie Bomber"
-          :image "StarWars/Imperial_TieBomber.png"
-          :classification "Lt. Spacecraft")
+         (base/unit<-tactics-key tactics "Tie Bomber")
         "Tie Defender"
-         (base/unit
-          :name "Tie Defender"
-          :image "StarWars/Imperial_TieDefender.png"
-          :classification "Lt. Spacecraft")
+         (base/unit<-tactics-key tactics "Tie Defender")
         "Tie Fighter"
-         (base/unit
-          :name "Tie Fighter"
-          :image "StarWars/Imperial_TieFighter.png"
-          :classification "Lt. Spacecraft"
-          :unitskillmap
-           (base/unitskillmap
-            :Gunnery
-             (base/unitskill
-              :name "Gunnery"
-              :level "4"
-              :unititemmap
-               (base/unititemmap
-                :Turbolaser
-                 (base/unititem
-                  :name "Turbolaser"
-                  :facing "Fx2")))))
+         (base/unit<-tactics-key tactics "Tie Fighter")
         "Tie Interceptor"
-         (base/unit
-          :name "Tie Interceptor"
-          :image "StarWars/Imperial_TieInterceptor.png"
-          :classification "Lt. Spacecraft"
-          :unitskillmap
-           (base/unitskillmap
-            :Gunnery
-             (base/unitskill
-              :name "Gunnery"
-              :level "4"
-              :unititemmap
-               (base/unititemmap
-                :Turbolaser
-                 (base/unititem
-                  :name "Turbolaser"
-                  :facing "Fx4")))))
+         (base/unit<-tactics-key tactics "Tie Interceptor")
+        "Tie Phantom"
+         (base/unit<-tactics-key tactics "Tie Phantom")
         "Imperator Star Destroyer"
          (base/unit
           :name "Imperator Star Destroyer"
           :image "StarWars/Imperial_StarDestroyer.png"
           :classification "Hvy. Spacecraft"
           :crew "34,285"
+          :body "2.5x9"
           :mass "25Mtons"
           :length "1600m"
           :unitpowermap

@@ -361,9 +361,7 @@ export default class nx_tactics_books_bestiary {
       ":name",
       "Beastmen",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Draconian",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -379,7 +377,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Draconian Dragoon", ":image", "images/bestiary/Draconian.png", ":summary", "* Elite Draconians are awarded Dractyl steeds. The Dractyl are unwieldy flyers and may only fly short distances with a heavy Draconian soldier.")
           )
         ),
-        ":Gryphon",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -397,7 +394,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Gryphon Light Infantry")
           )
         ),
-        ":Krukan",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -465,11 +461,8 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Krukan Trapper")
           )
         ),
-        ":Mantids",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Mantids", ":summary", "* The Mantids are a warlike, insectoid race. They walk on four legs and have large sickle-like claws with limited dexterity. They are capable of relatively fine work using the mandibles about their mouths.\n* Civilization - They live in large complexes deep underground where they wage war on other species including other tribes of Mantids.\n* Combat - They mostly rely on their natural weaponry, but they have been seen using simple spears and axes. There are also many specialized warriors capable of spitting poison or acid or explosives.", ":titles", "Ant Men, Insect Men, Mantis Men"),
-        ":Mycans",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Mycans", ":reference", "* Puffcap Peddler: Oh, if mushrooms could talk. Teemo: I'll have what he's having. - Puffcap Peddler and Teemo, Runeterra\n* I'm empty inside.. Sentience is a curse.. Knowledge is suffering.. I love being a meaningless pawn.. I had a bunch of friends before. They all died. - Mister Root, Runeterra", ":summary", "* The Mycans are a fungal race.\n* Life Cycle - They mostly live underground as a vast fungal network, but during spring months the networks spawns small mushroom men that work to improve their living area and seek mates. At the end of the fall, these mushrooms collapse and break down. Each year, the same personalities are resurrected, but they are born anew and have no memories of their previous life, though all of their memories are permanently stored in the network.\n* Appearance - Mycans are generally up to 5 feet tall with a narrow stem and a large cone-shaped cap. They move by splitting their stem into 2 or more smaller stems.\n* Senses - Mycans have no eyes, ears, or mouths. They have a keen sense of smell, and they hear and feel through vibrations, mostly coming through the ground.\n* Spores - Mycans can 'exhale' hallucinogenic spores to confuse and incapacitate opponents. They can also use their spores to create images and impressions in other creatures.\n* Communication - Mycans do not speak. Instead they communicate with each other through the mycelial network underground. In fact, they communicate so much information through this network that all Mycans in a colony immediately know everything every other member knows.\n* Intelligence - Mycans are fairly intelligent, but they are a simple folk and have little interest in things that don't directly affect their lives. They do build simple shelters and are expert farmers.\n* Personalities - Mycans are generally friendly and quite pleasent to those who do not threaten them. They are grimly militaristic against threats, however. They appear to have happy, childlike personalities, but though they are individuals, Mycans are a colony organism and are not overly concerned about their safety or deaths. They also see time in a more long term way than most creatures.", ":titles", "Fungus Men, Mushrooms, Mushroom Men, Shrooms"),
-        ":Naga",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -477,7 +470,7 @@ export default class nx_tactics_books_bestiary {
           ":summary",
           "* The Naga are large serpent people resembling huge cobras with short arms. They stand about 5 feet high, but 2/3 of their length is in their tail behind them. Clans are named after the current clan leader and the Naga use clan name as a last name. Like their snake and crocodile brethren, they are slow moving and lazy except while hunting. Their fangs produce a mild venom, but its lack of potency is a point of embarrassment to the Naga. They prefer the spear as a weapon because they can use it as a walking staff to aid them when they are not waist deep in water (their natural habitat). They sleep with their eyes open which makes them seem to always be on the alert.\n* Maximum Body - 6",
           ":titles",
-          "Lamia, Serpent People",
+          "Lamia",
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
@@ -489,7 +482,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Naga Hunter")
           )
         ),
-        ":Sagittarians",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -507,7 +499,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sagittarian Light Cavalry")
           )
         ),
-        ":Saurids",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -533,7 +524,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Saurid Heavy Cavalry", ":summary", "* The Saurid ride large Desert Strider lizards into battle.")
           )
         ),
-        ":Tauran",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -547,9 +537,7 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tauran Hammerman")
           )
         ),
-        ":Stryx",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Stryx", ":summary", "* A race of man-like beings resembling a cross between a vulture and a horned devil. They stand under six feet tall with a 20 foot wingspan. They excel at gliding and can cover great distances and remain aloft for hours. They have superior nightvision but see poorly in daylight. They feed on carrion and have little appetite for fighting. Their manual dexerity is limited, but they can use simple spears and polearms when necessary using either their hands on land or their feet in the air."),
-        ":Tritons",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -587,7 +575,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Selkie", ":summary", "* A seal that can shed its skin and appear human. In human form, the Selkie can only breathe air. If its seal skin is lost or destroyed, the Selkie cannot resume seal form.")
           )
         ),
-        ":Wildman",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -603,8 +590,17 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Jaka Manhunter", ":summary", "* The Jaka are a race of intelligent man-like beings with features resembling a cross between man, wolf, and panther. They are a striking people with sleek black fur and yellow/green eyes.\n* Personality - The Jaka are solitary beings, sullen and introspective in nature. They have been known to become steadfast companions to those they trust, but have also been known to become cold-blooded killers to those who cross them.\n* Lifestyle - They are cunning and have excellent senses, so they make are superb hunters. They typically live off the land but also trade their extra hides and animal parts for useful gear. Some have extended their tracking and hunting skills to become bounty hunters: tracking and capturing fugitives from justice and living off the bounty.")
           )
         ),
-        "Valusian",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Valusian", ":summary", "", ":titles", "Dragon Kings, Serpent People")
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_section},
+          ":name",
+          "Valusian",
+          ":summary",
+          "",
+          ":titles",
+          "Dragon Kings, Serpent People",
+          ":unitmap",
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Valusian Primitive", "Valusian Sorcerer", "Valusian Warrior")
+        )
       )
     )
     return output
@@ -659,9 +655,7 @@ export default class nx_tactics_books_bestiary {
       ":name",
       "Constructs",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Alchemical",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -673,7 +667,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Homunculus")
           )
         ),
-        ":Animated",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -697,7 +690,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Terra Cotta Warrior")
           )
         ),
-        ":Dreams",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -719,7 +711,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sandman")
           )
         ),
-        ":Golems",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -739,7 +730,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Colossus", ":reference", "* Colossus of Rhodes\n* Colossus of Sardia\n* Pygmalion\n* Talos\n* Exodia, Obliterate! - Yugi, Yu-Gi-Oh!", ":titles", "Animated Statue, Stone Golem", ":height", "30m")
           )
         ),
-        ":Machina",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -749,41 +739,8 @@ export default class nx_tactics_books_bestiary {
           ":titles",
           "Auton, Clockwork, Mech, Mek, Mekton",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            ":Automaton",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Automaton"),
-            "Bronze Bull",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bronze Bull"),
-            "Bronze Horse",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bronze Horse"),
-            "Clockwork Avian",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Avian"),
-            "Clockwork Cobra",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Cobra", ":titles", "Iron Cobra"),
-            "Clockwork Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Dragon", ":titles", "Iron Dragon"),
-            "Clockwork Golem",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Golem", ":titles", "Ruin Grader, Ruin Guard"),
-            "Clockwork Owl",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Owl", ":reference", "* Bubo - Clash of the Titans", ":summary", "* Clockwork Owls have excellent vision and make fair spys and messengers. However, they are not at all fast, stealthy, or agile, so some feel that they are far from practical."),
-            "Clockwork Minotaur",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Minotaur", ":reference", "* Minoton - Sinbad and the Eye of the Tiger"),
-            "Clockwork Scorpion",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Scorpion", ":titles", "Iron Scorpion"),
-            "Clockwork Spider",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Spider", ":titles", "Iron Spider, Spiderbot"),
-            "Clockwork Steed",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Steed", ":titles", "Iron Horse"),
-            "Dragon Engine",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon Engine", ":titles", "Steam Engine"),
-            "Iron Maiden",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Iron Maiden", ":summary", "* A semi-humanoid automaton whose lower body is a giant spiked maw that engulfs its target. It is used as an intimidation and torture device."),
-            ":Juggernaut",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Juggernaut")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Automaton", "Bronze Bull", "Bronze Horse", "Clockwork Avian", "Clockwork Cobra", "Clockwork Dragon", "Clockwork Golem", "Clockwork Owl", "Clockwork Minotaur", "Clockwork Scorpion", "Clockwork Spider", "Clockwork Steed", "Dragon Engine", "Iron Maiden", "Juggernaut")
         ),
-        ":Miniatures",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -803,7 +760,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Miniature Worker")
           )
         ),
-        ":Phantasms",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -811,17 +767,7 @@ export default class nx_tactics_books_bestiary {
           ":summary",
           "* Phantasms are created through powerful [Illusion].",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Phantasmal Force",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Force"),
-            "Phantasmal Mount",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Mount"),
-            "Phantasmal Monster",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Monster"),
-            "Phantasm Warrior",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasm Warrior")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Phantasmal Force", "Phantasmal Mount", "Phantasmal Monster", "Phantasmal Warrior")
         )
       )
     )
@@ -1339,9 +1285,7 @@ export default class nx_tactics_books_bestiary {
       ":summary",
       "* Morale - Normal\n* Units - Individuals\n* Dragons are ancient beings and remember the time, before men, when their kind ruled the world.",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Lesser Dragons",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1353,21 +1297,20 @@ export default class nx_tactics_books_bestiary {
             {"any-1": nx_tactics_base.t_unitmap},
             ":Dractyl",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dractyl", ":summary", "* Dractyl are horse-sized lesser dragons. They have a greyish scaly hide and large membranous wings. They live on cliffs and normally eat insects and vermin but will eat almost anything that does not require too much work. They can be trained as steeds, but they are clumsy flyers and only obey under duress so they cannot be relied on in battle. They have been known to throw their riders from altitudes to escape their servitude."),
-            "Fire Drake",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Fire Drake"),
+            "Drake: Fire",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drake: Fire"),
+            "Drake: Spindrift",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drake: Spindrift", ":summary", "* Spindrift Drakes are aquatic, horse-sized, lesser dragons. They hunt the near the surface of large water bodies. Their beautiful, thin, irridescent wings are adapted to swimming, but they are known to launch themselves from the seas and glide close to the surface at high speeds. Their preferred tactic is to burst from the waves, build up speed, and then knock their prey into the water and kill them underwater.", ":titles", "Spindrake"),
+            "Drake: Storm",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drake: Storm", ":titles", "Azure Drake"),
             ":Lindwyrm",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lindwyrm", ":summary", "* Lindwyrm are forest serpents that are connected with the forest. Everything around a Lindwyrm slowly grows, supposedly including treasure.", ":titles", "Lindworm"),
-            "Spindrift Drake",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spindrift Drake", ":summary", "* Spindrift Drakes are aquatic, horse-sized, lesser dragons. They hunt the near the surface of large water bodies. Their beautiful, thin, irridescent wings are adapted to swimming, but they are known to launch themselves from the seas and glide close to the surface at high speeds. Their preferred tactic is to burst from the waves, build up speed, and then knock their prey into the water and kill them underwater.", ":titles", "Spindrake"),
-            "Storm Drake",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Storm Drake", ":titles", "Azure Drake"),
             ":Wurm",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wurm"),
             ":Wyvern",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wyvern")
           )
         ),
-        "Greater Dragons",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1379,73 +1322,50 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            "Celestial Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Celestial Dragon", ":image", "images/bestiary/Dragon_Celestial.png", ":reference", "Shenron - Dragon Ball", ":titles", "Gilded Dragon, Gold Dragon, Silver Dragon"),
-            "Dragon Turtle",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon Turtle", ":reference", "* Gamera\n* Lion Turtle - Avatar The Last Airbender", ":summary", "* Dragon Turtles are enormous turtles that live most of their lives at sea and are sometimes mistaken for small islands. They are extremely long lived and are among the most ancient creatures living. They will occasionally float on the surface so long that plants and even trees grow on them.\n* Steam Breath - They produce extreme heat inside their bodies that can be expelled as steam, a boiling geyser, or fire.", ":titles", "Zaratan"),
-            "Earth Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Earth Dragon", ":summary", "* Earth Dragons are physically more like worms than typical dragons.\n* Heat Breath - The body of an Earth Dragon is scorching hot from friction as it moves. If it exhales strongly, that heat is released as a scorching blast.\n* Earth Moving - They move through sand by breathing in air and sand and blowing it out through the gaps in their long body in a similar way to gills. The air liquifies the surrounding sand and allows the Dragon to slide through the ground at relatively high speeds.", ":titles", "Desert Dragon, Dune Dragon, Earth Wyrm, Sand Dragon, Sand Wyrm"),
-            "Forest Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Forest Dragon", ":summary", "* Poison Spit - Has poison glands in its mouth that let it spit [Poison] like a Cobra.\n* Poison Cloud - Exhales while emitting poison from its glands to create a deadly poison cloud. This cloud provides cover and can be dropped behind the dragon while flying.\n* Poison Immunity - The dragon is immune to its own poison.", ":titles", "Green Dragon, Emerald Dragon"),
-            "Frost Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Frost Dragon", ":image", "images/bestiary/Dragon_Frost.png", ":summary", "* Inhales Heat - The Frost Dragon survives by draining heat sources. Its lair is always incredibly cold with its own body temperature matching the surroundings.\n* Absorb Heat - The body of the Frost Dragon absorbs heat around it creating intense cold around its body.\n* Cold Immunity - Cold has no effect on Frost Dragons\n* Heat Vulnerability - Heat attacks overwhelm its heat absorption ability.", ":titles", "Chromium, Ice Dragon, Whiteflame"),
-            "Mountain Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mountain Dragon", ":summary", "* Red/Orange, Lives in Volcanic regions\n* Firebreathing: The dragon produces 2 fluids in venom sacs in its neck. When released during an exhale, these combine and ignite to form a napalm-like cloud.", ":titles", "Crimson Dragon, Fire Dragon, Lava Dragon"),
-            "Sea Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sea Dragon", ":summary", "* Sea dragons are gigantic serpentine sea creatures with lengths over 60 feet. The great jaws of these creatures are lined with 10 inch teeth and can swallow longboats whole. They are the apex predators of the sea and they consume almost everything they encounter.\n* They are the oldest (along with Dragon Turtles) and largest of the dragon species but also the most primitive. Some have learned to communicate though they have little need to interact with others. Some believe that Sea Dragons may be incredibly ancient, predating almost every other creature of the world.\n* Sonic Roar - The roar of a Sea Dragon can be heard for leagues. It causes deafness and massive internal damage to anything in front of its maw. Like other sonic attacks, the roar has increased effect underwater.", ":titles", "Sea Serpent"),
-            "Shadow Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shadow Dragon", ":image", "images/bestiary/Dragon_Obsidian.png", ":summary", "* Spits Acid - The Shadow Dragon can belch stomach acid from its mouth to burn targets.\n* Acid Cloud - By exhaling while belching acid, the Shadow Dragon can", ":titles", "Black Dragon, Marsh Dragon, Obsidian Dragon, Swamp Dragon"),
-            "Sky Dragon",
+            "Dragon: Celestial",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Celestial", ":image", "images/bestiary/Dragon_Celestial.png", ":reference", "Shenron - Dragon Ball", ":titles", "Gilded Dragon, Gold Dragon, Silver Dragon"),
+            "Dragon: Turtle",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Turtle", ":reference", "* Gamera\n* Lion Turtle - Avatar The Last Airbender", ":summary", "* Dragon Turtles are enormous turtles that live most of their lives at sea and are sometimes mistaken for small islands. They are extremely long lived and are among the most ancient creatures living. They will occasionally float on the surface so long that plants and even trees grow on them.\n* Steam Breath - They produce extreme heat inside their bodies that can be expelled as steam, a boiling geyser, or fire.", ":titles", "Zaratan"),
+            "Dragon: Earth",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Earth", ":summary", "* Earth Dragons are physically more like worms than typical dragons.\n* Heat Breath - The body of an Earth Dragon is scorching hot from friction as it moves. If it exhales strongly, that heat is released as a scorching blast.\n* Earth Moving - They move through sand by breathing in air and sand and blowing it out through the gaps in their long body in a similar way to gills. The air liquifies the surrounding sand and allows the Dragon to slide through the ground at relatively high speeds.", ":titles", "Desert Dragon, Dune Dragon, Earth Wyrm, Sand Dragon, Sand Wyrm"),
+            "Dragon: Forest",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Forest", ":summary", "* Poison Spit - Has poison glands in its mouth that let it spit [Poison] like a Cobra.\n* Poison Cloud - Exhales while emitting poison from its glands to create a deadly poison cloud. This cloud provides cover and can be dropped behind the dragon while flying.\n* Poison Immunity - The dragon is immune to its own poison.", ":titles", "Green Dragon, Emerald Dragon"),
+            "Dragon: Frost",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Frost", ":image", "images/bestiary/Dragon_Frost.png", ":summary", "* Inhales Heat - The Frost Dragon survives by draining heat sources. Its lair is always incredibly cold with its own body temperature matching the surroundings.\n* Absorb Heat - The body of the Frost Dragon absorbs heat around it creating intense cold around its body.\n* Cold Immunity - Cold has no effect on Frost Dragons\n* Heat Vulnerability - Heat attacks overwhelm its heat absorption ability.", ":titles", "Chromium, Ice Dragon, Whiteflame"),
+            "Dragon: Mountain",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Mountain", ":summary", "* Red/Orange, Lives in Volcanic regions\n* Firebreathing: The dragon produces 2 fluids in venom sacs in its neck. When released during an exhale, these combine and ignite to form a napalm-like cloud.", ":titles", "Crimson Dragon, Fire Dragon, Lava Dragon"),
+            "Dragon: Sea",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Sea", ":summary", "* Sea dragons are gigantic serpentine sea creatures with lengths over 60 feet. The great jaws of these creatures are lined with 10 inch teeth and can swallow longboats whole. They are the apex predators of the sea and they consume almost everything they encounter.\n* They are the oldest (along with Dragon Turtles) and largest of the dragon species but also the most primitive. Some have learned to communicate though they have little need to interact with others. Some believe that Sea Dragons may be incredibly ancient, predating almost every other creature of the world.\n* Sonic Roar - The roar of a Sea Dragon can be heard for leagues. It causes deafness and massive internal damage to anything in front of its maw. Like other sonic attacks, the roar has increased effect underwater.", ":titles", "Sea Serpent"),
+            "Dragon: Dragon",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Dragon", ":image", "images/bestiary/Dragon_Obsidian.png", ":summary", "* Spits Acid - The Shadow Dragon can belch stomach acid from its mouth to burn targets.\n* Acid Cloud - By exhaling while belching acid, the Shadow Dragon can", ":titles", "Black Dragon, Marsh Dragon, Obsidian Dragon, Swamp Dragon"),
+            "Dragon: Sky",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Sky Dragon",
+              "Dragon: Sky",
               ":summary",
               "* Sky Dragons make their homes high in the clouds. Their massive wings allow them to fly without ever landing and they sleep while soaring. They are drawn to storms where their unique metallic scales attract and absorb lightning strikes and static electricity. It is unclear what these massive creatures consume, but their large teeth implies they are carnivorous.\n* Lightning Breath - When angered, their scales become ionized and they spit a conductive spray that carries enormous electric potential.\n* Lightning Armor - As might be expected, their scales also carry deadly electric charge which releases on contact.\n* Lightning Immunity\n* If forged into armor, their scales absorb electricity while their hide protects the wearer from that same electricity. Scales can also be used as alchemical batteries and magical focuses.",
               ":titles",
               "Blue-Eyes White Dragon, Night Fury, Rodan, Slifer the Sky Dragon, Cloud Dragon, Storm Dragon",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Electricity",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
+              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+                nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+                  tactics,
                   "Electricity",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Absorb Electricity",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Absorb Electricity")
-                  )
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Absorb Electricity")
                 )
               )
             ),
-            ":Underdragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Underdragon", ":summary", "* Dragons are bursting with magical energies, so even dead dragons can become undead (either purposely or accidentally). Since corpse dragons are no longer living, their normal breath weapon is usually lost, but instead they can exhale a billowing, decaying mist.", ":titles", "Corpse Dragon, Skeletal Dragon, Necrodragon, Undead Dragon, Zombie Dragon")
+            "Dragon: Under",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Under", ":summary", "* Dragons are bursting with magical energies, so even dead dragons can become undead (either purposely or accidentally). Since corpse dragons are no longer living, their normal breath weapon is usually lost, but instead they can exhale a billowing, decaying mist.", ":titles", "Corpse Dragon, Skeletal Dragon, Necrodragon, Undead Dragon, Underdragon, Zombie Dragon")
           )
         ),
-        "Monstrous Dragons",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Monstrous Dragons",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            ":Apophis",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Apophis", ":reference", "Egyptian Mythology"),
-            ":Ladon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ladon"),
-            "Midgard Serpent",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Midgard Serpent", ":reference", "Norse Mythology"),
-            ":Pytho",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pytho"),
-            ":Stoorworm",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Stoorworm"),
-            ":Tiamat",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tiamat", ":reference", "Babylonian Mythology", ":titles", "Avatar of Chaos, Avatar of the Wyrm, The Beast, Mother of All Life")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Dragon: Apophis", "Dragon: Ladon", "Dragon: Midgard Serpent", "Dragon: Pytho", "Dragon: Stoorworm", "Dragon: Tiamat")
         )
       )
     )
@@ -1890,9 +1810,9 @@ export default class nx_tactics_books_bestiary {
             "Marquis Sabnock",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Marquis Sabnock"),
             ":Nightmare",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nightmare", ":titles", "Shadowmane"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nightmare", ":titles", "Shadowmane", ":traits", "[Devil]"),
             "Pit Fiend",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pit Fiend", ":titles", "Balrog, Fiend, Lord of the Pit"),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Pit Fiend"),
             "Pit Wyrm",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pit Wyrm"),
             "President Amy",
@@ -2613,17 +2533,7 @@ export default class nx_tactics_books_bestiary {
           ":name",
           "Bears",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Black Bear",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Black Bear", ":reference", "* Apex predator. High on cocaine. Out of its mind. - Cocaine Bear"),
-            "Brown Bear",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Brown Bear"),
-            "Grizzly Bear",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Grizzly Bear", ":reference", "* It has been estimated that a bite from a grizzly could crush a bowling ball.", ":mass", "600kg"),
-            "Polar Bear",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Polar Bear")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Bear: Black", "Bear: Brown", "Bear: Grizzly", "Bear: Polar")
         ),
         ":Cats",
         vx_core.f_new(

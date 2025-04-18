@@ -141,8 +141,10 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Clouds", ":image", "images/cards/rule-weather-clouds.svg", ":summary", ":image"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Humidity", ":image", "images/cards/rule-weather-humidity.svg", ":summary", ":image"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Temperature", ":image", "images/cards/rule-weather-temperature.svg", ":summary", ":image"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Thunderstorm", ":image", "images/cards/rule-weather-thunderstorm.svg", ":summary", "* [Event]: Every 6 hours, [Reveal Fate].\n** IF a Black Wild THEN a nearby lightning strike\n** IF a Red Wild THEN a direct lightning strike\n** A lightning bolt carries up to 5GJ (5x9) of energy an dcould heat an object to 20,000F."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Wind", ":image", "images/cards/rule-weather-wind.svg", ":summary", ":image"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":id", "will", ":name", "Will", ":summary", "* Will is the measure of a unit's grit, determination and psychological stability.\n* A unit with Will:0 is panicked.\n* It is lossly derived from an average person having a 100 score. E.g. 100 = 5x10^1 = 5x1, 140 = 9x10^1 = 9x1")
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Will", ":summary", "* Will is the measure of a unit's grit, determination and psychological stability.\n* A unit with Will:0 is panicked.\n* It is lossly derived from an average person having a 100 score. E.g. 100 = 5x10^1 = 5x1, 140 = 9x10^1 = 9x1"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Zombie", ":summary", "* [Undead]: Immune to [Bleeding] and [Fear]. Never targets [Undead].\n* [Mindless]: Does not avoid [Hazard].\n* [Prey]: [Bleeding], [Prone] within 2 Moves. Will [Disengage] for prey.\n* [Zombie Plague]:\n** IF a unit suffers a [Pierce] [Bite]\n** THEN at the beginning of each [Turn], take [Fatigue]:+1 or [Stress]:+1 until cured.")
     )
     return output
   }
