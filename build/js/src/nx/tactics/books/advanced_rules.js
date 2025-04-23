@@ -8,6 +8,7 @@ export default class nx_tactics_books_advanced_rules {
 
   /**
    * @function chapter_advanced_rules
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_advanced_rules = {
@@ -18,7 +19,7 @@ export default class nx_tactics_books_advanced_rules {
   }
 
   // (func chapter_advanced_rules)
-  static f_chapter_advanced_rules() {
+  static f_chapter_advanced_rules(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -90,13 +91,11 @@ export default class nx_tactics_books_advanced_rules {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
             "Dramatic Clinch",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Dramatic Clinch", ":summary", "* During Melee or Close Combat, if the [Defense Roll] exactly cancelled the [Attack Roll], the [Units]\nmay enter a Clinch where they may speak to one another briefly without anyone overhearing."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Dramatic Clinch", ":summary", "* During Melee or Close Combat, if the [Defense Roll] exactly cancelled the [Attack Roll], the [Units] may enter a Clinch where they may speak to one another briefly without anyone overhearing."),
             "Dramatic Effect",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Dramatic Effect", ":summary", "* At the discretion of the other players, [Critical Hits] may be spent to describe a dramatic display\nof skill.  This has no game effect but add great flavor to the game."),
-            ":Formation",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Formation", ":summary", "* [Move]: Use half [Speed] to add a formation token of the appropriate type.\n* [Damage]: If a unit takes 2 [Retreats], remove its formation token.\n* Note: A unit only have 1 formation at a time."),
-            "Limited Dice",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Limited Dice", ":summary", "* Note: Limited and Synergy dice cancel each other in equals numbers so no roll may have both Synergy and Limited dice.\n* 1, 2, 3, 4, 5 = No Effect\n* 6 = Hit and roll a Critical Die"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Dramatic Effect", ":summary", "* At the discretion of the other players, [Crits] may be used to describe a dramatic display of skill. This has no game effect but add great flavor to the game."),
+            "Formation",
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Formation", ":summary", "* [Action]: Add a formation token of the appropriate type.\n* [Damage]: If a unit takes 2 [Retreats], remove its formation token.\n* Note: A unit only have 1 formation at a time."),
             "Multiple Actions",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Multiple Actions", ":summary", "If the [Unit] has multiple [Crew] members, then each member may use a DIFFERENT [Ability] this turn."),
             "Synergy Dice",
@@ -174,73 +173,73 @@ export default class nx_tactics_books_advanced_rules {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_damagemap},
             "Air Reserve Loss",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Air Reserve Loss"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Air Reserve Loss", ":summary", "* Cups"),
             "Air Circulation Failure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Air Circulation Failure"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Air Circulation Failure", ":summary", "* Cups"),
             "Air Purification Failure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Air Purification Failure"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Air Purification Failure", ":summary", "* Cups"),
             "Attitude Control Malfunction",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Attitude Control Malfunction"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Attitude Control Malfunction", ":summary", "* Swords"),
             "Cargo Damage",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Damage"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Damage", ":summary", "* Cups"),
             "Cargo Fire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Fire"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Fire", ":summary", "* Cups"),
             "Cargo Loss",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Loss"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Loss", ":summary", "* Cups"),
             "Crew Casualties",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Crew Casualties"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Crew Casualties", ":summary", "* Cups"),
             "Crew Quarters Fire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Crew Quarters Fire"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Crew Quarters Fire", ":summary", "* Cups"),
             "Fire Suppression Failure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Fire Suppression Failure"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Fire Suppression Failure", ":summary", "* Coins"),
             "Movement Impaired",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Movement Impaired", ":summary", "* Effect: -25% [Move]\n* Duration: Permanent until unit spends an entire turn repairing."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Movement Impaired", ":summary", "* Swords\n* Effect: -25% [Move]\n* Duration: Permanent until unit spends an entire turn repairing."),
             "Movement Crippled",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Movement Crippled", ":summary", "* Effect: -25% [Move]\n* Duration: Permanent until healed."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Movement Crippled", ":summary", "* Swords\n* Effect: -25% [Move]\n* Duration: Permanent until healed."),
             "Movement Control Failure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Movement Control Failure", ":summary", "* Unit must move at full speed until repaired."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Movement Control Failure", ":summary", "* Swords\n* Unit must move at full speed until repaired."),
             "Artificial Gravity Malfunction",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Artificial Gravity Malfunction"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Artificial Gravity Malfunction", ":summary", "* Coins"),
             "Bridge Damaged",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Bridge Damaged"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Bridge Damaged", ":summary", "* Coins"),
             "Bridge Explosion",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Bridge Explosion"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Bridge Explosion", ":summary", "* Coins"),
             "Bridge Fire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Bridge Fire"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Bridge Fire", ":summary", "* Coins"),
             "Bulkhead Collapse",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Bulkhead Collapse"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Bulkhead Collapse", ":summary", "* Wands"),
             "Cargo Hold Damaged",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Hold Damaged"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Hold Damaged", ":summary", "* Cups"),
             "Cargo Hold Explosion",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Hold Explosion"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Hold Explosion", ":summary", "* Cups"),
             "Cargo Hold Fire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Hold Fire"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Cargo Hold Fire", ":summary", "* Cups"),
             "Central Computer Malfunction",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Central Computer Malfunction"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Central Computer Malfunction", ":summary", "* Coins"),
             "Central Computer Explosion",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Central Computer Explosion"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Central Computer Explosion", ":summary", "* Coins"),
             "Central Computer Fire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Central Computer Fire"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Central Computer Fire", ":summary", "* Coins"),
             "Command and Control Failure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Command and Control Failure"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Command and Control Failure", ":summary", "* Coins"),
             "Communications Failure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Communications Failure", ":summary", "* Unit cannot communicate with other units.\n* In Game: Player may not speak. He/she may write rules questions to game master or opponents."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Communications Failure", ":summary", "* Coins\n* Unit cannot communicate with other units.\n* In Game: Player may not speak. He/she may write rules questions to game master or opponents."),
             "Crew Quarters Damaged",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Crew Quarters Damaged"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Crew Quarters Damaged", ":summary", "* Cups"),
             "Damage Control Damaged",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Damage Control Damaged"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Damage Control Damaged", ":summary", "* Coins"),
             "Engineering Damage",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Engineering Damage"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Engineering Damage", ":summary", "* Wands"),
             "Fire Control System Malfunction",
             vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Fire Control System Malfunction"),
             "Flag Bridge Damaged",
             vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Flag Bridge Damaged", ":summary", "* The Flag Bridge is used by senior executive officers to coordinate a fleet."),
             "Food Stock Damaged",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Food Stock Damaged"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Food Stock Damaged", ":summary", "* Cups"),
             "Fuel Explosion",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Fuel Explosion"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Fuel Explosion", ":summary", "* Wands"),
             "Fuel Fire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Fuel Fire"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Fuel Fire", ":summary", "* Wands"),
             "Fuel Loss",
             vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Fuel Loss"),
             "Helm Control Malfunction",
@@ -312,17 +311,17 @@ export default class nx_tactics_books_advanced_rules {
             "Steering Malfunction",
             vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Steering Malfunction", ":summary", "* Unit can only perform 1 change in direction during a Move."),
             "Structural Collapse",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Structural Collapse"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Structural Collapse", ":summary", "Wands"),
             "Target Aquisition Failure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Target Aquisition Failure"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Target Aquisition Failure", ":summary", "Coins"),
             "Temperature Control Failure",
             vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Temperature Control Failure"),
             "Turning Malfunction",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Turning Malfunction", ":summary", "* Unit cannot turn toward one side."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Turning Malfunction", ":summary", "* Swords\n* Unit cannot turn toward one side."),
             "Transponder Failure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Transponder Failure", ":summary", "* The vehicle no longer identifies as friend of foe, so it appears as a potential enemy vehicle. In a heated exchange it may take friendly fire.\n* This can be as simple as a fallen flag on old navy ships.", ":titles", "IFF Damage, Not Running Colors"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Transponder Failure", ":titles", "IFF Damage, Not Running Colors", ":summary", "* Coins\n* The vehicle no longer identifies as friend of foe, so it appears as a potential enemy vehicle. In a heated exchange it may take friendly fire.\n* This can be as simple as a fallen flag on old navy ships."),
             "Water Reserve Loss",
-            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Water Reserve Loss"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Water Reserve Loss", ":summary", "* Cups"),
             "Weapon Magazine Explosion",
             vx_core.f_new({"any-1": nx_tactics_base.t_damage}, ":name", "Weapon Magazine Explosion"),
             "Weapon Magazine Fire",
@@ -346,6 +345,7 @@ export default class nx_tactics_books_advanced_rules {
 
   /**
    * @function chapter_advanced_rules_overview
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_advanced_rules_overview = {
@@ -356,7 +356,7 @@ export default class nx_tactics_books_advanced_rules {
   }
 
   // (func chapter_advanced_rules_overview)
-  static f_chapter_advanced_rules_overview() {
+  static f_chapter_advanced_rules_overview(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -376,6 +376,7 @@ export default class nx_tactics_books_advanced_rules {
 
   /**
    * @function chapter_advanced_tokens
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_advanced_tokens = {
@@ -386,7 +387,7 @@ export default class nx_tactics_books_advanced_rules {
   }
 
   // (func chapter_advanced_tokens)
-  static f_chapter_advanced_tokens() {
+  static f_chapter_advanced_tokens(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -442,6 +443,7 @@ export default class nx_tactics_books_advanced_rules {
 
   /**
    * @function chapter_genres
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_genres = {
@@ -452,7 +454,7 @@ export default class nx_tactics_books_advanced_rules {
   }
 
   // (func chapter_genres)
-  static f_chapter_genres() {
+  static f_chapter_genres(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -493,10 +495,10 @@ export default class nx_tactics_books_advanced_rules {
       "AdvancedRules.jpg",
       ":chaptermap",
       nx_tactics_base.f_chaptermap_from_chapterlist(
-        nx_tactics_books_advanced_rules.f_chapter_advanced_rules_overview(),
-        nx_tactics_books_advanced_rules.f_chapter_advanced_tokens(),
-        nx_tactics_books_advanced_rules.f_chapter_advanced_rules(),
-        nx_tactics_books_advanced_rules.f_chapter_genres()
+        nx_tactics_books_advanced_rules.f_chapter_advanced_rules_overview(tactics),
+        nx_tactics_books_advanced_rules.f_chapter_advanced_tokens(tactics),
+        nx_tactics_books_advanced_rules.f_chapter_advanced_rules(tactics),
+        nx_tactics_books_advanced_rules.f_chapter_genres(tactics)
       )
     )
     return output

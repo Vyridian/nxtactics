@@ -210,6 +210,11 @@
         (any<-any : base/skill
          value)))
      (then
+      (== datatype base/power)
+       (string-display<-power
+        (any<-any : base/power
+         value)))
+     (then
       (or
        (== datatype base/item)
        (== datatype base/unit))
@@ -269,6 +274,38 @@
      ", ")]
   display)
  :doc "Returns display text from a deck")
+
+(func string-display<-power : string
+ [power : base/power]
+ (let : string
+  [summary : string := (:summary power)
+   specialtymap : base/specialtymap := (:specialtymap power)
+   abilitymap   : base/abilitymap   := (:abilitymap power)
+   specialnames : stringlist :=
+    (list<-map : stringlist
+     specialtymap
+     (fn : string
+      [key   : string
+       value : base/specialty]
+      (:name value)))
+   abilitynames : stringlist :=
+    (list<-map : stringlist
+     abilitymap
+     (fn : string
+      [key   : string
+       value : base/ability]
+      (:name value)))
+   appended : stringlist :=
+    (stringlist
+     summary
+     specialnames
+     abilitynames)
+   display : string :=
+    (string<-stringlist-join
+     appended
+     " ")]
+  display)
+ :doc "Returns display text from a power")
 
 (func string-display<-skill : string
  [skill : base/skill]
@@ -1220,6 +1257,12 @@
        (ui-nav<-skill-parent
         (any<-any : base/skill
          data)
+        parent))
+     (then
+      (== datatype base/power)
+       (ui-nav<-power-parent
+        (any<-any : base/power
+         data)
         parent))))))
  :doc "Returns a ui created from any value")
 
@@ -1241,6 +1284,36 @@
    :data  deck
    :uimap uimap))
  :doc "Returns the a deck ui.")
+
+(func ui-nav<-power-parent : ui/ui
+ [power  : base/power
+  parent : string]
+ (let : ui/ui
+  [name  : string :=
+    (:name power)
+   uid : string :=
+    (string parent "/" name)
+   specialtymap : base/specialtymap :=
+    (:specialtymap power)
+   abilitymap : base/abilitymap :=
+    (:abilitymap power)
+   cardmap1 : base/cardmap :=
+    (map<-map : base/cardmap specialtymap)
+   cardmap2 : base/cardmap :=
+    (map<-map : base/cardmap abilitymap)
+   cardmap3 : base/cardmap :=
+    (copy cardmap1 cardmap2)
+   uimap : ui/uimap :=
+    (uimap<-cardmap-parent-page-size
+     cardmap3 uid 1 100)]
+  (ui/ui
+   :uid uid
+   :stylelist
+    (ui/stylelist
+     style-deck)
+   :data  skill
+   :uimap uimap))
+ :doc "Returns a deck ui.")
 
 (func ui-nav<-skill-parent : ui/ui
  [skill  : base/skill
@@ -1270,7 +1343,7 @@
      style-deck)
    :data  skill
    :uimap uimap))
- :doc "Returns the a deck ui.")
+ :doc "Returns a deck ui.")
 
 (func ui-navbutton-back : ui/ui
  (let : ui/ui

@@ -1866,25 +1866,12 @@ export default class nx_tactics_books_fantasy {
                 )
               ),
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Stealth",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+                  tactics,
                   "Stealth",
-                  ":level",
-                  "9",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Backstab",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Backstab"),
-                    "Hide in Shadows",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Hide in Shadows"),
-                    "Move Silently",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Move Silently")
-                  )
+                  9,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Backstab", "Hide", "Sneak")
                 )
               )
             ),

@@ -2924,7 +2924,7 @@ export default class nx_tactics_books_superheroes {
               ":name",
               "Tiger, The",
               ":image",
-              "Superheroes/Tiger.png",
+              "superheroes/tiger.png",
               ":summary",
               "* Tiger is a young man who has a magical form of lycanthropy that allows him to transform into a large man with the head, claws and fur of a Siberian tiger.\n* Wind Cutter/Kazekiri - All of Tiger's powers derive from this katana artifact that has been passed down from generation to generation. The sword is a symbol of the Torakage clan and has become a vessel for the spirits of everyone in his bloodline who has ever been granted the powers of the Tiger.\n** Spiritual Energy - The katana contains massive spiritual energy associated with Wind magic.\n** Magic Weapon - It is considered a magical weapon, can strike intangible beings, and does increased damage against magical creatures, items, and enchantments.\n** Electro absorbtion - The katana can absorb electricity to imbue the katana with Electro.\n** Clean - The katana does not become dirty, bloodied, or lose its brilliant luster.\n** Armor Piercing - The katana can cut through armor and objects with unnatural ability.\n** Hardened - The katana is very hard to break and even if it happens it will dissolve into the air and will reform later.\n** Armor - With the sword in hand, Tiger may materialize a weightless suit of magical samurai armor that augments his defense.\n** Jumping - With the sword in hand, Tiger can launch himself 30 feet into the air with the strength of his legs and the lift of the wind.\n** Gliding - With the sword in hand, Tiger can draw the spiritual wind magic within to create spiritual wings and glide on the winds. He can only gain altitude by jumping or catching updrafts.\n** Invisibility - With the sword in hand, Tiger can draw the spiritual wind magic within to fade into the wind for as long as he concentrates. He may not fight or move quickly while invisible.\n* Transformation - With the sword in hand, Tiger may transform from human to Tiger form. The katana changes into a Wakizashi, when Tiger is in human form. If he is separated from his weapon, Tiger is trapped in his current form until he can recover it.\n** Strength - In Tiger form, his strength is sufficient to lift 1 ton.",
               ":titles",
@@ -2990,19 +2990,11 @@ export default class nx_tactics_books_superheroes {
               ":titles",
               "Faith, Fate, Myriad, Seraphim",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Longevity",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
+              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+                nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+                  tactics,
                   "Longevity",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Reincarnation - Transference",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Reincarnation - Transference")
-                  )
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Reincarnation - Transference")
                 )
               ),
               ":unitskillmap",

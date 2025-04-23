@@ -25,8 +25,8 @@
    :image "images/card-areaeffect.svg"
    :summary
     "* Powers can attack in an area.
-     * Reduce Skill or Intensity by 1 to get an Area Effect Card. Each extra reduction doubles the number of cards.
-     * Arrange the cards into a shape starting from the unit.")
+     * Skill:-1 or Intensity:-1 to get an Area Effect. Extra reductions double the cards.
+     * Arrange cards into a shape starting from the unit.")
   (base/rule
    :name "Beast"
    :summary
@@ -147,6 +147,12 @@
      * A Game is broken up into Rounds.
      * Each Round every Player takes a Turn.
      * Each Turn each Player takes 2 Actions.")
+  (base/rule
+   :name "Hit Location"
+   :image "images/rule-hitlocation.svg")
+  (base/rule
+   :name "Hit Location: Vehicle"
+   :image "images/rule-hitlocation-vehicle.svg")
   (base/rule
    :name "Hunger"
    :summary
@@ -470,6 +476,8 @@
        "Fight"
        "Skill"
        "Power"
+       "Hit Location"
+       "Hit Location: Vehicle"
        "Interact"
        "Recover"
        "Equip"

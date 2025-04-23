@@ -23,7 +23,15 @@ export default class nx_tactics_decks_power {
   static f_powermap_tactics(tactics) {
     let output = nx_tactics_base.e_powermap
     output = nx_tactics_base.f_powermap_from_powerlist(
-      vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Aeromancy", ":summary", "* Aero is the magical version of Air.\n* Aero effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Aero reacts with Pyro to produce the [Wildfire] effect.\n* Aero reacts with Cryo to produce the [Chill] effect.\n* Aero reacts with Hydro to produce the [Fog] effect.\n* Aero reacts with Electro to produce the [Ionized] effect.\n* Aero reacts with Geo to produce the [Weightess] effect."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Aeromancy",
+        ":summary",
+        "* Aero is the magical version of Air.\n* Aero effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Aero reacts with Pyro to produce the [Wildfire] effect.\n* Aero reacts with Cryo to produce the [Chill] effect.\n* Aero reacts with Hydro to produce the [Fog] effect.\n* Aero reacts with Electro to produce the [Ionized] effect.\n* Aero reacts with Geo to produce the [Weightess] effect.",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Air Bubble")
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
@@ -1333,25 +1341,7 @@ export default class nx_tactics_decks_power {
         ":titles",
         "Shaman, Spirit Caller, Witch Doctor",
         ":abilitymap",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_abilitymap},
-          "Call Spirits",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Call Spirits"),
-          "Control Spirit",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Control Spirit"),
-          ":Reincarnate",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Reincarnate", ":summary", "* Similar to [Resurrect], this ability allows a being to return to life in a new body if this ritual is performed soon after death. The reincarnated being will be physically different from the original, potentially different age, abilities, gender, race, or species. The being will have most of its original memories, but will often have a substantially different personality. If any [Successes] are made, the reincarnation succeeds and the character must be created again with significant differences and will appear in a location consistent with its new identity. The new character is built at a level equal to it original level or the reincarnate skill level whichever is lower. If the reincarnate skill level is lower than 10, the reincarnated being will be -10% younger than before for each level below 10."),
-          "Second Sight",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Second Sight", ":reference", "* I've got electric light, and I've got second sight.  I've got amazing...powers...of observation.  And that is how I know...When I try to get through...On the telephone to you...There will be nobody home. - Pink Floyd, Nobody Home", ":summary", "* Second sight is the ability to see the spiritual essence of beings. It quickly identifies the living from the unliving and can detect disease both phyiscal and mental."),
-          "Spirit Guide",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Spirit Guide"),
-          "Spiritual Affinity",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Spiritual Affinity", ":summary", "* Death: Enter the Spirit Realm"),
-          ":Totem",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Totem"),
-          "Vision Quest",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vision Quest")
-        )
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Call Spirits", "Control Spirit", "Reincarnation", "Second Sight", "Spirit Guide", "Spiritual Affinity", "Totem", "Vision Quest")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
@@ -1360,7 +1350,7 @@ export default class nx_tactics_decks_power {
         ":reference",
         "* This is forbidden. This is a summoning. I cannot speak this!... There is no light here. You came to the darkness for knowledge... And all the knowledge you seek is here. Surrender. Speak the words. Call her home. By three thay come. By three thy way opens. By the blood of the willing. We call thee home. Hail, daughter of hatred. Hail, Lilith. - Diablo IV",
         ":titles",
-        "Sorcerer, Sorceress, Sorceress Queen, Summoner",
+        "Hell Knight, Sorcerer, Sorceress, Sorceress Queen, Summoner",
         ":abilitymap",
         nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Daedalus Gateway", "Dimension Door", "Dimensional Gateway", "Gateway", "Soul Pact", "Summon Demon", "Summon Devil", "Summon Familiar", "Summon Item")
       ),
@@ -1527,6 +1517,8 @@ export default class nx_tactics_decks_power {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Acid Cloud", ":summary", "* Creates a cloud of acid.\n* [Damage Type]: [Corrosive]"),
           "Acid Rain",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Acid Rain", ":summary", "* Calls acid rain from an existing cloud.\n* [Damage Type]: [Corrosive]"),
+          "Air Bubble",
+          nx_tactics_base.f_ability_from_tactics_key(tactics, "Air Bubble"),
           "Air Breathing",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Air Breathing", ":summary", "* Can breath in any kind of air without ill effect including poison gases."),
           "Alter Temperature",
@@ -2058,6 +2050,13 @@ export default class nx_tactics_decks_power {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
+        "Digging",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Drilling", "Excavating", "Tunneling")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
         "Dimensional",
         ":reference",
         "* I reject your reality and substitute my own. - Adam Savage, Mythbusters",
@@ -2097,15 +2096,7 @@ export default class nx_tactics_decks_power {
         ":name",
         "Diseases",
         ":abilitymap",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_abilitymap},
-          "Fungal Growth",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fungal Growth"),
-          "Intestinal Parasite",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Intestinal Parasite"),
-          ":Rabid",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Rabid")
-        )
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Fungal Growth", "Intestinal Parasite", "Rabid")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
@@ -2118,8 +2109,8 @@ export default class nx_tactics_decks_power {
         ":abilitymap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_abilitymap},
-          ":Brainwashing",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Brainwashing"),
+          "Brainwashing",
+          nx_tactics_base.f_ability_from_tactics_key(tactics, "Brainwashing"),
           ":Conditioning",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Conditioning", ":reference", "Manchurian Candidate", ":summary", "* Low level success creates a confused zombie.\n* High level success creates fanatical loyalty."),
           "Edit Memories",
@@ -2183,7 +2174,7 @@ export default class nx_tactics_decks_power {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mountain out of a Molehill", ":summary", "* Grow a small pile of earth bigger and bigger."),
           "Pass Through Earth",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pass Through Earth", ":summary", "* Allows the user to move through earth as if it were water."),
-          ":Quagmire",
+          "Quagmire",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Quagmire", ":summary", "* Any unit in the area is must spend double movement when moving.", ":titles", "Mudslide, Quicksand"),
           ":Sandstorm",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sandstorm"),
@@ -2199,7 +2190,7 @@ export default class nx_tactics_decks_power {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stone Pillar", ":summary", "* [Action]: Summon a pillar of Stone within Range. (Removing any others)\n* [Reaction]: IF anything touches the pillar THEN you may make a basic Earth [Attack].\n* [Reaction]: IF you use an Earth ability THEN you may arc it to strike from the pillar instead."),
           "Treacherous Ground",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Treacherous Ground", ":summary", "* Creates a patch of broken earth or rock that will trip anything moving across it at more than a slow walk."),
-          ":Tremor",
+          "Tremor",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tremor", ":summary", "* Summons a small living earthquake in broken earth or rock. Earth elementals love nothing more than knocking things over."),
           "Volcanic Eruption",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Volcanic Eruption")
@@ -2818,30 +2809,14 @@ export default class nx_tactics_decks_power {
         ":name",
         "Inertia",
         ":abilitymap",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_abilitymap},
-          "Impact Absorption",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Impact Absorption"),
-          "Inertial Dampening",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Inertial Dampening"),
-          "Unstoppable",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unstoppable")
-        )
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Impact Absorption", "Inertial Dampening", "Unstoppable")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
         "Invisibility",
         ":abilitymap",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_abilitymap},
-          ":Invisible",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Invisible"),
-          ":Transparency",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Transparency"),
-          ":Vanish",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vanish")
-        )
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Invisible", "Transparent", "Vanish")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
@@ -3243,17 +3218,6 @@ export default class nx_tactics_decks_power {
         "Movement",
         ":abilitymap",
         nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Wall Crawling", "Wall Running", "Water Walking", "Water Running")
-      ),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_power},
-        ":name",
-        "Movement: Dig",
-        ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_abilitylist(
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Drilling"),
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Excavating"),
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tunneling")
-        )
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
@@ -3661,6 +3625,13 @@ export default class nx_tactics_decks_power {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
+        "Special Ability",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Cannibal", "Chaotic", "Corrupted", "Ethereal", "Feeding Frenzy", "Giant", "Huge", "Lernaean Poison", "Mindless", "Monstrous", "Nemean Invulnerability", "Rapid Metabolism", "Savage", "Skeletal", "Soulless", "Tainted")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
         "Strength",
         ":reference",
         "* Technique is for lightweights. - Sett, Runeterra",
@@ -3948,8 +3919,6 @@ export default class nx_tactics_decks_power {
         ":abilitymap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_abilitymap},
-          "Air Bubble",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Air Bubble"),
           "Call Water",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Call Water", ":titles", "Flashflood"),
           "Control Water",

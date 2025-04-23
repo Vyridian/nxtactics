@@ -96,6 +96,15 @@
    :name "Rockslide"
    :image "images/cards/place-rockslide.svg")
   (base/place
+   :name "Shop: General"
+   :image "images/cards/place-shop-general.svg")
+  (base/place
+   :name "Shop: Herbalist"
+   :image "images/cards/place-shop-herbalist.svg")
+  (base/place
+   :name "Shrine"
+   :image "images/cards/place-shrine.svg")
+  (base/place
    :name "Smoke"
    :image "images/cards/place-smoke.svg")
   (base/place

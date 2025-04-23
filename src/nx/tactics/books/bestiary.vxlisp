@@ -1730,29 +1730,32 @@
       :name "Fantastic Underground Creatures"
       :unitmap
        (base/unitmap
-        "Bore Worms"
+        "Worm: Bore"
          (base/unit
-          :name "Bore Worms"
-          :reference "* Bring me... the Bore Worms. No! Not the BORE WORMS! - Klytus and Princess Aura, Flash Gordon"
-          :summary "* Small worms that dig through flesh as easily as earth. They are attracted to burrowing creatures.")
+          :name "Worm: Bore"
+          :reference
+           "* Bring me... the Bore Worms. No! Not the BORE WORMS! - Klytus and Princess Aura, Flash Gordon"
+          :summary
+           "* Small worms that dig through flesh as easily as earth. They are attracted to burrowing creatures.")
         "False Hydra"
          (base/unit
           :name "False Hydra"
-          :summary "* An insane monster that grows under towns can erase memories. It is said that it is born of lies. Perhaps it is a [Curse].")
-        "Land Eel, Giant"
+          :summary
+           "* An insane monster that grows under towns can erase memories. It is said that it is born of lies. Perhaps it is a [Curse].")
+        "Eel: Giant Land"
          (base/unit
-          :name "Land Eel, Giant"
+          :name "Eel: Giant Land"
           :summary "* Giant, sightless creatures related to the Giant Moray Eel, these creatures burrow underground."
           :titles "Land Kra")
-        "Slug, Giant"
+        "Slug: Giant"
          (base/unit
-          :name "Slug, Giant")
-        "Snail, Giant"
+          :name "Slug: Giant")
+        "Snail: Giant"
          (base/unit
-          :name "Snail, Giant")
-        "Sand Worms"
+          :name "Snail: Giant")
+        "Worm: Sand"
          (base/unit
-          :name "Sand Worms"))))))
+          :name "Worm: Sand"))))))
 
 (func chapter_humanoids : base/chapter
  [tactics : base/tactics]
@@ -4840,37 +4843,8 @@
           :summary
            "* Ghost Ships are doomed ships crewed by the [Drowned]. When they encounter the living, they are compelled to kill them so they raise again to add to their crew."
           :titles "Chaos Fleet, Skeleton Crew")
-        :Ghoul
-         (base/unit
-          :name "Ghoul"
-          :summary
-           "* Description - A ghoul is a reanimated corpse that perpetuates its undead existence by feeding on the the dead. They reek of charnel pits and they have shrivelled nightmarish features. Though frail and unhealthy looking, they possess fearsome strength. The teeth and claws also carry [Corpse Rot], an infection that slowly kills the victim if the Ghoul doesn't first. Victims of Ghouls often raise as Ghouls themselves if they are not cured or their corpse is not blessed or destroyed.
-            * Personality - When well fed, Ghouls can communicate and can be surprisingly friendly though their intelligence is low and their interests are narrow (i.e. searching for corpses).
-            * Japanese Gaki appear as gaunt-faced monsters with enormous, frog-like mouths and grossly distended bellies.
-            * Morale - High
-            * Units - Mob"
-          :titles "Gaki, Hungry Dead, Necrophage"
-          :unitpowermap
-           (base/unitpowermap<-unitpowerlist
-            (base/unitpower
-             :name "Natural Weaponry"
-             :level "3")
-            (base/unitpower
-             :name "Digging"
-             :level "3"
-             :unitabilitymap
-              (base/unitabilitymap<-unitabilitylist
-               (base/unitability
-                :name "Tunneling")))
-            (base/unitpower
-             :name "Special Ability"
-             :level "2"
-             :unitabilitymap
-              (base/unitabilitymap<-unitabilitylist
-               (base/unitability
-                :name "Cannibal")
-               (base/unitability
-                :name "Savage")))))
+        "Ghoul"
+         (base/unit<-tactics-key tactics "Ghoul")
         :Lich
          (base/unit
           :name "Lich"
@@ -5181,15 +5155,10 @@
          (section
           :name "Vampires, Elder"
           :unitmap
-           (base/unitmap
-            :Kali
-             (base/unit
-              :name "Kali"
-              :summary "* Tzimisce Methuselah")
-            :Set
-             (base/unit
-              :name "Set"
-              :summary "* Setite Methuselah")))
+           (base/unitmap<-tactics-keys
+            tactics
+            "Kali"
+            "Set"))
         "Vampires, Anarchs"
          (section
           :name "Vampires, Anarchs"
@@ -5205,25 +5174,19 @@
               :name "Brujah"
               :titles "Bully, Bruiser"
               :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism")
-                :Strength
-                 (base/unitpower
-                  :name "Strength")))
+               (base/unitpowermap<-tactics-keys
+                tactics
+                "Vampirism"
+                "Strength"))
             :Gangrel
              (base/unit
               :name "Gangrel"
               :titles "Animal, Protector"
               :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism")
-                :Animalism
-                 (base/unitpower
-                  :name "Animalism")))
+               (base/unitpowermap<-tactics-keys
+                tactics
+                "Vampirism"
+                "Animalism"))
             :Malkavian
              (base/unit
               :name "Malkavian"
@@ -5233,19 +5196,12 @@
                 * Kinship - Unlike other tribes, the Malkavians have a natural understanding and kinship toward each other. It is rare that they outright betray one another."
               :titles "Jester, Maniac, Nutcase, Prankster, Psychotic"
               :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism")
-                :Dominiation
-                 (base/unitpower
-                  :name "Dominiation")
-                :Senses
-                 (base/unitpower
-                  :name "Senses")
-                :Madness
-                 (base/unitpower
-                  :name "Madness"))
+               (base/unitpowermap<-tactics-keys
+                tactics
+                "Vampirism"
+                "Domination"
+                "Senses"
+                "Madness")
               :unitskillmap
                (base/unitskillmap<-tactics-keys
                 tactics
@@ -5255,13 +5211,10 @@
               :name "Nosferatu"
               :titles "Sewer Rat"
               :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism")
-                :Invisibility
-                 (base/unitpower
-                  :name "Invisibility"))
+               (base/unitpowermap<-tactics-keys
+                tactics
+                "Vampirism"
+                "Invisibility")
               :unitskillmap
                (base/unitskillmap<-tactics-keys
                 tactics

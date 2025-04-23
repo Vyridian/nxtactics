@@ -8,13 +8,14 @@
   :image "AdvancedRules.jpg"
   :chaptermap
    (base/chaptermap<-chapterlist
-    (chapter_advanced_rules_overview)
-    (chapter_advanced_tokens)
-    (chapter_advanced_rules)
-    (chapter_genres)
+    (chapter_advanced_rules_overview tactics)
+    (chapter_advanced_tokens tactics)
+    (chapter_advanced_rules tactics)
+    (chapter_genres tactics)
    )))
 
 (func chapter_advanced_rules_overview : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Advanced Rules Overview"
   :sectionmap
@@ -33,6 +34,7 @@
         * Use the Terrain - Cover and abilities linked to cover offer an outstanding defense that layers with normal defense. The difference is most pronounced with lesser units. Effective use of terrain will determine the victor in most battles."))))
 
 (func chapter_advanced_tokens : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Advanced Tokens"
   :sectionmap
@@ -94,12 +96,13 @@
           :name "Shapeshift"))))))
 
 (func chapter_advanced_rules : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Advanced Rules"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Advanced Setup Rules"
-     (section
+     (base/section
       :name "Advanced Setup Rules"
       :rulemap
        (rulemap
@@ -240,36 +243,27 @@ expense commensurate with the level of the skill.
           :name "Simultaneous Movement"
           :summary "* After initiative is determined, each player chooses a unit or formation to activate. Each unit is compared to determine the one with the highest movement. This number is the number of phases in this turn. Each unit may choose to move or act on any phase of the turn with their chosen unit. They may also choose to react with any other unit, but a reacting unit may only move or use an action not both.")))
     "Action Rules"
-     (section
+     (base/section
       :name "Action Rules"
       :rulemap
-       (rulemap
+       (base/rulemap
         "Dramatic Clinch"
-         (rule
+         (base/rule
           :name "Dramatic Clinch"
           :summary
-           "* During Melee or Close Combat, if the [Defense Roll] exactly cancelled the [Attack Roll], the [Units]
-may enter a Clinch where they may speak to one another briefly without anyone overhearing.")
+           "* During Melee or Close Combat, if the [Defense Roll] exactly cancelled the [Attack Roll], the [Units] may enter a Clinch where they may speak to one another briefly without anyone overhearing.")
         "Dramatic Effect"
-         (rule
+         (base/rule
           :name "Dramatic Effect"
           :summary
-           "* At the discretion of the other players, [Critical Hits] may be spent to describe a dramatic display
-of skill.  This has no game effect but add great flavor to the game.")
-        :Formation
-         (rule
+           "* At the discretion of the other players, [Crits] may be used to describe a dramatic display of skill. This has no game effect but add great flavor to the game.")
+        "Formation"
+         (base/rule
           :name "Formation"
           :summary
-           "* [Move]: Use half [Speed] to add a formation token of the appropriate type.
-* [Damage]: If a unit takes 2 [Retreats], remove its formation token.
-* Note: A unit only have 1 formation at a time.")
-        "Limited Dice"
-         (rule
-          :name "Limited Dice"
-          :summary
-           "* Note: Limited and Synergy dice cancel each other in equals numbers so no roll may have both Synergy and Limited dice.
-* 1, 2, 3, 4, 5 = No Effect
-* 6 = Hit and roll a Critical Die")
+           "* [Action]: Add a formation token of the appropriate type.
+            * [Damage]: If a unit takes 2 [Retreats], remove its formation token.
+            * Note: A unit only have 1 formation at a time.")
         "Multiple Actions"
          (rule
           :name "Multiple Actions"
@@ -406,281 +400,353 @@ of skill.  This has no game effect but add great flavor to the game.")
      (section
       :name "Damage Cards"
       :damagemap
-       (damagemap
+       (base/damagemap
         "Air Reserve Loss"
-         (damage
-          :name "Air Reserve Loss")
+         (base/damage
+          :name "Air Reserve Loss"
+          :summary
+           "* Cups")
         "Air Circulation Failure"
-         (damage
-          :name "Air Circulation Failure")
+         (base/damage
+          :name "Air Circulation Failure"
+          :summary
+           "* Cups")
         "Air Purification Failure"
-         (damage
-          :name "Air Purification Failure")
+         (base/damage
+          :name "Air Purification Failure"
+          :summary
+           "* Cups")
         "Attitude Control Malfunction"
-         (damage
-          :name "Attitude Control Malfunction")
+         (base/damage
+          :name "Attitude Control Malfunction"
+          :summary
+           "* Swords")
         "Cargo Damage"
-         (damage
-          :name "Cargo Damage")
+         (base/damage
+          :name "Cargo Damage"
+          :summary
+           "* Cups")
         "Cargo Fire"
-         (damage
-          :name "Cargo Fire")
+         (base/damage
+          :name "Cargo Fire"
+          :summary
+           "* Cups")
         "Cargo Loss"
-         (damage
-          :name "Cargo Loss")
+         (base/damage
+          :name "Cargo Loss"
+          :summary
+           "* Cups")
         "Crew Casualties"
-         (damage
-          :name "Crew Casualties")
+         (base/damage
+          :name "Crew Casualties"
+          :summary
+           "* Cups")
         "Crew Quarters Fire"
-         (damage
-          :name "Crew Quarters Fire")
+         (base/damage
+          :name "Crew Quarters Fire"
+          :summary
+           "* Cups")
         "Fire Suppression Failure"
-         (damage
-          :name "Fire Suppression Failure")
+         (base/damage
+          :name "Fire Suppression Failure"
+          :summary
+           "* Coins")
         "Movement Impaired"
-         (damage
+         (base/damage
           :name "Movement Impaired"
           :summary
-           "* Effect: -25% [Move]
+           "* Swords
+            * Effect: -25% [Move]
             * Duration: Permanent until unit spends an entire turn repairing.")
         "Movement Crippled"
-         (damage
+         (base/damage
           :name "Movement Crippled"
           :summary
-           "* Effect: -25% [Move]
+           "* Swords
+            * Effect: -25% [Move]
             * Duration: Permanent until healed.")
         "Movement Control Failure"
-         (damage
+         (base/damage
           :name "Movement Control Failure"
-          :summary "* Unit must move at full speed until repaired.")
+          :summary
+           "* Swords
+            * Unit must move at full speed until repaired.")
         "Artificial Gravity Malfunction"
-         (damage
-          :name "Artificial Gravity Malfunction")
+         (base/damage
+          :name "Artificial Gravity Malfunction"
+          :summary
+           "* Coins")
         "Bridge Damaged"
-         (damage
-          :name "Bridge Damaged")
+         (base/damage
+          :name "Bridge Damaged"
+          :summary
+           "* Coins")
         "Bridge Explosion"
-         (damage
-          :name "Bridge Explosion")
+         (base/damage
+          :name "Bridge Explosion"
+          :summary
+           "* Coins")
         "Bridge Fire"
-         (damage
-          :name "Bridge Fire")
+         (base/damage
+          :name "Bridge Fire"
+          :summary
+           "* Coins")
         "Bulkhead Collapse"
-         (damage
-          :name "Bulkhead Collapse")
+         (base/damage
+          :name "Bulkhead Collapse"
+          :summary
+           "* Wands")
         "Cargo Hold Damaged"
-         (damage
-          :name "Cargo Hold Damaged")
+         (base/damage
+          :name "Cargo Hold Damaged"
+          :summary
+           "* Cups")
         "Cargo Hold Explosion"
-         (damage
-          :name "Cargo Hold Explosion")
+         (base/damage
+          :name "Cargo Hold Explosion"
+          :summary
+           "* Cups")
         "Cargo Hold Fire"
-         (damage
-          :name "Cargo Hold Fire")
+         (base/damage
+          :name "Cargo Hold Fire"
+          :summary
+           "* Cups")
         "Central Computer Malfunction"
-         (damage
-          :name "Central Computer Malfunction")
+         (base/damage
+          :name "Central Computer Malfunction"
+          :summary
+           "* Coins")
         "Central Computer Explosion"
-         (damage
-          :name "Central Computer Explosion")
+         (base/damage
+          :name "Central Computer Explosion"
+          :summary
+           "* Coins")
         "Central Computer Fire"
-         (damage
-          :name "Central Computer Fire")
+         (base/damage
+          :name "Central Computer Fire"
+          :summary
+           "* Coins")
         "Command and Control Failure"
-         (damage
-          :name "Command and Control Failure")
+         (base/damage
+          :name "Command and Control Failure"
+          :summary
+           "* Coins")
         "Communications Failure"
-         (damage
+         (base/damage
           :name "Communications Failure"
           :summary
-           "* Unit cannot communicate with other units.
-* In Game: Player may not speak. He/she may write rules questions to game master or opponents.")
+           "* Coins
+            * Unit cannot communicate with other units.
+            * In Game: Player may not speak. He/she may write rules questions to game master or opponents.")
         "Crew Quarters Damaged"
-         (damage
-          :name "Crew Quarters Damaged")
+         (base/damage
+          :name "Crew Quarters Damaged"
+          :summary
+           "* Cups")
         "Damage Control Damaged"
-         (damage
-          :name "Damage Control Damaged")
+         (base/damage
+          :name "Damage Control Damaged"
+          :summary
+           "* Coins")
         "Engineering Damage"
-         (damage
-          :name "Engineering Damage")
+         (base/damage
+          :name "Engineering Damage"
+          :summary
+           "* Wands")
         "Fire Control System Malfunction"
-         (damage
+         (base/damage
           :name "Fire Control System Malfunction")
         "Flag Bridge Damaged"
-         (damage
+         (base/damage
           :name "Flag Bridge Damaged"
           :summary "* The Flag Bridge is used by senior executive officers to coordinate a fleet.")
         "Food Stock Damaged"
-         (damage
-          :name "Food Stock Damaged")
+         (base/damage
+          :name "Food Stock Damaged"
+          :summary
+           "* Cups")
         "Fuel Explosion"
-         (damage
-          :name "Fuel Explosion")
+         (base/damage
+          :name "Fuel Explosion"
+          :summary
+           "* Wands")
         "Fuel Fire"
-         (damage
-          :name "Fuel Fire")
+         (base/damage
+          :name "Fuel Fire"
+          :summary
+           "* Wands")
         "Fuel Loss"
-         (damage
+         (base/damage
           :name "Fuel Loss")
         "Helm Control Malfunction"
-         (damage
+         (base/damage
           :name "Helm Control Malfunction")
         "Helm Fire"
-         (damage
+         (base/damage
           :name "Helm Fire")
         "Hydroponics Damage"
-         (damage
+         (base/damage
           :name "Hydroponics Damage")
         "Inertial Dampener Malfunction"
-         (damage
+         (base/damage
           :name "Inertial Dampener Malfunction")
         "Intercommunications Failure"
-         (damage
+         (base/damage
           :name "Intercommunications Failure"
           :summary "* Unit cannot communicate within the vehicle except person to person. On large vehicles, this can be a localized failure.")
         "Life Support Malfunction"
-         (damage
+         (base/damage
           :name "Life Support Malfunction")
         "Medical Bay Damage"
-         (damage
+         (base/damage
           :name "Medical Bay Damage")
         "Medical Bay Explosion"
-         (damage
+         (base/damage
           :name "Medical Bay Explosion")
         "Medical Bay Fire"
-         (damage
+         (base/damage
           :name "Medical Bay Fire")
         "Missile Launcher Explosion"
-         (damage
+         (base/damage
           :name "Missile Launcher Explosion")
         "Missile Launcher Malfunction"
-         (damage
+         (base/damage
           :name "Missile Launcher Malfunction")
         "Missile Magazine Explosion"
-         (damage
+         (base/damage
           :name "Missile Magazine Explosion")
         "Missile Magazine Fire"
-         (damage
+         (base/damage
           :name "Missile Magazine Fire")
         "Movement Malfunction"
-         (damage
+         (base/damage
           :name "Movement Malfunction")
         "Navigation Failure"
-         (damage
+         (base/damage
           :name "Navigation Failure")
         "Navigation Light Failure"
-         (damage
+         (base/damage
           :name "Navigation Light Failure"
           :summary "* The vehicles navigation/landing lights are not working across all spectrums. In combat, these lights are normally off anyway, but they make any landing or docking manuever much more perilous.")
         "Passenger Quarters Explosion"
-         (damage
+         (base/damage
           :name "Passenger Quarters Explosion")
         "Passenger Quarters Fire"
-         (damage
+         (base/damage
           :name "Passenger Quarters Fire")
         "Power Control Failure"
-         (damage
+         (base/damage
           :name "Power Control Failure")
         "Power Plant Coolant Failure"
-         (damage
+         (base/damage
           :name "Power Plant Coolant Failure")
         "Power Plant Damage"
-         (damage
+         (base/damage
           :name "Power Plant Damage")
         "Power Plant Explosion"
-         (damage
+         (base/damage
           :name "Power Plant Explosion")
         "Power Plant Fire"
-         (damage
+         (base/damage
           :name "Power Plant Fire")
         "Power Failure"
-         (damage
+         (base/damage
           :name "Power Failure")
         "Propellent Loss"
-         (damage
+         (base/damage
           :name "Propellent Loss")
         "Remote Systems Malfunction"
-         (damage
+         (base/damage
           :name "Remote Systems Malfunction"
           :summary "* Command over drones is lost.")
         "Secondary Bridge Explosion"
-         (damage
+         (base/damage
           :name "Secondary Bridge Explosion")
         "Secondary Bridge Fire"
-         (damage
+         (base/damage
           :name "Secondary Bridge Fire")
         "Secondary Bridge Malfunction"
-         (damage
+         (base/damage
           :name "Secondary Bridge Malfunction")
         "Sensor (Short Range) Malfunction"
-         (damage
+         (base/damage
           :name "Sensor (Short Range) Malfunction")
         "Sensor (Long Range) Malfunction"
-         (damage
+         (base/damage
           :name "Sensor (Long Range) Malfunction")
         "Shield Malfunction"
-         (damage
+         (base/damage
           :name "Shield Malfunction")
         "Spine Cracks"
-         (damage
+         (base/damage
           :name "Spine Cracks")
         "Steering Malfunction"
-         (damage
+         (base/damage
           :name "Steering Malfunction"
           :summary "* Unit can only perform 1 change in direction during a Move.")
         "Structural Collapse"
-         (damage
-          :name "Structural Collapse")
+         (base/damage
+          :name "Structural Collapse"
+          :summary
+           "Wands")
         "Target Aquisition Failure"
-         (damage
-          :name "Target Aquisition Failure")
+         (base/damage
+          :name "Target Aquisition Failure"
+          :summary
+           "Coins")
         "Temperature Control Failure"
-         (damage
+         (base/damage
           :name "Temperature Control Failure")
         "Turning Malfunction"
-         (damage
+         (base/damage
           :name "Turning Malfunction"
-          :summary "* Unit cannot turn toward one side.")
-        "Transponder Failure"
-         (damage
-          :name "Transponder Failure"
           :summary
-           "* The vehicle no longer identifies as friend of foe, so it appears as a potential enemy vehicle. In a heated exchange it may take friendly fire.
-* This can be as simple as a fallen flag on old navy ships."
-          :titles "IFF Damage, Not Running Colors")
+           "* Swords
+            * Unit cannot turn toward one side.")
+        "Transponder Failure"
+         (base/damage
+          :name "Transponder Failure"
+          :titles
+           "IFF Damage, Not Running Colors"
+          :summary
+           "* Coins
+            * The vehicle no longer identifies as friend of foe, so it appears as a potential enemy vehicle. In a heated exchange it may take friendly fire.
+            * This can be as simple as a fallen flag on old navy ships.")
         "Water Reserve Loss"
-         (damage
-          :name "Water Reserve Loss")
+         (base/damage
+          :name "Water Reserve Loss"
+          :summary
+           "* Cups")
         "Weapon Magazine Explosion"
-         (damage
+         (base/damage
           :name "Weapon Magazine Explosion")
         "Weapon Magazine Fire"
-         (damage
+         (base/damage
           :name "Weapon Magazine Fire")
         "Weapon Malfunction"
-         (damage
+         (base/damage
           :name "Weapon Malfunction")
         "Weapon Explosion"
-         (damage
+         (base/damage
           :name "Weapon Explosion")
         "Weapon Fire"
-         (damage
+         (base/damage
           :name "Weapon Fire")
         "Weapon Power Failure"
-         (damage
+         (base/damage
           :name "Weapon Power Failure")
         "Weapon Traverse Malfunction"
-         (damage
+         (base/damage
           :name "Weapon Traverse Malfunction"))))))
 
 (func chapter_genres : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Genres"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Carrier Command"
-     (section
+     (base/section
       :name "Carrier Command"
       :summary
        "Carrier Command is a set of rules for use with units that hold other units in a [Hanger].
@@ -700,7 +766,7 @@ of skill.  This has no game effect but add great flavor to the game.")
        * Refuel or Reload - Move and Action (Unit): Any unit on the [Flight Deck] or in the [Hanger] may refuel OR reload weapons (changing weapons if
        desired).")
     :RTS/4X
-     (section
+     (base/section
       :name "RTS/4X"
       :summary
        "4X:

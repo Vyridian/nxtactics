@@ -27,7 +27,6 @@
       (deck-rules tactics)
       (deck-setup tactics)
       (deck-scenes tactics)
-      (deck-encounters)
       (deck-places)
       (deck-units)
       (deck-items)
@@ -55,10 +54,6 @@
    (base/cardmap<-bookmap
     (:bookmap data/tactics-all)))
  :doc "Deck of books")
-
-(func deck-encounters : base/deck
- (base/deck
-  :name "Encounters"))
 
 (func deck-items : base/deck
  (let : base/deck

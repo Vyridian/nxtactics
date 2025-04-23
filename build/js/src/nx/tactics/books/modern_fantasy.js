@@ -8,6 +8,7 @@ export default class nx_tactics_books_modern_fantasy {
 
   /**
    * @function chapter_buffy_the_vampire_slayer
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_buffy_the_vampire_slayer = {
@@ -18,16 +19,14 @@ export default class nx_tactics_books_modern_fantasy {
   }
 
   // (func chapter_buffy_the_vampire_slayer)
-  static f_chapter_buffy_the_vampire_slayer() {
+  static f_chapter_buffy_the_vampire_slayer(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
       "Buffy the Vampire Slayer",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Scoobies",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -45,7 +44,6 @@ export default class nx_tactics_books_modern_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Xander Harris", ":image", "Buffy/Xander.png", ":reference", "Faith: She got me really wound up. A fight like that and, no kill. I'm about ready to pop!  Xander: Really? Pop?! Faith: You up for it?  Xander: Oh, I'm up. I'm suddenly very up. It's just, um, I've never been up with people before. Faith: Just relax. And take your pants off. Xander: Those two ... concepts are ... antithetical.")
           )
         ),
-        ":Independents",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -63,7 +61,6 @@ export default class nx_tactics_books_modern_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spike", ":image", "Buffy/Spike.png", ":reference", "Spike: I'll give you a choice. Now I'm going to kill you - no choice in that. But I can let you stay dead... or bring you back, to be like me. Willow: I'll scream! Spike: Bonus. [A short time later]  Spike: I don't understand. This sort of thing's never happened to me before. Willow: Maybe you were nervous. Spike: I felt all right when I started. Let's try again. Spike: Ow ow ow! Dammit!! Willow: Maybe you're trying too hard. Doesn't this happen to every vampire? Spike: Not to me it doesn't!", ":titles", "William the Bloody")
           )
         ),
-        "Bad Guys",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -90,6 +87,7 @@ export default class nx_tactics_books_modern_fantasy {
 
   /**
    * @function chapter_chronicles_of_amber
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_chronicles_of_amber = {
@@ -100,7 +98,7 @@ export default class nx_tactics_books_modern_fantasy {
   }
 
   // (func chapter_chronicles_of_amber)
-  static f_chapter_chronicles_of_amber() {
+  static f_chapter_chronicles_of_amber(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Chronicles of Amber")
     return output
@@ -108,6 +106,7 @@ export default class nx_tactics_books_modern_fantasy {
 
   /**
    * @function chapter_kengan_ashura
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_kengan_ashura = {
@@ -118,7 +117,7 @@ export default class nx_tactics_books_modern_fantasy {
   }
 
   // (func chapter_kengan_ashura)
-  static f_chapter_kengan_ashura() {
+  static f_chapter_kengan_ashura(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Kengan Ashura", ":summary", "* Kengan Matches - In Japan, wealthy business owners resolve disputes by hiring unarmed fighters to duel on their behalf. The match is form of high stakes gambling with large business interests on the line. Though the conflict appears to be fought on stage, a great deal of preparation, manipulation, and deception occur before, during, and after a match.\n* Rules - A Kengan member may make a 'reasonable' bet of another and challenge them to a Kengan match. The challenge is made known to the other members who may attend and bet on the results. The challenged party may agree to the duel, object, or decline. If they duel, each party chooses a champion and agree to a venue. The results of the battle must be adhered to. Win or lose, both parties rise in status for making the attempt. If the challenged party objects, they may counter offer or claim the challenge is unreasonable. Such disputes are decided by concensus vote among the other members. Poor challenges or objections are frowned upon. If the challenged declines, they are considered to have forfeited and must adhere to the terms and lose status for not participating.\n* History - During the Edo period of Japan, wealthy merchants stuggled for the best business dealings especially for the Shogun's business needs. Conflicts between merchants became increasingly bloody and reckless until the Shogun put a stop to it by announcing that all such conflicts must be resolved in a single-combat, unarmed duel. The tradition was very successful at keeping the peace and continues to this day.")
     return output
@@ -126,6 +125,7 @@ export default class nx_tactics_books_modern_fantasy {
 
   /**
    * @function chapter_matrix_the
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_matrix_the = {
@@ -136,18 +136,15 @@ export default class nx_tactics_books_modern_fantasy {
   }
 
   // (func chapter_matrix_the)
-  static f_chapter_matrix_the() {
+  static f_chapter_matrix_the(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
       "Matrix, The",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "The Matrix",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "The Matrix", ":reference", "* Welcome to the desert of the real. - Morpheus\n* What is 'real'? How do you define 'real'? - Morpheus\n* You are a slave, Neo. Like everyone else you were born into bondage. Into a prison that you cannot taste or see or touch. A prison for your mind. - Morpheus\n* Did you know that the first Matrix was designed to be a perfect human world?  Where none suffered, where everyone would be happy. It was a disaster. No one would accept the program. Entire crops were lost...human beings define their reality through suffering and misery. The perfect world was a dream that your primitive cerebrum kept trying to wake up from. - Agent Smith"),
-        ":Units",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -166,6 +163,7 @@ export default class nx_tactics_books_modern_fantasy {
 
   /**
    * @function chapter_modern_fantasy_overview
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_modern_fantasy_overview = {
@@ -176,16 +174,14 @@ export default class nx_tactics_books_modern_fantasy {
   }
 
   // (func chapter_modern_fantasy_overview)
-  static f_chapter_modern_fantasy_overview() {
+  static f_chapter_modern_fantasy_overview(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
       "Modern Fantasy Overview",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Why Tactics: Modern Fantasy?",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics: Modern Fantasy?")
       )
     )
@@ -194,6 +190,7 @@ export default class nx_tactics_books_modern_fantasy {
 
   /**
    * @function chapter_street_fighter
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_street_fighter = {
@@ -204,16 +201,14 @@ export default class nx_tactics_books_modern_fantasy {
   }
 
   // (func chapter_street_fighter)
-  static f_chapter_street_fighter() {
+  static f_chapter_street_fighter(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
       "Street Fighter",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "World Warriors",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -483,7 +478,6 @@ export default class nx_tactics_books_modern_fantasy {
             )
           )
         ),
-        ":Shadaloo",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -600,6 +594,7 @@ export default class nx_tactics_books_modern_fantasy {
 
   /**
    * @function chapter_world_of_darkness
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_world_of_darkness = {
@@ -610,16 +605,14 @@ export default class nx_tactics_books_modern_fantasy {
   }
 
   // (func chapter_world_of_darkness)
-  static f_chapter_world_of_darkness() {
+  static f_chapter_world_of_darkness(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
       "World of Darkness",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Technocracy",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -629,9 +622,7 @@ export default class nx_tactics_books_modern_fantasy {
           ":summary",
           "* A world-wide conspiracy that employs a technological paradigm called Enlightened Science to pursue an agenda promoting safety of the world over freedom. Considering the influence they have had over the world, some would say they are the most powerful organization ever known.\n* Capturing the Hearts and Minds - The Technocracy understands that reality is subjective and that it conforms to the collective will of humanity. Their agenda is to guide the beliefs of mankind to secure humanity from the chaos that surrounds us on all sides. To do this, they must guide our beliefs, removing belief in dangerous things and replacing it with belief in things that can be used to defend and better mankind. Of course, in order to do this they must control what the people believe in and completely stamp out anything that conflicts with their model of the future. Those who do not meet their criteria are labeled Reality Deviants.\n* Reality War - Because of its strong stance against reality deviancy, the Technocracy is essentially at war with all supernatural beings, including vampires, werewolves, and other mages. In practice, this conflict is a cold war, and the Technocracy has had far more success in proving to the masses that supernatural beings do not exist rather than eliminating them directly. Many beings, such as changelings and 'bygones' (mythic beasts such as dragons, manticores, and harpies) will simply cease to exist if the world stops believing in them.\n* The Price of Safety - The Technocracy champions science as a way to better and secure mankind while rejecting any innovation not approved by its own leadership. In this way, its agenda prevents effective criticism as it can always claim its ideological opponents are themselves against the benefits of science, many of which the Technocracy itself opposes while claiming to uphold.\n* Enlightened Science - In place of mysticism, the Technocracy uses Enlightened Science. It advances scientific methods and principles (along with the technology they produces), the spread of capitalist market-forces, and the application of political power. Roughly one in ten Technocrats can use true Enlightened Science and almost all believe their technology is so advanced that it only appears magical. Enlightened Science is all about moving the edge of knowledge forward, turning the unknown into the known, doing what's never been done before and hammering it into forms that work. Repeatedly. Reliably. Universally.\n* All Technocrats regardless of their enlightenment, use some sort of carefully constructed device. By their own definition, reality alteration without some sort of material basis is superstition.\n* Paradox and Enlightened Science - Like mysticism, Enlightened Science is subject to Paradox. The larger, more public, and more unlikely the effect, the large the potential for spectacular failure. Highly experimental science is best done in tightly controlled laboratory environments.\n* Be Seeing You - Watchwords stated to remind a fellow agent he will always serve the Technocracy.\n\nPrecepts\n* Bring stability and order to the universe. Predictability brings safety.\n* Define the nature of the universe. Knowledge must be absolute or chaos will envelop all.\n* Preserve the Gauntlet. Dangerous outside forces must be banished from the Earth.\n* Destroy Reality Deviants. Their recklessness threatens us all.\n* Shepherd the masses. Protect them from themselves by convincing them of the benefits of science and rationality. Conflict and suffering will be eliminated in our Utopia.\n\nHistory\n* Ancient World - Science and Magic coexisted for much of human history. Witchdoctors, Shamans, and Druids dominated their societies. Magic was as much trickery as substance because no one could prove a real Mage from a fake. Those with the real gift, however, steadily used it to gain individual power.\n* Rome - With the growth of the Roman Empire, Mages found that they lacked the organization necessary to hold off the Romans. Their people who had trusted in their magical leaders were disheartened by the inability of their magic to turn away the Romans.\n* Mythic Age - Without support from the people, the Mages were largely forced into hiding and into secret cabals and orders. Normally, Mages rarely had shared information, but now they were forced to share their knowledge within their Orders and this knowledge created a golden age for magical discovery. The Orders could not act publicly, but they were able to use their magic to subtley gain great influence in society.\n* Dark Ages - After the fall of the Roman Empire and with the coming of the Black Plague, the world was cast into fear and superstition. Reaon was at its weakest and the power of Mages was at its height. During this period, individual Mages controlled the gifts of Magic while the commoners languished in misery.\n* Craftmasons - The Craftmasons Guild of enchanters took on the mission of creating magical items that could be used by those without the gift. The guild found that in order for a lay person to use a magical item, he would have to believe that the item was not magical. To do this, the people would have to be convinced that the device was only a clever invention. This meant gradual development and regular public displays to allow the publich to accept each small enhancement.\n* Fall of Mistridge - After years of ideological conflict between the Craftmasons and the Mage Orders, the Craftmasons arranged an attack on Mistridge, the center of power of the Hermetic Orders. Peasants and spies created the distraction while the newest invention was rolled out, the cannon. Mistridge was soon demolished and the Craftmasons began their reign.\n* Inquisition - After the defeat of the Hermetic Orders, arrangements were made to set the public out to track down and eliminate the Order Mages. This culminated in the Inquisition under which many Mages and innocents were burned at the stake.\n* Renaissance - After centuries of steady progress, the Craftmasons' plans began to bear fruit and a new Age of Reason came upon man. Early Science, however, was just as outlandish as Magic, so inventions like Da Vinci's actually functioned at that time. Many of the most famous Techocrats developed during this period: Gutenberg, Copernicus. With the advent of the printing press, the Craftmasons were now able to communicate their ideals to a wider audience and to begin editing history that did not agree with their paradigm.\n* Victorian Era - As the power of the Craftmasons increased, they began to become fragmented into different specialties and disciplines called Conventions. This further fragmented into distinct idealogical groups concerned with nothing less than the destiny of humanity. In their minds, the Conventions have the power to direct the development of mankind in any way they see fit. What way to choose became hotly contested. The Sons of Ether actuallly walked out of the Conventions when it was deemed that their Convention would no longer be acceptable in their new world model.\n* World Wars - With the rise of Hitler, many within different regional Conventions found that they believed in his mission and began supporting his effort. Simultaneously, others began supporting the Allies. This led to a disaterous arms race within the Conventions that was fortunately resolved before it became completely out of control. Since then the Conventions have dismantled their regional control and focused on a single power structure with a global mission. Some, however, are still unhappy with this authoritarian approach.\n* Modern Era - The Technocracy has established bases of operation deep in the Ether, away from Paradox, and have already perfected artificial intelligence, cloning, cybernetics, fantastic methods of transportation, and mind shattering innovations in artificial life. These are even now being slowly introduced to the world.\n\nScenes:\n* Contain Reality Deviants\n* Recruit New Members\n* Establish a Front - The Technocracy mostly operates indirectly through other organizations, so it must maintain a number of front groups.\n* Investigate the Unknown\n* Internal Affairs\n* Contain Internal Threats\n* Explore the Depths\n* Everyday Living\n\nViewpoints:\n* Marauders - Call for backup then kill on sight. These insane chaos mages threaten everything the Technocracy stands for and must be removed at all costs.\n* Demons - Wait for backup then eliminate. Demons are powerful opponents and will require a team to take down.\n* Nephandi - Report any suspected encounter, but do not engage without explicit orders. The Nephandi are subversive and exposing their plots are far more important than eliminating individuals.\n* Mages - Observe and report. Tradition mages act in direct opposition to the Technocracy, but they are not necessarily dangerous and can certainly be reasoned with. We have many Mages under observation at any given moment. Violence is a last resort.\n* Vampires - Observe but do not engage. Minimal threat. Vampires are well known to the Technocracy. Their low body heat makes them easy to track with infrared. Cities are choked with the bloodsuckers, but they actively cover their own tracks, so they are low on the agenda. What the Technocracy does not realize is the massive influence that Vampires possess through the Blood Bond and that the Technocracy itself is being manipulated by various Vampire factions to do their dirty work.\n* Werewolves - Observe but do not engage. Werewolves are extremely powerful combatants and direct engagement can be suicide even for well equipped teams. Our agenda of causing the public to disbelieve in supernatural beings seems especially effective on werewolves. Their numbers are declining, and even direct sightings are dismissed as animal encounters. With patience the werewolves will simply disappear on their own. The Technocracy is completely unaware that its greatest threat is actually the Wyrm (which they consider primitive Werewolf superstition). The Technocracy's goals fall directly into the hands of the Wyrm, and the Technocracy itself has already been so corrupted at the highest levels that it is practically a pawn of the Wyrm.\n* Faeries - No threat. Race almost extinct. Await confimration of extinction.\n* Ghosts - Report any encounter. Usually no threat.",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            "Iteration X",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -663,7 +654,6 @@ export default class nx_tactics_books_modern_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Time-Motion Manager", ":summary", "* Time-Motion Managers focus on the maximization of efficiency and the design of information technology.")
               )
             ),
-            "New World Order",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -681,7 +671,6 @@ export default class nx_tactics_books_modern_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Public Relations (NWO)", ":summary", "* Smooth talking spin-doctors whose sole responsibility is to massage public opinion. They obtain positions in different organizations as PR men and women, and they make sure that the messsage that the public receives is always the same: there is a logical explanation; there will be an investigation to get to the bottom of it; there is nothing to worry about.", ":titles", "Man in Gray")
               )
             ),
-            ":Progenitors",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -701,7 +690,6 @@ export default class nx_tactics_books_modern_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Genegineer", ":summary", "* Genegineers focus on harnessing the power of applied genetics.\n* Since the cloning of Dolly the sheep in 1996, cloning technology has become more acceptable to the masses (if feared). The Genegineers can now produce tailored clones for any occasion. They are physically perfect, but every clone invariably has glaring mental deficiencies.\n* The excesses of the Genegineers can be truly frightening. Botched creations often die horribly or spectacularly after 'birth'. Successful creations have no rights are routinely abused, enslaved, experimented on, and exterminated.", ":titles", "Clone Arranger, Eugenist, Mutagenic Engineer")
               )
             ),
-            ":Syndicate",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -721,7 +709,6 @@ export default class nx_tactics_books_modern_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Syndicate Messenger", ":summary", "* The Messengers work in advertising. Their mission is more than just selling products, they are in charge of shaping trends. They build demand for entire product segments. Among many other things, this includes creating conflict to spur military spending.")
               )
             ),
-            "Void Engineers",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -749,7 +736,6 @@ export default class nx_tactics_books_modern_fantasy {
             )
           )
         ),
-        "Mages, Traditions",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -777,15 +763,10 @@ export default class nx_tactics_books_modern_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Verbena")
           )
         ),
-        ":Marauders",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Marauders", ":summary", "* Mages who have fallen into Quiet which has warped around them into personal [Paradox] Bubble fantasy worlds that wreck havoc on those around them. Their Quiet blends the real world with their fantasy world. From the outside perspective, the Marauders are dangerously insane."),
-        ":Nephilm",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Nephilm", ":summary", "* Nephandi - Their Avatars are 'inverted' (destroyed and recreated to server their dark masters)."),
-        "Wraiths and Spectres",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Wraiths and Spectres", ":summary", "* See Bestiary"),
-        ":Changelings",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Changelings", ":reference", "* Alice's Adventures in Wonderland - Lewis Carroll", ":summary", "* Changlings are Fae that have bonded with human hosts.\n* Changling stories tap into the roots of wonder and rediscover the world through the eyes of legend. In many ways, the lost children of the Fae are metaphors for our lost youth, and the World of Darkness mirrors the heartless society to which we are so resigned. By surrendering to the call of imagination, we can recapture some of our lost innocense. We can learn to laugh and weep again, for not all stories have happy endings, we can learn to remember. It is a journey between memory and forgetfulness, between dreams and reality, between wonder and banality."),
-        ":Spirits",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -793,19 +774,8 @@ export default class nx_tactics_books_modern_fantasy {
           ":summary",
           "* Bane - A corruption spirit that exists in the [Spirit Realm].\n* [Bane]s are attracted to hatred, cruelty, lust, and fear, and they are repelled by happiness, generosity, love, and kindness.\nNature Spirit Pattern Spider",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Bane, Disease",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane, Disease", ":summary", "* These repulsive Banes appear like blood covered bags of pus. They are drawn to plagues, cesspools, medical waste, etc."),
-            "Bane, Madness",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane, Madness", ":summary", "* These formless spirits wear down the sanity of those exposed to them with disembodied voices, disturbing visions, and horrible shrieking."),
-            "Bane, Poison",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane, Poison"),
-            "Bane, Radiation",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane, Radiation")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Bane: Disease", "Bane: Madness", "Bane: Poison", "Bane: Radiation")
         ),
-        ":Abominations",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -847,7 +817,6 @@ export default class nx_tactics_books_modern_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Throwback", ":reference", "Bouncers, Frat Boys, Jocks, Weight Lifters", ":summary", "* Appearance - Throwbacks are hulking, musclebound, prettyboys who are constantly looking at themselves.\n* History - Throwbacks begin as insecure guys who want to increase their bodies or their manhood.  The enhancements they receive brings out all of the worst male tendencies and exaggerate them to a homicidal degree. Vanity, violence, and sexual aggression all warp them into virtual cavemen who care for nothing but fighting, sex, and pumping iron.")
           )
         ),
-        "Modern Fantasy Terms",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -861,9 +830,7 @@ export default class nx_tactics_books_modern_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Paradox", ":reference", "* If we ask whether the position of the electron remains the same, we must say 'no'; if we ask whether the electron's position changes with time, we must say 'no'; if we ask whether the electron is at rest, we must say 'no'; if we ask whether it is in motion, we must say 'no'.  The Buddha has given such answers when interrogated as to the conditions of a man's self after death. - Robert Oppenheimer\n* A hundred years ago paradox meant error to the scientific mind.  But exploring such phenomena as the nature of light, electromagnetism, quantum mechanics and relativity theory, science has matured to the point where it is increasingly recognized that at a certain level reality is paradoxical. - M. Scott Peck, M.D., The Road Less Traveled", ":summary", "* The natural order of things must be consistent. Magick creates inconsistency displacing the natural order. Fortunately, the fabric of reality will bend before it will break. The tension generated by this bending is Paradox energy. Eventually, however, the fabric must snap back into place. This can physically damage the mage, cause Paradox Flaws, force the Mage into [Quiet], or actually fling the mage into a [Paradox Realm].")
           )
         ),
-        "Godlike Entities",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Godlike Entities", ":summary", "Weaver\n       * Measures the thread of life\n       !References\n       * Lachesis / The Allotter\n       Wyld\n       * Spins the thread of life\n       !References\n       * Clotho / The Spinner\n       Wyrm\n       * The cutter of the thread of life\n       !References\n       * Atropos / The Unturning\n       * Sitting in a bunker here behind my wall\n       Waiting for the worms to come.\n       In perfect isolation here behind my wall\n       Waiting for the worms to come.\n       Waiting to cut out the deadwood.\n       Waiting to clean up the city.\n       Waiting to follow the worms.\n       Waiting to put on a black shirt.\n       Waiting to weed out the weaklings.\n       Waiting to smash in their windows\n       And kick in their doors.\n       Waiting for the final solution\n       To strengthen the strain.\n       Waiting to follow the worms.\n       Waiting to turn on the showers\n       And fire the ovens.\n       Waiting for the queers and the coons\n       and the reds and the Jews.\n       Waiting to follow the worms.\n       Would you like to see Britannia\n       Rule again, my friend?\n       All you have to do is follow the worms.\n       Would you like to send our colored cousins\n       Home again, my friend?\n       All you need to do is follow the worms. - Pink Floyd, The Wall"),
-        "Modern Fantasy Places",
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Godlike Entities", ":summary", "Weaver\n      * Measures the thread of life\n      !References\n      * Lachesis / The Allotter\n      Wyld\n      * Spins the thread of life\n      !References\n      * Clotho / The Spinner\n      Wyrm\n      * The cutter of the thread of life\n      !References\n      * Atropos / The Unturning\n      * Sitting in a bunker here behind my wall\n      Waiting for the worms to come.\n      In perfect isolation here behind my wall\n      Waiting for the worms to come.\n      Waiting to cut out the deadwood.\n      Waiting to clean up the city.\n      Waiting to follow the worms.\n      Waiting to put on a black shirt.\n      Waiting to weed out the weaklings.\n      Waiting to smash in their windows\n      And kick in their doors.\n      Waiting for the final solution\n      To strengthen the strain.\n      Waiting to follow the worms.\n      Waiting to turn on the showers\n      And fire the ovens.\n      Waiting for the queers and the coons\n      and the reds and the Jews.\n      Waiting to follow the worms.\n      Would you like to see Britannia\n      Rule again, my friend?\n      All you have to do is follow the worms.\n      Would you like to send our colored cousins\n      Home again, my friend?\n      All you need to do is follow the worms. - Pink Floyd, The Wall"),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -877,7 +844,6 @@ export default class nx_tactics_books_modern_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Wells of Silence", ":reference", "* And in the naked light, I saw, 10,000 people or more.\nPeople talking without speaking, people hearing without listening\nPeople writing songs, that voices never share, and no one dared\nDisturb the sound of silence.\nFools, said I, you do not know, silence like a cancer grows\nHear my words so I might teach you, take my arms so I might reach you\nBut my words like silent raindrops fell\nand echoed in the wells of silence\nAnd the people bowed and prayed, to the neon god they made - Disturbed, Sound of Silence", ":summary", "* A world where humanity has lost its empathy with others. People are observers and consumers, but do not share emotional bonds.")
           )
         ),
-        "Paradigm Corporation",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -943,13 +909,13 @@ export default class nx_tactics_books_modern_fantasy {
       "Vampire_Slayer_by_Prasa.jpg",
       ":chaptermap",
       nx_tactics_base.f_chaptermap_from_chapterlist(
-        nx_tactics_books_modern_fantasy.f_chapter_modern_fantasy_overview(),
-        nx_tactics_books_modern_fantasy.f_chapter_buffy_the_vampire_slayer(),
-        nx_tactics_books_modern_fantasy.f_chapter_chronicles_of_amber(),
-        nx_tactics_books_modern_fantasy.f_chapter_kengan_ashura(),
-        nx_tactics_books_modern_fantasy.f_chapter_matrix_the(),
-        nx_tactics_books_modern_fantasy.f_chapter_street_fighter(),
-        nx_tactics_books_modern_fantasy.f_chapter_world_of_darkness()
+        nx_tactics_books_modern_fantasy.f_chapter_modern_fantasy_overview(tactics),
+        nx_tactics_books_modern_fantasy.f_chapter_buffy_the_vampire_slayer(tactics),
+        nx_tactics_books_modern_fantasy.f_chapter_chronicles_of_amber(tactics),
+        nx_tactics_books_modern_fantasy.f_chapter_kengan_ashura(tactics),
+        nx_tactics_books_modern_fantasy.f_chapter_matrix_the(tactics),
+        nx_tactics_books_modern_fantasy.f_chapter_street_fighter(tactics),
+        nx_tactics_books_modern_fantasy.f_chapter_world_of_darkness(tactics)
       )
     )
     return output

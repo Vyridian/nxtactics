@@ -81,24 +81,6 @@ export default class nx_tactics_decks_deck {
   }
 
   /**
-   * @function deck_encounters
-   * @return {deck}
-   */
-  static t_deck_encounters = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_encounters = {
-    vx_type: nx_tactics_decks_deck.t_deck_encounters
-  }
-
-  // (func deck-encounters)
-  static f_deck_encounters() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_deck}, ":name", "Encounters")
-    return output
-  }
-
-  /**
    * @function deck_home
    * @return {deck}
    */
@@ -129,7 +111,6 @@ export default class nx_tactics_decks_deck {
               nx_tactics_decks_rule.f_deck_rules(tactics),
               nx_tactics_decks_deck.f_deck_setup(tactics),
               nx_tactics_decks_deck.f_deck_scenes(tactics),
-              nx_tactics_decks_deck.f_deck_encounters(),
               nx_tactics_decks_deck.f_deck_places(),
               nx_tactics_decks_deck.f_deck_units(),
               nx_tactics_decks_deck.f_deck_items(),
@@ -419,7 +400,6 @@ export default class nx_tactics_decks_deck {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-abilities": nx_tactics_decks_deck.e_deck_abilities,
       "deck-books": nx_tactics_decks_deck.e_deck_books,
-      "deck-encounters": nx_tactics_decks_deck.e_deck_encounters,
       "deck-home": nx_tactics_decks_deck.e_deck_home,
       "deck-items": nx_tactics_decks_deck.e_deck_items,
       "deck-places": nx_tactics_decks_deck.e_deck_places,
@@ -433,7 +413,6 @@ export default class nx_tactics_decks_deck {
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "deck-abilities": nx_tactics_decks_deck.t_deck_abilities,
       "deck-books": nx_tactics_decks_deck.t_deck_books,
-      "deck-encounters": nx_tactics_decks_deck.t_deck_encounters,
       "deck-home": nx_tactics_decks_deck.t_deck_home,
       "deck-items": nx_tactics_decks_deck.t_deck_items,
       "deck-places": nx_tactics_decks_deck.t_deck_places,
@@ -490,24 +469,6 @@ export default class nx_tactics_decks_deck {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_deck.f_deck_books
-    }
-
-    // (func deck-encounters)
-    nx_tactics_decks_deck.t_deck_encounters['vx_value'] = {
-      name          : "deck-encounters",
-      pkgname       : "nx/tactics/decks/deck",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_deck.f_deck_encounters
     }
 
     // (func deck-home)

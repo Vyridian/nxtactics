@@ -191,15 +191,15 @@ Known as 'The Gun that Won the West' for its immense popularity at that time."
           :titles "Dirigible"))))))
 
 (func chapter_steam_age_maps : base/chapter
- (chapter
+ (base/chapter
   :name "Steam Age Maps"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Steam Age Terrain"
-     (section
+     (base/section
       :name "Steam Age Terrain"
       :rulemap
-       (rulemap
+       (base/rulemap
         :Mine
          (rule
           :name "Mine")

@@ -251,22 +251,13 @@
                 (base/unitability
                  :name "Inspiration"))))
          :unitskillmap
-          (base/unitskillmap
-           :Stealth
-            (base/unitskill
-             :name "Stealth"
-             :level "9"
-             :unitabilitymap
-              (base/unitabilitymap
-               :Backstab
-                (base/unitability
-                 :name "Backstab")
-               "Hide in Shadows"
-                (base/unitability
-                 :name "Hide in Shadows")
-               "Move Silently"
-                (base/unitability
-                 :name "Move Silently")))))
+          (base/unitskillmap<-unitskilllist
+           (base/unitskill<-tactics-key-lvl-abilities
+            tactics "Stealth" 9
+            (stringlist
+             "Backstab"
+             "Hide"
+             "Sneak"))))
         (base/unit
          :name "Sarak Ishimar"
          :image "images/fantasy/SarakIshimar.png"

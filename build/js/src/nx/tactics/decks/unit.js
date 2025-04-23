@@ -150,6 +150,10 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane: Disease", ":summary", "* These repulsive Banes appear like blood covered bags of pus. They are drawn to plagues, cesspools, medical waste, etc."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane: Madness", ":summary", "* These formless spirits wear down the sanity of those exposed to them with disembodied voices, disturbing visions, and horrible shrieking."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane: Poison"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane: Radiation"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bear: Black", ":image", "images/cards/unit-bear-black.svg", ":reference", "* Apex predator. High on cocaine. Out of its mind. - Cocaine Bear", ":body", "2x2", ":mass", "200kg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bear: Brown", ":image", "images/cards/unit-bear-brown.svg", ":body", "4x2", ":mass", "400kg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bear: Grizzly", ":image", "images/cards/unit-bear-grizzly.svg", ":reference", "* It has been estimated that a bite from a grizzly could crush a bowling ball.", ":body", "6x2", ":mass", "600kg"),
@@ -203,6 +207,40 @@ export default class nx_tactics_decks_unit {
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Intimidation", 1)
         )
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Brunhil Virden",
+        ":image",
+        "images/cards/unit-brunhil-virden.svg",
+        ":traits",
+        "Human Female",
+        ":body",
+        "7x1",
+        ":mind",
+        "6x1",
+        ":will",
+        "6x1",
+        ":speed",
+        "5x0",
+        ":mass",
+        "70kg/153lb",
+        ":speedland",
+        "5kph/3mph",
+        ":summary",
+        "* Sergeant of the Guard of Sandalstadt.",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Melee", 3),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+            tactics,
+            "Close Combat",
+            2,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
+          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Intimidation", 1)
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly: Giant"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -219,6 +257,7 @@ export default class nx_tactics_decks_unit {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar: Giant"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Avian"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Bull", ":titles", "Mechanical Bull", ":reference", "* It's a mechanical bull, the number one. You'll take a ride from anyone, Everyone wants a ride, and pulls away, from you - Metric, Black Sheep"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Cobra", ":titles", "Iron Cobra"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Dragon", ":titles", "Iron Dragon"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Golem", ":titles", "Ruin Grader, Ruin Guard"),
@@ -332,6 +371,31 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
+        "Ghoul",
+        ":summary",
+        "* Description - A ghoul is a reanimated corpse that perpetuates its undead existence by feeding on the the dead. They reek of charnel pits and they have shrivelled nightmarish features. Though frail and unhealthy looking, they possess fearsome strength. The teeth and claws also carry [Corpse Rot], an infection that slowly kills the victim if the Ghoul doesn't first. Victims of Ghouls often raise as Ghouls themselves if they are not cured or their corpse is not blessed or destroyed.\n* Personality - When well fed, Ghouls can communicate and can be surprisingly friendly though their intelligence is low and their interests are narrow (i.e. searching for corpses).\n* Japanese Gaki appear as gaunt-faced monsters with enormous, frog-like mouths and grossly distended bellies.\n* Morale - High\n* Units - Mob",
+        ":titles",
+        "Gaki, Ghul, Hungry Dead, Necrophage",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Natural Weaponry", 3),
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
+            tactics,
+            "Digging",
+            3,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Tunneling")
+          ),
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
+            tactics,
+            "Special Ability",
+            2,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Cannibal", "Savage")
+          )
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
         "Goblin: Scout",
         ":image",
         "images/cards/unit-goblin-scout.svg",
@@ -363,35 +427,17 @@ export default class nx_tactics_decks_unit {
         "1m/3ft",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitskill},
-            ":skill",
-            nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
-            ":level",
-            "1",
-            ":unititemmap",
-            nx_tactics_base.f_unititemmap_from_unititemlist(
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unititem},
-                ":item",
-                nx_tactics_base.f_item_from_tactics_key(tactics, "Knife: Dagger")
-              )
-            )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+            tactics,
+            "Close Combat",
+            1,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife: Dagger")
           ),
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitskill},
-            ":skill",
-            nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
-            ":level",
-            "1",
-            ":unitabilitymap",
-            nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitability},
-                ":ability",
-                nx_tactics_base.f_ability_from_tactics_key(tactics, "Sneak")
-              )
-            )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+            tactics,
+            "Stealth",
+            1,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sneak")
           )
         )
       ),
@@ -419,8 +465,6 @@ export default class nx_tactics_decks_unit {
         "80kg/175",
         ":height",
         "1.8m/6ft",
-        ":height",
-        "1.9m/6'3ft",
         ":demeanor",
         "Indifferent",
         ":nature",
@@ -585,6 +629,7 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Juggernaut"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Kali", ":summary", "* Tzimisce Vampire Methuselah"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -635,6 +680,7 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Mount"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Monster"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Warrior"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pilgrim", ":image", "images/cards/unit-pilgrim.png"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pit Fiend", ":titles", "Balrog, Fiend, Lord of the Pit", ":traits", "Devil"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -657,6 +703,7 @@ export default class nx_tactics_decks_unit {
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Flight", "Transform")
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Set", ":summary", "* Setite Vampire Methuselah"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shub-Niggurath", ":image", "cthulhu/shubniggurath.png", ":reference", "Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so tenuous in composition that its limbs vanish as quickly as they materialize, its very form dividing constantly into a surplus of smaller abominations that are either reabsorbed into its great form, or that escape to some hideous life elsewhere. Not the spitting image of a fertility goddess but this is as close as the mythos gets. Shub-Niggurath may well be the most widely revered amoung the other gods, infuence reaching not only to the Greeks, Cretans, Egyptions, and some druids, but to races so far-flung across the cosmos as the Mi-go of Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new life, especially intelligent life, is held as a sacred act. Many humans derive joy and self-import from the notion that their kind was toild over by some kind of divine intelligence. Shub-Niggurath with her blind, indifferent, prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's affirmation that life itself is nothing extrodinary. - Tale Foundry", ":titles", "The Black Goat of the Woods with a Thousand Young", ":summary", "* Mother's Gift - The milk of Shub-Niggurath with powerful healing and corrupting properties."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slave 1", ":image", "images/starwars/unit-slave1.png", ":titles", "Firespray-31", ":classification", "Med. Spacecraft"),
       vx_core.f_new(
@@ -867,9 +914,7 @@ export default class nx_tactics_decks_unit {
         ":summary",
         "* Cloaking Device",
         ":unitskillmap",
-        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Gunnery"),
-        ":unitpowermap",
-        nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Stealth")
+        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Gunnery", "Stealth")
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valusian Primitive", ":image", "images/cards/unit-valusian-primitive.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valusian Sorcerer", ":image", "images/cards/unit-valusian-warrior.svg"),

@@ -27,53 +27,36 @@ export default class nx_tactics_books_magic {
       "Magic Items",
       ":sectionmap",
       nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Magic Items", ":summary", "* Magic Weapons ignore armor equal to their + value.\n* Magic Armor ignores damage equal to their + value."),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Garb",
-          ":itemmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_itemmap},
-            "Fox Mask",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Fox Mask"),
-            "Oni Mask",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Oni Mask")
-          )
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Miscellaneous Magic",
-          ":itemmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_itemmap},
-            "Fan of the Winds",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Fan of the Winds")
-          )
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Magic Weapons",
+          "Magic Items",
+          ":summary",
+          "* Magic Weapons ignore armor equal to their + value.\n* Magic Armor ignores damage equal to their + value.",
           ":itemmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
             "Ascalan Lance",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Ascalan Lance", ":reference", "* The lance (or in some versions of the story, sword) that Saint George used to slay the dragon, named after the city Ashkelon.", ":titles", "Dragon Slayer Lance"),
-            ":Firebrand",
+            "Fan of the Winds",
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Fan of the Winds"),
+            "Firebrand",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Firebrand", ":titles", "Flame Tongue"),
-            ":Frostbrand",
+            "Fox Mask",
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Fox Mask"),
+            "Frostbrand",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Frostbrand"),
-            ":Moonblade",
+            "Moonblade",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Moonblade", ":titles", "A silver sword that is as hard as steel"),
+            "Oni Mask",
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Oni Mask"),
             "Poseidon's Net",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Poseidon's Net"),
             "Poseidon's Trident",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Poseidon's Trident"),
-            ":Runestaff",
+            "Runestaff",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Runestaff", ":summary", "* A staff with one or more Runes incribed upon it."),
-            ":Runesword",
+            "Runesword",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Runesword", ":summary", "* A sword with one or more Runes incribed upon it.")
           )
         )

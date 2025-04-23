@@ -2763,7 +2763,7 @@
         "Tiger, The"
          (base/unit
           :name "Tiger, The"
-          :image "Superheroes/Tiger.png"
+          :image "superheroes/tiger.png"
           :summary
            "* Tiger is a young man who has a magical form of lycanthropy that allows him to transform into a large man with the head, claws and fur of a Siberian tiger.
             * Wind Cutter/Kazekiri - All of Tiger's powers derive from this katana artifact that has been passed down from generation to generation. The sword is a symbol of the Torakage clan and has become a vessel for the spirits of everyone in his bloodline who has ever been granted the powers of the Tiger.
@@ -2842,15 +2842,10 @@
             * She is at once alien and empathetic having experienced every aspect of human existence over her long 'life'."
           :titles "Faith, Fate, Myriad, Seraphim"
           :unitpowermap
-           (base/unitpowermap
-            :Longevity
-             (base/unitpower
-              :name "Longevity"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Reincarnation - Transference"
-                 (base/unitability
-                  :name "Reincarnation - Transference"))))
+           (base/unitpowermap<-unitpowerlist
+            (base/unitpower<-tactics-key-abilities
+             tactics "Longevity"
+             (stringlist "Reincarnation - Transference")))
           :unitskillmap
            (base/unitskillmap
             :Stealth

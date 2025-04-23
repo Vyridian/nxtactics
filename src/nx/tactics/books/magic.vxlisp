@@ -107,55 +107,45 @@
      :name "Magic Items"
      :summary
       "* Magic Weapons ignore armor equal to their + value.
-       * Magic Armor ignores damage equal to their + value.")
-    (base/section
-     :name "Garb"
+       * Magic Armor ignores damage equal to their + value."
      :itemmap
-      (itemmap
-       "Fox Mask"
-        (item
-         :name "Fox Mask")
-       "Oni Mask"
-        (item
-         :name "Oni Mask")))
-    (base/section
-     :name "Miscellaneous Magic"
-     :itemmap
-      (itemmap
-       "Fan of the Winds"
-        (item
-         :name "Fan of the Winds")))
-    (base/section
-     :name "Magic Weapons"
-     :itemmap
-      (itemmap
+      (base/itemmap
        "Ascalan Lance"
-        (item
+        (base/item
          :name "Ascalan Lance"
          :reference "* The lance (or in some versions of the story, sword) that Saint George used to slay the dragon, named after the city Ashkelon."
          :titles "Dragon Slayer Lance")
-       :Firebrand
-        (item
+       "Fan of the Winds"
+        (base/item
+         :name "Fan of the Winds")
+       "Firebrand"
+        (base/item
          :name "Firebrand"
          :titles "Flame Tongue")
-       :Frostbrand
-        (item
+       "Fox Mask"
+        (base/item
+         :name "Fox Mask")
+       "Frostbrand"
+        (base/item
          :name "Frostbrand")
-       :Moonblade
-        (item
+       "Moonblade"
+        (base/item
          :name "Moonblade"
          :titles "A silver sword that is as hard as steel")
+       "Oni Mask"
+        (base/item
+         :name "Oni Mask")
        "Poseidon's Net"
-        (item
+        (base/item
          :name "Poseidon's Net")
        "Poseidon's Trident"
-        (item
+        (base/item
          :name "Poseidon's Trident")
-       :Runestaff
-        (item
+       "Runestaff"
+        (base/item
          :name "Runestaff"
          :summary "* A staff with one or more Runes incribed upon it.")
-       :Runesword
-        (item
+       "Runesword"
+        (base/item
          :name "Runesword"
          :summary "* A sword with one or more Runes incribed upon it."))))))

@@ -456,7 +456,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Travel",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Dimensional", "Flight", "Movement: Dig", "Movement: Ground", "Movement: Interstellar", "Movement: Space", "Movement: Water", "Teleportation", "Time Travel")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Digging", "Dimensional", "Flight", "Movement: Ground", "Movement: Interstellar", "Movement: Space", "Movement: Water", "Teleportation", "Time Travel")
         )
       )
     )
@@ -695,51 +695,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Special Skills",
           ":powermap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_powermap},
-            "Special Ability",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Special Ability",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                ":Cannibal",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cannibal", ":summary", "* [Requires]: Close Combat\n* [Attack]: Each [Critical Hit] may remove a [Damage Token] from this unit."),
-                ":Chaotic",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Chaotic"),
-                ":Corrupted",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Corrupted"),
-                ":Ethereal",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ethereal"),
-                "Feeding Frenzy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Feeding Frenzy"),
-                ":Giant",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Giant"),
-                ":Huge",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Huge"),
-                "Lernaean Poison",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lernaean Poison"),
-                ":Mindless",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mindless", ":summary", "* 0 [Mind]\n* Cannot use any Mind Abilities\n* Immune to Abilities that target [Mind]."),
-                ":Monstrous",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Monstrous"),
-                "Nemean Invulnerability",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Nemean Invulnerability"),
-                "Rapid Metabolism",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Rapid Metabolism"),
-                ":Savage",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Savage", ":summary", "* Must Attack if able.\n* Ignores Fear, Despair, and Morale"),
-                ":Skeletal",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Skeletal", ":summary", "* +1 Body\n* Ignores [Bleeding], [Poison], and [Disease]"),
-                ":Soulless",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulless", ":summary", "* A soulless unit is not truly alive.  It may not use or gain Spirit skills."),
-                ":Tainted",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tainted")
-              )
-            )
-          )
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Special Ability")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

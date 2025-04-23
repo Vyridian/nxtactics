@@ -14,7 +14,11 @@
      * Aero reacts with Cryo to produce the [Chill] effect.
      * Aero reacts with Hydro to produce the [Fog] effect.
      * Aero reacts with Electro to produce the [Ionized] effect.
-     * Aero reacts with Geo to produce the [Weightess] effect.")
+     * Aero reacts with Geo to produce the [Weightess] effect."
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Air Bubble"))
   (base/power
    :name "Alchemy"
    :summary
@@ -1040,7 +1044,8 @@
      "Cast Shadows"
       (base/ability
        :name "Cast Shadows"
-       :summary "* Animate shadows. Like [Illusions], they have full power but are destroyed on any hit.")
+       :summary
+        "* Animate shadows. Like [Illusions], they have full power but are destroyed on any hit.")
      "Circle of Darkness"
       (base/ability
        :name "Circle of Darkness")
@@ -2294,42 +2299,21 @@
    :name "Shamanism"
    :titles "Shaman, Spirit Caller, Witch Doctor"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Call Spirits"
-      (base/ability
-       :name "Call Spirits")
      "Control Spirit"
-      (base/ability
-       :name "Control Spirit")
-     :Reincarnate
-      (base/ability
-       :name "Reincarnate"
-       :summary "* Similar to [Resurrect], this ability allows a being to return to life in a new body if this ritual is performed soon after death. The reincarnated being will be physically different from the original, potentially different age, abilities, gender, race, or species. The being will have most of its original memories, but will often have a substantially different personality. If any [Successes] are made, the reincarnation succeeds and the character must be created again with significant differences and will appear in a location consistent with its new identity. The new character is built at a level equal to it original level or the reincarnate skill level whichever is lower. If the reincarnate skill level is lower than 10, the reincarnated being will be -10% younger than before for each level below 10.")
+     "Reincarnation"
      "Second Sight"
-      (base/ability
-       :name "Second Sight"
-       :reference
-        "* I've got electric light, and I've got second sight.  I've got amazing...powers...of observation.  And that is how I know...When I try to get through...On the telephone to you...There will be nobody home. - Pink Floyd, Nobody Home"
-       :summary
-        "* Second sight is the ability to see the spiritual essence of beings. It quickly identifies the living from the unliving and can detect disease both phyiscal and mental.")
      "Spirit Guide"
-      (base/ability
-       :name "Spirit Guide")
      "Spiritual Affinity"
-      (base/ability
-       :name "Spiritual Affinity"
-       :summary "* Death: Enter the Spirit Realm")
-     :Totem
-      (base/ability
-       :name "Totem")
-     "Vision Quest"
-      (base/ability
-       :name "Vision Quest")))
+     "Totem"
+     "Vision Quest"))
   (base/power
    :name "Sorcery"
    :reference
     "* This is forbidden. This is a summoning. I cannot speak this!... There is no light here. You came to the darkness for knowledge... And all the knowledge you seek is here. Surrender. Speak the words. Call her home. By three thay come. By three thy way opens. By the blood of the willing. We call thee home. Hail, daughter of hatred. Hail, Lilith. - Diablo IV"
-   :titles "Sorcerer, Sorceress, Sorceress Queen, Summoner"
+   :titles "Hell Knight, Sorcerer, Sorceress, Sorceress Queen, Summoner"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -2567,6 +2551,8 @@
        :summary
         "* Calls acid rain from an existing cloud.
          * [Damage Type]: [Corrosive]")
+     "Air Bubble"
+      (base/ability<-tactics-key tactics "Air Bubble")
      "Air Breathing"
       (base/ability
        :name "Air Breathing"
@@ -3346,6 +3332,14 @@
    :summary
     "* Your mass is increased or decreased. This is normally permanent but may be altered. Related Powers: [Phasing], [Size].")
   (base/power
+   :name "Digging"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Drilling"
+     "Excavating"
+     "Tunneling"))
+  (base/power
    :name "Dimensional"
    :reference
     "* I reject your reality and substitute my own. - Adam Savage, Mythbusters"
@@ -3405,16 +3399,11 @@
   (base/power
    :name "Diseases"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Fungal Growth"
-      (base/ability
-       :name "Fungal Growth")
      "Intestinal Parasite"
-      (base/ability
-       :name "Intestinal Parasite")
-     :Rabid
-      (base/ability
-       :name "Rabid")))
+     "Rabid"))
   (base/power
    :name "Domination"
    :reference
@@ -3426,9 +3415,8 @@
    :titles "Dominator, Master, Puppet Master, Puppeteer"
    :abilitymap
     (base/abilitymap
-     :Brainwashing
-      (base/ability
-       :name "Brainwashing")
+     "Brainwashing"
+      (base/ability<-tactics-key tactics "Brainwashing")
      :Conditioning
       (base/ability
        :name "Conditioning"
@@ -3485,8 +3473,10 @@
      "Buried Alive"
       (base/ability
        :name "Buried Alive"
-       :reference "* I've done far worse than kill you. I've hurt you. And I wish to go on hurting you. I shall leave you as you left me, as you left her; marooned for all eternity in the center of a dead planet... buried alive! Buried alive...! - Khan, Star Trek II: The Wrath of Khan"
-       :summary "* Collapse earth to close an opening.")
+       :reference
+        "* I've done far worse than kill you. I've hurt you. And I wish to go on hurting you. I shall leave you as you left me, as you left her; marooned for all eternity in the center of a dead planet... buried alive! Buried alive...! - Khan, Star Trek II: The Wrath of Khan"
+       :summary
+        "* Collapse earth to close an opening.")
      "Call Rockslide"
       (base/ability
        :name "Call Rockslide")
@@ -3497,25 +3487,30 @@
      :Earthbind
       (base/ability
        :name "Earthbind"
-       :summary "* Gravity increases for target flying unit. [-1 Altitude] for each success. No effect on units that are not flying."
+       :summary
+        "* Gravity increases for target flying unit. [-1 Altitude] for each success. No effect on units that are not flying."
        :titles "Grip of Earth")
      "Earth Move"
       (base/ability
        :name "Earth Move"
-       :summary "* Pushes a mound of earth like a bulldozer.")
+       :summary
+        "* Pushes a mound of earth like a bulldozer.")
      "Earth Sight"
       (base/ability
        :name "Earth Sight"
-       :summary "* By touching the ground with bare skin, detect any object directly touching the ground in sight range regardless of intervening obstacle. This ability is particularly useful underground, for seeing through walls, and for indirect fire."
+       :summary
+        "* By touching the ground with bare skin, detect any object directly touching the ground in sight range regardless of intervening obstacle. This ability is particularly useful underground, for seeing through walls, and for indirect fire."
        :titles "Earthsense")
      "Earth Till"
       (base/ability
        :name "Earth Till"
-       :summary "* Softens earth. Also can prepare earth for planting crops in a large area.")
+       :summary
+        "* Softens earth. Also can prepare earth for planting crops in a large area.")
      "Earth Walk"
       (base/ability
        :name "Earth Walk"
-       :summary "* Ignore movement penalties while travelling over natural earth or stone.")
+       :summary
+        "* Ignore movement penalties while travelling over natural earth or stone.")
      "Earth Wall"
       (base/ability
        :name "Earth Wall")
@@ -3534,7 +3529,7 @@
       (base/ability
        :name "Pass Through Earth"
        :summary "* Allows the user to move through earth as if it were water.")
-     :Quagmire
+     "Quagmire"
       (base/ability
        :name "Quagmire"
        :summary "* Any unit in the area is must spend double movement when moving."
@@ -3573,11 +3568,13 @@
      "Treacherous Ground"
       (base/ability
        :name "Treacherous Ground"
-       :summary "* Creates a patch of broken earth or rock that will trip anything moving across it at more than a slow walk.")
-     :Tremor
+       :summary
+        "* Creates a patch of broken earth or rock that will trip anything moving across it at more than a slow walk.")
+     "Tremor"
       (base/ability
        :name "Tremor"
-       :summary "* Summons a small living earthquake in broken earth or rock. Earth elementals love nothing more than knocking things over.")
+       :summary
+        "* Summons a small living earthquake in broken earth or rock. Earth elementals love nothing more than knocking things over.")
      "Volcanic Eruption"
       (base/ability
        :name "Volcanic Eruption")))
@@ -4496,29 +4493,19 @@
   (base/power
    :name "Inertia"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Impact Absorption"
-      (base/ability
-       :name "Impact Absorption")
      "Inertial Dampening"
-      (base/ability
-       :name "Inertial Dampening")
-     "Unstoppable"
-      (base/ability
-       :name "Unstoppable")))
+     "Unstoppable"))
   (base/power
    :name "Invisibility"
    :abilitymap
-    (base/abilitymap
-     :Invisible
-      (base/ability
-       :name "Invisible")
-     :Transparency
-      (base/ability
-       :name "Transparency")
-     :Vanish
-      (base/ability
-       :name "Vanish")))
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Invisible"
+     "Transparent"
+     "Vanish"))
   (base/power
    :name "Laboratory"
    :summary "Special labs for analyzing information. Science labs are very flexible and can be used for any number of quick analytics. Obviously, they are severly limited compared to proper research facilities."
@@ -4576,7 +4563,8 @@
      "Storm Cellar"
       (base/ability
        :name "Storm Cellar"
-       :summary "* The crew will occupy the cellar when the sun kicks up a solar storm of radiation. As these can last for days, one had better include a few crew-days worth of food, water, and tranquilizers. If you are relying upon algae for your oxygen, it deserves space in the storm cellar as well. This probably also applies to stored food too. Particle radiation can destroy a lot of the vitamins in food. Alas, computers and other digital electronics are also vulnerable to radiation. If there is a critical failure outside, thenit is time to start drawing straws to decide who gets to heroically commit suicide by saving the ship.")
+       :summary
+        "* The crew will occupy the cellar when the sun kicks up a solar storm of radiation. As these can last for days, one had better include a few crew-days worth of food, water, and tranquilizers. If you are relying upon algae for your oxygen, it deserves space in the storm cellar as well. This probably also applies to stored food too. Particle radiation can destroy a lot of the vitamins in food. Alas, computers and other digital electronics are also vulnerable to radiation. If there is a critical failure outside, thenit is time to start drawing straws to decide who gets to heroically commit suicide by saving the ship.")
      "Water Filtration"
       (base/ability
        :name "Water Filtration")
@@ -5126,16 +5114,6 @@
      "Wall Running"
      "Water Walking"
      "Water Running"))
-  (base/power
-   :name "Movement: Dig"
-   :abilitymap
-    (base/abilitymap<-abilitylist
-     (base/ability
-      :name "Drilling")
-     (base/ability
-      :name "Excavating")
-     (base/ability
-      :name "Tunneling")))
   (base/power
    :name "Movement: Ground"
    :abilitymap
@@ -5733,6 +5711,27 @@
        :reference
         "* A Cell gets out, and it will IMITATE EVERYTHING on the face of the EARTH! AND NOTHING CAN STOP IT! - Blair, The Thing")))
   (base/power
+   :name "Special Ability"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Cannibal"
+     "Chaotic"
+     "Corrupted"
+     "Ethereal"
+     "Feeding Frenzy"
+     "Giant"
+     "Huge"
+     "Lernaean Poison"
+     "Mindless"
+     "Monstrous"
+     "Nemean Invulnerability"
+     "Rapid Metabolism"
+     "Savage"
+     "Skeletal"
+     "Soulless"
+     "Tainted"))
+  (base/power
    :name "Strength"
    :reference "* Technique is for lightweights. - Sett, Runeterra"
    :stat "Body"
@@ -6187,9 +6186,6 @@
    :titles "Aquamancer, Hydromancer, Wave Rider"
    :abilitymap
     (base/abilitymap
-     "Air Bubble"
-      (base/ability
-       :name "Air Bubble")
      "Call Water"
       (base/ability
        :name "Call Water"

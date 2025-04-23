@@ -34,6 +34,11 @@
    :summary "* Grow Crop"
    :titles "Farmer, Gardener")
   (base/ability
+   :name "Air Bubble"
+   :summary
+    "* [Power]: [Aeromancy], [Air]
+     * [Action]: Create an area of breathable air in a radius of 1m/[Level]")
+  (base/ability
    :name "Air Burst")
   (base/ability
    :name "Ambush"
@@ -76,6 +81,10 @@
    :name "As if in a Dream"
    :summary "* Confuse a target's senses to perceive a single thing incorrectly.")
   (base/ability
+   :name "Authority"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
    :name "Auto Med System"
    :summary
     "* Detects severe damage to the wearer and automatically takes action to reduce shock and maintain suit integrity (sealing leaks or amputating if necessary).")
@@ -97,6 +106,12 @@
    :summary
     "* [Requires]: Javelin
      * Criticals vs Large units are [Rage] Tokens.")
+  (base/ability
+   :name "Bargain"
+   :titles "Haggler, Merchant"
+   :summary
+    "* [Skill]: [Business]
+     * Ability that Limits any attempt to buy or sell goods at their actual worth.")
   (base/ability
    :name "Barrage"
    :summary
@@ -157,6 +172,10 @@
   (base/ability
    :name "Blind Fighting")
   (base/ability
+   :name "Blind Justice"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
    :name "Blinding")
   (base/ability
    :name "Blinding Spit")
@@ -197,6 +216,11 @@
   (base/ability
    :name "Brain Storm")
   (base/ability
+   :name "Brainwashing"
+   :summary
+    "* [Power]: [Domination] vs. [Will]
+     * [Effect]: At Will:0 the [Rival] obeys all commands and becomes [Brainwashed].")
+  (base/ability
    :name "Brewing"
    :summary
     "* Brew Beer
@@ -222,6 +246,12 @@
   (base/ability
    :name "Call of the Hunt")
   (base/ability
+   :name "Call for Backup"
+   :reference
+    "Bring me everyone.  What do you mean 'everyone'?  EVERY-ONE! - Stansfield and Benny - Leon the Professional"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
    :name "Call to Arms"
    :reference
     "Unite. Take up arms.
@@ -243,12 +273,23 @@
    :name "Call Lightning"
    :summary "* Calls a lightning strike from an existing storm cloud.")
   (base/ability
+   :name "Call Spirits"
+   :summary
+    "* [Power]: [Shamanism]")
+  (base/ability
    :name "Camouflage"
    :summary
-    "* [Continuous]: While active, unit is hidden.
+    "* [Skill]: [Hunting] [Stealth]
+     * [Continuous]: While active, unit is hidden.
      * [Defense]: +1 Defense in [Terrain].
      * [Roll]: Skill - Move this turn.
      * [Versus]: and others must roll Spirit - Terrain penalty vs to detect.")
+  (base/ability
+   :name "Cannibal"
+   :summary
+    "* [Power]: [Special Ability]
+     * [Requires]: Close Combat
+     * [Attack]: Each [Critical Hit] may remove a [Damage Token] from this unit.")
   (base/ability
    :name "Carpentry"
    :titles "Carpenter")
@@ -257,6 +298,10 @@
    :summary
     "* [Action]: [Activate] up to [Command] units directly or indirectly adjacent to this unit. These units (including this one) may spend [Speed] or [Actions] in any order this [Turn].
      * [Interrupt]: May not be used as an Interrupt.")
+  (base/ability
+   :name "Chaotic"
+   :summary
+    "* [Power]: [Special Ability]")
   (base/ability
    :name "Claw"
    :summary
@@ -287,7 +332,16 @@
    :name "Commanding Presense")
   (base/ability
    :name "Concoct Dream Essence"
-   :summary "* Dreams caught with [Dreamcatching] can be contained in a bottle called [Dream Essence]. Opening the bottle releases the experience of the dream to all surrounding it.")
+   :summary
+    "* Dreams caught with [Dreamcatching] can be contained in a bottle called [Dream Essence]. Opening the bottle releases the experience of the dream to all surrounding it.")
+  (base/ability
+   :name "Condemn"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
+   :name "Confiscate"
+   :summary
+    "* [Skill]: [Law]")
   (base/ability
    :name "Constrict"
    :titles "Bear Hug")
@@ -302,6 +356,10 @@
    :name "Control Lightning"
    :summary "* [Reaction]: Redirect a lightning effect to another target.")
   (base/ability
+   :name "Control Spirit"
+   :summary
+    "* [Power]: [Shamanism]")
+  (base/ability
    :name "Cooking"
    :summary "* Prepare Recipe"
    :titles "Chef, Cook")
@@ -310,12 +368,24 @@
    :summary "* Make Sealable Barrel"
    :titles "Cooper")
   (base/ability
+   :name "Corrupted"
+   :summary
+    "* [Power]: [Special Ability]")
+  (base/ability
    :name "Crafts"
    :summary
     "* [Skill]: [Art]")
   (base/ability
    :name "Create Chimera"
    :summary "A Chimera is an imaginary creation. It exists only to the user, though those with magical abilities, young children and the mentally impaired may see them. They only can affect those who can see them.")
+  (base/ability
+   :name "Crime and Punishment"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
+   :name "Crowd Control"
+   :summary
+    "* [Skill]: [Law]")
   (base/ability
    :name "Cryo Sleep System"
    :summary
@@ -368,6 +438,17 @@
    :summary
     "* Effects only unliving objects
      * A target that takes Destruction Tokens equal to Body are completely destroyed.")
+  (base/ability
+   :name "Detail Oriented"
+   :summary
+    "* [Skill]: [Investigation]
+     * ONCE IF you found and item during a [Search] AND one or more [Crit]s THEN you may resuffle that item into the [Search Deck] and draw again taking the new result insteaad.")
+  (base/ability
+   :name "Detective Work"
+   :reference
+    "* To a cop the explanation is never that complicated. It's always simple. There's no mystery to the street, no arch criminal behind it all. If you got a dead body and you think his brother did it, you're gonna find out you're right. - Verbal, Usual Suspects"
+   :summary
+    "* [Skill]: [Investigation]")
   (base/ability
    :name "Dialect-Enlisted"
    :summary "Dialect of enlisted soldiers")
@@ -464,6 +545,12 @@
      * [Requires]: You must have a [Hold] on the target.
      * [Action]: You may at an additional Move:-1/space while dragging the target behind you.")
   (base/ability
+   :name "Dragnet"
+   :reference "* Our fugitive has been on the run for ninety minutes. Average foot speed over uneven ground barring injuries is 4 miles-per-hour. That gives us a radius of six miles. What I want from each and every one of you is a hard-target search of every gas station, residence, warehouse, farmhouse, henhouse, outhouse and doghouse in that area. - The Fugitive"
+   :summary
+    "* [Skill]: [Law]
+     * Search a large area for a fugitive.")
+  (base/ability
    :name "Drawing"
    :summary
     "* [Skill]: [Art]")
@@ -521,6 +608,11 @@
     "* Explore the [Dream Realm]
      * [Action]: While asleep, Spirit enters the [Dream Realm]. The Spirit may travel as long as it wants, but whenever the Body awakens, the Spirit immediately returns.
      * [Death]: Spirit may permanently enter the [Spirit Realm].")
+  (base/ability
+   :name "Drilling"
+   :summary
+    "* [Power]: [Digging]
+     * Create a hole")
   (base/ability
    :name "Drunken Monkey Roll"
    :summary
@@ -614,9 +706,26 @@
    :summary
     "* [Power]: [Longevity]")
   (base/ability
+   :name "Ethereal"
+   :summary
+    "* [Power]: [Special Ability]")
+  (base/ability
+   :name "Excavating"
+   :summary
+    "* [Power]: [Digging]
+     * Expose a large buried area.")
+  (base/ability
+   :name "Exile"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
    :name "Existential Riddle"
    :summary
     "Demoralize unwitting rivals by questioning their purpose in life.")
+  (base/ability
+   :name "Exonerate"
+   :summary
+    "* [Skill]: [Law]")
   (base/ability
    :name "Explosive Shot"
    :summary "* [Requires]: Bow or Crossbow")
@@ -649,6 +758,10 @@
    :name "Feint"
    :summary "* Feints are maneuvers designed to distract or mislead, done by giving the impression that a certain maneuver will take place, while in fact another, or even none, will."
    :titles "Kizeme")
+  (base/ability
+   :name "Feeding Frenzy"
+   :summary
+    "* [Power]: [Special Ability]")
   (base/ability
    :name "Fend Off"
    :summary
@@ -697,13 +810,32 @@
    :reference "Eternal Sunshine of the Spotless Mind"
    :summary "* This ability makes every childhood dream and ambition real again. Every imaginary friend is remembered clearly and the happiest moments from youth return with the intensity of a first kiss and the excitement of Christmas. Then, suddenly, its over. In their absence, depression can crash down.  Truly fallen beings can become suicidal. The remembrance can be uplifting in the end, allowing one to relive the best moments of life.")
   (base/ability
+   :name "Foraging"
+   :summary
+    "* [Skill]: [Survival]
+     * [Action]: This ability can be used to forage for 1 man day of food and water for each [Success]. Such food will typically be disgusting to those unaccustomed to the local cuisine, but it will sustain. Excess food only lasts for 1 additional day before going bad. Excess water can be transfered to containers if any, otherwise it cannot be carried. [Crit]s provide a particularly tasty, convenient, or useful source of nutrition (e.g. water in bamboo that can be carried, food that will last another day or more).")
+  (base/ability
    :name "Forward Observer"
    :summary
     "* [Action]: When unit has [Line of Sight] on a opponent, any number of units with [Indirect Fire] may attack that unit even if they do not have [Line of Sight].")
   (base/ability
+   :name "Fungal Growth"
+   :summary
+    "* [Power]: [Diseases]")
+  (base/ability
    :name "Gateway"
    :summary
     "* Open a portal to another location.")
+  (base/ability
+   :name "Giant"
+   :summary
+    "* [Power]: [Special Ability]
+     * [Body]:+0x2")
+  (base/ability
+   :name "Huge"
+   :summary
+    "* [Power]: [Special Ability]
+     * [Body]:+0x1")
   (base/ability
    :name "Glassblowing"
    :summary
@@ -803,6 +935,10 @@
      * Let's write something on the carpet... I know how about 'Mother SUCKS'. - Drop Dead Fred"
    :summary "Create a character with a distinct personality of your choice that only the target can see.")
   (base/ability
+   :name "Impact Absorption"
+   :summary
+    "* [Power]: [Inertia]")
+  (base/ability
    :name "Impale"
    :summary
     "* [Requires]: Spear
@@ -818,12 +954,24 @@
      * See: [Forward Observer]
      * See: [HE - High Explosives]")
   (base/ability
+   :name "Inertial Dampening"
+   :summary
+    "* [Power]: [Inertia]")
+  (base/ability
    :name "Infrared Dampener"
    :summary
     "* By activating this system, the armor reduces all heat signatures. Use of any system (even passive ones) will negate the stealth.
      * [Continuous Action] - Stealth vs. Infrared Sensors")
   (base/ability
+   :name "Intestinal Parasite"
+   :summary
+    "* [Power]: [Diseases]")
+  (base/ability
    :name "Investigative Genius")
+  (base/ability
+   :name "Invisible"
+   :summary
+    "* [Power]: [Invisibility]")
   (base/ability
    :name "Iron Horse"
    :reference "The Blob, X-men"
@@ -857,6 +1005,11 @@
      * Fashion Jewelry"
    :titles "Gemcutter, Jeweler")
   (base/ability
+   :name "Judgment"
+   :reference "* I am the law! - Judge Dredd"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
    :name "Jump Jets")
   (base/ability
    :name "Kick"
@@ -886,6 +1039,10 @@
     "* Fashion Leather Goods
      * Flay Skins"
    :titles "Tanner")
+  (base/ability
+   :name "Lernaean Poison"
+   :summary
+    "* [Power]: [Special Ability]")
   (base/ability
    :name "Lernaean Regeneration"
    :summary
@@ -956,12 +1113,28 @@
    :name "Metalworking"
    :titles "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith")
   (base/ability
+   :name "Mindless"
+   :summary
+    "* [Power]: [Special Ability]
+     * 0 [Mind]
+     * Cannot use any Mind Abilities
+     * Immune to Abilities that target [Mind].")
+  (base/ability
    :name "Missile Mount"
    :summary "* A special mount to add a missile pack on the back of the armor.")
   (base/ability
    :name "Molecular Alteration")
   (base/ability
+   :name "Monstrous"
+   :summary
+    "* [Power]: [Special Ability]
+     * [Body]:+0x3")
+  (base/ability
    :name "Multitasking")
+  (base/ability
+   :name "Nemean Invulnerability"
+   :summary
+    "* [Power]: [Special Ability]")
   (base/ability
    :name "Neck Bite"
    :summary
@@ -1127,6 +1300,10 @@
    :name "Power Throw"
    :summary "* Add Power Rating to weapon damage when throwing any object or weapon.")
   (base/ability
+   :name "Precedent"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
    :name "Prepare Acid")
   (base/ability
    :name "Prepare Anti-Coagulant"
@@ -1136,6 +1313,10 @@
    :summary "* Skilled in antidote creation.  Can create an antidote for any Poison user can brew.")
   (base/ability
    :name "Prepare Poison")
+  (base/ability
+   :name "Prosecute"
+   :summary
+    "* [Skill]: [Law]")
   (base/ability
    :name "Psychic Duel"
    :reference
@@ -1157,6 +1338,10 @@
   (base/ability
    :name "Quill Attack")
   (base/ability
+   :name "Rabid"
+   :summary
+    "* [Power]: [Diseases]")
+  (base/ability
    :name "Radar Dampener"
    :summary
     "* By activating this system, the armor reduces all radar signatures. Use of any system (even passive ones) will negate the stealth.
@@ -1170,6 +1355,10 @@
    :name "Rally"
    :summary
     "[Action]: Units within Range:Skill are placed into a [Formation] they all share.")
+  (base/ability
+   :name "Rapid Metabolism"
+   :summary
+    "* [Power]: [Special Ability]")
   (base/ability
    :name "Rapid Strike"
    :reference
@@ -1205,10 +1394,12 @@
     "* [Power]: [Healing]")
   (base/ability
    :name "Reincarnation"
-   :reference "* Doctor Who"
+   :reference
+    "* Doctor Who"
    :summary
     "* Be reborn into a new body.
-     * [Power]: [Longevity]")
+     * [Power]: [Longevity] [Shamanism]
+     * Similar to [Resurrect], this ability allows a being to return to life in a new body if this ritual is performed soon after death. The reincarnated being will be physically different from the original, potentially different age, abilities, gender, race, or species. The being will have most of its original memories, but will often have a substantially different personality. If any [Successes] are made, the reincarnation succeeds and the character must be created again with significant differences and will appear in a location consistent with its new identity. The new character is built at a level equal to it original level or the reincarnate skill level whichever is lower. If the reincarnate skill level is lower than 10, the reincarnated being will be -10% younger than before for each level below 10.")
   (base/ability
    :name "Reincarnation - Transference"
    :reference
@@ -1305,6 +1496,12 @@
      * Up to 10 weapons of the same type can be in 1 Salvo.
      * All targets in the space are attacked.")
   (base/ability
+   :name "Savage"
+   :summary
+    "* [Power]: [Special Ability]
+     * Must Attack if able.
+     * Ignores Fear, Despair, and Morale")
+  (base/ability
    :name "Savage Genitalia"
    :summary
     "* Male variations include excessive length, hardness, spines, and thorns.
@@ -1314,6 +1511,10 @@
      * -1 Accuracy
      * +1 Critical")
   (base/ability
+   :name "Scales of Justice"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
    :name "Scientific Genius")
   (base/ability
    :name "Scouting"
@@ -1322,6 +1523,19 @@
    :name "Sculpture"
    :summary
     "* [Skill]: [Art]")
+  (base/ability
+   :name "Search"
+   :summary
+    "* Rummage around for things:
+     * [Skill]: [Investigation]
+     ** ONCE, IF you searched a location and found an [Item], you may reshuffle that [Item] into its location and draw again.")
+  (base/ability
+   :name "Second Sight"
+   :reference
+    "* I've got electric light, and I've got second sight.  I've got amazing...powers...of observation.  And that is how I know...When I try to get through...On the telephone to you...There will be nobody home. - Pink Floyd, Nobody Home"
+   :summary
+    "* [Power]: [Shamanism]
+     * Second sight is the ability to see the spiritual essence of beings. It quickly identifies the living from the unliving and can detect disease both phyiscal and mental.")
   (base/ability
    :name "Seeing Eye Training"
    :summary
@@ -1348,12 +1562,24 @@
     * Repair Cloth"
    :titles "Dressmaker, Seamstress")
   (base/ability
+   :name "Shakedown"
+   :reference
+    "* How many times you been in a lineup? It's always you and four dummies. PD are paying homeless guys $10 a head half the time. And there's no way they'd line five felons in the same row. No way - Keaton, Usual Suspects"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
    :name "Shattered Dreams")
+  (base/ability
+   :name "Skeletal"
+   :summary
+    "* [Power]: [Special Ability]
+     * +1 Body
+     * Ignores [Bleeding], [Poison], and [Disease]")
   (base/ability
    :name "Shield Modulation"
    :summary
-    "* [Skill]: [Shielding]
-     * Alter the Shields to Resist a single [Damage Type] while becoming vulnerable to 2 others.")
+    "* [Power]: [Shielding]
+     * Alter the Shielding to Resist a single [Damage Type] while becoming vulnerable to 2 others.")
   (base/ability
    :name "Shield Redirection"
    :reference
@@ -1412,6 +1638,12 @@
   (base/ability
    :name "Soulforge")
   (base/ability
+   :name "Soulless"
+   :summary
+   :summary
+    "* [Power]: [Special Ability]
+     * A soulless unit is not truly alive. It may not use or gain Spirit skills.")
+  (base/ability
    :name "Soulrend"
    :titles "Soulrip"
    :reference
@@ -1442,6 +1674,15 @@
    :name "Speed Reading")
   (base/ability
    :name "Spines")
+  (base/ability
+   :name "Spirit Guide"
+   :summary
+    "* [Power]: [Shamanism]")
+  (base/ability
+   :name "Spiritual Affinity"
+   :summary
+    "* [Power]: [Shamanism]
+     * Death: Enter the Spirit Realm")
   (base/ability
    :name "Stagecraft"
    :summary "* The technical aspects of theatrical production, which include scenic design, stage machinery, lighting, sound, costume design, and makeup."
@@ -1542,6 +1783,10 @@
    :summary
     "* Subtly pursue someone. Ideally, you must stay as far away as possible without losing track of your quarry. Completely unaware people are easy to pursue. Paranoid targets will attempt to spot tailing and may attempt to evade tails even when they do not know they are being tailed.")
   (base/ability
+   :name "Tainted"
+   :summary
+    "* [Power]: [Special Ability]")
+  (base/ability
    :name "There are Many Enemies"
    :reference
     "When you are fighting one against many, draw both sword and companion sword and assume a wide-stretched left and right attitude. The spirit is to chase the enemies around from side to side, even though they come from all four directions. Observe their attacking order, and go to meet first those who attack first. Sweep your eyes around broadly, carefully examining the attacking order, and cut left and right alternately with your swords. Waiting is bad. Always quickly re-assume your attitudes to both sides, cut the enemies down as they advance, crushing them in the direction from which they attack. Whatever you do, you must drive the enemy together, as if tying a line of fishes, and when they are seen to be piled up, cut them down strongly without giving them room to move. - Miyamoto Mushashi, The Book of Five Rings"
@@ -1570,6 +1815,10 @@
   (base/ability
    :name "Tongue Lash")
   (base/ability
+   :name "Totem"
+   :summary
+    "* [Power]: [Shamanism]")
+  (base/ability
    :name "Tower of Iron Will")
   (base/ability
    :name "Track")
@@ -1590,12 +1839,33 @@
   (base/ability
    :name "Trample")
   (base/ability
+   :name "Transparent"
+   :summary
+    "* [Power]: [Invisibility]")
+  (base/ability
+   :name "Trial"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
+   :name "Trial By Fire"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
+   :name "Trial By Ordeal"
+   :summary
+    "* [Skill]: [Law]")
+  (base/ability
    :name "True Immortality"
    :reference
     "* Captain Jack Harkness - Doctor Who"
    :summary
     "* Can't die under normal circumstances.
      * [Power]: [Longevity]")
+  (base/ability
+   :name "Tunneling"
+   :summary
+    "* [Power]: [Digging]
+     * Create caves underground.")
   (base/ability
    :name "Turbo Booster"
    :titles "Boost, Nitro, Turbo, Turbo Charger")
@@ -1617,11 +1887,22 @@
    :name "Underwater Operation"
    :summary "* Sealed against water and can operate underwater. Small thrusters allow slow movement underwater. Oxygen scrubbers allow extended underwater operation.")
   (base/ability
+   :name "Unstoppable"
+   :reference
+    "* Juggernaut"
+   :summary
+    "* [Power]: [Inertia]")
+  (base/ability
    :name "Vanish"
    :reference
     "* Smoke Bomb! - Krieger, Archer"
    :summary
-    "* If you can momentarily break line of sight, you can immediately [Hide].")
+    "* [Skill]: [Deception] or [Stealth]
+     * If you can momentarily break line of sight, you can immediately [Hide].")
+  (base/ability
+   :name "Vision Quest"
+   :summary
+    "* [Power]: [Shamanism]")
   (base/ability
    :name "Wall Crawling")
   (base/ability

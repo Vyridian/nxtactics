@@ -64,6 +64,18 @@
       tactics "Stealth" 1
       (stringlist "Ambush"))))
   (base/unit
+   :name "Bane: Disease"
+   :summary
+    "* These repulsive Banes appear like blood covered bags of pus. They are drawn to plagues, cesspools, medical waste, etc.")
+  (base/unit
+   :name "Bane: Madness"
+   :summary
+    "* These formless spirits wear down the sanity of those exposed to them with disembodied voices, disturbing visions, and horrible shrieking.")
+  (base/unit
+   :name "Bane: Poison")
+  (base/unit
+   :name "Bane: Radiation")
+  (base/unit
    :name "Bear: Black"
    :image "images/cards/unit-bear-black.svg"
    :reference
@@ -130,6 +142,27 @@
      (base/unitskill<-tactics-key-lvl
       tactics "Intimidation" 1)))
   (base/unit
+   :name "Brunhil Virden"
+   :image "images/cards/unit-brunhil-virden.svg"
+   :traits "Human Female"
+   :body "7x1"
+   :mind "6x1"
+   :will "6x1"
+   :speed "5x0"
+   :mass "70kg/153lb"
+   :speedland "5kph/3mph"
+   :summary
+    "* Sergeant of the Guard of Sandalstadt."
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl
+      tactics "Melee" 3)
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Close Combat" 2
+      (stringlist "Grab"))
+     (base/unitskill<-tactics-key-lvl
+      tactics "Intimidation" 1)))
+  (base/unit
    :name "Butterfly: Giant")
   (base/unit
    :name "Cart: Wooden"
@@ -142,6 +175,11 @@
   (base/unit
    :name "Clockwork Avian")
   (base/unit
+   :name "Clockwork Bull"
+   :titles "Mechanical Bull"
+   :reference
+    "* It's a mechanical bull, the number one. You'll take a ride from anyone, Everyone wants a ride, and pulls away, from you - Metric, Black Sheep")
+  (base/unit
    :name "Clockwork Cobra"
    :titles "Iron Cobra")
   (base/unit
@@ -152,7 +190,8 @@
    :titles "Ruin Grader, Ruin Guard")
   (base/unit
    :name "Clockwork Owl"
-   :reference "* Bubo - Clash of the Titans"
+   :reference
+    "* Bubo - Clash of the Titans"
    :summary
     "* Clockwork Owls have excellent vision and make fair spys and messengers. However, they are not at all fast, stealthy, or agile, so some feel that they are far from practical.")
   (base/unit
@@ -255,6 +294,27 @@
     )
   )
   (base/unit
+   :name "Ghoul"
+   :summary
+    "* Description - A ghoul is a reanimated corpse that perpetuates its undead existence by feeding on the the dead. They reek of charnel pits and they have shrivelled nightmarish features. Though frail and unhealthy looking, they possess fearsome strength. The teeth and claws also carry [Corpse Rot], an infection that slowly kills the victim if the Ghoul doesn't first. Victims of Ghouls often raise as Ghouls themselves if they are not cured or their corpse is not blessed or destroyed.
+     * Personality - When well fed, Ghouls can communicate and can be surprisingly friendly though their intelligence is low and their interests are narrow (i.e. searching for corpses).
+     * Japanese Gaki appear as gaunt-faced monsters with enormous, frog-like mouths and grossly distended bellies.
+     * Morale - High
+     * Units - Mob"
+   :titles "Gaki, Ghul, Hungry Dead, Necrophage"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl
+      tactics "Natural Weaponry" 3)
+     (base/unitpower<-tactics-key-lvl-abilities
+      tactics "Digging" 3
+      (stringlist "Tunneling"))
+     (base/unitpower<-tactics-key-lvl-abilities
+      tactics "Special Ability" 2
+      (stringlist
+       "Cannibal"
+       "Savage"))))
+  (base/unit
    :name "Goblin: Scout"
    :image "images/cards/unit-goblin-scout.svg"
    :demeanor "Depraved"
@@ -272,20 +332,12 @@
    :height "1m/3ft"
    :unitskillmap
     (base/unitskillmap<-unitskilllist
-     (base/unitskill
-      :skill (base/skill<-tactics-key tactics "Close Combat")
-      :level "1"
-      :unititemmap
-       (base/unititemmap<-unititemlist
-         (base/unititem
-          :item (base/item<-tactics-key tactics "Knife: Dagger"))))
-     (base/unitskill
-      :skill (base/skill<-tactics-key tactics "Stealth")
-      :level "1"
-      :unitabilitymap
-       (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Sneak"))))))
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Close Combat" 1
+      (stringlist "Knife: Dagger"))
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Stealth" 1
+      (stringlist "Sneak"))))
   (base/unit
    :name "Guardsman"
    :image "images/cards/unit-guardsman.svg"
@@ -299,7 +351,6 @@
    :speedland "5kph/3mph"
    :mass "80kg/175"
    :height "1.8m/6ft"
-   :height "1.9m/6'3ft"
    :demeanor "Indifferent"
    :nature "Lazy"
    :beast "1x0"
@@ -415,6 +466,9 @@
   (base/unit
    :name "Juggernaut")
   (base/unit
+   :name "Kali"
+   :summary "* Tzimisce Vampire Methuselah")
+  (base/unit
    :name "Lili Ducon"
    :image "images/cards/unit-liliducon.svg"
    :summary
@@ -447,6 +501,9 @@
   (base/unit
    :name "Phantasmal Warrior")
   (base/unit
+   :name "Pilgrim"
+   :image "images/cards/unit-pilgrim.png")
+  (base/unit
    :name "Pit Fiend"
    :titles "Balrog, Fiend, Lord of the Pit"
    :traits "Devil")
@@ -466,6 +523,9 @@
       tactics
       "Flight"
       "Transform"))
+  (base/unit
+   :name "Set"
+   :summary "* Setite Vampire Methuselah")
   (base/unit
    :name "Shub-Niggurath"
    :image "cthulhu/shubniggurath.png"
@@ -612,10 +672,7 @@
    :unitskillmap
     (base/unitskillmap<-tactics-keys
      tactics
-     "Gunnery")
-   :unitpowermap
-    (base/unitpowermap<-tactics-keys
-     tactics
+     "Gunnery"
      "Stealth"))
   (base/unit
    :name "Valusian Primitive"

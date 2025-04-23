@@ -89,7 +89,7 @@ export default class nx_tactics_books_skills {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_sectionmap},
             "Extraordinary Skills",
-            vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Extraordinary Skills", ":reference", "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono , Hell's Paradise")
+            vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Extraordinary Skills", ":reference", "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono, Hell's Paradise")
           )
         )
       )

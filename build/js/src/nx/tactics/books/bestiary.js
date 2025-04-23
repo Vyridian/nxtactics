@@ -3846,43 +3846,8 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drowned", ":reference", "* The Ring", ":summary", "* The Drowned are the spirits of those who have died by drowning. They are completely fixated on their drowning death and are compelled to reenact the experience with others.", ":titles", "Drowner, Kappa"),
             "Ghost Ship",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ghost Ship", ":reference", "* Pirates of the Caribbean\n* The Fog\n* Pyaray - Elric of Melnibone", ":summary", "* Ghost Ships are doomed ships crewed by the [Drowned]. When they encounter the living, they are compelled to kill them so they raise again to add to their crew.", ":titles", "Chaos Fleet, Skeleton Crew"),
-            ":Ghoul",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Ghoul",
-              ":summary",
-              "* Description - A ghoul is a reanimated corpse that perpetuates its undead existence by feeding on the the dead. They reek of charnel pits and they have shrivelled nightmarish features. Though frail and unhealthy looking, they possess fearsome strength. The teeth and claws also carry [Corpse Rot], an infection that slowly kills the victim if the Ghoul doesn't first. Victims of Ghouls often raise as Ghouls themselves if they are not cured or their corpse is not blessed or destroyed.\n* Personality - When well fed, Ghouls can communicate and can be surprisingly friendly though their intelligence is low and their interests are narrow (i.e. searching for corpses).\n* Japanese Gaki appear as gaunt-faced monsters with enormous, frog-like mouths and grossly distended bellies.\n* Morale - High\n* Units - Mob",
-              ":titles",
-              "Gaki, Hungry Dead, Necrophage",
-              ":unitpowermap",
-              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Natural Weaponry", ":level", "3"),
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
-                  "Digging",
-                  ":level",
-                  "3",
-                  ":unitabilitymap",
-                  nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Tunneling")
-                  )
-                ),
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
-                  "Special Ability",
-                  ":level",
-                  "2",
-                  ":unitabilitymap",
-                  nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Cannibal"),
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Savage")
-                  )
-                )
-              )
-            ),
+            "Ghoul",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Ghoul"),
             ":Lich",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -4155,13 +4120,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Vampires, Elder",
               ":unitmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitmap},
-                ":Kali",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Kali", ":summary", "* Tzimisce Methuselah"),
-                ":Set",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Set", ":summary", "* Setite Methuselah")
-              )
+              nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Kali", "Set")
             ),
             "Vampires, Anarchs",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Vampires, Anarchs", ":summary", "* The strict caste system of the Camarilla does not favor new Vampires. Many newly embraced reject the machinations of the elders and live as they can on the fringe. Anarchs rely on each other to protect themselves from the actions of the Camarilla and the Sabbat. The larger organizations treat Anarchs like homeless people, largely ignoring them unless they get in their way. The Anarchs understand that the other groups are bound by rules, and they will use this to their advantage. In any situation, the Anarchs are wild cards, potentially able to shift a result one way or the other. The Anarchs have one crucial advantage over the Camarilla and Sabbat: they have nothing to lose."),
@@ -4183,13 +4142,7 @@ export default class nx_tactics_books_bestiary {
                   ":titles",
                   "Bully, Bruiser",
                   ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism"),
-                    ":Strength",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength")
-                  )
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Strength")
                 ),
                 ":Gangrel",
                 vx_core.f_new(
@@ -4199,13 +4152,7 @@ export default class nx_tactics_books_bestiary {
                   ":titles",
                   "Animal, Protector",
                   ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism"),
-                    ":Animalism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Animalism")
-                  )
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Animalism")
                 ),
                 ":Malkavian",
                 vx_core.f_new(
@@ -4217,17 +4164,7 @@ export default class nx_tactics_books_bestiary {
                   ":titles",
                   "Jester, Maniac, Nutcase, Prankster, Psychotic",
                   ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism"),
-                    ":Dominiation",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Dominiation"),
-                    ":Senses",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Senses"),
-                    ":Madness",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Madness")
-                  ),
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Domination", "Senses", "Madness"),
                   ":unitskillmap",
                   nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Stealth")
                 ),
@@ -4239,13 +4176,7 @@ export default class nx_tactics_books_bestiary {
                   ":titles",
                   "Sewer Rat",
                   ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism"),
-                    ":Invisibility",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Invisibility")
-                  ),
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Invisibility"),
                   ":unitskillmap",
                   nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Stealth")
                 ),
@@ -4466,18 +4397,18 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            "Bore Worms",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bore Worms", ":reference", "* Bring me... the Bore Worms. No! Not the BORE WORMS! - Klytus and Princess Aura, Flash Gordon", ":summary", "* Small worms that dig through flesh as easily as earth. They are attracted to burrowing creatures."),
+            "Worm: Bore",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm: Bore", ":reference", "* Bring me... the Bore Worms. No! Not the BORE WORMS! - Klytus and Princess Aura, Flash Gordon", ":summary", "* Small worms that dig through flesh as easily as earth. They are attracted to burrowing creatures."),
             "False Hydra",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "False Hydra", ":summary", "* An insane monster that grows under towns can erase memories. It is said that it is born of lies. Perhaps it is a [Curse]."),
-            "Land Eel, Giant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Land Eel, Giant", ":summary", "* Giant, sightless creatures related to the Giant Moray Eel, these creatures burrow underground.", ":titles", "Land Kra"),
-            "Slug, Giant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slug, Giant"),
-            "Snail, Giant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snail, Giant"),
-            "Sand Worms",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sand Worms")
+            "Eel: Giant Land",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Eel: Giant Land", ":summary", "* Giant, sightless creatures related to the Giant Moray Eel, these creatures burrow underground.", ":titles", "Land Kra"),
+            "Slug: Giant",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slug: Giant"),
+            "Snail: Giant",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snail: Giant"),
+            "Worm: Sand",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm: Sand")
           )
         )
       )

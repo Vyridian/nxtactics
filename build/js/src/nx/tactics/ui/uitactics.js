@@ -143,6 +143,15 @@ export default class nx_tactics_ui_uitactics {
             )})
           ),
           vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              datatype,
+              nx_tactics_base.t_power
+            )}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_uitactics.f_string_display_from_power(
+              vx_core.f_any_from_any({"any-1": nx_tactics_base.t_power, "any-2": vx_core.t_any}, value)
+            )})
+          ),
+          vx_core.f_then(
             vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_or(
               vx_core.f_eqeq(
                 datatype,
@@ -247,6 +256,49 @@ export default class nx_tactics_ui_uitactics {
             vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, value, ":name"))
         )
         const display = vx_type.f_string_from_stringlist_join(names, ", ")
+        return display
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function string_display_from_power
+   * Returns display text from a power
+   * @param  {power} power
+   * @return {string}
+   */
+  static t_string_display_from_power = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_display_from_power = {
+    vx_type: nx_tactics_ui_uitactics.t_string_display_from_power
+  }
+
+  // (func string-display<-power)
+  static f_string_display_from_power(power) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const summary = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_power}, power, ":summary")
+        const specialtymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_power}, power, ":specialtymap")
+        const abilitymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_power}, power, ":abilitymap")
+        const specialnames = vx_core.f_list_from_map_1(
+          {"any-1": vx_core.t_string, "any-2": nx_tactics_base.t_specialty, "list-1": vx_core.t_stringlist, "map-2": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_specialty},
+          specialtymap,
+          vx_core.f_new_from_type(vx_core.t_any_from_key_value, ([key, value]) => 
+            vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_specialty}, value, ":name"))
+        )
+        const abilitynames = vx_core.f_list_from_map_1(
+          {"any-1": vx_core.t_string, "any-2": nx_tactics_base.t_ability, "list-1": vx_core.t_stringlist, "map-2": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_ability},
+          abilitymap,
+          vx_core.f_new_from_type(vx_core.t_any_from_key_value, ([key, value]) => 
+            vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_ability}, value, ":name"))
+        )
+        const appended = vx_core.f_new({"any-1": vx_core.t_stringlist}, summary, specialnames, abilitynames)
+        const display = vx_type.f_string_from_stringlist_join(appended, " ")
         return display
       })
     )
@@ -1352,6 +1404,16 @@ export default class nx_tactics_ui_uitactics {
                   vx_core.f_any_from_any({"any-1": nx_tactics_base.t_skill, "any-2": vx_core.t_any}, data),
                   parent
                 )})
+              ),
+              vx_core.f_then(
+                vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+                  datatype,
+                  nx_tactics_base.t_power
+                )}),
+                vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_uitactics.f_ui_nav_from_power_parent(
+                  vx_core.f_any_from_any({"any-1": nx_tactics_base.t_power, "any-2": vx_core.t_any}, data),
+                  parent
+                )})
               )
             )
           })
@@ -1406,8 +1468,56 @@ export default class nx_tactics_ui_uitactics {
   }
 
   /**
+   * @function ui_nav_from_power_parent
+   * Returns a deck ui.
+   * @param  {power} power
+   * @param  {string} parent
+   * @return {ui}
+   */
+  static t_ui_nav_from_power_parent = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_nav_from_power_parent = {
+    vx_type: nx_tactics_ui_uitactics.t_ui_nav_from_power_parent
+  }
+
+  // (func ui-nav<-power-parent)
+  static f_ui_nav_from_power_parent(power, parent) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_power}, power, ":name")
+        const uid = vx_core.f_new({"any-1": vx_core.t_string}, parent, "/", name)
+        const specialtymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_power}, power, ":specialtymap")
+        const abilitymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_power}, power, ":abilitymap")
+        const cardmap1 = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_specialty, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_specialtymap}, specialtymap)
+        const cardmap2 = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_ability, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_abilitymap}, abilitymap)
+        const cardmap3 = vx_core.f_copy(cardmap1, cardmap2)
+        const uimap = nx_tactics_ui_uitactics.f_uimap_from_cardmap_parent_page_size(cardmap3, uid, 1, 100)
+        return vx_core.f_new(
+          {"any-1": vx_ui_ui.t_ui},
+          ":uid",
+          uid,
+          ":stylelist",
+          vx_core.f_new(
+            {"any-1": vx_ui_ui.t_stylelist},
+            nx_tactics_ui_stylesheet.c_style_deck
+          ),
+          ":data",
+          nx_tactics_base.t_skill,
+          ":uimap",
+          uimap
+        )
+      })
+    )
+    return output
+  }
+
+  /**
    * @function ui_nav_from_skill_parent
-   * Returns the a deck ui.
+   * Returns a deck ui.
    * @param  {skill} skill
    * @param  {string} parent
    * @return {ui}
@@ -2834,6 +2944,7 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-any": nx_tactics_ui_uitactics.e_string_display_from_any,
       "string-display<-book": nx_tactics_ui_uitactics.e_string_display_from_book,
       "string-display<-deck": nx_tactics_ui_uitactics.e_string_display_from_deck,
+      "string-display<-power": nx_tactics_ui_uitactics.e_string_display_from_power,
       "string-display<-skill": nx_tactics_ui_uitactics.e_string_display_from_skill,
       "string-display<-unit": nx_tactics_ui_uitactics.e_string_display_from_unit,
       "string-display<-unitpower": nx_tactics_ui_uitactics.e_string_display_from_unitpower,
@@ -2866,6 +2977,7 @@ export default class nx_tactics_ui_uitactics {
       "ui-image<-uid-path": nx_tactics_ui_uitactics.e_ui_image_from_uid_path,
       "ui-nav<-any-parent": nx_tactics_ui_uitactics.e_ui_nav_from_any_parent,
       "ui-nav<-deck-parent": nx_tactics_ui_uitactics.e_ui_nav_from_deck_parent,
+      "ui-nav<-power-parent": nx_tactics_ui_uitactics.e_ui_nav_from_power_parent,
       "ui-nav<-skill-parent": nx_tactics_ui_uitactics.e_ui_nav_from_skill_parent,
       "ui-navbutton-back": nx_tactics_ui_uitactics.e_ui_navbutton_back,
       "ui-navigate<-ui": nx_tactics_ui_uitactics.e_ui_navigate_from_ui,
@@ -2889,6 +3001,7 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-any": nx_tactics_ui_uitactics.t_string_display_from_any,
       "string-display<-book": nx_tactics_ui_uitactics.t_string_display_from_book,
       "string-display<-deck": nx_tactics_ui_uitactics.t_string_display_from_deck,
+      "string-display<-power": nx_tactics_ui_uitactics.t_string_display_from_power,
       "string-display<-skill": nx_tactics_ui_uitactics.t_string_display_from_skill,
       "string-display<-unit": nx_tactics_ui_uitactics.t_string_display_from_unit,
       "string-display<-unitpower": nx_tactics_ui_uitactics.t_string_display_from_unitpower,
@@ -2921,6 +3034,7 @@ export default class nx_tactics_ui_uitactics {
       "ui-image<-uid-path": nx_tactics_ui_uitactics.t_ui_image_from_uid_path,
       "ui-nav<-any-parent": nx_tactics_ui_uitactics.t_ui_nav_from_any_parent,
       "ui-nav<-deck-parent": nx_tactics_ui_uitactics.t_ui_nav_from_deck_parent,
+      "ui-nav<-power-parent": nx_tactics_ui_uitactics.t_ui_nav_from_power_parent,
       "ui-nav<-skill-parent": nx_tactics_ui_uitactics.t_ui_nav_from_skill_parent,
       "ui-navbutton-back": nx_tactics_ui_uitactics.t_ui_navbutton_back,
       "ui-navigate<-ui": nx_tactics_ui_uitactics.t_ui_navigate_from_ui,
@@ -3038,6 +3152,24 @@ export default class nx_tactics_ui_uitactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_uitactics.f_string_display_from_deck
+    }
+
+    // (func string-display<-power)
+    nx_tactics_ui_uitactics.t_string_display_from_power['vx_value'] = {
+      name          : "string-display<-power",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_string_display_from_power
     }
 
     // (func string-display<-skill)
@@ -3614,6 +3746,24 @@ export default class nx_tactics_ui_uitactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_uitactics.f_ui_nav_from_deck_parent
+    }
+
+    // (func ui-nav<-power-parent)
+    nx_tactics_ui_uitactics.t_ui_nav_from_power_parent['vx_value'] = {
+      name          : "ui-nav<-power-parent",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_ui_nav_from_power_parent
     }
 
     // (func ui-nav<-skill-parent)

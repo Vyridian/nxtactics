@@ -572,74 +572,9 @@
     (base/section
      :name "Special Skills"
      :powermap
-      (base/powermap
-       "Special Ability"
-        (base/power
-         :name "Special Ability"
-         :abilitymap
-          (base/abilitymap
-           :Cannibal
-            (base/ability
-             :name "Cannibal"
-             :summary
-              "* [Requires]: Close Combat
-               * [Attack]: Each [Critical Hit] may remove a [Damage Token] from this unit.")
-           :Chaotic
-            (base/ability
-             :name "Chaotic")
-           :Corrupted
-            (base/ability
-             :name "Corrupted")
-           :Ethereal
-            (base/ability
-             :name "Ethereal")
-           "Feeding Frenzy"
-            (base/ability
-             :name "Feeding Frenzy")
-           :Giant
-            (base/ability
-             :name "Giant")
-           :Huge
-            (base/ability
-             :name "Huge")
-           "Lernaean Poison"
-            (base/ability
-             :name "Lernaean Poison")
-           :Mindless
-            (base/ability
-             :name "Mindless"
-             :summary
-              "* 0 [Mind]
-               * Cannot use any Mind Abilities
-               * Immune to Abilities that target [Mind].")
-           :Monstrous
-            (base/ability
-             :name "Monstrous")
-           "Nemean Invulnerability"
-            (base/ability
-             :name "Nemean Invulnerability")
-           "Rapid Metabolism"
-            (base/ability
-             :name "Rapid Metabolism")
-           :Savage
-            (base/ability
-             :name "Savage"
-             :summary
-              "* Must Attack if able.
-               * Ignores Fear, Despair, and Morale")
-           :Skeletal
-            (base/ability
-             :name "Skeletal"
-             :summary
-              "* +1 Body
-               * Ignores [Bleeding], [Poison], and [Disease]")
-           :Soulless
-            (base/ability
-             :name "Soulless"
-             :summary "* A soulless unit is not truly alive.  It may not use or gain Spirit skills.")
-           :Tainted
-            (base/ability
-             :name "Tainted")))))
+      (base/powermap<-tactics-keys
+       tactics
+       "Special Ability"))
     (base/section
      :name "Weaknesses"
      :powermap
@@ -924,9 +859,9 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
+       "Digging"
        "Dimensional"
        "Flight"
-       "Movement: Dig"
        "Movement: Ground"
        "Movement: Interstellar"
        "Movement: Space"
