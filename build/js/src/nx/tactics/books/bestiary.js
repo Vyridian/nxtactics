@@ -2721,20 +2721,20 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ferret"),
             ":Hamster",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hamster"),
-            "Huge Rat",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Huge Rat", ":reference", "* What about the R.O.U.S.'s? Rodents Of Unusual Size? I don't think they exist. Raghh! - Westley, Buttercup, and ROUS - The Princess Bride"),
-            ":Mouse",
+            "Mouse",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mouse"),
-            "Plague Rat",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Plague Rat"),
-            ":Rabbit",
+            "Rabbit",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rabbit"),
-            "Rabid Rat",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rabid Rat"),
-            ":Rat",
+            "Rat",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat"),
-            "Sewer Rat",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sewer Rat")
+            "Rat: Huge",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Huge", ":reference", "* What about the R.O.U.S.'s? Rodents Of Unusual Size? I don't think they exist. Raghh! - Westley, Buttercup, and ROUS - The Princess Bride"),
+            "Rat: Plague",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Plague"),
+            "Rat: Rabid",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Rabid"),
+            "Rat: Sewer",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Sewer")
           )
         ),
         ":Swine",
@@ -2745,16 +2745,14 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Boar",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Boar"),
-            ":Pig",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pig"),
+            "Pig",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Pig"),
+            "Pig: Boar",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Pig: Boar"),
             ":Razorback",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Razorback"),
             ":Warthog",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Warthog"),
-            "Wild Boar",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wild Boar")
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Warthog")
           )
         ),
         "Other Mammals",
@@ -2793,20 +2791,20 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            "Bat, Giant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bat, Giant"),
-            "Bat, Huge",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bat, Huge"),
-            "Boar, Great",
+            "Bat: Giant",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bat: Giant"),
+            "Bat: Huge",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bat: Huge"),
+            "Pig: Great Boar",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Boar, Great"),
-            "Ferret, Keen",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ferret, Keen", ":summary", "* These furred scavengers are hoarders and theives by nature robbing nests and homes alike.  They have uncanny manual dexterity and are natural thieves able to squeeze into tight places, evade detection, and untie knots.\n* If caputured at infancy, they can be raised as pets and taught to steal for its master.  For this reason, they are valuable to professional thieves.\n* With training they can be taught to pick pockets and even pick simple locks.", ":mass", "2kg", ":length", ".5m"),
-            "Rat, Bog",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat, Bog"),
-            "Rat, Crypt",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat, Crypt"),
-            "Rat, Plague",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat, Plague"),
+            "Ferret: Keen",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ferret: Keen", ":summary", "* These furred scavengers are hoarders and theives by nature robbing nests and homes alike. They have uncanny manual dexterity and are natural thieves able to squeeze into tight places, evade detection, and untie knots.\n* If caputured at infancy, they can be raised as pets and taught to steal for its master. For this reason, they are valuable to professional thieves.\n* With training they can be taught to pick pockets and even pick simple locks.", ":mass", "2kg", ":length", ".5m"),
+            "Rat: Bog",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Bog"),
+            "Rat: Crypt",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Crypt"),
+            "Rat: Plague",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Plague"),
             ":Terrorphant",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Terrorphant", ":summary", "* A giant, carnivorous elephant. An evily, intelligent alpha predator."),
             ":Terrorpotmus",
@@ -3905,62 +3903,18 @@ export default class nx_tactics_books_bestiary {
             "Skeletal Dragon",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Skeletal Dragon"),
             "Skeletal Knight",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Skeletal Knight",
-              ":summary",
-              "* Morale - High",
-              ":titles",
-              "Death Knight",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                "Special Ability",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
-                  "Special Ability",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Savage",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Savage"),
-                    ":Skeletal",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Skeletal")
-                  )
-                )
-              ),
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Riding",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Riding")
-              )
-            ),
-            ":Skeleton",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Skeletal Knight"),
+            "Skeleton",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
               "Skeleton",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                "Special Ability",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
+              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+                nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+                  tactics,
                   "Special Ability",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Mindless",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Mindless"),
-                    ":Savage",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Savage"),
-                    ":Skeletal",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Skeletal")
-                  )
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Mindless", "Savage", "Skeletal", "Undead")
                 )
               ),
               ":unitskillmap",
@@ -3988,23 +3942,11 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Skeleton Warrior",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                "Special Ability",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
+              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+                nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+                  tactics,
                   "Special Ability",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Mindless",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Mindless"),
-                    ":Savage",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Savage"),
-                    ":Skeletal",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Skeletal")
-                  )
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Mindless", "Savage", "Skeletal", "Undead")
                 )
               ),
               ":unitskillmap",
@@ -4032,36 +3974,10 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slayer Dead", ":reference", "* Jason Voorhees\n* Nightmare on Elm Street\n* Vinland Saga", ":summary", "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines.", ":titles", "Murderous Dead, War Dead"),
             ":Wendigo",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wendigo", ":summary", "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims.", ":titles", "Abominable Snowman, Yeti"),
-            ":Wight",
+            "Wight",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wight", ":summary", "* A Wight is an animated corpse like a zombie, but its eyes burn fiercely, showing their deep hatred of the living. They continue to pursue their goals in life, but these goals are always twisted into hatred and revenge against the living.\n* Wights are usually highly intelligent or cunning and have the patience to carefully plan their murders. Wights enjoy killing as well as inflicting pain and fear on their victims who they believe deserve what they get.\n* A Wight is created when an extremely driven, evil person is on the verge of death. Before death, it makes a bargain with a demonic force, and returns to unlife as a Wight.\n* Wights retain most of their abilities while living. Powerful Wights can be as powerful as Liches. In fact, the necromantic study of Wights led to the necromantic rituals responsible for Mummies and Liches."),
-            ":Zombie",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Zombie",
-              ":summary",
-              "* Zombies are nearly mindless animated corpses.\n* They act irrationally and attack all living creatures with no sense of self preservation.\n* They have +2 Body, but because the do not protect themselves they suffer 2x criticals.",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                "Natural Weaponry",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Natural Weaponry", ":level", "2"),
-                "Special Ability",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
-                  "Special Ability",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Mindless",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Mindless"),
-                    ":Savage",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Savage")
-                  )
-                )
-              )
-            )
+            "Zombie",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Zombie")
           )
         ),
         "Noncorporeal Undead",
@@ -4072,31 +3988,31 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Haunt",
+            "Haunt",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Haunt", ":reference", "* The Sixth Sense\n* Beetlejuice", ":summary", "* Haunts are lesser undead that remain near the places and people from their living life instead of moving on. Haunts attempt to interact with the living to maintain a semblance of their former lives. Haunts are generally not malicious, but their interactions inadvertently drain the [Will] of others over time. There are also cases of Haunts who impersonate loved ones to purposely drain their [Will]."),
-            ":Lemure",
+            "Lemure",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lemure", ":summary", "* The wandering and vengeful spirits of those not afforded proper burial or funeral rites.", ":titles", "Larvae, Lemur"),
             "Lost Soul",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lost Soul"),
-            ":Phantom",
+            "Phantom",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantom", ":summary", "* Phantoms are the remnants of those who were lost in the Astral/Dream Realm. The Astral Realm is the realm of imagination, so those trapped here are gradually driven mad. Therefore, Phantoms have varying and unpredictable insanities."),
-            ":Poltergeist",
+            "Poltergeist",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Poltergeist"),
-            ":Reaper",
+            "Reaper",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Reaper", ":reference", "Charon the Ferryman", ":summary", "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon."),
-            ":Shade",
+            "Shade",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shade", ":reference", "The Ring", ":summary", "* Description - lank and ghastly beings with no feet, floating suspended above the ground.\n* Shades are the spirits of those who died in suicide, accident, murder, or wrongful execution. They are bound to this plane by the anger they felt at their deaths.\n* Suicide and accident victims attempt to compel those most like their former selves to die in the same manner.\n* Murder and wrongful death victims attempt to revenge themselves upon the killer or his descendents.", ":titles", "Aghast, Ghast, Ghastly, Shoryo"),
             ":Shadow",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shadow"),
             ":Sluagh",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sluagh", ":reference", "* The spirits of the sinners, or generally evil people who were welcome in neither heaven nor hell.\n* They were seen to fly in groups like flocks of birds, coming from the west, and were known to try to enter the house of a dying person in an effort to carry the soul away with them. West-facing windows were sometimes kept closed to keep them out. Some consider the Sluagh to also carry with them the souls of innocent people who were kidnapped by these destructive spirits.", ":summary", "* The Sluagh are thin, pale, snake-like, and grotesque, though they remain strangely compelling. They favor archaic, intricate, black clothing. Their joints can dislocate allowing them to slither our of bonds and into disquieting shapes.\n* They may only speak in whispers and dislike any social situations except among their own kind. They prefer to overserve other from hidden corners, and the secrets they obtain are their stock and trade."),
-            ":Spectre",
+            "Spectre",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectre", ":reference", "* Cenobites from Hellraiser", ":summary", "* A Spectre is a malevolent Wraith that has been so traumatized that it is has become completely obscessed with its suffering and reenacting that suffering with others. The Spectre has fallen completely under the controlled of it's [Shadow]."),
             "Spectral Horse",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectral Horse"),
-            ":Will-O-Wisp",
+            "Will-O-Wisp",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Will-O-Wisp"),
-            ":Wraith",
+            "Wraith",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wraith", ":summary", "* Wraiths normally exist in the [Underworld] where their numbers are legion.\n* Those with strong connections to the world of the living can walk among the living but are [Invisible] and [Ethereal] and can indistinctly see the living world through the [Shroud]. Skilled Wraiths may even temporarily breech the [Shroud].\n!Abilities\n* Keening\n* Manifestation\n* Poltergeist\n* Possession", ":titles", "Ghost")
           )
         ),
@@ -4112,19 +4028,15 @@ export default class nx_tactics_books_bestiary {
           ":titles",
           "Cainite, Kindred, Leech, Lick",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            "Vampires, Elder",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
               "Vampires, Elder",
               ":unitmap",
-              nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Kali", "Set")
+              nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Vampire: Kali", "Vampire: Set")
             ),
-            "Vampires, Anarchs",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Vampires, Anarchs", ":summary", "* The strict caste system of the Camarilla does not favor new Vampires. Many newly embraced reject the machinations of the elders and live as they can on the fringe. Anarchs rely on each other to protect themselves from the actions of the Camarilla and the Sabbat. The larger organizations treat Anarchs like homeless people, largely ignoring them unless they get in their way. The Anarchs understand that the other groups are bound by rules, and they will use this to their advantage. In any situation, the Anarchs are wild cards, potentially able to shift a result one way or the other. The Anarchs have one crucial advantage over the Camarilla and Sabbat: they have nothing to lose."),
-            "Vampires, Camarilla",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -4134,31 +4046,31 @@ export default class nx_tactics_books_bestiary {
               ":unitmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitmap},
-                ":Brujah",
+                "Vampire: Brujah",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unit},
                   ":name",
-                  "Brujah",
+                  "Vampire: Brujah",
                   ":titles",
                   "Bully, Bruiser",
                   ":unitpowermap",
                   nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Strength")
                 ),
-                ":Gangrel",
+                "Vampire: Gangrel",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unit},
                   ":name",
-                  "Gangrel",
+                  "Vampire: Gangrel",
                   ":titles",
                   "Animal, Protector",
                   ":unitpowermap",
                   nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Animalism")
                 ),
-                ":Malkavian",
+                "Vampire: Malkavian",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unit},
                   ":name",
-                  "Malkavian",
+                  "Vampire: Malkavian",
                   ":summary",
                   "* Cursed by Madness\n* Malkalv - The philosophic, antedeluvian sire of their clan. When he was destroyed with the First City. his childer began to gain the signature Madness. Some say his spirit continues through his blood and connects his childer. Others propose the preposterous notion that Malkav was a an embraced Angel.\n* Kinship - Unlike other tribes, the Malkavians have a natural understanding and kinship toward each other. It is rare that they outright betray one another.",
                   ":titles",
@@ -4168,11 +4080,11 @@ export default class nx_tactics_books_bestiary {
                   ":unitskillmap",
                   nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Stealth")
                 ),
-                ":Nosferatu",
+                "Vampire: Nosferatu",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unit},
                   ":name",
-                  "Nosferatu",
+                  "Vampire: Nosferatu",
                   ":titles",
                   "Sewer Rat",
                   ":unitpowermap",
@@ -4180,11 +4092,11 @@ export default class nx_tactics_books_bestiary {
                   ":unitskillmap",
                   nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Stealth")
                 ),
-                ":Toreador",
+                "Vampire: Toreador",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unit},
                   ":name",
-                  "Toreador",
+                  "Vampire: Toreador",
                   ":reference",
                   "* We come into this stale and plain stale world. So we spend our time, searching for that one sublime revelation. To fill the void. To lose ourselves in beauty and perfection. Beauty can be elegant, seductive, full of pleasure, Raw, Violent, Lethal. Let me help us find it. To lose ourselves. Come closer. I am a beautiful way to die. - Vampire: Bloodlines 2\n* She'll only come out at nights. The lean and hungry type... I wouldn't if I were you. I know what she can do. She's deadly man, she could really rip your world apart. Mind over matter. Ooh, the beauty is there but a beast is in the heart. Oh, here she comes. Watch out boy she'll chew you up. Oh, here she comes. She's a maneater. - Hall and Oates/No Hard Feelings, Maneater",
                   ":summary",
@@ -4192,147 +4104,49 @@ export default class nx_tactics_books_bestiary {
                   ":titles",
                   "Artists, Clan of Roses, Degenerate, Gossips, Obsessives",
                   ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism"),
-                    ":Quickness",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Quickness"),
-                    ":Senses",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Senses"),
-                    ":Presence",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Presence")
-                  )
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Quickness", "Senses", "Presence")
                 ),
-                ":Tremere",
+                "Vampire: Tremere",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unit},
                   ":name",
-                  "Tremere",
+                  "Vampire: Tremere",
                   ":image",
-                  "images/bestiary/Vampire_Tremere.png",
-                  ":summary",
-                  "* The Tremere is the second youngest clan having appeared in the Dark Ages.\n* History - The Tremere began as House Tremere, mages of the Order of Hermes named for their leader and founder, Tremere. At the end of the first millennium, the members of House Tremere realized the Hermetic arts were failing and found its immortality potions no longer working. House Tremere undertook numerous experiments, but it was Goratrix who devised a solution in his investigation of vampires. In 1022, Goratrix invited Tremere and six of the founder's closest advisers to participate in the completed ritual, which promised true immortality. Whether Goratrix knew what would happen is known only by him and, perhaps, Tremere, but at the completion of the ritual the participants fell unconscious and were reborn as vampires, their avatars destroyed and magical abilities lost. The mages had gained their immortality but lost the power they lived for. In time, the Tzimisce made war against House Tremere in retribution for the Fiends that had been made part of Goratrix's experiments. The Order of Hermes also became suspicious of diabolical practices being performed by the increasingly secretive House. In 1037 Tremere gathered the seven newly-made Cainites and forced the blood bond upon them. He then declared to them that House Tremere would be restructured with a new pyramid hierarchy, placing himself at the top as Primus of House and clan Tremere and his seven closest followers forming the Inner Council of Seven directly under him. They would slowly begin Embracing the rest of the House, with each initiate being bound to the Inner Council to ensure their loyalty. In time, all members of House Tremere would die or become vampires. While Tremere and Etrius pursued their own research throughout Europe in converting the hermetic arts into Thaumaturgy, Goratrix once again returned to his laboratories with his apprentices at hand. After years of experimentation on captured Tzimisce, Nosferatu, and Gangrel, he succeeded in creating a Gargoyle in 1121, and by 1125 the hybrids were serving as shock troops against the Fiends. Nevertheless, the Tremere found themselves third-class citizens among the undead. Whatever boldness Tremere had shown in entering the night was ignored by the staunchly traditionalist clans, and they were often forced from cities by princes who did not look kindly on their presumption. As he and Etrius rapidly acquired more vampiric lore they discovered the history of Caine and the Antediluvians, as well as the benefits of diablerie. Seeking to establish themselves as a clan proper, the Tremere sought a clan founder to diablerize and settled on Saulot, the enigmatic founder of the Salubri clan. In 1133, Tremere and the Inner Council discovered Saulot's tomb in the Anatolian desert. Tremere diablerized the Antediluvian and promptly entered torpor, leaving the Inner Council to lead the clan and destroy the remaining Salubri. As with everything else that the Tremere had done to this point, the result was a mixed blessing. The Tremere were entrenched in many Cainite courts, their services as mages making them indispensable to princes across Europe. They were now accepted as one of the Low Clans, albeit considered usurpers, distrusted warlocks, and known diablerists. In the early years of the 21st century, the Intellegence agencies of the United States managed to gain access to SchreckNet and gained firsthand knowledge of the existence of a race of undead bloodsuckers that were spread in all corners of the world. Sharing their knowledge with other intelligence agencies, the united secret services contacted the Vatican, whom they knew to have experience fighting the undead. After years of careful research, the Second Inquisition had targeted Vienna as the 'capital of vampires' and prepared a strike against their headquarters. In 2008, a united USSOCOM and Vatican ESOG force stormed the Vienna Chantry of Clan Tremere and destroyed it, blaming it to an ISIS terror attack to the public. London, Las Vegas, Paris, and Marseilles were largely cleared of vampiric activity, with numerous captured vampires being placed in black sites and experimented upon to discover their weaknesses. The Inner Council of Seven were slain and their Blood Bonds shattered. Since then the once monolithic Tremere structure has completely fallen apart.",
+                  "images/bestiary/vampire-tremere.png",
                   ":titles",
                   "Blood Sorcerer, Broken Clan, Pyramid, Usurpers, Warlock, Witch",
+                  ":summary",
+                  "* The Tremere is the second youngest clan having appeared in the Dark Ages.\n* History - The Tremere began as House Tremere, mages of the Order of Hermes named for their leader and founder, Tremere. At the end of the first millennium, the members of House Tremere realized the Hermetic arts were failing and found its immortality potions no longer working. House Tremere undertook numerous experiments, but it was Goratrix who devised a solution in his investigation of vampires. In 1022, Goratrix invited Tremere and six of the founder's closest advisers to participate in the completed ritual, which promised true immortality. Whether Goratrix knew what would happen is known only by him and, perhaps, Tremere, but at the completion of the ritual the participants fell unconscious and were reborn as vampires, their avatars destroyed and magical abilities lost. The mages had gained their immortality but lost the power they lived for. In time, the Tzimisce made war against House Tremere in retribution for the Fiends that had been made part of Goratrix's experiments. The Order of Hermes also became suspicious of diabolical practices being performed by the increasingly secretive House. In 1037 Tremere gathered the seven newly-made Cainites and forced the blood bond upon them. He then declared to them that House Tremere would be restructured with a new pyramid hierarchy, placing himself at the top as Primus of House and clan Tremere and his seven closest followers forming the Inner Council of Seven directly under him. They would slowly begin Embracing the rest of the House, with each initiate being bound to the Inner Council to ensure their loyalty. In time, all members of House Tremere would die or become vampires. While Tremere and Etrius pursued their own research throughout Europe in converting the hermetic arts into Thaumaturgy, Goratrix once again returned to his laboratories with his apprentices at hand. After years of experimentation on captured Tzimisce, Nosferatu, and Gangrel, he succeeded in creating a Gargoyle in 1121, and by 1125 the hybrids were serving as shock troops against the Fiends. Nevertheless, the Tremere found themselves third-class citizens among the undead. Whatever boldness Tremere had shown in entering the night was ignored by the staunchly traditionalist clans, and they were often forced from cities by princes who did not look kindly on their presumption. As he and Etrius rapidly acquired more vampiric lore they discovered the history of Caine and the Antediluvians, as well as the benefits of diablerie. Seeking to establish themselves as a clan proper, the Tremere sought a clan founder to diablerize and settled on Saulot, the enigmatic founder of the Salubri clan. In 1133, Tremere and the Inner Council discovered Saulot's tomb in the Anatolian desert. Tremere diablerized the Antediluvian and promptly entered torpor, leaving the Inner Council to lead the clan and destroy the remaining Salubri. As with everything else that the Tremere had done to this point, the result was a mixed blessing. The Tremere were entrenched in many Cainite courts, their services as mages making them indispensable to princes across Europe. They were now accepted as one of the Low Clans, albeit considered usurpers, distrusted warlocks, and known diablerists. In the early years of the 21st century, the Intellegence agencies of the United States managed to gain access to SchreckNet and gained firsthand knowledge of the existence of a race of undead bloodsuckers that were spread in all corners of the world. Sharing their knowledge with other intelligence agencies, the united secret services contacted the Vatican, whom they knew to have experience fighting the undead. After years of careful research, the Second Inquisition had targeted Vienna as the 'capital of vampires' and prepared a strike against their headquarters. In 2008, a united USSOCOM and Vatican ESOG force stormed the Vienna Chantry of Clan Tremere and destroyed it, blaming it to an ISIS terror attack to the public. London, Las Vegas, Paris, and Marseilles were largely cleared of vampiric activity, with numerous captured vampires being placed in black sites and experimented upon to discover their weaknesses. The Inner Council of Seven were slain and their Blood Bonds shattered. Since then the once monolithic Tremere structure has completely fallen apart.",
                   ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism"),
-                    "Blood Magic",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Blood Magic")
-                  )
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Bloodcraft")
                 ),
                 ":Ventrue",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unit},
                   ":name",
-                  "Ventrue",
+                  "Vampire: Ventrue",
                   ":titles",
                   "Bluebloods, Manipulator, Know-it-all",
                   ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism"),
-                    ":Domination",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Domination"),
-                    ":Toughness",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Toughness")
-                  ),
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Domination", "Toughness"),
                   ":unitskillmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitskillmap},
-                    ":Influence",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Influence")
-                  )
+                  nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Influence")
                 )
               )
             ),
-            "Vampires, Sabbat",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
               "Vampires, Sabbat",
               ":unitmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitmap},
-                ":Lasombra",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unit},
-                  ":name",
-                  "Lasombra",
-                  ":image",
-                  "images/bestiary/Vampire_Lasombra.png",
-                  ":titles",
-                  "Dark Priest",
-                  ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism")
-                  ),
-                  ":unitskillmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitskillmap},
-                    ":Influence",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Influence")
-                  )
-                ),
-                ":Tzimisce",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unit},
-                  ":name",
-                  "Tzimisce",
-                  ":image",
-                  "images/bestiary/Vampire_Tzimisce.png",
-                  ":reference",
-                  "The Tzimisce take pleasure in shaping themselves into a variety of inhuman forms.  Distended skulls, elongated fingers, polychromatic mottling are often displayed to demonstrate their alien superiority.",
-                  ":summary",
-                  "* The Tzimisce's extensive use of Fleshcraft upon themselves, their servants, and their foes, have made them the most bizarre and alien of the Vampire clans. Fortunately, they are solitary by nature preferring isolated locale to practice their horrid techniques on their hapless prey.\n* Examples: Backroom Surgeon, Carny Folk, Dracula, Inquisitor, Kali, Mortician, Nazi Scientist, Tatoo Artist, Toturer, Vivisectionist",
-                  ":titles",
-                  "Monster, Alien",
-                  ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism"),
-                    ":Fleshcraft",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Fleshcraft")
-                  ),
-                  ":unitskillmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitskillmap},
-                    ":Intimidation",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Intimidation")
-                  )
-                )
-              )
+              nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Vampire: Lasombra", "Vampire: Tzimisce")
             ),
-            "Vampires, Independent",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
               "Vampires, Independent",
               ":unitmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitmap},
-                ":Kuei-Jin",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Kuei-Jin"),
-                ":Setite",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unit},
-                  ":name",
-                  "Setite",
-                  ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Vampirism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Vampirism")
-                  )
-                )
-              )
+              nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Vampire: Kuei-Jin", "Vampire: Setite")
             )
           )
         )

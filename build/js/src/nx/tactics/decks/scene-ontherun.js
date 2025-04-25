@@ -30,7 +30,7 @@ export default class nx_tactics_decks_scene_ontherun {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist},
-          nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Hidden", "Goblin: Scout", "Hare", "Snake: Emerald Viper")
+          nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Hidden", "Fish: Small", "Hare", "Pheasant", "Pig: Wild Boar", "Snake: Emerald Viper", "Turkey")
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_skilllist},

@@ -237,16 +237,18 @@
    :mass "500g/1lb"
    :energy "50J"
    :length "25cm/10in")
-  (item
+  (base/item
    :name "Lattice")
   (base/item
    :name "Lockpicks"
    :image "images/cards/item-lockpicks.svg"
    :summary
     "* [Success]: IF picking a lock and Succeed with Evade THEN Success:+1")
-  (item
+  (base/item
+   :name "Lute")
+  (base/item
    :name "Matrix")
-  (item
+  (base/item
    :name "Mirror")
   (base/item
    :name "Mushrooms"

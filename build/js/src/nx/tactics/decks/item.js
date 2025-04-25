@@ -61,6 +61,7 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Knife: Dagger", ":image", "images/cards/item-knife-dagger.svg", ":summary", "* [Combat]: [Close Combat] or [Melee]\n* [Damage]: [Body] [Pierce] [Slash]\n* [Location]: [1-hand]", ":body", "5x-1", ":mass", "500g/1lb", ":energy", "50J", ":length", "25cm/10in"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lattice"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lockpicks", ":image", "images/cards/item-lockpicks.svg", ":summary", "* [Success]: IF picking a lock and Succeed with Evade THEN Success:+1"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lute"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Matrix"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Mirror"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Mushrooms", ":classification", "Plant", ":image", "images/cards/item-mushrooms.svg", ":summary", "* Nutrition for a day. After eating [Reveal Fate]. IF [Coins] THEN you spend 6 hours tripping or sleeping. IF [Cups] THEN Poison:+1"),

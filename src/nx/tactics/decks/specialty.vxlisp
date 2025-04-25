@@ -143,6 +143,8 @@
      * Strikes - [Elbow Strike], [Hook], [Knife Hand], [Spinning Back Fist], [Sword Hand]"
    :titles "Special Forces Training")
   (base/specialty
+   :name "Construction Vehicles")
+  (base/specialty
    :name "Courtesan"
    :reference
     "* Madame Kaji: We've been servicing the road-weary crotches of every man here to pay obeisance to your new family. You need service only one, freshly washed. Akemi: You don't understand. Madame Kaji: That he's a beast. He's weak. He's a man. All men are weak. The ones who act beastly are weakest. They penetrate women and think that makes them powerful. Really, their pricks are fragile. Exposed. You saw it yourself. They want to be diapered, spanked, and breastfed, then strut away like they conquered an army. Nurture his weakness. Be his strength, and he'll worship you. Akemi: I, don't know if I can. Madame Kaji: Stop running to and from men, and decide what you want for your fucking self. Akemi: I want to be in control of my life. Madame Kaji: Then take control of his, Princess - Madame Kaji and Akemi, Blue Eye Samurai"
@@ -520,6 +522,8 @@
     "* Grey Wardens, Dragon Age
      * Witcher")
   (base/specialty
+   :name "Motorcycles")
+  (base/specialty
    :name "Muay Thai"
    :reference
     "* Apachai: The use of knees and elbows is very important in Muay Thai.
@@ -596,6 +600,8 @@
    :name "Polearms"
    :summary "Fend Off"
    :titles "Glaivemaster, Halberdier, Poleman")
+  (base/specialty
+   :name "Race Cars")
   (base/specialty
    :name "Rifles")
   (base/specialty
@@ -745,6 +751,8 @@
     "Blackguard, Caitiff, Charlatan, Con Artist, Delinquent, Gambler, Knave, Ne'er do well, Ninja, Rapscallion, Renegade, Riffraff, Rogue, Scoundrel, Scalawag, Stage Magician, Swashbuckler, Swindler, Trickster")
   (base/specialty
    :name "Trivia")
+  (base/specialty
+   :name "Trucks")
   (base/specialty
    :name "Vampire Hunter"
    :reference

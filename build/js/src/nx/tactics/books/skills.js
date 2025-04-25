@@ -53,7 +53,7 @@ export default class nx_tactics_books_skills {
           ":name",
           "Social Skills",
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Art", "Business", "Communications", "Crime", "Deception", "Espionage", "Faith", "Influence", "Intimidation", "Law", "Leadership", "Performance", "Persuasion", "Science: Social", "Stealth")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Art", "Business", "Communication", "Crime", "Deception", "Espionage", "Faith", "Influence", "Intimidation", "Law", "Leadership", "Performance", "Persuasion", "Science: Social", "Stealth")
         )
       )
     )

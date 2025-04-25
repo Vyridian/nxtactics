@@ -544,7 +544,7 @@
       :summary
        "* A weapon that fires a shell that releases a burst of plasma when it strikes a target.  This shell glow with barely contained energy as it flies to its target."
       :titles "Blaster, Spinfusor")
-    :Railgun
+    "Railgun"
      (section
       :name "Railgun"
       :reference
@@ -553,7 +553,7 @@
        "* This type of weapon includes all hypervelocity rounds propelled by massive magnetic fields.
         * Their great speed gives them excellent penetration and kinetic damage.  Because of this great speed, they cannot carry any useful payload because the payload would be destroyed when the shell was launched.  Therefore, railguns are all kinetic weapons only.
         * Coilguns (Gauss) and Railguns are technically different, but their result is the same."
-      :titles "Coilgun, Gauss Gun, Kinetic Kill Weapons, Linear Cannon, Linear Rifle, Mass Driver")
+      :titles "Kinetic Kill Weapons, Linear Cannon, Linear Rifle, Mass Driver")
     "Sonic Weapon"
      (section
       :name "Sonic Weapon")

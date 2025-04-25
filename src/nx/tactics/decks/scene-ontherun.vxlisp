@@ -13,9 +13,12 @@
       tactics
       "Flint (Early)"
       "Hidden"
-      "Goblin: Scout"
+      "Fish: Small"
       "Hare"
-      "Snake: Emerald Viper"))
+      "Pheasant"
+      "Pig: Wild Boar"
+      "Snake: Emerald Viper"
+      "Turkey"))
     (list<-list : base/cardlist
      (base/skilllist<-tactics-keys
       tactics

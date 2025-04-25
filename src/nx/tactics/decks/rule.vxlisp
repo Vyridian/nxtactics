@@ -448,15 +448,6 @@
     "* Will is the measure of a unit's grit, determination and psychological stability.
      * A unit with Will:0 is panicked.
      * It is lossly derived from an average person having a 100 score. E.g. 100 = 5x10^1 = 5x1, 140 = 9x10^1 = 9x1")
-  (base/rule
-   :name "Zombie"
-   :summary
-    "* [Undead]: Immune to [Bleeding] and [Fear]. Never targets [Undead].
-     * [Mindless]: Does not avoid [Hazard].
-     * [Prey]: [Bleeding], [Prone] within 2 Moves. Will [Disengage] for prey.
-     * [Zombie Plague]:
-     ** IF a unit suffers a [Pierce] [Bite]
-     ** THEN at the beginning of each [Turn], take [Fatigue]:+1 or [Stress]:+1 until cured.")
 ))
 
 (func deck-rules : base/deck

@@ -43,11 +43,25 @@
        "Bandit"
        "Bruiser"
        "Guardsman"
+       "Herbalist"
        "Innkeeper"
        "Pilgrim"
+       "Urchin"
+       "Waif"
+       "Cat"
+       "Chicken"
+       "Dog"
        "Dog: Wild"
+       "Duck"
+       "Goat"
+       "Goose"
+       "Pig"
+       "Donkey"
+       "Sheep"
        "Horse"
-       "Cart: Wooden"))
+       "Ox"
+       "Cart: Wooden"
+       "Plough"))
      (list<-list : base/cardlist
       (base/cardimagelist<-tactics-unitkeys
        tactics
@@ -62,10 +76,22 @@
        "Bandit"
        "Bruiser"
        "Guardsman"
+       "Herbalist"
        "Innkeeper"
        "Pilgrim"
+       "Urchin"
+       "Waif"
+       "Cat"
+       "Chicken"
+       "Dog"
        "Dog: Wild"
+       "Donkey"
+       "Duck"
+       "Goose"
+       "Pig"
+       "Sheep"
        "Horse"
+       "Ox"
        "Cart: Wooden"))
      (list<-list : base/cardlist
       (base/rulelist<-tactics-keys
@@ -114,7 +140,7 @@
      (list<-list : base/cardlist
       (base/placelist<-tactics-keys
        tactics
-       "Sandalstadt"
+       "Sandalstad"
        "Field"
        "Forest"
        "Mountain"

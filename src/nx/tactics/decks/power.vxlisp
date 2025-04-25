@@ -287,10 +287,7 @@
        :summary
         "* [Extended Action]: At dawn, if the sun is visible, summon a blazing chariot with horses of flame that can carry the user and up to level passengers high into the sky all day. At sunset, the chariot lands anywhere the user chooses where the sun is visible.")
      "Charm of Virgo"
-      (base/ability
-       :name "Charm of Virgo"
-       :summary
-        "* [Action]: Gain [Synergy] on unit's next communication skill. Duration 1 turn.")
+      (base/ability<-tactics-key tactics "Charm of Virgo")
      "Cleansing of Aquarius"
       (base/ability
        :name "Cleansing of Aquarius"
@@ -944,14 +941,14 @@
          * Spells may then be cast upon the figure as if the figure was at 4 spaces range regardless of actual distance or line of sight. This ability can create any number of effects, but it cannot actually cause physical damage. All Body damage becomes [Stun] if the target cannot take anymore [Stun], the excess is ignored.
          * The ability level of any Spells cast are [Limited] by the skill with which the Effigy is created and the significance of the item linked to the Effigy."
        :titles "Straw Man")
-     :Fetish
+     "Fetish"
       (base/ability
        :name "Fetish"
        :summary
         "* A fetish is a small object that can be used to bind a spirit. The item must be unique and may be found or created.
          * [Action]: If you killed an extradimensional creatures last turn, you may capture the spirit of that creature in the Fetish.
          * [Action]: Release the spirit in the fetish to perform one task that turn. The spirit must perform the task if it is able though it does so under duress and may twist the intentions or deceive the user. Regardless of outcome, the spirit is released and will disappear.")
-     :Figurine
+     "Figurine"
       (base/ability
        :name "Figurine"
        :summary
@@ -1313,17 +1310,9 @@
    :abilitymap
     (base/abilitymap
      "Barren Loins"
-      (base/ability
-       :name "Barren Loins"
-       :summary "* Target cannot conceive a child while under this curse.")
-     :Charm
-      (base/ability
-       :name "Charm"
-       :summary
-        "* The opposite of [Malediction]. Charm reduces the severity of negative effects.
-         * [Requires]: Target cannot have any [Charm] Tokens.
-         * [Action]: Roll vs. Spirit and add a Black [Charm] Token for each [Hit]."
-       :titles "Warding Sign")
+      (base/ability<-tactics-key tactics "Barren Loins")
+     "Charm"
+      (base/ability<-tactics-key tactics "Charm")
      "Craft Incense"
       (base/ability
        :name "Craft Incense")
@@ -2189,7 +2178,8 @@
      :Sanctuary
       (base/ability
        :name "Sanctuary"
-       :summary "* From the user's perspective, it is like being on stage. While chanting, a spotlight seems to come upon the user, all other lights dim, and enemies cease to notice the user's presence.")
+       :summary
+        "* From the user's perspective, it is like being on stage. While chanting, a spotlight seems to come upon the user, all other lights dim, and enemies cease to notice the user's presence.")
      "Sense Corruption"
       (base/ability
        :name "Sense Corruption")
@@ -3411,13 +3401,14 @@
      * He accepted everything. The past was alterable. The past had never been altered. Oceania was at war with Eastasia. Oceania had always been at war with Eastasia. Jones, Aaronson, and Rutherford were guilty of the crimes they were charged with. He had never seen the photograph that disproved their guilt. It had never existed; he had invented it. He remembered remembering contradictory things, but those were false memories, products of self deception. How easy it all was! - 1984
      * Every move you make, every vow you break, every smile you fake, every claim you stake, I'll be watching you. Every single day... - Every Breath You Take, The Police
      * Your face will turn to alabaster. When you find your servant is your master. You'll be wrapped around my finger. - Wrapped around your Finger, The Police
-     * I know this steak doesn't exist. I know that when I put it in my mouth, the Matrix is telling my brain that it is juicy and delicious. After nine years, you know what I realize? Ignorance is bliss. - Cypher, The Matrix"
+     * I know this steak doesn't exist. I know that when I put it in my mouth, the Matrix is telling my brain that it is juicy and delicious. After nine years, you know what I realize? Ignorance is bliss. - Cypher, The Matrix
+     * Kotodama - Power of language in Japanese"
    :titles "Dominator, Master, Puppet Master, Puppeteer"
    :abilitymap
     (base/abilitymap
      "Brainwashing"
       (base/ability<-tactics-key tactics "Brainwashing")
-     :Conditioning
+     "Conditioning"
       (base/ability
        :name "Conditioning"
        :reference "Manchurian Candidate"
@@ -3427,7 +3418,7 @@
      "Edit Memories"
       (base/ability
        :name "Edit Memories")
-     :Indoctrination
+     "Indoctrination"
       (base/ability
        :name "Indoctrination"
        :summary "Slowly convert a subject into a willing servant.")
@@ -3448,16 +3439,18 @@
      "Subconscious Trigger"
       (base/ability
        :name "Subconscious Trigger")
-     :Subjugation
+     "Subjugation"
       (base/ability
        :name "Subjugation")
      "Subliminal Messaging"
       (base/ability
        :name "Subliminal Messaging")
-     :Suggestion
+     "Suggestion"
       (base/ability
        :name "Suggestion"
-       :summary "Change"))
+       :summary "Change")
+     "Word of Command"
+      (base/ability<-tactics-key tactics "Brainwashing"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -3668,9 +3661,8 @@
      "Cure Insanity"
       (base/ability
        :name "Cure Insanity")
-     :Demoralize
-      (base/ability
-       :name "Demoralize")
+     "Demoralize"
+      (base/ability<-tactics-key tactics "Demoralize")
      :Depression
       (base/ability
        :name "Depression")
@@ -4433,17 +4425,14 @@
        :summary
         "* [Mind]: Destroy any number of [Illusion]s to cause [Stun] and [Confusion] to targets in the area."
        :titles "Broken Mirror")
-     :Shimmer
+     "Shimmer"
       (base/ability
        :name "Shimmer")
-     :Simulacrum
+     "Simulacrum"
       (base/ability
        :name "Simulacrum")
      "Sleight of Mind"
-      (base/ability
-       :name "Sleight of Mind"
-       :summary
-        "* [Slow] [Even] [Mind]: +1 [Stress]. Create a distraction.")
+      (base/ability<-tactics-key tactics "Sleight of Mind")
      "Smoke and Mirrors"
       (base/ability
        :name "Smoke and Mirrors")
@@ -5662,16 +5651,28 @@
      "Shield Redirection"))
   (base/power
    :name "Size"
+   :reference
+    "* So many tinyies - Tarkaz the Tribeless, Runeterra"
    :summary
     "* Grow or Shrink. This change does not change your Mass. Combine with [Density] to actually change [Body] stat."
    :abilitymap
     (base/abilitymap
+     :Big
+      (base/ability
+       :name "Big"
+       :summary
+        "* You are permenantly larger and heavier.")
      :Growth
       (base/ability
        :name "Growth")
      :Shrinking
       (base/ability
-       :name "Shrinking")))
+       :name "Shrinking")
+     :Big
+      (base/ability
+       :name "Small"
+       :summary
+        "* You are permenantly smaller and lighter.")))
   (base/power
    :name "Sound"
    :summary
@@ -5726,11 +5727,14 @@
      "Mindless"
      "Monstrous"
      "Nemean Invulnerability"
+     "Prey"
      "Rapid Metabolism"
      "Savage"
      "Skeletal"
      "Soulless"
-     "Tainted"))
+     "Tainted"
+     "Undead"
+     "Zombie"))
   (base/power
    :name "Strength"
    :reference "* Technique is for lightweights. - Sett, Runeterra"

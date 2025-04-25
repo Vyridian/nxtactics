@@ -1706,9 +1706,7 @@ export default class nx_tactics_books_fantasy {
       ":name",
       "Nexus Fantasy Characters",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Nexus Fantasy Characters",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1846,23 +1844,12 @@ export default class nx_tactics_books_fantasy {
               ":summary",
               "* Half-Elven Bard\n* Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.\n* Beliefs - Phirax believes that improving the lives of those around him will also improves his own life. He sees this as selfishness through selflessness, therefore it is always in his own interest to help others. He could easily manipulate those around him, but he abhors the idea of exploiting others and is quick to judge abusers of any kind. He follows the lesser god Seker on his mission to destroy undead, specifically those who feed on or otherwise exploit the living (which is pretty much all of them).\n* History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure.",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Empathy",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
+              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+                nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
+                  tactics,
                   "Empathy",
-                  ":level",
-                  "12",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Demoralize",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Demoralize"),
-                    ":Inspiration",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Inspiration")
-                  )
+                  12,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Demoralize")
                 )
               ),
               ":unitskillmap",
@@ -1872,6 +1859,13 @@ export default class nx_tactics_books_fantasy {
                   "Stealth",
                   9,
                   vx_core.f_new({"any-1": vx_core.t_stringlist}, "Backstab", "Hide", "Sneak")
+                ),
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
+                  tactics,
+                  "Performance",
+                  9,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Inspiration"),
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Lute")
                 )
               )
             ),
@@ -1892,10 +1886,8 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Invocation", ":level", "10")
               ),
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                "Physical Powers",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Physical Powers", ":level", "8")
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Melee", 8)
               )
             ),
             vx_core.f_new(
@@ -1907,27 +1899,17 @@ export default class nx_tactics_books_fantasy {
               ":summary",
               "Dwarven Warrior",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Ranged",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+                  tactics,
                   "Ranged",
-                  ":level",
-                  "7",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    "Bow: Short",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Bow: Short")
-                  )
+                  7,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow: Short")
                 )
               )
             )
           )
         ),
-        "Nexus Fantasy Actors",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1936,19 +1918,7 @@ export default class nx_tactics_books_fantasy {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             "Antios Teron",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Antios Teron",
-              ":summary",
-              "* Human Spy\n* Antios is a spy for Lord Aramel.\n* He is currently disguised as a mercenary for hire while travelling through the Imperium to assess their defenses. He has been authorized to assassinate any high ranking politician he should encounter to disrupt\nlocal politics. His mission has no time limit, and he is periodically scried by Lord Aramel's wizards.\n* He is a convincing actor who can play most parts well. He is particularly ruthless about his identity and will silence any who might compromise him or his mission.",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Espionage",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Espionage", ":level", "5")
-              )
-            ),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Antios Teron"),
             ":Blackguard",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Blackguard", ":summary", "* An elite mercenary cadre organized by Hetman Undrig.\n* Their base is a small, walled town dedicated to their needs.\n* The Dragoons are a loose group. Decisions and leaders are chosen by majority vote. Power can change at anytime (including during combat).\n* Dragoons pay no dues nor is there direct pay. The Dragoons make money by hiring out as mercenaries.  They charge double normal rates, but are reknowned for their excellent training and equipment. Dragoons take great pride in their high status and react poorly to those who do not recognize their talent.\n* Dragoons are trained professionals in their jobs and recognize the need for discretion. They care little for whether a job is legal or not, and the Dragoons are known for possessing certain 'subtle' skills that make covert missions possible. They do not, however, enjoy excessive risk and are not above abandoning very dangerous missions.", ":titles", "Black Dragoon"),
             "Charn Aramel",
@@ -1961,16 +1931,8 @@ export default class nx_tactics_books_fantasy {
               ":titles",
               "Nighthook, Lord Aramel",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Conviction",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Conviction", ":level", "10")
-              ),
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                "Psychic Powers",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Psychic Powers", ":level", "10")
+              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+                nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Conviction", 10)
               )
             ),
             "Sarani Kalea",

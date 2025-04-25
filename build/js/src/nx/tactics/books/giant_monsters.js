@@ -347,26 +347,8 @@ export default class nx_tactics_books_giant_monsters {
             ),
             "Raideen",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Raideen"),
-            ":Voltron",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Voltron",
-              ":image",
-              "Daikaiju/Voltron.png",
-              ":mass",
-              "700tons",
-              ":height",
-              "60m",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Gunnery", ":summary", "* Wing Boomerang - Boomerang attack from the wings of GoLion.\n* Space Cutter - Spinning Blades.\n* Eye Flash - Beams fired from the eyes of GoLion.\n* Hurricane Attack - Wind attack similar to Daimos Blizzard, but not as strong.\n* Laser Magnum - Laser-like bullets fired from the mouth of the Green Lion.\n* Fire Tornado - A burst of flame emits from the mouth of the Red Lion.\n* Cross Beam - Cross-shaped boomerang fired from the chest.\n* Gatling Missiles - Small missiles fired from the legs.\n* Electromagnetic Lance - Weapon used as a spear at times.\n* Foot Missile - Missiles fired from the mouths of the Blue and Yellow Lions.\n* Four Lion Attack - The 'Lion Head Attack' 100-Ton Punch.\n* Grand Fire - A stream of flames fired from the mouths of the Blue and Yellow Lions", ":level", "5")
-              ),
-              ":unitpowermap",
-              nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Combine")
-            )
+            "Voltron",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Voltron")
           )
         )
       )

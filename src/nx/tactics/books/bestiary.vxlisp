@@ -618,48 +618,44 @@
         :Hamster
          (base/unit
           :name "Hamster")
-        "Huge Rat"
-         (base/unit
-          :name "Huge Rat"
-          :reference "* What about the R.O.U.S.'s? Rodents Of Unusual Size? I don't think they exist. Raghh! - Westley, Buttercup, and ROUS - The Princess Bride")
-        :Mouse
+        "Mouse"
          (base/unit
           :name "Mouse")
-        "Plague Rat"
-         (base/unit
-          :name "Plague Rat")
-        :Rabbit
+        "Rabbit"
          (base/unit
           :name "Rabbit")
-        "Rabid Rat"
-         (base/unit
-          :name "Rabid Rat")
-        :Rat
+        "Rat"
          (base/unit
           :name "Rat")
-        "Sewer Rat"
+        "Rat: Huge"
          (base/unit
-          :name "Sewer Rat")))
+          :name "Rat: Huge"
+          :reference
+           "* What about the R.O.U.S.'s? Rodents Of Unusual Size? I don't think they exist. Raghh! - Westley, Buttercup, and ROUS - The Princess Bride")
+        "Rat: Plague"
+         (base/unit
+          :name "Rat: Plague")
+        "Rat: Rabid"
+         (base/unit
+          :name "Rat: Rabid")
+        "Rat: Sewer"
+         (base/unit
+          :name "Rat: Sewer")))
     :Swine
      (section
       :name "Swine"
       :unitmap
        (base/unitmap
-        :Boar
-         (base/unit
-          :name "Boar")
-        :Pig
-         (base/unit
-          :name "Pig")
+        "Pig"
+         (base/unit<-tactics-key tactics "Pig")
+        "Pig: Boar"
+         (base/unit<-tactics-key tactics "Pig: Boar")
         :Razorback
          (base/unit
           :name "Razorback")
         :Warthog
          (base/unit
-          :name "Warthog")
-        "Wild Boar"
-         (base/unit
-          :name "Wild Boar")))
+          :name "Warthog")))
     "Other Mammals"
      (section
       :name "Other Mammals"
@@ -700,33 +696,33 @@
       :name "Fantastic Mammals"
       :unitmap
        (base/unitmap
-        "Bat, Giant"
+        "Bat: Giant"
          (base/unit
-          :name "Bat, Giant")
-        "Bat, Huge"
+          :name "Bat: Giant")
+        "Bat: Huge"
          (base/unit
-          :name "Bat, Huge")
-        "Boar, Great"
+          :name "Bat: Huge")
+        "Pig: Great Boar"
          (base/unit
           :name "Boar, Great")
-        "Ferret, Keen"
+        "Ferret: Keen"
          (base/unit
-          :name "Ferret, Keen"
+          :name "Ferret: Keen"
           :summary
-           "* These furred scavengers are hoarders and theives by nature robbing nests and homes alike.  They have uncanny manual dexterity and are natural thieves able to squeeze into tight places, evade detection, and untie knots.
-            * If caputured at infancy, they can be raised as pets and taught to steal for its master.  For this reason, they are valuable to professional thieves.
+           "* These furred scavengers are hoarders and theives by nature robbing nests and homes alike. They have uncanny manual dexterity and are natural thieves able to squeeze into tight places, evade detection, and untie knots.
+            * If caputured at infancy, they can be raised as pets and taught to steal for its master. For this reason, they are valuable to professional thieves.
             * With training they can be taught to pick pockets and even pick simple locks."
           :mass "2kg"
           :length ".5m")
-        "Rat, Bog"
+        "Rat: Bog"
          (base/unit
-          :name "Rat, Bog")
-        "Rat, Crypt"
+          :name "Rat: Bog")
+        "Rat: Crypt"
          (base/unit
-          :name "Rat, Crypt")
-        "Rat, Plague"
+          :name "Rat: Crypt")
+        "Rat: Plague"
          (base/unit
-          :name "Rat, Plague")
+          :name "Rat: Plague")
         :Terrorphant
          (base/unit
           :name "Terrorphant"
@@ -4915,47 +4911,19 @@
          (base/unit
           :name "Skeletal Dragon")
         "Skeletal Knight"
-         (base/unit
-          :name "Skeletal Knight"
-          :summary "* Morale - High"
-          :titles "Death Knight"
-          :unitpowermap
-           (base/unitpowermap
-            "Special Ability"
-             (base/unitpower
-              :name "Special Ability"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Savage
-                 (base/unitability
-                  :name "Savage")
-                :Skeletal
-                 (base/unitability
-                  :name "Skeletal"))))
-          :unitskillmap
-           (base/unitskillmap
-            :Riding
-             (base/unitskill
-              :name "Riding")))
-        :Skeleton
+         (base/unit<-tactics-key tactics "Skeletal Knight")
+        "Skeleton"
          (base/unit
           :name "Skeleton"
           :unitpowermap
-           (base/unitpowermap
-            "Special Ability"
-             (base/unitpower
-              :name "Special Ability"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Mindless
-                 (base/unitability
-                  :name "Mindless")
-                :Savage
-                 (base/unitability
-                  :name "Savage")
-                :Skeletal
-                 (base/unitability
-                  :name "Skeletal"))))
+           (base/unitpowermap<-unitpowerlist
+            (base/unitpower<-tactics-key-abilities
+             tactics "Special Ability"
+             (stringlist
+              "Mindless"
+              "Savage"
+              "Skeletal"
+              "Undead")))
           :unitskillmap
            (base/unitskillmap
             :Defense
@@ -4971,21 +4939,14 @@
          (base/unit
           :name "Skeleton Warrior"
           :unitpowermap
-           (base/unitpowermap
-            "Special Ability"
-             (base/unitpower
-              :name "Special Ability"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Mindless
-                 (base/unitability
-                  :name "Mindless")
-                :Savage
-                 (base/unitability
-                  :name "Savage")
-                :Skeletal
-                 (base/unitability
-                  :name "Skeletal"))))
+           (base/unitpowermap<-unitpowerlist
+            (base/unitpower<-tactics-key-abilities
+             tactics "Special Ability"
+             (stringlist
+              "Mindless"
+              "Savage"
+              "Skeletal"
+              "Undead")))
           :unitskillmap
            (base/unitskillmap
             :Defense
@@ -5007,14 +4968,15 @@
            "* Jason Voorhees
             * Nightmare on Elm Street
             * Vinland Saga"
-          :summary "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines."
+          :summary
+           "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines."
           :titles "Murderous Dead, War Dead")
         :Wendigo
          (base/unit
           :name "Wendigo"
           :summary "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims."
           :titles "Abominable Snowman, Yeti")
-        :Wight
+        "Wight"
          (base/unit
           :name "Wight"
           :summary
@@ -5022,43 +4984,21 @@
             * Wights are usually highly intelligent or cunning and have the patience to carefully plan their murders. Wights enjoy killing as well as inflicting pain and fear on their victims who they believe deserve what they get.
             * A Wight is created when an extremely driven, evil person is on the verge of death. Before death, it makes a bargain with a demonic force, and returns to unlife as a Wight.
             * Wights retain most of their abilities while living. Powerful Wights can be as powerful as Liches. In fact, the necromantic study of Wights led to the necromantic rituals responsible for Mummies and Liches.")
-        :Zombie
-         (base/unit
-          :name "Zombie"
-          :summary
-           "* Zombies are nearly mindless animated corpses.
-            * They act irrationally and attack all living creatures with no sense of self preservation.
-            * They have +2 Body, but because the do not protect themselves they suffer 2x criticals."
-          :unitpowermap
-           (base/unitpowermap
-            "Natural Weaponry"
-             (base/unitpower
-              :name "Natural Weaponry"
-              :level "2")
-            "Special Ability"
-             (base/unitpower
-              :name "Special Ability"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Mindless
-                 (base/unitability
-                  :name "Mindless")
-                :Savage
-                 (base/unitability
-                  :name "Savage")))))))
+        "Zombie"
+         (base/unit<-tactics-key tactics "Zombie")))
     "Noncorporeal Undead"
      (section
       :name "Noncorporeal Undead"
       :unitmap
        (base/unitmap
-        :Haunt
+        "Haunt"
          (base/unit
           :name "Haunt"
           :reference
            "* The Sixth Sense
             * Beetlejuice"
           :summary "* Haunts are lesser undead that remain near the places and people from their living life instead of moving on. Haunts attempt to interact with the living to maintain a semblance of their former lives. Haunts are generally not malicious, but their interactions inadvertently drain the [Will] of others over time. There are also cases of Haunts who impersonate loved ones to purposely drain their [Will].")
-        :Lemure
+        "Lemure"
          (base/unit
           :name "Lemure"
           :summary "* The wandering and vengeful spirits of those not afforded proper burial or funeral rites."
@@ -5066,19 +5006,19 @@
         "Lost Soul"
          (base/unit
           :name "Lost Soul")
-        :Phantom
+        "Phantom"
          (base/unit
           :name "Phantom"
           :summary "* Phantoms are the remnants of those who were lost in the Astral/Dream Realm. The Astral Realm is the realm of imagination, so those trapped here are gradually driven mad. Therefore, Phantoms have varying and unpredictable insanities.")
-        :Poltergeist
+        "Poltergeist"
          (base/unit
           :name "Poltergeist")
-        :Reaper
+        "Reaper"
          (base/unit
           :name "Reaper"
           :reference "Charon the Ferryman"
           :summary "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon.")
-        :Shade
+        "Shade"
          (base/unit
           :name "Shade"
           :reference "The Ring"
@@ -5100,7 +5040,7 @@
           :summary
            "* The Sluagh are thin, pale, snake-like, and grotesque, though they remain strangely compelling. They favor archaic, intricate, black clothing. Their joints can dislocate allowing them to slither our of bonds and into disquieting shapes.
             * They may only speak in whispers and dislike any social situations except among their own kind. They prefer to overserve other from hidden corners, and the secrets they obtain are their stock and trade.")
-        :Spectre
+        "Spectre"
          (base/unit
           :name "Spectre"
           :reference "* Cenobites from Hellraiser"
@@ -5109,10 +5049,10 @@
         "Spectral Horse"
          (base/unit
           :name "Spectral Horse")
-        :Will-O-Wisp
+        "Will-O-Wisp"
          (base/unit
           :name "Will-O-Wisp")
-        :Wraith
+        "Wraith"
          (base/unit
           :name "Wraith"
           :summary
@@ -5150,193 +5090,130 @@
         * Antitribu - Those who choose to oppose their clan, joining the Camarilla or Sabbat respectively."
       :titles "Cainite, Kindred, Leech, Lick"
       :sectionmap
-       (sectionmap
-        "Vampires, Elder"
-         (section
-          :name "Vampires, Elder"
-          :unitmap
-           (base/unitmap<-tactics-keys
-            tactics
-            "Kali"
-            "Set"))
-        "Vampires, Anarchs"
-         (section
-          :name "Vampires, Anarchs"
-          :summary "* The strict caste system of the Camarilla does not favor new Vampires. Many newly embraced reject the machinations of the elders and live as they can on the fringe. Anarchs rely on each other to protect themselves from the actions of the Camarilla and the Sabbat. The larger organizations treat Anarchs like homeless people, largely ignoring them unless they get in their way. The Anarchs understand that the other groups are bound by rules, and they will use this to their advantage. In any situation, the Anarchs are wild cards, potentially able to shift a result one way or the other. The Anarchs have one crucial advantage over the Camarilla and Sabbat: they have nothing to lose.")
-        "Vampires, Camarilla"
-         (section
-          :name "Vampires, Camarilla"
-          :titles "Neophyte, Elder, Prince, Sheriff"
-          :unitmap
-           (base/unitmap
-            :Brujah
-             (base/unit
-              :name "Brujah"
-              :titles "Bully, Bruiser"
-              :unitpowermap
-               (base/unitpowermap<-tactics-keys
-                tactics
-                "Vampirism"
-                "Strength"))
-            :Gangrel
-             (base/unit
-              :name "Gangrel"
-              :titles "Animal, Protector"
-              :unitpowermap
-               (base/unitpowermap<-tactics-keys
-                tactics
-                "Vampirism"
-                "Animalism"))
-            :Malkavian
-             (base/unit
-              :name "Malkavian"
-              :summary
-               "* Cursed by Madness
-                * Malkalv - The philosophic, antedeluvian sire of their clan. When he was destroyed with the First City. his childer began to gain the signature Madness. Some say his spirit continues through his blood and connects his childer. Others propose the preposterous notion that Malkav was a an embraced Angel.
-                * Kinship - Unlike other tribes, the Malkavians have a natural understanding and kinship toward each other. It is rare that they outright betray one another."
-              :titles "Jester, Maniac, Nutcase, Prankster, Psychotic"
-              :unitpowermap
-               (base/unitpowermap<-tactics-keys
-                tactics
-                "Vampirism"
-                "Domination"
-                "Senses"
-                "Madness")
-              :unitskillmap
-               (base/unitskillmap<-tactics-keys
-                tactics
-                "Stealth"))
-            :Nosferatu
-             (base/unit
-              :name "Nosferatu"
-              :titles "Sewer Rat"
-              :unitpowermap
-               (base/unitpowermap<-tactics-keys
-                tactics
-                "Vampirism"
-                "Invisibility")
-              :unitskillmap
-               (base/unitskillmap<-tactics-keys
-                tactics
-                "Stealth"))
-            :Toreador
-             (base/unit
-              :name "Toreador"
-              :reference
-               "* We come into this stale and plain stale world. So we spend our time, searching for that one sublime revelation. To fill the void. To lose ourselves in beauty and perfection. Beauty can be elegant, seductive, full of pleasure, Raw, Violent, Lethal. Let me help us find it. To lose ourselves. Come closer. I am a beautiful way to die. - Vampire: Bloodlines 2
-                * She'll only come out at nights. The lean and hungry type... I wouldn't if I were you. I know what she can do. She's deadly man, she could really rip your world apart. Mind over matter. Ooh, the beauty is there but a beast is in the heart. Oh, here she comes. Watch out boy she'll chew you up. Oh, here she comes. She's a maneater. - Hall and Oates/No Hard Feelings, Maneater"
-              :summary
-               "* Beauty is both a blessing and a curse
-                * Toreadors were key to founding the Camarilla and are among the most powerful and influencial clans.
-                * The Roses in the Garden - The Toreador who are obscessed with politics, conspiring on casual walks.
-                * Founder - It is said that the Clan's founder, Arikel was a mortal painter and/or sculptress and twin sister of Malkav in the First City. Famed throughout the lands for her work, after her Embrace she painted a mural on which the past, present and future of Kindred society was depicted. When Caine saw a terrible future for his race, he cursed her with the affliction that affects Toreador today – the art that she loved most dearly would now be her obsession and distraction above all things.
-                * Weakness - Fascination"
-              :titles "Artists, Clan of Roses, Degenerate, Gossips, Obsessives"
-              :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism")
-                :Quickness
-                 (base/unitpower
-                  :name "Quickness")
-                :Senses
-                 (base/unitpower
-                  :name "Senses")
-                :Presence
-                 (base/unitpower
-                  :name "Presence")))
-            :Tremere
-             (base/unit
-              :name "Tremere"
-              :image "images/bestiary/Vampire_Tremere.png"
-              :summary
-               "* The Tremere is the second youngest clan having appeared in the Dark Ages.
-                * History - The Tremere began as House Tremere, mages of the Order of Hermes named for their leader and founder, Tremere. At the end of the first millennium, the members of House Tremere realized the Hermetic arts were failing and found its immortality potions no longer working. House Tremere undertook numerous experiments, but it was Goratrix who devised a solution in his investigation of vampires. In 1022, Goratrix invited Tremere and six of the founder's closest advisers to participate in the completed ritual, which promised true immortality. Whether Goratrix knew what would happen is known only by him and, perhaps, Tremere, but at the completion of the ritual the participants fell unconscious and were reborn as vampires, their avatars destroyed and magical abilities lost. The mages had gained their immortality but lost the power they lived for. In time, the Tzimisce made war against House Tremere in retribution for the Fiends that had been made part of Goratrix's experiments. The Order of Hermes also became suspicious of diabolical practices being performed by the increasingly secretive House. In 1037 Tremere gathered the seven newly-made Cainites and forced the blood bond upon them. He then declared to them that House Tremere would be restructured with a new pyramid hierarchy, placing himself at the top as Primus of House and clan Tremere and his seven closest followers forming the Inner Council of Seven directly under him. They would slowly begin Embracing the rest of the House, with each initiate being bound to the Inner Council to ensure their loyalty. In time, all members of House Tremere would die or become vampires. While Tremere and Etrius pursued their own research throughout Europe in converting the hermetic arts into Thaumaturgy, Goratrix once again returned to his laboratories with his apprentices at hand. After years of experimentation on captured Tzimisce, Nosferatu, and Gangrel, he succeeded in creating a Gargoyle in 1121, and by 1125 the hybrids were serving as shock troops against the Fiends. Nevertheless, the Tremere found themselves third-class citizens among the undead. Whatever boldness Tremere had shown in entering the night was ignored by the staunchly traditionalist clans, and they were often forced from cities by princes who did not look kindly on their presumption. As he and Etrius rapidly acquired more vampiric lore they discovered the history of Caine and the Antediluvians, as well as the benefits of diablerie. Seeking to establish themselves as a clan proper, the Tremere sought a clan founder to diablerize and settled on Saulot, the enigmatic founder of the Salubri clan. In 1133, Tremere and the Inner Council discovered Saulot's tomb in the Anatolian desert. Tremere diablerized the Antediluvian and promptly entered torpor, leaving the Inner Council to lead the clan and destroy the remaining Salubri. As with everything else that the Tremere had done to this point, the result was a mixed blessing. The Tremere were entrenched in many Cainite courts, their services as mages making them indispensable to princes across Europe. They were now accepted as one of the Low Clans, albeit considered usurpers, distrusted warlocks, and known diablerists. In the early years of the 21st century, the Intellegence agencies of the United States managed to gain access to SchreckNet and gained firsthand knowledge of the existence of a race of undead bloodsuckers that were spread in all corners of the world. Sharing their knowledge with other intelligence agencies, the united secret services contacted the Vatican, whom they knew to have experience fighting the undead. After years of careful research, the Second Inquisition had targeted Vienna as the 'capital of vampires' and prepared a strike against their headquarters. In 2008, a united USSOCOM and Vatican ESOG force stormed the Vienna Chantry of Clan Tremere and destroyed it, blaming it to an ISIS terror attack to the public. London, Las Vegas, Paris, and Marseilles were largely cleared of vampiric activity, with numerous captured vampires being placed in black sites and experimented upon to discover their weaknesses. The Inner Council of Seven were slain and their Blood Bonds shattered. Since then the once monolithic Tremere structure has completely fallen apart."
-              :titles "Blood Sorcerer, Broken Clan, Pyramid, Usurpers, Warlock, Witch"
-              :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism")
-                "Blood Magic"
-                 (base/unitpower
-                  :name "Blood Magic")))
-            :Ventrue
-             (base/unit
-              :name "Ventrue"
-              :titles "Bluebloods, Manipulator, Know-it-all"
-              :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism")
-                :Domination
-                 (base/unitpower
-                  :name "Domination")
-                :Toughness
-                 (base/unitpower
-                  :name "Toughness"))
-              :unitskillmap
-               (base/unitskillmap
-                :Influence
-                 (base/unitskill
-                  :name "Influence")))))
-        "Vampires, Sabbat"
-         (section
-          :name "Vampires, Sabbat"
-          :unitmap
-           (base/unitmap
-            :Lasombra
-             (base/unit
-              :name "Lasombra"
-              :image "images/bestiary/Vampire_Lasombra.png"
-              :titles "Dark Priest"
-              :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism"))
-              :unitskillmap
-               (base/unitskillmap
-                :Influence
-                 (base/unitskill
-                  :name "Influence")))
-            :Tzimisce
-             (base/unit
-              :name "Tzimisce"
-              :image "images/bestiary/Vampire_Tzimisce.png"
-              :reference "The Tzimisce take pleasure in shaping themselves into a variety of inhuman forms.  Distended skulls, elongated fingers, polychromatic mottling are often displayed to demonstrate their alien superiority."
-              :summary
-               "* The Tzimisce's extensive use of Fleshcraft upon themselves, their servants, and their foes, have made them the most bizarre and alien of the Vampire clans. Fortunately, they are solitary by nature preferring isolated locale to practice their horrid techniques on their hapless prey.
-                * Examples: Backroom Surgeon, Carny Folk, Dracula, Inquisitor, Kali, Mortician, Nazi Scientist, Tatoo Artist, Toturer, Vivisectionist"
-              :titles "Monster, Alien"
-              :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism")
-                :Fleshcraft
-                 (base/unitpower
-                  :name "Fleshcraft"))
-              :unitskillmap
-               (base/unitskillmap
-                :Intimidation
-                 (base/unitskill
-                  :name "Intimidation")))))
-        "Vampires, Independent"
-         (section
-          :name "Vampires, Independent"
-          :unitmap
-           (base/unitmap
-            :Kuei-Jin
-             (base/unit
-              :name "Kuei-Jin")
-            :Setite
-             (base/unit
-              :name "Setite"
-              :unitpowermap
-               (base/unitpowermap
-                :Vampirism
-                 (base/unitpower
-                  :name "Vampirism"))))))))))
+       (base/sectionmap<-sectionlist
+        (base/section
+         :name "Vampires, Elder"
+         :unitmap
+          (base/unitmap<-tactics-keys
+           tactics
+           "Vampire: Kali"
+           "Vampire: Set"))
+        (base/section
+         :name "Vampires, Anarchs"
+         :summary "* The strict caste system of the Camarilla does not favor new Vampires. Many newly embraced reject the machinations of the elders and live as they can on the fringe. Anarchs rely on each other to protect themselves from the actions of the Camarilla and the Sabbat. The larger organizations treat Anarchs like homeless people, largely ignoring them unless they get in their way. The Anarchs understand that the other groups are bound by rules, and they will use this to their advantage. In any situation, the Anarchs are wild cards, potentially able to shift a result one way or the other. The Anarchs have one crucial advantage over the Camarilla and Sabbat: they have nothing to lose.")
+        (base/section
+         :name "Vampires, Camarilla"
+         :titles "Neophyte, Elder, Prince, Sheriff"
+         :unitmap
+          (base/unitmap
+           "Vampire: Brujah"
+            (base/unit
+             :name "Vampire: Brujah"
+             :titles "Bully, Bruiser"
+             :unitpowermap
+              (base/unitpowermap<-tactics-keys
+               tactics
+               "Vampirism"
+               "Strength"))
+           "Vampire: Gangrel"
+            (base/unit
+             :name "Vampire: Gangrel"
+             :titles "Animal, Protector"
+             :unitpowermap
+              (base/unitpowermap<-tactics-keys
+               tactics
+               "Vampirism"
+               "Animalism"))
+           "Vampire: Malkavian"
+            (base/unit
+             :name "Vampire: Malkavian"
+             :summary
+              "* Cursed by Madness
+               * Malkalv - The philosophic, antedeluvian sire of their clan. When he was destroyed with the First City. his childer began to gain the signature Madness. Some say his spirit continues through his blood and connects his childer. Others propose the preposterous notion that Malkav was a an embraced Angel.
+               * Kinship - Unlike other tribes, the Malkavians have a natural understanding and kinship toward each other. It is rare that they outright betray one another."
+             :titles "Jester, Maniac, Nutcase, Prankster, Psychotic"
+             :unitpowermap
+              (base/unitpowermap<-tactics-keys
+               tactics
+               "Vampirism"
+               "Domination"
+               "Senses"
+               "Madness")
+             :unitskillmap
+              (base/unitskillmap<-tactics-keys
+               tactics
+               "Stealth"))
+           "Vampire: Nosferatu"
+            (base/unit
+             :name "Vampire: Nosferatu"
+             :titles "Sewer Rat"
+             :unitpowermap
+              (base/unitpowermap<-tactics-keys
+               tactics
+               "Vampirism"
+               "Invisibility")
+             :unitskillmap
+              (base/unitskillmap<-tactics-keys
+               tactics
+               "Stealth"))
+           "Vampire: Toreador"
+            (base/unit
+             :name "Vampire: Toreador"
+             :reference
+              "* We come into this stale and plain stale world. So we spend our time, searching for that one sublime revelation. To fill the void. To lose ourselves in beauty and perfection. Beauty can be elegant, seductive, full of pleasure, Raw, Violent, Lethal. Let me help us find it. To lose ourselves. Come closer. I am a beautiful way to die. - Vampire: Bloodlines 2
+               * She'll only come out at nights. The lean and hungry type... I wouldn't if I were you. I know what she can do. She's deadly man, she could really rip your world apart. Mind over matter. Ooh, the beauty is there but a beast is in the heart. Oh, here she comes. Watch out boy she'll chew you up. Oh, here she comes. She's a maneater. - Hall and Oates/No Hard Feelings, Maneater"
+             :summary
+              "* Beauty is both a blessing and a curse
+               * Toreadors were key to founding the Camarilla and are among the most powerful and influencial clans.
+               * The Roses in the Garden - The Toreador who are obscessed with politics, conspiring on casual walks.
+               * Founder - It is said that the Clan's founder, Arikel was a mortal painter and/or sculptress and twin sister of Malkav in the First City. Famed throughout the lands for her work, after her Embrace she painted a mural on which the past, present and future of Kindred society was depicted. When Caine saw a terrible future for his race, he cursed her with the affliction that affects Toreador today – the art that she loved most dearly would now be her obsession and distraction above all things.
+               * Weakness - Fascination"
+             :titles "Artists, Clan of Roses, Degenerate, Gossips, Obsessives"
+             :unitpowermap
+              (base/unitpowermap<-tactics-keys
+               tactics
+               "Vampirism"
+               "Quickness"
+               "Senses"
+               "Presence"))
+           "Vampire: Tremere"
+            (base/unit
+             :name "Vampire: Tremere"
+             :image "images/bestiary/vampire-tremere.png"
+             :titles "Blood Sorcerer, Broken Clan, Pyramid, Usurpers, Warlock, Witch"
+             :summary
+              "* The Tremere is the second youngest clan having appeared in the Dark Ages.
+               * History - The Tremere began as House Tremere, mages of the Order of Hermes named for their leader and founder, Tremere. At the end of the first millennium, the members of House Tremere realized the Hermetic arts were failing and found its immortality potions no longer working. House Tremere undertook numerous experiments, but it was Goratrix who devised a solution in his investigation of vampires. In 1022, Goratrix invited Tremere and six of the founder's closest advisers to participate in the completed ritual, which promised true immortality. Whether Goratrix knew what would happen is known only by him and, perhaps, Tremere, but at the completion of the ritual the participants fell unconscious and were reborn as vampires, their avatars destroyed and magical abilities lost. The mages had gained their immortality but lost the power they lived for. In time, the Tzimisce made war against House Tremere in retribution for the Fiends that had been made part of Goratrix's experiments. The Order of Hermes also became suspicious of diabolical practices being performed by the increasingly secretive House. In 1037 Tremere gathered the seven newly-made Cainites and forced the blood bond upon them. He then declared to them that House Tremere would be restructured with a new pyramid hierarchy, placing himself at the top as Primus of House and clan Tremere and his seven closest followers forming the Inner Council of Seven directly under him. They would slowly begin Embracing the rest of the House, with each initiate being bound to the Inner Council to ensure their loyalty. In time, all members of House Tremere would die or become vampires. While Tremere and Etrius pursued their own research throughout Europe in converting the hermetic arts into Thaumaturgy, Goratrix once again returned to his laboratories with his apprentices at hand. After years of experimentation on captured Tzimisce, Nosferatu, and Gangrel, he succeeded in creating a Gargoyle in 1121, and by 1125 the hybrids were serving as shock troops against the Fiends. Nevertheless, the Tremere found themselves third-class citizens among the undead. Whatever boldness Tremere had shown in entering the night was ignored by the staunchly traditionalist clans, and they were often forced from cities by princes who did not look kindly on their presumption. As he and Etrius rapidly acquired more vampiric lore they discovered the history of Caine and the Antediluvians, as well as the benefits of diablerie. Seeking to establish themselves as a clan proper, the Tremere sought a clan founder to diablerize and settled on Saulot, the enigmatic founder of the Salubri clan. In 1133, Tremere and the Inner Council discovered Saulot's tomb in the Anatolian desert. Tremere diablerized the Antediluvian and promptly entered torpor, leaving the Inner Council to lead the clan and destroy the remaining Salubri. As with everything else that the Tremere had done to this point, the result was a mixed blessing. The Tremere were entrenched in many Cainite courts, their services as mages making them indispensable to princes across Europe. They were now accepted as one of the Low Clans, albeit considered usurpers, distrusted warlocks, and known diablerists. In the early years of the 21st century, the Intellegence agencies of the United States managed to gain access to SchreckNet and gained firsthand knowledge of the existence of a race of undead bloodsuckers that were spread in all corners of the world. Sharing their knowledge with other intelligence agencies, the united secret services contacted the Vatican, whom they knew to have experience fighting the undead. After years of careful research, the Second Inquisition had targeted Vienna as the 'capital of vampires' and prepared a strike against their headquarters. In 2008, a united USSOCOM and Vatican ESOG force stormed the Vienna Chantry of Clan Tremere and destroyed it, blaming it to an ISIS terror attack to the public. London, Las Vegas, Paris, and Marseilles were largely cleared of vampiric activity, with numerous captured vampires being placed in black sites and experimented upon to discover their weaknesses. The Inner Council of Seven were slain and their Blood Bonds shattered. Since then the once monolithic Tremere structure has completely fallen apart."
+             :unitpowermap
+              (base/unitpowermap<-tactics-keys
+               tactics
+               "Vampirism"
+               "Bloodcraft"))
+           :Ventrue
+            (base/unit
+             :name "Vampire: Ventrue"
+             :titles "Bluebloods, Manipulator, Know-it-all"
+             :unitpowermap
+              (base/unitpowermap<-tactics-keys
+               tactics
+               "Vampirism"
+               "Domination"
+               "Toughness")
+             :unitskillmap
+              (base/unitskillmap<-tactics-keys
+               tactics
+               "Influence"))))
+        (base/section
+         :name "Vampires, Sabbat"
+         :unitmap
+          (base/unitmap<-tactics-keys
+           tactics
+           "Vampire: Lasombra"
+           "Vampire: Tzimisce"))
+        (base/section
+         :name "Vampires, Independent"
+         :unitmap
+          (base/unitmap<-tactics-keys
+           tactics
+           "Vampire: Kuei-Jin"
+           "Vampire: Setite")))))))

@@ -48,7 +48,7 @@ export default class nx_tactics_decks_scene_nightonthetown {
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},
-            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Clinic", "Gas Station", "Police Station", "Store: Convenience", "Store: Gun", "Street")
+            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Clinic", "Gas Station", "Police Station", "Road: Asphalt", "Store: Convenience", "Store: Gun", "Street")
           )
         )
       )

@@ -445,32 +445,5 @@
               :level "5")))
         "Raideen"
          (base/unit<-tactics-key tactics "Raideen")
-        :Voltron
-         (base/unit
-          :name "Voltron"
-          :image "Daikaiju/Voltron.png"
-          :mass "700tons"
-          :height "60m"
-          :unitskillmap
-           (base/unitskillmap
-            :Gunnery
-             (base/unitskill
-              :name "Gunnery"
-              :summary
-               "* Wing Boomerang - Boomerang attack from the wings of GoLion.
-                * Space Cutter - Spinning Blades.
-                * Eye Flash - Beams fired from the eyes of GoLion.
-                * Hurricane Attack - Wind attack similar to Daimos Blizzard, but not as strong.
-                * Laser Magnum - Laser-like bullets fired from the mouth of the Green Lion.
-                * Fire Tornado - A burst of flame emits from the mouth of the Red Lion.
-                * Cross Beam - Cross-shaped boomerang fired from the chest.
-                * Gatling Missiles - Small missiles fired from the legs.
-                * Electromagnetic Lance - Weapon used as a spear at times.
-                * Foot Missile - Missiles fired from the mouths of the Blue and Yellow Lions.
-                * Four Lion Attack - The 'Lion Head Attack' 100-Ton Punch.
-                * Grand Fire - A stream of flames fired from the mouths of the Blue and Yellow Lions"
-              :level "5"))
-          :unitpowermap
-           (base/unitpowermap<-tactics-keys
-            tactics
-            "Combine")))))))
+        "Voltron"
+         (base/unit<-tactics-key tactics "Voltron"))))))

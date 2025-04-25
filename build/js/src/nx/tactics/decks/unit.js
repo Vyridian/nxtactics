@@ -95,6 +95,17 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Antios Teron",
+        ":summary",
+        "* Human Spy\n* Antios is a spy for Lord Aramel.\n* He is currently disguised as a mercenary for hire while travelling through the Imperium to assess their defenses. He has been authorized to assassinate any high ranking politician he should encounter to disrupt\nlocal politics. His mission has no time limit, and he is periodically scried by Lord Aramel's wizards.\n* He is a convincing actor who can play most parts well. He is particularly ruthless about his identity and will silence any who might compromise him or his mission.",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Espionage", 5)
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Automaton"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -213,6 +224,8 @@ export default class nx_tactics_decks_unit {
         "Brunhil Virden",
         ":image",
         "images/cards/unit-brunhil-virden.svg",
+        ":titles",
+        "Sergeant of the Guard",
         ":traits",
         "Human Female",
         ":body",
@@ -227,17 +240,21 @@ export default class nx_tactics_decks_unit {
         "70kg/153lb",
         ":speedland",
         "5kph/3mph",
-        ":summary",
-        "* Sergeant of the Guard of Sandalstadt.",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Melee", 3),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+            tactics,
+            "Melee",
+            4,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword: Long")
+          ),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
             tactics,
             "Close Combat",
             2,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
           ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Investigation", 2),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Intimidation", 1)
         )
       ),
@@ -255,7 +272,9 @@ export default class nx_tactics_decks_unit {
         ":mass",
         "200kg/440lb"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cat", ":image", "images/cards/unit-cat.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar: Giant"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Chicken", ":image", "images/cards/unit-chicken.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Avian"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Bull", ":titles", "Mechanical Bull", ":reference", "* It's a mechanical bull, the number one. You'll take a ride from anyone, Everyone wants a ride, and pulls away, from you - Metric, Black Sheep"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Cobra", ":titles", "Iron Cobra"),
@@ -268,6 +287,16 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Clockwork Steed", ":titles", "Iron Horse"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cthonian", ":image", "Cthulhu/Cthonian.png"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dhole", ":titles", "Bhole", ":summary", "* Huge slimy, worm-like creatures several hundred meters long."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Donkey",
+        ":image",
+        "images/cards/unit-donkey.svg",
+        ":imgmirror",
+        true
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dog", ":image", "images/cards/unit-dog.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -309,7 +338,9 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Pytho"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Stoorworm"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Tiamat", ":reference", "Babylonian Mythology", ":titles", "Avatar of Chaos, Avatar of the Wyrm, The Beast, Mother of All Life"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Duck", ":image", "images/cards/unit-duck.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Elder Thing", ":image", "Cthulhu/ElderThing.png", ":reference", "* The toughness of the things was almost incredible. Even the terrific pressure of the deepest sea bottoms appeared powerless to harm them. Very few seemed to die at all except for violence, and their burial places were very limited. - At the Mountains of Madness", ":summary", "* Their metabolism is based on carbon dioxide instead of oxygen; their blood is dark green in color. The nervous system of the Elder Things is quite complex, with five-lobed brains and many ganglial centers. The prismatic cilia on top of the creatures' head suggest that they have senses other than sight, smell, touch, hearing, and taste. Elder Things reproduce through spores. They can derive nourishment from inorganic substances, but prefer to feed on organic life."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Fish: Small", ":image", "images/cards/unit-fish-small.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -362,7 +393,7 @@ export default class nx_tactics_decks_unit {
           ),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
             tactics,
-            "Communications",
+            "Communication",
             1,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Elvish")
           )
@@ -389,10 +420,11 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Special Ability",
             2,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Cannibal", "Savage")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Cannibal", "Prey", "Savage", "Undead")
           )
         )
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goat", ":image", "images/cards/unit-goat.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -441,6 +473,7 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goose", ":image", "images/cards/unit-goose.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -490,6 +523,7 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbear"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellboar"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbull"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Herbalist", ":image", "images/cards/unit-herbalist.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hidden", ":image", "images/cards/unit-hidden.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -518,6 +552,7 @@ export default class nx_tactics_decks_unit {
         ":nature",
         "Skitish"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Innkeeper", ":image", "images/cards/unit-innkeeper.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Iron Maiden", ":summary", "* A semi-humanoid automaton whose lower body is a giant spiked maw that engulfs its target. It is used as an intimidation and torture device."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Jabba the Hutt", ":image", "images/starwars/unit-jabbathehutt.png"),
       vx_core.f_new(
@@ -629,7 +664,6 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Juggernaut"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Kali", ":summary", "* Tzimisce Vampire Methuselah"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -676,12 +710,33 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Ox",
+        ":image",
+        "images/cards/unit-ox.svg",
+        ":imgmirror",
+        true
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Force"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Mount"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Monster"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Warrior"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pilgrim", ":image", "images/cards/unit-pilgrim.png"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pheasant", ":image", "images/cards/unit-pheasant.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pig", ":image", "images/cards/unit-pig.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pig: Wild Boar", ":image", "images/cards/unit-pig-wildboar.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pilgrim", ":image", "images/cards/unit-pilgrim.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pit Fiend", ":titles", "Balrog, Fiend, Lord of the Pit", ":traits", "Devil"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Plough",
+        ":image",
+        "images/cards/unit-plough.svg",
+        ":imgmirror",
+        true
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -703,9 +758,28 @@ export default class nx_tactics_decks_unit {
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Flight", "Transform")
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Set", ":summary", "* Setite Vampire Methuselah"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sheep", ":image", "images/cards/unit-sheep.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shub-Niggurath", ":image", "cthulhu/shubniggurath.png", ":reference", "Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so tenuous in composition that its limbs vanish as quickly as they materialize, its very form dividing constantly into a surplus of smaller abominations that are either reabsorbed into its great form, or that escape to some hideous life elsewhere. Not the spitting image of a fertility goddess but this is as close as the mythos gets. Shub-Niggurath may well be the most widely revered amoung the other gods, infuence reaching not only to the Greeks, Cretans, Egyptions, and some druids, but to races so far-flung across the cosmos as the Mi-go of Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new life, especially intelligent life, is held as a sacred act. Many humans derive joy and self-import from the notion that their kind was toild over by some kind of divine intelligence. Shub-Niggurath with her blind, indifferent, prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's affirmation that life itself is nothing extrodinary. - Tale Foundry", ":titles", "The Black Goat of the Woods with a Thousand Young", ":summary", "* Mother's Gift - The milk of Shub-Niggurath with powerful healing and corrupting properties."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slave 1", ":image", "images/starwars/unit-slave1.png", ":titles", "Firespray-31", ":classification", "Med. Spacecraft"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Skeletal Knight",
+        ":summary",
+        "* Morale - High",
+        ":titles",
+        "Death Knight",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Special Ability",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Savage", "Skeletal", "Undead")
+          )
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Riding")
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -916,9 +990,73 @@ export default class nx_tactics_decks_unit {
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Gunnery", "Stealth")
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Turkey", ":image", "images/cards/unit-turkey.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Urchin", ":image", "images/cards/unit-urchin.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valusian Primitive", ":image", "images/cards/unit-valusian-primitive.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valusian Sorcerer", ":image", "images/cards/unit-valusian-warrior.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valusian Warrior", ":image", "images/cards/unit-valusian-warrior.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Vampire: Kali", ":summary", "* Tzimisce Vampire Methuselah"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Vampire: Kuei-Jin"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Vampire: Lasombra",
+        ":image",
+        "images/bestiary/vampire-lasombra.png",
+        ":titles",
+        "Dark Priest",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism"),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Influence")
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Vampire: Set", ":summary", "* Setite Vampire Methuselah"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Vampire: Setite",
+        ":summary",
+        "* Vampires sired by [Vampire: Set].",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Vampire: Tzimisce",
+        ":image",
+        "images/bestiary/vampire-tzimisce.png",
+        ":reference",
+        "The Tzimisce take pleasure in shaping themselves into a variety of inhuman forms.  Distended skulls, elongated fingers, polychromatic mottling are often displayed to demonstrate their alien superiority.",
+        ":summary",
+        "* The Tzimisce's extensive use of Fleshcraft upon themselves, their servants, and their foes, have made them the most bizarre and alien of the Vampire clans. Fortunately, they are solitary by nature preferring isolated locale to practice their horrid techniques on their hapless prey.\n* Examples: Backroom Surgeon, Carny Folk, Dracula, Inquisitor, Kali, Mortician, Nazi Scientist, Tatoo Artist, Toturer, Vivisectionist",
+        ":titles",
+        "Monster, Alien",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Fleshcraft"),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intimidation")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Voltron",
+        ":image",
+        "Daikaiju/Voltron.png",
+        ":mass",
+        "700tons",
+        ":height",
+        "60m",
+        ":unitskillmap",
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_unitskillmap},
+          ":Gunnery",
+          vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Gunnery", ":summary", "* Wing Boomerang - Boomerang attack from the wings of GoLion.\n* Space Cutter - Spinning Blades.\n* Eye Flash - Beams fired from the eyes of GoLion.\n* Hurricane Attack - Wind attack similar to Daimos Blizzard, but not as strong.\n* Laser Magnum - Laser-like bullets fired from the mouth of the Green Lion.\n* Fire Tornado - A burst of flame emits from the mouth of the Red Lion.\n* Cross Beam - Cross-shaped boomerang fired from the chest.\n* Gatling Missiles - Small missiles fired from the legs.\n* Electromagnetic Lance - Weapon used as a spear at times.\n* Foot Missile - Missiles fired from the mouths of the Blue and Yellow Lions.\n* Four Lion Attack - The 'Lion Head Attack' 100-Ton Punch.\n* Grand Fire - A stream of flames fired from the mouths of the Blue and Yellow Lions", ":level", "5")
+        ),
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Combine")
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Waif", ":image", "images/cards/unit-waif.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -1024,13 +1162,13 @@ export default class nx_tactics_decks_unit {
         ":mass",
         "80kg/175",
         ":summary",
-        "[Zombie]",
+        "* [Combat]: IF [Evade] THEN flip to [Fast].",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
             tactics,
             "Close Combat",
-            1,
+            2,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
           )
         ),
@@ -1041,6 +1179,11 @@ export default class nx_tactics_decks_unit {
             "Natural Weaponry",
             1,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
+          ),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Special Ability",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Zombie")
           )
         )
       ),
@@ -1067,7 +1210,7 @@ export default class nx_tactics_decks_unit {
         ":nature",
         "Dogged",
         ":summary",
-        "[Zombie]",
+        "* [Combat]: IF [Evade] THEN flip to [Fast].",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
@@ -1084,6 +1227,11 @@ export default class nx_tactics_decks_unit {
             "Natural Weaponry",
             1,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
+          ),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Special Ability",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Zombie")
           )
         )
       ),
@@ -1110,7 +1258,7 @@ export default class nx_tactics_decks_unit {
         ":demeanor",
         "Aloof",
         ":summary",
-        "[Zombie]",
+        "* [Combat]: IF [Evade] THEN flip to [Fast].",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
@@ -1127,6 +1275,11 @@ export default class nx_tactics_decks_unit {
             "Natural Weaponry",
             1,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
+          ),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Special Ability",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Zombie")
           )
         )
       ),
@@ -1149,24 +1302,27 @@ export default class nx_tactics_decks_unit {
         ":mass",
         "80kg/175",
         ":summary",
-        "[Zombie]",
+        "* Zombies are nearly mindless animated corpses.\n* They act irrationally and attack all living creatures with no sense of self preservation.\n* [Combat]: IF [Evade] THEN flip to [Fast].",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
             tactics,
             "Close Combat",
-            1,
+            2,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
           )
         ),
         ":unitpowermap",
-        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
-            tactics,
-            "Natural Weaponry",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
-          )
+        nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
+          tactics,
+          "Natural Weaponry",
+          1,
+          vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
+        ),
+        nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+          tactics,
+          "Special Ability",
+          vx_core.f_new({"any-1": vx_core.t_stringlist}, "Zombie")
         )
       )
     )

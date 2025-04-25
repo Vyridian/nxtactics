@@ -846,6 +846,7 @@
        "Mental Fortitude"
        "Mental Weakness"
        "Mind Over Matter"
+       "Presence"
        "Psychic Power")))))
 
 (func chapter_movement_powers : base/chapter

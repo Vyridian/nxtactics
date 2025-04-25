@@ -423,7 +423,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Mental Powers",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Charm", "Domination", "Empathy", "Genius", "Illusion", "Intuition", "Madness", "Mental Combat", "Mental Connection", "Mental Fortitude", "Mental Weakness", "Mind Over Matter", "Psychic Power")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Charm", "Domination", "Empathy", "Genius", "Illusion", "Intuition", "Madness", "Mental Combat", "Mental Connection", "Mental Fortitude", "Mental Weakness", "Mind Over Matter", "Presence", "Psychic Power")
         )
       )
     )

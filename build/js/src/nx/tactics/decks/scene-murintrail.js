@@ -37,11 +37,11 @@ export default class nx_tactics_decks_scene_murintrail {
           {"any-1": nx_tactics_base.t_cardlist},
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist},
-            nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Jes Aveer", "Jon Aveer", "Xeib Hanower", "Wilm Ducon", "Lili Ducon", "Brunhil Virden", "Goblin: Scout", "Bandit", "Bruiser", "Guardsman", "Innkeeper", "Pilgrim", "Dog: Wild", "Horse", "Cart: Wooden")
+            nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Jes Aveer", "Jon Aveer", "Xeib Hanower", "Wilm Ducon", "Lili Ducon", "Brunhil Virden", "Goblin: Scout", "Bandit", "Bruiser", "Guardsman", "Herbalist", "Innkeeper", "Pilgrim", "Urchin", "Waif", "Cat", "Chicken", "Dog", "Dog: Wild", "Duck", "Goat", "Goose", "Pig", "Donkey", "Sheep", "Horse", "Ox", "Cart: Wooden", "Plough")
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_cardimage, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_cardimagelist},
-            nx_tactics_base.f_cardimagelist_from_tactics_unitkeys(tactics, "Flint (Early)", "Jes Aveer", "Jon Aveer", "Xeib Hanower", "Wilm Ducon", "Lili Ducon", "Brunhil Virden", "Goblin: Scout", "Bandit", "Bruiser", "Guardsman", "Innkeeper", "Pilgrim", "Dog: Wild", "Horse", "Cart: Wooden")
+            nx_tactics_base.f_cardimagelist_from_tactics_unitkeys(tactics, "Flint (Early)", "Jes Aveer", "Jon Aveer", "Xeib Hanower", "Wilm Ducon", "Lili Ducon", "Brunhil Virden", "Goblin: Scout", "Bandit", "Bruiser", "Guardsman", "Herbalist", "Innkeeper", "Pilgrim", "Urchin", "Waif", "Cat", "Chicken", "Dog", "Dog: Wild", "Donkey", "Duck", "Goose", "Pig", "Sheep", "Horse", "Ox", "Cart: Wooden")
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
@@ -61,7 +61,7 @@ export default class nx_tactics_decks_scene_murintrail {
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},
-            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Sandalstadt", "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Shop: General", "Shop: Herbalist", "Shrine", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
+            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Sandalstad", "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Shop: General", "Shop: Herbalist", "Shrine", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
           )
         )
       )

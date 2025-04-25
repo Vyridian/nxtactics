@@ -187,11 +187,11 @@ export default class nx_tactics_books_modern {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Communications",
+                ":Communication",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Communications",
+                  "Communication",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},

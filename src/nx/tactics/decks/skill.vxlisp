@@ -1493,7 +1493,7 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Trade Union")))
   (base/skill
-   :name "Communications"
+   :name "Communication"
    :abilitymap
     (base/abilitymap
      :Appearance
@@ -1567,9 +1567,14 @@ x +1DMG vs. Crouching."
        :name "Poetry"
        :summary "Can author any type of poetry"
        :titles "Poet")
-     :Politics
+     "Politics"
       (base/ability
        :name "Politics")
+     "Power of Words"
+      (base/ability
+       :name "Power of Words"
+       :summary
+        "* [Skill]: [Communication]")
      :Recruiting
       (base/ability
        :name "Recruiting"
@@ -1777,89 +1782,29 @@ x +1DMG vs. Crouching."
    :titles "Chicanery, Legerdemain"
    :stat "Shadow"
    :abilitymap
-    (base/abilitymap
-     "Con Artist"
-      (base/ability
-       :name "Con Artist")
+    (base/abilitymap<-tactics-keys
+     tactics
      "Confidence Game"
-      (base/ability
-       :name "Confidence Game"
-       :titles "Con Artist, Swindler")
-     :Decoy
-      (base/ability
-       :name "Decoy"
-       :summary
-        "* Create a decoy to mislead.
-         * [Move]: Remove this unit from play and place 1 Decoy Token and 1 Decoy Unit Token on this unit's space. Both decoys may act normally during the Action phase, but any action but movement will dispel the decoys.  Both decoys defend as the original unit. If either unit is Hit, both decoys are dispelled. The decoys last until the next turn or until dispelled.")
+     "Decoy"
      "Detect Trap"
-      (base/ability
-       :name "Detect Trap")
-     :Distraction
-      (base/ability
-       :name "Distraction"
-       :titles "Throw Dirt")
-     :Escape
-      (base/ability
-       :name "Escape"
-       :reference
-        "* The chain in those handcuffs is high-tensile steel. It'd take you ten minutes to hack through it with this. Now, if you're lucky, you could hack through your ankle in five minutes. Go."
-       :summary
-        "* The ability comes from extensive practice escaping from various bonds and confinements. At higher abilities, the user can dislocate joints to slither out of bonds."
-       :titles "Escape Artist")
+     "Distraction"
+     "Escape"
      "Evade Pursuit"
-      (base/ability
-       :name "Evade Pursuit"
-       :summary "* Ability to correctly evaluate the opponent's pursuit style and outwit the pursuer.")
-     :Forgery
-      (base/ability
-       :name "Forgery"
-       :summary
-        "* The ability to forge money or documents. This ability is also used while creating money to prevent forgery.
-         * [Extended Action]: Roll vs. object quality or anti-forgery level. Any [Hits] allow a forgery that can pass at a distance. The more [Hits] and [Criticals] rolled, the more indistinquishable from the original. High level forgeries are works of art unto themselves.")
-     :Gambling
-      (base/ability
-       :name "Gambling"
-       :titles "Gambler, High Roller")
+     "Forgery"
+     "Gambling"
      "Honor Among Thieves"
-      (base/ability
-       :name "Honor Among Thieves")
-     :Misdirection
-      (base/ability
-       :name "Misdirection")
+     "Misdirection"
      "Pick Pocket"
-      (base/ability<-tactics-key tactics "Pick Pocket")
      "Sleight of Hand"
-      (base/ability
-       :name "Sleight of Hand"
-       :summary "* Hide a small object in hand without being noticed."
-       :titles "Legerdemain")
-     :Smuggling
-      (base/ability
-       :name "Smuggling")
+     "Smuggling"
      "Stage Magic"
-      (base/ability
-       :name "Stage Magic")
      "Thieves Guild Codes"
-      (base/ability
-       :name "Thieves Guild Codes"
-       :summary "Thieves must conceal their illegal conversations and the guilds have developed a shifting series of hand signals, marks, and code words to communicate simple concepts without arising suspiscion.")
      "Use Blinding Powder"
-      (base/ability
-       :name "Use Blinding Powder")
      "Use Flash Powder"
-      (base/ability
-       :name "Use Flash Powder")
      "Use Irritating Powder"
-      (base/ability
-       :name "Use Irritating Powder")
      "Use Sleeping Powder"
-      (base/ability
-       :name "Use Sleeping Powder")
      "Vanish"
-      (base/ability<-tactics-key tactics "Vanish")
-     "Ventriloquism"
-      (base/ability
-       :name "Ventriloquism"))
+     "Ventriloquism")
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -1869,30 +1814,19 @@ x +1DMG vs. Crouching."
    :name "Driving"
    :titles "Driver, Trucker"
    :abilitymap
-    (base/abilitymap
-     "Bootlegger Reverse"
-      (base/ability
-       :name "Bootlegger Reverse")
-     :Swerve
-      (base/ability
-       :name "Swerve")
+    (base/abilitymap<-tactics-keys
+     tactics
      "3 Point Turn"
-      (base/ability
-       :name "3 Point Turn")
+     "Bootlegger Reverse"
      "Parallel Parking"
-      (base/ability
-       :name "Parallel Parking"))
+     "Swerve")
    :specialtymap
-    (base/specialtymap
-     :Motorcycles
-      (base/specialty
-       :name "Motorcycles")
-     :Trucks
-      (base/specialty
-       :name "Trucks")
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Motorcycles"
+     "Trucks"
      "Construction Vehicles"
-      (base/specialty
-       :name "Construction Vehicles")))
+     "Race Cars"))
   (base/skill
    :name "Electronics"
    :reference "Reverse the polarity of the neutron flow - Doctor Who"
@@ -3013,13 +2947,8 @@ x +1DMG vs. Crouching."
      :Incite
       (base/ability
        :name "Incite")
-     :Inspiration
-      (base/ability
-       :name "Inspiration"
-       :summary
-        "* Allies in Radius are Continuously inspired to greater feats by this ability.
-         * [Passive]
-         * [Continuous]: [Retreats] are reduced by 1 for all allies within the radius.")
+     "Inspiration"
+      (base/ability<-tactics-key tactics "Inspiration")
      :Juggling
       (base/ability
        :name "Juggling"
@@ -3120,14 +3049,8 @@ x +1DMG vs. Crouching."
      :Pickup
       (base/ability
        :name "Pickup")
-     :Seduction
-      (base/ability
-       :name "Seduction"
-       :reference
-        "* But what of all those sweet words you spoke in private?  Oh that's just what we call pillow talk, baby, that's all. - Ash, Army of Darkness
-         * But you don't understand. That men are weak? 
-         * Guess I must be dumb. She had a pocket full of horses, trojan and some of them used... I guess I should have closed my eyes when you drove me to the pace where your horses run free. Cause I felt a little ill when I saw all the pictures of the jockeys that were there before me. Believe it or not, I started to worry. I wondered if I had enough class. But it was Saturday night, I guess that makes it alright. And you say, Baby have you got enough gas? Oh, Yeah! - Prince, Little Red Corvette"
-       :titles "Femme Fatale, Vamp")
+     "Seduction"
+      (base/ability<-tactics-key tactics "Seduction")
      "Silver Tongue"
       (base/ability
        :name "Silver Tongue")

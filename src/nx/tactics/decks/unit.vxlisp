@@ -34,6 +34,18 @@
         tactics
         "Salvo"))))
   (base/unit
+   :name "Antios Teron"
+   :summary
+    "* Human Spy
+     * Antios is a spy for Lord Aramel.
+     * He is currently disguised as a mercenary for hire while travelling through the Imperium to assess their defenses. He has been authorized to assassinate any high ranking politician he should encounter to disrupt
+     local politics. His mission has no time limit, and he is periodically scried by Lord Aramel's wizards.
+     * He is a convincing actor who can play most parts well. He is particularly ruthless about his identity and will silence any who might compromise him or his mission."
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl
+      tactics "Espionage" 5)))
+  (base/unit
    :name "Automaton")
   (base/unit
    :name "Bandit"
@@ -144,6 +156,7 @@
   (base/unit
    :name "Brunhil Virden"
    :image "images/cards/unit-brunhil-virden.svg"
+   :titles "Sergeant of the Guard"
    :traits "Human Female"
    :body "7x1"
    :mind "6x1"
@@ -151,15 +164,16 @@
    :speed "5x0"
    :mass "70kg/153lb"
    :speedland "5kph/3mph"
-   :summary
-    "* Sergeant of the Guard of Sandalstadt."
    :unitskillmap
     (base/unitskillmap<-unitskilllist
-     (base/unitskill<-tactics-key-lvl
-      tactics "Melee" 3)
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Melee" 4
+      (stringlist "Sword: Long"))
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Close Combat" 2
       (stringlist "Grab"))
+     (base/unitskill<-tactics-key-lvl
+      tactics "Investigation" 2)
      (base/unitskill<-tactics-key-lvl
       tactics "Intimidation" 1)))
   (base/unit
@@ -171,7 +185,13 @@
    :body "2x2"
    :mass "200kg/440lb")
   (base/unit
+   :name "Cat"
+   :image "images/cards/unit-cat.svg")
+  (base/unit
    :name "Caterpillar: Giant")
+  (base/unit
+   :name "Chicken"
+   :image "images/cards/unit-chicken.svg")
   (base/unit
    :name "Clockwork Avian")
   (base/unit
@@ -216,6 +236,13 @@
    :summary
     "* Huge slimy, worm-like creatures several hundred meters long.")
   (base/unit
+   :name "Donkey"
+   :image "images/cards/unit-donkey.svg"
+   :imgmirror true)
+  (base/unit
+   :name "Dog"
+   :image "images/cards/unit-dog.svg")
+  (base/unit
    :name "Dog: Wild"
    :image "images/cards/unit-dog-wild.svg"
    :summary
@@ -256,12 +283,18 @@
    :reference "Babylonian Mythology"
    :titles "Avatar of Chaos, Avatar of the Wyrm, The Beast, Mother of All Life")
   (base/unit
+   :name "Duck"
+   :image "images/cards/unit-duck.svg")
+  (base/unit
    :name "Elder Thing"
    :image "Cthulhu/ElderThing.png"
    :reference
     "* The toughness of the things was almost incredible. Even the terrific pressure of the deepest sea bottoms appeared powerless to harm them. Very few seemed to die at all except for violence, and their burial places were very limited. - At the Mountains of Madness"
    :summary
     "* Their metabolism is based on carbon dioxide instead of oxygen; their blood is dark green in color. The nervous system of the Elder Things is quite complex, with five-lobed brains and many ganglial centers. The prismatic cilia on top of the creatures' head suggest that they have senses other than sight, smell, touch, hearing, and taste. Elder Things reproduce through spores. They can derive nourishment from inorganic substances, but prefer to feed on organic life.")
+  (base/unit
+   :name "Fish: Small"
+   :image "images/cards/unit-fish-small.svg")
   (base/unit
    :name "Flint (Early)"
    :image "images/cards/unit-flint.svg"
@@ -289,7 +322,7 @@
       tactics "Tradeskills" 1
       (stringlist "House Painting"))
      (base/unitskill<-tactics-key-lvl-abilities
-      tactics "Communications" 1
+      tactics "Communication" 1
       (stringlist "Elvish"))
     )
   )
@@ -313,7 +346,12 @@
       tactics "Special Ability" 2
       (stringlist
        "Cannibal"
-       "Savage"))))
+       "Prey"
+       "Savage"
+       "Undead"))))
+  (base/unit
+   :name "Goat"
+   :image "images/cards/unit-goat.svg")
   (base/unit
    :name "Goblin: Scout"
    :image "images/cards/unit-goblin-scout.svg"
@@ -338,6 +376,9 @@
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 1
       (stringlist "Sneak"))))
+  (base/unit
+   :name "Goose"
+   :image "images/cards/unit-goose.svg")
   (base/unit
    :name "Guardsman"
    :image "images/cards/unit-guardsman.svg"
@@ -384,6 +425,9 @@
   (base/unit
    :name "Hellbull")
   (base/unit
+   :name "Herbalist"
+   :image "images/cards/unit-herbalist.svg")
+  (base/unit
    :name "Hidden"
    :image "images/cards/unit-hidden.svg")
   (base/unit
@@ -400,6 +444,9 @@
    :speedland "20kph/12mph"
    :demeanor "Aloof"
    :nature "Skitish")
+  (base/unit
+   :name "Innkeeper"
+   :image "images/cards/unit-innkeeper.svg")
   (base/unit
    :name "Iron Maiden"
    :summary
@@ -466,9 +513,6 @@
   (base/unit
    :name "Juggernaut")
   (base/unit
-   :name "Kali"
-   :summary "* Tzimisce Vampire Methuselah")
-  (base/unit
    :name "Lili Ducon"
    :image "images/cards/unit-liliducon.svg"
    :summary
@@ -493,6 +537,10 @@
       tactics "Survival" 1
       (stringlist "Foraging"))))
   (base/unit
+   :name "Ox"
+   :image "images/cards/unit-ox.svg"
+   :imgmirror true)
+  (base/unit
    :name "Phantasmal Force")
   (base/unit
    :name "Phantasmal Mount")
@@ -501,12 +549,25 @@
   (base/unit
    :name "Phantasmal Warrior")
   (base/unit
+   :name "Pheasant"
+   :image "images/cards/unit-pheasant.svg")
+  (base/unit
+   :name "Pig"
+   :image "images/cards/unit-pig.svg")
+  (base/unit
+   :name "Pig: Wild Boar"
+   :image "images/cards/unit-pig-wildboar.svg")
+  (base/unit
    :name "Pilgrim"
-   :image "images/cards/unit-pilgrim.png")
+   :image "images/cards/unit-pilgrim.svg")
   (base/unit
    :name "Pit Fiend"
    :titles "Balrog, Fiend, Lord of the Pit"
    :traits "Devil")
+  (base/unit
+   :name "Plough"
+   :image "images/cards/unit-plough.svg"
+   :imgmirror true)
   (base/unit
    :name "Raideen"
    :image "images/daikaiju/unit-raideen.png"
@@ -524,8 +585,8 @@
       "Flight"
       "Transform"))
   (base/unit
-   :name "Set"
-   :summary "* Setite Vampire Methuselah")
+   :name "Sheep"
+   :image "images/cards/unit-sheep.svg")
   (base/unit
    :name "Shub-Niggurath"
    :image "cthulhu/shubniggurath.png"
@@ -539,6 +600,22 @@
    :image "images/starwars/unit-slave1.png"
    :titles "Firespray-31"
    :classification "Med. Spacecraft")
+  (base/unit
+   :name "Skeletal Knight"
+   :summary "* Morale - High"
+   :titles "Death Knight"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Special Ability"
+      (stringlist
+       "Savage"
+       "Skeletal"
+       "Undead")))
+   :unitskillmap
+    (base/unitskillmap<-tactics-keys
+     tactics
+     "Riding"))
   (base/unit
    :name "Snake: Emerald Viper"
    :secrets
@@ -675,6 +752,12 @@
      "Gunnery"
      "Stealth"))
   (base/unit
+   :name "Turkey"
+   :image "images/cards/unit-turkey.svg")
+  (base/unit
+   :name "Urchin"
+   :image "images/cards/unit-urchin.svg")
+  (base/unit
    :name "Valusian Primitive"
    :image "images/cards/unit-valusian-primitive.svg")
   (base/unit
@@ -683,6 +766,84 @@
   (base/unit
    :name "Valusian Warrior"
    :image "images/cards/unit-valusian-warrior.svg")
+  (base/unit
+   :name "Vampire: Kali"
+   :summary "* Tzimisce Vampire Methuselah")
+  (base/unit
+   :name "Vampire: Kuei-Jin")
+  (base/unit
+   :name "Vampire: Lasombra"
+   :image "images/bestiary/vampire-lasombra.png"
+   :titles "Dark Priest"
+   :unitpowermap
+    (base/unitpowermap<-tactics-keys
+     tactics
+     "Vampirism")
+   :unitskillmap
+    (base/unitskillmap<-tactics-keys
+     tactics
+     "Influence"))
+  (base/unit
+   :name "Vampire: Set"
+   :summary
+    "* Setite Vampire Methuselah")
+  (base/unit
+   :name "Vampire: Setite"
+   :summary
+    "* Vampires sired by [Vampire: Set]."
+   :unitpowermap
+    (base/unitpowermap<-tactics-keys
+     tactics
+     "Vampirism"))
+  (base/unit
+   :name "Vampire: Tzimisce"
+   :image "images/bestiary/vampire-tzimisce.png"
+   :reference
+    "The Tzimisce take pleasure in shaping themselves into a variety of inhuman forms.  Distended skulls, elongated fingers, polychromatic mottling are often displayed to demonstrate their alien superiority."
+   :summary
+    "* The Tzimisce's extensive use of Fleshcraft upon themselves, their servants, and their foes, have made them the most bizarre and alien of the Vampire clans. Fortunately, they are solitary by nature preferring isolated locale to practice their horrid techniques on their hapless prey.
+     * Examples: Backroom Surgeon, Carny Folk, Dracula, Inquisitor, Kali, Mortician, Nazi Scientist, Tatoo Artist, Toturer, Vivisectionist"
+   :titles "Monster, Alien"
+   :unitpowermap
+    (base/unitpowermap<-tactics-keys
+     tactics
+     "Vampirism"
+     "Fleshcraft")
+   :unitskillmap
+    (base/unitskillmap<-tactics-keys
+     tactics
+     "Intimidation"))
+  (base/unit
+   :name "Voltron"
+   :image "Daikaiju/Voltron.png"
+   :mass "700tons"
+   :height "60m"
+   :unitskillmap
+    (base/unitskillmap
+     :Gunnery
+      (base/unitskill
+       :name "Gunnery"
+       :summary
+        "* Wing Boomerang - Boomerang attack from the wings of GoLion.
+         * Space Cutter - Spinning Blades.
+         * Eye Flash - Beams fired from the eyes of GoLion.
+         * Hurricane Attack - Wind attack similar to Daimos Blizzard, but not as strong.
+         * Laser Magnum - Laser-like bullets fired from the mouth of the Green Lion.
+         * Fire Tornado - A burst of flame emits from the mouth of the Red Lion.
+         * Cross Beam - Cross-shaped boomerang fired from the chest.
+         * Gatling Missiles - Small missiles fired from the legs.
+         * Electromagnetic Lance - Weapon used as a spear at times.
+         * Foot Missile - Missiles fired from the mouths of the Blue and Yellow Lions.
+         * Four Lion Attack - The 'Lion Head Attack' 100-Ton Punch.
+         * Grand Fire - A stream of flames fired from the mouths of the Blue and Yellow Lions"
+       :level "5"))
+   :unitpowermap
+    (base/unitpowermap<-tactics-keys
+     tactics
+     "Combine"))
+  (base/unit
+   :name "Waif"
+   :image "images/cards/unit-waif.svg")
   (base/unit
    :name "Wilm Ducon"
    :image "images/cards/unit-wilmducon.svg"
@@ -739,17 +900,20 @@
    :speedland "3kph/2mph"
    :mass "80kg/175"
    :summary
-    "[Zombie]"
+    "* [Combat]: IF [Evade] THEN flip to [Fast]."
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
-      tactics "Close Combat" 1
+      tactics "Close Combat" 2
       (stringlist "Grab")))
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
       tactics "Natural Weaponry" 1
-      (stringlist "Bite"))))
+      (stringlist "Bite"))
+     (base/unitpower<-tactics-key-abilities
+      tactics "Special Ability"
+      (stringlist "Zombie"))))
   (base/unit
    :name "Zombie: Dog"
    :image "images/cards/unit-zombie-dog.svg"
@@ -762,7 +926,7 @@
    :height "76cm/30in"
    :nature "Dogged"
    :summary
-    "[Zombie]"
+    "* [Combat]: IF [Evade] THEN flip to [Fast]."
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
@@ -772,7 +936,10 @@
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
       tactics "Natural Weaponry" 1
-      (stringlist "Bite"))))
+      (stringlist "Bite"))
+     (base/unitpower<-tactics-key-abilities
+      tactics "Special Ability"
+      (stringlist "Zombie"))))
   (base/unit
    :name "Zombie: Runner"
    :image "images/cards/unit-zombie-runner.svg"
@@ -785,7 +952,7 @@
    :height "1.8m/6ft"
    :demeanor "Aloof"
    :summary
-    "[Zombie]"
+    "* [Combat]: IF [Evade] THEN flip to [Fast]."
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
@@ -795,7 +962,10 @@
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
       tactics "Natural Weaponry" 1
-      (stringlist "Bite"))))
+      (stringlist "Bite"))
+     (base/unitpower<-tactics-key-abilities
+      tactics "Special Ability"
+      (stringlist "Zombie"))))
  (base/unit
   :name "Zombie: Walker"
   :image "images/cards/unit-zombie-walker.svg"
@@ -806,17 +976,21 @@
   :will "2x1"
   :mass "80kg/175"
   :summary
-   "[Zombie]"
+   "* Zombies are nearly mindless animated corpses.
+    * They act irrationally and attack all living creatures with no sense of self preservation.
+    * [Combat]: IF [Evade] THEN flip to [Fast]."
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill<-tactics-key-lvl-abilities
-     tactics "Close Combat" 1
+     tactics "Close Combat" 2
      (stringlist "Grab")))
   :unitpowermap
-   (base/unitpowermap<-unitpowerlist
-    (base/unitpower<-tactics-key-lvl-abilities
-     tactics "Natural Weaponry" 1
-     (stringlist "Bite"))))
+   (base/unitpower<-tactics-key-lvl-abilities
+    tactics "Natural Weaponry" 1
+    (stringlist "Bite"))
+   (base/unitpower<-tactics-key-abilities
+    tactics "Special Ability"
+    (stringlist "Zombie")))
  )
  :doc "Returns the base unitmap")
 

@@ -26,6 +26,7 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Blacksmith", ":image", "images/cards/place-blacksmith.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Brambles", ":image", "images/cards/place-brambles.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Campsite", ":image", "images/cards/place-campsite.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Carpet", ":image", "images/cards/place-carpet.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Cave", ":image", "images/cards/place-cave.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Chasm", ":image", "images/cards/place-chasm.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Cliff", ":image", "images/cards/place-cliff.svg"),
@@ -49,10 +50,12 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Pool: Acid", ":image", "images/cards/place-pool-acid.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Pond", ":image", "images/cards/place-pond.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "River", ":image", "images/cards/place-river.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Road: Asphalt", ":image", "images/cards/place-road-asphalt.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Road: Gravel", ":image", "images/cards/place-road-gravel.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Road: Stone", ":image", "images/cards/place-road-stone.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Rock", ":image", "images/cards/place-rock.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Rockslide", ":image", "images/cards/place-rockslide.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Sandalstad", ":summary", "* A small settlement nestled near the Sandal Forest and Mt. Murin.\n* It was established to harvest Sandalwood trees and the oils they produces. Transporting the wood is difficult, so the settlement is more focused on trading oils, creams, and perfumes. Local wheat farming, breads, and goat and sheep herding make up the main diet."),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Shop: General", ":image", "images/cards/place-shop-general.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Shop: Herbalist", ":image", "images/cards/place-shop-herbalist.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Shrine", ":image", "images/cards/place-shrine.svg"),
@@ -71,9 +74,9 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tavern Common", ":image", "images/cards/place-tavern-common.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tavern Dining", ":image", "images/cards/place-tavern-dining.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Temple", ":image", "images/cards/place-temple.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tile", ":image", "images/cards/place-tile.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Trading Post", ":image", "images/cards/place-tradingpost.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Wall: Stone", ":image", "images/cards/place-wall-stone.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Sandalstadt", ":summary", "* A small settlement nestled near the Sandal Forest and Mt. Murin.\n* It was established to harvest Sandalwood trees and the oils they produces. Transporting the wood is difficult, so the settlement is more focused on trading oils, creams, and perfumes. Local wheat farming, breads, and goat and sheep herding make up the main diet.")
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Wall: Stone", ":image", "images/cards/place-wall-stone.svg")
     )
     return output
   }

@@ -15,6 +15,9 @@
    :name "Campsite"
    :image "images/cards/place-campsite.svg")
   (base/place
+   :name "Carpet"
+   :image "images/cards/place-carpet.svg")
+  (base/place
    :name "Cave"
    :image "images/cards/place-cave.svg")
   (base/place
@@ -84,6 +87,9 @@
    :name "River"
    :image "images/cards/place-river.svg")
   (base/place
+   :name "Road: Asphalt"
+   :image "images/cards/place-road-asphalt.svg")
+  (base/place
    :name "Road: Gravel"
    :image "images/cards/place-road-gravel.svg")
   (base/place
@@ -95,6 +101,11 @@
   (base/place
    :name "Rockslide"
    :image "images/cards/place-rockslide.svg")
+  (base/place
+   :name "Sandalstad"
+   :summary
+    "* A small settlement nestled near the Sandal Forest and Mt. Murin.
+     * It was established to harvest Sandalwood trees and the oils they produces. Transporting the wood is difficult, so the settlement is more focused on trading oils, creams, and perfumes. Local wheat farming, breads, and goat and sheep herding make up the main diet.")
   (base/place
    :name "Shop: General"
    :image "images/cards/place-shop-general.svg")
@@ -152,16 +163,14 @@
    :name "Temple"
    :image "images/cards/place-temple.svg")
   (base/place
+   :name "Tile"
+   :image "images/cards/place-tile.svg")
+  (base/place
    :name "Trading Post"
    :image "images/cards/place-tradingpost.svg")
   (base/place
    :name "Wall: Stone"
    :image "images/cards/place-wall-stone.svg")
-  (base/place
-   :name "Sandalstadt"
-   :summary
-    "* A small settlement nestled near the Sandal Forest and Mt. Murin.
-     * It was established to harvest Sandalwood trees and the oils they produces. Transporting the wood is difficult, so the settlement is more focused on trading oils, creams, and perfumes. Local wheat farming, breads, and goat and sheep herding make up the main diet.")
   )
  :doc "Returns the base placemap")
 

@@ -508,9 +508,9 @@ actually turning into rubble."
           :name "Diplomat"
           :unitskillmap
            (base/unitskillmap
-            :Communications
+            :Communication
              (base/unitskill
-              :name "Communications"
+              :name "Communication"
               :unitabilitymap
                (base/unitabilitymap
                 :Negotiation

@@ -8,7 +8,7 @@
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    viewBox="0 0 238.11024 332.59842"
    xml:space="preserve"
-   inkscape:export-filename="card-conflict-c8.png"
+   inkscape:export-filename="..\..\work\cards\rule-hitlocation-vehicle.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -23,9 +23,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.92441828"
-     inkscape:cx="-20.012586"
-     inkscape:cy="389.97498"
+     inkscape:zoom="1.8488366"
+     inkscape:cx="141.98118"
+     inkscape:cy="255.56612"
      inkscape:window-width="1846"
      inkscape:window-height="989"
      inkscape:window-x="52"
@@ -589,11 +589,11 @@
          y="-212.43547">A</tspan></text><text
        xml:space="preserve"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.3333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000"
-       x="203.5005"
+       x="200.16566"
        y="-178.21002"
        id="text2-0-4-8"
        transform="rotate(90)"><tspan
          sodipodi:role="line"
-         id="tspan19"
-         x="203.5005"
-         y="-178.21002">Bow</tspan></text></g></svg>
+         id="tspan1"
+         x="200.16566"
+         y="-178.21002">Prow</tspan></text></g></svg>

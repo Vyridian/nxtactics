@@ -8,6 +8,10 @@
   (base/ability
    :name "2-Legged")
   (base/ability
+   :name "3 Point Turn"
+   :summary
+    "* [Skill]: [Driving]")
+  (base/ability
    :name "3-Legged")
   (base/ability
    :name "4-Legged")
@@ -119,23 +123,30 @@
 
      * The barrage was developed in World War I, with the infantry following the advancing barrage. Its employment in this way recognised the importance of artillery fire in neutralising, rather than destroying, the enemy. A creeping barrage immediately followed by an infantry assault could be far more effective than weeks of preliminary bombardment.")
   (base/ability
+   :name "Barren Loins"
+   :summary
+    "* [Power]: [Enchantment]
+     * Target cannot conceive a child while under this curse.")
+  (base/ability
    :name "Bite"
    :summary
-    "* IF you have a [Hold] on a target
-     * THEN
-     ** [Skill]: [Close Combat]
-     ** [Damage]: [Body] [Pierce] [Slash] [Hack]")
+    "* [Skill]: [Close Combat]
+     * IF you have a [Hold] on a target THEN [Damage]: [Body] [Pierce] [Slash] [Hack]")
   (base/ability
    :name "Blacksmithing"
-   :titles "Blacksmith")
+   :titles "Blacksmith"
+   :summary
+    "* [Skill]: [Tradeskills]")
   (base/ability
    :name "Blade Barrier"
-   :summary "* Creates a 3 space wide [Wall] directly in front of the unit by rapidly swinging the blade in a flashy display. Anything crossing this wall is subject to an [Opportunity Attack]."
-   :titles "Wall of Swords")
+   :titles "Wall of Swords"
+   :summary
+    "* Creates a 3 space wide [Wall] directly in front of the unit by rapidly swinging the blade in a flashy display. Anything crossing this wall is subject to an [Opportunity Attack].")
   (base/ability
    :name "Blade Locking"
    :summary
-    "* [Requires]: [Parry], May only be used against swords, knives or polearms.
+    "* [Skill]: [Melee]
+     * [Requires]: [Parry], May only be used against swords, knives or polearms.
      * [Reaction]: -2
      * [Success]: Opponent gains a [Broken Defense Token] for each [Hit]")
   (base/ability
@@ -203,6 +214,10 @@
    :reference
     "* I'll tell you a dirty little secret. When you're in the middle of an explosion, it's the ultimate rush. - Haggerty, Obliterated
      * Who has one thumb and just saved Las Vegas? This guy! - Hagerty, Obliterated")
+  (base/ability
+   :name "Bootlegger Reverse"
+   :summary
+    "* [Skill]: [Driving]")
   (base/ability
    :name "Bowel Raker"
    :summary
@@ -292,7 +307,9 @@
      * [Attack]: Each [Critical Hit] may remove a [Damage Token] from this unit.")
   (base/ability
    :name "Carpentry"
-   :titles "Carpenter")
+   :titles "Carpenter"
+   :summary
+    "* [Skill]: [Tradeskills]")
   (base/ability
    :name "Chain of Command"
    :summary
@@ -302,6 +319,19 @@
    :name "Chaotic"
    :summary
     "* [Power]: [Special Ability]")
+  (base/ability
+   :name "Charm"
+   :titles "Warding Sign"
+   :summary
+    "* [Power]: [Enchantment]
+     * The opposite of [Malediction]. Charm reduces the severity of negative effects.
+     * [Requires]: Target cannot have any [Charm] Tokens.
+     * [Action]: Roll vs. Spirit and add a Black [Charm] Token for each [Hit].")
+  (base/ability
+   :name "Charm of Virgo"
+   :summary
+    "* [Power]: [Astrology]
+     * [Action]: Gain [Synergy] on unit's next communication skill. Duration 1 turn.")
   (base/ability
    :name "Claw"
    :summary
@@ -342,6 +372,11 @@
    :name "Confiscate"
    :summary
     "* [Skill]: [Law]")
+  (base/ability
+   :name "Confidence Game"
+   :titles "Con Artist, Swindler"
+   :summary
+    "* [Skill]: [Deception]")
   (base/ability
    :name "Constrict"
    :titles "Bear Hug")
@@ -424,6 +459,12 @@
   (base/ability
    :name "Death Roll")
   (base/ability
+   :name "Decoy"
+   :summary
+    "* [Skill]: [Deception]
+     * Create a decoy to mislead.
+     * [Move]: Remove this unit from play and place 1 Decoy Token and 1 Decoy Unit Token on this unit's space. Both decoys may act normally during the Action phase, but any action but movement will dispel the decoys.  Both decoys defend as the original unit. If either unit is Hit, both decoys are dispelled. The decoys last until the next turn or until dispelled.")
+  (base/ability
    :name "Deflect"
    :summary
     "* Deflect, catch, or even return projectiles hurled at the fighter.
@@ -434,6 +475,10 @@
      0 Damage - Any successes become -Damage to the projectile. If the projectile has 0 Damage remaining, it is caught.
      Criticals - Any Criticals become -2 Damage to the proejctile. If the projectile has 0 Damage remaining and there are still Criticals, the projectile may be immediately thrown at +[Criticals] Accuracy.")
   (base/ability
+   :name "Demoralize"
+   :summary
+    "* [Power]: [Empathy]")
+  (base/ability
    :name "Destruction"
    :summary
     "* Effects only unliving objects
@@ -443,6 +488,10 @@
    :summary
     "* [Skill]: [Investigation]
      * ONCE IF you found and item during a [Search] AND one or more [Crit]s THEN you may resuffle that item into the [Search Deck] and draw again taking the new result insteaad.")
+  (base/ability
+   :name "Detect Trap"
+   :summary
+    "* [Skill]: [Deception]")
   (base/ability
    :name "Detective Work"
    :reference
@@ -515,6 +564,11 @@
    :summary
     "* Causes wounds that are difficult to heal
      * A victim that takes Disintegrate Tokens equal to Body are completely destroyed.")
+  (base/ability
+   :name "Distraction"
+   :titles "Throw Dirt"
+   :summary
+    "* [Skill]: [Deception]")
   (base/ability
    :name "Dive for Cover")
   (base/ability
@@ -701,6 +755,14 @@
    :summary
     "* A moment of ecstasy, delight, and intense revelation. During epiphanies, disparate things suddenly synchronize and make sense. Ephipanies often trigger major changes in personality or goals.")
   (base/ability
+   :name "Escape"
+   :reference
+    "* The chain in those handcuffs is high-tensile steel. It'd take you ten minutes to hack through it with this. Now, if you're lucky, you could hack through your ankle in five minutes. Go."
+   :summary
+    "* [Skill]: [Deception]
+     * The ability comes from extensive practice escaping from various bonds and confinements. At higher abilities, the user can dislocate joints to slither out of bonds."
+   :titles "Escape Artist")
+  (base/ability
    :name "Eternal Youth"
    :titles "Ageless"
    :summary
@@ -709,6 +771,11 @@
    :name "Ethereal"
    :summary
     "* [Power]: [Special Ability]")
+  (base/ability
+   :name "Evade Pursuit"
+   :summary
+    "* [Skill]: [Deception]
+     * Ability to correctly evaluate the opponent's pursuit style and outwit the pursuer.")
   (base/ability
    :name "Excavating"
    :summary
@@ -815,6 +882,12 @@
     "* [Skill]: [Survival]
      * [Action]: This ability can be used to forage for 1 man day of food and water for each [Success]. Such food will typically be disgusting to those unaccustomed to the local cuisine, but it will sustain. Excess food only lasts for 1 additional day before going bad. Excess water can be transfered to containers if any, otherwise it cannot be carried. [Crit]s provide a particularly tasty, convenient, or useful source of nutrition (e.g. water in bamboo that can be carried, food that will last another day or more).")
   (base/ability
+   :name "Forgery"
+   :summary
+    "* [Skill]: [Deception]
+     * The ability to forge money or documents. This ability is also used while creating money to prevent forgery.
+     * [Extended Action]: Roll vs. object quality or anti-forgery level. Any [Hits] allow a forgery that can pass at a distance. The more [Hits] and [Criticals] rolled, the more indistinquishable from the original. High level forgeries are works of art unto themselves.")
+  (base/ability
    :name "Forward Observer"
    :summary
     "* [Action]: When unit has [Line of Sight] on a opponent, any number of units with [Indirect Fire] may attack that unit even if they do not have [Line of Sight].")
@@ -822,6 +895,11 @@
    :name "Fungal Growth"
    :summary
     "* [Power]: [Diseases]")
+  (base/ability
+   :name "Gambling"
+   :titles "Gambler, High Roller"
+   :summary
+    "* [Skill]: [Deception]")
   (base/ability
    :name "Gateway"
    :summary
@@ -882,6 +960,10 @@
    :summary
     "* [Skill]: [Firearms]
      * Can shoot at Initiative:-1 without disadvantage from the Hip.")
+  (base/ability
+   :name "Honor Among Thieves"
+   :summary
+    "* [Skill]: [Deception]")
   (base/ability
    :name "Horns"
    :summary "* Usually they are worn as antlers, but may sprout form anywhere on the body.")
@@ -962,6 +1044,13 @@
    :summary
     "* By activating this system, the armor reduces all heat signatures. Use of any system (even passive ones) will negate the stealth.
      * [Continuous Action] - Stealth vs. Infrared Sensors")
+  (base/ability
+   :name "Inspiration"
+   :summary
+    "* Allies in Radius are Continuously inspired to greater feats by this ability.
+     * [Skill]: [Performance]
+     * [Passive]
+     * [Continuous]: [Retreats] are reduced by 1 for all allies within the radius.")
   (base/ability
    :name "Intestinal Parasite"
    :summary
@@ -1117,8 +1206,13 @@
    :summary
     "* [Power]: [Special Ability]
      * 0 [Mind]
+     * Does not avoid [Hazard]
      * Cannot use any Mind Abilities
      * Immune to Abilities that target [Mind].")
+  (base/ability
+   :name "Misdirection"
+   :summary
+    "* [Skill]: [Deception]")
   (base/ability
    :name "Missile Mount"
    :summary "* A special mount to add a missile pack on the back of the armor.")
@@ -1170,6 +1264,10 @@
    :name "Painting"
    :summary
     "* [Skill]: [Art]")
+  (base/ability
+   :name "Parallel Parking"
+   :summary
+    "* [Skill]: [Driving]")
   (base/ability
    :name "Paralyzing Bite")
   (base/ability
@@ -1313,6 +1411,10 @@
    :summary "* Skilled in antidote creation.  Can create an antidote for any Poison user can brew.")
   (base/ability
    :name "Prepare Poison")
+  (base/ability
+   :name "Prey"
+   :summary
+    "Will target those with the given criteria. Will for prey.")
   (base/ability
    :name "Prosecute"
    :summary
@@ -1544,6 +1646,15 @@
    :name "Seeming"
    :summary "* Take on the appearance of another.")
   (base/ability
+   :name "Seduction"
+   :titles "Femme Fatale, Vamp"
+   :reference
+    "* But what of all those sweet words you spoke in private?  Oh that's just what we call pillow talk, baby, that's all. - Ash, Army of Darkness
+     * But you don't understand. That men are weak? 
+     * Guess I must be dumb. She had a pocket full of horses, trojan and some of them used... I guess I should have closed my eyes when you drove me to the pace where your horses run free. Cause I felt a little ill when I saw all the pictures of the jockeys that were there before me. Believe it or not, I started to worry. I wondered if I had enough class. But it was Saturday night, I guess that makes it alright. And you say, Baby have you got enough gas? Oh, Yeah! - Prince, Little Red Corvette"
+   :summary
+    "* [Skill]: [Persuation]")
+  (base/ability
    :name "Sensory Deprivation")
   (base/ability
    :name "Sensory Overload")
@@ -1573,7 +1684,6 @@
    :name "Skeletal"
    :summary
     "* [Power]: [Special Ability]
-     * +1 Body
      * Ignores [Bleeding], [Poison], and [Disease]")
   (base/ability
    :name "Shield Modulation"
@@ -1606,6 +1716,22 @@
     "* Alert allied units by sending a prearranged signal. This can be flaming arrow at night, smoking arrow, singing arrow, etc.
      * [Requires]: Bow or Crossbow
      * [Action]: For the rest of the turn, other units adjacent to this unit may be treated as if under the [Sphere of Command] of any allied Commander.")
+  (base/ability
+   :name "Sleight of Hand"
+   :summary
+   :summary
+    "* [Skill]: [Deception]
+     * Hide a small object in hand without being noticed."
+   :titles "Legerdemain")
+  (base/ability
+   :name "Sleight of Mind"
+   :summary
+    "* [Power]: [Illusion]
+     * [Slow] [Even] [Mind]: +1 [Stress]. Create a distraction.")
+  (base/ability
+   :name "Smuggling"
+   :summary
+    "* [Skill]: [Deception]")
   (base/ability
    :name "Snake Charming"
    :summary
@@ -1683,6 +1809,10 @@
    :summary
     "* [Power]: [Shamanism]
      * Death: Enter the Spirit Realm")
+  (base/ability
+   :name "Stage Magic"
+   :summary
+    "* [Skill]: [Deception]")
   (base/ability
    :name "Stagecraft"
    :summary "* The technical aspects of theatrical production, which include scenic design, stage machinery, lighting, sound, costume design, and makeup."
@@ -1765,6 +1895,10 @@
      Criticals - [Knockdown]"
    :titles "Trip")
   (base/ability
+   :name "Swerve"
+   :summary
+    "* [Skill]: [Driving]")
+  (base/ability
    :name "Tabula Rasa")
   (base/ability
    :name "Tactical Genius")
@@ -1797,6 +1931,12 @@
    :name "There is No Escape"
    :reference
     "* Raiden Shogun, Genshin Impact")
+  (base/ability
+   :name "Thieves Guild Codes"
+   :summary
+   :summary
+    "* [Skill]: [Deception]
+     * Thieves must conceal their illegal conversations and the guilds have developed a shifting series of hand signals, marks, and code words to communicate simple concepts without arising suspiscion.")
   (base/ability
    :name "Thrust"
    :summary
@@ -1880,6 +2020,10 @@
     "* By activating this system, the armor emits a powerful blinding strobe in the ultraviolet band.
      * [Continuous Action] - [-Range] Ultraviolet sensors detection to any target within range.")
   (base/ability
+   :name "Undead"
+   :summary
+    "* Immune to [Bleeding] and [Fear]. Does not target other [Undead].")
+  (base/ability
    :name "Undermine"
    :summary
     "Damage walls.")
@@ -1893,12 +2037,32 @@
    :summary
     "* [Power]: [Inertia]")
   (base/ability
+   :name "Use Blinding Powder"
+   :summary
+    "* [Skill]: [Deception]")
+  (base/ability
+   :name "Use Flash Powder"
+   :summary
+    "* [Skill]: [Deception]")
+  (base/ability
+   :name "Use Irritating Powder"
+   :summary
+    "* [Skill]: [Deception]")
+  (base/ability
+   :name "Use Sleeping Powder"
+   :summary
+    "* [Skill]: [Deception]")
+  (base/ability
    :name "Vanish"
    :reference
     "* Smoke Bomb! - Krieger, Archer"
    :summary
     "* [Skill]: [Deception] or [Stealth]
      * If you can momentarily break line of sight, you can immediately [Hide].")
+  (base/ability
+   :name "Ventriloquism"
+   :summary
+    "* [Skill]: [Deception]")
   (base/ability
    :name "Vision Quest"
    :summary
@@ -1907,19 +2071,27 @@
    :name "Wall Crawling")
   (base/ability
    :name "Wall of Wonders"
-   :summary "* A wall of dreams. Causes [Fascination] in those who view it.")
+   :summary
+    "* [Power]: [Dreaming]
+     * A wall of dreams. Causes [Fascination] in those who view it.")
   (base/ability
    :name "Wall Running"
-   :summary "* Requires: [Wall Crawling]")
+   :summary
+    "* [Power]: [Movement]
+     * Requires: [Wall Crawling]")
   (base/ability
    :name "War Training"
    :summary
     "* [Skill]: [Animal Handling]")
   (base/ability
-   :name "Water Walking")
+   :name "Water Walking"
+   :summary
+    "* [Power]: [Hydromancy] or [Water]")
   (base/ability
    :name "Water Running"
-   :summary "* Requires: [Water Walking]")
+   :summary
+    "* [Power]: [Hydromancy] or [Water]
+     * Requires: [Water Walking]")
   (base/ability
    :name "Weapon Block"
    :summary
@@ -1932,23 +2104,39 @@
      Criticals - Any Criticals become -2 Damage to the weapon. If the weapon has 0 Damage remaining and there are still Criticals, the weapon may be immediately used at +[Criticals] Accuracy. Note: The weapon remains in the hands of the attacker.")
   (base/ability
    :name "Weaponsmith"
+   :titles "Bladesmith, Swordsmith"
    :summary
     "* The ability to repair, improve, or even create weapons.
-     * [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits."
-   :titles "Bladesmith, Swordsmith")
+     * [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits.")
   (base/ability
    :name "Wheeled")
   (base/ability
    :name "Whirlwind Attack"
-   :summary "* Allows multiple attacks to different targets by trading accuracy for extra attacks.")
+   :summary
+    "* Allows multiple attacks to different targets by trading accuracy for extra attacks.")
   (base/ability
    :name "Without a Trace"
    :summary
     "* Extremely difficult tor track you.")
   (base/ability
    :name "Woodworking"
-   :summary "The process of building, making or carving something using wood."
-   :titles "Carver, Whittler, Woodworker")
+   :titles "Carver, Whittler, Woodworker"
+   :summary
+    "The process of building, making or carving something using wood.")
+  (base/ability
+   :name "Word of Command"
+   :summary
+    "* [Power]: [Domination]")
+  (base/ability
+   :name "Zombie"
+   :summary
+    "* [Undead]: Immune to [Bleeding] and [Fear]. Never targets [Undead].
+     * [Mindless]: Does not avoid [Hazard].
+     * [Prey]: [Bleeding], [Prone] within 2 Moves. Will [Disengage] for prey.
+     * [Savage]: Must attack if able. Ignore Fear, Despair, and Morale.
+     * [Zombie Plague]:
+     ** IF a unit suffers a [Pierce] [Bite]
+     ** THEN at the beginning of each [Turn], take [Fatigue]:+1 or [Stress]:+1 until cured.")
  )
  :doc "Returns the base abilitymap")
 
