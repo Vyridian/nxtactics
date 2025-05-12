@@ -306,8 +306,8 @@ export default class nx_tactics_books_combat {
             {"any-1": nx_tactics_base.t_itemmap},
             ":Bezainted",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bezainted"),
-            "Breast Plate",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Breast Plate", ":summary", "* [Hit Location]: Shoulders Chest Abdomen Vitals", ":armor", "1mm"),
+            "Armor: Breast Plate",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Armor: Breast Plate"),
             ":Brigandine",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Brigandine"),
             "Bronze Armor",
@@ -1396,7 +1396,7 @@ export default class nx_tactics_books_combat {
           ":itemmap",
           nx_tactics_base.f_itemmap_from_tactics_keys(tactics, "Bare Handed"),
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Close Combat", "Defense", "Evasion", "Melee", "Ranged", "Firearms", "Gunnery", "Military", "Leadership")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Close Combat", "Defense", "Evasion", "Melee", "Ranged", "Firearms", "Gunnery", "Demolitions", "Military", "Leadership")
         )
       )
     )

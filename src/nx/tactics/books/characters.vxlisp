@@ -460,9 +460,9 @@
             * Avoid overly sterotypical locations and try to lavish them with subtle details including light, color, open space, background noise, music, smell, temperature, touch, taste. Each location should also have one particularly memorable feature that is subtly reinforced.
             * Metaphors and similes are good ways to express details and tone.
             * Setting Ideas: Penthouse, Mansion, Yacht, Cruise Ship, Social Club, Restaurant, Bar, Theater, Sporting Event, Shopping Center, Amusement Park, Carnival, Circus, Movie Set, TV Studio, Park, Zoo, Brothel, Casino, Gambling Club, Slaughterhouse, Graveyard")
-        :Conflict
+        "Story Conflict"
          (rule
-          :name "Conflict"
+          :name "Story Conflict"
           :summary
            "* Every Story involves some sort of conflict. Something opposes the characters goals or there is no point to the Story. No one cares about a girl who walks to the store and buys a loaf of bread, but if the girl is a starving orphan trying to feed her younger siblings and she makes her way through a snowstorm despite a broken leg, we are more likely to pay attention.
             * Conflict may involve enemies, the environment, other players, themselves.")
@@ -517,8 +517,8 @@
           :name "Story Ending"
           :summary
            "* Climax
-* Anti-Climax
-* Surprise Ending")
+            * Anti-Climax
+            * Surprise Ending")
         :Epilogue
          (rule
           :name "Epilogue"
@@ -624,9 +624,7 @@
          (rule
           :name "Jealosy"
           :summary
-           "* The characters have inspired envy or jealousy in another and steps are
-being taken against them. Their enemy may be someone they recently
-crossed.")
+           "* The characters have inspired envy or jealousy in another and steps are being taken against them. Their enemy may be someone they recently crossed.")
         :Kidnapping
          (rule
           :name "Kidnapping")

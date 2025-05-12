@@ -187,21 +187,13 @@ xDMG vs. all adjacent hexes; Knockback 1 each time DMG is dealt;
 Advance with MV after each hit, may roll DMG again if applicable;
 Dodge Maneuver.
 
-Spinning Knuckle     -1        +1(x2)    +3         S,C
-(1W) P3,A1,Spinning Back Fist
-xDodge Maneuver.
-
-Strong Decending Elvow +0       +1         +1         S,A
+Strong Decending Elbow +0       +1         +1         S,A
 P2,A1,Jump
 xAerial.
 
 Sword Hand Strike     -1       +4         -2         S,C,A
 P3
 xIgnores armor,Toughskin,etc.
-
-Triple Strike         -2    (+0,+0,+1)    None      S,C,A
-P2,K1
-xRoll three damage tests as indicated, take highest two rolls.
 
 Turn Punch      Rnd 1-1        +4        Two        S,C
 (W first turn)P4       Rnd 2-1        +5        Two        S,C
@@ -227,38 +219,20 @@ x +1DMG vs. Crouching."
      "Drag"
       (base/ability<-tactics-key tactics "Drag")
      "Back Fist"
-      (base/ability
-       :name "Back Fist"
-       :summary
-        "* [Arc]: Arc:Left or Arc:Right
-         * Strike with the back of the fist or open hand."
-       :titles "Backhand, Bitch Slap")
-     :Clothesline
-      (base/ability
-       :name "Clothesline"
-       :summary
-        "* [Requires]: [Close Combat]. Must have Moved this Round. [Hit Location]=Head or Shoulders
-         * [Arc]: Arc:Left or Arc:Right
-         * [Effect]: IF [Hit Location] is Head or Shoulders THEN Knockdown:+1")
+      (base/ability<-tactics-key tactics "Back Fist")
+     "Backflip Kick"
+      (base/ability<-tactics-key tactics "Backflip Kick")
+     "Beatdown"
+      (base/ability<-tactics-key tactics "Beatdown")
+     "Clothesline"
+      (base/ability<-tactics-key tactics "Beatdown")
      "Bull Rush"
       (base/ability
        :name "Bull Rush")
-     :Charge
-      (base/ability
-       :name "Charge")
      "Crouching Strike"
-      (base/ability
-       :name "Crouching Strike"
-       :summary
-        "Crouch low and deliver a powerful blow to the mid-section or below the belt.
-         * [Attack] [5]: +1 Effect"
-       :titles "Ducking Punch")
+      (base/ability<-tactics-key tactics "Crouching Strike")
      "Deflecting Punch"
-      (base/ability
-       :name "Deflecting Punch"
-       :summary
-        "* The fighter deflects a punch at him and immediately counters with a punch of his own.
-         * [Counter]: [Effect]:+1")
+      (base/ability<-tactics-key tactics "Deflecting Punch")
      "Dragon Strike"
       (base/ability
        :name "Dragon Strike"
@@ -382,6 +356,7 @@ x +1DMG vs. Crouching."
      "Spinning Back Fist"
       (base/ability
        :name "Spinning Back Fist"
+       :titles "Spinning Knuckle"
        :summary
         "* The fighter spins around adding force to the blow.
          -1 Initiative
@@ -407,21 +382,25 @@ x +1DMG vs. Crouching."
      "Tiger Claw"
       (base/ability
        :name "Tiger Claw"
-       :summary "Tiger Claw Strike")
+       :titles "Tiger Claw Strike"
+       :summary
+        "* [Skill]: [Close Combat]")
      :Uppercut
       (base/ability
        :name "Uppercut"
        :summary
         "* This powerful punch starts low and ends high using the fighter's leg and back muscles to increase damage.
+         * [Skill]: [Close Combat]
          * [Criticals] can be exchanged for Knockback
-         -1 Initiative
-         +1 Damage
-         -1 Move")
+         * Initiative:-1
+         * Damage:+1
+         * Move:-1")
      "Axe Kick"
       (base/ability
        :name "Axe Kick"
        :summary
         "* Fighter raises his leg high over his head and snaps it down toward the opponent's head and neck.
+         * [Skill]: [Close Combat]
          * [High Attack]
          -1 Initiative
          -2 Move
@@ -429,16 +408,6 @@ x +1DMG vs. Crouching."
      "Back Kick"
       (base/ability
        :name "Back Kick")
-     "Backflip Kick"
-      (base/ability
-       :name "Backflip Kick"
-       :summary
-        "* [High Attack]
-         * [Limited] by [Acrobatics].
-         +1 Initiative
-         1 Move (directly backwards)
-         +1 Damage"
-       :titles "Flash Kick")
      "Crescent Kick"
       (base/ability
        :name "Crescent Kick")
@@ -455,6 +424,7 @@ x +1DMG vs. Crouching."
        :name "Dragon Tail"
        :summary
         "* The fighter drops low, extends his leg and whirls around quickly, kicking his opponents and knocking their feet out from under them.
+         * [Skill]: [Close Combat]
          -2 Initiative
          -1 Accuracy
          Damage is [Knockback] instead.
@@ -464,43 +434,27 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Drop Kick"
        :summary
-        "* Ends [Prone].
-         * Kick the opponent with the soles of both feet and fall to the ground.")
+        "* Kick the opponent with the soles of both feet and fall to the ground.
+         * [Skill]: [Close Combat]
+         * Ends [Prone]")
      "Flying Kick"
       (base/ability
        :name "Flying Kick"
        :image "MartialArts/FlyingKick.jpg"
        :summary
-        "* The fighter launches himself feet first into the air toward his opponent.  He ends his move with a powerful kick, usually to the opponent's head or midsection.
+        "* The fighter launches himself feet first into the air toward his opponent. He ends his move with a powerful kick, usually to the opponent's head or midsection.
+         * [Skill]: [Close Combat]
          +1 Accurary
          +1 Damage
          +1 Move (Aerial in one direction)
           +  0		+  6		-- 2		S,C		(1 W)		K4, A4, Jump		*  Knockback; KD; --> Aerial Maneuver."
        :titles "Flying Thrust Kick")
      "Foot Stomp"
-      (base/ability
-       :name "Foot Stomp"
-       :reference
-        "* The toe crusher.  That went out of style when I left kindergarten. - Kung Fu Hustle"
-       :summary
-        "* Stomp on opponent's foot to slow their movement.")
+      (base/ability<-tactics-key tactics "Foot Stomp")
      "Handstand Kick"
-      (base/ability
-       :name "Handstand Kick"
-       :summary
-        "* The fighter bends over, places his hands on the ground, and then presses his legs up into a handstand. The legs snap up with tremendous kicking force. Can be used while [Prone]
-         -1 Initiative
-         1 Move
-         +2 Damage")
+      (base/ability<-tactics-key tactics "Handstand Kick")
      "Hurricane Kick"
-      (base/ability
-       :name "Hurricane Kick"
-       :image "MartialArts/HurricaneKick.jpg"
-       :summary
-        "-1 Speed
-         -2 Attack
-         * May attack up to 2 units in any surrounding spaces."
-       :titles "Butterfly Kick, Whirlwind Kick")
+      (base/ability<-tactics-key tactics "Hurricane Kick")
      "Kick Defense"
       (base/ability
        :name "Kick Defense"
@@ -544,14 +498,7 @@ x +1DMG vs. Crouching."
          [Critical Hits] are [Knockdown]"
        :titles "Foot Sweep")
      "Lightning Leg"
-      (base/ability
-       :name "Lightning Leg"
-       :image "MartialArts/LightningLeg.jpg"
-       :summary
-        "* [Finishing Move]
-         * [Attack]: [Auto]
-          LIGHTNING LEG			-- 2		+  1(x3)	None		as 100handslap	(1 W)		K3, Double Hit Kick
-         *  Knockback; When this maneuver is chosen the fighter determines which of the three attacks strike high, and which strike low (2 high, 1 low; or 1 high, 2 low), this affects blocking accordingly.")
+      (base/ability<-tactics-key tactics "Lightning Leg")
      "Reverse Front Kick"
       (base/ability
        :name "Reverse Front Kick"
@@ -587,6 +534,8 @@ x +1DMG vs. Crouching."
          * [Low Attack]
          * Critical Hits can be [Knockdown]
          * End Action [Prone]")
+     "Spinning Bird Kick"
+      (base/ability<-tactics-key tactics "Spinning Bird Kick")
      "Spinning Thrust Kick"
       (base/ability
        :name "Spinning Thrust Kick"
@@ -619,7 +568,7 @@ x +1DMG vs. Crouching."
          to the fighter.
          Criticals are [Knockdown]. Criticals also reduces falling Criticals
          to the fighter.")
-     :Backbreaker
+     "Backbreaker"
       (base/ability
        :name "Backbreaker"
        :summary
@@ -683,7 +632,7 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Ground Fighting"
        :summary "* [Passive]: Ignore penalties for being [Prone].")
-     :Headlock
+     "Headlock"
       (base/ability
        :name "Headlock")
      "Hip Throw"
@@ -694,7 +643,7 @@ x +1DMG vs. Crouching."
          -1 Move
          Damage - [Knockdown]
          Criticals - [Knockdown]")
-     :Hold
+     "Hold"
       (base/ability
        :name "Hold"
        :summary
@@ -702,7 +651,7 @@ x +1DMG vs. Crouching."
          +1 Initiative
          0 Damage - Add a [Hold] token.
          0 Criticals")
-     :Hook
+     "Hook"
       (base/ability
        :name "Hook"
        :summary
@@ -808,7 +757,6 @@ x +1DMG vs. Crouching."
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
-     "Binding"
      "Brawling"
      "Grappling"
      "Kicks"
@@ -846,17 +794,18 @@ x +1DMG vs. Crouching."
      "Sumo"
      "Tae Kwon Do"
      "Tai Ch'i Ch'uan"
+     "Ties That Bind"
      "Wu Shu"))
   (base/skill
    :name "Melee"
+   :titles "Battlemaster, Champion, Congueror, Fencer, Fighter, Master of Arms, Warrior"
    :reference
-    "* Mizu: I must become the greatest swordsman alive. Swordfather: Is that all? - Mizu and Swordfather, Blue Eye Samurai"
+    "* Mizu: I must become the greatest swordsman alive. Swordfather: Is that all? - Mizu and Swordfather, Blue Eye Samurai
+     * Steel has always carried with it a myster. You must learn its riddle Conan.. No one in this world can you trust, not men, not women, not beasts. This you can trust. - Conan's father, Conan the Barbarian"
    :summary
     "* Fighting near the opponent. This includes most hand to hand weapons.
      * [Target]: Melee combat may only be used to attack the 3 space directly ahead of you or the space you are on.
-     * Allows the use of all Melee weapons, but unfamiliar weapons follow the [Unfamiliar Item] rule.
-     * See Arms and Armor for weapons"
-   :titles "Battlemaster, Champion, Congueror, Fencer, Fighter, Master of Arms, Warrior"
+     * Allows the use of all Melee weapons, but unfamiliar weapons follow the [Unfamiliar Item] rule."
    :stat "Body"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -897,6 +846,7 @@ x +1DMG vs. Crouching."
     (base/specialtymap<-tactics-keys
      tactics
      "Bladedancer"
+     "Duelling"
      "Fensing"
      "Sword Saint"
      "Axes"
@@ -1074,17 +1024,6 @@ x +1DMG vs. Crouching."
      "Rapid Fire"
       (base/ability
        :name "Rapid Fire")
-     :Scattershot
-      (base/ability
-       :name "Scattershot"
-       :summary
-        "* Choose a target starting from the closest.
-         * If a hit is scored, roll another attack on the same target.
-         * If no hit scored, roll against next target.
-         * -1 for each Space of Range (Cone), -1 per roll (cumulative, inclusive).
-         * Criticals can be used for additional damage rolls (multiple Hits)
-         * If target was [Armor], that Armor is at +2 vs this attack"
-       :titles "Glaser, Shot")
      :Sniper
       (base/ability
        :name "Sniper"
@@ -1152,7 +1091,7 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Overload Weapon"
        :summary "* Detonate the entire weapon magazine (and the weapon) as an explosive with force equal to the total power in the magazine.")
-     :Rechargable
+     "Rechargable"
       (base/ability
        :name "Rechargable"
        :summary "* Uses batteries that can be slowly recharged from any power source.")
@@ -1161,7 +1100,7 @@ x +1DMG vs. Crouching."
        :name "Recoil Compensator"
        :summary
         "* Reduces the 'kick' of the weapon and therefore reduces the penalty for continuous fire.")
-     :Silencer
+     "Silencer"
       (base/ability
        :name "Silencer")
      "Smoke Generator"
@@ -1174,7 +1113,7 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Telescopic Sight"
        :summary "Reduces penalties for Medium Range to Short Range and Long Range to Medium Range")
-     :Turret
+     "Turret"
       (base/ability
        :name "Turret"
        :image "Tokens/Arrow.png"
@@ -1186,6 +1125,7 @@ x +1DMG vs. Crouching."
     (base/specialtymap<-tactics-keys
      tactics
      "Energy Weapons"
+     "Duelling"
      "Handguns"
      "Rifles"
      "Shotguns"))
@@ -1246,9 +1186,9 @@ x +1DMG vs. Crouching."
     (base/abilitymap<-tactics-keys
      tactics
      "Calligraphy"
-     "Art Imitates Life"
      "Crafts"
      "Drawing"
+     "Masterpiece"
      "Painting"
      "Photoshopping"
      "Sculpture"))
@@ -1429,6 +1369,37 @@ x +1DMG vs. Crouching."
      tactics
      "Acrobatics"
      "Climbing"))
+  (base/skill
+   :name "Brilliance"
+   :titles "Genius, Mastermind, Prodigy, Savant, Super Genius"
+   :stat "Mind"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Analyze Weakness"
+     "Calculator Mind"
+     "Circular Logic"
+     "Compartmentalize"
+     "Cryptography"
+     "Doublethink"
+     "Engineering Genius"
+     "Financial Genius"
+     "Investigative Genius"
+     "Linguistic Genius"
+     "Master Plan"
+     "Mathematical Genius"
+     "Maze Mastery"
+     "Mind Blank"
+     "Misinformation"
+     "Multitasking"
+     "Photographic Memory"
+     "Puzzles"
+     "Rationalize"
+     "Scientific Genius"
+     "Simplify, Simplify, Simplify"
+     "Speed Reading"
+     "Tactical Genius"
+     "Unsolvable Problem"))
   (base/skill
    :name "Business"
    :reference
@@ -1722,60 +1693,94 @@ x +1DMG vs. Crouching."
   (base/skill
    :name "Crime"
    :titles
-    "Bandit, Brigand, Crime Boss, Crook, Cutthroat, Highwayman, Pimp, Yakuza, Yakuza - Oyabun"
+    "Bandit, Brigand, Crime Boss, Crook, Cutthroat, Fixer, Highwayman, Pimp, Yakuza, Yakuza - Oyabun"
    :stat "Shadow"
    :abilitymap
     (base/abilitymap
      "Armed Robbery"
-      (base/ability
-       :name "Armed Robbery")
+      (base/ability<-tactics-key tactics "Armed Robbery")
      "Blackmail"
       (base/ability
-       :name "Blackmail")
+       :name "Blackmail"
+       :summary
+        "* [Skill]: [Crime]")
      "Burglary"
       (base/ability
-       :name "Burglary")
+       :name "Burglary"
+       :summary
+        "* [Skill]: [Crime]")
      "Bribery"
       (base/ability
-       :name "Bribery")
+       :name "Bribery"
+       :summary
+        "* [Skill]: [Crime]")
      "Crime Syndicate"
       (base/ability
-       :name "Crime Syndicate")
+       :name "Crime Syndicate"
+       :summary
+        "* [Skill]: [Crime]")
      "Crime Wave"
       (base/ability
-       :name "Crime Wave")
+       :name "Crime Wave"
+       :summary
+        "* [Skill]: [Crime]")
      "Criminal Mastermind"
       (base/ability
-       :name "Criminal Mastermind")
-     :Extortion
+       :name "Criminal Mastermind"
+       :summary
+        "* [Skill]: [Crime]")
+     "Extortion"
       (base/ability
-       :name "Extortion")
+       :name "Extortion"
+       :summary
+        "* [Skill]: [Crime]")
      "Fence Goods"
       (base/ability
-       :name "Fence Goods")
-     :Kidnapping
+       :name "Fence Goods"
+       :summary
+        "* [Skill]: [Crime]")
+     "Fixing"
       (base/ability
-       :name "Kidnapping")
+       :name "Fixing"
+       :summary
+        "* [Skill]: [Crime]")
+     "Kidnapping"
+      (base/ability
+       :name "Kidnapping"
+       :summary
+        "* [Skill]: [Crime]")
      "Mafia Connections"
       (base/ability
-       :name "Mafia Connections")
-     :Pimping
+       :name "Mafia Connections"
+       :summary
+        "* [Skill]: [Crime]")
+     "Pimping"
       (base/ability
-       :name "Pimping")
-     :Piracy
+       :name "Pimping"
+       :summary
+        "* [Skill]: [Crime]")
+     "Piracy"
       (base/ability
        :name "Piracy"
-       :summary "* Armed robbery of large shipments of goods without damaging the merchandise.")
+       :summary
+        "* Armed robbery of large shipments of goods without damaging the merchandise.
+         * [Skill]: [Crime]")
      :Prostitution
       (base/ability
-       :name "Prostitution")
+       :name "Prostitution"
+       :summary
+        "* [Skill]: [Crime]")
      :Rustling
       (base/ability
        :name "Rustling"
-       :summary "* Stealing and selling livestock")
+       :summary "* Stealing and selling livestock"
+       :summary
+        "* [Skill]: [Crime]")
      :Waylay
       (base/ability
-       :name "Waylay")))
+       :name "Waylay"
+       :summary
+        "* [Skill]: [Crime]")))
   (base/skill
    :name "Deception"
    :reference "* I whisper Truth, into Lies... - Leblanc, Runeterra"
@@ -1792,6 +1797,7 @@ x +1DMG vs. Crouching."
      "Evade Pursuit"
      "Forgery"
      "Gambling"
+     "Great Reveal"
      "Honor Among Thieves"
      "Misdirection"
      "Pick Pocket"
@@ -1835,7 +1841,7 @@ x +1DMG vs. Crouching."
      "Air Traffic Control"
       (base/ability
        :name "Air Traffic Control")
-     :Blackout
+     "Blackout"
       (base/ability
        :name "Blackout")
      "Boost Power Output"
@@ -1968,7 +1974,9 @@ x +1DMG vs. Crouching."
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
-     "Bomb Disposal"))
+     "Bomb Disposal"
+     "Explosives"
+     "Sapping"))
   (base/skill
    :name "Faith"
    :reference
@@ -2064,15 +2072,17 @@ x +1DMG vs. Crouching."
         "* A willing subject may describe his dark desires, the Sin Eater then repeats the description replacing references to the subject with himself. After the ritual is complete, the subject will not feel the urges so strongly. Instead the Sin Eater will feel those emotions. If he acts on them, even symbolically, his [Shadow] gains power. If he can resolve them, he gains experience.")))
   (base/skill
    :name "Hunting"
-   :reference "* Royal Huntsman - Sleeping Beauty"
    :titles
     "Forward Observer, Gamekeeper, Hunter, Huntress, Huntsman, Huntmaster, Lookout, Mage Hunter, Master Huntsman, Master of the Hunt, Poacher, Ranger, Royal Huntsman, Scout, Sentinel, Stalker, Tracer, Tracker, Watchman"
+   :reference
+    "* Royal Huntsman - Sleeping Beauty"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
      "Bug Hunt"
      "Call of the Hunt"
      "Camouflage"
+     "Cover your Tracks"
      "Cull the Herd"
      "Deadfall"
      "Field Dressing"
@@ -2213,55 +2223,20 @@ x +1DMG vs. Crouching."
    :titles "Demagogue, Enforcer, Fearmonger, Overseer, Pimp, Slave Lord, Slaver, Tormentor, Torturer"
    :stat "Shadow"
    :abilitymap
-    (base/abilitymap
-     :Coercion
-      (base/ability
-       :name "Coercion"
-       :reference "* The boat will be ready for you on Friday. If I see you or any of your friends before then, Miss. Finneran will find herself the victim of a most gruesome violation before she dies. As will your father, Mr. Hockney, and your Uncle Randall in Arizona, Mr. Kint. I might only castrate Mr. McManus's nephew, David. Do I make myself clear? - Kobayashi, Usual Suspects")
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Coercion"
      "Death March"
-      (base/ability
-       :name "Death March"
-       :summary "* Increase movement of allies within level spaces. Sustained use of this ability runs the risk of injuring or killing some allies.")
-     :Duress
-      (base/ability
-       :name "Duress")
-     :Enslave
-      (base/ability
-       :name "Enslave"
-       :reference "Did you know that pain causes the formation of the strongest chemical bonds in the mammalian brain?  Whip a dog, and it keeps coming back... At first it will hope that you'll stop, but after a while, it won't even know the difference. But you already know all about that don't you?... Time melted away into the pain... Finally something clicked over in his head and reality rushed back in around him, clearer and sharper than ever before... Staring he made out faces. Faces not unlike his own reflection he had seen only an eternity ago. Faces distended in howling agony... eyes welling with tears of blood, eyes that all turned toward Her, crying in admiration. - Mage: The Book of Madness")
+     "Duress"
+     "Enslave"
      "Grip of Fear"
-      (base/ability
-       :name "Grip of Fear"
-       :reference "* It was Keyser Soze, Agent Kujan. I mean the Devil himself. How do you shoot the devil in the back? What if you miss? - Verbal, Usual Suspects")
-     :Interrogate
-      (base/ability
-       :name "Interrogate"
-       :reference
-        "* I'm gonna ask you one more goddamn time, and if you still 'respectfully refuse,' I'm callin' the Bear Jew over here, and he's gonna take that big-ole bat of his, and he's gonna beat you to death with it. Now take your wiener schnitzel lickin' finger and point out on this map what I want to know...We got a German here who wants to die for his country! Oblige him! - Lt. Aldo Raine, Inglourious Basterds
-         * You don't need that. I'll tell you everything. Yes...I know you will. - Raiders of the Lost Ark")
-     :Intimidate
-      (base/ability
-       :name "Intimidate"
-       :reference
-        "* Your timing is impeccable. Pity you were all they sent... The Fatui would do well to update their intelligence concerning me. Ah, but of course, that would require one of you to return in one piece. - Ayato, Genshin Impact
-         * ...to the death. No. To the pain. I don't think I'm quite familiar with that phrase. ... To the pain means the first thing you will lose will be your feet below the ankles. Then your hands at the wrists. Next your nose. ...And then my ears, I understand let's get on with it. WRONG. Your ears you keep and I'll tell you why. So that every shriek of every child at seeing your hideousness will be yours to cherish. Every babe that weeps at your approach, every woman who cries out, 'Dear God! What is that THING?,' will echo in your perfect ears. That is what to the pain means. It means I leave you in anguish, wallowing in freakish misery ... forever. ...I think you're bluffing. It's possible, Pig, I might be bluffing. It's conceivable, you miserable, vomitous mass, that I'm only lying here because I lack the strength to stand. But, then again... perhaps I have the strength after all. - Princess Bride"
-       :summary "* A form of bluffing")
+     "Interrogate"
+     "Intimidate"
      "Reign of Terror"
-      (base/ability
-       :name "Reign of Terror"
-       :summary "* Use to rally troops")
-     :Terrorize
-      (base/ability
-       :name "Terrorize"
-       :summary "* [Attack]: Any [Critical Hits] may be [Retreats]")
-     :Torment
-      (base/ability
-       :name "Torment")
-     :Torture
-      (base/ability
-       :name "Torture"
-       :reference
-        "* Your cries of agony, where will they not reach?  Where on Citaeron will they not re-echo?  No man living will meet a doom more terrible than yours. - Sophocles, Oedipus Rex")))
+     "Roar"
+     "Terrorize"
+     "Torment"
+     "Torture"))
   (base/skill
    :name "Investigation"
    :summary
@@ -2448,13 +2423,13 @@ x +1DMG vs. Crouching."
    :titles "Locksmith, Tinker, Tinsmith, Watchmaker"
    :abilitymap
     (base/abilitymap
-     :Clockmaking
+     "Clockmaking"
       (base/ability
        :name "Clockmaking")
-     :Decontaminate
+     "Decontaminate"
       (base/ability
        :name "Decontaminate")
-     :Demolition
+     "Demolition"
       (base/ability
        :name "Demolition")
      "Engineering: Aeronautical"
@@ -2502,7 +2477,7 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Engineering: Weaponry"
        :titles "Gunsmithing")
-     :Fortification
+     "Fortification"
       (base/ability
        :name "Fortification")
      "Kit Bash"
@@ -2546,98 +2521,22 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Trap Laying"
        :summary "* See [Equipment: Traps]")
-     :Welding
+     "Welding"
       (base/ability
        :name "Welding")))
-  (base/skill
-   :name "Mastermind"
-   :summary
-    "* Attempts to confuse by introducing misleading, paradoxical, or spurious logic into a discussion."
-   :titles "Mind Games"
-   :abilitymap
-    (base/abilitymap
-     "Circular Logic"
-      (base/ability
-       :name "Circular Logic"
-       :reference
-        "* If such actions were not illegal, then they would not be prohibited by the law."
-       :summary
-        "* A seemingly reasonable argument that is in fact based upon dependent information.
-         * Such arguments are logically valid. That is, the conclusion does in fact follow from the premise, since it is already contained in the premise. They do not, however, aid in the proof of the statement or the premise.")
-     :Compartmentalize
-      (base/ability
-       :name "Compartmentalize"
-       :summary "* Separate a hidden thought process away from the normal mind.")
-     :Cryptography
-      (base/ability
-       :name "Cryptography")
-     :Doublethink
-      (base/ability
-       :name "Doublethink"
-       :reference
-        "* To tell deliberate lies while genuinely believing in them, to forget any fact that has become inconvenient, and then, when it becomes necessary again, to draw it back from oblivion for just so long as it is needed. - 1984 George Orwell"
-       :summary
-        "* Doublethink is the act of simultaneously holding two mutually contradictory beliefs while fervently fooling oneself into believing both.")
-     "Master Plan"
-      (base/ability
-       :name "Master Plan")
-     "Maze of the Mind"
-      (base/ability
-       :name "Maze of the Mind"
-       :summary
-        "* Confuses the target's senses so it cannot accurately choose its direction. This can be extremely hazardous to fast moving units.
-         * [Move]: Whenever the unit moves, its direction is randomized from among its normal movement options (including diving and climbing for air units).")
-     "Maze Mastery"
-      (base/ability
-       :name "Maze Mastery"
-       :summary "* The user knows thousands of mazes and can choose an optimal course through any maze with minimal trial and error.")
-     "Mind Blank"
-      (base/ability
-       :name "Mind Blank"
-       :summary
-        "* Hide ones true thoughts.
-         * Makes an excellent poker face.
-         * Full defense against any attempt to detect the unit's mind.
-         * Full defense against any attempt to detect lies.")
-     :Misinformation
-      (base/ability
-       :name "Misinformation"
-       :summary "* Spock: Logic is a little tweeting bird chirping in a meadow. Logic is a wreath of pretty flowers which smell BAD. Are you sure your circuits are functioning correctly? Your ears are green. - I, Mudd, Star Trek")
-     :Puzzles
-      (base/ability
-       :name "Puzzles")
-     :Rationalize
-      (base/ability
-       :name "Rationalize"
-       :summary
-        "* Increases resistance to all forms of mental attack by reinterpreting and rationalizing commands to render them meaningless.")
-     "Simplify, Simplify, Simplify"
-      (base/ability
-       :name "Simplify, Simplify, Simplify"
-       :summary
-        "* Progressively breakdown a problem into simpler problems which can each be resolved separately.")
-     "Unsolvable Problem"
-      (base/ability
-       :name "Unsolvable Problem"
-       :reference
-        "* Kirk: Everything Harry says is a lie. Remember that, Norman. *Everything* he says is a lie.
-         * Mudd: Now I want you to listen to me very carefully, Norman. I'm... lying.
-         * Norman: You say you are lying, but if everything you say is a lie, then you are telling the truth, but you cannot tell the truth because you always lie... illogical! Illogical - I, Mudd, Star Trek"
-       :summary
-        "* Fool the target into trying to resolve a problem with no easy solution.")))
   (base/skill
    :name "Medicine"
    :titles "Caregiver, Caretaker, Dentist, Doctor, EMT, Medic, Medical Examiner, Nurse, Physician, Surgeon"
    :stat "Mind"
    :abilitymap
     (base/abilitymap
-     :Anatomy
+     "Anatomy"
       (base/ability
        :name "Anatomy")
-     :Dentistry
+     "Dentistry"
       (base/ability
        :name "Dentistry")
-     :Diagnose
+     "Diagnose"
       (base/ability
        :name "Diagnose")
      "Emergency Treatment"
@@ -2646,31 +2545,34 @@ x +1DMG vs. Crouching."
      "First Aid"
       (base/ability
        :name "First Aid")
-     :Immunology
+     "Immunology"
       (base/ability
        :name "Immunology")
-     :Leeching
+     "Leeching"
       (base/ability
        :name "Leeching")
      "Medical Practice"
       (base/ability
        :name "Medical Practice")
-     :Nursing
+     "Nursing"
       (base/ability
        :name "Nursing")
-     :Pharmacy
+     "Pharmacy"
       (base/ability
        :name "Pharmacy"
        :titles "Pharmacist, Pharmacy Technician")
-     :Physiology
+     "Physiology"
       (base/ability
        :name "Physiology")
-     :Surgery
+     "Surgery"
       (base/ability
        :name "Surgery")
      "Surgery: Brain"
       (base/ability
        :name "Surgery: Brain")
+     "Surgery: Dental"
+      (base/ability
+       :name "Surgery: Dental")
      "Surgery: Cosmetic"
       (base/ability
        :name "Surgery: Cosmetic")
@@ -2680,6 +2582,12 @@ x +1DMG vs. Crouching."
      "Surgery: Nerve"
       (base/ability
        :name "Surgery: Nerve")
+     "Surgery: Reconstructive"
+      (base/ability
+       :name "Surgery: Reconstructive")
+     "Surgery: Veterinary"
+      (base/ability
+       :name "Surgery: Veterinary")
      "Treat Disease"
       (base/ability
        :name "Treat Disease")
@@ -2731,10 +2639,6 @@ x +1DMG vs. Crouching."
      "Diversionary Tactics"
       (base/ability
        :name "Diversionary Tactics")
-     :Explosives
-      (base/ability
-       :name "Explosives"
-       :summary "* Experienced using various small explosives in combat.")
      "Field Fortifications"
       (base/ability
        :name "Field Fortifications")
@@ -2812,9 +2716,6 @@ x +1DMG vs. Crouching."
        :summary
         "* [Formation]: Units move in triangle and focus on breaking enemy formations.
          * [+1 Retreat] Token if unit inflicts at least 1 [Retreat].")
-     :Fortifications
-      (base/ability
-       :name "Fortifications")
      "Halo Drop"
       (base/ability
        :name "Halo Drop")
@@ -2841,11 +2742,6 @@ x +1DMG vs. Crouching."
      "Parachute Assault"
       (base/ability
        :name "Parachute Assault")
-     :Sapping
-      (base/ability
-       :name "Sapping"
-       :reference 
-        "* If it was important, then they should have built it better. - Desert Naturalist, Runeterra")
      "Space Combat"
       (base/ability
        :name "Space Combat")
@@ -3069,6 +2965,17 @@ x +1DMG vs. Crouching."
    :titles "Aviator, Pilot, Sky Captain, Sky Knight, Sky Marshall, Wing Commander, Wingman"
    :abilitymap
     (base/abilitymap
+     "Astronavigation"
+      (base/ability
+       :name "Astronavigation"
+       :summary
+        "* [Skill]: [Piloting]")
+     "Astronavigation: FTL"
+      (base/ability
+       :name "Astronavigation: FTL")
+     "Astronavigation - Jump Drive"
+      (base/ability
+       :name "Astronavigation: Jump Drive")
      "Barn Storming"
       (base/ability
        :name "Barn Storming"
@@ -3080,12 +2987,6 @@ x +1DMG vs. Crouching."
        :name "Barrel Roll"
        :reference "* Do a barrel roll! - Peppy Hare, Star Fox 64"
        :summary "The pilot rolls the plane over sideways and 'corkscrews' through the air.")
-     "Cobra maneuver"
-      (base/ability
-       :name "Cobra maneuver"
-       :summary
-        "* A dramatic and demanding maneuver in which an airplane flying at a moderate speed abruptly raises its nose momentarily to a vertical and slightly past vertical attitude, causing an extremely high angle of attack and momentarily stalling the plane, making a full-body air brake before dropping back to normal position, during which the aircraft does not change effective altitude."
-       :titles "Dynamic deceleration")
      "Carrier Landing"
       (base/ability
        :name "Carrier Landing")
@@ -3097,6 +2998,21 @@ x +1DMG vs. Crouching."
      "Close Air Support"
       (base/ability
        :name "Close Air Support")
+     "Cobra maneuver"
+      (base/ability
+       :name "Cobra maneuver"
+       :summary
+        "* A dramatic and demanding maneuver in which an airplane flying at a moderate speed abruptly raises its nose momentarily to a vertical and slightly past vertical attitude, causing an extremely high angle of attack and momentarily stalling the plane, making a full-body air brake before dropping back to normal position, during which the aircraft does not change effective altitude."
+       :titles "Dynamic deceleration")
+     "Combat Pilot"
+      (base/ability
+       :name "Combat Pilot")
+     "Combat Pilot: Orbital"
+      (base/ability
+       :name "Combat Pilot: Orbital")
+     "Combat Pilot: Space"
+      (base/ability
+       :name "Combat Pilot: Space")
      "Dive Bombing"
       (base/ability
        :name "Dive Bombing"
@@ -3130,21 +3046,24 @@ x +1DMG vs. Crouching."
        :summary
         "The Immelmann turn has become one of the most popular airshow maneuvers in the world. However, the aerobatic maneuver is altogether different from the WWI Immelmann turn (See Wingover) and is of little use in modern dogfighting."
        :titles "Roll Off the Top")
-     :Jink
+     "Jink"
       (base/ability
        :name "Jink"
        :summary
         "* Yawing his plane from side to side, the pilot attempts to throw-off the aim of enemy gunners.
          * [Action]: [+1 Defense] until this unit's next turn.")
-     :Levitating
+     "Levitating"
       (base/ability
        :name "Levitating"
        :summary "* If a unit uses powers to fly, the unit must gain this ability of fly at a penalty.")
-     :Loop
+     "Loop"
       (base/ability
        :name "Loop"
        :summary
         "* The pilot pulls the plane up and over in a complete circle, ending up in the same position and facing that he started.")
+     "Orbital Piloting"
+      (base/ability
+       :name "Orbital Piloting")
      "Pull Out of a Dive"
       (base/ability
        :name "Pull Out of a Dive")
@@ -3155,15 +3074,15 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Split S"
        :summary
-        "A diving maneuver mostly used to disengage. The pilot half-rolls his aircraft inverted and executes a descending half-loop, resulting in level flight in the exact opposite direction at a lower altitude."
+        "* A diving maneuver mostly used to disengage. The pilot half-rolls his aircraft inverted and executes a descending half-loop, resulting in level flight in the exact opposite direction at a lower altitude."
        :titles "Reverse Immelmann")
-     :Strafe
+     "Strafe"
       (base/ability
        :name "Strafe")
      "Strategic Bombing"
       (base/ability
        :name "Strategic Bombing")
-     :Tail
+     "Tail"
       (base/ability
        :name "Tail")
      "Torpedo Bomb"
@@ -3181,49 +3100,62 @@ x +1DMG vs. Crouching."
      tactics
      "Airplanes: Civilian"
      "Airplanes: Commercial"
-     "Helicopters"))
+     "Helicopters"
+     "Starships"))
   (base/skill
    :name "Rage"
    :titles "Berserker, Marauder, Wildman"
    :stat "Beast"
    :abilitymap
     (base/abilitymap
-     :Berserker
+     "Berserker"
       (base/ability
-       :name "Berserker")
-     :Frenzy
+       :name "Berserker"
+       :summary
+        "* [Skill]: [Rage]")
+     "Frenzy"
       (base/ability
-       :name "Frenzy")
-     :Fury
+       :name "Frenzy"
+       :summary
+        "* [Skill]: [Rage]")
+     "Fury"
       (base/ability
-       :name "Fury")
-     :Hatred
+       :name "Fury"
+       :summary
+        "* [Skill]: [Rage]")
+     "Hatred"
       (base/ability
        :name "Hatred"
        :reference
         "* I killed Wesley. I shot him seven times.. because the clip ran out. He.. deserved.. MORE! - Karen Page and Kingpin, Daredevil"
        :summary
         "* Attack: +1 Speed vs. Tribal or long-standing personal enemies.")
-     :Howl
+     "Howl"
       (base/ability
-       :name "Howl")
-     :Taunt
+       :name "Howl"
+       :summary
+        "* [Skill]: [Rage]")
+     "Taunt"
       (base/ability
        :name "Taunt"
+       :titles "Goad"
        :reference "* Kirk: We tried it once your way, Khan, are you game for a rematch? Khan, I'm laughing at the 'superior intellect.' Khan: Full impulse power! Joachim: No, sir! You have Genesis! You can have whatever... Khan: FULL POWER! DAMN YOU! - Star Trek II: The Wrath of Khan"
        :summary
-        "* Dishonor opponent's mother.
-         * Roll vs. Mind. If successful, opponent must attack you."
-       :titles "Goad")
-     :Vengeance
+        "* Dishonor Rival's mother.
+         * [Skill]: [Rage] vs [Mind]. If successful, opponent must attack you.")
+     "Vengeance"
       (base/ability
        :name "Vengeance"
        :reference
         "* More names off the list, more names on it. - Pyke, Runeterra
-         * She opened a book and a box of tools. Sunny came home with a mission... Sunny came home with a list of names. She didn't believe in transcendence. 'It's time for a few small repairs.' she said. Sunny came home with a Vengence. - Shawn Colvin, Sunny Came Home")
-     :Warcry
+         * She opened a book and a box of tools. Sunny came home with a mission... Sunny came home with a list of names. She didn't believe in transcendence. 'It's time for a few small repairs.' she said. Sunny came home with a Vengence. - Shawn Colvin, Sunny Came Home"
+       :summary
+        "* [Skill]: [Rage]")
+     "Warcry"
       (base/ability
-       :name "Warcry")))
+       :name "Warcry"
+       :summary
+        "* [Skill]: [Rage]")))
   (base/skill
    :name "Riding"
    :summary
@@ -3251,14 +3183,8 @@ x +1DMG vs. Crouching."
        :summary
         "* [Formation]
          * High Dodge and Concentrated firepower")
-     :Charge
-      (base/ability
-       :name "Charge"
-       :reference "* We'll use the old ways...speed of horse! - Arthur, Excalibur"
-       :summary
-        "* [Requires]: Unit must have moved at least 4 spaces in a straight line.
-         * [Action]: Melee Attack costs no [Speed].
-         * [Attack], [Damage]: Any [Critical Hits] may be [Morale Tokens]")
+     "Charge"
+      (base/ability<-tactics-key tactics "Charge")
      "Drive Carriage"
       (base/ability
        :name "Drive Carriage")
@@ -3301,14 +3227,14 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Biology"
        :titles "Biologist")
-     "Biology, Molecular"
+     "Biology: Molecular"
       (base/ability
-       :name "Biology, Molecular"
+       :name "Biology: Molecular"
        :titles "Molecular Biologist")
-     "Biology, Xeno"
+     "Biology: Xeno"
       (base/ability
-       :name "Biology, Xeno")
-     :Botony
+       :name "Biology: Xeno")
+     "Botony"
       (base/ability
        :name "Botony"
        :summary
@@ -3317,14 +3243,14 @@ x +1DMG vs. Crouching."
          * Harvest Plant
          * Cultivate Plant Strain"
        :titles "Botonist, Herbalist, Horticulturalist")
-     :Cloning
+     "Cloning"
       (base/ability
        :name "Cloning")
-     :Cryogenics
+     "Cryogenics"
       (base/ability
        :name "Cryogenics"
        :summary "Hidden in ice for a century, to walk the Earth again. Lord have mercy on the frozen man. - James Taylor, The Frozen Man")
-     :Cultivate
+     "Cultivate"
       (base/ability
        :name "Cultivate"
        :summary "* Grow any plant, fungus, or bacteria that you have studied.")
@@ -3413,7 +3339,7 @@ x +1DMG vs. Crouching."
      "Prepare Vaccine"
       (base/ability
        :name "Prepare Vaccine")
-     :Zoology
+     "Zoology"
       (base/ability
        :name "Zoology"
        :summary
@@ -3541,9 +3467,8 @@ x +1DMG vs. Crouching."
      "Determine Motivation"
       (base/ability
        :name "Determine Motivation")
-     :Philosophy
-      (base/ability
-       :name "Philosophy")
+     "Philosophy"
+      (base/ability<-tactics-key tactics "Philosophy")
      :Profile
       (base/ability
        :name "Profile")
@@ -3619,28 +3544,6 @@ x +1DMG vs. Crouching."
        :name "Trade Winds"
        :summary "Faster travel when piloting commercial sailing vessels.")))
   (base/skill
-   :name "Starpiloting"
-   :abilitymap
-    (base/abilitymap
-     :Astronavigation
-      (base/ability
-       :name "Astronavigation")
-     "Astronavigation - FTL"
-      (base/ability
-       :name "Astronavigation - FTL")
-     "Astronavigation - Jump Drive"
-      (base/ability
-       :name "Astronavigation - Jump Drive")
-     "Combat Orbital Piloting"
-      (base/ability
-       :name "Combat Orbital Piloting")
-     "Combat Space Piloting"
-      (base/ability
-       :name "Combat Space Piloting")
-     "Orbital Piloting"
-      (base/ability
-       :name "Orbital Piloting")))
-  (base/skill
    :name "Stealth"
    :titles "Stalker"
    :stat "Body"
@@ -3678,25 +3581,17 @@ x +1DMG vs. Crouching."
    :stat "Defense"
    :abilitymap
     (base/abilitymap
-     "Cold Weather Survival"
-      (base/ability
-       :name "Cold Weather Survival"
-       :summary "* Hazards - Blizzard, Avalanche, Frostbite")
      "Dead Reckoning"
       (base/ability
        :name "Dead Reckoning"
        :summary "* Estimate current position and movement.")
-     "Desert Survival"
-      (base/ability
-       :name "Desert Survival"
-       :titles "Desert Bandit, Desert Dweller, Desert Fox, Desert Nomad, Dune Raider, Dune Rider")
      "Detect Hollow Rock"
       (base/ability
        :name "Detect Hollow Rock"
        :summary "* Detect trap doors, secret doors, and unstable rocks.")
      "Foraging"
       (base/ability<-tactics-key tactics "Foraging")
-     :Forestry
+     "Forestry"
       (base/ability
        :name "Forestry"
        :reference "Tin Man"
@@ -3708,27 +3603,30 @@ x +1DMG vs. Crouching."
          * [Stealth]: IF Level>1 THEN [Stealth]:+1 in [Woods]
          * [Combat]: IF Level>2 THEN [Inititiative]:+1 vs Ranged in [Woods]"
        :titles "Forest Lord, Logger, Lumberjack, Pathcutter, Ranger, Warden, Woodcutter, Woodsman")
-     "High Altitude Survival"
-      (base/ability
-       :name "High Altitude Survival")
-     "Jungle Survival"
-      (base/ability
-       :name "Jungle Survival"
-       :reference "Tarzan"
-       :summary
-        "* This ability is used to avoid or mitigate the common hazards encountered while delving into the jungle. This can also be used to avoid the attention of random predators.
-         * [Requires]: Unit must be a [Light Unit]
-         * [Survival]: [Survival]:+1 in [Jungle]
-         * [Stealth]: IF Level>1 THEN [Stealth]:+1 in [Jungle]
-         * [Combat]: IF Level>2 THEN [Inititiative]:+1 vs Ranged in [Jungle]"
-       :titles "Jungle Dweller, Lord of the Jungle")
      "Motion Sense"
       (base/ability
        :name "Motion Sense"
        :summary "* Detect air movements and faint sounds to detect moving things even when they are around corners or in the dark.")
-     "Swamp Survival"
+     "Survival: Cold Weather"
       (base/ability
-       :name "Swamp Survival"
+       :name "Survival: Cold Weather"
+       :summary "* Hazards - Blizzard, Avalanche, Frostbite")
+     "Survival: Desert"
+      (base/ability
+       :name "Desert Survival"
+       :titles "Desert Bandit, Desert Dweller, Desert Fox, Desert Nomad, Dune Raider, Dune Rider")
+     "Survival: High Altitude"
+      (base/ability
+       :name "Survival: High Altitude")
+     "Survival: Jungle"
+      (base/ability<-tactics-key tactics "Survival: Jungle")
+     "Survival: Radiation"
+      (base/ability
+       :name "Survival: Radiation"
+       :summary "* Hazards - Radioactive")
+     "Survival: Swamp"
+      (base/ability
+       :name "Survival: Swamp"
        :summary
         "* This ability is used to avoid or mitigate the common hazards encountered while delving into swampland. This can also be used to avoid the attention of random predators.
          * [Requires]: Unit must be a [Light Unit]
@@ -3736,15 +3634,18 @@ x +1DMG vs. Crouching."
          * [Stealth]: IF Level>1 THEN [Stealth]:+1 in [Swamp]
          * [Combat]: IF Level>2 THEN [Inititiative]:+1 vs Ranged in [Swamp]"
        :titles "Murk Dweller, Murk Lord, Swamp Lord, Swamp Knight, Swamp Thing")
-     "Underground Survival"
+     "Survival: Underground"
       (base/ability
-       :name "Underground Survival"))
+       :name "Survival: Underground")
+     "Survival: Underwater"
+      (base/ability
+       :name "Survival: Underwater"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
      "Caving"))
   (base/skill
-   :name "Tradeskills"
+   :name "Tradeskill"
    :reference "* Tradesman"
    :stat "None"
    :abilitymap
@@ -3774,6 +3675,7 @@ x +1DMG vs. Crouching."
      "Servant"
      "Sewing"
      "Stagecraft"
+     "Taxadermy"
      "Weaponsmith"
      "Woodworking"))
  )

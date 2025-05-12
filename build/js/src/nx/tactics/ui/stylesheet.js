@@ -1,7 +1,6 @@
 'strict mode'
 
 import vx_core from "../../../vx/core.js"
-import nx_tactics_base from "../../../nx/tactics/base.js"
 import vx_data_file from "../../../vx/data/file.js"
 import vx_ui_ui from "../../../vx/ui/ui.js"
 
@@ -442,6 +441,18 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_item_summary = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-item-summary', type: vx_ui_ui.t_style}}
 
   /**
+   * Constant: style-place-detail
+   * {style}
+   */
+  static c_style_place_detail = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-place-detail', type: vx_ui_ui.t_style}}
+
+  /**
+   * Constant: style-place-image
+   * {style}
+   */
+  static c_style_place_image = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-place-image', type: vx_ui_ui.t_style}}
+
+  /**
    * Constant: style-selected
    * {style}
    */
@@ -670,6 +681,8 @@ export default class nx_tactics_ui_stylesheet {
       "style-image-wand1": nx_tactics_ui_stylesheet.c_style_image_wand1,
       "style-image-wand2": nx_tactics_ui_stylesheet.c_style_image_wand2,
       "style-item-summary": nx_tactics_ui_stylesheet.c_style_item_summary,
+      "style-place-detail": nx_tactics_ui_stylesheet.c_style_place_detail,
+      "style-place-image": nx_tactics_ui_stylesheet.c_style_place_image,
       "style-selected": nx_tactics_ui_stylesheet.c_style_selected,
       "style-text": nx_tactics_ui_stylesheet.c_style_text,
       "style-text-2": nx_tactics_ui_stylesheet.c_style_text_2,
@@ -1694,6 +1707,34 @@ export default class nx_tactics_ui_stylesheet {
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 32, ":y", 16),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 30, ":y", 31)
+    ))
+
+    // (const style-place-detail)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_place_detail, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_style},
+      ":name",
+      "style-place-detail",
+      ":layout",
+      vx_ui_ui.c_layout_label,
+      ":pointpos",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 2, ":y", 38),
+      ":pointsize",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 60, ":y", 37)
+    ))
+
+    // (const style-place-image)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_place_image, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_style},
+      ":name",
+      "style-place-image",
+      ":layout",
+      vx_ui_ui.c_layout_image,
+      ":pointpos",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 16, ":y", 2),
+      ":pointrotate",
+      vx_ui_ui.c_point_rotate_270,
+      ":pointsize",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 30, ":y", 42)
     ))
 
     // (const style-selected)

@@ -42,7 +42,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Batman.png",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             "Green Lantern",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Green Lantern", ":image", "Superheroes/GreenLantern.png"),
@@ -85,7 +85,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Brainiac.png",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             ":Catwoman",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Catwoman", ":image", "Superheroes/Catwoman.png"),
@@ -97,7 +97,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Darkseid.png",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             ":Joker",
             vx_core.f_new(
@@ -109,7 +109,7 @@ export default class nx_tactics_books_superheroes {
               ":summary",
               "* You won't kill me out of some misplaced sense of self-righteousness, and I won't kill you because you're just too much fun. I think you and I are destined to do this forever.",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             ":Sinestro",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sinestro", ":image", "Superheroes/Sinestro.png")
@@ -1565,7 +1565,7 @@ export default class nx_tactics_books_superheroes {
                 )
               ),
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             )
           )
         ),
@@ -1759,7 +1759,7 @@ export default class nx_tactics_books_superheroes {
               ":reference",
               "* Rogers: Arnim Zola was a German scientist who worked with the Red Skull. He's been dead for years.\n* Zola: First correction, I am Swiss. Second, look around you, I have never been more alive! In 1972, I received a terminal diagnosis. Science could not save by body. My mind, however, that was worth saving... on tow hundred thousand feet of data banks! You are standing in my brain. - Captain America: The Winter Soldier\n* Zola: I am afraid I have been stalling Captain. Admit it. It is better this way. We are both of us...out of time.",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             "Black Widow",
             vx_core.f_new(
@@ -1771,7 +1771,7 @@ export default class nx_tactics_books_superheroes {
               ":reference",
               "* I've got red in my ledger, I'd like to wipe it out. ... Can you wipe out that much red? Drakov's daughter, Tugenov, the hospital fire? ... Your ledger is dripping, it's gushing red, and you think saving a man no more virtuous than yourself will change anything? ... You lie and kill in the service of liars and killers. ... No, I won't touch Barton. Not until I make him kill you! Slowly, intimately, in every way he knows you fear! ... This is my bargain, you mewling quim!  You're a monster!  No, you brought the monster.  So, Banner... that's your play. ... Thank you for your cooperation. - Loki and Black Widow, The Avengers",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             "Captain America",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Captain America", ":image", "Superheroes/CaptainAmerica.png", ":reference", "* Rogers: When I see a situation pointed south, I can't ignore it. Sometimes I wish I could. Stark: No you don't. Rogers: No, I don't - Steve Rogers and Tony Stark, Captain America: Civil War"),
@@ -1823,7 +1823,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Mandarin.png",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             "Red Skull, The",
             vx_core.f_new(
@@ -1835,7 +1835,7 @@ export default class nx_tactics_books_superheroes {
               ":reference",
               "* You are deluded, Captain. You pretend to be a simple soldier, but in reality you are just afraid to admit that we have left humanity behind. Unlike you, I embrace it proudly. Without fear!\n* You could have the power of the gods! Yet you wear a flag on your chest and think you fight a battle of nations! I have seen the future, Captain! There are no flags!",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             ":Ultron",
             vx_core.f_new(
@@ -1857,7 +1857,7 @@ export default class nx_tactics_books_superheroes {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               ),
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             "Wasp, The",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wasp, The", ":image", "Superheroes/Wasp.png")
@@ -2177,7 +2177,7 @@ export default class nx_tactics_books_superheroes {
                 )
               ),
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             "Bug, Micronaut",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bug, Micronaut", ":image", "Superheroes/Bug.png"),
@@ -2271,7 +2271,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Kingpin.png",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Close Combat", "Crime", "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Close Combat", "Crime", "Brilliance")
             ),
             "Lizard, The",
             vx_core.f_new(
@@ -2351,7 +2351,7 @@ export default class nx_tactics_books_superheroes {
                 )
               ),
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Mastermind")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
             ),
             "Black Queen",
             vx_core.f_new(
@@ -2829,18 +2829,18 @@ export default class nx_tactics_books_superheroes {
             ":Carver",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Carver", ":summary", "* Corax is a mystical, Japanese were-crow. He can shapeshift into several forms each with their own abilities.\n* Powers - His magical powers give him control over wind and birds, specifically crows and ravens. As a shapeshifter, he has enhanced regeneration especially when he changes form. In all forms, he can 	magically speak the languages of birds and has subtle control over winds. He gains other powers in different forms.\n* Crow Form: He can fly and regenerate and is far more durable than a normal crow or human. He can speak in simple sentences in a similar way to a normal raven. Like a raven, he also has excellent eyesight especially for shiny things which can sometimes lead to distraction. Unfortunately, his intelligence is greatly reduced in this form.\n* Giant Crow Form: In this form, he looks like a crow that has grown to the size of an eagle. In this form, he is a natural predator and can fly for extended periods before diving to attack at high speeds. A dive can also be a deadly lead-in to a shift into Warbird form.\n* Human Form: Normal human form though his intelligence is the highest in this form.\n* Feathered Human Form: In this form, he appears as a short man wearing a red mask with a long nose. He also appears to be wearing a bulky, black, feathered cape. This cape, however, is his folded wings, and he is not wearing a mask. This form is his most magically powerful. He can command birds, levitate and fly (awkwardly). In this form, he can summon intense winds, throw deadly feathers and can summon and command huge numbers of magical crows that are immune to his winds and will always fight to the 	death. His intelligence is moderately lower in this form, but he remains very shrewd and aware.\n* Crinos/Warbird Form: In this form, he is an huge, terrifying, feathered bird creature. His body is jet black and rippling with power while his mind is clouded with rage. His feathers, beak and talons are insanely strong and sharp. In combat, he mostly uses his wings like massive claws, spears, or 	shields and hurls feathers like machine gun fire. In this form, he also regenerates at an exceptional rate. Crows that were already summoned continue to fight for him, but he can no longer control them or the winds except to aid his flight. He can fly nearly as fast as a jet fighter and possesses extreme agility in the air.", ":titles", "Corax, Feather, Ravenous, Stormcrow"),
             ":Salaman",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Salaman", ":summary", "* Dr. Mayer is an accomplished Biochemist with an Medical Degree. He spent the last eight years in the Brazilian Amazon, researching the biology of rare salamanders. His research explores the unique skin of salamanders. This includes regeneration, neurotoxins, moulting, skin respiration, and mucus secretion. So far, he has discovered promising reductions of the neurotoxins that could help seizures, anxiety or hyperactivity. While searching for salamanders, a rotten tree fell on top of him, crushing his legs and pinning him in the marsh for two days before he was found. After his legs were amputated, he redoubled his focus on regeneration. Months later, he was shocked to discover that his skin texture was changing and he was losing his hair. Later he discovered his legs were regenerating. Not only that, the rate of regeneration was accelerating. He immediately returned to his home in New Jersey and Galion Pharmaceuticals to study his condition. Over time, his legs completely grew back and he discovered increasing changes to his celluar structure. His bones were softening and his skin began secreting mucous. It was obvious that his body had been infected in some way by the salamanders he had worked with. Further analysis showed that he was suffering from a retrovirus that transitioned from a salamander. He expected his degenerative condition to be fatal, but it turned out to be quite the opposite.\n* He receives funding from Galion Pharmaceuticals and he also assists in the local clinic.\n* Powers:\n** Stretching\n*** Arm Whip\n*** Tail - Can rapidly form a prehensile tail by drawing mass from his body.\n** Regeneration\n** Poison - When he desires, he may exude powerful neurotoxins from he skin that cause weakness, paralysis, or death.\n** Waterbreathing\n** Climbing - The rough surface of his hands and feet allow him to cling to most surfaces.", ":titles", "Dr. Samuel Mayer"),
-            ":Savant",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Salaman", ":summary", "* Dr. Mayer is an accomplished Biochemist with an Medical Degree. He spent the last eight years in the Brazilian Amazon, researching the biology of rare salamanders. His research explores the unique skin of salamanders. This includes regeneration, neurotoxins, moulting, skin respiration, and mucus secretion. So far, he has discovered promising reductions of the neurotoxins that could help seizures, anxiety or hyperactivity. While searching for salamanders, a rotten tree fell on top of him, crushing his legs and pinning him in the marsh for two days before he was found. After his legs were amputated, he redoubled his focus on regeneration. Months later, he was shocked to discover that his skin texture was changing and he was losing his hair. Later he discovered his legs were regenerating. Not only that, the rate of regeneration was accelerating. He immediately returned to his home in New Jersey and Galion Pharmaceuticals to study his condition. Over time, his legs completely grew back and he discovered increasing changes to his celluar structure. His bones were softening and his skin began secreting mucous. It was obvious that his body had been infected in some way by the salamanders he had worked with. Further analysis showed that he was suffering from a retrovirus that transitioned from a salamander. He expected his degenerative condition to be fatal, but it turned out to be quite the opposite.\n* He receives funding from Galion Pharmaceuticals and he also assists in the local clinic.\n* Powers:\n** Stretching\n*** Arm Whip\n*** Tail - Can rapidly form a prehensile tail by drawing mass from his body.\n** Regeneration\n** Poison - May exude powerful neurotoxins from he skin that cause weakness, paralysis, or death.\n** Waterbreathing\n** Climbing - The rough surface of his hands and feet allow him to cling to most surfaces.", ":titles", "Dr. Samuel Mayer"),
+            "Strand",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Savant",
+              "Strand",
               ":reference",
               "* To walk in the darkness with a light is to know light. To know darkness you must walk without light.",
               ":summary",
               "* Strand is a professional mystic, healer, and cult leader. He is extremely gifted and charges high prices to his elite clientele.\n* Appearance - Strand is tall, thin and handsome. His eyes are a piercing green/hazel. He has short black dishevelled hair and his facial hair has an unshaven look. He generally wears a white button down shirt, black pants, and black shoes. In Coventry, he wears a loose robe over his clothes that indicates his rank. Outside he wears a long black raincoat that billows unnaturally around him with his every move. When he engages in combat, he materializes the Shroud of Uncertainty around him.\n* Personality - Strand is young, striking, and arrogant in his power. He considers non-occultists to be simple livestock to be used and discarded without regard. He is an opium addict and has experimented extensively in every form of drug, vice or taboo. Privately he is intensely jaded finding little pleasure in earthly existence, seemingly waiting for some grand event that has yet to occur.\n* History - Strand was raised by his father, Daedalus, a drug addict and occult practioner. His father travelled the world to increase his occult powers through forbidden knowledge and mind expanding drugs. Strand became an addict at age 8 and was institutionalized at age 16 for acute paranoid delusions. After his father died of an overdose, Strand immediately began to recover. Three months later he was released fully cured. Strand inherited his father's estate and immediately continued in his father's footsteps.\n* The Coven - Despite his hauty attitude or because of it, many people are drawn to him. Strand maintains a select cult of fanatically loyal servants who serve his every whim in exchange for mystic training, knowledge, healing, and mind altering experiences.\n* Conventry - Strand maintains an aging mansion deep in the woods. The building is a maze of massive rooms that seems to defy the exterior size. Most of these rooms are actually in the Spirit World.\n* Powers\n** Shroud of Uncertainty - Enchantment that makes the caster very difficult to harm. When attacked the caster appears to be hit by the full force of the attack, but this is an alternate reality that immediately fades.\n** Anyone tracking or researching the wearer will discover multiple conflicting alternate reality trails. Such information is largely useless.\n** Ties that Bind - Strand is partially possessed by his father's spirit. This connection grants him a high level of magical resistence.\n** Threads of Fate - Those with spiritual or mental powers can see silvery-red cords of spirit rising from every part of his body and disappearing somewhere above him. These cords are reminiscent of puppeteer string as if he is being manipulated by an unseen force. He can cause similar cords to appear between himself and a target. When these cords touch a target, he can exert his will over them to immobilize, influence or control them. They are particularly effective against those with repressed aspects of their personality that he can unleash with his ability. This ability can only effect targets that can make decisions or are based on randomness (includes most computer programs).\n** Reanimated - Strand has already died and been reanimated with Necromancy. His body is much tougher than normal and is highly resistant to damage. He can still bleed, but blood loss does not negatively affect him except that his appearance becomes more corpse-like. He no longer needs to breathe and he is highly resistant to radiation. He if vulnerable to dismemberment, fire, silver and purifying magic. He does not heals normally, but he can be repaired with Necromancy, at a price of course.\n** Necromancy - Necrotic Repair, Reanimate\n** Summoning - \n** Levitation - The Silver Cords can lift him off the ground and he can float at normal movement speeds.",
               ":titles",
-              "Strand Beizingstoke, Daedalus Beizingstoke, Advent, Arcana, Archon, Ash, Lord Archon, Dusk, Harbinger, Horizon, Shroud, Strand, Threshold, Vassal",
+              "Strand Beizingstoke, Daedalus Beizingstoke, Advent, Arcana, Archon, Ash, Lord Archon, Dusk, Harbinger, Horizon, Savant, Shroud, Threshold, Vassal",
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
@@ -2882,11 +2882,11 @@ export default class nx_tactics_books_superheroes {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Revenant", ":titles", "Blood"),
             "Saber, The",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Saber, The"),
-            ":Seraph",
+            "Seraph, The",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Seraph",
+              "Seraph, The",
               ":image",
               "Superheroes/Archon.png",
               ":summary",
@@ -2912,8 +2912,8 @@ export default class nx_tactics_books_superheroes {
             ),
             "Shade, The",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shade, The"),
-            ":Spectrum",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectrum", ":image", "Superheroes/Vector.png", ":summary", "* Spectrum appears in glowing, angular, mirrored armor with a mirrored visor. The armor augments his strength to lift 800lbs. He can materialize angular blades and shields from his arms. He can also create glowing shards in different forms including a flying triangular plate, throwing knives, barriers, and cages.\n* Spectrum's armor is powered by light and the area will visibly darken when his powers are active. In a completely dark area, his powers are greatly diminished. Conversely, very bright light increases his power level. For this reason, he usually acts only in daylight.\n* Dr. Alex Lietner is an MIT physicist reseaching the creation of holograms with lasers. He discovered that through precise modulation, a hologram could temporarily be turned into an extremely rigid solid. With the help of some of his students, he was able to create a portable projection system in a wearable suit.\n* Blinding Flash - Intense light burst similar to a flash bomb.\n* Blinding Torrent - A dizzying kaleidoscope of intense light that causes vertigo and nausea.", ":titles", "Alan Lietner, Shard, Vector"),
+            "Spectrum",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Spectrum"),
             ":Spinnerette",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spinnerette", ":summary", "* Spinnerette is a petite woman of Indian decent who wears a stylized sari as a costume.\n* Spinnerette can create dozens of sticky threads from her fingertips. By spinning her body around, she can cause these threads to criss-cross into a large net that constricts her target."),
             ":Tendril",
@@ -3045,13 +3045,13 @@ export default class nx_tactics_books_superheroes {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             "Captain America II",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Captain America II", ":summary", "* Pamela Kathman is the only daughter of the criminal Taskmaster. She is a 6 year old child prodigy with both violin and piano. Her mutant powers have already manifested themselves and are identical to her father's.\n* In the Sentinel alternate future, she was recruited by the Senturion to become a resistance fighter. She obtrained Captain America's shield in a raid on a Sentinel warehouse. She has since taken on Captain America's role and become a symbol of the resistance.\n* Photographic Reflexes - She possesses the skills of Hawkeye, Captain America, Punisher, Spiderman, Daredevil, and countless others. She rapidly switches styles during combat to make her moves more unpredictable.\n* Adamantium Shield - Unbreakable Shield can resist almost any physical force.\n* Agility (Spiderman) - Her agility level far exceeds human maximum and she is extremely difficult to hit.\n* Weapon Skill (Punisher) - She has encyclopedic knowledge of military grade weaponry and will use them to great effect.\n* Second Generation Mutant - Her mutant powers are difficult to detect except at very close range.", ":titles", "Pamela Kathman, Taskmaster II"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Captain America II", ":titles", "Pamela Kathman, Taskmaster II", ":summary", "* Pamela Kathman is the only daughter of the criminal Taskmaster. She is a 6 year old child prodigy with both violin and piano. Her mutant powers have already manifested themselves and are identical to her father's.\n* In the Sentinel alternate future, she was recruited by the Senturion to become a resistance fighter. She obtrained Captain America's shield in a raid on a Sentinel warehouse. She has since taken on Captain America's role and become a symbol of the resistance.\n* Photographic Reflexes - She possesses the skills of Hawkeye, Captain America, Punisher, Spiderman, Daredevil, and countless others. She rapidly switches styles during combat to make her moves more unpredictable.\n* Adamantium Shield - Unbreakable Shield can resist almost any physical force.\n* Agility (Spiderman) - Her agility level far exceeds human maximum and she is extremely difficult to hit.\n* Weapon Skill (Punisher) - She has expert knowledge of military grade weaponry and will use them to great effect.\n* Second Generation Mutant - Her mutant powers are difficult to detect except at very close range."),
             ":Deathwatch",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Deathwatch", ":summary", "* Deathwatch is an ancient, undead, native-american being that embodies entropy. It lay in an Indian burial ground until the Sentinels disturbed it. Since then, it has joined Senturion for its own reaons. It never makes a sound, wears a heavy poncho, and is cloaked in shadows underneath the poncho even in bright light.\n* Damage Resistance - Deathwatch has received enormous damage and simply rises again and again. No force has been able to keep him down.\n* Environmental Independence - No environmental effect seem to have the slightest effect on it.\n* Undeath - Deathwatch is not a living creature anymore. It never eats, sleeps, or speaks. It is immune to bleeding, poison, radiation, and mind control. It is vulnerable to magical control, however.\n* Strength - Deathwatch has strength exceeding human levels. It has been observed leaping 15 feet into the air.\n* Cloak of Entropy - Deathwatch's main ability. Anything wrapped in his cloak begins to corrode into dust. The more complex the target the quicker the destruction."),
             ":Phalanx",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phalanx", ":summary", "* In the Sentinel alternate future, Senturion recovered the Awesome Android from its watery grave. He reporgrammed the Android and now it now serves only the Senturion.", ":titles", "Awesome Android"),
-            ":Senturion",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Senturion", ":summary", "* Senturion is a highly advanced, alien construct with the thought patterns of a human super-imposed upon his programming. He originally believed that he was a young man who could transform into a robot, but he has since learned that his actual body died long ago and that his personality is just an artificial duplicate. After this discovery, his humanity has gradually diminished over time.\n* Synthetic - Senturion does not need to eat, sleep or breathe. He is composed of molecular machines that twist and wrap in layers of ceramic wire filaments. These multipurpose filaments reconfigure into different forms to heal or create custom weapons. These filaments must always remain connected to the main body or they self-destruct to maintain their secrets. If Senturion loses a limb, the resulting explosion can cause significant damage.\n* Body - He has tremendous strength and endurance and can withstand extreme temperatures, pressures, and the vacuum of space. His body is very flexible, and he can contort himself to escape confinement of fit through small gaps.\n* Mind - His computer brain greatly increases his ability to quickly process information and create complex strategies.\n* Speed - Senturion moves and reacts with lightning speed and precision. He can run at 80mph and can briefly run on walls. His graceful movements belie his great strength and significant weight.\n* Leaping - Senturion can jump 40ft in the air.\n* Eyes - Senturion's eyes can emit tight-beam lasers or a white sheet of explosive energy. He can sense electromagnetic radiation (including infrared and ultraviolet). He also possesses telescopic and microscopic vision.\n* Transformation - As Mech-Man he was able to transform from a human-like form to his mechanical form. He has since lost this ability (and a great deal of his human personality). As Senturion he has refined this power to produce specialized weapons like blades and spikes.\n* Healing - Senturion's android body rapidly repairs itself.\n* Filaments - In close combat, filaments can emerge from its body which can scramble or override electrical devices on contact.\n* History - Senturion was designed as one of a multitude of multi-purpose exploratory probes. Their natural form is a squirming mass of clear filaments. These probes were packed into artificial comets and launched in all directions from their homeworld. To protect their designers, they possess no memory of their origin or ultimate purpose. Many of these probes have landed on all planets in the solar system and millions more are littered across the galaxy. Most were buried underground by their impact and there they lie dormant. The ones on the surface seek a power source to fuel their growth and adaptation to their environment. They absorb light, heat, electricity or other radiation. When fully charged, they quietly begin exploring and analyzing their environment for possible resources and threats. If the planet is lifeless, they will catalog the available resources and begin creating more identical probes. If the planet is inhabited, they will wait and study the local wildlife until they are confident that they can completely mimic a sample of the apex species. Then they will begin to blend into the local society to learn everything they can. When their analysis no longer produces significant results, they begin to create more probes. Though they are unaware of their creator or purpose, they continue to catalog and expand. Eventually, their data network reaches back to their creators who collect this massive treasure trove of data.", ":titles", "Mech Man", ":mass", "300kg")
+            "Senturion",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Senturion")
           )
         ),
         ":Extras",
@@ -3063,11 +3063,11 @@ export default class nx_tactics_books_superheroes {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             "Samantha Hellerton",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Samantha Hellerton", ":reference", "I haven't been killed yet.", ":summary", "* Miss Hellerton is an investigative reporter who will go to great lengths for a story. She has been kidnapped and shot at numerous times. She feels that getting directly involved gives her stories a personal and exclusive touch. She freelances for ABC radio and television in New York, and she makes a bundle for a good story. Her special reports are very popular, detailing her most recent adventures in the dangerous world of crime and power. To this end, she is always trying to top herself with increasingly risky and mindboggling news. Though she may seem sensationalist, she considers herself to be an excellent journalist and has no interest in altering or suppressing the facts. Her popularity and sincerity make her a favorite person to 'leak' information to. Her tendency to get into the thick of a situation maker her somewhat of a menace to superheroes.\n* She is very energetic and disorganized bordering on hyperactive. She has fantastic luck, great skill as a journalist, and some photographic talent.\n* She has many contacts around the world (not one of which is reliable). She dislikes her brother intensely.", ":titles", "Sammy"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Samantha Hellerton", ":titles", "Sammy", ":reference", "I haven't been killed yet.", ":summary", "* Miss Hellerton is an investigative reporter who will go to great lengths for a story. She has been kidnapped and shot at numerous times. She feels that getting directly involved gives her stories a personal and exclusive touch. She freelances for ABC radio and television in New York, and she makes a bundle for a good story. Her special reports are very popular, detailing her most recent adventures in the dangerous world of crime and power. To this end, she is always trying to top herself with increasingly risky and mindboggling news. Though she may seem sensationalist, she considers herself to be an excellent journalist and has no interest in altering or suppressing the facts. Her popularity and sincerity make her a favorite person to 'leak' information to. Her tendency to get into the thick of a situation maker her somewhat of a menace to superheroes.\n* She is very energetic and disorganized bordering on hyperactive. She has fantastic luck, great skill as a journalist, and some photographic talent.\n* She has many contacts around the world (not one of which is reliable). She dislikes her brother intensely."),
             "Samuel Timothy Hellerton",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Samuel Timothy Hellerton", ":reference", "Let me get this straight ... Is is not true that? ... Just answer the question!", ":summary", "* Samuel Hellerton is a no-nonsense assistant D.A. He has built himself up from the bottom, is sickeningly straight, and is very dedicated to the Law.\n* He is generally calm and matter of fact. He nevers smile but is otherwise courteous and amiable. In court, however, he suddenly transforms into a merciless, abusive interrogator.\n* He does not get along well with his sister. He doesn't understand her, and she can't stand him. They are so used to fighting that they have rules about what is acceptable to throw at each other.\n* Samuel is a talented lawyer. He has mastered the give and take of the justice system. He is also skilled with the many firearms he keeps as a hobby (his house is like a gunlocker). He has many contacts: some rich, some powerful, many shady. Most are not reliable, but he knows which ones are.", ":titles", "Sam, Assistant District Attorney Hellerton"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Samuel Timothy Hellerton", ":titles", "Sam, Assistant District Attorney Hellerton", ":reference", "Let me get this straight ... Is it not true that? ... Just answer the question!", ":summary", "* Samuel Hellerton is a no-nonsense assistant D.A. He has built himself up from the bottom, is sickeningly straight, and is very dedicated to the Law.\n* He is generally calm and matter of fact. He never smiles but is otherwise courteous and amiable. In court, however, he suddenly transforms into a merciless, abusive interrogator.\n* He does not get along well with his sister. He doesn't understand her, and she can't stand him. They are so used to fighting that they have rules about what is acceptable to throw at each other.\n* Samuel is a talented lawyer. He has mastered the give and take of the justice system. He is also skilled with the many firearms he keeps as a hobby (his house is like a gunlocker). He has many contacts: some rich, some powerful, many shady. Most are not reliable, but he knows which ones are."),
             "David Spencer Grant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "David Spencer Grant", ":summary", "* Sergeant Grant is a middle-aged, highly decorated enigma. He has been a police officer for 23 years, a sergeant for 17, and has long ago given up on a promotion. Everyone on the force respects him, though few like him.\n* He has a macho image that he enforces to excess and is a card carrying male chauvanist pig. Socially, he can be obnoxious and irritating. For all his surly nature, he will do the right thing when the chips are down.\n* He is growing a pot belly, and he wears sunglasses even at night. He gave up smoking 2 years ago, but has never quite gotten over them.", ":titles", "Sergeant Grant")
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "David Spencer Grant", ":titles", "Sergeant Grant", ":summary", "* Sergeant Grant is a middle-aged, highly decorated enigma. He has been a police officer for 23 years, a sergeant for 17, and has long ago given up on a promotion. Everyone on the force respects him, though few like him.\n* He has a macho image that he enforces to excess and is a card carrying male chauvanist pig. Socially, he can be obnoxious and irritating. For all his surly nature, he will do the right thing when the chips are down.\n* He is growing a pot belly, and he wears sunglasses even at night. He gave up smoking 2 years ago, but has never quite gotten over them.")
           )
         )
       )

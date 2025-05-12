@@ -602,12 +602,7 @@ Altitude until the end of the [Turn].
            "* Easy - Quick Game with Basic Rules
             * Medium
             * Difficult
-            * Epic - Maximum complexity (and detail).  Often long play or part of a [Campaign].")
-        :Initiative
-         (rule
-          :name "Initiative"
-          :summary
-           "* Initiative is determined by Spirit. Unit act in order of initiative from lowest to highest. Before any Action, a unit with higher initiative may interrupt the current unit and take its turn."))))))
+            * Epic - Maximum complexity (and detail).  Often long play or part of a [Campaign]."))))))
 
 (func chapter_tokens : base/chapter
  (chapter
@@ -624,58 +619,24 @@ Altitude until the end of the [Turn].
           :name "Duration"
           :summary
            "* Duration tokens are placed on an ability card when it is activated.
-* When the ability no longer has any duration tokens, it is removed.")
-        :Morale
-         (rule
-          :name "Morale"
-          :image "Tokens/MoraleToken.png"
-          :summary
-           "-1 [Spirit]
-* A unit must move 1 space away from the source of the attack/damage for each Morale Token received.
-* If it already has Morale tokens,  it must roll Morale tokens vs. [Spirit] and must move additional spaces
-for any [Hits].
-* This movement does not cost [Speed], but if the unit is blocked from moving away it will suffer a [Collision]
-of Speed equal to the number of remaining [Hits].
-* [Anytime]: If [Morale] >= [Spirit] then the unit will take no [Actions], move at its best speed away from
-any opponents, and will leave the map if able.")))
+            * When the ability no longer has any duration tokens, it is removed.")))
     "Black Tokens"
      (section
       :name "Black Tokens"
       :summary "* Permanent Effects that will not normally be removed during a battle such as Damage."
       :rulemap
        (rulemap
-        "Suffering Damage"
-         (rule
-          :name "Suffering Damage")
         "Treating Damage"
          (rule
           :name "Treating Damage"
           :summary
            "* Blood Loss, if present, should usually be treated first. This is because Blood Loss can cause death in as little as 4 minutes from a single wound.
-* Shock, if present, should be treated next. It can kill in as little as 30 minutes.
-* Eventually fatal wounds, if any, should be treated next. These wounds become progressively worse kill in from 1 hour to 9 days.
-* Lastly, the wound itself should be treated. Untreated wounds take twice as long to heal on their own.")
+            * Shock, if present, should be treated next. It can kill in as little as 30 minutes.
+            * Eventually fatal wounds, if any, should be treated next. These wounds become progressively worse kill in from 1 hour to 9 days.
+            * Lastly, the wound itself should be treated. Untreated wounds take twice as long to heal on their own.")
         "Healing Damage"
          (rule
           :name "Healing Damage")
-        :Damaged
-         (rule
-          :name "Damaged"
-          :image "Tokens/DamageToken.png"
-          :summary
-           "-1 [Body]
--1 [Defense]
--1 [Speed] for every 2
--1 [Skill]
-* [Anytime]: If [Damaged] >= [Body], then the unit is incapacitated.
-* [Anytime]: If [Damaged] >= 2x [Body], then the unit is dead.
-* [Anytime]: If [Damaged] >= 3x [Body], then the unit is completely destroyed.")
-        "Blood Loss Damage"
-         (rule
-          :name "Blood Loss Damage")
-        "Broken Bone Damage"
-         (rule
-          :name "Broken Bone Damage")
         "Burn Damage"
          (rule
           :name "Burn Damage"
@@ -700,12 +661,12 @@ any opponents, and will leave the map if able.")))
           :name "Shock Damage"
           :summary
            `* Shock is a life-threatening medical condition as a result of insufficient blood flow throughout the body. Shock often accompanies severe injury or illness. Medical shock is a medical emergency and can lead to other conditions such as lack of oxygen in the body's tissues (hypoxia), heart attack (cardiac arrest) or organ damage. It requires immediate treatment as symptoms can worsen rapidly.
-* Types of Shock:
-** Septic shock is caused by bacteria. It is treated with antibiotics and fluids.
-** Anaphylactic shock is caused by hypersensitivity or allergic reaction. If is treated with diphenhydramine (Benadryl), epinephrine (an "Epi-pen"), and steroid medications (solumedrol).
-** Cardiogenic shock is from heart damage. It is treated by identifying and treating the underlying cause.
-** Hypovolemic shock is from blood or fluid loss. It is treated with fluids (saline) in minor cases, and blood transfusions in severe cases.
-** Neurogenic shock is from spinal cord trauma. It is the most difficult to treat as spinal cord damage is often irreversible. Immobilization, anti-inflammatories such as steroids and surgery are the main treatments.`)
+            * Types of Shock:
+            ** Septic shock is caused by bacteria. It is treated with antibiotics and fluids.
+            ** Anaphylactic shock is caused by hypersensitivity or allergic reaction. If is treated with diphenhydramine (Benadryl), epinephrine (an "Epi-pen"), and steroid medications (solumedrol).
+            ** Cardiogenic shock is from heart damage. It is treated by identifying and treating the underlying cause.
+            ** Hypovolemic shock is from blood or fluid loss. It is treated with fluids (saline) in minor cases, and blood transfusions in severe cases.
+            ** Neurogenic shock is from spinal cord trauma. It is the most difficult to treat as spinal cord damage is often irreversible. Immobilization, anti-inflammatories such as steroids and surgery are the main treatments.`)
         "Sickness Damage"
          (rule
           :name "Sickness Damage"
@@ -714,35 +675,6 @@ any opponents, and will leave the map if able.")))
          (rule
           :name "Slash Damage"
           :summary "* Slash Damage is characterized by long surface wounds of varying depth. If the wounds are sufficiently deep they may remove entire extremities.")))
-    "Red Tokens"
-     (section
-      :name "Red Tokens"
-      :summary
-       "* Red tokens represent continuous Effects that will eventually lead to death such as Bleeding and Fire.
-* [Activate]: Add one Stun token."
-      :rulemap
-       (rulemap
-        :Bleeding
-         (rule
-          :name "Bleeding"
-          :image "Tokens/BleedingToken.png"
-          :summary "* Each turn add 1 [Stun] token Any adjacent [Unit] may use an [Action] to extinguish 1 Fire token."
-          :titles "Bloody, Serrated, Sharp")
-        :Burning
-         (rule
-          :name "Burning"
-          :image "Tokens/FireToken.png"
-          :summary
-           "* [Activate]: Roll Fire tokens vs. [Defense].
-* [Hits] are [Damage] tokens.
-* [Critical Hits] are additional Fire tokens. Also, a random adjacent space gains Fire tokens equal to the [Critical Hits]
-* If no [Hits] are scored, remove a Fire Token.
-* Any adjacent [Unit] may use an [Action] to extinguish 1 Fire token."
-          :titles "Burning, Fiery, Flaming")
-        "Choking Damage"
-         (rule
-          :name "Choking Damage"
-          :summary "* This includes any obstruction of airways such as smoke, water, sand, fungus, disease, physical choking, etc. It also includes damage to filters and other aspiration/ventilation systems on machines.")))
     :Status
      (section
       :name "Status"
@@ -806,12 +738,12 @@ any opponents, and will leave the map if able.")))
       :name "Core Scales"
       :summary
        "* 10^-35m - Plank Scale. Any smaller than this and space seems to have no meaning.
-* 10^-20m - Particle Scale. The smallest particles exist at roughly this scale.
-* 10^-5m - Cell Scale. Bacterium and other cells exist at this scale.
-* 10^10m - Planetary Scale. Planets and moons exist at this scale.
-* 10^25m - Hubble Scale. The entire observable universe is at this scale.
-* ? - Universal Scale. The actual size of the universe, whatever that means.
-* ? - Multiversal Scale. The size of the multiverse, whatever that means."
+        * 10^-20m - Particle Scale. The smallest particles exist at roughly this scale.
+        * 10^-5m - Cell Scale. Bacterium and other cells exist at this scale.
+        * 10^10m - Planetary Scale. Planets and moons exist at this scale.
+        * 10^25m - Hubble Scale. The entire observable universe is at this scale.
+        * ? - Universal Scale. The actual size of the universe, whatever that means.
+        * ? - Multiversal Scale. The size of the multiverse, whatever that means."
       :rulemap
        (rulemap
         "Personal Scale"
@@ -819,109 +751,99 @@ any opponents, and will leave the map if able.")))
           :name "Personal Scale"
           :summary
            "Wars are fought at larger scales, but individual interaction is best done at this scale.
-* Round:2s
-* Space:2m (6 ft)
-* 24 x 20 map = 48m x 40m
-* 1 Space/Turn = 1m/s
-* The world record for 100m dash is 10 seconds = 22mph = 36kph = 10m/s = 10 spaces
-* The highest average speed for Marathon: 12mph = 20kph = 5m/s = 5 spaces
-* An average brisk walk: 4mph = 7kph = 2m/s = 2 spaces
-* Light Infantry: A normal person with only light gear: 18mph = 29kph = 8m/s = 8 spaces
-* Medium Infantry: A normal person with medium gear: 13mph = 21kph = 6m/s = 6 spaces
-* Heavy Infantry: A normal person with heavy gear: 9mph = 14kph = 4m/s = 4 spaces
-* Race Car: Takes 3x1 spaces: 100mph = 160kph = 45m/s = 45 spaces
-* Sherman Tank: 6m takes 3x2 spaces: 25mph = 38kph = 10m/s = 10 spaces
-* SBD Dauntless: 10mx12m takes 5x6 spaces: 250mph = 400kph = 110m/s = 110 spaces
-* B-24 Liberator: 20mx33m takes 10x17 spaces:  300mph = 470kph = 130m/s = 130 spaces
-* PT-109: 24m takes 12x4 space: 76kph = 21m/s = 21 spaces
-* USS Enterprise: 240m takes 120x40 spaces: 37mph = 60kph = 17m/s = 17 spaces")
+            * Round:2s
+            * Space:2m (6 ft)
+            * 24 x 20 map = 48m x 40m
+            * 1 Space/Turn = 1m/s
+            * The world record for 100m dash is 10 seconds = 22mph = 36kph = 10m/s = 10 spaces
+            * The highest average speed for Marathon: 12mph = 20kph = 5m/s = 5 spaces
+            * An average brisk walk: 4mph = 7kph = 2m/s = 2 spaces
+            * Light Infantry: A normal person with only light gear: 18mph = 29kph = 8m/s = 8 spaces
+            * Medium Infantry: A normal person with medium gear: 13mph = 21kph = 6m/s = 6 spaces
+            * Heavy Infantry: A normal person with heavy gear: 9mph = 14kph = 4m/s = 4 spaces
+            * Race Car: Takes 3x1 spaces: 100mph = 160kph = 45m/s = 45 spaces
+            * Sherman Tank: 6m takes 3x2 spaces: 25mph = 38kph = 10m/s = 10 spaces
+            * SBD Dauntless: 10mx12m takes 5x6 spaces: 250mph = 400kph = 110m/s = 110 spaces
+            * B-24 Liberator: 20mx33m takes 10x17 spaces:  300mph = 470kph = 130m/s = 130 spaces
+            * PT-109: 24m takes 12x4 space: 76kph = 21m/s = 21 spaces
+            * USS Enterprise: 240m takes 120x40 spaces: 37mph = 60kph = 17m/s = 17 spaces")
         "Standard Scale"
          (rule
           :name "Standard Scale"
           :summary
            "* 1 Turn = 4 seconds
-* 1 Space = 4m (12 ft)
-* 24 x 20 map = 96m x 80m
-1 Round = 2 seconds
-1 Space = 4m
-Light Infantry: 10 man Squad with only light gear: 18mph = 29kph = 8m/s = 4 spaces
-Medium Infantry: A normal person with medium gear: 13mph = 21kph = 6m/s = 3 spaces
-Heavy Infantry: A normal person with heavy gear: 9mph = 14kph = 4m/s = 2 spaces
-Race Car: Takes 2x1 spaces: 100mph = 160kph = 45m/s = 22 spaces
-Sherman Tank: 6m takes 2x1 spaces: 25mph = 38kph = 10m/s = 5 spaces
-SBD Dauntless: 10mx12m takes 5x6 spaces: 250mph = 400kph = 110m/s = 55 spaces
-B-24 Liberator: 20mx33m takes 10x17 spaces:  300mph = 470kph = 130m/s = 65 spaces
-PT-109: 24m takes 12x4 space: 76kph = 21m/s = 10 spaces
-USS Enterprise: 240m takes 120x40 spaces: 37mph = 60kph = 17m/s = 8 spaces")
+            * 1 Space = 4m (12 ft)
+            * 24 x 20 map = 96m x 80m
+            1 Round = 2 seconds
+            1 Space = 4m
+            Light Infantry: 10 man Squad with only light gear: 18mph = 29kph = 8m/s = 4 spaces
+            Medium Infantry: A normal person with medium gear: 13mph = 21kph = 6m/s = 3 spaces
+            Heavy Infantry: A normal person with heavy gear: 9mph = 14kph = 4m/s = 2 spaces
+            Race Car: Takes 2x1 spaces: 100mph = 160kph = 45m/s = 22 spaces
+            Sherman Tank: 6m takes 2x1 spaces: 25mph = 38kph = 10m/s = 5 spaces
+            SBD Dauntless: 10mx12m takes 5x6 spaces: 250mph = 400kph = 110m/s = 55 spaces
+            B-24 Liberator: 20mx33m takes 10x17 spaces:  300mph = 470kph = 130m/s = 65 spaces
+            PT-109: 24m takes 12x4 space: 76kph = 21m/s = 10 spaces
+            USS Enterprise: 240m takes 120x40 spaces: 37mph = 60kph = 17m/s = 8 spaces")
         "Large Scale"
          (rule
           :name "Large Scale"
           :summary
            "* 1 Turn = 15 seconds
-* 1 Space = 15m (50 ft)
-* 24 x 20 map = 360m x 300m")
+            * 1 Space = 15m (50 ft)
+            * 24 x 20 map = 360m x 300m")
         "Modern Naval Scale"
          (rule
           :name "Modern Naval Scale"
           :summary
-           "* Naval Combat - World War II was the turning point of Naval Warfare when air power made traditional naval
-combat obsolete.  Even submarines and torpedoes were insignificant compared to the effect of air power.  Map
-scale is therefore based primarily on aircraft speed.
-* 1 Turn = 5 seconds
-* 1 Space = 80m
-* Infantry: 100 man Company with only light gear: 18mph = 29kph = 8m/s = 40m/turn = 1/2 space (1 space assuming
-trucks)
-* Race Car: 10 cars in 1 space: 100mph = 160kph = 45m/s = 225m/turn = 3 spaces
-* Sherman Tank: 5 tanks in 1 space: 25mph = 38kph = 10m/s = 50m/turn = 1 space
-* SBD Dauntless: 5 plane Flight in 1 space: 250mph = 400kph = 110m/s = 550 m/turn = 7 spaces
-* B-24 Liberator: 1 plane take 1 space:  300mph = 470kph = 130m/s = 650 m/turn = 8 spaces
-* PT-109: 24m takes 1 space: 76kph = 21m/s = 105m/turn = 1.5 spaces
-* USS Enterprise: 240m takes 3x1 spaces: 37mph = 60kph = 17m/s = 85 m/turn = 1 space")
+           "* Naval Combat - World War II was the turning point of Naval Warfare when air power made traditional naval combat obsolete. Even submarines and torpedoes were insignificant compared to the effect of air power. Map scale is therefore based primarily on aircraft speed.
+            * 1 Turn = 5 seconds
+            * 1 Space = 80m
+            * Infantry: 100 man Company with only light gear: 18mph = 29kph = 8m/s = 40m/turn = 1/2 space (1 space assuming trucks)
+            * Race Car: 10 cars in 1 space: 100mph = 160kph = 45m/s = 225m/turn = 3 spaces
+            * Sherman Tank: 5 tanks in 1 space: 25mph = 38kph = 10m/s = 50m/turn = 1 space
+            * SBD Dauntless: 5 plane Flight in 1 space: 250mph = 400kph = 110m/s = 550 m/turn = 7 spaces
+            * B-24 Liberator: 1 plane take 1 space:  300mph = 470kph = 130m/s = 650 m/turn = 8 spaces
+            * PT-109: 24m takes 1 space: 76kph = 21m/s = 105m/turn = 1.5 spaces
+            * USS Enterprise: 240m takes 3x1 spaces: 37mph = 60kph = 17m/s = 85 m/turn = 1 space")
         "Tactical Scale"
          (rule
           :name "Tactical Scale"
           :summary
            "* 1 Turn = 1 hour
-* 1 Space = 50km
-* 24 x 20 map = ?
-* Infantry: 100 man Company with only light gear: 18mph = 29kph = 3/5 space (1 space assuming trucks)
-* Race Car: 10 cars in 1 space: 100mph = 160kph = 3 spaces
-* Sherman Tank: 5 tanks in 1 space: 25mph = 38kph = 4/5 space
-* SBD Dauntless: 5 plane Flight in 1 space: 250mph = 400kph = 8 spaces
-* B-24 Liberator: 1 plane take 1 space:  300mph = 470kph = 9 spaces
-* PT-109: 24m takes 1 space: 76kph = 1.5 spaces
-* USS Enterprise: 240m takes 3x1 spaces: 37mph = 60kph = 1 space")
+            * 1 Space = 50km
+            * 24 x 20 map = ?
+            * Infantry: 100 man Company with only light gear: 18mph = 29kph = 3/5 space (1 space assuming trucks)
+            * Race Car: 10 cars in 1 space: 100mph = 160kph = 3 spaces
+            * Sherman Tank: 5 tanks in 1 space: 25mph = 38kph = 4/5 space
+            * SBD Dauntless: 5 plane Flight in 1 space: 250mph = 400kph = 8 spaces
+            * B-24 Liberator: 1 plane take 1 space:  300mph = 470kph = 9 spaces
+            * PT-109: 24m takes 1 space: 76kph = 1.5 spaces
+            * USS Enterprise: 240m takes 3x1 spaces: 37mph = 60kph = 1 space")
         "Strategic Scale"
          (rule
           :name "Strategic Scale"
           :summary
            "* Infantry to tank ratio: 1000 to 1.
-* 1 Turn = ?
-* 1 Space = ?
-* 24 x 20 map = ?")
+            * 1 Turn = ?
+            * 1 Space = ?
+            * 24 x 20 map = ?")
         "Global Scale"
          (rule
           :name "Global Scale"
           :summary
-           "* The World Wars were indeed the first wars to be waged worldwide.  The logical scale for modern global events
-is the world itself.
-* 1 Turn = 3 days
-* 1 Space = 1600km = 1000miles.
-* 24 x 20 map = ?
-The Earth's circumference is 40,000km.
-* Infantry: 2,000 man Division with trucks: 18mph = 29kph = 3/5 space (1 space assuming trucks)
-* M3 Halftrack: 200 trucks have a range of 280km which it can reach in 4 hours.  At 4 trips/day, it can carry
-infantry 2 spaces/turn.
-* Sherman Tank: 100 tanks has a range of 120mi = 190km which it can reach in 6 hours.  At 2.5 trips/day, it can
-move 1 space/turn.
-* SBD Dauntless: 100 planes with a range of 773mi = 1243km which it can reach in 4 hours.  At 3 flights/day, it
-can move 7 spaces/turn if it can land and refuel in each space.
-* B-24 Liberator: 20 bombers with a range of 3700mi = 6000km which it can reach in 8 hours.  At 2 flights/day,
-it can move 22 spaces/turn if it can land and refuel every 4 spaces.
-* PT-109: 20 boats have only a 12 hour endurance so is entirely dependent on support ships for long range
-travel.
-* USS Enterprise: 1 capital ship, 2 light cruiser, and 3 destroyer escorts can cruise at
-17mph = 28kph = 672km/day.  It can move 672km * 3 days = 2016km/turn = 1 space/turn.")))
+           "* The World Wars were indeed the first wars to be waged worldwide. The logical scale for modern global events is the world itself.
+            * 1 Turn = 3 days
+            * 1 Space = 1600km = 1000miles.
+            * 24 x 20 map = ?
+            The Earth's circumference is 40,000km.
+            * Infantry: 2,000 man Division with trucks: 18mph = 29kph = 3/5 space (1 space assuming trucks)
+            * M3 Halftrack: 200 trucks have a range of 280km which it can reach in 4 hours.  At 4 trips/day, it can carry infantry 2 spaces/turn.
+            * Sherman Tank: 100 tanks has a range of 120mi = 190km which it can reach in 6 hours.  At 2.5 trips/day, it can move 1 space/turn.
+            * SBD Dauntless: 100 planes with a range of 773mi = 1243km which it can reach in 4 hours.  At 3 flights/day, it can move 7 spaces/turn if it can land and refuel in each space.
+            * B-24 Liberator: 20 bombers with a range of 3700mi = 6000km which it can reach in 8 hours.  At 2 flights/day, it can move 22 spaces/turn if it can land and refuel every 4 spaces.
+            * PT-109: 20 boats have only a 12 hour endurance so is entirely dependent on support ships for long range travel.
+            * USS Enterprise: 1 capital ship, 2 light cruiser, and 3 destroyer escorts can cruise at 17mph = 28kph = 672km/day.  It can move 672km * 3 days = 2016km/turn = 1 space/turn.")))
     "Core Maps"
      (section
       :name "Core Maps"
@@ -947,30 +869,22 @@ travel.
           :image "Maps/Building.png"
           :summary
            "* [Move]: Impassable by Vehicles
-* [Defense]: [+1 Defense], Gains [Armor] based on building material and thickness")
+            * [Defense]: [+1 Defense], Gains [Armor] based on building material and thickness")
         :Cliff
          (rule
           :name "Cliff"
           :image "Maps/Cliff.png"
           :summary
            "* [Move]: Impassable along the cliff edge
-* [Attack]: +1 [Elevation]
-* [Defense]: +1 [Elevation]")
-        :Forest
-         (rule
-          :name "Forest"
-          :image "Maps/Forest.png"
-          :summary
-           "* [Move]: [-1 Speed]
-* [Defense]: [+2 Defense], [+2 Armor], Blocks [Line of Sight]")
+            * [Elevation]:+1")
         :Hill
          (rule
           :name "Hill"
           :image "Maps/Hills.png"
           :summary
-           "* [Move]: [-1 Speed]
-* [Attack]: [+1 Elevation]
-* [Defense]: [+1 Elevation], Blocks [Line of Sight] to units behind the hill, but not units on the hill.")
+           "* [Move]:-1
+            * [Attack]: [+1 Elevation]
+            * [Defense]: [+1 Elevation], Blocks [Line of Sight] to units behind the hill, but not units on the hill.")
         :Road
          (rule
           :name "Road"

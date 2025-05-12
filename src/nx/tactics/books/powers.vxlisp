@@ -12,9 +12,9 @@
     (chapter_special_modifiers tactics)
     (chapter-equipment-powers tactics)
     (chapter_strength_and_weaknesses tactics)
-    (chapter_mental_powers_and_weaknesses tactics)
+    (chapter_mental_powers tactics)
     (chapter_movement_powers tactics)
-    (chapter_physical_powers_and_weaknesses tactics)
+    (chapter_physical_powers tactics)
     (chapter_body_powers tactics)
     (chapter_energy_and_forces tactics)
     (chapter_alteration_powers tactics)
@@ -32,79 +32,87 @@
 
 (func chapter_special_modifiers : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "Special Modifiers"
   :sectionmap
    (base/sectionmap<-sectionlist
     (base/section
      :name "Buffs"
      :modifiermap
-      (modifiermap
-       "Armor-Piercing (AP)"
-        (modifier
-         :name "Armor-Piercing (AP)"
-         :summary "* Specifically designed to target armored units.")
-       :Anti-Armor
-        (modifier
+      (base/modifiermap
+       "Anti-Armor"
+        (base/modifier
          :name "Anti-Armor"
          :summary "* Specifically designed to tear apart armor to leave target open to further attacks.")
-       :Anti-Missile
-        (modifier
+       "Anti-Missile"
+        (base/modifier
          :name "Anti-Missile"
          :summary "* Specifically designed to intercept high speed targets moving in a straight line.")
-       :Anti-Personnel
-        (modifier
+       "Anti-Personnel"
+        (base/modifier
          :name "Anti-Personnel"
          :summary "* Specifically designed to attack man-sized targets.")
-       :Anti-Shield
-        (modifier
+       "Anti-Shield"
+        (base/modifier
          :name "Anti-Shield"
          :summary "* Specifically designed to reduced [Shielding].")
-       :Aura
-        (modifier
+       "AP"
+        (base/modifier
+         :name "AP"
+         :titles "Armor-Piercing"
+         :summary "* Specifically designed to target armored units.")
+       "Aura"
+        (base/modifier
          :name "Aura"
          :summary "* Radial effect encompassing the current space and continuing for Level Range.")
-       :Beam
-        (modifier
+       "Autofire"
+        (base/modifier
+         :name "Autofire"
+         :summary
+          "* Cannot Combo. Shots:-10. A Normal Success automatically creates a Combo with All lower numbers. E.g. Rank 7 would add 6, 5, 4, 3, and 2.")
+       "Beam"
+        (base/modifier
          :name "Beam"
          :summary
           "* Rectangular shaped effect 1 space wide.
            * [-1 Skill] for each 2 Spaces of Range")
+       "Burstfire"
+        (base/modifier
+         :name "Burstfire"
+         :summary
+          "* Cannot Combo. Shots:-3. A Normal Success automatically creates a Combo with the 2 lower numbers. E.g. Rank 7 would add 6 and 5.")
        "Chain Reaction"
-        (modifier
+        (base/modifier
          :name "Chain Reaction")
-       :Cloud
-        (modifier
+       "Cloud"
+        (base/modifier
          :name "Cloud")
-       :Cluster
-        (modifier
+       "Cluster"
+        (base/modifier
          :name "Cluster")
-       :Column
-        (modifier
+       "Column"
+        (base/modifier
          :name "Column"
          :summary
           "* Rectangular shaped effect starting at 1 space wide and widening to 3 spaces.
            * [Action]: [-2 Skill] for each Space of Range")
-       :Cone
-        (modifier
+       "Cone"
+        (base/modifier
          :name "Cone"
          :summary
           "* Triangle shaped effect starting at 1 space wide and widening by 1 additional space for every 2 spaces of range.
            * [Action]: [-2 Skill] for each Space of Range")
-       :Fork
-        (modifier
+       "Fork"
+        (base/modifier
          :name "Fork")
-       :Haywire
-        (modifier
+       "Haywire"
+        (base/modifier
          :name "Haywire"
          :summary "* Attack that damages electrical systems.")
-       "Hidden Effect"
-        (modifier
-         :name "Hidden Effect"
-         :summary "Effect cannot be detected through normal means.")
-       "High-Explosive (HE)"
-        (modifier
-         :name "High-Explosive (HE)"
+       "HE"
+        (base/modifier
+         :name "HE"
+         :titles "High-Explosive"
          :summary
           "* [Targetting]: Target a space.  All units in that space and surrounding spaces are attacked.
            * [Damage]: All target's are [+2 Armor] against this attack.
@@ -114,134 +122,143 @@
            * Instead of standard [High Explosive (HE)] rules the following may be used to more accurately simulate the damage exponential decrease in energy of explosives.
            * [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.
            * [Damage]: All target's are [+2 Armor] against this attack.
-           * [Damage]: Units surrounding the space are attacked by dividing the energy (in Joules, or tons of TNT) using the following reduction pattern for each space distant: 1/1, 1/3, 1/10, 1/30, 1/100, 1/300, 1/1000, etc. Then look up the new damage based on the new energy level.")
-       :Homing
-        (modifier
+           * [Damage]: Units surrounding the space are attacked by dividing the energy (in Joules, or tons of TNT) using the following reduction pattern for each space distant: 1/1, 1/3, 1/10, 1/30, 1/100, 1/300, 1/1000, etc. Then look up the new damage based on the new energy level.")       "HEAT"
+        (base/modifier
+         :name "HEAT"
+         :titles "High Explosive Anti-Tank"
+         :summary
+          "* A shaped charge designed for maximum penentration with little exterior damage.")
+       "Hidden Effect"
+        (base/modifier
+         :name "Hidden Effect"
+         :summary "Effect cannot be detected through normal means.")
+       "Homing"
+        (base/modifier
          :name "Homing"
          :titles "Guided, Seeking")
-       :Indirect
-        (modifier
+       "Indirect"
+        (base/modifier
          :name "Indirect"
          :summary "* May use [Indirect Fire] ability to attack without [Line of Sight].")
        "Pushing the Limits"
-        (modifier
+        (base/modifier
          :name "Pushing the Limits"
          :summary "Powers may be increased temporarily, but this runs a risk of damaging or permanently altering the subject or his powers in some way. This may even increase the power but may create [Aberrations].")
-       :Ring
-        (modifier
+       "Ring"
+        (base/modifier
          :name "Ring"
          :titles "Circle")
        :Sphere
-        (modifier
+        (base/modifier
          :name "Sphere"
          :summary
           "* Radial effect encompassing the current space.
            * [Action]: [-3 Skill] for each Space of Range")
        :Spray
-        (modifier
+        (base/modifier
          :name "Spray")
        :Swarm
-        (modifier
+        (base/modifier
          :name "Swarm")
        :Touch
-        (modifier
+        (base/modifier
          :name "Touch"
          :summary "* [Requires]: Target must be within 1 space and be able to be touched.")
        :Wall
-        (modifier
+        (base/modifier
          :name "Wall"
          :summary "* Walls start on the edge of a space and spread outward one space in each direction on each of this unit's turns until the unit ceases concentration or the maximum size is reached. Maximum Size is one square space per level.")
        :Wave
-        (modifier
+        (base/modifier
          :name "Wave")))
     (base/section
      :name "Power Weaknesses"
      :modifiermap
-      (modifiermap
+      (base/modifiermap
        :Activation
-        (modifier
+        (base/modifier
          :name "Activation"
          :summary "* Activating the ability requires more than just desire")
        "Always On"
-        (modifier
+        (base/modifier
          :name "Always On"
          :summary "* Ability may not be turned off")
        :Annoying
-        (modifier
+        (base/modifier
          :name "Annoying"
          :summary "* Tiny things that make using the ability frustrating.")
        "Communications Broadcast Only"
-        (modifier
+        (base/modifier
          :name "Communications Broadcast Only")
        "Communications None"
-        (modifier
+        (base/modifier
          :name "Communications None")
        "Communications Receive Only"
-        (modifier
+        (base/modifier
          :name "Communications Receive Only")
        "Conditional Use"
-        (modifier
+        (base/modifier
          :name "Conditional Use"
          :summary "* Ability may only be used under specific circumstances")
        "Energy Discharge"
-        (modifier
+        (base/modifier
          :name "Energy Discharge"
          :summary "Cannot completely contain own energies and must allow them to leak out regularly. At low levels this just draws attention, but at higher levels becomes dangerous.")
        "Focus Item"
-        (modifier
+        (base/modifier
          :name "Focus Item")
        "Glider Only"
-        (modifier
+        (base/modifier
          :name "Glider Only")
        :Inefficient
-        (modifier
+        (base/modifier
          :name "Inefficient"
          :summary "* Uses excessive energy.")
        :Internalize
-        (modifier
+        (base/modifier
          :name "Internalize")
        "Large Sensor Profile"
-        (modifier
+        (base/modifier
          :name "Large Sensor Profile")
        "Limited Uses"
-        (modifier
+        (base/modifier
          :name "Limited Uses")
        :Overheats
-        (modifier
+        (base/modifier
          :name "Overheats")
        :Overloads
-        (modifier
+        (base/modifier
          :name "Overloads")
        "Poor Climb Angle"
-        (modifier
+        (base/modifier
          :name "Poor Climb Angle")
        "Poor Ceiling"
-        (modifier
+        (base/modifier
          :name "Poor Ceiling")
        "Poor Towing Capacity"
-        (modifier
+        (base/modifier
          :name "Poor Towing Capacity")
        "Power Fluxuation"
-        (modifier
+        (base/modifier
          :name "Power Fluxuation"
          :summary "Cannot completely control power level. At random, power use may be higher or lower than expected. High level powers may not be able to be turned off or may not turn on when needed.")
        "Power Hungry"
-        (modifier
+        (base/modifier
          :name "Power Hungry"
          :summary "* Requires extra turns of inactivity to use.")
        "Power Manifestation"
-        (modifier
+        (base/modifier
          :name "Power Manifestation"
          :summary "When powers are used, a visual or audible manifestation appears. The higher the power level the more obvious the manifestation.")
        "Requires Airstrip"
-        (modifier
+        (base/modifier
          :name "Requires Airstrip")
        "Sensor Dependent"
-        (modifier
+        (base/modifier
          :name "Sensor Dependent"
          :summary "* Blind without Sensors")
        "Traceable Emmissions"
-        (modifier
+        (base/modifier
          :name "Traceable Emmissions"))))))
 
 (func chapter-equipment-powers : base/chapter
@@ -301,231 +318,18 @@
        * Cloaking Device
        * Shields"
      :powermap
-      (base/powermap
+      (base/powermap<-tactics-keys
+       tactics
+       "Cabin"
+       "Cargo"
        "Combine"
-        (base/power<-tactics-key tactics "Combine")
+       "Equipment"
        "Hanger"
-        (base/power<-tactics-key tactics "Hanger")
-       "Mission Section"
-        (base/power
-         :name "Mission Section"
-         :summary
-          "* Determine the total hull size and then divide it as desired by the following abilities."
-         :abilitymap
-          (base/abilitymap
-           "Air Locks"
-            (base/ability
-             :name "Air Locks")
-           "Boarding Equipment"
-            (base/ability
-             :name "Boarding Equipment"
-             :titles "Grapple Launchers, Magnetic Mooring Lines")
-           "Cargo Hold"
-            (base/ability
-             :name "Cargo Hold")
-           "Cloaking System"
-            (base/ability
-             :name "Cloaking System")
-           "Cryogenic Chamber"
-            (base/ability
-             :name "Cryogenic Chamber"
-             :summary "* Special ability of space craft to carry passengers in cryonic suspension.")
-           "Captain's Quarters"
-            (base/ability
-             :name "Captain's Quarters")
-           "Centrifuge Chamber"
-            (base/ability
-             :name "Centrifuge Chamber")
-           "Climbing Apparatus"
-            (base/ability
-             :name "Climbing Apparatus")
-           "Easy to Modify"
-            (base/ability
-             :name "Easy to Modify")
-           :ECM
-            (base/ability
-             :name "ECM"
-             :titles "Electronic Countermeasures, Jamming")
-           :ECCM
-            (base/ability
-             :name "ECCM"
-             :titles "Electronic Counter-Countermeasures")
-           "Ejection System"
-            (base/ability
-             :name "Ejection System")
-           "Escape Pods"
-            (base/ability
-             :name "Escape Pods")
-           "Fuel Scoop"
-            (base/ability
-             :name "Fuel Scoop")
-           "Gun Ports"
-            (base/ability
-             :name "Gun Ports"
-             :summary "Allows crew to use small arms fire without sacrificing armor protection.")
-           "Missile Decoys"
-            (base/ability
-             :name "Missile Decoys"
-             :titles "Chaff Dispenser, Flares")
-           "Living Quarters"
-            (base/ability
-             :name "Living Quarters"
-             :summary
-              "* Long range and luxury vessels offer more than the minimum crew quarters. This includes private rooms, mess, recreation areas, etc.
-               * The larger the living space, the higher quality clientele may be brought aboard and the longer the ships range before shore leave is needed.
-               * Includes Mess and Lounges")
-           "Luxury Facilities"
-            (base/ability
-             :name "Luxury Facilities")
-           "Marine Ready Room"
-            (base/ability
-             :name "Marine Ready Room")
-           "Marine Drop Pods"
-            (base/ability
-             :name "Marine Drop Pods")
-           "Medical Facilities"
-            (base/ability
-             :name "Medical Facilities"
-             :titles "Sick Bay")
-           :Minelayer
-            (base/ability
-             :name "Minelayer")
-           :Minesweeper
-            (base/ability
-             :name "Minesweeper")
-           "Mining Facilities"
-            (base/ability
-             :name "Mining Facilities")
-           "Passenger Seating"
-            (base/ability
-             :name "Passenger Seating")
-           "Prison Facilities"
-            (base/ability
-             :name "Prison Facilities"
-             :titles "Brig")
-           "Ram Plate"
-            (base/ability
-             :name "Ram Plate")
-           :Refinery
-            (base/ability
-             :name "Refinery")
-           "Science Lab"
-            (base/ability
-             :name "Science Lab")
-           "Atmospheric Sensors"
-            (base/ability
-             :name "Atmospheric Sensors")
-           "Biological Sensors"
-            (base/ability
-             :name "Biological Sensors")
-           "Geological Sensors"
-            (base/ability
-             :name "Geological Sensors")
-           "Stealth Equipment"
-            (base/ability
-             :name "Stealth Equipment")
-           "Storm Chamber"
-            (base/ability
-             :name "Storm Chamber"
-             :summary "Specially shielded chamber designed to be a safe room for particularly dangerous events including radiation flares and decompression.")
-           "Tanker Hold"
-            (base/ability
-             :name "Tanker Hold"
-             :summary
-              "The hold is equipped to hold large amounts of liquids or gases at appropriate environments.  This can be used for long range vessels to carry their own fuel or act as a fuel tanker.")
-           "Towing Capacity"
-            (base/ability
-             :name "Towing Capacity")
-           "Training Facilities"
-            (base/ability
-             :name "Training Facilities")
-           "Weapons Locker"
-            (base/ability
-             :name "Weapons Locker"))
-         :specialtymap
-          (base/specialtymap
-           :Battleship
-            (base/specialty
-             :name "Battleship"
-             :summary
-              "* A large (3 space) ship dedicated to being a battleship may carry a Spinal Mount weapon.
-               * Spinal Mount")
-           "Colony Vessel"
-            (base/specialty
-             :name "Colony Vessel"
-             :summary "* Cryogenic Chamber")
-           "Cargo Vessel"
-            (base/specialty
-             :name "Cargo Vessel"
-             :summary
-              "* Cargo Hold
-               * Tanker Hold")
-           "Factory Vessel"
-            (base/specialty
-             :name "Factory Vessel"
-             :summary
-              "* Factory
-               * Refinery
-               * Tanker Hold")
-           "Heavy Bomber"
-            (base/specialty
-             :name "Heavy Bomber")
-           "Heavy Carrier"
-            (base/specialty
-             :name "Heavy Carrier"
-             :summary
-              "* A large (3 space) ship dedicated to being a carrier can carry 1 extra unit (4 units) in its Hanger.
-               * Hanger
-               * Launch Catapult")
-           "Luxury Vessel"
-            (base/specialty
-             :name "Luxury Vessel"
-             :summary
-              "* Living Quarters
-               * Luxury Facilities")
-           "Prison Vessel"
-            (base/specialty
-             :name "Prison Vessel")
-           "Science Vessel"
-            (base/specialty
-             :name "Science Vessel"
-             :summary
-              "* Science Lab
-               * Sensor Arrays")
-           "Search and Rescue Vessel"
-            (base/specialty
-             :name "Search and Rescue Vessel"
-             :summary
-              "* Wide array of sensors
-               * Multipurpse rescue vehicles
-               * Heavy construction equipment
-               * Emergency medical facilities
-               * Space for evacuation and emergency supplies")
-           "Stealth Vessel"
-            (base/specialty
-             :name "Stealth Vessel"
-             :summary
-              "* Cloaking Device
-               * ECM
-               * Stealth Equipment")
-           "Transport Vessel"
-            (base/specialty
-             :name "Transport Vessel"
-             :summary "* Living Quarters")))
-       "Electronics"
-        (base/power<-tactics-key tactics "Electronics")
        "Engine"
-        (base/power<-tactics-key tactics "Engine")
        "Factory"
-        (base/power<-tactics-key tactics "Factory")
        "Laboratory"
-        (base/power<-tactics-key tactics "Laboratory")
        "Life Support"
-        (base/power<-tactics-key tactics "Life Support")
-       "Transform"
-        (base/power<-tactics-key tactics "Transform")
-       "Vehicle Systems"
-        (base/power<-tactics-key tactics "Vehicle Systems"))
+       "Transform")
      :sectionmap
       (base/sectionmap
        "Weapon Bay"
@@ -578,255 +382,17 @@
     (base/section
      :name "Weaknesses"
      :powermap
-      (base/powermap
-       "Physical Weakness"
-        (base/power
-         :name "Physical Weakness"
-         :summary
-          "A being that has a great deal of power becomes increasingly inhuman as power increases. Physical powers become harder to conceal growing increasingly monstrous and mentality leans more toward megalomania, messiah complex, or detached alien."
-         :titles "Aberrations, Inhumanity, The Price of Power, Taint"
-         :abilitymap
-          (base/abilitymap
-           :Allergy
-            (base/ability
-             :name "Allergy"
-             :summary "Affected by substances or energies that have little or no effect on normal people.")
-           :Asthma
-            (base/ability
-             :name "Asthma")
-           :Atrophy
-            (base/ability
-             :name "Atrophy"
-             :summary "* One or more limbs has limited mobility")
-           :Blind
-            (base/ability
-             :name "Blind")
-           :Brittle
-            (base/ability
-             :name "Brittle")
-           :Child
-            (base/ability
-             :name "Child"
-             :summary "* You are still a child and have difficulty getting others to take you seriously. This is usually taken with [Short].")
-           "Cold Blooded"
-            (base/ability
-             :name "Cold Blooded")
-           "Color Blindness"
-            (base/ability
-             :name "Color Blindness")
-           :Contagious
-            (base/ability
-             :name "Contagious"
-             :summary "Spreads disease.")
-           :Clumsy
-            (base/ability
-             :name "Clumsy")
-           :Deaf
-            (base/ability
-             :name "Deaf")
-           :Deformity
-            (base/ability
-             :name "Deformity"
-             :summary "* Reduces Social Skills and some Physical Skills.")
-           :Disfigured
-            (base/ability
-             :name "Disfigured"
-             :summary "* Reduces Social Skills dramatically.")
-           "Extra Body Parts"
-            (base/ability
-             :name "Extra Body Parts")
-           "Hard of Hearing"
-            (base/ability
-             :name "Hard of Hearing")
-           :Lame
-            (base/ability
-             :name "Lame"
-             :summary "* Reduces Speed")
-           :Leprosy
-            (base/ability
-             :name "Leprosy")
-           "Missing Body Parts"
-            (base/ability
-             :name "Missing Body Parts")
-           :Mute
-            (base/ability
-             :name "Mute")
-           :Obvious
-            (base/ability
-             :name "Obvious"
-             :summary "* Easy to detect and target"
-             :titles "Large Profile")
-           "Obvious Signature"
-            (base/ability
-             :name "Obvious Signature"
-             :summary "* Easy to identify and track"
-             :titles "Energy Signature, Heat Signature")
-           :Numb
-            (base/ability
-             :name "Numb")
-           :Old
-            (base/ability
-             :name "Old")
-           :Paralyzed
-            (base/ability
-             :name "Paralyzed")
-           "Parasitic Infection"
-            (base/ability
-             :name "Parasitic Infection")
-           "Peeling Skin"
-            (base/ability
-             :name "Peeling Skin")
-           "Poor Vision"
-            (base/ability
-             :name "Poor Vision")
-           :Short
-            (base/ability
-             :name "Short"
-             :summary
-              "* This minor weakness reduces vision over objects and movement speed.
-               * It can, however, provide benefits to [Stealth].")
-           :Sterile
-            (base/ability
-             :name "Sterile"
-             :summary "* May not produce offspring")
-           :Tasteless
-            (base/ability
-             :name "Tasteless")
-           "Temperature Control Problem"
-            (base/ability
-             :name "Temperature Control Problem"
-             :summary "* Cannot regulate temperature correctly")
-           "Terminal Condition"
-            (base/ability
-             :name "Terminal Condition")
-           "Unusual Appearance"
-            (base/ability
-             :name "Unusual Appearance")
-           "Unusual Diet"
-            (base/ability
-             :name "Unusual Diet"
-             :summary
-              "* Minor: Eat wood, garbage, hair, etc.
-               * Major: Eat metal, energy
-               * Extreme: Eat blood, human flesh, plutonium")
-           "Unusual Eyes"
-            (base/ability
-             :name "Unusual Eyes"
-             :summary
-              "* Minor: Strange colored
-               * Major: Animal-like, or glowing eyes
-               * Extreme: Bug-eyes, or no eyes")
-           "Unusual Limbs"
-            (base/ability
-             :name "Unusual Limbs"
-             :summary "Gnarled, segmented, snake-like, eloganted or other bizarre looking limbs")
-           "Unusual Musculature"
-            (base/ability
-             :name "Unusual Musculature"
-             :summary "Bulging muscles or wasted looking")
-           "Unusual Skin"
-            (base/ability
-             :name "Unusual Skin"
-             :summary
-              "* Minor: Strange colored
-               * Major: Furry, Striped, Glowing
-               * Extreme: Translucent, Reptilian, Rock-like, Exoskeleton, Oozing")
-           "Unusual Vulnerability"
-            (base/ability
-             :name "Unusual Vulnerability"
-             :reference "Kryptonite, Severe Allergies"
-             :summary "* Take damage from things that are not dangerous to ordinary people.")
-           :Vulnerability
-            (base/ability
-             :name "Vulnerability"
-             :summary "* Take additional damage from certain effects")
-           "Vulnerable to Bleeding"
-            (base/ability
-             :name "Vulnerable to Bleeding")
-           "Vulnerable to Electricity"
-            (base/ability
-             :name "Vulnerable to Electricity")
-           "Vulnerable to Fire"
-            (base/ability
-             :name "Vulnerable to Fire")
-           "Vulnerable to Heat"
-            (base/ability
-             :name "Vulnerable to Heat")
-           "Vulnerable to Impact"
-            (base/ability
-             :name "Vulnerable to Impact")
-           "Vulnerable to Piercing"
-            (base/ability
-             :name "Vulnerable to Piercing")
-           "Vulnerable to Radiation"
-            (base/ability
-             :name "Vulnerable to Radiation")
-           "Vulnerable to Slashing"
-            (base/ability
-             :name "Vulnerable to Slashing")
-           :Wasting
-            (base/ability
-             :name "Wasting")))
-       "Social Weakness"
-        (base/power
-         :name "Social Weakness"
-         :abilitymap
-          (base/abilitymap
-           :Awkward
-            (base/ability
-             :name "Awkward")
-           :Hideous
-            (base/ability
-             :name "Hideous")
-           :Hunted
-            (base/ability
-             :name "Hunted")
-           :Naive
-            (base/ability
-             :name "Naive")
-           :Nemesis
-            (base/ability
-             :name "Nemesis")
-           :Noble
-            (base/ability
-             :name "Noble")
-           :Notorious
-            (base/ability
-             :name "Notorious")
-           "Speech Impediment"
-            (base/ability
-             :name "Speech Impediment")
-           :Strangeness
-            (base/ability
-             :name "Strangeness")
-           :Terrifying
-            (base/ability
-             :name "Terrifying")
-           :Timid
-            (base/ability
-             :name "Timid")
-           :Ugly
-            (base/ability
-             :name "Ugly")
-           "Unnatural Presense"
-            (base/ability
-             :name "Unnatural Presense"
-             :summary "* Subtly disturbing, homely, or too perfect and inspires negative attention from others.")
-           :Ward
-            (base/ability
-             :name "Ward"
-             :summary "* You are devoted to taking care of another (who happens to get into trouble a lot).")))
+      (base/powermap<-tactics-keys
+       tactics
        "Weakness: Cursed"
-        (base/power<-tactics-key tactics "Weakness: Cursed")
-       "Weakness: Dark Fate"
-        (base/power<-tactics-key tactics "Weakness: Dark Fate")
-       "Weakness: Haunted"
-        (base/power<-tactics-key tactics "Weakness: Haunted"))))))
+       "Weakness: Mental"
+       "Weakness: Physical"
+       "Weakness: Social")))))
 
-(func chapter_mental_powers_and_weaknesses : base/chapter
+(func chapter_mental_powers : base/chapter
  [tactics : base/tactics]
  (chapter
-  :name "Mental Powers and Weaknesses"
+  :name "Mental Powers"
   :sectionmap
    (base/sectionmap<-sectionlist
     (base/section
@@ -837,14 +403,12 @@
        "Charm"
        "Domination"
        "Empathy"
-       "Genius"
        "Illusion"
        "Intuition"
        "Madness"
        "Mental Combat"
        "Mental Connection"
        "Mental Fortitude"
-       "Mental Weakness"
        "Mind Over Matter"
        "Presence"
        "Psychic Power")))))
@@ -870,10 +434,10 @@
        "Teleportation"
        "Time Travel")))))
 
-(func chapter_physical_powers_and_weaknesses : base/chapter
+(func chapter_physical_powers : base/chapter
  [tactics : base/tactics]
  (chapter
-  :name "Physical Powers and Weaknesses"
+  :name "Physical Powers"
   :sectionmap
    (base/sectionmap<-sectionlist
     (base/section
@@ -884,14 +448,14 @@
        "Agility"
        "Appearance"
        "Armored"
-       "Fortitude"
        "Healing"
        "Movement"
        "Natural Weaponry"
        "Quickness"
        "Senses"
        "Shielding"
-       "Strength")))))
+       "Strength"
+       "Toughness")))))
 
 (func chapter_body_powers : base/chapter
  [tactics : tactics]
@@ -1018,13 +582,13 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Primal Force"))
+       "Primus"))
     (base/section
      :name "Projectiles"
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Ropes"))
+       "Bonds"))
     (base/section
      :name "Miscellaneous"
      :powermap

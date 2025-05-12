@@ -167,7 +167,7 @@
            :Firearms
             (base/unitskill
              :name "Firearms"
-             :level "3"
+             :level 3
              :unititemmap
               (base/unititemmap
                "18mm Musket"

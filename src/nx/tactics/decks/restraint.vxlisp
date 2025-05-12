@@ -40,7 +40,7 @@
    "Minor: Hair Ensnared. Slow:1
     Moderate: Face Constricted. Slow:1 Every turn. Remove:1 Damage
     Major: Skull Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
-    Extreme: Neck Constricted. [Suffocating] [Dying] Remove:3 Damage"))
+    Extreme: Neck Constricted. [Choking] [Dying] Remove:3 Damage"))
 
 (const restraint-ad : base/damage
  (base/damage
@@ -51,7 +51,7 @@
    "Minor: Hair Ensnared. Slow:1
     Moderate: Face Ensnared. Slow:2 Remove:1 Actions
     Major: Head Ensnared. Slow:3 Remove:2 Actions
-    Extreme: Head Bound. Blood and Air cut off from Head. [Suffocating] [Dying]"))
+    Extreme: Head Bound. Blood and Air cut off from Head. [Choking] [Dying]"))
 
 (const restraint-ah : base/damage
  (base/damage
@@ -84,7 +84,7 @@
    "Minor: Shoulder Ensnared. Slow:1
     Moderate: Shoulder Constricted. Slow:1 Every turn. Remove:1 Damage
     Major: Shoulders Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
-    Extreme: Blood and Air cut off from Head. [Suffocating] [Dying]"))
+    Extreme: Blood and Air cut off from Head. [Choking] [Dying]"))
 
 (const restraint-kd : base/damage
  (base/damage
@@ -95,7 +95,7 @@
    "Minor: Shoulder Ensnared. Slow:1
     Moderate: Shoulders Ensnared. Slow:2 Remove:1 Actions
     Major: Shoulders Bound. [Impaired]. Slow:3 Remove:2 Actions
-    Extreme: Neck Bound. [Suffocating] Remove:3 Actions"))
+    Extreme: Neck Bound. [Choking] Remove:3 Actions"))
 
 (const restraint-kh : base/damage
  (base/damage
@@ -128,7 +128,7 @@
    "Minor: Ribs Ensnared. Slow:1
     Moderate: Ribs Constricted. Slow:1 Every turn. Remove:1 Damage
     Major: Chest Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
-    Extreme: Lungs constricted. Cannot inhale. [Suffocating]"))
+    Extreme: Lungs constricted. Cannot inhale. [Choking]"))
 
 (const restraint-qd : base/damage
  (base/damage
@@ -172,7 +172,7 @@
    "Minor: Belly Ensnared. Slow:1
     Moderate: Belly Constricted. Slow:1 Every turn. Remove:1 Damage
     Major: Stomach Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
-    Extreme: Diaphram constricted. Cannot inhale. [Suffocating]"))
+    Extreme: Diaphram constricted. Cannot inhale. [Choking]"))
 
 (const restraint-jd : base/damage
  (base/damage

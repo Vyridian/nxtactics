@@ -8,17 +8,16 @@
   :name "On The Run"
   :cardmap
    (base/cardmap<-cardlist
-    (list<-list : base/cardlist
-     (base/unitlist<-tactics-keys
-      tactics
-      "Flint (Early)"
-      "Hidden"
-      "Fish: Small"
-      "Hare"
-      "Pheasant"
-      "Pig: Wild Boar"
-      "Snake: Emerald Viper"
-      "Turkey"))
+    (base/cardlist-images<-tactics-units
+     tactics
+     "Flint (Early)"
+     "Hidden"
+     "Fish: Small"
+     "Hare"
+     "Pheasant"
+     "Pig: Wild Boar"
+     "Snake: Emerald Viper"
+     "Turkey")
     (list<-list : base/cardlist
      (base/skilllist<-tactics-keys
       tactics

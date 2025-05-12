@@ -2,10 +2,6 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Murin Trail Scene")
 
-(const power-groundmovement : base/power
- (base/power
-  :name "Ground Movement"))
-
 (func scene-murintrail : base/scene
  [tactics : base/tactics]
  (base/scene
@@ -29,74 +25,38 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     (list<-list : base/cardlist
-      (base/unitlist<-tactics-keys
-       tactics
-       "Flint (Early)"
-       "Jes Aveer"
-       "Jon Aveer"
-       "Xeib Hanower"
-       "Wilm Ducon"
-       "Lili Ducon"
-       "Brunhil Virden"
-       "Goblin: Scout"
-       "Bandit"
-       "Bruiser"
-       "Guardsman"
-       "Herbalist"
-       "Innkeeper"
-       "Pilgrim"
-       "Urchin"
-       "Waif"
-       "Cat"
-       "Chicken"
-       "Dog"
-       "Dog: Wild"
-       "Duck"
-       "Goat"
-       "Goose"
-       "Pig"
-       "Donkey"
-       "Sheep"
-       "Horse"
-       "Ox"
-       "Cart: Wooden"
-       "Plough"))
-     (list<-list : base/cardlist
-      (base/cardimagelist<-tactics-unitkeys
-       tactics
-       "Flint (Early)"
-       "Jes Aveer"
-       "Jon Aveer"
-       "Xeib Hanower"
-       "Wilm Ducon"
-       "Lili Ducon"
-       "Brunhil Virden"
-       "Goblin: Scout"
-       "Bandit"
-       "Bruiser"
-       "Guardsman"
-       "Herbalist"
-       "Innkeeper"
-       "Pilgrim"
-       "Urchin"
-       "Waif"
-       "Cat"
-       "Chicken"
-       "Dog"
-       "Dog: Wild"
-       "Donkey"
-       "Duck"
-       "Goose"
-       "Pig"
-       "Sheep"
-       "Horse"
-       "Ox"
-       "Cart: Wooden"))
-     (list<-list : base/cardlist
-      (base/rulelist<-tactics-keys
-       tactics
-       "Zombie"))
+     (base/cardlist-images<-tactics-units
+      tactics
+      "Flint (Early)"
+      "Jes Aveer"
+      "Jon Aveer"
+      "Xeib Hanower"
+      "Wilm Ducon"
+      "Lili Ducon"
+      "Brunhil Virden"
+      "Goblin Scout"
+      "Bandit"
+      "Bruiser"
+      "Guardsman"
+      "Herbalist"
+      "Innkeeper"
+      "Pilgrim"
+      "Urchin"
+      "Waif"
+      "Cat"
+      "Chicken"
+      "Dog"
+      "Dog: Wild"
+      "Duck"
+      "Goat"
+      "Goose"
+      "Pig"
+      "Donkey"
+      "Sheep"
+      "Horse"
+      "Ox"
+      "Cart: Wooden"
+      "Plough")
      (list<-list : base/cardlist
       (base/skilllist<-tactics-keys
        tactics
@@ -104,13 +64,14 @@
        "Melee"
        "Stealth"
        "Business"
-       "Tradeskills"))
+       "Tradeskill"))
      (list<-list : base/cardlist
       (base/abilitylist<-tactics-keys
        tactics
        "Ambush"
        "Bargain"
-       "Sneak"))
+       "Sneak"
+       "Zombified"))
      (list<-list : base/cardlist
       (base/itemlist<-tactics-keys
        tactics
@@ -137,33 +98,32 @@
        "Rations"
        "Waterskin"
        ))
-     (list<-list : base/cardlist
-      (base/placelist<-tactics-keys
-       tactics
-       "Sandalstad"
-       "Field"
-       "Forest"
-       "Mountain"
-       "Blacksmith"
-       "Campsite"
-       "Cave"
-       "Guardpost"
-       "Hall: Wooden"
-       "House: Farm"
-       "Mill"
-       "Path: Dirt"
-       "Road: Gravel"
-       "Road: Stone"
-       "Shop: General"
-       "Shop: Herbalist"
-       "Shrine"
-       "Stables"
-       "Stairs"
-       "Tavern"
-       "Tavern Bar"
-       "Tavern Bedroom"
-       "Tavern Common"
-       "Tavern Dining"
-       "Temple"
-       "Trading Post"
-     ))))))
+     (base/cardlist-images<-tactics-places
+      tactics
+      "Sandalstad"
+      "Field"
+      "Forest"
+      "Mountain"
+      "Blacksmith"
+      "Campsite"
+      "Cave"
+      "Guardpost"
+      "Hall: Wooden"
+      "House: Farm"
+      "Mill"
+      "Path: Dirt"
+      "Road: Gravel"
+      "Road: Stone"
+      "Shop: General"
+      "Shop: Herbalist"
+      "Shrine"
+      "Stables"
+      "Stairs"
+      "Tavern"
+      "Tavern Bar"
+      "Tavern Bedroom"
+      "Tavern Common"
+      "Tavern Dining"
+      "Temple"
+      "Trading Post"
+     )))))

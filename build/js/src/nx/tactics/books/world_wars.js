@@ -40,6 +40,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwi_british_forces
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwi_british_forces = {
@@ -50,7 +51,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwi_british_forces)
-  static f_chapter_wwi_british_forces() {
+  static f_chapter_wwi_british_forces(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -131,6 +132,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwi_french_forces
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwi_french_forces = {
@@ -141,7 +143,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwi_french_forces)
-  static f_chapter_wwi_french_forces() {
+  static f_chapter_wwi_french_forces(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -181,6 +183,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwi_german_forces
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwi_german_forces = {
@@ -191,7 +194,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwi_german_forces)
-  static f_chapter_wwi_german_forces() {
+  static f_chapter_wwi_german_forces(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -219,6 +222,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_american_equipment
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_american_equipment = {
@@ -229,7 +233,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_american_equipment)
-  static f_chapter_wwii_american_equipment() {
+  static f_chapter_wwii_american_equipment(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -269,7 +273,7 @@ export default class nx_tactics_books_world_wars {
             ".30-06 M1919A4 MG",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".30-06 M1919A4 MG", ":image", "WWIIAmerican/MG_1919_Browning.jpg", ":classification", "Hvy. MG", ":length", ".96m", ":mass", "14kg", ":modifiers", "Auto", ":muzzlevelocity", "853m/s", ":rof", "500/min", ":rounds", "250"),
             ".50 cal M2HB MG",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".50 cal M2HB MG", ":image", "WWIIAmerican/MG_BrowningM2.jpg", ":reference", "* While the AP projectiles from the .50-caliber machine guns could not penetrate the front, side, or turret armor of enemy tanks, it could sometimes penetrate the engine grilles and exhaust system of the German Pzkpf Mk IV or Pzkpf V (Panther I), disabling the vehicle.\n* Used extensively from 1920's to present with few modifications. It is the primary MG of NATO countries and has been in use longer than any other small arm in U.S..", ":summary", ".50 cal Browning M2 water cooled machine gun", ":classification", "Hvy. MG", ":length", "1650mm", ":mass", "38kg", ":modifiers", "Auto, AP, API, Tracer", ":muzzlevelocity", "930m/s", ":rof", "500/min"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".50 cal M2HB MG", ":image", "WWIIAmerican/MG_BrowningM2.jpg", ":reference", "* While the AP projectiles from the .50-caliber machine guns could not penetrate the front, side, or turret armor of enemy tanks, it could sometimes penetrate the engine grilles and exhaust system of the German Pzkpf Mk IV or Pzkpf V (Panther I), disabling the vehicle.\n* Used extensively from 1920's to present with few modifications. It is the primary MG of NATO countries and has been in use longer than any other small arm in U.S..", ":summary", ".50 cal Browning M2 water cooled machine gun", ":classification", "Hvy. MG", ":length", "1650mm", ":mass", "38kg", ":modifiers", "Auto, AP, Tracer", ":muzzlevelocity", "930m/s", ":rof", "500/min"),
             "M2 Flamethrower",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "M2 Flamethrower", ":image", "WWIIAmerican/Flamethrower_M2.jpg", ":reference", "* With the arrival of tanks, especially flamethrower tanks, the need for infantrymen to expose themselves to fire became unnecessary as tanks offered greater protection while still delivering the effective damage.\n* While some were sold off, the majority of them were scrapped when they were declared obsolete.", ":summary", "* All [Hits] and [Critical Hits] are [Fire] tokens.", ":classification", "Flamethrower", ":crew", "2", ":mass", "31kg", ":modifiers", "Fire, Auto", ":range", "20m"),
             "M1A1 Bazooka",
@@ -333,6 +337,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_american_units
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_american_units = {
@@ -343,7 +348,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_american_units)
-  static f_chapter_wwii_american_units() {
+  static f_chapter_wwii_american_units(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -361,23 +366,7 @@ export default class nx_tactics_books_world_wars {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             "Able Team",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Able Team",
-              ":image",
-              "WWIIAmerican/Infantry_AbleScoutToken.png",
-              ":summary",
-              "* Able Team is composed of 2 scouts who advance 25m ahead of the squad.",
-              ":classification",
-              "Lt. Infantry",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "3")
-              )
-            ),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Able Team"),
             "Baker Team",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -2137,6 +2126,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_british_equipment
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_british_equipment = {
@@ -2147,7 +2137,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_british_equipment)
-  static f_chapter_wwii_british_equipment() {
+  static f_chapter_wwii_british_equipment(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2213,6 +2203,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_british_units
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_british_units = {
@@ -2223,7 +2214,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_british_units)
-  static f_chapter_wwii_british_units() {
+  static f_chapter_wwii_british_units(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3105,6 +3096,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_east_african_theatre
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_east_african_theatre = {
@@ -3115,7 +3107,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_east_african_theatre)
-  static f_chapter_wwii_east_african_theatre() {
+  static f_chapter_wwii_east_african_theatre(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3145,6 +3137,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_eastern_front
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_eastern_front = {
@@ -3155,7 +3148,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_eastern_front)
-  static f_chapter_wwii_eastern_front() {
+  static f_chapter_wwii_eastern_front(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3209,6 +3202,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_equipment
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_equipment = {
@@ -3219,7 +3213,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_equipment)
-  static f_chapter_wwii_equipment() {
+  static f_chapter_wwii_equipment(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3269,6 +3263,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_french_equipment
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_french_equipment = {
@@ -3279,7 +3274,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_french_equipment)
-  static f_chapter_wwii_french_equipment() {
+  static f_chapter_wwii_french_equipment(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3309,6 +3304,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_french_units
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_french_units = {
@@ -3319,7 +3315,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_french_units)
-  static f_chapter_wwii_french_units() {
+  static f_chapter_wwii_french_units(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3471,6 +3467,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_german_equipment
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_german_equipment = {
@@ -3481,7 +3478,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_german_equipment)
-  static f_chapter_wwii_german_equipment() {
+  static f_chapter_wwii_german_equipment(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3565,6 +3562,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_german_units
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_german_units = {
@@ -3575,7 +3573,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_german_units)
-  static f_chapter_wwii_german_units() {
+  static f_chapter_wwii_german_units(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -4931,6 +4929,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_italian_units
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_italian_units = {
@@ -4941,7 +4940,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_italian_units)
-  static f_chapter_wwii_italian_units() {
+  static f_chapter_wwii_italian_units(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -5323,6 +5322,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_japanese_equipment
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_japanese_equipment = {
@@ -5333,7 +5333,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_japanese_equipment)
-  static f_chapter_wwii_japanese_equipment() {
+  static f_chapter_wwii_japanese_equipment(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -5399,6 +5399,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_japanese_units
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_japanese_units = {
@@ -5409,16 +5410,14 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_japanese_units)
-  static f_chapter_wwii_japanese_units() {
+  static f_chapter_wwii_japanese_units(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
       "WWII Japanese Units",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "WWII Japanese Infantry",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -5590,7 +5589,6 @@ export default class nx_tactics_books_world_wars {
             )
           )
         ),
-        "WWII Japanese Vehicles",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -5666,7 +5664,6 @@ export default class nx_tactics_books_world_wars {
             )
           )
         ),
-        "WWII Japanese Aircraft",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -5894,7 +5891,6 @@ export default class nx_tactics_books_world_wars {
             )
           )
         ),
-        "WWII Japanese Naval Vessels",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -6231,6 +6227,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_mediterranean_theatre
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_mediterranean_theatre = {
@@ -6241,7 +6238,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_mediterranean_theatre)
-  static f_chapter_wwii_mediterranean_theatre() {
+  static f_chapter_wwii_mediterranean_theatre(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -6315,6 +6312,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_middle_east_theatre
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_middle_east_theatre = {
@@ -6325,7 +6323,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_middle_east_theatre)
-  static f_chapter_wwii_middle_east_theatre() {
+  static f_chapter_wwii_middle_east_theatre(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -6373,6 +6371,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_north_african_theatre
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_north_african_theatre = {
@@ -6383,7 +6382,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_north_african_theatre)
-  static f_chapter_wwii_north_african_theatre() {
+  static f_chapter_wwii_north_african_theatre(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -6482,6 +6481,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_pacific_theatre
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_pacific_theatre = {
@@ -6492,7 +6492,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_pacific_theatre)
-  static f_chapter_wwii_pacific_theatre() {
+  static f_chapter_wwii_pacific_theatre(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -6720,6 +6720,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_soviet_equipment
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_soviet_equipment = {
@@ -6730,7 +6731,7 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_soviet_equipment)
-  static f_chapter_wwii_soviet_equipment() {
+  static f_chapter_wwii_soviet_equipment(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -6756,7 +6757,7 @@ export default class nx_tactics_books_world_wars {
             "7.62mm PPSh-41 SMG",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "7.62mm PPSh-41 SMG", ":image", "WWIIRussian/SMG_PPSh41.jpg", ":classification", "Lt. MG", ":modifiers", "Auto", ":range", "200m"),
             "ROKS Flamethrower",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "ROKS Flamethrower", ":classification", "Flamethrower", ":crew", "1", ":mass", "22kg", ":modifiers", "Fire, Auto", ":range", "25m"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "ROKS Flamethrower", ":classification", "Flamethrower", ":crew", "1", ":mass", "22kg", ":modifiers", "Autofire, Burning", ":range", "25m"),
             "7.62mm Degtyaryov LMG",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "7.62mm Degtyaryov LMG", ":classification", "Med. MG", ":modifiers", "Auto, +1 Prepare"),
             "12.7mm DShK MG",
@@ -6794,6 +6795,7 @@ export default class nx_tactics_books_world_wars {
 
   /**
    * @function chapter_wwii_soviet_units
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_wwii_soviet_units = {
@@ -6804,16 +6806,14 @@ export default class nx_tactics_books_world_wars {
   }
 
   // (func chapter_wwii_soviet_units)
-  static f_chapter_wwii_soviet_units() {
+  static f_chapter_wwii_soviet_units(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
       "WWII Soviet Units",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "WWII Soviet Infantry",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -6943,7 +6943,6 @@ export default class nx_tactics_books_world_wars {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Russian Sapper", ":image", "WWIIRussian/Infantry_SapperToken.png", ":classification", "Hvy. Infantry")
           )
         ),
-        "WWII Soviet Vehicles",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -7381,7 +7380,6 @@ export default class nx_tactics_books_world_wars {
             )
           )
         ),
-        "WWII Soviet Aircraft",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -7397,7 +7395,7 @@ export default class nx_tactics_books_world_wars {
               ":image",
               "WWIIRussian/Fighter_P39Airacobra.png",
               ":reference",
-              "* Lend Lease from US\n				        * The low-speed, low-altitude turning nature of most air combat on the Russian Front suited the P-39's strengths: sturdy construction, reliable radio gear, and adequate firepower. The second-highest scoring Allied ace, Aleksandr Pokryshkin, flew the P-39. His unofficial score stands at nearly 60 Luftwaffe aircraft. His wingman, Grigori Rechkalov, scored 57 victories with the P-39. This is the highest score ever gained by any pilot with any U.S.-made aircraft.",
+              "* Lend Lease from US\n* The low-speed, low-altitude turning nature of most air combat on the Russian Front suited the P-39's strengths: sturdy construction, reliable radio gear, and adequate firepower. The second-highest scoring Allied ace, Aleksandr Pokryshkin, flew the P-39. His unofficial score stands at nearly 60 Luftwaffe aircraft. His wingman, Grigori Rechkalov, scored 57 victories with the P-39. This is the highest score ever gained by any pilot with any U.S.-made aircraft.",
               ":classification",
               "Lt. Aircraft",
               ":crew",
@@ -7842,29 +7840,29 @@ export default class nx_tactics_books_world_wars {
         nx_tactics_books_world_wars.f_chapter_wwi_campaign(tactics),
         nx_tactics_books_world_wars.f_chapter_wwii_overview(tactics),
         nx_tactics_books_world_wars.f_chapter_wwii_western_front(tactics),
-        nx_tactics_books_world_wars.f_chapter_wwii_eastern_front(),
-        nx_tactics_books_world_wars.f_chapter_wwii_north_african_theatre(),
-        nx_tactics_books_world_wars.f_chapter_wwii_east_african_theatre(),
-        nx_tactics_books_world_wars.f_chapter_wwii_middle_east_theatre(),
-        nx_tactics_books_world_wars.f_chapter_wwii_mediterranean_theatre(),
-        nx_tactics_books_world_wars.f_chapter_wwii_pacific_theatre(),
-        nx_tactics_books_world_wars.f_chapter_wwi_british_forces(),
-        nx_tactics_books_world_wars.f_chapter_wwi_french_forces(),
-        nx_tactics_books_world_wars.f_chapter_wwi_german_forces(),
-        nx_tactics_books_world_wars.f_chapter_wwii_equipment(),
-        nx_tactics_books_world_wars.f_chapter_wwii_american_equipment(),
-        nx_tactics_books_world_wars.f_chapter_wwii_american_units(),
-        nx_tactics_books_world_wars.f_chapter_wwii_british_equipment(),
-        nx_tactics_books_world_wars.f_chapter_wwii_british_units(),
-        nx_tactics_books_world_wars.f_chapter_wwii_french_equipment(),
-        nx_tactics_books_world_wars.f_chapter_wwii_french_units(),
-        nx_tactics_books_world_wars.f_chapter_wwii_german_equipment(),
-        nx_tactics_books_world_wars.f_chapter_wwii_german_units(),
-        nx_tactics_books_world_wars.f_chapter_wwii_italian_units(),
-        nx_tactics_books_world_wars.f_chapter_wwii_japanese_equipment(),
-        nx_tactics_books_world_wars.f_chapter_wwii_japanese_units(),
-        nx_tactics_books_world_wars.f_chapter_wwii_soviet_equipment(),
-        nx_tactics_books_world_wars.f_chapter_wwii_soviet_units()
+        nx_tactics_books_world_wars.f_chapter_wwii_eastern_front(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_north_african_theatre(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_east_african_theatre(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_middle_east_theatre(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_mediterranean_theatre(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_pacific_theatre(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwi_british_forces(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwi_french_forces(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwi_german_forces(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_equipment(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_american_equipment(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_american_units(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_british_equipment(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_british_units(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_french_equipment(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_french_units(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_german_equipment(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_german_units(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_italian_units(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_japanese_equipment(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_japanese_units(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_soviet_equipment(tactics),
+        nx_tactics_books_world_wars.f_chapter_wwii_soviet_units(tactics)
       )
     )
     return output

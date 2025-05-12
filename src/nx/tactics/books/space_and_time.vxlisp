@@ -376,15 +376,15 @@ small unregarded yellow sun. - Hitchhiker's Guide to the Galaxy"
           :reference
            "This photograph shows one of the most spectacular solar flares ever recorded; the base of the flare is more than 591Mm across."))
       :unitmap
-       (unitmap
+       (base/unitmap
         "Arctic World"
-         (unit
+         (base/unit
           :name "Arctic World")
         "Arid World"
-         (unit
+         (base/unit
           :name "Arid World")
         "Asteroid Field"
-         (unit
+         (base/unit
           :name "Asteroid Field"
           :image "Units/SpaceAndTime/Asteroid.png"
           :summary
@@ -397,7 +397,7 @@ small unregarded yellow sun. - Hitchhiker's Guide to the Galaxy"
           :length "500m"
           :width "500m")
         "Black Hole"
-         (unit
+         (base/unit
           :name "Black Hole"
           :image "Units/SpaceAndTime/BlackHole.png"
           :summary
@@ -405,14 +405,14 @@ small unregarded yellow sun. - Hitchhiker's Guide to the Galaxy"
             * Event Horizon"
           :titles "Singularity")
         "Blue Giant Star"
-         (unit
+         (base/unit
           :name "Blue Giant Star")
         :Comet
-         (unit
+         (base/unit
           :name "Comet"
           :image "Units/SpaceAndTime/Comet.png")
         "Debris Field"
-         (unit
+         (base/unit
           :name "Debris Field"
           :image "Units/SpaceAndTime/SpaceDebris.jpg"
           :summary
@@ -420,100 +420,105 @@ small unregarded yellow sun. - Hitchhiker's Guide to the Galaxy"
             * Debris Fields are treated as an [Asteroid Field].
             * Any large unit that explodes is replaced with a Debris Field.")
         "Desert World"
-         (unit
+         (base/unit
           :name "Desert World")
         "Dyson Sphere"
-         (unit
+         (base/unit
           :name "Dyson Sphere")
         "Gas Giant"
-         (unit
+         (base/unit
           :name "Gas Giant")
         "Greenhouse World"
-         (unit
+         (base/unit
           :name "Greenhouse World")
         "Ionized Atmosphere World"
-         (unit
+         (base/unit
           :name "Ionized Atmosphere World"
           :summary
            "* Atmosphere is heavily ionized which produces powerful lightning storms and regularly disrupts electrical systems and communications.")
         "Irradiated World"
-         (unit
+         (base/unit
           :name "Irradiated World")
         "Jungle World"
-         (unit
+         (base/unit
           :name "Jungle World")
         :Meteorite
-         (unit
+         (base/unit
           :name "Meteorite"
           :reference "Armaggeddon")
-        "Methane Ocean World"
-         (unit
-          :name "Methane Ocean World")
-        "Neutron Star"
-         (unit
-          :name "Neutron Star"
+        "World: Methane Ocean"
+         (base/unit
+          :name "World: Methane Ocean")
+        "Star: Neutron"
+         (base/unit
+          :name "Star: Neutron"
           :image "Units/SpaceAndTime/NeutronStar.png"
-          :reference "* 12 miles across and 1.4 times the mass of the sun.  One teaspoonful would weigh a billion tons."
+          :reference
+           "* 12 miles across and 1.4 times the mass of the sun. One teaspoonful would weigh a billion tons."
           :mass "2x10^27tons"
           :length "20km")
-        "Ocean World"
-         (unit
-          :name "Ocean World")
+        "World: Ocean"
+         (base/unit
+          :name "World: Ocean")
         "Proto World"
-         (unit
+         (base/unit
           :name "Proto World")
         :Pulsar
-         (unit
+         (base/unit
           :name "Pulsar"
           :image "Units/SpaceAndTime/Pulsar.png")
         "Red Giant Star"
-         (unit
+         (base/unit
           :name "Red Giant Star")
         "Ring World"
-         (unit
+         (base/unit
           :name "Ring World")
         "Ringed Gas Giant"
-         (unit
+         (base/unit
           :name "Ringed Gas Giant")
         "Solar Storm World"
-         (unit
+         (base/unit
           :name "Solar Storm World"
-          :summary "* This planet is routinely bombarded by intense solar radiation. The planet itself is not radioactive, but when solar storms appear all life is scoured from any exposed surface. Life underground or underwater is possible.")
-        "Seasonally Extreme World"
-         (unit
-          :name "Seasonally Extreme World"
+          :summary
+           "* A planet routinely bombarded by intense solar radiation. The planet itself is not radioactive, but when solar storms appear all life is scoured from any exposed surface. Life underground or underwater is possible.")
+        "World: Seasonally Extreme"
+         (base/unit
+          :name "World: Seasonally Extreme"
           :summary
            "* A planet with a very oblong orbit and high axial shift will produce severe changes in seasons shifting from artic to tropic environments during the year. Such a punishing environment is difficult for complex life to develop. Simple life forms will tend toward short life spans or hibernation during winter months with a massive spring bloom and fall die off.")
-        "Seasonless World"
-         (unit
-          :name "Seasonless World"
+        "World: Seasonless"
+         (base/unit
+          :name "World: Seasonless"
           :summary
            "* A planet with a nearly circular orbit and minor axial shift will produce bands of terrain where the seasons don't change throughout the year. Polar areas are uniformly cold and equatorial areas are uniformly hot. Such a predictable environment is ideal for life to develop.")
         "Seismic World"
-         (unit
+         (base/unit
           :name "Seismic World")
-        "Stony World"
-         (unit
+        "World: Tidally Locked"
+         (base/unit
+          :name "World: Tidally Locked")
+        "World: Stony"
+         (base/unit
           :name "Stony World")
         "Storm World"
-         (unit
+         (base/unit
           :name "Storm World")
         "Swamp World"
-         (unit
+         (base/unit
           :name "Swamp World"
           :summary
            "* The combination of mild greenhouse effect and high amounts of surface water creates a world where most land masses are densely covered with vegetation. Very little dry land exists and the vegetation mostly has its roots underwater. Some particularly dense vegetation can be walked on. Quicksand, parasites, insects, water predators, and other threats are common.")
         "Toxic World"
-         (unit
+         (base/unit
           :name "Toxic World")
         "Tropical World"
-         (unit
+         (base/unit
           :name "Tropical World")
         "Tundra World"
-         (unit
+         (base/unit
           :name "Tundra World")
         "Yellow Star"
-         (unit
+         (base/unit
           :name "Yellow Star"))))))
 
 (func chapter_dimensional_travel : base/chapter

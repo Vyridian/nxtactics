@@ -268,32 +268,8 @@ export default class nx_tactics_books_modern_fantasy {
                 )
               )
             ),
-            ":Chun-Li",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Chun-Li",
-              ":image",
-              "StreetFighter/Chun-LiToken.png",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                "Close Combat",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
-                  "Close Combat",
-                  ":level",
-                  "8",
-                  ":unitspecialtymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitspecialtymap},
-                    "Wu Shu",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitspecialty}, ":name", "Wu Shu")
-                  )
-                )
-              )
-            ),
+            "Chun-Li",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Chun-Li"),
             ":Dhalsim",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -798,18 +774,14 @@ export default class nx_tactics_books_modern_fantasy {
               {"any-1": nx_tactics_base.t_unit},
               ":name",
               "Normality",
+              ":titles",
+              "Normals",
               ":reference",
               "Hate Crimes",
               ":summary",
               "* Normalities are ghastly creatures that were once human but have been transformed into blank, sexless horrors. All Normalities appear exactly identical: thin, sexless, hairless, and faceless except for a slash of a mouth. With heavy clothing they may briefly pass for human.\n* Personality - Normalities have a hatred of all things different (which includes everything except themselves). They are homicidal with a particulary strong reaction to those who choose to flaunt their differences (e.g. piercings, tattoos, goths, punkers, women wearing pants)\n* History - The Normalities are created as part of a horrific treatment that pretends to be a cure for homosexuality. Indeed, the treatment does cure homosexuality, as well as any sexuality and finally humanity.",
-              ":titles",
-              "Normals",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Hunting",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Hunting")
-              )
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Hunting")
             ),
             "Seventh Generation",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Seventh Generation", ":summary", "* Seventh Generation is a Wyrm cult dedicated to the absolute domination of men over women and children. It encourages child abuse, spousal abuse, misogyny, pedophilia, and even murder and cannibalism. Their membership is composed of an interlocking network of politicians, businessmen, corrupted clergy, military officers, millionaires, and even serial killers. Each member is a twisted individual drawn together by the commonalities of their vile appetites.\n* Seventh Generation sponsors child foster care facilities. These facilities are like boot camps and are very successful at teaching children to follow instructions unquestioningly. This discipline comes at the price of the child's sense of self-esteem. The final steps are to place the child in abusive and alcoholic homes.There abuse and inferiority come naturally."),

@@ -75,6 +75,12 @@ export default class nx_tactics_base {
   static e_cardimagelist = vx_core.vx_new_list(nx_tactics_base.t_cardimagelist, [])
 
   /**
+   * type: cardlayout
+   */
+  static t_cardlayout = {}
+  static e_cardlayout = {vx_type: nx_tactics_base.t_cardlayout}
+
+  /**
    * type: cardlist
    */
   static t_cardlist = {}
@@ -594,6 +600,24 @@ export default class nx_tactics_base {
    */
   static t_weaknessmap = {}
   static e_weaknessmap = {vx_type: nx_tactics_base.t_weaknessmap}
+  /**
+   * Constant: cardlayout-imagemirror
+   * {cardlayout}
+   */
+  static c_cardlayout_imagemirror = {vx_type: nx_tactics_base.t_cardlayout, vx_constdef: {pkgname: 'nx/tactics/base', name: 'cardlayout-imagemirror', type: nx_tactics_base.t_cardlayout}}
+
+  /**
+   * Constant: cardlayout-imageonly
+   * {cardlayout}
+   */
+  static c_cardlayout_imageonly = {vx_type: nx_tactics_base.t_cardlayout, vx_constdef: {pkgname: 'nx/tactics/base', name: 'cardlayout-imageonly', type: nx_tactics_base.t_cardlayout}}
+
+  /**
+   * Constant: cardlayout-textimage
+   * {cardlayout}
+   */
+  static c_cardlayout_textimage = {vx_type: nx_tactics_base.t_cardlayout, vx_constdef: {pkgname: 'nx/tactics/base', name: 'cardlayout-textimage', type: nx_tactics_base.t_cardlayout}}
+
   /**
    * Constant: rank-ace
    * {rank}
@@ -1488,10 +1512,22 @@ export default class nx_tactics_base {
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
         const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":image")
+        const cardtype = vx_core.f_type_from_any(card)
+        const layout = vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_cardlayout, "any-2": vx_core.t_any},
+          cardtype,
+          vx_core.f_case_1(
+            nx_tactics_base.t_place,
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_base.c_cardlayout_textimage})
+          ),
+          vx_core.f_else(
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_cardlayout, "struct-2": nx_tactics_base.t_card}, card, ":layout")})
+          )
+        )
         const imgmirror = vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": nx_tactics_base.t_card}, card, ":imgmirror")
         const id = vx_core.f_new({"any-1": vx_core.t_string}, name, "-image")
         const imgname = id
-        return vx_core.f_new({"any-1": nx_tactics_base.t_cardimage}, ":id", id, ":name", name, ":origcard", card, ":image", image, ":imgmirror", imgmirror)
+        return vx_core.f_new({"any-1": nx_tactics_base.t_cardimage}, ":id", id, ":name", name, ":origcard", card, ":image", image, ":layout", layout, ":imgmirror", imgmirror)
       })
     )
     return output
@@ -1551,6 +1587,61 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function cardimagelist_from_placelist
+   * Returns a cardimagelist from placelist.
+   * @param  {placelist} ... placelist
+   * @return {cardimagelist}
+   */
+  static t_cardimagelist_from_placelist = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardimagelist_from_placelist = {
+    vx_type: nx_tactics_base.t_cardimagelist_from_placelist
+  }
+
+  // (func cardimagelist<-placelist)
+  static f_cardimagelist_from_placelist(...placelist) {
+    let output = nx_tactics_base.e_cardimagelist
+    placelist = vx_core.f_new_from_type(nx_tactics_base.t_placelist, ...placelist)
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_cardimage, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardimagelist, "list-2": nx_tactics_base.t_placelist},
+      placelist,
+      vx_core.f_new_from_type(vx_core.t_any_from_any, (place) => 
+        nx_tactics_base.f_cardimage_from_card(place))
+    )
+    return output
+  }
+
+  /**
+   * @function cardimagelist_from_tactics_placekeys
+   * Returns a cardimagelist from a given tactics and place keys.
+   * @param  {tactics} tactics
+   * @param  {stringlist} ... keys
+   * @return {cardimagelist}
+   */
+  static t_cardimagelist_from_tactics_placekeys = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardimagelist_from_tactics_placekeys = {
+    vx_type: nx_tactics_base.t_cardimagelist_from_tactics_placekeys
+  }
+
+  // (func cardimagelist<-tactics-placekeys)
+  static f_cardimagelist_from_tactics_placekeys(tactics, ...keys) {
+    let output = nx_tactics_base.e_cardimagelist
+    keys = vx_core.f_new_from_type(vx_core.t_stringlist, ...keys)
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_cardimagelist},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const placelist = nx_tactics_base.f_placelist_from_tactics_keys(tactics, ...keys)
+        return nx_tactics_base.f_cardimagelist_from_placelist(placelist)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function cardimagelist_from_tactics_unitkeys
    * Returns a cardimagelist from a given tactics and unit keys.
    * @param  {tactics} tactics
@@ -1569,17 +1660,38 @@ export default class nx_tactics_base {
     let output = nx_tactics_base.e_cardimagelist
     keys = vx_core.f_new_from_type(vx_core.t_stringlist, ...keys)
     output = vx_core.f_let(
-      {"any-1": nx_tactics_base.t_cardimagelist, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardimagelist, "list-2": nx_tactics_base.t_unitlist},
+      {"any-1": nx_tactics_base.t_cardimagelist},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const unitlist = nx_tactics_base.f_unitlist_from_tactics_keys(tactics, ...keys)
-        return vx_core.f_list_from_list_1(
-          {"any-1": nx_tactics_base.t_cardimage, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardimagelist, "list-2": nx_tactics_base.t_unitlist},
-          unitlist,
-          vx_core.f_new_from_type(vx_core.t_any_from_any, (unit) => 
-            nx_tactics_base.f_cardimage_from_card(unit))
-        )
+        return nx_tactics_base.f_cardimagelist_from_unitlist(unitlist)
       })
+    )
+    return output
+  }
+
+  /**
+   * @function cardimagelist_from_unitlist
+   * Returns a cardimagelist from unitlist.
+   * @param  {unitlist} ... unitlist
+   * @return {cardimagelist}
+   */
+  static t_cardimagelist_from_unitlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardimagelist_from_unitlist = {
+    vx_type: nx_tactics_base.t_cardimagelist_from_unitlist
+  }
+
+  // (func cardimagelist<-unitlist)
+  static f_cardimagelist_from_unitlist(...unitlist) {
+    let output = nx_tactics_base.e_cardimagelist
+    unitlist = vx_core.f_new_from_type(nx_tactics_base.t_unitlist, ...unitlist)
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_cardimage, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardimagelist, "list-2": nx_tactics_base.t_unitlist},
+      unitlist,
+      vx_core.f_new_from_type(vx_core.t_any_from_any, (unit) => 
+        nx_tactics_base.f_cardimage_from_card(unit))
     )
     return output
   }
@@ -1652,6 +1764,70 @@ export default class nx_tactics_base {
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const rule = nx_tactics_base.f_rule_from_tactics_key(tactics, rulekey)
         return nx_tactics_base.f_cardlist_copy_from_card_count_isnum(rule, count, isnum)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function cardlist_images_from_tactics_places
+   * Returns a cardlist with images from unitkeys
+   * @param  {tactics} tactics
+   * @param  {stringlist} ... placekeys
+   * @return {cardlist}
+   */
+  static t_cardlist_images_from_tactics_places = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardlist_images_from_tactics_places = {
+    vx_type: nx_tactics_base.t_cardlist_images_from_tactics_places
+  }
+
+  // (func cardlist-images<-tactics-places)
+  static f_cardlist_images_from_tactics_places(tactics, ...placekeys) {
+    let output = nx_tactics_base.e_cardlist
+    placekeys = vx_core.f_new_from_type(vx_core.t_stringlist, ...placekeys)
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_cardlist},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const places = nx_tactics_base.f_placelist_from_tactics_keys(tactics, ...placekeys)
+        const images = nx_tactics_base.f_cardimagelist_from_placelist(places)
+        const cards = vx_core.f_list_from_list({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist}, places)
+        const cardsimage = vx_core.f_list_from_list({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_cardimage, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_cardimagelist}, images)
+        return vx_core.f_new({"any-1": nx_tactics_base.t_cardlist}, cards, cardsimage)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function cardlist_images_from_tactics_units
+   * Returns a cardlist with images from unitkeys
+   * @param  {tactics} tactics
+   * @param  {stringlist} ... unitkeys
+   * @return {cardlist}
+   */
+  static t_cardlist_images_from_tactics_units = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardlist_images_from_tactics_units = {
+    vx_type: nx_tactics_base.t_cardlist_images_from_tactics_units
+  }
+
+  // (func cardlist-images<-tactics-units)
+  static f_cardlist_images_from_tactics_units(tactics, ...unitkeys) {
+    let output = nx_tactics_base.e_cardlist
+    unitkeys = vx_core.f_new_from_type(vx_core.t_stringlist, ...unitkeys)
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_cardlist},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const units = nx_tactics_base.f_unitlist_from_tactics_keys(tactics, ...unitkeys)
+        const images = nx_tactics_base.f_cardimagelist_from_unitlist(units)
+        const cards = vx_core.f_list_from_list({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist}, units)
+        const cardsimage = vx_core.f_list_from_list({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_cardimage, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_cardimagelist}, images)
+        return vx_core.f_new({"any-1": nx_tactics_base.t_cardlist}, cards, cardsimage)
       })
     )
     return output
@@ -4287,6 +4463,70 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function unitskill_from_tactics_key_abilities
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @param  {stringlist} abilities
+   * @return {unitskill}
+   */
+  static t_unitskill_from_tactics_key_abilities = {
+    vx_type: vx_core.t_type
+  }
+  static e_unitskill_from_tactics_key_abilities = {
+    vx_type: nx_tactics_base.t_unitskill_from_tactics_key_abilities
+  }
+
+  // (func unitskill<-tactics-key-abilities)
+  static f_unitskill_from_tactics_key_abilities(tactics, key, abilities) {
+    let output = nx_tactics_base.e_unitskill
+    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
+      tactics,
+      key,
+      0,
+      abilities,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      ),
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unitskill_from_tactics_key_items
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @param  {stringlist} items
+   * @return {unitskill}
+   */
+  static t_unitskill_from_tactics_key_items = {
+    vx_type: vx_core.t_type
+  }
+  static e_unitskill_from_tactics_key_items = {
+    vx_type: nx_tactics_base.t_unitskill_from_tactics_key_items
+  }
+
+  // (func unitskill<-tactics-key-items)
+  static f_unitskill_from_tactics_key_items(tactics, key, items) {
+    let output = nx_tactics_base.e_unitskill
+    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
+      tactics,
+      key,
+      0,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      ),
+      items,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      )
+    )
+    return output
+  }
+
+  /**
    * @function unitskill_from_tactics_key_lvl
    * @param  {tactics} tactics
    * @param  {string} key
@@ -4303,10 +4543,13 @@ export default class nx_tactics_base {
   // (func unitskill<-tactics-key-lvl)
   static f_unitskill_from_tactics_key_lvl(tactics, key, lvl) {
     let output = nx_tactics_base.e_unitskill
-    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
+    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
       tactics,
       key,
       lvl,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      ),
       vx_core.f_empty(
         vx_core.t_stringlist
       ),
@@ -4335,11 +4578,14 @@ export default class nx_tactics_base {
   // (func unitskill<-tactics-key-lvl-abilities)
   static f_unitskill_from_tactics_key_lvl_abilities(tactics, key, level, abilities) {
     let output = nx_tactics_base.e_unitskill
-    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
+    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
       tactics,
       key,
       level,
       abilities,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      ),
       vx_core.f_empty(
         vx_core.t_stringlist
       )
@@ -4349,7 +4595,6 @@ export default class nx_tactics_base {
 
   /**
    * @function unitskill_from_tactics_key_lvl_abilities_items
-   * Returns a unitskill from tactics, skill key, level, ability keys, and item keys
    * @param  {tactics} tactics
    * @param  {string} key
    * @param  {int} level
@@ -4366,6 +4611,42 @@ export default class nx_tactics_base {
 
   // (func unitskill<-tactics-key-lvl-abilities-items)
   static f_unitskill_from_tactics_key_lvl_abilities_items(tactics, key, level, abilities, items) {
+    let output = nx_tactics_base.e_unitskill
+    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
+      tactics,
+      key,
+      level,
+      abilities,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      ),
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unitskill_from_tactics_key_lvl_abilities_items_specialties
+   * Returns a unitskill from tactics, skill key, level, ability keys, and item keys
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @param  {int} level
+   * @param  {stringlist} abilities
+   * @param  {stringlist} items
+   * @param  {stringlist} specialties
+   * @return {unitskill}
+   */
+  static t_unitskill_from_tactics_key_lvl_abilities_items_specialties = {
+    vx_type: vx_core.t_type
+  }
+  static e_unitskill_from_tactics_key_lvl_abilities_items_specialties = {
+    vx_type: nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities_items_specialties
+  }
+
+  // (func unitskill<-tactics-key-lvl-abilities-items-specialties)
+  static f_unitskill_from_tactics_key_lvl_abilities_items_specialties(tactics, key, level, abilities, items, specialties) {
     let output = nx_tactics_base.e_unitskill
     output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_unitskill},
@@ -4388,8 +4669,42 @@ export default class nx_tactics_base {
             vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":item", item))
         )
         const unititemmap = nx_tactics_base.f_unititemmap_from_unititemlist(unititemlist)
-        return vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":skill", skill, ":level", level, ":unitabilitymap", unitabilitymap, ":unititemmap", unititemmap)
+        return vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":skill", skill, ":level", level, ":unitabilitymap", unitabilitymap, ":unititemmap", unititemmap, ":specialties", specialties)
       })
+    )
+    return output
+  }
+
+  /**
+   * @function unitskill_from_tactics_key_lvl_abilities_specialties
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @param  {int} level
+   * @param  {stringlist} abilities
+   * @param  {stringlist} specialties
+   * @return {unitskill}
+   */
+  static t_unitskill_from_tactics_key_lvl_abilities_specialties = {
+    vx_type: vx_core.t_type
+  }
+  static e_unitskill_from_tactics_key_lvl_abilities_specialties = {
+    vx_type: nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities_specialties
+  }
+
+  // (func unitskill<-tactics-key-lvl-abilities-specialties)
+  static f_unitskill_from_tactics_key_lvl_abilities_specialties(tactics, key, level, abilities, specialties) {
+    let output = nx_tactics_base.e_unitskill
+    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
+      tactics,
+      key,
+      level,
+      abilities,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      ),
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      )
     )
     return output
   }
@@ -4412,14 +4727,50 @@ export default class nx_tactics_base {
   // (func unitskill<-tactics-key-lvl-items)
   static f_unitskill_from_tactics_key_lvl_items(tactics, key, level, items) {
     let output = nx_tactics_base.e_unitskill
-    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
+    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
       tactics,
       key,
       level,
       vx_core.f_empty(
         vx_core.t_stringlist
       ),
-      items
+      items,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unitskill_from_tactics_key_lvl_specialties
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @param  {int} level
+   * @param  {stringlist} specialties
+   * @return {unitskill}
+   */
+  static t_unitskill_from_tactics_key_lvl_specialties = {
+    vx_type: vx_core.t_type
+  }
+  static e_unitskill_from_tactics_key_lvl_specialties = {
+    vx_type: nx_tactics_base.t_unitskill_from_tactics_key_lvl_specialties
+  }
+
+  // (func unitskill<-tactics-key-lvl-specialties)
+  static f_unitskill_from_tactics_key_lvl_specialties(tactics, key, level, specialties) {
+    let output = nx_tactics_base.e_unitskill
+    output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
+      tactics,
+      key,
+      level,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      ),
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      ),
+      specialties
     )
     return output
   }
@@ -4539,6 +4890,9 @@ export default class nx_tactics_base {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
+      "cardlayout-imagemirror": nx_tactics_base.c_cardlayout_imagemirror,
+      "cardlayout-imageonly": nx_tactics_base.c_cardlayout_imageonly,
+      "cardlayout-textimage": nx_tactics_base.c_cardlayout_textimage,
       "rank-ace": nx_tactics_base.c_rank_ace,
       "rank-eight": nx_tactics_base.c_rank_eight,
       "rank-five": nx_tactics_base.c_rank_five,
@@ -4642,6 +4996,7 @@ export default class nx_tactics_base {
       "cardback": nx_tactics_base.e_cardback,
       "cardimage": nx_tactics_base.e_cardimage,
       "cardimagelist": nx_tactics_base.e_cardimagelist,
+      "cardlayout": nx_tactics_base.e_cardlayout,
       "cardlist": nx_tactics_base.e_cardlist,
       "cardmap": nx_tactics_base.e_cardmap,
       "chapter": nx_tactics_base.e_chapter,
@@ -4743,9 +5098,14 @@ export default class nx_tactics_base {
       "cardimage<-card": nx_tactics_base.e_cardimage_from_card,
       "cardimage<-tactics-unitkey": nx_tactics_base.e_cardimage_from_tactics_unitkey,
       "cardimagelist<-cardlist": nx_tactics_base.e_cardimagelist_from_cardlist,
+      "cardimagelist<-placelist": nx_tactics_base.e_cardimagelist_from_placelist,
+      "cardimagelist<-tactics-placekeys": nx_tactics_base.e_cardimagelist_from_tactics_placekeys,
       "cardimagelist<-tactics-unitkeys": nx_tactics_base.e_cardimagelist_from_tactics_unitkeys,
+      "cardimagelist<-unitlist": nx_tactics_base.e_cardimagelist_from_unitlist,
       "cardlist-copy<-card-count-isnum": nx_tactics_base.e_cardlist_copy_from_card_count_isnum,
       "cardlist-copy<-tactics-rulekey-count-isnum": nx_tactics_base.e_cardlist_copy_from_tactics_rulekey_count_isnum,
+      "cardlist-images<-tactics-places": nx_tactics_base.e_cardlist_images_from_tactics_places,
+      "cardlist-images<-tactics-units": nx_tactics_base.e_cardlist_images_from_tactics_units,
       "cardmap-copy<-card-count-isnum": nx_tactics_base.e_cardmap_copy_from_card_count_isnum,
       "cardmap<-bookmap": nx_tactics_base.e_cardmap_from_bookmap,
       "cardmap<-cardlist": nx_tactics_base.e_cardmap_from_cardlist,
@@ -4836,10 +5196,15 @@ export default class nx_tactics_base {
       "unitpowermap<-tactics-keys": nx_tactics_base.e_unitpowermap_from_tactics_keys,
       "unitpowermap<-unitpowerlist": nx_tactics_base.e_unitpowermap_from_unitpowerlist,
       "unitskill<-tactics-key": nx_tactics_base.e_unitskill_from_tactics_key,
+      "unitskill<-tactics-key-abilities": nx_tactics_base.e_unitskill_from_tactics_key_abilities,
+      "unitskill<-tactics-key-items": nx_tactics_base.e_unitskill_from_tactics_key_items,
       "unitskill<-tactics-key-lvl": nx_tactics_base.e_unitskill_from_tactics_key_lvl,
       "unitskill<-tactics-key-lvl-abilities": nx_tactics_base.e_unitskill_from_tactics_key_lvl_abilities,
       "unitskill<-tactics-key-lvl-abilities-items": nx_tactics_base.e_unitskill_from_tactics_key_lvl_abilities_items,
+      "unitskill<-tactics-key-lvl-abilities-items-specialties": nx_tactics_base.e_unitskill_from_tactics_key_lvl_abilities_items_specialties,
+      "unitskill<-tactics-key-lvl-abilities-specialties": nx_tactics_base.e_unitskill_from_tactics_key_lvl_abilities_specialties,
       "unitskill<-tactics-key-lvl-items": nx_tactics_base.e_unitskill_from_tactics_key_lvl_items,
+      "unitskill<-tactics-key-lvl-specialties": nx_tactics_base.e_unitskill_from_tactics_key_lvl_specialties,
       "unitskilllist<-tactics-keys": nx_tactics_base.e_unitskilllist_from_tactics_keys,
       "unitskillmap<-tactics-keys": nx_tactics_base.e_unitskillmap_from_tactics_keys,
       "unitskillmap<-unitskilllist": nx_tactics_base.e_unitskillmap_from_unitskilllist,
@@ -4861,9 +5226,14 @@ export default class nx_tactics_base {
       "cardimage<-card": nx_tactics_base.t_cardimage_from_card,
       "cardimage<-tactics-unitkey": nx_tactics_base.t_cardimage_from_tactics_unitkey,
       "cardimagelist<-cardlist": nx_tactics_base.t_cardimagelist_from_cardlist,
+      "cardimagelist<-placelist": nx_tactics_base.t_cardimagelist_from_placelist,
+      "cardimagelist<-tactics-placekeys": nx_tactics_base.t_cardimagelist_from_tactics_placekeys,
       "cardimagelist<-tactics-unitkeys": nx_tactics_base.t_cardimagelist_from_tactics_unitkeys,
+      "cardimagelist<-unitlist": nx_tactics_base.t_cardimagelist_from_unitlist,
       "cardlist-copy<-card-count-isnum": nx_tactics_base.t_cardlist_copy_from_card_count_isnum,
       "cardlist-copy<-tactics-rulekey-count-isnum": nx_tactics_base.t_cardlist_copy_from_tactics_rulekey_count_isnum,
+      "cardlist-images<-tactics-places": nx_tactics_base.t_cardlist_images_from_tactics_places,
+      "cardlist-images<-tactics-units": nx_tactics_base.t_cardlist_images_from_tactics_units,
       "cardmap-copy<-card-count-isnum": nx_tactics_base.t_cardmap_copy_from_card_count_isnum,
       "cardmap<-bookmap": nx_tactics_base.t_cardmap_from_bookmap,
       "cardmap<-cardlist": nx_tactics_base.t_cardmap_from_cardlist,
@@ -4954,10 +5324,15 @@ export default class nx_tactics_base {
       "unitpowermap<-tactics-keys": nx_tactics_base.t_unitpowermap_from_tactics_keys,
       "unitpowermap<-unitpowerlist": nx_tactics_base.t_unitpowermap_from_unitpowerlist,
       "unitskill<-tactics-key": nx_tactics_base.t_unitskill_from_tactics_key,
+      "unitskill<-tactics-key-abilities": nx_tactics_base.t_unitskill_from_tactics_key_abilities,
+      "unitskill<-tactics-key-items": nx_tactics_base.t_unitskill_from_tactics_key_items,
       "unitskill<-tactics-key-lvl": nx_tactics_base.t_unitskill_from_tactics_key_lvl,
       "unitskill<-tactics-key-lvl-abilities": nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities,
       "unitskill<-tactics-key-lvl-abilities-items": nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities_items,
+      "unitskill<-tactics-key-lvl-abilities-items-specialties": nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities_items_specialties,
+      "unitskill<-tactics-key-lvl-abilities-specialties": nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities_specialties,
       "unitskill<-tactics-key-lvl-items": nx_tactics_base.t_unitskill_from_tactics_key_lvl_items,
+      "unitskill<-tactics-key-lvl-specialties": nx_tactics_base.t_unitskill_from_tactics_key_lvl_specialties,
       "unitskilllist<-tactics-keys": nx_tactics_base.t_unitskilllist_from_tactics_keys,
       "unitskillmap<-tactics-keys": nx_tactics_base.t_unitskillmap_from_tactics_keys,
       "unitskillmap<-unitskilllist": nx_tactics_base.t_unitskillmap_from_unitskilllist,
@@ -4975,6 +5350,7 @@ export default class nx_tactics_base {
       "cardback": nx_tactics_base.t_cardback,
       "cardimage": nx_tactics_base.t_cardimage,
       "cardimagelist": nx_tactics_base.t_cardimagelist,
+      "cardlayout": nx_tactics_base.t_cardlayout,
       "cardlist": nx_tactics_base.t_cardlist,
       "cardmap": nx_tactics_base.t_cardmap,
       "chapter": nx_tactics_base.t_chapter,
@@ -5108,6 +5484,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -5244,6 +5625,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5365,6 +5751,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5442,6 +5833,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -5523,6 +5919,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5585,6 +5986,25 @@ export default class nx_tactics_base {
       proplast      : {}
     }
     nx_tactics_base.e_cardimagelist['vx_type'] = nx_tactics_base.t_cardimagelist
+
+    // (type cardlayout)
+    nx_tactics_base.t_cardlayout['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_cardlayout['vx_value'] = {
+      name          : "cardlayout",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_cardlayout['vx_type'] = nx_tactics_base.t_cardlayout
+    nx_tactics_base.e_cardlayout['vx_value'] = {}
 
     // (type cardlist)
     nx_tactics_base.t_cardlist['vx_type'] = vx_core.t_type
@@ -5660,6 +6080,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -5801,6 +6226,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5878,6 +6308,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -5996,6 +6431,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6080,6 +6520,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6159,6 +6604,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6236,6 +6686,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -6335,6 +6790,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -6601,6 +7061,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6678,6 +7143,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -6776,6 +7246,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -6966,6 +7441,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7120,6 +7600,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7197,6 +7682,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -7286,6 +7776,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -7420,6 +7915,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7539,6 +8039,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -7662,6 +8167,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7727,14 +8237,14 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_rulemap,
           "multi": false
         },
-        "scenemap": {
-          "name" : "scenemap",
-          "type" : nx_tactics_base.t_scenemap,
-          "multi": false
-        },
         "sectionmap": {
           "name" : "sectionmap",
           "type" : nx_tactics_base.t_sectionmap,
+          "multi": false
+        },
+        "scenemap": {
+          "name" : "scenemap",
+          "type" : nx_tactics_base.t_scenemap,
           "multi": false
         },
         "skillmap": {
@@ -7864,6 +8374,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -8015,6 +8530,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -8131,6 +8651,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -8208,6 +8733,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -8387,6 +8917,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -8464,6 +8999,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -8584,6 +9124,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -8680,6 +9225,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -8781,6 +9331,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -8858,6 +9413,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -9180,6 +9740,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -9381,6 +9946,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -9465,11 +10035,16 @@ export default class nx_tactics_base {
           "name" : "unitspecialtymap",
           "type" : nx_tactics_base.t_unitspecialtymap,
           "multi": false
+        },
+        "specialties": {
+          "name" : "specialties",
+          "type" : vx_core.t_stringlist,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "unitspecialtymap",
-        "type" : nx_tactics_base.t_unitspecialtymap,
+        "name" : "specialties",
+        "type" : vx_core.t_stringlist,
         "multi": false
       }
     }
@@ -9552,6 +10127,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -9611,11 +10191,16 @@ export default class nx_tactics_base {
           "name" : "unitspecialtymap",
           "type" : nx_tactics_base.t_unitspecialtymap,
           "multi": false
+        },
+        "specialties": {
+          "name" : "specialties",
+          "type" : vx_core.t_stringlist,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "unitspecialtymap",
-        "type" : nx_tactics_base.t_unitspecialtymap,
+        "name" : "specialties",
+        "type" : vx_core.t_stringlist,
         "multi": false
       }
     }
@@ -9761,6 +10346,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_boolean,
           "multi": false
         },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -9857,6 +10447,11 @@ export default class nx_tactics_base {
         "imgmirror": {
           "name" : "imgmirror",
           "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "layout": {
+          "name" : "layout",
+          "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
         "reference": {
@@ -10206,6 +10801,42 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_cardimagelist_from_cardlist
     }
 
+    // (func cardimagelist<-placelist)
+    nx_tactics_base.t_cardimagelist_from_placelist['vx_value'] = {
+      name          : "cardimagelist<-placelist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardimagelist_from_placelist
+    }
+
+    // (func cardimagelist<-tactics-placekeys)
+    nx_tactics_base.t_cardimagelist_from_tactics_placekeys['vx_value'] = {
+      name          : "cardimagelist<-tactics-placekeys",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardimagelist_from_tactics_placekeys
+    }
+
     // (func cardimagelist<-tactics-unitkeys)
     nx_tactics_base.t_cardimagelist_from_tactics_unitkeys['vx_value'] = {
       name          : "cardimagelist<-tactics-unitkeys",
@@ -10222,6 +10853,24 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_cardimagelist_from_tactics_unitkeys
+    }
+
+    // (func cardimagelist<-unitlist)
+    nx_tactics_base.t_cardimagelist_from_unitlist['vx_value'] = {
+      name          : "cardimagelist<-unitlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardimagelist_from_unitlist
     }
 
     // (func cardlist-copy<-card-count-isnum)
@@ -10258,6 +10907,42 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_cardlist_copy_from_tactics_rulekey_count_isnum
+    }
+
+    // (func cardlist-images<-tactics-places)
+    nx_tactics_base.t_cardlist_images_from_tactics_places['vx_value'] = {
+      name          : "cardlist-images<-tactics-places",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardlist_images_from_tactics_places
+    }
+
+    // (func cardlist-images<-tactics-units)
+    nx_tactics_base.t_cardlist_images_from_tactics_units['vx_value'] = {
+      name          : "cardlist-images<-tactics-units",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardlist_images_from_tactics_units
     }
 
     // (func cardmap-copy<-card-count-isnum)
@@ -11880,6 +12565,42 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_unitskill_from_tactics_key
     }
 
+    // (func unitskill<-tactics-key-abilities)
+    nx_tactics_base.t_unitskill_from_tactics_key_abilities['vx_value'] = {
+      name          : "unitskill<-tactics-key-abilities",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_unitskill_from_tactics_key_abilities
+    }
+
+    // (func unitskill<-tactics-key-items)
+    nx_tactics_base.t_unitskill_from_tactics_key_items['vx_value'] = {
+      name          : "unitskill<-tactics-key-items",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_unitskill_from_tactics_key_items
+    }
+
     // (func unitskill<-tactics-key-lvl)
     nx_tactics_base.t_unitskill_from_tactics_key_lvl['vx_value'] = {
       name          : "unitskill<-tactics-key-lvl",
@@ -11934,6 +12655,42 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items
     }
 
+    // (func unitskill<-tactics-key-lvl-abilities-items-specialties)
+    nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities_items_specialties['vx_value'] = {
+      name          : "unitskill<-tactics-key-lvl-abilities-items-specialties",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties
+    }
+
+    // (func unitskill<-tactics-key-lvl-abilities-specialties)
+    nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities_specialties['vx_value'] = {
+      name          : "unitskill<-tactics-key-lvl-abilities-specialties",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_specialties
+    }
+
     // (func unitskill<-tactics-key-lvl-items)
     nx_tactics_base.t_unitskill_from_tactics_key_lvl_items['vx_value'] = {
       name          : "unitskill<-tactics-key-lvl-items",
@@ -11950,6 +12707,24 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_unitskill_from_tactics_key_lvl_items
+    }
+
+    // (func unitskill<-tactics-key-lvl-specialties)
+    nx_tactics_base.t_unitskill_from_tactics_key_lvl_specialties['vx_value'] = {
+      name          : "unitskill<-tactics-key-lvl-specialties",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_unitskill_from_tactics_key_lvl_specialties
     }
 
     // (func unitskilllist<-tactics-keys)

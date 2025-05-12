@@ -121,11 +121,14 @@ Known as 'The Gun that Won the West' for its immense popularity at that time."
          (item
           :name "12g Winchester Model 1887"
           :reference "Considered the first truly successful repeating shotgun"
-          :summary "Level action"
+          :summary
+           "Level action
+            * [Skill]: [Firearms]
+            * [Scattershot]"
           :classification "Shotgun"
           :length "1m"
           :mass "3.6kg"
-          :modifiers "Scattershot, Bleeding"
+          :modifiers "Bleeding"
           :range "30m"
           :rounds "5")
         ".50 Gatling Gun"

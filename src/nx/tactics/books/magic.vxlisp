@@ -71,9 +71,9 @@
        tactics
        "Conviction"
        "Blessing"
-       "Divine"
        "Invocation"
        "Life"
+       "Primus"
        "Purity"
        "Radiant"))
     (base/section

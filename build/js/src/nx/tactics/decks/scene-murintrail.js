@@ -7,12 +7,6 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_decks_scene_murintrail {
 
   /**
-   * Constant: power-groundmovement
-   * {power}
-   */
-  static c_power_groundmovement = {vx_type: nx_tactics_base.t_power, vx_constdef: {pkgname: 'nx/tactics/decks/scene-murintrail', name: 'power-groundmovement', type: nx_tactics_base.t_power}}
-
-  /**
    * @function deck_murintrail
    * @param  {tactics} tactics
    * @return {deck}
@@ -35,34 +29,20 @@ export default class nx_tactics_decks_scene_murintrail {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
-          vx_core.f_list_from_list(
-            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist},
-            nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Jes Aveer", "Jon Aveer", "Xeib Hanower", "Wilm Ducon", "Lili Ducon", "Brunhil Virden", "Goblin: Scout", "Bandit", "Bruiser", "Guardsman", "Herbalist", "Innkeeper", "Pilgrim", "Urchin", "Waif", "Cat", "Chicken", "Dog", "Dog: Wild", "Duck", "Goat", "Goose", "Pig", "Donkey", "Sheep", "Horse", "Ox", "Cart: Wooden", "Plough")
-          ),
-          vx_core.f_list_from_list(
-            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_cardimage, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_cardimagelist},
-            nx_tactics_base.f_cardimagelist_from_tactics_unitkeys(tactics, "Flint (Early)", "Jes Aveer", "Jon Aveer", "Xeib Hanower", "Wilm Ducon", "Lili Ducon", "Brunhil Virden", "Goblin: Scout", "Bandit", "Bruiser", "Guardsman", "Herbalist", "Innkeeper", "Pilgrim", "Urchin", "Waif", "Cat", "Chicken", "Dog", "Dog: Wild", "Donkey", "Duck", "Goose", "Pig", "Sheep", "Horse", "Ox", "Cart: Wooden")
-          ),
-          vx_core.f_list_from_list(
-            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Zombie")
-          ),
+          nx_tactics_base.f_cardlist_images_from_tactics_units(tactics, "Flint (Early)", "Jes Aveer", "Jon Aveer", "Xeib Hanower", "Wilm Ducon", "Lili Ducon", "Brunhil Virden", "Goblin Scout", "Bandit", "Bruiser", "Guardsman", "Herbalist", "Innkeeper", "Pilgrim", "Urchin", "Waif", "Cat", "Chicken", "Dog", "Dog: Wild", "Duck", "Goat", "Goose", "Pig", "Donkey", "Sheep", "Horse", "Ox", "Cart: Wooden", "Plough"),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_skilllist},
-            nx_tactics_base.f_skilllist_from_tactics_keys(tactics, "Close Combat", "Melee", "Stealth", "Business", "Tradeskills")
+            nx_tactics_base.f_skilllist_from_tactics_keys(tactics, "Close Combat", "Melee", "Stealth", "Business", "Tradeskill")
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_abilitylist},
-            nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Bargain", "Sneak")
+            nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Bargain", "Sneak", "Zombified")
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
             nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife: Dagger", "Sword: Long", "Sword: Short", "Hammer", "Axe: Hand", "Axe: Wood", "Spear", "Spear: Short", "Bow: Short", "Quiver: Arrows", "Shield: Buckler", "Shield: Heater", "Armor: Leather Cuirass", "Coins: Copper", "Coins: Silver", "Coins: Gold", "Coins: Platinum", "Salve: Healing", "Cloak: Fine Woodland", "Rations", "Waterskin")
           ),
-          vx_core.f_list_from_list(
-            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},
-            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Sandalstad", "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Shop: General", "Shop: Herbalist", "Shrine", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
-          )
+          nx_tactics_base.f_cardlist_images_from_tactics_places(tactics, "Sandalstad", "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Shop: General", "Shop: Herbalist", "Shrine", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
         )
       )
     )
@@ -92,7 +72,7 @@ export default class nx_tactics_decks_scene_murintrail {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
-      "power-groundmovement": nx_tactics_decks_scene_murintrail.c_power_groundmovement
+      
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-murintrail": nx_tactics_decks_scene_murintrail.e_deck_murintrail,
@@ -149,9 +129,6 @@ export default class nx_tactics_decks_scene_murintrail {
       proplast      : {},
       fn            : nx_tactics_decks_scene_murintrail.f_scene_murintrail
     }
-
-    // (const power-groundmovement)
-    Object.assign(nx_tactics_decks_scene_murintrail.c_power_groundmovement, vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Ground Movement"))
 
   }
 }

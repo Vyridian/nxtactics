@@ -1,8 +1,9 @@
 (package nx/tactics/apptactics
- :libs (lib base   :path nx/tactics/base)
-       (lib bl     :path nx/tactics/books/bookloader)
+ :libs
+//     (lib base   :path nx/tactics/base)
+//     (lib bl     :path nx/tactics/books/bookloader)
        (lib fil    :path vx/data/file)
-       (lib xml    :path vx/data/xml)
+//     (lib xml    :path vx/data/xml)
        (lib styles :path nx/tactics/ui/stylesheet)
        (lib ui     :path vx/ui/ui)
        (lib uihtml :path vx/ui/html/uihtml)

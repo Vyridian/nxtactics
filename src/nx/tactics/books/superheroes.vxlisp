@@ -104,7 +104,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
        "Green Lantern"
         (base/unit
          :name "Green Lantern"
@@ -144,7 +144,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
        :Catwoman
         (base/unit
          :name "Catwoman"
@@ -156,7 +156,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
        :Joker
         (base/unit
          :name "Joker"
@@ -166,7 +166,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
        :Sinestro
         (base/unit
          :name "Sinestro"
@@ -1442,7 +1442,7 @@
           :unitskillmap
            (base/unitskillmap<-tactics-keys
             tactics
-            "Mastermind"))))
+            "Brilliance"))))
     :Asgardians
      (section
       :name "Asgardians"
@@ -1582,7 +1582,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
         "Black Widow"
          (base/unit
           :name "Black Widow"
@@ -1592,7 +1592,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
         "Captain America"
          (base/unit
           :name "Captain America"
@@ -1649,7 +1649,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
         "Red Skull, The"
          (base/unit
           :name "Red Skull, The"
@@ -1660,7 +1660,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
         :Ultron
          (base/unit
           :name "Ultron"
@@ -1683,7 +1683,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
         "Wasp, The"
          (base/unit
           :name "Wasp, The"
@@ -1958,7 +1958,7 @@
           :unitskillmap
            (base/unitskillmap<-tactics-keys
             tactics
-            "Mastermind"))
+            "Brilliance"))
         "Bug, Micronaut"
          (base/unit
           :name "Bug, Micronaut"
@@ -2042,7 +2042,7 @@
             tactics
             "Close Combat"
             "Crime"
-            "Mastermind"))
+            "Brilliance"))
         "Lizard, The"
          (base/unit
           :name "Lizard, The"
@@ -2100,7 +2100,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Mastermind"))
+           "Brilliance"))
         "Black Queen"
          (base/unit
           :name "Black Queen"
@@ -2613,13 +2613,13 @@
             *** Arm Whip
             *** Tail - Can rapidly form a prehensile tail by drawing mass from his body.
             ** Regeneration
-            ** Poison - When he desires, he may exude powerful neurotoxins from he skin that cause weakness, paralysis, or death.
+            ** Poison - May exude powerful neurotoxins from he skin that cause weakness, paralysis, or death.
             ** Waterbreathing
             ** Climbing - The rough surface of his hands and feet allow him to cling to most surfaces."
           :titles "Dr. Samuel Mayer")
-        :Savant
+        "Strand"
          (base/unit
-          :name "Savant"
+          :name "Strand"
           :reference "* To walk in the darkness with a light is to know light. To know darkness you must walk without light."
           :summary
            "* Strand is a professional mystic, healer, and cult leader. He is extremely gifted and charges high prices to his elite clientele.
@@ -2638,7 +2638,7 @@
             ** Summoning - 
             ** Levitation - The Silver Cords can lift him off the ground and he can float at normal movement speeds."
           :titles
-           "Strand Beizingstoke, Daedalus Beizingstoke, Advent, Arcana, Archon, Ash, Lord Archon, Dusk, Harbinger, Horizon, Shroud, Strand, Threshold, Vassal"
+           "Strand Beizingstoke, Daedalus Beizingstoke, Advent, Arcana, Archon, Ash, Lord Archon, Dusk, Harbinger, Horizon, Savant, Shroud, Threshold, Vassal"
           :unitpowermap
            (base/unitpowermap
             :Empathy
@@ -2710,9 +2710,9 @@
         "Saber, The"
          (base/unit
           :name "Saber, The")
-        :Seraph
+        "Seraph, The"
          (base/unit
-          :name "Seraph"
+          :name "Seraph, The"
           :image "Superheroes/Archon.png"
           :summary
            "* Seraph was once an member of a distant planet of avian humanoids. Their race had developed interplanetary travel and Seraph was conducting atmospheric experiments in high orbit when the unthinkable happened: Terrax brought the world-eater Galactus to his planet. For hours, he watched helplessly as his people descended into chaos and terror as his planet was slowly destroyed. Eventually, his world exploded in a wave of destruction, bathing him in primordial energies and hurling his small craft toward their Sun. Over the following days, his crippled craft flew inexorably toward the Sun and he grew increasingly despondent over his lost world, life and loves. When he finally plunged into the star he should have died; perhaps he did. Either way, something new emerged from the star: a semi-conscious stream of stellar plasma. Over the following decades, the plasma flew through space and began to regain purpose and take form. Eventually, he took on the idealized form of he former people. His purpose became to find and destroy the world-eater. That purpose led him to Earth, the first world that repelled the world-eater.
@@ -2733,17 +2733,8 @@
         "Shade, The"
          (base/unit
           :name "Shade, The")
-        :Spectrum
-         (base/unit
-          :name "Spectrum"
-          :image "Superheroes/Vector.png"
-          :summary
-           "* Spectrum appears in glowing, angular, mirrored armor with a mirrored visor. The armor augments his strength to lift 800lbs. He can materialize angular blades and shields from his arms. He can also create glowing shards in different forms including a flying triangular plate, throwing knives, barriers, and cages.
-            * Spectrum's armor is powered by light and the area will visibly darken when his powers are active. In a completely dark area, his powers are greatly diminished. Conversely, very bright light increases his power level. For this reason, he usually acts only in daylight.
-            * Dr. Alex Lietner is an MIT physicist reseaching the creation of holograms with lasers. He discovered that through precise modulation, a hologram could temporarily be turned into an extremely rigid solid. With the help of some of his students, he was able to create a portable projection system in a wearable suit.
-            * Blinding Flash - Intense light burst similar to a flash bomb.
-            * Blinding Torrent - A dizzying kaleidoscope of intense light that causes vertigo and nausea."
-          :titles "Alan Lietner, Shard, Vector")
+        "Spectrum"
+         (base/unit<-tactics-key tactics "Spectrum")
         :Spinnerette
          (base/unit
           :name "Spinnerette"
@@ -2894,15 +2885,15 @@
         "Captain America II"
          (base/unit
           :name "Captain America II"
+          :titles "Pamela Kathman, Taskmaster II"
           :summary
            "* Pamela Kathman is the only daughter of the criminal Taskmaster. She is a 6 year old child prodigy with both violin and piano. Her mutant powers have already manifested themselves and are identical to her father's.
             * In the Sentinel alternate future, she was recruited by the Senturion to become a resistance fighter. She obtrained Captain America's shield in a raid on a Sentinel warehouse. She has since taken on Captain America's role and become a symbol of the resistance.
             * Photographic Reflexes - She possesses the skills of Hawkeye, Captain America, Punisher, Spiderman, Daredevil, and countless others. She rapidly switches styles during combat to make her moves more unpredictable.
             * Adamantium Shield - Unbreakable Shield can resist almost any physical force.
             * Agility (Spiderman) - Her agility level far exceeds human maximum and she is extremely difficult to hit.
-            * Weapon Skill (Punisher) - She has encyclopedic knowledge of military grade weaponry and will use them to great effect.
-            * Second Generation Mutant - Her mutant powers are difficult to detect except at very close range."
-          :titles "Pamela Kathman, Taskmaster II")
+            * Weapon Skill (Punisher) - She has expert knowledge of military grade weaponry and will use them to great effect.
+            * Second Generation Mutant - Her mutant powers are difficult to detect except at very close range.")
         :Deathwatch
          (base/unit
           :name "Deathwatch"
@@ -2919,23 +2910,8 @@
           :summary
            "* In the Sentinel alternate future, Senturion recovered the Awesome Android from its watery grave. He reporgrammed the Android and now it now serves only the Senturion."
           :titles "Awesome Android")
-        :Senturion
-         (base/unit
-          :name "Senturion"
-          :summary
-           "* Senturion is a highly advanced, alien construct with the thought patterns of a human super-imposed upon his programming. He originally believed that he was a young man who could transform into a robot, but he has since learned that his actual body died long ago and that his personality is just an artificial duplicate. After this discovery, his humanity has gradually diminished over time.
-            * Synthetic - Senturion does not need to eat, sleep or breathe. He is composed of molecular machines that twist and wrap in layers of ceramic wire filaments. These multipurpose filaments reconfigure into different forms to heal or create custom weapons. These filaments must always remain connected to the main body or they self-destruct to maintain their secrets. If Senturion loses a limb, the resulting explosion can cause significant damage.
-            * Body - He has tremendous strength and endurance and can withstand extreme temperatures, pressures, and the vacuum of space. His body is very flexible, and he can contort himself to escape confinement of fit through small gaps.
-            * Mind - His computer brain greatly increases his ability to quickly process information and create complex strategies.
-            * Speed - Senturion moves and reacts with lightning speed and precision. He can run at 80mph and can briefly run on walls. His graceful movements belie his great strength and significant weight.
-            * Leaping - Senturion can jump 40ft in the air.
-            * Eyes - Senturion's eyes can emit tight-beam lasers or a white sheet of explosive energy. He can sense electromagnetic radiation (including infrared and ultraviolet). He also possesses telescopic and microscopic vision.
-            * Transformation - As Mech-Man he was able to transform from a human-like form to his mechanical form. He has since lost this ability (and a great deal of his human personality). As Senturion he has refined this power to produce specialized weapons like blades and spikes.
-            * Healing - Senturion's android body rapidly repairs itself.
-            * Filaments - In close combat, filaments can emerge from its body which can scramble or override electrical devices on contact.
-            * History - Senturion was designed as one of a multitude of multi-purpose exploratory probes. Their natural form is a squirming mass of clear filaments. These probes were packed into artificial comets and launched in all directions from their homeworld. To protect their designers, they possess no memory of their origin or ultimate purpose. Many of these probes have landed on all planets in the solar system and millions more are littered across the galaxy. Most were buried underground by their impact and there they lie dormant. The ones on the surface seek a power source to fuel their growth and adaptation to their environment. They absorb light, heat, electricity or other radiation. When fully charged, they quietly begin exploring and analyzing their environment for possible resources and threats. If the planet is lifeless, they will catalog the available resources and begin creating more identical probes. If the planet is inhabited, they will wait and study the local wildlife until they are confident that they can completely mimic a sample of the apex species. Then they will begin to blend into the local society to learn everything they can. When their analysis no longer produces significant results, they begin to create more probes. Though they are unaware of their creator or purpose, they continue to catalog and expand. Eventually, their data network reaches back to their creators who collect this massive treasure trove of data."
-          :titles "Mech Man"
-          :mass "300kg")))
+        "Senturion"
+         (base/unit<-tactics-key tactics "Senturion")))
     :Extras
      (section
       :name "Extras"
@@ -2944,27 +2920,29 @@
         "Samantha Hellerton"
          (base/unit
           :name "Samantha Hellerton"
-          :reference "I haven't been killed yet."
+          :titles "Sammy"
+          :reference
+           "I haven't been killed yet."
           :summary
            "* Miss Hellerton is an investigative reporter who will go to great lengths for a story. She has been kidnapped and shot at numerous times. She feels that getting directly involved gives her stories a personal and exclusive touch. She freelances for ABC radio and television in New York, and she makes a bundle for a good story. Her special reports are very popular, detailing her most recent adventures in the dangerous world of crime and power. To this end, she is always trying to top herself with increasingly risky and mindboggling news. Though she may seem sensationalist, she considers herself to be an excellent journalist and has no interest in altering or suppressing the facts. Her popularity and sincerity make her a favorite person to 'leak' information to. Her tendency to get into the thick of a situation maker her somewhat of a menace to superheroes.
             * She is very energetic and disorganized bordering on hyperactive. She has fantastic luck, great skill as a journalist, and some photographic talent.
-            * She has many contacts around the world (not one of which is reliable). She dislikes her brother intensely."
-          :titles "Sammy")
+            * She has many contacts around the world (not one of which is reliable). She dislikes her brother intensely.")
         "Samuel Timothy Hellerton"
          (base/unit
           :name "Samuel Timothy Hellerton"
-          :reference "Let me get this straight ... Is is not true that? ... Just answer the question!"
+          :titles "Sam, Assistant District Attorney Hellerton"
+          :reference
+           "Let me get this straight ... Is it not true that? ... Just answer the question!"
           :summary
            "* Samuel Hellerton is a no-nonsense assistant D.A. He has built himself up from the bottom, is sickeningly straight, and is very dedicated to the Law.
-            * He is generally calm and matter of fact. He nevers smile but is otherwise courteous and amiable. In court, however, he suddenly transforms into a merciless, abusive interrogator.
+            * He is generally calm and matter of fact. He never smiles but is otherwise courteous and amiable. In court, however, he suddenly transforms into a merciless, abusive interrogator.
             * He does not get along well with his sister. He doesn't understand her, and she can't stand him. They are so used to fighting that they have rules about what is acceptable to throw at each other.
-            * Samuel is a talented lawyer. He has mastered the give and take of the justice system. He is also skilled with the many firearms he keeps as a hobby (his house is like a gunlocker). He has many contacts: some rich, some powerful, many shady. Most are not reliable, but he knows which ones are."
-          :titles "Sam, Assistant District Attorney Hellerton")
+            * Samuel is a talented lawyer. He has mastered the give and take of the justice system. He is also skilled with the many firearms he keeps as a hobby (his house is like a gunlocker). He has many contacts: some rich, some powerful, many shady. Most are not reliable, but he knows which ones are.")
         "David Spencer Grant"
          (base/unit
           :name "David Spencer Grant"
+          :titles "Sergeant Grant"
           :summary
            "* Sergeant Grant is a middle-aged, highly decorated enigma. He has been a police officer for 23 years, a sergeant for 17, and has long ago given up on a promotion. Everyone on the force respects him, though few like him.
             * He has a macho image that he enforces to excess and is a card carrying male chauvanist pig. Socially, he can be obnoxious and irritating. For all his surly nature, he will do the right thing when the chips are down.
-            * He is growing a pot belly, and he wears sunglasses even at night. He gave up smoking 2 years ago, but has never quite gotten over them."
-          :titles "Sergeant Grant"))))))
+            * He is growing a pot belly, and he wears sunglasses even at night. He gave up smoking 2 years ago, but has never quite gotten over them."))))))

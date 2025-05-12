@@ -45,7 +45,7 @@
        "Hunting"
        "Rage"
        "Survival"
-       "Tradeskills"))
+       "Tradeskill"))
     (base/section
      :name "Transportation Skills"
      :skillmap
@@ -54,18 +54,17 @@
        "Driving"
        "Piloting"
        "Riding"
-       "Seamanship"
-       "Starpiloting"))
+       "Seamanship"))
     (base/section
      :name "Academic Skills"
      :skillmap
       (base/skillmap<-tactics-keys
        tactics
+       "Brilliance"
        "Computers"
        "Electronics"
        "Investigation"
        "Knowledge"
-       "Mastermind"
        "Mechanics"
        "Medicine"
        "Science: Life"

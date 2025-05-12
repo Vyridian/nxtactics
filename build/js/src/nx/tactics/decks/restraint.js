@@ -1058,7 +1058,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-head.svg",
       ":summary",
-      "Minor: Hair Ensnared. Slow:1\nModerate: Face Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Skull Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Neck Constricted. [Suffocating] [Dying] Remove:3 Damage"
+      "Minor: Hair Ensnared. Slow:1\nModerate: Face Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Skull Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Neck Constricted. [Choking] [Dying] Remove:3 Damage"
     ))
 
     // (const restraint-ad)
@@ -1071,7 +1071,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-head.svg",
       ":summary",
-      "Minor: Hair Ensnared. Slow:1\nModerate: Face Ensnared. Slow:2 Remove:1 Actions\nMajor: Head Ensnared. Slow:3 Remove:2 Actions\nExtreme: Head Bound. Blood and Air cut off from Head. [Suffocating] [Dying]"
+      "Minor: Hair Ensnared. Slow:1\nModerate: Face Ensnared. Slow:2 Remove:1 Actions\nMajor: Head Ensnared. Slow:3 Remove:2 Actions\nExtreme: Head Bound. Blood and Air cut off from Head. [Choking] [Dying]"
     ))
 
     // (const restraint-ah)
@@ -1110,7 +1110,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-abdomen.svg",
       ":summary",
-      "Minor: Belly Ensnared. Slow:1\nModerate: Belly Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Stomach Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Diaphram constricted. Cannot inhale. [Suffocating]"
+      "Minor: Belly Ensnared. Slow:1\nModerate: Belly Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Stomach Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Diaphram constricted. Cannot inhale. [Choking]"
     ))
 
     // (const restraint-jd)
@@ -1162,7 +1162,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-shoulders.svg",
       ":summary",
-      "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulder Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Shoulders Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Blood and Air cut off from Head. [Suffocating] [Dying]"
+      "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulder Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Shoulders Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Blood and Air cut off from Head. [Choking] [Dying]"
     ))
 
     // (const restraint-kd)
@@ -1175,7 +1175,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-shoulders.svg",
       ":summary",
-      "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulders Ensnared. Slow:2 Remove:1 Actions\nMajor: Shoulders Bound. [Impaired]. Slow:3 Remove:2 Actions\nExtreme: Neck Bound. [Suffocating] Remove:3 Actions"
+      "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulders Ensnared. Slow:2 Remove:1 Actions\nMajor: Shoulders Bound. [Impaired]. Slow:3 Remove:2 Actions\nExtreme: Neck Bound. [Choking] Remove:3 Actions"
     ))
 
     // (const restraint-kh)
@@ -1214,7 +1214,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-chest.svg",
       ":summary",
-      "Minor: Ribs Ensnared. Slow:1\nModerate: Ribs Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Chest Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Lungs constricted. Cannot inhale. [Suffocating]"
+      "Minor: Ribs Ensnared. Slow:1\nModerate: Ribs Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Chest Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Lungs constricted. Cannot inhale. [Choking]"
     ))
 
     // (const restraint-qd)

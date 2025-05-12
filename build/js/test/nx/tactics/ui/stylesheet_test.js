@@ -3,7 +3,6 @@
 import nx_tactics_ui_stylesheet from "../../../../src/nx/tactics/ui/stylesheet.js"
 import vx_core from "../../../../src/vx/core.js"
 import vx_test from "../../../../src/vx/test.js"
-import nx_tactics_base from "../../../../src/nx/tactics/base.js"
 import vx_data_file from "../../../../src/vx/data/file.js"
 import vx_ui_ui from "../../../../src/vx/ui/ui.js"
 
@@ -26,12 +25,12 @@ export default class nx_tactics_ui_stylesheet_test {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/stylesheet", 
-      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 93), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 33, ":tests", 31, ":total", 93), 
+      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 95), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 32, ":tests", 31, ":total", 95), 
       "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 93), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 95), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -117,6 +116,8 @@ export default class nx_tactics_ui_stylesheet_test {
           "style-image-wand1", 0,
           "style-image-wand2", 0,
           "style-item-summary", 0,
+          "style-place-detail", 0,
+          "style-place-image", 0,
           "style-selected", 0,
           "style-text", 0,
           "style-text-2", 0,

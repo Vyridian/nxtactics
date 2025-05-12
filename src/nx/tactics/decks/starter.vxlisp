@@ -27,7 +27,7 @@
   :name "Player"
   :image (string "images/card-" color ".svg")
   :summary
-   "* [Game Start]: Place your Units on the [Status Bar] with a Unit# card. Arrange your other Unit cards in front of you.
+   "* [Setup]: Place your Units on the [Status Bar] with a [Unit#] card. Arrange your other Unit cards in front of you.
     * [Round End]: [Draw]:1 and [Recover]."))
 
 (func card-rotated : base/card

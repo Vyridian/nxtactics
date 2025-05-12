@@ -222,7 +222,7 @@ export default class nx_tactics_books_age_of_sail {
                   ":name",
                   "Firearms",
                   ":level",
-                  "3",
+                  3,
                   ":unititemmap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unititemmap},

@@ -30,17 +30,10 @@ export default class nx_tactics_decks_scene_nightonthetown {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
-          vx_core.f_list_from_list(
-            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist},
-            nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "The Professor", "Zombie: Crawler", "Zombie: Dog", "Zombie: Runner", "Zombie: Walker")
-          ),
-          vx_core.f_list_from_list(
-            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_cardimage, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_cardimagelist},
-            nx_tactics_base.f_cardimagelist_from_tactics_unitkeys(tactics, "The Professor", "Zombie: Crawler", "Zombie: Dog", "Zombie: Runner", "Zombie: Walker")
-          ),
+          nx_tactics_base.f_cardlist_images_from_tactics_units(tactics, "The Professor", "Zombie: Crawler", "Zombie: Dog", "Zombie: Runner", "Zombie: Walker"),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_abilitylist},
-            nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Bite", "Detail Oriented", "Grab")
+            nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Bite", "Detail Oriented", "Grab", "Zombified")
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
@@ -48,7 +41,7 @@ export default class nx_tactics_decks_scene_nightonthetown {
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},
-            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Clinic", "Gas Station", "Police Station", "Road: Asphalt", "Store: Convenience", "Store: Gun", "Street")
+            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Clinic", "Gas Station", "Police Station", "Road: Asphalt", "Road: Intersection", "Store: Convenience", "Store: Gun")
           )
         )
       )

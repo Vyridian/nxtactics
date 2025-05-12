@@ -22,6 +22,10 @@
    :name "Ammo: Shotgun"
    :image "images/cards/item-ammo-shotgun.svg")
   (base/item
+   :name "Armor: Breast Plate"
+   :summary "* [Hit Location]: Shoulders Chest Abdomen Vitals"
+   :armor "1mm")
+  (base/item
    :name "Armor: Chain Mail"
    :reference
     "* Shark expert and underwater filmmaker Valerie Taylor was among the first to develop and test shark suits in 1979 while diving with sharks.
@@ -49,8 +53,7 @@
    :name "Axe: Fire"
    :image "images/cards/item-axe-fire.svg"
    :summary
-    "* [Combat]: [Melee]
-     * [Initiative]:-1
+    "* [Skill]: [Melee]-1
      * [Damage]: [Body]:+3 [Hack] [Slash]
      * [Location]: [2-hand]
      * [Armor]:1x1"
@@ -450,10 +453,9 @@
    :image "images/cards/item-sword-long.svg"
    :classification "Sword"
    :summary
-    "* [Combat]: [Melee]
+    "* [Skill]: [Melee]+1
      * [Damage]: [Body]:+2 [Pierce] [Slash]
      * [Arc]: [Arc:Front] and [Arc:Left] OR [Arc:Right]
-     * [Initiative]: +1
      * [Location]: [1-hand]
      * [Armor]: 1x1"
    :body "10x-1"

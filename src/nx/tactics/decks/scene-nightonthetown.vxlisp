@@ -10,28 +10,20 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     (list<-list : base/cardlist
-      (base/unitlist<-tactics-keys
-       tactics
-       "The Professor"
-       "Zombie: Crawler"
-       "Zombie: Dog"
-       "Zombie: Runner"
-       "Zombie: Walker"))
-     (list<-list : base/cardlist
-      (base/cardimagelist<-tactics-unitkeys
-       tactics
-       "The Professor"
-       "Zombie: Crawler"
-       "Zombie: Dog"
-       "Zombie: Runner"
-       "Zombie: Walker"))
+     (base/cardlist-images<-tactics-units
+      tactics
+      "The Professor"
+      "Zombie: Crawler"
+      "Zombie: Dog"
+      "Zombie: Runner"
+      "Zombie: Walker")
      (list<-list : base/cardlist
       (base/abilitylist<-tactics-keys
        tactics
        "Bite"
        "Detail Oriented"
-       "Grab"))
+       "Grab"
+       "Zombified"))
      (list<-list : base/cardlist
       (base/itemlist<-tactics-keys
        tactics
@@ -59,8 +51,8 @@
        "Gas Station"
        "Police Station"
        "Road: Asphalt"
+       "Road: Intersection"
        "Store: Convenience"
        "Store: Gun"
-       "Street"
       ))
     ))))

@@ -71,143 +71,7 @@ export default class nx_tactics_books_powers {
           ":summary",
           "** Atmospheric Engine\n** Sub-light Drive\n** FTL Drive\n\n* Science Lab w/Sensors\n* Air Locks\n** Magnetic Mooring Lines\n** Vacc Suits\n* Weapons Locker\n* Drop Chamber w/Drop Pods\n* Cloaking Device\n* Shields",
           ":powermap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_powermap},
-            "Combine",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Combine"),
-            "Hanger",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Hanger"),
-            "Mission Section",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Mission Section",
-              ":summary",
-              "* Determine the total hull size and then divide it as desired by the following abilities.",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Air Locks",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Air Locks"),
-                "Boarding Equipment",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Boarding Equipment", ":titles", "Grapple Launchers, Magnetic Mooring Lines"),
-                "Cargo Hold",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cargo Hold"),
-                "Cloaking System",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cloaking System"),
-                "Cryogenic Chamber",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cryogenic Chamber", ":summary", "* Special ability of space craft to carry passengers in cryonic suspension."),
-                "Captain's Quarters",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Captain's Quarters"),
-                "Centrifuge Chamber",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Centrifuge Chamber"),
-                "Climbing Apparatus",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Climbing Apparatus"),
-                "Easy to Modify",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Easy to Modify"),
-                ":ECM",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "ECM", ":titles", "Electronic Countermeasures, Jamming"),
-                ":ECCM",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "ECCM", ":titles", "Electronic Counter-Countermeasures"),
-                "Ejection System",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ejection System"),
-                "Escape Pods",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Escape Pods"),
-                "Fuel Scoop",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fuel Scoop"),
-                "Gun Ports",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Gun Ports", ":summary", "Allows crew to use small arms fire without sacrificing armor protection."),
-                "Missile Decoys",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Missile Decoys", ":titles", "Chaff Dispenser, Flares"),
-                "Living Quarters",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Living Quarters", ":summary", "* Long range and luxury vessels offer more than the minimum crew quarters. This includes private rooms, mess, recreation areas, etc.\n* The larger the living space, the higher quality clientele may be brought aboard and the longer the ships range before shore leave is needed.\n* Includes Mess and Lounges"),
-                "Luxury Facilities",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Luxury Facilities"),
-                "Marine Ready Room",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Marine Ready Room"),
-                "Marine Drop Pods",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Marine Drop Pods"),
-                "Medical Facilities",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Medical Facilities", ":titles", "Sick Bay"),
-                ":Minelayer",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Minelayer"),
-                ":Minesweeper",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Minesweeper"),
-                "Mining Facilities",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mining Facilities"),
-                "Passenger Seating",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Passenger Seating"),
-                "Prison Facilities",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Prison Facilities", ":titles", "Brig"),
-                "Ram Plate",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ram Plate"),
-                ":Refinery",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Refinery"),
-                "Science Lab",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Science Lab"),
-                "Atmospheric Sensors",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Atmospheric Sensors"),
-                "Biological Sensors",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Biological Sensors"),
-                "Geological Sensors",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Geological Sensors"),
-                "Stealth Equipment",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stealth Equipment"),
-                "Storm Chamber",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Storm Chamber", ":summary", "Specially shielded chamber designed to be a safe room for particularly dangerous events including radiation flares and decompression."),
-                "Tanker Hold",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tanker Hold", ":summary", "The hold is equipped to hold large amounts of liquids or gases at appropriate environments.  This can be used for long range vessels to carry their own fuel or act as a fuel tanker."),
-                "Towing Capacity",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Towing Capacity"),
-                "Training Facilities",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Training Facilities"),
-                "Weapons Locker",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Weapons Locker")
-              ),
-              ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Battleship",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Battleship", ":summary", "* A large (3 space) ship dedicated to being a battleship may carry a Spinal Mount weapon.\n* Spinal Mount"),
-                "Colony Vessel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Colony Vessel", ":summary", "* Cryogenic Chamber"),
-                "Cargo Vessel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Cargo Vessel", ":summary", "* Cargo Hold\n* Tanker Hold"),
-                "Factory Vessel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Factory Vessel", ":summary", "* Factory\n* Refinery\n* Tanker Hold"),
-                "Heavy Bomber",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Heavy Bomber"),
-                "Heavy Carrier",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Heavy Carrier", ":summary", "* A large (3 space) ship dedicated to being a carrier can carry 1 extra unit (4 units) in its Hanger.\n* Hanger\n* Launch Catapult"),
-                "Luxury Vessel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Luxury Vessel", ":summary", "* Living Quarters\n* Luxury Facilities"),
-                "Prison Vessel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Prison Vessel"),
-                "Science Vessel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Science Vessel", ":summary", "* Science Lab\n* Sensor Arrays"),
-                "Search and Rescue Vessel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Search and Rescue Vessel", ":summary", "* Wide array of sensors\n* Multipurpse rescue vehicles\n* Heavy construction equipment\n* Emergency medical facilities\n* Space for evacuation and emergency supplies"),
-                "Stealth Vessel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Stealth Vessel", ":summary", "* Cloaking Device\n* ECM\n* Stealth Equipment"),
-                "Transport Vessel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Transport Vessel", ":summary", "* Living Quarters")
-              )
-            ),
-            "Electronics",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Electronics"),
-            "Engine",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Engine"),
-            "Factory",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Factory"),
-            "Laboratory",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Laboratory"),
-            "Life Support",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Life Support"),
-            "Transform",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Transform"),
-            "Vehicle Systems",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Vehicle Systems")
-          ),
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Cabin", "Cargo", "Combine", "Equipment", "Hanger", "Engine", "Factory", "Laboratory", "Life Support", "Transform"),
           ":sectionmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_sectionmap},
@@ -372,14 +236,14 @@ export default class nx_tactics_books_powers {
           ":titles",
           "Primal Order",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Primal Force")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Primus")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Projectiles",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Ropes")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Bonds")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -398,24 +262,24 @@ export default class nx_tactics_books_powers {
   }
 
   /**
-   * @function chapter_mental_powers_and_weaknesses
+   * @function chapter_mental_powers
    * @param  {tactics} tactics
    * @return {chapter}
    */
-  static t_chapter_mental_powers_and_weaknesses = {
+  static t_chapter_mental_powers = {
     vx_type: vx_core.t_type
   }
-  static e_chapter_mental_powers_and_weaknesses = {
-    vx_type: nx_tactics_books_powers.t_chapter_mental_powers_and_weaknesses
+  static e_chapter_mental_powers = {
+    vx_type: nx_tactics_books_powers.t_chapter_mental_powers
   }
 
-  // (func chapter_mental_powers_and_weaknesses)
-  static f_chapter_mental_powers_and_weaknesses(tactics) {
+  // (func chapter_mental_powers)
+  static f_chapter_mental_powers(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
-      "Mental Powers and Weaknesses",
+      "Mental Powers",
       ":sectionmap",
       nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
@@ -423,7 +287,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Mental Powers",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Charm", "Domination", "Empathy", "Genius", "Illusion", "Intuition", "Madness", "Mental Combat", "Mental Connection", "Mental Fortitude", "Mental Weakness", "Mind Over Matter", "Presence", "Psychic Power")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Charm", "Domination", "Empathy", "Illusion", "Intuition", "Madness", "Mental Combat", "Mental Connection", "Mental Fortitude", "Mind Over Matter", "Presence", "Psychic Power")
         )
       )
     )
@@ -464,24 +328,24 @@ export default class nx_tactics_books_powers {
   }
 
   /**
-   * @function chapter_physical_powers_and_weaknesses
+   * @function chapter_physical_powers
    * @param  {tactics} tactics
    * @return {chapter}
    */
-  static t_chapter_physical_powers_and_weaknesses = {
+  static t_chapter_physical_powers = {
     vx_type: vx_core.t_type
   }
-  static e_chapter_physical_powers_and_weaknesses = {
-    vx_type: nx_tactics_books_powers.t_chapter_physical_powers_and_weaknesses
+  static e_chapter_physical_powers = {
+    vx_type: nx_tactics_books_powers.t_chapter_physical_powers
   }
 
-  // (func chapter_physical_powers_and_weaknesses)
-  static f_chapter_physical_powers_and_weaknesses(tactics) {
+  // (func chapter_physical_powers)
+  static f_chapter_physical_powers(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
-      "Physical Powers and Weaknesses",
+      "Physical Powers",
       ":sectionmap",
       nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
@@ -489,7 +353,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Physical Powers",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Agility", "Appearance", "Armored", "Fortitude", "Healing", "Movement", "Natural Weaponry", "Quickness", "Senses", "Shielding", "Strength")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Agility", "Appearance", "Armored", "Healing", "Movement", "Natural Weaponry", "Quickness", "Senses", "Shielding", "Strength", "Toughness")
         )
       )
     )
@@ -551,45 +415,51 @@ export default class nx_tactics_books_powers {
           ":modifiermap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_modifiermap},
-            "Armor-Piercing (AP)",
-            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Armor-Piercing (AP)", ":summary", "* Specifically designed to target armored units."),
-            ":Anti-Armor",
+            "Anti-Armor",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Anti-Armor", ":summary", "* Specifically designed to tear apart armor to leave target open to further attacks."),
-            ":Anti-Missile",
+            "Anti-Missile",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Anti-Missile", ":summary", "* Specifically designed to intercept high speed targets moving in a straight line."),
-            ":Anti-Personnel",
+            "Anti-Personnel",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Anti-Personnel", ":summary", "* Specifically designed to attack man-sized targets."),
-            ":Anti-Shield",
+            "Anti-Shield",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Anti-Shield", ":summary", "* Specifically designed to reduced [Shielding]."),
-            ":Aura",
+            "AP",
+            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "AP", ":titles", "Armor-Piercing", ":summary", "* Specifically designed to target armored units."),
+            "Aura",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Aura", ":summary", "* Radial effect encompassing the current space and continuing for Level Range."),
-            ":Beam",
+            "Autofire",
+            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Autofire", ":summary", "* Cannot Combo. Shots:-10. A Normal Success automatically creates a Combo with All lower numbers. E.g. Rank 7 would add 6, 5, 4, 3, and 2."),
+            "Beam",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Beam", ":summary", "* Rectangular shaped effect 1 space wide.\n* [-1 Skill] for each 2 Spaces of Range"),
+            "Burstfire",
+            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Burstfire", ":summary", "* Cannot Combo. Shots:-3. A Normal Success automatically creates a Combo with the 2 lower numbers. E.g. Rank 7 would add 6 and 5."),
             "Chain Reaction",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Chain Reaction"),
-            ":Cloud",
+            "Cloud",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Cloud"),
-            ":Cluster",
+            "Cluster",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Cluster"),
-            ":Column",
+            "Column",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Column", ":summary", "* Rectangular shaped effect starting at 1 space wide and widening to 3 spaces.\n* [Action]: [-2 Skill] for each Space of Range"),
-            ":Cone",
+            "Cone",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Cone", ":summary", "* Triangle shaped effect starting at 1 space wide and widening by 1 additional space for every 2 spaces of range.\n* [Action]: [-2 Skill] for each Space of Range"),
-            ":Fork",
+            "Fork",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Fork"),
-            ":Haywire",
+            "Haywire",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Haywire", ":summary", "* Attack that damages electrical systems."),
+            "HE",
+            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "HE", ":titles", "High-Explosive", ":summary", "* [Targetting]: Target a space.  All units in that space and surrounding spaces are attacked.\n* [Damage]: All target's are [+2 Armor] against this attack.\n* [Damage]: Units surrounding the space are attacked at -1 Damage for each space distant.\n\nAdvanced:\n* Instead of standard [High Explosive (HE)] rules the following may be used to more accurately simulate the damage exponential decrease in energy of explosives.\n* [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.\n* [Damage]: All target's are [+2 Armor] against this attack.\n* [Damage]: Units surrounding the space are attacked by dividing the energy (in Joules, or tons of TNT) using the following reduction pattern for each space distant: 1/1, 1/3, 1/10, 1/30, 1/100, 1/300, 1/1000, etc. Then look up the new damage based on the new energy level."),
+            "HEAT",
+            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "HEAT", ":titles", "High Explosive Anti-Tank", ":summary", "* A shaped charge designed for maximum penentration with little exterior damage."),
             "Hidden Effect",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Hidden Effect", ":summary", "Effect cannot be detected through normal means."),
-            "High-Explosive (HE)",
-            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "High-Explosive (HE)", ":summary", "* [Targetting]: Target a space.  All units in that space and surrounding spaces are attacked.\n* [Damage]: All target's are [+2 Armor] against this attack.\n* [Damage]: Units surrounding the space are attacked at -1 Damage for each space distant.\n\nAdvanced:\n* Instead of standard [High Explosive (HE)] rules the following may be used to more accurately simulate the damage exponential decrease in energy of explosives.\n* [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.\n* [Damage]: All target's are [+2 Armor] against this attack.\n* [Damage]: Units surrounding the space are attacked by dividing the energy (in Joules, or tons of TNT) using the following reduction pattern for each space distant: 1/1, 1/3, 1/10, 1/30, 1/100, 1/300, 1/1000, etc. Then look up the new damage based on the new energy level."),
-            ":Homing",
+            "Homing",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Homing", ":titles", "Guided, Seeking"),
-            ":Indirect",
+            "Indirect",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Indirect", ":summary", "* May use [Indirect Fire] ability to attack without [Line of Sight]."),
             "Pushing the Limits",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Pushing the Limits", ":summary", "Powers may be increased temporarily, but this runs a risk of damaging or permanently altering the subject or his powers in some way. This may even increase the power but may create [Aberrations]."),
-            ":Ring",
+            "Ring",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Ring", ":titles", "Circle"),
             ":Sphere",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Sphere", ":summary", "* Radial effect encompassing the current space.\n* [Action]: [-3 Skill] for each Space of Range"),
@@ -702,165 +572,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Weaknesses",
           ":powermap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_powermap},
-            "Physical Weakness",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Physical Weakness",
-              ":summary",
-              "A being that has a great deal of power becomes increasingly inhuman as power increases. Physical powers become harder to conceal growing increasingly monstrous and mentality leans more toward megalomania, messiah complex, or detached alien.",
-              ":titles",
-              "Aberrations, Inhumanity, The Price of Power, Taint",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                ":Allergy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Allergy", ":summary", "Affected by substances or energies that have little or no effect on normal people."),
-                ":Asthma",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Asthma"),
-                ":Atrophy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Atrophy", ":summary", "* One or more limbs has limited mobility"),
-                ":Blind",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Blind"),
-                ":Brittle",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Brittle"),
-                ":Child",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Child", ":summary", "* You are still a child and have difficulty getting others to take you seriously. This is usually taken with [Short]."),
-                "Cold Blooded",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cold Blooded"),
-                "Color Blindness",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Color Blindness"),
-                ":Contagious",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Contagious", ":summary", "Spreads disease."),
-                ":Clumsy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Clumsy"),
-                ":Deaf",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Deaf"),
-                ":Deformity",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Deformity", ":summary", "* Reduces Social Skills and some Physical Skills."),
-                ":Disfigured",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Disfigured", ":summary", "* Reduces Social Skills dramatically."),
-                "Extra Body Parts",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Extra Body Parts"),
-                "Hard of Hearing",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hard of Hearing"),
-                ":Lame",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lame", ":summary", "* Reduces Speed"),
-                ":Leprosy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Leprosy"),
-                "Missing Body Parts",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Missing Body Parts"),
-                ":Mute",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mute"),
-                ":Obvious",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Obvious", ":summary", "* Easy to detect and target", ":titles", "Large Profile"),
-                "Obvious Signature",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Obvious Signature", ":summary", "* Easy to identify and track", ":titles", "Energy Signature, Heat Signature"),
-                ":Numb",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Numb"),
-                ":Old",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Old"),
-                ":Paralyzed",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Paralyzed"),
-                "Parasitic Infection",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Parasitic Infection"),
-                "Peeling Skin",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Peeling Skin"),
-                "Poor Vision",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poor Vision"),
-                ":Short",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Short", ":summary", "* This minor weakness reduces vision over objects and movement speed.\n* It can, however, provide benefits to [Stealth]."),
-                ":Sterile",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sterile", ":summary", "* May not produce offspring"),
-                ":Tasteless",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tasteless"),
-                "Temperature Control Problem",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Temperature Control Problem", ":summary", "* Cannot regulate temperature correctly"),
-                "Terminal Condition",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Terminal Condition"),
-                "Unusual Appearance",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unusual Appearance"),
-                "Unusual Diet",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unusual Diet", ":summary", "* Minor: Eat wood, garbage, hair, etc.\n* Major: Eat metal, energy\n* Extreme: Eat blood, human flesh, plutonium"),
-                "Unusual Eyes",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unusual Eyes", ":summary", "* Minor: Strange colored\n* Major: Animal-like, or glowing eyes\n* Extreme: Bug-eyes, or no eyes"),
-                "Unusual Limbs",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unusual Limbs", ":summary", "Gnarled, segmented, snake-like, eloganted or other bizarre looking limbs"),
-                "Unusual Musculature",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unusual Musculature", ":summary", "Bulging muscles or wasted looking"),
-                "Unusual Skin",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unusual Skin", ":summary", "* Minor: Strange colored\n* Major: Furry, Striped, Glowing\n* Extreme: Translucent, Reptilian, Rock-like, Exoskeleton, Oozing"),
-                "Unusual Vulnerability",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unusual Vulnerability", ":reference", "Kryptonite, Severe Allergies", ":summary", "* Take damage from things that are not dangerous to ordinary people."),
-                ":Vulnerability",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vulnerability", ":summary", "* Take additional damage from certain effects"),
-                "Vulnerable to Bleeding",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vulnerable to Bleeding"),
-                "Vulnerable to Electricity",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vulnerable to Electricity"),
-                "Vulnerable to Fire",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vulnerable to Fire"),
-                "Vulnerable to Heat",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vulnerable to Heat"),
-                "Vulnerable to Impact",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vulnerable to Impact"),
-                "Vulnerable to Piercing",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vulnerable to Piercing"),
-                "Vulnerable to Radiation",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vulnerable to Radiation"),
-                "Vulnerable to Slashing",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vulnerable to Slashing"),
-                ":Wasting",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wasting")
-              )
-            ),
-            "Social Weakness",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Social Weakness",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                ":Awkward",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Awkward"),
-                ":Hideous",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hideous"),
-                ":Hunted",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hunted"),
-                ":Naive",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Naive"),
-                ":Nemesis",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Nemesis"),
-                ":Noble",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Noble"),
-                ":Notorious",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Notorious"),
-                "Speech Impediment",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Speech Impediment"),
-                ":Strangeness",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Strangeness"),
-                ":Terrifying",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Terrifying"),
-                ":Timid",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Timid"),
-                ":Ugly",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ugly"),
-                "Unnatural Presense",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unnatural Presense", ":summary", "* Subtly disturbing, homely, or too perfect and inspires negative attention from others."),
-                ":Ward",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ward", ":summary", "* You are devoted to taking care of another (who happens to get into trouble a lot).")
-              )
-            ),
-            "Weakness: Cursed",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Weakness: Cursed"),
-            "Weakness: Dark Fate",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Weakness: Dark Fate"),
-            "Weakness: Haunted",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Weakness: Haunted")
-          )
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Weakness: Cursed", "Weakness: Mental", "Weakness: Physical", "Weakness: Social")
         )
       )
     )
@@ -894,9 +606,9 @@ export default class nx_tactics_books_powers {
         nx_tactics_books_powers.f_chapter_special_modifiers(tactics),
         nx_tactics_books_powers.f_chapter_equipment_powers(tactics),
         nx_tactics_books_powers.f_chapter_strength_and_weaknesses(tactics),
-        nx_tactics_books_powers.f_chapter_mental_powers_and_weaknesses(tactics),
+        nx_tactics_books_powers.f_chapter_mental_powers(tactics),
         nx_tactics_books_powers.f_chapter_movement_powers(tactics),
-        nx_tactics_books_powers.f_chapter_physical_powers_and_weaknesses(tactics),
+        nx_tactics_books_powers.f_chapter_physical_powers(tactics),
         nx_tactics_books_powers.f_chapter_body_powers(tactics),
         nx_tactics_books_powers.f_chapter_energy_and_forces(tactics),
         nx_tactics_books_powers.f_chapter_alteration_powers(tactics),
@@ -918,9 +630,9 @@ export default class nx_tactics_books_powers {
       "chapter_body_powers": nx_tactics_books_powers.e_chapter_body_powers,
       "chapter_energy_and_forces": nx_tactics_books_powers.e_chapter_energy_and_forces,
       "chapter_godlike_powers": nx_tactics_books_powers.e_chapter_godlike_powers,
-      "chapter_mental_powers_and_weaknesses": nx_tactics_books_powers.e_chapter_mental_powers_and_weaknesses,
+      "chapter_mental_powers": nx_tactics_books_powers.e_chapter_mental_powers,
       "chapter_movement_powers": nx_tactics_books_powers.e_chapter_movement_powers,
-      "chapter_physical_powers_and_weaknesses": nx_tactics_books_powers.e_chapter_physical_powers_and_weaknesses,
+      "chapter_physical_powers": nx_tactics_books_powers.e_chapter_physical_powers,
       "chapter_powers_overview": nx_tactics_books_powers.e_chapter_powers_overview,
       "chapter_special_modifiers": nx_tactics_books_powers.e_chapter_special_modifiers,
       "chapter_strength_and_weaknesses": nx_tactics_books_powers.e_chapter_strength_and_weaknesses,
@@ -932,9 +644,9 @@ export default class nx_tactics_books_powers {
       "chapter_body_powers": nx_tactics_books_powers.t_chapter_body_powers,
       "chapter_energy_and_forces": nx_tactics_books_powers.t_chapter_energy_and_forces,
       "chapter_godlike_powers": nx_tactics_books_powers.t_chapter_godlike_powers,
-      "chapter_mental_powers_and_weaknesses": nx_tactics_books_powers.t_chapter_mental_powers_and_weaknesses,
+      "chapter_mental_powers": nx_tactics_books_powers.t_chapter_mental_powers,
       "chapter_movement_powers": nx_tactics_books_powers.t_chapter_movement_powers,
-      "chapter_physical_powers_and_weaknesses": nx_tactics_books_powers.t_chapter_physical_powers_and_weaknesses,
+      "chapter_physical_powers": nx_tactics_books_powers.t_chapter_physical_powers,
       "chapter_powers_overview": nx_tactics_books_powers.t_chapter_powers_overview,
       "chapter_special_modifiers": nx_tactics_books_powers.t_chapter_special_modifiers,
       "chapter_strength_and_weaknesses": nx_tactics_books_powers.t_chapter_strength_and_weaknesses,
@@ -1042,9 +754,9 @@ export default class nx_tactics_books_powers {
       fn            : nx_tactics_books_powers.f_chapter_godlike_powers
     }
 
-    // (func chapter_mental_powers_and_weaknesses)
-    nx_tactics_books_powers.t_chapter_mental_powers_and_weaknesses['vx_value'] = {
-      name          : "chapter_mental_powers_and_weaknesses",
+    // (func chapter_mental_powers)
+    nx_tactics_books_powers.t_chapter_mental_powers['vx_value'] = {
+      name          : "chapter_mental_powers",
       pkgname       : "nx/tactics/books/powers",
       extends       : ":func",
       idx           : 0,
@@ -1057,7 +769,7 @@ export default class nx_tactics_books_powers {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_mental_powers_and_weaknesses
+      fn            : nx_tactics_books_powers.f_chapter_mental_powers
     }
 
     // (func chapter_movement_powers)
@@ -1078,9 +790,9 @@ export default class nx_tactics_books_powers {
       fn            : nx_tactics_books_powers.f_chapter_movement_powers
     }
 
-    // (func chapter_physical_powers_and_weaknesses)
-    nx_tactics_books_powers.t_chapter_physical_powers_and_weaknesses['vx_value'] = {
-      name          : "chapter_physical_powers_and_weaknesses",
+    // (func chapter_physical_powers)
+    nx_tactics_books_powers.t_chapter_physical_powers['vx_value'] = {
+      name          : "chapter_physical_powers",
       pkgname       : "nx/tactics/books/powers",
       extends       : ":func",
       idx           : 0,
@@ -1093,7 +805,7 @@ export default class nx_tactics_books_powers {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_physical_powers_and_weaknesses
+      fn            : nx_tactics_books_powers.f_chapter_physical_powers
     }
 
     // (func chapter_powers_overview)

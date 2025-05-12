@@ -1,6 +1,5 @@
 (package nx/tactics/ui/stylesheet
- :libs (lib base :path nx/tactics/base)
-       (lib file :path vx/data/file)
+ :libs (lib file :path vx/data/file)
        (lib ui   :path vx/ui/ui)
  :doc "Tactics UI")
 
@@ -742,6 +741,35 @@
    (ui/point
     :x 30
     :y 31))
+ :doc "")
+
+(const style-place-detail : ui/style
+ (ui/style
+  :name "style-place-detail"
+  :layout ui/layout-label
+  :pointpos
+   (ui/point
+    :x 2
+    :y 38)
+  :pointsize
+   (ui/point
+    :x 60
+    :y 37))
+ :doc "")
+
+(const style-place-image : ui/style
+ (ui/style
+  :name "style-place-image"
+  :layout ui/layout-image
+  :pointpos
+   (ui/point
+    :x 16
+    :y 2)
+  :pointrotate ui/point-rotate-270
+  :pointsize
+   (ui/point
+    :x 30
+    :y 42))
  :doc "")
 
 (const style-selected : ui/style

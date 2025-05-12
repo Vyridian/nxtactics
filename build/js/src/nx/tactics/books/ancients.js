@@ -265,7 +265,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GermanLevySpearmen.png",
               ":summary",
-              "Free Spears are farmers and hunters.  According to Germanic tradition, as soon as these men receive their\nspear and shield, they are 'free' adults.  Though lacking in the organized training of the warbands, they\nare veterans of the ritualized tribal warfare of German tribes, and fight with a force and fury superior to\ntheir neighbors militia.",
+              "Free Spears are farmers and hunters. According to Germanic tradition, as soon as these men receive their spear and shield, they are 'free' adults. Though lacking in the organized training of the warbands, they are veterans of the ritualized tribal warfare of German tribes, and fight with a force and fury superior to their neighbors militia.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
@@ -283,7 +283,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GermanSkirmishers.png",
               ":summary",
-              "Young skirmishers break up and harass enemy formations before the main battle lines meet, and act as a screen\nfor heavy troops, taking losses in order to increase the odds of survival of more valuable 'proven' warriors.\nThey must first prove themselves in battle in order to earn status.  Each warrior is armed with a bundle of\nthrowing spears, a slightly longer spear for melee and a stout ovular shield, but they do not wear armor,\nbeing poor and of low status, but also choosing speed over protection.",
+              "Young skirmishers break up and harass enemy formations before the main battle lines meet, and act as a screen for heavy troops, taking losses in order to increase the odds of survival of more valuable 'proven' warriors. They must first prove themselves in battle in order to earn status. Each warrior is armed with a bundle of throwing spears, a slightly longer spear for melee and a stout ovular shield, but they do not wear armor, being poor and of low status, but also choosing speed over protection.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
@@ -313,7 +313,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GermanTrustedSpearmen.png",
               ":summary",
-              "Proud and experienced, 'proven' warriors steeled by years of constant warfare and veterans of numerous\nconflicts.  These men are hardened for battle and unlikely to flee from conflict, and are trained through\nlong experience to work in close or open formation, and even the shieldwall.",
+              "Proud and experienced, 'proven' warriors steeled by years of constant warfare and veterans of numerous conflicts. These men are hardened for battle and unlikely to flee from conflict, and are trained through long experience to work in close or open formation, and even the shieldwall.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
@@ -343,7 +343,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GermanSlayers.png",
               ":summary",
-              "By shaping heavy boughs of oak and inserting bone spikes, these Cudgels can be used to maim both armored\nand unarmored foes alike.  Cudgels are cheap, easy to make, and replaceable on campaign, while also being\nable to smash or punch through armor.  Although this weapon may seem primitive to untrained eyes, against\narmored opponents it is more effective than any other at their disposal.  These light armored club warriors\nwere recorded to have taken down units of the feared and notoriously lethal kataphraktoi.",
+              "By shaping heavy boughs of oak and inserting bone spikes, these Cudgels can be used to maim both armored and unarmored foes alike. Cudgels are cheap, easy to make, and replaceable on campaign, while also being able to smash or punch through armor. Although this weapon may seem primitive to untrained eyes, against armored opponents it is more effective than any other at their disposal. These light armored club warriors were recorded to have taken down units of the feared and notoriously lethal kataphraktoi.",
               ":classification",
               "Med. Infantry",
               ":unitskillmap",
@@ -361,7 +361,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GermanShooters.png",
               ":summary",
-              "Equipped to harass and break up enemy formations so more experienced and valuable melee warriors can finish\nthem.  Shooters are often untrained or uncapable warriors, but many are also excellect hunters.  They are\nalso armed with the spear and can act as light infantry, but they will not last long in melee.  In the woods,\ntheir superior ambush skills can be put to best use.\n\nHistorically, Germanic bowmen on the battlefield were few in numbers, because weapons were status symbols,\nand common multipurpose tools, such as the axe or bow were looked down upon.",
+              "Equipped to harass and break up enemy formations so more experienced and valuable melee warriors can finish them. Shooters are often untrained or uncapable warriors, but many are also excellect hunters. They are also armed with the spear and can act as light infantry, but they will not last long in melee. In the woods, their superior ambush skills can be put to best use. Historically, Germanic bowmen on the battlefield were few in numbers, because weapons were status symbols, and common multipurpose tools, such as the axe or bow were looked down upon.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
@@ -383,15 +383,15 @@ export default class nx_tactics_books_ancients {
                 )
               )
             ),
-            "Sword Possessors",
+            "German: Sword Possessors",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Sword Possessors",
+              "German: Sword Possessors",
               ":image",
-              "images/ancients/GermanSwordPossessors.png",
+              "images/ancients/unit-german-swordpossessors.png",
               ":summary",
-              "Sword Possessors are well trained, experienced and armed with superior quality swords and javelins to\nsoften the enemy before their furious charge.\n\nHistorically, swords were not plentiful in Germanic lands because of the cost of iron, so those fierce and\nvaliant warriors carried their highly valued swords with pride.",
+              "Sword Possessors are well trained, experienced and armed with superior quality swords and javelins to soften the enemy before their furious charge. Historically, swords were not plentiful in Germanic lands because of the cost of iron, so those fierce and valiant warriors carried their highly valued swords with pride.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
@@ -413,33 +413,24 @@ export default class nx_tactics_books_ancients {
                 )
               )
             ),
-            "Night Walkers",
+            "German: Night Walkers",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Night Walkers",
+              "German: Night Walkers",
               ":image",
               "images/ancients/GermanNightWalkers.png",
               ":summary",
-              "Night-Walkers are unconventional warriors who specialize in ambush.  They display their zeal and ferocity\nwith the help of pitch and dye by blackening their shields and bodies.  They choose dark nights for their\nbattles and when the moment is right, they charge wildly, wide-eyed and screaming at their foes.  Any who\nsurvive assaults by these maniacal warriors are convinced they are spirits sent from the otherworld.",
+              "Night-Walkers are unconventional warriors who specialize in ambush. They display their zeal and ferocity with the help of pitch and dye by blackening their shields and bodies. They choose dark nights for their battles and when the moment is right, they charge wildly, wide-eyed and screaming at their foes. Any who survive assaults by these maniacal warriors are convinced they are spirits sent from the otherworld.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Intimidation",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+                  nx_tactics_base.t_tactics,
                   "Intimidation",
-                  ":level",
-                  "3",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Terrorize",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Terrorize")
-                  )
+                  3,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Terrorize")
                 )
               )
             ),
@@ -451,7 +442,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GermanPikeFence.png",
               ":summary",
-              "The Pike Fence are hard-nosed, disciplined warriors that fight together in a\nvery dense formation, unlike most other Germanic warbands. They are trained in\nthe Shield Wall and are universally feared by cavalry.",
+              "The Pike Fence are hard-nosed, disciplined warriors that fight together in a very dense formation, unlike most other Germanic warbands. They are trained in the Shield Wall and are universally feared by cavalry.",
               ":classification",
               "Hvy. Infantry",
               ":unitskillmap",
@@ -481,7 +472,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GermanHearthCompanion.png",
               ":summary",
-              "These are the Germanic tribes' best warriors. Germans respect their leader's\nbravery, not their rank, and it is a disgrace for a leader to be surpassed in\nbravery. They are wealthy, powerful men, fiercely loyal to their lord, often\nheavily scarred by years of warfare. Their weapons and armor are the best. To\nleave a battlefield alive while their lord lay dead meant a life of shame and\nscorn. To defend and protect him, to assign one's own acts of heroism to his\ncredit-that's what is truly meant by allegiance.",
+              "These are the Germanic tribes' best warriors. Germans respect their leader's bravery, not their rank, and it is a disgrace for a leader to be surpassed in bravery. They are wealthy, powerful men, fiercely loyal to their lord, often heavily scarred by years of warfare. Their weapons and armor are the best. To leave a battlefield alive while their lord lay dead meant a life of shame and scorn. To defend and protect him, to assign one's own acts of heroism to his credit-that's what is truly meant by allegiance.",
               ":classification",
               "Hvy. Infantry",
               ":unitskillmap",
@@ -513,7 +504,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GermanRiders.png",
               ":summary",
-              "Riders ride small, poor quality horses, though they are excellent light cavalry.  Like many Germanic warriors,\nhowever, they can lack battle-discipline and be over-keen to enter battle for glory.\n\nThey were mostly armed with shield and spear and were supported by fast-moving light infantry - this light\ncavalry combined with light infantry allowed great tactical speed and versatility on the battlefield.\n\nHistorically, Germanic tribes did not frequently use cavalry, however, some tribes were known for their\ncavalry and many peoples praised the good quality of Germanic cavalry.  Though their horses were not\nexceptional, Germanic horsemen could still maneuver very well and operated as a unit, rather than as an\nunorganized band.",
+              "Riders ride small, poor quality horses, though they are excellent light cavalry. Like many Germanic warriors, however, they can lack battle-discipline and be over-keen to enter battle for glory. They were mostly armed with shield and spear and were supported by fast-moving light infantry - this light cavalry combined with light infantry allowed great tactical speed and versatility on the battlefield. Historically, Germanic tribes did not frequently use cavalry, however, some tribes were known for their cavalry and many peoples praised the good quality of Germanic cavalry. Though their horses were not exceptional, Germanic horsemen could still maneuver very well and operated as a unit, rather than as an unorganized band.",
               ":classification",
               "Lt. Cavalry",
               ":unitskillmap",
@@ -531,7 +522,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GermanCompanionCavalry.png",
               ":summary",
-              "The Companion Cavalry are extremely wealthy and powerful men, but still fiercely loyal to their lord who\nprovides them the finest warhorses and wargear at his disposal.\n\nThey can be used most effectively as shock troops whose charges can break the enemy line and destory their\nflanks, but they are also useful for overrunning heavy infantry and slaughtering lighter cavalry.",
+              "The Companion Cavalry are extremely wealthy and powerful men, but still fiercely loyal to their lord who provides them the finest warhorses and wargear at his disposal. They can be used most effectively as shock troops whose charges can break the enemy line and destory their flanks, but they are also useful for overrunning heavy infantry and slaughtering lighter cavalry.",
               ":classification",
               "Hvy. Cavalry",
               ":unitskillmap",
@@ -629,7 +620,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/GreekSpartanToken.png",
               ":reference",
-              "* From the age of seven onwards, Spartan males were trained for a life of warfare.  They were taught iron\ndiscipline, and almost programmed to forget about their individuality.\n* The strenuous training and comradeship engendered between Spartans made them ideally suited to hoplite warfare\nwhich required high levels of discipline and selflessness.",
+              "* From the age of seven onwards, Spartan males were trained for a life of warfare. They were taught iron discipline, and almost programmed to forget about their individuality.\n* The strenuous training and comradeship engendered between Spartans made them ideally suited to hoplite warfare which required high levels of discipline and selflessness.",
               ":classification",
               "Hvy. Infantry",
               ":unitskillmap",
@@ -687,7 +678,7 @@ export default class nx_tactics_books_ancients {
               ":name",
               "Thracian Peltast",
               ":reference",
-              "* When faced by hoplites peltasts operated by throwing javelins at short range.  If the hoplites charged they\nwould flee.  As they carried considerably lighter equipment than the hoplites they were usually able to evade\nsuccessfully especially in difficult terrain.\n* Peltasts were usually deployed on the flanks of the phalanx providing a link with any cavalry.",
+              "* When faced by hoplites peltasts operated by throwing javelins at short range. If the hoplites charged they would flee. As they carried considerably lighter equipment than the hoplites they were usually able to evade successfully especially in difficult terrain.\n* Peltasts were usually deployed on the flanks of the phalanx providing a link with any cavalry.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
@@ -710,20 +701,9 @@ export default class nx_tactics_books_ancients {
               )
             ),
             "Greek Cavalry",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Greek Cavalry",
-              ":reference",
-              "The utility of the Greek Citizen Cavalry was small on account of their heavy armor.",
-              ":classification",
-              "Hvy. Cavalry",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "3")
-              )
+            nx_tactics_base.f_unit_from_tactics_key(
+              nx_tactics_base.t_tactics,
+              "Greek Cavalry"
             ),
             "Greek Cataphracts",
             vx_core.f_new(
@@ -1013,7 +993,7 @@ export default class nx_tactics_books_ancients {
           ":name",
           "Legionnaries",
           ":summary",
-          "Roman Legions were the official fighting force of the empire and were divided in the following way:\n\n* Each Legion consisted of 4800 men\n* Each Legion was divided into 10 cohorts of 480 legionaries\n* Each Cohort was divided into 6 centuries of 80 men each.  The 6 centuries were: Forward Hastati, Rear Hastati,\nForward Pricipes, Rear Pricipes, Forward Triarii, and Rear Triarii.\n* Each Century was divided into 10 octets of 8 men.  Soldiers of an octet shared a tent, and were rewarded or\npunished together.  If one member acted dishonorably in battle, that contubernium would suffer\ndecimation, whereby the group would be required to draw straws, the soldier unlucky enough to draw the short straw\nthen being stoned to death by the others.",
+          "* Roman Legions were the official fighting force of the empire and were divided in the following way:\n* Each Legion consisted of 4800 men\n* Each Legion was divided into 10 cohorts of 480 legionaries\n* Each Cohort was divided into 6 centuries of 80 men each. The 6 centuries were: Forward Hastati, Rear Hastati, Forward Pricipes, Rear Pricipes, Forward Triarii, and Rear Triarii.\n* Each Century was divided into 10 octets of 8 men. Soldiers of an octet shared a tent, and were rewarded or punished together. If one member acted dishonorably in battle, that contubernium would suffer decimation, whereby the group would be required to draw straws, the soldier unlucky enough to draw the short straw then being stoned to death by the others.",
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
@@ -1025,7 +1005,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/RomanLegionaireToken.png",
               ":summary",
-              "These were the first line of the Roman heavy infantry and were made up of the relatively young\n(inexperienced), but wealthier citizens.  The Hastati were the primary engaging force of the\nlegion and always met the enemy first in melee combat. If things went badly, or they simply needed\nto rest and regroup, the Hastati would roll behind the Princeps.",
+              "These were the first line of the Roman heavy infantry and were made up of the relatively young (inexperienced), but wealthier citizens. The Hastati were the primary engaging force of the legion and always met the enemy first in melee combat. If things went badly, or they simply needed to rest and regroup, the Hastati would roll behind the Princeps.",
               ":classification",
               "Hvy. Infantry",
               ":unitskillmap",
@@ -1057,7 +1037,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/RomanPrincepToken.png",
               ":summary",
-              "The elite of the legion, in the prime of their careers for age and experience, and constituted the\nwealthier class.  It was simply the obligation of the Princeps to win the battle.  First they would\nact in relief of the Hastati, but then would carry the fight in earnest.  It was a successful tactic,\nwearing down the enemy with good, but not your best forces, than hitting with your best men right in\nthe middle of the fight.",
+              "The elite of the legion, in the prime of their careers for age and experience, and constituted the wealthier class. It was simply the obligation of the Princeps to win the battle. First they would act in relief of the Hastati, but then would carry the fight in earnest. It was a successful tactic, wearing down the enemy with good, but not your best forces, than hitting with your best men right in the middle of the fight.",
               ":classification",
               "Hvy. Infantry",
               ":unitskillmap",
@@ -1089,7 +1069,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/RomanLegionaire2Token.png",
               ":summary",
-              "Though the triarii were similarly armored as the Hastatii and Princeps, they played a much different\nrole and were more akin to the Greek hoplites than Roman heavy infantry.  The Triarii were the oldest\nand very experienced of the Roman army, and their job was to defend against disaster as a last resort,\nor to shock the enemy with a different look at the right moment.  If the heavy infantry were pushed\nback, the Triarii would charge forward with their spears, hopefully with the effect of shocking the\nenemy and allowing the Princeps and Hastati time to regroup.  They were used as a last resort, and the\nLatin expression 'ad triarios redisse', or it has come to the triarii, became a general phrase meaning\nthat something was in a desperate situation.",
+              "Though the triarii were similarly armored as the Hastatii and Princeps, they played a much different role and were more akin to the Greek hoplites than Roman heavy infantry. The Triarii were the oldest and very experienced of the Roman army, and their job was to defend against disaster as a last resort, or to shock the enemy with a different look at the right moment. If the heavy infantry were pushed back, the Triarii would charge forward with their spears, hopefully with the effect of shocking the enemy and allowing the Princeps and Hastati time to regroup.  They were used as a last resort, and the Latin expression 'ad triarios redisse', or it has come to the triarii, became a general phrase meaning that something was in a desperate situation.",
               ":classification",
               "Hvy. Infantry",
               ":unitskillmap",
@@ -1153,7 +1133,7 @@ export default class nx_tactics_books_ancients {
               ":name",
               "Praetorian Guard",
               ":summary",
-              "Initially, the guard for a general, the title was later used for the Emperor's personal army.  These men were\nhandpicked from the legions and represent the best warriors in Rome.",
+              "Initially, the guard for a general, the title was later used for the Emperor's personal army. These men were handpicked from the legions and represent the best warriors in Rome.",
               ":classification",
               "Hvy. Infantry",
               ":unitskillmap",
@@ -1187,7 +1167,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/RomanVeliteToken.png",
               ":summary",
-              "The poorest citizen class allowed to serve, these units were lightly armed skirmishers who were\ndeployed en masse on the battlefield in front of the heavier infantry lines, but moved back beyond\nthe Hastati after discharging their javelins as the enemy approached. The Velites were also an\nimportant part of defense against war elephants.  Using their greater mobility, due to lighter\narmament, Velites could avoid elephant charges and flank them.",
+              "The poorest citizen class allowed to serve, these units were lightly armed skirmishers who were deployed en masse on the battlefield in front of the heavier infantry lines, but moved back beyond the Hastati after discharging their javelins as the enemy approached. The Velites were also an important part of defense against war elephants. Using their greater mobility, due to lighter armament, Velites could avoid elephant charges and flank them.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
@@ -1217,7 +1197,7 @@ export default class nx_tactics_books_ancients {
               ":image",
               "images/ancients/RomanHeavyCavalryToken.png",
               ":summary",
-              "The Republican cavalry was designed for speed of movement, and were similarly equipped to the Hastati.  Their\nduty was to provide scouting and potential fast moving support to weakening parts of a battle line.  At times\nthe cavalry could be used to turn a flank or deliver a shock at the right moment, but their limited number\ngenerally made their capabilities limited.  As the Romans were not considered great natural horsemen, the great\neffectiveness of cavalry in the Roman army didn't come until the inclusion of various auxilia cavalry like that\nof the Gauls and Germanics.",
+              "The Republican cavalry was designed for speed of movement, and were similarly equipped to the Hastati. Their duty was to provide scouting and potential fast moving support to weakening parts of a battle line. At times the cavalry could be used to turn a flank or deliver a shock at the right moment, but their limited number generally made their capabilities limited. As the Romans were not considered great natural horsemen, the great effectiveness of cavalry in the Roman army didn't come until the inclusion of various auxilia cavalry like that of the Gauls and Germanics.",
               ":classification",
               "Hvy. Cavalry",
               ":unitskillmap",
@@ -1247,91 +1227,79 @@ export default class nx_tactics_books_ancients {
           ":name",
           "Auxilia",
           ":summary",
-          "Roman Auxilia are support troops and specialized units.  By the 2nd century, the auxilia contained the same number of\ninfantry as the legions and in addition provided almost all the Roman army's cavalry and more specialised troops\n(especially light cavalry and archers).  The auxilia thus represented three-fifths of Rome's regular land forces.\nLike their legionary counterparts, auxiliary recruits were mostly volunteers, not conscripts, but unlike the legion\nthe auxilia accepted non-Romans (which represented 90% of the empire).",
+          "Roman Auxilia are support troops and specialized units. By the 2nd century, the auxilia contained the same number of infantry as the legions and in addition provided almost all the Roman army's cavalry and more specialised troops (especially light cavalry and archers). The auxilia thus represented three-fifths of Rome's regular land forces. Like their legionary counterparts, auxiliary recruits were mostly volunteers, not conscripts, but unlike the legion the auxilia accepted non-Romans (which represented 90% of the empire).",
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            "Cohors Peditata",
+            "Roman Peditata",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Cohors Peditata",
+              "Roman Peditata",
               ":image",
               "images/ancients/RomanAuxiliaToken.png",
+              ":titles",
+              "Cohors Peditata",
               ":summary",
               "Most auxiliary cohortes contained heavy infantry similar to legionaries.",
               ":classification",
               "Hvy. Infantry",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "2")
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl(
+                  nx_tactics_base.t_tactics,
+                  "Military",
+                  2
+                )
               )
             ),
-            "Cohortes Sagittariorum",
+            "Roman Sagittariorum",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Cohortes Sagittariorum",
+              "Roman Sagittariorum",
               ":image",
               "images/ancients/RomanArcherAuxiliaToken.png",
+              ":titles",
+              "Cohortes Sagittariorum",
               ":summary",
               "Most Sagittarii were from Syria.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+                  nx_tactics_base.t_tactics,
                   "Military",
-                  ":level",
-                  "3",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Skirmish",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Skirmish")
-                  )
+                  3,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Formation: Skirmish")
                 )
               )
             ),
-            ":Funditores",
+            "Roman Funditores",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Funditores",
+              "Roman Funditores",
               ":summary",
               "Slingers wore no armor.",
               ":classification",
               "Lt. Infantry",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+                  nx_tactics_base.t_tactics,
                   "Military",
-                  ":level",
-                  "3",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Skirmish",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Skirmish")
-                  )
+                  3,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Formation: Skirmish")
                 )
               )
             ),
-            "Eques Alaris",
+            "Roman Eques Alaris",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Eques Alaris",
+              "Roman Eques Alaris",
               ":image",
               "images/ancients/RomanLightCavalryToken.png",
               ":summary",
@@ -1339,45 +1307,38 @@ export default class nx_tactics_books_ancients {
               ":classification",
               "Lt. Cavalry",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "2")
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl(
+                  nx_tactics_base.t_tactics,
+                  "Military",
+                  2
+                )
               )
             ),
-            "Alae Sagittariorum",
+            "Roman Alae Sagittariorum",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Alae Sagittariorum",
+              "Roman Alae Sagittariorum",
               ":summary",
               "* Mounted Archers",
               ":classification",
               "Lt. Cavalry",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+                  nx_tactics_base.t_tactics,
                   "Military",
-                  ":level",
-                  "3",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Skirmish",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Skirmish")
-                  )
+                  3,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Formation: Skirmish")
                 )
               )
             ),
-            ":Cataphractarii",
+            "Roman Cataphractarii",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Cataphractarii",
+              "Roman Cataphractarii",
               ":classification",
               "Hvy. Cavalry",
               ":unitskillmap",
@@ -1480,7 +1441,7 @@ export default class nx_tactics_books_ancients {
   // (func chapter_unfiled_ancient)
   static f_chapter_unfiled_ancient() {
     let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Unfiled Ancient", ":summary", "Examples of Play\nRomans vs. Greeks\nCombat Example:\n\nCombat Cards:\nSurprise\nUse when:\n	Opponent must be unaware\nEffects:\n	+4 Attack\n	Opponent can only defend\n\nHold Off\nUse when:\n	Longer Reach\n	In Melee Combat\n	Not in Close Combat\nEffects:\n	First Strike\n	+2 Attack\n	+4 Damage Vs Charge\n	Opponent cannot move into Close Combat if you hit.\n\nCharge:\nEffect:\nUse when:\n	Not in Melee Combat\nEffect:\n	Full Move Attack\n	+2 Damage\n	Moves into Close Combat\n\nGuard:\nEffect:\n	+2 Defense\n	All hits taken are shield hits\n\nExample:\nHuman attacks the Orc in the open.\nThe Orc has longer reach an chooses Hold Off.\nThe Human is wary of the spear and plays Guard and Close Combat.\n\nRound 1:\nOrc roll: 12 + 9 Spear + 2 Hold Off = 23\nHuman roll: 9 + 8 Sword + 2 Guard - 1 Encumberance = 18\n\nOrc scores a hit for 5 + 3 Spear = 8 Damage\n\nGuard makes the damage a shield hit.\nDetermine hit location.\n8 (Piercing) - 3 (Shield) - 3 (Armor) = 2 (Piercing) Wound.\n\nBody reduces by 2 to 10 not enough to change bonus.\n\nThe successful Hold Off means the Human's Close Combat Movement fails.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Unfiled Ancient", ":summary", "Examples of Play\nRomans vs. Greeks\nCombat Example:\n\nCombat Cards:\nSurprise\nUse when:\n Opponent must be unaware\nEffects:\n +4 Attack\n Opponent can only defend\n\nHold Off\nUse when:\n Longer Reach\n In Melee Combat\n Not in Close Combat\nEffects:\n First Strike\n +2 Attack\n +4 Damage Vs Charge\n Opponent cannot move into Close Combat if you hit.\n\nCharge:\nEffect:\nUse when:\n Not in Melee Combat\nEffect:\n Full Move Attack\n +2 Damage\n Moves into Close Combat\n\nGuard:\nEffect:\n +2 Defense\n All hits taken are shield hits\n\nExample:\nHuman attacks the Orc in the open.\nThe Orc has longer reach an chooses Hold Off.\nThe Human is wary of the spear and plays Guard and Close Combat.\n\nRound 1:\nOrc roll: 12 + 9 Spear + 2 Hold Off = 23\nHuman roll: 9 + 8 Sword + 2 Guard - 1 Encumberance = 18\n\nOrc scores a hit for 5 + 3 Spear = 8 Damage\n\nGuard makes the damage a shield hit.\nDetermine hit location.\n8 (Piercing) - 3 (Shield) - 3 (Armor) = 2 (Piercing) Wound.\n\nBody reduces by 2 to 10 not enough to change bonus.\n\nThe successful Hold Off means the Human's Close Combat Movement fails.")
     return output
   }
 

@@ -204,21 +204,8 @@
                "Commando Training"
                 (base/unitspecialty
                  :name "Commando Training")))))
-       :Chun-Li
-        (base/unit
-         :name "Chun-Li"
-         :image "StreetFighter/Chun-LiToken.png"
-         :unitskillmap
-          (base/unitskillmap
-           "Close Combat"
-            (base/unitskill
-             :name "Close Combat"
-             :level "8"
-             :unitspecialtymap
-              (base/unitspecialtymap
-               "Wu Shu"
-                (base/unitspecialty
-                 :name "Wu Shu")))))
+       "Chun-Li"
+        (base/unit<-tactics-key tactics "Chun-Li")
        :Dhalsim
         (base/unit
          :name "Dhalsim"
@@ -756,17 +743,16 @@
        :Normality
         (base/unit
          :name "Normality"
+         :titles "Normals"
          :reference "Hate Crimes"
          :summary
           "* Normalities are ghastly creatures that were once human but have been transformed into blank, sexless horrors. All Normalities appear exactly identical: thin, sexless, hairless, and faceless except for a slash of a mouth. With heavy clothing they may briefly pass for human.
            * Personality - Normalities have a hatred of all things different (which includes everything except themselves). They are homicidal with a particulary strong reaction to those who choose to flaunt their differences (e.g. piercings, tattoos, goths, punkers, women wearing pants)
            * History - The Normalities are created as part of a horrific treatment that pretends to be a cure for homosexuality. Indeed, the treatment does cure homosexuality, as well as any sexuality and finally humanity."
-         :titles "Normals"
          :unitskillmap
-          (base/unitskillmap
-           :Hunting
-            (base/unitskill
-             :name "Hunting")))
+          (base/unitskillmap<-tactics-keys
+           tactics
+           "Hunting"))
        "Seventh Generation"
         (base/unit
          :name "Seventh Generation"

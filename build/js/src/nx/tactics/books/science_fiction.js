@@ -2162,6 +2162,10 @@ export default class nx_tactics_books_science_fiction {
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Interceptor"),
             "Tie Phantom",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Phantom"),
+            "Tie Reaper",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Reaper"),
+            "Tie Striker",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Tie Striker"),
             "Imperator Star Destroyer",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},

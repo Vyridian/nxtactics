@@ -133,7 +133,7 @@ export default class nx_tactics_books_magic {
           ":titles",
           "Channelling, Miracle Working, White Magic",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Conviction", "Blessing", "Divine", "Invocation", "Life", "Purity", "Radiant")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Conviction", "Blessing", "Invocation", "Life", "Primus", "Purity", "Radiant")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

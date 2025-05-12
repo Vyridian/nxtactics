@@ -193,47 +193,37 @@
  (let : string
   [datatype : any := (type<-any value)
    display : string :=
-    (if : string
-     (then
-      (== datatype base/book)
+    (switch : string
+     datatype
+     (case base/book
       (string-display<-book
        (any<-any : base/book
         value)))
-     (then
-      (== datatype base/deck)
+     (case base/deck
       (string-display<-deck
        (any<-any : base/deck
         value)))
-     (then
-      (== datatype base/skill)
-       (string-display<-skill
-        (any<-any : base/skill
-         value)))
-     (then
-      (== datatype base/power)
-       (string-display<-power
-        (any<-any : base/power
-         value)))
-     (then
-      (or
-       (== datatype base/item)
-       (== datatype base/unit))
-      "")
-     (then
-      (is-type datatype base/card)
-      (let : string
-       [card : base/card :=
-         (any<-any : base/card
-          value)
-        summary : string :=
-         (:summary card)
-        summaryout : string :=
-         (if : string
-          (then
-           (= summary ":image")
-           "")
-          (else summary))]
-       summaryout)))]
+     (case base/skill
+      (string-display<-skill
+       (any<-any : base/skill
+        value)))
+     (case base/power
+      (string-display<-power
+       (any<-any : base/power
+        value)))
+     (case base/item "")
+     (case base/place "")
+     (case base/unit "")
+     (else
+      (if : string
+       (is-type datatype base/card)
+       (let : string
+        [card : base/card :=
+          (any<-any : base/card
+           value)
+         summary : string :=
+          (:summary card)]
+        summary))))]
   display)
  :doc "Returns display text from any")
 
@@ -528,6 +518,7 @@
   [id      : string := (:id card)
    name    : string := (:name card)
    summary : string := (:summary card)
+   layout  : base/cardlayout := (:layout card)
    datatype : any := (type<-any card)
    style-display : ui/style :=
     (if : ui/style
@@ -568,9 +559,7 @@
      (then
       (== datatype base/conflict) (empty ui/ui))
      (then
-      (= name "Conflict Back") (empty ui/ui))
-     (then
-      (= summary ":image") (empty ui/ui))
+      (== layout base/cardlayout-imageonly) (empty ui/ui))
      (else
       (ui-title1<-uid-text
        uid name)))
@@ -579,7 +568,7 @@
      (then
       (== datatype base/conflict) (empty ui/ui))
      (then
-      (= name "Conflict Back") (empty ui/ui))
+      (== layout base/cardlayout-imageonly) (empty ui/ui))
      (then
       (== datatype base/cardback)
       (ui-title2<-uid-text
@@ -608,59 +597,62 @@
      ranksuit
      uid)
    uilist2 : ui/uilist :=
-    (if : ui/uilist
-     (then
-      (== datatype base/item)
+    (switch : ui/uilist
+     datatype
+     (case base/item
       (uilist<-item-parent
        (any<-any card)
        parent))
-     (then
-      (== datatype base/unit)
+     (case base/place
+      (uilist<-place-parent
+       (any<-any card)
+       parent))
+     (case base/unit
       (uilist<-unit-parent
        (any<-any card)
        parent))
-     (then
-      (== datatype base/cardimage)
+     (case base/cardimage
       (uilist<-cardimage-parent
        (any<-any card)
        parent))
-     (then
-      isdisplay4
-      (let : ui/uilist
-       [uid2 : string := (string uid "/display2")
-        display2 : string := (:2 displaysplit)
-        uidisplay2 : ui/ui :=
-         (ui/ui
-          :uid uid2
-          :style styles/style-card-display2
-          :stylelist
-           (ui/stylelist
-            styles/style-textarea)
-          :data display2)
-        uid3 : string := (string uid "/display3")
-        display3 : string := (:3 displaysplit)
-        uidisplay3 : ui/ui :=
-         (ui/ui
-          :uid uid3
-          :style styles/style-card-display3
-          :stylelist
-           (ui/stylelist
-            styles/style-textarea)
-          :data display3)
-        uid4 : string := (string uid "/display4")
-        display4 : string := (:4 displaysplit)
-        uidisplay4 : ui/ui :=
-         (ui/ui
-          :uid uid4
-          :style styles/style-card-display4
-          :stylelist
-           (ui/stylelist
-            styles/style-textarea)
-          :data display4)]
+     (else
+      (if : ui/uilist
+       isdisplay4
+       (let : ui/uilist
+        [uid2 : string := (string uid "/display2")
+         display2 : string := (:2 displaysplit)
+         uidisplay2 : ui/ui :=
+          (ui/ui
+           :uid uid2
+           :style styles/style-card-display2
+           :stylelist
+            (ui/stylelist
+             styles/style-textarea)
+           :data display2)
+         uid3 : string := (string uid "/display3")
+         display3 : string := (:3 displaysplit)
+         uidisplay3 : ui/ui :=
+          (ui/ui
+           :uid uid3
+           :style styles/style-card-display3
+           :stylelist
+            (ui/stylelist
+             styles/style-textarea)
+           :data display3)
+         uid4 : string := (string uid "/display4")
+         display4 : string := (:4 displaysplit)
+         uidisplay4 : ui/ui :=
+          (ui/ui
+           :uid uid4
+           :style styles/style-card-display4
+           :stylelist
+            (ui/stylelist
+             styles/style-textarea)
+           :data display4)]
        (ui/uilist
         uidisplay2
         uidisplay3
-        uidisplay4))))]
+        uidisplay4)))))]
   (ui/uilist
    uilist1
    uilist2
@@ -774,24 +766,91 @@
    uidetail))
  :doc "Returns a list of child ui from a item/parent")
 
+(func uilist<-place-parent : ui/uilist
+ [place  : base/place
+  parent : string]
+ (let : ui/uilist
+  [name : string := (:name place)
+   titles : string := (:titles place)
+   image : string := (:image place)
+   summary : string := (:summary place)
+   prefix : string := (string parent "/" name)
+   detail : string := summary
+   uiimage : ui/ui :=
+    (if : ui/ui
+     (then
+      (!-empty image)
+      (ui/ui
+       :uid (string prefix "/image")
+       :style styles/style-place-image
+       :data
+        (file/file<-path
+         image))))
+   uititles : ui/ui :=
+    (if : ui/ui
+     (then
+      (!-empty titles)
+      (ui/ui
+       :uid (string prefix "/titles")
+       :style styles/style-unit-titles
+       :stylelist
+        (ui/stylelist
+         styles/style-text)
+       :data titles)))
+   uidetail : ui/ui :=
+    (if : ui/ui
+     (then
+      (!-empty detail)
+      (ui/ui
+       :uid (string prefix "/detail")
+       :style styles/style-place-detail
+       :stylelist
+        (ui/stylelist
+         styles/style-textarea)
+       :data detail)))]
+  (ui/uilist
+   uiimage
+   uititles
+   uidetail))
+ :doc "Returns a list of child ui from a place/parent")
+
 (func uilist<-cardimage-parent : ui/uilist
  [cardimage : base/cardimage
   parent : string]
  (let : ui/uilist
-  [name      : string  := (:name  cardimage)
-   image     : string  := (:image cardimage)
-   imgmirror : boolean := (:imgmirror cardimage)
-   prefix    : string  := (string parent "/" name)
+  [name      : string       := (:name  cardimage)
+   image     : string       := (:image cardimage)
+   layout : base/cardlayout := (:layout cardimage)
+   imgmirror : boolean      := (:imgmirror cardimage)
+   prefix    : string       := (string parent "/" name)
    uiimage1  : ui/ui :=
-    (ui/ui
-     :uid (string prefix "/image1")
-     :style styles/style-cardimage-image1
-     :data
-      (file/file<-path
-       image))
+    (switch : ui/ui
+     layout
+     (case base/cardlayout-imageonly
+      (ui/ui
+       :uid (string prefix "/image1")
+       :style styles/style-image-background
+       :data
+        (file/file<-path
+         image)))
+     (case base/cardlayout-textimage
+      (ui/ui
+       :uid (string prefix "/image1")
+       :style styles/style-image-background
+       :data
+        (file/file<-path
+         image)))
+     (else
+      (ui/ui
+       :uid (string prefix "/image1")
+       :style styles/style-cardimage-image1
+       :data
+        (file/file<-path
+         image))))
    uiimage2 : ui/ui :=
-    (if
-     (then imgmirror
+    (switch : ui/ui
+     cardlayout
+     (case base/cardlayout-imagemirror
       (ui/ui
        :uid (string prefix "/image2")
        :style styles/style-cardimage-image2
@@ -1009,6 +1068,7 @@
      datatype
      (case base/item "images/card-item.svg")
      (case base/unit "images/card-unit.svg")
+     (case base/place "")
      (case base/cardimage "")
      (else image))
    uiimage : ui/ui :=

@@ -31,6 +31,7 @@
    icon        : string
    image       : string
    imgmirror   : boolean
+   layout      : cardlayout
    reference   : string
    secrets     : string
    summary     : string
@@ -48,6 +49,8 @@
 
 (type cardimagelist : list
  :allowtypes [cardimage])
+
+(type cardlayout : struct)
 
 (type cardlist : list
  :allowtypes [card])
@@ -235,8 +238,8 @@
    placemap    : placemap
    powermap    : powermap
    rulemap     : rulemap
-   scenemap : scenemap
    sectionmap  : sectionmap
+   scenemap    : scenemap
    skillmap    : skillmap
    suitmap     : suitmap
    terrainmap  : terrainmap
@@ -414,7 +417,8 @@
    strength         : string
    unitabilitymap   : unitabilitymap
    unititemmap      : unititemmap
-   unitspecialtymap : unitspecialtymap]
+   unitspecialtymap : unitspecialtymap
+   specialties      : stringlist]
  :traits [card])
 
 (type unitpowerlist : list
@@ -430,7 +434,8 @@
    skill            : skill
    unitabilitymap   : unitabilitymap
    unititemmap      : unititemmap
-   unitspecialtymap : unitspecialtymap]
+   unitspecialtymap : unitspecialtymap
+   specialties      : stringlist]
  :traits [card])
 
 (type unitskilllist : list
@@ -471,6 +476,12 @@
 (type trauma : struct
  :traits [card]
  :doc "Lasting Will Damage")
+
+(const cardlayout-imagemirror : cardlayout)
+
+(const cardlayout-imageonly : cardlayout)
+
+(const cardlayout-textimage : cardlayout)
 
 (const rank-ace : rank
  (rank
@@ -978,6 +989,82 @@
    (:name book)))
  :doc "Returns a bookmap of all books.")
 
+(func cardimage<-card : cardimage
+ [card : card]
+ (let : cardimage
+  [name  : string := (:name card)
+   image : string := (:image card)
+   cardtype : any := (type<-any card)
+   layout : cardlayout :=
+    (switch : cardlayout
+     cardtype
+     (case place cardlayout-textimage)
+     (else (:layout card)))
+   imgmirror : boolean := (:imgmirror card)
+   id : string := (string name "-image")
+   imgname : string := id]
+  (cardimage
+   :id id
+   :name name
+   :origcard card
+   :image image
+   :layout layout
+   :imgmirror imgmirror))
+ :doc "Returns a cardimage from a given card")
+
+(func cardimage<-tactics-unitkey : cardimage
+ [tactics : tactics
+  key     : string]
+ (let : cardimage
+  [unit : unit := (unit<-tactics-key tactics key)]
+  (cardimage<-card unit))
+ :doc "Returns a cardimage from a given tactics and unit key.")
+
+(func cardimagelist<-cardlist : cardimagelist
+ [cardlist : cardlist]
+ (list<-list : cardimagelist
+  cardlist
+  (fn : cardimage
+   [card : card]
+   (cardimage<-card card)))
+ :doc "Returns a cardimagelist from a given cardlist.")
+
+(func cardimagelist<-placelist : cardimagelist
+ [placelist : placelist :...]
+ (list<-list : cardimagelist
+  placelist
+  (fn : cardimage
+   [place : place]
+   (cardimage<-card place)))
+ :doc "Returns a cardimagelist from placelist.")
+
+(func cardimagelist<-tactics-placekeys : cardimagelist
+ [tactics : tactics
+  keys    : stringlist :...]
+ (let : cardimagelist
+  [placelist : placelist :=
+    (placelist<-tactics-keys tactics keys)]
+  (cardimagelist<-placelist placelist))
+ :doc "Returns a cardimagelist from a given tactics and place keys.")
+
+(func cardimagelist<-tactics-unitkeys : cardimagelist
+ [tactics : tactics
+  keys    : stringlist :...]
+ (let : cardimagelist
+  [unitlist : unitlist :=
+    (unitlist<-tactics-keys tactics keys)]
+  (cardimagelist<-unitlist unitlist))
+ :doc "Returns a cardimagelist from a given tactics and unit keys.")
+
+(func cardimagelist<-unitlist : cardimagelist
+ [unitlist : unitlist :...]
+ (list<-list : cardimagelist
+  unitlist
+  (fn : cardimage
+   [unit : unit]
+   (cardimage<-card unit)))
+ :doc "Returns a cardimagelist from unitlist.")
+
 (func cardlist-copy<-card-count-isnum : cardlist
  [card  : card
   count : int
@@ -1011,6 +1098,38 @@
    (cardlist-copy<-card-count-isnum
     rule count isnum))
  :doc "Returns a cardlist by copying a rule count times")
+
+(func cardlist-images<-tactics-places : cardlist
+ [tactics   : tactics
+  placekeys : stringlist :...]
+ (let : cardlist
+  [places : placelist :=
+    (placelist<-tactics-keys
+     tactics placekeys)
+   images : cardimagelist :=
+    (cardimagelist<-placelist places)
+   cards : cardlist :=
+    (list<-list : cardlist places)
+   cardsimage : cardlist :=
+    (list<-list : cardlist images)]
+  (cardlist cards cardsimage))
+ :doc "Returns a cardlist with images from unitkeys")
+
+(func cardlist-images<-tactics-units : cardlist
+ [tactics  : tactics
+  unitkeys : stringlist :...]
+ (let : cardlist
+  [units : unitlist :=
+    (unitlist<-tactics-keys
+     tactics unitkeys)
+   images : cardimagelist :=
+    (cardimagelist<-unitlist units)
+   cards : cardlist :=
+    (list<-list : cardlist units)
+   cardsimage : cardlist :=
+    (list<-list : cardlist images)]
+  (cardlist cards cardsimage))
+ :doc "Returns a cardlist with images from unitkeys")
 
 (func cardmap<-bookmap : cardmap
  [bookmap : bookmap]
@@ -1095,52 +1214,6 @@
    [chapter : chapter]
    (:name chapter)))
  :doc "Returns a chaptermap from a given chapterlist")
-
-(func cardimage<-card : cardimage
- [card : card]
- (let : cardimage
-  [name  : string := (:name card)
-   image : string := (:image card)
-   imgmirror : boolean := (:imgmirror card)
-   id : string := (string name "-image")
-   imgname : string := id]
-  (cardimage
-   :id id
-   :name name
-   :origcard card
-   :image image
-   :imgmirror imgmirror))
- :doc "Returns a cardimage from a given card")
-
-(func cardimage<-tactics-unitkey : cardimage
- [tactics : tactics
-  key     : string]
- (let : cardimage
-  [unit : unit := (unit<-tactics-key tactics key)]
-  (cardimage<-card unit))
- :doc "Returns a cardimage from a given tactics and unit key.")
-
-(func cardimagelist<-cardlist : cardimagelist
- [cardlist : cardlist]
- (list<-list : cardimagelist
-  cardlist
-  (fn : cardimage
-   [card : card]
-   (cardimage<-card card)))
- :doc "Returns a cardimagelist from a given cardlist.")
-
-(func cardimagelist<-tactics-unitkeys : cardimagelist
- [tactics : tactics
-  keys    : stringlist :...]
- (let : cardimagelist
-  [unitlist : unitlist :=
-    (unitlist<-tactics-keys tactics keys)]
-  (list<-list : cardimagelist
-   unitlist
-   (fn : cardimage
-    [unit : unit]
-    (cardimage<-card unit))))
- :doc "Returns a cardimagelist from a given tactics and unit keys.")
 
 (func item<-tactics-key : item
  [tactics : tactics
@@ -2179,20 +2252,34 @@
  (unitskill<-tactics-key-lvl-abilities-items
   tactics key 0 (empty stringlist) (empty stringlist)))
 
+(func unitskill<-tactics-key-abilities : unitskill
+ [tactics   : tactics
+  key       : string
+  abilities : stringlist]
+ (unitskill<-tactics-key-lvl-abilities-items-specialties
+  tactics key 0 abilities (empty stringlist) (empty stringlist)))
+
+(func unitskill<-tactics-key-items : unitskill
+ [tactics : tactics
+  key     : string
+  items   : stringlist]
+ (unitskill<-tactics-key-lvl-abilities-items-specialties
+  tactics key 0 (empty stringlist) items (empty stringlist)))
+
 (func unitskill<-tactics-key-lvl : unitskill
  [tactics   : tactics
   key       : string
   lvl       : int]
- (unitskill<-tactics-key-lvl-abilities-items
-  tactics key lvl (empty stringlist) (empty stringlist)))
+ (unitskill<-tactics-key-lvl-abilities-items-specialties
+  tactics key lvl (empty stringlist) (empty stringlist) (empty stringlist)))
 
 (func unitskill<-tactics-key-lvl-abilities : unitskill
  [tactics   : tactics
   key       : string
   level     : int
   abilities : stringlist]
- (unitskill<-tactics-key-lvl-abilities-items
-  tactics key level abilities (empty stringlist)))
+ (unitskill<-tactics-key-lvl-abilities-items-specialties
+  tactics key level abilities (empty stringlist) (empty stringlist)))
 
 (func unitskill<-tactics-key-lvl-abilities-items : unitskill
  [tactics   : tactics
@@ -2200,6 +2287,16 @@
   level     : int
   abilities : stringlist
   items     : stringlist]
+ (unitskill<-tactics-key-lvl-abilities-items-specialties
+  tactics key level abilities (empty stringlist) (empty stringlist)))
+
+(func unitskill<-tactics-key-lvl-abilities-items-specialties : unitskill
+ [tactics     : tactics
+  key         : string
+  level       : int
+  abilities   : stringlist
+  items       : stringlist
+  specialties : stringlist]
  (let : unitskill
   [skill : skill :=
     (skill<-tactics-key tactics key)
@@ -2229,16 +2326,34 @@
    :skill skill
    :level level
    :unitabilitymap unitabilitymap
-   :unititemmap unititemmap))
+   :unititemmap unititemmap
+   :specialties specialties))
  :doc "Returns a unitskill from tactics, skill key, level, ability keys, and item keys")
 
+(func unitskill<-tactics-key-lvl-abilities-specialties : unitskill
+ [tactics     : tactics
+  key         : string
+  level       : int
+  abilities   : stringlist
+  specialties : stringlist]
+ (unitskill<-tactics-key-lvl-abilities-items-specialties
+  tactics key level abilities (empty stringlist) (empty stringlist)))
+
 (func unitskill<-tactics-key-lvl-items : unitskill
- [tactics   : tactics
-  key       : string
-  level     : int
-  items     : stringlist]
- (unitskill<-tactics-key-lvl-abilities-items
-  tactics key level (empty stringlist) items))
+ [tactics : tactics
+  key     : string
+  level   : int
+  items   : stringlist]
+ (unitskill<-tactics-key-lvl-abilities-items-specialties
+  tactics key level (empty stringlist) items (empty stringlist)))
+
+(func unitskill<-tactics-key-lvl-specialties : unitskill
+ [tactics     : tactics
+  key         : string
+  level       : int
+  specialties : stringlist]
+ (unitskill<-tactics-key-lvl-abilities-items-specialties
+  tactics key level (empty stringlist) (empty stringlist) specialties))
 
 (func unitskilllist<-tactics-keys : unitskilllist
  [tactics : tactics

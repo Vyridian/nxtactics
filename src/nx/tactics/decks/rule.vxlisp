@@ -14,12 +14,11 @@
      * Ability Points may be saved.")
   (base/rule
    :name "Action"
-   :summary
-    "* Each [Turn] a Unit will get 2 Actions. These are [Move], [Fight], [Skill], [Recover], [Search], [Equip], and [Reload], and [Wait].")
+   :image "images/rule-action.svg")
   (base/rule
    :name "Advantage"
    :summary
-    "* Your [Normal] [Block] cards always Succeed against [Normal] [Strong].")
+    "* Your [Common] [Block] cards always Succeed against [Common] [Strong].")
   (base/rule
    :name "Area Effect"
    :image "images/card-areaeffect.svg"
@@ -45,6 +44,12 @@
   (base/rule
    :name "Character")
   (base/rule
+   :name "Choking"
+   :summary
+    "* This includes any obstruction of airways such as smoke, water, sand, fungus, disease, physical choking, etc. It also includes damage to filters and other aspiration/ventilation systems on machines.
+     * Will:-1
+     * Event: IF a Unit breathes < 1 minute/2 minutes THEN Choking:+1 ELSE Choking:-1")
+  (base/rule
    :name "Clock"
    :summary
     "* Represents the current Clock time.
@@ -54,6 +59,71 @@
      ** IF one or more [Encounter] cards are revealed THEN resolve them.
      ** IF there are no remaining Round# cards THEN the [scene] immediately ends for time.")
   (base/rule
+   :name "Combat"
+   :summary
+    "* Target a unit with a damaging Skill/Power.
+     * Each player chooses a Conflict card from their hand or a random card from Shared Conflict.
+     * Conflict Cards are compared like Rock/Paper/Scissors.
+     * Fight Speed: Block/Counter > Fast > Evade > Strong > Block/Counter
+     * If both play Fast or Strong then compare by rank (lower is faster).
+     * Order: AJQK2-10
+     * If Tied, there is no result.
+     * If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.
+     * Discard all card used (except Keep)")
+  (base/rule
+   :name "Conclusion"
+   :summary
+    "* Downtime
+     * Rewards
+     * Advancement")
+  (base/rule
+   :name "Conflict"
+   :summary
+    "1) Choose Approach / Rank
+     2) Reveal
+     3) Compare
+     4) Effect
+     5) Resolution")
+  (base/rule
+   :name "Conflict: Approach"
+   :image "images/rule-conflict-approach.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Conflict: Compare"
+   :image "images/rule-conflict-compare.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Conflict: Chart"
+   :image "images/rule-conflict-chart.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Conflict: Clash"
+   :summary
+    "A Clash occurs when two [Fast] or two [Strong] face each other.
+     * A - Win: any
+     * J - Win: 2-10, Q, K
+     * Q - Win: 2-10, K
+     * K - Win: 2-10
+     * 2-10 - Lower number Wins (after modifiers)
+     ** Modifier = Higher Skill Level - Lower Skill Level
+     ** Add Modifier to Lower Skill Rank.
+     ** Compare Ranks. Lower Rank Wins.
+     ** IF Still Tied THEN Both Win.")
+  (base/rule
+   :name "Conflict: Effect"
+   :summary
+    "* Effect")
+  (base/rule
+   :name "Conflict: Reveal"
+   :image "images/rule-conflict-reveal.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Conflict: Resolution")
+  (base/rule
+   :name "Conflict: Rank"
+   :image "images/rule-conflict-rank.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
    :name "Conscience"
    :summary
     "* Conscience")
@@ -62,10 +132,10 @@
    :summary
     "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.
      * If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:
-     ** 25% Cover: Initiative:-1.
-     ** 50% Cover: Initiative:-2.
-     ** 75% Cover: Initiative:-3.
-     ** 100% Cover: Initiative:-4.
+     ** 25% Cover: Skill:-1.
+     ** 50% Cover: Skill:-2.
+     ** 75% Cover: Skill:-3.
+     ** 100% Cover: Skill:-4.
      * If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Conflict]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.
      ** Insubstantial: Resolve damage normally.
      ** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
@@ -89,7 +159,11 @@
   (base/rule
    :name "Disadvantage"
    :summary
-    "* Your [Normal] [Block] cards Fail against [Fast].")
+    "* Your [Common] [Block] cards Fail against [Fast].")
+  (base/rule
+   :name "Drawn to Destiny"
+   :image "images/rule-drawntodestiny.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Effect"
    :summary
@@ -104,7 +178,7 @@
    :name "Damaged"
    :summary
     "* [Body]:-1
-     * When using a damaged item or body part take [Initiative]:-1/Damaged.
+     * When using a damaged item or body part take [Skill]:-1/Damaged.
      * An item with no [Body] remaining is [Broken].")
   (base/rule
    :name "Exposure"
@@ -112,31 +186,27 @@
     "* Move:-1
      * Event: IF a Unit has shelter < 6 hours/day THEN Exposure:+1 ELSE Exposure:-1.")
   (base/rule
-   :name "Fight"
+   :name "Features"
    :summary
-    "* Target a unit with a damaging Skill/Power.
-     * Each player chooses a Conflict card from their hand or a random card from Shared Conflict.
-     * Conflict Cards are compared like Rock/Paper/Scissors.
-     * Fight Speed: Block/Counter > Fast > Evade > Strong > Block/Counter
-     * If both play Fast or Strong then compare by rank (lower is faster).
-     * Order: AJQK2-10
-     * If Tied, there is no result.
-     * If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.
-     * Discard all card used (except Keep)")
+    "* Tactical Card, War, Board, Roleplaying Game
+     * Supports any genre at any scale
+     * Based in physics
+     * Everything is a card - Designed to stay compact and modular
+     * Simultaneously Play - Max Uptime
+     * Agency - Players choose their 'rolls'
+     * Detailed Damage / Hit Location
+     * Mental and Emotional Trauma
+     * Focus on Martial Arts
+     * Vast Magic and Superpowers
+     * Broad vs Vertical Investment")
   (base/rule
    :name "Flanking"
    :summary
-    "* Flanks: IF a unit attacks an opponent from anywhere behind THEN [Initiative]:+1
-     * Blindspot: IF a unit attacks an opponent and is in a straight line directly behind an opponent THEN the opponent is [Exposed] for this attack.")
+    "* Flanks: IF a unit attacks an opponent from anywhere behind THEN [Skill]:+1
+     * Blindspot: IF a unit attacks an opponent and is in a straight line directly behind an opponent THEN the opponent has [Disadvantage] for this attack.")
   (base/rule
    :name "Free Action"
-   :summary
-    "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.
-     * Move Out: [Fatigue]:+1 to [Move]:1. You may Turn or Drift once during this Move.
-     * Double Down: [Stun]:+1 to reduce a Double Action to an Action.
-     * Grit Your Teeth: [Stress]:+1 to ignore the effect of all of your negative statuses this turn.
-     * Final Sprint: [Slow]:+1 to [Move].
-     * Opportunity Combat: IF a Target moves from one adjacent space of a Unit to another THEN that Unit may take a [Stun] to take a free [Fight] against it.")
+   :image "images/rule-freeaction.svg")
   (base/rule
    :name "Game"
    :summary
@@ -149,22 +219,30 @@
      * Each Turn each Player takes 2 Actions.")
   (base/rule
    :name "Hit Location"
-   :image "images/rule-hitlocation.svg")
+   :image "images/rule-hitlocation.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Hit Location: Vehicle"
-   :image "images/rule-hitlocation-vehicle.svg")
+   :image "images/rule-hitlocation-vehicle.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "How to Play"
+   :summary
+    "* Scene - Choose a Scene to play
+     * Setup - Place Decks, Places, and Units according to the Scene
+     * Rounds - Multiple Rounds when Players act simultaneously
+     * Round Start - 
+     * Move - 
+     * Action - 
+     * Conflict - Combat, Interactions and Skills are decided with opposed cards from the Conflict decks
+     * Resolution - After a Conflict the results are decided including Damage
+     * Round End - Draw a Card, Recover, and resolve Events
+     * Conclusion - Downtime after a Scene include rewards and advancement")
   (base/rule
    :name "Hunger"
    :summary
     "* Body:-1
      * Event: IF a Unit eats < 4 days/week THEN Hunger:+1 ELSE Hunger:-1")
-  (base/rule
-   :name "Initiative"
-   :summary
-    "* Lower is Better: IF you and your opponent both play [Normal] [Fast] or you both play [Normal] [Strong] THEN the lower [Rank] of the cards wins.
-     * Skill Difference: The difference between your and your opponent's [Skill] is a Bonus or Penalty.
-     * Bonus (+X): Initiative bonus is SUBTRACTED before comparing.
-     * Penalty (-X): Initiative penalty is ADDED before comparing.")
   (base/rule
    :name "Interact"
    :summary
@@ -235,7 +313,7 @@
    :reference
     "I admit it. You are better than I am. Then why are you smiling? Because I know something you don't know...I am not left handed...There's something I ought to tell you...I am not left handed either. - Princess Bride"
    :summary
-    "* [Action]: IF an [Ability] is used in the incorrect hand or using fewer hands than normal THEN Initiative:-1.")
+    "* [Action]: IF an [Ability] is used in the incorrect hand or using fewer hands than normal THEN [Skill]:-1.")
   (base/rule
    :name "Player")
   (base/rule
@@ -247,6 +325,10 @@
    :name "Power"
    :summary
     "")
+  (base/rule
+   :name "Rank"
+   :summary
+    "* The number on a card or the first part of a value.")
   (base/rule
    :name "Reach"
    :summary
@@ -263,11 +345,20 @@
      * 4 Actions: Reload a revolver, a mortar, a machinegun or a crossbow.")
   (base/rule
    :name "Round"
-   :summary
-    "* Each [Round], each [Unit] will get to act.
-     * Turn Start: Draw from your [Conflict] deck. [Recover].
-     * Take 2 Actions: These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]. You may perform the same Action twice.
-     * Turn End: The next unit in Turn Order performs their turn until the Round Ends.")
+   :image "images/rule-round.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Round: Actions")
+  (base/rule
+   :name "Round: End")
+  (base/rule
+   :name "Round: Groups")
+  (base/rule
+   :name "Round: Moves")
+  (base/rule
+   :name "Round: Start")
+  (base/rule
+   :name "Round: Targets")
   (base/rule
    :name "Rule")
   (base/rule
@@ -289,7 +380,21 @@
    :summary
     "* [Double Action]: Test [Investigate] vs. [Conflict] to search the [Place] you occupy. If you succeed, you may find something.")
   (base/rule
+   :name "Scattershot"
+   :titles "Glaser, Shot"
+   :summary
+    "* [Conflict]: 2 random Units adjacent to the Target are also attacked.
+     * [Hit Location]: IF multiple valid Hit Locations are revealed THEN separate them into separate Hit Locations. Crits are only applied to the primary location.")
+  (base/rule
    :name "Scene")
+  (base/rule
+   :name "Setup"
+   :summary
+    "* Choose a scene and sort it in numerical order.
+     * Each [Player] chooses or creates the [Units] they will use.
+     * Each [Player] chooses a colored Starter Deck.
+     * Place each Unit card on the Status Bar with a Unit# card about it.
+     * Reveal the top card in the scene deck and follow its instructions.")
   (base/rule
    :name "Skill Point"
    :summary
@@ -300,14 +405,6 @@
      * 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level.")
   (base/rule
    :name "Space")
-  (base/rule
-   :name "Setup Guide"
-   :summary
-    "* Choose a scene and sort it in numerical order.
-     * Each [Player] chooses or creates the [Units] they will use.
-     * Each [Player] chooses a colored Starter Deck.
-     * All Player [Initiative] cards are shuffled together to create an [Initiative] deck.
-     * Reveal the top card in the scene deck and follow its instructions.")
   (base/rule
    :name "Shadow"
    :summary
@@ -335,11 +432,6 @@
    :summary
     "* Special: IF Speed over 5 THEN penalty is Speed:-2.")
   (base/rule
-   :name "Suffocation"
-   :summary
-    "* Will:-1
-     * Event: IF a Unit breathes < 1 minute/5 minutes THEN Suffocation:+1 ELSE Suffocation:-1")
-  (base/rule
    :name "Surprise"
    :summary
     "* IF a unit suddenly appears adjacent or upon a unit.
@@ -365,6 +457,20 @@
   (base/rule
    :name "Team")
   (base/rule
+   :name "Terminology"
+   :summary
+    "* Value - A Value has Level and Scale
+     -- Level - # normally used
+     -- Scale - # of zeroes after Level
+     * Scene - An short scenario
+     * Place - A map or location
+     * Unit - A person, creature or vehicle
+     * Item - A thing to interact with
+     * Skill - A capability a Unit has learned
+     * Power - A superhuman Skill
+     * Ability - A specific ability / feat
+     * Specialty - A style or focus area")
+  (base/rule
    :name "Thirst"
    :summary
     "* Mind:-1
@@ -372,7 +478,7 @@
   (base/rule
    :name "Unfamiliar Item"
    :summary
-    "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled].")
+    "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at [Skill]:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled].")
   (base/rule
    :name "Unit")
   (base/rule
@@ -396,15 +502,13 @@
   (base/rule
    :name "Weather: Clouds"
    :image "images/cards/rule-weather-clouds.svg"
-   :summary
-    ":image")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Weather: Downpour")
   (base/rule
    :name "Weather: Humidity"
    :image "images/cards/rule-weather-humidity.svg"
-   :summary
-    ":image")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Weather: Hurricane")
   (base/rule
@@ -424,8 +528,7 @@
   (base/rule
    :name "Weather: Temperature"
    :image "images/cards/rule-weather-temperature.svg"
-   :summary
-    ":image")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Weather: Tornado")
   (base/rule
@@ -440,10 +543,11 @@
   (base/rule
    :name "Weather: Wind"
    :image "images/cards/rule-weather-wind.svg"
-   :summary
-    ":image")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Will"
+   :reference
+    "* R:Your father failed to act. B:The man had a gun. R:Would that stop you? B:I've had training. R:The training is nothing! Will is everything! The will to act. - Bruce Wayne and Ra's al Ghul, Batman Begins"
    :summary
     "* Will is the measure of a unit's grit, determination and psychological stability.
      * A unit with Will:0 is panicked.
@@ -458,31 +562,52 @@
      (list<-list : base/cardlist
       (base/rulelist<-tactics-keys
        tactics
-       "Game"
-       "Setup Guide"
-       "Damage Guide"
+       "Drawn to Destiny"
+       "Features"
+       "Terminology"
+       "How to Play"
+       "Scene"
+       "Setup"
        "Round"
+       "Round: Start"
+       "Round: Targets"
+       "Round: Groups"
+       "Round: Moves"
+       "Round: Actions"
+       "Round: End"
+       "Conclusion"
        "Move"
+       "Free Action"
        "Action"
-       "Fight"
-       "Skill"
-       "Power"
+       "Combat"
+       "Conflict"
+       "Conflict: Approach"
+       "Conflict: Rank"
+       "Conflict: Reveal"
+       "Conflict: Compare"
+       "Conflict: Chart"
+       "Conflict: Effect"
+       "Conflict: Resolution"
        "Hit Location"
        "Hit Location: Vehicle"
+       "Damage Decks"
+       "Damage Guide"
        "Interact"
        "Recover"
        "Equip"
        "Reload"
        "Search"
-       "Free Action"
        "Line of Sight"
-       "Initiative"
-       "Damage Guide"
        "Effect"
        "Crits"
        "Mitigation"
        "Cover"
        "Task"
+       "Value"
+       "Unit"
+       "Item"
+       "Skill"
+       "Power"
        "Character"
        "Body"
        "Mind"
@@ -506,7 +631,7 @@
        "Surprise"
        "Unskilled"
        "Unfamiliar Item"
-       "Suffocation"
+       "Choking"
        "Hunger"
        "Thirst"
        "Exposure"

@@ -32,21 +32,21 @@ export default class nx_tactics_books_skills {
           ":name",
           "Physical Skills",
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Animal Handling", "Assassination", "Athletics", "Hunting", "Rage", "Survival", "Tradeskills")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Animal Handling", "Assassination", "Athletics", "Hunting", "Rage", "Survival", "Tradeskill")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Transportation Skills",
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Driving", "Piloting", "Riding", "Seamanship", "Starpiloting")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Driving", "Piloting", "Riding", "Seamanship")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Academic Skills",
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Computers", "Electronics", "Investigation", "Knowledge", "Mastermind", "Mechanics", "Medicine", "Science: Life", "Science: Physical")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Brilliance", "Computers", "Electronics", "Investigation", "Knowledge", "Mechanics", "Medicine", "Science: Life", "Science: Physical")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

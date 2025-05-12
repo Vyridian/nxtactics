@@ -68,7 +68,7 @@ export default class nx_tactics_decks_starter {
       ":image",
       vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
       ":summary",
-      "* [Game Start]: Place your Units on the [Status Bar] with a Unit# card. Arrange your other Unit cards in front of you.\n* [Round End]: [Draw]:1 and [Recover]."
+      "* [Setup]: Place your Units on the [Status Bar] with a [Unit#] card. Arrange your other Unit cards in front of you.\n* [Round End]: [Draw]:1 and [Recover]."
     )
     return output
   }

@@ -1561,11 +1561,15 @@
                            "Order Brother"
                             (base/unit
                              :name "Order Brother"
-                             :summary "* Monks of the Order swear numerous oaths of purity including oaths of poverty and celebacy. Most Brothers live in a Monestary, while others travel the world doing good works and spreading the word of their God.")
+                             :summary
+                              "* Monks of the Order swear numerous oaths of purity including oaths of poverty and celebacy. Most Brothers live in a Monestary, while others travel the world doing good works and spreading the word of their God.")
                            "Order Crusader"
                             (base/unit
                              :name "Order Crusader"
-                             :summary "* The armored knights of the Order. They serve as the officers of the army and navy.")
+                             :reference
+                              "* Ours is the one true light. - Solari Soldier, Runeterra"
+                             :summary
+                              "* The armored knights of the Order. They serve as the officers of the army and navy.")
                            "Order Evangelist"
                             (base/unit
                              :name "Order Evangelist")
@@ -1575,11 +1579,15 @@
                            "Order Hierophant"
                             (base/unit
                              :name "Order Hierophant"
-                             :summary "* The Hierophant is the undisputed religious ruler of the nation. Though he theoretically holds no military power, he is considered to be infallible and a direct emissary of God, so he practically wields absolute power. His power is maintained by the Theocracy, so he must maintain their trust at all times.")
+                             :summary
+                              "* The Hierophant is the undisputed religious ruler of the nation. Though he theoretically holds no military power, he is considered to be infallible and a direct emissary of God, so he practically wields absolute power. His power is maintained by the Theocracy, so he must maintain their trust at all times.")
                            "Order Inquisitor"
                             (base/unit
                              :name "Order Inquisitor"
-                             :summary "* The Inquisitors have a single task: to root out and elminate heretics. To this end they act as judges, secret police, and interrogators. Inquisitors preside over rituals desgined to purge unacceptable desires from penitent hearts using methods that some might call torture.")
+                             :reference
+                              "* No mercy for heretics. - Solari Soldier, Runeterra"
+                             :summary
+                              "* The Inquisitors have a single task: to root out and elminate heretics. To this end they act as judges, secret police, and interrogators. Inquisitors preside over rituals desgined to purge unacceptable desires from penitent hearts using methods that some might call torture.")
                            "Order Mother Superior"
                             (base/unit
                              :name "Order Mother Superior")

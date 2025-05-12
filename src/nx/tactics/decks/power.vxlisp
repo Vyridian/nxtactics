@@ -104,10 +104,11 @@
         "* Force a substance to make a minor state change (e.g. Liquids become solids, soft substances turn to liquid, hard substances become soft, water evaporates, ice melts.")))
   (base/power
    :name "Anima"
-   :summary
-    "* Restrictions - Must not harm animals."
    :titles
     "Animal Mastery, Beast Lord, Beast Master"
+   :summary
+    "* Animal Friendship and Command
+     * Restrictions - Must not harm animals."
    :abilitymap
     (base/abilitymap
      "Animal Magnetism"
@@ -130,7 +131,8 @@
      "Bird's Eye"
       (base/ability
        :name "Bird's Eye"
-       :summary "* Have a bird spy for you.")
+       :summary
+        "* Have a bird spy for you.")
      "Call of the Wild"
       (base/ability
        :name "Call of the Wild"
@@ -400,7 +402,6 @@
    :summary
     "* Divine power surrounds the petitioner and those deemed allies.
      * [Focus]: +1 [Defense]"
-   :titles "Protection"
    :stat "Will"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -720,11 +721,8 @@
    :stat "Shadow"
    :abilitymap
     (base/abilitymap
-     :Balefire
-      (base/ability
-       :name "Balefire"
-       :summary "* Balefire is a magical, corrupting fire that appears as a sickly pale, greenish flame that flows like a liquid. It burns like napalm and is not extinquished by water. Prolonged exposure produces damage like [Radiation]."
-       :titles "Hellfire, Witchfire")
+     "Balefire"
+      (base/ability<-tactics-key tactics "Balefire")
      :Befoul
       (base/ability
        :name "Befoul")
@@ -761,6 +759,8 @@
      "Eye of Corruption"
       (base/ability
        :name "Eye of Corruption")
+     "Fester"
+      (base/ability<-tactics-key tactics "Fester")
      :Miasma
       (base/ability
        :name "Miasma")
@@ -836,17 +836,16 @@
      "Death Touch"
       (base/ability
        :name "Death Touch"
+       :titles "Dim Mak"
        :reference "Five Point Palm Exploding Heart Technique - Kill Bill"
        :summary
         "* The fighter strikes vulnerable pressure points, disrupting the opponent's chi flow causing intense pain or death. The effect has no outward effect, but the victim will know something is wrong. Eventually, the victim recovers or dies suddenly from the stress.
-         -1 Action
-         -2 Initiative
-         -2 Accuracy
-         +0 Damage - [Stun] only
-         +3 Criticals - [Poison]
+         * [Skill]: [Cultivation]-2
+         * [Requires]: [Strong]
+         * [Damage]: [Stun] only
+         * [Crits]: [Poison]
          0 Move
-         -1 Defense"
-       :titles "Dim Mak")
+         -1 Defense")
      "Empty Force"
       (base/ability
        :name "Empty Force"
@@ -986,19 +985,19 @@
         "* Animates a melee weapon which makes the next attack easier.
          * [Requires]: A melee weapon with no moving parts.
          * [Action]: On the next action the weapon may be used at [+1 Skill].")
-     :Miniature
+     "Miniature"
       (base/ability
        :name "Miniature"
        :summary "* A miniature of a simple item grows into a full size version.")
-     :Puppeteer
+     "Puppeteer"
       (base/ability
        :name "Puppeteer"
        :summary "* When this unit acts the target unit must perform the same actions.")
-     :Rack
+     "Rack"
       (base/ability
        :name "Rack"
        :summary "* Each time Target uses a special [Ability] it takes a [Stun].")
-     :Serendipity
+     "Serendipity"
       (base/ability
        :name "Serendipity")
      "Spirit Bottle"
@@ -1016,6 +1015,8 @@
        :name "Subtle Possession"
        :summary
         "* The user's spirit secretly enters the body of the target. The user acts as a manipulative inner voice to the target.")
+     "Swap Sensations"
+      (base/ability<-tactics-key tactics "Swap Sensations")
      "Sympathetic Bond"
       (base/ability
        :name "Sympathetic Bond"
@@ -1097,36 +1098,6 @@
      * Demon Soul allows the user a number of physical advantages including regeneration and natural weaponry, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit."
    :titles "Demon, Demon Soul, Yoki, Yoma"
    :stat "Beast")
-  (base/power
-   :name "Divine"
-   :reference
-    "* It might take the suffering or worship of 10,000 souls to produce a grain of Divinity...but a single grain is beyond all the power of this world."
-   :summary
-    "* The ability to absorb the worship of others. Level determines the amount of Divinity that can be held at once."
-   :titles "Prime, Primal"
-   :abilitymap
-    (base/abilitymap
-     "Divine Accuracy"
-      (base/ability
-       :name "Divine Accuracy"
-       :summary
-        "* Attack: Spend a [Divinity]. The attack cannot miss. The minimum number of hits is 1 Critical.")
-     "Divine Blessing"
-      (base/ability
-       :name "Divine Blessing"
-       :summary "* Action: Transfer any amount of [Divinity] to the target.")
-     "Divine Grace"
-      (base/ability
-       :name "Divine Grace"
-       :summary "* Action: Spend a [Divinity]. Perform another non-attack Action. That action cannot fail. The minimum success is 1 Critical.")
-     "Divine Shield"
-      (base/ability
-       :name "Divine Shield"
-       :summary "* Action: Choose a shield or armor and spend a [Divinity]. For the next 3 turns, the shield or armor cannot be penetrated by force that is not also Divine.")
-     "Divine Strike"
-      (base/ability
-       :name "Divine Strike"
-       :summary "* Attack: Spend a [Divinity].  If the attack hits, The damage is always at least 1 Critical.")))
   (base/power
    :name "Divination"
    :reference
@@ -1420,21 +1391,25 @@
      "Body Sculpting"
       (base/ability
        :name "Body Sculpting"
-       :summary "* Stats may be rearranged depending on the success roll. Only magical healing will repair.")
+       :reference
+        "* Oh you'll live, probably. - Crimson Aristocrat, Runeterra"
+       :summary
+        "* Stats may be rearranged depending on the success roll. Only magical healing will repair.")
      "Flesh Molding"
       (base/ability
        :name "Flesh Molding"
-       :summary "* Body can be scuplted like clay. This is a very powerful but impercise ability. It can be further refined with [Body Scuplting].")
-     :Grafting
+       :summary
+        "* Body can be scuplted like clay. This is a very powerful but impercise ability. It can be further refined with [Body Scuplting].")
+     "Grafting"
       (base/ability
        :name "Grafting"
        :reference "Frankenstein's Monster"
        :summary "* Separate living organs from their host and graft them to another.")
-     :Hybridize
+     "Hybridize"
       (base/ability
        :name "Hybridize"
        :summary "* Create new lifeforms by growing hybridized cells.")
-     :Pain
+     "Pain"
       (base/ability
        :name "Pain"
        :reference
@@ -1727,11 +1702,13 @@
      "Brush with Death"
       (base/ability
        :name "Brush with Death")
-     "Call the Death"
+     "Call the Dead"
       (base/ability
-       :name "Call the Death"
-       :reference "* Bring out your dead! - Monty Python and the Holy Grail"
-       :summary "* Attract undead creatures to your location.")
+       :name "Call the Dead"
+       :reference
+        "* Bring out your dead! - Monty Python and the Holy Grail"
+       :summary
+        "* Attract undead creatures to your location.")
      "Command the Dead"
       (base/ability
        :name "Command the Dead"
@@ -1753,15 +1730,16 @@
       (base/ability
        :name "Dead Man Walking"
        :summary "* The Necromancer becomes corpselike and is treated as [Undead] by other [Undead].")
-     :Deathgrip
+     "Dead Men Tell No Tales"
+      (base/ability
+       :name "Dead Men Tell No Tales"
+       :summary
+        "* Speak to a corpse. This is more difficult the longer they are dead and often does not work.")
+     "Deathgrip"
       (base/ability
        :name "Deathgrip")
      "Death's Door"
-      (base/ability
-       :name "Death's Door"
-       :summary
-        "* [Action]: Project your spirit into the [Underworld] while the body lies in a coma.
-         * [Death]: Enter the Underworld")
+      (base/ability<-tactics-key tactics "Death's Door")
      "Drain Life"
       (base/ability
        :name "Drain Life")
@@ -1769,7 +1747,7 @@
       (base/ability
        :name "Draining Strike"
        :summary "* While this ability is active, gain 1 Health when the user deals at least 1 [Health] damage with a [Close Combat] [Strike].")
-     :Embalming
+     "Embalming"
       (base/ability
        :name "Embalming"
        :summary
@@ -1785,36 +1763,37 @@
        :summary
         "* The Hand of Glory is the dried and pickled hand of a man who has been hanged, often specified as being the left (Latin: sinister) hand, or, if the man were hanged for murder, the hand that 'did the deed.'
          * Old European beliefs attribute great powers to a Hand of Glory combined with a candle made from fat from the corpse of the same malefactor who died on the gallows. The candle so made, lighted, and placed (as if in a candlestick) in the Hand of Glory, would have rendered motionless all persons to whom it was presented.")
-     :Harrowing
+     "Harrowing"
       (base/ability
        :name "Harrowing")
      "Living Death"
       (base/ability
        :name "Living Death"
        :summary "* Temporarily turns the caster into a [Lich].")
-     :Manifestation
+     "Manifestation"
       (base/ability
        :name "Manifestation"
-       :summary "* Allows a dead spirit to temporarily interact with the living world.")
+       :summary
+        "* Allows a dead spirit to temporarily interact with the living world.")
      "Moment of Death"
       (base/ability
        :name "Moment of Death"
        :summary "* Touch a corpse and view its death.")
-     :Mummification
+     "Mummification"
       (base/ability
        :name "Mummification"
        :summary "* A complex ritual to turn the target into a [Mummy] or [Lich].  A perfectly created undead appears like a completely normal living being (though it is no longer alive).  Flaws is the casting make the being more monstrous.")
-     :Necropotence
+     "Necropotence"
       (base/ability
        :name "Necropotence"
        :summary "* Reduce your own health to increase another magical effect.")
-     :Necroscope
+     "Necroscope"
       (base/ability
        :name "Necroscope")
      "Prolong Life"
       (base/ability
        :name "Prolong Life")
-     :Reanimation
+     "Reanimation"
       (base/ability
        :name "Reanimation"
        :reference "Reanimator"
@@ -1826,7 +1805,7 @@
      "Rigor Mortis"
       (base/ability
        :name "Rigor Mortis")
-     :Seance
+     "Seance"
       (base/ability
        :name "Seance"
        :summary "* Draw ghosts to you and allow them to speak through you.")
@@ -1836,7 +1815,7 @@
        :summary
         "* [Requires]: Target whose spirit has left its body.
          * [Action]: Cut the connection between the spirit and its body.  The spirit may become lost, and the body falls into a coma. The soulless body is now an attractive target for possession.")
-     :Undeath
+     "Undeath"
       (base/ability
        :name "Undeath"
        :summary
@@ -1898,11 +1877,14 @@
       (base/ability
        :name "Pinwheel")))
   (base/power
-   :name "Primal Force"
+   :name "Primus"
+   :titles "Arch Demon, Arch Fiend, Celestials, Deity, Demigod, Divine Power, Galactus, Godling, Godly, Godlike, Greater Deity, Lesser Deity, Planeswalker, Power Cosmic, Prime, Primal, Supreme Deity"
+   :reference
+    "* It might take the suffering or worship of 10,000 souls to produce a grain of Divinity...but a single grain is beyond all the power of this world."
    :summary
-    "* Primal energy is the most fundamental energy in existence. It is, at once, physical, mental, and spiritual. As the fundamental energy of the cosmos, those that wield it have a special connection to reality and can gain control over certain aspects of reality.
-     * Though Primal is not innately more powerful than other forces, it makes other abilities a great deal more effective."
-   :titles "Arch Demon, Arch Fiend, Celestials, Deity, Demigod, Divine Power, Galactus, Godling, Godly, Godlike, Greater Deity, Lesser Deity, Planeswalker, Power Cosmic, Supreme Deity"
+    "* The ability to absorb the worship of others. Level determines the amount of Primus that can be held at once.
+     * Primus energy is the most fundamental energy in existence. It is, at once, physical, mental, and spiritual. As the fundamental energy of the cosmos, those that wield it have a special connection to reality and can gain control over certain aspects of reality.
+     * Though Primus is not innately more powerful than other forces, it makes other abilities a great deal more effective."
    :abilitymap
     (base/abilitymap
      "Channel Worship"
@@ -1922,7 +1904,13 @@
        :summary
         "* [Requires]: Spend a [Primal]
          * [Action]: Create [Skill] worth of creatures of any sort desired. These are free to maintain on any Plane the user created. They require an additional [Primal] per day when up to [Skill] Servitors are on any other Plane. Such Servitors are usually fanatically loyal, though some users do not inspire loyalty.")
-     :Planescaping
+     "Primal Grace"
+      (base/ability
+       :name "Primal Grace"
+       :summary
+        "* [Requires]: Spend a [Primus]
+         * [Free]: The current non-combat action cannot fail. The minimum success is 1 Critical.")
+     "Planescaping"
       (base/ability
        :name "Planescaping"
        :summary
@@ -1935,12 +1923,12 @@
        :name "Primal Accuracy"
        :summary
         "* [Requires]: Spend a [Primal]
-         * [Free]: The current [Attack] ignores target [Defense]. It may also be targetted to affect only one type of material.")
+         * [Free]: The current [Attack] ignores target [Evade]. It may also be targetted to affect only one type of material.")
      "Primal Armor"
       (base/ability
        :name "Primal Armor"
        :summary
-        "* [Requires]: Spend a [Primal]
+        "* [Requires]: Spend a [Primus]
          * [Free]: For this turn, gain [Armor] equal to [Skill] vs. any type of attack including [Primal Strike].")
      "Primal Avatar"
       (base/ability
@@ -1948,22 +1936,27 @@
      "Primal Awe"
       (base/ability
        :name "Primal Awe")
+     "Primal Blessing"
+      (base/ability
+       :name "Primal Blessing"
+       :summary "* Action: Transfer any amount of [Primus] to the target.")
      "Primal Defense"
       (base/ability
        :name "Primal Defense"
        :summary
-        "* [Requires]: Spend a [Primal]
+        "* [Requires]: Spend a [Primus]
          * [Free]: For this turn, gain [Defense] equal to [Skill] vs. any type of attack including [Primal Accuracy].")
      "Primal Embodiment"
       (base/ability
        :name "Primal Embodiment"
        :summary
-        "* [Requires]: Spend a [Primal]
+        "* [Requires]: Spend a [Primus]
          * [Action]: For the next [Skill] turns, the user may use any ability through any willing target.")
      "Primal Immortality"
       (base/ability
        :name "Primal Immortality"
-       :summary "* [Passive]: User does not age, does not require food, water or air.  User is immune to disease, gases, non-acidic poisons.")
+       :summary
+        "* [Passive]: User does not age, does not require food, water or air.  User is immune to disease, gases, non-acidic poisons.")
      "Primal Immunity"
       (base/ability
        :name "Primal Immunity"
@@ -2038,7 +2031,7 @@
    :name "Protection"
    :titles "Abjuration"
    :summary
-    "Protective Magic. They create barriers, negate abilities, harm trespassers, or banish those who do not belong. It includes Barriers and Wards."
+    "* Protective Magic. They create barriers, negate abilities, harm trespassers, or banish those who do not belong. It includes Barriers and Wards."
    :abilitymap
     (base/abilitymap
      :Banishment
@@ -2046,7 +2039,7 @@
        :name "Banishment"
        :summary
         "* [Action]: Return any [Outsider] to its original realm. This ability may only be attempted on a particular being once per month.")
-     :Binding
+     "Binding"
       (base/ability
        :name "Binding"
        :summary
@@ -2553,6 +2546,14 @@
      "Alter Weather"
       (base/ability
        :name "Alter Weather")
+     "Call Hailstorm"
+      (base/ability
+       :name "Call Hailstorm")
+     "Call Hurricane"
+      (base/ability
+       :name "Call Hurricane"
+       :summary "* Buildup"
+       :titles "Divine Wind")
      "Call Storm"
       (base/ability
        :name "Call Storm"
@@ -2574,7 +2575,7 @@
       (base/ability
        :name "Control Winds"
        :summary "* Effect: Raise or lower Wind strength.")
-     :Downdraft
+     "Downdraft"
       (base/ability
        :name "Downdraft")
      "Eye of the Storm"
@@ -2590,24 +2591,15 @@
      "Fog Bank"
       (base/ability
        :name "Fog Bank")
-     :Hailstorm
-      (base/ability
-       :name "Hailstorm")
-     :Hurricane
-      (base/ability
-       :name "Hurricane"
-       :summary "* Buildup"
-       :titles "Divine Wind")
-     :Smother
+     "Smother"
       (base/ability
        :name "Smother")
-     :Spindrift
+     "Spindrift"
       (base/ability
        :name "Spindrift"
        :summary "* Wind generates a thick mist above any body of water.")
-     :Suffocate
-      (base/ability
-       :name "Suffocate")
+     "Suffocate"
+      (base/ability<-tactics-key tactics "Suffocate")
      "Summon Cloud"
       (base/ability
        :name "Summon Cloud"
@@ -2622,14 +2614,14 @@
      "Summon Slyph"
       (base/ability
        :name "Summon Slyph")
-     :Swirl
+     "Swirl"
       (base/ability
        :name "Swirl")
      "Temperature Control"
       (base/ability
        :name "Temperature Control"
        :summary "* Effect: Raise or lower Temperature, Humidity.")
-     :Tempest
+     "Tempest"
       (base/ability
        :name "Tempest")
      "Tempest in a Teapot"
@@ -2658,7 +2650,9 @@
      "Whispering Winds"
       (base/ability
        :name "Whispering Winds"
-       :summary "Speak to others (one way) over long distances.")
+       :summary
+        "* [Power]: [Air] or [Aero]
+         * Speak to others (one way) over long distances.")
      "Wind Blade"
       (base/ability
        :name "Wind Blade"
@@ -2684,14 +2678,15 @@
       (base/ability
        :name "Wind Wall"
        :summary "* Wall that deflects missles and strikes aerial units.")
-     :Updraft
+     "Updraft"
       (base/ability
        :name "Updraft"
-       :summary "* [Action]: Apply [Wind] in a radius around user, lift enemies off the ground with Level weight, and hurl them down, if they strike a surface they take Level damage .")))
+       :summary
+        "* [Action]: Apply [Wind] in a radius around user, lift enemies off the ground with Level weight, and hurl them down, if they strike a surface they take Level damage .")))
   (base/power
    :name "Animalism"
-   :reference "Beast Boy, Teen Titans"
    :titles "Shapeshifter"
+   :reference "Beast Boy, Teen Titans"
    :abilitymap
     (base/abilitymap
      "Adhesive Grip"
@@ -3307,6 +3302,36 @@
       (base/ability
        :name "Snowblind")))
   (base/power
+   :name "Cabin"
+   :titles "Quarters"
+   :summary
+    "* The power to have living quarters inside. The maximum Mass is determined by [Intensity]. The amount allocated per person determines the endurance before resupply."
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Centrifuge Chamber"
+     "Cryogenic Chamber"
+     "Ejection System"
+     "Living Quarters"
+     "Luxury Facilities"
+     "Marine Ready Room"
+     "Passenger Seating"
+     "Prison Facilities"
+     "Quarters: Captain"
+     "Quarters: Crew"
+     "Quarters: VIP"
+     "Storm Chamber"))
+  (base/power
+   :name "Cargo"
+   :titles "Cargo Hold"
+   :summary
+    "* The ability to carry cargo. The maximum Mass is determined by [Intensity]."
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Fuel Scoop"
+     "Tanker Hold"))
+  (base/power
    :name "Combine"
    :reference
     "* Form feet and legs; form arms and body; and I'll form the head! - Keith, Voltron
@@ -3507,10 +3532,10 @@
      "Earth Wall"
       (base/ability
        :name "Earth Wall")
-     :Earthquake
+     "Earthquake"
       (base/ability
        :name "Earthquake")
-     :Landslide
+     "Landslide"
       (base/ability
        :name "Landslide"
        :summary "* Causes a weak section of earth or rock to collapse.")
@@ -3527,20 +3552,20 @@
        :name "Quagmire"
        :summary "* Any unit in the area is must spend double movement when moving."
        :titles "Mudslide, Quicksand")
-     :Sandstorm
+     "Sandstorm"
       (base/ability
        :name "Sandstorm")
-     :Shatter
+     "Shatter"
       (base/ability
        :name "Shatter"
        :summary "* [Attack] - Does no damage to the target, but instead damages its [Armor]."
        :titles "Armor Break")
-     :Sinkhole
+     "Sinkhole"
       (base/ability
        :name "Sinkhole"
        :summary "* A prone character on bare earth begins to sink."
        :titles "Dirt Nap")
-     :Solidify
+     "Solidify"
       (base/ability
        :name "Solidify"
        :summary "* Any liquified solid become solid again.")
@@ -3594,58 +3619,6 @@
      "Lightning Warp"
      "Resist: Electricity"))
   (base/power
-   :name "Electronics"
-   :abilitymap
-    (base/abilitymap
-     "Analyze Target"
-      (base/ability
-       :name "Analyze Target")
-     "Detailed Scan"
-      (base/ability
-       :name "Detailed Scan")
-     "Electronic Countermeasures"
-      (base/ability
-       :name "Electronic Countermeasures")
-     "Electronic Warfare"
-      (base/ability
-       :name "Electronic Warfare")
-     "Haywire Resistance"
-      (base/ability
-       :name "Haywire Resistance"
-       :summary "* Resists the Haywire attack")
-     "Laser Link"
-      (base/ability
-       :name "Laser Link")
-     "Locate Target"
-      (base/ability
-       :name "Locate Target")
-     "Navigation System"
-      (base/ability
-       :name "Navigation System")
-     "Quantum Entanglement Comm"
-      (base/ability
-       :name "Quantum Entanglement Comm"
-       :summary
-        "* A technique used to transfer quantum information from one quantum system to another over vast distances.")
-     "Radio Comm"
-      (base/ability
-       :name "Radio Comm")
-     "Radio Comm AM"
-      (base/ability
-       :name "Radio Comm AM")
-     "Radio Comm CB"
-      (base/ability
-       :name "Radio Comm CB")
-     "Radio Comm FM"
-      (base/ability
-       :name "Radio Comm FM")
-     "Scan for Life"
-      (base/ability
-       :name "Scan for Life")
-     "Scan for Weapons"
-      (base/ability
-       :name "Scan for Weapons")))
-  (base/power
    :name "Empathy"
    :summary "The ability to feel the joys and pains of others"
    :titles "Empath"
@@ -3655,7 +3628,7 @@
      "Change of Heart"
       (base/ability
        :name "Change of Heart")
-     :Compulsion
+     "Compulsion"
       (base/ability
        :name "Compulsion")
      "Cure Insanity"
@@ -3663,10 +3636,10 @@
        :name "Cure Insanity")
      "Demoralize"
       (base/ability<-tactics-key tactics "Demoralize")
-     :Depression
+     "Depression"
       (base/ability
        :name "Depression")
-     :Despair
+     "Despair"
       (base/ability
        :name "Despair")
      "Ego Crush"
@@ -3676,7 +3649,8 @@
      "Empathic Bond"
       (base/ability
        :name "Empathic Bond"
-       :summary "* Create a permanent empathic connection with a single target with an already established deep connection (typically lovers or longtime friends). Each senses the other's strong feelings over any distance. No effort is required to maintain the bond, but only one such bond can be maintained at a time.")
+       :summary
+        "* Create a permanent empathic connection with a single target with an already established deep connection (typically lovers or longtime friends). Each senses the other's strong feelings over any distance. No effort is required to maintain the bond, but only one such bond can be maintained at a time.")
      "Empathic Healing"
       (base/ability
        :name "Empathic Healing"
@@ -3687,27 +3661,29 @@
      "Empathic Link"
       (base/ability
        :name "Empathic Link"
-       :summary "* Create an empathic connection with a target. Each senses the other's honest feelings. This ability creates trust if the parties are being honest, or mistrust if the parties are false."
+       :summary
+        "* Create an empathic connection with a target. Each senses the other's honest feelings. This ability creates trust if the parties are being honest, or mistrust if the parties are false."
        :titles "Telesthesia")
      "Empathic Sense"
       (base/ability
        :name "Empathic Sense"
-       :summary "* Sense nearby sentient creatures by their emotions. A general sense of the emotions can be determined as well.")
-     :Enrage
+       :summary
+        "* Sense nearby sentient creatures by their emotions. A general sense of the emotions can be determined as well.")
+     "Enrage"
       (base/ability
        :name "Enrage")
-     :Enrapture
+     "Enrapture"
       (base/ability
        :name "Enrapture"
        :titles "Rapture")
-     :Enthrall
+     "Enthrall"
       (base/ability
        :name "Enthrall")
      "Fear Eater"
       (base/ability
        :name "Fear Eater"
        :summary "* Remove a [Fear] from the target and gain [Spirit].")
-     :Guilt
+     "Guilt"
       (base/ability
        :name "Guilt")
      "Heal Mental Trauma"
@@ -3716,18 +3692,18 @@
      "Lie Detector"
       (base/ability
        :name "Lie Detector")
-     :Nostalgia
+     "Nostalgia"
       (base/ability
        :name "Nostalgia")
-     :Obsession
+     "Obsession"
       (base/ability
        :name "Obsession")
      "Project Pain"
       (base/ability
        :name "Project Pain"
+       :titles "Pain Shared is a Pain Doubled"
        :summary
-        "* Relive a past (or current) trauma and project those feelings on a target. If you have more than 1 damage you may move 1 to the target. If you have more than 1 negative condition, you may move 1 negative condition to the target."
-       :titles "Pain Shared is a Pain Doubled")
+        "* Relive a past (or current) trauma and project those feelings on a target. If you have more than 1 damage you may move 1 to the target. If you have more than 1 negative condition, you may move 1 negative condition to the target.")
      "Share Pain"
       (base/ability
        :name "Share Pain"
@@ -3736,10 +3712,12 @@
        :summary
         "* Feel the pain the target is experiencing and create trust through the shared experience."
        :titles "Pain Shared is Pain Halved")
-     :Sympathy
+     "Swap Sensations"
+      (base/ability<-tactics-key tactics "Swap Sensations")
+     "Sympathy"
       (base/ability
        :name "Sympathy")
-     :Terrify
+     "Terrify"
       (base/ability
        :name "Terrify")))
   (base/power
@@ -3793,15 +3771,24 @@
      "Geared for Endurance"
       (base/ability
        :name "Geared for Endurance"
-       :summary "* Vehicle is designed for Endurance and can travel unusually long distances without resupply and is exceptionally rugged.")
+       :summary
+        "* Vehicle is designed for Endurance and can travel unusually long distances without resupply and is exceptionally rugged.")
      "Geared for Power"
       (base/ability
        :name "Geared for Power"
-       :summary "* Vehicle is designed for Power and can tow, lift, or push 50% more load than usual.")
+       :summary
+        "* Vehicle is designed for Power and can tow, lift, or push 50% more load than usual.")
      "Geared for Speed"
       (base/ability
        :name "Geared for Speed"
-       :summary "* Vehicle is designed for Speed and can accelerate faster and can temporarily exceed normal speed rating.")
+       :summary
+       "* Vehicle is designed for Speed and can accelerate faster and can temporarily exceed normal speed rating.")
+     "High Mobility"
+      (base/ability
+       :name "High Mobility"
+       :summary
+        "* Vehicles with this ability sacrifice overall speed for rapid turning. Movement systems are divided across the entire vehicle to maximize mobility, but this greatly reduces maximum speed.
+         * -2 Speed, Unit may use Infantry movement rules.")
      "Red Line"
       (base/ability
        :name "Red Line"
@@ -3809,63 +3796,296 @@
         "* Engineering can push any of the ships' systems for extra performance, but run the risk of significant damage.
          * [Action]: Roll vs. the target system. Any [Hits] increase that system by 1 for [Hits] turns. Each [Critical Hit] increases that system by a further 1. Negative [Hits] reduce that system by the [Hits] for [Hits] turns. For each system [Critical Hit], the system takes a [System Damage Token].")))
   (base/power
+   :name "Equipment"
+   :abilitymap
+    (base/abilitymap
+     "Active Camouflage"
+      (base/ability
+       :name "Active Camouflage")
+     "Air Locks"
+      (base/ability
+       :name "Air Locks")
+     "Airlift Ready"
+      (base/ability
+       :name "Airlift Ready"
+       :summary "* Ability to be quickly picked up and dropped by [Airlift] vehicles without them landing.")
+     "Alarm System"
+      (base/ability
+       :name "Alarm System"
+       :summary "* When armed, this defensive system will raise a warning whenever a person gets too close.")
+     "Anti-Personnel Charges"
+      (base/ability
+       :name "Anti-Personnel Charges"
+       :summary
+        "* When armed, this defensive system will automatically detonate whenever a person gets too close.")
+     "Artificial Intelligence"
+      (base/ability
+       :name "Artificial Intelligence")
+     "Atmospheric Sensors"
+      (base/ability
+       :name "Atmospheric Sensors")
+     "Automated Combat System"
+      (base/ability
+       :name "Automated Combat System")
+     "Autopilot"
+      (base/ability
+       :name "Autopilot")
+     "Biological Sensors"
+      (base/ability
+       :name "Biological Sensors")
+     "Boarding Equipment"
+      (base/ability
+       :name "Boarding Equipment"
+       :titles "Grapple Launchers, Magnetic Mooring Lines")
+     "Camouflage Net"
+      (base/ability
+       :name "Camouflage Net")
+     "Catapult Hook"
+      (base/ability
+       :name "Catapult Hook"
+       :summary
+        "* Can take off and land from carriers and gain the initial speed benefit of carrier catapults.")
+     "Climbing Apparatus"
+      (base/ability
+       :name "Climbing Apparatus")
+     "Cloaking"
+      (base/ability
+       :name "Cloaking"
+       :titles "Stealth Technology"
+       :summary
+        "* Reduces detection by radar, heat and other similar vehicle detection systems.")
+     "Cold Protection"
+      (base/ability
+       :name "Cold Protection")
+     "Crane Arm"
+      (base/ability
+       :name "Crane Arm")
+     "Desert Protection"
+      (base/ability
+       :name "Desert Protection")
+     "Detailed Scan"
+      (base/ability
+       :name "Detailed Scan")
+     "Easy to Modify"
+      (base/ability
+       :name "Easy to Modify")
+     "Electronic Counter-Countermeasures"
+      (base/ability
+       :name "EElectronic Counter-Countermeasures"
+       :titles "ECM, Jamming")
+     "Electronic Countermeasures"
+      (base/ability
+       :name "Electronic Countermeasures"
+       :titles "EECM, Jamming")
+     "Electronic Warfare"
+      (base/ability
+       :name "Electronic Warfare"
+       :titles "EW")
+     "Grapple Launcher"
+      (base/ability
+       :name "Grapple Launcher")
+     "Gun Ports"
+      (base/ability
+       :name "Gun Ports"
+       :summary "Allows crew to use small arms fire without sacrificing armor protection.")
+     "Haywire Resistance"
+      (base/ability
+       :name "Haywire Resistance"
+       :summary "* Resists the Haywire attack")
+     "Humanoid Form"
+      (base/ability
+       :name "Humanoid Form")
+     "Landing Gear"
+      (base/ability
+       :name "Landing Gear")
+     "Landing Gear: Snow"
+      (base/ability
+       :name "Landing Gear: Snow")
+     "Landing Gear: Water"
+      (base/ability
+       :name "Landing Gear: Water")
+     "Laser Link"
+      (base/ability
+       :name "Laser Link")
+     "Locate Target"
+      (base/ability
+       :name "Locate Target")
+     "Long Range Package"
+      (base/ability
+       :name "Long Range Package")
+     "Luxury Package"
+      (base/ability
+       :name "Luxury Package")
+     "Manipulator Arm"
+      (base/ability
+       :name "Manipulator Arm")
+     "Missile Decoys"
+      (base/ability
+       :name "Missile Decoys"
+       :titles "Chaff Dispenser, Flares")
+     "Minelayer"
+      (base/ability
+       :name "Minelayer")
+     "Minesweeper"
+      (base/ability
+       :name "Minesweeper")
+     "Navigation System"
+      (base/ability
+       :name "Navigation System")
+     "Off-Road Package"
+      (base/ability
+       :name "Off-Road Package")
+     "Quantum Entanglement Comm"
+      (base/ability
+       :name "Quantum Entanglement Comm"
+       :summary
+        "* A technique used to transfer quantum information from one quantum system to another over vast distances.")
+     "Radio Comm"
+      (base/ability
+       :name "Radio Comm")
+     "Radio Comm AM"
+      (base/ability
+       :name "Radio Comm AM")
+     "Radio Comm CB"
+      (base/ability
+       :name "Radio Comm CB")
+     "Radio Comm FM"
+      (base/ability
+       :name "Radio Comm FM")
+     "Ram Plate"
+      (base/ability
+       :name "Ram Plate")
+     "Remote Controlled"
+      (base/ability
+       :name "Remote Controlled")
+     "Sport Package"
+      (base/ability
+       :name "Sport Package")
+     "Streamlining"
+      (base/ability
+       :name "Streamlining")
+     "Tool Arm"
+      (base/ability
+       :name "Tool Arm")
+     "Towing Capacity"
+      (base/ability
+       :name "Towing Capacity")
+     "Training Facilities"
+      (base/ability
+       :name "Training Facilities")
+     "Vector Movement"
+      (base/ability
+       :name "Vector Movement"
+       :summary
+        "* Movement in frictionless environments follow Newton's first law, a object in motion tends to stay in motion.
+         * Units will continue at their current speed.
+         * [Speed] can used to increase or decrease current speed.
+         * [Speed] can also be used to sideslip left or right by 1 space.
+         * Facing can be changed by one side each space moved, but this does not change speed or direction.")
+     "Weapons Locker"
+      (base/ability
+       :name "Weapons Locker"))
+    :specialtymap
+     (base/specialtymap
+      :Battleship
+       (base/specialty
+        :name "Battleship"
+        :summary
+         "* A large (3 space) ship dedicated to being a battleship may carry a Spinal Mount weapon.
+          * Spinal Mount")
+      "Colony Vessel"
+       (base/specialty
+        :name "Colony Vessel"
+        :summary "* Cryogenic Chamber")
+      "Cargo Vessel"
+       (base/specialty
+        :name "Cargo Vessel"
+        :summary
+         "* Cargo Hold
+          * Tanker Hold")
+      "Factory Vessel"
+       (base/specialty
+        :name "Factory Vessel"
+        :summary
+         "* Factory
+          * Refinery
+          * Tanker Hold")
+      "Heavy Bomber"
+       (base/specialty
+        :name "Heavy Bomber")
+      "Heavy Carrier"
+       (base/specialty
+        :name "Heavy Carrier"
+        :summary
+         "* A large (3 space) ship dedicated to being a carrier can carry 1 extra unit (4 units) in its Hanger.
+          * Hanger
+          * Launch Catapult")
+      "Luxury Vessel"
+       (base/specialty
+        :name "Luxury Vessel"
+        :summary
+         "* Living Quarters
+          * Luxury Facilities")
+      "Prison Vessel"
+       (base/specialty
+        :name "Prison Vessel")
+      "Science Vessel"
+       (base/specialty
+        :name "Science Vessel"
+        :summary
+         "* Science Lab
+          * Sensor Arrays")
+      "Search and Rescue Vessel"
+       (base/specialty
+        :name "Search and Rescue Vessel"
+        :summary
+         "* Wide array of sensors
+          * Multipurpse rescue vehicles
+          * Heavy construction equipment
+          * Emergency medical facilities
+          * Space for evacuation and emergency supplies")
+      "Stealth Vessel"
+       (base/specialty
+        :name "Stealth Vessel"
+        :summary
+         "* Cloaking Device
+          * ECM
+          * Stealth Equipment")
+      "Transport Vessel"
+       (base/specialty
+        :name "Transport Vessel"
+        :summary "* Living Quarters")))
+  (base/power
    :name "Explosive"
    :abilitymap
     (base/abilitymap
      "Bombardier Spray"
       (base/ability
-       :name "Bombardier Spray"))
-    (base/abilitymap
+       :name "Bombardier Spray")
      "Explosive Body"
       (base/ability
        :name "Explosive Body"))
-    (base/abilitymap
      "Explosive Punch"
       (base/ability
-       :name "Explosive Punch")))
+       :name "Explosive Punch"))
   (base/power
    :name "Factory"
    :abilitymap
-    (base/abilitymap
-     "Gas Refinery"
-      (base/ability
-       :name "Gas Refinery")
-     "Oil Refinery"
-      (base/ability
-       :name "Oil Refinery")
-     "Oil Rig"
-      (base/ability
-       :name "Oil Rig")
-     "Manufacturing Factory"
-      (base/ability
-       :name "Manufacturing Factory")
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Factory: Manufacturing"
+     "Factory: Military"
+     "Factory: Pharmaceutical"
+     "Factory: Vehicle"
      "Mining Rig"
-      (base/ability
-       :name "Mining Rig")
-     "Pharmaceutical Manufacturing"
-      (base/ability
-       :name "Pharmaceutical Manufacturing")
-     "Aircraft Factory"
-      (base/ability
-       :name "Aircraft Factory")
-     "Mobile Shipyard"
-      (base/ability
-       :name "Mobile Shipyard")
-     "Naval Shipyard"
-      (base/ability
-       :name "Naval Shipyard")
-     "Spacecraft Shipyard"
-      (base/ability
-       :name "Spacecraft Shipyard")
-     "Starship Shipyard"
-      (base/ability
-       :name "Starship Shipyard")
-     "Tank Factory"
-      (base/ability
-       :name "Tank Factory")
-     "Vehicle Factory"
-      (base/ability
-       :name "Vehicle Factory")))
+     "Oil Rig"
+     "Refinery: Gas"
+     "Refinery: Oil"
+     "Refinery: Ore"
+     "Shipyard: Aircraft"
+     "Shipyard: Mobile"
+     "Shipyard: Naval"
+     "Shipyard: Spaceship"))
   (base/power
    :name "Fire"
    :reference
@@ -4077,12 +4297,12 @@
      "Air Droppable"
       (base/ability
        :name "Air Droppable")
-     :Airlift
+     "Airlift"
       (base/ability
        :name "Airlift"
        :summary
         "* Ability to pick up and drop cargo or [Airlift Ready] vehicles without landing.")
-     :Atmospheric
+     "Atmospheric"
       (base/ability
        :name "Atmospheric")
      "Diving Attack"
@@ -4147,91 +4367,6 @@
         "* If the unit has wings, it must have this ability or fly at a penalty.
          * If the unit grew up with wings, this ability is assumed.")))
   (base/power
-   :name "Fortitude"
-   :titles "Resistence, Toughness"
-   :stat "Body"
-   :abilitymap
-    (base/abilitymap
-     :Resilience
-      (base/ability
-       :name "Resilience")
-     "Resist Acid"
-      (base/ability
-       :name "Resist Acid")
-     "Resist Cold"
-      (base/ability
-       :name "Resist Cold")
-     "Resist Disease"
-      (base/ability
-       :name "Resist Disease")
-     "Resist Electricity"
-      (base/ability
-       :name "Resist Electricity")
-     "Resist Exposure"
-      (base/ability
-       :name "Resist Exposure")
-     "Resist Fire"
-      (base/ability
-       :name "Resist Fire"
-       :summary
-        "[Reduce Damage]: Reduce [Weapon Damage] by [Intensity].
-         Note: Not the same as Resist Heat")
-     "Resist Gravity"
-      (base/ability
-       :name "Resist Gravity")
-     "Resist Heat"
-      (base/ability
-       :name "Resist Heat"
-       :summary
-        "[Reduce Damage]: Reduce [Weapon Damage] by [Intensity].
-         Note: Not the same as Resist Fire")
-     "Resist Hunger"
-      (base/ability
-       :name "Resist Hunger")
-     "Resist Poison"
-      (base/ability
-       :name "Resist Poison")
-     "Resist Pressure"
-      (base/ability
-       :name "Resist Pressure")
-     "Resist Radiation"
-      (base/ability
-       :name "Resist Radiation")
-     "Resist Space"
-      (base/ability
-       :name "Resist Space")
-     "Resist Thirst"
-      (base/ability
-       :name "Resist Thirst")
-     "Resist Vacuum"
-      (base/ability
-       :name "Resist Vacuum")
-     "Resist Water"
-      (base/ability
-       :name "Resist Water")
-     "Suspended Animation"
-      (base/ability
-       :name "Suspended Animation")))
-  (base/power
-   :name "Genius"
-   :titles "Genius, Prodigy, Savant, Super Genius"
-   :stat "Mind"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Analyze Weakness"
-     "Calculator Mind"
-     "Engineering Genius"
-     "Financial Genius"
-     "Multitasking"
-     "Investigative Genius"
-     "Linguistic Genius"
-     "Mathematical Genius"
-     "Photographic Memory"
-     "Scientific Genius"
-     "Speed Reading"
-     "Tactical Genius"))
-  (base/power
    :name "Gravity"
    :abilitymap
     (base/abilitymap
@@ -4265,14 +4400,13 @@
      * Repair Drones
      * Mobile Armor"
    :titles "Vehicle Bay"
-    (base/abilitymap
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Catapult Launcher"
-      (base/ability
-       :name "Catapult Launcher"
-       :summary "* Launching vehicle may begin move at up to full speed without using fuel.")
      "Catapult Hook Capture"
-      (base/ability
-       :name "Catapult Hook Capture")))
+     "Escape Pod"
+     "Marine Drop Pod"))
   (base/power
    :name "Healing"
    :abilitymap
@@ -4497,9 +4631,14 @@
      "Vanish"))
   (base/power
    :name "Laboratory"
-   :summary "Special labs for analyzing information. Science labs are very flexible and can be used for any number of quick analytics. Obviously, they are severly limited compared to proper research facilities."
+   :summary
+    "* Special labs for analyzing information. Science labs are very flexible and can be used for any number of quick analytics. Obviously, they are severly limited compared to proper research facilities.
+     * Like [Transform] When purchasing a Laboratory, create one or more Units to represent the labooratories. The Intensity of the Laboratory is the total cost of the Units."
    :abilitymap
     (base/abilitymap
+     "Analyze Target"
+      (base/ability
+       :name "Analyze Target")
      "Chemical Lab"
       (base/ability
        :name "Chemical Lab")
@@ -4509,14 +4648,25 @@
      "Geological Lab"
       (base/ability
        :name "Geological Lab")
+     "Geological Scan"
+      (base/ability
+       :name "Geological Scan")
+     "Medical Lab"
+      (base/ability
+       :name "Medical Lab"
+       :titles "Sick Bay")
      "Physics Lab"
       (base/ability
        :name "Physics Lab")
-     "Sick Bay"
+     "Scan for Life"
       (base/ability
-       :name "Sick Bay")))
+       :name "Scan for Life")
+     "Scan for Weapons"
+      (base/ability
+       :name "Scan for Weapons")))
   (base/power
    :name "Life Support"
+   :titles "Environment"
    :abilitymap
     (base/abilitymap
      "Acceleration Dampening"
@@ -4704,6 +4854,13 @@
      "Induce Paranoia"
       (base/ability
        :name "Induce Paranoia")
+     "Maze of the Mind"
+      (base/ability
+       :name "Maze of the Mind"
+       :summary
+        "* Confuses the target's senses so it cannot accurately choose its direction. This can be extremely hazardous to fast moving units.
+         * [Skill]: [Brilliance]
+         * [Move]: Whenever the unit moves, its direction is randomized from among its normal movement options (including diving and climbing for air units).")
      "Mind Twist"
       (base/ability
        :name "Mind Twist")
@@ -4873,186 +5030,6 @@
       (base/ability
        :name "Tower of Iron Will"
        :summary "Ward")))
-  (base/power
-   :name "Mental Weakness"
-   :summary "* Note: Mental Weaknesses may be physical in nature, but they are grouped here because they effect mental function."
-   :abilitymap
-    (base/abilitymap
-     "Addle Minded"
-      (base/ability
-       :name "Addle Minded"
-       :summary "* Tendency to forget to do things or misplace things.  The missed things may be trival, important, or critical."
-       :titles "Absent Minded, Addle Minded, Airhead")
-     :Addiction
-      (base/ability
-       :name "Addiction")
-     "Alien Thoughts"
-      (base/ability
-       :name "Alien Thoughts")
-     :Amnesia
-      (base/ability
-       :name "Amnesia"
-       :reference "* Memento"
-       :summary "* Unit has strange lapses of memory. It may forget generally known facts, friends, family, or own identity.")
-     :Anxious
-      (base/ability
-       :name "Anxious")
-     :Bipolar
-      (base/ability
-       :name "Bipolar"
-       :summary "* Prone to fits of erratic up moods and severe depression. May be moody, lie around and mope, risk life and limb, or even suicidal."
-       :titles "Manic Depressive")
-     :Bloodthirsty
-      (base/ability
-       :name "Bloodthirsty"
-       :summary "* Must attack Bleeding Enemies first. May attack Bleeding Allies if a Spirit roll fails.")
-     :Brainwashed
-      (base/ability
-       :name "Brainwashed")
-     :Catatonia
-      (base/ability
-       :name "Catatonia")
-     "Compulsive Liar"
-      (base/ability
-       :name "Compulsive Liar")
-     :Cleptomania
-      (base/ability
-       :name "Cleptomania")
-     :Cyberpsychosis
-      (base/ability
-       :name "Cyberpsychosis"
-       :reference "* Something happens when you start to add metal and plastic to people. They start to change. And it isn't pretty - Cyberpunk RPG"
-       :summary "* A psychotic aberration suffered by excessive users of cyberware. It begins as a sense of loss for the portions of the body replaced with unfeeling machinery. Later it manifests as a Overconfidence and detachment from other people (sometimes in favor of machines). Extreme cases lead to more serious derangements such as: Martyr Syndrome, Megalomania, Delusions of Grandear, Inferiority Complex, and Messiah Complex.")
-     :Delusional
-      (base/ability
-       :name "Delusional"
-       :reference "* The walls of reality will come crashing down. One minute you'll be the savior of the rebel cause.  The next thing you know you'll be Cohagen's busom buddy. You'll even have fantasies of alien civilizations, as you requested, but in the end, back on Earth, you'll be lobotomized! - Dr. Edgemar, Total Recall"
-       :summary "* Believe things that are not real.  May hear voices or see things."
-       :titles "Free-form Delusion, Schizoid Embelism")
-     :Flashbacks
-      (base/ability
-       :name "Flashbacks")
-     :Frightened
-      (base/ability
-       :name "Frightened"
-       :summary "* Lacks nerve, especially in combat.  May freeze or flee."
-       :titles "Cowardly")
-     :Hallucinations
-      (base/ability
-       :name "Hallucinations")
-     :Homicidal
-      (base/ability
-       :name "Homicidal")
-     "Inferiority Complex"
-      (base/ability
-       :name "Inferiority Complex")
-     :Intolerant
-      (base/ability
-       :name "Intolerant")
-     :Manic
-      (base/ability
-       :name "Manic")
-     "Martyr Syndrome"
-      (base/ability
-       :name "Martyr Syndrome")
-     :Masochism
-      (base/ability
-       :name "Masochism"
-       :summary "* Dislikes self. Will go out of way to injure oneself. May seek verbal, physical, psychological, or sexual abuse. May seek life threatening abuse.")
-     :Megalomania
-      (base/ability
-       :name "Megalomania"
-       :summary "* A specific form of delusion that you are more important than you are. May believe you are destined for greatness, a Messiah, or even God."
-       :titles "Delusions of Grandeur, Messiah Complex")
-     "Mental Decay"
-      (base/ability
-       :name "Mental Decay"
-       :titles "Alzheimers")
-     "Multiple Personalities"
-      (base/ability
-       :name "Multiple Personalities"
-       :reference "Sybil"
-       :summary "* More than one distinct personality. Personalities may change under stress or randomly.  Personalities may like, dislike, or be oblivious to each other. Some may be dangerous to self or others.")
-     :Narssicist
-      (base/ability
-       :name "Narssicist")
-     :Nightmares
-      (base/ability
-       :name "Nightmares")
-     :Obsessed
-      (base/ability
-       :name "Obsessed"
-       :summary "* Focused on a single person or object and will talk about it all the time. May risk embarrassment, financial loss, or bodily harm to pursue it.")
-     "Obsessive Compulsive"
-      (base/ability
-       :name "Obsessive Compulsive"
-       :summary "* Compulsively performs trivial activities."
-       :titles "OCD")
-     :Overcompensating
-      (base/ability
-       :name "Overcompensating"
-       :summary "* Constantly attempt to draw attention away from preceived flaw.")
-     :Overconfidence
-      (base/ability
-       :name "Overconfidence")
-     :Paranoia
-      (base/ability
-       :name "Paranoia"
-       :reference "Just because you're paranoid doesn't mean they aren't after you. - Catch 22"
-       :summary "* Belief that enemies are everywhere. May rant endlessly about the conspiracy, compulsively work on defenses, risk everything to stop them.")
-     :Phobia
-      (base/ability
-       :name "Phobia"
-       :summary "* Unreasoning fear of some common thing. Fear of dogs, heights, sounds, or colors. May feel discomfort, paralyzing fear, beserk fear, or catatonia.")
-     "Post Traumatic Stress Disorder"
-      (base/ability
-       :name "Post Traumatic Stress Disorder")
-     :Pyromania
-      (base/ability
-       :name "Pyromania")
-     :Robophobia
-      (base/ability
-       :name "Robophobia"
-       :reference
-        "* Uncanny Valley - The theory that as a robot is made more humanlike in its appearance and motion, the emotional response from a human being to the robot will become increasingly positive, until a point is reached beyond which the response quickly becomes that of strong revulsion. However, as the appearance and motion continue to become less distinguishable from a human being, the emotional response becomes positive once more.
-         * This area of repulsive response aroused by a robot with appearance and motion between a 'barely human' and 'fully human' entity is called the uncanny valley. The name captures the idea that a robot which is 'almost human' will seem overly strange and corpselike.
-         * Not robots...walking dead. They pretend we control them...but really... - Doctor Who, The Robots of Death
-         * The name 'Grimwade's Syndrome' was an in-joke reference to production assistant Peter Grimwade who had bemoaned the fact that the stories on which he was assigned to work almost always involved robots. - Doctor Who, The Robots of Death"
-       :summary "* Fear of Robots"
-       :titles "Grimwade's Syndrome, Uncanny Valley")
-     "Refuses to Kill"
-      (base/ability
-       :name "Refuses to Kill")
-     :Sadistic
-      (base/ability
-       :name "Sadistic")
-     "Sex Crazed"
-      (base/ability
-       :name "Sex Crazed"
-       :titles "Cassonova, Heartbreaker, Lady Killer, Libertine, Lothario, Romeo, Sex Addict")
-     :Shy
-      (base/ability
-       :name "Shy"
-       :summary "* Hate dealing with others.  Avoid interactions with new people.  May need to retreat from others.")
-     :Sociopath
-      (base/ability
-       :name "Sociopath")
-     :Stubborn
-      (base/ability
-       :name "Stubborn"
-       :summary "* Will not give in or compromise.  May risk embarrassment, financial loss, or injury to prove you're right.")
-     :Tempermental
-      (base/ability
-       :name "Tempermental"
-       :reference "* What do we have? Sea Bass. Riiiight? They are mutated Sea Bass. Really. Are they ill-tempered.  Absolutely. Well that's a start. - Dr. Evil and Number 2 - Austin Powers"
-       :summary "* Constantly irritable. When temper flares will risk embarrassment, financial loss, incarceration, or life and limb."
-       :titles "Bad Tempered, Hot Tempered")
-     "Unreasoning Hatred"
-      (base/ability
-       :name "Unreasoning Hatred")
-     :Vengeful
-      (base/ability
-       :name "Vengeful")))
   (base/power
    :name "Mind Over Matter"
    :titles "Telekinesis, Psychokinesis"
@@ -5233,6 +5210,7 @@
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
+     "Autotomy"
      "Bite"
      "Bull Rush"
      "Burrowing"
@@ -5262,21 +5240,21 @@
    :name "Phasing"
    :titles "Intangibility"
    :abilitymap
-   (base/abilitymap<-abilitylist
-    (base/ability
-     :name "Dematerialize")
-    (base/ability
-     :name "Dematerialize Other")
-    (base/ability
-     :name "Phase Jump"
-     :summary
-      "* The ability to move without travelling through the intervening space.
-       * [Action]: Instantly move to any empty space up to 1/3 speed away without passing through any intervening spaces.")
-    (base/ability
-     :name "Phase Walk"
-     :summary
-      "* The ability to move through solid matter.
-       * [Action]: Move at half speed ignoring terrain penalties or other objects. While Phase Walking, the user takes no physical damage (unless it is magical). If the move ends in a solid object, the user is still considered to be Phase Walking unitl it no longer ends it turn on a solid object. No attacks can be made this turn.")))
+    (base/abilitymap<-abilitylist
+     (base/ability
+      :name "Dematerialize")
+     (base/ability
+      :name "Dematerialize Other")
+     (base/ability
+      :name "Phase Jump"
+      :summary
+       "* The ability to move without travelling through the intervening space.
+        * [Action]: Instantly move to any empty space up to 1/3 speed away without passing through any intervening spaces.")
+     (base/ability
+      :name "Phase Walk"
+      :summary
+       "* The ability to move through solid matter.
+        * [Action]: Move at half speed ignoring terrain penalties or other objects. While Phase Walking, the user takes no physical damage (unless it is magical). If the move ends in a solid object, the user is still considered to be Phase Walking unitl it no longer ends it turn on a solid object. No attacks can be made this turn.")))
   (base/power
    :name "Power Copy")
   (base/power
@@ -5293,6 +5271,13 @@
    :name "Power Theft")
   (base/power
    :name "Power Vampire")
+  (base/power
+   :name "Presence"
+   :abilitymap
+    (base/abilitymap
+     tactics
+     "Charm of Virgo"
+     "Desire"))
   (base/power
    :name "Psychic Power"
    :summary
@@ -5462,9 +5447,9 @@
      "Spyware Program"
       (base/ability
        :name "Spyware Program")
-     "Zombie Program"
+     "Program: Zombie"
       (base/ability
-       :name "Zombie Program"))
+       :name "Program: Zombie"))
    :specialtymap
     (base/specialtymap
      "Attack Programs"
@@ -5495,7 +5480,7 @@
         "* Dragon Ball
          * Phantom Miria - Claymore"
        :summary
-        "* Evade: Instantly make a Move without triggering Opportunity Attacks.")
+        "* [Evade]: Instantly make a Move without triggering Opportunity Attacks.")
      "Fast Actions"
       (base/ability
        :name "Fast Actions"
@@ -5521,7 +5506,7 @@
    :name "Radiation"
    :abilitymap
     (base/abilitymap
-     :Fallout
+     "Fallout"
       (base/ability
        :name "Fallout")
      "Radiation Beam"
@@ -5546,7 +5531,7 @@
        :summary
         "* Exits from a location loop back upon themselves to leave a person back where they started.")))
   (base/power
-   :name "Ropes"
+   :name "Bonds"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -5734,7 +5719,7 @@
      "Soulless"
      "Tainted"
      "Undead"
-     "Zombie"))
+     "Zombified"))
   (base/power
    :name "Strength"
    :reference "* Technique is for lightweights. - Sett, Runeterra"
@@ -5837,6 +5822,72 @@
       (base/ability
        :name "Travel to the Past")))
   (base/power
+   :name "Toughness"
+   :titles "Fortitude, Resistence"
+   :stat "Body"
+   :abilitymap
+    (base/abilitymap
+     :Resilience
+      (base/ability
+       :name "Resilience")
+     "Resist Acid"
+      (base/ability
+       :name "Resist Acid")
+     "Resist Cold"
+      (base/ability
+       :name "Resist Cold")
+     "Resist Disease"
+      (base/ability
+       :name "Resist Disease")
+     "Resist Electricity"
+      (base/ability
+       :name "Resist Electricity")
+     "Resist Exposure"
+      (base/ability
+       :name "Resist Exposure")
+     "Resist Fire"
+      (base/ability
+       :name "Resist Fire"
+       :summary
+        "[Reduce Damage]: Reduce [Weapon Damage] by [Intensity].
+         Note: Not the same as Resist Heat")
+     "Resist Gravity"
+      (base/ability
+       :name "Resist Gravity")
+     "Resist Heat"
+      (base/ability
+       :name "Resist Heat"
+       :summary
+        "[Reduce Damage]: Reduce [Weapon Damage] by [Intensity].
+         Note: Not the same as Resist Fire")
+     "Resist Hunger"
+      (base/ability
+       :name "Resist Hunger")
+     "Resist Poison"
+      (base/ability
+       :name "Resist Poison")
+     "Resist Pressure"
+      (base/ability
+       :name "Resist Pressure")
+     "Resist Radiation"
+      (base/ability
+       :name "Resist Radiation")
+     "Resist Space"
+      (base/ability
+       :name "Resist Space")
+     "Resist Thirst"
+      (base/ability
+       :name "Resist Thirst")
+     "Resist Vacuum"
+      (base/ability
+       :name "Resist Vacuum")
+     "Resist Water"
+      (base/ability
+       :name "Resist Water")
+     "Suspended Animation"
+      (base/ability
+       :name "Suspended Animation")))
+  (base/power
    :name "Toxins"
    :reference
     "* Say 'ah'. Some poisons can kill people in the thousands with that amount. Like botulinum toxin. It inhibits acetylcholine release, causing loss of muscle tone, lethary, .. dizziness .., visual impairment.., heavy eyelids, intense thirst, loss of speech, vomiting, diarrhea, stomach distention, breathing difficulty.. then.. respiratory failure. - A.K.I, Street Fighter 6"
@@ -5883,10 +5934,10 @@
      * Robotech
      * Let me change into something a little more... Comfortable. - Elise, Runeterra"
    :summary
-    "* The Unit transforms into one or more different forms.
+    "* Transform allows a unit to switch into a different form. Each form must be designnated at creation time, and each form must purchase its abilities sepearately. This is particularly useful for abilities that have penalties (e.g. High Mobility).
      * [Action]: Change into one of the Units.
      * This [Power] is similar to [Hanger] and [Combiner], but the Units are prechosen at creation and their [Cost] is included in the Transformer Unit Cost.
-     * The Transform [Intensity] must be high enough to hold the Units [Cost].")
+     * The Transform [Intensity] must be high enough to hold all of the Units [Cost].")
   (base/power
    :name "Transformation"
    :abilitymap
@@ -6054,126 +6105,6 @@
       :summary
        "* As Vampires age, their taste for blood becomes increasingly refined and they can no longer tolerate 'common' blood. Very old Vampires have exceedingly exotic tastes.")))
   (base/power
-   :name "Vehicle Systems"
-   :abilitymap
-    (base/abilitymap
-     "Airlift Ready"
-      (base/ability
-       :name "Airlift Ready"
-       :summary "* Ability to be quickly picked up and dropped by [Airlift] vehicles without them landing.")
-     "Alarm System"
-      (base/ability
-       :name "Alarm System"
-       :summary "* When armed, this defensive system will raise a warning whenever a person gets too close.")
-     "Anti-Personnel Charges"
-      (base/ability
-       :name "Anti-Personnel Charges"
-       :summary
-        "* When armed, this defensive system will automatically detonate whenever a person gets too close.")
-     "Artificial Intelligence"
-      (base/ability
-       :name "Artificial Intelligence")
-     "Automated Combat System"
-      (base/ability
-       :name "Automated Combat System")
-     :Autopilot
-      (base/ability
-       :name "Autopilot")
-     "Camouflage Net"
-      (base/ability
-       :name "Camouflage Net")
-     "Catapult Hook"
-      (base/ability
-       :name "Catapult Hook"
-       :summary
-        "* Can take off and land from carriers and gain the initial speed benefit of carrier catapults.")
-     :Cloaking
-      (base/ability
-       :name "Cloaking")
-     "Crane Arm"
-      (base/ability
-       :name "Crane Arm")
-     "Ejection System"
-      (base/ability
-       :name "Ejection System")
-     "High Mobility"
-      (base/ability
-       :name "High Mobility"
-       :summary
-        "* Vehicles with this ability sacrifice overall speed for rapid turning. Movement systems are divided across the entire vehicle to maximize mobility, but this greatly reduces maximum speed.
-         * -2 Speed, Unit may use Infantry movement rules.")
-     "Humanoid Form"
-      (base/ability
-       :name "Humanoid Form")
-     "Long Range Package"
-      (base/ability
-       :name "Long Range Package")
-     "Luxury Package"
-      (base/ability
-       :name "Luxury Package")
-     "Off-Road Package"
-      (base/ability
-       :name "Off-Road Package")
-     "Remote Controlled"
-      (base/ability
-       :name "Remote Controlled")
-     "Sport Package"
-      (base/ability
-       :name "Sport Package")
-     "Stealth Technology"
-      (base/ability
-       :name "Stealth Technology"
-       :summary "* Reduces detection by radar, heat and other similar vehicle detection systems.")
-     "Transformation System"
-      (base/ability
-       :name "Transformation System"
-       :summary "* Transformation allows a unit to switch into a different form. Each form must be designnated at creation time, and each form may have any or all of the units abilities. This is particularly useful for abilities that have penalties (e.g. High Mobility).")
-     "Vector Movement"
-      (base/ability
-       :name "Vector Movement"
-       :summary
-        "* Movement in frictionless environments follow Newton's first law, a object in motion tends to stay in motion.
-         * Units will continue at their current speed.
-         * [Speed] can used to increase or decrease current speed.
-         * [Speed] can also be used to sideslip left or right by 1 space.
-         * Facing can be changed by one side each space moved, but this does not change speed or direction.")
-     "Active Camouflage"
-      (base/ability
-       :name "Active Camouflage")
-     "Camo Netting"
-      (base/ability
-       :name "Camo Netting")
-     "Cold Protection"
-      (base/ability
-       :name "Cold Protection")
-     "Desert Protection"
-      (base/ability
-       :name "Desert Protection")
-     "Escape Pods"
-      (base/ability
-       :name "Escape Pods")
-     "Grapple Launcher"
-      (base/ability
-       :name "Grapple Launcher")
-     "Manipulator Arm"
-      (base/ability
-       :name "Manipulator Arm")
-     "Landing Gear"
-      (base/ability
-       :name "Landing Gear")
-     "Ram Plate"
-      (base/ability
-       :name "Ram Plate")
-     :Streamlining
-      (base/ability
-       :name "Streamlining")
-     "Stealth System"
-      (base/ability
-       :name "Stealth System")
-     "Tool Arm"
-      (base/ability
-       :name "Tool Arm")))
-  (base/power
    :name "Vibration"
    :titles "Tremors")
   (base/power
@@ -6279,18 +6210,459 @@
      "Wave Ride"
       (base/ability
        :name "Wave Ride")
-     :Whirlpool
+     "Whirlpool"
       (base/ability
        :name "Whirlpool")
      "Wishing Well"
       (base/ability
        :name "Wishing Well")))
   (base/power
-   :name "Weakness: Cursed")
+   :name "Weakness: Cursed"
+   :abilitymap
+    (base/abilitymap
+     "Dark Fate"
+      (base/ability
+       :name "Dark Fate")
+     "Haunted"
+      (base/ability
+       :name "Haunted")))
   (base/power
-   :name "Weakness: Dark Fate")
+   :name "Weakness: Mental"
+   :summary
+    "* Note: Mental Weaknesses may be physical in nature, but they are grouped here because they effect mental function."
+   :abilitymap
+    (base/abilitymap
+     "Addiction"
+      (base/ability
+       :name "Addiction")
+     "Addle Minded"
+      (base/ability
+       :name "Addle Minded"
+       :titles "Absent Minded, Addle Minded, Airhead"
+       :summary
+        "* Tendency to forget to do things or misplace things.  The missed things may be trival, important, or critical.")
+     "Alien Thoughts"
+      (base/ability
+       :name "Alien Thoughts")
+     "Amnesia"
+      (base/ability
+       :name "Amnesia"
+       :reference "* Memento"
+       :summary "* Unit has strange lapses of memory. It may forget generally known facts, friends, family, or own identity.")
+     "Anxious"
+      (base/ability
+       :name "Anxious")
+     "Bipolar"
+      (base/ability
+       :name "Bipolar"
+       :summary "* Prone to fits of erratic up moods and severe depression. May be moody, lie around and mope, risk life and limb, or even suicidal."
+       :titles "Manic Depressive")
+     "Blind Hatred"
+      (base/ability
+       :name "Blind Hatred")
+     "Bloodthirsty"
+      (base/ability
+       :name "Bloodthirsty"
+       :summary "* Must attack Bleeding Enemies first. May attack Bleeding Allies if a Spirit roll fails.")
+     "Brainwashed"
+      (base/ability
+       :name "Brainwashed")
+     "Catatonia"
+      (base/ability
+       :name "Catatonia")
+     "Compulsive Liar"
+      (base/ability
+       :name "Compulsive Liar")
+     "Cleptomania"
+      (base/ability
+       :name "Cleptomania")
+     "Cyberpsychosis"
+      (base/ability
+       :name "Cyberpsychosis"
+       :reference
+        "* Something happens when you start to add metal and plastic to people. They start to change. And it isn't pretty - Cyberpunk RPG"
+       :summary
+        "* A psychotic aberration suffered by excessive users of cyberware. It begins as a sense of loss for the portions of the body replaced with unfeeling machinery. Later it manifests as a Overconfidence and detachment from other people (sometimes in favor of machines). Extreme cases lead to more serious derangements such as: Martyr Syndrome, Megalomania, Delusions of Grandear, Inferiority Complex, and Messiah Complex.")
+     "Delusional"
+      (base/ability
+       :name "Delusional"
+       :reference
+        "* The walls of reality will come crashing down. One minute you'll be the savior of the rebel cause.  The next thing you know you'll be Cohagen's busom buddy. You'll even have fantasies of alien civilizations, as you requested, but in the end, back on Earth, you'll be lobotomized! - Dr. Edgemar, Total Recall"
+       :titles "Free-form Delusion, Schizoid Embelism"
+       :summary
+        "* Believe things that are not real.  May hear voices or see things.")
+     "Flashbacks"
+      (base/ability
+       :name "Flashbacks")
+     "Frightened"
+      (base/ability
+       :name "Frightened"
+       :summary
+        "* Lacks nerve, especially in combat.  May freeze or flee."
+       :titles "Cowardly")
+     "Hallucinations"
+      (base/ability
+       :name "Hallucinations")
+     "Homicidal"
+      (base/ability
+       :name "Homicidal")
+     "Inferiority Complex"
+      (base/ability
+       :name "Inferiority Complex")
+     "Intolerant"
+      (base/ability
+       :name "Intolerant")
+     "Manic"
+      (base/ability
+       :name "Manic")
+     "Martyr Syndrome"
+      (base/ability
+       :name "Martyr Syndrome")
+     "Masochism"
+      (base/ability
+       :name "Masochism"
+       :summary
+        "* Dislikes self. Will go out of way to injure oneself. May seek verbal, physical, psychological, or sexual abuse. May seek life threatening abuse.")
+     "Megalomania"
+      (base/ability
+       :name "Megalomania"
+       :titles "Delusions of Grandeur, Messiah Complex"
+       :summary
+        "* A specific form of delusion that you are more important than you are. May believe you are destined for greatness, a Messiah, or even God.")
+     "Mental Decay"
+      (base/ability
+       :name "Mental Decay"
+       :titles "Alzheimers")
+     "Multiple Personalities"
+      (base/ability
+       :name "Multiple Personalities"
+       :reference "Sybil"
+       :summary
+        "* More than one distinct personality. Personalities may change under stress or randomly.  Personalities may like, dislike, or be oblivious to each other. Some may be dangerous to self or others.")
+     "Narssicist"
+      (base/ability
+       :name "Narssicist")
+     "Nightmares"
+      (base/ability
+       :name "Nightmares")
+     "Obsessed"
+      (base/ability
+       :name "Obsessed"
+       :summary
+        "* Focused on a single person or object and will talk about it all the time. May risk embarrassment, financial loss, or bodily harm to pursue it.")
+     "Obsessive Compulsive"
+      (base/ability
+       :name "Obsessive Compulsive"
+       :titles "OCD"
+       :summary
+        "* Compulsively performs trivial activities.")
+     "Overcompensating"
+      (base/ability
+       :name "Overcompensating"
+       :summary
+        "* Constantly attempt to draw attention away from preceived flaw.")
+     "Overconfidence"
+      (base/ability
+       :name "Overconfidence")
+     "Paranoia"
+      (base/ability
+       :name "Paranoia"
+       :reference
+        "Just because you're paranoid doesn't mean they aren't after you. - Catch 22"
+       :summary
+        "* Belief that enemies are everywhere. May rant endlessly about the conspiracy, compulsively work on defenses, risk everything to stop them.")
+     "Phobia"
+      (base/ability
+       :name "Phobia"
+       :summary
+        "* Unreasoning fear of some common thing. Fear of dogs, heights, sounds, or colors. May feel discomfort, paralyzing fear, beserk fear, or catatonia.")
+     "Post Traumatic Stress Disorder"
+      (base/ability
+       :name "Post Traumatic Stress Disorder")
+     "Pyromania"
+      (base/ability
+       :name "Pyromania")
+     "Robophobia"
+      (base/ability
+       :name "Robophobia"
+       :reference
+        "* Uncanny Valley - The theory that as a robot is made more humanlike in its appearance and motion, the emotional response from a human being to the robot will become increasingly positive, until a point is reached beyond which the response quickly becomes that of strong revulsion. However, as the appearance and motion continue to become less distinguishable from a human being, the emotional response becomes positive once more.
+         * This area of repulsive response aroused by a robot with appearance and motion between a 'barely human' and 'fully human' entity is called the uncanny valley. The name captures the idea that a robot which is 'almost human' will seem overly strange and corpselike.
+         * Not robots...walking dead. They pretend we control them...but really... - Doctor Who, The Robots of Death
+         * The name 'Grimwade's Syndrome' was an in-joke reference to production assistant Peter Grimwade who had bemoaned the fact that the stories on which he was assigned to work almost always involved robots. - Doctor Who, The Robots of Death"
+       :summary "* Fear of Robots"
+       :titles "Grimwade's Syndrome, Uncanny Valley")
+     "Refuses to Kill"
+      (base/ability
+       :name "Refuses to Kill")
+     "Sadistic"
+      (base/ability
+       :name "Sadistic")
+     "Sex Crazed"
+      (base/ability
+       :name "Sex Crazed"
+       :titles "Cassonova, Heartbreaker, Lady Killer, Libertine, Lothario, Romeo, Sex Addict")
+     "Shy"
+      (base/ability
+       :name "Shy"
+       :summary "* Hate dealing with others.  Avoid interactions with new people.  May need to retreat from others.")
+     "Skittish"
+      (base/ability
+       :name "Skittish")
+     "Sociopath"
+      (base/ability
+       :name "Sociopath")
+     "Stubborn"
+      (base/ability
+       :name "Stubborn"
+       :summary
+        "* Will not give in or compromise.  May risk embarrassment, financial loss, or injury to prove you're right.")
+     "Tempermental"
+      (base/ability
+       :name "Tempermental"
+       :titles "Bad Tempered, Hot Tempered"
+       :reference
+        "* Dr:What do we have? #2:Sea Bass. Dr:Riiiight? #2:They are mutated Sea Bass. Dr:Really? Are they ill-tempered? #2:Absolutely. Dr:Well that's a start. - Dr. Evil and Number 2 - Austin Powers"
+       :summary
+        "* Constantly irritable. When temper flares will risk embarrassment, financial loss, incarceration, or life and limb.")
+     "Vengeful"
+      (base/ability
+       :name "Vengeful")))
   (base/power
-   :name "Weakness: Haunted")
+   :name "Weakness: Physical"
+   :titles "Aberrations, Inhumanity, The Price of Power, Taint"
+   :summary
+    "A being that has a great deal of power becomes increasingly inhuman as power increases. Physical powers become harder to conceal growing increasingly monstrous and mentality leans more toward megalomania, messiah complex, or detached alien."
+   :abilitymap
+    (base/abilitymap
+     "Allergy"
+      (base/ability
+       :name "Allergy"
+       :summary "Affected by substances or energies that have little or no effect on normal people.")
+     "Asthma"
+      (base/ability
+       :name "Asthma")
+     "Atrophy"
+      (base/ability
+       :name "Atrophy"
+       :summary "* One or more limbs has limited mobility")
+     "Blind"
+      (base/ability
+       :name "Blind")
+     "Brittle"
+      (base/ability
+       :name "Brittle")
+     "Child"
+      (base/ability
+       :name "Child"
+       :summary "* You are still a child and have difficulty getting others to take you seriously. This is usually taken with [Short].")
+     "Cold Blooded"
+      (base/ability
+       :name "Cold Blooded")
+     "Color Blindness"
+      (base/ability
+       :name "Color Blindness")
+     :Contagious
+      (base/ability
+       :name "Contagious"
+       :summary "Spreads disease.")
+     "Clumsy"
+      (base/ability
+       :name "Clumsy")
+     "Deaf"
+      (base/ability
+       :name "Deaf")
+     "Deformity"
+      (base/ability
+       :name "Deformity"
+       :summary "* Reduces Social Skills and some Physical Skills.")
+     "Disfigured"
+      (base/ability
+       :name "Disfigured"
+       :summary "* Reduces Social Skills dramatically.")
+     "Extra Body Parts"
+      (base/ability
+       :name "Extra Body Parts")
+     "Hard of Hearing"
+      (base/ability
+       :name "Hard of Hearing")
+     "Lame"
+      (base/ability
+       :name "Lame"
+       :summary "* Reduces Speed")
+     "Leprosy"
+      (base/ability
+       :name "Leprosy")
+     "Missing Body Parts"
+      (base/ability
+       :name "Missing Body Parts")
+     "Mute"
+      (base/ability
+       :name "Mute")
+     "Obvious"
+      (base/ability
+       :name "Obvious"
+       :summary "* Easy to detect and target"
+       :titles "Large Profile")
+     "Obvious"
+      (base/ability
+       :name "Obvious"
+       :summary "* Easy to identify and track"
+       :titles "Energy Signature, Heat Signature")
+     "Numb"
+      (base/ability
+       :name "Numb")
+     "Old"
+      (base/ability
+       :name "Old")
+     "Paralyzed"
+      (base/ability
+       :name "Paralyzed")
+     "Parasitic Infection"
+      (base/ability
+       :name "Parasitic Infection")
+     "Peeling Skin"
+      (base/ability
+       :name "Peeling Skin")
+     "Poor Vision"
+      (base/ability
+       :name "Poor Vision")
+     "Short"
+      (base/ability
+       :name "Short"
+       :summary
+        "* This minor weakness reduces vision over objects and movement speed.
+         * It can, however, provide benefits to [Stealth].")
+     "Sterile"
+      (base/ability
+       :name "Sterile"
+       :summary "* May not produce offspring")
+     "Tasteless"
+      (base/ability
+       :name "Tasteless")
+     "Temperature Control Problem"
+      (base/ability
+       :name "Temperature Control Problem"
+       :summary "* Cannot regulate temperature correctly")
+     "Terminal Condition"
+      (base/ability
+       :name "Terminal Condition")
+     "Unusual Appearance"
+      (base/ability
+       :name "Unusual Appearance")
+     "Unusual Diet"
+      (base/ability
+       :name "Unusual Diet"
+       :summary
+        "* Minor: Eat wood, garbage, hair, etc.
+         * Major: Eat metal, energy
+         * Extreme: Eat blood, human flesh, plutonium")
+     "Unusual Eyes"
+      (base/ability
+       :name "Unusual Eyes"
+       :summary
+        "* Minor: Strange colored
+         * Major: Animal-like, or glowing eyes
+         * Extreme: Bug-eyes, or no eyes")
+     "Unusual Limbs"
+      (base/ability
+       :name "Unusual Limbs"
+       :summary "Gnarled, segmented, snake-like, eloganted or other bizarre looking limbs")
+     "Unusual Musculature"
+      (base/ability
+       :name "Unusual Musculature"
+       :summary "Bulging muscles or wasted looking")
+     "Unusual Skin"
+      (base/ability
+       :name "Unusual Skin"
+       :summary
+        "* Minor: Strange colored
+         * Major: Furry, Striped, Glowing
+         * Extreme: Translucent, Reptilian, Rock-like, Exoskeleton, Oozing")
+     "Vulnerability"
+      (base/ability
+       :name "Vulnerability"
+       :summary "* Take additional damage from certain effects")
+     "Vulnerable: Bleeding"
+      (base/ability
+       :name "Vulnerable: Bleeding")
+     "Vulnerable: Electricity"
+      (base/ability
+       :name "Vulnerable: Electricity")
+     "Vulnerable: Fire"
+      (base/ability
+       :name "Vulnerable: Fire")
+     "Vulnerable: Heat"
+      (base/ability
+       :name "Vulnerable: Heat")
+     "Vulnerable: Impact"
+      (base/ability
+       :name "Vulnerable: Impact")
+     "Vulnerable: Piercing"
+      (base/ability
+       :name "Vulnerable: Piercing")
+     "Vulnerable: Radiation"
+      (base/ability
+       :name "Vulnerable: Radiation")
+     "Vulnerable: Slashing"
+      (base/ability
+       :name "Vulnerable: Slashing")
+     "Vulnerable: Unusual"
+      (base/ability
+       :name "Vulnerable: Unusual"
+       :reference "Kryptonite, Severe Allergies"
+       :summary "* Take damage from things that are not dangerous to ordinary people.")
+     "Wasting"
+      (base/ability
+       :name "Wasting")))
+  (base/power
+   :name "Weakness: Social"
+   :abilitymap
+    (base/abilitymap
+     "Awkward"
+      (base/ability
+       :name "Awkward")
+     "Hideous"
+      (base/ability
+       :name "Hideous")
+     "Hunted"
+      (base/ability
+       :name "Hunted")
+     "Naive"
+      (base/ability
+       :name "Naive")
+     "Nemesis"
+      (base/ability
+       :name "Nemesis")
+     "Noble"
+      (base/ability
+       :name "Noble")
+     "Notorious"
+      (base/ability
+       :name "Notorious")
+     "Speech Impediment"
+      (base/ability
+       :name "Speech Impediment")
+     "Strangeness"
+      (base/ability
+       :name "Strangeness")
+     "Terrifying"
+      (base/ability
+       :name "Terrifying")
+     "Timid"
+      (base/ability
+       :name "Timid")
+     "Ugly"
+      (base/ability
+       :name "Ugly")
+     "Unnatural Presense"
+      (base/ability
+       :name "Unnatural Presense"
+       :summary "* Subtly disturbing, homely, or too perfect and inspires negative attention from others.")
+     "Ward"
+      (base/ability
+       :name "Ward"
+       :summary "* You are devoted to taking care of another (who happens to get into trouble a lot).")))
   (base/power
    :name "Weather")
  )

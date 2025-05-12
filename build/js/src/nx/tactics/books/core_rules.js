@@ -196,9 +196,7 @@ export default class nx_tactics_books_core_rules {
             ":Collision",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Collision", ":summary", "* When 2 units collide, they each Roll [Body]+[Speed] vs. [Armor] against each other.\n* Either, both, or neither may take damage."),
             ":Difficulty",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Difficulty", ":summary", "* Easy - Quick Game with Basic Rules\n* Medium\n* Difficult\n* Epic - Maximum complexity (and detail).  Often long play or part of a [Campaign]."),
-            ":Initiative",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Initiative", ":summary", "* Initiative is determined by Spirit. Unit act in order of initiative from lowest to highest. Before any Action, a unit with higher initiative may interrupt the current unit and take its turn.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Difficulty", ":summary", "* Easy - Quick Game with Basic Rules\n* Medium\n* Difficult\n* Epic - Maximum complexity (and detail).  Often long play or part of a [Campaign].")
           )
         )
       )
@@ -244,13 +242,13 @@ export default class nx_tactics_books_core_rules {
             "Large Scale",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Large Scale", ":summary", "* 1 Turn = 15 seconds\n* 1 Space = 15m (50 ft)\n* 24 x 20 map = 360m x 300m"),
             "Modern Naval Scale",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Modern Naval Scale", ":summary", "* Naval Combat - World War II was the turning point of Naval Warfare when air power made traditional naval\ncombat obsolete.  Even submarines and torpedoes were insignificant compared to the effect of air power.  Map\nscale is therefore based primarily on aircraft speed.\n* 1 Turn = 5 seconds\n* 1 Space = 80m\n* Infantry: 100 man Company with only light gear: 18mph = 29kph = 8m/s = 40m/turn = 1/2 space (1 space assuming\ntrucks)\n* Race Car: 10 cars in 1 space: 100mph = 160kph = 45m/s = 225m/turn = 3 spaces\n* Sherman Tank: 5 tanks in 1 space: 25mph = 38kph = 10m/s = 50m/turn = 1 space\n* SBD Dauntless: 5 plane Flight in 1 space: 250mph = 400kph = 110m/s = 550 m/turn = 7 spaces\n* B-24 Liberator: 1 plane take 1 space:  300mph = 470kph = 130m/s = 650 m/turn = 8 spaces\n* PT-109: 24m takes 1 space: 76kph = 21m/s = 105m/turn = 1.5 spaces\n* USS Enterprise: 240m takes 3x1 spaces: 37mph = 60kph = 17m/s = 85 m/turn = 1 space"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Modern Naval Scale", ":summary", "* Naval Combat - World War II was the turning point of Naval Warfare when air power made traditional naval combat obsolete. Even submarines and torpedoes were insignificant compared to the effect of air power. Map scale is therefore based primarily on aircraft speed.\n* 1 Turn = 5 seconds\n* 1 Space = 80m\n* Infantry: 100 man Company with only light gear: 18mph = 29kph = 8m/s = 40m/turn = 1/2 space (1 space assuming trucks)\n* Race Car: 10 cars in 1 space: 100mph = 160kph = 45m/s = 225m/turn = 3 spaces\n* Sherman Tank: 5 tanks in 1 space: 25mph = 38kph = 10m/s = 50m/turn = 1 space\n* SBD Dauntless: 5 plane Flight in 1 space: 250mph = 400kph = 110m/s = 550 m/turn = 7 spaces\n* B-24 Liberator: 1 plane take 1 space:  300mph = 470kph = 130m/s = 650 m/turn = 8 spaces\n* PT-109: 24m takes 1 space: 76kph = 21m/s = 105m/turn = 1.5 spaces\n* USS Enterprise: 240m takes 3x1 spaces: 37mph = 60kph = 17m/s = 85 m/turn = 1 space"),
             "Tactical Scale",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Tactical Scale", ":summary", "* 1 Turn = 1 hour\n* 1 Space = 50km\n* 24 x 20 map = ?\n* Infantry: 100 man Company with only light gear: 18mph = 29kph = 3/5 space (1 space assuming trucks)\n* Race Car: 10 cars in 1 space: 100mph = 160kph = 3 spaces\n* Sherman Tank: 5 tanks in 1 space: 25mph = 38kph = 4/5 space\n* SBD Dauntless: 5 plane Flight in 1 space: 250mph = 400kph = 8 spaces\n* B-24 Liberator: 1 plane take 1 space:  300mph = 470kph = 9 spaces\n* PT-109: 24m takes 1 space: 76kph = 1.5 spaces\n* USS Enterprise: 240m takes 3x1 spaces: 37mph = 60kph = 1 space"),
             "Strategic Scale",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Strategic Scale", ":summary", "* Infantry to tank ratio: 1000 to 1.\n* 1 Turn = ?\n* 1 Space = ?\n* 24 x 20 map = ?"),
             "Global Scale",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Global Scale", ":summary", "* The World Wars were indeed the first wars to be waged worldwide.  The logical scale for modern global events\nis the world itself.\n* 1 Turn = 3 days\n* 1 Space = 1600km = 1000miles.\n* 24 x 20 map = ?\nThe Earth's circumference is 40,000km.\n* Infantry: 2,000 man Division with trucks: 18mph = 29kph = 3/5 space (1 space assuming trucks)\n* M3 Halftrack: 200 trucks have a range of 280km which it can reach in 4 hours.  At 4 trips/day, it can carry\ninfantry 2 spaces/turn.\n* Sherman Tank: 100 tanks has a range of 120mi = 190km which it can reach in 6 hours.  At 2.5 trips/day, it can\nmove 1 space/turn.\n* SBD Dauntless: 100 planes with a range of 773mi = 1243km which it can reach in 4 hours.  At 3 flights/day, it\ncan move 7 spaces/turn if it can land and refuel in each space.\n* B-24 Liberator: 20 bombers with a range of 3700mi = 6000km which it can reach in 8 hours.  At 2 flights/day,\nit can move 22 spaces/turn if it can land and refuel every 4 spaces.\n* PT-109: 20 boats have only a 12 hour endurance so is entirely dependent on support ships for long range\ntravel.\n* USS Enterprise: 1 capital ship, 2 light cruiser, and 3 destroyer escorts can cruise at\n17mph = 28kph = 672km/day.  It can move 672km * 3 days = 2016km/turn = 1 space/turn.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Global Scale", ":summary", "* The World Wars were indeed the first wars to be waged worldwide. The logical scale for modern global events is the world itself.\n* 1 Turn = 3 days\n* 1 Space = 1600km = 1000miles.\n* 24 x 20 map = ?\nThe Earth's circumference is 40,000km.\n* Infantry: 2,000 man Division with trucks: 18mph = 29kph = 3/5 space (1 space assuming trucks)\n* M3 Halftrack: 200 trucks have a range of 280km which it can reach in 4 hours.  At 4 trips/day, it can carry infantry 2 spaces/turn.\n* Sherman Tank: 100 tanks has a range of 120mi = 190km which it can reach in 6 hours.  At 2.5 trips/day, it can move 1 space/turn.\n* SBD Dauntless: 100 planes with a range of 773mi = 1243km which it can reach in 4 hours.  At 3 flights/day, it can move 7 spaces/turn if it can land and refuel in each space.\n* B-24 Liberator: 20 bombers with a range of 3700mi = 6000km which it can reach in 8 hours.  At 2 flights/day, it can move 22 spaces/turn if it can land and refuel every 4 spaces.\n* PT-109: 20 boats have only a 12 hour endurance so is entirely dependent on support ships for long range travel.\n* USS Enterprise: 1 capital ship, 2 light cruiser, and 3 destroyer escorts can cruise at 17mph = 28kph = 672km/day.  It can move 672km * 3 days = 2016km/turn = 1 space/turn.")
           )
         ),
         "Core Maps",
@@ -280,11 +278,9 @@ export default class nx_tactics_books_core_rules {
             ":Building",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Building", ":image", "Maps/Building.png", ":summary", "* [Move]: Impassable by Vehicles\n* [Defense]: [+1 Defense], Gains [Armor] based on building material and thickness"),
             ":Cliff",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Cliff", ":image", "Maps/Cliff.png", ":summary", "* [Move]: Impassable along the cliff edge\n* [Attack]: +1 [Elevation]\n* [Defense]: +1 [Elevation]"),
-            ":Forest",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Forest", ":image", "Maps/Forest.png", ":summary", "* [Move]: [-1 Speed]\n* [Defense]: [+2 Defense], [+2 Armor], Blocks [Line of Sight]"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Cliff", ":image", "Maps/Cliff.png", ":summary", "* [Move]: Impassable along the cliff edge\n* [Elevation]:+1"),
             ":Hill",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hill", ":image", "Maps/Hills.png", ":summary", "* [Move]: [-1 Speed]\n* [Attack]: [+1 Elevation]\n* [Defense]: [+1 Elevation], Blocks [Line of Sight] to units behind the hill, but not units on the hill."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hill", ":image", "Maps/Hills.png", ":summary", "* [Move]:-1\n* [Attack]: [+1 Elevation]\n* [Defense]: [+1 Elevation], Blocks [Line of Sight] to units behind the hill, but not units on the hill."),
             ":Road",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Road", ":image", "Maps/Road.png", ":summary", "-1 [Speed] for each 2 spaces moved (rounded up)", ":titles", "Cobblestones, Dirt Road, Gravel, Highway, Racetrack, Sidewalk, Street"),
             ":Water",
@@ -456,9 +452,7 @@ export default class nx_tactics_books_core_rules {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
             ":Duration",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Duration", ":summary", "* Duration tokens are placed on an ability card when it is activated.\n* When the ability no longer has any duration tokens, it is removed."),
-            ":Morale",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Morale", ":image", "Tokens/MoraleToken.png", ":summary", "-1 [Spirit]\n* A unit must move 1 space away from the source of the attack/damage for each Morale Token received.\n* If it already has Morale tokens,  it must roll Morale tokens vs. [Spirit] and must move additional spaces\nfor any [Hits].\n* This movement does not cost [Speed], but if the unit is blocked from moving away it will suffer a [Collision]\nof Speed equal to the number of remaining [Hits].\n* [Anytime]: If [Morale] >= [Spirit] then the unit will take no [Actions], move at its best speed away from\nany opponents, and will leave the map if able.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Duration", ":summary", "* Duration tokens are placed on an ability card when it is activated.\n* When the ability no longer has any duration tokens, it is removed.")
           )
         ),
         "Black Tokens",
@@ -471,18 +465,10 @@ export default class nx_tactics_books_core_rules {
           ":rulemap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
-            "Suffering Damage",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suffering Damage"),
             "Treating Damage",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Treating Damage", ":summary", "* Blood Loss, if present, should usually be treated first. This is because Blood Loss can cause death in as little as 4 minutes from a single wound.\n* Shock, if present, should be treated next. It can kill in as little as 30 minutes.\n* Eventually fatal wounds, if any, should be treated next. These wounds become progressively worse kill in from 1 hour to 9 days.\n* Lastly, the wound itself should be treated. Untreated wounds take twice as long to heal on their own."),
             "Healing Damage",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Healing Damage"),
-            ":Damaged",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Damaged", ":image", "Tokens/DamageToken.png", ":summary", "-1 [Body]\n-1 [Defense]\n-1 [Speed] for every 2\n-1 [Skill]\n* [Anytime]: If [Damaged] >= [Body], then the unit is incapacitated.\n* [Anytime]: If [Damaged] >= 2x [Body], then the unit is dead.\n* [Anytime]: If [Damaged] >= 3x [Body], then the unit is completely destroyed."),
-            "Blood Loss Damage",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Blood Loss Damage"),
-            "Broken Bone Damage",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Broken Bone Damage"),
             "Burn Damage",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Burn Damage", ":summary", "* Burn Damage is characterized by shallow wounds with great surface damage. Fire, Acid, Cold, Abrasions, and Radiation all produce Burn Damage."),
             "Concussive Damage",
@@ -494,29 +480,11 @@ export default class nx_tactics_books_core_rules {
             "Puncture Damage",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Puncture Damage", ":summary", "* Puncture Damage is characterized by a deep wound with little surface damage."),
             "Shock Damage",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shock Damage", ":summary", "* Shock is a life-threatening medical condition as a result of insufficient blood flow throughout the body. Shock often accompanies severe injury or illness. Medical shock is a medical emergency and can lead to other conditions such as lack of oxygen in the body's tissues (hypoxia), heart attack (cardiac arrest) or organ damage. It requires immediate treatment as symptoms can worsen rapidly.\n* Types of Shock:\n** Septic shock is caused by bacteria. It is treated with antibiotics and fluids.\n** Anaphylactic shock is caused by hypersensitivity or allergic reaction. If is treated with diphenhydramine (Benadryl), epinephrine (an \"Epi-pen\"), and steroid medications (solumedrol).\n** Cardiogenic shock is from heart damage. It is treated by identifying and treating the underlying cause.\n** Hypovolemic shock is from blood or fluid loss. It is treated with fluids (saline) in minor cases, and blood transfusions in severe cases.\n** Neurogenic shock is from spinal cord trauma. It is the most difficult to treat as spinal cord damage is often irreversible. Immobilization, anti-inflammatories such as steroids and surgery are the main treatments."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shock Damage", ":summary", "* Shock is a life-threatening medical condition as a result of insufficient blood flow throughout the body. Shock often accompanies severe injury or illness. Medical shock is a medical emergency and can lead to other conditions such as lack of oxygen in the body's tissues (hypoxia), heart attack (cardiac arrest) or organ damage. It requires immediate treatment as symptoms can worsen rapidly.\n            * Types of Shock:\n            ** Septic shock is caused by bacteria. It is treated with antibiotics and fluids.\n            ** Anaphylactic shock is caused by hypersensitivity or allergic reaction. If is treated with diphenhydramine (Benadryl), epinephrine (an \"Epi-pen\"), and steroid medications (solumedrol).\n            ** Cardiogenic shock is from heart damage. It is treated by identifying and treating the underlying cause.\n            ** Hypovolemic shock is from blood or fluid loss. It is treated with fluids (saline) in minor cases, and blood transfusions in severe cases.\n            ** Neurogenic shock is from spinal cord trauma. It is the most difficult to treat as spinal cord damage is often irreversible. Immobilization, anti-inflammatories such as steroids and surgery are the main treatments."),
             "Sickness Damage",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Sickness Damage", ":summary", "* Sickness Damage is characterized by physical and mental weakness. Poison, Disease, and Radiation can all cause Sickness."),
             "Slash Damage",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Slash Damage", ":summary", "* Slash Damage is characterized by long surface wounds of varying depth. If the wounds are sufficiently deep they may remove entire extremities.")
-          )
-        ),
-        "Red Tokens",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Red Tokens",
-          ":summary",
-          "* Red tokens represent continuous Effects that will eventually lead to death such as Bleeding and Fire.\n* [Activate]: Add one Stun token.",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            ":Bleeding",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Bleeding", ":image", "Tokens/BleedingToken.png", ":summary", "* Each turn add 1 [Stun] token Any adjacent [Unit] may use an [Action] to extinguish 1 Fire token.", ":titles", "Bloody, Serrated, Sharp"),
-            ":Burning",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Burning", ":image", "Tokens/FireToken.png", ":summary", "* [Activate]: Roll Fire tokens vs. [Defense].\n* [Hits] are [Damage] tokens.\n* [Critical Hits] are additional Fire tokens. Also, a random adjacent space gains Fire tokens equal to the [Critical Hits]\n* If no [Hits] are scored, remove a Fire Token.\n* Any adjacent [Unit] may use an [Action] to extinguish 1 Fire token.", ":titles", "Burning, Fiery, Flaming"),
-            "Choking Damage",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Choking Damage", ":summary", "* This includes any obstruction of airways such as smoke, water, sand, fungus, disease, physical choking, etc. It also includes damage to filters and other aspiration/ventilation systems on machines.")
           )
         ),
         ":Status",

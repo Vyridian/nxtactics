@@ -61,7 +61,7 @@
    :name "Architecture"
    :summary
     "* [Downtime]: Design a structure. The size and quality of the structure are limited by level.
-     * [Skill]: [Tradeskills]
+     * [Skill]: [Tradeskill]
      * [Action]: Determine weaknesses of a structure."
    :titles "Architect")
   (base/ability
@@ -70,6 +70,10 @@
     "* May fire over other units that block Line of Sight.
      * [Skill]: [Ranged]
      * [Requires]: Bow or Javelin")
+  (base/ability
+   :name "Armed Robbery"
+   :summary
+    "* [Skill]: [Crime]")
   (base/ability
    :name "Art Imitates Life"
    :reference "Dorian Gray"
@@ -93,16 +97,46 @@
    :summary
     "* Detects severe damage to the wearer and automatically takes action to reduce shock and maintain suit integrity (sealing leaks or amputating if necessary).")
   (base/ability
+   :name "Autotomy"
+   :titles "Self-amputation"
+   :reference
+    "* Uh, I hope I didn't need that - Lounging Lizard, Runeterra"
+   :summary
+    "* Self-amputation is the behaviour whereby a creature sheds or discards an appendage, usually as a self-defense mechanism to elude a predator's grasp.
+     * It is often paired with Regeneration.")
+  (base/ability
+   :name "Back Fist"
+   :titles "Backhand, Bitch Slap"
+   :summary
+    "* Strike with the back of the fist or open hand.
+     * [Skill]: [Close Combat]
+     * [Arc]: Arc:Left or Arc:Right")
+  (base/ability
+   :name "Backflip Kick"
+   :titles "Flash Kick"
+   :summary
+    "* [Skill]: [Close Combat]+1
+     * [High Attack]
+     * [Limited] by [Acrobatics].
+     1 Move (directly backwards)
+     +1 Damage")
+  (base/ability
    :name "Backlash")
   (base/ability
    :name "Backstab"
    :summary
     "* [Passive]:
-     ** IF [Flanking] THEN [Initiative]:+1 AND [Hits]:+1
-     ** IF [Blindspot] THEN [Initiative]:+1/level AND [Hits]:+1/[Level]"
+     ** IF [Flanking] THEN [Skill]:+1
+     ** IF [Blindspot] THEN [Skill]:+[Skill]"
    :titles "Back Biter, Back Stabber, Opportunist, Traitor")
   (base/ability
    :name "Balanced for Throwing")
+  (base/ability
+   :name "Balefire"
+   :titles "Hellfire, Witchfire"
+   :summary
+    "* Balefire is a magical, corrupting fire that appears as a sickly pale, greenish flame that flows like a liquid. It burns like napalm and is not extinquished by water. Prolonged exposure produces damage like [Radiation].
+     * [Power]: [Corruption]")
   (base/ability
    :name "Ball Lightning")
   (base/ability
@@ -128,6 +162,11 @@
     "* [Power]: [Enchantment]
      * Target cannot conceive a child while under this curse.")
   (base/ability
+   :name "Beatdown"
+   :summary
+    "* [Skill]: [Close Combat]
+     * IF your [Rival] is [Prone] THEN [Damage]:+1")
+  (base/ability
    :name "Bite"
    :summary
     "* [Skill]: [Close Combat]
@@ -136,7 +175,7 @@
    :name "Blacksmithing"
    :titles "Blacksmith"
    :summary
-    "* [Skill]: [Tradeskills]")
+    "* [Skill]: [Tradeskill]")
   (base/ability
    :name "Blade Barrier"
    :titles "Wall of Swords"
@@ -294,7 +333,7 @@
   (base/ability
    :name "Camouflage"
    :summary
-    "* [Skill]: [Hunting] [Stealth]
+    "* [Skill]: [Hunting] or [Stealth]
      * [Continuous]: While active, unit is hidden.
      * [Defense]: +1 Defense in [Terrain].
      * [Roll]: Skill - Move this turn.
@@ -309,7 +348,22 @@
    :name "Carpentry"
    :titles "Carpenter"
    :summary
-    "* [Skill]: [Tradeskills]")
+    "* [Skill]: [Tradeskill]")
+  (base/ability
+   :name "Catapult Launcher"
+   :summary
+    "* Launching vehicle may begin move at up to full speed without using fuel.
+     * [Power]: [Hanger]")
+  (base/ability
+   :name "Catapult Hook Capture"
+   :summary
+    "* Vehicles may land without perfectly matching the movement of the mothership.
+     * [Power]: [Hanger]")
+  (base/ability
+   :name "Centrifuge Chamber"
+   :summary
+    "* Simulates gravity.
+     * [Power]: [Cabin]")
   (base/ability
    :name "Chain of Command"
    :summary
@@ -319,6 +373,15 @@
    :name "Chaotic"
    :summary
     "* [Power]: [Special Ability]")
+  (base/ability
+   :name "Charge"
+   :reference
+    "* We'll use the old ways...speed of horse! - Arthur, Excalibur"
+   :summary
+    "* [Skill]: [Riding]
+     * [Requires]: Unit must have moved at least 4 spaces in a straight line.
+     * [Action]: Melee Attack costs no [Speed].
+     * [Attack], [Damage]: Any [Critical Hits] may be [Morale Tokens]")
   (base/ability
    :name "Charm"
    :titles "Warding Sign"
@@ -330,8 +393,16 @@
   (base/ability
    :name "Charm of Virgo"
    :summary
-    "* [Power]: [Astrology]
+    "* [Power]: [Astrology] [Presence]
      * [Action]: Gain [Synergy] on unit's next communication skill. Duration 1 turn.")
+  (base/ability
+   :name "Circular Logic"
+   :reference
+    "* If such actions were not illegal, then they would not be prohibited by the law."
+   :summary
+    "* A seemingly reasonable argument that is in fact based upon dependent information.
+     * Such arguments are logically valid. That is, the conclusion does in fact follow from the premise, since it is already contained in the premise. They do not, however, aid in the proof of the statement or the premise.
+     * [Skill]: [Brilliance]")
   (base/ability
    :name "Claw"
    :summary
@@ -341,10 +412,10 @@
    :name "Claw Rake"
    :summary
     "* A quick raking claw attack with one set of claws.
-     * +2 Initiative
-     * -1 Accuracy
-     * +1 Move
-     * Criticals - [Bleeding]")
+     * [Power]: [Natural Weaponry]
+     * [Skill]:+2
+     * [Move]:+1
+     * [Crits] - [Bleeding]")
   (base/ability
    :name "Cleaning"
    :titles "Maid")
@@ -353,13 +424,31 @@
    :summary
     "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
   (base/ability
+   :name "Clothesline"
+   :summary
+    "* [Skill]: [Close Combat]
+     * [Requires]: Must have Moved this Round. [Hit Location]=Head or Shoulders
+     * [Arc]: Arc:Left or Arc:Right
+     * [Effect]: IF [Hit Location] is Head or Shoulders THEN Knockdown:+1")
+  (base/ability
    :name "Cobbling"
    :summary "* Make Shoes"
    :titles "Cobbler")
   (base/ability
+   :name "Coercion"
+   :reference
+    "* The boat will be ready for you on Friday. If I see you or any of your friends before then, Miss. Finneran will find herself the victim of a most gruesome violation before she dies. As will your father, Mr. Hockney, and your Uncle Randall in Arizona, Mr. Kint. I might only castrate Mr. McManus's nephew, David. Do I make myself clear? - Kobayashi, Usual Suspects"
+   :summary
+    "* [Skill]: [Intimidation] vs [Will]")
+  (base/ability
    :name "Combat Sense")
   (base/ability
    :name "Commanding Presense")
+  (base/ability
+   :name "Compartmentalize"
+   :summary
+    "* Separate a hidden thought process away from the normal mind.
+     * [Skill]: [Brilliance]")
   (base/ability
    :name "Concoct Dream Essence"
    :summary
@@ -396,8 +485,11 @@
     "* [Power]: [Shamanism]")
   (base/ability
    :name "Cooking"
-   :summary "* Prepare Recipe"
-   :titles "Chef, Cook")
+   :titles "Chef, Cook"
+   :summary
+    "* Prepare a meal based on a known Recipe
+     * [Skill]: [Tradeskill]
+     * 30 Minutes: Convert foodstuffs into a meal for [Level] people.")
   (base/ability
    :name "Cooping"
    :summary "* Make Sealable Barrel"
@@ -406,6 +498,11 @@
    :name "Corrupted"
    :summary
     "* [Power]: [Special Ability]")
+  (base/ability
+   :name "Cover your Tracks"
+   :summary
+    "* Hide your tracks to make it difficult to track you.
+     * [Skill]: [Hunting]")
   (base/ability
    :name "Crafts"
    :summary
@@ -418,6 +515,13 @@
    :summary
     "* [Skill]: [Law]")
   (base/ability
+   :name "Crouching Strike"
+   :titles "Ducking Punch"
+   :summary
+    "* Crouch low and deliver a powerful blow to the mid-section or below the belt.
+     * [Skill]: [Close Combat]
+     * [Attack] [5]: Effect:+1")
+  (base/ability
    :name "Crowd Control"
    :summary
     "* [Skill]: [Law]")
@@ -425,6 +529,15 @@
    :name "Cryo Sleep System"
    :summary
     "* Can freeze the wearer into cryo-sleep and armor runs on minimal power to preserve the wearer from hostile environments or critical wounds for up to a month before power gives out.")
+  (base/ability
+   :name "Cryogenic Chamber"
+   :summary
+    "* Able to carry passengers in cryonic suspension.
+     * [Power]: [Cabin]")
+  (base/ability
+   :name "Cryptography"
+   :summary
+    "* [Skill]: [Brilliance]")
   (base/ability
    :name "Cull the Herd")
   (base/ability
@@ -434,8 +547,9 @@
   (base/ability
    :name "Dash Attack"
    :summary
-    "* [Requires]: May only move in a straight line this turn.
-     * [Action]: [-1 Attack], May attack any number of adjacent opponents along path each at a cumulative -1.")
+    "* [Skill]: [Melee]-1
+     * [Requires]: May only move in a straight line this turn.
+     * [Effect]: May attack any number of adjacent opponents along path each at a cumulative [Melee]:-1.")
   (base/ability
    :name "Dazing Blow"
    :summary
@@ -457,7 +571,18 @@
   (base/ability
    :name "Deafening")
   (base/ability
+   :name "Death March"
+   :summary
+    "* Increase movement of allies within level spaces. Sustained use of this ability runs the risk of injuring or killing some allies.
+     * [Skill]: [Intimidation] vs [Will]")
+  (base/ability
    :name "Death Roll")
+  (base/ability
+   :name "Death's Door"
+   :summary
+    "* [Power]: [Necromancy]
+     * [Action]: Project your spirit into the [Underworld] while the body lies in a coma.
+     * [Death]: Enter the Underworld")
   (base/ability
    :name "Decoy"
    :summary
@@ -475,9 +600,19 @@
      0 Damage - Any successes become -Damage to the projectile. If the projectile has 0 Damage remaining, it is caught.
      Criticals - Any Criticals become -2 Damage to the proejctile. If the projectile has 0 Damage remaining and there are still Criticals, the projectile may be immediately thrown at +[Criticals] Accuracy.")
   (base/ability
+   :name "Deflecting Punch"
+   :summary
+    "* The fighter deflects a punch at him and immediately counters with a punch of his own.
+     * [Skill]: [Close Combat]
+     * [Counter] [6]: [Effect]:+1")
+  (base/ability
    :name "Demoralize"
    :summary
     "* [Power]: [Empathy]")
+  (base/ability
+   :name "Desire"
+   :summary
+    "* [Power]: [Presence]")
   (base/ability
    :name "Destruction"
    :summary
@@ -587,6 +722,13 @@
      * [Piercing]:-1"
    :titles "Double Throw")
   (base/ability
+   :name "Doublethink"
+   :reference
+    "* To tell deliberate lies while genuinely believing in them, to forget any fact that has become inconvenient, and then, when it becomes necessary again, to draw it back from oblivion for just so long as it is needed. - 1984 George Orwell"
+   :summary
+    "* Doublethink is the act of simultaneously holding two mutually contradictory beliefs while fervently fooling oneself into believing both.
+     * [Skill]: [Brilliance]")
+  (base/ability
    :name "Down the Rabbit Hole"
    :summary
     "* [Skill]: [Dreaming]
@@ -687,10 +829,19 @@
      * [Skill]: [Close Combat] or [Melee]
      * [Counter]: [Damage]:+1")
   (base/ability
+   :name "Duress"
+   :summary
+    "* [Skill]: [Intimidation] vs [Will]")
+  (base/ability
    :name "Ego Whip"
    :summary
     "* [Skill]: [Mental Combat] vs. [Spirit]."
    :titles "Mind Whip")
+  (base/ability
+   :name "Ejection System"
+   :summary
+    "* Ability to eject quickly when in danger. Works well with [Escape Pod].
+     * [Power]: [Cabin]")
   (base/ability
    :name "Elder Tongue"
    :summary
@@ -738,6 +889,12 @@
    :summary
     "Fluent in the English language")
   (base/ability
+   :name "Enslave"
+   :reference
+    "Did you know that pain causes the formation of the strongest chemical bonds in the mammalian brain? Whip a dog, and it keeps coming back... At first it will hope that you'll stop, but after a while, it won't even know the difference. But you already know all about that don't you?... Time melted away into the pain... Finally something clicked over in his head and reality rushed back in around him, clearer and sharper than ever before... Staring he made out faces... Faces distended in howling agony... eyes welling with tears of blood, eyes that all turned toward Her, crying in admiration. - Mage: The Book of Madness"
+   :summary
+    "* [Skill]: [Intimidation] vs [Will]")
+  (base/ability
    :name "Entanglement"
    :summary "Reduces Movement"
    :titles "Tanglers")
@@ -762,6 +919,12 @@
     "* [Skill]: [Deception]
      * The ability comes from extensive practice escaping from various bonds and confinements. At higher abilities, the user can dislocate joints to slither out of bonds."
    :titles "Escape Artist")
+  (base/ability
+   :name "Escape Pod"
+   :titles "Lifeboat"
+   :summary
+    "* Ability to escape in a sort of lifeboat when in danger. Works well with [Ejection System].
+     * [Power]: [Hanger]")
   (base/ability
    :name "Eternal Youth"
    :titles "Ageless"
@@ -797,6 +960,11 @@
    :name "Explosive Shot"
    :summary "* [Requires]: Bow or Crossbow")
   (base/ability
+   :name "Explosives"
+   :summary
+    "* Experienced using various small explosives in combat.
+     * [Skill]: [Demolitions]")
+  (base/ability
    :name "Eyes of a Child"
    :summary "* All Chimera become visible to those you chose.")
   (base/ability
@@ -807,6 +975,26 @@
    :name "Face Off"
    :summary
     "[Downtime]: Surgically swap appearances with another unit.")
+  (base/ability
+   :name "Factory: Manufacturing"
+   :summary
+    "* Can produce manufactured goods. Must be modified for each type of good.
+     * [Power]: [Factory]")
+  (base/ability
+   :name "Factory: Military"
+   :summary
+    "* Can produce military vehicles. Must be modified for each type of vehicles.
+     * [Power]: [Factory]")
+  (base/ability
+   :name "Factory: Pharmaceutical"
+   :summary
+    "* Can produce drugs. Must be modified for each type of drug.
+     * [Power]: [Factory]")
+  (base/ability
+   :name "Factory: Vehicle"
+   :summary
+    "* Can produce vehicles. Must be modified for each type of vehicles.
+     * [Power]: [Factory]")
   (base/ability
    :name "Falconry"
    :summary
@@ -835,6 +1023,11 @@
     "* [Requires]: Weapon with [Reach]
      * [Reaction]: If you hit with [Fend Off], the opponent may not move any closer to you this turn.")
   (base/ability
+   :name "Fester"
+   :summary
+    "* Increase the [Effect] of an existing [Disease].
+     * [Power]: [Corruption]")
+  (base/ability
    :name "Field Dressing")
   (base/ability
    :name "Financial Genius")
@@ -847,9 +1040,12 @@
      * [Action]: [+1 Attack], if you used this ability to [React] last turn.")
   (base/ability
    :name "Fishing"
+   :titles "Fisherman"
    :summary
-    "* Catch enough fish to eat. Similar to Foraging."
-   :titles "Fisherman")
+    "* Catch enough fish to eat. Similar to Foraging.
+     * [Skill]: [Hunting]
+        :summary
+     * 6 Hours: IF practical THEN catch 1kg of game/Level")
   (base/ability
    :name "Flaming Shot"
    :summary "* [Requires]: Bow or Crossbow")
@@ -877,10 +1073,18 @@
    :reference "Eternal Sunshine of the Spotless Mind"
    :summary "* This ability makes every childhood dream and ambition real again. Every imaginary friend is remembered clearly and the happiest moments from youth return with the intensity of a first kiss and the excitement of Christmas. Then, suddenly, its over. In their absence, depression can crash down.  Truly fallen beings can become suicidal. The remembrance can be uplifting in the end, allowing one to relive the best moments of life.")
   (base/ability
+   :name "Foot Stomp"
+   :reference
+    "* The toe crusher. That went out of style when I left kindergarten. - Kung Fu Hustle"
+   :summary
+    "* Stomp on opponent's foot to slow their movement.
+     * [Skill]: [Close Combat]
+     * [Damage]: IF a Foot Bash THEN Damage:+1")
+  (base/ability
    :name "Foraging"
    :summary
     "* [Skill]: [Survival]
-     * [Action]: This ability can be used to forage for 1 man day of food and water for each [Success]. Such food will typically be disgusting to those unaccustomed to the local cuisine, but it will sustain. Excess food only lasts for 1 additional day before going bad. Excess water can be transfered to containers if any, otherwise it cannot be carried. [Crit]s provide a particularly tasty, convenient, or useful source of nutrition (e.g. water in bamboo that can be carried, food that will last another day or more).")
+     * [Action]: This ability can be used to forage for 1 man day of food and water for each [Effect]. Such food will typically be disgusting to those unaccustomed to the local cuisine, but it will sustain. Excess food only lasts for 1 additional day before going bad. Excess water can be transfered to containers if any, otherwise it cannot be carried. [Crit]s provide a particularly tasty, convenient, or useful source of nutrition (e.g. water in bamboo that can be carried, food that will last another day or more).")
   (base/ability
    :name "Forgery"
    :summary
@@ -891,6 +1095,11 @@
    :name "Forward Observer"
    :summary
     "* [Action]: When unit has [Line of Sight] on a opponent, any number of units with [Indirect Fire] may attack that unit even if they do not have [Line of Sight].")
+  (base/ability
+   :name "Fuel Scoop"
+   :summary
+    "* Can scoop fuel directly into [Tanker Hold].
+     * [Power]: [Cargo]")
   (base/ability
    :name "Fungal Growth"
    :summary
@@ -909,6 +1118,14 @@
    :summary
     "* [Power]: [Special Ability]
      * [Body]:+0x2")
+  (base/ability
+   :name "Handstand Kick"
+   :summary
+    "* The fighter bends over, places his hands on the ground, and then presses his legs up into a handstand. The legs snap up with tremendous kicking force. Can be used while [Prone]
+     * [Skill]: [Close Combat]
+     * Initiative:-1
+     * Move:-1
+     * Damage:+1")
   (base/ability
    :name "Huge"
    :summary
@@ -929,6 +1146,17 @@
    :name "Grappling Hoist"
    :summary
     "* A grappling dart that is fired into stone or hooked onto any uneven surface. The attached winch can then pull the wearer to the target or vis versa depending on relative weight. This can be used for climbing or towing. The darts can be recovered and reused, but they are often not recoverable. 2 replacement darts are included.")
+  (base/ability
+   :name "Great Reveal"
+   :reference "Ta-Da!"
+   :summary
+    "* [Skill]: [Deception]")
+  (base/ability
+   :name "Grip of Fear"
+   :reference
+    "* It was Keyser Soze, Agent Kujan. I mean the Devil himself. How do you shoot the devil in the back? What if you miss? - Verbal, Usual Suspects"
+   :summary
+    "* [Skill]: [Intimidation] vs [Will]")
   (base/ability
    :name "Guard Training"
    :summary
@@ -962,6 +1190,8 @@
      * Can shoot at Initiative:-1 without disadvantage from the Hip.")
   (base/ability
    :name "Honor Among Thieves"
+   :reference
+    "* Honor is the rust on a dull blade. Sivir, Runeterra"
    :summary
     "* [Skill]: [Deception]")
   (base/ability
@@ -980,9 +1210,21 @@
    :summary
     "* [Continuous]: Place a mark on target. Initiative:+1 vs. marked target.")
   (base/ability
+   :name "Hurricane Kick"
+   :image "MartialArts/HurricaneKick.jpg"
+   :reference
+    "* Ryu, Ken, Akuma, Street Fighter"
+   :summary
+    "* May attack up to 2 units in any surrounding spaces.
+     * [Skill]: [Close Combat]
+     -1 Speed
+     -2 Attack"
+   :titles "Butterfly Kick, Whirlwind Kick")
+  (base/ability
    :name "Husbandry"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* The ability to raise and breed animals to emphasize certain traits.
+     * [Skill]: [Animal Handling]")
   (base/ability
    :name "Hyperdrive"
    :image "Units/SpaceAndTime/Hyperspace.jpg"
@@ -1052,9 +1294,24 @@
      * [Passive]
      * [Continuous]: [Retreats] are reduced by 1 for all allies within the radius.")
   (base/ability
+   :name "Interrogate"
+   :reference
+    "* I'm gonna ask you one more goddamn time, and if you still 'respectfully refuse,' I'm callin' the Bear Jew over here, and he's gonna take that big-ole bat of his, and he's gonna beat you to death with it. Now take your wiener schnitzel lickin' finger and point out on this map what I want to know...We got a German here who wants to die for his country! Oblige him! - Lt. Aldo Raine, Inglourious Basterds
+     * You don't need that. I'll tell you everything. Yes...I know you will. - Raiders of the Lost Ark"
+   :summary
+    "* [Skill]: [Intimidation] vs [Will]")
+  (base/ability
    :name "Intestinal Parasite"
    :summary
     "* [Power]: [Diseases]")
+  (base/ability
+   :name "Intimidate"
+   :reference
+    "* Your timing is impeccable. Pity you were all they sent... The Fatui would do well to update their intelligence concerning me. Ah, but of course, that would require one of you to return in one piece. - Ayato, Genshin Impact
+     * ...to the death. No. To the pain. I don't think I'm quite familiar with that phrase. ... To the pain means the first thing you will lose will be your feet below the ankles. Then your hands at the wrists. Next your nose. ...And then my ears, I understand let's get on with it. WRONG. Your ears you keep and I'll tell you why. So that every shriek of every child at seeing your hideousness will be yours to cherish. Every babe that weeps at your approach, every woman who cries out, 'Dear God! What is that THING?,' will echo in your perfect ears. That is what to the pain means. It means I leave you in anguish, wallowing in freakish misery ... forever. ...I think you're bluffing. It's possible, Pig, I might be bluffing. It's conceivable, you miserable, vomitous mass, that I'm only lying here because I lack the strength to stand. But, then again... perhaps I have the strength after all. - Princess Bride"
+   :summary
+    "* A form of bluffing
+     * [Skill]: [Intimidation] vs [Will]")
   (base/ability
    :name "Investigative Genius")
   (base/ability
@@ -1063,15 +1320,14 @@
     "* [Power]: [Invisibility]")
   (base/ability
    :name "Iron Horse"
+   :titles "San He"
    :reference "The Blob, X-men"
    :summary
     "* The ability to prevent being moved.
-     * [Skill]:
+     * [Skill]:+1
      * [Passive]
-     +1 Initiative
-     Defense - When rolling Defense, [Hits] or [Criticals] can be exchanged for [Knockback] or [Knockdown] resistance.
-     0 Move"
-   :titles "San He")
+     * Defense - When rolling Defense, [Hits] or [Crits] can be exchanged for [Knockback] or [Knockdown] resistance.
+     0 Move")
   (base/ability
    :name "Iron Skin"
    :summary "* Hardening of the skin to prevent cuts and punctures."
@@ -1142,17 +1398,31 @@
    :summary "* Imbue an item with electric charge that is discharged on contact.")
   (base/ability
    :name "Lightning Lash"
-   :titles "Arc Lash, Lightning Whip")
+   :titles "Arc Lash, Lightning Whip"
+   :summary
+    "* [Power]: [Electricity] or [Electromancy]")
+  (base/ability
+   :name "Lightning Leg"
+   :image "MartialArts/LightningLeg.jpg"
+   :reference
+    "* Chun-Li, Street Fighter"
+   :summary
+    "* [Skill]: [Close Combat]
+     * [Finishing Move]
+     * [Attack]: [Auto]
+      LIGHTNING LEG			-- 2		+  1(x3)	None		as 100handslap	(1 W)		K3, Double Hit Kick
+     *  Knockback; When this maneuver is chosen the fighter determines which of the three attacks strike high, and which strike low (2 high, 1 low; or 1 high, 2 low), this affects blocking accordingly.")
   (base/ability
    :name "Lightning Pillar"
    :summary
-    "* [Action]: Summon a pillar of Electricity within Range. (Removing any others)
+    "* [Power]: [Electricity] or [Electromancy]
+     * [Action]: Summon a pillar of Electricity within Range. (Removing any others)
      * [Reaction]: IF anything touches the pillar THEN you may make a basic Electricity [Attack].
      * [Reaction]: IF you use an Electricity ability THEN you may arc it to strike from the pillar instead.")
   (base/ability
    :name "Lightning Warp"
    :summary
-    "* [Power]: [Electricity] or [Electro]
+    "* [Power]: [Electricity] or [Electromancy]
      * Near instantaneous travel in a flash of lightning.
      * Level determines distance travelled.")
   (base/ability
@@ -1163,11 +1433,19 @@
  (base/ability
   :name "Livestock"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* The ability to grow livestock.
+     * [Skill]: [Animal Handling]")
   (base/ability
    :name "Living Nightmare"
    :summary "* A chimerical monster formed from nightmares or madness."
    :titles "Waking Nightmare")
+  (base/ability
+   :name "Living Quarters"
+   :summary
+    "* Long range and luxury vessels offer more than the minimum crew quarters. This includes private rooms, mess, recreation areas, etc.
+     * The larger the living space, the higher quality clientele may be brought aboard and the longer the ships range before shore leave is needed.
+     * Includes Mess and Lounges
+     * [Power]: [Cabin]")
   (base/ability
    :name "Lobotomize"
    :reference
@@ -1185,10 +1463,39 @@
    :name "Lure"
    :reference "Everquest Pulling")
   (base/ability
+   :name "Luxury Facilities"
+   :summary
+    "* [Power]: [Cabin]")
+  (base/ability
    :name "Malleate"
-   :summary "* Make target soft and malleable like clay.")
+   :reference
+    "* My, who happened to you? - Evelynn, Runeterra"
+   :summary
+    "* Make target soft and malleable like clay.")
+  (base/ability
+   :name "Marine Drop Pod"
+   :summary
+    "* Ability to send Marines in custom drop pods.
+     * [Power]: [Hanger]")
+  (base/ability
+   :name "Marine Ready Room"
+   :summary
+    "* [Power]: [Cabin]")
+  (base/ability
+   :name "Master Plan"
+   :summary
+    "* [Skill]: [Brilliance]")
+  (base/ability
+   :name "Masterpiece"
+   :summary
+    "* [Skill]: [Art]")
   (base/ability
    :name "Mathematical Genius")
+  (base/ability
+   :name "Maze Mastery"
+   :summary
+    "* The user knows thousands of mazes and can choose an optimal course through any maze with minimal trial and error.
+     * [Skill]: [Brilliance]")
   (base/ability
    :name "Mental Blast"
    :summary "Attacks Mind.  All tokens are stun.")
@@ -1202,6 +1509,14 @@
    :name "Metalworking"
    :titles "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith")
   (base/ability
+   :name "Mind Blank"
+   :summary
+    "* Hide ones true thoughts.
+     * Makes an excellent poker face.
+     * [Skill]: [Brilliance]
+     * Full defense against any attempt to detect the unit's mind.
+     * Full defense against any attempt to detect lies.")
+  (base/ability
    :name "Mindless"
    :summary
     "* [Power]: [Special Ability]
@@ -1210,9 +1525,20 @@
      * Cannot use any Mind Abilities
      * Immune to Abilities that target [Mind].")
   (base/ability
+   :name "Mining Rig"
+   :summary
+    "* Can mine for ore. Must be modified for each type of ore.
+     * [Power]: [Factory]")
+  (base/ability
    :name "Misdirection"
    :summary
     "* [Skill]: [Deception]")
+  (base/ability
+   :name "Misinformation"
+   :reference
+    "* Spock: Logic is a little tweeting bird chirping in a meadow. Logic is a wreath of pretty flowers which smell BAD. Are you sure your circuits are functioning correctly? Your ears are green. - I, Mudd, Star Trek"
+   :summary
+    "* [Skill]: [Brilliance]")
   (base/ability
    :name "Missile Mount"
    :summary "* A special mount to add a missile pack on the back of the armor.")
@@ -1245,7 +1571,7 @@
   (base/ability
    :name "Offhanded Fighting"
    :summary
-    "* [Action]: Normal Attack take a -2 penalty if performed with the non primary hand. This ability negates that penalty when using this skill in the off hand."
+    "* [Action]: Common Attacks take a -2 penalty if performed with the non primary hand. This ability negates that penalty when using this skill in the off hand."
    :reference
     "I: I admit it. You are better than I am.
      M: Then why are you smiling?
@@ -1258,6 +1584,11 @@
      M: There's something I ought to tell you.
      I: Tell me.
      M: I'm not left-handed either. - Inigo Montoya abd /Man in Black, Princess Bride")
+  (base/ability
+   :name "Oil Rig"
+   :summary
+    "* Can mine for oil. Must be modified for each type of oil.
+     * [Power]: [Factory]")
   (base/ability
    :name "Overwhelm")
   (base/ability
@@ -1284,6 +1615,10 @@
      +1 Initiative
      +2 Defense")
   (base/ability
+   :name "Passenger Seating"
+   :summary
+    "* [Power]: [Cabin]")
+  (base/ability
    :name "Pep Talk"
    :reference
     "* A small victory is still a victory. Good work. - Kai'sa, Runeterra")
@@ -1295,6 +1630,12 @@
      * Additional Effects: A petrified arm cannot move. A petrified leg reduces Move by half. A petrified head is unable to see or hear. Other petrifed areas have no additional effect. Petrified Arms or legs can break off like a clean amputation without blood loss.
      * This ability can also be used to restore a petrified target back to its original form if the skill is at least equal to the original. Lost limbs may also be restored by reattaching the limb before restoration.
      * This ability can also be used on any sort of earth to harden the earth to equivalent stone.")
+  (base/ability
+   :name "Philosophy"
+   :reference
+    "* I went to see the doctor of Philosophy, with a poster of Rasputin and a beard down to his knees. He never did marry or see a B-grade movie. He graded my performance. He said he could see through me. I spent 4 years prostrate to the higher mind, got my paper and I was free. - Indigo Girls, Closer I Am To Fine"
+   :summary
+    "* [Skill]: [Science: Social]")
   (base/ability
    :name "Photographic Memory")
   (base/ability
@@ -1338,7 +1679,9 @@
   (base/ability
    :name "Poison Spray")
   (base/ability
-   :name "Poison Sting")
+   :name "Poison Sting"
+   :reference
+    "* A little puncture and a lot of pain. - Spell Slinger, Runeterra")
   (base/ability
    :name "Poison Tolerance"
    :reference
@@ -1381,7 +1724,8 @@
   (base/ability
    :name "Pounce"
    :summary
-    "* The fighter drops into a crouch and then explodes into a mighty leap at his prey attempting to knock down the opponent.
+    "* [Power]: [Natural Weaponry] vs. [Body]
+     * Drop into a crouch and then explode into a mighty leap at his prey attempting to knock down the opponent.
      * [Aerial]
      * +1 Accuracy
      * +1 Move
@@ -1416,6 +1760,11 @@
    :summary
     "Will target those with the given criteria. Will for prey.")
   (base/ability
+   :name "Prison Facilities"
+   :titles "Brig"
+   :summary
+    "* [Power]: [Cabin]")
+  (base/ability
    :name "Prosecute"
    :summary
     "* [Skill]: [Law]")
@@ -1432,6 +1781,26 @@
    :summary
     "* [Skill]: [Close Combat]
      * [Damage]: [Body] [Bash]")
+  (base/ability
+   :name "Puzzles"
+   :summary
+    "* Expert at puzzles.
+     * [Skill]: [Brilliance]")
+  (base/ability
+   :name "Quarters: Captain"
+   :summary
+    "* Special Quarters for the Captain.
+     * [Power]: [Cabin]")
+  (base/ability
+   :name "Quarters: Crew"
+   :summary
+    "* Special Quarters for the Crew.
+     * [Power]: [Cabin]")
+  (base/ability
+   :name "Quarters: VIP"
+   :summary
+    "* Special Quarters for VIPs.
+     * [Power]: [Cabin]")
   (base/ability
    :name "Quick Draw"
    :summary
@@ -1475,6 +1844,11 @@
     "* An extremely difficult and rare ability of self-discovery to create Glamour from oneself. Only at a moment of sudden self-realization can a Rapture be attained.
      * [Passive] - While in a Rapture, all [Critical] results generate [Glamour Token]s.")
   (base/ability
+   :name "Rationalize"
+   :summary
+    "* Increases resistance to all forms of mental attack by reinterpreting and rationalizing commands to render them meaningless.
+     * [Skill]: [Brilliance]")
+  (base/ability
    :name "Ravaging"
    :summary
     "* Drain creativity from a subject. The subject must be well known and a good knowledge of how the subject dreams is required. After that, the subject must simply be touched and he/she will experience a wave of depression and fear as the Glamour is drained from them.
@@ -1485,6 +1859,21 @@
     "* Exterior layer of armor explodes on impact reducing damage of the first hit but reduces armor rating for all subsequent hits.
      * [Passive] - +2 Armor vs. the first hit. -1 Armor for each subsequent hit.")
   (base/ability
+   :name "Refinery: Gas"
+   :summary
+    "* Can refine gas. Must be modified for each type of gas.
+     * [Power]: [Factory]")
+  (base/ability
+   :name "Refinery: Oil"
+   :summary
+    "* Can refine oil. Must be modified for each type of oil.
+     * [Power]: [Factory]")
+  (base/ability
+   :name "Refinery: Ore"
+   :summary
+    "* Can refine ore. Must be modified for each type of ore.
+     * [Power]: [Factory]")
+  (base/ability
    :name "Regeneration"
    :summary
     "* [Power]: [Healing]
@@ -1494,6 +1883,11 @@
    :name "Regrowth"
    :summary
     "* [Power]: [Healing]")
+  (base/ability
+   :name "Reign of Terror"
+   :summary
+    "* Use to rally troops
+     * [Skill]: [Intimidation] vs [Will]")
   (base/ability
    :name "Reincarnation"
    :reference
@@ -1592,11 +1986,21 @@
      * +1 Critical - [Bleeding] or [Weakness]"
    :titles "Jaws of Death")
   (base/ability
+   :name "Roar"
+   :summary
+    "* [Skill]: [Intimidation] vs [Will]")
+  (base/ability
    :name "Salvo"
    :summary
     "* The simultaneous discharge of weapons, rather than scattered 'fire at will'.
      * Up to 10 weapons of the same type can be in 1 Salvo.
      * All targets in the space are attacked.")
+  (base/ability
+   :name "Sapping"
+   :reference 
+    "* If it was important, then they should have built it better. - Desert Naturalist, Runeterra"
+   :summary
+    "* [Skill]: [Demolitions]")
   (base/ability
    :name "Savage"
    :summary
@@ -1620,7 +2024,9 @@
    :name "Scientific Genius")
   (base/ability
    :name "Scouting"
-   :titles "Reconnaissance")
+   :titles "Reconnaissance"
+   :summary
+     "* [Skill]: [Hunting]")
   (base/ability
    :name "Sculpture"
    :summary
@@ -1665,13 +2071,16 @@
    :name "Set Against Charge")
   (base/ability
    :name "Sewing"
+   :titles "Dressmaker, Seamstress"
+   :reference
+    "* Every tapestry begins with a single stitch. - Taliyah, Runeterra"
    :summary
-    "* Crochet
-    * Embroidery
-    * Fashion Clothing
-    * Needlepoint
-    * Repair Cloth"
-   :titles "Dressmaker, Seamstress")
+    "* [Skill]: [Tradeskill]
+     * Crochet
+     * Embroidery
+     * Fashion Clothing
+     * Needlepoint
+     * Repair Cloth")
   (base/ability
    :name "Shakedown"
    :reference
@@ -1704,6 +2113,26 @@
      * [Requires]: Javelin, Target with shield
      * [Attack]: Criticals are [Encumberance] Tokens.")
   (base/ability
+   :name "Shipyard: Aircraft"
+   :summary
+    "* Can produce aircraft. Must be modified for each type of aircraft.
+     * [Power]: [Factory]")
+  (base/ability
+   :name "Shipyard: Mobile"
+   :summary
+    "* Can produce mobile weapons. Must be modified for each type of mobile.
+     * [Power]: [Factory]")
+  (base/ability
+   :name "Shipyard: Naval"
+   :summary
+    "* Can produce ships. Must be modified for each type of ships.
+     * [Power]: [Factory]")
+  (base/ability
+   :name "Shipyard: Spaceship"
+   :summary
+    "* Can produce spaceships. Must be modified for each type of ships.
+     * [Power]: [Factory]")
+  (base/ability
    :name "Shockwave"
    :summary
     "* [Power]: [Strength]
@@ -1716,6 +2145,11 @@
     "* Alert allied units by sending a prearranged signal. This can be flaming arrow at night, smoking arrow, singing arrow, etc.
      * [Requires]: Bow or Crossbow
      * [Action]: For the rest of the turn, other units adjacent to this unit may be treated as if under the [Sphere of Command] of any allied Commander.")
+  (base/ability
+   :name "Simplify, Simplify, Simplify"
+   :summary
+    "* Progressively breakdown a problem into simpler problems which can each be resolved separately.
+     * [Skill]: [Brilliance]")
   (base/ability
    :name "Sleight of Hand"
    :summary
@@ -1801,6 +2235,17 @@
   (base/ability
    :name "Spines")
   (base/ability
+   :name "Spinning Bird Kick"
+   :reference
+    "* Chun-Li, Street Fighter"
+   :summary
+    "* The fighter bends over, places his hands on the ground, and then presses his legs up into a spinning handstand. The legs snap outward with tremendous momentum striking opponents in [Arc:Front], [Arc:Left], and [Arc:Right].
+     * [Skill]: [Close Combat]
+     * [Requires]: [Handstand Kick]
+     * Initiative:-1
+     * Move:-1
+     * Damage:+1")
+  (base/ability
    :name "Spirit Guide"
    :summary
     "* [Power]: [Shamanism]")
@@ -1831,6 +2276,11 @@
   (base/ability
    :name "Sting")
   (base/ability
+   :name "Storm Chamber"
+   :summary
+    "* Specially shielded chamber designed to be a safe room for particularly dangerous events including radiation flares and decompression.
+     * [Power]: [Cabin]")
+  (base/ability
    :name "Strategic Warp Jump"
    :summary
     "* A ship with a Warp Engine may perform a strategic warp jump and instantly remove itself from combat, returning to the strategic map.
@@ -1850,6 +2300,12 @@
    :summary
     "* [Requires]: Thrown Object
      * Trades lethal damage for stunning damage.")
+  (base/ability
+   :name "Suffocate"
+   :summary
+    "* Draw the air away from a target.
+     * [Power]: [Air] or [Aeromancy] vs [Speed]
+     * [Damage]: [Choking]")
   (base/ability
    :name "Summon Demon"
    :titles "Demonic Summoning")
@@ -1884,7 +2340,25 @@
    :name "Summon Item"
    :summary "* A single item may be attuned to a summoning. Later that item may be summoned to the owner's hand.")
   (base/ability
-   :name "Swallow Whole")
+   :name "Survival: Jungle"
+   :titles "Jungle Dweller, Lord of the Jungle"
+   :reference "Tarzan"
+   :summary
+    "* This ability is used to avoid or mitigate the common hazards encountered while delving into the jungle. This can also be used to avoid the attention of random predators.
+     * [Requires]: Unit must be a [Light Unit]
+     * [Survival]: [Survival]:+1 in [Jungle]
+     * [Stealth]: IF Level>1 THEN [Stealth]:+1 in [Jungle]
+     * [Combat]: IF Level>2 THEN [Inititiative]:+1 vs Ranged in [Jungle]")
+  (base/ability
+   :name "Swallow Whole"
+   :reference
+    "* I do not require a menu. - Tahm Kench, Runeterra
+     * Come along. There's room for everyone. - Tahm Kench, Runeterra")
+  (base/ability
+   :name "Swap Sensations"
+   :summary
+    "* Swap sensations with Rival.
+     * [Power]: [Empathy] or [Curses]")
   (base/ability
    :name "Sweep"
    :summary
@@ -1921,6 +2395,21 @@
    :summary
     "* [Power]: [Special Ability]")
   (base/ability
+   :name "Tanker Hold"
+   :summary
+    "* The hold is equipped to hold large amounts of liquids or gases at appropriate environments. This can be used for long range vessels to carry their own fuel or act as a fuel tanker.
+     * [Power]: [Cargo]")
+  (base/ability
+   :name "Taxadermy"
+   :summary
+    "* Stuff and Mount creatures for display
+     * [Skill]: [Tradeskill]")
+  (base/ability
+   :name "Terrorize"
+   :summary
+    "* [Skill]: [Intimidation] vs [Will]
+     * [Attack]: Any [Critical Hits] may be [Retreats]")
+  (base/ability
    :name "There are Many Enemies"
    :reference
     "When you are fighting one against many, draw both sword and companion sword and assume a wide-stretched left and right attitude. The spirit is to chase the enemies around from side to side, even though they come from all four directions. Observe their attacking order, and go to meet first those who attack first. Sweep your eyes around broadly, carefully examining the attacking order, and cut left and right alternately with your swords. Waiting is bad. Always quickly re-assume your attitudes to both sides, cut the enemies down as they advance, crushing them in the direction from which they attack. Whatever you do, you must drive the enemy together, as if tying a line of fishes, and when they are seen to be piled up, cut them down strongly without giving them room to move. - Miyamoto Mushashi, The Book of Five Rings"
@@ -1954,6 +2443,19 @@
     "When the enemy attacks and you also attack with the long sword, you should go in with a sticky feeling and fix your long sword against the enemy's as you receive his cut. The spirit of stickiness is not hitting very strongly, but hitting so that the long swords do not separate easily. It is best to approach as calmly as possible when hitting the enemy's long sword with stickiness. The difference between 'Stickiness' and 'Entanglement' is that stickiness is firm and entanglement is weak. - Miyamoto Mushashi, The Book of Five Rings")
   (base/ability
    :name "Tongue Lash")
+  (base/ability
+   :name "Torment"
+   :reference
+    "* I heard all the screaming. I was starting to get jealous. - Domination and Evelynn, Runeterra"
+   :summary
+    "* [Skill]: [Intimidation] vs [Will]")
+  (base/ability
+   :name "Torture"
+   :reference
+    "* Your cries of agony, where will they not reach?  Where on Citaeron will they not re-echo?  No man living will meet a doom more terrible than yours. - Sophocles, Oedipus Rex
+     * Oh, Its always over so soon. - Evelynn, Runeterra"
+   :summary
+    "* [Skill]: [Intimidation] vs [Will]")
   (base/ability
    :name "Totem"
    :summary
@@ -2030,6 +2532,15 @@
   (base/ability
    :name "Underwater Operation"
    :summary "* Sealed against water and can operate underwater. Small thrusters allow slow movement underwater. Oxygen scrubbers allow extended underwater operation.")
+  (base/ability
+   :name "Unsolvable Problem"
+   :reference
+    "* Kirk: Everything Harry says is a lie. Remember that, Norman. *Everything* he says is a lie.
+     * Mudd: Now I want you to listen to me very carefully, Norman. I'm... lying.
+     * Norman: You say you are lying, but if everything you say is a lie, then you are telling the truth, but you cannot tell the truth because you always lie... illogical! Illogical - I, Mudd, Star Trek"
+   :summary
+    "* Fool the target into trying to resolve a problem with no easy solution.
+     * [Skill]: [Brilliance]")
   (base/ability
    :name "Unstoppable"
    :reference
@@ -2128,7 +2639,7 @@
    :summary
     "* [Power]: [Domination]")
   (base/ability
-   :name "Zombie"
+   :name "Zombified"
    :summary
     "* [Undead]: Immune to [Bleeding] and [Fear]. Never targets [Undead].
      * [Mindless]: Does not avoid [Hazard].

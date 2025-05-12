@@ -81,7 +81,7 @@ export default class nx_tactics_books_high_technology {
                 )
               )
             ),
-            ":E.S.W.A.T.",
+            "E.S.W.A.T.",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "E.S.W.A.T.", ":reference", "Appleseed"),
             "Mobile Police",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mobile Police", ":reference", "Appleseed")
@@ -167,13 +167,13 @@ export default class nx_tactics_books_high_technology {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            "Bounty Hunter",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bounty Hunter"),
+            "Sprawl Bounty Hunter",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sprawl Bounty Hunter"),
             "Cyber Psycho",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cyber Psycho", ":summary", "* Buttonhead - someone addicted to artificially stimulating the pleasure centers of the brain.", ":titles", "Buttonhead"),
-            ":Enforcer",
+            "Enforcer",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Enforcer"),
-            ":Fixer",
+            "Fixer",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Fixer", ":summary", "* Fixers buy and sell information, goods, and services.\n* Some of their services merely require the right connections. Others are not quite legal.", ":titles", "Bookie, Executive Secretary, Gobetween, Information Broker, Negotiator, Organizer, Producer, Roadie, Thirdman"),
             "Gang Member",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Gang Member"),

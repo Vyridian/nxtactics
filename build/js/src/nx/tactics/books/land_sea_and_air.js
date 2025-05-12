@@ -125,105 +125,6 @@ export default class nx_tactics_books_land_sea_and_air {
   }
 
   /**
-   * @function chapter_land_sea_and_air_terrain
-   * @return {chapter}
-   */
-  static t_chapter_land_sea_and_air_terrain = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_land_sea_and_air_terrain = {
-    vx_type: nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_terrain
-  }
-
-  // (func chapter_land_sea_and_air_terrain)
-  static f_chapter_land_sea_and_air_terrain() {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Land, Sea and Air Terrain",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Terrain, Buildings",
-          ":terrainmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_terrainmap},
-            "Air Field",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Air Field", ":summary", "* May [Deploy] Aircraft\n* Repairs Aircraft\n* Required to extend Aircraft Range"),
-            ":Barracks",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Barracks", ":summary", "* May [Deploy] Soldiers"),
-            ":Bunker",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Bunker", ":summary", "* A small stone or concrete building.\n* Gains [Armor] of stone/concrete except at [Point Blank Range].\n+1 [Defense]"),
-            ":Dock",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Dock", ":summary", "* Required to extend Naval Supply Lines"),
-            "Field Headquarters",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Field Headquarters"),
-            "Field Hospital",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Field Hospital", ":summary", "* May [Deploy] Infantry with [Medicine] Skill\n* Heals Soldiers"),
-            "Fuel Depot",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Fuel Depot", ":summary", "* Required to extend Vehicle Supply Lines"),
-            "Motor Pool",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Motor Pool", ":summary", "* May [Deploy] land Vehicles\n* Repairs land Vehicles"),
-            ":Passageway",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Passageway", ":titles", "Corridor"),
-            ":Room",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Room"),
-            ":Shipyard",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Shipyard", ":summary", "* May [Deploy] Ships\n* Repairs Ships"),
-            "Supply Depot",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Supply Depot", ":summary", "* Required to extend Soldier Supply Lines")
-          )
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Terrain, Natural",
-          ":terrainmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_terrainmap},
-            "Broken Ground",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Broken Ground"),
-            ":Burning",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Burning"),
-            ":Cave",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Cave", ":titles", "Cavern"),
-            ":Desert",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Desert", ":summary", "* +2 [Terrain Penalty]\n* +1 [Fatigue]/Turn\n* +1 [Thirst]/Hour\n* [Heat Wave]\n* [Mirage]"),
-            ":Ice",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Ice"),
-            ":Jungle",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Jungle", ":summary", "* Flora - Native peoples are well versed in finding food from their jungle environment but for the inexperienced there are many poisonous or harmful plants. Vines and creepers should never be grasped and pulled by the naked hand as many have sharp thorns, or can spilt into extremely sharp fibres, which can cause deep lacerations. Bamboo can split to form sharp stakes when mature and any minor cut can be very serious due to the high risk of infection. Many people will have seen the classic film or TV scene where the hero cuts a vine and then drinks from it, despite this being common scene it is not a good source of drinking water, if such water is red, yellow or milky in colour it is not safe to drink. Large sections of bamboo can also contain safe drinking water, to test for it tap the section of stem with blade or hard object and listen for a change in tone or sloshing sound, such water is safe to drink. On the other hand many jungle plants are very well adapted to such a damp environment and finding suitable leaves to make a waterproof shelter is often an easy task. Many plant saps contain irritants or toxins, which can be absorbed through the skin, so skin contact with plant sap should be avoided.  Fungus is a major source of infections as in the high humidity the human body can become the perfect growing environment for a variety of unpleasant fungal parasites. Care to keep the feet dry using the correct powder is very important if at all possible as fungal foot infections in the jungle can quickly slow a person and turn a healthy one into a casualty.\n* Fauna - Jungles team with life but the greatest threat comes not from large animals but from invertebrates and smaller poisonous reptiles. Large predators such as Jaguar, Anaconda, and crocodiles will rarely attack adult humans. Much more dangerous are the vast array of stinging and biting insects which can cause sickness or be carriers for disease such as malaria and yellow fever. If scratched mosquito bites can quickly become infected in such conditions draining morale and strength. Scorpions, poisonous spiders and even poisonous frogs inhabit some jungles so checking your foot ware for visitors before putting your feet into them in the morning is vital. In some areas soldier ants can be a problems so sleeping should be done in hammocks above the ground, this also offers some protection against snakes and other nocturnal visitors. Larger predators and scavengers can be attracted by waste food and bodily waste so camp hygiene is important. If your party is strong and well armed certain large jungle animals can provide large amounts of fresh meat but such creatures are not easy to hunt and kill, wild boar and pigs are powerful animals. Most snakes are edible, an Anaconda can feed a small village but the capture and killing of one is not an easy task. Due to the variety of parasites and climate conditions the consumption of animals that you may find already dead is to be strongly avoided.\n* Environmental Hazards - Jungles are extremely hot and humid places and such conditions can place an enormous strain on the body. Despite the humidity dehydration can be a real problem and although water can be plentiful, clean water may not be. The jungle has a reputation for quickly destroying the fitness levels of the inexperienced, through dehydration, malnutrition, disease and fatigue. River crossings can be extremely hazardous and the simple precaution of wearing a condom (for the male members of the party) can prevent some very nasty parasites entering the body. Psychologically the jungles constant wall of green and low light levels beneath the canopy can seriously affect motivation and the sounds of the nocturnal animals can also be disturbing for those unused to them. All this said many native peoples around the world have learned to adapt and even thrive in such conditions."),
-            ":Lava",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Lava"),
-            "Open Water",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Open Water"),
-            ":Plains",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Plains"),
-            ":Quicksand",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Quicksand"),
-            ":Sand",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Sand"),
-            ":Scrubland",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Scrubland"),
-            ":Steppeland",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Steppeland"),
-            ":Snow",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Snow"),
-            ":Swamp",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Swamp", ":summary", "* Bog Fen Murk"),
-            ":Whitewater",
-            vx_core.f_new({"any-1": nx_tactics_base.t_terrain}, ":name", "Whitewater")
-          )
-        )
-      )
-    )
-    return output
-  }
-
-  /**
    * @function chapter_land_sea_and_air_unit_types
    * @return {chapter}
    */
@@ -587,7 +488,6 @@ export default class nx_tactics_books_land_sea_and_air {
         nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_overview(),
         nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_unit_types(),
         nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_rules(),
-        nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_terrain(),
         nx_tactics_books_land_sea_and_air.f_chapter_maps()
       )
     )
@@ -603,7 +503,6 @@ export default class nx_tactics_books_land_sea_and_air {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "chapter_land_sea_and_air_overview": nx_tactics_books_land_sea_and_air.e_chapter_land_sea_and_air_overview,
       "chapter_land_sea_and_air_rules": nx_tactics_books_land_sea_and_air.e_chapter_land_sea_and_air_rules,
-      "chapter_land_sea_and_air_terrain": nx_tactics_books_land_sea_and_air.e_chapter_land_sea_and_air_terrain,
       "chapter_land_sea_and_air_unit_types": nx_tactics_books_land_sea_and_air.e_chapter_land_sea_and_air_unit_types,
       "chapter_maps": nx_tactics_books_land_sea_and_air.e_chapter_maps,
       "tacticsbook": nx_tactics_books_land_sea_and_air.e_tacticsbook
@@ -611,7 +510,6 @@ export default class nx_tactics_books_land_sea_and_air {
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "chapter_land_sea_and_air_overview": nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_overview,
       "chapter_land_sea_and_air_rules": nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_rules,
-      "chapter_land_sea_and_air_terrain": nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_terrain,
       "chapter_land_sea_and_air_unit_types": nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_unit_types,
       "chapter_maps": nx_tactics_books_land_sea_and_air.t_chapter_maps,
       "tacticsbook": nx_tactics_books_land_sea_and_air.t_tacticsbook
@@ -662,24 +560,6 @@ export default class nx_tactics_books_land_sea_and_air {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_rules
-    }
-
-    // (func chapter_land_sea_and_air_terrain)
-    nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_terrain['vx_value'] = {
-      name          : "chapter_land_sea_and_air_terrain",
-      pkgname       : "nx/tactics/books/land_sea_and_air",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_terrain
     }
 
     // (func chapter_land_sea_and_air_unit_types)

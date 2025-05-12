@@ -2577,6 +2577,10 @@ weapons load for a small ship.
          (base/unit<-tactics-key tactics "Tie Interceptor")
         "Tie Phantom"
          (base/unit<-tactics-key tactics "Tie Phantom")
+        "Tie Reaper"
+         (base/unit<-tactics-key tactics "Tie Reaper")
+        "Tie Striker"
+         (base/unit<-tactics-key tactics "Tie Striker")
         "Imperator Star Destroyer"
          (base/unit
           :name "Imperator Star Destroyer"

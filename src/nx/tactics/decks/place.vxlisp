@@ -6,11 +6,32 @@
  [tactics : base/tactics]
  (base/placemap<-placelist
   (base/place
+   :name "Air Field"
+   :image "images/cards/place-airfield.svg"
+   :summary
+    "* May [Deploy] Aircraft
+     * Repairs Aircraft
+     * Required to extend Aircraft Range")
+  (base/place
+   :name "Barracks"
+   :image "images/cards/place-barracks.svg"
+   :summary
+    "* May [Deploy] Soldiers")
+  (base/place
    :name "Blacksmith"
    :image "images/cards/place-blacksmith.svg")
   (base/place
    :name "Brambles"
    :image "images/cards/place-brambles.svg")
+  (base/place
+   :name "Broken Ground")
+  (base/place
+   :name "Bunker"
+   :image "images/cards/place-bunker.svg"
+   :summary
+    "* A small stone or concrete building.
+     * Gains [Armor] of stone/concrete except at [Point Blank Range].
+     +1 [Defense]")
   (base/place
    :name "Campsite"
    :image "images/cards/place-campsite.svg")
@@ -19,25 +40,63 @@
    :image "images/cards/place-carpet.svg")
   (base/place
    :name "Cave"
-   :image "images/cards/place-cave.svg")
+   :image "images/cards/place-cave.svg"
+   :titles "Cavern")
   (base/place
    :name "Chasm"
    :image "images/cards/place-chasm.svg")
   (base/place
    :name "Cliff"
    :image "images/cards/place-cliff.svg")
- (base/place
-  :name "Clinic"
-  :image "images/cards/place-clinic.svg")
+  (base/place
+   :name "Clinic"
+   :image "images/cards/place-clinic.svg")
+  (base/place
+   :name "Command Post"
+   :image "images/cards/place-commandpost.svg")
+  (base/place
+   :name "Control Tower"
+   :image "images/cards/place-controltower.svg")
+  (base/place
+   :name "Corridor"
+   :titles "Passageway")
+  (base/place
+   :name "Desert"
+   :image "images/cards/place-desert.svg"
+   :summary
+    "* +2 [Terrain Penalty]
+     * +1 [Fatigue]/Turn
+     * +1 [Thirst]/Hour
+     * [Heat Wave]
+     * [Mirage]")
+  (base/place
+   :name "Dock"
+   :summary
+    "* Required to extend Naval Supply Lines")
   (base/place
    :name "Field"
    :image "images/cards/place-field.svg")
+  (base/place
+   :name "Field Headquarters")
+  (base/place
+   :name "Field Hospital"
+   :summary
+    "* May [Deploy] Infantry with [Medicine] Skill
+     * Heals Soldiers")
   (base/place
    :name "Flames"
    :image "images/cards/place-flames.svg")
   (base/place
    :name "Forest"
-   :image "images/cards/place-forest.svg")
+   :image "images/cards/place-forest.svg"
+   :summary
+    "* [Move]:-1
+     * [Line of Sight]: Blocked
+     * [Block]: [Skill]:+2, [Armor]:+2
+     * [Evade]: [Skill]:+2")
+  (base/place
+   :name "Fuel Depot"
+   :summary "* Required to extend Vehicle Supply Lines")
   (base/place
    :name "Gas Station"
    :image "images/cards/place-gasstation.svg")
@@ -51,6 +110,16 @@
    :name "House: Farm"
    :image "images/cards/place-house-farm.svg")
   (base/place
+   :name "Ice"
+   :image "images/cards/place-ice.svg")
+  (base/place
+   :name "Jungle"
+   :image "images/cards/place-jungle.svg"
+   :summary
+    "* Flora - Native peoples are well versed in finding food from their jungle environment but for the inexperienced there are many poisonous or harmful plants. Vines and creepers should never be grasped and pulled by the naked hand as many have sharp thorns, or can spilt into extremely sharp fibres, which can cause deep lacerations. Bamboo can split to form sharp stakes when mature and any minor cut can be very serious due to the high risk of infection. Many people will have seen the classic film or TV scene where the hero cuts a vine and then drinks from it, despite this being common scene it is not a good source of drinking water, if such water is red, yellow or milky in colour it is not safe to drink. Large sections of bamboo can also contain safe drinking water, to test for it tap the section of stem with blade or hard object and listen for a change in tone or sloshing sound, such water is safe to drink. On the other hand many jungle plants are very well adapted to such a damp environment and finding suitable leaves to make a waterproof shelter is often an easy task. Many plant saps contain irritants or toxins, which can be absorbed through the skin, so skin contact with plant sap should be avoided.  Fungus is a major source of infections as in the high humidity the human body can become the perfect growing environment for a variety of unpleasant fungal parasites. Care to keep the feet dry using the correct powder is very important if at all possible as fungal foot infections in the jungle can quickly slow a person and turn a healthy one into a casualty.
+     * Fauna - Jungles team with life but the greatest threat comes not from large animals but from invertebrates and smaller poisonous reptiles. Large predators such as Jaguar, Anaconda, and crocodiles will rarely attack adult humans. Much more dangerous are the vast array of stinging and biting insects which can cause sickness or be carriers for disease such as malaria and yellow fever. If scratched mosquito bites can quickly become infected in such conditions draining morale and strength. Scorpions, poisonous spiders and even poisonous frogs inhabit some jungles so checking your foot ware for visitors before putting your feet into them in the morning is vital. In some areas soldier ants can be a problems so sleeping should be done in hammocks above the ground, this also offers some protection against snakes and other nocturnal visitors. Larger predators and scavengers can be attracted by waste food and bodily waste so camp hygiene is important. If your party is strong and well armed certain large jungle animals can provide large amounts of fresh meat but such creatures are not easy to hunt and kill, wild boar and pigs are powerful animals. Most snakes are edible, an Anaconda can feed a small village but the capture and killing of one is not an easy task. Due to the variety of parasites and climate conditions the consumption of animals that you may find already dead is to be strongly avoided.
+     * Environmental Hazards - Jungles are extremely hot and humid places and such conditions can place an enormous strain on the body. Despite the humidity dehydration can be a real problem and although water can be plentiful, clean water may not be. The jungle has a reputation for quickly destroying the fitness levels of the inexperienced, through dehydration, malnutrition, disease and fatigue. River crossings can be extremely hazardous and the simple precaution of wearing a condom (for the male members of the party) can prevent some very nasty parasites entering the body. Psychologically the jungles constant wall of green and low light levels beneath the canopy can seriously affect motivation and the sounds of the nocturnal animals can also be disturbing for those unused to them. All this said many native peoples around the world have learned to adapt and even thrive in such conditions.")
+  (base/place
    :name "Lake"
    :image "images/cards/place-lake.svg")
   (base/place
@@ -63,17 +132,26 @@
    :name "Mill"
    :image "images/cards/place-mill.svg")
   (base/place
+   :name "Motor Pool"
+   :summary
+    "* May [Deploy] land Vehicles
+     * Repairs land Vehicles")
+  (base/place
    :name "Mountain"
    :image "images/cards/place-mountain.svg")
   (base/place
    :name "Mudslide"
    :image "images/cards/place-mudslide.svg")
   (base/place
+   :name "Open Water")
+  (base/place
    :name "Path: Dirt"
    :image "images/cards/place-path-dirt.svg")
   (base/place
    :name "Pit"
    :image "images/cards/place-pit.svg")
+  (base/place
+   :name "Plains")
   (base/place
    :name "Police Station"
    :image "images/cards/place-policestation.svg")
@@ -84,6 +162,8 @@
    :name "Pond"
    :image "images/cards/place-pond.svg")
   (base/place
+   :name "Quicksand")
+  (base/place
    :name "River"
    :image "images/cards/place-river.svg")
   (base/place
@@ -92,6 +172,9 @@
   (base/place
    :name "Road: Gravel"
    :image "images/cards/place-road-gravel.svg")
+  (base/place
+   :name "Road: Intersection"
+   :image "images/cards/place-road-intersection.svg")
   (base/place
    :name "Road: Stone"
    :image "images/cards/place-road-stone.svg")
@@ -102,10 +185,19 @@
    :name "Rockslide"
    :image "images/cards/place-rockslide.svg")
   (base/place
+   :name "Sand")
+  (base/place
    :name "Sandalstad"
    :summary
     "* A small settlement nestled near the Sandal Forest and Mt. Murin.
      * It was established to harvest Sandalwood trees and the oils they produces. Transporting the wood is difficult, so the settlement is more focused on trading oils, creams, and perfumes. Local wheat farming, breads, and goat and sheep herding make up the main diet.")
+  (base/place
+   :name "Scrubland")
+  (base/place
+   :name "Shipyard"
+   :summary
+    "* May [Deploy] Ships
+     * Repairs Ships")
   (base/place
    :name "Shop: General"
    :image "images/cards/place-shop-general.svg")
@@ -130,6 +222,8 @@
    :name "Stairs"
    :image "images/cards/place-stairs.svg")
   (base/place
+   :name "Steppeland")
+  (base/place
    :name "Store: Convenience"
    :image "images/cards/place-store-convenience.svg")
   (base/place
@@ -139,10 +233,11 @@
    :name "Stream"
    :image "images/cards/place-stream.svg")
   (base/place
-   :name "Street"
-   :image "images/cards/place-street.svg")
+   :name "Supply Depot"
+   :summary "* Required to extend Soldier Supply Lines")
   (base/place
    :name "Swamp"
+   :titles "Bog, Fen, Murk"
    :image "images/cards/place-swamp.svg")
   (base/place
    :name "Tavern"
@@ -163,6 +258,9 @@
    :name "Temple"
    :image "images/cards/place-temple.svg")
   (base/place
+   :name "Thera"
+   :image "images/cards/place-thera.svg")
+  (base/place
    :name "Tile"
    :image "images/cards/place-tile.svg")
   (base/place
@@ -171,6 +269,8 @@
   (base/place
    :name "Wall: Stone"
    :image "images/cards/place-wall-stone.svg")
+  (base/place
+   :name "Whitewater")
   )
  :doc "Returns the base placemap")
 

@@ -629,6 +629,7 @@
        "Ranged"
        "Firearms"
        "Gunnery"
+       "Demolitions"
        "Military"
        "Leadership")))))
 
@@ -646,11 +647,8 @@
         :Bezainted
          (base/item
           :name "Bezainted")
-        "Breast Plate"
-         (base/item
-          :name "Breast Plate"
-          :summary "* [Hit Location]: Shoulders Chest Abdomen Vitals"
-          :armor "1mm")
+        "Armor: Breast Plate"
+         (base/item<-tactics-key tactics "Armor: Breast Plate")
         :Brigandine
          (base/item
           :name "Brigandine")

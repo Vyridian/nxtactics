@@ -12,29 +12,29 @@
     (chapter_wwi_campaign tactics)
     (chapter_wwii_overview tactics)
     (chapter_wwii_western_front tactics)
-    (chapter_wwii_eastern_front)
-    (chapter_wwii_north_african_theatre)
-    (chapter_wwii_east_african_theatre)
-    (chapter_wwii_middle_east_theatre)
-    (chapter_wwii_mediterranean_theatre)
-    (chapter_wwii_pacific_theatre)
-    (chapter_wwi_british_forces)
-    (chapter_wwi_french_forces)
-    (chapter_wwi_german_forces)
-    (chapter_wwii_equipment)
-    (chapter_wwii_american_equipment)
-    (chapter_wwii_american_units)
-    (chapter_wwii_british_equipment)
-    (chapter_wwii_british_units)
-    (chapter_wwii_french_equipment)
-    (chapter_wwii_french_units)
-    (chapter_wwii_german_equipment)
-    (chapter_wwii_german_units)
-    (chapter_wwii_italian_units)
-    (chapter_wwii_japanese_equipment)
-    (chapter_wwii_japanese_units)
-    (chapter_wwii_soviet_equipment)
-    (chapter_wwii_soviet_units)
+    (chapter_wwii_eastern_front tactics)
+    (chapter_wwii_north_african_theatre tactics)
+    (chapter_wwii_east_african_theatre tactics)
+    (chapter_wwii_middle_east_theatre tactics)
+    (chapter_wwii_mediterranean_theatre tactics)
+    (chapter_wwii_pacific_theatre tactics)
+    (chapter_wwi_british_forces tactics)
+    (chapter_wwi_french_forces tactics)
+    (chapter_wwi_german_forces tactics)
+    (chapter_wwii_equipment tactics)
+    (chapter_wwii_american_equipment tactics)
+    (chapter_wwii_american_units tactics)
+    (chapter_wwii_british_equipment tactics)
+    (chapter_wwii_british_units tactics)
+    (chapter_wwii_french_equipment tactics)
+    (chapter_wwii_french_units tactics)
+    (chapter_wwii_german_equipment tactics)
+    (chapter_wwii_german_units tactics)
+    (chapter_wwii_italian_units tactics)
+    (chapter_wwii_japanese_equipment tactics)
+    (chapter_wwii_japanese_units tactics)
+    (chapter_wwii_soviet_equipment tactics)
+    (chapter_wwii_soviet_units tactics)
    )))
 
 (func chapter_world_wars_overview : base/chapter
@@ -118,19 +118,19 @@
 
 (func chapter_wwi_campaign : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "WWI Campaign"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Overview
-     (section
+     (base/section
       :name "Overview"
       :summary
        "* Events Leading to War
         * Overview of the War
         * Aftermath")
     "WWI Scenes"
-     (section
+     (base/section
       :name "WWI Scenes"
       :scenemap
        (scenemap
@@ -204,12 +204,12 @@
 
 (func chapter_wwii_western_front : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "WWII Western Front"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Unfiled WWII"
-     (section
+     (base/section
       :name "Unfiled WWII"
       :scenemap
        (scenemap
@@ -293,11 +293,11 @@
                "* 12 Levels of Artillery (max 3) (Quickstart: ?)
                 * 9 Levels of Infantry (max 8) (Quickstart: Waffen-SS, MG Team, 4x Riflemen)")))))
     "Phoney War"
-     (section
+     (base/section
       :name "Phoney War"
       :summary "The Germans invade Poland in 1939. Britain and France declare war on Germany, but launch no land operations, instead building their forces for a long war.")
     "Battle of the Netherlands"
-     (section
+     (base/section
       :name "Battle of the Netherlands"
       :summary "Although the Netherlands had been neutral during World War I, Dutch sympathies during that conflict were more on the German side. At the end of World War I, the Netherlands gave asylum to German Emperor Wilhelm II and refused to release him into Allied custody, instead giving him a castle, Huis Doorn, where he lived until his death in 1941. Following outbreak of the Second World War, the Netherlands hoped to remain neutral just like they had done 25 years previously. The Dutch forces were poorly equipped with WWI era tankettes and biplanes and were no match for the Germans falling in 4 days."
       :scenemap
@@ -351,7 +351,7 @@
                 * 62 Planes
                 * Artillery")))))
     "Battle of France"
-     (section
+     (base/section
       :name "Battle of France"
       :summary
        "* After the seven months of the Phoney War, the Battle of France began in earnest on 10 May 1940. The French and British soon collapsed under the onslaught of the German blitzkrieg. The British escaped at Dunkirk, while the French Army surrendered with 90,000 dead and 200,000 wounded.
@@ -397,12 +397,12 @@
               :name "German"
               :forces "Panzer Divisions")))))
     "Battle of Britain"
-     (section
+     (base/section
       :name "Battle of Britain"
       :summary
        "During the summer and fall of 1940, the the German Luftwaffe attempted to gain air superiority over the Royal Air Force (RAF). Had it been successful, the planned amphibious and airborne landings in Britain would have followed. The Battle of Britain was the first major campaign to be fought entirely by air forces. It was the largest and most sustained bombing campaign attempted up until that date. The failure of Nazi Germany to destroy Britain's air defense or to break British morale is considered its first major defeat.")
     "Battle of Denmark Strait"
-     (section
+     (base/section
       :name "Battle of Denmark Strait"
       :scenemap
        (scenemap
@@ -463,7 +463,7 @@
                "* Battleship - Bismarck
                 * Submarine - U-556")))))
     "St. Nazaire Raid"
-     (section
+     (base/section
       :name "St. Nazaire Raid"
       :summary
        "* The St. Nazaire Raid (also called Operation Chariot) was a successful British seaborne attack on the heavily defended docks of St. Nazaire in occupied France on the night of March 28, 1942 during World War II.
@@ -481,14 +481,14 @@
         * It was not until 1035 hrs that the Campbeltown finally exploded, destroying the caisson and killing about 250 German soldiers and civilians in the immediate area.
         * Of the 611 British soldiers, 169 had been killed and 200 captured, but the mission was a success and the dock was unusable until 1947.")
     "Dieppe Raid"
-     (section
+     (base/section
       :name "Dieppe Raid"
       :summary
        "* Because of the massive logistical obstacles a cross-channel invasion would face, Allied high command decided to conduct a practice attack against the French coast.
         * On August 19, 1942, the Allies began the Dieppe Raid, an attack on Dieppe, France. Most of the troops were Canadian, with an American and some British contingents. The raid was a disaster, and almost two-thirds of the attacking force became casualties. However, much was learned as a result of the operation, these lessons would be put to good use later in subsequent invasions.
         * For almost two years, there was no land-fighting on the Western Front with the exception of commando raids and the guerrilla actions of the resistance aided by the SOE and OSS. However, in the meantime, the Allies took the war to Germany, with a strategic bombing campaign the US Eighth Air Force bombing Germany by day and the RAF Bomber Command bombing by night.")
     "Invasion of Normandy"
-     (section
+     (base/section
       :name "Invasion of Normandy"
       :summary
        "* On June 6, 1944, the Allies began Operation Overlord (also known as 'D-Day') - the long-awaited liberation of France. The deception operation had the Germans convinced that the invasion would occur at the Pas-de-Calais, while the real target was Normandy.
@@ -547,7 +547,7 @@
               :deploy "* Surprise is yours. Do not deploy at the beginning of the game. Instead, any time you have the initiative, you may deploy the Tiger in any space and immediately attack."
               :forces "* 1 [Tiger Tank] - Ace")))))
     "Liberation of France / Operation Dragoon"
-     (section
+     (base/section
       :name "Liberation of France / Operation Dragoon"
       :summary
        "* On August 15. 1944 in an effort to aid their operations in Normandy, the Allies launched Operation Dragoon - the invasion of Southern France. The Allies rapidly consolidated this beachhead and liberated southern France in two weeks."
@@ -557,7 +557,7 @@
          (scene
           :name "Red Ball Express")))
     "Operation Market Garden"
-     (section
+     (base/section
       :name "Operation Market Garden"
       :summary
        "* The British Field-Marshal Montgomery persuaded Allied High Command to launch a bold attack. Paratroopers would fly in from England and take bridges over the main rivers of the German-occupied Netherlands in three main cities, Eindhoven, Nijmegen, and Arnhem. British troops would punch through the German lines and link up with the paratroopers. If all went well, the Allies would capture the port facilities in Antwerp and advance into Germany without any remaining major obstacles. British XXX Corps was able to link up with six of the seven paratrooper-held bridges, but was unable to link up with the troops near the bridge over the Rhine at Arnhem. The result was the destruction of the British 1st Airborne Division. These events were summarized by Lt Gen. Frederick Browning as 'a bridge too far'."
@@ -586,12 +586,12 @@
              (team
               :name "German*")))))
     "Allied advance from Paris to the Rhine"
-     (section
+     (base/section
       :name "Allied advance from Paris to the Rhine"
       :summary
        "Starting in early September 1944, the Americans began slow and bloody fighting through the Hurtgen Forest to breach the line.")
     "Battle of the Bulge"
-     (section
+     (base/section
       :name "Battle of the Bulge"
       :summary
        "* The 'bulge' was the initial incursion the Germans put into the Allies' line of advance. The offensive was launched in the Ardennes. Germany's planned goal for these operations was to split the British and American Allied line in half, capturing Antwerp, Belgium, and then proceeding to encircle and destroy four Allied armies, forcing the Western Allies to negotiate a peace treaty in the Axis Powers' favor.
@@ -600,23 +600,24 @@
         * For the U.S. Army, the battle incorporated more troops and engaged more enemy troops than any conflict before that time. The German objectives ultimately were unrealized. In the wake of the defeat, many experienced German units were left severely depleted of men and equipment.
         * The Battle of the Bulge was the bloodiest of the battles that U.S. forces experienced in WWII with 19,000 American dead.")
     "Invasion of Germany"
-     (section
+     (base/section
       :name "Invasion of Germany"
       :summary
        "* Hitler would not allow Field Marshal Gerd von Rundstedt to withdraw East behind the Rhine arguing that it would only delay the inevitable fight. Hitler ordered him to fight where his forces stood. By the time the water had subsided and the U.S. Army was able to cross the Roer on February 23, other Allied forces were also close to the Rhine's west bank. Rundstedt's divisions which had remained on the west bank of the Rhine were cut to pieces in the battle of the Rhineland and 290,000 men were taken prisoner.
         * On May 7 1944, Eisenhower took the unconditional surrender of all German forces to the western Allies and the Soviet Union."))))
 
 (func chapter_wwii_eastern_front : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Eastern Front"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Invasion of Poland"
-     (section
+     (base/section
       :name "Invasion of Poland"
       :summary "Germans invade Poland in 1939.")
     "Operattion Barbarossa"
-     (section
+     (base/section
       :name "Operattion Barbarossa"
       :summary
        "* The codename for Nazi Germany's invasion of the Soviet Union during WWII that commenced on June 22, 1941. Over 4.5 million troops of the Axis powers invaded the USSR along an 1,800 mile front. The operation was named after the Emperor Frederick Barbarossa of the Holy Roman Empire, a leader of the Third Crusade in the 12th century. Barbarossa was the major part of the war on the Eastern Front. The planning for operation Barbarossa took several years prior to June 1941; the clandestine preparations and the military operation itself lasted almost a year, from the Spring of 1941, through the Winter of 1941.
@@ -624,15 +625,15 @@
         * Then the failure of Barbarossa resulted in Hitler's demands for additional operations inside Russia, all of which eventually failed, such as continuation of the Siege of Leningrad, Operation Nordlicht, and Battle of Stalingrad, among other battles on the occupied Russian territory.
         * The failure of Operation Barbarossa resulted in the eventual defeat of Nazi Germany and is considered a turning point for the Third Reich. Most importantly, Operation Barbarossa opened up the Eastern Front, which ultimately became the biggest theater of war in world history. Operation Barbarossa and the areas which fell under it became the site of some of the largest and most brutal battles, deadliest atrocities, terrible loss of life, and horrific conditions for Soviets and Germans alike - all of which influenced the course of both WWII and 20th Century history.")
     "Battle of Moscow"
-     (section
+     (base/section
       :name "Battle of Moscow"
       :summary "* Nazi strategic offensive Operation Typhoon, and a series of Soviet strategic and smaller operations executed during the defense of Moscow, and the subsequent Soviet counter-offensive that occurred between October 1941 and January 1942 on the Eastern Front during WWII as a response to the Hitler's strategy that considered Moscow to be the primary military and political objective for Axis forces in their invasion of the Soviet Union.")
     "Battle of Stalingrad"
-     (section
+     (base/section
       :name "Battle of Stalingrad"
       :summary "Stalingrad was the bloodiest battle in human history, with combined casualties estimated to be above 60 million. The battle was marked by brutality and disregard for military and civilian casualties by both sides. The German offensive to take Stalingrad, the battle inside the city, and the Soviet counter-offensive which eventually trapped and destroyed the 6th Army and other Axis forces around the city was the second large-scale defeat of the Second World War.")
     "Battle of Kursk"
-     (section
+     (base/section
       :name "Battle of Kursk"
       :summary
        "* The last German blitzkrieg offensive in the east executed by the German forces on a strategic scale during the war, with the hope of another great encirclement of Red Army forces. The operations, which included the famous battle at Prokhorovka, remains both the largest series of armored operations and the most costly single day of aerial warfare to date.
@@ -668,6 +669,7 @@
         * The battle of Berlin lasted from late April 1945 until early May and was one of the bloodiest battles in history. Before the battle was over, German dictator Adolf Hitler and many of his followers committed suicide."))))
 
 (func chapter_wwii_north_african_theatre : base/chapter
+ [tactics : base/tactics]
  (base/chapter
   :name "WWII North African Theatre"
   :summary
@@ -677,13 +679,13 @@
     * It would not be until early in 1943, after another year and a half of hard fighting and mixed fortunes, that the Axis forces would be finally driven out of Libya.
     * On November 8, 1942, the U.S. had entered the war beginning with amphibious landing in northwest Africa, codenamed Operation Torch, under the Supreme Allied Commander General Dwight D. Eisenhower."
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Invasion of Egypt"
-     (section
+     (base/section
       :name "Invasion of Egypt"
       :summary "On September 13, 1940, Italy invaded Egypt with 200,000 troops from Libya.")
     "Operation Compass"
-     (section
+     (base/section
       :name "Operation Compass"
       :summary
        "* The Allies had only 36,000 men, but nevertheless launched a counter-attack. The Italians had 150,000 troops and tanks were evenly divided between the mechanically reliable but machine gun-armed Fiat L3s tankettes and the heavier Fiat M11/39. This tank featured a hull-mounted 37 mm tank gun which was difficult to bring to bear on targets because of its lack of available traverse, was relatively poorly armored and was mechanically unreliable. In comparison, the British were able to field some faster Cruiser tanks (the Mk I, Mk II, and Mk III) which were more than match to the M11/39s. The British also had a limited number of heavy Matilda Infantry tanks that, while slow, were strongly armored and well armed. The armour of the Matilda tanks could not be pierced by any of the available Italian tank guns or anti-tank guns available at that time though Italian anti-aircraft guns could be used against them in the same manner as the German 88mm.
@@ -692,7 +694,7 @@
         * The British had captured Nibeiwa and destroyed the only front-line Italian armoured unit in less than five hours. After the disaster, the Italian General was replaced.
         * As the Commonwealth forces advanced, several large Italian units were surrounded, cut off from supply, and defeated. After some hard fighting, one position after another surrendered.")
     :Bardia
-     (section
+     (base/section
       :name "Bardia"
       :reference
        "* Never has so much been surrendered by so many to so few. - Anthony Eden
@@ -701,43 +703,43 @@
        "* On January 4, 1941, an Australian division was to assault Bardia and found themselves under continuous mortar and artillery fire and found it best to keep skirmishing forward instead of stopping and enduring artillery. Italian morale was broken, worn down by six weeks of aerial and naval bombardment.
         * The Australians captured Bardia taking 45,000 prisoners, 462 guns, 12 medium tanks, 115 tankettes and 708 vehicles with a loss of 130 dead.")
     :Tobruk
-     (section
+     (base/section
       :name "Tobruk"
       :summary
        "* On January 22, 1941, the Australians briefly captured Tobruk, yielding over 25,000 prisoners along with 236 field and medium guns, 23 medium tanks and more than 200 other vehicles. The Australian losses were 49 dead. The British began bombarding the remaining Italian positions.
         * On January 26, 1941, during the night it was hoped that a surrender could be brokered, but Mussolini himself forbid the generals from surrender. Later that night Italian SM 79's carried out a surprise low-level attack which accidentally bombed 8,000 Italian prisoners killing and wounding hundreds of their own men. This bombing broke the will of the Italians and that afternoon they surrendered.
         * 25,000 Italians and 400 Australians had been killed.")
     "Battle of Beda Fomm"
-     (section
+     (base/section
       :name "Battle of Beda Fomm"
       :summary
        "* On February 6, 1941, the Combe Force consisting of 2,000 men and (for the sake of speed) only light and Cruiser tanks managed to hold off 20,000 Italian soldiers supported by over 100 tanks and 200 guns. The Italian tanks were the newly arrived Fiat M13/40 medium tanks which were a vast improvement to the M11's.
         * The fighting was close and often hand to hand. At one point, a regimental sergeant major captured an Italian light tank by hitting the commander over the head with a rifle-butt.
         * Soon British and Australian reinforcements arrived and the Italians surrendered.")
     "Aftermath of Beda Fomm"
-     (section
+     (base/section
       :name "Aftermath of Beda Fomm"
       :summary
        "* After 10 weeks the Italian Tenth Army was no more. The British and Commonwealth forces had advanced 800km, destroyed or captured 400 tanks and 1290 artillery pieces, and captured 130,000 Libyan and Italian Prisoners of war. Their prisoners included 22 generals. The Commonwealth forces suffered 494 dead and 1,225 wounded.
         * However the advance stopped short of driving the Italians out of North Africa. As the advance reached El Agheila, Churchill ordered that it be stopped, and troops dispatched to defend Greece which was being attacked by Italy.")
     :Rommel
-     (section
+     (base/section
       :name "Rommel"
       :summary "* The stunning defeat of the Italians did not go unnoticed and fresh Italian troops together with German troops, the Deutsches Afrikakorps under Erwin Rommel were sent in to reinforce the Italian forces in western Libya. Although Rommel had been ordered to simply hold the line, an armoured reconnaissance soon became a fully fledged offensive.")
     "Operation Torch"
-     (section
+     (base/section
       :name "Operation Torch"
       :summary
        "* On November 8, 1942, Allied forces landed in Vichy held French North Africa where they were met with bloody resistance in Oran and Morocco, but in Algiers a coup d'etat by the French resistance on November 8 succeeded in neutralizing the defense before the landing, and arresting the Vichy commanders. Oran and Morocco were then convinced to cease resistance with the proviso that the Vichy Admiral Darlan would be head of the Free French administration. The Vichy army joined the Allies and formed the Free French Forces.
         * On December 24, Darlan was assassinated for his collaboration with the Nazis.")
     "Western Desert Campaign"
-     (section
+     (base/section
       :name "Western Desert Campaign"
       :summary
        "* The Western Desert Campaign, also known as the Desert War was the initial stage of the North African Campaign. The Axis powers had planned to dominate the Mediterranean through control of Gibraltar and the Suez Canal and planned to follow a successful campaign in North Africa with a strike north to the rich oil fields of the Middle East. This would have cut off nearby oil supplies to the Allies, and would have tremendously increased the oil supplies available for the Axis war machine.
         * By 1942, the campaign was heavily influenced by the availability of supplies and transport. Large quantities of supplies were becoming available form the United States. The British and Italian navies were evenly matched in the Mediterranean, but the British retention of Malta allowed the RAF to interdict an increasing amount of Italian supplies at sea denying the German commander, Rommel, fuel and reinforcements at critical moments.")
     :Jefria
-     (section
+     (base/section
       :name "Jefria"
       :summary
        "* On November 24, two Allied columns prepared to advance from Djebel Abiod.
@@ -746,7 +748,7 @@
         * The ambush worked perfectly with the leading battalion taking 149 casualties. Units were sent into the hills to try to flush the Germans out but the stubborn resistance of the paratroopers combined with the cleverly planned interlocking defenses proved too much.
         * The position remained in German hands until the last days of fighting in Tunisia the following spring.")
     "German Initiative"
-     (section
+     (base/section
       :name "German Initiative"
       :summary
        "* A string of Allied defeats in December cost them dearly; 173 tanks, 432 other vehicles, and 170 artillery pieces were lost, in addition to thousands of casualties.
@@ -754,7 +756,7 @@
         * On December 22, 1942, the British Coldstream Guards drove back the German 10th Panzer Division from Longstop Hill. They were then relieved and withdrawn to Mejdez. The Germans regained the hill in a counter-attack and the Coldstreams were ordered back to Longstop. They regained the peak, but with ammunition running low and Axis forces holding adjacent high ground they were forced to withdraw.
         * By December 26, 1942, the Allies had withdrawn to the line they had left 2 weeks earlier having suffered 20,743 casualties.")
     "Battle of Kasserine Pass"
-     (section
+     (base/section
       :name "Battle of Kasserine Pass"
       :summary
        "* The Battle of Kasserine Pass was, in fact, a series of battles fought around Kasserine Pass, a two-mile (3 km) wide gap in the Grand Dorsal chain of the Atlas Mountains in west central Tunisia.
@@ -764,7 +766,7 @@
         * The battle has been described as when the amateurs first met the professionals. In the aftermath, the U.S. Army instituted sweeping changes from unit-level organization to the replacing of commanders.
         * When they next met, in some cases only weeks later, the U.S. was considerably stronger.")
     :Faïd
-     (section
+     (base/section
       :name "Faïd"
       :summary
        "* On January 23, 1943, the Allies took Tripoli, thereby cutting off Rommel's main supply base. Rommel had planned for this eventuality. With their lines steadied by the Atlas Mountains on the west and Gulf of Sidra on the east, even small numbers of German/Italian troops would be able to hold off the Allied forces.
@@ -772,14 +774,14 @@
         * The Panzer Divisions moved on the Atlas Mountans. Several attempts were made by the U.S. 1st Armored Division to stop their advance, but all three combat commands found themselves faced with the classic blitzkrieg every time they were ordered into a defensive position, they would find those positions had already been overrun, and they were attacked by German soldiers with heavy losses.
         * After 3 days the Allies had to withdraw.")
     "Battle of Sidi Bou Zid"
-     (section
+     (base/section
       :name "Battle of Sidi Bou Zid"
       :summary
        "* Rommel eventually decided that he could improve his supply situation and further erode the American threat to his flank by attacking towards two U.S. supply bases in Algeria.
         * On February 14, 1943, the Panzer Division moved west attacking Sidi Bou Zid.
         * The battle raged for a day, but poor use of armor by the U.S. led to their defeat. By this point, the U.S. forces had lost 2,546 men, 103 tanks, 280 vehicles, 18 field guns, 3 antitank guns, and an entire antiaircraft battery.")
     "Rommel's Assault"
-     (section
+     (base/section
       :name "Rommel's Assault"
       :summary
        "* On February 19, 1943, Rommel launched an assault that broke the U.S. lines within minutes. Their light guns and tanks had no chance against the heavier German equipment, and they had little or no experience in armored warfare. The German Panzer IVs and Tiger tanks fended off all attacks with ease; the M3 Lee and M3 Stuart tanks they faced were inferior in firepower and their crews far less experienced.
@@ -787,7 +789,7 @@
         * Once again, the 1st Armored Division found itself ordered into useless positions. Morale among the U.S. troops started to fall precipitously, and by evening many troops had pulled back, leaving their equipment on the field.
         * The pass was completely open, and it appeared the supply dump at Tebessa was within reach. However, desperate resistance by isolated groups left behind in the action seriously slowed the German advance.")
     :Thala
-     (section
+     (base/section
       :name "Thala"
       :summary
        "* By February 21, 1943, the Panzer Division was just outside of the small town of Thala. If they took it the U.S. 9th Infantry Division would be cut off from their supplies, and Combat Command B of the 1st Armored Division would be trapped by the 10th Panzer division. That night, small units of British, French, and U.S. forces freed from the line to the north were sent piecemeal into the lines at Thala. 
@@ -796,7 +798,7 @@
         * After the battle, Rommel was largely contemptuous of both the U.S. equipment and fighting ability and considered them a non-threat. U.S. Commander Lloyd Fredendall was relieved and sent to a noncombat assignment for the remainder of the war. Fredendall's subordinates had no confidence in him as their commander and British First Army commander also thought Fredendall incompetent.
         * On March 6, Major-General George S. Patton was placed in command with the explicit task of improving performance.")
     "Operation Capri"
-     (section
+     (base/section
       :name "Operation Capri"
       :summary
        "* On March 6, 1943, the Allies had reached the Tunisian border and Rommel and von Arnim found themselves outflanked, outmanned and outgunned.
@@ -805,7 +807,7 @@
         * With the failure of Capri, Rommel decided that the only way to save his armies would be to evacuate them. He therefore left Tunisia to see Hitler to try to convince him to abandon Tunisia and return the Axis armies to Europe. Hitler refused, and Rommel was placed, in strict secrecy, on sick leave.
         * Von Arnim became commander of Army Group Africa.")
     "Battle of El Guettar"
-     (section
+     (base/section
       :name "Battle of El Guettar"
       :summary "* On March 23, 1943, the 10th Panzer met the U.S. II Corp. At first the battle went much as it had in earlier matchups, with the German tanks rolling up lead units of the US forces. However, they soon ran into a US minefield, and immediately the US artillery and anti-tank units opened up on them. The 10th lost 30 tanks over a short period, and retreated out of the minefield."
       :scenemap
@@ -814,7 +816,7 @@
          (scene
           :name "Minefield")))
     :Tunisia
-     (section
+     (base/section
       :name "Tunisia"
       :reference
        "* Sink, burn, capture, destroy. Let nothing pass - Admiral Cunningham, Naval Task Force Commander
@@ -825,7 +827,7 @@
         * On May 13, 1943, the Axis forces surrendered yielding over 275,000 prisoners of war including most of the Afrika Korps. This huge loss of experienced troops greatly reduced the military capacity of the Axis powers, although the largest percentage of Axis troops escaped Tunisia.
         * This defeat in Africa led to all Italian colonies being captured.")
     "Aftermath of Tunisia"
-     (section
+     (base/section
       :name "Aftermath of Tunisia"
       :summary
        "* According to historian Williamson A. Murray 'The decision to reinforce North Africa was one of the worst of Hitler's blunder: admittedly, it kept the Mediterranean closed for six more months, with a negative impact on the Allied shipping situation, but it placed some of Germany's best troops in an indefensible position from which, like Stalingrad, there would be no escape. Moreover Hitler committed the Luftwaffe to fight a battle of attrition under unfavorable conditions, and it suffered losses that it could not afford.'
@@ -833,7 +835,8 @@
         * With North Africa now in Allied hands, plans quickly turned to the invasion of Sicily, and Italy after it."))))
 
 (func chapter_wwii_east_african_theatre : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII East African Theatre"
   :summary
    "* The battles of this campaign were fought between the forces of the British Empire, the British Commonwealth of Nations, and the forces of the Italian Empire.
@@ -841,9 +844,9 @@
     * In November 1940, the British and Commonwealth forces received an incredible intelligence advantage. The government code and cypher school broke the high grade cypher of the Italian Royal Army in East Africa. Later, during the same month, the replacement cypher for the Italian Royal Air Force was broken.
     * From this point on, the commanders knew Italian plans as soon as they were issued."
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Italian Forces"
-     (section
+     (base/section
       :name "Italian Forces"
       :summary
        "* Troops - The Italian forces included Italian nationals, East African colonials (Eritreans, Abyssinians, and Somali Dubats), and a small number of German volunteers (the German Motorized Company).
@@ -854,7 +857,7 @@
         * Aircraft - The Italians had 200-300 Savoia-Marchetti SM.79 and Savoia-Marchetti SM.81 bombers and Fiat CR-42 fighters. While some of these aircraft were outdated, in relative terms these were some of the best aircraft available to either side in East Africa in 1940. In addition, the Italian aircraft were often based at better airfields than their British and Commonwealth counter-parts. When the war began, Italian pilots were relatively well trained and confident of their abilities. But, cut off from Italy as they were, problems with lack of fuel, munitions, spare parts, and replacements eventually wore the Italian air capability down.
         * Navy - Italian Naval power maintained presence in the Red Sea region with its 'Red Sea Flotilla' consisting of seven destroyers, five motor torpedo boats and eight submarines.")
     "Allied Forces"
-     (section
+     (base/section
       :name "Allied Forces"
       :summary
        "* Troops - The British and Commonwealth forces in East Africa amounted to about 30,000 men in the Sudan, British East Africa, and British Somaliland. The British were slightly better equipped than the Italians, and had access to resupply and reinforcements. However, they were vastly outnumbered by the Italian forces. To make matters worse, the Italians had at least another 208,000 men (fourteen divisions) available in Libya.
@@ -862,7 +865,7 @@
         * Aircraft - The roughly one-hundred aircraft available to the British and Commonwealth forces at the beginning of the campaign were dispersed as follows: In the north (Sudan) were two Royal Air Force (RAF) bomber squadrons at Port Sudan (one of these squadron was equipped with obsolete aircraft) and the RAF Army Co-operation Squadron on the Sudan frontier. In the south (Kenya) were No. 12 Bomber Squadron of the South African Air Force (SAAF) (equipped with Junkers Ju 86 bombers), No. 11 Bomber Squadron of the SAAF (equipped with Fairey Battles), No. 40 Army Co-operation Squadron SAAF (equipped with Hawker Hartebees), No. 2 Fighter Squadron, SAAF (equipped with Hawker Furies), and No. 237 (Southern Rhodesian) Army Co-operation Squadron (equipped with Hawker Hardys). Unlike the Italians, the aircraft available to the British and Commonwealth forces got better with time. But much of the equipment initially available tended to be older and slower. Even so, the British and Commonwealth forces managed to make do with what they had.
         * Navy - Allied Naval presence is very high in the Indian Ocean, but the Eastern Fleet largely consisted of older capital ships that had been deemed too slow or too vulnerable to be of use in the Atlantic Ocean or the Mediterranean Sea.")
     "Battle of Tug Argan"
-     (section
+     (base/section
       :name "Battle of Tug Argan"
       :summary
        "* On August 3, 1940, 25,000 Italian troops invaded British Somaliland. The British resisted with 4,000 men including the Somaliland Camel Corp.
@@ -872,7 +875,7 @@
         * Throughout November, December, and early January, the British continued to apply constant pressure on the Italians all along the border with the Sudan. Better British aircraft started to replace some of the older models. The new Hawker Hurricanes were clearly superior to the Italian Fiat CR-42. Additionally, a series of failed naval engagements had lost a number of Italian warships with few British losses.
         * By January, 31 1941, the Italian military forces in East Africa were down to 67 operational aircraft with limited fuel.")
     "Battle of Keren"
-     (section
+     (base/section
       :name "Battle of Keren"
       :reference
        "* Keren was as hard a soldiers' battle as was ever fought, and let it be said that nowhere in the war did the Germans fight more stubbornly than those [Italian] Savoia battalions. The unfortunate license of wartime propaganda allowed the British Press to represent the Italians almost as comic warriors; but except for the German parachute division in Italy and the Japanese in Burma no enemy with whom the British and Indian troops were matched put up a finer fight. Moreover, the Colonial troops, until they cracked at the very end, fought with valor and resolution, and their staunchness was a testimony to the excellence of the Italian administration and Military."
@@ -880,13 +883,13 @@
        "* On March, 14 1941, the British forces of 13,000 assaulted a reinforced Italian defense of 23,000. Both sides fought with determination and suffered heavy losses.
         * On March 27, Keren fell.")
     :Massawa
-     (section
+     (base/section
       :name "Massawa"
       :summary
        "* On April 8, 1941, Massawa was captured after the Italian ground resistance collapsed without adequate fuel, ammunition, or food.
         * Before Massawa fell, Bonnetti had ordered the remaining six Italian destroyers and the remaining motor torpedo boat on a 'do or die' mission. They were sunk or ran aground without doing much damage.")
     "Amba Alagi"
-     (section
+     (base/section
       :name "Amba Alagi"
       :summary
        "* The Italians decided to make their final defense area around the 12,000 foot high mountain, Amba Alagi. They drove galleries into the solid rock to protect their troops and to hold ample ammunition and stores. In this mountain fortress, the defenders, under command of Amedeo, Duke of Aosta, thought themselves to be impregnable.
@@ -894,20 +897,21 @@
         * On 18 May, Amedeo, Duke of Aosta surrendered his embattled forces at Amba Alagi and received full military honors. While the Duke of Aosta faced defeat in East Africa, his brother, the Duke of Spoleto was being made the King of Croatia after the successful invasion of Yugoslavia. The Duke of Aosta had endured the last months of fighting while suffering a severe attack of malaria (and died of TBC and malaria a few months later)."))))
 
 (func chapter_wwii_middle_east_theatre : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Middle East Theatre"
   :summary
    "* Although Southwest Asia was destined to remain a strategic backwater for the duration of World War II, in late 1941 and early 1942 the Allies were not certain that it would remain so. Before the turning points of the Battle of Stalingrad (June 1942 to February, 1943) and the Second Battle of El Alamein (October to November 1942), the fear was that the Germans might attack the area either through Turkey, or via Cyprus into Lebanon; or through defeating of the British in Egypt. If the anticipated attack came through Turkey or Lebanon, then not only could the Axis Powers threaten British controlled Egypt and the strategically important Suez Canal, it would also allow the Germans an alternative route to attack the Soviet Union from Southwest Asia north through the USSR's southern frontiers. In the slightly longer term the British feared independent regimes in the region as well as the possibility that the German might follow in Alexander the Great's footsteps and attack British controlled India from Persia in the west as Japan simultaneously attacked India from the east through Burma."
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Anglo-Iraqi War"
-     (section
+     (base/section
       :name "Anglo-Iraqi War"
       :summary
        "* Iraq had been officially granted independence by the United Kingdom in 1932, under a number of conditions, including the retention of British military bases. This caused resentment within Iraq and a pro-Axis prime minister assumed control. In early 1941, he ordered British forces to withdraw. On April 30 the Iraqi Army surrounded and besieged the isolated and poorly-defended Royal Air Force base at Habbaniya. Although the base had no offensive aircraft, RAF personnel converted training aircraft to carry weapons, and attacked the Iraqi forces.
         * The British counterattacked and defeated the larger but poorly-trained Iraqi Army in a series of battles, even though the Iraqis received direct aid from the Luftwaffe. The British pressed on to Baghdad and then to Mosul. The prime minister and his supporters fled the country and an armistice was signed.")
     "Syria-Lebanon Campaign"
-     (section
+     (base/section
       :name "Syria-Lebanon Campaign"
       :summary
        "* On June-July 1941, the British led Allies invaded Vichy French-controlled Syria and Lebanon. The campaign remains little known, even in the countries that took part. There is evidence that Allied censors acted to suppress or reduce reportage of the fierce fighting believing that knowledge of fighting against French forces could have a negative effect on public opinion in Allied countries.
@@ -950,7 +954,7 @@
                 * 2 - Artillery Groups
                 * 100 Aircraft - Dewoitine 520, Potez 63")))))
     "Anglo-Soviet Invasion of Iran"
-     (section
+     (base/section
       :name "Anglo-Soviet Invasion of Iran"
       :summary
        "* On August 25, 1941, Britain and Russia launched an invasion of the neutral nation of Iran. The British feared that the Anglo-Iranian Oil Company might fall into German hands. The refinery produced 8 million tons of oil and was a crucial part of the Allied war effort. For the Russians, Iran was a country of extreme strategic importance. The Germans were steadily advancing through the Soviet Union and there were few ways for the Allies to get desperately needed American Lend-Lease supplies to the Soviets. With increasing German submarine attacks, as well as heavy ice floes and the coastal ice cap fast rendering convoys to Arkhangelsk impossible, the Trans-Iranian Railway seemed a very attractive route to transport supplies up from the Persian Gulf. The two Allied nations applied pressure on Iran and the Shah but this led only to increased tensions and pro-German rallies in Tehran. The Shah refused to expel the many German nationals residing in Iran, and denied the use of the railway to the Allies. These conditions prompted Britain and Russia to invade.
@@ -958,19 +962,20 @@
         * With this crucial supply route now open to the Soviet Union the Persian Corridor was opened and would provide a massive flow of supplies (over 5 million tons of war materiel) to the Soviets primarily, but also the British in the Middle East."))))
 
 (func chapter_wwii_mediterranean_theatre : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Mediterranean Theatre"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Italian Campaign Overview"
-     (section
+     (base/section
       :name "Italian Campaign Overview"
       :summary
        "* The US and British disagreed fiercely on how to prosecute the war. The US argued for an invasion of France as early as possible, while the British advocated a Mediterranean strategy since large numbers of troops trained for amphibious landings in the Mediterranean made a limited-scale invasion possible. Eventually the US and British made the decision to commit to an invasion of France in early 1944, but with a lower-priority Italian campaign reflecting Roosevelt's desire that to keep U.S. troops active in the European theater during 1943 and his attraction to the idea of eliminating Italy from the war.
         * It was hoped that an invasion would knock the Italians out of the war, or provide at least a major propaganda blow. The elimination of Italy as an enemy would also enable the Royal Navy to completely dominate the Mediterranean Sea, massively improving communications with Egypt, the Far East, the Middle East, and India. It would also mean that the Germans would have to transfer troops from the Eastern Front to defend Italy and the entire southern coast of France, thus aiding the Soviets. The Italians would also withdraw their troops from the Soviet Union to defend Italy.
         * It is estimated that between September 1943 and April 1945 some 60,000 Allied and 50,000 German soldiers died in Italy. No campaign in western Europe cost more than Italy, in terms of lives lost and wounds suffered by infantry.")
     "Invasion of Sicily"
-     (section
+     (base/section
       :name "Invasion of Sicily"
       :summary
        "* On July 9, 1943, the Allies invaded Sicily. It was the largest amphibious operation of the war in terms of men landed on the beaches and of frontage. It opened the Mediterranean sea lanes and toppled Mussolini from power.
@@ -1001,7 +1006,7 @@
                 * 260 Tanks
                 * 1,400 aircraft")))))
     "Invasion of Italy"
-     (section
+     (base/section
       :name "Invasion of Italy"
       :summary
        "* A coup deposed Benito Mussolini as head of the Italian government, which then began approaching the Allies to make peace. It was believed a quick invasion of Italy might hasten an Italian surrender and produce quick military victories over the German troops that could be trapped fighting in a hostile country. However, Italian and German resistance proved relatively strong, and fighting in Italy continued even after the fall of Berlin. In addition, the invasion left the Allies in a position of supplying food and supplies to conquered territory, a burden which would otherwise have fallen on Germany. As well, Italy occupied by a hostile German army would have created additional problems for the Germans.
@@ -1024,7 +1029,7 @@
               :name "Axis Forces"
               :forces "* 100,000 Personnel (Italian and German)")))))
     "Advance to Rome"
-     (section
+     (base/section
       :name "Advance to Rome"
       :summary
        "* Kesselring was given command of the whole of Italy and immediately ordered the preparation of a series of defensive lines across Italy south of Rome. Two lines, the Volturno Line and the Barbara Line, were used to delay the Allied advance to buy time to prepare the most formidable defensive positions which formed the Winter Line, the collective name for the Gustav Line and two associated defensive lines on the west of the Apennine mountains, the Bernhardt Line and the Hitler Line. The Winter Line proved a major obstacle to the Allies at the end of 1943, halting their advance on the Fifth Army's front, the western side of Italy.
@@ -1033,7 +1038,7 @@
         * It took four major offensives between January and May 1944 before the line was eventually broken along a twenty mile front between Monte Cassino and the western seaboard. At the same time the forces at Anzio broke out of their beachhead but an opportunity to cut off and destroy a large part of the German Tenth Army retreating from the Gustav Line was lost when, on the brink of success, the Anzio forces changed their direction of attack to move parallel with the coast to capture Rome.
         * Rome	was declared an open city by the German army and the US forces took possession on June 4.")
     "Advance to Northern Italy"
-     (section
+     (base/section
       :name "Advance to Northern Italy"
       :summary
        "* After the capture of Rome and the Normandy Invasion in June many experienced American and French units, the equivalent of a total of 7 divisions, were pulled out of Italy during the summer of 1944 to participate in Operation Dragoon, the Allied invasion in the south of France.
@@ -1043,12 +1048,13 @@
         * As April came to an end, the Axis forces in Italy, retreating on all fronts and having lost most of its fighting powers, was left with little option but surrender."))))
 
 (func chapter_wwii_pacific_theatre : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Pacific Theatre"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Battle of Pearl Harbor"
-     (section
+     (base/section
       :name "Battle of Pearl Harbor"
       :summary
        "* On Sunday morning, December 7, 1941, the Japanese navy launched a surprise attack against the Pacific Fleet docked at Pearl Harbor, Hawaii which drew America into World War II. It was intended as a preventive action to remove the U.S. Pacific Fleet to protect Japan's advance into Malaya and the Dutch East Indies — for their natural resources such as oil and rubber.
@@ -1057,7 +1063,7 @@
         * The Japanese high command was certain, though mistakenly so, an attack on the United Kingdom's colonies would bring the U.S. into the war, so a preventive strike appeared to be the only way Japan could avoid U.S. interference in the Pacific. While the attack accomplished its intended objective, it was completely unnecessary - unbeknownst to Yamamoto, the U.S. Navy had decided to abandon any intention of 'charging' across the Pacific towards the Philippines at the outset of war back in 1935. They instead adopted 'Plan Dog' in 1940, which emphasized keeping the Imperial Japanese Navy (IJN) out of the eastern Pacific and the shipping lanes to Australia, while the U.S. concentrated on defeating Nazi Germany.
         * The attack was one of the most important engagements of World War II. Occurring as it did before a formal declaration of war, it pushed U.S. public opinion from isolationism to an acceptance war was unavoidable, as Roosevelt called December 7, 1941 '...a date which will live in infamy.'")
     "Battle of Wake Island"
-     (section
+     (base/section
       :name "Battle of Wake Island"
       :summary
        "* On December 8, 1941, the same day as the attack on Pearl Harbor, 36 Japanese medium bombers attacked Wake Island, destroying eight of the twelve F4F Wildcat fighters.
@@ -1069,14 +1075,14 @@
         * The U.S. Marines lost 47 killed and 2 MIA during the entire 15-day siege, while three U.S. Navy personnel and at least 70 civilians were killed.
         * Japanese losses were recorded at between 700 to 900 killed, with at least 1,000 more wounded, in addition to the two destroyers lost in the first invasion attempt and at least 28 land-based and carrier aircraft either shot down or destroyed. The Japanese captured all men remaining on the island.")
     "Battle of Hong Kong"
-     (section
+     (base/section
       :name "Battle of Hong Kong"
       :summary
        "* On December 8-25, 1941 a battle was fought ending with Hong Kong, a British colony, surrendering to Japan.
         * The battle began less than eight hours after the Attack on Pearl Harbor. The garrison had held out for 17 days before surrendering.
         * This was the first occasion on which a British Crown Colony was surrendered to an invading force.")
     "Battle of Bataan"
-     (section
+     (base/section
       :name "Battle of Bataan"
       :summary
        "* The capture of the Philippine Islands was crucial to Japan's effort to control the Southwest Pacific, seize the resource-rich Dutch East Indies, and protect its Southeast Asia flank.
@@ -1091,14 +1097,14 @@
             * The surrender of Bataan would hasten the fall of Corregidor, a month later. However, without this stand, the Japanese might have quickly overrun all of the U.S. bases in the Pacific. Bataan forced them to slow down, giving the allies valuable time to prepare for conflicts such as the Battle of the Coral Sea and the Battle of Midway which followed closely thereafter.
             * Ultimately, more than 60,000 Filipino and 15,000 American prisoners of war were forced into the infamous Bataan Death March. The prisoners were forced to march through deep dust for 90 miles. 5000-10000 died en route from disease, starvation, dehydration, heat prostration, untreated wounds, and wanton execution. Those who fell behind were usually executed or left to die; the sides of the roads became littered with dead bodies and those begging for help.")))
     "Battle of Malaya"
-     (section
+     (base/section
       :name "Battle of Malaya"
       :summary
        "* The Battle of Malaya was fought from December 8, 1941 to January 31, 1942.
         * The Japanese invaded with over two hundred tanks, but the British Army in Malaya did not have a single one.
         * For the British, Indian, Australian and Malayan forces defending the colony, the campaign was a disaster. In less than two months, the battle ended in comprehensive defeat for the Commonwealth forces with nearly 50,000 Commonwealth troops had been captured or killed.")
     "Battle of Corregidor"
-     (section
+     (base/section
       :name "Battle of Corregidor"
       :summary
        "* The fall of Bataan in April 9, 1942, ended all organized opposition in the Phillipines. The island bastion of Corregidor, with its network of tunnels and formidable array of defensive armament, along with the fortifications across the entrance to Manila Bay, was the remaining obstacle. The Japanese had to take Corregidor; as long as the island remained in American hands, they would be denied the use of the Manila Bay, the finest natural harbor in the Far East.
@@ -1129,20 +1135,20 @@
                 * 34x 149mm Howitzers
                 * 32x Artillery")))))
     "Battle of Singapore"
-     (section
+     (base/section
       :name "Battle of Singapore"
       :summary
        "* Japan invaded Singapore and fighting lasted from February 7, 1942 to February 15, 1942.
         * It resulted in the fall of Singapore, the major British military base in South East Asia and the largest surrender of British-led military personnel in history. About 80,000 Indian, Australian and British troops became prisoners of war, joining 50,000 taken by the Japanese in the Malayan campaign. Winston Churchill called the ignominious fall of Singapore the 'worst disaster' and 'largest capitulation' in British history.")
     "Doolittle Raid"
-     (section
+     (base/section
       :name "Doolittle Raid"
       :summary
        "* The Doolittle Raid, 18 April 1942, was the first air raid by the United States to strike the Japanese home island of Honshū during World War II. It demonstrated that the Japanese home islands were vulnerable to Allied air attack. The Doolittle Raid was the only time that United States Army Air Forces bombers were launched from an aircraft carrier.
         * The plan was to launch B-25B bombers from a carrier, hit targets in Japan, and fly on to land in China. All 16 aircraft were lost, and 11 crewmen were either killed or captured. The crews of 13 aircraft, however, were recovered and returned to the United States, and a 14th crew interned by the Soviet Union eventually made its way home in 1943.
         * The Doolittle raid did little material damage, but American morale soared from the depths following Pearl Harbor. The raid also had a strategic impact, though it was not understood at the time, in that it caused the Japanese to recall some fighter units back to the home islands for defense. They did not understand how American aircraft could attack from such a distance and assumed that America had developed a new, extremely long-range aircraft, when in reality, American forces knew it would essentially be a one-way trip. This assumption that the home islands were vulnerable to air attack strengthened Admiral Yamamoto's resolve to carry out military action against Midway Island. These reassignments subsequently weakened Japan's air capabilities against the Allies at the Battle of Midway and later Pacific Theater campaigns.")
     "Battle of the Coral Sea"
-     (section
+     (base/section
       :name "Battle of the Coral Sea"
       :summary
        "* On May 4-8, 1942, the Japanese fought the US and Australian in the first naval battle between aircraft carriers and the first naval battle where neither side's ships sighted or fired directly upon the other.
@@ -1178,7 +1184,7 @@
                 * 2x Heavy cruisers
                 * Support ships")))))
     "Battle of Midway"
-     (section
+     (base/section
       :name "Battle of Midway"
       :summary
        "* From June 4, 1942 to June 7, 1942, exactly six months to the day after Japan's attack on Pearl Harbor the Americans and Japanese fought around Midway island in what is widely regarded as the most important naval battle in the Pacific.
@@ -1239,7 +1245,7 @@
                 * 2x Heavy cruisers
                 * Support ships")))))
     "Battle of Quadalcanal"
-     (section
+     (base/section
       :name "Battle of Quadalcanal"
       :summary
        "* On August 7, 1942, US forces landed on the islands of Guadalcanal, Tulagi, and Florida in the southern Solomons	capturing Tulagi and Florida as well as an airfield (later named Henderson Field) that was under construction by the	Japanese on Guadalcanal.
@@ -1429,7 +1435,7 @@
                 * 9 destroyers - Asagumo, Ayanami, Samaidare, Shikinami, Teruzuki, Uranami
                 * 4 transports")))))
     "Battle of Guam"
-     (section
+     (base/section
       :name "Battle of Guam"
       :summary
        "* On July 21 the Americans landed on both sides of the Orote peninsula on the western side of Guam, planning to cut off the airfield. Japanese artillery sank 20 LVTs, but by 09:00 tanks were ashore at both beaches.
@@ -1438,7 +1444,7 @@
         * As in other battles of the Pacific War, the Japanese refused to surrender, and almost all were killed.
         * A few Japanese soldiers held out in the jungle. On December 8, 1945, three U.S. Marines were ambushed and killed. On January 24, 1972, Sergeant Shoichi Yokoi was discovered by hunters. He had lived alone in a cave for 27 years.")
     "Battle of Leyte Gulf"
-     (section
+     (base/section
       :name "Battle of Leyte Gulf"
       :summary
        "* From October 17 to December 31, 1944, the Battle in Philippines is generally considered to be the largest naval battle of WWII and, by some criteria, the largest naval battle in history.
@@ -1447,20 +1453,20 @@
         * The struggle also reduced Japanese land-based air capability in the Philippines by more than fifty percent, forcing them to depend on suicidal kamikaze pilots.
         * Once the decisive battle of Leyte was lost, the Japanese gave up hope of retaining the strategically critical Philippines, from which Japan could be easily cut off from outside resources, and from which the direct assaults on the Japanese home islands could be launched.")
     "Battle of Iwo Jima"
-     (section
+     (base/section
       :name "Battle of Iwo Jima"
       :summary
        "* On February 19-March 26, 1945, US forces captured of the island of Iwo Jima from the Japanese, producing some of the fiercest fighting in the Pacific Campaign of World War II. The Japanese positions on the island were heavily fortified, with vast bunkers, hidden artillery, and 18 kilometers (11 mi) of tunnels. The battle was the first American attack on the Japanese Home Islands and the Imperial soldiers defended their positions tenaciously.
         * Of the 21,000 Japanese soldiers present at the beginning of the battle, over 20,000 were killed and only 216 taken prisoner.")
     "Battle of Okinawa"
-     (section
+     (base/section
       :name "Battle of Okinawa"
       :summary
        "* The 82 day battle lasted from late March through June 1945 and was the largest amphibious assault in the Pacific Theater. The battle has one of the highest casualties: the Japanese lost over 100,000 troops, and the Allies (mostly United States) suffered more than 50,000 casualties, with over 12,000 killed in action. Hundreds of thousands of civilians were killed, wounded or attempted suicide.
         * The main objective of the operation was to seize a large island only 340 miles away from mainland Japan. Okinawa was to serve as a springboard for the invasion of Japan, though the the atomic bombings of Hiroshima and Nagasaki caused Japan to surrender just weeks after the end of the fighting at Okinawa and the invasion never took place.
         * Some military historians believe that Okinawa led directly to the use of the atomic bomb on Hiroshima and Nagasaki. '...because the Japanese on Okinawa, including native Okinawans, were so fierce in their defense (even when cut off, and without supplies), and because casualties were so appalling, many American strategists looked for an alternative means to subdue mainland Japan. This means presented itself, with the advent of atomic bombs, which worked admirably in convincing the Japanese to sue for peace, without American casualties. Ironically, the American conventional fire-bombing of major Japanese cities (which had been going on for months before Okinawa) was far more effective at killing civilians than the atomic bombs and, had the Americans simply continued, or expanded this, the Japanese would likely have surrendered anyway. Nevertheless, the bombs were a powerful symbolic display of American power, and the Japanese capitulated, obviating the need for an invasion.'")
     "Atomic bombings of Hiroshima and Nagasaki"
-     (section
+     (base/section
       :name "Atomic bombings of Hiroshima and Nagasaki"
       :summary
        "* On August 6, 1945, after six months of intense firebombing of 67 other Japanese cities, the nuclear weapon 'Little Boy' was dropped on the city of Hiroshima.
@@ -1471,12 +1477,13 @@
         * The bombings led, in part, to post-war Japan forbidding itself from nuclear armament."))))
 
 (func chapter_wwi_british_forces : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWI British Forces"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWI British Infantry"
-     (section
+     (base/section
       :name "WWI British Infantry"
       :unitmap
        (base/unitmap
@@ -1491,12 +1498,13 @@
           :name "Sopwith Camel"))))))
 
 (func chapter_wwi_french_forces : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWI French Forces"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWI French Infantry"
-     (section
+     (base/section
       :name "WWI French Infantry"
       :unitmap
        (base/unitmap
@@ -1505,7 +1513,7 @@
           :name "French Infantry"
           :image "WorldWars/French_Infantry.png")))
     "WWI French Vehicles"
-     (section
+     (base/section
       :name "WWI French Vehicles"
       :unitmap
        (base/unitmap
@@ -1516,12 +1524,13 @@
            "* Among the most revolutionary and influential tank designs in history. The FT 17 was the first tank with an armament in a fully rotating turret, and its configuration with the turret on top, engine in the back and the driver in front became the conventional one, repeated in most tanks until today; at the time it was a revolutionary innovation, causing armour historian Steven Zaloga to describe the type as 'the world's first modern tank.' The tank was widely used by the French and the Americans (who, as mentioned, were lent 514) in the latter stages of World War I, after 31 May 1918. The tank was cheap and well-suited for mass production. Indeed, the very production was made a weapon in itself: a goal was set of 12,260 to be produced (4,440 of which in the USA) before the end of 1919.This prospect was one of several factors which drove the German High Command to its decision to launch the massive all-or-nothing offensives in the spring of 1918, which in turn weakened their army so that it collapsed in the summer. FT 17 tanks were also used in the Second World War, among others in Poland, Finland, France and Kingdom of Yugoslavia, although they were completely obsolete by then."))))))
 
 (func chapter_wwi_german_forces : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWI German Forces"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWI French German Vehicles"
-     (section
+     (base/section
       :name "WWI French German Vehicles"
       :unitmap
        (base/unitmap
@@ -1532,12 +1541,13 @@
            "* Of all the aces the war produced none compared to the greatest flyer of all, Manfred Richtofen 'The Red Baron'. To this day his name remains a legend that is better known to most than even the war that created him."))))))
 
 (func chapter_wwii_equipment : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Equipment"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII Explosives"
-     (section
+     (base/section
       :name "WWII Explosives"
       :itemmap
        (itemmap
@@ -1608,12 +1618,13 @@
           :classification "Torpedo"))))))
 
 (func chapter_wwii_american_equipment : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII American Equipment"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII American Light Weapons"
-     (section
+     (base/section
       :name "WWII American Light Weapons"
       :itemmap
        (itemmap
@@ -1682,7 +1693,7 @@
           :rof "450/min"
           :rounds "20")))
     "WWII American Heavy Weapons"
-     (section
+     (base/section
       :name "WWII American Heavy Weapons"
       :itemmap
        (itemmap
@@ -1709,7 +1720,7 @@
           :classification "Hvy. MG"
           :length "1650mm"
           :mass "38kg"
-          :modifiers "Auto, AP, API, Tracer"
+          :modifiers "Auto, AP, Tracer"
           :muzzlevelocity "930m/s"
           :rof "500/min")
         "M2 Flamethrower"
@@ -1859,7 +1870,7 @@
           :range "29km"
           :rof "4/min")))
     "WWII American Explosives"
-     (section
+     (base/section
       :name "WWII American Explosives"
       :itemmap
        (itemmap
@@ -1923,27 +1934,18 @@
           :classification "Bomb"))))))
 
 (func chapter_wwii_american_units : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII American Units"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII American Infantry"
-     (section
+     (base/section
       :name "WWII American Infantry"
       :unitmap
        (base/unitmap
         "Able Team"
-         (base/unit
-          :name "Able Team"
-          :image "WWIIAmerican/Infantry_AbleScoutToken.png"
-          :summary "* Able Team is composed of 2 scouts who advance 25m ahead of the squad."
-          :classification "Lt. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
+         (base/unit<-tactics-key tactics "Able Team")
         "Baker Team"
          (base/unit
           :name "Baker Team"
@@ -2135,7 +2137,7 @@
                  (base/unititem
                   :name "Demolition Pack")))))))
     "WWII American Vehicles"
-     (section
+     (base/section
       :name "WWII American Vehicles"
       :unitmap
        (base/unitmap
@@ -2693,7 +2695,7 @@
               :name "Military"
               :level "3")))))
     "WWII American Aircraft"
-     (section
+     (base/section
       :name "WWII American Aircraft"
       :unitmap
        (base/unitmap
@@ -3068,7 +3070,7 @@
               :name "Military"
               :level "4")))))
     "WWII American Naval Vessels"
-     (section
+     (base/section
       :name "WWII American Naval Vessels"
       :unitmap
        (base/unitmap
@@ -3247,7 +3249,7 @@
               :name "Military"
               :level "2")))))
     "WWII American Strategic Forces"
-     (section
+     (base/section
       :name "WWII American Strategic Forces"
       :unitmap
        (base/unitmap
@@ -3268,12 +3270,13 @@
           :classification "Hvy. Infantry"))))))
 
 (func chapter_wwii_british_equipment : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII British Equipment"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII British Weapons"
-     (section
+     (base/section
       :name "WWII British Weapons"
       :itemmap
        (itemmap
@@ -3450,12 +3453,13 @@
           :mass "10tons"))))))
 
 (func chapter_wwii_british_units : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII British Units"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII British Infantry"
-     (section
+     (base/section
       :name "WWII British Infantry"
       :unitmap
        (base/unitmap
@@ -3597,7 +3601,7 @@
           :image "WWIIBritish/Infantry_CanadianSapperToken.png"
           :classification "Med. Infantry")))
     "WWII British Vehicles"
-     (section
+     (base/section
       :name "WWII British Vehicles"
       :unitmap
        (base/unitmap
@@ -3921,7 +3925,7 @@
               :name "Military"
               :level "3")))))
     "WWII British Aircraft"
-     (section
+     (base/section
       :name "WWII British Aircraft"
       :unitmap
        (base/unitmap
@@ -4080,7 +4084,7 @@
               :name "Military"
               :level "3")))))
     "WWII British Naval Vessels"
-     (section
+     (base/section
       :name "WWII British Naval Vessels"
       :unitmap
        (base/unitmap
@@ -4127,12 +4131,13 @@
           :speedwater "57kph"))))))
 
 (func chapter_wwii_french_equipment : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII French Equipment"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII French Weapons"
-     (section
+     (base/section
       :name "WWII French Weapons"
       :itemmap
        (itemmap
@@ -4152,12 +4157,13 @@
           :modifiers "Auto"))))))
 
 (func chapter_wwii_french_units : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII French Units"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII French Infantry"
-     (section
+     (base/section
       :name "WWII French Infantry"
       :unitmap
        (base/unitmap
@@ -4180,7 +4186,7 @@
           :image "WWIIFrench/ManouchianGroupToken.png"
           :reference "* Guerrilla Resistance Fighters")))
     "WWII French Vehicles"
-     (section
+     (base/section
       :name "WWII French Vehicles"
       :unitmap
        (base/unitmap
@@ -4239,7 +4245,7 @@
               :name "Military"
               :level "3")))))
     "WWII French Aircraft"
-     (section
+     (base/section
       :name "WWII French Aircraft"
       :unitmap
        (base/unitmap
@@ -4270,12 +4276,13 @@
               :level "4"))))))))
 
 (func chapter_wwii_german_equipment : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII German Equipment"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII German Weapons"
-     (section
+     (base/section
       :name "WWII German Weapons"
       :itemmap
        (itemmap
@@ -4562,12 +4569,13 @@
           :width "1.65m"))))))
 
 (func chapter_wwii_german_units : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII German Units"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII German Infantry"
-     (section
+     (base/section
       :name "WWII German Infantry"
       :unitmap
        (base/unitmap
@@ -4752,7 +4760,7 @@ of the period."
           :summary "Combat Engineers from the German Defense Force"
           :classification "Med. Infantry")))
     "WWII German Vehicles"
-     (section
+     (base/section
       :name "WWII German Vehicles"
       :unitmap
        (base/unitmap
@@ -5299,7 +5307,7 @@ of the period."
               :name "Military"
               :level "3")))))
     "WWII German Aircraft"
-     (section
+     (base/section
       :name "WWII German Aircraft"
       :unitmap
        (base/unitmap
@@ -5506,7 +5514,7 @@ of the period."
               :name "Military"
               :level "4")))))
     "WWII German Naval Vessels"
-     (section
+     (base/section
       :name "WWII German Naval Vessels"
       :unitmap
        (base/unitmap
@@ -5554,12 +5562,13 @@ of the period."
           :classification "Submarine"))))))
 
 (func chapter_wwii_italian_units : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Italian Units"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII Italian Weapons"
-     (section
+     (base/section
       :name "WWII Italian Weapons"
       :itemmap
        (itemmap
@@ -5636,7 +5645,7 @@ of the period."
           :muzzlevelocity "425m/s"
           :range "9564m")))
     "WWII Italian Infantry"
-     (section
+     (base/section
       :name "WWII Italian Infantry"
       :unitmap
        (base/unitmap
@@ -5678,7 +5687,7 @@ of the period."
               :name "Military"
               :level "4")))))
     "WWII Italian Vehicles"
-     (section
+     (base/section
       :name "WWII Italian Vehicles"
       :unitmap
        (base/unitmap
@@ -5788,7 +5797,7 @@ of the period."
               :name "Military"
               :level "4")))))
     "WWII Italian Aircraft"
-     (section
+     (base/section
       :name "WWII Italian Aircraft"
       :unitmap
        (base/unitmap
@@ -5879,12 +5888,13 @@ of the period."
               :level "4"))))))))
 
 (func chapter_wwii_japanese_equipment : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Japanese Equipment"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII Japanese Weapons"
-     (section
+     (base/section
       :name "WWII Japanese Weapons"
       :itemmap
        (itemmap
@@ -6061,583 +6071,581 @@ of the period."
           :speedwater "56kph"))))))
 
 (func chapter_wwii_japanese_units : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Japanese Units"
   :sectionmap
-   (sectionmap
-    "WWII Japanese Infantry"
-     (section
-      :name "WWII Japanese Infantry"
-      :unitmap
-       (base/unitmap
-        "Arisaka Riflemen"
-         (base/unit
-          :name "Arisaka Riflemen"
-          :image "WWIIJapanese/Infantry_RiflemenToken.png"
-          :summary "Composed of 7 riflemen"
-          :classification "Med. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Close Assault"
-                 (base/unitability
-                  :name "Close Assault")))))
-        "Japanese LMG"
-         (base/unit
-          :name "Japanese LMG"
-          :summary "Composed of 4 riflemen, 1 LMG, and squad leader"
-          :classification "Med. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Arisaka Sniper"
-         (base/unit
-          :name "Arisaka Sniper"
-          :image "WWIIJapanese/Infantry_Sniper.png"
-          :classification "Lt. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Special Naval Landing Forces"
-         (base/unit
-          :name "Special Naval Landing Forces"
-          :titles "SNLF"
-          :classification "Med. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Amphibious Assault"
-                 (base/unitability
-                  :name "Amphibious Assault")))))
-        "Teishin Shudan"
-         (base/unit
-          :name "Teishin Shudan"
-          :image "WWIIJapanese/Infantry_ParatrooperToken.png"
-          :reference "Commando Paratroopers"
-          :classification "Lt. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Airborne Assault"
-                 (base/unitability
-                  :name "Airborne Assault")))))
-        "Japanese Commander"
-         (base/unit
-          :name "Japanese Commander"
-          :image "WWIIJapanese/Infantry_CommanderToken.png"
-          :classification "Lt. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "5"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Close Assault"
-                 (base/unitability
-                  :name "Close Assault")))))
-        "Japanese Forward Observer"
-         (base/unit
-          :name "Japanese Forward Observer"
-          :classification "Lt. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))))
-    "WWII Japanese Vehicles"
-     (section
-      :name "WWII Japanese Vehicles"
-      :unitmap
-       (base/unitmap
-        "Type 95 Ha-Go"
-         (base/unit
-          :name "Type 95 Ha-Go"
-          :image "WWIIJapanese/TankLt_Type95Ha-go_Token.png"
-          :reference
-           "* One key to the Japanese success in Malaya was the unexpected presence of their tanks in wet jungle terrain where the British did not believe tanks could be used."
-          :classification "Lt. Tank"
-          :crew "3"
-          :mass "7.4tons"
-          :length "4.4m"
-          :range "250km"
-          :speedland "45kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "10mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "Type 97 Chi-Ha"
-         (base/unit
-          :name "Type 97 Chi-Ha"
-          :image "WWIIJapanese/TankMed_Type97ChiHa.png"
-          :classification "Med. Tank"
-          :crew "4"
-          :mass "16tons"
-          :length "5.5m"
-          :range "210km"
-          :speedland "38kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "33mm"
-              :side "9mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))))
-    "WWII Japanese Aircraft"
-     (section
-      :name "WWII Japanese Aircraft"
-      :unitmap
-       (base/unitmap
-        "J2M Raiden Fighter"
-         (base/unit
-          :name "J2M Raiden Fighter"
-          :image "WWIIJapanese/Fighter_J2M3_Raiden_Token.png"
-          :classification "Lt. Aircraft"
-          :crew "1"
-          :mass "3.5tons"
-          :height "3.8m"
-          :length "9.7m"
-          :range "560km"
-          :speedair "612kph"
-          :width "10.8m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "13mm"
-              :back "13mm"
-              :over "13mm"
-              :side "13mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "A6M Zero Naval Fighter"
-         (base/unit
-          :name "A6M Zero Naval Fighter"
-          :image "WWIIJapanese/FighterNavy_A6M5_Zero_Token.png"
-          :reference
-           "* Designed for attack, the Zero gave precedence to maneuverability and firepower at the expense of protection
-            * When it was introduced, the Zero was the best carrier-based fighter in the world and it was greatly feared by Allied pilots. Excellent maneuverability and very long range made it one of the finest fighters of its era. By 1943, the allies produced more powerful fighters and the A6M became obsolete."
-          :classification "Lt. Aircraft"
-          :crew "1"
-          :mass "2.4tons"
-          :height "3m"
-          :length "9m"
-          :range "3105km"
-          :speedair "533kph"
-          :width "12m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "4mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "B5N Kate Torpedo Bomber"
-         (base/unit
-          :name "B5N Kate Torpedo Bomber"
-          :image "WWIIJapanese/TorpedoBomber_B5N1_Kate_Token.png"
-          :reference
-           "* High performance but little armor
-            * Torpedo may be replaced with 3x 250kg Bombs or 6x 60kg Bombs"
-          :classification "Lt. Aircraft"
-          :crew "3"
-          :mass "3.8tons"
-          :height "3.7m"
-          :length "10.3m"
-          :range "1992km"
-          :speedair "378kph"
-          :width "15.5m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "8mm"
-              :back "8mm"
-              :over "8mm"
-              :side "8mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "D3A Val Dive Bomber"
-         (base/unit
-          :name "D3A Val Dive Bomber"
-          :image "WWIIJapanese/DiveBomber_D3A1_VALToken.png"
-          :reference
-           "* Scored over 80% hits in Indian Ocean vs British
-            * Able to survive as a fighter
-            * Could replace 250kg Bomb with 2x 60kg Bombs"
-          :classification "Lt. Aircraft"
-          :crew "2"
-          :mass "3.6tons"
-          :height "3.9m"
-          :length "10.2m"
-          :range "1352km"
-          :speedair "430kph"
-          :width "14.4m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "8mm"
-              :back "8mm"
-              :over "8mm"
-              :side "8mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Ohka Kamikaze Rocket"
-         (base/unit
-          :name "Ohka Kamikaze Rocket"
-          :image "WWIIJapanese/KamikazeRocket_Ohka_Token.png"
-          :reference
-           "* Essentially a 1,200 kg bomb with wooden wings powered by three solid-fuel rocket motors, the Type 11 achieved great speed but with limited range. This was problematic, as it required the slow, heavily-laden mother aircraft to approach within 37 km of the target, making them very vulnerable to defending fighters.
-            * Seven US ships were damaged or sunk by Ohkas throughout the war."
-          :classification "Missile"
-          :crew "1"
-          :mass "2.14tons"
-          :height "1.2m"
-          :length "6.1m"
-          :range "36km"
-          :speedair "804kph"
-          :width "5.1m"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "A6M2 Rufe Seaplane"
-         (base/unit
-          :name "A6M2 Rufe Seaplane"
-          :image "WWIIJapanese/Seaplane_A6M2_Rufe_Token.png"
-          :reference
-           "* This floatplane was developed from the A6M Zero for supporting amphibian operations and defending remote bases."
-          :crew "1"
-          :mass "2.5tons"
-          :height "4.3m"
-          :length "10.1m"
-          :range "1782km"
-          :speedair "516kph"
-          :width "12m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "4mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))))
-    "WWII Japanese Naval Vessels"
-     (section
-      :name "WWII Japanese Naval Vessels"
-      :unitmap
-       (base/unitmap
-        "Kaga Class Converted Carrier"
-         (base/unit
-          :name "Kaga Class Converted Carrier"
-          :image "WWIIJapanese/Carrier_KagaToken.png"
-          :summary "Akagi carried - 21 Zeros, 21 Vals, and 21 Kates"
-          :titles "Kaga, Akagi"
-          :classification "Hvy. Naval Vessel"
-          :crew "2016"
-          :mass "38.8ktons"
-          :length "247m"
-          :range "18520km"
-          :speedwater "52kph"
-          :width "32m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "152mm"
-              :back "152mm"
-              :over "152mm"
-              :under "152mm"
-              :side "152mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Soryu Class Fast Carrier"
-         (base/unit
-          :name "Soryu Class Fast Carrier"
-          :image "WWIIJapanese/Carrier_Hiryu.png"
-          :titles "Hiryu, Soryu"
-          :classification "Hvy. Naval Vessel"
-          :crew "1103"
-          :mass "19.5ktons"
-          :length "222m"
-          :range "14000km"
-          :speedwater "64kph"
-          :width "21m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "45mm"
-              :back "45mm"
-              :over "25mm"
-              :under "45mm"
-              :side "45mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Fubuki Class Destroyer"
-         (base/unit
-          :name "Fubuki Class Destroyer"
-          :image "WWIIJapanese/Destroyer_Akatsuki_Token.png"
-          :reference
-           "* Has been called 'the world's first modern destroyer.' It set a new standard for destroyers around the world. The Japanese destroyers were bigger, more powerfully armed, and faster than anything that any other fleet possessed."
-          :classification "Med. Naval Vessel"
-          :crew "219"
-          :mass "2ktons"
-          :length "118m"
-          :range "9200km"
-          :speedwater "70kph"
-          :width "10m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "10mm"
-              :back "10mm"
-              :over "10mm"
-              :under "10mm"
-              :side "10mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Agano Class Light Cruiser"
-         (base/unit
-          :name "Agano Class Light Cruiser"
-          :image "WWIIJapanese/CruiserLt_Noshiro_Token.png"
-          :classification "Med. Naval Vessel"
-          :crew "726"
-          :mass "7.6ktons"
-          :length "162m"
-          :range "11000km"
-          :speedwater "67kph"
-          :width "15.2m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "60mm"
-              :over "20mm"
-              :under "60mm"
-              :side "60mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Tone Class Hvy. Cruiser"
-         (base/unit
-          :name "Tone Class Hvy. Cruiser"
-          :image "WWIIJapanese/CruiserHvy_Furutaka_Token.png"
-          :classification "Hvy. Naval Vessel"
-          :crew "874"
-          :mass "11ktons"
-          :length "189m"
-          :range "1852km"
-          :speedwater "67kph"
-          :width "19m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "100mm"
-              :over "35mm"
-              :under "100mm"
-              :side "100mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Yamato Class Battleship"
-         (base/unit
-          :name "Yamato Class Battleship"
-          :image "WWIIJapanese/Battleship_YamatoToken.png"
-          :reference
-           "* Largest battleships ever built with largest naval guns ever. Yamato sank after 8 bombs and 13 torpedos caused her magazine to explode."
-          :classification "Hvy. Naval Vessel"
-          :crew "2767"
-          :mass "72ktons"
-          :length "263m"
-          :range "13000km"
-          :speedwater "50kph"
-          :width "39m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "650mm"
-              :over "200mm"
-              :side "410mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Otori Class Torpedo Boat"
-         (base/unit
-          :name "Otori Class Torpedo Boat"
-          :image "WWIIJapanese/TorpedoBoat_MitsubishiT14_Token.png"
-          :classification "Lt. Naval Vessel"
-          :crew "129"
-          :mass "960tons"
-          :length "88.5m"
-          :range "7400km"
-          :speedwater "56kph"
-          :width "8.2m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "B1 Type Submarine Carrier"
-         (base/unit
-          :name "B1 Type Submarine Carrier"
-          :image "WWIIJapanese/Submarine_I29Token.png"
-          :reference
-           "* 15kph Submerged
-            * 100m Test Depth
-            * Fast, very long ranged, and carried a single Yokosuka E14Y seaplane, located in a hangar in front of the conning tower, launched by a catapult.
-            * A submarine could be equipped with 3-6 Kaiten torpedoes on the deck, but this limited dive depth."
-          :titles "I-15 Series"
-          :classification "Submarine"
-          :crew "94"
-          :mass "3654tons"
-          :length "108m"
-          :range "26000km"
-          :speedwater "44kph"
-          :width "9.3m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Kaidai VII Submarine"
-         (base/unit
-          :name "Kaidai VII Submarine"
-          :reference
-           "* 15kph Submerged
-            * 80m Test Depth"
-          :classification "Submarine"
-          :crew "86"
-          :mass "2.6ktons"
-          :length "105m"
-          :range "15000km"
-          :speedwater "43kph"
-          :width "8.25m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4"))))))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "WWII Japanese Infantry"
+     :unitmap
+      (base/unitmap
+       "Arisaka Riflemen"
+        (base/unit
+         :name "Arisaka Riflemen"
+         :image "WWIIJapanese/Infantry_RiflemenToken.png"
+         :summary "Composed of 7 riflemen"
+         :classification "Med. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4"
+             :unitabilitymap
+              (base/unitabilitymap
+               "Close Assault"
+                (base/unitability
+                 :name "Close Assault")))))
+       "Japanese LMG"
+        (base/unit
+         :name "Japanese LMG"
+         :summary "Composed of 4 riflemen, 1 LMG, and squad leader"
+         :classification "Med. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Arisaka Sniper"
+        (base/unit
+         :name "Arisaka Sniper"
+         :image "WWIIJapanese/Infantry_Sniper.png"
+         :classification "Lt. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Special Naval Landing Forces"
+        (base/unit
+         :name "Special Naval Landing Forces"
+         :titles "SNLF"
+         :classification "Med. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4"
+             :unitabilitymap
+              (base/unitabilitymap
+               "Amphibious Assault"
+                (base/unitability
+                 :name "Amphibious Assault")))))
+       "Teishin Shudan"
+        (base/unit
+         :name "Teishin Shudan"
+         :image "WWIIJapanese/Infantry_ParatrooperToken.png"
+         :reference "Commando Paratroopers"
+         :classification "Lt. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4"
+             :unitabilitymap
+              (base/unitabilitymap
+               "Airborne Assault"
+                (base/unitability
+                 :name "Airborne Assault")))))
+       "Japanese Commander"
+        (base/unit
+         :name "Japanese Commander"
+         :image "WWIIJapanese/Infantry_CommanderToken.png"
+         :classification "Lt. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "5"
+             :unitabilitymap
+              (base/unitabilitymap
+               "Close Assault"
+                (base/unitability
+                 :name "Close Assault")))))
+       "Japanese Forward Observer"
+        (base/unit
+         :name "Japanese Forward Observer"
+         :classification "Lt. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))))
+    (base/section
+     :name "WWII Japanese Vehicles"
+     :unitmap
+      (base/unitmap
+       "Type 95 Ha-Go"
+        (base/unit
+         :name "Type 95 Ha-Go"
+         :image "WWIIJapanese/TankLt_Type95Ha-go_Token.png"
+         :reference
+          "* One key to the Japanese success in Malaya was the unexpected presence of their tanks in wet jungle terrain where the British did not believe tanks could be used."
+         :classification "Lt. Tank"
+         :crew "3"
+         :mass "7.4tons"
+         :length "4.4m"
+         :range "250km"
+         :speedland "45kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "10mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "Type 97 Chi-Ha"
+        (base/unit
+         :name "Type 97 Chi-Ha"
+         :image "WWIIJapanese/TankMed_Type97ChiHa.png"
+         :classification "Med. Tank"
+         :crew "4"
+         :mass "16tons"
+         :length "5.5m"
+         :range "210km"
+         :speedland "38kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "33mm"
+             :side "9mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))))
+    (base/section
+     :name "WWII Japanese Aircraft"
+     :unitmap
+      (base/unitmap
+       "J2M Raiden Fighter"
+        (base/unit
+         :name "J2M Raiden Fighter"
+         :image "WWIIJapanese/Fighter_J2M3_Raiden_Token.png"
+         :classification "Lt. Aircraft"
+         :crew "1"
+         :mass "3.5tons"
+         :height "3.8m"
+         :length "9.7m"
+         :range "560km"
+         :speedair "612kph"
+         :width "10.8m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "13mm"
+             :back "13mm"
+             :over "13mm"
+             :side "13mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "A6M Zero Naval Fighter"
+        (base/unit
+         :name "A6M Zero Naval Fighter"
+         :image "WWIIJapanese/FighterNavy_A6M5_Zero_Token.png"
+         :reference
+          "* Designed for attack, the Zero gave precedence to maneuverability and firepower at the expense of protection
+           * When it was introduced, the Zero was the best carrier-based fighter in the world and it was greatly feared by Allied pilots. Excellent maneuverability and very long range made it one of the finest fighters of its era. By 1943, the allies produced more powerful fighters and the A6M became obsolete."
+         :classification "Lt. Aircraft"
+         :crew "1"
+         :mass "2.4tons"
+         :height "3m"
+         :length "9m"
+         :range "3105km"
+         :speedair "533kph"
+         :width "12m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "4mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "B5N Kate Torpedo Bomber"
+        (base/unit
+         :name "B5N Kate Torpedo Bomber"
+         :image "WWIIJapanese/TorpedoBomber_B5N1_Kate_Token.png"
+         :reference
+          "* High performance but little armor
+           * Torpedo may be replaced with 3x 250kg Bombs or 6x 60kg Bombs"
+         :classification "Lt. Aircraft"
+         :crew "3"
+         :mass "3.8tons"
+         :height "3.7m"
+         :length "10.3m"
+         :range "1992km"
+         :speedair "378kph"
+         :width "15.5m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "8mm"
+             :back "8mm"
+             :over "8mm"
+             :side "8mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "D3A Val Dive Bomber"
+        (base/unit
+         :name "D3A Val Dive Bomber"
+         :image "WWIIJapanese/DiveBomber_D3A1_VALToken.png"
+         :reference
+          "* Scored over 80% hits in Indian Ocean vs British
+           * Able to survive as a fighter
+           * Could replace 250kg Bomb with 2x 60kg Bombs"
+         :classification "Lt. Aircraft"
+         :crew "2"
+         :mass "3.6tons"
+         :height "3.9m"
+         :length "10.2m"
+         :range "1352km"
+         :speedair "430kph"
+         :width "14.4m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "8mm"
+             :back "8mm"
+             :over "8mm"
+             :side "8mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Ohka Kamikaze Rocket"
+        (base/unit
+         :name "Ohka Kamikaze Rocket"
+         :image "WWIIJapanese/KamikazeRocket_Ohka_Token.png"
+         :reference
+          "* Essentially a 1,200 kg bomb with wooden wings powered by three solid-fuel rocket motors, the Type 11 achieved great speed but with limited range. This was problematic, as it required the slow, heavily-laden mother aircraft to approach within 37 km of the target, making them very vulnerable to defending fighters.
+           * Seven US ships were damaged or sunk by Ohkas throughout the war."
+         :classification "Missile"
+         :crew "1"
+         :mass "2.14tons"
+         :height "1.2m"
+         :length "6.1m"
+         :range "36km"
+         :speedair "804kph"
+         :width "5.1m"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "A6M2 Rufe Seaplane"
+        (base/unit
+         :name "A6M2 Rufe Seaplane"
+         :image "WWIIJapanese/Seaplane_A6M2_Rufe_Token.png"
+         :reference
+          "* This floatplane was developed from the A6M Zero for supporting amphibian operations and defending remote bases."
+         :crew "1"
+         :mass "2.5tons"
+         :height "4.3m"
+         :length "10.1m"
+         :range "1782km"
+         :speedair "516kph"
+         :width "12m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "4mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))))
+    (base/section
+     :name "WWII Japanese Naval Vessels"
+     :unitmap
+      (base/unitmap
+       "Kaga Class Converted Carrier"
+        (base/unit
+         :name "Kaga Class Converted Carrier"
+         :image "WWIIJapanese/Carrier_KagaToken.png"
+         :summary "Akagi carried - 21 Zeros, 21 Vals, and 21 Kates"
+         :titles "Kaga, Akagi"
+         :classification "Hvy. Naval Vessel"
+         :crew "2016"
+         :mass "38.8ktons"
+         :length "247m"
+         :range "18520km"
+         :speedwater "52kph"
+         :width "32m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "152mm"
+             :back "152mm"
+             :over "152mm"
+             :under "152mm"
+             :side "152mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Soryu Class Fast Carrier"
+        (base/unit
+         :name "Soryu Class Fast Carrier"
+         :image "WWIIJapanese/Carrier_Hiryu.png"
+         :titles "Hiryu, Soryu"
+         :classification "Hvy. Naval Vessel"
+         :crew "1103"
+         :mass "19.5ktons"
+         :length "222m"
+         :range "14000km"
+         :speedwater "64kph"
+         :width "21m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "45mm"
+             :back "45mm"
+             :over "25mm"
+             :under "45mm"
+             :side "45mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Fubuki Class Destroyer"
+        (base/unit
+         :name "Fubuki Class Destroyer"
+         :image "WWIIJapanese/Destroyer_Akatsuki_Token.png"
+         :reference
+          "* Has been called 'the world's first modern destroyer.' It set a new standard for destroyers around the world. The Japanese destroyers were bigger, more powerfully armed, and faster than anything that any other fleet possessed."
+         :classification "Med. Naval Vessel"
+         :crew "219"
+         :mass "2ktons"
+         :length "118m"
+         :range "9200km"
+         :speedwater "70kph"
+         :width "10m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "10mm"
+             :back "10mm"
+             :over "10mm"
+             :under "10mm"
+             :side "10mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Agano Class Light Cruiser"
+        (base/unit
+         :name "Agano Class Light Cruiser"
+         :image "WWIIJapanese/CruiserLt_Noshiro_Token.png"
+         :classification "Med. Naval Vessel"
+         :crew "726"
+         :mass "7.6ktons"
+         :length "162m"
+         :range "11000km"
+         :speedwater "67kph"
+         :width "15.2m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "60mm"
+             :over "20mm"
+             :under "60mm"
+             :side "60mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Tone Class Hvy. Cruiser"
+        (base/unit
+         :name "Tone Class Hvy. Cruiser"
+         :image "WWIIJapanese/CruiserHvy_Furutaka_Token.png"
+         :classification "Hvy. Naval Vessel"
+         :crew "874"
+         :mass "11ktons"
+         :length "189m"
+         :range "1852km"
+         :speedwater "67kph"
+         :width "19m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "100mm"
+             :over "35mm"
+             :under "100mm"
+             :side "100mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Yamato Class Battleship"
+        (base/unit
+         :name "Yamato Class Battleship"
+         :image "WWIIJapanese/Battleship_YamatoToken.png"
+         :reference
+          "* Largest battleships ever built with largest naval guns ever. Yamato sank after 8 bombs and 13 torpedos caused her magazine to explode."
+         :classification "Hvy. Naval Vessel"
+         :crew "2767"
+         :mass "72ktons"
+         :length "263m"
+         :range "13000km"
+         :speedwater "50kph"
+         :width "39m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "650mm"
+             :over "200mm"
+             :side "410mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Otori Class Torpedo Boat"
+        (base/unit
+         :name "Otori Class Torpedo Boat"
+         :image "WWIIJapanese/TorpedoBoat_MitsubishiT14_Token.png"
+         :classification "Lt. Naval Vessel"
+         :crew "129"
+         :mass "960tons"
+         :length "88.5m"
+         :range "7400km"
+         :speedwater "56kph"
+         :width "8.2m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "B1 Type Submarine Carrier"
+        (base/unit
+         :name "B1 Type Submarine Carrier"
+         :image "WWIIJapanese/Submarine_I29Token.png"
+         :reference
+          "* 15kph Submerged
+           * 100m Test Depth
+           * Fast, very long ranged, and carried a single Yokosuka E14Y seaplane, located in a hangar in front of the conning tower, launched by a catapult.
+           * A submarine could be equipped with 3-6 Kaiten torpedoes on the deck, but this limited dive depth."
+         :titles "I-15 Series"
+         :classification "Submarine"
+         :crew "94"
+         :mass "3654tons"
+         :length "108m"
+         :range "26000km"
+         :speedwater "44kph"
+         :width "9.3m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Kaidai VII Submarine"
+        (base/unit
+         :name "Kaidai VII Submarine"
+         :reference
+          "* 15kph Submerged
+           * 80m Test Depth"
+         :classification "Submarine"
+         :crew "86"
+         :mass "2.6ktons"
+         :length "105m"
+         :range "15000km"
+         :speedwater "43kph"
+         :width "8.25m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4"))))))))
 
 (func chapter_wwii_soviet_equipment : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Soviet Equipment"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "WWII Soviet Weapons"
-     (section
+     (base/section
       :name "WWII Soviet Weapons"
       :itemmap
        (itemmap
@@ -6671,7 +6679,7 @@ of the period."
           :classification "Flamethrower"
           :crew "1"
           :mass "22kg"
-          :modifiers "Fire, Auto"
+          :modifiers "Autofire, Burning"
           :range "25m")
         "7.62mm Degtyaryov LMG"
          (item
@@ -6763,509 +6771,507 @@ of the period."
           :range "5.4km"))))))
 
 (func chapter_wwii_soviet_units : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "WWII Soviet Units"
   :sectionmap
-   (sectionmap
-    "WWII Soviet Infantry"
-     (section
-      :name "WWII Soviet Infantry"
-      :unitmap
-       (base/unitmap
-        "Soviet Rifle Team"
-         (base/unit
-          :name "Soviet Rifle Team"
-          :image "WWIIRussian/Infantry_RiflemenToken.png"
-          :summary "Composed of 5 riflemen"
-          :classification "Med. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Close Assault"
-                 (base/unitability
-                  :name "Close Assault")))))
-        "Soviet Light MG Team"
-         (base/unit
-          :name "Soviet Light MG Team"
-          :image "WWIIRussian/Infantry_MGToken.png"
-          :summary "Composed of 4 riflemen and an LMG"
-          :classification "Med. MG"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "Soviet SMG Team"
-         (base/unit
-          :name "Soviet SMG Team"
-          :image "WWIIRussian/Infantry_SMGToken.png"
-          :reference
-           "* The Soviets would often equip whole regiments and even entire divisions with the PPSh-41, giving them unmatched short-range firepower."
-          :classification "Med. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "Russian Commander"
-         (base/unit
-          :name "Russian Commander"
-          :image "WWIIRussian/Infantry_CommanderToken.png"
-          :classification "Med. Infantry")
-        "Soviet NKVD"
-         (base/unit
-          :name "Soviet NKVD"
-          :image "WWIIRussian/Infantry_NKVDToken.png"
-          :reference
-           "* People's Commissariat for Internal Affairs was the public and secret police organization of the Soviet Union that directly executed the rule of terror, including political repression, during the Stalinist era."
-          :classification "Med. Infantry")
-        "Soviet Sniper"
-         (base/unit
-          :name "Soviet Sniper"
-          :image "WWIIRussian/Infantry_SniperToken.png"
-          :reference
-           "* One of the best known battles involving snipers, and also the battle that made the Germans reinstate their specialized sniper training, was the Battle of Stalingrad. Their defensive position inside a city filled with rubble meant that Soviet snipers were able to inflict significant casualties."
-          :classification "Lt. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "Soviet Forward Observer"
-         (base/unit
-          :name "Soviet Forward Observer"
-          :classification "Lt. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
-        "M1938 Mortar Team"
-         (base/unit
-          :name "M1938 Mortar Team"
-          :classification "Hvy. Infantry"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "Russian Medic"
-         (base/unit
-          :name "Russian Medic"
-          :classification "Med. Infantry")
-        "Russian Sapper"
-         (base/unit
-          :name "Russian Sapper"
-          :image "WWIIRussian/Infantry_SapperToken.png"
-          :classification "Hvy. Infantry")))
-    "WWII Soviet Vehicles"
-     (section
-      :name "WWII Soviet Vehicles"
-      :unitmap
-       (base/unitmap
-        :T-34/76
-         (base/unit
-          :name "T-34/76"
-          :image "WWIIRussian/TankMed_T34-76Token.png"
-          :reference
-           "* Politcal pressure came to halt production of the T-34. This pressure was from the developer of the KV-1 and IS-2 tanks which were in competition with the T-34."
-          :classification "Med. Tank"
-          :crew "4"
-          :mass "28.5tons"
-          :length "6.7m"
-          :range "400km"
-          :speedland "53kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "60mm Sloped"
-              :back "45mm"
-              :over "20mm"
-              :under "20mm"
-              :side "45mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        :T-34/85
-         (base/unit
-          :name "T-34/85"
-          :image "WWIIRussian/TankMed_T34-85Token.png"
-          :classification "Med. Tank"
-          :crew "5"
-          :mass "32tons"
-          :length "6.7m"
-          :range "360km"
-          :speedland "53kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "90mm Sloped"
-              :under "20mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "OT-34 85mm"
-         (base/unit
-          :name "OT-34 85mm"
-          :image "WWIIRussian/TankMed_T34-85Token.png"
-          :classification "Med. Tank"
-          :crew "5"
-          :mass "32tons"
-          :length "6.7m"
-          :range "360km"
-          :speedland "53kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "90mm Sloped"
-              :under "20mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        :KV-1
-         (base/unit
-          :name "KV-1"
-          :image "WWIIRussian/TankHvy_KV1Token.png"
-          :classification "Hvy. Tank"
-          :crew "5"
-          :mass "45tons"
-          :length "6.7m"
-          :range "250km"
-          :speedland "28kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "130mm"
-              :under "20mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        :KV-2
-         (base/unit
-          :name "KV-2"
-          :image "WWIIRussian/TankHvy_KV-2Token.png"
-          :classification "Hvy. Tank"
-          :crew "5"
-          :mass "53tons"
-          :length "6.8m"
-          :range "140km"
-          :speedland "25.6kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "110mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        :IS-2
-         (base/unit
-          :name "IS-2"
-          :image "WWIIRussian/TankHvy_IS-2Token.png"
-          :reference
-           "* Proving-ground tests showed that the A-19 could penetrate clear through the front and rear armor of the German Panther tank. When it didn't penetrate, it would often knock the turret right off a tank. It was, however, slow to reload firing only 2/minute."
-          :classification "Hvy. Tank"
-          :crew "4"
-          :mass "46tons"
-          :length "9.9m"
-          :range "240km"
-          :speedland "37kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "160mm Sloped"
-              :under "30mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        :SU-76
-         (base/unit
-          :name "SU-76"
-          :image "WWIIRussian/SPG_SU76MToken.png"
-          :classification "Tank Destroyer"
-          :crew "4"
-          :mass "10.2tons"
-          :length "5m"
-          :range "320km"
-          :speedland "45kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "35mm"
-              :side "16mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        :SU-85
-         (base/unit
-          :name "SU-85"
-          :image "WWIIRussian/SPG_SU-85Token.png"
-          :classification "Tank Destroyer"
-          :crew "4"
-          :mass "29.6tons"
-          :length "6.1m"
-          :range "400km"
-          :speedland "55kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "45mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        :SU-100
-         (base/unit
-          :name "SU-100"
-          :image "WWIIRussian/SPG_SU-100Token.png"
-          :classification "Tank Destroyer"
-          :crew "4"
-          :mass "31.6tons"
-          :length "9.5m"
-          :range "320km"
-          :speedland "48kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "75mm"
-              :over "20mm"
-              :side "45mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        :SU-122
-         (base/unit
-          :name "SU-122"
-          :image "WWIIRussian/SPG_SU-122Token.png"
-          :reference
-           "* Even a Tiger was once heavily damaged by SU-122 assault guns firing high-explosive shells."
-          :classification "Hvy. Tank"
-          :crew "4"
-          :mass "31tons"
-          :length "7m"
-          :range "300km"
-          :speedland "55kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "45mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "BM-13 Katyusha"
-         (base/unit
-          :name "BM-13 Katyusha"
-          :image "WWIIRussian/RocketLauncher_KatyushaToken.png"
-          :classification "Hvy. Rocket Launcher"
-          :crew "2+1"
-          :mass "4.2tons"
-          :speedland "55kph"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "ZiS3 76mm"
-         (base/unit
-          :name "ZiS3 76mm"
-          :image "WWIIRussian/Artillery_ZiS3_76mmToken.png"
-          :reference
-           "* The first ZiS-3 gun was designed and built in secret from from Red Army authorities, who ignored the Red Army's need for light and medium field guns. The authorities believed Nazi propaganda that German heavy tanks carried exceptionally strong armour. So the project was run purely on the initiative of Grabin, his design bureau and the Artillery Factory No. 92 head and his deputies. None of them informed state authorities about the ZiS-3 project until the authorities belatedly realized that Nazi tanks were often destroyed by even lighter guns."
-          :classification "Artillery"
-          :crew "7"
-          :mass "2.65tons"
-          :speedland "0kph"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "Soviet M3 Scout Car"
-         (base/unit
-          :name "Soviet M3 Scout Car"
-          :image "WWIIRussian/Car_M3ScoutCarToken.png"
-          :reference "Lend Lease from US"
-          :classification "Car"
-          :crew "1+7"
-          :mass "5.7tons"
-          :length "5.6m"
-          :range "403km"
-          :speedland "81kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "13mm"
-              :over "0mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "BZ-35 Fuel Truck"
-         (base/unit
-          :name "BZ-35 Fuel Truck"
-          :image "WWIIRussian/Truck_BZ-35_RefuelLorryToken.png"
-          :classification "Truck"
-          :crew "1+2"
-          :mass "4.2tons"
-          :speedland "55kph"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))))
-    "WWII Soviet Aircraft"
-     (section
-      :name "WWII Soviet Aircraft"
-      :unitmap
-       (base/unitmap
-        "P-39 Airacobra"
-         (base/unit
-          :name "P-39 Airacobra"
-          :image "WWIIRussian/Fighter_P39Airacobra.png"
-          :reference
-           "* Lend Lease from US
-				        * The low-speed, low-altitude turning nature of most air combat on the Russian Front suited the P-39's strengths: sturdy construction, reliable radio gear, and adequate firepower. The second-highest scoring Allied ace, Aleksandr Pokryshkin, flew the P-39. His unofficial score stands at nearly 60 Luftwaffe aircraft. His wingman, Grigori Rechkalov, scored 57 victories with the P-39. This is the highest score ever gained by any pilot with any U.S.-made aircraft."
-          :classification "Lt. Aircraft"
-          :crew "1"
-          :mass "3.8tons"
-          :height "3.8m"
-          :length "9.2m"
-          :range "840km"
-          :speedair "605kph"
-          :width "10.4m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "13mm"
-              :back "13mm"
-              :over "13mm"
-              :side "13mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "Lavochkin La-5"
-         (base/unit
-          :name "Lavochkin La-5"
-          :reference
-           "* Exhaust gas often entered in the cockpit due to poor insulation of the engine compartment. Consequently, pilots ignored orders and frequently flew with their canopies open."
-          :classification "Lt. Aircraft"
-          :crew "1"
-          :mass "3.3tons"
-          :height "2.5m"
-          :length "8.7m"
-          :range "765km"
-          :speedair "648kph"
-          :width "9.8m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "10mm"
-              :back "10mm"
-              :over "10mm"
-              :side "10mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "Yakovlev Yak-9"
-         (base/unit
-          :name "Yakovlev Yak-9"
-          :reference
-           "* The most numerous Soviet fighter of the war"
-          :classification "Lt. Aircraft"
-          :crew "1"
-          :mass "3.2tons"
-          :height "3m"
-          :length "8.6m"
-          :range "675km"
-          :speedair "672kph"
-          :width "9.7m"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armored"
-              :front "10mm"
-              :back "10mm"
-              :over "10mm"
-              :side "10mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3"))))))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "WWII Soviet Infantry"
+     :unitmap
+      (base/unitmap
+       "Soviet Rifle Team"
+        (base/unit
+         :name "Soviet Rifle Team"
+         :image "WWIIRussian/Infantry_RiflemenToken.png"
+         :summary "Composed of 5 riflemen"
+         :classification "Med. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3"
+             :unitabilitymap
+              (base/unitabilitymap
+               "Close Assault"
+                (base/unitability
+                 :name "Close Assault")))))
+       "Soviet Light MG Team"
+        (base/unit
+         :name "Soviet Light MG Team"
+         :image "WWIIRussian/Infantry_MGToken.png"
+         :summary "Composed of 4 riflemen and an LMG"
+         :classification "Med. MG"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "Soviet SMG Team"
+        (base/unit
+         :name "Soviet SMG Team"
+         :image "WWIIRussian/Infantry_SMGToken.png"
+         :reference
+          "* The Soviets would often equip whole regiments and even entire divisions with the PPSh-41, giving them unmatched short-range firepower."
+         :classification "Med. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "Russian Commander"
+        (base/unit
+         :name "Russian Commander"
+         :image "WWIIRussian/Infantry_CommanderToken.png"
+         :classification "Med. Infantry")
+       "Soviet NKVD"
+        (base/unit
+         :name "Soviet NKVD"
+         :image "WWIIRussian/Infantry_NKVDToken.png"
+         :reference
+          "* People's Commissariat for Internal Affairs was the public and secret police organization of the Soviet Union that directly executed the rule of terror, including political repression, during the Stalinist era."
+         :classification "Med. Infantry")
+       "Soviet Sniper"
+        (base/unit
+         :name "Soviet Sniper"
+         :image "WWIIRussian/Infantry_SniperToken.png"
+         :reference
+          "* One of the best known battles involving snipers, and also the battle that made the Germans reinstate their specialized sniper training, was the Battle of Stalingrad. Their defensive position inside a city filled with rubble meant that Soviet snipers were able to inflict significant casualties."
+         :classification "Lt. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "Soviet Forward Observer"
+        (base/unit
+         :name "Soviet Forward Observer"
+         :classification "Lt. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "4")))
+       "M1938 Mortar Team"
+        (base/unit
+         :name "M1938 Mortar Team"
+         :classification "Hvy. Infantry"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "Russian Medic"
+        (base/unit
+         :name "Russian Medic"
+         :classification "Med. Infantry")
+       "Russian Sapper"
+        (base/unit
+         :name "Russian Sapper"
+         :image "WWIIRussian/Infantry_SapperToken.png"
+         :classification "Hvy. Infantry")))
+    (base/section
+     :name "WWII Soviet Vehicles"
+     :unitmap
+      (base/unitmap
+       :T-34/76
+        (base/unit
+         :name "T-34/76"
+         :image "WWIIRussian/TankMed_T34-76Token.png"
+         :reference
+          "* Politcal pressure came to halt production of the T-34. This pressure was from the developer of the KV-1 and IS-2 tanks which were in competition with the T-34."
+         :classification "Med. Tank"
+         :crew "4"
+         :mass "28.5tons"
+         :length "6.7m"
+         :range "400km"
+         :speedland "53kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "60mm Sloped"
+             :back "45mm"
+             :over "20mm"
+             :under "20mm"
+             :side "45mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       :T-34/85
+        (base/unit
+         :name "T-34/85"
+         :image "WWIIRussian/TankMed_T34-85Token.png"
+         :classification "Med. Tank"
+         :crew "5"
+         :mass "32tons"
+         :length "6.7m"
+         :range "360km"
+         :speedland "53kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "90mm Sloped"
+             :under "20mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "OT-34 85mm"
+        (base/unit
+         :name "OT-34 85mm"
+         :image "WWIIRussian/TankMed_T34-85Token.png"
+         :classification "Med. Tank"
+         :crew "5"
+         :mass "32tons"
+         :length "6.7m"
+         :range "360km"
+         :speedland "53kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "90mm Sloped"
+             :under "20mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       :KV-1
+        (base/unit
+         :name "KV-1"
+         :image "WWIIRussian/TankHvy_KV1Token.png"
+         :classification "Hvy. Tank"
+         :crew "5"
+         :mass "45tons"
+         :length "6.7m"
+         :range "250km"
+         :speedland "28kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "130mm"
+             :under "20mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       :KV-2
+        (base/unit
+         :name "KV-2"
+         :image "WWIIRussian/TankHvy_KV-2Token.png"
+         :classification "Hvy. Tank"
+         :crew "5"
+         :mass "53tons"
+         :length "6.8m"
+         :range "140km"
+         :speedland "25.6kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "110mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       :IS-2
+        (base/unit
+         :name "IS-2"
+         :image "WWIIRussian/TankHvy_IS-2Token.png"
+         :reference
+          "* Proving-ground tests showed that the A-19 could penetrate clear through the front and rear armor of the German Panther tank. When it didn't penetrate, it would often knock the turret right off a tank. It was, however, slow to reload firing only 2/minute."
+         :classification "Hvy. Tank"
+         :crew "4"
+         :mass "46tons"
+         :length "9.9m"
+         :range "240km"
+         :speedland "37kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "160mm Sloped"
+             :under "30mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       :SU-76
+        (base/unit
+         :name "SU-76"
+         :image "WWIIRussian/SPG_SU76MToken.png"
+         :classification "Tank Destroyer"
+         :crew "4"
+         :mass "10.2tons"
+         :length "5m"
+         :range "320km"
+         :speedland "45kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "35mm"
+             :side "16mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       :SU-85
+        (base/unit
+         :name "SU-85"
+         :image "WWIIRussian/SPG_SU-85Token.png"
+         :classification "Tank Destroyer"
+         :crew "4"
+         :mass "29.6tons"
+         :length "6.1m"
+         :range "400km"
+         :speedland "55kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "45mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       :SU-100
+        (base/unit
+         :name "SU-100"
+         :image "WWIIRussian/SPG_SU-100Token.png"
+         :classification "Tank Destroyer"
+         :crew "4"
+         :mass "31.6tons"
+         :length "9.5m"
+         :range "320km"
+         :speedland "48kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "75mm"
+             :over "20mm"
+             :side "45mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       :SU-122
+        (base/unit
+         :name "SU-122"
+         :image "WWIIRussian/SPG_SU-122Token.png"
+         :reference
+          "* Even a Tiger was once heavily damaged by SU-122 assault guns firing high-explosive shells."
+         :classification "Hvy. Tank"
+         :crew "4"
+         :mass "31tons"
+         :length "7m"
+         :range "300km"
+         :speedland "55kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "45mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "BM-13 Katyusha"
+        (base/unit
+         :name "BM-13 Katyusha"
+         :image "WWIIRussian/RocketLauncher_KatyushaToken.png"
+         :classification "Hvy. Rocket Launcher"
+         :crew "2+1"
+         :mass "4.2tons"
+         :speedland "55kph"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "ZiS3 76mm"
+        (base/unit
+         :name "ZiS3 76mm"
+         :image "WWIIRussian/Artillery_ZiS3_76mmToken.png"
+         :reference
+          "* The first ZiS-3 gun was designed and built in secret from from Red Army authorities, who ignored the Red Army's need for light and medium field guns. The authorities believed Nazi propaganda that German heavy tanks carried exceptionally strong armour. So the project was run purely on the initiative of Grabin, his design bureau and the Artillery Factory No. 92 head and his deputies. None of them informed state authorities about the ZiS-3 project until the authorities belatedly realized that Nazi tanks were often destroyed by even lighter guns."
+         :classification "Artillery"
+         :crew "7"
+         :mass "2.65tons"
+         :speedland "0kph"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "Soviet M3 Scout Car"
+        (base/unit
+         :name "Soviet M3 Scout Car"
+         :image "WWIIRussian/Car_M3ScoutCarToken.png"
+         :reference "Lend Lease from US"
+         :classification "Car"
+         :crew "1+7"
+         :mass "5.7tons"
+         :length "5.6m"
+         :range "403km"
+         :speedland "81kph"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "13mm"
+             :over "0mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "BZ-35 Fuel Truck"
+        (base/unit
+         :name "BZ-35 Fuel Truck"
+         :image "WWIIRussian/Truck_BZ-35_RefuelLorryToken.png"
+         :classification "Truck"
+         :crew "1+2"
+         :mass "4.2tons"
+         :speedland "55kph"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))))
+    (base/section
+     :name "WWII Soviet Aircraft"
+     :unitmap
+      (base/unitmap
+       "P-39 Airacobra"
+        (base/unit
+         :name "P-39 Airacobra"
+         :image "WWIIRussian/Fighter_P39Airacobra.png"
+         :reference
+          "* Lend Lease from US
+           * The low-speed, low-altitude turning nature of most air combat on the Russian Front suited the P-39's strengths: sturdy construction, reliable radio gear, and adequate firepower. The second-highest scoring Allied ace, Aleksandr Pokryshkin, flew the P-39. His unofficial score stands at nearly 60 Luftwaffe aircraft. His wingman, Grigori Rechkalov, scored 57 victories with the P-39. This is the highest score ever gained by any pilot with any U.S.-made aircraft."
+         :classification "Lt. Aircraft"
+         :crew "1"
+         :mass "3.8tons"
+         :height "3.8m"
+         :length "9.2m"
+         :range "840km"
+         :speedair "605kph"
+         :width "10.4m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "13mm"
+             :back "13mm"
+             :over "13mm"
+             :side "13mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "Lavochkin La-5"
+        (base/unit
+         :name "Lavochkin La-5"
+         :reference
+          "* Exhaust gas often entered in the cockpit due to poor insulation of the engine compartment. Consequently, pilots ignored orders and frequently flew with their canopies open."
+         :classification "Lt. Aircraft"
+         :crew "1"
+         :mass "3.3tons"
+         :height "2.5m"
+         :length "8.7m"
+         :range "765km"
+         :speedair "648kph"
+         :width "9.8m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "10mm"
+             :back "10mm"
+             :over "10mm"
+             :side "10mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "Yakovlev Yak-9"
+        (base/unit
+         :name "Yakovlev Yak-9"
+         :reference
+          "* The most numerous Soviet fighter of the war"
+         :classification "Lt. Aircraft"
+         :crew "1"
+         :mass "3.2tons"
+         :height "3m"
+         :length "8.6m"
+         :range "675km"
+         :speedair "672kph"
+         :width "9.7m"
+         :unitpowermap
+          (base/unitpowermap
+           :Armor
+            (base/unitpower
+             :name "Armored"
+             :front "10mm"
+             :back "10mm"
+             :over "10mm"
+             :side "10mm"))
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3"))))))))

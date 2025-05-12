@@ -860,7 +860,7 @@
                 :Motorcycles
                  (base/unitspecialty
                   :name "Motorcycles")))))
-        :E.S.W.A.T.
+        "E.S.W.A.T."
          (base/unit
           :name "E.S.W.A.T."
           :reference "Appleseed")
@@ -955,18 +955,18 @@
       :titles "Dirtboys, Dirtgirls"
       :unitmap
        (base/unitmap
-        "Bounty Hunter"
+        "Sprawl Bounty Hunter"
          (base/unit
-          :name "Bounty Hunter")
+          :name "Sprawl Bounty Hunter")
         "Cyber Psycho"
          (base/unit
           :name "Cyber Psycho"
           :summary "* Buttonhead - someone addicted to artificially stimulating the pleasure centers of the brain."
           :titles "Buttonhead")
-        :Enforcer
+        "Enforcer"
          (base/unit
           :name "Enforcer")
-        :Fixer
+        "Fixer"
          (base/unit
           :name "Fixer"
           :summary

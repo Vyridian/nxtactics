@@ -26,7 +26,7 @@
    :name "Acting"
    :reference
     "* Acting! - Master Thespian, Saturday Night Live
-     * Suffering is the bleeding heart of drama. - Jhin, Runeterra"
+     * Suffering is the beating heart of drama. - Jhin, Runeterra"
    :titles
     "Drama Queen, Master Thespian, Theater Brat, Thespian")
   (base/specialty
@@ -74,17 +74,14 @@
      One of my bad days. - Pink Floyd, One of My Turns"
    :titles "Axeman")
   (base/specialty
-   :name "Binding"
-   :titles "Strangler"
-   :summary "* Includes Garotte, Pianowire, Monofilament, Pillowcase, Towel, Rolled up Shirt, etc.")
-  (base/specialty
    :name "Bladedancer"
    :summary
     "* A combat technique focusing on elegant moves that efficiently combine attack and defense. Heavy armor may not be used with this technique.")
   (base/specialty
    :name "Bounty Hunter"
    :reference
-    "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway"
+    "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway
+     * Fixing the world one scroundrel at a time. - Akshan, Runeterra"
    :summary
     "* Bounty Hunting represents experience in stalking and capturing a target in an urban setting. This is traditionally done for money and can be quite profitable.
      * Bounties are placed on people for whom the law lacks the resources or inclination to pursue.
@@ -162,6 +159,13 @@
      * Demon Hunter, Diablo
      * Demon Slayer: Kimetsu no Yaiba
      * Sango, Inuyasha")
+  (base/specialty
+   :name "Duelling"
+   :reference
+    "* I have no equal. - Fiora, Runeterra"
+   :summary
+    "* Accomplished at one-on-one formal combat
+     * [Skill]: [Melee] or [Firearms]")
   (base/specialty
    :name "Devil Hunter"
    :reference
@@ -643,6 +647,9 @@
    :summary "Fend Off, Impale, Set Against Charge, Shield Snare"
    :titles "Lancer, Javelineer, Myrmidon, Peltast, Pikeman, Spartan, Spearman, Velite")
   (base/specialty
+   :name "Starships"
+   :summary "Astronavigation, Astronavigation: FTL, Astronavigation: Jump Drive, Combat Pilot: Orbital, Combat Pilot: Space, Orbital Piloting")
+  (base/specialty
    :name "Staves"
    :summary
     "* This specialty includes long staves and short sticks. Staves have longer reach than most weapons while fighting sticks attack with great speed.
@@ -732,6 +739,11 @@
    :reference "You? You're very good. But me? I'm magic. - Bullseye, Daredevil Comics"
    :summary "* Barbed Javelin, Double Shot, Knife Throwing, Precision Throw, Shield Snare"
    :titles "Knife Thrower, Javelineer, Slinger")
+  (base/specialty
+   :name "Ties That Bind"
+   :titles "Strangler"
+   :summary
+    "* Includes Garotte, Ropes, Noose, Pianowire, Monofilament, Pillowcase, Towel, Rolled up Shirt, etc.")
   (base/specialty
    :name "Trapper")
   (base/specialty
