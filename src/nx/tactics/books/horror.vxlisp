@@ -30,20 +30,20 @@
  (chapter
   :name "Call of Cthulhu"
   :reference
-   "* Premise that common human laws and interests and emotions have no validity or significance in the vast cosmos-at-large... To achieve the essence of real externality, whether of space or time or dimension, one must forget that such things as organic life, good and evil, love and hate, and all such local attributes of a negligible and temporary race called mankind, have any existence at all."
+   "* These entities are aware of higher dimensions and the powerful ones exist on those higher dimensions. Trying to describe them is like describing a Hypercube. They have a concrete, alien form, and then they move and their form is different in an sort of kaleidoscopic way. Impossible to describe. Impossible to rationalize. Even the memory would be confusing and unnerving. The worst part is their awareness of time. All of our time is already written and we are just playing our parts (like the movie Arrival). We have no agency. There is no hope. Soul-crushing horror."
   :summary
    "* Most of the intelligent Mythos creatures are masters of [Necromancy] and have long ago reanimated their physical bodies into part physical/part spiritual forms that humans would call [Undead].
     * Like [Undead], they exist partially in the [Spirit Realm], are immune to most hostile environments, and appear blurry in photograph and other recordings.
-    * If their body is destroyed, their Spirit leaves the body and enters the [Spirit Realm] fully. Their bodies age will rapidly catch up to it usually causing it to deteriorate rapidly. Normally their spirit never returns to the physical world, but if they are powerful enough, they may find their way back through the Veil and even death may not stop them from returning."
+    * If their body is destroyed, their Spirit leaves the body and enters the [Spirit Realm] fully. Their bodies' age will rapidly catch up to it usually causing it to deteriorate rapidly. Normally their spirit never returns to the physical world, but if they are powerful enough, they may find their way back through the Veil and even death may not stop them from returning."
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Mythos Places"
-     (section
+     (base/section
       :name "Mythos Places"
       :placemap
-       (placemap
-        :Carcosa
-         (place
+       (base/placemap
+        "Carcosa"
+         (base/place
           :name "Carcosa"
           :reference
            "* ... my eyes became riveted to the open page, and with a cry of terror or perhaps it was of joy so poinant that I suffered in every nerve... I read it and re-read it and wept and laughed and trembled with a horror which at times assails me yet. This the thing that troubles me, for I cannot forget Carcosa. Where black stars hang in the heavens. Where the shadows of men's thoughts lengthen in the afternoon. ... I pray God will curse the writer as the writer has cursed he has cursed the world with this beautiful stupendous creation. Terrible in its simplicity, irresistible in its truth, a world which now trembles before the King in Yellow. - Robert W. Chambers, The Repairer of Reputations"
@@ -98,18 +98,18 @@
               :summary
                "* The Crag of the Ghouls is a rugged cliff in the Peaks of Thok from which the ghouls of deeper dreamland pitch the leftover bones of their sepulchral feasts. Uncounted miles below the crag is the bone-filled [Vale of Pnath].")
             "G'harne"
-             (place
+             (base/place
               :name "G'harne"
               :summary
                "* A lost city in the deep desert, now a gathering spot for Cthonians.")
              "Great Abyss"
-             (place
+             (base/place
               :name "Great Abyss"
               :summary
                "* The Great Abyss is a realm that lies below the ruins of Sarkomand and is possibly a massive cavern that joins with all parts of the underworld. It connects with the upper Dreamlands by a stairway in Sarkomand.
                 * The Abyss is ruled by the god Nodens, who is served by the night-gaunts. Nodens' influence seems very languid in the underworld and does not appear to extend much beyond the Abyss itself; except perhaps to Ngranek on the isle of Oriab, whose upper slopes are guarded by his night-gaunts.")
             "Jungle of Kled"
-             (place
+             (base/place
               :name "Jungle of Kled"
               :summary
                "* Several abandoned ivory palaces are laid within Kled.
@@ -159,7 +159,7 @@
                "* The Vaults of Zin is a huge cavern in the underworld. It lies near the cemetery of the gugs and opens onto a large cave that is the mouth of vaults of Zin, and the vindictive ghasts are always on watch there for those denizens of the upper abyss'. The ghasts who dwell in the Vaults of Zin prey on ghouls and gugs, and sometimes even one another.
                * It is possible that a well in the monastery of the High Priest Not to Be Described in the Plateau of Leng connects with the Vaults of Zin.")))))
     "Mythos Items"
-     (section
+     (base/section
       :name "Mythos Items"
       :itemmap
        (base/itemmap
@@ -253,7 +253,7 @@
           :image "cthulhu/item-truemagick.jpg"
           :classification "Book")))
     "Mythos Independent Races"
-     (section
+     (base/section
       :name "Mythos Independent Races"
       :unitmap
        (base/unitmap<-tactics-keys
@@ -320,7 +320,7 @@
             * Reversal - The touch of Yibb-Tstll causes the hideous reversal. Typically this change with kill the living or drive the sane mad, but like its name implies, it can also do the opposite."
           :titles "The Patient One")))
     "Great Ones"
-     (section
+     (base/section
       :name "Great Ones"
       :reference
        "Behind the Veil what gulfs of Time and Space? What blinking mowing Shapes to blast the sight? I shrink before a vague colossal Face...Born in the mad immensities of Night. - Robert E. Howard, An Open Window"

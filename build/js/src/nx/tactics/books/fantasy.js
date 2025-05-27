@@ -1864,7 +1864,7 @@ export default class nx_tactics_books_fantasy {
                   tactics,
                   "Performance",
                   9,
-                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Inspiration"),
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Inspire"),
                   vx_core.f_new({"any-1": vx_core.t_stringlist}, "Lute")
                 )
               )

@@ -928,7 +928,7 @@
            (base/unitskillmap
             :Firearms
              (base/unitskill
-              :name "Firearms"
+              :name "Firearm"
               :summary "Pistol"
               :level "4")))
         "Medical Technician"
@@ -1646,7 +1646,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored")))
+              :name "Armor")))
         "UEA Mobile Infantry"
          (base/unit
           :name "UEA Mobile Infantry"
@@ -1670,7 +1670,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored")))
+              :name "Armor")))
         "UEA Mobile Assault Infantry"
          (base/unit
           :name "UEA Mobile Assault Infantry"
@@ -1699,7 +1699,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored")))
+              :name "Armor")))
         "UEA Pilot"
          (base/unit
           :name "UEA Pilot")
@@ -2257,7 +2257,7 @@
           :unitskillmap
            (base/unitskillmap<-unitskilllist
             (base/unitskill
-             :name "Armored"
+             :name "Armor"
              :unitabilitymap
               (base/unitabilitymap
                "Hardened vs. Energy"
@@ -2272,7 +2272,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2292,7 +2292,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2376,7 +2376,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2398,7 +2398,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2544,7 +2544,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2722,7 +2722,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2741,7 +2741,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2760,7 +2760,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2779,7 +2779,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2798,7 +2798,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2845,7 +2845,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2863,7 +2863,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2881,7 +2881,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2900,7 +2900,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -2919,7 +2919,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Energy"
@@ -2942,7 +2942,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Energy"
@@ -3027,7 +3027,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3046,7 +3046,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3103,7 +3103,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :unitabilitymap
                (base/unitabilitymap
                 "Hardened vs. Projectiles"

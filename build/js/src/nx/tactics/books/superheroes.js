@@ -34,23 +34,15 @@ export default class nx_tactics_books_superheroes {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Batman",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Batman",
-              ":image",
-              "Superheroes/Batman.png",
-              ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
-            ),
+            "Batman",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Batman"),
             "Green Lantern",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Green Lantern", ":image", "Superheroes/GreenLantern.png"),
             "Martian Manhunter",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Martian Manhunter", ":image", "Superheroes/MartianManhunter.png"),
-            ":Supergirl",
+            "Supergirl",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Supergirl", ":image", "Superheroes/Supergirl.png"),
-            ":Superman",
+            "Superman",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -77,7 +69,7 @@ export default class nx_tactics_books_superheroes {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Brainiac",
+            "Brainiac",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -85,7 +77,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Brainiac.png",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             ":Catwoman",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Catwoman", ":image", "Superheroes/Catwoman.png"),
@@ -97,7 +89,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Darkseid.png",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             ":Joker",
             vx_core.f_new(
@@ -109,7 +101,7 @@ export default class nx_tactics_books_superheroes {
               ":summary",
               "* You won't kill me out of some misplaced sense of self-righteousness, and I won't kill you because you're just too much fun. I think you and I are destined to do this forever.",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             ":Sinestro",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sinestro", ":image", "Superheroes/Sinestro.png")
@@ -1470,7 +1462,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "15tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance"),
                 ":Longevity",
@@ -1565,7 +1557,7 @@ export default class nx_tactics_books_superheroes {
                 )
               ),
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             )
           )
         ),
@@ -1642,39 +1634,10 @@ export default class nx_tactics_books_superheroes {
                 )
               )
             ),
-            ":Odin",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Odin",
-              ":image",
-              "Superheroes/Odin.png",
-              ":unitpowermap",
-              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-                nx_tactics_base.f_unitpower_from_tactics_key_abilities(
-                  tactics,
-                  "Longevity",
-                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Eternal Youth")
-                )
-              )
-            ),
-            ":Surtur",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Surtur",
-              ":image",
-              "Superheroes/Surtur.png",
-              ":unitpowermap",
-              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-                nx_tactics_base.f_unitpower_from_tactics_key(tactics, "Fire"),
-                nx_tactics_base.f_unitpower_from_tactics_key_abilities(
-                  tactics,
-                  "Longevity",
-                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Eternal Youth")
-                )
-              )
-            ),
+            "Odin",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Odin"),
+            "Surtur",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Surtur"),
             ":Thor",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -1759,7 +1722,7 @@ export default class nx_tactics_books_superheroes {
               ":reference",
               "* Rogers: Arnim Zola was a German scientist who worked with the Red Skull. He's been dead for years.\n* Zola: First correction, I am Swiss. Second, look around you, I have never been more alive! In 1972, I received a terminal diagnosis. Science could not save by body. My mind, however, that was worth saving... on tow hundred thousand feet of data banks! You are standing in my brain. - Captain America: The Winter Soldier\n* Zola: I am afraid I have been stalling Captain. Admit it. It is better this way. We are both of us...out of time.",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             "Black Widow",
             vx_core.f_new(
@@ -1771,7 +1734,7 @@ export default class nx_tactics_books_superheroes {
               ":reference",
               "* I've got red in my ledger, I'd like to wipe it out. ... Can you wipe out that much red? Drakov's daughter, Tugenov, the hospital fire? ... Your ledger is dripping, it's gushing red, and you think saving a man no more virtuous than yourself will change anything? ... You lie and kill in the service of liars and killers. ... No, I won't touch Barton. Not until I make him kill you! Slowly, intimately, in every way he knows you fear! ... This is my bargain, you mewling quim!  You're a monster!  No, you brought the monster.  So, Banner... that's your play. ... Thank you for your cooperation. - Loki and Black Widow, The Avengers",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             "Captain America",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Captain America", ":image", "Superheroes/CaptainAmerica.png", ":reference", "* Rogers: When I see a situation pointed south, I can't ignore it. Sometimes I wish I could. Stark: No you don't. Rogers: No, I don't - Steve Rogers and Tony Stark, Captain America: Civil War"),
@@ -1792,7 +1755,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "75tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "She is able to withstand bullets from pistols and machine gun fire, and can also absorb mortar shells and energy blasts, though extremely high-energy attacks may overload her absorbing ability")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "She is able to withstand bullets from pistols and machine gun fire, and can also absorb mortar shells and energy blasts, though extremely high-energy attacks may overload her absorbing ability")
               )
             ),
             "Iron Man",
@@ -1808,7 +1771,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "85tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               )
@@ -1823,7 +1786,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Mandarin.png",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             "Red Skull, The",
             vx_core.f_new(
@@ -1835,7 +1798,7 @@ export default class nx_tactics_books_superheroes {
               ":reference",
               "* You are deluded, Captain. You pretend to be a simple soldier, but in reality you are just afraid to admit that we have left humanity behind. Unlike you, I embrace it proudly. Without fear!\n* You could have the power of the gods! Yet you wear a flag on your chest and think you fight a battle of nations! I have seen the future, Captain! There are no flags!",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             ":Ultron",
             vx_core.f_new(
@@ -1852,12 +1815,12 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "75tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               ),
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             "Wasp, The",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wasp, The", ":image", "Superheroes/Wasp.png")
@@ -1914,7 +1877,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "100tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               ),
@@ -1978,7 +1941,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "2tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               ),
@@ -2058,7 +2021,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "75tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               )
@@ -2076,7 +2039,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "85tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance"),
                 ":Fire",
@@ -2114,7 +2077,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "85tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               )
@@ -2177,7 +2140,7 @@ export default class nx_tactics_books_superheroes {
                 )
               ),
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             "Bug, Micronaut",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bug, Micronaut", ":image", "Superheroes/Bug.png"),
@@ -2271,7 +2234,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Kingpin.png",
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Close Combat", "Crime", "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Close Combat", "Crime", "Intellect")
             ),
             "Lizard, The",
             vx_core.f_new(
@@ -2351,7 +2314,7 @@ export default class nx_tactics_books_superheroes {
                 )
               ),
               ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Brilliance")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
             ),
             "Black Queen",
             vx_core.f_new(
@@ -2787,7 +2750,7 @@ export default class nx_tactics_books_superheroes {
                   )
                 ),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
               )
             ),
             "Lash, Renegade",

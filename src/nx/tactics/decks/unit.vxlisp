@@ -27,7 +27,7 @@
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower
-      :power (base/power<-tactics-key tactics "Armored")
+      :power (base/power<-tactics-key tactics "Armor")
       :summary "21 inches (530 mm/88mm RHA)"
       :front "88mm"
       :back "88mm"
@@ -102,6 +102,13 @@
    :name "Bat: Fruit")
   (base/unit
    :name "Bat: Vampire")
+  (base/unit
+   :name "Batman"
+   :image "Superheroes/Batman.png"
+   :unitskillmap
+    (base/unitskillmap<-tactics-keys
+     tactics
+     "Intellect"))
   (base/unit
    :name "Bear: Black"
    :image "images/cards/unit-bear-black.svg"
@@ -475,6 +482,14 @@
        "Savage"
        "Undead"))))
   (base/unit
+   :name "Gnoll Axeman"
+   :image "images/bestiary/Gnoll_Axeman.png"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-items
+      tactics "Melee"
+      (stringlist "Pike"))))
+  (base/unit
    :name "Gnoll Pikeman"
    :unitskillmap
     (base/unitskillmap<-unitskilllist
@@ -603,6 +618,12 @@
   (base/unit
    :name "Hidden"
    :image "images/cards/unit-hidden.svg")
+  (base/unit
+   :name "Hollow Man"
+   :reference
+    "* They're good for us. They kill the bad things inside us...What you're supposed to do is eat it. You eat as much as you can and you keep eating it. - The Stuff"
+   :summary
+    "* A person infested by parasites, insects, or small animals.  The hapless victim has become completely hollowed out by its unwanted tenants, but is somehow still alive.  The Hollow Man is desolate, immobile, and empty without the possessing colony, but they are poor company at best.")
   (base/unit
    :name "Horse"
    :image "images/cards/unit-horse.svg"
@@ -780,6 +801,18 @@
      * It can only enter a house into which it has been invited, so during the day it poses as a woeful traveler to gain admittance to houses where babies live.
      * Night Terrors, being exclusively female, can only reproduce by mating with a male member of another species. The hag often slays her mate. The child born looks like a normal member of her species with black or blue hair and is often given into foster care by the hag disguised as a normal woman. When the young girl reaches puberty, the mother Night Hag might visit the child several times and, after several rituals, transforms her offspring into another hag.")
   (base/unit
+   :name "Normality"
+   :titles "Normals"
+   :reference "Hate Crimes"
+   :summary
+    "* Normalities are ghastly creatures that were once human but have been transformed into blank, sexless horrors. All Normalities appear exactly identical: thin, sexless, hairless, and faceless except for a slash of a mouth. With heavy clothing they may briefly pass for human.
+     * Personality - Normalities have a hatred of all things different (which includes everything except themselves). They are homicidal with a particulary strong reaction to those who choose to flaunt their differences (e.g. piercings, tattoos, goths, punkers, women wearing pants)
+     * History - The Normalities are created as part of a horrific treatment that pretends to be a cure for homosexuality. Indeed, the treatment does cure homosexuality, as well as any sexuality and finally humanity."
+   :unitskillmap
+    (base/unitskillmap<-tactics-keys
+     tactics
+     "Hunting"))
+  (base/unit
    :name "Nyarlathotep"
    :image "images/cards/unit-nyarlathotep.png"
    :titles "The Crawling Chaos"
@@ -787,6 +820,14 @@
     "Nyarlathotep is nothing like the other Other Gods. He travels by his own laws, into and out of the known cosmos, acting as a messenger to and from the Other Gods. His strange personality, or perhaps the simple fact that he has a personality, baffles them. ... To lesser intelligences, he's a trickster, malevolent and cruel, bequeathing gifts of wisdom and power to those who seek it, and whom he knows cannot handle it. Where Nyarlathotep goes, madness follows. He is the Crawling Chaos, and as the only direct offspring of Azathoth, he revels in it. To Lovecraft, Nyarlathotep must have been a perfect manisfestation of his racism and xenophobia. He is not only the outside seeping in, but a malevolent, undetectable outside seeping in. - Tale Foundry"
    :summary
     "* Like the other Other Gods, Nyarlathotep is a primal being of unimaginable power. Unlike the others, however, his power is knowledge and Nyarlathotep may be a creature entirely of the mind. Though he typically appears as a man, he has innumerable other forms and may be able to appear in any form he wishes. He seens to specifically target and toy with humanity by offering dangerous knowledge and observing the results. This is probably an overly simplistic view of his actions. Like the other Other Gods, he is too grand a figure to care about humanity. More likely, he acts like Yog-Sothoth and simply appears as an avatar and provides Knowledge to those who seek him without regard to what we do with it. In this way, Nyarlathotep is like Prometheus providing fire to humanity. It is possible that Nyarlathotep is constantly offering knowledge, but we are generally unable to recognize it. Perhaps Nyarlathotep is the Muse behind all discoveries.")
+  (base/unit
+   :name "Odin"
+   :image "Superheroes/Odin.png"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Longevity"
+      (stringlist "Eternal Youth"))))
   (base/unit
    :name "Ogre"
    :image "images/cards/unit-ogre.svg"
@@ -1071,6 +1112,16 @@
     "A bird of ill-omen that feeds on human flesh and blood.
      * Description - A large-headed, dark, birdlike creature similar to an owl with transfixed eyes, rapacious beak, hooked claws. They fly and rest inverted with feet above their head.")
   (base/unit
+   :name "Surtur"
+   :image "Superheroes/Surtur.png"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key
+      tactics "Fire")
+     (base/unitpower<-tactics-key-abilities
+      tactics "Longevity"
+      (stringlist "Eternal Youth"))))
+  (base/unit
    :name "Terraphant"
    :summary
     "* A hulking beast the size of an elephant with a head like an octopus.")
@@ -1078,7 +1129,7 @@
    :name "Tentacle Terror"
    :titles "Roper, Tentacle Beast"
    :reference
-    "* Cthulu Mythos
+    "* Cthulhu Mythos
      * Hentai"
    :summary
     "* A formless mass that can create writhing tentacles, eyes, and mouths from its body.")
@@ -1104,6 +1155,12 @@
       tactics "Investigation" 1
       (stringlist "Detail Oriented")
       (stringlist "Accessory: Monocle"))))
+  (base/unit
+   :name "Throwback"
+   :reference "Bouncers, Frat Boys, Jocks, Weight Lifters"
+   :summary
+    "* Appearance - Throwbacks are hulking, musclebound, prettyboys who are constantly looking at themselves.
+     * History - Throwbacks begin as insecure guys who want to increase their bodies or their manhood. The enhancements they receive brings out all of the worst male tendencies and exaggerate them to a homicidal degree. Vanity, violence, and sexual aggression all warp them into virtual cavemen who care for nothing but fighting, sex, and pumping iron.")
   (base/unit
    :name "Thunderbird"
    :titles "Stormcrow, Stormraptor"

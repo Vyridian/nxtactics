@@ -333,7 +333,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "* The Conestogas skin consists of a laminated layer of insulators, alloy micro meteor shielding, composite armors, and aerogel layers. This provides only limited protection against Kinetic weapons (the best defense against those is high-mass armor, untenable on a starship), but it does provide excellent protection against directed energy weapons.\n* Overlying all of this are layers of Radar Absorbent Material, and a dark grey paint, in order to keep both the ships radar and optical signature as low as possible. In addition to this the ship has a radar jamming system for ECM, and the computer systems are designed with double hardened systems to prevent either jamming or EMP from damaging the ships system or any systems of equipment inside the ship."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "* The Conestogas skin consists of a laminated layer of insulators, alloy micro meteor shielding, composite armors, and aerogel layers. This provides only limited protection against Kinetic weapons (the best defense against those is high-mass armor, untenable on a starship), but it does provide excellent protection against directed energy weapons.\n* Overlying all of this are layers of Radar Absorbent Material, and a dark grey paint, in order to keep both the ships radar and optical signature as low as possible. In addition to this the ship has a radar jamming system for ECM, and the computer systems are designed with double hardened systems to prevent either jamming or EMP from damaging the ships system or any systems of equipment inside the ship."),
                 ":Hanger",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Hanger", ":summary", "20ktons Cargo")
               ),
@@ -593,7 +593,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding")
               )
@@ -766,7 +766,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -896,7 +896,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1484,7 +1484,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding")
               ),
@@ -1528,7 +1528,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding")
               ),
@@ -1616,7 +1616,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "Solid Neutronium - Hyper Dense Neutron Star Material")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "Solid Neutronium - Hyper Dense Neutron Star Material")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1648,7 +1648,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding"),
                 ":Weaponry",
@@ -1696,7 +1696,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding"),
                 ":Weaponry",
@@ -1750,7 +1750,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding")
               ),
@@ -2187,7 +2187,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":level", "26"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":level", "26"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding", ":level", "26"),
                 ":Hanger",
@@ -2231,7 +2231,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":level", "29"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":level", "29"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding", ":level", "29"),
                 ":Hanger",
@@ -2281,7 +2281,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":level", "30"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":level", "30"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding", ":level", "30"),
                 ":Hanger",
@@ -2356,7 +2356,7 @@ export default class nx_tactics_books_science_fiction {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Firearms",
+                  "Firearm",
                   ":unititemmap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unititemmap},
@@ -2489,7 +2489,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding")
               ),
@@ -2545,7 +2545,7 @@ export default class nx_tactics_books_science_fiction {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
                 ":Shielding",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding")
               ),
@@ -2664,7 +2664,7 @@ export default class nx_tactics_books_science_fiction {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Firearms",
+                  "Firearm",
                   ":level",
                   "5",
                   ":unititemmap",

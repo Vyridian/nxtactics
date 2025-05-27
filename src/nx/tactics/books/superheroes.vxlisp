@@ -97,14 +97,8 @@
      :name "DC Heroes"
      :unitmap
       (base/unitmap
-       :Batman
-        (base/unit
-         :name "Batman"
-         :image "Superheroes/Batman.png"
-         :unitskillmap
-          (base/unitskillmap<-tactics-keys
-           tactics
-           "Brilliance"))
+       "Batman"
+        (base/unit<-tactics-key tactics "Batman")
        "Green Lantern"
         (base/unit
          :name "Green Lantern"
@@ -113,11 +107,11 @@
         (base/unit
          :name "Martian Manhunter"
          :image "Superheroes/MartianManhunter.png")
-       :Supergirl
+       "Supergirl"
         (base/unit
          :name "Supergirl"
          :image "Superheroes/Supergirl.png")
-       :Superman
+       "Superman"
         (base/unit
          :name "Superman"
          :image "Superheroes/Superman.png"
@@ -137,14 +131,14 @@
      :name "DC Villains"
      :unitmap
       (base/unitmap
-       :Brainiac
+       "Brainiac"
         (base/unit
          :name "Brainiac"
          :image "Superheroes/Brainiac.png"
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Brilliance"))
+           "Intellect"))
        :Catwoman
         (base/unit
          :name "Catwoman"
@@ -156,7 +150,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Brilliance"))
+           "Intellect"))
        :Joker
         (base/unit
          :name "Joker"
@@ -166,7 +160,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Brilliance"))
+           "Intellect"))
        :Sinestro
         (base/unit
          :name "Sinestro"
@@ -1373,7 +1367,7 @@
               :strength "15tons")
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Endurance
              (base/unitpower
               :name "Endurance")
@@ -1442,7 +1436,7 @@
           :unitskillmap
            (base/unitskillmap<-tactics-keys
             tactics
-            "Brilliance"))))
+            "Intellect"))))
     :Asgardians
      (section
       :name "Asgardians"
@@ -1500,26 +1494,10 @@
             (base/unitpower<-tactics-key-abilities
              tactics "Longevity"
              (stringlist "Eternal Youth"))))
-        :Odin
-         (base/unit
-          :name "Odin"
-          :image "Superheroes/Odin.png"
-          :unitpowermap
-           (base/unitpowermap<-unitpowerlist
-            (base/unitpower<-tactics-key-abilities
-             tactics "Longevity"
-             (stringlist "Eternal Youth"))))
-        :Surtur
-         (base/unit
-          :name "Surtur"
-          :image "Superheroes/Surtur.png"
-          :unitpowermap
-           (base/unitpowermap<-unitpowerlist
-            (base/unitpower<-tactics-key
-             tactics "Fire")
-            (base/unitpower<-tactics-key-abilities
-             tactics "Longevity"
-             (stringlist "Eternal Youth"))))
+        "Odin"
+         (base/unit<-tactics-key tactics "Odin")
+        "Surtur"
+         (base/unit<-tactics-key tactics "Surtur")
         :Thor
          (base/unit
           :name "Thor"
@@ -1582,7 +1560,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Brilliance"))
+           "Intellect"))
         "Black Widow"
          (base/unit
           :name "Black Widow"
@@ -1592,7 +1570,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Brilliance"))
+           "Intellect"))
         "Captain America"
          (base/unit
           :name "Captain America"
@@ -1615,7 +1593,7 @@
               :strength "75tons")
             :Armor
              (base/unitpower
-              :name "Armored"
+              :name "Armor"
               :summary
                "She is able to withstand bullets from pistols and machine gun fire, and can also absorb mortar shells and energy blasts, though extremely high-energy attacks may overload her absorbing ability")))
         "Iron Man"
@@ -1630,7 +1608,7 @@
               :strength "85tons")
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Endurance
              (base/unitpower
               :name "Endurance")))
@@ -1649,7 +1627,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Brilliance"))
+           "Intellect"))
         "Red Skull, The"
          (base/unit
           :name "Red Skull, The"
@@ -1660,7 +1638,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Brilliance"))
+           "Intellect"))
         :Ultron
          (base/unit
           :name "Ultron"
@@ -1676,14 +1654,14 @@
               :strength "75tons")
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Endurance
              (base/unitpower
               :name "Endurance"))
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Brilliance"))
+           "Intellect"))
         "Wasp, The"
          (base/unit
           :name "Wasp, The"
@@ -1727,7 +1705,7 @@
               :strength "100tons")
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Endurance
              (base/unitpower
               :name "Endurance"))
@@ -1776,7 +1754,7 @@
               :strength "2tons")
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Endurance
              (base/unitpower
               :name "Endurance"))
@@ -1846,7 +1824,7 @@
               :strength "75tons")
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Endurance
              (base/unitpower
               :name "Endurance")))
@@ -1862,7 +1840,7 @@
               :strength "85tons")
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Endurance
              (base/unitpower
               :name "Endurance")
@@ -1897,7 +1875,7 @@
               :strength "85tons")
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Endurance
              (base/unitpower
               :name "Endurance")))))
@@ -1958,7 +1936,7 @@
           :unitskillmap
            (base/unitskillmap<-tactics-keys
             tactics
-            "Brilliance"))
+            "Intellect"))
         "Bug, Micronaut"
          (base/unit
           :name "Bug, Micronaut"
@@ -2042,7 +2020,7 @@
             tactics
             "Close Combat"
             "Crime"
-            "Brilliance"))
+            "Intellect"))
         "Lizard, The"
          (base/unit
           :name "Lizard, The"
@@ -2100,7 +2078,7 @@
          :unitskillmap
           (base/unitskillmap<-tactics-keys
            tactics
-           "Brilliance"))
+           "Intellect"))
         "Black Queen"
          (base/unit
           :name "Black Queen"
@@ -2523,7 +2501,7 @@
                   :name "Claw")))
             :Armor
              (base/unitpower
-              :name "Armored")))
+              :name "Armor")))
         "Lash, Renegade"
          (base/unit
           :name "Lash, Renegade")

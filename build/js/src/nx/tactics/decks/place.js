@@ -44,7 +44,7 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Field Headquarters"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Field Hospital", ":summary", "* May [Deploy] Infantry with [Medicine] Skill\n* Heals Soldiers"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Flames", ":image", "images/cards/place-flames.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Forest", ":image", "images/cards/place-forest.svg", ":summary", "* [Move]:-1\n* [Line of Sight]: Blocked\n* [Block]: [Skill]:+2, [Armor]:+2\n* [Evade]: [Skill]:+2"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Forest", ":image", "images/cards/place-forest.svg", ":summary", "* [Move]:-1\n* [Line of Sight]: Blocked\n* [Block]: [Skill]:+1, [Armor]:+1\n* [Evade]: [Skill]:+1"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Fuel Depot", ":summary", "* Required to extend Vehicle Supply Lines"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Gas Station", ":image", "images/cards/place-gasstation.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Guardpost", ":image", "images/cards/place-guardpost.svg"),

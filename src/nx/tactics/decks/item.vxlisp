@@ -45,10 +45,18 @@
    :titles "Leather Body Armor"
    :image "images/cards/item-armor-leathercuirass.svg"
    :summary
-    "* [Armor]: 1x1 [Hardened vs Slash]
-     * [Location]: [Shoulders] [Chest] [Abdomen] [Vitals]"
+    "* [Armor]: 1x1 [Hardened vs Slash]"
    :body "7x0"
-   :mass "7kg/15lb")
+   :mass "7kg/15lb"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Armor"
+      (stringlist
+       "Armor: Shoulders"
+       "Armor: Chest"
+       "Armor: Abdomen"
+       "Armor: Vitals"))))
   (base/item
    :name "Axe: Fire"
    :image "images/cards/item-axe-fire.svg"
@@ -83,9 +91,16 @@
    :name "Bare Handed"
    :image "images/cards/item-barehanded.svg"
    :summary
-    "* [Skill]: [Close Combat] or [Melee]
-     * [Arc]: [Arc:Front]
-     * [Damage]: [Body] [Bash]")
+    "* [Skill]: [Close Combat] or [Melee]"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Weapon"
+      (stringlist
+       "Damage:Body"
+       "Bash"
+       "1-Handed"
+       "Close Weapon"))))
   (item
    :name "Beast Claw")
   (base/item
@@ -137,7 +152,7 @@
      * [Damage]: 8x1 [Pierce] [Slash]
      * [Range]: 2x1 20m/60ft
      * [Location]: [2-hand]
-     * [Shots]: 0 Max:1
+     * [Uses]: 0 Max:1
      * [Reload]: [Action]"
    :energy "80J"
    :body "10x-1"
@@ -196,6 +211,12 @@
      * 2 nice meals, 3 bottles wine, round of drinks, a private room, week supplies, cheap gear."
    :body "10x-2"
    :mass "100g/.2lb")
+  (base/item
+   :name "Door: Heavy Wooden"
+   :image "images/cards/item-door-heavy-wooden.svg")
+  (base/item
+   :name "Door: Wooden"
+   :image "images/cards/item-door-wooden.svg")
   (base/item
    :name "Grenade: White Phosphorous")
   (base/item
@@ -268,6 +289,13 @@
   (base/item
    :name "Paper: Lock Combination"
    :image "images/cards/item-paper-lockcombination.svg")
+  (base/item
+   :name "Pike"
+   :titles "Pikeman"
+   :classification "Spear"
+   :energy "200J"
+   :length "4m"
+   :modifiers "Reach, Piercing")
   (base/item
    :name "Pistol: Revolver"
    :image "images/cards/item-pistol-revolver.svg")
@@ -452,15 +480,20 @@
    :name "Sword: Long"
    :image "images/cards/item-sword-long.svg"
    :classification "Sword"
-   :summary
-    "* [Skill]: [Melee]+1
-     * [Damage]: [Body]:+2 [Pierce] [Slash]
-     * [Arc]: [Arc:Front] and [Arc:Left] OR [Arc:Right]
-     * [Location]: [1-hand]
-     * [Armor]: 1x1"
    :body "10x-1"
    :mass "1.25kg/3lb"
-   :energy "100J")
+   :energy "100J"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Weapon"
+      (stringlist
+       "Damage:Body+2"
+       "Pierce"
+       "Slash"
+       "1-Handed"
+       "Melee Weapon"
+       "Armor:1"))))
   (base/item
    :name "Sword: Ninjato"
    :classification "Sword"
@@ -526,6 +559,20 @@
      * [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
      * [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
      * [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.")
+  (base/item
+   :name "Wall: Bramble")
+  (base/item
+   :name "Wall: Fire"
+   :image "images/cards/item-wall-fire.svg")
+  (base/item
+   :name "Wall: Force")
+  (base/item
+   :name "Wall: Hedge")
+  (base/item
+   :name "Wall: Metal")
+  (base/item
+   :name "Wall: Stone"
+   :image "images/cards/item-wall-stone.svg")
   (base/item
    :name "Water: Pond"
    :image "images/cards/item-water-pond.svg"

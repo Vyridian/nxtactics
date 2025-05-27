@@ -832,7 +832,7 @@
            (base/unitskillmap
             :Armor
              (base/unitskill
-              :name "Armored"
+              :name "Armor"
               :level "1"
               :unititemmap
                (base/unititemmap

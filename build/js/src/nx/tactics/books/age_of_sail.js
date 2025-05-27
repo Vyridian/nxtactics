@@ -220,7 +220,7 @@ export default class nx_tactics_books_age_of_sail {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Firearms",
+                  "Firearm",
                   ":level",
                   3,
                   ":unititemmap",
@@ -255,7 +255,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -281,7 +281,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -305,7 +305,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -333,7 +333,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -353,7 +353,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -392,7 +392,7 @@ export default class nx_tactics_books_age_of_sail {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Firearms",
+                  "Firearm",
                   ":level",
                   "3",
                   ":unititemmap",
@@ -420,7 +420,7 @@ export default class nx_tactics_books_age_of_sail {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Firearms",
+                  "Firearm",
                   ":level",
                   "3",
                   ":unititemmap",
@@ -450,7 +450,7 @@ export default class nx_tactics_books_age_of_sail {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Firearms",
+                  "Firearm",
                   ":level",
                   "3",
                   ":unititemmap",
@@ -477,7 +477,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -505,7 +505,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -576,7 +576,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -606,7 +606,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -630,7 +630,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -650,7 +650,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -693,7 +693,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -725,7 +725,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -770,7 +770,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -794,7 +794,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               )
             ),
             "Spanish Man-O-War",
@@ -812,7 +812,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(

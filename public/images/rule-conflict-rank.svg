@@ -24,7 +24,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.3073248"
-     inkscape:cx="327.76859"
+     inkscape:cx="328.15105"
      inkscape:cy="223.73935"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
@@ -149,11 +149,13 @@
          id="stop25" /></linearGradient></defs><text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.28882;stroke-dasharray:none"
-     x="59.608521"
+     x="70.947121"
      y="22.682598"
      id="text9"><tspan
        sodipodi:role="line"
-       id="tspan1">Conflict: Rank</tspan></text><rect
+       id="tspan1"
+       x="70.947121"
+       y="22.682598">Conflict: Rank</tspan></text><rect
      style="opacity:0.5;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.28895;stroke-dasharray:none"
      id="rect16"
      width="236.82127"

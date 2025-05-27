@@ -226,6 +226,10 @@ x +1DMG vs. Crouching."
       (base/ability<-tactics-key tactics "Beatdown")
      "Clothesline"
       (base/ability<-tactics-key tactics "Beatdown")
+     "Combat Sense"
+      (base/ability<-tactics-key tactics "Combat Sense")
+     "Combination"
+      (base/ability<-tactics-key tactics "Combination")
      "Bull Rush"
       (base/ability
        :name "Bull Rush")
@@ -234,13 +238,7 @@ x +1DMG vs. Crouching."
      "Deflecting Punch"
       (base/ability<-tactics-key tactics "Deflecting Punch")
      "Dragon Strike"
-      (base/ability
-       :name "Dragon Strike"
-       :summary
-        "* When striking with the fist, more power can be exerted when the movement originates from the feet, is guided by the waist, flows through the body, and exits through the fist.
-         * [Attack] [J]: Push:+1, Stun:+1
-         * [Aerial]"
-       :titles "Dragon Fist, Dragon Punch")
+      (base/ability<-tactics-key tactics "Dragon Strike")
      "Ear Pop"
       (base/ability
        :name "Ear Pop"
@@ -257,12 +255,12 @@ x +1DMG vs. Crouching."
      "Elbow Strike"
       (base/ability
        :name "Elbow Strike"
+       :titles "Elbow Smash"
        :summary
         "* Devastating blow common to Muay Thai.
          * +1 Initiative
          * +1 Damage
-         * 1 Move"
-       :titles "Elbow Smash")
+         * 1 Move")
      "Eye Rake"
       (base/ability
        :name "Eye Rake"
@@ -276,22 +274,22 @@ x +1DMG vs. Crouching."
      "Fists of Fire"
       (base/ability
        :name "Fists of Fire")
-     :Haymaker
+     "Haymaker"
       (base/ability
        :name "Haymaker"
+       :titles "Two-Fisted Smash"
        :summary
         "* A slow all out attack that causes massive damage. Especially useful to finish off weakened opponents.
          -2 Initiative
          0 Move
-         +2 Damage"
-       :titles "Two-Fisted Smash")
+         +2 Damage")
      "Head Butt"
       (base/ability
        :name "Head Butt"
        :summary
         "-2 Move
          +1 Damage")
-     :Hyperfist
+     "Hyperfist"
       (base/ability
        :name "Hyperfist"
        :summary
@@ -300,7 +298,7 @@ x +1DMG vs. Crouching."
          -1 Damage
          1 Move"
        :titles "Hundred Hand Slap, Lightning Fist, Rapid Punch")
-     :Jab
+     "Jab"
       (base/ability
        :name "Jab"
        :summary
@@ -312,27 +310,29 @@ x +1DMG vs. Crouching."
      "Knife Hand"
       (base/ability
        :name "Knife Hand"
-       :summary "* [Damage]: [Critical Hits] may reduce opponent's [Armor] roll.")
+       :summary
+        "* [Damage]: [Critical Hits] may reduce opponent's [Armor] roll.")
      "Knuckle Fist"
       (base/ability
        :name "Knuckle Fist"
-       :summary "* [Critical Hits] cause Knockback.")
+       :summary
+        "* [Critical Hits] cause Knockback.")
      "Monkey Punch"
       (base/ability
        :name "Monkey Punch"
+       :titles "Grab Punch"
        :summary
         "* Grab blocking arm and punch
-         * If opponent used a block, ignore it."
-       :titles "Grab Punch")
+         * If opponent used a block, ignore it.")
      "Nerve Strike"
       (base/ability
        :name "Nerve Strike"
+       :titles "Atemi Strike, Atemi Waza, Cobra Strike"
        :summary
         "* Use the tips of the fingers to strike and pinch nerve clusters to produce pain and debilitation.
          * [Action]
          * -1 Initiative
-         * +1 Stun"
-       :titles "Atemi Strike, Atemi Waza, Cobra Strike")
+         * +1 Stun")
      "One Two Punch"
       (base/ability
        :name "One Two Punch")
@@ -346,7 +346,7 @@ x +1DMG vs. Crouching."
        :summary
         "* Middle finger protrudes from fist to strike nerve clusters to cause numbness.
          * [Criticals] can be exchanged for Slow tokens.")
-     :Ram
+     "Ram"
       (base/ability
        :name "Ram"
        :summary
@@ -385,7 +385,7 @@ x +1DMG vs. Crouching."
        :titles "Tiger Claw Strike"
        :summary
         "* [Skill]: [Close Combat]")
-     :Uppercut
+     "Uppercut"
       (base/ability
        :name "Uppercut"
        :summary
@@ -816,6 +816,7 @@ x +1DMG vs. Crouching."
      "Blade Barrier"
      "Blind Fighting"
      "Combat Sense"
+     "Combination"
      "Continuous Cut"
      "Dash Attack"
      "Dazing Blow"
@@ -863,13 +864,18 @@ x +1DMG vs. Crouching."
    :stat "Body"
    :abilitymap
     (base/abilitymap
-     :Armorsmithing
+     "Armorsmithing"
       (base/ability
        :name "Armorsmithing"
-       :summary "* The ability to repair, improve, or even create armor.")
-     :Counterattack
+       :summary
+        "* [Skill]: [Defense]
+         * The ability to repair, improve, or even create armor.")
+     "Blocked In"
       (base/ability
-       :name "Counterattack")
+       :name "Blocked In"
+       :summary
+        "* [Skill]: [Defense]
+         * [Block] [Royal]: Rival gets Move:-1")
      "High Block"
       (base/ability
        :name "High Block"
@@ -893,18 +899,22 @@ x +1DMG vs. Crouching."
      "Shield Block"
       (base/ability
        :name "Shield Block"
-       :summary "* [Defend] [Damage]: Add Shield [Armor] to your [Armor].")
+       :summary
+        "* [Skill]: [Defense]
+         * [Block] [Damage]: Add Shield [Armor] to your [Armor].")
      "Shield Charge"
       (base/ability
        :name "Shield Charge")
      "Shield Guard"
       (base/ability
        :name "Shield Guard"
-       :summary "* [Reaction] [Damage]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor].")
+       :summary
+        "* [Reaction] [Damage]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor].")
      "Shield Sacrifice"
       (base/ability
        :name "Shield Sacrifice"
-       :summary "* [Club] [Defend] [Damage]: The shield becomes the target of any [Overwhelm] damage."))
+       :summary
+        "* [Club] [Defend] [Damage]: The shield becomes the target of any [Overrun] damage."))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -915,12 +925,13 @@ x +1DMG vs. Crouching."
    :name "Evasion"
    :summary
     "* Evasion is a special defense typically used by those that choose to wear light or no Armor."
-   :stat "Defense"
+   :stat "Speed"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
      "Blade Locking"
      "Body Climb"
+     "Counterattack"
      "Deflect"
      "Dirty Fighting"
      "Disarm"
@@ -954,6 +965,7 @@ x +1DMG vs. Crouching."
      "Fletching"
      "Knife Throwing"
      "Piercing Shot"
+     "Quick Draw"
      "Richochet"
      "Shield Snare"
      "Signal Shot"
@@ -964,7 +976,7 @@ x +1DMG vs. Crouching."
      "Archery"
      "Thrown Weapons"))
   (base/skill
-   :name "Firearms"
+   :name "Firearm"
    :titles "Crackshot, Marksman, Rifleman, Sharpshooter, Sniper"
    :reference
     "* Captain's orders: Bullet to the face. - Crackshot Corsair, Runeterra
@@ -973,128 +985,100 @@ x +1DMG vs. Crouching."
     "* Skill in using guns of various types (not including crossbows). IF you shoot in a non-standard way, you have [Disadvantage]."
    :abilitymap
     (base/abilitymap
-     :Anti-Personnel
+     "Quick Draw"
+      (base/ability<-tactics-key tactics "Quick Draw")
+     "Hip Shoot"
+      (base/ability<-tactics-key tactics "Hip Shoot")
+     "Rapid Fire"
+      (base/ability
+       :name "Rapid Fire")
+     "Sniper"
+      (base/ability<-tactics-key tactics "Sniper")
+     "Supressive Fire"
+      (base/ability<-tactics-key tactics "Supressive Fire")
+     "Anti-Personnel"
       (base/ability
        :name "Anti-Personnel"
-       :summary "* [Action]: [+1 Damage] or [-1 Damage] vs. 2 or more Armor"
+       :summary
+        "* [Action]: [+1 Damage] or [-1 Damage] vs. 2 or more Armor"
        :titles "Hollow Point")
      "Armor Piercing"
       (base/ability
        :name "Armor Piercing"
        :summary "* [Action]: Enemy at [-2 Armor]"
        :titles "Depleted Uraniumn")
-     :Autofire
+     "Blast"
       (base/ability
-       :name "Autofire"
+       :name "Blast")
+     "Bombardment"
+      (base/ability
+       :name "Bombardment")
+     "Capacitors"
+      (base/ability
+       :name "Capacitors"
        :summary
-        "* [Requires]: Weapon with [Autofire]
-         -1 [Attack]
-         * [Action]: Target 2 adjacent units.")
+        "* Uses capacitors that can recharge 1 Use a turn from a power source rated at the same power level as a single shot. Cannot be used with lower energy power sources.")
      "Chemical Rounds"
       (base/ability
        :name "Chemical Rounds"
-       :summary "* [Action]: [-1 Damage], [Critical Hits] are [Acid]")
-     "Quick Draw"
-      (base/ability<-tactics-key tactics "Quick Draw")
-     "Gyrojet Rounds"
-      (base/ability
-       :name "Gyrojet Rounds"
-       :summary "* [Action]: [+1 Damage] at Long Range, [-1 Damage] at Short Range"
-       :titles "Rocket Rounds")
-     "High Explosive Rounds"
-      (base/ability
-       :name "High Explosive Rounds"
-       :summary "* [Action]: Use [Blast] rules for targetting and damage."
-       :titles "Explosive Rounds")
-     "Hip Shoot"
-      (base/ability<-tactics-key tactics "Hip Shoot")
-     "Non-Lethal Rounds"
-      (base/ability
-       :name "Non-Lethal Rounds"
-       :summary "* [Action]: [-2 Damage] vs. 2 or more Armor.  Half of all [Damage] is [Stun] instead."
-       :titles "Rubber Bullets")
-     "Paint Rounds"
-      (base/ability
-       :name "Paint Rounds"
-       :summary "* [Action]: [0 Damage], [Critical Hits] are [Stun]"
-       :titles "Paintball")
-     "Pin Down"
-      (base/ability
-       :name "Pin Down")
-     "Rapid Fire"
-      (base/ability
-       :name "Rapid Fire")
-     :Sniper
-      (base/ability
-       :name "Sniper"
-       :reference
-        "* The snipe (a family of shorebirds) is difficult to catch for experienced hunters, so much so that the word 'sniper' is derived from it to refer to anyone skilled enough to shoot one.
-         * I aim to win and my aim... is Excellent. - Caitlyn, Runeterra"
        :summary
-        "* [Requires]: Long Range Weapon
-         * Increase weapon range by 50% and choose [Hit Location]")
-     "Supressive Fire"
-      (base/ability
-       :name "Supressive Fire"
-       :summary
-        "* Firing weapons at enemy forces with the primary goal of forcing them to remain under cover.
-         * [Requires]: Weapon with [Autofire]
-         * [Action]: Target a unit that has not been activated this turn, all [Hits] and [Critical Hits] are [Stun] tokens.
-         +1 Attack"
-       :titles "Covering Fire")
-     "Tracer Rounds"
-      (base/ability
-       :name "Tracer Rounds"
-       :summary
-        "* [Requires]: [Auto], Must attack same target on subsequent round.
-         * [Action]: [+1 Attack], [-1 Damage].")
-     "Tracking Rounds"
-      (base/ability
-       :name "Tracking Rounds")
-     :Auto
-      (base/ability
-       :name "Auto"
-       :summary
-        "+1 Cost
-         * Criticals can be used for additional damage rolls (multiple hits).")
-     :Blast
-      (base/ability
-       :name "Blast")
-     :Bombardment
-      (base/ability
-       :name "Bombardment")
-     :Capacitors
-      (base/ability
-       :name "Capacitors"
-       :summary "* Uses capacitors that can recharge 1 shot a turn from a power source rated at the same power level as a single shot.  Cannot be used with lower energy power sources.")
-     :Electroshock
+        "* [Action]: [-1 Damage], [Critical Hits] are [Acid]")
+     "Electroshock"
       (base/ability
        :name "Electroshock"
        :titles "Taser")
      "Extra Ammo"
       (base/ability
        :name "Extra Ammo"
-       :summary "* 2x number of shots, each time this modifier is taken.")
+       :summary "* 2x number of Uses, each time this modifier is taken.")
      "Flash Surpressor"
       (base/ability
        :name "Flash Surpressor"
-       :summary "* Reduces the muzzle flare of the weapon making it more difficult to visually locate the shooter.")
+       :summary
+        "* Reduces the muzzle flare of the weapon making it more difficult to visually locate the shooter.")
      "Gun Mount"
       (base/ability
        :name "Gun Mount"
        :titles "Bipod, Tripod")
-     :Overcharge
+     "Gyrojet Rounds"
+      (base/ability
+       :name "Gyrojet Rounds"
+       :summary
+        "* [Action]: [+1 Damage] at Long Range, [-1 Damage] at Short Range"
+       :titles "Rocket Rounds")
+     "High Explosive Rounds"
+      (base/ability
+       :name "High Explosive Rounds"
+       :titles "Explosive Rounds"
+       :summary
+        "* [Action]: Use [Blast] rules for targetting and damage.")
+     "Non-Lethal Rounds"
+      (base/ability
+       :name "Non-Lethal Rounds"
+       :titles "Rubber Bullets"
+       :summary
+        "* [Action]: [-2 Damage] vs. 2 or more Armor. Half of all [Damage] is [Stun] instead.")
+     "Overcharge"
       (base/ability
        :name "Overcharge"
-       :summary "* [Action]: Consume 2 shots to to 1 extra damage. Then Damage is -1 until repaired.")
+       :summary
+        "* [Action]: Consume 2 Uses to to 1 extra damage. Then Damage is -1 until repaired.")
      "Overload Weapon"
       (base/ability
        :name "Overload Weapon"
-       :summary "* Detonate the entire weapon magazine (and the weapon) as an explosive with force equal to the total power in the magazine.")
+       :summary
+        "* Detonate the entire weapon magazine (and the weapon) as an explosive with force equal to the total power in the magazine.")
+     "Paint Rounds"
+      (base/ability
+       :name "Paint Rounds"
+       :titles "Paintball"
+       :summary
+        "* [Action]: [0 Damage], [Critical Hits] are [Stun]")
      "Rechargable"
       (base/ability
        :name "Rechargable"
-       :summary "* Uses batteries that can be slowly recharged from any power source.")
+       :summary
+        "* Uses batteries that can be slowly recharged from any power source.")
      "Recoil Compensator"
       (base/ability
        :name "Recoil Compensator"
@@ -1112,14 +1096,18 @@ x +1DMG vs. Crouching."
      "Telescopic Sight"
       (base/ability
        :name "Telescopic Sight"
-       :summary "Reduces penalties for Medium Range to Short Range and Long Range to Medium Range")
+       :summary
+        "Reduces penalties for Medium Range to Short Range and Long Range to Medium Range")
+     "Tracking Rounds"
+      (base/ability
+       :name "Tracking Rounds")
      "Turret"
       (base/ability
        :name "Turret"
        :image "Tokens/Arrow.png"
        :summary
-        "+1 Cost
-         * Turret mounted weapons may turn their turret toward any direction and fire from the side the turret is facing.
+        "* Turret mounted weapons may turn their turret toward any direction and fire from the side the turret is facing.
+         [Cost]:+1
          * Turrets are normally assumed to be facing forward.  At the beginning of its [Action], a unit may change the turret facing by 1 side (Use a [Vector] Token) indicate where the Turret is pointing."))
    :specialtymap
     (base/specialtymap<-tactics-keys
@@ -1370,7 +1358,7 @@ x +1DMG vs. Crouching."
      "Acrobatics"
      "Climbing"))
   (base/skill
-   :name "Brilliance"
+   :name "Intellect"
    :titles "Genius, Mastermind, Prodigy, Savant, Super Genius"
    :stat "Mind"
    :abilitymap
@@ -1824,6 +1812,7 @@ x +1DMG vs. Crouching."
      tactics
      "3 Point Turn"
      "Bootlegger Reverse"
+     "Military Vehicle"
      "Parallel Parking"
      "Swerve")
    :specialtymap
@@ -2232,7 +2221,9 @@ x +1DMG vs. Crouching."
      "Grip of Fear"
      "Interrogate"
      "Intimidate"
+     "Oppress"
      "Reign of Terror"
+     "Repress"
      "Roar"
      "Terrorize"
      "Torment"
@@ -2300,20 +2291,9 @@ x +1DMG vs. Crouching."
    :abilitymap
     (base/abilitymap
      "Antiquities"
-      (base/ability
-       :name "Antiquities"
-       :reference
-        "* Ah Dr. Jones. We've heard a great deal about you... Professor of archeology, expert on the occult. and how does one say it: obtainer of rare antiquities. - Raiders of the Lost Ark"
-       :summary
-        "* [Skill]: [Knowledge]
-         * The study and valuation of unique objects throughout history.")
+      (base/ability<-tactics-key tactics "Antiquities")
      "Archeology"
-      (base/ability
-       :name "Archeology"
-       :summary
-        "* [Skill]: [Knowledge]
-         * The study and reclamation of ancient relics and remains."
-       :titles "Archeologist, Paleontology, Paleontologist")
+      (base/ability<-tactics-key tactics "Archeology")
      "Current Events"
       (base/ability
        :name "Current Events")
@@ -2614,143 +2594,37 @@ x +1DMG vs. Crouching."
     "Admiral, Brigade, Brigadier, Cadet, Centurion, Colonel, Commander, Commando, Conscript, Corporal, Field Marshal, Footman, Gamesman, General, Grunt, High Guard, Honor Guard, Infantry, Legionnaire, Lieutenant, Praetor, Praetorian Guard, Reserves, Royal Guard, Soldier, Soldier of Fortune, Strategist, Tactician, Vanguard"
    :stat "Will"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Airborne Assault"
-      (base/ability
-       :name "Airborne Assault")
      "Amphibious Assault"
-      (base/ability
-       :name "Amphibious Assault")
-     :Besiege
-      (base/ability
-       :name "Besiege")
+     "Besiege"
      "Close Assault"
-      (base/ability
-       :name "Close Assault"
-       :summary
-        "* [Action]: If a [Vehicle] is adjacent to this unit, you may target the Top Armor.  If the unit has explosives, it may target the Under Armor.")
      "Combat Driver"
-      (base/ability
-       :name "Combat Driver"
-       :summary "* Experienced in fighting in a car.")
-     "Divide and Conquer"
-      (base/ability
-       :name "Divide and Conquer")
      "Diversionary Tactics"
-      (base/ability
-       :name "Diversionary Tactics")
+     "Divide and Conquer"
      "Field Fortifications"
-      (base/ability
-       :name "Field Fortifications")
      "Formation: Back to Back"
-      (base/ability
-       :name "Formation: Back to Back"
-       :summary
-        "* [Formation]: Not strictly a formation, units with their backs against each other largely protect each other's back.")
      "Formation: Cover"
-      (base/ability
-       :name "Formation: Cover"
-       :summary
-        "* [Formation]: Not strictly a formation, units in Cover formation stay close enough together to protect each other's sides.")
      "Formation: March"
-      (base/ability
-       :name "Formation: March"
-       :summary
-        "* [Formation]: Units move in columns.
-         * [+1 Speed]")
      "Formation: Parade"
-      (base/ability
-       :name "Formation: Parade"
-       :summary
-        "* [Formation]: A showy formation designed to look good.  Has no use in battle.
-         * [+ 1 Intimidation]")
      "Formation: Phalanx"
-      (base/ability
-       :name "Formation: Phalanx"
-       :reference "* With his friends jostling and pushing on both sides and behind, and his enemies forming a solid wall in front of him, the hoplite had little opportunity for feats of technique and weapon skill, but great need for commitment and mental toughness. The hoplites had to trust their neighbors for mutual protection, so a phalanx was only as strong as its weakest elements. Its effectiveness depended on how well the hoplites could maintain this formation while in combat, and how well they could stand their ground, especially when engaged against another phalanx. The more disciplined and courageous the army, the more likely it was to win. The Greek word dynamis, the 'will' or 'ability to fight,' was used to express the drive that kept hoplites in formation."
-       :summary
-        "* [Formation]: Focuses on offense using Melee attacks with Reach.
-         * [Requires]: At least half must have Weapons with Reach 2+.
-         * [+1 Attack], [+1 Defense] from Front
-         * [-1 Defense] from Rear")
      "Formation: Shield Wall"
-      (base/ability
-       :name "Formation: Shield Wall"
-       :summary
-        "* [Formation]: Uses shields to form a wall.
-         * [Requires]: At least half must have Shields.
-         +1 Defense from Front.")
      "Formation: Skirmish"
-      (base/ability
-       :name "Formation: Skirmish"
-       :reference "Acting as light infantry with their light arms and minimal armor, they could run ahead of the main battle line, release a volley of arrows, slingshots or javelins, and retreat behind their main battle line before the clash of the opposing main forces. The aims of skirmishing were to disrupt enemy formations by causing casualties before the main battle, and to tempt the opposing infantry into attacking prematurely, throwing their organization into disarray. Skirmishers could also be effectively used to surround opposing soldiers in the absence of friendly cavalry."
-       :summary
-        "* [Formation]: Units move in loose shapes.
-         * [Requires]: Only [Light Infantry].
-         * [Move]: Ignore 1 [Terrain Penalty].
-         * [+1 Defense] vs Ranged or Large Units
-         * [+1 Defense] when in Terrain with Defense bonus
-         * [-1 Defense] vs Small Melee and Close Combat Units"
-       :titles "Skirmisher")
      "Formation: Testudo"
-      (base/ability
-       :name "Formation: Testudo"
-       :image "Skills/Testudo.jpg"
-       :summary
-        "* [Formation]: Uses shields to form a shell around a unit.
-         * [Requires]: At least half must have Shields.
-         * [+2 Defense] vs Ranged
-         * Shields protect all sides
-         * Cannot Attack"
-       :titles "Tortoise Formation, Turtle Up")
      "Formation: Tight"
-      (base/ability
-       :name "Formation: Tight"
-       :summary
-        "* [Formation]: Units stay tightly packed to maximize Melee defense.
-         * [+1 Defense] vs Melee and Close Combat.
-         * [-1 Defense] vs Ranged")
      "Formation: Wedge"
-      (base/ability
-       :name "Formation: Wedge"
-       :summary
-        "* [Formation]: Units move in triangle and focus on breaking enemy formations.
-         * [+1 Retreat] Token if unit inflicts at least 1 [Retreat].")
      "Halo Drop"
-      (base/ability
-       :name "Halo Drop")
      "Jump Suit Combat"
-      (base/ability
-       :name "Jump Suit Combat")
      "Military Vehicle"
-      (base/ability
-       :name "Military Vehicle"
-       :summary "* Every vehicle unit is assumed to have this ability. Units that are not vehicles must take this ability for each vehicle.")
      "Mine Clearing"
-      (base/ability
-       :name "Mine Clearing")
      "Mine Laying"
-      (base/ability
-       :name "Mine Laying")
      "Mobile Infantry"
-      (base/ability
-       :name "Mobile Infantry"
-       :summary "* Experienced with powered armor.")
      "Orbital Halo Drop"
-      (base/ability
-       :name "Orbital Halo Drop")
      "Parachute Assault"
-      (base/ability
-       :name "Parachute Assault")
      "Space Combat"
-      (base/ability
-       :name "Space Combat")
      "Urban Assault"
-      (base/ability
-       :name "Urban Assault")
-     "Wingsuit Combat"
-      (base/ability
-       :name "Wingsuit Combat"))
+     "Wingsuit Combat")
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -2758,158 +2632,233 @@ x +1DMG vs. Crouching."
   (base/skill
    :name "Performance"
    :reference
-    "* Ahh, the denouement. - Jhin, Runeterra"
+    "* Ahh, the denouement. - Jhin, Runeterra
+     * You have been a marvelous audience! - Jhin, Runeterra"
    :titles "Entertainer, Performer, Jester, Juggler"
    :stat "Spirit"
    :abilitymap
     (base/abilitymap
-     :Allure
+     "Allure"
       (base/ability
-       :name "Allure")
-     :Amplify
+       :name "Allure"
+       :summary
+        "* [Skill]: [Performance]")
+     "Amplify"
       (base/ability
        :name "Amplify"
-       :reference "These go to eleven. - This is Spinal Tap"
-       :summary "* A performer must be able to be heard. This ability maximizes the acoustics available and allows the performer's message to be heard.")
-     :Ballad
-      (base/ability
-       :name "Ballad")
-     "Ballroom Dance"
-      (base/ability
-       :name "Ballroom Dance")
-     "Break Dance"
-      (base/ability
-       :name "Break Dance")
-     :Calm
+       :reference
+        "These go to eleven. - This is Spinal Tap"
+       :summary
+        "* A performer must be able to be heard. This ability maximizes the acoustics available and allows the performer's message to be heard.
+         * [Skill]: [Performance]")
+     "Calm"
       (base/ability
        :name "Calm"
-       :titles "Pacify, Soothe the Savage")
+       :titles "Pacify, Soothe the Savage"
+       :summary
+        "* [Skill]: [Performance]")
      "Captivating Song"
       (base/ability
        :name "Captivating Song"
-       :summary "* For each success, the targets Move is reduced by 1.")
-     :Comedy
+       :summary
+        "* For each success, the targets Move is reduced by 1.
+         * [Skill]: [Performance]")
+     "Comedy"
       (base/ability
        :name "Comedy"
-       :titles "Clown, Comedian, Mime, Jester")
-     :Crescendo
-      (base/ability
-       :name "Crescendo")
-     :Dirge
-      (base/ability
-       :name "Dirge"
+       :titles "Clown, Comedian, Mime, Jester"
        :summary
-        "* Opponents in Radius are cloaked in despair.
-         * [Passive]
-         * [Continuous]: [Retreats] are increased by 1 for all opponents within the radius."
-       :titles "Demoralize, Song of Fear")
-     :Discord
+        "* [Skill]: [Performance]")
+     "Crescendo"
+      (base/ability
+       :name "Crescendo"
+       :summary
+        "* [Skill]: [Performance]")
+     "Dance: Ballroom"
+      (base/ability
+       :name "Dance: Ballroom"
+       :summary
+        "* [Skill]: [Performance]")
+     "Dance: Break"
+      (base/ability
+       :name "Dance: Break"
+       :summary
+        "* [Skill]: [Performance]")
+     "Dance: Hip Hop"
+      (base/ability
+       :name "Dance: Hip Hop"
+       :summary
+        "* [Skill]: [Performance]")
+     "Dance: Line"
+      (base/ability
+       :name "Dance: Line"
+       :summary
+        "* [Skill]: [Performance]")
+     "Dance: Pole"
+      (base/ability
+       :name "Dance: Pole"
+       :summary
+        "* [Skill]: [Performance]")
+     "Dance: Salsa"
+      (base/ability
+       :name "Dance: Salsa"
+       :summary
+        "* [Skill]: [Performance]")
+     "Dance: Tango"
+      (base/ability
+       :name "Dance: Tango"
+       :summary
+        "* [Skill]: [Performance]")
+     "Dance: Waltz"
+      (base/ability
+       :name "Dance: Waltz"
+       :summary
+        "* [Skill]: [Performance]")
+     "Discord"
       (base/ability
        :name "Discord"
        :summary
         "* A sudden sound that disrupts the natural flow of existing sounds.
+         * [Skill]: [Performance]
          * The secret to this skill is to pick the most inappropriate sound at the most inappropriate time.
          * The result is extremely distracting and will cancel other effects based on sound including other Communication abilities."
        :titles "Cacaphony")
      "Disguise"
       (base/ability<-tactics-key tactics "Disguise")
-     :Fanfare
+     "Fanfare"
       (base/ability
        :name "Fanfare"
-       :summary "* A cheering audience increases an entertrainer's power.")
-     "Gabriel's Horn"
-      (base/ability
-       :name "Gabriel's Horn"
        :summary
-        "* [Requires]: Horn
-         * Damages Walls of any kind")
-     :Harmonize
+        "* A cheering audience increases an entertrainer's power.
+         * [Skill]: [Performance]")
+     "Horn of Gabriel"
       (base/ability
-       :name "Harmonize")
-     :Heartstrings
+       :name "Horn of Gabriel"
+       :summary
+        "* Damages Walls of any kind
+         * [Skill]: [Performance]
+         * [Requires]: Horn")
+     "Imitation"
       (base/ability
-       :name "Heartstrings"
+       :name "Imitation"
+       :summary
+        "* [Skill]: [Performance]")
+     "Impersonate"
+      (base/ability<-tactics-key tactics "Impersonate")
+     "Incite"
+      (base/ability
+       :name "Incite"
+       :summary
+        "* [Skill]: [Performance]")
+     "Inspire"
+      (base/ability<-tactics-key tactics "Inspire")
+     "Juggling"
+      (base/ability<-tactics-key tactics "Juggling")
+     "Makeup"
+      (base/ability<-tactics-key tactics "Makeup")
+     "Music: Ballad"
+      (base/ability
+       :name "Music: Ballad"
+       :summary
+        "* [Skill]: [Performance]")
+     "Music: Dirge"
+      (base/ability
+       :name "Music: Dirge"
+       :titles "Demoralize, Song of Fear"
+       :summary
+        "* Opponents in Radius are cloaked in despair.
+         * [Skill]: [Performance]
+         * [Passive]
+         * [Continuous]: [Retreats] are increased by 1 for all opponents within the radius.")
+     "Music: Harmonize"
+      (base/ability
+       :name "Music: Harmonize"
+       :summary
+        "* [Skill]: [Performance]")
+     "Music: Heartstrings"
+      (base/ability
+       :name "Music: Heartstrings"
        :reference
-        "* I felt he found all my letters and read each one out loud. I prayed he would finish. But he just kept right on... He sang as if he knew me. In all my dark despair. And then he looked right through me. As if I wasn't there... Strumming my pain with his fingers. Singing my life with his words. Killing me softly with his song. Killing me softly with his song. Telling my whole life with his words. Killing me softly with his song. - Roberta Flack, Killing Me Softly")
-     "Hip Hop Dance"
-      (base/ability
-       :name "Hip Hop Dance")
-     :Imitation
-      (base/ability
-       :name "Imitation")
-     :Impersonation
-      (base/ability
-       :name "Impersonation")
-     :Incite
-      (base/ability
-       :name "Incite")
-     "Inspiration"
-      (base/ability<-tactics-key tactics "Inspiration")
-     :Juggling
-      (base/ability
-       :name "Juggling"
+        "* I felt he found all my letters and read each one out loud. I prayed he would finish. But he just kept right on... He sang as if he knew me. In all my dark despair. And then he looked right through me. As if I wasn't there... Strumming my pain with his fingers. Singing my life with his words. Killing me softly with his song. Killing me softly with his song. Telling my whole life with his words. Killing me softly with his song. - Roberta Flack, Killing Me Softly"
        :summary
-        "* Besides juggling objects, this ability allows the user to catch objects.
-         * [Reaction]: When an object is thrown at a space within one space of the user, roll vs. the [Attack], the object is caught if any [Hits] are scored. Further, the user may immediately throw the object using [Juggling] level as attack value.")
-     :Lullaby
+        "* [Skill]: [Performance]")
+     "Music: Lullaby"
       (base/ability
-       :name "Lullaby")
+       :name "Music: Lullaby"
+       :summary
+        "* [Skill]: [Performance]")
+     "Music: Requiem"
+      (base/ability
+       :name "Music: Requiem"
+       :summary
+        "* [Skill]: [Performance]")
+     "Music: Serenade"
+      (base/ability
+       :name "Music: Serenade"
+       :summary
+        "* [Skill]: [Performance]")
+     "Music: Siren Song"
+      (base/ability
+       :name "Music: Siren Song"
+       :summary
+        "* [Skill]: [Performance]
+         * [Action]: For each success, during its turn, the target must use half of its [Move] to approach the singer.")
+     "Music: Song"
+      (base/ability
+       :name "Music: Song"
+       :summary
+        "* [Skill]: [Performance]")
+
+     "Music: War Song"
+      (base/ability
+       :name "Music: War Song"
+       :reference "Battle Hymn, Glorious Anthem"
+       :summary
+        "* [Skill]: [Performance]")
+     "Music: Work Song"
+      (base/ability
+       :name "Music: Work Song"
+       :reference
+        "* Just whistle while you work. - Dwarves, Snow White"
+       :summary
+        "* [Skill]: [Performance]")
      "Performance Art"
       (base/ability
        :name "Performance Art"
-       :reference "Cirque de Soleil")
-     "Pole Dance"
+       :reference "Cirque de Soleil"
+       :summary
+        "* [Skill]: [Performance]")
+     "Satirize"
       (base/ability
-       :name "Pole Dance")
-     :Requiem
-      (base/ability
-       :name "Requiem")
-     "Salsa Dance"
-      (base/ability
-       :name "Salsa Dance")
-     :Satirize
-      (base/ability
-       :name "Satirize")
-     :Serenade
-      (base/ability
-       :name "Serenade")
-     :Sexpertise
+       :name "Satirize"
+       :summary
+        "* [Skill]: [Performance]")
+     "Sexpertise"
       (base/ability
        :name "Sexpertise"
-       :reference "* If you don't like the company, let's just do it you and me...you and me...or three...or four, on the floor. - Britney Spears, Three")
-     :Silence
+       :summary
+        "* [Skill]: [Performance]")
+     "Silence"
       (base/ability
-       :name "Silence")
-     "Siren Song"
+       :name "Silence"
+       :summary
+        "* [Skill]: [Performance]")
+     "Speeches"
       (base/ability
-       :name "Siren Song"
-       :summary "* [Action]: For each success, during its turn, the target must use half of its [Move] to approach the singer.")
-     :Speeches
-      (base/ability
-       :name "Speeches")
-     :Song
-      (base/ability
-       :name "Song")
-     :Storytelling
+       :name "Speeches"
+       :summary
+        "* [Skill]: [Performance]")
+     "Storytelling"
       (base/ability
        :name "Storytelling"
-       :titles "Storyteller")
-     :Style
+       :titles "Storyteller"
+       :summary
+        "* [Skill]: [Performance]")
+     "Style"
       (base/ability
-       :name "Style")
-     :Tango
-      (base/ability
-       :name "Tango")
-     :Waltz
-      (base/ability
-       :name "Waltz")
-     "War Song"
-      (base/ability
-       :name "War Song"
-       :reference "Battle Hymn, Glorious Anthem")
-     "Work Song"
-      (base/ability
-       :name "Work Song"))
+       :name "Style"
+       :summary
+        "* [Skill]: [Performance]"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -3578,7 +3527,7 @@ x +1DMG vs. Crouching."
      * [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty versus Body + Survival or gain Black [Exhaustion] Tokens."
    :titles
     "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Sentry, Survivalist, Trailblazer, Traveller, Wanderer, Wayfarer"
-   :stat "Defense"
+   :stat "Will"
    :abilitymap
     (base/abilitymap
      "Dead Reckoning"

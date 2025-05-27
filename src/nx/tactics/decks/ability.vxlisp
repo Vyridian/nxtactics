@@ -6,6 +6,16 @@
  [tactics : base/tactics]
  (base/abilitymap<-abilitylist
   (base/ability
+   :name "1-Handed"
+   :summary
+    "* Requires 1 Hand
+     * [Power]: [Weapon]")
+  (base/ability
+   :name "2-Handed"
+   :summary
+    "* Requires 2 Hands
+     * [Power]: [Weapon]")
+  (base/ability
    :name "2-Legged")
   (base/ability
    :name "3 Point Turn"
@@ -45,18 +55,71 @@
   (base/ability
    :name "Air Burst")
   (base/ability
+   :name "Airborne Assault"
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
    :name "Ambush"
    :summary
     "* [Action]: Anyone who is within 10m, tests [Investigation] vs. [Stealth] with [Advantage] to detect them.
      * [Downtime]: Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak.")
   (base/ability
+   :name "Amphibious Assault"
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
    :name "Analyze Weakness")
   (base/ability
+   :name "Antiquities"
+   :reference
+    "* Ah Dr. Jones. We've heard a great deal about you... Professor of archeology, expert on the occult. and how does one say it: obtainer of rare antiquities. - Raiders of the Lost Ark"
+   :summary
+    "* [Skill]: [Knowledge]
+     * The study and valuation of unique objects throughout history.")
+  (base/ability
    :name "Anvil Strike"
-   :summary "* [+1 Damage] when target is adjacent to solid terrain.")
+   :summary
+    "* [+1 Damage] when target is adjacent to solid terrain.")
   (base/ability
    :name "Arc Lightning"
-   :summary "* Lightning leaps from the target to others in range.")
+   :summary
+    "* Lightning leaps from the target to others in range.")
+  (base/ability
+   :name "Arc:1-Side"
+   :summary
+    "* Equip on Left or Right. Covers the equiped [Arc]
+     * [Power]: [Weapon]")
+  (base/ability
+   :name "Arc:Back"
+   :summary
+    "* Covers the Back [Arc]
+     * [Power]: [Weapon] or [Armor]")
+  (base/ability
+   :name "Arc:Front"
+   :summary
+    "* Covers the Front [Arc]
+     * [Power]: [Weapon] or [Armor]")
+  (base/ability
+   :name "Arc:Left"
+   :summary
+    "* Covers the Left [Arc]
+     * [Power]: [Weapon] or [Armor]")
+  (base/ability
+   :name "Arc:Right"
+   :summary
+    "* Covers the Right [Arc]
+     * [Power]: [Weapon] or [Armor]")
+  (base/ability
+   :name "Armor:1"
+   :summary
+    "* [Block]: Counts as Armor:1 when Blocking
+     * [Power]: [Weapon]")
+  (base/ability
+   :name "Archeology"
+   :summary
+    "* The study and reclamation of ancient relics and remains.
+     * [Skill]: [Knowledge]"
+   :titles "Archeologist, Paleontology, Paleontologist")
   (base/ability
    :name "Architecture"
    :summary
@@ -74,6 +137,51 @@
    :name "Armed Robbery"
    :summary
     "* [Skill]: [Crime]")
+  (base/ability
+   :name "Armor: Abdomen"
+   :summary
+    "* Protects Abdomen [J]
+     * [Power]: [Armor]")
+  (base/ability
+   :name "Armor: Arms"
+   :summary
+    "* Protects Arms [8] and [9]
+     * [Power]: [Armor]")
+  (base/ability
+   :name "Armor: Chest"
+   :summary
+    "* Protects Chest [Q]
+     * [Power]: [Armor]")
+  (base/ability
+   :name "Armor: Feet"
+   :summary
+    "* Protects Feet [2] and [3]
+     * [Power]: [Armor]")
+  (base/ability
+   :name "Armor: Hands"
+   :summary
+    "* Protects Arms [6] and [7]
+     * [Power]: [Armor]")
+  (base/ability
+   :name "Armor: Head"
+   :summary
+    "* Protects Head [A]
+     * [Power]: [Armor]")
+  (base/ability
+   :name "Armor: Legs"
+   :summary
+    "* Protects Legs [4] and [5]
+     * [Power]: [Armor]")
+  (base/ability
+   :name "Armor: Shoulders"
+   :summary
+    "* Protects Shoulders [K]
+     * [Power]: [Armor]")
+  (base/ability
+   :name "Armor: Vitals"
+   :summary
+    "* Protects Vitals [10]
+     * [Power]: [Armor]")
   (base/ability
    :name "Art Imitates Life"
    :reference "Dorian Gray"
@@ -96,6 +204,11 @@
    :name "Auto Med System"
    :summary
     "* Detects severe damage to the wearer and automatically takes action to reduce shock and maintain suit integrity (sealing leaks or amputating if necessary).")
+  (base/ability
+   :name "Autofire"
+   :summary
+    "* [Power]: [Weapon]
+     * Cannot Combo. Uses:-10. A Normal Success automatically creates a Combo with All lower numbers. E.g. Rank 7 would add 6, 5, 4, 3, and 2.")
   (base/ability
    :name "Autotomy"
    :titles "Self-amputation"
@@ -125,9 +238,7 @@
   (base/ability
    :name "Backstab"
    :summary
-    "* [Passive]:
-     ** IF [Flanking] THEN [Skill]:+1
-     ** IF [Blindspot] THEN [Skill]:+[Skill]"
+    "* [Fight]: IF [Flanking] double the Flanking Bonus"
    :titles "Back Biter, Back Stabber, Opportunist, Traitor")
   (base/ability
    :name "Balanced for Throwing")
@@ -162,10 +273,19 @@
     "* [Power]: [Enchantment]
      * Target cannot conceive a child while under this curse.")
   (base/ability
+   :name "Bash"
+   :summary
+    "* Impact or Explosive Damage. Causes [Fatigue] and [Push].
+     * [Power]: [Weapon]")
+  (base/ability
    :name "Beatdown"
    :summary
     "* [Skill]: [Close Combat]
      * IF your [Rival] is [Prone] THEN [Damage]:+1")
+  (base/ability
+   :name "Besiege"
+   :summary
+    "* [Skill]: [Military]")
   (base/ability
    :name "Bite"
    :summary
@@ -220,7 +340,9 @@
    :summary
     "* [Focus]: +1 [Defense] and +1 [Armor] vs. melee weapons. Unarmed combat is unaffected.")
   (base/ability
-   :name "Blind Fighting")
+   :name "Blind Fighting"
+   :summary
+    "* [Power]: [Cultivation]")
   (base/ability
    :name "Blind Justice"
    :summary
@@ -292,6 +414,12 @@
   (base/ability
    :name "Burrowing")
   (base/ability
+   :name "Burstfire"
+   :summary
+    "* Fire a 3 round burst
+     * [Power]: [Weapon]
+     * Cannot Combo. Uses:-3. A Normal Success automatically creates a Combo with the 2 lower numbers. E.g. Rank 7 would add 6 and 5.")
+  (base/ability
    :name "Calculator Mind")
   (base/ability
    :name "Calligraphy"
@@ -322,7 +450,8 @@
      The price will be high for the greatest prize of all.
      Stand and be counted among those that dared.
      Those who dared to fight for their freedom. - Glass Fleet"
-   :summary "Gather a war party from the populace")
+   :summary
+    "Gather a war party from the populace")
   (base/ability
    :name "Call Lightning"
    :summary "* Calls a lightning strike from an existing storm cloud.")
@@ -374,6 +503,12 @@
    :summary
     "* [Power]: [Special Ability]")
   (base/ability
+   :name "Chameleon Skin"
+   :summary
+    "* Change skin color catch attention, threaten, or blend in.
+     * [Power]: [Animalism] or [Appearance]
+     * [Stealth]:+1 or [Intimidation]:+1")
+  (base/ability
    :name "Charge"
    :reference
     "* We'll use the old ways...speed of horse! - Arthur, Excalibur"
@@ -424,6 +559,20 @@
    :summary
     "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
   (base/ability
+   :name "Close Assault"
+   :summary
+    "* [Skill]: [Military]
+     * [Action]: If a [Vehicle] is adjacent to this unit, you may target the Top Armor.  If the unit has explosives, it may target the Under Armor.")
+  (base/ability
+   :name "Close Weapon"
+   :summary
+    "* A Close Combat Weapon.
+     * [Power]: [Weapon]
+     * [Skill]: [Close Combat]
+     * [Arc]: [Arc:Front]
+     * [Range]: 0-1
+     * [Damage]: [Body] + [Energy]")
+  (base/ability
    :name "Clothesline"
    :summary
     "* [Skill]: [Close Combat]
@@ -441,7 +590,28 @@
    :summary
     "* [Skill]: [Intimidation] vs [Will]")
   (base/ability
-   :name "Combat Sense")
+   :name "Combat Driver"
+   :summary
+    "* Experienced in fighting in a car."
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
+   :name "Combat Sense"
+   :summary
+    "* [Skill]: [Close Combat] or [Melee]")
+  (base/ability
+   :name "Combination"
+   :summary
+    "* Any combat abilities may be strung together as a Combination.
+     * [Skill]: [Close Combat] or [Melee]
+     * Every ability after the first gets +1 to initiative. If any ability misses or fails, then the combo ends and the next ability is at -1 initiative. Each combo must be chosen when this ability is gained and must be taken again for each separate combo.")
+  (base/ability
+   :name "Command the Dead"
+   :reference
+    "* All who live will serve. Viego, Runeterra"
+   :summary
+    "* Compel undead creatures to serve you for the duration of the ability.
+     * [Power]: [Necromancy]")
   (base/ability
    :name "Commanding Presense")
   (base/ability
@@ -499,6 +669,10 @@
    :summary
     "* [Power]: [Special Ability]")
   (base/ability
+   :name "Counterattack"
+   :summary
+    "* [Skill]: [Evasion]")
+  (base/ability
    :name "Cover your Tracks"
    :summary
     "* Hide your tracks to make it difficult to track you.
@@ -544,6 +718,26 @@
    :name "Daedalus Gateway"
    :summary
     "* A subtle gate that moves a person to a different Realm without them realizing. Both locations must be nearly identical.")
+  (base/ability
+   :name "Damage:Body"
+   :summary
+    "* Does [Damage] equal to [Body]
+     * [Power]: [Weapon]")
+  (base/ability
+   :name "Damage:Body+1"
+   :summary
+    "* Does [Damage] equal to [Body]+1
+     * [Power]: [Weapon]")
+  (base/ability
+   :name "Damage:Body+2"
+   :summary
+    "* Does [Damage] equal to [Body]+2
+     * [Power]: [Weapon]")
+  (base/ability
+   :name "Damage:Body+3"
+   :summary
+    "* Does [Damage] equal to [Body]+3
+     * [Power]: [Weapon]")
   (base/ability
    :name "Dash Attack"
    :summary
@@ -707,6 +901,14 @@
   (base/ability
    :name "Dive for Cover")
   (base/ability
+   :name "Diversionary Tactics"
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
+   :name "Divide and Conquer"
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
    :name "Dodge"
    :summary
     "* [Skill]: [Evasion]")
@@ -742,7 +944,8 @@
      * [Action]: You may at an additional Move:-1/space while dragging the target behind you.")
   (base/ability
    :name "Dragnet"
-   :reference "* Our fugitive has been on the run for ninety minutes. Average foot speed over uneven ground barring injuries is 4 miles-per-hour. That gives us a radius of six miles. What I want from each and every one of you is a hard-target search of every gas station, residence, warehouse, farmhouse, henhouse, outhouse and doghouse in that area. - The Fugitive"
+   :reference
+    "* Our fugitive has been on the run for ninety minutes. Average foot speed over uneven ground barring injuries is 4 miles-per-hour. That gives us a radius of six miles. What I want from each and every one of you is a hard-target search of every gas station, residence, warehouse, farmhouse, henhouse, outhouse and doghouse in that area. - The Fugitive"
    :summary
     "* [Skill]: [Law]
      * Search a large area for a fugitive.")
@@ -810,6 +1013,14 @@
     "* [Power]: [Digging]
      * Create a hole")
   (base/ability
+   :name "Dragon Strike"
+   :titles "Dragon Fist, Dragon Punch"
+   :summary
+    "* When striking with the fist, more power can be exerted when the movement originates from the feet, is guided by the waist, flows through the body, and exits through the fist.
+     * [Skill]: [Close Combat]
+     * [Attack] [J]: Push:+1, Stun:+1
+     * [Aerial]")
+  (base/ability
    :name "Drunken Monkey Roll"
    :summary
     "* [Crouching]
@@ -826,7 +1037,7 @@
      * Dual katana Japanese styles also exist."
    :summary
     "* Using a second weapon in the off hand.
-     * [Skill]: [Close Combat] or [Melee]
+     * [Skill]: [Close Combat]+1 or [Melee]+1
      * [Counter]: [Damage]:+1")
   (base/ability
    :name "Duress"
@@ -1030,6 +1241,10 @@
   (base/ability
    :name "Field Dressing")
   (base/ability
+   :name "Field Fortifications"
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
    :name "Financial Genius")
   (base/ability
    :name "Fire and Stones Cut"
@@ -1038,6 +1253,14 @@
    :summary
     "* [Reaction]: [+1 Defense]
      * [Action]: [+1 Attack], if you used this ability to [React] last turn.")
+  (base/ability
+   :name "Firearm Weapon"
+   :summary
+    "* A Firearm.
+     * [Power]: [Weapon]
+     * [Skill]: [Firearm]
+     * [Arc]: [Arc:Front]
+     * [Range]: [Skill]")
   (base/ability
    :name "Fishing"
    :titles "Fisherman"
@@ -1092,9 +1315,85 @@
      * The ability to forge money or documents. This ability is also used while creating money to prevent forgery.
      * [Extended Action]: Roll vs. object quality or anti-forgery level. Any [Hits] allow a forgery that can pass at a distance. The more [Hits] and [Criticals] rolled, the more indistinquishable from the original. High level forgeries are works of art unto themselves.")
   (base/ability
+   :name "Formation: Back to Back"
+   :summary
+    "* [Formation]: Not strictly a formation, units with their backs against each other largely protect each other's back.
+     * [Skill]: [Military]")
+  (base/ability
+   :name "Formation: Cover"
+   :summary
+    "* [Formation]: Not strictly a formation, units in Cover formation stay close enough together to protect each other's sides.
+     * [Skill]: [Military]")
+  (base/ability
+   :name "Formation: March"
+   :summary
+    "* [Formation]: Units move in columns.
+     * [Skill]: [Military]
+     * [+1 Speed]")
+  (base/ability
+   :name "Formation: Parade"
+   :summary
+    "* [Formation]: A showy formation designed to look good.  Has no use in battle.
+     * [Skill]: [Military]
+     * [Intimidation]:+1")
+  (base/ability
+   :name "Formation: Phalanx"
+   :reference
+    "* With his friends jostling and pushing on both sides and behind, and his enemies forming a solid wall in front of him, the hoplite had little opportunity for feats of technique and weapon skill, but great need for commitment and mental toughness. The hoplites had to trust their neighbors for mutual protection, so a phalanx was only as strong as its weakest elements. Its effectiveness depended on how well the hoplites could maintain this formation while in combat, and how well they could stand their ground, especially when engaged against another phalanx. The more disciplined and courageous the army, the more likely it was to win. The Greek word dynamis, the 'will' or 'ability to fight,' was used to express the drive that kept hoplites in formation."
+   :summary
+    "* [Formation]: Focuses on offense using Melee attacks with Reach.
+     * [Skill]: [Military]
+     * [Requires]: At least half must have Weapons with Reach 2+.
+     * [+1 Attack], [+1 Defense] from Front
+     * [-1 Defense] from Rear")
+  (base/ability
+   :name "Formation: Shield Wall"
+   :summary
+    "* [Formation]: Uses shields to form a wall.
+     * [Skill]: [Military]
+     * [Requires]: At least half must have Shields.
+     +1 Defense from Front.")
+  (base/ability
+   :name "Formation: Skirmish"
+   :reference
+    "Acting as light infantry with their light arms and minimal armor, they could run ahead of the main battle line, release a volley of arrows, slingshots or javelins, and retreat behind their main battle line before the clash of the opposing main forces. The aims of skirmishing were to disrupt enemy formations by causing casualties before the main battle, and to tempt the opposing infantry into attacking prematurely, throwing their organization into disarray. Skirmishers could also be effectively used to surround opposing soldiers in the absence of friendly cavalry."
+   :summary
+    "* [Formation]: Units move in loose shapes.
+     * [Skill]: [Military]
+     * [Requires]: Only [Light Infantry].
+     * [Move]: Ignore 1 [Terrain Penalty].
+     * [+1 Defense] vs Ranged or Large Units
+     * [+1 Defense] when in Terrain with Defense bonus
+     * [-1 Defense] vs Small Melee and Close Combat Units"
+   :titles "Skirmisher")
+  (base/ability
+   :name "Formation: Testudo"
+   :image "Skills/Testudo.jpg"
+   :summary
+    "* [Formation]: Uses shields to form a shell around a unit.
+     * [Skill]: [Military]
+     * [Requires]: At least half must have Shields.
+     * [+2 Defense] vs Ranged
+     * Shields protect all sides
+     * Cannot Attack"
+   :titles "Tortoise Formation, Turtle Up")
+  (base/ability
+   :name "Formation: Tight"
+   :summary
+    "* [Formation]: Units stay tightly packed to maximize Melee defense.
+     * [Skill]: [Military]
+     * [+1 Defense] vs Melee and Close Combat.
+     * [-1 Defense] vs Ranged")
+  (base/ability
    :name "Forward Observer"
    :summary
     "* [Action]: When unit has [Line of Sight] on a opponent, any number of units with [Indirect Fire] may attack that unit even if they do not have [Line of Sight].")
+  (base/ability
+   :name "Formation: Wedge"
+   :summary
+    "* [Formation]: Units move in triangle and focus on breaking enemy formations.
+     * [Skill]: [Military]
+     * [+1 Retreat] Token if unit inflicts at least 1 [Retreat].")
   (base/ability
    :name "Fuel Scoop"
    :summary
@@ -1119,6 +1418,10 @@
     "* [Power]: [Special Ability]
      * [Body]:+0x2")
   (base/ability
+   :name "Halo Drop"
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
    :name "Handstand Kick"
    :summary
     "* The fighter bends over, places his hands on the ground, and then presses his legs up into a handstand. The legs snap up with tremendous kicking force. Can be used while [Prone]
@@ -1126,6 +1429,20 @@
      * Initiative:-1
      * Move:-1
      * Damage:+1")
+  (base/ability
+   :name "High-Explosive"
+   :titles "HE"
+   :summary
+    "* [Power]: [Weapon: Firearm] or [Weapon: Cannon] or [Weapon: Missile]
+     * [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.
+     * [Damage]: All target's are [+2 Armor] against this attack.
+     * [Damage]: Units surrounding the space are attacked at -1 Damage for each space distant.
+
+     Advanced:
+     * Instead of standard [High Explosive (HE)] rules the following may be used to more accurately simulate the damage exponential decrease in energy of explosives.
+     * [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.
+     * [Damage]: All target's are [+2 Armor] against this attack.
+     * [Damage]: Units surrounding the space are attacked by dividing the energy (in Joules, or tons of TNT) using the following reduction pattern for each space distant: 1/1, 1/3, 1/10, 1/30, 1/100, 1/300, 1/1000, etc. Then look up the new damage based on the new energy level.")
   (base/ability
    :name "Huge"
    :summary
@@ -1161,6 +1478,19 @@
    :name "Guard Training"
    :summary
     "* [Skill]: [Animal Handling]")
+  (base/ability
+   :name "Gunnery Weapon"
+   :summary
+    "* A Gunnery Weapon including Cannons and Rockets.
+     * [Power]: [Weapon]
+     * [Skill]: [Gunnery]
+     * [Range]: [Skill]
+     * [Arc]: [Arc:Front]")
+  (base/ability
+   :name "Hack"
+   :summary
+    "* Chopping and Spliting Damage. Causes ugly wounds and [Stress].
+     * [Power]: [Weapon]")
   (base/ability
    :name "Hamstring"
    :summary
@@ -1287,7 +1617,13 @@
     "* By activating this system, the armor reduces all heat signatures. Use of any system (even passive ones) will negate the stealth.
      * [Continuous Action] - Stealth vs. Infrared Sensors")
   (base/ability
-   :name "Inspiration"
+   :name "Impersonate"
+   :reference
+    "* Places to go, people to be. - Leblanc, Runeterra"
+   :summary
+    "* [Skill]: [Performance]")
+  (base/ability
+   :name "Inspire"
    :summary
     "* Allies in Radius are Continuously inspired to greater feats by this ability.
      * [Skill]: [Performance]
@@ -1355,7 +1691,17 @@
    :summary
     "* [Skill]: [Law]")
   (base/ability
+   :name "Juggling"
+   :summary
+    "* Besides juggling objects, this ability allows the user to catch objects.
+     * [Skill]: [Performance]
+     * [Reaction]: When an object is thrown at a space within one space of the user, roll vs. the [Attack], the object is caught if any [Hits] are scored. Further, the user may immediately throw the object using [Juggling] level as attack value.")
+  (base/ability
    :name "Jump Jets")
+  (base/ability
+   :name "Jump Suit Combat"
+   :summary
+    "* [Skill]: [Military]")
   (base/ability
    :name "Kick"
    :summary
@@ -1467,6 +1813,12 @@
    :summary
     "* [Power]: [Cabin]")
   (base/ability
+   :name "Makeup"
+   :reference
+    "* I hate having to put my face on. - Leblanc, Runeterra"
+   :summary
+    "* [Skill]: [Performance]")
+  (base/ability
    :name "Malleate"
    :reference
     "* My, who happened to you? - Evelynn, Runeterra"
@@ -1497,6 +1849,15 @@
     "* The user knows thousands of mazes and can choose an optimal course through any maze with minimal trial and error.
      * [Skill]: [Brilliance]")
   (base/ability
+   :name "Melee Weapon"
+   :summary
+    "* A Melee Weapon.
+     * [Power]: [Weapon]
+     * [Skill]: [Melee]
+     * [Arc]: [Arc:Front] and [Arc:Left] or [Arc:Right]
+     * [Range]: 0 or 1
+     * [Damage]: [Body] + [Energy]")
+  (base/ability
    :name "Mental Blast"
    :summary "Attacks Mind.  All tokens are stun.")
   (base/ability
@@ -1508,6 +1869,11 @@
   (base/ability
    :name "Metalworking"
    :titles "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith")
+  (base/ability
+   :name "Military Vehicle"
+   :summary
+    "* Every vehicle unit is assumed to have this ability. Units that are not vehicles must take this ability for each vehicle.
+     * [Skill]: [Driving] or [Military]")
   (base/ability
    :name "Mind Blank"
    :summary
@@ -1524,6 +1890,14 @@
      * Does not avoid [Hazard]
      * Cannot use any Mind Abilities
      * Immune to Abilities that target [Mind].")
+  (base/ability
+   :name "Mine Clearing"
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
+   :name "Mine Laying"
+   :summary
+    "* [Skill]: [Military]")
   (base/ability
    :name "Mining Rig"
    :summary
@@ -1542,6 +1916,11 @@
   (base/ability
    :name "Missile Mount"
    :summary "* A special mount to add a missile pack on the back of the armor.")
+  (base/ability
+   :name "Mobile Infantry"
+   :summary
+    "* Experienced with powered armor.
+     * [Skill]: [Military]")
   (base/ability
    :name "Molecular Alteration")
   (base/ability
@@ -1564,8 +1943,14 @@
      * +1 Accuracy
      * Critcals - [Bleeding]")
   (base/ability
+   :name "Nightfall"
+   :summary
+    "* Gain [Darkness]:+1 for the first hour after dusk.
+     * [Power]: [Darkness]")
+  (base/ability
    :name "Nightmare Essence"
-   :summary "* Nightmares caught with [Dreamcatching] can be contained in a bottle. Opening the bottle releases the experience of the dream to all surrounding it. These can be used as grenades.")
+   :summary
+    "* Nightmares caught with [Dreamcatching] can be contained in a bottle. Opening the bottle releases the experience of the dream to all surrounding it. These can be used as grenades.")
   (base/ability
    :name "Off Roading")
   (base/ability
@@ -1590,11 +1975,30 @@
     "* Can mine for oil. Must be modified for each type of oil.
      * [Power]: [Factory]")
   (base/ability
+   :name "Oppress"
+   :summary
+    "* [Skill]: [Intimidation]")
+  (base/ability
+   :name "Orbital Halo Drop"
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
+   :name "Oubliette"
+   :reference
+    "* Without her, there is only darkness. - Viego, Runeterra"
+   :summary
+    "* Trap a target in a prison of absolute darkness.
+     * [Power]: [Darkness]")
+  (base/ability
    :name "Overwhelm")
   (base/ability
    :name "Painting"
    :summary
     "* [Skill]: [Art]")
+  (base/ability
+   :name "Parachute Assault"
+   :summary
+    "* [Skill]: [Military]")
   (base/ability
    :name "Parallel Parking"
    :summary
@@ -1647,6 +2051,11 @@
    :name "Pick Pocket"
    :summary
     "* [Skill]: [Deception]")
+  (base/ability
+   :name "Pierce"
+   :summary
+    "* Pointy Penetraing Damage. Causes internal damage and [Stun].
+     * [Power]: [Weapon]")
   (base/ability
    :name "Piercing Shot"
    :summary
@@ -1804,7 +2213,8 @@
   (base/ability
    :name "Quick Draw"
    :summary
-    "* [Requires]: 1 Handed Firearm
+    "* [Skill]: [Ranged] or [Firearm]
+     * [Requires]: [1-Handed] [Weapon: Firearm] or [Weapon: Ranged]
      * [Free]: Move:-1 to draw a Hand weapon from holster to hip where he can [Hip Shoot].")
   (base/ability
    :name "Quill Attack")
@@ -1826,6 +2236,15 @@
    :name "Rally"
    :summary
     "[Action]: Units within Range:Skill are placed into a [Formation] they all share.")
+  (base/ability
+   :name "Ranged Weapon"
+   :summary
+    "* A Manually powered Ranged Weapon including Bows, Crossbows, Darts.
+     * [Power]: [Weapon]
+     * [Skill]: [Ranged]
+     * [Arc]: [Arc:Front]
+     * [Range]: [Body] + [Skill]
+     * [Damage]: [Body] + Item [Body]")
   (base/ability
    :name "Rapid Metabolism"
    :summary
@@ -1858,6 +2277,15 @@
    :summary
     "* Exterior layer of armor explodes on impact reducing damage of the first hit but reduces armor rating for all subsequent hits.
      * [Passive] - +2 Armor vs. the first hit. -1 Armor for each subsequent hit.")
+  (base/ability
+   :name "Reanimation"
+   :reference "Reanimator"
+   :summary
+    "* Some otherworldly beings defy death by Reanimating themselves.
+     * [Power]: [Necromancy] or [Longevity]
+     * [Action]: [Success] indicate the new maximum [Body] of the corpse up to its original [Body]. The closer the corpse gets to its full original [Body], the more alive it will appear.
+     * The corpse of a dead unit may be reanimated returning it to an [Undead] semblance of life.
+     * This ability does not give any control of the [Undead] to the caster unless the caster is somehow reanimating his own body.")
   (base/ability
    :name "Refinery: Gas"
    :summary
@@ -1903,6 +2331,12 @@
    :summary
     "* Transfer your consciousness into another body.
      * [Power]: [Longevity]")
+  (base/ability
+   :name "Repress"
+   :reference
+    "* Help! Help! I'm being repressed. - Peasant, Monty Python and the Holy Grail"
+   :summary
+    "* [Skill]: [Intimidation]")
   (base/ability
    :name "Resist: Cold"
    :summary "* [Passive] - Armor:+1 vs. Cold")
@@ -2021,6 +2455,13 @@
    :summary
     "* [Skill]: [Law]")
   (base/ability
+   :name "Scattershot"
+   :titles "Glaser, Shot"
+   :summary
+    "* [Power]: [Weapon]
+     * [Conflict]: 2 random Units adjacent to the Target are also attacked.
+     * [Hit Location]: IF multiple valid Hit Locations are revealed THEN separate them into separate Hit Locations. Crits are only applied to the primary location.")
+  (base/ability
    :name "Scientific Genius")
   (base/ability
    :name "Scouting"
@@ -2081,6 +2522,16 @@
      * Fashion Clothing
      * Needlepoint
      * Repair Cloth")
+  (base/ability
+   :name "Shadow Step"
+   :summary
+    "* Step into a shadow and appear from a nearby shadow, though failure will leave the unit trapped in shadow.
+     * [Power]: [Darkness]")
+  (base/ability
+   :name "Shadow Strike"
+   :summary
+    "* Add [Blindness] Criticals to a normal attack.
+     * [Power]: [Darkness]")
   (base/ability
    :name "Shakedown"
    :reference
@@ -2151,6 +2602,11 @@
     "* Progressively breakdown a problem into simpler problems which can each be resolved separately.
      * [Skill]: [Brilliance]")
   (base/ability
+   :name "Slash"
+   :summary
+    "* Slicing and Cutting Damage. Causes [Bleeding] and [Slow].
+     * [Power]: [Weapon]")
+  (base/ability
    :name "Sleight of Hand"
    :summary
    :summary
@@ -2179,6 +2635,15 @@
   (base/ability
    :name "Sneak Attack"
    :titles "Suprise Attack")
+  (base/ability
+   :name "Sniper"
+   :reference
+    "* The snipe (a family of shorebirds) is difficult to catch for experienced hunters, so much so that the word 'sniper' is derived from it to refer to anyone skilled enough to shoot one.
+     * I aim to win and my aim... is Excellent. - Caitlyn, Runeterra"
+   :summary
+    "* Increase weapon range by 50% and choose [Hit Location]
+     * [Skill]: [Firearm]
+     * [Requires]: Long Range Weapon")
   (base/ability
    :name "Snowcraft"
    :summary
@@ -2230,6 +2695,10 @@
    :summary
     "[Requires]: 2 handed Weapon
      [Combat]: Attack in a circle around you. Anyone hit get [Push]:1.")
+  (base/ability
+   :name "Space Combat"
+   :summary
+    "* [Skill]: [Military]")
   (base/ability
    :name "Speed Reading")
   (base/ability
@@ -2340,6 +2809,15 @@
    :name "Summon Item"
    :summary "* A single item may be attuned to a summoning. Later that item may be summoned to the owner's hand.")
   (base/ability
+   :name "Supressive Fire"
+   :titles "Covering Fire, Pin Down"
+   :summary
+    "* Firing weapons at enemy forces with the primary goal of forcing them to remain under cover.
+     * [Requires]: [Weapon] with [Autofire]
+     * [Skill]: [Fireamr]
+     * [Action]: Target a unit that has not been activated this turn, all [Hits] and [Critical Hits] are [Stun] tokens.
+     +1 Attack")
+  (base/ability
    :name "Survival: Jungle"
    :titles "Jungle Dweller, Lord of the Jungle"
    :reference "Tarzan"
@@ -2349,6 +2827,11 @@
      * [Survival]: [Survival]:+1 in [Jungle]
      * [Stealth]: IF Level>1 THEN [Stealth]:+1 in [Jungle]
      * [Combat]: IF Level>2 THEN [Inititiative]:+1 vs Ranged in [Jungle]")
+  (base/ability
+   :name "Suspended Animation"
+   :summary
+    "* Sleep for extended periods without dying.
+     * [Power]: [Longevity]")
   (base/ability
    :name "Swallow Whole"
    :reference
@@ -2463,6 +2946,12 @@
   (base/ability
    :name "Tower of Iron Will")
   (base/ability
+   :name "Tracer Rounds"
+   :summary
+    "* [Power]: [Weapon]
+     * [Requires]: [Auto], Must attack same target on subsequent round.
+     * [Action]: [+1 Attack], [-1 Damage].")
+  (base/ability
    :name "Track")
   (base/ability
    :name "Tracked")
@@ -2531,7 +3020,8 @@
     "Damage walls.")
   (base/ability
    :name "Underwater Operation"
-   :summary "* Sealed against water and can operate underwater. Small thrusters allow slow movement underwater. Oxygen scrubbers allow extended underwater operation.")
+   :summary
+    "* Sealed against water and can operate underwater. Small thrusters allow slow movement underwater. Oxygen scrubbers allow extended underwater operation.")
   (base/ability
    :name "Unsolvable Problem"
    :reference
@@ -2547,6 +3037,10 @@
     "* Juggernaut"
    :summary
     "* [Power]: [Inertia]")
+  (base/ability
+   :name "Urban Assault"
+   :summary
+    "* [Skill]: [Military]")
   (base/ability
    :name "Use Blinding Powder"
    :summary
@@ -2625,6 +3119,10 @@
    :name "Whirlwind Attack"
    :summary
     "* Allows multiple attacks to different targets by trading accuracy for extra attacks.")
+  (base/ability
+   :name "Wingsuit Combat"
+   :summary
+    "* [Skill]: [Military]")
   (base/ability
    :name "Without a Trace"
    :summary

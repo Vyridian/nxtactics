@@ -42,25 +42,28 @@
     * [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."))
 
 (func card-target : base/card
- [color : string
+ [tactics : base/tactics
+  color : string
   num : int]
- (base/card
-  :id (string "card-target-" color "-" num)
-  :name (string "Target #" num)
-  :image (string "images/card-" color ".svg")
-  :summary
-   "* [Round Start]: Place this card on your [Target] for the [Round]."))
+ (let : base/card
+  [rule : base/rule :=
+   (base/rule<-tactics-key tactics "Target#")]
+  (copy rule
+   :id (string "card-target-" color "-" num)
+   :name (string "Target#" num)
+   :image (string "images/card-" color ".svg")
+  )))
 
 (func card-unit : base/card
  [tactics : base/tactics
   color   : string
   num     : int]
  (let : base/card
-  [unit : base/rule :=
-    (base/rule<-tactics-key tactics "Unit #")]
-  (copy unit
+  [rule : base/rule :=
+    (base/rule<-tactics-key tactics "Unit#")]
+  (copy rule
    :id (string "unit-" color "-" num)
-   :name (string "Unit #" num)
+   :name (string "Unit#" num)
    :image (string "images/card-" color ".svg")
   )))
 
@@ -77,11 +80,11 @@
      (card-unit tactics color 3)
      (card-unit tactics color 4)
      (card-unit tactics color 5)
-     (card-target color 1)
-     (card-target color 2)
-     (card-target color 3)
-     (card-target color 4)
-     (card-target color 5))
+     (card-target tactics color 1)
+     (card-target tactics color 2)
+     (card-target tactics color 3)
+     (card-target tactics color 4)
+     (card-target tactics color 5))
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist
      cardlist)]

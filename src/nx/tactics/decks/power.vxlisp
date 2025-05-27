@@ -113,82 +113,125 @@
     (base/abilitymap
      "Animal Magnetism"
       (base/ability
-       :name "Animal Magnetism")
+       :name "Animal Magnetism"
+       :summary
+        "* [Power]: [Anima]")
      "Animal Ward"
       (base/ability
        :name "Animal Ward"
-       :summary "[Ward] - Defends against animals.")
+       :summary
+        "* [Ward] - Defends against animals.
+         * [Power]: [Anima]")
      "Banish Vermin"
       (base/ability
-       :name "Banish Vermin")
+       :name "Banish Vermin"
+       :summary
+        "* [Power]: [Anima]")
      "Beast Lore"
       (base/ability
-       :name "Beast Lore")
+       :name "Beast Lore"
+       :summary
+        "* [Power]: [Anima]")
      "Beast Tongue"
       (base/ability
        :name "Beast Tongue"
-       :summary "[Tongue] - Speak with Animal")
+       :summary
+        "* [Tongue] - Speak with Animal
+         * [Power]: [Anima]")
      "Bird's Eye"
       (base/ability
        :name "Bird's Eye"
        :summary
-        "* Have a bird spy for you.")
+        "* Have a bird spy for you.
+         * [Power]: [Anima]")
      "Call of the Wild"
       (base/ability
        :name "Call of the Wild"
-       :summary "* [Action]: Make an emotional plea for aid to any [Beast]s or [Animal]s within [Range]. Note that creatures will only help if it serves their own interests, and they will act indepentently according to their intelligence and nature.")
+       :summary
+        "* [Action]: Make an emotional plea for aid to any [Beast]s or [Animal]s within [Range].
+         * [Power]: [Anima]
+         Note that creatures will only help if it serves their own interests, and they will act indepentently according to their intelligence and nature.")
      "Calm the Beast"
       (base/ability
-       :name "Calm the Beast")
+       :name "Calm the Beast"
+       :summary
+        "* [Power]: [Anima]")
      "Commune with Animals"
       (base/ability
        :name "Commune with Animals"
-       :summary "* [Action]: Sense if animals in [Range] notice anything significant. The higher the [Success], the more subtle information received.")
+       :summary
+        "* [Action]: Sense if animals in [Range] notice anything significant. The higher the [Success], the more subtle information received.
+         * [Power]: [Anima]")
      "Control Beast"
       (base/ability
-       :name "Control Beast")
+       :name "Control Beast"
+       :summary
+        "* [Power]: [Anima]")
      "Purge Venom"
       (base/ability
        :name "Purge Venom"
        :summary
         "* By sucking on a bite, the user may rapidly remove a creature's venom from a wound.
-         * [Action]: Remove 1 Poison Counter for each success.")
+         * [Action]: Remove 1 Poison Counter for each success.
+         * [Power]: [Anima]")
      "Creeping Doom"
       (base/ability
-       :name "Creeping Doom")
+       :name "Creeping Doom"
+       :summary
+        "* [Power]: [Anima]")
      "Giant Animal"
       (base/ability
-       :name "Giant Animal")
+       :name "Giant Animal"
+       :summary
+        "* [Power]: [Anima]")
      :Infestation
       (base/ability
-       :name "Infestation")
+       :name "Infestation"
+       :summary
+        "* [Power]: [Anima]")
      "Insect Swarm"
       (base/ability
        :name "Insect Swarm"
-       :summary "Distracts targets and transfers up to 3 conditions from you to the target.")
+       :summary
+        "* Distracts targets and transfers up to 3 conditions from you to the target.
+         * [Power]: [Anima]")
      "Locate Animal"
       (base/ability
-       :name "Locate Animal")
+       :name "Locate Animal"
+       :summary
+        "* [Power]: [Anima]")
      "Nature of the Beast"
       (base/ability
-       :name "Nature of the Beast")
+       :name "Nature of the Beast"
+       :summary
+        "* [Power]: [Anima]")
      "Natural Order"
       (base/ability
-       :name "Natural Order")
+       :name "Natural Order"
+       :summary
+        "* [Power]: [Anima]")
      "Scent of the Wild"
       (base/ability
        :name "Scent of the Wild"
-       :summary "* [Action]: Cover the unnatural and threatening scent of creatures and gear in range. Natural creatures will treat them as if they were large herbivores.")
+       :summary
+        "* [Action]: Cover the unnatural and threatening scent of creatures and gear in range. Natural creatures will treat them as if they were large herbivores.
+         * [Power]: [Anima]")
      "Shrink Animal"
       (base/ability
-       :name "Shrink Animal")
+       :name "Shrink Animal"
+       :summary
+        "* [Power]: [Anima]")
      "Speak with Animals"
       (base/ability
-       :name "Speak with Animals")
+       :name "Speak with Animals"
+       :summary
+        "* [Power]: [Anima]")
      "Survival of the Fittest"
       (base/ability
        :name "Survival of the Fittest"
-       :titles "Natural Selection")))
+       :titles "Natural Selection"
+       :summary
+        "* [Power]: [Anima]")))
   (base/power
    :name "Artifice"
    :summary "* Synergy with Mechanics"
@@ -822,17 +865,13 @@
   (base/power
    :name "Cultivation"
    :titles "Chi Powers, Combat Focus, Ki Powers"
+   :reference
+    "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono, Hell's Paradise"
    :stat "Will"
    :abilitymap
     (base/abilitymap
      "Blind Fighting"
-      (base/ability
-       :name "Blind Fighting")
-     :Combination
-      (base/ability
-       :name "Combination"
-       :summary
-        "* Any combat abilities may be strung together as a Combination. Every ability after the first gets +1 to initiative. If any ability misses or fails, then the combo ends and the next ability is at -1 initiative. Each combo must be chosen when this ability is gained and must be taken again for each separate combo.")
+      (base/ability<-tactics-key tactics "Blind Fighting")
      "Death Touch"
       (base/ability
        :name "Death Touch"
@@ -840,7 +879,7 @@
        :reference "Five Point Palm Exploding Heart Technique - Kill Bill"
        :summary
         "* The fighter strikes vulnerable pressure points, disrupting the opponent's chi flow causing intense pain or death. The effect has no outward effect, but the victim will know something is wrong. Eventually, the victim recovers or dies suddenly from the stress.
-         * [Skill]: [Cultivation]-2
+         * [Power]: [Cultivation]-2
          * [Requires]: [Strong]
          * [Damage]: [Stun] only
          * [Crits]: [Poison]
@@ -851,6 +890,7 @@
        :name "Empty Force"
        :summary
         "* The fighter projects a strike across empty space. The fighter may strike at any range, but if he does not score at least 1 Criticals for each space of Range, the ability fails.
+         * [Power]: [Cultivation]
          -2 Initiative
          -2 Move
          -1 Damage
@@ -1064,22 +1104,14 @@
      "Heart of Darkness"
       (base/ability
        :name "Heart of Darkness")
-     :Nightfall
-      (base/ability
-       :name "Nightfall"
-       :summary "* Gain +1 [Darkness] Skill for the first hour after the dusk.")
-     :Oubliette
-      (base/ability
-       :name "Oubliette"
-       :summary "* Trap a target in a prison of absolute darkness.")
+     "Nightfall"
+      (base/ability<-tactics-key tactics "Nightfall")
+     "Oubliette"
+      (base/ability<-tactics-key tactics "Oubliette")
      "Shadow Step"
-      (base/ability
-       :name "Shadow Step"
-       :summary "* Step into a shadow and appear from a nearby shadow, though failure will leave the unit trapped in shadow.")
+      (base/ability<-tactics-key tactics "Shadow Step")
      "Shadow Strike"
-      (base/ability
-       :name "Shadow Strike"
-       :summary "* Add [Blindness] Criticals to a normal attack.")
+      (base/ability<-tactics-key tactics "Shadow Strike")
      "Tendrils of Night"
       (base/ability
        :name "Tendrils of Night")
@@ -1088,6 +1120,7 @@
        :name "Wall of Darkness")))
   (base/power
    :name "Demonic"
+   :titles "Demon, Demon Soul, Yoki, Yoma"
    :reference
     "* Claymore
      * Ghost Rider
@@ -1096,7 +1129,6 @@
    :summary
     "* Demon Soul is when a user has been partially or completely possessed by a demonic entity.
      * Demon Soul allows the user a number of physical advantages including regeneration and natural weaponry, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit."
-   :titles "Demon, Demon Soul, Yoki, Yoma"
    :stat "Beast")
   (base/power
    :name "Divination"
@@ -1116,20 +1148,20 @@
       (base/ability
        :name "All Seeing Eye"
        :reference "The Eye of  Providence")
-     :Augury
+     "Augury"
       (base/ability
        :name "Augury")
-     :Cartomancy
+     "Cartomancy"
       (base/ability
        :name "Cartomancy"
        :summary "* The art of reading the future through playing cards or tarot cards.")
-     :Clairaudience
+     "Clairaudience"
       (base/ability
        :name "Clairaudience")
-     :Clairvoyance
+     "Clairvoyance"
       (base/ability
        :name "Clairvoyance")
-     :Dowsing
+     "Dowsing"
       (base/ability
        :name "Dowsing"
        :summary "* Through the use of a divining rod the user may detect desired items hidden underground below them.")
@@ -1142,11 +1174,11 @@
          * Bibliomancy - Reading random passages from a book, such as Liber Legis or the I Ching.
          * Tea Leaves
          * Tarot")
-     :Hallmark
+     "Hallmark"
       (base/ability
        :name "Hallmark"
        :summary "* Analyze a magical effect to learn information about its caster.")
-     :Kismet
+     "Kismet"
       (base/ability
        :name "Kismet")
      "Mirror of Truth"
@@ -1710,9 +1742,7 @@
        :summary
         "* Attract undead creatures to your location.")
      "Command the Dead"
-      (base/ability
-       :name "Command the Dead"
-       :summary "* Compel undead creatures to serve you for the duration of the ability.")
+      (base/ability<-tactics-key tactics "Command the Dead")
      "Corpse Explosion"
       (base/ability
        :name "Corpse Explosion")
@@ -1794,14 +1824,7 @@
       (base/ability
        :name "Prolong Life")
      "Reanimation"
-      (base/ability
-       :name "Reanimation"
-       :reference "Reanimator"
-       :summary
-        "* The corpse of a dead unit may be reanimated returning it to an [Undead] semblance of life.
-         * This ability does not give any control of the [Undead] to the caster unless the caster is somehow reanimating his own body.
-         * [Action] - [Success] indicate the new maximum [Body] of the corpse up to its original [Body]. The closer the corpse gets to its full original [Body], the more alive it will appear.
-         * Some otherworldly beings defy death by Reanimating themselves.")
+      (base/ability<-tactics-key tactics "Reanimation")
      "Rigor Mortis"
       (base/ability
        :name "Rigor Mortis")
@@ -2687,6 +2710,8 @@
    :name "Animalism"
    :titles "Shapeshifter"
    :reference "Beast Boy, Teen Titans"
+   :summary
+    "* Gain the powers of an animal"
    :abilitymap
     (base/abilitymap
      "Adhesive Grip"
@@ -2710,8 +2735,7 @@
        :name "Cat Feet"
        :summary "* Reduce damage from falls")
      "Chameleon Skin"
-      (base/ability
-       :name "Chameleon Skin")
+      (base/ability<-tactics-key tactics "Chameleon Skin")
      "Extra Limbs"
       (base/ability
        :name "Extra Limbs")
@@ -2721,7 +2745,7 @@
      "Fish Form"
       (base/ability
        :name "Fish Form")
-     :Gills
+     "Gills"
       (base/ability
        :name "Gills")
      "Hawk Eye"
@@ -2731,6 +2755,14 @@
      "Hawk Form"
       (base/ability
        :name "Hawk Form")
+     "Puff Up"
+      (base/ability
+       :name "Puff Up"
+       :summary
+        "* Increase your size to be more intimidating.")
+     "Quills"
+      (base/ability
+       :name "Quills")
      "Rat Form"
       (base/ability
        :name "Rat Form")
@@ -2743,13 +2775,13 @@
      "Spider Climb"
       (base/ability
        :name "Spider Climb")
-     :Spines
+     "Spines"
       (base/ability
        :name "Spines")
-     :Tendrils
+     "Tendrils"
       (base/ability
        :name "Tendrils")
-     :Wings
+     "Wings"
       (base/ability
        :name "Wings")
      "Wolf Form"
@@ -2769,9 +2801,8 @@
       (base/ability
        :name "Another Face in the Crowd")
      "Chameleon Skin"
-      (base/ability
-       :name "Chameleon Skin")
-     :Doppleganger
+      (base/ability<-tactics-key tactics "Chameleon Skin")
+     "Doppleganger"
       (base/ability
        :name "Doppleganger"
        :summary "Take on the appearance of someone else.")
@@ -2784,9 +2815,12 @@
        :summary "* Appear differently to different viewers.")
      "Face of Terror"
       (base/ability
-       :name "Face of Terror")))
+       :name "Face of Terror")
+     "Fairest of them All"
+      (base/ability
+       :name "Fairest of them All")))
   (base/power
-   :name "Armored"
+   :name "Armor"
    :summary
     "* Armor normally alters appearance and may be a permanent alteration or a suit that may be donned.
      * [+1 Value] for Armor that can appear on demand.
@@ -2795,8 +2829,17 @@
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
-     "Auto Med System"
      "Ablative Armor"
+     "Armor: Abdomen"
+     "Armor: Arms"
+     "Armor: Chest"
+     "Armor: Feet"
+     "Armor: Hands"
+     "Armor: Head"
+     "Armor: Legs"
+     "Armor: Vitals"
+     "Armor: Shoulders"
+     "Auto Med System"
      "Body Flares"
      "Cryo Sleep System"
      "Environmental Containment"
@@ -4753,8 +4796,10 @@
      tactics
      "Eternal Youth"
      "Long Life"
+     "Reanimation"
      "Reincarnation"
      "Reincarnation - Transference"
+     "Suspended Animation"
      "True Immortality"))
   (base/power
    :name "Lycanthropy"
@@ -6663,6 +6708,36 @@
       (base/ability
        :name "Ward"
        :summary "* You are devoted to taking care of another (who happens to get into trouble a lot).")))
+  (base/power
+   :name "Weapon"
+   :summary
+    "* A weapon of some kind. Must have [Weapon: Melee], [Weapon: Close Combat], [Weapon: Ranged], [Weapon: Firearm] or [Weapon: Gunnery]"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "1-Handed"
+     "2-Handed"
+     "Arc:1-Side"
+     "Arc:Front"
+     "Armor:1"
+     "Autofire"
+     "Bash"
+     "Burstfire"
+     "Close Weapon"
+     "Damage:Body"
+     "Damage:Body+1"
+     "Damage:Body+2"
+     "Damage:Body+3"
+     "Firearm Weapon"
+     "Gunnery Weapon"
+     "Hack"
+     "High-Explosive"
+     "Melee Weapon"
+     "Pierce"
+     "Ranged Weapon"
+     "Scattershot"
+     "Slash"
+     "Tracer Rounds"))
   (base/power
    :name "Weather")
  )

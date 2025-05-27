@@ -265,6 +265,30 @@
   display)
  :doc "Returns display text from a deck")
 
+(func string-display<-item : string
+ [item : base/item]
+ (let : string
+  [summary : string := (:summary item)
+   skilllist : stringlist :=
+    (stringlist-display<-unitskillmap
+     (:unitskillmap item))
+   powerlist : stringlist :=
+    (stringlist-display<-unitpowermap
+     (:unitpowermap item))
+   summarylist : stringlist :=
+    (if : stringlist
+     (then
+      (!-empty summary)
+      (stringlist summary)))
+   displaylist : stringlist :=
+    (stringlist
+     summarylist
+     skilllist
+     powerlist)]
+  (string<-stringlist-join
+   displaylist newline))
+ :doc "Returns display text from an item")
+
 (func string-display<-power : string
  [power : base/power]
  (let : string
@@ -359,6 +383,11 @@
   [power : base/power := (:power unitpower)
    level : string     := (:level unitpower)
    name  : string     := (:name power)
+   lvl   : string :=
+    (if : string
+     (== 0 level)
+     ""
+     level)
    specialties : stringlist :=
     (stringlist-display<-unitspecialtymap
      (:unitspecialtymap unitpower))
@@ -381,7 +410,7 @@
    "* ["
    name
    "]:"
-   level
+   lvl
    extras))
  :doc "Returns a string from a unitpower")
 
@@ -601,15 +630,18 @@
      datatype
      (case base/item
       (uilist<-item-parent
-       (any<-any card)
+       (any<-any : base/item
+        card)
        parent))
      (case base/place
       (uilist<-place-parent
-       (any<-any card)
+       (any<-any : base/place
+        card)
        parent))
      (case base/unit
       (uilist<-unit-parent
-       (any<-any card)
+       (any<-any : base/unit
+        card)
        parent))
      (case base/cardimage
       (uilist<-cardimage-parent
@@ -661,36 +693,24 @@
    uidisplay)))
 
 (func uilist<-item-parent : ui/uilist
- [unit   : base/item
+ [item   : base/item
   parent : string]
  (let : ui/uilist
-  [name : string := (:name unit)
-   titles : string := (:titles unit)
-   image : string := (:image unit)
-   value : string := (:value unit)
-   summary : string := (:summary unit)
-   body : string := (:body unit)
+  [name : string := (:name item)
+   titles : string := (:titles item)
+   image : string := (:image item)
+   value : string := (:value item)
+   summary : string := (:summary item)
+   body : string := (:body item)
    bodydetail : string :=
     (string<-mass-h-l-w
-     (:mass   unit)
-     (:height unit)
-     (:length unit)
-     (:width  unit))
+     (:mass   item)
+     (:height item)
+     (:length item)
+     (:width  item))
    prefix : string := (string parent "/" name)
-/*
-   uiitemsummary : ui/ui :=
-    (if : ui/ui
-     (then
-      (!-empty summary)
-      (ui/ui
-       :uid (string prefix "/summary")
-       :style styles/style-item-summary
-       :stylelist
-        (ui/stylelist
-         styles/style-textarea)
-       :data summary)))
-*/
-   detail : string := summary
+   detail : string :=
+    (string-display<-item item)
    uiimage : ui/ui :=
     (if : ui/ui
      (then
@@ -762,7 +782,6 @@
    uititles
    uibody
    uibodydetail
-//   uiitemsummary
    uidetail))
  :doc "Returns a list of child ui from a item/parent")
 

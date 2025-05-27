@@ -6947,6 +6947,16 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "unitpowermap": {
+          "name" : "unitpowermap",
+          "type" : nx_tactics_base.t_unitpowermap,
+          "multi": false
+        },
+        "unitskillmap": {
+          "name" : "unitskillmap",
+          "type" : nx_tactics_base.t_unitskillmap,
+          "multi": false
+        },
         "value": {
           "name" : "value",
           "type" : vx_core.t_string,

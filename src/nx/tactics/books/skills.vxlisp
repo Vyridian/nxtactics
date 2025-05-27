@@ -8,25 +8,8 @@
   :image "Skill.jpg"
   :chaptermap
    (base/chaptermap<-chapterlist
-    (chapter_skills_overview tactics)
     (chapter_skill_types tactics)
    )))
-
-(func chapter_skills_overview : base/chapter
- [tactics : base/tactics]
- (base/chapter
-  :name "Skills Overview"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Why Tactics: Skills?"
-     :sectionmap
-      (sectionmap
-       "Extraordinary Skills"
-        (section
-         :name "Extraordinary Skills"
-         :reference
-          "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono, Hell's Paradise"))))))
 
 (func chapter_skill_types : base/chapter
  [tactics : base/tactics]
@@ -60,9 +43,9 @@
      :skillmap
       (base/skillmap<-tactics-keys
        tactics
-       "Brilliance"
        "Computers"
        "Electronics"
+       "Intellect"
        "Investigation"
        "Knowledge"
        "Mechanics"

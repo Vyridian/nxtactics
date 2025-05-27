@@ -815,29 +815,7 @@ export default class nx_tactics_books_bestiary {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             "Gnoll Axeman",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Gnoll Axeman",
-              ":image",
-              "images/bestiary/Gnoll_Axeman.png",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Melee",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
-                  "Melee",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    ":Pike",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Pike")
-                  )
-                )
-              )
-            ),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Gnoll Axeman"),
             "Gnoll Chieftain",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},

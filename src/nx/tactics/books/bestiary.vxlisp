@@ -3797,19 +3797,7 @@
       :unitmap
        (base/unitmap
         "Gnoll Axeman"
-         (base/unit
-          :name "Gnoll Axeman"
-          :image "images/bestiary/Gnoll_Axeman.png"
-          :unitskillmap
-           (base/unitskillmap
-            :Melee
-             (base/unitskill
-              :name "Melee"
-              :unititemmap
-               (base/unititemmap
-                :Pike
-                 (base/unititem
-                  :name "Pike")))))
+         (base/unit<-tactics-key tactics "Gnoll Axeman")
         "Gnoll Chieftain"
          (base/unit
           :name "Gnoll Chieftain"

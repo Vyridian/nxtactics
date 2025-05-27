@@ -715,7 +715,7 @@ export default class nx_tactics_books_modern_fantasy {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Mages, Traditions",
+          "Mage Traditions",
           ":reference",
           "* There's a butterfly trapped in a spider's web.  That's my soul up there. - The Police, King of Pain",
           ":summary",
@@ -768,25 +768,13 @@ export default class nx_tactics_books_modern_fantasy {
             "Corrupted Animal",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Corrupted Animal", ":summary", "* [Corruption]"),
             "Hollow Man",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hollow Man", ":reference", "* They're good for us. They kill the bad things inside us...What you're supposed to do is eat it. You eat as much as you can and you keep eating it. - The Stuff", ":summary", "* A person infested by parasites, insects, or small animals.  The hapless victim has become completely hollowed out by its unwanted tenants, but is somehow still alive.  The Hollow Man is desolate, immobile, and empty without the possessing colony, but they are poor company at best."),
-            ":Normality",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Normality",
-              ":titles",
-              "Normals",
-              ":reference",
-              "Hate Crimes",
-              ":summary",
-              "* Normalities are ghastly creatures that were once human but have been transformed into blank, sexless horrors. All Normalities appear exactly identical: thin, sexless, hairless, and faceless except for a slash of a mouth. With heavy clothing they may briefly pass for human.\n* Personality - Normalities have a hatred of all things different (which includes everything except themselves). They are homicidal with a particulary strong reaction to those who choose to flaunt their differences (e.g. piercings, tattoos, goths, punkers, women wearing pants)\n* History - The Normalities are created as part of a horrific treatment that pretends to be a cure for homosexuality. Indeed, the treatment does cure homosexuality, as well as any sexuality and finally humanity.",
-              ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Hunting")
-            ),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Hollow Man"),
+            "Normality",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Normality"),
             "Seventh Generation",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Seventh Generation", ":summary", "* Seventh Generation is a Wyrm cult dedicated to the absolute domination of men over women and children. It encourages child abuse, spousal abuse, misogyny, pedophilia, and even murder and cannibalism. Their membership is composed of an interlocking network of politicians, businessmen, corrupted clergy, military officers, millionaires, and even serial killers. Each member is a twisted individual drawn together by the commonalities of their vile appetites.\n* Seventh Generation sponsors child foster care facilities. These facilities are like boot camps and are very successful at teaching children to follow instructions unquestioningly. This discipline comes at the price of the child's sense of self-esteem. The final steps are to place the child in abusive and alcoholic homes.There abuse and inferiority come naturally."),
-            ":Throwback",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Throwback", ":reference", "Bouncers, Frat Boys, Jocks, Weight Lifters", ":summary", "* Appearance - Throwbacks are hulking, musclebound, prettyboys who are constantly looking at themselves.\n* History - Throwbacks begin as insecure guys who want to increase their bodies or their manhood.  The enhancements they receive brings out all of the worst male tendencies and exaggerate them to a homicidal degree. Vanity, violence, and sexual aggression all warp them into virtual cavemen who care for nothing but fighting, sex, and pumping iron.")
+            "Throwback",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Throwback")
           )
         ),
         vx_core.f_new(

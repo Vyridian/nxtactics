@@ -166,7 +166,7 @@
           (base/unitskillmap
            :Firearms
             (base/unitskill
-             :name "Firearms"
+             :name "Firearm"
              :level 3
              :unititemmap
               (base/unititemmap
@@ -187,7 +187,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -210,7 +210,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "14 inches (360 mm/60mm RHA)"
              :front "60mm"
              :back "60mm"
@@ -231,7 +231,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "14 inches (360 mm/60mm RHA)"
              :front "60mm"
              :back "60mm"
@@ -254,7 +254,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -273,7 +273,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -304,7 +304,7 @@
           (base/unitskillmap
            :Firearms
             (base/unitskill
-             :name "Firearms"
+             :name "Firearm"
              :level "3"
              :unititemmap
               (base/unititemmap
@@ -320,7 +320,7 @@
           (base/unitskillmap
            :Firearms
             (base/unitskill
-             :name "Firearms"
+             :name "Firearm"
              :level "3"
              :unititemmap
               (base/unititemmap
@@ -337,7 +337,7 @@
           (base/unitskillmap
            :Firearms
             (base/unitskill
-             :name "Firearms"
+             :name "Firearm"
              :level "3"
              :unititemmap
               (base/unititemmap
@@ -355,7 +355,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "14 inches (360 mm/60mm RHA)"
              :front "60mm"
              :back "60mm"
@@ -378,7 +378,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -425,7 +425,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -450,7 +450,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -472,7 +472,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -492,7 +492,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -522,7 +522,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -547,7 +547,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -583,7 +583,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "7 inches (180 mm/30mm RHA)"
              :front "30mm"
              :back "30mm"
@@ -605,7 +605,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "14 inches (360 mm/60mm RHA)"
              :front "60mm"
              :back "60mm"
@@ -620,7 +620,7 @@
           (base/unitpowermap
            :Armor
             (base/unitpower
-             :name "Armored"
+             :name "Armor"
              :summary "14 inches (360 mm/60mm RHA)"
              :front "60mm"
              :back "60mm"

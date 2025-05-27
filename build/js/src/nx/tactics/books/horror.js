@@ -26,9 +26,9 @@ export default class nx_tactics_books_horror {
       ":name",
       "Call of Cthulhu",
       ":reference",
-      "* Premise that common human laws and interests and emotions have no validity or significance in the vast cosmos-at-large... To achieve the essence of real externality, whether of space or time or dimension, one must forget that such things as organic life, good and evil, love and hate, and all such local attributes of a negligible and temporary race called mankind, have any existence at all.",
+      "* These entities are aware of higher dimensions and the powerful ones exist on those higher dimensions. Trying to describe them is like describing a Hypercube. They have a concrete, alien form, and then they move and their form is different in an sort of kaleidoscopic way. Impossible to describe. Impossible to rationalize. Even the memory would be confusing and unnerving. The worst part is their awareness of time. All of our time is already written and we are just playing our parts (like the movie Arrival). We have no agency. There is no hope. Soul-crushing horror.",
       ":summary",
-      "* Most of the intelligent Mythos creatures are masters of [Necromancy] and have long ago reanimated their physical bodies into part physical/part spiritual forms that humans would call [Undead].\n* Like [Undead], they exist partially in the [Spirit Realm], are immune to most hostile environments, and appear blurry in photograph and other recordings.\n* If their body is destroyed, their Spirit leaves the body and enters the [Spirit Realm] fully. Their bodies age will rapidly catch up to it usually causing it to deteriorate rapidly. Normally their spirit never returns to the physical world, but if they are powerful enough, they may find their way back through the Veil and even death may not stop them from returning.",
+      "* Most of the intelligent Mythos creatures are masters of [Necromancy] and have long ago reanimated their physical bodies into part physical/part spiritual forms that humans would call [Undead].\n* Like [Undead], they exist partially in the [Spirit Realm], are immune to most hostile environments, and appear blurry in photograph and other recordings.\n* If their body is destroyed, their Spirit leaves the body and enters the [Spirit Realm] fully. Their bodies' age will rapidly catch up to it usually causing it to deteriorate rapidly. Normally their spirit never returns to the physical world, but if they are powerful enough, they may find their way back through the Veil and even death may not stop them from returning.",
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
@@ -40,7 +40,7 @@ export default class nx_tactics_books_horror {
           ":placemap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_placemap},
-            ":Carcosa",
+            "Carcosa",
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Carcosa", ":reference", "* ... my eyes became riveted to the open page, and with a cry of terror or perhaps it was of joy so poinant that I suffered in every nerve... I read it and re-read it and wept and laughed and trembled with a horror which at times assails me yet. This the thing that troubles me, for I cannot forget Carcosa. Where black stars hang in the heavens. Where the shadows of men's thoughts lengthen in the afternoon. ... I pray God will curse the writer as the writer has cursed he has cursed the world with this beautiful stupendous creation. Terrible in its simplicity, irresistible in its truth, a world which now trembles before the King in Yellow. - Robert W. Chambers, The Repairer of Reputations", ":titles", "Lost Carcosa"),
             ":R'yleh",
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "R'yleh", ":image", "Cthulhu/Ryleh.jpg", ":reference", "That is not dead which can eternal lie, And with strange aeons even death may die."),

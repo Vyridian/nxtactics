@@ -750,7 +750,7 @@
   :pointpos
    (ui/point
     :x 2
-    :y 38)
+    :y 39)
   :pointsize
    (ui/point
     :x 60
@@ -764,7 +764,7 @@
   :pointpos
    (ui/point
     :x 16
-    :y 2)
+    :y 3)
   :pointrotate ui/point-rotate-270
   :pointsize
    (ui/point

@@ -64,12 +64,12 @@ export default class nx_tactics_decks_deck_test {
           vx_core.t_intmap,
           "deck-abilities", 0,
           "deck-books", 0,
+          "deck-decks", 0,
           "deck-home", 0,
           "deck-items", 0,
           "deck-places", 0,
           "deck-powers", 0,
           "deck-scenes", 0,
-          "deck-setup", 0,
           "deck-skills", 0,
           "deck-specialties", 0,
           "deck-units", 0

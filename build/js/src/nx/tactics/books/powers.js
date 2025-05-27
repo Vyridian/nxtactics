@@ -353,7 +353,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Physical Powers",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Agility", "Appearance", "Armored", "Healing", "Movement", "Natural Weaponry", "Quickness", "Senses", "Shielding", "Strength", "Toughness")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Agility", "Appearance", "Armor", "Healing", "Movement", "Natural Weaponry", "Quickness", "Senses", "Shielding", "Strength", "Toughness")
         )
       )
     )
@@ -427,12 +427,8 @@ export default class nx_tactics_books_powers {
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "AP", ":titles", "Armor-Piercing", ":summary", "* Specifically designed to target armored units."),
             "Aura",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Aura", ":summary", "* Radial effect encompassing the current space and continuing for Level Range."),
-            "Autofire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Autofire", ":summary", "* Cannot Combo. Shots:-10. A Normal Success automatically creates a Combo with All lower numbers. E.g. Rank 7 would add 6, 5, 4, 3, and 2."),
             "Beam",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Beam", ":summary", "* Rectangular shaped effect 1 space wide.\n* [-1 Skill] for each 2 Spaces of Range"),
-            "Burstfire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Burstfire", ":summary", "* Cannot Combo. Shots:-3. A Normal Success automatically creates a Combo with the 2 lower numbers. E.g. Rank 7 would add 6 and 5."),
             "Chain Reaction",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Chain Reaction"),
             "Cloud",
@@ -447,8 +443,6 @@ export default class nx_tactics_books_powers {
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Fork"),
             "Haywire",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "Haywire", ":summary", "* Attack that damages electrical systems."),
-            "HE",
-            vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "HE", ":titles", "High-Explosive", ":summary", "* [Targetting]: Target a space.  All units in that space and surrounding spaces are attacked.\n* [Damage]: All target's are [+2 Armor] against this attack.\n* [Damage]: Units surrounding the space are attacked at -1 Damage for each space distant.\n\nAdvanced:\n* Instead of standard [High Explosive (HE)] rules the following may be used to more accurately simulate the damage exponential decrease in energy of explosives.\n* [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.\n* [Damage]: All target's are [+2 Armor] against this attack.\n* [Damage]: Units surrounding the space are attacked by dividing the energy (in Joules, or tons of TNT) using the following reduction pattern for each space distant: 1/1, 1/3, 1/10, 1/30, 1/100, 1/300, 1/1000, etc. Then look up the new damage based on the new energy level."),
             "HEAT",
             vx_core.f_new({"any-1": nx_tactics_base.t_modifier}, ":name", "HEAT", ":titles", "High Explosive Anti-Tank", ":summary", "* A shaped charge designed for maximum penentration with little exterior damage."),
             "Hidden Effect",

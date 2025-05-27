@@ -127,6 +127,8 @@
    speedland      : string
    speedspace     : string
    speedwater     : string
+   unitpowermap   : unitpowermap
+   unitskillmap   : unitskillmap
    value          : string
    width          : string])
 

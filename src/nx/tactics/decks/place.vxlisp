@@ -92,8 +92,8 @@
    :summary
     "* [Move]:-1
      * [Line of Sight]: Blocked
-     * [Block]: [Skill]:+2, [Armor]:+2
-     * [Evade]: [Skill]:+2")
+     * [Block]: [Skill]:+1, [Armor]:+1
+     * [Evade]: [Skill]:+1")
   (base/place
    :name "Fuel Depot"
    :summary "* Required to extend Vehicle Supply Lines")

@@ -88,7 +88,7 @@ export default class nx_tactics_decks_unit {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitpower},
             ":power",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Armored"),
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Armor"),
             ":summary",
             "21 inches (530 mm/88mm RHA)",
             ":front",
@@ -184,6 +184,15 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane: Radiation"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bat: Fruit"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bat: Vampire"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Batman",
+        ":image",
+        "Superheroes/Batman.png",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Intellect")
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bear: Black", ":image", "images/cards/unit-bear-black.svg", ":reference", "* Apex predator. High on cocaine. Out of its mind. - Cocaine Bear", ":body", "2x2", ":mass", "200kg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bear: Brown", ":image", "images/cards/unit-bear-brown.svg", ":body", "4x2", ":mass", "400kg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bear: Grizzly", ":image", "images/cards/unit-bear-grizzly.svg", ":reference", "* It has been estimated that a bite from a grizzly could crush a bowling ball.", ":body", "6x2", ":mass", "600kg"),
@@ -515,6 +524,21 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
+        "Gnoll Axeman",
+        ":image",
+        "images/bestiary/Gnoll_Axeman.png",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_items(
+            tactics,
+            "Melee",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pike")
+          )
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
         "Gnoll Pikeman",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
@@ -673,6 +697,7 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbull"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Herbalist", ":image", "images/cards/unit-herbalist.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hidden", ":image", "images/cards/unit-hidden.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hollow Man", ":reference", "* They're good for us. They kill the bad things inside us...What you're supposed to do is eat it. You eat as much as you can and you keep eating it. - The Stuff", ":summary", "* A person infested by parasites, insects, or small animals.  The hapless victim has become completely hollowed out by its unwanted tenants, but is somehow still alive.  The Hollow Man is desolate, immobile, and empty without the possessing colony, but they are poor company at best."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -902,7 +927,35 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lion"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mi-Go", ":image", "cthulhu/unit-migo.png", ":titles", "Fungi from Yuggoth", ":reference", "* Fact: Migoi or Mi-go (pronounced mey-goo) is a Tibetan name for the Yeti and translates as 'wild man'.", ":summary", "* Mi-go are an alien race of fungus-like creatures, approximately man-sized, pinkish in color, with crustaceous bodies bearing vast pairs of membranous wings and several sets of articulate limbs. The Mi-Go have a sort of convoluted ellipsoid where its head should be, covered with a multitude of very short antennae.\n    * They have a colony on Pluto (i.e. Yuggoth) and have mining colonies in high mountains looking for rare minerals.\n    * The Mi-go are not wholly native to our phyical universe. Thus, they cannot eat food from Earth, and photographs of them are blurry and indistinct. They can also fly unassisted through interstellar space at fantastic speeds. They dissolve shortly after death.\n    * They are unaccustomed to light which confuses them.\n    * They seem to be highly focused on their scientific pursuits and are most often encountered in search of obscure minerals in remote places. Trespassers are usually eliminated, though they have been known to have human agents work on their behalf.\n    * Mi-go have access to a number of advanced weapons. The mist projector releases a cloud of frigid gas. They have an organic 'armor' that humans can use, but it is extremely sticky and will damage the user each time it is removed. The armor will also weaken each day unless immersed in the proper nutrient bath.\n    * The Mi-Go are advanced in the sphere of surgery. With surgical alterations the Mi-Go are able to speak human languages, though their voice is buzzy and irritating. They can also surgically move the brain of other species into metal cylinders for transportation to other worlds through space.", ":body", "6x1", ":mass", "60kg/130lb", ":height", "1.5m/5ft"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Night Terror", ":titles", "Night Hag", ":reference", "* A night terror is a sleep disorder characterized by extreme terror and a temporary inability to regain full consciousness. The subject wakes abruptly usually accompanied by gasping, moaning, or screaming.  It is often impossible to fully awaken the person, and after the episode the subject normally settles back to sleep without waking.\n* Night terrors are distinct from nightmares in several key ways. First, the subject is not fully awake when roused, and even when efforts are made to awaken the sleeper, he/she may continue to experience the night terror for ten to twenty minutes. Unlike nightmares, which occur during REM sleep, night terrors occur during slow-wave sleep, the deepest levels of non-REM sleep. Even if awakened, the subject often cannot remember the episode except for a sense of panic, while nightmares usually can be easily recalled. The subject often has no recollection of the incident.\n* Unlike nightmares, which are frequently dreams of a frightening nature, night terrors are not dreams. Usually there is no situation or event (scary or otherwise) that is dreamt, but rather the emotion of fear itself is felt. The lack of a dream itself leaves those awakened from a night terror in a state of disorientation much more severe than that caused by a normal nightmare. This can include a short period of amnesia during which the subjects may be unable to recall their names, locations, ages, or any other identifying features of themselves.\n* Children from age two to six are most prone to night terrors, and they affect about fifteen percent of all children.", ":summary", "* Evil women who died in childbirth and now returned to slay children.\n* By day it may take the form of a shriveled old woman. At night it becomes a horrific corpse-like creature. In this form it sneaks into houses and sucks the breath from the lips of children, leaving them cold and lifeless.\n* It can only enter a house into which it has been invited, so during the day it poses as a woeful traveler to gain admittance to houses where babies live.\n* Night Terrors, being exclusively female, can only reproduce by mating with a male member of another species. The hag often slays her mate. The child born looks like a normal member of her species with black or blue hair and is often given into foster care by the hag disguised as a normal woman. When the young girl reaches puberty, the mother Night Hag might visit the child several times and, after several rituals, transforms her offspring into another hag."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Normality",
+        ":titles",
+        "Normals",
+        ":reference",
+        "Hate Crimes",
+        ":summary",
+        "* Normalities are ghastly creatures that were once human but have been transformed into blank, sexless horrors. All Normalities appear exactly identical: thin, sexless, hairless, and faceless except for a slash of a mouth. With heavy clothing they may briefly pass for human.\n* Personality - Normalities have a hatred of all things different (which includes everything except themselves). They are homicidal with a particulary strong reaction to those who choose to flaunt their differences (e.g. piercings, tattoos, goths, punkers, women wearing pants)\n* History - The Normalities are created as part of a horrific treatment that pretends to be a cure for homosexuality. Indeed, the treatment does cure homosexuality, as well as any sexuality and finally humanity.",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Hunting")
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nyarlathotep", ":image", "images/cards/unit-nyarlathotep.png", ":titles", "The Crawling Chaos", ":reference", "Nyarlathotep is nothing like the other Other Gods. He travels by his own laws, into and out of the known cosmos, acting as a messenger to and from the Other Gods. His strange personality, or perhaps the simple fact that he has a personality, baffles them. ... To lesser intelligences, he's a trickster, malevolent and cruel, bequeathing gifts of wisdom and power to those who seek it, and whom he knows cannot handle it. Where Nyarlathotep goes, madness follows. He is the Crawling Chaos, and as the only direct offspring of Azathoth, he revels in it. To Lovecraft, Nyarlathotep must have been a perfect manisfestation of his racism and xenophobia. He is not only the outside seeping in, but a malevolent, undetectable outside seeping in. - Tale Foundry", ":summary", "* Like the other Other Gods, Nyarlathotep is a primal being of unimaginable power. Unlike the others, however, his power is knowledge and Nyarlathotep may be a creature entirely of the mind. Though he typically appears as a man, he has innumerable other forms and may be able to appear in any form he wishes. He seens to specifically target and toy with humanity by offering dangerous knowledge and observing the results. This is probably an overly simplistic view of his actions. Like the other Other Gods, he is too grand a figure to care about humanity. More likely, he acts like Yog-Sothoth and simply appears as an avatar and provides Knowledge to those who seek him without regard to what we do with it. In this way, Nyarlathotep is like Prometheus providing fire to humanity. It is possible that Nyarlathotep is constantly offering knowledge, but we are generally unable to recognize it. Perhaps Nyarlathotep is the Muse behind all discoveries."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Odin",
+        ":image",
+        "Superheroes/Odin.png",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Longevity",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Eternal Youth")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ogre", ":image", "images/cards/unit-ogre.svg", ":reference", "* You small. Me big. - Tarzak the Tribeless, Runeterra", ":summary", "* Gluttony, Wrath\n* Preferred Skills - Close Combat, Hunting\n* Morale - Low\n* Units - Elite Heavy Infantry (Note: Full units are very rare)\n* Description - Ogres appear as huge, overweight, hairless humanoids.\n* Personality - Ogres are perpetually hungry. However, they are limited by their extremely low intelligence and short tempers.", ":body", "3x2", ":mind", "3x1", ":will", "3x1", ":mass", "300kg", ":height", "3m"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -1096,8 +1149,24 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectre", ":reference", "* Cenobites from Hellraiser", ":summary", "* A Spectre is a malevolent Wraith that has been so traumatized that it is has become completely obscessed with its suffering and reenacting that suffering with others. The Spectre has fallen completely under the controlled of it's [Shadow]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectrum", ":image", "Superheroes/Vector.png", ":titles", "Alan Lietner, Shard, Vector", ":summary", "* Spectrum appears in glowing, angular, mirrored armor with a mirrored visor. The armor augments his strength to lift 800lbs. He can materialize angular blades and shields from his arms. He can also create glowing shards in different forms including a flying triangular plate, throwing knives, barriers, and cages.\n* Spectrum's armor is powered by light and the area will visibly darken when his powers are active. In a completely dark area, his powers are greatly diminished. Conversely, very bright light increases his power level. For this reason, he usually acts only in daylight.\n* Dr. Alex Lietner is an MIT physicist reseaching the creation of holograms with lasers. He discovered that through precise modulation, a hologram could temporarily be turned into an extremely rigid solid. With the help of some of his students, he was able to create a portable projection system in a wearable suit.\n* Blinding Flash - Intense light burst similar to a flash bomb.\n* Blinding Torrent - A dizzying kaleidoscope of intense light that causes vertigo and nausea."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Strix", ":titles", "Stirges (plural), Vampire Owls", ":summary", "A bird of ill-omen that feeds on human flesh and blood.\n* Description - A large-headed, dark, birdlike creature similar to an owl with transfixed eyes, rapacious beak, hooked claws. They fly and rest inverted with feet above their head."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Surtur",
+        ":image",
+        "Superheroes/Surtur.png",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key(tactics, "Fire"),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Longevity",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Eternal Youth")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Terraphant", ":summary", "* A hulking beast the size of an elephant with a head like an octopus."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tentacle Terror", ":titles", "Roper, Tentacle Beast", ":reference", "* Cthulu Mythos\n* Hentai", ":summary", "* A formless mass that can create writhing tentacles, eyes, and mouths from its body."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tentacle Terror", ":titles", "Roper, Tentacle Beast", ":reference", "* Cthulhu Mythos\n* Hentai", ":summary", "* A formless mass that can create writhing tentacles, eyes, and mouths from its body."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -1141,6 +1210,7 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Throwback", ":reference", "Bouncers, Frat Boys, Jocks, Weight Lifters", ":summary", "* Appearance - Throwbacks are hulking, musclebound, prettyboys who are constantly looking at themselves.\n* History - Throwbacks begin as insecure guys who want to increase their bodies or their manhood. The enhancements they receive brings out all of the worst male tendencies and exaggerate them to a homicidal degree. Vanity, violence, and sexual aggression all warp them into virtual cavemen who care for nothing but fighting, sex, and pumping iron."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Thunderbird", ":titles", "Stormcrow, Stormraptor", ":summary", "* The Thunderbird is a large bird with a special affinity for electricity. When a storm is present, the Thunderbirds true power is awakened.\n* The wings of Thunderbirds generate increasing static electricity with each flap.\n* Thunder Shield - Touching the Thunderbird triggers an electric shock and a sonic area attack.\n* Thunderstrike - With a shriek, the Thunderbird calls a lightning strike unto itself which is instantly redirected in the direction it is facing as if the lightning came from its mouth.\n* Thunderclap - When the Thunderbird claps its wings together a lightning bolt strikes it and produces a deafening sonic area attack around it.\n* Thunder Storm - By spreading its wings, the Thunderbird calls a lightning strike onto itself which is then split into multiple strikes that rain lightning down below it."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},

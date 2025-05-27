@@ -588,9 +588,9 @@
             * FR - Fixed Right.  Can only attack the right arc.
             * Turrent - Turret mount.  Can attack in any direction but must use [Turret] rules to fire anywhere but forward.
             * Pintle - Pintle mount.  Can attack in any direction without limit, but if the pintle mount is used, a crew member is exposed and may be targetted separately from the vehicle at -1.")
-        :Reload
+        :Reload1
          (rule
-          :name "Reload"
+          :name "Reload1"
           :summary
            "* [Action]: An item with Reload may not be used until all Reload tokens are removed.
             * [Action]: An item with Reload adds the number of Reload tokens each time the item is used.
@@ -601,11 +601,7 @@
             4. Tiger 1E 15 sec
             5. IS-2 20 sec - This is longer due to the IS-2 having a 122mm cannon and the shell has to be loaded in two parts. Although the first shot to a Panther, Tiger or a PZ IV is usally fatal.
             6. KV-1S 12 sec
-            7. T34-76 13 sec")
-        "Shoot From The Hip"
-         (rule
-          :name "Shoot From The Hip"
-          :summary "* Any unit shooting from the hip takes -1 Attack."))))))
+            7. T34-76 13 sec"))))))
 
 (func chapter_skills : base/chapter
  [tactics : base/tactics]
@@ -627,7 +623,7 @@
        "Evasion"
        "Melee"
        "Ranged"
-       "Firearms"
+       "Firearm"
        "Gunnery"
        "Demolitions"
        "Military"
@@ -649,12 +645,12 @@
           :name "Bezainted")
         "Armor: Breast Plate"
          (base/item<-tactics-key tactics "Armor: Breast Plate")
-        :Brigandine
+        "Brigandine"
          (base/item
           :name "Brigandine")
-        "Bronze Armor"
+        "Armor: Bronze"
          (base/item
-          :name "Bronze Armor"
+          :name "Armor: Bronze"
           :summary "* Bronze Cuirass, Helmet, Greaves"
           :armor "1mm")
         "Armor: Chain Mail"
@@ -1054,6 +1050,8 @@
          (base/item
           :name "Naginata"
           :energy "200J")
+        "Pike"
+         (base/item<-tactics-key tactics "Pike")
         :Poleaxe
          (base/item
           :name "Poleaxe"
@@ -1102,14 +1100,6 @@
           :classification "Spear"
           :energy "300J"
           :length "2.5m"
-          :modifiers "Reach, Piercing")
-        :Pike
-         (base/item
-          :name "Pike"
-          :titles "Pikeman"
-          :classification "Spear"
-          :energy "200J"
-          :length "4m"
           :modifiers "Reach, Piercing")
         :Pilum
          (base/item

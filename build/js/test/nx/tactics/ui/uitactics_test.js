@@ -33,11 +33,11 @@ export default class nx_tactics_ui_uitactics_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/uitactics", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 67, ":tests", 40, ":total", 59), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 56), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 68, ":tests", 41, ":total", 60), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 57), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 6, ":tests", 4, ":total", 59), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 6, ":tests", 4, ":total", 60), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -66,6 +66,7 @@ export default class nx_tactics_ui_uitactics_test {
           "string-display<-any", 0,
           "string-display<-book", 0,
           "string-display<-deck", 0,
+          "string-display<-item", 0,
           "string-display<-power", 0,
           "string-display<-skill", 0,
           "string-display<-unit", 0,

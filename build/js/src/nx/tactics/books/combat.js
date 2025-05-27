@@ -308,10 +308,10 @@ export default class nx_tactics_books_combat {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bezainted"),
             "Armor: Breast Plate",
             nx_tactics_base.f_item_from_tactics_key(tactics, "Armor: Breast Plate"),
-            ":Brigandine",
+            "Brigandine",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Brigandine"),
-            "Bronze Armor",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bronze Armor", ":summary", "* Bronze Cuirass, Helmet, Greaves", ":armor", "1mm"),
+            "Armor: Bronze",
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Armor: Bronze", ":summary", "* Bronze Cuirass, Helmet, Greaves", ":armor", "1mm"),
             "Armor: Chain Mail",
             nx_tactics_base.f_item_from_tactics_key(tactics, "Armor: Chain Mail"),
             "Armor: Chain Shirt",
@@ -582,6 +582,8 @@ export default class nx_tactics_books_combat {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Halberd", ":titles", "Halberdier", ":energy", "200J"),
             ":Naginata",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Naginata", ":energy", "200J"),
+            "Pike",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Pike"),
             ":Poleaxe",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Poleaxe", ":energy", "200J"),
             ":Ranseur",
@@ -608,8 +610,6 @@ export default class nx_tactics_books_combat {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Javelin", ":classification", "Spear", ":energy", "198J", ":mass", "3kg", ":modifiers", "Indirect Fire, Piercing", ":range", "18m"),
             ":Lance",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lance", ":titles", "Couched Lance", ":classification", "Spear", ":energy", "300J", ":length", "2.5m", ":modifiers", "Reach, Piercing"),
-            ":Pike",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pike", ":titles", "Pikeman", ":classification", "Spear", ":energy", "200J", ":length", "4m", ":modifiers", "Reach, Piercing"),
             ":Pilum",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pilum", ":reference", "* When once fixed in the shield it was impossible to draw them out, and when thrown with force and skill, they penetrated the cuirass without difficulty. - Roman writer Vegtius", ":summary", "* The pilum was designed to be armour-piercing: the pyramidal head would punch a small hole through an enemy shield allowing the thin shank to pass through and penetrate a distance sufficient to hit the target. A pilum, having penetrated a shield through a small hole and its shank having bent would now be difficult to remove. It is likely that the shaft would hit the ground and thus stop the charging enemy in his tracks. An enemy, if not killed by the pilum, would have little time before closing with the legionaries and would have to discard his now-unwieldy shield before going into combat. Additionally, bent pila would be less suitable for reuse by a resourceful opponent.", ":classification", "Spear", ":energy", "100J", ":mass", "3kg", ":modifiers", "Indirect Fire, Piercing", ":range", "18m"),
             ":Spear",
@@ -1357,10 +1357,8 @@ export default class nx_tactics_books_combat {
             {"any-1": nx_tactics_base.t_rulemap},
             "Firing Arc",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Firing Arc", ":summary", "Larger weapons are often cumbersome to use or aim and may only attack in a particular arc. The following abbreviations are used:\n* F - Front. Can only attach in any front arc.\n* B - Back. Can only attack in any rear arc.\n* FF - Fixed Forward.  Can only attack the forward arc.\n* FB - Fixed Backward.  Can only attack the rear arc.\n* FL - Fixed Left.  Can only attack the left arc.\n* FR - Fixed Right.  Can only attack the right arc.\n* Turrent - Turret mount.  Can attack in any direction but must use [Turret] rules to fire anywhere but forward.\n* Pintle - Pintle mount.  Can attack in any direction without limit, but if the pintle mount is used, a crew member is exposed and may be targetted separately from the vehicle at -1."),
-            ":Reload",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reload", ":summary", "* [Action]: An item with Reload may not be used until all Reload tokens are removed.\n* [Action]: An item with Reload adds the number of Reload tokens each time the item is used.\n* Gain a White [Reload] Token for each Reload value each time the weapon is fired.\n1. Panther G 13 sec\n2. PZ IV F1 9 sec\n3. PZ IV F2 10 sec\n4. Tiger 1E 15 sec\n5. IS-2 20 sec - This is longer due to the IS-2 having a 122mm cannon and the shell has to be loaded in two parts. Although the first shot to a Panther, Tiger or a PZ IV is usally fatal.\n6. KV-1S 12 sec\n7. T34-76 13 sec"),
-            "Shoot From The Hip",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shoot From The Hip", ":summary", "* Any unit shooting from the hip takes -1 Attack.")
+            ":Reload1",
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reload1", ":summary", "* [Action]: An item with Reload may not be used until all Reload tokens are removed.\n* [Action]: An item with Reload adds the number of Reload tokens each time the item is used.\n* Gain a White [Reload] Token for each Reload value each time the weapon is fired.\n1. Panther G 13 sec\n2. PZ IV F1 9 sec\n3. PZ IV F2 10 sec\n4. Tiger 1E 15 sec\n5. IS-2 20 sec - This is longer due to the IS-2 having a 122mm cannon and the shell has to be loaded in two parts. Although the first shot to a Panther, Tiger or a PZ IV is usally fatal.\n6. KV-1S 12 sec\n7. T34-76 13 sec")
           )
         )
       )
@@ -1396,7 +1394,7 @@ export default class nx_tactics_books_combat {
           ":itemmap",
           nx_tactics_base.f_itemmap_from_tactics_keys(tactics, "Bare Handed"),
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Close Combat", "Defense", "Evasion", "Melee", "Ranged", "Firearms", "Gunnery", "Demolitions", "Military", "Leadership")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Close Combat", "Defense", "Evasion", "Melee", "Ranged", "Firearm", "Gunnery", "Demolitions", "Military", "Leadership")
         )
       )
     )

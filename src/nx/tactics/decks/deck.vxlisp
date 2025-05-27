@@ -23,19 +23,20 @@
    :cardmap
     (base/cardmap<-cardlist
      (base/cardlist
-      (deck-books)
       (deck-rules tactics)
-      (deck-setup tactics)
+      (deck-decks tactics)
       (deck-scenes tactics)
-      (deck-places)
-      (deck-units)
-      (deck-items)
-      (deck-skills)
-      (deck-powers)
-      (deck-abilities)
-      (deck-specialties))))))
+      (deck-books tactics)
+      (deck-places tactics)
+      (deck-units tactics)
+      (deck-items tactics)
+      (deck-skills tactics)
+      (deck-powers tactics)
+      (deck-abilities tactics)
+      (deck-specialties tactics))))))
 
 (func deck-abilities : base/deck
+ [tactics : base/tactics]
  (let : base/deck
   [abilitymap : base/abilitymap :=
    (:abilitymap data/tactics-all)
@@ -48,6 +49,7 @@
  :doc "Ability Deck")
 
 (func deck-books : base/deck
+ [tactics : base/tactics]
  (base/deck
   :name "Books"
   :cardmap
@@ -56,6 +58,7 @@
  :doc "Deck of books")
 
 (func deck-items : base/deck
+ [tactics : base/tactics]
  (let : base/deck
   [itemmap : base/itemmap :=
    (:itemmap data/tactics-all)
@@ -68,6 +71,7 @@
  :doc "Items Deck")
 
 (func deck-places : base/deck
+ [tactics : base/tactics]
  (let : base/deck
   [placemap : base/placemap :=
    (:placemap data/tactics-all)
@@ -80,6 +84,7 @@
  :doc "Places Deck")
 
 (func deck-powers : base/deck
+ [tactics : base/tactics]
  (let : base/deck
   [powermap : base/powermap :=
    (:powermap data/tactics-all)
@@ -91,10 +96,10 @@
    :cardmap cardmap))
  :doc "Powers Deck")
 
-(func deck-setup : base/deck
+(func deck-decks : base/deck
  [tactics : base/tactics]
  (base/deck
-  :name "Setup"
+  :name "Decks"
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
@@ -129,6 +134,7 @@
      (ontherun/deck-ontherun tactics)))))
 
 (func deck-skills : base/deck
+ [tactics : base/tactics]
  (let : base/deck
   [skillmap : base/skillmap :=
    (:skillmap data/tactics-all)
@@ -141,6 +147,7 @@
  :doc "Skills Deck")
 
 (func deck-specialties : base/deck
+ [tactics : base/tactics]
  (let : base/deck
   [specialtymap : base/specialtymap :=
    (:specialtymap data/tactics-all)
@@ -153,6 +160,7 @@
  :doc "Specialty Deck")
 
 (func deck-units : base/deck
+ [tactics : base/tactics]
  (let : base/deck
   [unitmap : base/unitmap :=
    (:unitmap data/tactics-all)

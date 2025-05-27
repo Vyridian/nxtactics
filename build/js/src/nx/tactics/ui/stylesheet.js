@@ -1717,7 +1717,7 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 2, ":y", 38),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 2, ":y", 39),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 60, ":y", 37)
     ))
@@ -1730,7 +1730,7 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_image,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 16, ":y", 2),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 16, ":y", 3),
       ":pointrotate",
       vx_ui_ui.c_point_rotate_270,
       ":pointsize",

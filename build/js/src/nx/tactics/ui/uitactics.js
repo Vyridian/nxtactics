@@ -246,6 +246,50 @@ export default class nx_tactics_ui_uitactics {
   }
 
   /**
+   * @function string_display_from_item
+   * Returns display text from an item
+   * @param  {item} item
+   * @return {string}
+   */
+  static t_string_display_from_item = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_display_from_item = {
+    vx_type: nx_tactics_ui_uitactics.t_string_display_from_item
+  }
+
+  // (func string-display<-item)
+  static f_string_display_from_item(item) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const summary = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":summary")
+        const skilllist = nx_tactics_ui_uitactics.f_stringlist_display_from_unitskillmap(
+          vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitskillmap, "struct-2": nx_tactics_base.t_item}, item, ":unitskillmap")
+        )
+        const powerlist = nx_tactics_ui_uitactics.f_stringlist_display_from_unitpowermap(
+          vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitpowermap, "struct-2": nx_tactics_base.t_item}, item, ":unitpowermap")
+        )
+        const summarylist = vx_core.f_if_2(
+          {"any-1": vx_core.t_stringlist},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(summary)}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_stringlist}, summary)})
+          )
+        )
+        const displaylist = vx_core.f_new({"any-1": vx_core.t_stringlist}, summarylist, skilllist, powerlist)
+        return vx_type.f_string_from_stringlist_join(
+          displaylist,
+          vx_core.c_newline
+        )
+      })
+    )
+    return output
+  }
+
+  /**
    * @function string_display_from_power
    * Returns display text from a power
    * @param  {power} power
@@ -398,6 +442,12 @@ export default class nx_tactics_ui_uitactics {
         const power = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_power, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":power")
         const level = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":level")
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_power}, power, ":name")
+        const lvl = vx_core.f_if_1(
+          {"any-1": vx_core.t_string},
+          vx_core.f_eqeq(0, level),
+          "",
+          level
+        )
         const specialties = nx_tactics_ui_uitactics.f_stringlist_display_from_unitspecialtymap(
           vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitspecialtymap, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":unitspecialtymap")
         )
@@ -416,7 +466,7 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        return vx_core.f_new({"any-1": vx_core.t_string}, "* [", name, "]:", level, extras)
+        return vx_core.f_new({"any-1": vx_core.t_string}, "* [", name, "]:", lvl, extras)
       })
     )
     return output
@@ -2391,7 +2441,7 @@ export default class nx_tactics_ui_uitactics {
   /**
    * @function uilist_from_item_parent
    * Returns a list of child ui from a item/parent
-   * @param  {item} unit
+   * @param  {item} item
    * @param  {string} parent
    * @return {uilist}
    */
@@ -2403,26 +2453,26 @@ export default class nx_tactics_ui_uitactics {
   }
 
   // (func uilist<-item-parent)
-  static f_uilist_from_item_parent(unit, parent) {
+  static f_uilist_from_item_parent(item, parent) {
     let output = vx_ui_ui.e_uilist
     output = vx_core.f_let(
       {"any-1": vx_ui_ui.t_uilist},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":name")
-        const titles = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":titles")
-        const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":image")
-        const value = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":value")
-        const summary = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":summary")
-        const body = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":body")
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":name")
+        const titles = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":titles")
+        const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":image")
+        const value = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":value")
+        const summary = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":summary")
+        const body = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":body")
         const bodydetail = nx_tactics_ui_uitactics.f_string_from_mass_h_l_w(
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":mass"),
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":height"),
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":length"),
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, unit, ":width")
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":mass"),
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":height"),
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":length"),
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":width")
         )
         const prefix = vx_core.f_new({"any-1": vx_core.t_string}, parent, "/", name)
-        const detail = summary
+        const detail = nx_tactics_ui_uitactics.f_string_display_from_item(item)
         const uiimage = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
           vx_core.f_then(
@@ -3054,6 +3104,7 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-any": nx_tactics_ui_uitactics.e_string_display_from_any,
       "string-display<-book": nx_tactics_ui_uitactics.e_string_display_from_book,
       "string-display<-deck": nx_tactics_ui_uitactics.e_string_display_from_deck,
+      "string-display<-item": nx_tactics_ui_uitactics.e_string_display_from_item,
       "string-display<-power": nx_tactics_ui_uitactics.e_string_display_from_power,
       "string-display<-skill": nx_tactics_ui_uitactics.e_string_display_from_skill,
       "string-display<-unit": nx_tactics_ui_uitactics.e_string_display_from_unit,
@@ -3112,6 +3163,7 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-any": nx_tactics_ui_uitactics.t_string_display_from_any,
       "string-display<-book": nx_tactics_ui_uitactics.t_string_display_from_book,
       "string-display<-deck": nx_tactics_ui_uitactics.t_string_display_from_deck,
+      "string-display<-item": nx_tactics_ui_uitactics.t_string_display_from_item,
       "string-display<-power": nx_tactics_ui_uitactics.t_string_display_from_power,
       "string-display<-skill": nx_tactics_ui_uitactics.t_string_display_from_skill,
       "string-display<-unit": nx_tactics_ui_uitactics.t_string_display_from_unit,
@@ -3264,6 +3316,24 @@ export default class nx_tactics_ui_uitactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_uitactics.f_string_display_from_deck
+    }
+
+    // (func string-display<-item)
+    nx_tactics_ui_uitactics.t_string_display_from_item['vx_value'] = {
+      name          : "string-display<-item",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_string_display_from_item
     }
 
     // (func string-display<-power)

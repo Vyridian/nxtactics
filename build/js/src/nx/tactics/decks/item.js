@@ -30,11 +30,49 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Armor: Breast Plate", ":summary", "* [Hit Location]: Shoulders Chest Abdomen Vitals", ":armor", "1mm"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Armor: Chain Mail", ":reference", "* Shark expert and underwater filmmaker Valerie Taylor was among the first to develop and test shark suits in 1979 while diving with sharks.\n* Mail is widely used in industrial settings as shrapnel guards and splash guards in metal working operations.\n* Electrical applications for mail include RF leakage testing and being worn as a Faraday cage suit by tesla coil enthusiasts and high voltage electrical workers.", ":summary", "* Chain mail is a type of armor consisting of small metal rings linked together in a pattern to form a mesh. It was generally in common military use between the 3rd century BC and the 16th century AD in Europe, and longer in Asia and North Africa.", ":titles", "Chainmail, Mail, Byrnie, Hauberk", ":armor", "1mm"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Armor: Chain Shirt", ":summary", "* [Hit Location]: Shoulders Chest Abdomen Vitals", ":titles", "Chainmail, Mail", ":armor", "1mm"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Armor: Leather Cuirass", ":titles", "Leather Body Armor", ":image", "images/cards/item-armor-leathercuirass.svg", ":summary", "* [Armor]: 1x1 [Hardened vs Slash]\n* [Location]: [Shoulders] [Chest] [Abdomen] [Vitals]", ":body", "7x0", ":mass", "7kg/15lb"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Armor: Leather Cuirass",
+        ":titles",
+        "Leather Body Armor",
+        ":image",
+        "images/cards/item-armor-leathercuirass.svg",
+        ":summary",
+        "* [Armor]: 1x1 [Hardened vs Slash]",
+        ":body",
+        "7x0",
+        ":mass",
+        "7kg/15lb",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Armor",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor: Shoulders", "Armor: Chest", "Armor: Abdomen", "Armor: Vitals")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe: Fire", ":image", "images/cards/item-axe-fire.svg", ":summary", "* [Skill]: [Melee]-1\n* [Damage]: [Body]:+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]:1x1", ":body", "3x0", ":mass", "3.1kg/7lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe: Hand", ":image", "images/cards/item-axe-hand.svg", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+1 [Hack] [Slash]\n* [Location]: [1-hand]", ":body", "9x-1", ":mass", "900g/2lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe: Wood", ":titles", "Splitting Maul", ":image", "images/cards/item-axe-wood.svg", ":summary", "* [Skill]: [Melee]:-1\n* [Damage]: [Body]:+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]: 1x1", ":body", "3x0", ":mass", "3.1kg/7lb"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bare Handed", ":image", "images/cards/item-barehanded.svg", ":summary", "* [Skill]: [Close Combat] or [Melee]\n* [Arc]: [Arc:Front]\n* [Damage]: [Body] [Bash]"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Bare Handed",
+        ":image",
+        "images/cards/item-barehanded.svg",
+        ":summary",
+        "* [Skill]: [Close Combat] or [Melee]",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Weapon",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Damage:Body", "Bash", "1-Handed", "Close Weapon")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Beast Claw"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bedroll", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bedroll: Restful Sleep", ":summary", "Providest the [Restful Sleep] ability."),
@@ -45,7 +83,7 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow: Composite", ":summary", "* [Skill]: [Ranged]\n* [Damage]: 10x1 [Pierce] [Slash]\n* [Range]: 10x1 100m/300ft\n* [Location]: [2-hand]\n* The main advantage of composite bows over self bows (made from a single piece of wood) is their combination of smaller size with high power. They are more suitable for use from horseback or chariot.\n* Constructing composite bows requires much more time and materials than self bows, and the animal glue traditionally used can lose strength in humid conditions and be quickly ruined by submersion. For most practical non-mounted archery purposes, composite construction offers no advantage; 'the initial velocity is about the same for all types of bow, the design parameters appear to be less important than is often claimed.' However, their compact size make them superior for horsemen.", ":energy", "170J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow: Compound"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow: Long", ":titles", "Daikyu", ":summary", "* [Skill]: [Ranged]\n* [Damage]: 10x1 [Pierce] [Slash]\n* [Range]: 10x1 100m/300ft\n* [Location]: [2-hand]", ":energy", "156J"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow: Short", ":image", "images/cards/item-bow-short.svg", ":titles", "Hankyu, Recurve Bow", ":reference", "Can fire about 6 aimed shots or 12 unaimed shots per minute.", ":summary", "* [Skill]: [Ranged]\n* [Damage]: 8x1 [Pierce] [Slash]\n* [Range]: 2x1 20m/60ft\n* [Location]: [2-hand]\n* [Shots]: 0 Max:1\n* [Reload]: [Action]", ":energy", "80J", ":body", "10x-1", ":mass", "1kg/2lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow: Short", ":image", "images/cards/item-bow-short.svg", ":titles", "Hankyu, Recurve Bow", ":reference", "Can fire about 6 aimed shots or 12 unaimed shots per minute.", ":summary", "* [Skill]: [Ranged]\n* [Damage]: 8x1 [Pierce] [Slash]\n* [Range]: 2x1 20m/60ft\n* [Location]: [2-hand]\n* [Uses]: 0 Max:1\n* [Reload]: [Action]", ":energy", "80J", ":body", "10x-1", ":mass", "1kg/2lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Candle"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Cloak"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Cloak: Fine Woodland", ":image", "images/cards/item-cloak-finewoodland.svg", ":summary", "* [Passive]: [Stealth]:+1 in [Forest]\n* [Passive]: Discard the first [Fatigue] you receive from [Weather] each [Turn].", ":body", "2x0", ":mass", "2kg/4.4lb"),
@@ -53,6 +91,8 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Coins: Gold", ":image", "images/cards/item-coins-gold.svg", ":summary", "* A few (~5=$500) coins.\n* A tidy sum.\n* 10 Silver = 1 Gold\n* 10 Gold = 1 Platinum\n* A piece of quality gear.", ":body", "10x-2", ":mass", "150g/.3lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Coins: Platinum", ":image", "images/cards/item-coins-platinum.svg", ":summary", "* A few (~5=$5000) coins.\n* A small fortune.\n* 10 Gold = 1 Platinum\n* A piece of extremely high quality or magical gear.", ":body", "10x-2", ":mass", "150g/.3lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Coins: Silver", ":image", "images/cards/item-coins-silver.svg", ":summary", "* A few (~5=$50) coins.\n* Spending money.\n* 10 Copper = 1 Silver\n* 10 Silver = 1 Gold\n* 2 nice meals, 3 bottles wine, round of drinks, a private room, week supplies, cheap gear.", ":body", "10x-2", ":mass", "100g/.2lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Door: Heavy Wooden", ":image", "images/cards/item-door-heavy-wooden.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Door: Wooden", ":image", "images/cards/item-door-wooden.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Grenade: White Phosphorous"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hammer", ":image", "images/cards/item-hammer.svg", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+3 [Bash]\n* [Location]: [1-hand]", ":body", "2x0", ":mass", "2kg/4.4lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Improvised Weapon", ":summary", "* Any item can be a weapon.\n* [Melee] or [Close Combat]: vs [Body]\n* [Damage]: [Body] Damage Types based on item."),
@@ -68,6 +108,7 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Mushrooms", ":classification", "Plant", ":image", "images/cards/item-mushrooms.svg", ":summary", "* Nutrition for a day. After eating [Reveal Fate]. IF [Coins] THEN you spend 6 hours tripping or sleeping. IF [Cups] THEN Poison:+1"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Onions: Wild", ":classification", "Plant", ":image", "images/cards/item-onions-wild.svg", ":summary", "* Nutrition for a day."),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Paper: Lock Combination", ":image", "images/cards/item-paper-lockcombination.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pike", ":titles", "Pikeman", ":classification", "Spear", ":energy", "200J", ":length", "4m", ":modifiers", "Reach, Piercing"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pistol: Revolver", ":image", "images/cards/item-pistol-revolver.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Quiver: Arrows", ":image", "images/cards/item-quiver-arrows.svg", ":summary", "* Holds up to 20 arrows\n* [Location]: [Shoulders] Back", ":body", "10x-1", ":mass", "1kg/2.2lb", ":length", "6cm/2ft"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Raspberries", ":classification", "Plant", ":image", "images/cards/item-raspberries.svg", ":summary", "* Nutrition for a day. [Reveal Fate]. IF [Coins] THEN they are sour. IF [Cups] THEN they are sweet.", ":body", "10x-1", ":mass", "1kg/2lbs"),
@@ -101,7 +142,29 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword: Hook", ":classification", "Sword", ":energy", "100J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword: Katana", ":classification", "Sword", ":energy", "100J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword: Katar", ":classification", "Sword", ":energy", "100J"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword: Long", ":image", "images/cards/item-sword-long.svg", ":classification", "Sword", ":summary", "* [Skill]: [Melee]+1\n* [Damage]: [Body]:+2 [Pierce] [Slash]\n* [Arc]: [Arc:Front] and [Arc:Left] OR [Arc:Right]\n* [Location]: [1-hand]\n* [Armor]: 1x1", ":body", "10x-1", ":mass", "1.25kg/3lb", ":energy", "100J"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Sword: Long",
+        ":image",
+        "images/cards/item-sword-long.svg",
+        ":classification",
+        "Sword",
+        ":body",
+        "10x-1",
+        ":mass",
+        "1.25kg/3lb",
+        ":energy",
+        "100J",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Weapon",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Damage:Body+2", "Pierce", "Slash", "1-Handed", "Melee Weapon", "Armor:1")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword: Ninjato", ":classification", "Sword", ":energy", "100J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword: No-Dachi", ":classification", "Sword", ":energy", "200J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword: Rapier", ":classification", "Sword", ":energy", "100J"),
@@ -113,6 +176,12 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Tooth"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Torch", ":image", "images/cards/item-torch.svg", ":summary", "* Provides poor light for 30 minutes.", ":body", "10x-1", ":mass", "1kg/2lbs"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Vampire Blood", ":summary", "* Black Token\n* Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].\n* [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.\n* [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.\n* [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.\n* [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Wall: Bramble"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Wall: Fire", ":image", "images/cards/item-wall-fire.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Wall: Force"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Wall: Hedge"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Wall: Metal"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Wall: Stone", ":image", "images/cards/item-wall-stone.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Water: Pond", ":image", "images/cards/item-water-pond.svg", ":summary", "* IF drank [Reveal Fate] THEN IF [Cups] THEN [Diseased]:+1", ":body", "2x0", ":mass", "2kg/4.4lbs"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Waterskin", ":image", "images/cards/item-waterskin.svg", ":summary", "* 2 liters/.5 gallon. Enough Water for 2 days.\n* Cost: [Copper Coins]. Can be refilled from any clean water source.", ":body", "2x0", ":mass", "2kg/4.4lbs"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Yams: Wild", ":classification", "Plant", ":image", "images/cards/item-yams-wild.svg", ":summary", "* Nutrition for a day.", ":body", "10x-1", ":mass", "1kg/2lbs")

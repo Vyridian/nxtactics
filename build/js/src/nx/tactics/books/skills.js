@@ -46,7 +46,7 @@ export default class nx_tactics_books_skills {
           ":name",
           "Academic Skills",
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Brilliance", "Computers", "Electronics", "Investigation", "Knowledge", "Mechanics", "Medicine", "Science: Life", "Science: Physical")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Computers", "Electronics", "Intellect", "Investigation", "Knowledge", "Mechanics", "Medicine", "Science: Life", "Science: Physical")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -54,43 +54,6 @@ export default class nx_tactics_books_skills {
           "Social Skills",
           ":skillmap",
           nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Art", "Business", "Communication", "Crime", "Deception", "Espionage", "Faith", "Influence", "Intimidation", "Law", "Leadership", "Performance", "Persuasion", "Science: Social", "Stealth")
-        )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function chapter_skills_overview
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_skills_overview = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_skills_overview = {
-    vx_type: nx_tactics_books_skills.t_chapter_skills_overview
-  }
-
-  // (func chapter_skills_overview)
-  static f_chapter_skills_overview(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Skills Overview",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Why Tactics: Skills?",
-          ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            "Extraordinary Skills",
-            vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Extraordinary Skills", ":reference", "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono, Hell's Paradise")
-          )
         )
       )
     )
@@ -120,7 +83,6 @@ export default class nx_tactics_books_skills {
       "Skill.jpg",
       ":chaptermap",
       nx_tactics_base.f_chaptermap_from_chapterlist(
-        nx_tactics_books_skills.f_chapter_skills_overview(tactics),
         nx_tactics_books_skills.f_chapter_skill_types(tactics)
       )
     )
@@ -135,12 +97,10 @@ export default class nx_tactics_books_skills {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "chapter_skill_types": nx_tactics_books_skills.e_chapter_skill_types,
-      "chapter_skills_overview": nx_tactics_books_skills.e_chapter_skills_overview,
       "tacticsbook": nx_tactics_books_skills.e_tacticsbook
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "chapter_skill_types": nx_tactics_books_skills.t_chapter_skill_types,
-      "chapter_skills_overview": nx_tactics_books_skills.t_chapter_skills_overview,
       "tacticsbook": nx_tactics_books_skills.t_tacticsbook
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -171,24 +131,6 @@ export default class nx_tactics_books_skills {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_skills.f_chapter_skill_types
-    }
-
-    // (func chapter_skills_overview)
-    nx_tactics_books_skills.t_chapter_skills_overview['vx_value'] = {
-      name          : "chapter_skills_overview",
-      pkgname       : "nx/tactics/books/skills",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_skills.f_chapter_skills_overview
     }
 
     // (func tacticsbook)

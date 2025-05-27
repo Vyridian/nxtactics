@@ -389,7 +389,7 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored"
+              :name "Armor"
               :summary
                "* The Conestogas skin consists of a laminated layer of insulators, alloy micro meteor shielding, composite armors, and aerogel layers. This provides only limited protection against Kinetic weapons (the best defense against those is high-mass armor, untenable on a starship), but it does provide excellent protection against directed energy weapons.
                 * Overlying all of this are layers of Radar Absorbent Material, and a dark grey paint, in order to keep both the ships radar and optical signature as low as possible. In addition to this the ship has a radar jamming system for ECM, and the computer systems are designed with double hardened systems to prevent either jamming or EMP from damaging the ships system or any systems of equipment inside the ship.")
@@ -619,7 +619,7 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Shielding
              (base/unitpower
               :name "Shielding")))
@@ -760,7 +760,7 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored"))
+              :name "Armor"))
           :unitskillmap
            (base/unitskillmap
             :Gunnery
@@ -875,7 +875,7 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored"))
+              :name "Armor"))
           :unitskillmap
            (base/unitskillmap
             :Gunnery
@@ -2028,7 +2028,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Shielding
              (base/unitpower
               :name "Shielding"))
@@ -2059,7 +2059,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Shielding
              (base/unitpower
               :name "Shielding"))
@@ -2130,7 +2130,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored"
+              :name "Armor"
               :summary "Solid Neutronium - Hyper Dense Neutron Star Material"))
           :unitskillmap
            (base/unitskillmap
@@ -2151,7 +2151,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Shielding
              (base/unitpower
               :name "Shielding")
@@ -2188,7 +2188,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Shielding
              (base/unitpower
               :name "Shielding")
@@ -2237,7 +2237,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Shielding
              (base/unitpower
               :name "Shielding"))
@@ -2594,7 +2594,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored"
+              :name "Armor"
               :level "26")
             :Shielding
              (base/unitpower
@@ -2648,7 +2648,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored"
+              :name "Armor"
               :level "29")
             :Shielding
              (base/unitpower
@@ -2698,7 +2698,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored"
+              :name "Armor"
               :level "30")
             :Shielding
              (base/unitpower
@@ -2764,7 +2764,7 @@ weapons load for a small ship.
            (base/unitskillmap
             :Firearms
              (base/unitskill
-              :name "Firearms"
+              :name "Firearm"
               :unititemmap
                (base/unititemmap
                 "Blaster Rifle"
@@ -2877,7 +2877,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Shielding
              (base/unitpower
               :name "Shielding"))
@@ -2921,7 +2921,7 @@ weapons load for a small ship.
            (base/unitpowermap
             :Armor
              (base/unitpower
-              :name "Armored")
+              :name "Armor")
             :Shielding
              (base/unitpower
               :name "Shielding"))
@@ -3021,7 +3021,7 @@ it for the money. - Han Solo, Star Wars"
            (base/unitskillmap
             :Firearms
              (base/unitskill
-              :name "Firearms"
+              :name "Firearm"
               :level "5"
               :unititemmap
                (base/unititemmap

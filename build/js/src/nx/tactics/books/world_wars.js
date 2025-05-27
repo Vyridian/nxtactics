@@ -672,7 +672,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "75mm", ":back", "30mm", ":over", "30mm", ":under", "30mm", ":side", "50mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "75mm", ":back", "30mm", ":over", "30mm", ":under", "30mm", ":side", "50mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -704,7 +704,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -746,7 +746,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -778,7 +778,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -812,7 +812,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "110mm", ":under", "25mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "110mm", ":under", "25mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -846,7 +846,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -880,7 +880,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -914,7 +914,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "25mm Sloped", ":over", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "25mm Sloped", ":over", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -948,7 +948,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "57mm", ":over", "0mm", ":under", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "57mm", ":over", "0mm", ":under", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -982,7 +982,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "25mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "25mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1016,7 +1016,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "108mm", ":over", "0mm", ":under", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "108mm", ":over", "0mm", ":under", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1050,7 +1050,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1080,7 +1080,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "20mm", ":back", "0mm", ":over", "0mm", ":under", "0mm", ":side", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "20mm", ":back", "0mm", ":over", "0mm", ":under", "0mm", ":side", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1110,7 +1110,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "20mm", ":back", "0mm", ":over", "0mm", ":under", "0mm", ":side", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "20mm", ":back", "0mm", ":over", "0mm", ":under", "0mm", ":side", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1174,7 +1174,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "3mm", ":back", "3mm", ":over", "0mm", ":under", "0mm", ":side", "3mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "3mm", ":back", "3mm", ":over", "0mm", ":under", "0mm", ":side", "3mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1222,7 +1222,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1266,7 +1266,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "12mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "12mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1300,7 +1300,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1336,7 +1336,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "5mm", ":over", "0mm", ":side", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "5mm", ":over", "0mm", ":side", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1370,7 +1370,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "5mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "5mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1402,7 +1402,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "5mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "5mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1444,7 +1444,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1476,7 +1476,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1514,7 +1514,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1550,7 +1550,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1588,7 +1588,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1620,7 +1620,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1656,7 +1656,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1688,7 +1688,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1724,7 +1724,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1764,7 +1764,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1802,7 +1802,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1840,7 +1840,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1878,7 +1878,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1922,7 +1922,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "100mm", ":over", "40mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "100mm", ":over", "40mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1958,7 +1958,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "125mm", ":back", "125mm", ":over", "55mm", ":under", "125mm", ":side", "125mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "125mm", ":back", "125mm", ":over", "55mm", ":under", "125mm", ":side", "125mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1990,7 +1990,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "55mm", ":back", "55mm", ":over", "32mm", ":under", "55mm", ":side", "85mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "55mm", ":back", "55mm", ":over", "32mm", ":under", "55mm", ":side", "85mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2026,7 +2026,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2064,7 +2064,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":under", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":under", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2092,7 +2092,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2442,7 +2442,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "152mm", ":under", "16mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "152mm", ":under", "16mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2474,7 +2474,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "152mm", ":under", "16mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "152mm", ":under", "16mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2506,7 +2506,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "102mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "102mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2540,7 +2540,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "76mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "76mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2574,7 +2574,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "78mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "78mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2606,7 +2606,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2640,7 +2640,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2674,7 +2674,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm", ":under", "8mm", ":side", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm", ":under", "8mm", ":side", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2708,7 +2708,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2742,7 +2742,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "60mm", ":over", "0mm", ":under", "14mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "60mm", ":over", "0mm", ":under", "14mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2776,7 +2776,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "57mm", ":under", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "57mm", ":under", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2828,7 +2828,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "15mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "15mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2892,7 +2892,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2926,7 +2926,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2958,7 +2958,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2992,7 +2992,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3026,7 +3026,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3060,7 +3060,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "3mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "3mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3375,7 +3375,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3407,7 +3407,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "57mm", ":over", "0mm", ":under", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "57mm", ":over", "0mm", ":under", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3449,7 +3449,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3885,7 +3885,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "70mm", ":back", "50mm", ":over", "10mm", ":under", "5mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "70mm", ":back", "50mm", ":over", "10mm", ":under", "5mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3921,7 +3921,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "70mm", ":back", "50mm", ":over", "10mm", ":under", "5mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "70mm", ":back", "50mm", ":over", "10mm", ":under", "5mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3955,7 +3955,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "80mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "80mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3987,7 +3987,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "80mm Sloped", ":back", "45mm", ":over", "30mm", ":under", "30mm", ":side", "50mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "80mm Sloped", ":back", "45mm", ":over", "30mm", ":under", "30mm", ":side", "50mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4021,7 +4021,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "100mm", ":back", "25mm", ":over", "40mm", ":under", "40mm", ":side", "80mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "100mm", ":back", "25mm", ":over", "40mm", ":under", "40mm", ":side", "80mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4055,7 +4055,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "150mm", ":back", "80mm", ":over", "40mm", ":under", "40mm", ":side", "80mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "150mm", ":back", "80mm", ":over", "40mm", ":under", "40mm", ":side", "80mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4089,7 +4089,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "35mm", ":back", "0mm", ":over", "0mm", ":side", "15mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "35mm", ":back", "0mm", ":over", "0mm", ":side", "15mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4123,7 +4123,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "80mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "80mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4155,7 +4155,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "60mm Sloped")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "60mm Sloped")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4189,7 +4189,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "80mm Sloped", ":back", "45mm", ":over", "30mm", ":side", "50mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "80mm Sloped", ":back", "45mm", ":over", "30mm", ":side", "50mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4217,7 +4217,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "200mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "200mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4245,7 +4245,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "30mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "30mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4283,7 +4283,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "100mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "100mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4323,7 +4323,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "150mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "150mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4359,7 +4359,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4395,7 +4395,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "15mm", ":back", "8mm", ":over", "6mm", ":under", "6mm", ":side", "12mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "15mm", ":back", "8mm", ":over", "6mm", ":under", "6mm", ":side", "12mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4521,7 +4521,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "15mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "15mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4635,7 +4635,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4673,7 +4673,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4709,7 +4709,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4747,7 +4747,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4785,7 +4785,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4823,7 +4823,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4861,7 +4861,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4907,7 +4907,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "320mm", ":back", "320mm", ":over", "120mm", ":side", "320mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "320mm", ":back", "320mm", ":over", "120mm", ":side", "320mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5072,7 +5072,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "40mm", ":under", "6mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "40mm", ":under", "6mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5108,7 +5108,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "42mm", ":over", "15mm", ":under", "6mm", ":side", "25mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "42mm", ":over", "15mm", ":under", "6mm", ":side", "25mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5144,7 +5144,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "30mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "30mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5182,7 +5182,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "50mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "50mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5230,7 +5230,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5268,7 +5268,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5304,7 +5304,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "3mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "3mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5621,7 +5621,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5653,7 +5653,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "33mm", ":side", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "33mm", ":side", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5698,7 +5698,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5736,7 +5736,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "4mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "4mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5774,7 +5774,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5812,7 +5812,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5880,7 +5880,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "4mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "4mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5927,7 +5927,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "152mm", ":back", "152mm", ":over", "152mm", ":under", "152mm", ":side", "152mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "152mm", ":back", "152mm", ":over", "152mm", ":under", "152mm", ":side", "152mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5963,7 +5963,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "45mm", ":back", "45mm", ":over", "25mm", ":under", "45mm", ":side", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "45mm", ":back", "45mm", ":over", "25mm", ":under", "45mm", ":side", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5999,7 +5999,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":under", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":under", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6033,7 +6033,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "60mm", ":over", "20mm", ":under", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "60mm", ":over", "20mm", ":under", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6067,7 +6067,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "100mm", ":over", "35mm", ":under", "100mm", ":side", "100mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "100mm", ":over", "35mm", ":under", "100mm", ":side", "100mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6103,7 +6103,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "650mm", ":over", "200mm", ":side", "410mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "650mm", ":over", "200mm", ":side", "410mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6137,7 +6137,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6175,7 +6175,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6209,7 +6209,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6975,7 +6975,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "60mm Sloped", ":back", "45mm", ":over", "20mm", ":under", "20mm", ":side", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "60mm Sloped", ":back", "45mm", ":over", "20mm", ":under", "20mm", ":side", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7007,7 +7007,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "90mm Sloped", ":under", "20mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "90mm Sloped", ":under", "20mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7039,7 +7039,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "90mm Sloped", ":under", "20mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "90mm Sloped", ":under", "20mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7071,7 +7071,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "130mm", ":under", "20mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "130mm", ":under", "20mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7103,7 +7103,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "110mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "110mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7137,7 +7137,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "160mm Sloped", ":under", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "160mm Sloped", ":under", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7169,7 +7169,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "35mm", ":side", "16mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "35mm", ":side", "16mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7201,7 +7201,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7233,7 +7233,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "75mm", ":over", "20mm", ":side", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "75mm", ":over", "20mm", ":side", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7267,7 +7267,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7347,7 +7347,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7416,7 +7416,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7452,7 +7452,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7488,7 +7488,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(

@@ -251,7 +251,7 @@
           (base/unitskill<-tactics-key-lvl-abilities-items
            tactics "Performance" 9
            (stringlist
-            "Inspiration")
+            "Inspire")
            (stringlist
             "Lute"))))
        (base/unit

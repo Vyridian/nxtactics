@@ -134,7 +134,7 @@ export default class nx_tactics_books_high_technology {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
                 ":Firearms",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Firearms", ":summary", "Pistol", ":level", "4")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Firearm", ":summary", "Pistol", ":level", "4")
               )
             ),
             "Medical Technician",
@@ -966,7 +966,7 @@ export default class nx_tactics_books_high_technology {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Armor")
               )
             ),
             "UEA Mobile Infantry",
@@ -982,7 +982,7 @@ export default class nx_tactics_books_high_technology {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Armor")
               )
             ),
             "UEA Mobile Assault Infantry",
@@ -998,7 +998,7 @@ export default class nx_tactics_books_high_technology {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Armored")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Armor")
               )
             ),
             "UEA Pilot",
@@ -1405,7 +1405,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -1431,7 +1431,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -1459,7 +1459,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -1569,7 +1569,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -1605,7 +1605,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -1759,7 +1759,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -1975,7 +1975,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2009,7 +2009,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2043,7 +2043,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2077,7 +2077,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2111,7 +2111,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2185,7 +2185,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2217,7 +2217,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2249,7 +2249,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2283,7 +2283,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2317,7 +2317,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2351,7 +2351,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2477,7 +2477,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2511,7 +2511,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2595,7 +2595,7 @@ export default class nx_tactics_books_high_technology {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armored",
+                  "Armor",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},

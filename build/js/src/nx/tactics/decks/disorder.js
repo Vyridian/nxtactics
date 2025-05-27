@@ -746,6 +746,8 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_5d,
       ":image",
       "images/card-disorder-delusion.svg",
+      ":reference",
+      "* What's love got to do, got to do with it? what's love but a second-hand emotion. What's love got to do, got to do with? Who needs a heart when a heart can be browen? - Tina Turner, What's Love Got to do with it?",
       ":summary",
       "Minor: Belief that everyone desires you.\nMajor: Belief that they have a true romantic relationship with an inappropriate person. Critical: Overwhelming visions of elaborate and extreme sexual encounters.\nExtreme: Bliss. Overwhelmed by intense sexual fantasies. Comatose."
     ))
