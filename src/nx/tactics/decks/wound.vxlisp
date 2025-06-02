@@ -2,40 +2,16 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Tactics Wound Decks")
 
-(const bleeding : base/cardback
- (base/cardback
-  :id "bleeding"
-  :name "Bleeding"
-  :image "images/card-bleeding.svg"
-  :summary
-   "* Turn End: [Fatigue]:1 for each [Bleeding]. IF [Body]:0 THEN [Blood Loss]:1 instead."))
-
-(const bloodloss : base/card
- (base/card
-  :id "bloodloss"
-  :name "Blood Loss"
-  :image "images/card-bloodloss.svg"
-  :summary
-   "* Day End: Discard one [Blood Loss]"))
-
-(const poisoned : base/card
- (base/card
-  :id "poisoned"
-  :name "Poisoned"
-  :image "images/card-poisoned.svg")
-)
-
 (const fatigue : base/cardback
  (base/cardback
   :id "fatigue"
-  :name "Damage: Fatigue"
+  :name "Wound: Fatigue"
   :titles "Physical Damage/Fatigue/Weaken/Exertion"
   :image "images/card-wound-fatigue.svg"
   :summary
-   "* Fatigue: temporary weaknesss or exertion.
-    * Wound: lasting damage and can be [Bash], [Hack], [Pierce], [Slash].
-    * IF [Body]:0 THEN [Exhausted].
-    * [Exhausted]: [Disadvantage]. Must [Recover] once each [Round]. Extra [Fatigue] are Wounds instead."))
+   "Temporary weaknesss or exertion
+    * IF [Body]:0 THEN [Exhausted]
+    * [Exhausted]: [Disadvantage]. Extra [Fatigue] is flipped to Wound"))
 
 (const wound-wild-black : base/damage
  (base/damage
@@ -679,88 +655,79 @@
     Critical: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1
     Extreme: Foot Severed. Hobbled. Bleeding:2"))
 
-(func deck-bleeding : base/deck
- (base/deck
-  :name "Bleeding"
-  :cardmap
-   (base/cardmap-copy<-card-count-isnum
-    bleeding 10 true))
- :doc "Bleeding Deck")
-
-(func deck-bloodloss : base/deck
- (base/deck
-  :name "Bloodloss"
-  :cardmap
-   (base/cardmap-copy<-card-count-isnum
-    bloodloss 10 true))
- :doc "Bloodloss Deck")
-
 (func deck-wound : base/deck
  (base/deck
   :name "Wounds"
+  :image "images/card-wound-deck.svg"
+  :layout base/cardlayout-imageonly
   :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist
-     wound-wild-black
-     wound-wild-red
-     wound-ac
-     wound-ad
-     wound-ah
-     wound-as
-     wound-kc
-     wound-kd
-     wound-kh
-     wound-ks
-     wound-qc
-     wound-qd
-     wound-qh
-     wound-qs
-     wound-jc
-     wound-jd
-     wound-jh
-     wound-js
-     wound-tc
-     wound-td
-     wound-th
-     wound-ts
-     wound-9c
-     wound-9d
-     wound-9h
-     wound-9s
-     wound-8c
-     wound-8d
-     wound-8h
-     wound-8s
-     wound-7c
-     wound-7d
-     wound-7h
-     wound-7s
-     wound-6c
-     wound-6d
-     wound-6h
-     wound-6s
-     wound-5c
-     wound-5d
-     wound-5h
-     wound-5s
-     wound-4c
-     wound-4d
-     wound-4h
-     wound-4s
-     wound-3c
-     wound-3d
-     wound-3h
-     wound-3s
-     wound-2c
-     wound-2d
-     wound-2h
-     wound-2s)))
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      wound-wild-black
+      wound-wild-red
+      wound-ac
+      wound-ad
+      wound-ah
+      wound-as
+      wound-kc
+      wound-kd
+      wound-kh
+      wound-ks
+      wound-qc
+      wound-qd
+      wound-qh
+      wound-qs
+      wound-jc
+      wound-jd
+      wound-jh
+      wound-js
+      wound-tc
+      wound-td
+      wound-th
+      wound-ts
+      wound-9c
+      wound-9d
+      wound-9h
+      wound-9s
+      wound-8c
+      wound-8d
+      wound-8h
+      wound-8s
+      wound-7c
+      wound-7d
+      wound-7h
+      wound-7s
+      wound-6c
+      wound-6d
+      wound-6h
+      wound-6s
+      wound-5c
+      wound-5d
+      wound-5h
+      wound-5s
+      wound-4c
+      wound-4d
+      wound-4h
+      wound-4s
+      wound-3c
+      wound-3d
+      wound-3h
+      wound-3s
+      wound-2c
+      wound-2d
+      wound-2h
+      wound-2s))
+   (base/cardmap-copy<-card-count-isnum
+    fatigue 54 false)))
  :doc "Wound Deck")
 
 (func deck-woundback : base/deck
  (base/deck
   :name "Wound Back"
+  :image "images/card-wound-fatigue.svg"
+  :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap-copy<-card-count-isnum
-    fatigue 54 true))
+    fatigue 54 false))
  :doc "Wound Back Deck")

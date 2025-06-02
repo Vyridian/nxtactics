@@ -482,6 +482,7 @@
    :classification "Sword"
    :body "10x-1"
    :mass "1.25kg/3lb"
+   :length ".1m/4ft"
    :energy "100J"
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
@@ -492,8 +493,9 @@
        "Pierce"
        "Slash"
        "1-Handed"
-       "Melee Weapon"
-       "Armor:1"))))
+       "Melee Weapon"))
+     (base/unitpower<-tactics-key-lvl
+      tactics "Armor" 1)))
   (base/item
    :name "Sword: Ninjato"
    :classification "Sword"

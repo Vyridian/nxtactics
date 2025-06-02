@@ -2144,7 +2144,17 @@ export default class nx_tactics_ui_uitactics {
           name
         )
         const uid = vx_core.f_new({"any-1": vx_core.t_string}, parent, "/", id1)
-        const display = nx_tactics_ui_uitactics.f_string_display_from_any(card)
+        const display = vx_core.f_switch(
+          {"any-1": vx_core.t_string, "any-2": nx_tactics_base.t_cardlayout},
+          layout,
+          vx_core.f_case_1(
+            nx_tactics_base.c_cardlayout_imageonly,
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return ""})
+          ),
+          vx_core.f_else(
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_uitactics.f_string_display_from_any(card)})
+          )
+        )
         const displaysplit = vx_core.f_if_2(
           {"any-1": vx_core.t_stringlist},
           vx_core.f_then(

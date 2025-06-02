@@ -1,0 +1,40 @@
+(package nx/tactics/decks/resource
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Resource Deck")
+
+(const bleeding : base/cardback
+ (base/cardback
+  :id "bleeding"
+  :name "Bleeding"
+  :image "images/card-bleeding.svg"
+  :summary
+   "* Turn End: [Fatigue]:1 for each [Bleeding]. IF [Body]:0 THEN [Blood Loss]:1 instead."))
+
+(const bloodloss : base/card
+ (base/card
+  :id "bloodloss"
+  :name "Blood Loss"
+  :image "images/card-bloodloss.svg"
+  :summary
+   "* Day End: Discard one [Blood Loss]"))
+
+(const poisoned : base/card
+ (base/card
+  :id "poisoned"
+  :name "Poisoned"
+  :image "images/card-poisoned.svg")
+)
+
+(func deck-resource : base/deck
+ (base/deck
+  :name "Resources"
+  :cardmap
+   (base/cardmap
+    (base/cardmap-copy<-card-count-isnum
+     bleeding 10 true)
+    (base/cardmap-copy<-card-count-isnum
+     bloodloss 10 true)
+    (base/cardmap-copy<-card-count-isnum
+     poisoned 10 true)
+    ))
+ :doc "Resource Deck")

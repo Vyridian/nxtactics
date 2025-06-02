@@ -1,6 +1,6 @@
 (package nx/tactics/decks/disorder
  :libs (lib base :path nx/tactics/base)
- :doc  "Tactics Disorder Decks")
+ :doc  "Disorder Decks")
 
 (const stun : base/cardback
  (base/cardback
@@ -9,10 +9,9 @@
   :titles "Mental Damage/Strain/Distraction/Surprise/Shock"
   :image "images/card-disorder-stun.svg"
   :summary
-   "* Stun: temporary distraction or suprise
-    * Disorder: lasting [Loss], [Delusion], [Compulsion], [Neural].
-    * If [Mind]:0 gain [Confused].
-    * [Confused]: Cannot play odd [Focus] cards. Second action may only be [Recover]. Additional [Stun] is flipped to Disorder."))
+   "Temporary Distraction or suprise
+    * If [Mind]:0 become [Confused]
+    * [Confused]: Cannot play odd [Strong] cards. Extra [Stun] is flipped to Disorder"))
 
 (const disorder-wild-black : base/damage
  (base/damage
@@ -50,7 +49,7 @@
    "Minor: You hear the dead. Stun:1
     Major: You see the dead. Some are scary. Some are nice. Stun:2
     Critical: Dedicate yourself to the dead. Stun:4
-    Extreme: Cannot sense the living world. Catatonic. Stun:4"))
+    Extreme: Cannot sense the living world. Incoherent. Catatonic. Stun:4"))
 
 (const disorder-ah : base/damage
  (base/damage
@@ -65,7 +64,7 @@
 
 (const disorder-as : base/damage
  (base/damage
-  :name "Neural: Head"
+  :name "Nervous: Head"
   :ranksuit base/ranksuit-as
   :image "images/card-disorder-head.svg"
   :summary
@@ -109,7 +108,7 @@
 
 (const disorder-ks : base/damage
  (base/damage
-  :name "Neural: Shoulders"
+  :name "Nervous: Shoulders"
   :ranksuit base/ranksuit-ks
   :image "images/card-disorder-shoulders.svg"
   :summary
@@ -153,7 +152,7 @@
 
 (const disorder-qs : base/damage
  (base/damage
-  :name "Neural: Chest"
+  :name "Nervous: Chest"
   :ranksuit base/ranksuit-qs
   :image "images/card-disorder-chest.svg"
   :summary
@@ -197,7 +196,7 @@
 
 (const disorder-js : base/damage
  (base/damage
-  :name "Neural: Abdomen"
+  :name "Nervous: Abdomen"
   :ranksuit base/ranksuit-js
   :image "images/card-disorder-abdomen.svg"
   :summary
@@ -241,7 +240,7 @@
 
 (const disorder-ts : base/damage
  (base/damage
-  :name "Neural: Vitals"
+  :name "Nervous: Vitals"
   :ranksuit base/ranksuit-ts
   :image "images/card-disorder-vitals.svg"
   :summary
@@ -284,7 +283,7 @@
 
 (const disorder-9s : base/damage
  (base/damage
-  :name "Neural: Left Arm"
+  :name "Nervous: Left Arm"
   :ranksuit base/ranksuit-9s
   :image "images/card-disorder-arm-left.svg"
   :summary
@@ -328,7 +327,7 @@
 
 (const disorder-8s : base/damage
  (base/damage
-  :name "Neural: Right Arm"
+  :name "Nervous: Right Arm"
   :ranksuit base/ranksuit-8s
   :image "images/card-disorder-arm-right.svg"
   :summary
@@ -372,7 +371,7 @@
 
 (const disorder-7s : base/damage
  (base/damage
-  :name "Neural: Left Hand"
+  :name "Nervous: Left Hand"
   :ranksuit base/ranksuit-7s
   :image "images/card-disorder-hand-left.svg"
   :summary
@@ -416,7 +415,7 @@
 
 (const disorder-6s : base/damage
  (base/damage
-  :name "Neural: Right Hand"
+  :name "Nervous: Right Hand"
   :ranksuit base/ranksuit-6s
   :image "images/card-disorder-hand-left.svg"
   :summary
@@ -461,7 +460,7 @@
 
 (const disorder-5s : base/damage
  (base/damage
-  :name "Neural: Left Leg"
+  :name "Nervous: Left Leg"
   :ranksuit base/ranksuit-5s
   :image "images/card-disorder-leg-left.svg"
   :summary
@@ -505,7 +504,7 @@
 
 (const disorder-4s : base/damage
  (base/damage
-  :name "Neural: Right Leg"
+  :name "Nervous: Right Leg"
   :ranksuit base/ranksuit-4s
   :image "images/card-disorder-leg-right.svg"
   :summary
@@ -549,7 +548,7 @@
 
 (const disorder-3s : base/damage
  (base/damage
-  :name "Neural: Left Foot"
+  :name "Nervous: Left Foot"
   :ranksuit base/ranksuit-3s
   :image "images/card-disorder-foot-left.svg"
   :summary
@@ -560,7 +559,7 @@
 
 (const disorder-3s : base/damage
  (base/damage
-  :name "Neural: Left Foot"
+  :name "Nervous: Left Foot"
   :ranksuit base/ranksuit-3s
   :image "images/card-disorder-foot-left.svg"
   :summary
@@ -604,7 +603,7 @@
 
 (const disorder-2s : base/damage
  (base/damage
-  :name "Neural: Right Foot"
+  :name "Nervous: Right Foot"
   :ranksuit base/ranksuit-2s
   :image "images/card-disorder-foot-right.svg"
   :summary
@@ -617,74 +616,71 @@
  (base/deck
   :name "Disorder"
   :titles "Crazed, Insane, Nonsensical, Obsessed, Unhinged"
+  :image "images/card-disorder-deck.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "* C-Loss/Disfunction/Misunderstand/Miscommunicate/Amnesia/Aphasia
+   "* C-Loss/Dysfunction/Misunderstand/Miscommunicate/Amnesia/Aphasia
     * D-Delusion/Racism/Irrational/Lost in Fantasy/Lost in Nightmare/Lost in Hell/Distortion/Misperception
     * H-Compulsion/Obsession/Monomaniacal
-    * S-Neural/Shock/Disable/Tremors/Spasms/Seizures/Stroke/Nerve Damage/Paralysis/Brain"
+    * S-Nervous/Shock/Disable/Tremors/Spasms/Seizures/Stroke/Nerve Damage/Paralysis/Brain"
   :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist
-     disorder-wild-black
-     disorder-wild-red
-     disorder-ac
-     disorder-ad
-     disorder-ah
-     disorder-as
-     disorder-kc
-     disorder-kd
-     disorder-kh
-     disorder-ks
-     disorder-qc
-     disorder-qd
-     disorder-qh
-     disorder-qs
-     disorder-jc
-     disorder-jd
-     disorder-jh
-     disorder-js
-     disorder-tc
-     disorder-td
-     disorder-th
-     disorder-ts
-     disorder-9c
-     disorder-9d
-     disorder-9h
-     disorder-9s
-     disorder-8c
-     disorder-8d
-     disorder-8h
-     disorder-8s
-     disorder-7c
-     disorder-7d
-     disorder-7h
-     disorder-7s
-     disorder-6c
-     disorder-6d
-     disorder-6h
-     disorder-6s
-     disorder-5c
-     disorder-5d
-     disorder-5h
-     disorder-5s
-     disorder-4c
-     disorder-4d
-     disorder-4h
-     disorder-4s
-     disorder-3c
-     disorder-3d
-     disorder-3h
-     disorder-3s
-     disorder-2c
-     disorder-2d
-     disorder-2h
-     disorder-2s)))
- :doc "Damage to the Mind")
-
-(func deck-disorderback : base/deck
- (base/deck
-  :name "Disorder Back"
-  :cardmap
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      disorder-wild-black
+      disorder-wild-red
+      disorder-ac
+      disorder-ad
+      disorder-ah
+      disorder-as
+      disorder-kc
+      disorder-kd
+      disorder-kh
+      disorder-ks
+      disorder-qc
+      disorder-qd
+      disorder-qh
+      disorder-qs
+      disorder-jc
+      disorder-jd
+      disorder-jh
+      disorder-js
+      disorder-tc
+      disorder-td
+      disorder-th
+      disorder-ts
+      disorder-9c
+      disorder-9d
+      disorder-9h
+      disorder-9s
+      disorder-8c
+      disorder-8d
+      disorder-8h
+      disorder-8s
+      disorder-7c
+      disorder-7d
+      disorder-7h
+      disorder-7s
+      disorder-6c
+      disorder-6d
+      disorder-6h
+      disorder-6s
+      disorder-5c
+      disorder-5d
+      disorder-5h
+      disorder-5s
+      disorder-4c
+      disorder-4d
+      disorder-4h
+      disorder-4s
+      disorder-3c
+      disorder-3d
+      disorder-3h
+      disorder-3s
+      disorder-2c
+      disorder-2d
+      disorder-2h
+      disorder-2s))
    (base/cardmap-copy<-card-count-isnum
-    stun 54 false))
- :doc "Disorder Back Deck")
+    stun 54 false)))
+ :doc "Damage to the Mind")

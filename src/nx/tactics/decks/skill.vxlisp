@@ -861,6 +861,10 @@ x +1DMG vs. Crouching."
   (base/skill
    :name "Defense"
    :titles "Armorer, Defender, Shield Bearer, Shield Warden, Warder"
+   :summary
+    "Skill emphasizing Block, Shields, Medium, and Heavy Armor.
+     * Armor requires a minimum Defense Level
+     * [Success]: IF you played a [Common] [Block] and your Modified Rank is less than 2 THEN [Fatigue]:-1 for each Rank below 2."
    :stat "Body"
    :abilitymap
     (base/abilitymap
@@ -880,51 +884,60 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "High Block"
        :summary
-        "-1 Speed
+        "* [Skill]: [Defense]
+         -1 Speed
          +4 Defense vs. [High Attack]
          +1 Defense vs. other attacks")
      "Low Block"
       (base/ability
        :name "Low Block"
        :summary
-        "-1 Speed
+        "* [Skill]: [Defense]
+         -1 Speed
          +4 Defense vs. [Low Attack]
          +1 Defense vs. other attacks")
-     "Powered Armor"
-      (base/ability
-       :name "Powered Armor")
      "Shield Bash"
       (base/ability
-       :name "Shield Bash")
+       :name "Shield Bash"
+       :summary
+        "* [Skill]: [Defense]
+         * [Resolution] [Block]: Rival gets [Stun]:+1")
      "Shield Block"
       (base/ability
        :name "Shield Block"
        :summary
         "* [Skill]: [Defense]
-         * [Block] [Damage]: Add Shield [Armor] to your [Armor].")
+         * [Resolution] [Block]: Spend an [Action] to add Shield [Armor] to your [Armor].")
      "Shield Charge"
       (base/ability
-       :name "Shield Charge")
+       :name "Shield Charge"
+       :summary
+        "* [Skill]: [Defense]")
      "Shield Guard"
       (base/ability
        :name "Shield Guard"
        :summary
-        "* [Reaction] [Damage]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor].")
+        "* [Skill]: [Defense]
+         * [Reaction] [Resolution]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor].")
      "Shield Sacrifice"
       (base/ability
        :name "Shield Sacrifice"
        :summary
-        "* [Club] [Defend] [Damage]: The shield becomes the target of any [Overrun] damage."))
+       :summary
+        "* [Skill]: [Defense]
+         * [Resolution] [Block] [Wand]: The shield becomes the target of any [Overrun] damage."))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
      "Medium Armor"
      "Heavy Armor"
+     "Powered Armor"
      "Shields"))
   (base/skill
    :name "Evasion"
    :summary
-    "* Evasion is a special defense typically used by those that choose to wear light or no Armor."
+    "* Evasion is a special defense typically used by those that choose to wear light or no Armor.
+     * [Success]: IF you played a [Common] [Evade] and your Modified Rank is less than 2 THEN [Move]:+1 for each Rank below 2."
    :stat "Speed"
    :abilitymap
     (base/abilitymap<-tactics-keys

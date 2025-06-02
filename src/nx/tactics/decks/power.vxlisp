@@ -1633,7 +1633,7 @@
      "Banish Weeds"
       (base/ability
        :name "Banish Weeds")
-     :Barkskin
+     "Barkskin"
       (base/ability
        :name "Barkskin")
      "Binding Vines"
@@ -6719,7 +6719,6 @@
      "2-Handed"
      "Arc:1-Side"
      "Arc:Front"
-     "Armor:1"
      "Autofire"
      "Bash"
      "Burstfire"

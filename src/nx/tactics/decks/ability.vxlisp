@@ -110,11 +110,6 @@
     "* Covers the Right [Arc]
      * [Power]: [Weapon] or [Armor]")
   (base/ability
-   :name "Armor:1"
-   :summary
-    "* [Block]: Counts as Armor:1 when Blocking
-     * [Power]: [Weapon]")
-  (base/ability
    :name "Archeology"
    :summary
     "* The study and reclamation of ancient relics and remains.

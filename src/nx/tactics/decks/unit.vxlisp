@@ -1106,6 +1106,11 @@
      * Blinding Flash - Intense light burst similar to a flash bomb.
      * Blinding Torrent - A dizzying kaleidoscope of intense light that causes vertigo and nausea.")
   (base/unit
+   :name "Sphinx"
+   :image "images/cards/unit-sphinx.svg"
+   :summary
+    "* Highly intelligent")
+  (base/unit
    :name "Strix"
    :titles "Stirges (plural), Vampire Owls"
    :summary

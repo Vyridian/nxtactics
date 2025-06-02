@@ -50,7 +50,6 @@ export default class nx_tactics_decks_ability {
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Arc:Front", ":summary", "* Covers the Front [Arc]\n* [Power]: [Weapon] or [Armor]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Arc:Left", ":summary", "* Covers the Left [Arc]\n* [Power]: [Weapon] or [Armor]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Arc:Right", ":summary", "* Covers the Right [Arc]\n* [Power]: [Weapon] or [Armor]"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Armor:1", ":summary", "* [Block]: Counts as Armor:1 when Blocking\n* [Power]: [Weapon]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Archeology", ":summary", "* The study and reclamation of ancient relics and remains.\n* [Skill]: [Knowledge]", ":titles", "Archeologist, Paleontology, Paleontologist"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Architecture", ":summary", "* [Downtime]: Design a structure. The size and quality of the structure are limited by level.\n* [Skill]: [Tradeskill]\n* [Action]: Determine weaknesses of a structure.", ":titles", "Architect"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Arcing Fire", ":summary", "* May fire over other units that block Line of Sight.\n* [Skill]: [Ranged]\n* [Requires]: Bow or Javelin"),

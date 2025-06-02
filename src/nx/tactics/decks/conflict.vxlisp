@@ -342,75 +342,70 @@
   :layout base/cardlayout-imageonly))
 
 (func deck-conflict : base/deck
- (base/deck
-  :name "Conflict Deck"
-  :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist
-     conflict-wildblack
-     conflict-wildred
-     conflict-ac
-     conflict-ad
-     conflict-ah
-     conflict-as
-     conflict-kc
-     conflict-kd
-     conflict-kh
-     conflict-ks
-     conflict-qc
-     conflict-qd
-     conflict-qh
-     conflict-qs
-     conflict-jc
-     conflict-jd
-     conflict-jh
-     conflict-js
-     conflict-tc
-     conflict-td
-     conflict-th
-     conflict-ts
-     conflict-9c
-     conflict-9d
-     conflict-9h
-     conflict-9s
-     conflict-8c
-     conflict-8d
-     conflict-8h
-     conflict-8s
-     conflict-7c
-     conflict-7d
-     conflict-7h
-     conflict-7s
-     conflict-6c
-     conflict-6d
-     conflict-6h
-     conflict-6s
-     conflict-5c
-     conflict-5d
-     conflict-5h
-     conflict-5s
-     conflict-4c
-     conflict-4d
-     conflict-4h
-     conflict-4s
-     conflict-3c
-     conflict-3d
-     conflict-3h
-     conflict-3s
-     conflict-2c
-     conflict-2d
-     conflict-2h
-     conflict-2s
-     )))
- :doc "Conflict Deck")
-
-(func deck-conflict-back : base/deck
  (let : base/deck
   [card : base/card := (card-conflict-back)]
   (base/deck
-   :id "deck-conflict-back"
-   :name "Conflict Back Deck"
+   :name "Conflict Deck"
+   :image "images/card-conflict-back.svg"
+   :layout base/cardlayout-imageonly
    :cardmap
-    (base/cardmap-copy<-card-count-isnum
-     card 54 false)))
- :doc "Conflict Back Deck")
+    (base/cardmap
+     (base/cardmap<-cardlist
+      (base/cardlist
+       conflict-wildblack
+       conflict-wildred
+       conflict-ac
+       conflict-ad
+       conflict-ah
+       conflict-as
+       conflict-kc
+       conflict-kd
+       conflict-kh
+       conflict-ks
+       conflict-qc
+       conflict-qd
+       conflict-qh
+       conflict-qs
+       conflict-jc
+       conflict-jd
+       conflict-jh
+       conflict-js
+       conflict-tc
+       conflict-td
+       conflict-th
+       conflict-ts
+       conflict-9c
+       conflict-9d
+       conflict-9h
+       conflict-9s
+       conflict-8c
+       conflict-8d
+       conflict-8h
+       conflict-8s
+       conflict-7c
+       conflict-7d
+       conflict-7h
+       conflict-7s
+       conflict-6c
+       conflict-6d
+       conflict-6h
+       conflict-6s
+       conflict-5c
+       conflict-5d
+       conflict-5h
+       conflict-5s
+       conflict-4c
+       conflict-4d
+       conflict-4h
+       conflict-4s
+       conflict-3c
+       conflict-3d
+       conflict-3h
+       conflict-3s
+       conflict-2c
+       conflict-2d
+       conflict-2h
+       conflict-2s))
+     (base/cardmap-copy<-card-count-isnum
+      card 54 false))))
+ :doc "Conflict Deck")

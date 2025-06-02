@@ -154,6 +154,8 @@ export default class nx_tactics_decks_item {
         "10x-1",
         ":mass",
         "1.25kg/3lb",
+        ":length",
+        ".1m/4ft",
         ":energy",
         "100J",
         ":unitpowermap",
@@ -161,8 +163,9 @@ export default class nx_tactics_decks_item {
           nx_tactics_base.f_unitpower_from_tactics_key_abilities(
             tactics,
             "Weapon",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Damage:Body+2", "Pierce", "Slash", "1-Handed", "Melee Weapon", "Armor:1")
-          )
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Damage:Body+2", "Pierce", "Slash", "1-Handed", "Melee Weapon")
+          ),
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Armor", 1)
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword: Ninjato", ":classification", "Sword", ":energy", "100J"),

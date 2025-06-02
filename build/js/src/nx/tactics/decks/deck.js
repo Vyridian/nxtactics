@@ -2,16 +2,16 @@
 
 import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
+import nx_tactics_decks_burden from "../../../nx/tactics/decks/burden.js"
 import nx_tactics_decks_conflict from "../../../nx/tactics/decks/conflict.js"
 import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
-import nx_tactics_decks_restraint from "../../../nx/tactics/decks/restraint.js"
 import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
 import nx_tactics_decks_scene_murintrail from "../../../nx/tactics/decks/scene-murintrail.js"
 import nx_tactics_decks_scene_nightonthetown from "../../../nx/tactics/decks/scene-nightonthetown.js"
 import nx_tactics_decks_scene_ontherun from "../../../nx/tactics/decks/scene-ontherun.js"
+import nx_tactics_decks_resource from "../../../nx/tactics/decks/resource.js"
 import nx_tactics_decks_starter from "../../../nx/tactics/decks/starter.js"
-import nx_tactics_decks_tarot from "../../../nx/tactics/decks/tarot.js"
 import nx_tactics_decks_trauma from "../../../nx/tactics/decks/trauma.js"
 import nx_tactics_decks_wound from "../../../nx/tactics/decks/wound.js"
 
@@ -106,23 +106,16 @@ export default class nx_tactics_decks_deck {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_conflict.f_deck_conflict(),
-          nx_tactics_decks_conflict.f_deck_conflict_back(),
-          nx_tactics_decks_wound.f_deck_wound(),
-          nx_tactics_decks_wound.f_deck_woundback(),
-          nx_tactics_decks_disorder.f_deck_disorder(),
-          nx_tactics_decks_disorder.f_deck_disorderback(),
-          nx_tactics_decks_trauma.f_deck_trauma(),
-          nx_tactics_decks_trauma.f_deck_traumaback(),
-          nx_tactics_decks_restraint.f_deck_restraint(),
-          nx_tactics_decks_restraint.f_deck_restraintback(),
-          nx_tactics_decks_wound.f_deck_bleeding(),
-          nx_tactics_decks_wound.f_deck_bloodloss(),
           nx_tactics_decks_starter.f_deck_player(tactics, "blue"),
           nx_tactics_decks_starter.f_deck_player(tactics, "green"),
           nx_tactics_decks_starter.f_deck_player(tactics, "red"),
           nx_tactics_decks_starter.f_deck_player(tactics, "yellow"),
-          nx_tactics_decks_tarot.f_deck_tarot()
+          nx_tactics_decks_conflict.f_deck_conflict(),
+          nx_tactics_decks_wound.f_deck_wound(),
+          nx_tactics_decks_disorder.f_deck_disorder(),
+          nx_tactics_decks_trauma.f_deck_trauma(),
+          nx_tactics_decks_burden.f_deck_burden(),
+          nx_tactics_decks_resource.f_deck_resource()
         )
       )
     )

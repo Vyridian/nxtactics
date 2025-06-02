@@ -67,15 +67,15 @@
       :name "Fantastic Amphibians"
       :unitmap
        (base/unitmap
-        "Frog, Giant"
+        "Frog: Giant"
          (base/unit
-          :name "Frog, Giant")
-        "Toad, Giant"
+          :name "Frog: Giant")
+        "Toad: Giant"
          (base/unit
-          :name "Toad, Giant")
-        "Toad, Giant Poisonous"
+          :name "Toad: Giant")
+        "Toad: Giant Poisonous"
          (base/unit
-          :name "Toad, Giant Poisonous"))))))
+          :name "Toad: Giant Poisonous"))))))
 
 (func chapter_arthropods : base/chapter
  [tactics : base/tactics]
@@ -165,51 +165,51 @@
       :name "Fantastic Arthropods"
       :unitmap
        (base/unitmap
-        "Ant, Giant"
+        "Ant: Giant"
          (base/unit
-          :name "Ant, Giant")
+          :name "Ant: Giant")
         "Ant, Huge"
          (base/unit
           :name "Ant, Huge")
         "Ant, Huge Fire"
          (base/unit
           :name "Ant, Huge Fire")
-        "Ant Lion, Giant"
+        "Ant Lion: Giant"
          (base/unit
-          :name "Ant Lion, Giant")
+          :name "Ant Lion: Giant")
         "Ant Lion, Huge"
          (base/unit
           :name "Ant Lion, Huge")
-        "Beetle, Giant"
+        "Beetle: Giant"
          (base/unit
-          :name "Beetle, Giant")
-        "Beetle, Giant Pincher"
+          :name "Beetle: Giant")
+        "Beetle: Giant Pincher"
          (base/unit
-          :name "Beetle, Giant Pincher")
-        "Beetle, Giant Rinoceros"
+          :name "Beetle: Giant Pincher")
+        "Beetle: Giant Rinoceros"
          (base/unit
-          :name "Beetle, Giant Rinoceros")
+          :name "Beetle: Giant Rinoceros")
         "Beetle, Hugh"
          (base/unit
           :name "Beetle, Hugh")
         "Beetle, Hugh Fire"
          (base/unit
           :name "Beetle, Hugh Fire")
-        "Caterpillar, Giant"
+        "Caterpillar: Giant"
          (base/unit
-          :name "Caterpillar, Giant")
-        "Centipede, Giant"
+          :name "Caterpillar: Giant")
+        "Centipede: Giant"
          (base/unit
-          :name "Centipede, Giant")
+          :name "Centipede: Giant")
         "Centipede, Hugh Poisonous"
          (base/unit
           :name "Centipede, Hugh Poisonous")
-        "Cockroach, Giant"
+        "Cockroach: Giant"
          (base/unit
-          :name "Cockroach, Giant")
-        "Dragonfly, Giant"
+          :name "Cockroach: Giant")
+        "Dragonfly: Giant"
          (base/unit
-          :name "Dragonfly, Giant")
+          :name "Dragonfly: Giant")
         "Dragonfly, Huge"
          (base/unit
           :name "Dragonfly, Huge")
@@ -222,30 +222,30 @@
         "Lightning Bug, Huge"
          (base/unit
           :name "Lightning Bug, Huge")
-        "Mantis, Giant"
+        "Mantis: Giant"
          (base/unit
-          :name "Mantis, Giant")
+          :name "Mantis: Giant")
         "Mantis, Huge"
          (base/unit
           :name "Mantis, Huge")
-        "Mosquito, Giant"
+        "Mosquito: Giant"
          (base/unit
-          :name "Mosquito, Giant")
+          :name "Mosquito: Giant")
         "Mosquito, Huge"
          (base/unit
           :name "Mosquito, Huge")
         "Scarab, Huge"
          (base/unit
           :name "Scarab, Huge")
-        "Scorpion, Giant"
+        "Scorpion: Giant"
          (base/unit
-          :name "Scorpion, Giant")
+          :name "Scorpion: Giant")
         "Scorpion, Huge"
          (base/unit
           :name "Scorpion, Huge")
-        "Spider, Giant"
+        "Spider: Giant"
          (base/unit
-          :name "Spider, Giant")
+          :name "Spider: Giant")
         "Spider, Huge"
          (base/unit
           :name "Spider, Huge")
@@ -276,12 +276,12 @@
         "Wasp, Parasite"
          (base/unit
           :name "Wasp, Parasite")
-        "Worm, Giant"
+        "Worm: Giant"
          (base/unit
-          :name "Worm, Giant")
-        "Worm, Giant Sand"
+          :name "Worm: Giant")
+        "Worm: Giant Sand"
          (base/unit
-          :name "Worm, Giant Sand"))))))
+          :name "Worm: Giant Sand"))))))
 
 (func chapter_avians : base/chapter
  [tactics : base/tactics]
@@ -929,9 +929,9 @@
          (base/unit
           :name "Balizard"
           :summary "* A large, magical variety of lizard that survives in arctic climates. Its body temperature matches the surrounding. It has a special form of gaze ability where it can draw heat from any target it is facing into its nose and mouth. It uses this ability to freeze opponents before eating their icy remains.")
-        "Crocodile, Giant"
+        "Crocodile: Giant"
          (base/unit
-          :name "Crocodile, Giant")
+          :name "Crocodile: Giant")
         "Desert Strider"
          (base/unit
           :name "Desert Strider"
@@ -952,9 +952,9 @@
            "* This seemingly normal Cobra has the enhanced ability to hypnotise its victim.
             * Hypnotism - By slowly swaying back and forth and removing all hostile intent from its mind, the Cobra creates the illusion that it is peaceful and harmless. Its victim becomes enthralled and simply watches as the Cobra slowly advances. When the Cobra is face to face with its victim, it attacks with lightning speed to bite the face or throat to deposit its venom near the victim's brain."
           :titles "Hypnotic Cobra")
-        "Tortoise, Giant"
+        "Tortoise: Giant"
          (base/unit
-          :name "Tortoise, Giant"))))))
+          :name "Tortoise: Giant"))))))
 
 (func chapter_plants : base/chapter
  [tactics : base/tactics]
@@ -1315,7 +1315,7 @@
         Vanilla -- Love, Lust, Mental Powers
         Venus Flytrap -- Protection, Love
         Vervain -- The Witches Herb. Love, Protection, Purification, Peace, Money, Youth, Chastity, Sleep. Healing. Empowers any magick, especially love spells. Enhances the dreaming process and is recommended for dream quests. Used to consecrate and empower any ritual tools. Protects from negative emotions and depression. Used in house and home blessings. Turns back negativity. In love spells: add to recipes to attract mates, find true love, achieve sexual fulfilment, work sexual magick, an for bringing extra bliss on the wedding night. The herb of poets, singers, and bards. Inspires artistry. Instills a love of learning. Best when gathered at Midsummer.
-        Vetch, Giant -- Fidelity
+        Vetch: Giant -- Fidelity
         Vetivert -- Love, Hex Breaking, Luck, Money, Anti-Theft
         Violet -- Protection, Love, Lust, Luck, Wishes, Peace, Healing
         Walnut -- Health, Mental Powers, Infertility, Wishes
@@ -1538,16 +1538,16 @@
            "* A corrupted spirit that resembles a twisted humanoid composed of dead decaying wood. Deadwood is created when a woodland area is exposed to powerful corruption. Once established in an area, it begins to absorb life energies from all living creatures around it. All vegetation around will become warped and withered. Living creatures will fall sick developing strange ailments. Meanwhile, the Deadwood grows in power.
             * Deadwood can control plant life and unliving wood. They cannot be destroyed except by enchanted weapons, fire, or by starving it by destroying the surrounding plant life."
           :titles "Plant Demon, Wood Grue")
-        "Giant Fisher Plant"
+        "Fisher Plant: Giant"
          (base/unit
-          :name "Giant Fisher Plant"
+          :name "Fisher Plant: Giant"
           :summary
            "* A huge creeper vine plant that covers mulitple nearby trees and has enormous blossoms hanging from high branches. The plant attacks living creatures by dropping vines from the bottom of the blossums that entwine and drag prey into the canaopy above where they die of strangulation or dehydration and are eventually digested. Bones and bits of carcass are dropped below to lure more prey.")
-        :Shambler
+        "Shambler"
          (base/unit
           :name "Shambler"
           :summary "* An animated pile of decaying vegetation.")
-        :Slime
+        "Slime"
          (base/unit
           :name "Slime")
         "Strangle Vine"
@@ -1555,12 +1555,12 @@
           :name "Strangle Vine"
           :summary
            "* A large, creeper vine that waits attacks like a constrictor snake. They typically hang in jungles or caves and strike from above or slowly entwine immobile (e.g. sleeping) targets on the ground.")
-        :Triffid
+        "Triffid"
          (base/unit
           :name "Triffid")
-        "Venus Flytrap, Giant"
+        "Venus Flytrap: Giant"
          (base/unit
-          :name "Venus Flytrap, Giant"))))))
+          :name "Venus Flytrap: Giant"))))))
 
 (func chapter_microorganisms : base/chapter
  [tactics : base/tactics]
@@ -1625,20 +1625,20 @@
       :name "Centipedes"
       :unitmap
        (base/unitmap
-        "Poisonous Centipede"
+        "Centipede: Poisonous"
          (base/unit
-          :name "Poisonous Centipede")
-        "Amazonian Giant Centipede"
+          :name "Centipede: Poisonous")
+        "Centipede: Amazonian Giant"
          (base/unit
-          :name "Amazonian Giant Centipede")))
+          :name "Centipede: Amazonian Giant")))
     :Worms
      (section
       :name "Worms"
       :unitmap
        (base/unitmap
-        :Maggots
+        "Worm: Maggots"
          (base/unit
-          :name "Maggots")))
+          :name "Worm: Maggots")))
     "Fantastic Underground Creatures"
      (section
       :name "Fantastic Underground Creatures"
@@ -4105,10 +4105,10 @@
        (base/unitmap
         "Ogre"
          (base/unit<-tactics-key tactics "Ogre")
-        :Oni
+        "Oni"
          (base/unit
           :name "Oni")
-        :Troll
+        "Troll"
          (base/unit
           :name "Troll"
           :summary
@@ -4121,49 +4121,52 @@
       :summary "* Units - Elite Heavy Infantry (Note: Full units are very rare)"
       :unitmap
        (base/unitmap
-        "Cloud Giant"
+        "Giant: Cloud"
          (base/unit
-          :name "Cloud Giant")
-        :Cyclops
+          :name "Giant: Cloud")
+        "Giant: Cyclops"
          (base/unit
-          :name "Cyclops")
-        "Fire Giant"
+          :name "Giant: Cyclops")
+        "Giant: Fire"
          (base/unit
-          :name "Fire Giant"
+          :name "Giant: Fire"
           :titles "Eldjotunn")
-        "Hill Giant"
+        "Giant: Hill"
          (base/unit
-          :name "Hill Giant")
-        "Ice Giant"
+          :name "Giant: Hill")
+        "Giant: Ice"
          (base/unit
-          :name "Ice Giant"
+          :name "Giant: Ice"
           :titles "Frost Giant, Jotunn")
-        "Mountain Giant"
+        "Giant: Mountain"
          (base/unit
-          :name "Mountain Giant")
-        "Stone Giant"
+          :name "Giant: Mountain")
+        "Giant: Stone"
          (base/unit
-          :name "Stone Giant")
-        "Storm Giant"
+          :name "Giant: Stone")
+        "Giant: Storm"
          (base/unit
-          :name "Storm Giant")))
+          :name "Giant: Storm")))
     "Unique Giants"
      (section
       :name "Unique Giants"
       :unitmap
        (base/unitmap
-        :Surtr
+        "Surtr"
          (base/unit
           :name "Surtr"
-          :reference "* Surtr is foretold as being a major figure during the events of Ragnarok; carrying his bright sword, he will go to battle against the Aesir, he will do battle with the major god Freyr, and afterward the flames that he brings forth will engulf the earth."
-          :titles "The Black One")
-        :Ymir
+          :titles "The Black One"          
+          :reference
+           "* Surtr is foretold as being a major figure during the events of Ragnarok; carrying his bright sword, he will go to battle against the Aesir, he will do battle with the major god Freyr, and afterward the flames that he brings forth will engulf the earth.")
+        "Ymir"
          (base/unit
           :name "Ymir"
-          :reference "* Ymir was the founder of the race of frost giants and an important figure in Norse cosmology. Odin and his brothers killed Ymir, and when Ymir fell the blood from his wounds drowned almost the entire tribe of frost giants or jotuns. Then they used Ymir's body to create Midgard, the earth. His flesh became the earth. His blood formed seas and lakes. From his bones mountains were erected. From his hair grew trees and maggots from his flesh became the race of dwarfs. The gods set Ymir's skull above Ginnungagap and made the sky."
-          :summary "* Jotunheim")))
-    :Titans
-     (section
+          :summary
+           "* Jotunheim"
+          :reference
+           "* Ymir was the founder of the race of frost giants and an important figure in Norse cosmology. Odin and his brothers killed Ymir, and when Ymir fell the blood from his wounds drowned almost the entire tribe of frost giants or jotuns. Then they used Ymir's body to create Midgard, the earth. His flesh became the earth. His blood formed seas and lakes. From his bones mountains were erected. From his hair grew trees and maggots from his flesh became the race of dwarfs. The gods set Ymir's skull above Ginnungagap and made the sky.")))
+    "Titans"
+     (base/section
       :name "Titans"
       :unitmap
        (base/unitmap
@@ -4353,10 +4356,8 @@
         "Sea Horse"
          (base/unit
           :name "Sea Horse")
-        :Sphinx
-         (base/unit
-          :name "Sphinx"
-          :summary "* Highly intelligent")
+        "Sphinx"
+         (base/unit<-tactics-key tactics "Sphinx")
         "Strix"
          (base/unit<-tactics-key tactics "Strix")
         "Tentacle Terror"

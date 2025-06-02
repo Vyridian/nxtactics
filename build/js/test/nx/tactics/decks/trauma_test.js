@@ -25,11 +25,11 @@ export default class nx_tactics_decks_trauma_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/trauma", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 55), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 3, ":tests", 2, ":total", 57), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 2), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 1, ":total", 56), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 57), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 56), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -105,8 +105,7 @@ export default class nx_tactics_decks_trauma_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
-          "deck-trauma", 0,
-          "deck-traumaback", 0
+          "deck-trauma", 0
         )
     )
     return output

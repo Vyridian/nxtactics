@@ -7,7 +7,7 @@
    viewBox="0 0 6 6"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    sodipodi:docname="icon-coin.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,11 +24,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="17.104167"
-     inkscape:cx="24.058465"
+     inkscape:cx="24.087697"
      inkscape:cy="22.772229"
      inkscape:window-width="1904"
      inkscape:window-height="1001"
-     inkscape:window-x="205"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
@@ -40,7 +40,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#d80000;fill-opacity:1;stroke-width:0.232652"
+       style="fill:#e8322b;fill-opacity:1;stroke-width:0.232652"
        id="path1-3"
        sodipodi:type="arc"
        sodipodi:cx="2.9299388"
@@ -66,7 +66,7 @@
        sodipodi:arc-type="arc"
        d="M 5.287879,3.1299385 A 2.360738,2.4855421 0 0 1 2.8796802,5.5471013 2.360738,2.4855421 0 0 1 0.56750291,3.0281482 2.360738,2.4855421 0 0 1 2.9441355,0.57659623 2.360738,2.4855421 0 0 1 5.288759,3.0620804" />
     <rect
-       style="fill:#cc0400;fill-opacity:1;stroke-width:0.272867"
+       style="fill:#e8322b;fill-opacity:1;stroke-width:0.272867"
        id="rect1"
        width="2.9038363"
        height="2.9673259"

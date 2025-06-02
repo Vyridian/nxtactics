@@ -571,8 +571,12 @@
    uid : string :=
     (string parent "/" id1)
    display : string :=
-    (string-display<-any
-     card)
+    (switch : string
+     layout
+     (case base/cardlayout-imageonly "")
+     (else
+      (string-display<-any
+       card)))
    displaysplit : stringlist :=
     (if : stringlist
      (then isdisplay4

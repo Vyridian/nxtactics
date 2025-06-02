@@ -357,96 +357,79 @@ export default class nx_tactics_decks_disorder {
       "Disorder",
       ":titles",
       "Crazed, Insane, Nonsensical, Obsessed, Unhinged",
+      ":image",
+      "images/card-disorder-deck.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "* C-Loss/Disfunction/Misunderstand/Miscommunicate/Amnesia/Aphasia\n* D-Delusion/Racism/Irrational/Lost in Fantasy/Lost in Nightmare/Lost in Hell/Distortion/Misperception\n* H-Compulsion/Obsession/Monomaniacal\n* S-Neural/Shock/Disable/Tremors/Spasms/Seizures/Stroke/Nerve Damage/Paralysis/Brain",
+      "* C-Loss/Dysfunction/Misunderstand/Miscommunicate/Amnesia/Aphasia\n* D-Delusion/Racism/Irrational/Lost in Fantasy/Lost in Nightmare/Lost in Hell/Distortion/Misperception\n* H-Compulsion/Obsession/Monomaniacal\n* S-Nervous/Shock/Disable/Tremors/Spasms/Seizures/Stroke/Nerve Damage/Paralysis/Brain",
       ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_disorder.c_disorder_wild_black,
-          nx_tactics_decks_disorder.c_disorder_wild_red,
-          nx_tactics_decks_disorder.c_disorder_ac,
-          nx_tactics_decks_disorder.c_disorder_ad,
-          nx_tactics_decks_disorder.c_disorder_ah,
-          nx_tactics_decks_disorder.c_disorder_as,
-          nx_tactics_decks_disorder.c_disorder_kc,
-          nx_tactics_decks_disorder.c_disorder_kd,
-          nx_tactics_decks_disorder.c_disorder_kh,
-          nx_tactics_decks_disorder.c_disorder_ks,
-          nx_tactics_decks_disorder.c_disorder_qc,
-          nx_tactics_decks_disorder.c_disorder_qd,
-          nx_tactics_decks_disorder.c_disorder_qh,
-          nx_tactics_decks_disorder.c_disorder_qs,
-          nx_tactics_decks_disorder.c_disorder_jc,
-          nx_tactics_decks_disorder.c_disorder_jd,
-          nx_tactics_decks_disorder.c_disorder_jh,
-          nx_tactics_decks_disorder.c_disorder_js,
-          nx_tactics_decks_disorder.c_disorder_tc,
-          nx_tactics_decks_disorder.c_disorder_td,
-          nx_tactics_decks_disorder.c_disorder_th,
-          nx_tactics_decks_disorder.c_disorder_ts,
-          nx_tactics_decks_disorder.c_disorder_9c,
-          nx_tactics_decks_disorder.c_disorder_9d,
-          nx_tactics_decks_disorder.c_disorder_9h,
-          nx_tactics_decks_disorder.c_disorder_9s,
-          nx_tactics_decks_disorder.c_disorder_8c,
-          nx_tactics_decks_disorder.c_disorder_8d,
-          nx_tactics_decks_disorder.c_disorder_8h,
-          nx_tactics_decks_disorder.c_disorder_8s,
-          nx_tactics_decks_disorder.c_disorder_7c,
-          nx_tactics_decks_disorder.c_disorder_7d,
-          nx_tactics_decks_disorder.c_disorder_7h,
-          nx_tactics_decks_disorder.c_disorder_7s,
-          nx_tactics_decks_disorder.c_disorder_6c,
-          nx_tactics_decks_disorder.c_disorder_6d,
-          nx_tactics_decks_disorder.c_disorder_6h,
-          nx_tactics_decks_disorder.c_disorder_6s,
-          nx_tactics_decks_disorder.c_disorder_5c,
-          nx_tactics_decks_disorder.c_disorder_5d,
-          nx_tactics_decks_disorder.c_disorder_5h,
-          nx_tactics_decks_disorder.c_disorder_5s,
-          nx_tactics_decks_disorder.c_disorder_4c,
-          nx_tactics_decks_disorder.c_disorder_4d,
-          nx_tactics_decks_disorder.c_disorder_4h,
-          nx_tactics_decks_disorder.c_disorder_4s,
-          nx_tactics_decks_disorder.c_disorder_3c,
-          nx_tactics_decks_disorder.c_disorder_3d,
-          nx_tactics_decks_disorder.c_disorder_3h,
-          nx_tactics_decks_disorder.c_disorder_3s,
-          nx_tactics_decks_disorder.c_disorder_2c,
-          nx_tactics_decks_disorder.c_disorder_2d,
-          nx_tactics_decks_disorder.c_disorder_2h,
-          nx_tactics_decks_disorder.c_disorder_2s
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_cardmap},
+        nx_tactics_base.f_cardmap_from_cardlist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_cardlist},
+            nx_tactics_decks_disorder.c_disorder_wild_black,
+            nx_tactics_decks_disorder.c_disorder_wild_red,
+            nx_tactics_decks_disorder.c_disorder_ac,
+            nx_tactics_decks_disorder.c_disorder_ad,
+            nx_tactics_decks_disorder.c_disorder_ah,
+            nx_tactics_decks_disorder.c_disorder_as,
+            nx_tactics_decks_disorder.c_disorder_kc,
+            nx_tactics_decks_disorder.c_disorder_kd,
+            nx_tactics_decks_disorder.c_disorder_kh,
+            nx_tactics_decks_disorder.c_disorder_ks,
+            nx_tactics_decks_disorder.c_disorder_qc,
+            nx_tactics_decks_disorder.c_disorder_qd,
+            nx_tactics_decks_disorder.c_disorder_qh,
+            nx_tactics_decks_disorder.c_disorder_qs,
+            nx_tactics_decks_disorder.c_disorder_jc,
+            nx_tactics_decks_disorder.c_disorder_jd,
+            nx_tactics_decks_disorder.c_disorder_jh,
+            nx_tactics_decks_disorder.c_disorder_js,
+            nx_tactics_decks_disorder.c_disorder_tc,
+            nx_tactics_decks_disorder.c_disorder_td,
+            nx_tactics_decks_disorder.c_disorder_th,
+            nx_tactics_decks_disorder.c_disorder_ts,
+            nx_tactics_decks_disorder.c_disorder_9c,
+            nx_tactics_decks_disorder.c_disorder_9d,
+            nx_tactics_decks_disorder.c_disorder_9h,
+            nx_tactics_decks_disorder.c_disorder_9s,
+            nx_tactics_decks_disorder.c_disorder_8c,
+            nx_tactics_decks_disorder.c_disorder_8d,
+            nx_tactics_decks_disorder.c_disorder_8h,
+            nx_tactics_decks_disorder.c_disorder_8s,
+            nx_tactics_decks_disorder.c_disorder_7c,
+            nx_tactics_decks_disorder.c_disorder_7d,
+            nx_tactics_decks_disorder.c_disorder_7h,
+            nx_tactics_decks_disorder.c_disorder_7s,
+            nx_tactics_decks_disorder.c_disorder_6c,
+            nx_tactics_decks_disorder.c_disorder_6d,
+            nx_tactics_decks_disorder.c_disorder_6h,
+            nx_tactics_decks_disorder.c_disorder_6s,
+            nx_tactics_decks_disorder.c_disorder_5c,
+            nx_tactics_decks_disorder.c_disorder_5d,
+            nx_tactics_decks_disorder.c_disorder_5h,
+            nx_tactics_decks_disorder.c_disorder_5s,
+            nx_tactics_decks_disorder.c_disorder_4c,
+            nx_tactics_decks_disorder.c_disorder_4d,
+            nx_tactics_decks_disorder.c_disorder_4h,
+            nx_tactics_decks_disorder.c_disorder_4s,
+            nx_tactics_decks_disorder.c_disorder_3c,
+            nx_tactics_decks_disorder.c_disorder_3d,
+            nx_tactics_decks_disorder.c_disorder_3h,
+            nx_tactics_decks_disorder.c_disorder_3s,
+            nx_tactics_decks_disorder.c_disorder_2c,
+            nx_tactics_decks_disorder.c_disorder_2d,
+            nx_tactics_decks_disorder.c_disorder_2h,
+            nx_tactics_decks_disorder.c_disorder_2s
+          )
+        ),
+        nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
+          nx_tactics_decks_disorder.c_stun,
+          54,
+          false
         )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function deck_disorderback
-   * Disorder Back Deck
-   * @return {deck}
-   */
-  static t_deck_disorderback = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_disorderback = {
-    vx_type: nx_tactics_decks_disorder.t_deck_disorderback
-  }
-
-  // (func deck-disorderback)
-  static f_deck_disorderback() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_deck},
-      ":name",
-      "Disorder Back",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
-        nx_tactics_decks_disorder.c_stun,
-        54,
-        false
       )
     )
     return output
@@ -513,12 +496,10 @@ export default class nx_tactics_decks_disorder {
       "stun": nx_tactics_decks_disorder.c_stun
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "deck-disorder": nx_tactics_decks_disorder.e_deck_disorder,
-      "deck-disorderback": nx_tactics_decks_disorder.e_deck_disorderback
+      "deck-disorder": nx_tactics_decks_disorder.e_deck_disorder
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "deck-disorder": nx_tactics_decks_disorder.t_deck_disorder,
-      "deck-disorderback": nx_tactics_decks_disorder.t_deck_disorderback
+      "deck-disorder": nx_tactics_decks_disorder.t_deck_disorder
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -548,24 +529,6 @@ export default class nx_tactics_decks_disorder {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_disorder.f_deck_disorder
-    }
-
-    // (func deck-disorderback)
-    nx_tactics_decks_disorder.t_deck_disorderback['vx_value'] = {
-      name          : "deck-disorderback",
-      pkgname       : "nx/tactics/decks/disorder",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_disorder.f_deck_disorderback
     }
 
     // (const disorder-2c)
@@ -611,7 +574,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_2s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Right Foot",
+      "Nervous: Right Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
       ":image",
@@ -663,7 +626,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_3s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Left Foot",
+      "Nervous: Left Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3s,
       ":image",
@@ -715,7 +678,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_4s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Right Leg",
+      "Nervous: Right Leg",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4s,
       ":image",
@@ -769,7 +732,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_5s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Left Leg",
+      "Nervous: Left Leg",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5s,
       ":image",
@@ -821,7 +784,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_6s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Right Hand",
+      "Nervous: Right Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s,
       ":image",
@@ -873,7 +836,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_7s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Left Hand",
+      "Nervous: Left Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7s,
       ":image",
@@ -925,7 +888,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_8s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Right Arm",
+      "Nervous: Right Arm",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8s,
       ":image",
@@ -977,7 +940,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_9s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Left Arm",
+      "Nervous: Left Arm",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9s,
       ":image",
@@ -1009,7 +972,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/card-disorder-delusion.svg",
       ":summary",
-      "Minor: You hear the dead. Stun:1\nMajor: You see the dead. Some are scary. Some are nice. Stun:2\nCritical: Dedicate yourself to the dead. Stun:4\nExtreme: Cannot sense the living world. Catatonic. Stun:4"
+      "Minor: You hear the dead. Stun:1\nMajor: You see the dead. Some are scary. Some are nice. Stun:2\nCritical: Dedicate yourself to the dead. Stun:4\nExtreme: Cannot sense the living world. Incoherent. Catatonic. Stun:4"
     ))
 
     // (const disorder-ah)
@@ -1029,7 +992,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_as, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Head",
+      "Nervous: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":image",
@@ -1081,7 +1044,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_js, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Abdomen",
+      "Nervous: Abdomen",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_js,
       ":image",
@@ -1133,7 +1096,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_ks, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Shoulders",
+      "Nervous: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ks,
       ":image",
@@ -1185,7 +1148,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_qs, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Chest",
+      "Nervous: Chest",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qs,
       ":image",
@@ -1237,7 +1200,7 @@ export default class nx_tactics_decks_disorder {
     Object.assign(nx_tactics_decks_disorder.c_disorder_ts, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Neural: Vitals",
+      "Nervous: Vitals",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ts,
       ":image",
@@ -1273,7 +1236,7 @@ export default class nx_tactics_decks_disorder {
     ))
 
     // (const stun)
-    Object.assign(nx_tactics_decks_disorder.c_stun, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "stun", ":name", "Disorder: Stun", ":titles", "Mental Damage/Strain/Distraction/Surprise/Shock", ":image", "images/card-disorder-stun.svg", ":summary", "* Stun: temporary distraction or suprise\n* Disorder: lasting [Loss], [Delusion], [Compulsion], [Neural].\n* If [Mind]:0 gain [Confused].\n* [Confused]: Cannot play odd [Focus] cards. Second action may only be [Recover]. Additional [Stun] is flipped to Disorder."))
+    Object.assign(nx_tactics_decks_disorder.c_stun, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "stun", ":name", "Disorder: Stun", ":titles", "Mental Damage/Strain/Distraction/Surprise/Shock", ":image", "images/card-disorder-stun.svg", ":summary", "Temporary Distraction or suprise\n* If [Mind]:0 become [Confused]\n* [Confused]: Cannot play odd [Strong] cards. Extra [Stun] is flipped to Disorder"))
 
   }
 }

@@ -355,98 +355,79 @@ export default class nx_tactics_decks_trauma {
       {"any-1": nx_tactics_base.t_deck},
       ":name",
       "Trauma",
-      ":titles",
-      "",
+      ":image",
+      "images/card-trauma-deck.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "* C-Anger/Fury/Surly/Suicidal Rage\n* D-Doubt/Servitude/Coverted\n* H-Despair/Apathy/Depression/Broken/Suicidal\n* S-Fear/Cowed/Died of Fear",
       ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_trauma.c_trauma_wild_black,
-          nx_tactics_decks_trauma.c_trauma_wild_red,
-          nx_tactics_decks_trauma.c_trauma_ac,
-          nx_tactics_decks_trauma.c_trauma_ad,
-          nx_tactics_decks_trauma.c_trauma_ah,
-          nx_tactics_decks_trauma.c_trauma_as,
-          nx_tactics_decks_trauma.c_trauma_kc,
-          nx_tactics_decks_trauma.c_trauma_kd,
-          nx_tactics_decks_trauma.c_trauma_kh,
-          nx_tactics_decks_trauma.c_trauma_ks,
-          nx_tactics_decks_trauma.c_trauma_qc,
-          nx_tactics_decks_trauma.c_trauma_qd,
-          nx_tactics_decks_trauma.c_trauma_qh,
-          nx_tactics_decks_trauma.c_trauma_qs,
-          nx_tactics_decks_trauma.c_trauma_jc,
-          nx_tactics_decks_trauma.c_trauma_jd,
-          nx_tactics_decks_trauma.c_trauma_jh,
-          nx_tactics_decks_trauma.c_trauma_js,
-          nx_tactics_decks_trauma.c_trauma_tc,
-          nx_tactics_decks_trauma.c_trauma_td,
-          nx_tactics_decks_trauma.c_trauma_th,
-          nx_tactics_decks_trauma.c_trauma_ts,
-          nx_tactics_decks_trauma.c_trauma_9c,
-          nx_tactics_decks_trauma.c_trauma_9d,
-          nx_tactics_decks_trauma.c_trauma_9h,
-          nx_tactics_decks_trauma.c_trauma_9s,
-          nx_tactics_decks_trauma.c_trauma_8c,
-          nx_tactics_decks_trauma.c_trauma_8d,
-          nx_tactics_decks_trauma.c_trauma_8h,
-          nx_tactics_decks_trauma.c_trauma_8s,
-          nx_tactics_decks_trauma.c_trauma_7c,
-          nx_tactics_decks_trauma.c_trauma_7d,
-          nx_tactics_decks_trauma.c_trauma_7h,
-          nx_tactics_decks_trauma.c_trauma_7s,
-          nx_tactics_decks_trauma.c_trauma_6c,
-          nx_tactics_decks_trauma.c_trauma_6d,
-          nx_tactics_decks_trauma.c_trauma_6h,
-          nx_tactics_decks_trauma.c_trauma_6s,
-          nx_tactics_decks_trauma.c_trauma_5c,
-          nx_tactics_decks_trauma.c_trauma_5d,
-          nx_tactics_decks_trauma.c_trauma_5h,
-          nx_tactics_decks_trauma.c_trauma_5s,
-          nx_tactics_decks_trauma.c_trauma_4c,
-          nx_tactics_decks_trauma.c_trauma_4d,
-          nx_tactics_decks_trauma.c_trauma_4h,
-          nx_tactics_decks_trauma.c_trauma_4s,
-          nx_tactics_decks_trauma.c_trauma_3c,
-          nx_tactics_decks_trauma.c_trauma_3d,
-          nx_tactics_decks_trauma.c_trauma_3h,
-          nx_tactics_decks_trauma.c_trauma_3s,
-          nx_tactics_decks_trauma.c_trauma_2c,
-          nx_tactics_decks_trauma.c_trauma_2d,
-          nx_tactics_decks_trauma.c_trauma_2h,
-          nx_tactics_decks_trauma.c_trauma_2s
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_cardmap},
+        nx_tactics_base.f_cardmap_from_cardlist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_cardlist},
+            nx_tactics_decks_trauma.c_trauma_wild_black,
+            nx_tactics_decks_trauma.c_trauma_wild_red,
+            nx_tactics_decks_trauma.c_trauma_ac,
+            nx_tactics_decks_trauma.c_trauma_ad,
+            nx_tactics_decks_trauma.c_trauma_ah,
+            nx_tactics_decks_trauma.c_trauma_as,
+            nx_tactics_decks_trauma.c_trauma_kc,
+            nx_tactics_decks_trauma.c_trauma_kd,
+            nx_tactics_decks_trauma.c_trauma_kh,
+            nx_tactics_decks_trauma.c_trauma_ks,
+            nx_tactics_decks_trauma.c_trauma_qc,
+            nx_tactics_decks_trauma.c_trauma_qd,
+            nx_tactics_decks_trauma.c_trauma_qh,
+            nx_tactics_decks_trauma.c_trauma_qs,
+            nx_tactics_decks_trauma.c_trauma_jc,
+            nx_tactics_decks_trauma.c_trauma_jd,
+            nx_tactics_decks_trauma.c_trauma_jh,
+            nx_tactics_decks_trauma.c_trauma_js,
+            nx_tactics_decks_trauma.c_trauma_tc,
+            nx_tactics_decks_trauma.c_trauma_td,
+            nx_tactics_decks_trauma.c_trauma_th,
+            nx_tactics_decks_trauma.c_trauma_ts,
+            nx_tactics_decks_trauma.c_trauma_9c,
+            nx_tactics_decks_trauma.c_trauma_9d,
+            nx_tactics_decks_trauma.c_trauma_9h,
+            nx_tactics_decks_trauma.c_trauma_9s,
+            nx_tactics_decks_trauma.c_trauma_8c,
+            nx_tactics_decks_trauma.c_trauma_8d,
+            nx_tactics_decks_trauma.c_trauma_8h,
+            nx_tactics_decks_trauma.c_trauma_8s,
+            nx_tactics_decks_trauma.c_trauma_7c,
+            nx_tactics_decks_trauma.c_trauma_7d,
+            nx_tactics_decks_trauma.c_trauma_7h,
+            nx_tactics_decks_trauma.c_trauma_7s,
+            nx_tactics_decks_trauma.c_trauma_6c,
+            nx_tactics_decks_trauma.c_trauma_6d,
+            nx_tactics_decks_trauma.c_trauma_6h,
+            nx_tactics_decks_trauma.c_trauma_6s,
+            nx_tactics_decks_trauma.c_trauma_5c,
+            nx_tactics_decks_trauma.c_trauma_5d,
+            nx_tactics_decks_trauma.c_trauma_5h,
+            nx_tactics_decks_trauma.c_trauma_5s,
+            nx_tactics_decks_trauma.c_trauma_4c,
+            nx_tactics_decks_trauma.c_trauma_4d,
+            nx_tactics_decks_trauma.c_trauma_4h,
+            nx_tactics_decks_trauma.c_trauma_4s,
+            nx_tactics_decks_trauma.c_trauma_3c,
+            nx_tactics_decks_trauma.c_trauma_3d,
+            nx_tactics_decks_trauma.c_trauma_3h,
+            nx_tactics_decks_trauma.c_trauma_3s,
+            nx_tactics_decks_trauma.c_trauma_2c,
+            nx_tactics_decks_trauma.c_trauma_2d,
+            nx_tactics_decks_trauma.c_trauma_2h,
+            nx_tactics_decks_trauma.c_trauma_2s
+          )
+        ),
+        nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
+          nx_tactics_decks_trauma.c_stress,
+          54,
+          false
         )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function deck_traumaback
-   * Trauma Back Deck
-   * @return {deck}
-   */
-  static t_deck_traumaback = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_traumaback = {
-    vx_type: nx_tactics_decks_trauma.t_deck_traumaback
-  }
-
-  // (func deck-traumaback)
-  static f_deck_traumaback() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_deck},
-      ":name",
-      "Trauma Back",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
-        nx_tactics_decks_trauma.c_stress,
-        54,
-        false
       )
     )
     return output
@@ -513,12 +494,10 @@ export default class nx_tactics_decks_trauma {
       "trauma-wild-red": nx_tactics_decks_trauma.c_trauma_wild_red
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "deck-trauma": nx_tactics_decks_trauma.e_deck_trauma,
-      "deck-traumaback": nx_tactics_decks_trauma.e_deck_traumaback
+      "deck-trauma": nx_tactics_decks_trauma.e_deck_trauma
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "deck-trauma": nx_tactics_decks_trauma.t_deck_trauma,
-      "deck-traumaback": nx_tactics_decks_trauma.t_deck_traumaback
+      "deck-trauma": nx_tactics_decks_trauma.t_deck_trauma
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -550,36 +529,18 @@ export default class nx_tactics_decks_trauma {
       fn            : nx_tactics_decks_trauma.f_deck_trauma
     }
 
-    // (func deck-traumaback)
-    nx_tactics_decks_trauma.t_deck_traumaback['vx_value'] = {
-      name          : "deck-traumaback",
-      pkgname       : "nx/tactics/decks/trauma",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_trauma.f_deck_traumaback
-    }
-
     // (const stress)
-    Object.assign(nx_tactics_decks_trauma.c_stress, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "stress", ":name", "Trauma: Stress", ":titles", "Emotional Trauma/Stress/Duress/Horror", ":image", "images/card-trauma-stress.svg", ":summary", "* Stress: temporary duress or horror.\n* Trauma: lasting [Rage], [Despair], [Need], [Fear].\n* If [Will]:0 then gain [Shaken].\n* [Shaken]: Cannot play odd [Defend] cards. Second action may only be [Recover]. Additional [Stress] is flipped to Trauma.", ":reference", "Because love's such an old-fashioned word\nAnd love dares you to care for\nThe people on the edge of the night\nAnd love dares you to change our way of\nCaring about ourselves\nThis is our last dance\nThis is ourselves under pressure - Queen and David Bowie, Under Pressure"))
+    Object.assign(nx_tactics_decks_trauma.c_stress, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "stress", ":name", "Trauma: Stress", ":titles", "Emotional Trauma/Stress/Duress/Horror", ":image", "images/card-trauma-stress.svg", ":summary", "Temporary duress or horror\n* If [Will]:0 then gain [Shaken]\n* [Shaken]: [Disadvantage]. Flip extra [Stress] to Trauma", ":reference", "Because love's such an old-fashioned word\nAnd love dares you to care for\nThe people on the edge of the night\nAnd love dares you to change our way of\nCaring about ourselves\nThis is our last dance\nThis is ourselves under pressure - Queen and David Bowie, Under Pressure"))
 
     // (const trauma-2c)
     Object.assign(nx_tactics_decks_trauma.c_trauma_2c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Fortune",
+      "Anger: Fortune",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Frustrated by an arbitrary world.\nMajor: Random outbursts. Your temper seems to surge at random times.\nCritical: Lash out. Choose enemy targets at random. [Beast]:2\nExtreme: Blind Rage. Choose targets completely at random. [Beast Unleashed]"
     ))
@@ -601,11 +562,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_2h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Fortune",
+      "Desire: Fortune",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2h,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Frugal. A penny saved is a penny earned.\nMajor: Stingy. You only buy what is absolutely necessary.\nCritical: Miserly. Hoard your treasure. Mine. Mine. Mine.\nExtreme: Heartless Miser. Nothing will separate you from a penny. [Shadow Triumphant]"
     ))
@@ -627,11 +588,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_3c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Things",
+      "Anger: Things",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":reference",
       "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra",
       ":summary",
@@ -655,11 +616,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_3h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Things",
+      "Desire: Things",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3h,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Collector. Keep mementoes of your life.\nMajor: Pack Rat. You have a hard time leaving anything behind.\nCritical: Hoarder. Keep everything.\nExtreme: Collect everything but never use them. [Shadow Triumphant]"
     ))
@@ -681,11 +642,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_4c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Change",
+      "Anger: Change",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.\nMajor: Reactionary. Cannot tolerate anything new or modern.\nCritical: Luddite. Destroy anything modern or new.\nExtreme: Violent Primitivist. Destroy anything that is more advanced than would be on a farm."
     ))
@@ -707,11 +668,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_4h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Change",
+      "Desire: Change",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4h,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Hyperactive. Axious when not active.\nMajor: Change for changes sake.\nCritical: Stream of consciousness. Needs to be 'All In' all the time.\nExtreme: Cannot focus on any topic. No downtime. Work yourself to death."
     ))
@@ -733,11 +694,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Strangers",
+      "Anger: Strangers",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Possessive. Drawn to abusive relationships.\nMajor: Controlling. You are a manipulator.\nCritical: Stalker. You are a sexual abuser.\nExtreme: Jealous Rage. Kill your rivals. If you can't have them. No one can. [Beast Unleashed]"
     ))
@@ -759,11 +720,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_5h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Love",
+      "Desire: Love",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5h,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Infatuated.\nMajor: Clingy. Obsessed with finding and keeping a mate.\nCritical: Exhausting. You need almost constant attention.\nExtreme: Desperate. Bottomless need for love and attention. Life is over if you are rejected."
     ))
@@ -785,11 +746,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_6c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Strangers",
+      "Anger: Strangers",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Resentful. Talks about others with sweeping sterotypes.\nMajor: Hateful. Uses overtly hateful language and is uncomfortable working in certain groups.\nCritical: Terrorist. Hates other groups and actively seeks to undermine or harm them.\nExtreme: Genocidal. Actively works to wipe out certain groups. [Beast Unleashed]"
     ))
@@ -811,11 +772,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_6h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Strangers",
+      "Desire: Strangers",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6h,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Seek and study dangerous people.\nMajor: You want to challenge dangerous people.\nCritical: Rush into danger with no concern for safety.\nExtreme: Obsessively seeks and engages the most danger opponents possible."
     ))
@@ -837,11 +798,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_7c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Companions",
+      "Anger: Companions",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Vindictive. Aggressively protective of companions.\nMajor: Hunter. Take merciless revenge on any wrongs against companions.\nCritical: Punisher. There are more who deserve punishment. Relentlessly hunt them down.\nExtreme: Angel of Death. Remove all their filth from the world. Endless bloodshed. [Beast Unleashed]"
     ))
@@ -863,11 +824,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_7h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Companions",
+      "Desire: Companions",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Unsure. Get approval before making decisions.\nMajor: Joiner. Always be in a group.\nCritical: Dependent. Can't do anything without a group.\nExtreme: Spend all your time and fortune maintaining a growing posse of 'friends'"
     ))
@@ -889,11 +850,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_8c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Status",
+      "Anger: Status",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Jealous. Frustrated by showoffs.\nMajor: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. [Beast]:1\nCritical: Smear Campaign. Dedicated to embarassing and undermining the elite.\nExtreme: Punish the elite for their hubris. Kill them all. [Beast Unleashed]"
     ))
@@ -915,11 +876,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_8h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Status",
+      "Desire: Status",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8h,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Poser. Crave status and try to show your fashion.\nMajor: Attention Seeker. Regularly attempt to be accepted by the in crowd.\nCritical: Suck Up. Nothing else matters but status. Show off. Beg. Do something. Anything. Extreme: Sychophant. Spend all your time and fortune weaseling into elite social circles."
     ))
@@ -941,11 +902,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_9c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Belief",
+      "Anger: Belief",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Skeptic. Completely apathetic and dismissive of religious figures or icons.\nMajor: Sacreligeous. Has a tendency toward sacrilege and blasphemy.\nCritical: Violent secularist. Blame faith for everything. Unable to work with those who with strong beliefs.\nExtreme: Jihadist. Holy War. Mercilessly slay all unbelievers. Your own safety doesn't matter. [Beast Unleashed]"
     ))
@@ -967,11 +928,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_9h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Belief",
+      "Desire: Belief",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9h,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Gullible. Crave something to believe in.\nMajor: Believer. Become very religious.\nCritical: Devout. Believe everything your religion says.\nExtreme: Acolyte. Slavishly follow the leaders of your religion."
     ))
@@ -993,11 +954,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_ac, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Death",
+      "Anger: Death",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Frustrated by the randomness and cruelty of death.\nMajor: Create meaning in death by choosing who dies. [Beast]:1\nCritical: Hair Trigger. Witnessing death sends you into an uncontrolled rage. [Beast]:2\nExtreme: Killing machine. Murderous Rage until death. [Beast Unleashed]"
     ))
@@ -1019,11 +980,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_ah, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Death",
+      "Desire: Death",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Study and discuss wounds and death.\nMajor: Necrophile. May only take Skills/Abilities associated with death.\nCritical: Death Cultist. Obsessive focus on death, spirits, and necromancy.\nExtreme: Suicidal. Take the final step. Try to cross over."
     ))
@@ -1047,11 +1008,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_jc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Violence",
+      "Anger: Violence",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Viscious. Revel in the kill.\nMajor: Bloodthirsty. Find a way to keep the kills coming.\nCritical: Butcher. [Beast]:1 Cleave a bloody path wherever you go. [Beast]:2\nExtreme: Animalistic. Kill indiscriminately. [Beast Unleased]"
     ))
@@ -1073,11 +1034,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_jh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Violence",
+      "Desire: Violence",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jh,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Tough. You have a suprisingly high pain threshold.\nMajor: Masochist. You enjoy pain. [Shadow]:1\nCritical: Self-destructive. You revel in extreme sensation of any kind.\nExtreme: Suffering. Explorers in the further regions of experience. Demons to some. Angels to others. [Shadow Triumphant]"
     ))
@@ -1099,11 +1060,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_kc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Power",
+      "Anger: Power",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kc,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Rebel. You hate those who seek to control others.\nMajor: Revolutionary. You openly discuss revolution and seek to bring others to your cause. [Beast]:1\nCritical: Insurgent. You despise those in power and are dedicated to putting a blade to them. [Beast]:2\nExtreme: Antifa. Violently attack anyone who commands others. [Beast Unleashed]"
     ))
@@ -1125,11 +1086,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_kh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Power",
+      "Desire: Power",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kh,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Bossy. If only they just listened to you.\nMajor: Overbearing. You order everyone around and have no tolerance of opposition.\nCritical: Tyranical. Your need for power justifies any action.\nExtreme: Megalomaniac. You crave all power and will do anything and everything for the slightest advantage."
     ))
@@ -1151,11 +1112,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_qc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Self",
+      "Anger: Self",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":reference",
       "* And, oh, my love remind me, what was it that I said? I can't help but pull the earth around me to make my bed. And, oh, my love remind me, what was it that I did? Did I drink too much? Am I losing touch? Did I build a ship to wreck? - Florence and the Machine, Ship to Wreck",
       ":summary",
@@ -1179,11 +1140,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_qh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Self",
+      "Desire: Self",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qh,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Vainglory. You brag about own appearance, abilities, and status.\nMajor: Gloryhound. You seek praise at the expense of others.\nCritical: Nascissist. Only think in terms of yourself. Take offense at anyone who questions you. Acts alone and refuses all help.\nExtreme: Messiah Complex. Your every action changes the world. Solo all comers. None can interfere."
     ))
@@ -1205,11 +1166,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_tc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Rage: Reality",
+      "Anger: Reality",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
       ":image",
-      "images/card-trauma-rage.svg",
+      "images/card-trauma-anger.svg",
       ":summary",
       "Minor: Angry drunk. Obnoxious and pushy when intoxicated.\nMajor: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. [Beast]:1\nCritical: Violent Addict. You're violent when high and will take anything for a high. [Beast]:2\nExtreme:Wildly Violent Addict. Do anything it takes to stay high. [Beast Unleashed]"
     ))
@@ -1231,11 +1192,11 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_th, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Need: Reality",
+      "Desire: Reality",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_th,
       ":image",
-      "images/card-trauma-need.svg",
+      "images/card-trauma-desire.svg",
       ":summary",
       "Minor: Boozer. You seek alchohol and drugs to change your state of mind.\nMajor: Hooked. Always looking for a fix.\nCritical: Addict. You spend your time high or trying to get high.\nExtreme: Hopeless Addict. You will eventually starve or overdose."
     ))

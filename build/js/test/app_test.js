@@ -48,12 +48,13 @@ import nx_tactics_books_space_and_time_test from "./nx/tactics/books/space_and_t
 import nx_tactics_books_superheroes_test from "./nx/tactics/books/superheroes_test.js"
 import nx_tactics_books_world_wars_test from "./nx/tactics/books/world_wars_test.js"
 import nx_tactics_decks_ability_test from "./nx/tactics/decks/ability_test.js"
+import nx_tactics_decks_burden_test from "./nx/tactics/decks/burden_test.js"
 import nx_tactics_decks_conflict_test from "./nx/tactics/decks/conflict_test.js"
 import nx_tactics_decks_disorder_test from "./nx/tactics/decks/disorder_test.js"
 import nx_tactics_decks_item_test from "./nx/tactics/decks/item_test.js"
 import nx_tactics_decks_place_test from "./nx/tactics/decks/place_test.js"
 import nx_tactics_decks_power_test from "./nx/tactics/decks/power_test.js"
-import nx_tactics_decks_restraint_test from "./nx/tactics/decks/restraint_test.js"
+import nx_tactics_decks_resource_test from "./nx/tactics/decks/resource_test.js"
 import nx_tactics_decks_rule_test from "./nx/tactics/decks/rule_test.js"
 import nx_tactics_decks_scene_murintrail_test from "./nx/tactics/decks/scene-murintrail_test.js"
 import nx_tactics_decks_scene_ontherun_test from "./nx/tactics/decks/scene-ontherun_test.js"
@@ -61,7 +62,6 @@ import nx_tactics_decks_scene_test from "./nx/tactics/decks/scene_test.js"
 import nx_tactics_decks_skill_test from "./nx/tactics/decks/skill_test.js"
 import nx_tactics_decks_specialty_test from "./nx/tactics/decks/specialty_test.js"
 import nx_tactics_decks_starter_test from "./nx/tactics/decks/starter_test.js"
-import nx_tactics_decks_tarot_test from "./nx/tactics/decks/tarot_test.js"
 import nx_tactics_decks_trauma_test from "./nx/tactics/decks/trauma_test.js"
 import nx_tactics_decks_unit_test from "./nx/tactics/decks/unit_test.js"
 import nx_tactics_decks_wound_test from "./nx/tactics/decks/wound_test.js"
@@ -147,12 +147,13 @@ export default class app_test {
       nx_tactics_books_superheroes_test.test_package(context),
       nx_tactics_books_world_wars_test.test_package(context),
       nx_tactics_decks_ability_test.test_package(context),
+      nx_tactics_decks_burden_test.test_package(context),
       nx_tactics_decks_conflict_test.test_package(context),
       nx_tactics_decks_disorder_test.test_package(context),
       nx_tactics_decks_item_test.test_package(context),
       nx_tactics_decks_place_test.test_package(context),
       nx_tactics_decks_power_test.test_package(context),
-      nx_tactics_decks_restraint_test.test_package(context),
+      nx_tactics_decks_resource_test.test_package(context),
       nx_tactics_decks_rule_test.test_package(context),
       nx_tactics_decks_scene_murintrail_test.test_package(context),
       nx_tactics_decks_scene_ontherun_test.test_package(context),
@@ -160,7 +161,6 @@ export default class app_test {
       nx_tactics_decks_skill_test.test_package(context),
       nx_tactics_decks_specialty_test.test_package(context),
       nx_tactics_decks_starter_test.test_package(context),
-      nx_tactics_decks_tarot_test.test_package(context),
       nx_tactics_decks_trauma_test.test_package(context),
       nx_tactics_decks_unit_test.test_package(context),
       nx_tactics_decks_wound_test.test_package(context),

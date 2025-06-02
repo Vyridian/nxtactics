@@ -446,11 +446,12 @@ Fight - Go to Damage.
   (base/rule
    :name "Overview"
    :summary
-    "* Drawn to Destiny (D2D) is a free, print-and-play game intended for tactical mini board/war/role-playing gaming
-     * I want to combine my favorite game mechanics into a crunchy AND rules-light tabletop game for any genre
-     * Classless, Skill-based RPG with GM optional rules
-     * Magic the Gathering and Arkham Horror TCG showed me how cards are the perfect platform for compact and modular rules
-     * Car Wars, Tales from the Red Dragon Inn, and X-Wing minis showed me the importance of tactical movement and powers")
+    "* Drawn to Destiny (D2D) is a free, print-and-play game for tactical mini board/war/role-playing
+     * It is Classless and Skill-based with GM optional rules
+     * It is a crunchy AND rules-light tabletop game for any genre
+     * It is 'batteries-included' with reusable minies, maps, and terrain
+     * Magic the Gathering and Arkham Horror TCG are the models for cards as the perfect platform for compact and modular rules
+     * Car Wars, Tales from the Red Dragon Inn, and X-Wing minis are the models for tactical movement and powers")
   (base/rule
    :name "Place")
   (base/rule
@@ -477,7 +478,7 @@ Fight - Go to Damage.
   (base/rule
    :name "Reach"
    :summary
-    "* Can target one additional dot away [Scaled]")
+    "* Can target one additional Space away [Scaled]")
   (base/rule
    :name "Round: Actions"
    :summary
@@ -553,7 +554,7 @@ Fight - Go to Damage.
      * Respec - Take Skill:-1 on ONE Skill for SP:+(lower Skill level)
      * 2 Week - Train/Research and spend SP:-(current Skill Level) for Skill:+1.
      Ability Points (AP)
-     * Respec - Remove ONE Ability for AP:+1
+     * Respec - Remove 1 Ability for AP:+1
      * 1 Week - Train/Research and AP:-1 for an Ability, Specialty, or Item in a Skill OR Intensity:+0x1 to a Power.
      * Specialty - IF you gain an Ability in your Specialty THEN every third Ability costs 0 AP.")
   (base/rule
@@ -617,7 +618,7 @@ Fight - Go to Damage.
      * Status - You can gain or lose status among different Factions
      * Favor - You can gain or lose favor among different individuals
      * Experience
-     -- Character Points (CP) - CP:+1 IF significant event toward Character Concept
+     -- Character Points (CP) - CP:+1 IF significant Character event
      -- Skill Points (SP) - SP:+1 IF Major Milestone (e.g. Chapter End)
      -- Ability Points (AP) - AP:+1 IF Minor Milestone (e.g. Significant Event)")
   (base/rule
@@ -641,30 +642,24 @@ Fight - Go to Damage.
      * Unit - Unit stat and mini cards
      * Skills - Skill cards on the Unit
      * Abilities - Ability cards on the Unit
-     * Specialties - Specialty cards on the Unit
+     * Specialties - Specialty cards
      * Items - Item cards on the Unit. Arrange these like a paper doll to show what you are wearing or holding.")
   (base/rule
    :name "Setup: Decks"
    :summary
-    "* Fate Deck - Shuffle an extra Conflict Deck to be the Fate Deck. You may use this instead of cards from your hand.
-     * Damage Decks - Shuffle the Wound, Disorder, Trauma, and Restraint decks.
-     * Resource Deck - Keep this deck sorted for easy access.
-     * Clock Deck - Set out the Clock Deck (sorted numerically). It is the game clock.")
-  (base/rule
-   :name "Setup: Overview"
-   :summary
-    "Setup is common to every game:
-     * Players - Everyone gets a colored Player Deck
-     * Decks - Damage decks are placed for easy access
-     * Tokens - Some abilities require tokens")
+    "* Damage Decks - Shuffle the Wound, Disorder, Trauma, and Burden decks
+     * Fate Deck - Shuffle an extra Conflict Deck to be the Fate Deck. Anyone may use this instead of cards from hand
+     * Resource Deck - Keep this deck sorted for easy access
+     * Clock Deck - Set out the Clock Deck (sorted numerically)")
   (base/rule
    :name "Setup: Players"
    :summary
-    "All Players have the same setup:
-     * Player Deck - Take a Colored Player Deck.
-     * Conflict Deck - Take a Conflict Deck for Skill Checks, shuffle it, and draw 5 cards.
-     * Character Deck - Players may have a deck of their character cards.
-     * Narrator - Some Players may be Game Masters.")
+    "Some Players may be designated Narrators (Game Masters). All Players get the following:
+     * Colored Player Deck
+     * Conflict Deck for Skill Checks - Shuffle and draw 5 cards
+
+     Optional:
+     A Character Deck of their personal character cards")
   (base/rule
    :name "Setup: Tokens"
    :summary
@@ -791,6 +786,7 @@ Fight - Go to Damage.
      * Inverted - An upsidedown card
      * Cooldown - A sideways card
      * Narrator - The host / game master(s)
+     * Space - A dot on the Map
      * Requires - A requirement to use
      * Uses - # of uses before reload
      * [Key]:Value - Key refers to another Card. Value is the value/modifier.
@@ -832,7 +828,9 @@ Fight - Go to Damage.
   (base/rule
    :name "Warning"
    :summary
-    "* This game attempts to bring more reality and popular fiction into games. For this reason, it includes physical, mental, and emotional trauma. I know little of the realities of these serious concepts, so I apologize in advance for any inaccuracies or clumsy representations.")
+    "* This game attempts to bring more reality and popular fiction into games. For this reason, it includes physical, mental, and emotional trauma. I know little of the realities of these serious concepts, so I apologize in advance for any inaccuracies or clumsy representations.
+     * I am not an artist, and AI art is fast and convenient. No art here is original.
+     * This project has no intention of monetization or ownership. References to other copyrighted material is provided as examples and inspiration and are not intended to imply any ownership.")
   (base/rule
    :name "Weather: Clouds"
    :image "images/cards/rule-weather-clouds.svg"
@@ -907,7 +905,6 @@ Fight - Go to Damage.
        "Item: Sample"
        "Item"
        "How to Play"
-       "Setup: Overview"
        "Setup: Players"
        "Setup: Decks"
        "Setup: Tokens"
@@ -919,9 +916,9 @@ Fight - Go to Damage.
        "Scene: Status Bar"
        "Scene: Rounds"
        "Scene: Events"
+       "Scene: Conclusion"
        "Scene: Rewards"
        "Scene: Advancement"
-       "Scene: Conclusion"
        "Scene: Sample"
        "Round: Overview"
        "Round: Start"

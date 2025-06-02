@@ -1791,23 +1791,12 @@ export default class nx_tactics_books_fantasy {
               ":summary",
               "* Orc Assassin\n* A pragmatic, hardened survivalist who began his career as a lowly militia man in the Orc Army who would later form the infamous mercenary guild, the Blackguard.\n* Personality - Hetman is noteworthy for his lack of personal pride or conscience. He dislikes authority.  He strongly believes the ends justify the means and has no compunction about using any means available.\n* The Blackguard - When establishing the Blackguard, he insisted that it should never have a central authority and that all decisions were made by popular vote.",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Melee",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+                  tactics,
                   "Melee",
-                  ":level",
-                  "5",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    "Sword: Long",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Sword: Long"),
-                    "Knife: Dagger",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Knife: Dagger")
-                  )
+                  5,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword: Long", "Knife: Dagger")
                 )
               )
             ),

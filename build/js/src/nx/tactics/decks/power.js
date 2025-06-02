@@ -961,7 +961,7 @@ export default class nx_tactics_decks_power {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Back to Nature", ":summary", "* Dead wood or hide rapid decays."),
           "Banish Weeds",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Banish Weeds"),
-          ":Barkskin",
+          "Barkskin",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Barkskin"),
           "Binding Vines",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Binding Vines"),
@@ -4168,7 +4168,7 @@ export default class nx_tactics_decks_power {
         ":summary",
         "* A weapon of some kind. Must have [Weapon: Melee], [Weapon: Close Combat], [Weapon: Ranged], [Weapon: Firearm] or [Weapon: Gunnery]",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "1-Handed", "2-Handed", "Arc:1-Side", "Arc:Front", "Armor:1", "Autofire", "Bash", "Burstfire", "Close Weapon", "Damage:Body", "Damage:Body+1", "Damage:Body+2", "Damage:Body+3", "Firearm Weapon", "Gunnery Weapon", "Hack", "High-Explosive", "Melee Weapon", "Pierce", "Ranged Weapon", "Scattershot", "Slash", "Tracer Rounds")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "1-Handed", "2-Handed", "Arc:1-Side", "Arc:Front", "Autofire", "Bash", "Burstfire", "Close Weapon", "Damage:Body", "Damage:Body+1", "Damage:Body+2", "Damage:Body+3", "Firearm Weapon", "Gunnery Weapon", "Hack", "High-Explosive", "Melee Weapon", "Pierce", "Ranged Weapon", "Scattershot", "Slash", "Tracer Rounds")
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Weather")
     )

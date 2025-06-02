@@ -9,10 +9,9 @@
   :titles "Emotional Trauma/Stress/Duress/Horror"
   :image "images/card-trauma-stress.svg"
   :summary
-   "* Stress: temporary duress or horror.
-    * Trauma: lasting [Rage], [Despair], [Need], [Fear].
-    * If [Will]:0 then gain [Shaken].
-    * [Shaken]: Cannot play odd [Defend] cards. Second action may only be [Recover]. Additional [Stress] is flipped to Trauma."
+   "Temporary duress or horror
+    * If [Will]:0 then gain [Shaken]
+    * [Shaken]: [Disadvantage]. Flip extra [Stress] to Trauma"
   :reference
    "Because love's such an old-fashioned word
     And love dares you to care for
@@ -40,9 +39,9 @@
 
 (const trauma-ac : base/damage
  (base/damage
-  :name "Rage: Death"
+  :name "Anger: Death"
   :ranksuit base/ranksuit-ac
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Frustrated by the randomness and cruelty of death.
     Major: Create meaning in death by choosing who dies. [Beast]:1
@@ -62,9 +61,9 @@
 
 (const trauma-ah : base/damage
  (base/damage
-  :name "Need: Death"
+  :name "Desire: Death"
   :ranksuit base/ranksuit-ah
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Study and discuss wounds and death.
     Major: Necrophile. May only take Skills/Abilities associated with death.
@@ -86,9 +85,9 @@
 
 (const trauma-kc : base/damage
  (base/damage
-  :name "Rage: Power"
+  :name "Anger: Power"
   :ranksuit base/ranksuit-kc
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Rebel. You hate those who seek to control others.
     Major: Revolutionary. You openly discuss revolution and seek to bring others to your cause. [Beast]:1
@@ -108,9 +107,9 @@
 
 (const trauma-kh : base/damage
  (base/damage
-  :name "Need: Power"
+  :name "Desire: Power"
   :ranksuit base/ranksuit-kh
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Bossy. If only they just listened to you.
     Major: Overbearing. You order everyone around and have no tolerance of opposition.
@@ -130,9 +129,9 @@
 
 (const trauma-qc : base/damage
  (base/damage
-  :name "Rage: Self"
+  :name "Anger: Self"
   :ranksuit base/ranksuit-qc
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :reference
    "* And, oh, my love remind me, what was it that I said? I can't help but pull the earth around me to make my bed. And, oh, my love remind me, what was it that I did? Did I drink too much? Am I losing touch? Did I build a ship to wreck? - Florence and the Machine, Ship to Wreck"
   :summary
@@ -154,9 +153,9 @@
 
 (const trauma-qh : base/damage
  (base/damage
-  :name "Need: Self"
+  :name "Desire: Self"
   :ranksuit base/ranksuit-qh
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Vainglory. You brag about own appearance, abilities, and status.
     Major: Gloryhound. You seek praise at the expense of others.
@@ -176,9 +175,9 @@
 
 (const trauma-jc : base/damage
  (base/damage
-  :name "Rage: Violence"
+  :name "Anger: Violence"
   :ranksuit base/ranksuit-jc
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Viscious. Revel in the kill.
     Major: Bloodthirsty. Find a way to keep the kills coming.
@@ -198,9 +197,9 @@
 
 (const trauma-jh : base/damage
  (base/damage
-  :name "Need: Violence"
+  :name "Desire: Violence"
   :ranksuit base/ranksuit-jh
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Tough. You have a suprisingly high pain threshold.
     Major: Masochist. You enjoy pain. [Shadow]:1
@@ -220,9 +219,9 @@
 
 (const trauma-tc : base/damage
  (base/damage
-  :name "Rage: Reality"
+  :name "Anger: Reality"
   :ranksuit base/ranksuit-tc
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Angry drunk. Obnoxious and pushy when intoxicated.
     Major: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. [Beast]:1
@@ -242,9 +241,9 @@
 
 (const trauma-th : base/damage
  (base/damage
-  :name "Need: Reality"
+  :name "Desire: Reality"
   :ranksuit base/ranksuit-th
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Boozer. You seek alchohol and drugs to change your state of mind.
     Major: Hooked. Always looking for a fix.
@@ -264,9 +263,9 @@
 
 (const trauma-9c : base/damage
  (base/damage
-  :name "Rage: Belief"
+  :name "Anger: Belief"
   :ranksuit base/ranksuit-9c
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Skeptic. Completely apathetic and dismissive of religious figures or icons.
     Major: Sacreligeous. Has a tendency toward sacrilege and blasphemy.
@@ -286,9 +285,9 @@
 
 (const trauma-9h : base/damage
  (base/damage
-  :name "Need: Belief"
+  :name "Desire: Belief"
   :ranksuit base/ranksuit-9h
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Gullible. Crave something to believe in.
     Major: Believer. Become very religious.
@@ -308,9 +307,9 @@
 
 (const trauma-8c : base/damage
  (base/damage
-  :name "Rage: Status"
+  :name "Anger: Status"
   :ranksuit base/ranksuit-8c
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Jealous. Frustrated by showoffs.
     Major: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. [Beast]:1
@@ -330,9 +329,9 @@
 
 (const trauma-8h : base/damage
  (base/damage
-  :name "Need: Status"
+  :name "Desire: Status"
   :ranksuit base/ranksuit-8h
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Poser. Crave status and try to show your fashion.
     Major: Attention Seeker. Regularly attempt to be accepted by the in crowd.
@@ -351,9 +350,9 @@
 
 (const trauma-7c : base/damage
  (base/damage
-  :name "Rage: Companions"
+  :name "Anger: Companions"
   :ranksuit base/ranksuit-7c
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Vindictive. Aggressively protective of companions.
     Major: Hunter. Take merciless revenge on any wrongs against companions.
@@ -373,9 +372,9 @@
 
 (const trauma-7h : base/damage
  (base/damage
-  :name "Need: Companions"
+  :name "Desire: Companions"
   :ranksuit base/ranksuit-7h
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Unsure. Get approval before making decisions.
     Major: Joiner. Always be in a group.
@@ -395,9 +394,9 @@
 
 (const trauma-6c : base/damage
  (base/damage
-  :name "Rage: Strangers"
+  :name "Anger: Strangers"
   :ranksuit base/ranksuit-6c
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Resentful. Talks about others with sweeping sterotypes.
     Major: Hateful. Uses overtly hateful language and is uncomfortable working in certain groups.
@@ -417,9 +416,9 @@
 
 (const trauma-6h : base/damage
  (base/damage
-  :name "Need: Strangers"
+  :name "Desire: Strangers"
   :ranksuit base/ranksuit-6h
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Seek and study dangerous people.
     Major: You want to challenge dangerous people.
@@ -439,9 +438,9 @@
 
 (const trauma-5c : base/damage
  (base/damage
-  :name "Rage: Strangers"
+  :name "Anger: Strangers"
   :ranksuit base/ranksuit-5c
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Possessive. Drawn to abusive relationships.
     Major: Controlling. You are a manipulator.
@@ -461,9 +460,9 @@
 
 (const trauma-5h : base/damage
  (base/damage
-  :name "Need: Love"
+  :name "Desire: Love"
   :ranksuit base/ranksuit-5h
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Infatuated.
     Major: Clingy. Obsessed with finding and keeping a mate.
@@ -483,9 +482,9 @@
 
 (const trauma-4c : base/damage
  (base/damage
-  :name "Rage: Change"
+  :name "Anger: Change"
   :ranksuit base/ranksuit-4c
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.
     Major: Reactionary. Cannot tolerate anything new or modern.
@@ -505,9 +504,9 @@
 
 (const trauma-4h : base/damage
  (base/damage
-  :name "Need: Change"
+  :name "Desire: Change"
   :ranksuit base/ranksuit-4h
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Hyperactive. Axious when not active.
     Major: Change for changes sake.
@@ -527,9 +526,9 @@
 
 (const trauma-3c : base/damage
  (base/damage
-  :name "Rage: Things"
+  :name "Anger: Things"
   :ranksuit base/ranksuit-3c
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :reference
    "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra"
   :summary
@@ -551,9 +550,9 @@
 
 (const trauma-3h : base/damage
  (base/damage
-  :name "Need: Things"
+  :name "Desire: Things"
   :ranksuit base/ranksuit-3h
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Collector. Keep mementoes of your life.
     Major: Pack Rat. You have a hard time leaving anything behind.
@@ -573,9 +572,9 @@
 
 (const trauma-2c : base/damage
  (base/damage
-  :name "Rage: Fortune"
+  :name "Anger: Fortune"
   :ranksuit base/ranksuit-2c
-  :image "images/card-trauma-rage.svg"
+  :image "images/card-trauma-anger.svg"
   :summary
    "Minor: Frustrated by an arbitrary world.
     Major: Random outbursts. Your temper seems to surge at random times.
@@ -595,9 +594,9 @@
 
 (const trauma-2h : base/damage
  (base/damage
-  :name "Need: Fortune"
+  :name "Desire: Fortune"
   :ranksuit base/ranksuit-2h
-  :image "images/card-trauma-need.svg"
+  :image "images/card-trauma-desire.svg"
   :summary
    "Minor: Frugal. A penny saved is a penny earned.
     Major: Stingy. You only buy what is absolutely necessary.
@@ -618,76 +617,72 @@
 (func deck-trauma : base/deck
  (base/deck
   :name "Trauma"
-  :titles ""
+  :image "images/card-trauma-deck.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "* C-Anger/Fury/Surly/Suicidal Rage
     * D-Doubt/Servitude/Coverted
     * H-Despair/Apathy/Depression/Broken/Suicidal
     * S-Fear/Cowed/Died of Fear"
   :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist
-     trauma-wild-black
-     trauma-wild-red
-     trauma-ac
-     trauma-ad
-     trauma-ah
-     trauma-as
-     trauma-kc
-     trauma-kd
-     trauma-kh
-     trauma-ks
-     trauma-qc
-     trauma-qd
-     trauma-qh
-     trauma-qs
-     trauma-jc
-     trauma-jd
-     trauma-jh
-     trauma-js
-     trauma-tc
-     trauma-td
-     trauma-th
-     trauma-ts
-     trauma-9c
-     trauma-9d
-     trauma-9h
-     trauma-9s
-     trauma-8c
-     trauma-8d
-     trauma-8h
-     trauma-8s
-     trauma-7c
-     trauma-7d
-     trauma-7h
-     trauma-7s
-     trauma-6c
-     trauma-6d
-     trauma-6h
-     trauma-6s
-     trauma-5c
-     trauma-5d
-     trauma-5h
-     trauma-5s
-     trauma-4c
-     trauma-4d
-     trauma-4h
-     trauma-4s
-     trauma-3c
-     trauma-3d
-     trauma-3h
-     trauma-3s
-     trauma-2c
-     trauma-2d
-     trauma-2h
-     trauma-2s
-)))
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      trauma-wild-black
+      trauma-wild-red
+      trauma-ac
+      trauma-ad
+      trauma-ah
+      trauma-as
+      trauma-kc
+      trauma-kd
+      trauma-kh
+      trauma-ks
+      trauma-qc
+      trauma-qd
+      trauma-qh
+      trauma-qs
+      trauma-jc
+      trauma-jd
+      trauma-jh
+      trauma-js
+      trauma-tc
+      trauma-td
+      trauma-th
+      trauma-ts
+      trauma-9c
+      trauma-9d
+      trauma-9h
+      trauma-9s
+      trauma-8c
+      trauma-8d
+      trauma-8h
+      trauma-8s
+      trauma-7c
+      trauma-7d
+      trauma-7h
+      trauma-7s
+      trauma-6c
+      trauma-6d
+      trauma-6h
+      trauma-6s
+      trauma-5c
+      trauma-5d
+      trauma-5h
+      trauma-5s
+      trauma-4c
+      trauma-4d
+      trauma-4h
+      trauma-4s
+      trauma-3c
+      trauma-3d
+      trauma-3h
+      trauma-3s
+      trauma-2c
+      trauma-2d
+      trauma-2h
+      trauma-2s))
+    (base/cardmap-copy<-card-count-isnum
+     stress 54 false)
+   ))
  :doc "Trauma Deck")
-
-(func deck-traumaback : base/deck
- (base/deck
-  :name "Trauma Back"
-  :cardmap
-   (base/cardmap-copy<-card-count-isnum
-    stress 54 false))
- :doc "Trauma Back Deck")

@@ -7,28 +7,10 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_decks_wound {
 
   /**
-   * Constant: bleeding
-   * {cardback}
-   */
-  static c_bleeding = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'bleeding', type: nx_tactics_base.t_cardback}}
-
-  /**
-   * Constant: bloodloss
-   * {card}
-   */
-  static c_bloodloss = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'bloodloss', type: nx_tactics_base.t_card}}
-
-  /**
    * Constant: fatigue
    * {cardback}
    */
   static c_fatigue = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'fatigue', type: nx_tactics_base.t_cardback}}
-
-  /**
-   * Constant: poisoned
-   * {card}
-   */
-  static c_poisoned = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'poisoned', type: nx_tactics_base.t_card}}
 
   /**
    * Constant: wound-2c
@@ -363,64 +345,6 @@ export default class nx_tactics_decks_wound {
   static c_wound_wild_red = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'wound-wild-red', type: nx_tactics_base.t_damage}}
 
   /**
-   * @function deck_bleeding
-   * Bleeding Deck
-   * @return {deck}
-   */
-  static t_deck_bleeding = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_bleeding = {
-    vx_type: nx_tactics_decks_wound.t_deck_bleeding
-  }
-
-  // (func deck-bleeding)
-  static f_deck_bleeding() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_deck},
-      ":name",
-      "Bleeding",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
-        nx_tactics_decks_wound.c_bleeding,
-        10,
-        true
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function deck_bloodloss
-   * Bloodloss Deck
-   * @return {deck}
-   */
-  static t_deck_bloodloss = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_bloodloss = {
-    vx_type: nx_tactics_decks_wound.t_deck_bloodloss
-  }
-
-  // (func deck-bloodloss)
-  static f_deck_bloodloss() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_deck},
-      ":name",
-      "Bloodloss",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
-        nx_tactics_decks_wound.c_bloodloss,
-        10,
-        true
-      )
-    )
-    return output
-  }
-
-  /**
    * @function deck_wound
    * Wound Deck
    * @return {deck}
@@ -439,64 +363,76 @@ export default class nx_tactics_decks_wound {
       {"any-1": nx_tactics_base.t_deck},
       ":name",
       "Wounds",
+      ":image",
+      "images/card-wound-deck.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_wound.c_wound_wild_black,
-          nx_tactics_decks_wound.c_wound_wild_red,
-          nx_tactics_decks_wound.c_wound_ac,
-          nx_tactics_decks_wound.c_wound_ad,
-          nx_tactics_decks_wound.c_wound_ah,
-          nx_tactics_decks_wound.c_wound_as,
-          nx_tactics_decks_wound.c_wound_kc,
-          nx_tactics_decks_wound.c_wound_kd,
-          nx_tactics_decks_wound.c_wound_kh,
-          nx_tactics_decks_wound.c_wound_ks,
-          nx_tactics_decks_wound.c_wound_qc,
-          nx_tactics_decks_wound.c_wound_qd,
-          nx_tactics_decks_wound.c_wound_qh,
-          nx_tactics_decks_wound.c_wound_qs,
-          nx_tactics_decks_wound.c_wound_jc,
-          nx_tactics_decks_wound.c_wound_jd,
-          nx_tactics_decks_wound.c_wound_jh,
-          nx_tactics_decks_wound.c_wound_js,
-          nx_tactics_decks_wound.c_wound_tc,
-          nx_tactics_decks_wound.c_wound_td,
-          nx_tactics_decks_wound.c_wound_th,
-          nx_tactics_decks_wound.c_wound_ts,
-          nx_tactics_decks_wound.c_wound_9c,
-          nx_tactics_decks_wound.c_wound_9d,
-          nx_tactics_decks_wound.c_wound_9h,
-          nx_tactics_decks_wound.c_wound_9s,
-          nx_tactics_decks_wound.c_wound_8c,
-          nx_tactics_decks_wound.c_wound_8d,
-          nx_tactics_decks_wound.c_wound_8h,
-          nx_tactics_decks_wound.c_wound_8s,
-          nx_tactics_decks_wound.c_wound_7c,
-          nx_tactics_decks_wound.c_wound_7d,
-          nx_tactics_decks_wound.c_wound_7h,
-          nx_tactics_decks_wound.c_wound_7s,
-          nx_tactics_decks_wound.c_wound_6c,
-          nx_tactics_decks_wound.c_wound_6d,
-          nx_tactics_decks_wound.c_wound_6h,
-          nx_tactics_decks_wound.c_wound_6s,
-          nx_tactics_decks_wound.c_wound_5c,
-          nx_tactics_decks_wound.c_wound_5d,
-          nx_tactics_decks_wound.c_wound_5h,
-          nx_tactics_decks_wound.c_wound_5s,
-          nx_tactics_decks_wound.c_wound_4c,
-          nx_tactics_decks_wound.c_wound_4d,
-          nx_tactics_decks_wound.c_wound_4h,
-          nx_tactics_decks_wound.c_wound_4s,
-          nx_tactics_decks_wound.c_wound_3c,
-          nx_tactics_decks_wound.c_wound_3d,
-          nx_tactics_decks_wound.c_wound_3h,
-          nx_tactics_decks_wound.c_wound_3s,
-          nx_tactics_decks_wound.c_wound_2c,
-          nx_tactics_decks_wound.c_wound_2d,
-          nx_tactics_decks_wound.c_wound_2h,
-          nx_tactics_decks_wound.c_wound_2s
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_cardmap},
+        nx_tactics_base.f_cardmap_from_cardlist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_cardlist},
+            nx_tactics_decks_wound.c_wound_wild_black,
+            nx_tactics_decks_wound.c_wound_wild_red,
+            nx_tactics_decks_wound.c_wound_ac,
+            nx_tactics_decks_wound.c_wound_ad,
+            nx_tactics_decks_wound.c_wound_ah,
+            nx_tactics_decks_wound.c_wound_as,
+            nx_tactics_decks_wound.c_wound_kc,
+            nx_tactics_decks_wound.c_wound_kd,
+            nx_tactics_decks_wound.c_wound_kh,
+            nx_tactics_decks_wound.c_wound_ks,
+            nx_tactics_decks_wound.c_wound_qc,
+            nx_tactics_decks_wound.c_wound_qd,
+            nx_tactics_decks_wound.c_wound_qh,
+            nx_tactics_decks_wound.c_wound_qs,
+            nx_tactics_decks_wound.c_wound_jc,
+            nx_tactics_decks_wound.c_wound_jd,
+            nx_tactics_decks_wound.c_wound_jh,
+            nx_tactics_decks_wound.c_wound_js,
+            nx_tactics_decks_wound.c_wound_tc,
+            nx_tactics_decks_wound.c_wound_td,
+            nx_tactics_decks_wound.c_wound_th,
+            nx_tactics_decks_wound.c_wound_ts,
+            nx_tactics_decks_wound.c_wound_9c,
+            nx_tactics_decks_wound.c_wound_9d,
+            nx_tactics_decks_wound.c_wound_9h,
+            nx_tactics_decks_wound.c_wound_9s,
+            nx_tactics_decks_wound.c_wound_8c,
+            nx_tactics_decks_wound.c_wound_8d,
+            nx_tactics_decks_wound.c_wound_8h,
+            nx_tactics_decks_wound.c_wound_8s,
+            nx_tactics_decks_wound.c_wound_7c,
+            nx_tactics_decks_wound.c_wound_7d,
+            nx_tactics_decks_wound.c_wound_7h,
+            nx_tactics_decks_wound.c_wound_7s,
+            nx_tactics_decks_wound.c_wound_6c,
+            nx_tactics_decks_wound.c_wound_6d,
+            nx_tactics_decks_wound.c_wound_6h,
+            nx_tactics_decks_wound.c_wound_6s,
+            nx_tactics_decks_wound.c_wound_5c,
+            nx_tactics_decks_wound.c_wound_5d,
+            nx_tactics_decks_wound.c_wound_5h,
+            nx_tactics_decks_wound.c_wound_5s,
+            nx_tactics_decks_wound.c_wound_4c,
+            nx_tactics_decks_wound.c_wound_4d,
+            nx_tactics_decks_wound.c_wound_4h,
+            nx_tactics_decks_wound.c_wound_4s,
+            nx_tactics_decks_wound.c_wound_3c,
+            nx_tactics_decks_wound.c_wound_3d,
+            nx_tactics_decks_wound.c_wound_3h,
+            nx_tactics_decks_wound.c_wound_3s,
+            nx_tactics_decks_wound.c_wound_2c,
+            nx_tactics_decks_wound.c_wound_2d,
+            nx_tactics_decks_wound.c_wound_2h,
+            nx_tactics_decks_wound.c_wound_2s
+          )
+        ),
+        nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
+          nx_tactics_decks_wound.c_fatigue,
+          54,
+          false
         )
       )
     )
@@ -522,11 +458,15 @@ export default class nx_tactics_decks_wound {
       {"any-1": nx_tactics_base.t_deck},
       ":name",
       "Wound Back",
+      ":image",
+      "images/card-wound-fatigue.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":cardmap",
       nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
         nx_tactics_decks_wound.c_fatigue,
         54,
-        true
+        false
       )
     )
     return output
@@ -536,10 +476,7 @@ export default class nx_tactics_decks_wound {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
-      "bleeding": nx_tactics_decks_wound.c_bleeding,
-      "bloodloss": nx_tactics_decks_wound.c_bloodloss,
       "fatigue": nx_tactics_decks_wound.c_fatigue,
-      "poisoned": nx_tactics_decks_wound.c_poisoned,
       "wound-2c": nx_tactics_decks_wound.c_wound_2c,
       "wound-2d": nx_tactics_decks_wound.c_wound_2d,
       "wound-2h": nx_tactics_decks_wound.c_wound_2h,
@@ -596,14 +533,10 @@ export default class nx_tactics_decks_wound {
       "wound-wild-red": nx_tactics_decks_wound.c_wound_wild_red
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "deck-bleeding": nx_tactics_decks_wound.e_deck_bleeding,
-      "deck-bloodloss": nx_tactics_decks_wound.e_deck_bloodloss,
       "deck-wound": nx_tactics_decks_wound.e_deck_wound,
       "deck-woundback": nx_tactics_decks_wound.e_deck_woundback
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "deck-bleeding": nx_tactics_decks_wound.t_deck_bleeding,
-      "deck-bloodloss": nx_tactics_decks_wound.t_deck_bloodloss,
       "deck-wound": nx_tactics_decks_wound.t_deck_wound,
       "deck-woundback": nx_tactics_decks_wound.t_deck_woundback
     })
@@ -618,42 +551,6 @@ export default class nx_tactics_decks_wound {
       "typemap": typemap
     })
     vx_core.vx_global_package_set(pkg)
-
-    // (func deck-bleeding)
-    nx_tactics_decks_wound.t_deck_bleeding['vx_value'] = {
-      name          : "deck-bleeding",
-      pkgname       : "nx/tactics/decks/wound",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_wound.f_deck_bleeding
-    }
-
-    // (func deck-bloodloss)
-    nx_tactics_decks_wound.t_deck_bloodloss['vx_value'] = {
-      name          : "deck-bloodloss",
-      pkgname       : "nx/tactics/decks/wound",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_wound.f_deck_bloodloss
-    }
 
     // (func deck-wound)
     nx_tactics_decks_wound.t_deck_wound['vx_value'] = {
@@ -691,17 +588,8 @@ export default class nx_tactics_decks_wound {
       fn            : nx_tactics_decks_wound.f_deck_woundback
     }
 
-    // (const bleeding)
-    Object.assign(nx_tactics_decks_wound.c_bleeding, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "bleeding", ":name", "Bleeding", ":image", "images/card-bleeding.svg", ":summary", "* Turn End: [Fatigue]:1 for each [Bleeding]. IF [Body]:0 THEN [Blood Loss]:1 instead."))
-
-    // (const bloodloss)
-    Object.assign(nx_tactics_decks_wound.c_bloodloss, vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "bloodloss", ":name", "Blood Loss", ":image", "images/card-bloodloss.svg", ":summary", "* Day End: Discard one [Blood Loss]"))
-
     // (const fatigue)
-    Object.assign(nx_tactics_decks_wound.c_fatigue, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "fatigue", ":name", "Damage: Fatigue", ":titles", "Physical Damage/Fatigue/Weaken/Exertion", ":image", "images/card-wound-fatigue.svg", ":summary", "* Fatigue: temporary weaknesss or exertion.\n* Wound: lasting damage and can be [Bash], [Hack], [Pierce], [Slash].\n* IF [Body]:0 THEN [Exhausted].\n* [Exhausted]: [Disadvantage]. Must [Recover] once each [Round]. Extra [Fatigue] are Wounds instead."))
-
-    // (const poisoned)
-    Object.assign(nx_tactics_decks_wound.c_poisoned, vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "poisoned", ":name", "Poisoned", ":image", "images/card-poisoned.svg"))
+    Object.assign(nx_tactics_decks_wound.c_fatigue, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "fatigue", ":name", "Wound: Fatigue", ":titles", "Physical Damage/Fatigue/Weaken/Exertion", ":image", "images/card-wound-fatigue.svg", ":summary", "Temporary weaknesss or exertion\n* IF [Body]:0 THEN [Exhausted]\n* [Exhausted]: [Disadvantage]. Extra [Fatigue] is flipped to Wound"))
 
     // (const wound-2c)
     Object.assign(nx_tactics_decks_wound.c_wound_2c, vx_core.f_new(

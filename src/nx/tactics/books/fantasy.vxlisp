@@ -200,19 +200,12 @@
           * Personality - Hetman is noteworthy for his lack of personal pride or conscience. He dislikes authority.  He strongly believes the ends justify the means and has no compunction about using any means available.
           * The Blackguard - When establishing the Blackguard, he insisted that it should never have a central authority and that all decisions were made by popular vote."
         :unitskillmap
-         (base/unitskillmap
-          :Melee
-           (base/unitskill
-            :name "Melee"
-            :level "5"
-            :unititemmap
-             (base/unititemmap
-              "Sword: Long"
-               (base/unititem
-                :name "Sword: Long")
-              "Knife: Dagger"
-               (base/unititem
-                :name "Knife: Dagger")))))
+         (base/unitskillmap<-unitskilllist
+          (base/unitskill<-tactics-key-lvl-items
+           tactics "Melee" 5
+           (stringlist
+            "Sword: Long"
+            "Knife: Dagger"))))
        (base/unit
         :name "Jaris Ransun"
         :image "images/fantasy/Ransun.png"
