@@ -1506,8 +1506,16 @@
    :name "Hide"
    :summary
     "* Find a hiding place in an area where you will not normally be detected.
-     * IF You have [Full Cover] AND you don't move AND your opponents are at least your [Body] spaces away.
-     * THEN [Action] [Continuous]: You are hidden from view AND Opponents must succeed at [Investigate]/[Seek] to detect you.")
+     * [Skill]: [Stealth]
+     * IF You have [Full Cover] AND you don't move AND Rivals are at least your [Body] spaces away.
+     * THEN [Action] [Continuous]: You are hidden from view AND Rivals must succeed at [Investigate]/[Seek] to detect you.")
+  (base/ability
+   :name "Hide in Plain Sight"
+   :summary
+    "* A tricky ability to remain hidden despite being in direct sight
+     * [Skill]: [Stealth]
+     * Requires: [Camouflage]
+     * IF you have appropriate camouflage AND you don't move THEN you cannot be detected using normal vision")
   (base/ability
    :name "Hip Shoot"
    :summary

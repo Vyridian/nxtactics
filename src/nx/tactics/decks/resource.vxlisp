@@ -27,7 +27,9 @@
 
 (func deck-resource : base/deck
  (base/deck
-  :name "Resources"
+  :name "Resource Deck"
+  :image "images/deck-resource.svg"
+  :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap
     (base/cardmap-copy<-card-count-isnum

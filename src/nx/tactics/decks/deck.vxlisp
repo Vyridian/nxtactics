@@ -57,6 +57,20 @@
     (:bookmap data/tactics-all)))
  :doc "Deck of books")
 
+(func deck-clock : base/deck
+ [tactics : base/tactics]
+ (let : base/deck
+  [clock : base/card :=
+    (base/rule<-tactics-key
+     tactics "Clock")]
+  (base/deck
+   :name "Clock Deck"
+   :image "images/rule-clock-deck.svg"
+   :layout base/cardlayout-imageonly
+   :cardmap
+    (base/cardmap-copy<-card-count-isnum
+     clock 54 true))))
+
 (func deck-items : base/deck
  [tactics : base/tactics]
  (let : base/deck
@@ -95,25 +109,6 @@
    :name "Powers"
    :cardmap cardmap))
  :doc "Powers Deck")
-
-(func deck-decks : base/deck
- [tactics : base/tactics]
- (base/deck
-  :name "Decks"
-  :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist
-     (starter/deck-player tactics "blue")
-     (starter/deck-player tactics "green")
-     (starter/deck-player tactics "red")
-     (starter/deck-player tactics "yellow")
-     (conflict/deck-conflict)
-     (wound/deck-wound)
-     (disorder/deck-disorder)
-     (trauma/deck-trauma)
-     (burden/deck-burden)
-     (resource/deck-resource))))
- :doc "Setup Deck")
 
 (func deck-scenes : base/deck
  [tactics : base/tactics]
@@ -164,3 +159,23 @@
    :name "Units"
    :cardmap cardmap))
  :doc "Units Deck")
+
+(func deck-decks : base/deck
+ [tactics : base/tactics]
+ (base/deck
+  :name "Decks"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist
+     (starter/deck-player tactics "blue")
+     (starter/deck-player tactics "green")
+     (starter/deck-player tactics "red")
+     (starter/deck-player tactics "yellow")
+     (conflict/deck-conflict)
+     (wound/deck-wound)
+     (disorder/deck-disorder)
+     (trauma/deck-trauma)
+     (burden/deck-burden)
+     (resource/deck-resource)
+     (deck-clock tactics))))
+ :doc "Setup Deck")

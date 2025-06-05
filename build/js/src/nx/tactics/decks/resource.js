@@ -42,7 +42,11 @@ export default class nx_tactics_decks_resource {
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_deck},
       ":name",
-      "Resources",
+      "Resource Deck",
+      ":image",
+      "images/deck-resource.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":cardmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_cardmap},

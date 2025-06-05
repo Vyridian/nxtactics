@@ -1099,7 +1099,7 @@ export default class nx_tactics_decks_skill {
         ":titles",
         "Bailiff, Chief Justice, Constable, Executioner, Judge, Justice, Lawbringer, Lawyer, Litigant, Magistrate, Peace Officer, Peacekeeper, Police Officer",
         ":reference",
-        "I shall now render judgment on Furina's misrepresentation of herself as the Archon of Fontaine. As a human who knowingly deceived her fellow citizens, Furina is .. Guilty. - Neuvillette, Genshin Impact",
+        "* Rules were made to be broken, like buidings, and people. - Jinx, Runeterra\n* I shall now render judgment on Furina's misrepresentation of herself as the Archon of Fontaine. As a human who knowingly deceived her fellow citizens, Furina is .. Guilty. - Neuvillette, Genshin Impact",
         ":stat",
         "Mind",
         ":abilitymap",
@@ -1761,7 +1761,7 @@ export default class nx_tactics_decks_skill {
         ":summary",
         "* This skill includes abilities that let you hide, move silently, and suprise your opponents.\n* Tokens - The number of Tokens on Stealth represents how Hidden you are. Tokens may not be more than 2xStealth.\n* Forced: Maximum Move=Tokens. IF Tokens=0 THEN you Reveal immediately.\n* Reveal - Free: You may place your unit anywhere within Move:Tokens of your Hidden unit, but it must be on or next to a space out of sight of Rivals. Remove Tokens and Hidden Units.\n* Surprise - IF you reveal adjacent to a unit, you may give them Stress:+1.\n* Remain Hidden - Clock: Tokens+1",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Ambush", "Backstab", "Blend into the Crowd", "Camouflage", "Cloak and Dagger", "Hide", "Sneak", "Sneak Attack", "Stalk", "Strike and Fade", "Tailing", "Vanish", "Without a Trace")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Ambush", "Backstab", "Blend into the Crowd", "Camouflage", "Cloak and Dagger", "Hide", "Hide in Plain Sight", "Sneak", "Sneak Attack", "Stalk", "Strike and Fade", "Tailing", "Vanish", "Without a Trace")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_skill},

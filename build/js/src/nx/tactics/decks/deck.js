@@ -83,6 +83,46 @@ export default class nx_tactics_decks_deck {
   }
 
   /**
+   * @function deck_clock
+   * @param  {tactics} tactics
+   * @return {deck}
+   */
+  static t_deck_clock = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_clock = {
+    vx_type: nx_tactics_decks_deck.t_deck_clock
+  }
+
+  // (func deck-clock)
+  static f_deck_clock(tactics) {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_deck},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const clock = nx_tactics_base.f_rule_from_tactics_key(tactics, "Clock")
+        return vx_core.f_new(
+          {"any-1": nx_tactics_base.t_deck},
+          ":name",
+          "Clock Deck",
+          ":image",
+          "images/rule-clock-deck.svg",
+          ":layout",
+          nx_tactics_base.c_cardlayout_imageonly,
+          ":cardmap",
+          nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
+            clock,
+            54,
+            true
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
    * @function deck_decks
    * Setup Deck
    * @param  {tactics} tactics
@@ -115,7 +155,8 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_disorder.f_deck_disorder(),
           nx_tactics_decks_trauma.f_deck_trauma(),
           nx_tactics_decks_burden.f_deck_burden(),
-          nx_tactics_decks_resource.f_deck_resource()
+          nx_tactics_decks_resource.f_deck_resource(),
+          nx_tactics_decks_deck.f_deck_clock(tactics)
         )
       )
     )
@@ -401,6 +442,7 @@ export default class nx_tactics_decks_deck {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-abilities": nx_tactics_decks_deck.e_deck_abilities,
       "deck-books": nx_tactics_decks_deck.e_deck_books,
+      "deck-clock": nx_tactics_decks_deck.e_deck_clock,
       "deck-decks": nx_tactics_decks_deck.e_deck_decks,
       "deck-home": nx_tactics_decks_deck.e_deck_home,
       "deck-items": nx_tactics_decks_deck.e_deck_items,
@@ -414,6 +456,7 @@ export default class nx_tactics_decks_deck {
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "deck-abilities": nx_tactics_decks_deck.t_deck_abilities,
       "deck-books": nx_tactics_decks_deck.t_deck_books,
+      "deck-clock": nx_tactics_decks_deck.t_deck_clock,
       "deck-decks": nx_tactics_decks_deck.t_deck_decks,
       "deck-home": nx_tactics_decks_deck.t_deck_home,
       "deck-items": nx_tactics_decks_deck.t_deck_items,
@@ -470,6 +513,24 @@ export default class nx_tactics_decks_deck {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_deck.f_deck_books
+    }
+
+    // (func deck-clock)
+    nx_tactics_decks_deck.t_deck_clock['vx_value'] = {
+      name          : "deck-clock",
+      pkgname       : "nx/tactics/decks/deck",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_deck.f_deck_clock
     }
 
     // (func deck-decks)

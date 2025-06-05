@@ -2372,7 +2372,8 @@ x +1DMG vs. Crouching."
    :titles
     "Bailiff, Chief Justice, Constable, Executioner, Judge, Justice, Lawbringer, Lawyer, Litigant, Magistrate, Peace Officer, Peacekeeper, Police Officer"
    :reference
-    "I shall now render judgment on Furina's misrepresentation of herself as the Archon of Fontaine. As a human who knowingly deceived her fellow citizens, Furina is .. Guilty. - Neuvillette, Genshin Impact"
+    "* Rules were made to be broken, like buidings, and people. - Jinx, Runeterra
+     * I shall now render judgment on Furina's misrepresentation of herself as the Archon of Fontaine. As a human who knowingly deceived her fellow citizens, Furina is .. Guilty. - Neuvillette, Genshin Impact"
    :stat "Mind"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -3525,6 +3526,7 @@ x +1DMG vs. Crouching."
      "Camouflage"
      "Cloak and Dagger"
      "Hide"
+     "Hide in Plain Sight"
      "Sneak"
      "Sneak Attack"
      "Stalk"

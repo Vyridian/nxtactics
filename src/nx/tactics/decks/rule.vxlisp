@@ -143,13 +143,13 @@
      * Event: IF a Unit breathes < 1 minute/2 minutes THEN Choking:+1 ELSE Choking:-1")
   (base/rule
    :name "Clock"
+   :image "images/rule-clock.svg"
    :summary
-    "* Represents the current Clock time.
-     * The [scene] determines how many rounds there are and whether they count up or down.
-     * scene Start: Stack the cards in order with Round#1 on top or bottom depending on the [scene].
-     * Round End: Discard the top Round#.
-     ** IF one or more [Encounter] cards are revealed THEN resolve them.
-     ** IF there are no remaining Round# cards THEN the [scene] immediately ends for time.")
+    "Represents the current Clock time.
+     * Scene Start: Order with Clock#1 on top or bottom based on [Scene]
+     * Round End: Discard the top Clock
+     ** Resolve any revealed [Event]
+     ** IF no Clocks THEN resolve according to the [Scene]")
   (base/rule
    :name "Combat"
    :summary
@@ -596,6 +596,12 @@ Fight - Go to Damage.
      * Places - A Place is a Card that depicts a location (e.g. Rock, Tavern, Tunnel, Mountain). Lay the Places on the table as described by the Scene.
      * Units - eploy Units on the map as described by the Scene. They must be placed on a valid Space (dot) with a valid Facing.")
   (base/rule
+   :name "Scene: Map#1"
+   :image "images/rule-scene-map-1.svg")
+  (base/rule
+   :name "Scene: Map#2"
+   :image "images/rule-scene-map-2.svg")
+  (base/rule
    :name "Scene: Overview"
    :summary
     "Scene describes a location and situation:
@@ -646,13 +652,15 @@ Fight - Go to Damage.
      * Items - Item cards on the Unit. Arrange these like a paper doll to show what you are wearing or holding.")
   (base/rule
    :name "Setup: Decks"
+   :image "images/rule-setup-decks.svg"
    :summary
     "* Damage Decks - Shuffle the Wound, Disorder, Trauma, and Burden decks
      * Fate Deck - Shuffle an extra Conflict Deck to be the Fate Deck. Anyone may use this instead of cards from hand
      * Resource Deck - Keep this deck sorted for easy access
-     * Clock Deck - Set out the Clock Deck (sorted numerically)")
+     * Clock Deck - Sort the Clock Deck")
   (base/rule
    :name "Setup: Players"
+   :image "images/rule-setup-players.svg"
    :summary
     "Some Players may be designated Narrators (Game Masters). All Players get the following:
      * Colored Player Deck
@@ -662,8 +670,9 @@ Fight - Go to Damage.
      A Character Deck of their personal character cards")
   (base/rule
    :name "Setup: Tokens"
+   :image "images/rule-setup-tokens.svg"
    :summary
-    "Some abilities require Tokens. Any kind of small coin-sized token will do.")
+    "Some cards require Tokens. Small metal cubes or coins are ideal, but cards work as well")
   (base/rule
    :name "Skill")
   (base/rule
@@ -911,6 +920,8 @@ Fight - Go to Damage.
        "Scene: Overview"
        "Scene: Introduction"
        "Scene: Map"
+       "Scene: Map#1"
+       "Scene: Map#2"
        "Scene: Factions"
        "Scene: Units"
        "Scene: Status Bar"

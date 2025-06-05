@@ -168,7 +168,7 @@ export default class nx_tactics_decks_starter {
           ":name",
           vx_core.f_new({"any-1": vx_core.t_string}, "Unit#", num),
           ":image",
-          vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg")
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, ".svg")
         )
       })
     )
@@ -218,7 +218,9 @@ export default class nx_tactics_decks_starter {
           ":name",
           "Player Deck",
           ":image",
-          vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, "-deck.svg"),
+          ":layout",
+          nx_tactics_base.c_cardlayout_imageonly,
           ":cardmap",
           cardmap
         )

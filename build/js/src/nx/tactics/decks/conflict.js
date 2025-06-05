@@ -383,7 +383,7 @@ export default class nx_tactics_decks_conflict {
           ":name",
           "Conflict Deck",
           ":image",
-          "images/card-conflict-back.svg",
+          "images/card-conflict-deck.svg",
           ":layout",
           nx_tactics_base.c_cardlayout_imageonly,
           ":cardmap",
