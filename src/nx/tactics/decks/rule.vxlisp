@@ -12,7 +12,7 @@
    :name "Ability Point"
    :summary
     "* [Minor Achievment]: Gain an Ability Point. You may also convert 1 of your existing Abilities into an Ability Point.
-     * An Ability Point may be exchanged for an Ability, Specialty, or a Power Intensity increase.
+     * An Ability Point may be exchanged for an Ability, Specialty, or a Power Rating increase.
      * Ability Points may be saved.")
   (base/rule
    :name "Action: Attack"
@@ -55,12 +55,19 @@
      * Skip - Discard Move or Turn tokens.
      * Drop - Drop an item in front of you.
      * Equip - Move:-1 to move/pickup/trade/reload an item
-     * Notice - Stun:+1 to attempt to detect hidden things.
-     * Push the Limit - Fatigue:+1 to gain Skill:+1 this Round.
-     * State of Mind - Stun:+1 to remove Fatigue, Stress, or Slow.
-     * Grit Your Teeth - Stress:+1 to ignore Penalties this Round.
-     * Burst of Speed - Slow:+1 to Move:+1 AND Turn:+1
-     * Heroic Feat - Character Point:-1 to Effect:+1 or -1. (e.g. Damage)")
+     * Notice - Stun:+1 to attempt to detect hidden things
+     * Push the Limit - Fatigue:+1 to gain Skill:+1 this Round
+     * State of Mind - Stun:+1 to remove a Fatigue, Stress, or Slow
+     * Grit Your Teeth - Stress:+1 to ignore Penalties this Round
+     * Burst of Speed - Slow:+1 to Move:+2 AND Turn:+1
+     * Heroic Feat - Character Point:-1 to Hits:+1 or -1 (e.g. Damage)")
+  (base/rule
+   :name "Action: Hide"
+   :summary
+    "Move:-[Action Cost]
+     * Find a hiding place
+     * IF You have [Full Cover] AND Rivals are at least your [Body] spaces away.
+     * THEN [Continuous]: Replace your figure with a [Hidden] one AND Rivals must attempt to [Notice] or [Search] for you.")
   (base/rule
    :name "Action: Notice"
    :summary
@@ -90,7 +97,8 @@
   (base/rule
    :name "Advantage"
    :summary
-    "* [Reveal]: IF both play the same [Suit] THEN you may flip yours to the other [Approach].")
+    "* [Reveal]: IF both play the same [Suit] THEN you may flip to the other [Approach]
+     * IF you have Advantage and rival has [Disadvantage] and both play the same Color THEN you may flip to the other [Approach]")
   (base/rule
    :name "Arc"
    :image "images/rule-arc.svg"
@@ -100,7 +108,7 @@
    :image "images/card-areaeffect.svg"
    :summary
     "* Powers can attack in an area.
-     * Skill:-1 or Intensity:-1 to get an Area Effect. Extra reductions double the cards.
+     * Level:-1 or Rating:-1 to get an Area Effect. Extra reductions double the cards.
      * Arrange cards into a shape starting from the unit.")
   (base/rule
    :name "Beast"
@@ -245,14 +253,6 @@ Fight - Go to Damage.
     "* Crits are face-up [Damage] cards.
      * 10 [Hits] = 1 Crit")
   (base/rule
-   :name "Damage: Location"
-   :image "images/rule-damage-location.svg"
-   :layout base/cardlayout-imageonly)
-  (base/rule
-   :name "Damage: Location Vehicle"
-   :image "images/rule-damage-location-vehicle.svg"
-   :layout base/cardlayout-imageonly)
-  (base/rule
    :name "Damage: Mitigation"
    :summary
     "* Shielding - 
@@ -260,7 +260,14 @@ Fight - Go to Damage.
   (base/rule
    :name "Damage: Overview"
    :summary
-    "1) Damage Types - Determine the [Damage Types] of the weapon.
+    "When a char takes damage they take the Damage card onto their character.
+* Rank - Hit Location A=Head, 2=Right Foot
+* Suit - Damage Type (Bash, Pierce, Hack, Slash)
+* Severity - Rotating the card increases the severity (4 severities per card. The last is very nasty.)
+There are two types of damage:
+* Hits - Cause Fatigue - Face Down Damage
+* Crits - Cause Wounds - Face Up Damage. Rotate for each additional Crit. Armor in the locations turns Crits to Hits.
+    1) Damage Types - Determine the [Damage Types] of the weapon.
      2) Reveal Damage - Reveal cards equal to [Hits].
      3) Separate Damage - Separate them into 2 piles: Those that match the [Damage Types] (Damage) and those that don't (Fatigue).
      4) Hit Location - The top card from the matching pile is the Hit Location (or the mismatch pile if no matches). Move it aside and flip the Fatigue pile to its facedown side.
@@ -271,7 +278,7 @@ Fight - Go to Damage.
   (base/rule
    :name "Disadvantage"
    :summary
-    "* [Reveal]: IF both play the same Suit THEN your Rival may flip yours to the other [Approach].")
+    "* [Reveal]: IF both play the same [Suit] THEN your Rival may rotate yours to the opposite [Approach]")
   (base/rule
    :name "Drawn to Destiny"
    :image "images/rule-drawntodestiny.svg"
@@ -282,31 +289,6 @@ Fight - Go to Damage.
     "* [Body]:-1
      * When using a damaged item or body part take [Skill]:-1/Damaged.
      * An item with no [Body] remaining is [Broken].")
-  (base/rule
-   :name "Hit: Combo"
-   :summary
-    "Optional. Winner may discard cards make a Set to increase Effect. Allowed Sets:
-     * Royal - QQ, KK, KKK, AA, AAA, AAAA
-     * Common - 3+ card Straight. Bonus:Gain any card from Discard for each card over 2")
-  (base/rule
-   :name "Hit: Item/Weapon"
-   :summary
-    "* Compare item Effect/Damage to Difficulty
-     -- IF Level > Difficulty THEN Hits:+1
-     -- IF Scale <> Difficulty Scale THEN Hits:+-Scale Difference")
-  (base/rule
-   :name "Hit: Overview"
-   :summary
-    "Hits are the degree of success
-     * Combo - Optional. Discard cards to increase Hits
-     * Rank - Each card may increase Hits
-     * Item/Weapon - Item/Weapon may increase Hits")
-  (base/rule
-   :name "Hit: Rank"
-   :summary
-    "For each card check Rank:
-     * IF 10, J, Q, K, A THEN Hits:+1
-     * IF 2-9 AND Rank > Difficulty THEN Hits:+1")
   (base/rule
    :name "Exposure"
    :summary
@@ -340,6 +322,55 @@ Fight - Go to Damage.
      * A Game is broken up into Rounds.
      * Each Round every Player takes a Turn.
      * Each Turn each Player takes 2 Actions.")
+  (base/rule
+   :name "Golden Rules"
+   :summary
+    "* Be Kind - Don't badger others
+     * Have Fun - Don't take anything too seriously
+     * Speed is Key - Keep the game moving. Fast=Fun
+     * Oops - If you forget something, ignore it and move on. Suboptimal is fine
+     * New Rules - Cards can override the standard rules
+     * Be Fair - Don't exploit the rules")
+  (base/rule
+   :name "Hit Location"
+   :image "images/rule-hit-location.svg")
+  (base/rule
+   :name "Hit Location Person"
+   :image "images/rule-hit-location-person.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Hit Location Vehicle"
+   :image "images/rule-hit-location-vehicle.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Hits: Combo"
+   :summary
+    "Optional. Winner may discard cards to make Sets. Allowed Sets:
+     * Agent - AA, AAA, AAAA
+     * Royal - QQ, KK, KKK
+     * Common - 3+ card Straight
+     
+     Bonus: Gain any OTHER card from Discard for each card in the Set over 2")
+  (base/rule
+   :name "Hits: Damage Decks"
+   :image "images/rule-hits-damage-decks.svg")
+  (base/rule
+   :name "Hits: Overview"
+   :summary
+    "Hits are the degree of success
+     * Combo - Optional. Discard cards to increase Hits
+     * Rank - Each card may increase Hits
+     * Powers - Powers including those on Weapons and Items may increase Hits")
+  (base/rule
+   :name "Hits: Power"
+   :image "images/rule-hits-power.svg")
+  (base/rule
+   :name "Hits: Rank"
+   :summary
+    "Hits:+1 for each card (including Combo):
+     * IF A-J
+     OR
+     * Rank + Level Bonus > Difficulty")
   (base/rule
    :name "How to Play"
    :summary
@@ -480,6 +511,10 @@ Fight - Go to Damage.
    :summary
     "* Can target one additional Space away [Scaled]")
   (base/rule
+   :name "Ritual"
+   :summary
+    "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event.")
+  (base/rule
    :name "Round: Actions"
    :summary
     "Generally, you spend half your starting Move to take an Action. Therefore, up to 2 Actions a Round.
@@ -537,7 +572,7 @@ Fight - Go to Damage.
     "* Each stat/skill/power has a number after the letter 'x'.
      * This is the scale of that ability.
      * The number represents the number of zeroes. E.g. 5x3 translates to 5000.
-     * x1 denotes human scale. E.g. 1x1=10kg, 10iq+50, 10will, 10kph")
+     * x1 denotes human scale. E.g. 2x1=20kg, 20IQ+50, 20Will, 20kph")
   (base/rule
    :name "Scaled"
    :summary
@@ -555,7 +590,7 @@ Fight - Go to Damage.
      * 2 Week - Train/Research and spend SP:-(current Skill Level) for Skill:+1.
      Ability Points (AP)
      * Respec - Remove 1 Ability for AP:+1
-     * 1 Week - Train/Research and AP:-1 for an Ability, Specialty, or Item in a Skill OR Intensity:+0x1 to a Power.
+     * 1 Week - Train/Research and AP:-1 for an Ability, Specialty, or Item in a Skill OR Rating:+0x1 to a Power.
      * Specialty - IF you gain an Ability in your Specialty THEN every third Ability costs 0 AP.")
   (base/rule
    :name "Scene: Conclusion"
@@ -594,7 +629,12 @@ Fight - Go to Damage.
      * Scale - The Map Scale to use
      * Boards - A Board is a page-sized map depicting some type of terrain (e.g. Dirt, Forest, Ocean, Sky, Space). Lay the Boards on the table as described by the Scene.
      * Places - A Place is a Card that depicts a location (e.g. Rock, Tavern, Tunnel, Mountain). Lay the Places on the table as described by the Scene.
-     * Units - eploy Units on the map as described by the Scene. They must be placed on a valid Space (dot) with a valid Facing.")
+     * Units - Deploy Units on the map as described by the Scene. They must be placed on a valid Space (dot) with a valid Facing.")
+  (base/rule
+   :name "Scene: Minis"
+   :image "images/rule-scene-minis.svg"
+   :summary
+    "The map is large enough for any mini including other minitures and toy cars. Included paper minis can be printed on card stock and placed on stands or laid flat.")
   (base/rule
    :name "Scene: Map#1"
    :image "images/rule-scene-map-1.svg")
@@ -630,9 +670,9 @@ Fight - Go to Damage.
   (base/rule
    :name "Scene: Rounds"
    :summary
-    "Scenes take place over a number of Rounds.
-     * Time - Round length is determined by the Map Scale. 6 sec for Personal Scale, 6 min for Travel Scale, 6 hours for Exploration Scale, etc.
-     * Groups - During a Round, Units are divided into the Groups based on who they Target. Each Group can resolve separately until Round End.
+    "Scenes take a number of Rounds
+     * Time - Map Scale determins Round length. Personal:6 sec, Traval:6 min, Exploration:6 hours
+     * Groups - Each Round, divide Units into the Groups based their Targets. Groups resolve separately until Round End.
      * Moves - Within a Group, Units move and act simultaneously by gradually spending their Move tokens.
      * Actions - Units may take an Action by spending half of their starting Move tokens, so they can take up to 2 Actions.")
   (base/rule
@@ -640,9 +680,11 @@ Fight - Go to Damage.
   (base/rule
    :name "Scene: Status Bar"
    :summary
-    "* Place each Unit card on the Status Bar with a Unit# card above it.")
+    "The Status Bar is an area near the board where all Units are displayed
+     * Place each Unit card on the Status Bar with a Unit# card above it.")
   (base/rule
    :name "Scene: Units"
+   :image "images/rule-scene-units.svg"
    :summary
     "Gather and layout your Unit cards
      * Unit - Unit stat and mini cards
@@ -656,7 +698,8 @@ Fight - Go to Damage.
    :summary
     "* Damage Decks - Shuffle the Wound, Disorder, Trauma, and Burden decks
      * Fate Deck - Shuffle an extra Conflict Deck to be the Fate Deck. Anyone may use this instead of cards from hand
-     * Resource Deck - Keep this deck sorted for easy access
+     * Library Deck - Keep sorted
+     * Scene Deck - Keep as is
      * Clock Deck - Sort the Clock Deck")
   (base/rule
    :name "Setup: Players"
@@ -684,14 +727,36 @@ Fight - Go to Damage.
      * A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.
      * 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level.")
   (base/rule
-   :name "Space")
+   :name "Space"
+   :summary
+    "A point on the map")
   (base/rule
-   :name "Specialty")
+   :name "Space: Inner")
+  (base/rule
+   :name "Space: Outer")
+  (base/rule
+   :name "Specialty"
+   :summary
+    "A field of specialization
+     * Setup - When you prepare Abilities, for each Specialty you may prepare an additional Ability under the Specialty
+     * Advancement - When you gain an Ability under a Specialty, you may gain another one for free")
   (base/rule
    :name "Shadow"
+   :titles "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin"          :reference
+    "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence
+     * Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil
+     * Hannibal Lecter
+     * Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas
+     * If once you start down the dark path, forever will it dominate your destiny - Yoda, Star Wars: The Empire Strikes Back
+     * A farmer comes home one day to find ... everything that he loved, taken from him. His children. One can only 	imagine the pit of despair, the hours of Job-like lamentations, the burden of existence. He makes a promise to 	himself in those dark hours. A life's work erupts from his knotted mind... Years go by... The farmer, who is no longer a farmer, sees the wreckage that he has left in his wake. It is now he who burns. It is he who slaughters, ... and he knows in his heart, he must pay. - Red Reddington, The Blacklist
+     * No one escapes their shadow. - Zed, Runeterra
+     * When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker"
    :summary
-    "* The Shadow
-     * Shadow Triumphant: The Shadow is now in control of this unit. Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank")
+    "* Lurking Shadow - The Shadow is a devious, sociopathic, latent personality. It is normally powerless, surpressed by the [Will] in civilized men. It can, however, gain power and even dominance in those with weak wills or those who cultivate it such as from [Corruption], [Darkness], [Fleshcraft], [Intimidation], or [Necromancy].
+     * Cruel and Unusual - The Shadow silently observes all that the person experiences. It has nothing but contempt for others as well as the [Will] that keeps it contained. As the manifestation of the unit's dark dreams, twisted desires, and bizarre megalomania, the Shadow reinforces its own superiority by exerting power over others. Manipulating, dominating, and causing physical or emotional pain is a siren's call that the Shadow cannot
+     refuse.
+     * Consumed by Shadow - Whenever a unit's [Will] is lowered to 0 or below its Shadow rating, test Shadow vs. [Will]. If the Shadow wins, it gains control of the unit until [Will] exceeds Shadow again (if ever). Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank.
+     * Rising Shadow - While the Shadow is dominant, the person always uses its Shadow rating instead of [Will]. The Shadow will always act toward its, usually immediate, self interest. It will usually not aid its allies in any way. Because the Shadow is self absorbed, all [Retreats] against it are doubled, but failure feeds its insecurities, so retreat is emotionally devastating and can lead to the [Will] taking charge again.")
   (base/rule
    :name "Skill"
    :summary
@@ -756,7 +821,7 @@ Fight - Go to Damage.
    :name "Task: Overview"
    :summary
     "Any skill/ability/power/stat test is called a Task. There are 3 types:
-     * Test - A quick test. Any success will pass the test
+     * Test - A quick test. Any success passes
      * Extended - An extended task over multiple Rounds
      * Damaging - A damaging attack. The degree of success determines wound severity")
   (base/rule
@@ -775,12 +840,10 @@ Fight - Go to Damage.
   (base/rule
    :name "Task: Test"
    :summary
-    "A quick test. Any success will pass the test
+    "A quick test. Any success passes
      * Difficulty - Determine the Difficulty. This is usually a Stat like the target's Body.
      * Conflict - Perform a Conflict. Reveal and Compare cards.
      * Success - Pass the Test. Effect describes the degree of Success")
-  (base/rule
-   :name "Team")
   (base/rule
    :name "Terms"
    :summary
@@ -907,6 +970,7 @@ Fight - Go to Damage.
        "Overview"
        "Features"
        "Warning"
+       "Golden Rules"
        "Terms"
        "Stat"
        "Unit: Sample"
@@ -919,6 +983,7 @@ Fight - Go to Damage.
        "Setup: Tokens"
        "Scene: Overview"
        "Scene: Introduction"
+       "Scene: Minis"
        "Scene: Map"
        "Scene: Map#1"
        "Scene: Map#2"
@@ -945,6 +1010,7 @@ Fight - Go to Damage.
        "Action: Equip"
        "Action: Notice"
        "Action: Recover"
+       "Action: Hide"
        "Action: Search"
        "Action: Attack"
        "Action: Interact"
@@ -965,11 +1031,12 @@ Fight - Go to Damage.
        "Hits: Overview"
        "Hits: Combo"
        "Hits: Rank"
-       "Hits: Item/Weapon"
+       "Hits: Damage Decks"
+       "Hit Location"
+       "Hit Location Person"
+       "Hit Location Vehicle"
+       "Hits: Power"
        "Damage: Overview"
-       "Damage: Decks"
-       "Damage: Location"
-       "Damage: Location - Vehicle"
        "Damage: Mitigation"
        "Damage: Crits"
        "Character"
@@ -1013,13 +1080,7 @@ Fight - Go to Damage.
        "Build: Character"
        "Build: Item"
        "Build: Vehicle"
-      ))
-     (base/cardlist-copy<-tactics-rulekey-count-isnum
-      tactics "Clock" 20 true)
-     (base/cardlist-copy<-tactics-rulekey-count-isnum
-      tactics "Skill Point" 5 true)
-     (base/cardlist-copy<-tactics-rulekey-count-isnum
-      tactics "Ability Point" 5 true))
+      )))
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist
      cardlist)]

@@ -382,7 +382,7 @@ export default class nx_tactics_decks_skill {
         ":titles",
         "Artillerist, Field Ops, Gunner",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Air Burst", "Barrage", "Forward Observer", "Indirect Fire", "Point Defense", "Salvo"),
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Air Burst", "Barrage", "Forward Observer", "Indirect Fire", "Salvo"),
         ":specialtymap",
         nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Cannons", "Flamethrowers", "Machineguns")
       ),
@@ -1379,26 +1379,26 @@ export default class nx_tactics_decks_skill {
         ":abilitymap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_abilitymap},
-          ":Bluff",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bluff"),
-          ":Credibility",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Credibility", ":summary", "* The ability to convince large groups of people that you are telling the truth."),
-          ":Debate",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Debate"),
+          "Bluff",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bluff", ":summary", "* [Skill]: [Persuasion]"),
+          "Credibility",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Credibility", ":summary", "* [Skill]: [Persuasion]\n* The ability to convince large groups of people that you are telling the truth."),
+          "Debate",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Debate", ":summary", "* [Skill]: [Persuasion]"),
           "Fast Talk",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fast Talk"),
-          ":Lying",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lying", ":titles", "Fibbing"),
-          ":Manipulation",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Manipulation"),
-          ":Pickup",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pickup"),
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fast Talk", ":summary", "* [Skill]: [Persuasion]"),
+          "Lying",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lying", ":titles", "Fibbing", ":summary", "* [Skill]: [Persuasion]"),
+          "Manipulation",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Manipulation", ":summary", "* [Skill]: [Persuasion]"),
+          "Pickup",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pickup", ":reference", "* I love your eye patch. Oh, you think so? No wait. Shut up and fight! - Akshan and Vekauran Vagabond, Runeterra", ":summary", "* [Skill]: [Persuasion]"),
           "Seduction",
           nx_tactics_base.f_ability_from_tactics_key(tactics, "Seduction"),
           "Silver Tongue",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Silver Tongue"),
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Silver Tongue", ":summary", "* [Skill]: [Persuasion]"),
           "Swords to Plowshares",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Swords to Plowshares", ":summary", "* Sincerly convince a rival to choose peace over conflict.")
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Swords to Plowshares", ":summary", "* [Skill]: [Persuasion]\n* Sincerly convince a rival to choose peace over conflict.")
         )
       ),
       vx_core.f_new(
@@ -1761,7 +1761,7 @@ export default class nx_tactics_decks_skill {
         ":summary",
         "* This skill includes abilities that let you hide, move silently, and suprise your opponents.\n* Tokens - The number of Tokens on Stealth represents how Hidden you are. Tokens may not be more than 2xStealth.\n* Forced: Maximum Move=Tokens. IF Tokens=0 THEN you Reveal immediately.\n* Reveal - Free: You may place your unit anywhere within Move:Tokens of your Hidden unit, but it must be on or next to a space out of sight of Rivals. Remove Tokens and Hidden Units.\n* Surprise - IF you reveal adjacent to a unit, you may give them Stress:+1.\n* Remain Hidden - Clock: Tokens+1",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Ambush", "Backstab", "Blend into the Crowd", "Camouflage", "Cloak and Dagger", "Hide", "Hide in Plain Sight", "Sneak", "Sneak Attack", "Stalk", "Strike and Fade", "Tailing", "Vanish", "Without a Trace")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Ambush", "Backstab", "Blend into the Crowd", "Camouflage", "Cloak and Dagger", "Hide in Plain Sight", "Sneak", "Sneak Attack", "Stalk", "Strike and Fade", "Tailing", "Vanish", "Without a Trace")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_skill},

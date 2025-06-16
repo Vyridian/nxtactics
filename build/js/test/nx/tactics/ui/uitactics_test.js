@@ -134,12 +134,12 @@ export default class nx_tactics_ui_uitactics_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"conscience:1x1 beast:2x1 shadow:3x1\"\n (string<-conscience-beast-shadow\n  \"1x1\" \"2x1\" \"3x1\"))",
+            ":describename", "(test\n \"conscience:2x1 beast:2x1 shadow:3x1\"\n (string<-conscience-beast-shadow\n  \"2x1\" \"2x1\" \"3x1\"))",
             ":testresult",
             vx_test.f_test(
               context,
-              "conscience:1x1 beast:2x1 shadow:3x1",
-              nx_tactics_ui_uitactics.f_string_from_conscience_beast_shadow("1x1", "2x1", "3x1")
+              "conscience:2x1 beast:2x1 shadow:3x1",
+              nx_tactics_ui_uitactics.f_string_from_conscience_beast_shadow("2x1", "2x1", "3x1")
             )
           )
         )

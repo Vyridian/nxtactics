@@ -149,19 +149,13 @@
         :summary "* Human Priest/Monk"
         :titles "Taybor the Red"
         :unitskillmap
-         (base/unitskillmap
-          :Melee
-           (base/unitskill
-            :name "Melee"
-            :level "5"
-            :unititemmap
-             (base/unititemmap
-              :Quarterstaff
-               (base/unititem
-                :name "Quarterstaff")))))
+         (base/unitskillmap<-unitskilllist
+          (base/unitskill<-tactics-key-lvl-items
+           tactics "Melee" 5
+           (stringlist "Quarterstaff"))))
        (base/unit
         :name "Eldruf Grundel"
-        :summary "Gnome Thief Magician")
+        :summary "Gnome Thief Illusionist")
        (base/unit
         :name "Flint"
         :image "images/fantasy/Flint.png"
@@ -181,17 +175,9 @@
           * Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.
           * History - Galamir was born to Chantry trainers, and as a child he was allowed special access to the arcane academy. As a teen, he became obsessed with magic and its effect on the world. His brilliance and magical aptitude were soon recognized and he was accepted into the academy. For the next 25 years he completed his full wizardry and elemental training and received top honors. He was a logical 	candidate to become a trainer himself, but he was bored of the cloistered life, so he began visiting other Chantries across the world. Along the way he encountered a naive, young half-elf rogue named Phirax living on a simple farm. Galamir recruited Phirax to join him to perform the more dangerous and mundane tasks while Galamir provided the leadership and strategy. Later, he recruited the Warrior Stam and the Cleric Sarak into their party to rounded out their abilities."
         :unitpowermap
-         (base/unitpowermap
-          :Wizardry
-           (base/unitpower
-            :name "Wizardry"
-            :level "11"))
-        :unitskillmap
-         (base/unitskillmap
-          "Physical Powers"
-           (base/unitskill
-            :name "Physical Powers"
-            :level "10")))
+         (base/unitpowermap<-unitpowerlist
+          (base/unitpower<-tactics-key-lvl
+           tactics "Wizardry" 11)))
        (base/unit
         :name "Hetman Undrig"
         :summary
@@ -217,7 +203,7 @@
            tactics "Defense" 5
            (stringlist
             "Armor: Chain Mail"
-            "Shield"))))
+            "Shield: Round"))))
        (base/unit
         :name "Phirax Alganon"
         :image "images/fantasy/PhiraxAlganon.png"
@@ -239,7 +225,6 @@
            tactics "Stealth" 9
            (stringlist
             "Backstab"
-            "Hide"
             "Sneak"))
           (base/unitskill<-tactics-key-lvl-abilities-items
            tactics "Performance" 9
@@ -252,15 +237,11 @@
         :image "images/fantasy/SarakIshimar.png"
         :summary "Human Cleric"
         :unitpowermap
-         (base/unitpowermap
-          :Faith
-           (base/unitpower
-            :name "Faith"
-            :level "8")
-          :Invocation
-           (base/unitpower
-            :name "Invocation"
-            :level "10"))
+         (base/unitpowermap<-unitpowerlist
+          (base/unitpower<-tactics-key-lvl
+           tactics "Faith" 8)
+          (base/unitpower<-tactics-key-lvl
+           tactics "Invocation" 10))
         :unitskillmap
          (base/unitskillmap<-unitskilllist
           (base/unitskill<-tactics-key-lvl
@@ -277,54 +258,12 @@
     (base/section
      :name "Nexus Fantasy Actors"
      :unitmap
-      (base/unitmap
+      (base/unitmap<-tactics-keys
+       tactics
        "Antios Teron"
-        (base/unit<-tactics-key tactics "Antios Teron")
-       :Blackguard
-        (base/unit
-         :name "Blackguard"
-         :summary
-          "* An elite mercenary cadre organized by Hetman Undrig.
-           * Their base is a small, walled town dedicated to their needs.
-           * The Dragoons are a loose group. Decisions and leaders are chosen by majority vote. Power can change at anytime (including during combat).
-           * Dragoons pay no dues nor is there direct pay. The Dragoons make money by hiring out as mercenaries.  They charge double normal rates, but are reknowned for their excellent training and equipment. Dragoons take great pride in their high status and react poorly to those who do not recognize their talent.
-           * Dragoons are trained professionals in their jobs and recognize the need for discretion. They care little for whether a job is legal or not, and the Dragoons are known for possessing certain 'subtle' skills that make covert missions possible. They do not, however, enjoy excessive risk and are not above abandoning very dangerous missions."
-         :titles "Black Dragoon")
+       "Blackguard"
        "Charn Aramel"
-        (base/unit
-         :name "Charn Aramel"
-         :summary "Human Dread Knight"
-         :titles "Nighthook, Lord Aramel"
-         :unitpowermap
-          (base/unitpowermap<-unitpowerlist
-           (base/unitpower<-tactics-key-lvl
-            tactics "Conviction" 10)))
-       "Sarani Kalea"
-        (base/unit
-         :name "Sarani Kalea"
-         :summary "Human Priestess"
-         :titles "Princess Kalea, High Priestess of Kali"
-         :unitpowermap
-          (base/unitpowermap
-           :Conviction
-            (base/unitpower
-             :name "Conviction"
-             :level "12")
-           :Invocation
-            (base/unitpower
-             :name "Invocation"
-             :level "16"
-             :unitabilitymap
-              (base/unitabilitymap
-               :Aspecting
-                (base/unitability
-                 :name "Aspecting"))))
-         :unitskillmap
-          (base/unitskillmap
-           "Psychic Powers"
-            (base/unitskill
-             :name "Psychic Powers"
-             :level "12"))))))))
+       "Sarani Kalea")))))
 
 (func chapter_material_realm : base/chapter
  [tactics : base/tactics]
@@ -2432,7 +2371,7 @@
             * The Void is a realm of nothingness and contains no matter, energy, atmosphere, magnetism, inertia, gravity, or any other force.
             * Light, sound, and heat do not exist in the Void, but those with Spirits can see and hear normally. They also experience no discomfort despite the harsh conditions. Those without Spirits are blind, deaf, and lost in the endless void.
             * Attributes - Those with Spirits appear as idealistic versions of themselves in the Void. Body, Mind, Spirit, and Speed are increased to the higher of their Mind or Spirit.
-            * Speed - As light and inertia do not exist in the Void, vessels may move much faster than light. Those with Spirits may move at astronomical speeds and can move at the equivalent of [Mind] or [Spirit] x 1 Light Day per second.
+            * Speed - As light and inertia do not exist in the Void, vessels may move much faster than light. Those with Spirits may move at astronomical speeds and can move at the equivalent of [Mind] or [Will] x 1 Light Day per second.
             * Void Ships - Ships created to travel between the realms. Note: physical travel into the Astral Realm by magical means may only be performed without observers."
           :unitmap
            (base/unitmap<-unitlist
@@ -2518,7 +2457,7 @@
            "* There is no end to the darkness in the Night Realm. There is no sun, no stars. The winds are bitterly cold, bearing dagger-sharp ice crystals. Facing into the wind is blinding. Fires flicker and die in the winds, but any light attracts the tormented and Shikome alike. The terrain is rocky and frozen black crystal that leech the energy of those who rest on them. Meadows and tree exist, but they are covered with dark crytal blades that tear at passersby.
             * Kakuri is the hell of those who have lost their honor. The land is therefore the anti-thesis of honor. There are no great battles, no great challenges, no bragging enemies. There is no duty, no honor, and no way to escape. There are no flesh eating devils, no pits of burning oil, no grand ministries of torment. In a land without hope, there don't need to be.
             * Ruler: Emma-o, perhaps the greatest of the Yama-kings.
-            * Shikome: Beautiful, cold, female devils that delight in speeding their victims to despair. They are subtle and can appear as tormented souls or as friends or lovers. Whatever their form, they will drain the [Spirit] from their victims leaving them to wander in hopelessness and despair.
+            * Shikome: Beautiful, cold, female devils that delight in speeding their victims to despair. They are subtle and can appear as tormented souls or as friends or lovers. Whatever their form, they will drain the [Will] from their victims leaving them to wander in hopelessness and despair.
             * Kyuden No Kakuri - The Castle of Kakuri is the stronghold of Emma-o.  It is situated at the top of an unassailable peak. The castle has elaborate obsidian walls and are a testament to his vanity and conceit.
             * Cave of Maidens - One of Emma-o's favored traps, the caves appear an oasis from the icy torment and occasionally a way out of Yomi. Edible fungi, shelter, and pretty prisoners can be found in the caves. The prisoners will dote on the visitors, but they will suddenly accuse them of theft, rape, murder, or worse. The visitors are beaten and driven from the caves. The power of the Shikome lets them trick their victims again and again with the lure of false hope. Amazingly, there is actually a chance that a cave is actually an exit from the Hell, the ultimate lure for lost souls.")
         "Hell: Pit of Iron and Salt"

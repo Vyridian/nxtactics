@@ -265,7 +265,7 @@ export default class nx_tactics_books_gear {
             "Icy Manipulator",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Icy Manipulator", ":summary", "* [Action]: Roll vs. [Mind]. If successful, target loses its next [Action]."),
             "Zuran Orb",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Zuran Orb", ":reference", "* I will go to any length to achieve my goal. Eternal life is worth any sacrifice. - Zur the Enchanter, Magic the Gathering", ":summary", "* [Action]: -1 [Spirit] permanently. -2 Damage, -1 Critical, -10 Age.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Zuran Orb", ":reference", "* I will go to any length to achieve my goal. Eternal life is worth any sacrifice. - Zur the Enchanter, Magic the Gathering", ":summary", "* [Action]: -1 [Will] permanently. -2 Damage, -1 Critical, -10 Age.")
           )
         ),
         ":Artwork",

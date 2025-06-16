@@ -26,11 +26,8 @@ export default class nx_tactics_books_characters {
       ":name",
       "Cast",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Memorable Characters",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Memorable Characters", ":summary", "* When creating characters, it is helpful to have at least one unique detail that makes that character singulary memorable. In the future, this may be the one thing that players remember about the character and can bring back memories by itself. Be careful to avoid sterotyping, because that will defeat the uniqueness you need and risks making the character cartoonish (unless that is what you are going for)."),
-        "Stock Characters",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Stock Characters", ":summary", "* Boy Scout - How can a corrupt police force uphold justice?\n* Devoted Sidekick - You're going to need help, and I'm coming with you.\n* Elitist - We're the ones who matter and everyone else can go to hell!\n* Femme Fatale - I'm not very good at flirting. I don't usually talk to men unless I'm really interested.\n** All curves inside and out, there's nothing simple about the Femme Fatale. At times bold and brassy, other times vulnerable and frightened, she's always in control and always utterly deadly, but most victims don't realize until it is too late.\n* Hard Nosed Cop - I don't care if the cuffs are too tight. They're supposed to be.\n* Has-Been - I used to be able to do that, but I haven't tried in years.\n* Manipulator\n* Innocent Victim - My shop...my house! How am I going to live? That thing took everything I had.\n* Inscrutable Stranger\n* Not-So-Innocent Victim - I didn't mean I would ACTUALLY kill him. It was a figure of speech!  And now look what he did! Who is going to pay for this?\n* Lover - Come home in one piece, ok? I love you.\n* Plucky Bystander - What the hell was that? Nevermind. Hey, you're bleeding. Wrap this around your arm and keep pressure on it. I'll watch the door, ok?\n* Rival\n* Seducer - Come on, you can get away for one night. You have to see this place. It's stunning, and the people! So friendly. It's just something you have to see.\n* Smooth Talker - I could call the super for the key. I'm sure he won't mind coming in at this hour. He is a kind old man even if the stroke did change him.\n* Sullen Detective - Leave him here. A loser like him'll get picked up for something eventually.\n* Thrill-Seeker - Here, try this: First throw the parachute out, count to five, then jump out after it, without a jumpsuit!\n* Turncoat - I informed the Supervisor that progress is virtually nonexistant.  He was very impressed with my proposal to get things back on schedule.  He should be here momentarily to discuss it.")
       )
     )
@@ -59,9 +56,7 @@ export default class nx_tactics_books_characters {
       ":summary",
       "* Antihero\n* Bad Boy\n* Bumpkin\n* Coutier - Politics, Etiquette, Psychology, Fashion\n* Crafter\n* Damsel\n* Fatalist - Nihilist\n* Fool\n* Grotesque\n* Hermit\n* Knight in Shining Armor\n* Mysterious\n* Orchid - Pampered Life\n* Outlaw\n* Peacock - Showoff\n* Rake - Pleasure seeker\n* Regent - Leader\n* Rogue\n* Sage\n* Saint\n* Savage\n* Trickster - Riddler\n* Troubadour\n* Wayfarer - Wanderer\n* Wretch",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Warrior Classes",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -87,7 +82,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Warrior", ":summary", "* Preferred Skills: [Melee Combat], [Armor], [Riding]")
           )
         ),
-        "Rogue Classes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -121,7 +115,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Thief", ":summary", "* Preferred Skills: [Thrown Weapons], [Deception]:Thievery, [Mechanics], [Climbing], [Acrobatics], [Scouting], [Stealth]")
           )
         ),
-        "Mentalist Classes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -135,7 +128,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mentalist")
           )
         ),
-        "Spiritualist Classes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -157,7 +149,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Witch Doctor")
           )
         ),
-        "Wizard Classes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -233,9 +224,7 @@ export default class nx_tactics_books_characters {
       ":summary",
       "* Attributes\n* Skills\n* Equipment\n* Personality\n* History\n* Friends and Family\n** Dependents\n* Enemies\n** Hunted",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Friends and Family",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -275,7 +264,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Teenager")
           )
         ),
-        "Character Rules",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -284,14 +272,13 @@ export default class nx_tactics_books_characters {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
             ":Beast",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Beast", ":reference", "* The Krell forgot one deadly danger - their own subconscious hate and lust for destruction. The beast. The mindless primitive! - Morbius, Forbidden Planet\n* Guilty! Guilty! My evil self is at that door, and I have no power to stop it! - Morbius, Forbidden Planet", ":summary", "* Caged Beast - The Beast is a savage, nearly mindless, latent personality. It is normally powerless, contained by the [Mind] in civilized men. It can, however, gain power and even dominance in those with weak minds or those who cultivate it such as from [Berserker], [Lycanthropy], or [Vampirism].\n* Succumb to the Beast - Whenever a unit's [Mind] is reduced to 0 or is lowered below its Beast rating, roll Beast vs. [Mind]. If the Beast wins, it gains control of the unit until [Mind] exceeds Beast again (if ever).\n* Fight or Flight - While the Beast is dominant, the unit gains +1 to all Melee or Close Combat attack rolls. It also always uses its Beast rating instead of [Mind]. Unfortunately, it may only use [Physical Skills]. When in combat, it will always attack the closest target (friend or foe) with Melee or Close Combat. Because the Beast is easily surprised, all [Retreat]s against it are doubled.", ":titles", "Id, Reptile Brain, Yang"),
-            ":Shadow",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shadow", ":reference", "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence\n* Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil\n* Hannibal Lecter\n* Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas\n* If once you start down the dark path, forever will it dominate your destiny - Yoda, Star Wars: The Empire Strikes Back\n* A farmer comes home one day to find ... everything that he loved, taken from him. His children. One can only 	imagine the pit of despair, the hours of Job-like lamentations, the burden of existence. He makes a promise to 	himself in those dark hours. A life's work erupts from his knotted mind... Years go by... The farmer, who is no longer a farmer, sees the wreckage that he has left in his wake. It is now he who burns. It is he who slaughters, ... and he knows in his heart, he must pay. - Red Reddington, The Blacklist\n* No one escapes their shadow. - Zed, Runeterra\n* When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker", ":summary", "* Lurking Shadow - The Shadow is a devious, sociopathic, latent personality. It is normally powerless, surpressed by the [Spirit] in civilized men. It can, however, gain power and even dominance in those with weak wills or those who cultivate it such as from [Corruption], [Darkness], [Fleshcraft], [Intimidation], or [Necromancy].\n* Cruel and Unusual - The Shadow silently observes all that the person experiences. It has nothing but contempt for others as well as the [Spirit] that keeps it contained. As the manifestation of the unit's dark dreams, twisted desires, and bizarre megalomania, the Shadow reinforces its own superiority by exerting power over others. Manipulating, dominating, and causing physical or emotional pain is a siren's call that the Shadow cannot\nrefuse.\n* Consumed by Shadow - Whenever a unit's [Spirit] is lowered to 0 or below its Shadow rating, roll Shadow vs. [Spirit]. If the Shadow wins, it gains control of the unit until [Spirit] exceeds Shadow again (if ever).\n* Rising Shadow - While the Shadow is dominant, the person always uses its Shadow rating instead of [Spirit]. The Shadow will always act toward its, usually immediate, self interest. It will usually not aid its allies in any way. Because the Shadow is self absorbed, all [Retreats] against it are doubled, but failure feeds its insecurities, so retreat is emotionally devastating and can lead to the [Spirit] taking charge again.", ":titles", "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin"),
-            ":Banality",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Banality", ":summary", "* Banality is the grip of the mundane, day-to-day world. It is the opposite of Art and creativity. Banality encourages us to perform mindless, repetitive tasks without creativity or expression. Watching television is the ultimate expression of Banality.\n* If Banality exceeds [Spirit], all Artistic or Magical skills are reduced by the difference between Banality and [Spirit].")
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Beast", ":titles", "Id, Reptile Brain, Yang", ":reference", "* The Krell forgot one deadly danger - their own subconscious hate and lust for destruction. The beast. The mindless primitive! - Morbius, Forbidden Planet\n* Guilty! Guilty! My evil self is at that door, and I have no power to stop it! - Morbius, Forbidden Planet", ":summary", "* Caged Beast - The Beast is a savage, nearly mindless, latent personality. It is normally powerless, contained by the [Mind] in civilized men. It can, however, gain power and even dominance in those with weak minds or those who cultivate it such as from [Berserker], [Lycanthropy], or [Vampirism].\n* Succumb to the Beast - Whenever a unit's [Mind] is reduced to 0 or is lowered below its Beast rating, roll Beast vs. [Mind]. If the Beast wins, it gains control of the unit until [Mind] exceeds Beast again (if ever).\n* Fight or Flight - While the Beast is dominant, the unit gains +1 to all Melee or Close Combat attack rolls. It also always uses its Beast rating instead of [Mind]. Unfortunately, it may only use [Physical Skills]. When in combat, it will always attack the closest target (friend or foe) with Melee or Close Combat. Because the Beast is easily surprised, all [Retreat]s against it are doubled."),
+            "Shadow",
+            nx_tactics_base.f_rule_from_tactics_key(tactics, "Shadow"),
+            "Banality",
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Banality", ":summary", "* Banality is the grip of the mundane, day-to-day world. It is the opposite of Art and creativity. Banality encourages us to perform mindless, repetitive tasks without creativity or expression. Watching television is the ultimate expression of Banality.\n* If Banality exceeds [Will], all Artistic or Magical skills are reduced by the difference between Banality and [Will].")
           )
         ),
-        ":Personalities",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Personalities", ":summary", "Positive\n* Adventurous - Someone who is adventurous enjoys adventure and takes risks.\n* Affectionate - Someone who is affectionate shows their love for other people.\n* Ambitious - A person who is ambitious wants to be successful in their career, studies, sport.\n* Brave - A brave person wants to do difficult or challenging things and is not afraid.\n* Chatty - Someone who is chatty enjoys talking to other people a lot.\n* Cheerful - A cheerful person smiles a lot and is happy.\n* Confident - Confident people feel sure about their own ability and present themselves well to other people.\n* Creative - Someone who is creative is very good at designing or making things.\n* Determined - A determined person makes a definite decision and does not give up.\n* Easy-going - Someone who is easy-going is quite relaxed and accepts things as they are.\n* Enthusiastic - Someone who is enthusiastic shows lots of interest in something and is very positive about it.\n* Frank - Someone who is frank is honest and direct in what they say.\n* Friendly - A friendly person always talks to other people and perhaps helps them too.\n* Funny - Someone who is funny makes people laugh.\n* Generous - A generous person is kind to other people, may give presents or lend money.\n* Hard-working - Someone who is hard working always puts a lot of effort into their work.\n* Helpful - A helpful person is always happy to help other people.\n* Honest - An honest person tells the truth and never steals or cheats.\n* Imaginative - An imaginative person has good ideas or is good at creating stories or artwork.\n* Intelligent - Someone who is intelligent is good at learning. This person may think about things in a logical way.\n* Kind - A kind person cares about other people and behaves positively towards them.\n* Loyal - Someone who is loyal will always support his or her friends.\n* Meticulous - A meticulous person pays careful attention to detail, probably has a tidy house and neat handwriting!\n* Modest - Someone who is modest does not show off about his or her abilities or possessions.\n* Optimistic - An optimistic person has a positive view of life and expects good things to happen.\n* Outgoing - An outgoing person is very sociable.\n* Patient - Someone who is patient does not get annoyed or frustrated easily and has time for other people.\n* Reliable - A person who is reliable can always be trusted to do what is required.\n* Sensible - A person who is sensible makes decisions based on reason/logic, does not take risks.\n* Sensitive - A sensitive person is very aware of other people’s feelings, can be easily hurt emotionally\n* Sincere - A sincere person is honest in their relationships with others and says what they think or feel.\n* Sociable - Someone who is sociable loves chatting with other people.\n* Sympathetic - Someone who is sympathetic understands other people’s problems very well.\n* Thoughtful - Someone who is thoughtful always thinks of other people, remembers birthdays and sends a card!\n* Trustworthy - A trustworthy person is someone you can rely on to be honest.\n\nNegative\n* Arrogant - An arrogant person thinks they are very important and behaves in a overly proud way.\n* Big-headed - Someone who is big-headed talks a lot about how good they are, this person is too proud.\n* Bossy - A bossy person is always telling other people what to do.\n* Childish - Someone who is childish is silly or behaves like a child when they should behave like an adult.\n* Clumsy - A clumsy person knocks things over a lot and is not careful.\n* Cruel - Someone who is cruel is extremely unkind to other people or animals.\n* Defensive - Someone who is defensive behaves in a way that suggests they believe other people are criticising them.\n* Dishonest - A dishonest person tells lies or tricks other people.\n* Fussy - A fussy person wants everything to be done in a particular way, they are picky/choosy.\n* Grumpy - Someone who is grumpy is easily annoyed, in a bad mood.\n* Gullible - It is easy to trick someone who is gullible. This person believes something that most people would not believe, being naive\n* Impolite - An impolite person is rude.\n* Inconsiderate - Someone who is inconsiderate does not think about other people, quite selfish.\n* Indecisive - An indecisive person finds it difficult to make decisions.\n* Inflexible - Someone who is inflexible is unwilling to change their opinion or the way they do things.\n* Insecure - An insecure person does not have confidence in themselves or their relationship with other people.\n* Jealous - A jealous person feels angry or unhappy because they wish they had something that somebody else has.\n* Lazy - A lazy person does not work hard.\n* Mean - Someone who is mean is unkind.\n* Moody - A moody person is bad-tempered or has frequent mood changes.\n* Narrow-minded - A narrow-minded person is not willing to listen to the ideas or opinions of others.\n* Nasty - A nasty person is very unkind.\n* Pessimistic - Someone who is pessimistic has a negative view of the future and expects bad things to happen.\n* Pretentious - Someone who tries to look or sound more important or clever than they are.\n* Rebellious - Someone who is rebellious does not follow the rules.\n* Rude - A rude person is not polite or does not respect other people.\n* Quick-tempered - Someone who is quick-tempered becomes angry very easily.\n* Self-centered - A person who is self-centred only thinks about himself or herself.\n* Selfish - Selfish people think only about themselves and not about other people.\n* Stubborn - Someone who is stubborn does not easily change their mind.\n* Sulky - If someone is sulky they show their bad mood by not speaking.\n* Tactless - A tactless person does not show sensitivity to others in what they say, not diplomatic.\n* Unpleasant - An unpleasant person is not nice.\n* Unreliable - An unreliable person cannot be trusted or relied upon.\n* Vain - Someone who is vain is too concerned about their appearance or abilities.")
       )
     )
@@ -337,17 +324,11 @@ export default class nx_tactics_books_characters {
       ":name",
       "Sets",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Foreign Lands",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Foreign Lands", ":summary", "* Exotic locales can help support a sense of adventure.  Familiar landmarks can form an interesting backdrop to the action.\n* Different locations separate the characters from their normal resources and patterns.  The area they are in may also be particularly hostile to them as well.\n* Examples: Egypt, Mexico, Siberia, Niagara Falls, Baghdad, the White House, Tibet, Peru, the London Underground, Hong Kong markets, the Great Barrier Reef, Aztec ruins.\n* Remember getting there is half the fun, and getting out is twice as hard."),
-        "Alien Environments",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Alien Environments", ":summary", "* Beyond traditional locations are the truly bizarre locations.\n* Examples: Underwater, polar ice caps, deserts, volcanos, lightless caverns, sunken ships, outer space, other times, the [Void], the [Underworld], Hell."),
-        ":Buildings",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Buildings", ":summary", "* Abbey\n* Academy\n* Aqueduct\n* Archaeological Dig\n* Archive\n* Arena (of the Ancients)\n* Asylum\n* Aviary\n* Bar\n* Basilica\n* Bazaar\n* Beastiary\n* Belfry\n* Bridge\n* Campsite\n* Cantina\n* Castle\n* Cathedral\n* Cemetery\n* Citadel\n* City (of Brass, Forbidden, Forsaken, Sunken)\n* Cloister\n* Coliseum\n* Crematorium\n* Crypt\n* Encampment\n* Estate\n* Fort\n* Fortress (Dwarven, Elven, Ice)\n* Foundry\n* Fountain\n* Furnace\n* Garrison\n* Graveyard\n* Guildhouse\n* Haven\n* Hold (Dwarven)\n* Home\n* House\n* Keep\n* Laboratory\n* Library (of Alexandria)\n* Lighthouse\n* Lodge\n* Market (Black)\n* Marketplace\n* Mausoleum\n* Mine (Copper, Diamond, Gold, Silver)\n* Outpost\n* Palace\n* Palisade\n* Parapet\n* Parthenon\n* Port\n* Prison\n* Pyramid\n* Quarry\n* Rampart\n* Rectory\n* Reliquary\n* Ruins (Dwarven, Elven)\n* Sacred Ground\n* Sanctum\n* School\n* Shrine\n* Stadium\n* Standing Stones\n* Storehouse\n* Stronghold (Mountain)\n* Tavern\n* Temple\n* Tomb\n* Tower (Costal, Ivory)\n* Town (Square)\n* Township\n* Trade Route\n* Trading Post\n* Vault\n* Villiage\n* Wall (Great)\n* Watchtower\n* Well\n* Woodlot"),
-        "Character Places",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Character Places", ":summary", "* Archipelago\n* Atoll (Coral)\n* Basin (Jungle)\n* Bay\n* Bog (Peat)\n* Boneyard\n* Burrow\n* Chasm (Glacial)\n* Cave\n* Cavern\n* Canyon (Box, Winding)\n* Cliffs\n* Cove\n* Crater (Meteor, Smouldering)\n* Crevice\n* Delta (River)\n* Den\n* Desert\n* Dust Bowl\n* Everglades\n* Fissure\n* Flats (Salt)\n* Foothills\n* Forest (Petrified)\n* Garden\n* Glacier\n* Gorge\n* Graveyard (Elephant)\n* Grotto\n* Grove\n* Heath\n* Hellhole\n* Highlands\n* Hive\n* Irrigation Ditch\n* Island\n* Isle\n* Marsh (Salt)\n* Mesa\n* Mire\n* Oasis\n* Orchard\n* Peninsula\n* Pit (Bottomless, Breeding, Tar)\n* Plateau (Leng)\n* Pool (Reflecting, Spawning)\n* Prairie\n* Ridge\n* River (Underground)\n* Scrubland\n* Steppe\n* Thicket\n* Trench\n* Vale\n* Valley\n* Vein (Crystal)\n* Vineyard\n* Void\n* Volcanic Vent\n* Volcano (Dormant)\n* Vortex\n* Warren\n* Wasteland\n* Wastes (Forgotten, Forsaken)"),
-        ":Settlement",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Settlement", ":summary", "* Settlement Level describes the general size of a settlement.  It determines the level of resources that can be bought and sold and the availability of exotic resources.\n\nTitles\n* Nomadic Tribe - Level 1\n* Town - Level 4\n* Large Town - Level 6\n* Small City - Level 8\n* City - Level 10\n* Metropolis - Level 12\n* Urban Sprawl - Level 14\n* Planetary Sprawl - Level 16\n* Galactic Empire - Level 20")
       )
     )
@@ -376,9 +357,7 @@ export default class nx_tactics_books_characters {
       ":summary",
       "* As Storyteller you're part artist, part writer, and mostly editor. You design the overall plots and subplots, draw out the backgrounds, design the greater part of the cast and improvise dialog as the story goes. By describing the world around them, you help to define the characters. Daunting? Sure. But it's not as impossible as it sounds.\n* Don't try to win. Tell a story - Storytelling isn't about winning and losing. It is about drama and interaction. Trying to meet objectives is just a device to achieve drama. A story may be more interesting if the objective is failed.\n* Players are not your opponents - It is important to remember that the players and storyteller are both responsible for creating an interesting story.\n* Don't try to maintain control - Instead of a detailed plot, try to create detailed situations that will play out without the characters' involvement. Then let the players make their own decisions. The storyteller sets up the situation and the sets and props. The players do the acting. Test yourself by not talking every once in a while and listen to the players. If they go silent waiting for you, then something is wrong. If they are deeply interacting with one another and haven't noticed your silence, you are doing it right.\n* Understand the Players - Some play to gain a sense of power, others for the social aspects of being with friends, and others as a means of wish fulfillment. Some prefer fighting deadly foes, others prefer puzzles and riddles, others simply enjoy talking in character and engaging in political infighting or witty repartee. All of these desires must be juggled and given some space in the game. Some players are vocal and aggressive while others are shy or have trouble putting their ideas into words.\n* Offer Variety - Luckily juggling different player needs provides variety and a change of pace. Switching from action to drama to tragedy to comedy provides depth and realism to the story. Life never stays the same after all. Be sure to vary the focus of the game onto each player. Some players will regularly take the focus themselves while you must steer the story toward other players by allowing them to notice things the busier players miss or by revolving plot points around skills or special knowledge that only some players possess. If players become bored, the story will die.",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Roleplaying",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -390,7 +369,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Troupes", ":summary", "* Optional Rule\n* Instead of playing a single character, each player controls several characters of different types, selecting the most appropriate for the given situation. This can free the Storyteller from roleplaying theses characters while giving the player more opportunity to vary their playsstyle.\n* This rule can be particularly appropriate when there are few players or a number of lesser follower characters.")
           )
         ),
-        "Story Elements",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -424,7 +402,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Epilogue", ":summary", "* Are there any loose ends that hint at the next story.", ":titles", "Aftermath")
           )
         ),
-        "Plot Archetypes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -470,8 +447,8 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Falling"),
             ":Framing",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Framing", ":summary", "* Characters are maneuvered into a situation where it appears they have committed an offense. This may lead to an escape and a mystery."),
-            ":Gambling",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Gambling"),
+            "Gambling Casino",
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Gambling Casino"),
             "Gang Activty",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Gang Activty"),
             ":Guard",
@@ -530,7 +507,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "White Collar Crime")
           )
         ),
-        ":Subtleties",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -568,7 +544,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Plot Twist", ":reference", "Sixth Sense, Usual Suspects", ":summary", "* Allies can become enemies.\n* Enemies may become sympathetic.\n* Characters and situations can have hidden dimensions that can change the meaning and purpose of the characters.\n* Note that the best plot twists are subtle.")
           )
         ),
-        ":Encounters",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -586,7 +561,6 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Close Encounters", ":summary", "* Close encounters require immediate action. All close encounters need not result in combat. Most creatures will not fight to the death and will abandon a fight that is not going well.\n* Encounters with others may be good, bad, or neutral. The reaction to one another is partly random, but mostly based on mutual history, race, attitude, caste, and courtesy. Characters who are good communicators will do better than others in these circumstances. Such encounters can introduce side characters and move the plot forward.\n* Sample travellers: Messengers, Traders, Refugees, Criminals, Victims, Armies, Priests, Monsters, Entertainers, Nobles, Craftsmen, Spies, Pilgrims, Patrols, Locals, Scholars, Charlatans, Thieves, Bandits.")
           )
         ),
-        "Character Scenes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",

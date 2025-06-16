@@ -984,10 +984,10 @@ export default class nx_tactics_books_bestiary {
             ),
             "Goblin Raider",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Goblin Raider"),
-            "Goblin Scout",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Goblin Scout"),
             "Goblin Saboteur",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goblin Saboteur"),
+            "Goblin Scout",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Goblin Scout"),
             "Goblin Shaman",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goblin Shaman"),
             "Goblin Soothsayer",
@@ -1402,33 +1402,7 @@ export default class nx_tactics_books_bestiary {
           ":name",
           "Water Elementals",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Hydro Essence",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hydro Essence", ":summary", "* A mindless, condensed blob of Hydro energy.\n* Since slimes store magical energy they are highly sought after by mages and alchemists.", ":titles", "Hydro Slime, Hydrolon, Water Slime"),
-            ":Naiad",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Naiad", ":titles", "Nereid, Nyad"),
-            ":Undine",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Undine"),
-            "Water Elemental",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Water Elemental"),
-            "Water Elemental Lord",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Water Elemental Lord",
-              ":summary",
-              "* Greater Water Elementals are enormous creatures that can appear as a lake, a whirlpool, or a tidal wave. They have complete mastery over the Water, can perform any Water Power at maximum ability and can cancel any other being attempting to use Fire.",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Water",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Water", ":level", "20")
-              )
-            ),
-            "Water Sprite",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Water Sprite")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Hydro Essence", "Naiad", "Undine", "Water Elemental", "Water Elemental Lord", "Water Sprite")
         )
       )
     )
@@ -1530,14 +1504,16 @@ export default class nx_tactics_books_bestiary {
             "Abyssal Horror",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Abyssal Horror"),
             "Abyssal Hound",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Abyssal Hound", ":summary", "* Resembles large muscular bulldog/pit bull 3ft at the shoulder. Their eyes pulse a faint red with their heartbeat. They love to chase prey and are completely silent in pursuit. They are aggressive bullies, but will flee a determined foe unless the scent of blood drives them into a murderous frenzy.", ":titles", "Demon Dog"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Abyssal Hound", ":titles", "Demon Dog", ":summary", "* Resembles large muscular bulldog/pit bull 3ft at the shoulder. Their eyes pulse a faint red with their heartbeat. They love to chase prey and are completely silent in pursuit. They are aggressive bullies, but will flee a determined foe unless the scent of blood drives them into a murderous frenzy."),
             "Abyssal Hunter",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Abyssal Hunter"),
             "Chaos Demon",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Chaos Demon", ":summary", "* A Chaos Demon is a creature drawn from the stuff of Chaos. The results of summoning a Chaos Demon are necessarily difficult to predict. Randomly select each Body Part. For each [Hit], add one random ability. For each [Critical Hit], add one ability of your choice.\n** Body Parts\n*** Head\n**** Headless\n**** Mindless\n**** Cunning\n**** Brilliant\n*** Mouth\n**** Mouthless\n**** Taste\n*** Ears\n**** Deaf\n**** Big Ears\n**** Sonar\n*** Eyes\n**** Blind\n**** Bug Eyes\n**** Eye Stalks\n*** Nose\n**** Snout\n*** Body\n**** Armor\n**** Acid Blood\n**** Blob\n**** Boat\n**** Mist\n**** Slime\n**** Spines\n*** Arms\n**** Armless\n**** Claws\n**** Hands\n*** Wings\n**** Bat Wings\n**** Bird Wings\n**** Insect Wings\n**** Wingless\n*** Legs\n**** Caterpillar Legs\n**** Hopping\n**** Insect Legs\n**** Legless\n**** Slug\n**** Spider Legs\n** Abilities\n*** Burrowing\n*** Clairvoyance\n*** Confusion\n*** [[Darkness]]\n*** Darts\n*** Disease\n*** Dust Cloud\n*** Emotion Control\n*** Empathy\n*** Ethereal\n*** Freezing Attack\n*** Hellfire\n*** Horde\n*** Insect Plague\n*** Lore\n*** Poison\n*** Shape Change\n*** Shock\n*** Stinger\n*** Telekinesis\n*** Web"),
-            ":Empusa",
+            "Demon Bear",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Demon Bear", ":reference", "* Inside every person there are two bears. One bear is all the good things, compassion, love trust. The other is all the bad things, fear, shame, self-destruction. I asked, Which one wins? He answered, The one you feed. - New Mutants"),
+            "Empusa",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Empusa"),
-            ":Lilin",
+            "Lilin",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lilin"),
             "Mist Demon",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mist Demon"),
@@ -1559,7 +1535,7 @@ export default class nx_tactics_books_bestiary {
           ":reference",
           "* The greatest trick the Devil ever pulled was convincing the world he didn't exist. - Verbal, The Usual Suspects",
           ":summary",
-          "* Fiends are dangerous creatures both physically and mentally. They are sometimes mistaken for Demons, but Demons are forces of random destruction while Fiends possess a sinister intellect and seek to install their own order on the mortal realm.\n* Conflict - Fiends are powerful creatures that have been engaged in a cold war with the Angels for millenia. As in any longstanding dipute, their history is convuluted and both sides maintain conflicting claims why their causes are just. They both seek to recruit souls from the mortal realm to increase their faction's power. The Angels promise protection while the Fiends see this protection as oppressive control. The Fiends promise freedom while the Angels see this as freedom to suffer. Essentially, their conflict is socialism vs. capitalism.\n* Soul Collection - The prime motivation for fiends is collecting corrupted souls. Fiends cannot corrupt a soul by forcing one to do evil. Instead they must manipulate and tempt. Therefore, fiends spend most of their time on earth in mortal form stalking people, learning their secrets, poisoning their emotions, and gaining their trust in any way they can. The best minions of Hell are never noticed at all. With their powers, fiends could cause tremendous destruction, but that would drive people away. They would have the corpses but not the souls.\n* Contract - Devil's Bargain. Fiends are willing to engage in contracts with mortals, usually in exchange for their soul but sometimes for lesser mischief. The fiend hierarchy ensures that these contracts are always binding to both parties. Some magi believe they can deal with fiends, learn from them, and not be corrupted themselves. This rarely goes to plan and fiends are more than willing to pit their intelligence against a mage's.\n* Deceiver - Fiends are deceivers first and foremost. No ability can reveal whether they are telling the truth.\n* Corrupted - No ability can change them into virtuous beings. They are too far gone to turn.\n* Tormented - Though fiends appear to be all-powerful embodiments of evil, they are ruled by their [Shadow] and forever tormented by the remnants of their [Spirit]. They are secretly filled with regret and self-loathing and have even been known to strangely act in ways that lead to their own defeat.\n* Shaitan are the original and most powerful fiends. Most are ancient fallen angels, who through millenia of worship now possess godlike power.\n* Archfiends are the most powerful sorts of Fiends below the godlike Shaitan. They stand 10 to 20 feet tall and have red or coal black skin. They live in stone castles and observe a medieval heirarchy of princes, 	princesses, barons, ministers, and knights. They profess undying loyalty to the Shaitan, though, in fact, they crave power, wealth, and position and are throughly unscrupulous and untrustworthy in all their dealings.",
+          "* Fiends are dangerous creatures both physically and mentally. They are sometimes mistaken for Demons, but Demons are forces of random destruction while Fiends possess a sinister intellect and seek to install their own order on the mortal realm.\n* Conflict - Fiends are powerful creatures that have been engaged in a cold war with the Angels for millenia. As in any longstanding dipute, their history is convuluted and both sides maintain conflicting claims why their causes are just. They both seek to recruit souls from the mortal realm to increase their faction's power. The Angels promise protection while the Fiends see this protection as oppressive control. The Fiends promise freedom while the Angels see this as freedom to suffer. Essentially, their conflict is socialism vs. capitalism.\n* Soul Collection - The prime motivation for fiends is collecting corrupted souls. Fiends cannot corrupt a soul by forcing one to do evil. Instead they must manipulate and tempt. Therefore, fiends spend most of their time on earth in mortal form stalking people, learning their secrets, poisoning their emotions, and gaining their trust in any way they can. The best minions of Hell are never noticed at all. With their powers, fiends could cause tremendous destruction, but that would drive people away. They would have the corpses but not the souls.\n* Contract - Devil's Bargain. Fiends are willing to engage in contracts with mortals, usually in exchange for their soul but sometimes for lesser mischief. The fiend hierarchy ensures that these contracts are always binding to both parties. Some magi believe they can deal with fiends, learn from them, and not be corrupted themselves. This rarely goes to plan and fiends are more than willing to pit their intelligence against a mage's.\n* Deceiver - Fiends are deceivers first and foremost. No ability can reveal whether they are telling the truth.\n* Corrupted - No ability can change them into virtuous beings. They are too far gone to turn.\n* Tormented - Though fiends appear to be all-powerful embodiments of evil, they are ruled by their [Shadow] and forever tormented by the remnants of their [Will]. They are secretly filled with regret and self-loathing and have even been known to strangely act in ways that lead to their own defeat.\n* Shaitan are the original and most powerful fiends. Most are ancient fallen angels, who through millenia of worship now possess godlike power.\n* Archfiends are the most powerful sorts of Fiends below the godlike Shaitan. They stand 10 to 20 feet tall and have red or coal black skin. They live in stone castles and observe a medieval heirarchy of princes, 	princesses, barons, ministers, and knights. They profess undying loyalty to the Shaitan, though, in fact, they crave power, wealth, and position and are throughly unscrupulous and untrustworthy in all their dealings.",
           ":titles",
           "Devilish, Devils, Diabolic, Fiends, Shaitan, Shayatin",
           ":unitmap",
@@ -3524,13 +3500,11 @@ export default class nx_tactics_books_bestiary {
       ":reference",
       "* Seven Deadly Sins: Envy",
       ":summary",
-      "* Description - The dead are normally at rest, but under certain circumstances their spirits return from the [Spirit Realm] and they rise again. Created through different means, the Undead share a common trait. Their life is artificial, a soulless parody of true life. Above all they envy the life that they lack, and they may only maintain their unlife by taking life from others.\n* Personality - Despite their reputation, the Undead are not innately evil. They retain at least some of their original personalities, but their new existence often forces them to reevaluate their morals. Most of the more 'ethical' Undead end their own miserable existences.\n* Spirit - Undead cannot recover Spirit except by stealing it from the living. Slaying the living is always worth 1 extra [Spirit] to any undead. Note: Undead are more connected to the spirit world than the living world and therefore are permanently banished from the living world if their Spirit ever drops to zero. Without a [Spirit], they many never use any [Naturalism] or [Spiritualism] magics.\n\nTypes\n* Traumatic death - Focused completely on the trauma of their death, they are drawn to the living and end up reenacting their death with others. - Burning Dead, Drowned, Frozen Dead, Scarecrow, Wendigo.\n* Incomplete business - These are compelled to attempt to complete their goals. Sometimes the completion of the goal is enough to let them rest. Sometimes they continue endlessly trying to complete an impossible goal. - Shades, Poltergeists\n* Necromancy - Lich, Mummies, Night Terror, Skeletons, Zombies\n* Raised by another Undead - Ghoul, Skeleton Crew, Vampire.",
+      "* Description - The dead are normally at rest, but under certain circumstances their spirits return from the [Spirit Realm] and they rise again. Created through different means, the Undead share a common trait. Their life is artificial, a soulless parody of true life. Above all they envy the life that they lack, and they may only maintain their unlife by taking life from others.\n* Personality - Despite their reputation, the Undead are not innately evil. They retain at least some of their original personalities, but their new existence often forces them to reevaluate their morals. Most of the more 'ethical' Undead end their own miserable existences.\n* Spirit - Undead cannot recover Spirit except by stealing it from the living. Slaying the living is always worth 1 extra [Will] to any undead. Note: Undead are more connected to the spirit world than the living world and therefore are permanently banished from the living world if their Spirit ever drops to zero. Without a [Will], they many never use any [Naturalism] or [Spiritualism] magics.\n\nTypes\n* Traumatic death - Focused completely on the trauma of their death, they are drawn to the living and end up reenacting their death with others. - Burning Dead, Drowned, Frozen Dead, Scarecrow, Wendigo.\n* Incomplete business - These are compelled to attempt to complete their goals. Sometimes the completion of the goal is enough to let them rest. Sometimes they continue endlessly trying to complete an impossible goal. - Shades, Poltergeists\n* Necromancy - Lich, Mummies, Night Terror, Skeletons, Zombies\n* Raised by another Undead - Ghoul, Skeleton Crew, Vampire.",
       ":titles",
       "Restless, Restless Dead, Risen, Undeath, Unquiet",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Corporeal Undead",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -3540,7 +3514,7 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Barghest",
+            "Barghest",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Barghest", ":titles", "Black Shuck, Ghost Hound"),
             "Burning Dead",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Burning Dead"),
@@ -3556,6 +3530,8 @@ export default class nx_tactics_books_bestiary {
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Ghost Ship"),
             "Ghoul",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Ghoul"),
+            "Husk",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Husk", ":summary", "A person who has been completely drained of their lifeforce."),
             "Lich",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Lich"),
             "Mummy",
@@ -3608,7 +3584,6 @@ export default class nx_tactics_books_bestiary {
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Zombie: Walker")
           )
         ),
-        "Noncorporeal Undead",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -3644,7 +3619,6 @@ export default class nx_tactics_books_bestiary {
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Wraith")
           )
         ),
-        ":Vampires",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",

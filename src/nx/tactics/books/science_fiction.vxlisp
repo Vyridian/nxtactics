@@ -2223,8 +2223,7 @@ weapons load for a small ship.
           :name "Nomad Probe"
           :image "StarTrek/Nomad.png"
           :reference
-           "* Error! Error!...Faulty! Faulty! Must sterilize imperfection! - STER-I-LIZE! - Nomad, Star Trek
-            * Nomad - See the universe. Meet interesting people...and kill them. - Motivational Poster Parody")
+         "* Error! Error!...Faulty! Faulty! Must sterilize imperfection! - STER-I-LIZE! - Nomad, Star Trek")
         "Romulan Centurion"
          (base/unit
           :name "Romulan Centurion"
@@ -2234,13 +2233,10 @@ weapons load for a small ship.
           :name "Romulan Warbird"
           :image "StarTrek/Romulan_Warbird.png"
           :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armor")
-            :Shielding
-             (base/unitpower
-              :name "Shielding"))
+           (base/unitpowermap<-tactics-keys
+            tactics
+            "Armor"
+            "Shielding")
           :unitskillmap
            (base/unitskillmap
             :Gunnery
@@ -2259,11 +2255,10 @@ weapons load for a small ship.
          (base/unit
           :name "Species 8472"
           :image "StarTrek/Species8472.png")
-        :V'Ger
+        "V'Ger"
          (base/unit
           :name "V'Ger"
           :image "StarTrek/VoyagerVI.png"
-          :reference "Voyager VI - Tell Nomad I'm going to kick his ass. - Motivational Poster Parody"
           :titles "Voyager VI"
           :length "98km"))))))
 

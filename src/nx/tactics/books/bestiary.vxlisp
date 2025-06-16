@@ -3068,40 +3068,17 @@
           :name "Raijin"
           :titles "God of Lightning, Narukami, Raiden")))
     "Water Elementals"
-     (section
+     (base/section
       :name "Water Elementals"
       :unitmap
-       (base/unitmap
+       (base/unitmap<-tactics-keys
+        tactics
         "Hydro Essence"
-         (base/unit
-          :name "Hydro Essence"
-          :summary
-           "* A mindless, condensed blob of Hydro energy.
-            * Since slimes store magical energy they are highly sought after by mages and alchemists."
-          :titles "Hydro Slime, Hydrolon, Water Slime")
-        :Naiad
-         (base/unit
-          :name "Naiad"
-          :titles "Nereid, Nyad")
-        :Undine
-         (base/unit
-          :name "Undine")
+        "Naiad"
+        "Undine"
         "Water Elemental"
-         (base/unit
-          :name "Water Elemental")
         "Water Elemental Lord"
-         (base/unit
-          :name "Water Elemental Lord"
-          :summary "* Greater Water Elementals are enormous creatures that can appear as a lake, a whirlpool, or a tidal wave. They have complete mastery over the Water, can perform any Water Power at maximum ability and can cancel any other being attempting to use Fire."
-          :unitpowermap
-           (base/unitpowermap
-            :Water
-             (base/unitpower
-              :name "Water"
-              :level "20")))
-        "Water Sprite"
-         (base/unit
-          :name "Water Sprite"))))))
+        "Water Sprite")))))
 
 (func chapter_extra-dimensional : base/chapter
  [tactics : base/tactics]
@@ -3274,8 +3251,8 @@
         "Abyssal Hound"
          (base/unit
           :name "Abyssal Hound"
-          :summary "* Resembles large muscular bulldog/pit bull 3ft at the shoulder. Their eyes pulse a faint red with their heartbeat. They love to chase prey and are completely silent in pursuit. They are aggressive bullies, but will flee a determined foe unless the scent of blood drives them into a murderous frenzy."
-          :titles "Demon Dog")
+          :titles "Demon Dog"
+          :summary "* Resembles large muscular bulldog/pit bull 3ft at the shoulder. Their eyes pulse a faint red with their heartbeat. They love to chase prey and are completely silent in pursuit. They are aggressive bullies, but will flee a determined foe unless the scent of blood drives them into a murderous frenzy.")
         "Abyssal Hunter"
          (base/unit
           :name "Abyssal Hunter")
@@ -3349,10 +3326,15 @@
             *** Stinger
             *** Telekinesis
             *** Web")
-        :Empusa
+        "Demon Bear"
+         (base/unit
+          :name "Demon Bear"
+          :reference
+           "* Inside every person there are two bears. One bear is all the good things, compassion, love trust. The other is all the bad things, fear, shame, self-destruction. I asked, Which one wins? He answered, The one you feed. - New Mutants")
+        "Empusa"
          (base/unit
           :name "Empusa")
-        :Lilin
+        "Lilin"
          (base/unit
           :name "Lilin")
         "Mist Demon"
@@ -3387,7 +3369,7 @@
         * Contract - Devil's Bargain. Fiends are willing to engage in contracts with mortals, usually in exchange for their soul but sometimes for lesser mischief. The fiend hierarchy ensures that these contracts are always binding to both parties. Some magi believe they can deal with fiends, learn from them, and not be corrupted themselves. This rarely goes to plan and fiends are more than willing to pit their intelligence against a mage's.
         * Deceiver - Fiends are deceivers first and foremost. No ability can reveal whether they are telling the truth.
         * Corrupted - No ability can change them into virtuous beings. They are too far gone to turn.
-        * Tormented - Though fiends appear to be all-powerful embodiments of evil, they are ruled by their [Shadow] and forever tormented by the remnants of their [Spirit]. They are secretly filled with regret and self-loathing and have even been known to strangely act in ways that lead to their own defeat.
+        * Tormented - Though fiends appear to be all-powerful embodiments of evil, they are ruled by their [Shadow] and forever tormented by the remnants of their [Will]. They are secretly filled with regret and self-loathing and have even been known to strangely act in ways that lead to their own defeat.
         * Shaitan are the original and most powerful fiends. Most are ancient fallen angels, who through millenia of worship now possess godlike power.
         * Archfiends are the most powerful sorts of Fiends below the godlike Shaitan. They stand 10 to 20 feet tall and have red or coal black skin. They live in stone castles and observe a medieval heirarchy of princes, 	princesses, barons, ministers, and knights. They profess undying loyalty to the Shaitan, though, in fact, they crave power, wealth, and position and are throughly unscrupulous and untrustworthy in all their dealings."
       :titles "Devilish, Devils, Diabolic, Fiends, Shaitan, Shayatin"
@@ -3926,11 +3908,11 @@
                   :name "Sapping")))))
         "Goblin Raider"
          (base/unit<-tactics-key tactics "Goblin Raider")
-        "Goblin Scout"
-         (base/unit<-tactics-key tactics "Goblin Scout")
         "Goblin Saboteur"
          (base/unit
           :name "Goblin Saboteur")
+        "Goblin Scout"
+         (base/unit<-tactics-key tactics "Goblin Scout")
         "Goblin Shaman"
          (base/unit
           :name "Goblin Shaman")
@@ -4506,7 +4488,7 @@
   :summary
    "* Description - The dead are normally at rest, but under certain circumstances their spirits return from the [Spirit Realm] and they rise again. Created through different means, the Undead share a common trait. Their life is artificial, a soulless parody of true life. Above all they envy the life that they lack, and they may only maintain their unlife by taking life from others.
     * Personality - Despite their reputation, the Undead are not innately evil. They retain at least some of their original personalities, but their new existence often forces them to reevaluate their morals. Most of the more 'ethical' Undead end their own miserable existences.
-    * Spirit - Undead cannot recover Spirit except by stealing it from the living. Slaying the living is always worth 1 extra [Spirit] to any undead. Note: Undead are more connected to the spirit world than the living world and therefore are permanently banished from the living world if their Spirit ever drops to zero. Without a [Spirit], they many never use any [Naturalism] or [Spiritualism] magics.
+    * Spirit - Undead cannot recover Spirit except by stealing it from the living. Slaying the living is always worth 1 extra [Will] to any undead. Note: Undead are more connected to the spirit world than the living world and therefore are permanently banished from the living world if their Spirit ever drops to zero. Without a [Will], they many never use any [Naturalism] or [Spiritualism] magics.
 
     Types
     * Traumatic death - Focused completely on the trauma of their death, they are drawn to the living and end up reenacting their death with others. - Burning Dead, Drowned, Frozen Dead, Scarecrow, Wendigo.
@@ -4515,211 +4497,213 @@
     * Raised by another Undead - Ghoul, Skeleton Crew, Vampire."
   :titles "Restless, Restless Dead, Risen, Undeath, Unquiet"
   :sectionmap
-   (sectionmap
-    "Corporeal Undead"
-     (section
-      :name "Corporeal Undead"
-      :summary "* Vulnerable: [Fire], [Impact]"
-      :unitmap
-       (base/unitmap
-        :Barghest
-         (base/unit
-          :name "Barghest"
-          :titles "Black Shuck, Ghost Hound")
-        "Burning Dead"
-         (base/unit<-tactics-key tactics "Burning Dead")
-        "Dead of Night"
-         (base/unit<-tactics-key tactics "Dead of Night")
-        "Dead of Winter"
-         (base/unit<-tactics-key tactics "Dead of Winter")
-        "Dhampyr"
-         (base/unit<-tactics-key tactics "Dhampyr")
-        "Drowned"
-         (base/unit<-tactics-key tactics "Drowned")
-        "Ghost Ship"
-         (base/unit<-tactics-key tactics "Ghost Ship")
-        "Ghoul"
-         (base/unit<-tactics-key tactics "Ghoul")
-        "Lich"
-         (base/unit<-tactics-key tactics "Lich")
-        "Mummy"
-         (base/unit
-          :name "Mummy"
-          :reference "The Mummy"
-          :summary
-           "* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.
-            * Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk."
-          :unitpowermap
-           (base/unitpowermap
-            :Longevity
-             (base/unitpower
-              :name "Longevity"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Reanimation
-                 (base/unitability
-                  :name "Reanimation")))))
-        "Night Terror"
-         (base/unit<-tactics-key tactics "Night Terror")
-        "Pestilence Horse"
-         (base/unit
-          :name "Pestilence Horse"
-          :summary
-           "* A Pestience Horse is a zombie horse that carries deadly diseases. It's decaying body is not as fast as its original body, but may still trot fairly quickly. It is not as agressive as other undead, instead travelling around spreading disease and fleeing when confronted.")
-        "Scarecrow"
-         (base/unit<-tactics-key tactics "Scarecrow")
-        "Skeletal Dragon"
-         (base/unit
-          :name "Skeletal Dragon")
-        "Skeletal Knight"
-         (base/unit<-tactics-key tactics "Skeletal Knight")
-        "Skeleton"
-         (base/unit<-tactics-key tactics "Skeleton")
-        "Skeleton Warrior"
-         (base/unit<-tactics-key tactics "Skeleton Warrior")
-        "Slayer Dead"
-         (base/unit
-          :name "Slayer Dead"
-          :titles "Murderous Dead, War Dead"
-          :reference
-           "* Jason Voorhees
-            * Nightmare on Elm Street
-            * Vinland Saga"
-          :summary
-           "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines.")
-        "Wendigo"
-         (base/unit
-          :name "Wendigo"
-          :titles "Abominable Snowman, Yeti"
-          :summary "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims.")
-        "Wight"
-         (base/unit<-tactics-key tactics "Wight")
-        "Zombie: Walker"
-         (base/unit<-tactics-key tactics "Zombie: Walker")))
-    "Noncorporeal Undead"
-     (section
-      :name "Noncorporeal Undead"
-      :unitmap
-       (base/unitmap
-        "Haunt"
-         (base/unit<-tactics-key tactics "Haunt")
-        "Lemure"
-         (base/unit
-          :name "Lemure"
-          :summary "* The wandering and vengeful spirits of those not afforded proper burial or funeral rites."
-          :titles "Larvae, Lemur")
-        "Lost Soul"
-         (base/unit
-          :name "Lost Soul")
-        "Phantom"
-         (base/unit
-          :name "Phantom"
-          :summary "* Phantoms are the remnants of those who were lost in the Astral/Dream Realm. The Astral Realm is the realm of imagination, so those trapped here are gradually driven mad. Therefore, Phantoms have varying and unpredictable insanities.")
-        "Poltergeist"
-         (base/unit
-          :name "Poltergeist")
-        "Reaper"
-         (base/unit
-          :name "Reaper"
-          :reference "Charon the Ferryman"
-          :summary "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon.")
-        "Shade"
-         (base/unit
-          :name "Shade"
-          :reference "The Ring"
-          :summary
-           "* Description - lank and ghastly beings with no feet, floating suspended above the ground.
-            * Shades are the spirits of those who died in suicide, accident, murder, or wrongful execution. They are bound to this plane by the anger they felt at their deaths.
-            * Suicide and accident victims attempt to compel those most like their former selves to die in the same manner.
-            * Murder and wrongful death victims attempt to revenge themselves upon the killer or his descendents."
-          :titles "Aghast, Ghast, Ghastly, Shoryo")
-        :Shadow
-         (base/unit
-          :name "Shadow")
-        :Sluagh
-         (base/unit
-          :name "Sluagh"
-          :reference
-           "* The spirits of the sinners, or generally evil people who were welcome in neither heaven nor hell.
-            * They were seen to fly in groups like flocks of birds, coming from the west, and were known to try to enter the house of a dying person in an effort to carry the soul away with them. West-facing windows were sometimes kept closed to keep them out. Some consider the Sluagh to also carry with them the souls of innocent people who were kidnapped by these destructive spirits."
-          :summary
-           "* The Sluagh are thin, pale, snake-like, and grotesque, though they remain strangely compelling. They favor archaic, intricate, black clothing. Their joints can dislocate allowing them to slither our of bonds and into disquieting shapes.
-            * They may only speak in whispers and dislike any social situations except among their own kind. They prefer to overserve other from hidden corners, and the secrets they obtain are their stock and trade.")
-        "Spectre"
-         (base/unit<-tactics-key tactics "Spectre")
-        "Spectral Horse"
-         (base/unit
-          :name "Spectral Horse")
-        "Will-O-Wisp"
-         (base/unit<-tactics-key tactics "Will-O-Wisp")
-        "Wraith"
-         (base/unit<-tactics-key tactics "Wraith")))
-    :Vampires
-     (section
-      :name "Vampires"
-      :reference
-       "* Dracula
-        * I died... so many years ago. You can make me feel like it isn't so. ... I know, I should go, but I follow you like a man possessed. There's a traitor here beneath my breast, and it hurts me more than you've ever guessed. If my heart could beat, it would break my chest. But I can see, that you're unimpressed, so leave me be and let me rest in peace. Let me get some sleep. Let me take my love and bury it six feet deep. - Spike, Buff the Vampire Slayer
-        * Cause I’ve made some real big mistakes. But you make the worst one look fine. I should’ve known it was strange. You only come out at night. I used to think I was smart. But you made me look so naïve. The way you sold me for parts. As you sunk your teeth into me, oh. Bloodsucker, dreamcrusher. Bleeding me dry like a damn vampire - Olivia Rodrigo, Vampire
-        * Victor: I need you to understand something very, very clearly. The place we're going, if you repeat in front of them that she knows about a 'thing', she's dead. Everyone she knows is dead. Anyone she might have texted is dead. So you're going to have to learn from this exact second, how to keep a secret. There's a little show we have to put on. You might call it a sort of masquerade that we all have to live into, that none of this is real. Never in your life did you think this is real, and is has been the entire time. So learn to lie to your girlfriend if you want to live. Nelli G: Or if you want to live. Jasper: That too. - L.A By Night
-        * Annabelle: You seem reasonable. Why do you follow their orders?... Jasper: I follow his orders because if I don't, I get left in that sun that hurts so much... I work with them because if I don't, I get introduced to the dawn. I do a lot of things, so I get to keep living... It's a game we all play, so we get to keep doing this. Talking, living, walking. - L.A By Night"
-      :summary
-       "* Description - Among most powerful and feared of all undead, Vampires are among the oldest known undead creatures with legends that go back to the first intelligent humans. They possess the abilities that they had in life as well as gaining unique vampiric powers.
-        * Feeding - Vampires regain Spirit only by drinking the blood of the living. Some Eastern Vampires eat the flesh of the living instead. As the Spirit of a Vampire decreases, the Vampire becomes more savage and beastial.
-        * Morale - Normal, Low vs. Fire and Sunlight. Ironically, the one thing that truly terrifies these eternal, murderous beings is the end of their own cursed lives.
-        * Vulnerability to Fire - The cleansing touch of Fire will rapidly consume a Vampire.
-        * Vulnerability to Sunlight - The cleansing touch of Sunlight will ignite a Vampire on Fire. During daylight hours, Vampires fall into a deathlike sleep. Contrary to some sources, arificial sunlight has no effect on them.
-        * Vulnerability to Silver - The cleansing touch of Silver will ignite a Vampire on Fire. Even their reflection is destroyed by Silver. Contrary to some sources, non-silver mirrors still reflect the image of a Vampire.
-        * Immunity to Bleeding - Vampire blood can move on its own and will not leave the body without force.
-        * Biology - Vampires are created when one Vampire drains a person to the brink of death and then feeds their own blood to the victim. This is called: The Embrace. At this moment, the victim has a chance to reject the Embrace, and die peacefully. If the victim accepts the Embrace, the blood will rapidly reach the victim's heart and the transformation to Vampire will immediately begin.
-        * Nature - There is much conjecture about how a Vampire functions, but it is certain that the blood of a Vampire is the source of its unnatural existence. Some believe that the blood itself is a form of evil, magical, parasite centered on the heart that animates the Vampire's body.
-        * Masquerade - During the day, Vampires are completely vulnerable. Therefore, they avoid drawing attention to themselves. They pretend to be normal people while manipulating from behind the scenes. Vampires appear as near perfect humans, but this too is a mask. Vampires pretend at being sophisticated and refined, but always behind this is their true, savage, bestial nature.
-        * Sire - The vampire's creator.
-        * Childer - The relationship of a vampire to a Sire.
-        * Book of Nod - The vampiric history/bible.
-        * Antitribu - Those who choose to oppose their clan, joining the Camarilla or Sabbat respectively."
-      :titles "Cainite, Kindred, Leech, Lick"
-      :sectionmap
-       (base/sectionmap<-sectionlist
-        (base/section
-         :name "Vampires, Elder"
-         :unitmap
-          (base/unitmap<-tactics-keys
-           tactics
-           "Vampire: Kali"
-           "Vampire: Set"))
-        (base/section
-         :name "Vampires: Anarchs"
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Corporeal Undead"
+     :summary "* Vulnerable: [Fire], [Impact]"
+     :unitmap
+      (base/unitmap
+       "Barghest"
+        (base/unit
+         :name "Barghest"
+         :titles "Black Shuck, Ghost Hound")
+       "Burning Dead"
+        (base/unit<-tactics-key tactics "Burning Dead")
+       "Dead of Night"
+        (base/unit<-tactics-key tactics "Dead of Night")
+       "Dead of Winter"
+        (base/unit<-tactics-key tactics "Dead of Winter")
+       "Dhampyr"
+        (base/unit<-tactics-key tactics "Dhampyr")
+       "Drowned"
+        (base/unit<-tactics-key tactics "Drowned")
+       "Ghost Ship"
+        (base/unit<-tactics-key tactics "Ghost Ship")
+       "Ghoul"
+        (base/unit<-tactics-key tactics "Ghoul")
+       "Husk"
+        (base/unit
+         :name "Husk"
          :summary
-          "* The strict caste system of the Camarilla does not favor new Vampires. Many newly embraced reject the machinations of the elders and live as they can on the fringe. Anarchs rely on each other to protect themselves from the actions of the Camarilla and the Sabbat. The larger organizations treat Anarchs like homeless people, largely ignoring them unless they get in their way. The Anarchs understand that the other groups are bound by rules, and they will use this to their advantage. In any situation, the Anarchs are wild cards, potentially able to shift a result one way or the other. The Anarchs have one crucial advantage over the Camarilla and Sabbat: they have nothing to lose.")
-        (base/section
-         :name "Vampires: Camarilla"
-         :titles "Neophyte, Elder, Prince, Sheriff"
-         :unitmap
-          (base/unitmap<-tactics-keys
-           tactics
-           "Vampire: Brujah"
-           "Vampire: Gangrel"
-           "Vampire: Malkavian"
-           "Vampire: Nosferatu"
-           "Vampire: Toreador"
-           "Vampire: Tremere"
-           "Vampire: Ventrue"))
-        (base/section
-         :name "Vampires: Sabbat"
+          "A person who has been completely drained of their lifeforce.")
+       "Lich"
+        (base/unit<-tactics-key tactics "Lich")
+       "Mummy"
+        (base/unit
+         :name "Mummy"
+         :reference "The Mummy"
+         :summary
+          "* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.
+           * Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk."
+         :unitpowermap
+          (base/unitpowermap
+           :Longevity
+            (base/unitpower
+             :name "Longevity"
+             :unitabilitymap
+              (base/unitabilitymap
+               :Reanimation
+                (base/unitability
+                 :name "Reanimation")))))
+       "Night Terror"
+        (base/unit<-tactics-key tactics "Night Terror")
+       "Pestilence Horse"
+        (base/unit
+         :name "Pestilence Horse"
+         :summary
+          "* A Pestience Horse is a zombie horse that carries deadly diseases. It's decaying body is not as fast as its original body, but may still trot fairly quickly. It is not as agressive as other undead, instead travelling around spreading disease and fleeing when confronted.")
+       "Scarecrow"
+        (base/unit<-tactics-key tactics "Scarecrow")
+       "Skeletal Dragon"
+        (base/unit
+         :name "Skeletal Dragon")
+       "Skeletal Knight"
+        (base/unit<-tactics-key tactics "Skeletal Knight")
+       "Skeleton"
+        (base/unit<-tactics-key tactics "Skeleton")
+       "Skeleton Warrior"
+        (base/unit<-tactics-key tactics "Skeleton Warrior")
+       "Slayer Dead"
+        (base/unit
+         :name "Slayer Dead"
+         :titles "Murderous Dead, War Dead"
          :reference
-          "* I'm not evil for the things I do. I AM Evil."
+          "* Jason Voorhees
+           * Nightmare on Elm Street
+           * Vinland Saga"
          :summary
-          "* The members of the Camarilla pretend to humanity and play power games to maintain their parasitic grip on humanity. The Sabbat have embraced the truth: they are not human anymore; they are monsters."
-         :unitmap
-          (base/unitmap<-tactics-keys
-           tactics
-           "Vampire: Lasombra"
-           "Vampire: Tzimisce"))
-        (base/section
-         :name "Vampires: Independent"
-         :unitmap
-          (base/unitmap<-tactics-keys
-           tactics
-           "Vampire: Kuei-Jin"
-           "Vampire: Setite")))))))
+          "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines.")
+       "Wendigo"
+        (base/unit
+         :name "Wendigo"
+         :titles "Abominable Snowman, Yeti"
+         :summary "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims.")
+       "Wight"
+        (base/unit<-tactics-key tactics "Wight")
+       "Zombie: Walker"
+        (base/unit<-tactics-key tactics "Zombie: Walker")))
+    (base/section
+     :name "Noncorporeal Undead"
+     :unitmap
+      (base/unitmap
+       "Haunt"
+        (base/unit<-tactics-key tactics "Haunt")
+       "Lemure"
+        (base/unit
+         :name "Lemure"
+         :summary "* The wandering and vengeful spirits of those not afforded proper burial or funeral rites."
+         :titles "Larvae, Lemur")
+       "Lost Soul"
+        (base/unit
+         :name "Lost Soul")
+       "Phantom"
+        (base/unit
+         :name "Phantom"
+         :summary "* Phantoms are the remnants of those who were lost in the Astral/Dream Realm. The Astral Realm is the realm of imagination, so those trapped here are gradually driven mad. Therefore, Phantoms have varying and unpredictable insanities.")
+       "Poltergeist"
+        (base/unit
+         :name "Poltergeist")
+       "Reaper"
+        (base/unit
+         :name "Reaper"
+         :reference "Charon the Ferryman"
+         :summary "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon.")
+       "Shade"
+        (base/unit
+         :name "Shade"
+         :reference "The Ring"
+         :summary
+          "* Description - lank and ghastly beings with no feet, floating suspended above the ground.
+           * Shades are the spirits of those who died in suicide, accident, murder, or wrongful execution. They are bound to this plane by the anger they felt at their deaths.
+           * Suicide and accident victims attempt to compel those most like their former selves to die in the same manner.
+           * Murder and wrongful death victims attempt to revenge themselves upon the killer or his descendents."
+         :titles "Aghast, Ghast, Ghastly, Shoryo")
+       :Shadow
+        (base/unit
+         :name "Shadow")
+       :Sluagh
+        (base/unit
+         :name "Sluagh"
+         :reference
+          "* The spirits of the sinners, or generally evil people who were welcome in neither heaven nor hell.
+           * They were seen to fly in groups like flocks of birds, coming from the west, and were known to try to enter the house of a dying person in an effort to carry the soul away with them. West-facing windows were sometimes kept closed to keep them out. Some consider the Sluagh to also carry with them the souls of innocent people who were kidnapped by these destructive spirits."
+         :summary
+          "* The Sluagh are thin, pale, snake-like, and grotesque, though they remain strangely compelling. They favor archaic, intricate, black clothing. Their joints can dislocate allowing them to slither our of bonds and into disquieting shapes.
+           * They may only speak in whispers and dislike any social situations except among their own kind. They prefer to overserve other from hidden corners, and the secrets they obtain are their stock and trade.")
+       "Spectre"
+        (base/unit<-tactics-key tactics "Spectre")
+       "Spectral Horse"
+        (base/unit
+         :name "Spectral Horse")
+       "Will-O-Wisp"
+        (base/unit<-tactics-key tactics "Will-O-Wisp")
+       "Wraith"
+        (base/unit<-tactics-key tactics "Wraith")))
+    (base/section
+     :name "Vampires"
+     :reference
+      "* Dracula
+       * I died... so many years ago. You can make me feel like it isn't so. ... I know, I should go, but I follow you like a man possessed. There's a traitor here beneath my breast, and it hurts me more than you've ever guessed. If my heart could beat, it would break my chest. But I can see, that you're unimpressed, so leave me be and let me rest in peace. Let me get some sleep. Let me take my love and bury it six feet deep. - Spike, Buff the Vampire Slayer
+       * Cause I’ve made some real big mistakes. But you make the worst one look fine. I should’ve known it was strange. You only come out at night. I used to think I was smart. But you made me look so naïve. The way you sold me for parts. As you sunk your teeth into me, oh. Bloodsucker, dreamcrusher. Bleeding me dry like a damn vampire - Olivia Rodrigo, Vampire
+       * Victor: I need you to understand something very, very clearly. The place we're going, if you repeat in front of them that she knows about a 'thing', she's dead. Everyone she knows is dead. Anyone she might have texted is dead. So you're going to have to learn from this exact second, how to keep a secret. There's a little show we have to put on. You might call it a sort of masquerade that we all have to live into, that none of this is real. Never in your life did you think this is real, and is has been the entire time. So learn to lie to your girlfriend if you want to live. Nelli G: Or if you want to live. Jasper: That too. - L.A By Night
+       * Annabelle: You seem reasonable. Why do you follow their orders?... Jasper: I follow his orders because if I don't, I get left in that sun that hurts so much... I work with them because if I don't, I get introduced to the dawn. I do a lot of things, so I get to keep living... It's a game we all play, so we get to keep doing this. Talking, living, walking. - L.A By Night"
+     :summary
+      "* Description - Among most powerful and feared of all undead, Vampires are among the oldest known undead creatures with legends that go back to the first intelligent humans. They possess the abilities that they had in life as well as gaining unique vampiric powers.
+       * Feeding - Vampires regain Spirit only by drinking the blood of the living. Some Eastern Vampires eat the flesh of the living instead. As the Spirit of a Vampire decreases, the Vampire becomes more savage and beastial.
+       * Morale - Normal, Low vs. Fire and Sunlight. Ironically, the one thing that truly terrifies these eternal, murderous beings is the end of their own cursed lives.
+       * Vulnerability to Fire - The cleansing touch of Fire will rapidly consume a Vampire.
+       * Vulnerability to Sunlight - The cleansing touch of Sunlight will ignite a Vampire on Fire. During daylight hours, Vampires fall into a deathlike sleep. Contrary to some sources, arificial sunlight has no effect on them.
+       * Vulnerability to Silver - The cleansing touch of Silver will ignite a Vampire on Fire. Even their reflection is destroyed by Silver. Contrary to some sources, non-silver mirrors still reflect the image of a Vampire.
+       * Immunity to Bleeding - Vampire blood can move on its own and will not leave the body without force.
+       * Biology - Vampires are created when one Vampire drains a person to the brink of death and then feeds their own blood to the victim. This is called: The Embrace. At this moment, the victim has a chance to reject the Embrace, and die peacefully. If the victim accepts the Embrace, the blood will rapidly reach the victim's heart and the transformation to Vampire will immediately begin.
+       * Nature - There is much conjecture about how a Vampire functions, but it is certain that the blood of a Vampire is the source of its unnatural existence. Some believe that the blood itself is a form of evil, magical, parasite centered on the heart that animates the Vampire's body.
+       * Masquerade - During the day, Vampires are completely vulnerable. Therefore, they avoid drawing attention to themselves. They pretend to be normal people while manipulating from behind the scenes. Vampires appear as near perfect humans, but this too is a mask. Vampires pretend at being sophisticated and refined, but always behind this is their true, savage, bestial nature.
+       * Sire - The vampire's creator.
+       * Childer - The relationship of a vampire to a Sire.
+       * Book of Nod - The vampiric history/bible.
+       * Antitribu - Those who choose to oppose their clan, joining the Camarilla or Sabbat respectively."
+     :titles "Cainite, Kindred, Leech, Lick"
+     :sectionmap
+      (base/sectionmap<-sectionlist
+       (base/section
+        :name "Vampires, Elder"
+        :unitmap
+         (base/unitmap<-tactics-keys
+          tactics
+          "Vampire: Kali"
+          "Vampire: Set"))
+       (base/section
+        :name "Vampires: Anarchs"
+        :summary
+         "* The strict caste system of the Camarilla does not favor new Vampires. Many newly embraced reject the machinations of the elders and live as they can on the fringe. Anarchs rely on each other to protect themselves from the actions of the Camarilla and the Sabbat. The larger organizations treat Anarchs like homeless people, largely ignoring them unless they get in their way. The Anarchs understand that the other groups are bound by rules, and they will use this to their advantage. In any situation, the Anarchs are wild cards, potentially able to shift a result one way or the other. The Anarchs have one crucial advantage over the Camarilla and Sabbat: they have nothing to lose.")
+       (base/section
+        :name "Vampires: Camarilla"
+        :titles "Neophyte, Elder, Prince, Sheriff"
+        :unitmap
+         (base/unitmap<-tactics-keys
+          tactics
+          "Vampire: Brujah"
+          "Vampire: Gangrel"
+          "Vampire: Malkavian"
+          "Vampire: Nosferatu"
+          "Vampire: Toreador"
+          "Vampire: Tremere"
+          "Vampire: Ventrue"))
+       (base/section
+        :name "Vampires: Sabbat"
+        :reference
+         "* I'm not evil for the things I do. I AM Evil."
+        :summary
+         "* The members of the Camarilla pretend to humanity and play power games to maintain their parasitic grip on humanity. The Sabbat have embraced the truth: they are not human anymore; they are monsters."
+        :unitmap
+         (base/unitmap<-tactics-keys
+          tactics
+          "Vampire: Lasombra"
+          "Vampire: Tzimisce"))
+       (base/section
+        :name "Vampires: Independent"
+        :unitmap
+         (base/unitmap<-tactics-keys
+          tactics
+          "Vampire: Kuei-Jin"
+          "Vampire: Setite")))))))

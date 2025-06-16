@@ -68,12 +68,14 @@
  (base/damage
   :name "Slash: Head"
   :ranksuit base/ranksuit-as
-  :image "images/card-wound-head.svg"
-  :summary
-   "Minor: Head Cut. Bleeding:1
-    Major: Face Gash. Stress:1 Bleeding:1
-    Critical: Throat Slashed. Bleeding:3 Stress:2
-    Extreme: Beheaded. Dead."))
+  :image "images/damage-wound-as.svg"
+  :layout base/cardlayout-imageonly
+//  :summary
+//   "Minor: Head Cut. Bleeding:1
+//    Major: Face Gash. Stress:1 Bleeding:1
+//    Critical: Throat Slashed. Bleeding:3 Stress:2
+//    Extreme: Beheaded. Dead."
+))
 
 (const wound-kc : base/damage
  (base/damage

@@ -134,6 +134,15 @@
    :body "5x2"
    :mass "500kg")
   (base/unit
+   :name "Blackguard"
+   :titles "Black Dragoon"
+   :summary
+    "* An elite mercenary cadre organized by Hetman Undrig.
+     * Their base is a small, walled town dedicated to their needs.
+     * The Dragoons are a loose group. Decisions and leaders are chosen by majority vote. Power can change at anytime (including during combat).
+     * Dragoons pay no dues nor is there direct pay. The Dragoons make money by hiring out as mercenaries.  They charge double normal rates, but are reknowned for their excellent training and equipment. Dragoons take great pride in their high status and react poorly to those who do not recognize their talent.
+     * Dragoons are trained professionals in their jobs and recognize the need for discretion. They care little for whether a job is legal or not, and the Dragoons are known for possessing certain 'subtle' skills that make covert missions possible. They do not, however, enjoy excessive risk and are not above abandoning very dangerous missions.")
+  (base/unit
    :name "Boba Fett"
    :image "images/starwars/unit-bobafett.png"
    :reference
@@ -222,20 +231,28 @@
   (base/unit
    :name "Butterfly: Giant")
   (base/unit
+   :name "Capybara"
+   :body "5x1"
+   :mass "50kg")
+  (base/unit
    :name "Cart: Wooden"
    :image "images/cards/unit-cart-wooden.svg"
    :imgmirror true
    :body "2x2"
    :mass "200kg/440lb")
   (base/unit
-   :name "Capybara"
-   :body "5x1"
-   :mass "50kg")
-  (base/unit
    :name "Cat"
    :image "images/cards/unit-cat.svg")
   (base/unit
    :name "Caterpillar: Giant")
+  (base/unit
+   :name "Charn Aramel"
+   :summary "Human Dread Knight"
+   :titles "Nighthook, Lord Aramel"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl
+      tactics "Conviction" 10)))
   (base/unit
    :name "Chicken"
    :image "images/cards/unit-chicken.svg")
@@ -334,7 +351,7 @@
      * Dhampyrs are mortal but can live for centuries. Once mature, they age at roughly 1/10 the rate of humans.
      * They can breed with humans, but not with Kuei-jin or other dhampyrs.
      * They are not dead, so they must breath, eat, drink, and sleep. They may bleed, and they may die.
-     * By using [Spirit], they can perform feats not possible for humans. They can regain [Spirit] through rest or by eating flesh (usually they cannot by drinking blood).
+     * By using [Will], they can perform feats not possible for humans. They can regain [Will] through rest or by eating flesh (usually they cannot by drinking blood).
      * The [Beast] is weaker in a Dhampyr than in their Vampire kin, but this makes their powers weaker as well.")
   (base/unit
    :name "Dhole"
@@ -515,7 +532,9 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 2
-      (stringlist "Knife: Dagger"))))
+      (stringlist
+       "Spear: Short"
+       "Knife: Dagger"))))
   (base/unit
    :name "Goblin Scout"
    :image "images/cards/unit-goblin-scout.svg"
@@ -523,15 +542,15 @@
     "* The only information I will let them have is that their scouts are not coming back. This will be their grave. - Goblin Slayer"
    :demeanor "Depraved"
    :nature "Cowardly Envious"
-   :conscience "1x1"
-   :beast "1x0"
+   :conscience "2x1"
+   :beast "2x0"
    :traits "Goblin Male"
    :body "2x1"
    :mind "6x1"
    :will "2x1"
    :speed "5x0"
    :speedland "5kph/3mph"
-   :value "1x0"
+   :value "2x0"
    :mass "22kg/50lb"
    :height "1m/3ft"
    :unitskillmap
@@ -651,6 +670,12 @@
   (base/unit
    :name "Hunting Horror"
    :image "cthulhu/huntingHorror.png")
+  (base/unit
+   :name "Hydro Essence"
+   :summary
+    "* A mindless, condensed blob of Hydro energy.
+     * Since slimes store magical energy they are highly sought after by mages and alchemists."
+   :titles "Hydro Slime, Hydrolon, Water Slime")
   (base/unit
    :name "Innkeeper"
    :image "images/cards/unit-innkeeper.svg")
@@ -783,10 +808,17 @@
     * They are unaccustomed to light which confuses them.
     * They seem to be highly focused on their scientific pursuits and are most often encountered in search of obscure minerals in remote places. Trespassers are usually eliminated, though they have been known to have human agents work on their behalf.
     * Mi-go have access to a number of advanced weapons. The mist projector releases a cloud of frigid gas. They have an organic 'armor' that humans can use, but it is extremely sticky and will damage the user each time it is removed. The armor will also weaken each day unless immersed in the proper nutrient bath.
-    * The Mi-Go are advanced in the sphere of surgery. With surgical alterations the Mi-Go are able to speak human languages, though their voice is buzzy and irritating. They can also surgically move the brain of other species into metal cylinders for transportation to other worlds through space."
+    * The Mi-Go are advanced in the sphere of surgery. With surgical alterations the Mi-Go are able to speak human languages, though their voice is buzzy and irritating. They can also surgically move the brain of other species into metal cylinders for transportation to other worlds through space.
+    * Essentially a space fungus, the crablike form we're accustom to is actually a pressure suit that allows them to walk around, speak and fly in Earth's atmosphere. They grow their 'bodies' likes coral and can form appendages to anything they require - wings, arms, shells. Each of these shells is alive and using grafting, they can switch out limbs as needed. The discarded limbs are kept alive like potted plants until they are needed again.
+    * They are alien extremophiles, perfectly suited for deep space travel. They don't require air to breathe, are capable of periods of hibernation lasting hundreds of thousands of years, feed off minerals and cosmic radiation, using something like photosynthesis to make food.
+    * They procreate by budding, a form of cloning, to make copies of the older, mature individuals and use spores to create their workforce - bred to labor and die in the mines. They can bore deep into the mantel of worlds, and as they don't require air to breath and can survive incredible heat, cold and pressure, they can just keep going deeper while most species would die in moments.
+    * They communicate and see via radiation, the flowerlike sensory organ we view as their head, emits and receives radioactive wavelengths, allowing them to see through walls and for miles clearly as they have no eyes to focus. They can see the background radiation of the universe and use it to travel with precision between stars. This also means they can see the elemental make up of asteroids and planets just by looking at them."
    :body "6x1"
    :mass "60kg/130lb"
    :height "1.5m/5ft")
+  (base/unit
+   :name "Naiad"
+   :titles "Nereid, Nyad")
   (base/unit
    :name "Night Terror"
    :titles "Night Hag"
@@ -925,6 +957,17 @@
   (base/unit
    :name "Rukh Hatchling")
   (base/unit
+   :name "Sarani Kalea"
+   :summary "Human Priestess"
+   :titles "Princess Kalea, High Priestess of Kali"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl
+      tactics "Conviction" 12)
+     (base/unitpower<-tactics-key-lvl-abilities
+      tactics "Invocation" 16
+      (stringlist "Aspecting"))))
+  (base/unit
    :name "Scarecrow"
    :titles "Dullahan"
    :reference
@@ -997,7 +1040,7 @@
      (base/unitskill<-tactics-key-lvl-items
       tactics "Defense" 1
       (stringlist
-       "Shield"))))
+       "Shield: Round"))))
   (base/unit
    :name "Skeleton Warrior"
    :unitpowermap
@@ -1015,7 +1058,7 @@
       tactics "Defense" 3
       (stringlist
        "Armor: Breast Plate"
-       "Shield"))))
+       "Shield: Round"))))
   (base/unit
    :name "Slave 1"
    :image "images/starwars/unit-slave1.png"
@@ -1080,7 +1123,7 @@
       (stringlist "Ambush" "Camouflage")))
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
-     (base/unitpower<-tactics-key-lvl-intensity-abilities
+     (base/unitpower<-tactics-key-lvl-rating-abilities
       tactics "Toxins" 2 "2x2"
       (stringlist "Poison Bite"))))
   (base/unit
@@ -1269,7 +1312,11 @@
    :name "Tie Striker")
   (base/unit
    :name "Turkey"
-   :image "images/cards/unit-turkey.svg")
+   :image "images/cards/unit-turkey.svg"
+   :reference
+    "* As God is my witness, I thought turkeys could fly. - Mr. Carlson, WKRP in Cincinnati")
+  (base/unit
+   :name "Undine")
   (base/unit
    :name "Urchin"
    :image "images/cards/unit-urchin.svg")
@@ -1463,6 +1510,18 @@
   (base/unit
    :name "Waif"
    :image "images/cards/unit-waif.svg")
+  (base/unit
+   :name "Water Elemental")
+  (base/unit
+   :name "Water Elemental Lord"
+   :summary
+    "* Greater Water Elementals are enormous creatures that can appear as a lake, a whirlpool, or a tidal wave. They have complete mastery over the Water, can perform any Water Power at maximum ability and can cancel any other being attempting to use Fire."
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl
+      tactics "Water" 20)))
+  (base/unit
+   :name "Water Sprite")
   (base/unit
    :name "Werecat"
    :image "images/bestiary/Lycanthrope_Weretiger.png"

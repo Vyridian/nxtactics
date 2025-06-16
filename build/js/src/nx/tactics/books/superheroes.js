@@ -2730,10 +2730,10 @@ export default class nx_tactics_books_superheroes {
               {"any-1": nx_tactics_base.t_unit},
               ":name",
               "Hellion, Renegade",
-              ":summary",
-              "* Hellion is a human host possessed by a demon. He has become a sort of doorway to a hellish dimension. When he allows the door to open, he transforms into a red, bestial creature of savage destructive 	power. As the creature is damaged, it is forced back to its dimension leaving just the man behind.\n* Street punk turned amateur kickboxer turned low-level enforcer, Anthony Keys was always a wildman of 	questionable character. Abused as a child, he revels in violence and power. Keys went to PSI because he felt a dim presence when he was at his most violent. The Will discovered a demonic creature was attempting to possess Keys, which The Will encouraged. Keys is now mostly psychotic and enjoys the power of his demonic form. The demon K'rog detests the mental control the Will has over Anthony which prevents its own control, but it is content to commit mayhem when it is released, so for now it serves as the main muscle of the Renegades.\n* Powers - Strength, Speed, Resistance, Leaping, Regeneration, Transformation, Tracking Scent, Cunning but limited intelligence.",
               ":titles",
               "Anthony Keys, Hellion, Hell Hound, Rampage, Savage",
+              ":summary",
+              "* Hellion is a human host possessed by a demon. He has become a sort of doorway to a hellish dimension. When he allows the door to open, he transforms into a red, bestial creature of savage destructive 	power. As the creature is damaged, it is forced back to its dimension leaving just the man behind.\n* Street punk turned amateur kickboxer turned low-level enforcer, Anthony Keys was always a wildman of 	questionable character. Abused as a child, he revels in violence and power. Keys went to PSI because he felt a dim presence when he was at his most violent. The Will discovered a demonic creature was attempting to possess Keys, which The Will encouraged. Keys is now mostly psychotic and enjoys the power of his demonic form. The demon K'rog detests the mental control the Will has over Anthony which prevents its own control, but it is content to commit mayhem when it is released, so for now it serves as the main muscle of the Renegades.\n* Powers - Strength, Speed, Resistance, Leaping, Regeneration, Transformation, Tracking Scent, Cunning but limited intelligence.",
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
@@ -2963,7 +2963,7 @@ export default class nx_tactics_books_superheroes {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Stealth",
+                "Stealth",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
@@ -2979,8 +2979,6 @@ export default class nx_tactics_books_superheroes {
                     vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Blend into the Crowd"),
                     ":Camouflage",
                     vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Camouflage"),
-                    ":Hide",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Hide"),
                     ":Seek",
                     vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Seek"),
                     ":Sneak",

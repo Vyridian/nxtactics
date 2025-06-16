@@ -1736,7 +1736,7 @@ export default class nx_tactics_books_science_fiction {
               )
             ),
             "Nomad Probe",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nomad Probe", ":image", "StarTrek/Nomad.png", ":reference", "* Error! Error!...Faulty! Faulty! Must sterilize imperfection! - STER-I-LIZE! - Nomad, Star Trek\n* Nomad - See the universe. Meet interesting people...and kill them. - Motivational Poster Parody"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nomad Probe", ":image", "StarTrek/Nomad.png", ":reference", "* Error! Error!...Faulty! Faulty! Must sterilize imperfection! - STER-I-LIZE! - Nomad, Star Trek"),
             "Romulan Centurion",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Romulan Centurion", ":image", "StarTrek/Romulan_Centurion.png"),
             "Romulan Warbird",
@@ -1747,13 +1747,7 @@ export default class nx_tactics_books_science_fiction {
               ":image",
               "StarTrek/Romulan_Warbird.png",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
-                ":Shielding",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding")
-              ),
+              nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Armor", "Shielding"),
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
@@ -1777,8 +1771,8 @@ export default class nx_tactics_books_science_fiction {
             ),
             "Species 8472",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Species 8472", ":image", "StarTrek/Species8472.png"),
-            ":V'Ger",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "V'Ger", ":image", "StarTrek/VoyagerVI.png", ":reference", "Voyager VI - Tell Nomad I'm going to kick his ass. - Motivational Poster Parody", ":titles", "Voyager VI", ":length", "98km")
+            "V'Ger",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "V'Ger", ":image", "StarTrek/VoyagerVI.png", ":titles", "Voyager VI", ":length", "98km")
           )
         )
       )

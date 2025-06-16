@@ -263,20 +263,20 @@
        "Scale:
         Ratings:
         * Attribute and Skill Rating - Each unit is rated at a certain level in a number of attributes and skills. Attributes rate the power, resistance, and damage capacity in the following areas: Body, Mind, and Spirit. Value is an overall rating of the cost of the unit to aquire or recruit. Skills rate the varied abilities in which this unit is proficient.
-        * Level:Scale - Each Rating has two parts: Level and a Scale. The Level is a number from 2 to 10, and the Scale is the number of zeroes added after that number. E.g. 5000 becomes 5:3 (Rating 5 : Scale 3).
-        * Level/Intensity - 
+        * LevelxScale - Each Rating has two parts: Level and a Scale. The Level is a number from 2 to 10, and the Scale is the number of zeroes added after that number. E.g. 5000 becomes 5x3 (Level 5 x Scale 3).
+        * Level/Rating - 
         ** No Rating - Challenged. Everyday tasks are difficult.
-        ** Rating 1:0 - Everyday. Most people get by with this rating.
-        ** Rating 2:0 - Everyday. Most people get by with this rating.
-        ** Rating 3:0 - Competent. Most healthy adults have some attributes and skills in this range.
-        ** Rating 4:0 - Competent. Most healthy adults have some attributes and skills in this range.
-        ** Rating 5:0 - Veteran. Well trained and highly experienced. Veteran Marines, Commandoes, Paratroopers, SS.
-        ** Rating 6:0 - Elite. Highest level of training and experience. Special Forces, SAS, Delta Force, Navy SEALs, Airborne Rangers, Green Berets.
-        ** Rating 7:0 - World Class. Highest training and natural ability. Olympic Athletes, Nobel-winning scientists, Top martial artists.
-        ** Rating 8:0 - World Class. Highest training and natural ability. Olympic Athletes, Nobel-winning scientists, Top martial artists.
-        ** Rating 9:0 - Legendary. Realistic Human maximum. Einstein, James Bond.
-        ** Rating 1:1+ - Superhuman.
-        * Scale/Severity - The second part of an attribute or skill Rating is it's scale. Each scale represents a power of 10 greater than the last. The observable universe has a diameter of 9x10^26m or 9:26m, a mass of 1.5x10^53kg or 1.5:52g, and has 1x10^82 atoms. The Planck Length is 10^-35m or 1:-35m. The Tegmark theoretical distance to an identical universe to ours is 10^118m or 1:118m.
+        ** Level 1x0 - Everyday. Most people get by with this rating.
+        ** Level 2x0 - Everyday. Most people get by with this rating.
+        ** Level 3x0 - Competent. Most healthy adults have some attributes and skills in this range.
+        ** Level 4x0 - Competent. Most healthy adults have some attributes and skills in this range.
+        ** Level 5x0 - Veteran. Well trained and highly experienced. Veteran Marines, Commandoes, Paratroopers, SS.
+        ** Rating 6x0 - Elite. Highest level of training and experience. Special Forces, SAS, Delta Force, Navy SEALs, Airborne Rangers, Green Berets.
+        ** Rating 7x0 - World Class. Highest training and natural ability. Olympic Athletes, Nobel-winning scientists, Top martial artists.
+        ** Rating 8x0 - World Class. Highest training and natural ability. Olympic Athletes, Nobel-winning scientists, Top martial artists.
+        ** Rating 9x0 - Legendary. Realistic Human maximum. Einstein, James Bond.
+        ** Rating 10x0+ - Superhuman.
+        * Scale/Severity - The second part of an attribute or skill Rating is it's scale. Each scale represents a power of 10 greater than the last. The observable universe has a diameter of 9x10^26m or 9:26m, a mass of 1.5x10^53kg or 1.5x52g, and has 1x10^82 atoms. The Planck Length is 10^-35m or 1x-35m. The Tegmark theoretical distance to an identical universe to ours is 10^118m or 1x118m.
         ** Scale -2 - Insect Scale. Distance/Size=1cm(.3in), Speed=1cm/s(.3in/s), Mass=100g(~.2lb), Energy=1J, Force=1N(100g lifted 1m), Current=1W
         ** Scale -1 - Game Scale. Distance/Size=10cm(3.5in), Speed=10cm/s(3.5in/s, .3kph, .2mph), Mass=1kg(~2.2lb), Energy=10J, Force=10N(1kg lifted 1m), Current=10W(LED Light Bulb, Human energy use/s)
         ** Scale 0 - Human Scale. Distance/Size=1m(3ft), Speed=1m/s(3ft/s, 3.5kph, 2mph), Mass=10kg(~22lb), Energy=100J, Force=100N(10kg lifted 1m), Current=100W(Incandesent Light Bulb, Human energy use/s)
@@ -289,12 +289,12 @@
          (rule
           :name "Body"
           :image "Tokens/BodyToken.png"
+          :titles "Build, Constitution, Endurance, Physique, Size, Stamina, Strength, Toughness"
           :reference
            "* The nature of existence is obvious. The things I can see and touch are real."
           :summary
            "* Physical - The physical resistance of the unit. This is equal to the unit's highest Physical skill. Units with low Body are easily killed.
-            * Body is determined by Mass. Fit human male: 8:1 (80kg/175lb). Fit human female: 6:1 (60kg/132lb)."
-          :titles "Build, Constitution, Endurance, Physique, Size, Stamina, Strength, Toughness")
+            * Body is determined by Mass. Fit human male: 8:1 (80kg/175lb). Fit human female: 6:1 (60kg/132lb).")
         :Mind
          (rule
           :name "Mind"
@@ -897,5 +897,5 @@ Altitude until the end of the [Turn].
           :image "Maps/Water.png"
           :summary
            "* Impassable
-* Depth"
+            * Depth"
           :titles "Lake, Oasis, Ocean, Pond, Pool, River, Stream, Underwater"))))))

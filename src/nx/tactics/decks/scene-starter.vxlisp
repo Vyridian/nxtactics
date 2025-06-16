@@ -1,0 +1,48 @@
+(package nx/tactics/decks/scene-starter
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Starter Scene")
+
+(func scene-starter : base/scene
+ [tactics : base/tactics]
+ (base/scene
+  :name "Starter Scene"))
+
+(func deck-starter : base/deck
+ [tactics : base/tactics]
+ (base/deck
+  :name "Starter"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist
+     (base/cardlist-images<-tactics-units
+      tactics
+      "Goblin Raider"
+      "Goblin Scout"
+     )
+     (list<-list : base/cardlist
+      (base/skilllist<-tactics-keys
+       tactics
+       "Close Combat"
+       "Melee"
+       "Stealth"
+      ))
+     (list<-list : base/cardlist
+      (base/abilitylist<-tactics-keys
+       tactics
+       "Ambush"
+       "Sneak"
+      ))
+     (list<-list : base/cardlist
+      (base/itemlist<-tactics-keys
+       tactics
+       "Knife: Dagger"
+       "Sword: Long"
+       "Armor: Leather Cuirass"
+       "Armor: Leather Helmet"
+       "Shield: Round"
+       "Campfire"
+       ))
+     (base/cardlist-images<-tactics-places
+      tactics
+      "Rock"
+     )))))

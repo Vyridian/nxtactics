@@ -2484,11 +2484,11 @@
         "Hellion, Renegade"
          (base/unit
           :name "Hellion, Renegade"
+          :titles "Anthony Keys, Hellion, Hell Hound, Rampage, Savage"
           :summary
            "* Hellion is a human host possessed by a demon. He has become a sort of doorway to a hellish dimension. When he allows the door to open, he transforms into a red, bestial creature of savage destructive 	power. As the creature is damaged, it is forced back to its dimension leaving just the man behind.
             * Street punk turned amateur kickboxer turned low-level enforcer, Anthony Keys was always a wildman of 	questionable character. Abused as a child, he revels in violence and power. Keys went to PSI because he felt a dim presence when he was at his most violent. The Will discovered a demonic creature was attempting to possess Keys, which The Will encouraged. Keys is now mostly psychotic and enjoys the power of his demonic form. The demon K'rog detests the mental control the Will has over Anthony which prevents its own control, but it is content to commit mayhem when it is released, so for now it serves as the main muscle of the Renegades.
             * Powers - Strength, Speed, Resistance, Leaping, Regeneration, Transformation, Tracking Scent, Cunning but limited intelligence."
-          :titles "Anthony Keys, Hellion, Hell Hound, Rampage, Savage"
           :unitpowermap
            (base/unitpowermap
             "Natural Weaponry"
@@ -2817,7 +2817,7 @@
              (stringlist "Reincarnation - Transference")))
           :unitskillmap
            (base/unitskillmap
-            :Stealth
+            "Stealth"
              (base/unitskill
               :name "Stealth"
               :unitabilitymap
@@ -2834,9 +2834,6 @@
                 :Camouflage
                  (base/unitability
                   :name "Camouflage")
-                :Hide
-                 (base/unitability
-                  :name "Hide")
                 :Seek
                  (base/unitability
                   :name "Seek")

@@ -1722,25 +1722,16 @@ export default class nx_tactics_books_fantasy {
               ":titles",
               "Taybor the Red",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Melee",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+                  tactics,
                   "Melee",
-                  ":level",
-                  "5",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    ":Quarterstaff",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Quarterstaff")
-                  )
+                  5,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Quarterstaff")
                 )
               )
             ),
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Eldruf Grundel", ":summary", "Gnome Thief Magician"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Eldruf Grundel", ":summary", "Gnome Thief Illusionist"),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -1772,16 +1763,8 @@ export default class nx_tactics_books_fantasy {
               ":summary",
               "* Human Mage\n* Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.\n* History - Galamir was born to Chantry trainers, and as a child he was allowed special access to the arcane academy. As a teen, he became obsessed with magic and its effect on the world. His brilliance and magical aptitude were soon recognized and he was accepted into the academy. For the next 25 years he completed his full wizardry and elemental training and received top honors. He was a logical 	candidate to become a trainer himself, but he was bored of the cloistered life, so he began visiting other Chantries across the world. Along the way he encountered a naive, young half-elf rogue named Phirax living on a simple farm. Galamir recruited Phirax to join him to perform the more dangerous and mundane tasks while Galamir provided the leadership and strategy. Later, he recruited the Warrior Stam and the Cleric Sarak into their party to rounded out their abilities.",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Wizardry",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Wizardry", ":level", "11")
-              ),
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                "Physical Powers",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Physical Powers", ":level", "10")
+              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+                nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Wizardry", 11)
               )
             ),
             vx_core.f_new(
@@ -1816,7 +1799,7 @@ export default class nx_tactics_books_fantasy {
                   tactics,
                   "Defense",
                   5,
-                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor: Chain Mail", "Shield")
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor: Chain Mail", "Shield: Round")
                 )
               )
             ),
@@ -1847,7 +1830,7 @@ export default class nx_tactics_books_fantasy {
                   tactics,
                   "Stealth",
                   9,
-                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Backstab", "Hide", "Sneak")
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Backstab", "Sneak")
                 ),
                 nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
                   tactics,
@@ -1867,12 +1850,9 @@ export default class nx_tactics_books_fantasy {
               ":summary",
               "Human Cleric",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Faith",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Faith", ":level", "8"),
-                ":Invocation",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Invocation", ":level", "10")
+              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+                nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Faith", 8),
+                nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Invocation", 10)
               ),
               ":unitskillmap",
               nx_tactics_base.f_unitskillmap_from_unitskilllist(
@@ -1904,63 +1884,7 @@ export default class nx_tactics_books_fantasy {
           ":name",
           "Nexus Fantasy Actors",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Antios Teron",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Antios Teron"),
-            ":Blackguard",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Blackguard", ":summary", "* An elite mercenary cadre organized by Hetman Undrig.\n* Their base is a small, walled town dedicated to their needs.\n* The Dragoons are a loose group. Decisions and leaders are chosen by majority vote. Power can change at anytime (including during combat).\n* Dragoons pay no dues nor is there direct pay. The Dragoons make money by hiring out as mercenaries.  They charge double normal rates, but are reknowned for their excellent training and equipment. Dragoons take great pride in their high status and react poorly to those who do not recognize their talent.\n* Dragoons are trained professionals in their jobs and recognize the need for discretion. They care little for whether a job is legal or not, and the Dragoons are known for possessing certain 'subtle' skills that make covert missions possible. They do not, however, enjoy excessive risk and are not above abandoning very dangerous missions.", ":titles", "Black Dragoon"),
-            "Charn Aramel",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Charn Aramel",
-              ":summary",
-              "Human Dread Knight",
-              ":titles",
-              "Nighthook, Lord Aramel",
-              ":unitpowermap",
-              nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-                nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Conviction", 10)
-              )
-            ),
-            "Sarani Kalea",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Sarani Kalea",
-              ":summary",
-              "Human Priestess",
-              ":titles",
-              "Princess Kalea, High Priestess of Kali",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Conviction",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Conviction", ":level", "12"),
-                ":Invocation",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
-                  "Invocation",
-                  ":level",
-                  "16",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Aspecting",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Aspecting")
-                  )
-                )
-              ),
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                "Psychic Powers",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Psychic Powers", ":level", "12")
-              )
-            )
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Antios Teron", "Blackguard", "Charn Aramel", "Sarani Kalea")
         )
       )
     )
@@ -2233,7 +2157,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Void, The",
               ":summary",
-              "* The Void is an empty Realm between Realms. It is the Spiritual equivalent to outer space.\n* The Void is a realm of nothingness and contains no matter, energy, atmosphere, magnetism, inertia, gravity, or any other force.\n* Light, sound, and heat do not exist in the Void, but those with Spirits can see and hear normally. They also experience no discomfort despite the harsh conditions. Those without Spirits are blind, deaf, and lost in the endless void.\n* Attributes - Those with Spirits appear as idealistic versions of themselves in the Void. Body, Mind, Spirit, and Speed are increased to the higher of their Mind or Spirit.\n* Speed - As light and inertia do not exist in the Void, vessels may move much faster than light. Those with Spirits may move at astronomical speeds and can move at the equivalent of [Mind] or [Spirit] x 1 Light Day per second.\n* Void Ships - Ships created to travel between the realms. Note: physical travel into the Astral Realm by magical means may only be performed without observers.",
+              "* The Void is an empty Realm between Realms. It is the Spiritual equivalent to outer space.\n* The Void is a realm of nothingness and contains no matter, energy, atmosphere, magnetism, inertia, gravity, or any other force.\n* Light, sound, and heat do not exist in the Void, but those with Spirits can see and hear normally. They also experience no discomfort despite the harsh conditions. Those without Spirits are blind, deaf, and lost in the endless void.\n* Attributes - Those with Spirits appear as idealistic versions of themselves in the Void. Body, Mind, Spirit, and Speed are increased to the higher of their Mind or Spirit.\n* Speed - As light and inertia do not exist in the Void, vessels may move much faster than light. Those with Spirits may move at astronomical speeds and can move at the equivalent of [Mind] or [Will] x 1 Light Day per second.\n* Void Ships - Ships created to travel between the realms. Note: physical travel into the Astral Realm by magical means may only be performed without observers.",
               ":unitmap",
               nx_tactics_base.f_unitmap_from_unitlist(
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Void Lurker"),
@@ -2273,7 +2197,7 @@ export default class nx_tactics_books_fantasy {
             "Hell of Upside-Down Sinners",
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Hell of Upside-Down Sinners", ":summary", "* This domain defies description. This is either the cleverest of the Yomi realms or the maddest hell devised by the sickest of minds. Time and space are inverted. Sensation and thought are twisted. Minutes pass like an eternity and millenia rush by in a blink of an eye. In this hell, the strong perish and the weak survive. That which is dull cuts while sharp objects bring comfort.\n* Souls - Recent arrivals are often driven mad as they begin to see odors, smell sounds, and hear sights. Emotions too become jumbled. Souls begin to hate those who helped them and love those who have done them wrong. They fear the helpless and refuse to flee certain destruction. Skills and powers do not work correctly here. The stronger the ability the more ineffectual it is.\n* Ruler - No one knows what inconceivable creature would create such a realm."),
             "Hell: Kakuri, The Night Realm",
-            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Hell: Kakuri, The Night Realm", ":summary", "* There is no end to the darkness in the Night Realm. There is no sun, no stars. The winds are bitterly cold, bearing dagger-sharp ice crystals. Facing into the wind is blinding. Fires flicker and die in the winds, but any light attracts the tormented and Shikome alike. The terrain is rocky and frozen black crystal that leech the energy of those who rest on them. Meadows and tree exist, but they are covered with dark crytal blades that tear at passersby.\n* Kakuri is the hell of those who have lost their honor. The land is therefore the anti-thesis of honor. There are no great battles, no great challenges, no bragging enemies. There is no duty, no honor, and no way to escape. There are no flesh eating devils, no pits of burning oil, no grand ministries of torment. In a land without hope, there don't need to be.\n* Ruler: Emma-o, perhaps the greatest of the Yama-kings.\n* Shikome: Beautiful, cold, female devils that delight in speeding their victims to despair. They are subtle and can appear as tormented souls or as friends or lovers. Whatever their form, they will drain the [Spirit] from their victims leaving them to wander in hopelessness and despair.\n* Kyuden No Kakuri - The Castle of Kakuri is the stronghold of Emma-o.  It is situated at the top of an unassailable peak. The castle has elaborate obsidian walls and are a testament to his vanity and conceit.\n* Cave of Maidens - One of Emma-o's favored traps, the caves appear an oasis from the icy torment and occasionally a way out of Yomi. Edible fungi, shelter, and pretty prisoners can be found in the caves. The prisoners will dote on the visitors, but they will suddenly accuse them of theft, rape, murder, or worse. The visitors are beaten and driven from the caves. The power of the Shikome lets them trick their victims again and again with the lure of false hope. Amazingly, there is actually a chance that a cave is actually an exit from the Hell, the ultimate lure for lost souls."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Hell: Kakuri, The Night Realm", ":summary", "* There is no end to the darkness in the Night Realm. There is no sun, no stars. The winds are bitterly cold, bearing dagger-sharp ice crystals. Facing into the wind is blinding. Fires flicker and die in the winds, but any light attracts the tormented and Shikome alike. The terrain is rocky and frozen black crystal that leech the energy of those who rest on them. Meadows and tree exist, but they are covered with dark crytal blades that tear at passersby.\n* Kakuri is the hell of those who have lost their honor. The land is therefore the anti-thesis of honor. There are no great battles, no great challenges, no bragging enemies. There is no duty, no honor, and no way to escape. There are no flesh eating devils, no pits of burning oil, no grand ministries of torment. In a land without hope, there don't need to be.\n* Ruler: Emma-o, perhaps the greatest of the Yama-kings.\n* Shikome: Beautiful, cold, female devils that delight in speeding their victims to despair. They are subtle and can appear as tormented souls or as friends or lovers. Whatever their form, they will drain the [Will] from their victims leaving them to wander in hopelessness and despair.\n* Kyuden No Kakuri - The Castle of Kakuri is the stronghold of Emma-o.  It is situated at the top of an unassailable peak. The castle has elaborate obsidian walls and are a testament to his vanity and conceit.\n* Cave of Maidens - One of Emma-o's favored traps, the caves appear an oasis from the icy torment and occasionally a way out of Yomi. Edible fungi, shelter, and pretty prisoners can be found in the caves. The prisoners will dote on the visitors, but they will suddenly accuse them of theft, rape, murder, or worse. The visitors are beaten and driven from the caves. The power of the Shikome lets them trick their victims again and again with the lure of false hope. Amazingly, there is actually a chance that a cave is actually an exit from the Hell, the ultimate lure for lost souls."),
             "Hell: Pit of Iron and Salt",
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Hell: Pit of Iron and Salt", ":summary", "* The Pit is a vast salt mine with seemingly no bottom. Iron citadels dot the inside of the pit, so the pit resembles a great gaping maw with the citadels resembling teeth. The landscape is unchanging and sterile. It is not a place of shock or disgust, but a hell of quiet oppression.\n* Souls - Those who labor here do so in the false hope that through hard work they will eventually be relieved of their suffering. They search for treasure they will never find beneath the lashes of cruel overseers.  Cuts and lashes are inflamed by the salt everywhere.\n* Ruler - Yama-king Wu Hua lives at the the bottom of the pit in a great iron city surrounded by six enormous barbed spires on which hundreds of bodies are impaled. Sputtering greenish fires can be seen from a distance that hint at grotesque rituals and obscene torments, but what exactly goes on inside is unknown.\n* Iron Citadels - The citadels are places of decadence and depravity. The souls are intermittently rotated from the mines to the citadel to act as slaves. Most mine workers view the change as desirable, but every soul chosen learns that this is not the case. In reality, the souls are treated worse here than anywhere else in the domain. Their suffering is more valuable to Wu Hua because it is so much more 'personal'."),
             "Hell: Wicked City",

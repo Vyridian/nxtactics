@@ -766,36 +766,36 @@
     (base/abilitymap
      "Balefire"
       (base/ability<-tactics-key tactics "Balefire")
-     :Befoul
+     "Befoul"
       (base/ability
        :name "Befoul")
-     :Blight
+     "Blight"
       (base/ability
        :name "Blight"
        :summary "* Damage plant life in an area.")
-     :Contaminate
+     "Contaminate"
       (base/ability
        :name "Contaminate")
-     :Corrosion
+     "Corrode"
       (base/ability
-       :name "Corrosion")
-     :Corrupt
+       :name "Corrode")
+     "Corrupt"
       (base/ability
        :name "Corrupt")
-     :Decay
+     "Decay"
       (base/ability
        :name "Decay")
      :Defile
       (base/ability
        :name "Defile")
-     :Despoil
+     "Despoil"
       (base/ability
        :name "Despoil")
-     :Deteriorate
+     "Deteriorate"
       (base/ability
        :name "Deteriorate"
        :summary "* Magnify any existing negative tokens.")
-     :Epidemic
+     "Epidemic"
       (base/ability
        :name "Epidemic"
        :summary "Copies all conditions from target to all targets in the area around the target.")
@@ -804,51 +804,51 @@
        :name "Eye of Corruption")
      "Fester"
       (base/ability<-tactics-key tactics "Fester")
-     :Miasma
+     "Miasma"
       (base/ability
        :name "Miasma")
-     :Pestilence
+     "Pestilence"
       (base/ability
        :name "Pestilence")
-     :Plague
+     "Plague"
       (base/ability
        :name "Plague")
      "Plague Carrier"
       (base/ability
        :name "Plague Carrier"
+       :titles "Plague Bearer, Typhoid Mary"
        :summary
         "* This ability inflicts a contagious disease on a subject while also providing some immunity to the victim.
-         * The subject then spreads the disease to others."
-       :titles "Plague Bearer, Typhoid Mary")
+         * The subject then spreads the disease to others.")
      "Plague Strike"
       (base/ability
        :name "Plague Strike"
        :summary "* Add [Disease] Criticals to a normal attack.")
-     :Pollute
+     "Pollute"
       (base/ability
        :name "Pollute"
        :summary "* Add Poison or Disease to any fluid or food.")
-     :Putrefy
+     "Putrefy"
       (base/ability
        :name "Putrefy")
      "Putrid Explosion"
       (base/ability
        :name "Putrid Explosion")
-     :Rot
+     "Rot"
       (base/ability
        :name "Rot")
-     :Ruin
+     "Ruin"
       (base/ability
        :name "Ruin"
        :summary "* Cause a structure to age and take structural damage."
        :titles "Raze")
-     :Sicken
+     "Sicken"
       (base/ability
        :name "Sicken")
      "Tainted Land"
       (base/ability
        :name "Tainted Land")
-     :Wither
+     "Wither"
       (base/ability
        :name "Wither"
        :titles "Shrivelling")))
@@ -878,7 +878,8 @@
        :titles "Dim Mak"
        :reference "Five Point Palm Exploding Heart Technique - Kill Bill"
        :summary
-        "* The fighter strikes vulnerable pressure points, disrupting the opponent's chi flow causing intense pain or death. The effect has no outward effect, but the victim will know something is wrong. Eventually, the victim recovers or dies suddenly from the stress.
+        "* [Power]: [Cultivation]
+         * The fighter strikes vulnerable pressure points, disrupting the opponent's chi flow causing intense pain or death. The effect has no outward effect, but the victim will know something is wrong. Eventually, the victim recovers or dies suddenly from the stress.
          * [Power]: [Cultivation]-2
          * [Requires]: [Strong]
          * [Damage]: [Stun] only
@@ -900,38 +901,49 @@
       (base/ability
        :name "Feather Walk"
        :summary
-        "* Reduces body weight while active.  This increases the effects of [Retreat] and leaping while decreasing falling speed and damage.
+        "* [Power]: [Cultivation]
+         * Reduces body weight while active.  This increases the effects of [Retreat] and leaping while decreasing falling speed and damage.
          * If [Skill] greater than or equal to [Body], then unit may walk on any substance that would suspend a feather."
        :titles "Feather Fall, Walk on Water")
      "Feign Death"
       (base/ability
-       :name "Feign Death")
+       :name "Feign Death"
+       :summary
+        "* [Power]: [Cultivation]")
      "Hold Breath"
       (base/ability
-       :name "Hold Breath")
+       :name "Hold Breath"
+       :summary
+        "* [Power]: [Cultivation]")
      "Spirit Healing"
       (base/ability
        :name "Spirit Healing"
-       :titles "Chi Kung Healing")
+       :titles "Chi Kung Healing"
+       :summary
+        "* [Power]: [Cultivation]")
      "Team Combo"
       (base/ability
        :name "Team Combo"
        :reference "Fastball Special - Colossus and Wolverine, X-men"
        :summary
-        "* Like a [Combo], the Team Combo chains attacks together. The Team Combo however is performed by different members of a team with the identical Team Combo. Any team member may perform each step of the combo with each subsequent attack allowed to reroll 1 die. The combo ends if any attack misses, any member attacks twice in a row, or if a turn passes with no attack attempt. Any combat abilities may be strung together as a Team Combo (even abilities that only others in the team possess). Each combo must be chosen when this ability is gained and must be taken again for each separate combo.")
+        "* [Power]: [Cultivation]
+         * Like a [Combo], the Team Combo chains attacks together. The Team Combo however is performed by different members of a team with the identical Team Combo. Any team member may perform each step of the combo with each subsequent attack allowed to reroll 1 die. The combo ends if any attack misses, any member attacks twice in a row, or if a turn passes with no attack attempt. Any combat abilities may be strung together as a Team Combo (even abilities that only others in the team possess). Each combo must be chosen when this ability is gained and must be taken again for each separate combo.")
      "Walk on Fire"
       (base/ability
-       :name "Walk on Fire")
+       :name "Walk on Fire"
+       :summary
+        "* [Power]: [Cultivation]")
      "Zen No Mind"
       (base/ability
        :name "Zen No Mind"
+       :titles "Mushin"
        :reference
         "The mind must always be in the state of 'flowing,' for when it stops anywhere that means the flow is interrupted...In the case of the swordsman, it means death.  When the swordsman stands against his opponent, he is not to think of the opponent, nor of himself, nor of his enemy's sword movements. ... When he strikes, it is not the man but the sword in the hand of the man's subconscious that strikes. - Zen Master Takuan Soho"
        :summary
-        "* A mind not fixed or occupied by thought or emotion and thus open to everything.
+        "* [Power]: [Cultivation]
+         * A mind not fixed or occupied by thought or emotion and thus open to everything.
          * Mushin is achieved when a fighter feels no anger, fear or ego during combat, so the fighter is totally free to act and react towards an opponent without hesitation. At this point, a person relies not on what they think should be the next move, but what is felt intuitively.
-         * A martial artist would likely have to train for many years to be capable of mushin. This allows time for combinations of movements and exchanges of techniques to be practiced repetitively many thousands of times, until they can be performed spontaneously, without conscious thought."
-       :titles "Mushin")))
+         * A martial artist would likely have to train for many years to be capable of mushin. This allows time for combinations of movements and exchanges of techniques to be practiced repetitively many thousands of times, until they can be performed spontaneously, without conscious thought.")))
   (base/power
    :name "Curses"
    :reference
@@ -1398,7 +1410,7 @@
      "Spirit Ward"
       (base/ability
        :name "Spirit Ward"
-       :summary "* Provides increased defense against spirit beings and attack against [Spirit].")
+       :summary "* Provides increased defense against spirit beings and attack against [Will].")
      "Stone Ward"
       (base/ability
        :name "Stone Ward"
@@ -2829,6 +2841,7 @@
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
+     "1-Handed"
      "Ablative Armor"
      "Armor: Abdomen"
      "Armor: Arms"
@@ -2837,8 +2850,8 @@
      "Armor: Hands"
      "Armor: Head"
      "Armor: Legs"
-     "Armor: Vitals"
      "Armor: Shoulders"
+     "Armor: Vitals"
      "Auto Med System"
      "Body Flares"
      "Cryo Sleep System"
@@ -2851,16 +2864,19 @@
      "Radar Dampener"
      "Radar Jammer"
      "Reactive Armor"
+     "Resist: Bash"
      "Resist: Cold"
      "Resist: Corrosion"
      "Resist: Electricity"
      "Resist: Energy"
      "Resist: Fire"
+     "Resist: Hack"
      "Resist: Magnetism"
-     "Resist: Piercing"
+     "Resist: Pierce"
      "Resist: Plasma"
      "Resist: Pressure"
      "Resist: Radiation"
+     "Resist: Slash"
      "Turret Mount"
      "Ultraviolet Jammer"
      "Underwater Operation"))
@@ -3348,7 +3364,7 @@
    :name "Cabin"
    :titles "Quarters"
    :summary
-    "* The power to have living quarters inside. The maximum Mass is determined by [Intensity]. The amount allocated per person determines the endurance before resupply."
+    "* The power to have living quarters inside. The maximum Mass is determined by [Rating]. The amount allocated per person determines the endurance before resupply."
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -3368,7 +3384,7 @@
    :name "Cargo"
    :titles "Cargo Hold"
    :summary
-    "* The ability to carry cargo. The maximum Mass is determined by [Intensity]."
+    "* The ability to carry cargo. The maximum Mass is determined by [Rating]."
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -3384,7 +3400,7 @@
     "* The Unit combines from multiple smaller Units.
      * [Action]: Combine the smaller Units. All Units must be present.
      * This [Power] is similar to [Hanger] and [Transform], but the Units are prechosen at creation and their [Cost] is included in the Combine Unit Cost.
-     * Combiner [Intensity] must be the total of all Units that [Combine].")
+     * Combiner [Rating] must be the total of all Units that [Combine].")
   (base/power
    :name "Density"
    :summary
@@ -3688,7 +3704,7 @@
      "Ego Crush"
       (base/ability
        :name "Ego Crush"
-       :summary "* Reduce the [Spirit] of the target to make them more ... pliable.")
+       :summary "* Reduce the [Will] of the target to make them more ... pliable.")
      "Empathic Bond"
       (base/ability
        :name "Empathic Bond"
@@ -3725,7 +3741,7 @@
      "Fear Eater"
       (base/ability
        :name "Fear Eater"
-       :summary "* Remove a [Fear] from the target and gain [Spirit].")
+       :summary "* Remove a [Fear] from the target and gain [Will].")
      "Guilt"
       (base/ability
        :name "Guilt")
@@ -4433,7 +4449,7 @@
    :name "Hanger"
    :summary
     "* The Unit can carry other Units (especially vehicles).
-     * The Hanger can hold Unit [Cost] up to [Intensity].
+     * The Hanger can hold Unit [Cost] up to [Rating].
      * A unit may carry 1 small unit (1 space) per space it takes up.
      * Action: Move 1 unit into or out of the hanger. The unit may not Move or take any Action the turn it moves into or out of the hanger.
      * Ship's Boat
@@ -4676,7 +4692,7 @@
    :name "Laboratory"
    :summary
     "* Special labs for analyzing information. Science labs are very flexible and can be used for any number of quick analytics. Obviously, they are severly limited compared to proper research facilities.
-     * Like [Transform] When purchasing a Laboratory, create one or more Units to represent the labooratories. The Intensity of the Laboratory is the total cost of the Units."
+     * Like [Transform] When purchasing a Laboratory, create one or more Units to represent the labooratories. The Rating of the Laboratory is the total cost of the Units."
    :abilitymap
     (base/abilitymap
      "Analyze Target"
@@ -4851,11 +4867,11 @@
          ** Clothes and Armor are destroyed or dropped.
          ** All Equipment not in hands is dropped.
          ** Gain [Natural Weaponry], [Armor], and [Regeneration] Abilities.
-         ** Each [[Bleeding]] or [[Damage]] Token taken grants a [[Rage]] Token.
-         ** Each [[Bleeding]] Token inflicted grants a [[Rage]] Token.
-         ** Each adjacent Ally or Foe slain grants a [[Rage]] Token.
-         ** Remove a [[Rage]] Token instead of gaining a [[Hold]], [[Control]], [[Morale]], [[Despair]] or [[Fear]] Token.
-         ** If [[Rage]] Tokens exceed Spirit, then roll [[Rage]] vs [[Spirit]] or gain a [[Berserk]] Token.
+         ** Each [Bleeding] or [Damage] Token taken grants a [Rage] Token.
+         ** Each [Bleeding] Token inflicted grants a [Rage] Token.
+         ** Each adjacent Ally or Foe slain grants a [Rage] Token.
+         ** Remove a [Rage] Token instead of gaining a [Hold], [Control], [Morale], [Despair] or [Fear] Token.
+         ** If [Rage] Tokens exceed Spirit, then roll [Rage] vs [Will] or gain a [Berserk] Token.
          ** Duration: Until sunrise.")
      "Human Form"
       (base/ability
@@ -5667,9 +5683,9 @@
    :titles "Shapeshifter"
    :abilitymap
     (base/abilitymap
-     "Physical Imitation"
+     "Imitation: Physical"
       (base/ability
-       :name "Physical Imitation"
+       :name "Imitation: Physical"
        :reference
         "* So, how do we know who's human? If I was an imitation, a perfect imitation, how would you know it was really me? - Childs, The Thing")))
   (base/power
@@ -5677,8 +5693,11 @@
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
+     "Point Defense"
      "Shield Modulation"
-     "Shield Redirection"))
+     "Shield Redirection"
+     "Shielding: Magical"
+     ))
   (base/power
    :name "Size"
    :reference
@@ -5894,7 +5913,7 @@
       (base/ability
        :name "Resist Fire"
        :summary
-        "[Reduce Damage]: Reduce [Weapon Damage] by [Intensity].
+        "[Reduce Damage]: Reduce [Weapon Rating] by [Rating].
          Note: Not the same as Resist Heat")
      "Resist Gravity"
       (base/ability
@@ -5903,7 +5922,7 @@
       (base/ability
        :name "Resist Heat"
        :summary
-        "[Reduce Damage]: Reduce [Weapon Damage] by [Intensity].
+        "[Reduce Damage]: Reduce [Weapon Rating] by [Rating].
          Note: Not the same as Resist Fire")
      "Resist Hunger"
       (base/ability
@@ -5982,7 +6001,7 @@
     "* Transform allows a unit to switch into a different form. Each form must be designnated at creation time, and each form must purchase its abilities sepearately. This is particularly useful for abilities that have penalties (e.g. High Mobility).
      * [Action]: Change into one of the Units.
      * This [Power] is similar to [Hanger] and [Combiner], but the Units are prechosen at creation and their [Cost] is included in the Transformer Unit Cost.
-     * The Transform [Intensity] must be high enough to hold all of the Units [Cost].")
+     * The Transform [Rating] must be high enough to hold all of the Units [Cost].")
   (base/power
    :name "Transformation"
    :abilitymap
@@ -6110,7 +6129,7 @@
        :name "Consume Flesh"
        :summary
         "* Consume the flesh of a grabbed unit. Gain a [Vampire Blood] token and target gains a [Damage] and a [Spirit Damage].
-         * You may not gain more [Vampire Blood] than target has [Spirit], though you gain one more [Vampire Blood] if the target is slain by drinking its blood.
+         * You may not gain more [Vampire Blood] than target has [Will], though you gain one more [Vampire Blood] if the target is slain by drinking its blood.
          * You may not have more [Vampire Blood] than [Vampirism].
          * You may not drink from the dead.")
      "Drink Blood"
@@ -6118,7 +6137,7 @@
        :name "Drink Blood"
        :summary
         "* Drink blood from a grabbed unit. Gain a [Vampire Blood] token and target gains a [Damage] and a [Spirit Damage].
-         * You may not gain more [Vampire Blood] than target has [Spirit], though you gain one more [Vampire Blood] if the target is slain by drinking its blood.
+         * You may not gain more [Vampire Blood] than target has [Will], though you gain one more [Vampire Blood] if the target is slain by drinking its blood.
          * You may not have more [Vampire Blood] than [Vampirism].
          * You may not drink from the dead."
        :titles "The Kiss")
@@ -6174,13 +6193,13 @@
       (base/ability
        :name "Control Water"
        :summary "* [Reaction]: Redirect a water effect to another target.")
-     :Extinguish
+     "Extinguish"
       (base/ability
        :name "Extinguish")
      "Fountain of Youth"
       (base/ability
        :name "Fountain of Youth")
-     :Liquify
+     "Liquify"
       (base/ability
        :name "Liquify"
        :summary "* Any solid becomes a liquid.")
@@ -6206,14 +6225,14 @@
      "Summon Undine"
       (base/ability
        :name "Summon Undine")
-     :Tides
+     "Tides"
       (base/ability
        :name "Tides"
        :summary "* Raise or lower water level.")
-     :Tsunami
+     "Tsunami"
       (base/ability
        :name "Tsunami")
-     :Undertow
+     "Undertow"
       (base/ability
        :name "Undertow"
        :summary
@@ -6225,6 +6244,8 @@
         "* [Effect]: [Wall] of Water
          * [Requires]: May only be cast in water.
          * [Anytime]: Turbulence strikes any surface or underwater unit that crosses it.")
+     "Water Weapon"
+      (base/ability<-tactics-key tactics "Water Weapon")
      "Water Breathing"
       (base/ability
        :name "Water Breathing")
@@ -6723,10 +6744,6 @@
      "Bash"
      "Burstfire"
      "Close Weapon"
-     "Damage:Body"
-     "Damage:Body+1"
-     "Damage:Body+2"
-     "Damage:Body+3"
      "Firearm Weapon"
      "Gunnery Weapon"
      "Hack"

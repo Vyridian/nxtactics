@@ -1,6 +1,6 @@
-(package nx/tactics/decks/resource
+(package nx/tactics/decks/library
  :libs (lib base :path nx/tactics/base)
- :doc  "Resource Deck")
+ :doc  "Library Deck")
 
 (const bleeding : base/cardback
  (base/cardback
@@ -25,13 +25,18 @@
   :image "images/card-poisoned.svg")
 )
 
-(func deck-resource : base/deck
+(func deck-library : base/deck
+ [tactics : base/tactics]
  (base/deck
-  :name "Resource Deck"
-  :image "images/deck-resource.svg"
+  :name "Library Deck"
+  :image "images/deck-library.svg"
   :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap
+    (base/cardlist-copy<-tactics-rulekey-count-isnum
+     tactics "Skill Point" 5 true)
+    (base/cardlist-copy<-tactics-rulekey-count-isnum
+     tactics "Ability Point" 5 true)
     (base/cardmap-copy<-card-count-isnum
      bleeding 10 true)
     (base/cardmap-copy<-card-count-isnum
@@ -39,4 +44,4 @@
     (base/cardmap-copy<-card-count-isnum
      poisoned 10 true)
     ))
- :doc "Resource Deck")
+ :doc "Library Deck")

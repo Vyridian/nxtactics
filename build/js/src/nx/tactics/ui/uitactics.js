@@ -441,12 +441,19 @@ export default class nx_tactics_ui_uitactics {
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const power = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_power, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":power")
         const level = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":level")
+        const rating = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":rating")
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_power}, power, ":name")
         const lvl = vx_core.f_if_1(
           {"any-1": vx_core.t_string},
           vx_core.f_eqeq(0, level),
           "",
           level
+        )
+        const ratinglvl = vx_core.f_if_1(
+          {"any-1": vx_core.t_string},
+          vx_core.f_eqeq("", rating),
+          "",
+          vx_core.f_new({"any-1": vx_core.t_string}, " Rating:", rating)
         )
         const specialties = nx_tactics_ui_uitactics.f_stringlist_display_from_unitspecialtymap(
           vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitspecialtymap, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":unitspecialtymap")
@@ -466,7 +473,7 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        return vx_core.f_new({"any-1": vx_core.t_string}, "* [", name, "]:", lvl, extras)
+        return vx_core.f_new({"any-1": vx_core.t_string}, "* [", name, "]:", lvl, ratinglvl, extras)
       })
     )
     return output
@@ -2248,6 +2255,15 @@ export default class nx_tactics_ui_uitactics {
         )
         const ranksuit = vx_core.f_if_2(
           {"any-1": nx_tactics_base.t_ranksuit},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              layout,
+              nx_tactics_base.c_cardlayout_imageonly
+            )}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
+              vx_ui_ui.t_ui
+            )})
+          ),
           vx_core.f_then(
             vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
               datatype,

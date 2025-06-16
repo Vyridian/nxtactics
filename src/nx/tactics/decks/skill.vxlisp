@@ -1145,7 +1145,6 @@ x +1DMG vs. Crouching."
      "Barrage"
      "Forward Observer"
      "Indirect Fire"
-     "Point Defense"
      "Salvo")
    :specialtymap
     (base/specialtymap<-tactics-keys
@@ -2885,38 +2884,58 @@ x +1DMG vs. Crouching."
    :titles "Fast Talker, Silver Tongue Devil, Smooth Operator"
    :abilitymap
     (base/abilitymap
-     :Bluff
+     "Bluff"
       (base/ability
-       :name "Bluff")
-     :Credibility
+       :name "Bluff"
+       :summary
+        "* [Skill]: [Persuasion]")
+     "Credibility"
       (base/ability
        :name "Credibility"
-       :summary "* The ability to convince large groups of people that you are telling the truth.")
-     :Debate
+       :summary
+        "* [Skill]: [Persuasion]
+         * The ability to convince large groups of people that you are telling the truth.")
+     "Debate"
       (base/ability
-       :name "Debate")
+       :name "Debate"
+       :summary
+        "* [Skill]: [Persuasion]")
      "Fast Talk"
       (base/ability
-       :name "Fast Talk")
-     :Lying
+       :name "Fast Talk"
+       :summary
+        "* [Skill]: [Persuasion]")
+     "Lying"
       (base/ability
        :name "Lying"
-       :titles "Fibbing")
-     :Manipulation
+       :titles "Fibbing"
+       :summary
+        "* [Skill]: [Persuasion]")
+     "Manipulation"
       (base/ability
-       :name "Manipulation")
-     :Pickup
+       :name "Manipulation"
+       :summary
+        "* [Skill]: [Persuasion]")
+     "Pickup"
       (base/ability
-       :name "Pickup")
+       :name "Pickup"
+       :reference
+        "* I love your eye patch. Oh, you think so? No wait. Shut up and fight! - Akshan and Vekauran Vagabond, Runeterra"
+       :summary
+        "* [Skill]: [Persuasion]")
      "Seduction"
       (base/ability<-tactics-key tactics "Seduction")
      "Silver Tongue"
       (base/ability
-       :name "Silver Tongue")
+       :name "Silver Tongue"
+       :summary
+        "* [Skill]: [Persuasion]")
      "Swords to Plowshares"
       (base/ability
        :name "Swords to Plowshares"
-       :summary "* Sincerly convince a rival to choose peace over conflict.")))
+       :summary
+        "* [Skill]: [Persuasion]
+         * Sincerly convince a rival to choose peace over conflict.")))
   (base/skill
    :name "Piloting"
    :summary
@@ -3525,7 +3544,6 @@ x +1DMG vs. Crouching."
      "Blend into the Crowd"
      "Camouflage"
      "Cloak and Dagger"
-     "Hide"
      "Hide in Plain Sight"
      "Sneak"
      "Sneak Attack"

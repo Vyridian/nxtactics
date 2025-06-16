@@ -8,12 +8,13 @@
   (base/ability
    :name "1-Handed"
    :summary
-    "* Requires 1 Hand
-     * [Power]: [Weapon]")
+    "* Requires: 1 Hand
+     * [Power]: [Weapon] or [Armor]
+     * Usable only to [Arc:Front] and [Arc:Left] or [Arc:Right]")
   (base/ability
    :name "2-Handed"
    :summary
-    "* Requires 2 Hands
+    "* Requires: 2 Hands
      * [Power]: [Weapon]")
   (base/ability
    :name "2-Legged")
@@ -714,26 +715,6 @@
    :summary
     "* A subtle gate that moves a person to a different Realm without them realizing. Both locations must be nearly identical.")
   (base/ability
-   :name "Damage:Body"
-   :summary
-    "* Does [Damage] equal to [Body]
-     * [Power]: [Weapon]")
-  (base/ability
-   :name "Damage:Body+1"
-   :summary
-    "* Does [Damage] equal to [Body]+1
-     * [Power]: [Weapon]")
-  (base/ability
-   :name "Damage:Body+2"
-   :summary
-    "* Does [Damage] equal to [Body]+2
-     * [Power]: [Weapon]")
-  (base/ability
-   :name "Damage:Body+3"
-   :summary
-    "* Does [Damage] equal to [Body]+3
-     * [Power]: [Weapon]")
-  (base/ability
    :name "Dash Attack"
    :summary
     "* [Skill]: [Melee]-1
@@ -1041,7 +1022,7 @@
   (base/ability
    :name "Ego Whip"
    :summary
-    "* [Skill]: [Mental Combat] vs. [Spirit]."
+    "* [Skill]: [Mental Combat] vs. [Will]."
    :titles "Mind Whip")
   (base/ability
    :name "Ejection System"
@@ -1288,8 +1269,10 @@
     "* [Action]: If you hit with this ability, you may immediately turn to the left or right and attack a target in the next adjacent space. This may be repeated any number of times at [-1 Attack] per target after the first though each additional target must be in the same direction.")
   (base/ability
    :name "Fond Memories"
-   :reference "Eternal Sunshine of the Spotless Mind"
-   :summary "* This ability makes every childhood dream and ambition real again. Every imaginary friend is remembered clearly and the happiest moments from youth return with the intensity of a first kiss and the excitement of Christmas. Then, suddenly, its over. In their absence, depression can crash down.  Truly fallen beings can become suicidal. The remembrance can be uplifting in the end, allowing one to relive the best moments of life.")
+   :reference
+    "Eternal Sunshine of the Spotless Mind"
+   :summary
+    "* This ability makes every childhood dream and ambition real again. Every imaginary friend is remembered clearly and the happiest moments from youth return with the intensity of a first kiss and the excitement of Christmas. Then, suddenly, its over. In their absence, depression can crash down. Truly fallen beings can become suicidal. The remembrance can be uplifting in the end, allowing one to relive the best moments of life.")
   (base/ability
    :name "Foot Stomp"
    :reference
@@ -1297,7 +1280,7 @@
    :summary
     "* Stomp on opponent's foot to slow their movement.
      * [Skill]: [Close Combat]
-     * [Damage]: IF a Foot Bash THEN Damage:+1")
+     * [Damage]: IF a Foot Bash THEN Rating:+1")
   (base/ability
    :name "Foraging"
    :summary
@@ -1401,6 +1384,8 @@
   (base/ability
    :name "Gambling"
    :titles "Gambler, High Roller"
+   :reference
+    "* Never lost a fair game. Never played one. - Twisted Fate, Runeterra"
    :summary
     "* [Skill]: [Deception]")
   (base/ability
@@ -1423,7 +1408,7 @@
      * [Skill]: [Close Combat]
      * Initiative:-1
      * Move:-1
-     * Damage:+1")
+     * Rating:+1")
   (base/ability
    :name "High-Explosive"
    :titles "HE"
@@ -1502,13 +1487,6 @@
    :titles "Cowboy, Pig Farmer, Rancher, Shepherd"
    :summary
     "* [Skill]: [Animal Handling]")
-  (base/ability
-   :name "Hide"
-   :summary
-    "* Find a hiding place in an area where you will not normally be detected.
-     * [Skill]: [Stealth]
-     * IF You have [Full Cover] AND you don't move AND Rivals are at least your [Body] spaces away.
-     * THEN [Action] [Continuous]: You are hidden from view AND Rivals must succeed at [Investigate]/[Seek] to detect you.")
   (base/ability
    :name "Hide in Plain Sight"
    :summary
@@ -2032,7 +2010,7 @@
   (base/ability
    :name "Petrification"
    :summary
-    "* [Skill]: [Transformation] vs. [Spirit] and place [Petrification] counters on the target body location.
+    "* [Skill]: [Transformation] vs. [Will] and place [Petrification] counters on the target body location.
      * Any body location with a [Petrification] is encased in stone. It requires an [Action] to remove a [Petrification]. Any area that suffers 3 [Petrification] turns completely to stone. If any other area is so petrified, then complete petrification immediately spreads across the entire body and then the body and all its gear immediately converts to a stone statue.
      * Additional Effects: A petrified arm cannot move. A petrified leg reduces Move by half. A petrified head is unable to see or hear. Other petrifed areas have no additional effect. Petrified Arms or legs can break off like a clean amputation without blood loss.
      * This ability can also be used to restore a petrified target back to its original form if the skill is at least equal to the original. Lost limbs may also be restored by reattaching the limb before restoration.
@@ -2078,7 +2056,10 @@
    :name "Plumbing"
    :titles "Plumber")
   (base/ability
-   :name "Point Defense")
+   :name "Point Defense"
+   :summary
+    "* Shielding moves to block attacks
+     * [Power]: [Shielding]")
   (base/ability
    :name "Poison Bite"
    :summary
@@ -2122,7 +2103,7 @@
    :reference
     "* She turned me into a newt. A newt? Well I got better. - Monty Python and the Holy Grail"
    :summary
-    "* [Skill]: [Transmutation] vs. [Spirit].
+    "* [Skill]: [Transmutation] vs. [Will].
      * A unit with 0 Spirit due to polymorph changes into any creature desired of equal Body. When the damage inflicted by Polymorph is removed, the unit returns to normal.")
   (base/ability
    :name "Porting"
@@ -2341,6 +2322,10 @@
    :summary
     "* [Skill]: [Intimidation]")
   (base/ability
+   :name "Resist: Bash"
+   :summary
+    "* [Damage]: [Armor]:+1 if attack is a [Bash]")
+  (base/ability
    :name "Resist: Cold"
    :summary "* [Passive] - Armor:+1 vs. Cold")
   (base/ability
@@ -2358,18 +2343,20 @@
   (base/ability
    :name "Resist: Fire"
    :summary
-    "* [Damage]: [+2 Armor] if attack produces [Fire] tokens
-     * Only 1 Hardened vs. ability may be taken")
+    "* [Damage]: [Armor]:+1 if attack produces [Fire]")
+  (base/ability
+   :name "Resist: Hack"
+   :summary
+    "* [Damage]: [Armor]:+1 if attack is a [Hack]")
   (base/ability
    :name "Resist: Magnetism"
    :summary
     "* Reduces the chance that a magnetic attachment can hold on the armor (assuming it is metallic).
      * [Passive] - Armor:+1 vs. Magnetism")
   (base/ability
-   :name "Resist: Piercing"
+   :name "Resist: Pierce"
    :summary
-    "* [Damage]: [+2 Armor] if attack is a [Projectile]
-     * Only 1 Hardened vs. ability may be taken")
+    "* [Damage]: [Armor]:+1 if attack is a [Pierce]")
   (base/ability
    :name "Resist: Plasma"
    :summary
@@ -2385,6 +2372,10 @@
   (base/ability
    :name "Resist: Radiation"
    :summary "* [Passive] - Armor:+1 vs. Radiation")
+  (base/ability
+   :name "Resist: Slash"
+   :summary
+    "* [Damage]: [Armor]:+1 if attack is a [Slash]")
   (base/ability
    :name "Restful Sleep"
    :summary
@@ -2567,6 +2558,11 @@
      * [Requires]: Javelin, Target with shield
      * [Attack]: Criticals are [Encumberance] Tokens.")
   (base/ability
+   :name "Shielding: Magical"
+   :summary
+    "* IF the Shielding falls due to Damage THEN all further Damage is cancelled.
+     * [Power]: [Shielding]")
+  (base/ability
    :name "Shipyard: Aircraft"
    :summary
     "* Can produce aircraft. Must be modified for each type of aircraft.
@@ -2716,7 +2712,7 @@
      * [Requires]: [Handstand Kick]
      * Initiative:-1
      * Move:-1
-     * Damage:+1")
+     * Rating:+1")
   (base/ability
    :name "Spirit Guide"
    :summary
@@ -3094,12 +3090,22 @@
   (base/ability
    :name "Water Walking"
    :summary
-    "* [Power]: [Hydromancy] or [Water]")
+    "* [Continuous]: May move over water at Move:-1 penalty.
+     * [Power]: [Hydromancy] or [Water]")
   (base/ability
    :name "Water Running"
    :summary
-    "* [Power]: [Hydromancy] or [Water]
+    "* [Continuous]: May move over water.
+     * [Power]: [Hydromancy] or [Water]
      * Requires: [Water Walking]")
+  (base/ability
+   :name "Water Weapon"
+   :summary
+    "Create a water weapon
+     * [Power]: [Hydromancy] or [Water]
+     * [Action]: Form a weapon out of nearby water (like a water bottle)
+     * [Continuous]: Maintain the weapon
+     * [Action]: Dissolve the weapon into a nearby container")
   (base/ability
    :name "Weapon Block"
    :summary

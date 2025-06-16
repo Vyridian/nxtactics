@@ -6,11 +6,12 @@ import nx_tactics_decks_burden from "../../../nx/tactics/decks/burden.js"
 import nx_tactics_decks_conflict from "../../../nx/tactics/decks/conflict.js"
 import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
+import nx_tactics_decks_library from "../../../nx/tactics/decks/library.js"
 import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
 import nx_tactics_decks_scene_murintrail from "../../../nx/tactics/decks/scene-murintrail.js"
 import nx_tactics_decks_scene_nightonthetown from "../../../nx/tactics/decks/scene-nightonthetown.js"
 import nx_tactics_decks_scene_ontherun from "../../../nx/tactics/decks/scene-ontherun.js"
-import nx_tactics_decks_resource from "../../../nx/tactics/decks/resource.js"
+import nx_tactics_decks_scene_starter from "../../../nx/tactics/decks/scene-starter.js"
 import nx_tactics_decks_starter from "../../../nx/tactics/decks/starter.js"
 import nx_tactics_decks_trauma from "../../../nx/tactics/decks/trauma.js"
 import nx_tactics_decks_wound from "../../../nx/tactics/decks/wound.js"
@@ -155,8 +156,7 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_disorder.f_deck_disorder(),
           nx_tactics_decks_trauma.f_deck_trauma(),
           nx_tactics_decks_burden.f_deck_burden(),
-          nx_tactics_decks_resource.f_deck_resource(),
-          nx_tactics_decks_deck.f_deck_clock(tactics)
+          nx_tactics_decks_library.f_deck_library(tactics)
         )
       )
     )
@@ -328,6 +328,7 @@ export default class nx_tactics_decks_deck {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
+          nx_tactics_decks_scene_starter.f_deck_starter(tactics),
           nx_tactics_decks_scene_murintrail.f_deck_murintrail(tactics),
           nx_tactics_decks_scene_nightonthetown.f_deck_nightonthetown(tactics),
           nx_tactics_decks_scene_ontherun.f_deck_ontherun(tactics)

@@ -197,6 +197,7 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bear: Brown", ":image", "images/cards/unit-bear-brown.svg", ":body", "4x2", ":mass", "400kg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bear: Grizzly", ":image", "images/cards/unit-bear-grizzly.svg", ":reference", "* It has been estimated that a bite from a grizzly could crush a bowling ball.", ":body", "6x2", ":mass", "600kg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bear: Polar", ":image", "images/cards/unit-bear-polar.svg", ":body", "5x2", ":mass", "500kg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Blackguard", ":titles", "Black Dragoon", ":summary", "* An elite mercenary cadre organized by Hetman Undrig.\n* Their base is a small, walled town dedicated to their needs.\n* The Dragoons are a loose group. Decisions and leaders are chosen by majority vote. Power can change at anytime (including during combat).\n* Dragoons pay no dues nor is there direct pay. The Dragoons make money by hiring out as mercenaries.  They charge double normal rates, but are reknowned for their excellent training and equipment. Dragoons take great pride in their high status and react poorly to those who do not recognize their talent.\n* Dragoons are trained professionals in their jobs and recognize the need for discretion. They care little for whether a job is legal or not, and the Dragoons are known for possessing certain 'subtle' skills that make covert missions possible. They do not, however, enjoy excessive risk and are not above abandoning very dangerous missions."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Boba Fett", ":image", "images/starwars/unit-bobafett.png", ":reference", "* Vader: There will be a substantial reward for the one who finds the Millenium Falcon. You are free to use any methods necessary, but I want them alive. No disintegrations. Boba:As you wish. - Darth Vader and Boba Fett - Empire Strikes Back"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bossk", ":image", "images/starwars/unit-bossk.png", ":titles", "Bossk'wassak'Cradossk", ":reference", "* We live and die as the Scorekeeper wills--and I am favored over my enemies by the great goddess. - Bossk", ":summary", "A male Trandoshan bounty hunter and the son of Cradossk who was known for hunting Wookiees. During the Clone Wars, Bossk worked alongside fellow hunters Aurra Sing and Castas to mentor the orphaned Boba Fett. Their scheme to kill Fett's hated enemy, the Jedi Master Mace Windu, resulted in Fett and Bossk's arrest."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bronze Bull"),
@@ -307,6 +308,7 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly: Giant"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Capybara", ":body", "5x1", ":mass", "50kg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -320,9 +322,21 @@ export default class nx_tactics_decks_unit {
         ":mass",
         "200kg/440lb"
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Capybara", ":body", "5x1", ":mass", "50kg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cat", ":image", "images/cards/unit-cat.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar: Giant"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Charn Aramel",
+        ":summary",
+        "Human Dread Knight",
+        ":titles",
+        "Nighthook, Lord Aramel",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Conviction", 10)
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Chicken", ":image", "images/cards/unit-chicken.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -378,7 +392,7 @@ export default class nx_tactics_decks_unit {
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Cold")
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dhampyr", ":reference", "* A dhampir in Balkan folklore is the child of a vampire father and a human mother, with vampire powers but none of the weaknesses. A dhampir is believed to have the unique ability to see vampires, even when these are invisible, and is unusually adept at killing them.\n** A dhampir is always paid well for his services. The amount of money varies, but there is never bickering over the price. Standard pay for a dhampir may also include a meal or a suit of clothing. Sometimes a dhampir is paid in cattle, jewelry or women.\n** Charlatans traveling the regions around the Carpathian Mountains, Balkans and elsewhere in Eastern Europe would claim to be dhampirs. They were believed to be the only ones who could see the spirit and would put on elaborate shows for villages. Once fear, grief and superstition took hold in a village following a recent death, the dhampir would 'come to the rescue'.\n* Blood: The Last Vampire\n* Vampire Hunter D\n* Blade\n* BloodRayne", ":summary", "* Dhampyrs, can function both day and night, although they find sunlight uncomfortable.\n* Dhampyrs are mortal but can live for centuries. Once mature, they age at roughly 1/10 the rate of humans.\n* They can breed with humans, but not with Kuei-jin or other dhampyrs.\n* They are not dead, so they must breath, eat, drink, and sleep. They may bleed, and they may die.\n* By using [Spirit], they can perform feats not possible for humans. They can regain [Spirit] through rest or by eating flesh (usually they cannot by drinking blood).\n* The [Beast] is weaker in a Dhampyr than in their Vampire kin, but this makes their powers weaker as well."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dhampyr", ":reference", "* A dhampir in Balkan folklore is the child of a vampire father and a human mother, with vampire powers but none of the weaknesses. A dhampir is believed to have the unique ability to see vampires, even when these are invisible, and is unusually adept at killing them.\n** A dhampir is always paid well for his services. The amount of money varies, but there is never bickering over the price. Standard pay for a dhampir may also include a meal or a suit of clothing. Sometimes a dhampir is paid in cattle, jewelry or women.\n** Charlatans traveling the regions around the Carpathian Mountains, Balkans and elsewhere in Eastern Europe would claim to be dhampirs. They were believed to be the only ones who could see the spirit and would put on elaborate shows for villages. Once fear, grief and superstition took hold in a village following a recent death, the dhampir would 'come to the rescue'.\n* Blood: The Last Vampire\n* Vampire Hunter D\n* Blade\n* BloodRayne", ":summary", "* Dhampyrs, can function both day and night, although they find sunlight uncomfortable.\n* Dhampyrs are mortal but can live for centuries. Once mature, they age at roughly 1/10 the rate of humans.\n* They can breed with humans, but not with Kuei-jin or other dhampyrs.\n* They are not dead, so they must breath, eat, drink, and sleep. They may bleed, and they may die.\n* By using [Will], they can perform feats not possible for humans. They can regain [Will] through rest or by eating flesh (usually they cannot by drinking blood).\n* The [Beast] is weaker in a Dhampyr than in their Vampire kin, but this makes their powers weaker as well."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dhole", ":titles", "Bhole", ":summary", "* Huge slimy, worm-like creatures several hundred meters long."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dolphin", ":reference", "Man had always assumed that he was more intelligent than dolphins because he had a achieved so much: the wheel, New York, Wars. Whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphin thought they were more intelligent than man for precisely same reasonse. - Hitchhikers Guide to the Galaxy"),
       vx_core.f_new(
@@ -575,7 +589,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Melee",
             2,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife: Dagger")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Spear: Short", "Knife: Dagger")
           )
         )
       ),
@@ -592,9 +606,9 @@ export default class nx_tactics_decks_unit {
         ":nature",
         "Cowardly Envious",
         ":conscience",
-        "1x1",
+        "2x1",
         ":beast",
-        "1x0",
+        "2x0",
         ":traits",
         "Goblin Male",
         ":body",
@@ -608,7 +622,7 @@ export default class nx_tactics_decks_unit {
         ":speedland",
         "5kph/3mph",
         ":value",
-        "1x0",
+        "2x0",
         ":mass",
         "22kg/50lb",
         ":height",
@@ -727,6 +741,7 @@ export default class nx_tactics_decks_unit {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hound of Tindalos", ":image", "cthulhu/unit-houndoftindalos.png", ":reference", "* All the evil in the universe was concentrated in their lean, hungry bodies. Or had they bodies? I saw them only for a moment, I cannot be certain. - Frank Belknap Long, The Hounds of Tindalos", ":summary", "* The Hounds of Tindalos dwell in the distant past of the earth, when normal life had not yet advanced past one-celled animals. They are said to inhabit the angles of time, while other beings descend from curves. The Hounds are thought to be immortal and are believed to lust after something in humankind and other normal life, and will follow victims through time and space to get it.\n    * Their appearance is unknown because no characters who meet them survive long enough to give a description. It is said that they have long, hollow tongues or proboscis to drain victims' body-fluids, and that they excrete a strange blue pus or ichor.\n    * Though the Hounds are sometimes pictured as canine, it is not likely that they appear as such. Their name refers more to the creatures' habits than their appearance.\n    * Because of their relationship with the angles of time, they can materialize through any corner if it is fairly sharp—120 degress or less. When a Hound is about to appear, it materializes first as smoke pouring from the corner, and finally the head emerges followed by the body. It is said that once a human becomes known to one of these creatures, a Hound of Tindalos will pursue the victim through anything to reach its quarry. A person risks attracting their attention by travelling through time."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hunting Horror", ":image", "cthulhu/huntingHorror.png"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hydro Essence", ":summary", "* A mindless, condensed blob of Hydro energy.\n* Since slimes store magical energy they are highly sought after by mages and alchemists.", ":titles", "Hydro Slime, Hydrolon, Water Slime"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Innkeeper", ":image", "images/cards/unit-innkeeper.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Jabba the Hutt", ":image", "images/starwars/unit-jabbathehutt.png"),
       vx_core.f_new(
@@ -925,7 +940,8 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lion"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mi-Go", ":image", "cthulhu/unit-migo.png", ":titles", "Fungi from Yuggoth", ":reference", "* Fact: Migoi or Mi-go (pronounced mey-goo) is a Tibetan name for the Yeti and translates as 'wild man'.", ":summary", "* Mi-go are an alien race of fungus-like creatures, approximately man-sized, pinkish in color, with crustaceous bodies bearing vast pairs of membranous wings and several sets of articulate limbs. The Mi-Go have a sort of convoluted ellipsoid where its head should be, covered with a multitude of very short antennae.\n    * They have a colony on Pluto (i.e. Yuggoth) and have mining colonies in high mountains looking for rare minerals.\n    * The Mi-go are not wholly native to our phyical universe. Thus, they cannot eat food from Earth, and photographs of them are blurry and indistinct. They can also fly unassisted through interstellar space at fantastic speeds. They dissolve shortly after death.\n    * They are unaccustomed to light which confuses them.\n    * They seem to be highly focused on their scientific pursuits and are most often encountered in search of obscure minerals in remote places. Trespassers are usually eliminated, though they have been known to have human agents work on their behalf.\n    * Mi-go have access to a number of advanced weapons. The mist projector releases a cloud of frigid gas. They have an organic 'armor' that humans can use, but it is extremely sticky and will damage the user each time it is removed. The armor will also weaken each day unless immersed in the proper nutrient bath.\n    * The Mi-Go are advanced in the sphere of surgery. With surgical alterations the Mi-Go are able to speak human languages, though their voice is buzzy and irritating. They can also surgically move the brain of other species into metal cylinders for transportation to other worlds through space.", ":body", "6x1", ":mass", "60kg/130lb", ":height", "1.5m/5ft"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mi-Go", ":image", "cthulhu/unit-migo.png", ":titles", "Fungi from Yuggoth", ":reference", "* Fact: Migoi or Mi-go (pronounced mey-goo) is a Tibetan name for the Yeti and translates as 'wild man'.", ":summary", "* Mi-go are an alien race of fungus-like creatures, approximately man-sized, pinkish in color, with crustaceous bodies bearing vast pairs of membranous wings and several sets of articulate limbs. The Mi-Go have a sort of convoluted ellipsoid where its head should be, covered with a multitude of very short antennae.\n    * They have a colony on Pluto (i.e. Yuggoth) and have mining colonies in high mountains looking for rare minerals.\n    * The Mi-go are not wholly native to our phyical universe. Thus, they cannot eat food from Earth, and photographs of them are blurry and indistinct. They can also fly unassisted through interstellar space at fantastic speeds. They dissolve shortly after death.\n    * They are unaccustomed to light which confuses them.\n    * They seem to be highly focused on their scientific pursuits and are most often encountered in search of obscure minerals in remote places. Trespassers are usually eliminated, though they have been known to have human agents work on their behalf.\n    * Mi-go have access to a number of advanced weapons. The mist projector releases a cloud of frigid gas. They have an organic 'armor' that humans can use, but it is extremely sticky and will damage the user each time it is removed. The armor will also weaken each day unless immersed in the proper nutrient bath.\n    * The Mi-Go are advanced in the sphere of surgery. With surgical alterations the Mi-Go are able to speak human languages, though their voice is buzzy and irritating. They can also surgically move the brain of other species into metal cylinders for transportation to other worlds through space.\n    * Essentially a space fungus, the crablike form we're accustom to is actually a pressure suit that allows them to walk around, speak and fly in Earth's atmosphere. They grow their 'bodies' likes coral and can form appendages to anything they require - wings, arms, shells. Each of these shells is alive and using grafting, they can switch out limbs as needed. The discarded limbs are kept alive like potted plants until they are needed again.\n    * They are alien extremophiles, perfectly suited for deep space travel. They don't require air to breathe, are capable of periods of hibernation lasting hundreds of thousands of years, feed off minerals and cosmic radiation, using something like photosynthesis to make food.\n    * They procreate by budding, a form of cloning, to make copies of the older, mature individuals and use spores to create their workforce - bred to labor and die in the mines. They can bore deep into the mantel of worlds, and as they don't require air to breath and can survive incredible heat, cold and pressure, they can just keep going deeper while most species would die in moments.\n    * They communicate and see via radiation, the flowerlike sensory organ we view as their head, emits and receives radioactive wavelengths, allowing them to see through walls and for miles clearly as they have no eyes to focus. They can see the background radiation of the universe and use it to travel with precision between stars. This also means they can see the elemental make up of asteroids and planets just by looking at them.", ":body", "6x1", ":mass", "60kg/130lb", ":height", "1.5m/5ft"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Naiad", ":titles", "Nereid, Nyad"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Night Terror", ":titles", "Night Hag", ":reference", "* A night terror is a sleep disorder characterized by extreme terror and a temporary inability to regain full consciousness. The subject wakes abruptly usually accompanied by gasping, moaning, or screaming.  It is often impossible to fully awaken the person, and after the episode the subject normally settles back to sleep without waking.\n* Night terrors are distinct from nightmares in several key ways. First, the subject is not fully awake when roused, and even when efforts are made to awaken the sleeper, he/she may continue to experience the night terror for ten to twenty minutes. Unlike nightmares, which occur during REM sleep, night terrors occur during slow-wave sleep, the deepest levels of non-REM sleep. Even if awakened, the subject often cannot remember the episode except for a sense of panic, while nightmares usually can be easily recalled. The subject often has no recollection of the incident.\n* Unlike nightmares, which are frequently dreams of a frightening nature, night terrors are not dreams. Usually there is no situation or event (scary or otherwise) that is dreamt, but rather the emotion of fear itself is felt. The lack of a dream itself leaves those awakened from a night terror in a state of disorientation much more severe than that caused by a normal nightmare. This can include a short period of amnesia during which the subjects may be unable to recall their names, locations, ages, or any other identifying features of themselves.\n* Children from age two to six are most prone to night terrors, and they affect about fifteen percent of all children.", ":summary", "* Evil women who died in childbirth and now returned to slay children.\n* By day it may take the form of a shriveled old woman. At night it becomes a horrific corpse-like creature. In this form it sneaks into houses and sucks the breath from the lips of children, leaving them cold and lifeless.\n* It can only enter a house into which it has been invited, so during the day it poses as a woeful traveler to gain admittance to houses where babies live.\n* Night Terrors, being exclusively female, can only reproduce by mating with a male member of another species. The hag often slays her mate. The child born looks like a normal member of her species with black or blue hair and is often given into foster care by the hag disguised as a normal woman. When the young girl reaches puberty, the mother Night Hag might visit the child several times and, after several rituals, transforms her offspring into another hag."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -1011,6 +1027,25 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Huge", ":body", "5x0", ":mass", "5kg/10lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rukh", ":titles", "Roc", ":reference", "* Rukh Egg - Magic the Gathering\n* Sindbad observed that when a karkadann spears an elephant on its horn, the elephant’s fat runs into the rhino’s eyes and blinds it; a rukh will then swoop down and carry both combatants off to feed its chicks.", ":summary", "* Appearance - Rukhs are monstrously large birds vaguely similar in a appearance to a vulture.\n    * Feeding - Rukhs are uncontested predators capable of feeding on the largest and most dangerous land animals. They have a particular fondness for giant serpents, elephants, and karkadanns or rhinoceroses.\n    * Intelligence - Rukhs also appear to have some degree of intelligence, using boulders to smash prey."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rukh Hatchling"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Sarani Kalea",
+        ":summary",
+        "Human Priestess",
+        ":titles",
+        "Princess Kalea, High Priestess of Kali",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Conviction", 12),
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
+            tactics,
+            "Invocation",
+            16,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Aspecting")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Scarecrow", ":titles", "Dullahan", ":reference", "* Headless Horseman\n* Great Pumpkin\n* Jack O' Lantern\n* Pumpkin King", ":summary", "* A scarecrow is a humanoid mass of twigs, straw, and old clothes that has been animated by an undead spirit. Some are actual scarecrows that have been possessed; others form out of pumpkin patches on moonless nights. Scarecrows hate all living things, but wish to do more than kill. They desire to frighten living beings as much as possible. A scarecrow can be created when someone calls for vengeance before their death. Sometimes they are killed by brigands, other times they starves to death because of blight or drought. The scarecrow then haunts the place of death, not ranging more than a mile from it. Sometimes entire families become scarecrows, and the victims of scarecrows occasionally join the haunting as well. Simply killing the body is not enough to end its haunting, as it reappears from another pumpkin on the next moonless night. To finally destroy a scarecrow, every scrap of every body must be burned, as well as any pumpkins or pumpkin vines. The land must then be tilled and planted with a new crop. Only then are the spirits forced to give up their vengeance and give up the mortal coil.\n* Scarecrows prefer to play with their prey, sneaking up on them and attempting to terrify them.  Scarecrows fight without regard to their own safety, as they know they are likely to return on another night if destroyed."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sea Elephant"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sea Lion"),
@@ -1038,7 +1073,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Defense",
             1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Shield")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Shield: Round")
           )
         )
       ),
@@ -1060,7 +1095,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Defense",
             3,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor: Breast Plate", "Shield")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor: Breast Plate", "Shield: Round")
           )
         )
       ),
@@ -1134,7 +1169,7 @@ export default class nx_tactics_decks_unit {
         ),
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl_intensity_abilities(
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_rating_abilities(
             tactics,
             "Toxins",
             2,
@@ -1338,7 +1373,8 @@ export default class nx_tactics_decks_unit {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tie Reaper"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tie Striker"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Turkey", ":image", "images/cards/unit-turkey.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Turkey", ":image", "images/cards/unit-turkey.svg", ":reference", "* As God is my witness, I thought turkeys could fly. - Mr. Carlson, WKRP in Cincinnati"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Undine"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Urchin", ":image", "images/cards/unit-urchin.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Uruk Butcher", ":summary", "* Orc Butchers deal in all things meat. They serve as cooks, surgeons, executioners, undertakers, and torturers.\n* They prefer cleavers, hand axes, and knives in combat."),
       vx_core.f_new(
@@ -1498,6 +1534,19 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Combine")
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Waif", ":image", "images/cards/unit-waif.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Water Elemental"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Water Elemental Lord",
+        ":summary",
+        "* Greater Water Elementals are enormous creatures that can appear as a lake, a whirlpool, or a tidal wave. They have complete mastery over the Water, can perform any Water Power at maximum ability and can cancel any other being attempting to use Fire.",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Water", 20)
+        )
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Water Sprite"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Werecat", ":image", "images/bestiary/Lycanthrope_Weretiger.png", ":titles", "Rakshasa, Werejaguar, Werepanther, Weretiger", ":reference", "Every time it happens... you tell yourself it's love. But it isn't. It's blood. And death. - Cat People"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wandering Eye", ":titles", "Eye Killer", ":summary", "* Thw Wandering Eye is a bizarre, eel-like creature with a single, large, humanoid eye where a mouth and face would normally be. Eyes live in large groups underground and slowly float through the air like schools of fish. Their skin is a dark matte brown while their eye is highly reflective white, so usually the first view of Wandering Eyes is of a dozen disembodied eyes moving and blinking independently of one another in the dark.\n* Motivation - The Eyes are not intelligent nor malicious. They simply seek food, and will flee if startled or they are losing.\n* Levitation - Eyes produce a lighter than air gas that is stored in sacs down its body. These allow The creature to float and it can slowly propel itself through the air by making swimming motions.\n* Confusion - The creature's single, large eye doesn't seem to focus on anything and keeps moving about randomly. When a group of Wandering Eyes are seen, their weird, random eyes cause vertigo, confusion, fear, and sometimes madness. The Wandering Eye somehow feeds on this confusion and will attempt to trap victims and keep them in an intense state of confusion until they expire.\n* Weakness - Eyes are adjusted to life in the dark and are blinded by bright lights and large fires."),
       vx_core.f_new(

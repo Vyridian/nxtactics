@@ -27,6 +27,7 @@ export default class nx_tactics_decks_resource {
   /**
    * @function deck_resource
    * Resource Deck
+   * @param  {tactics} tactics
    * @return {deck}
    */
   static t_deck_resource = {
@@ -37,7 +38,7 @@ export default class nx_tactics_decks_resource {
   }
 
   // (func deck-resource)
-  static f_deck_resource() {
+  static f_deck_resource(tactics) {
     let output = nx_tactics_base.e_deck
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_deck},
@@ -50,6 +51,18 @@ export default class nx_tactics_decks_resource {
       ":cardmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_cardmap},
+        nx_tactics_base.f_cardlist_copy_from_tactics_rulekey_count_isnum(
+          tactics,
+          "Skill Point",
+          5,
+          true
+        ),
+        nx_tactics_base.f_cardlist_copy_from_tactics_rulekey_count_isnum(
+          tactics,
+          "Ability Point",
+          5,
+          true
+        ),
         nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
           nx_tactics_decks_resource.c_bleeding,
           10,

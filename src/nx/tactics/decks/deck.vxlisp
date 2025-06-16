@@ -4,11 +4,12 @@
        (lib conflict       :path nx/tactics/decks/conflict)
        (lib data           :path nx/tactics/decks/data)
        (lib disorder       :path nx/tactics/decks/disorder)
+       (lib library        :path nx/tactics/decks/library)
        (lib rule           :path nx/tactics/decks/rule)
        (lib murintrail     :path nx/tactics/decks/scene-murintrail)
        (lib nightonthetown :path nx/tactics/decks/scene-nightonthetown)
        (lib ontherun       :path nx/tactics/decks/scene-ontherun)
-       (lib resource       :path nx/tactics/decks/resource)
+       (lib scene-starter  :path nx/tactics/decks/scene-starter)
        (lib starter        :path nx/tactics/decks/starter)
        (lib trauma         :path nx/tactics/decks/trauma)
        (lib wound          :path nx/tactics/decks/wound)
@@ -117,6 +118,7 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
+     (scene-starter/deck-starter tactics)
      (murintrail/deck-murintrail tactics)
      (nightonthetown/deck-nightonthetown tactics)
      (ontherun/deck-ontherun tactics)))))
@@ -176,6 +178,5 @@
      (disorder/deck-disorder)
      (trauma/deck-trauma)
      (burden/deck-burden)
-     (resource/deck-resource)
-     (deck-clock tactics))))
+     (libarary/deck-library tactics))))
  :doc "Setup Deck")

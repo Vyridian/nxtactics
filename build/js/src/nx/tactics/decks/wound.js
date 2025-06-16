@@ -1120,9 +1120,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":image",
-      "images/card-wound-head.svg",
-      ":summary",
-      "Minor: Head Cut. Bleeding:1\nMajor: Face Gash. Stress:1 Bleeding:1\nCritical: Throat Slashed. Bleeding:3 Stress:2\nExtreme: Beheaded. Dead."
+      "images/damage-wound-as.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly
     ))
 
     // (const wound-jc)
