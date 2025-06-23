@@ -411,7 +411,7 @@
    "Minor: Drawn to mysterious, shady people.
     Major: Excited by dangerous and mysterious people.
     Critical: Pursue increasingly risky encounters with strangers.
-    Extreme: Hypersexual. Dedicate all waking hours to shady encounters with strangers."))
+    Extreme: Danger Magnet. Dedicate all waking hours to shady encounters with strangers."))
 
 (const disorder-6s : base/damage
  (base/damage
@@ -452,11 +452,13 @@
   :name "Compulsion: Love"
   :ranksuit base/ranksuit-5h
   :image "images/card-disorder-compulsion.svg"
+  :reference
+   "* Sometimes I wish that I could stop you from talking. When I hear the silly things that you say. I think somebody better put out the big light. 'Cause I can't stand to see you this way - Elvis Costello, Allison"
   :summary
    "Minor: Fetishes.
     Major: Deviant. Bizarre lusts fill your thoughts. Pushes to play them out.
-    Critical: Monster. Compelled to push for sex as often as possible even if it defies social norms and sexual preference, forcing the issue if necessary.
-    Extreme: Abomination. You commit appalling sexual acts. [Shadow Triumphant]"))
+    Critical: Monster. Compelled to push for relations as often as possible even if it defies social norms and sexual preference, forcing the issue if necessary.
+    Extreme: Abomination. You are committed to perform appalling acts. [Shadow Triumphant]"))
 
 (const disorder-5s : base/damage
  (base/damage

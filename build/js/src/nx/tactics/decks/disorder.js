@@ -724,8 +724,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_5h,
       ":image",
       "images/card-disorder-compulsion.svg",
+      ":reference",
+      "* Sometimes I wish that I could stop you from talking. When I hear the silly things that you say. I think somebody better put out the big light. 'Cause I can't stand to see you this way - Elvis Costello, Allison",
       ":summary",
-      "Minor: Fetishes.\nMajor: Deviant. Bizarre lusts fill your thoughts. Pushes to play them out.\nCritical: Monster. Compelled to push for sex as often as possible even if it defies social norms and sexual preference, forcing the issue if necessary.\nExtreme: Abomination. You commit appalling sexual acts. [Shadow Triumphant]"
+      "Minor: Fetishes.\nMajor: Deviant. Bizarre lusts fill your thoughts. Pushes to play them out.\nCritical: Monster. Compelled to push for relations as often as possible even if it defies social norms and sexual preference, forcing the issue if necessary.\nExtreme: Abomination. You are committed to perform appalling acts. [Shadow Triumphant]"
     ))
 
     // (const disorder-5s)
@@ -777,7 +779,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/card-disorder-compulsion.svg",
       ":summary",
-      "Minor: Drawn to mysterious, shady people.\nMajor: Excited by dangerous and mysterious people.\nCritical: Pursue increasingly risky encounters with strangers.\nExtreme: Hypersexual. Dedicate all waking hours to shady encounters with strangers."
+      "Minor: Drawn to mysterious, shady people.\nMajor: Excited by dangerous and mysterious people.\nCritical: Pursue increasingly risky encounters with strangers.\nExtreme: Danger Magnet. Dedicate all waking hours to shady encounters with strangers."
     ))
 
     // (const disorder-6s)

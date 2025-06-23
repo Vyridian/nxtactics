@@ -123,6 +123,24 @@ export default class nx_tactics_decks_unit {
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Espionage", 5)
         )
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Arinni Taybor",
+        ":summary",
+        "* Human Priest/Monk",
+        ":titles",
+        "Taybor the Red",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+            tactics,
+            "Melee",
+            5,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Quarterstaff")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Automaton"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -182,6 +200,7 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane: Madness", ":summary", "* These formless spirits wear down the sanity of those exposed to them with disembodied voices, disturbing visions, and horrible shrieking."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane: Poison"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane: Radiation"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Barghest", ":titles", "Black Shuck, Ghost Hound"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bat: Fruit"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bat: Vampire"),
       vx_core.f_new(
@@ -449,7 +468,26 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drowned", ":titles", "Drowner, Kappa", ":reference", "* The Ring", ":summary", "* The Drowned are the spirits of those who have died by drowning. They are completely fixated on their drowning death and are compelled to reenact the experience with others."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Duck", ":image", "images/cards/unit-duck.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Elder Thing", ":image", "Cthulhu/ElderThing.png", ":reference", "* The toughness of the things was almost incredible. Even the terrific pressure of the deepest sea bottoms appeared powerless to harm them. Very few seemed to die at all except for violence, and their burial places were very limited. - At the Mountains of Madness", ":summary", "* Their metabolism is based on carbon dioxide instead of oxygen; their blood is dark green in color. The nervous system of the Elder Things is quite complex, with five-lobed brains and many ganglial centers. The prismatic cilia on top of the creatures' head suggest that they have senses other than sight, smell, touch, hearing, and taste. Elder Things reproduce through spores. They can derive nourishment from inorganic substances, but prefer to feed on organic life."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Eldruf Grundel", ":summary", "Gnome Thief Illusionist"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Fish: Small", ":image", "images/cards/unit-fish-small.svg"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Flint",
+        ":image",
+        "images/fantasy/Flint.png",
+        ":summary",
+        "Half-Elven Thief",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+            tactics,
+            "Stealth",
+            9,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Backstab")
+          )
+        )
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -509,6 +547,23 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Flying Polyp", ":summary", "* The flying polyps came to Earth from space as conquerors about 750 million years ago. They built basalt cities with high windowless towers. When they attempted to colonize the oceans, the polyps were driven back by the Elder Things. Thereafter, they restricted their habitats to the surface world.\n    * Their senses did not include sight, but what senses they had could penetrate all material obstructions. They were only partially matter, but still solid enough to affect and be stopped by normal materials; this additionally gave them resistance, if not outright invulnerability, to normal means of damage, though they could be destroyed by certain forms of electrical energy. Their minds were so strange that the Great Race of Yith could not perform psychic transfers with them.\n    * They are able to levitate and fly despite lacking any visible means of doing so, and leave telltale massive footprints when on the ground. Their amorphous bodies can turn invisible at will, though this ability appears somewhat negated by whistling noises associated with them in general. In battle, their ability to control and direct powerful winds is put to use as a weapon.\n    * When the Great Race of Yith came to Earth, they warred with the polyps and soon drove them underground with their advanced technology. The Great Race then sealed the entryways to the polyps' subterranean abode with trapdoors, which afterwards were diligently guarded. The polyps' cities were left abandoned, perhaps as a reminder of the horrors that dwelt below.\n    * Eventually, the polyps rose up and almost exterminated the Great Race, afterwards returning to their subterranean haunts. Having no conception of light, the polyps seem content to remain there, annihilating the few intruders that chance upon them. The entrances to their dwellings are mostly deep within ancient ruins where there are great wells sealed over with stone."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Galamir Mirlesem",
+        ":image",
+        "images/fantasy/GalamirMirlesem.png",
+        ":demeanor",
+        "Imperious",
+        ":nature",
+        "Self-Absorbed",
+        ":summary",
+        "* Human Mage\n* Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.\n* History - Galamir was born to Chantry trainers, and as a child he was allowed special access to the arcane academy. As a teen, he became obsessed with magic and its effect on the world. His brilliance and magical aptitude were soon recognized and he was accepted into the academy. For the next 25 years he completed his full wizardry and elemental training and received top honors. He was a logical 	candidate to become a trainer himself, but he was bored of the cloistered life, so he began visiting other Chantries across the world. Along the way he encountered a naive, young half-elf rogue named Phirax living on a simple farm. Galamir recruited Phirax to join him to perform the more dangerous and mundane tasks while Galamir provided the leadership and strategy. Later, he recruited the Warrior Stam and the Cleric Sarak into their party to rounded out their abilities.",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Wizardry", 11)
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ghost Ship", ":titles", "Chaos Fleet, Skeleton Crew", ":reference", "* Pirates of the Caribbean\n* The Fog\n* Pyaray - Elric of Melnibone", ":summary", "* Ghost Ships are doomed ships crewed by the [Drowned]. When they encounter the living, they are compelled to kill them so they raise again to add to their crew."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -583,6 +638,8 @@ export default class nx_tactics_decks_unit {
         "Goblin Raider",
         ":image",
         "images/cards/unit-goblin-raider.svg",
+        ":summary",
+        "* [Role: Attacker]",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
@@ -627,6 +684,8 @@ export default class nx_tactics_decks_unit {
         "22kg/50lb",
         ":height",
         "1m/3ft",
+        ":summary",
+        "* [Role: Skirmisher]",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
@@ -710,6 +769,22 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellboar"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbull"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Herbalist", ":image", "images/cards/unit-herbalist.svg"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Hetman Undrig",
+        ":summary",
+        "* Orc Assassin\n* A pragmatic, hardened survivalist who began his career as a lowly militia man in the Orc Army who would later form the infamous mercenary guild, the Blackguard.\n* Personality - Hetman is noteworthy for his lack of personal pride or conscience. He dislikes authority.  He strongly believes the ends justify the means and has no compunction about using any means available.\n* The Blackguard - When establishing the Blackguard, he insisted that it should never have a central authority and that all decisions were made by popular vote.",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+            tactics,
+            "Melee",
+            5,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword: Long", "Knife: Dagger")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hidden", ":image", "images/cards/unit-hidden.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hollow Man", ":reference", "* They're good for us. They kill the bad things inside us...What you're supposed to do is eat it. You eat as much as you can and you keep eating it. - The Stuff", ":summary", "* A person infested by parasites, insects, or small animals.  The hapless victim has become completely hollowed out by its unwanted tenants, but is somehow still alive.  The Hollow Man is desolate, immobile, and empty without the possessing colony, but they are poor company at best."),
       vx_core.f_new(
@@ -741,9 +816,30 @@ export default class nx_tactics_decks_unit {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hound of Tindalos", ":image", "cthulhu/unit-houndoftindalos.png", ":reference", "* All the evil in the universe was concentrated in their lean, hungry bodies. Or had they bodies? I saw them only for a moment, I cannot be certain. - Frank Belknap Long, The Hounds of Tindalos", ":summary", "* The Hounds of Tindalos dwell in the distant past of the earth, when normal life had not yet advanced past one-celled animals. They are said to inhabit the angles of time, while other beings descend from curves. The Hounds are thought to be immortal and are believed to lust after something in humankind and other normal life, and will follow victims through time and space to get it.\n    * Their appearance is unknown because no characters who meet them survive long enough to give a description. It is said that they have long, hollow tongues or proboscis to drain victims' body-fluids, and that they excrete a strange blue pus or ichor.\n    * Though the Hounds are sometimes pictured as canine, it is not likely that they appear as such. Their name refers more to the creatures' habits than their appearance.\n    * Because of their relationship with the angles of time, they can materialize through any corner if it is fairly sharp—120 degress or less. When a Hound is about to appear, it materializes first as smoke pouring from the corner, and finally the head emerges followed by the body. It is said that once a human becomes known to one of these creatures, a Hound of Tindalos will pursue the victim through anything to reach its quarry. A person risks attracting their attention by travelling through time."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hunting Horror", ":image", "cthulhu/huntingHorror.png"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Husk", ":summary", "A person who has been completely drained of their lifeforce."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hydro Essence", ":summary", "* A mindless, condensed blob of Hydro energy.\n* Since slimes store magical energy they are highly sought after by mages and alchemists.", ":titles", "Hydro Slime, Hydrolon, Water Slime"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Innkeeper", ":image", "images/cards/unit-innkeeper.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Jabba the Hutt", ":image", "images/starwars/unit-jabbathehutt.png"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Jaris Ransun",
+        ":image",
+        "images/fantasy/Ransun.png",
+        ":summary",
+        "Human Hunter",
+        ":titles",
+        "Valen the Hunter",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+            tactics,
+            "Defense",
+            5,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor: Chain Mail", "Shield: Round")
+          )
+        )
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -853,6 +949,7 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Juggernaut"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lemure", ":titles", "Larvae, Lemur", ":summary", "* The wandering and vengeful spirits of those not afforded proper burial or funeral rites."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -940,7 +1037,33 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lion"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lost Soul"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mi-Go", ":image", "cthulhu/unit-migo.png", ":titles", "Fungi from Yuggoth", ":reference", "* Fact: Migoi or Mi-go (pronounced mey-goo) is a Tibetan name for the Yeti and translates as 'wild man'.", ":summary", "* Mi-go are an alien race of fungus-like creatures, approximately man-sized, pinkish in color, with crustaceous bodies bearing vast pairs of membranous wings and several sets of articulate limbs. The Mi-Go have a sort of convoluted ellipsoid where its head should be, covered with a multitude of very short antennae.\n    * They have a colony on Pluto (i.e. Yuggoth) and have mining colonies in high mountains looking for rare minerals.\n    * The Mi-go are not wholly native to our phyical universe. Thus, they cannot eat food from Earth, and photographs of them are blurry and indistinct. They can also fly unassisted through interstellar space at fantastic speeds. They dissolve shortly after death.\n    * They are unaccustomed to light which confuses them.\n    * They seem to be highly focused on their scientific pursuits and are most often encountered in search of obscure minerals in remote places. Trespassers are usually eliminated, though they have been known to have human agents work on their behalf.\n    * Mi-go have access to a number of advanced weapons. The mist projector releases a cloud of frigid gas. They have an organic 'armor' that humans can use, but it is extremely sticky and will damage the user each time it is removed. The armor will also weaken each day unless immersed in the proper nutrient bath.\n    * The Mi-Go are advanced in the sphere of surgery. With surgical alterations the Mi-Go are able to speak human languages, though their voice is buzzy and irritating. They can also surgically move the brain of other species into metal cylinders for transportation to other worlds through space.\n    * Essentially a space fungus, the crablike form we're accustom to is actually a pressure suit that allows them to walk around, speak and fly in Earth's atmosphere. They grow their 'bodies' likes coral and can form appendages to anything they require - wings, arms, shells. Each of these shells is alive and using grafting, they can switch out limbs as needed. The discarded limbs are kept alive like potted plants until they are needed again.\n    * They are alien extremophiles, perfectly suited for deep space travel. They don't require air to breathe, are capable of periods of hibernation lasting hundreds of thousands of years, feed off minerals and cosmic radiation, using something like photosynthesis to make food.\n    * They procreate by budding, a form of cloning, to make copies of the older, mature individuals and use spores to create their workforce - bred to labor and die in the mines. They can bore deep into the mantel of worlds, and as they don't require air to breath and can survive incredible heat, cold and pressure, they can just keep going deeper while most species would die in moments.\n    * They communicate and see via radiation, the flowerlike sensory organ we view as their head, emits and receives radioactive wavelengths, allowing them to see through walls and for miles clearly as they have no eyes to focus. They can see the background radiation of the universe and use it to travel with precision between stars. This also means they can see the elemental make up of asteroids and planets just by looking at them.", ":body", "6x1", ":mass", "60kg/130lb", ":height", "1.5m/5ft"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Mummy",
+        ":reference",
+        "The Mummy",
+        ":summary",
+        "* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.\n* Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk.",
+        ":unitpowermap",
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_unitpowermap},
+          ":Longevity",
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitpower},
+            ":name",
+            "Longevity",
+            ":unitabilitymap",
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_unitabilitymap},
+              ":Reanimation",
+              vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Reanimation")
+            )
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Naiad", ":titles", "Nereid, Nyad"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Night Terror", ":titles", "Night Hag", ":reference", "* A night terror is a sleep disorder characterized by extreme terror and a temporary inability to regain full consciousness. The subject wakes abruptly usually accompanied by gasping, moaning, or screaming.  It is often impossible to fully awaken the person, and after the episode the subject normally settles back to sleep without waking.\n* Night terrors are distinct from nightmares in several key ways. First, the subject is not fully awake when roused, and even when efforts are made to awaken the sleeper, he/she may continue to experience the night terror for ten to twenty minutes. Unlike nightmares, which occur during REM sleep, night terrors occur during slow-wave sleep, the deepest levels of non-REM sleep. Even if awakened, the subject often cannot remember the episode except for a sense of panic, while nightmares usually can be easily recalled. The subject often has no recollection of the incident.\n* Unlike nightmares, which are frequently dreams of a frightening nature, night terrors are not dreams. Usually there is no situation or event (scary or otherwise) that is dreamt, but rather the emotion of fear itself is felt. The lack of a dream itself leaves those awakened from a night terror in a state of disorientation much more severe than that caused by a normal nightmare. This can include a short period of amnesia during which the subjects may be unable to recall their names, locations, ages, or any other identifying features of themselves.\n* Children from age two to six are most prone to night terrors, and they affect about fifteen percent of all children.", ":summary", "* Evil women who died in childbirth and now returned to slay children.\n* By day it may take the form of a shriveled old woman. At night it becomes a horrific corpse-like creature. In this form it sneaks into houses and sucks the breath from the lips of children, leaving them cold and lifeless.\n* It can only enter a house into which it has been invited, so during the day it poses as a woeful traveler to gain admittance to houses where babies live.\n* Night Terrors, being exclusively female, can only reproduce by mating with a male member of another species. The hag often slays her mate. The child born looks like a normal member of her species with black or blue hair and is often given into foster care by the hag disguised as a normal woman. When the young girl reaches puberty, the mother Night Hag might visit the child several times and, after several rituals, transforms her offspring into another hag."),
       vx_core.f_new(
@@ -982,11 +1105,51 @@ export default class nx_tactics_decks_unit {
         ":imgmirror",
         true
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pestilence Horse", ":summary", "* A Pestience Horse is a zombie horse that carries deadly diseases. It's decaying body is not as fast as its original body, but may still trot fairly quickly. It is not as agressive as other undead, instead travelling around spreading disease and fleeing when confronted."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Force"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Mount"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Monster"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Warrior"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantom", ":summary", "* Phantoms are the remnants of those who were lost in the Astral/Dream Realm. The Astral Realm is the realm of imagination, so those trapped here are gradually driven mad. Therefore, Phantoms have varying and unpredictable insanities."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pheasant", ":image", "images/cards/unit-pheasant.svg"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Phirax Alganon",
+        ":image",
+        "images/fantasy/PhiraxAlganon.png",
+        ":demeanor",
+        "Personable",
+        ":nature",
+        "Self Righteous",
+        ":summary",
+        "* Half-Elven Bard\n* Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.\n* Beliefs - Phirax believes that improving the lives of those around him will also improves his own life. He sees this as selfishness through selflessness, therefore it is always in his own interest to help others. He could easily manipulate those around him, but he abhors the idea of exploiting others and is quick to judge abusers of any kind. He follows the lesser god Seker on his mission to destroy undead, specifically those who feed on or otherwise exploit the living (which is pretty much all of them).\n* History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure.",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
+            tactics,
+            "Empathy",
+            12,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Demoralize")
+          )
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+            tactics,
+            "Stealth",
+            9,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Backstab", "Sneak")
+          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
+            tactics,
+            "Performance",
+            9,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Inspire"),
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Lute")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pig", ":image", "images/cards/unit-pig.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pig: Wild Boar", ":image", "images/cards/unit-pig-wildboar.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pilgrim", ":image", "images/cards/unit-pilgrim.svg"),
@@ -1000,6 +1163,7 @@ export default class nx_tactics_decks_unit {
         ":imgmirror",
         true
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Poltergeist"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Primal Ooze", ":titles", "Blob, Slime Beast"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -1025,8 +1189,27 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat", ":body", "5x-1", ":mass", ".5kg/1lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Giant", ":reference", "* What about the R.O.U.S.'s? Rodents Of Unusual Size? I don't think they exist. Raghh! - Westley, Buttercup, and ROUS - The Princess Bride", ":body", "5x1", ":speed", "6x1", ":mass", "50kg/100lb", ":landspeed", "60kph/40mph"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Huge", ":body", "5x0", ":mass", "5kg/10lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Reaper", ":reference", "Charon the Ferryman", ":summary", "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rukh", ":titles", "Roc", ":reference", "* Rukh Egg - Magic the Gathering\n* Sindbad observed that when a karkadann spears an elephant on its horn, the elephant’s fat runs into the rhino’s eyes and blinds it; a rukh will then swoop down and carry both combatants off to feed its chicks.", ":summary", "* Appearance - Rukhs are monstrously large birds vaguely similar in a appearance to a vulture.\n    * Feeding - Rukhs are uncontested predators capable of feeding on the largest and most dangerous land animals. They have a particular fondness for giant serpents, elephants, and karkadanns or rhinoceroses.\n    * Intelligence - Rukhs also appear to have some degree of intelligence, using boulders to smash prey."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rukh Hatchling"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Sarak Ishimar",
+        ":image",
+        "images/fantasy/SarakIshimar.png",
+        ":summary",
+        "Human Cleric",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Faith", 8),
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Invocation", 10)
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Melee", 8)
+        )
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -1051,9 +1234,31 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sea Lion"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Seal"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Senturion", ":titles", "Mech Man", ":summary", "* Senturion is a highly advanced, alien construct with the thought patterns of a human super-imposed upon his programming. He originally believed that he was a young man who could transform into a robot, but he has since learned that his actual body died long ago and that his personality is just an artificial duplicate. After this discovery, his humanity has gradually diminished over time.\n* Synthetic - Senturion does not need to eat, sleep or breathe. He is composed of molecular machines that twist and wrap in layers of ceramic wire filaments. These multipurpose filaments reconfigure into different forms to heal or create custom weapons. These filaments must always remain connected to the main body or they self-destruct to maintain their secrets. If Senturion loses a limb, the resulting explosion can cause significant damage.\n* Body - He has tremendous strength and endurance and can withstand extreme temperatures, pressures, and the vacuum of space. His body is very flexible, and he can contort himself to escape confinement of fit through small gaps.\n* Mind - His computer brain greatly increases his ability to quickly process information and create complex strategies.\n* Speed - Senturion moves and reacts with lightning speed and precision. He can run at 80mph and can briefly run on walls. His graceful movements belie his great strength and significant weight.\n* Leaping - Senturion can jump 40ft in the air.\n* Eyes - Senturion's eyes can emit tight-beam lasers or a white sheet of explosive energy. He can sense electromagnetic radiation (including infrared and ultraviolet). He also possesses telescopic and microscopic vision.\n* Transformation - As Mech-Man he was able to transform from a human-like form to his mechanical form. He has since lost this ability (and a great deal of his human personality). As Senturion he has refined this power to produce specialized weapons like blades and spikes.\n* Healing - Senturion's android body rapidly repairs itself.\n* Filaments - In close combat, filaments can emerge from its body which can scramble or override electrical devices on contact.\n* History - Senturion was designed as one of a multitude of multi-purpose exploratory probes. Their natural form is a squirming mass of pale filaments. These probes were packed into artificial comets and launched in all directions from their homeworld. To protect their designers, they possess no memory of their origin or ultimate purpose. Many of these probes have landed on all planets in the solar system and millions more are littered across the galaxy. Most were buried underground by their impact and there they lie dormant. The ones on the surface seek a power source to fuel their growth and adaptation to their environment. They absorb light, heat, electricity or other radiation. When fully charged, they quietly begin exploring and analyzing their environment for possible resources and threats. If the planet is lifeless, they will catalog the available resources and begin creating more identical probes. If the planet is inhabited, they will wait and study the local wildlife until they are confident that they can completely mimic a sample of the apex species. Then they will begin to blend into the local society to learn everything they can. When their analysis no longer produces significant results, they begin to create more probes. Though they are unaware of their creator or purpose, they continue to catalog and expand. Eventually, their data network reaches back to their creators who collect this massive treasure trove of data.", ":body", "3x2", ":mass", "300kg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shade", ":titles", "Aghast, Ghast, Ghastly, Shoryo", ":reference", "The Ring", ":summary", "* Description - lank and ghastly beings with no feet, floating suspended above the ground.\n* Shades are the spirits of those who died in suicide, accident, murder, or wrongful execution. They are bound to this plane by the anger they felt at their deaths.\n* Suicide and accident victims attempt to compel those most like their former selves to die in the same manner.\n* Murder and wrongful death victims attempt to revenge themselves upon the killer or his descendents."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shadow"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sheep", ":image", "images/cards/unit-sheep.svg", ":body", "8x1", ":mass", "80kg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shoggoth", ":image", "Cthulhu/Shoggoth.png", ":reference", "* This was the dream in which I saw a shoggoth for the first time, and the sight set me awake in a frenzy of screaming. - The Shadow Over Innsmouth", ":summary", "* Enormous beings who would measure some fifteen feet across if they formed their bodies into a sphere, Shoggoths are amorphous creatures composed of a malleable protoplasm, something akin to a colossal amoeba. They are capable of forming whatever organs or appendages they require for the task at hand, although their usual state is a writhing mass of eyes, mouths and wriggling tentacles.", ":body", "5x4", ":mass", "50tons", ":height", "4.5m/15ft"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shub-Niggurath", ":image", "cthulhu/shubniggurath.png", ":titles", "The Black Goat of the Woods with a Thousand Young", ":reference", "Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so tenuous in composition that its limbs vanish as quickly as they materialize, its very form dividing constantly into a surplus of smaller abominations that are either reabsorbed into its great form, or that escape to some hideous life elsewhere. Not the spitting image of a fertility goddess but this is as close as the mythos gets. Shub-Niggurath may well be the most widely revered amoung the other gods, infuence reaching not only to the Greeks, Cretans, Egyptions, and some druids, but to races so far-flung across the cosmos as the Mi-go of Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new life, especially intelligent life, is held as a sacred act. Many humans derive joy and self-import from the notion that their kind was toild over by some kind of divine intelligence. Shub-Niggurath with her blind, indifferent, prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's affirmation that life itself is nothing extrodinary. - Tale Foundry", ":summary", "* Mother's Gift - The milk of Shub-Niggurath with powerful healing and corrupting properties."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Skeletal Dragon"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Skeletal Knight",
+        ":summary",
+        "* Morale - High",
+        ":titles",
+        "Death Knight",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Special Ability",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Savage", "Skeletal", "Undead")
+          )
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Riding")
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -1100,25 +1305,8 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slave 1", ":image", "images/starwars/unit-slave1.png", ":titles", "Firespray-31", ":classification", "Med. Spacecraft"),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_unit},
-        ":name",
-        "Skeletal Knight",
-        ":summary",
-        "* Morale - High",
-        ":titles",
-        "Death Knight",
-        ":unitpowermap",
-        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
-            tactics,
-            "Special Ability",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Savage", "Skeletal", "Undead")
-          )
-        ),
-        ":unitskillmap",
-        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Riding")
-      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slayer Dead", ":titles", "Murderous Dead, War Dead", ":reference", "* Jason Voorhees\n* Nightmare on Elm Street\n* Vinland Saga", ":summary", "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sluagh", ":reference", "* The spirits of the sinners, or generally evil people who were welcome in neither heaven nor hell.\n* They were seen to fly in groups like flocks of birds, coming from the west, and were known to try to enter the house of a dying person in an effort to carry the soul away with them. West-facing windows were sometimes kept closed to keep them out. Some consider the Sluagh to also carry with them the souls of innocent people who were kidnapped by these destructive spirits.", ":summary", "* The Sluagh are thin, pale, snake-like, and grotesque, though they remain strangely compelling. They favor archaic, intricate, black clothing. Their joints can dislocate allowing them to slither our of bonds and into disquieting shapes.\n* They may only speak in whispers and dislike any social situations except among their own kind. They prefer to overserve other from hidden corners, and the secrets they obtain are their stock and trade."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -1181,9 +1369,28 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: King Cobra"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Python"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Viper"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectral Horse"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectre", ":reference", "* Cenobites from Hellraiser", ":summary", "* A Spectre is a malevolent Wraith that has been so traumatized that it is has become completely obscessed with its suffering and reenacting that suffering with others. The Spectre has fallen completely under the controlled of it's [Shadow]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectrum", ":image", "Superheroes/Vector.png", ":titles", "Alan Lietner, Shard, Vector", ":summary", "* Spectrum appears in glowing, angular, mirrored armor with a mirrored visor. The armor augments his strength to lift 800lbs. He can materialize angular blades and shields from his arms. He can also create glowing shards in different forms including a flying triangular plate, throwing knives, barriers, and cages.\n* Spectrum's armor is powered by light and the area will visibly darken when his powers are active. In a completely dark area, his powers are greatly diminished. Conversely, very bright light increases his power level. For this reason, he usually acts only in daylight.\n* Dr. Alex Lietner is an MIT physicist reseaching the creation of holograms with lasers. He discovered that through precise modulation, a hologram could temporarily be turned into an extremely rigid solid. With the help of some of his students, he was able to create a portable projection system in a wearable suit.\n* Blinding Flash - Intense light burst similar to a flash bomb.\n* Blinding Torrent - A dizzying kaleidoscope of intense light that causes vertigo and nausea."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sphinx", ":image", "images/cards/unit-sphinx.svg", ":summary", "* Highly intelligent"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Stam Domindor",
+        ":image",
+        "images/fantasy/Stam.png",
+        ":summary",
+        "Dwarven Warrior",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+            tactics,
+            "Ranged",
+            7,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow: Short")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Strix", ":titles", "Stirges (plural), Vampire Owls", ":summary", "A bird of ill-omen that feeds on human flesh and blood.\n* Description - A large-headed, dark, birdlike creature similar to an owl with transfixed eyes, rapacious beak, hooked claws. They fly and rest inverted with feet above their head."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -1534,6 +1741,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Combine")
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Waif", ":image", "images/cards/unit-waif.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wandering Eye", ":titles", "Eye Killer", ":summary", "* Thw Wandering Eye is a bizarre, eel-like creature with a single, large, humanoid eye where a mouth and face would normally be. Eyes live in large groups underground and slowly float through the air like schools of fish. Their skin is a dark matte brown while their eye is highly reflective white, so usually the first view of Wandering Eyes is of a dozen disembodied eyes moving and blinking independently of one another in the dark.\n* Motivation - The Eyes are not intelligent nor malicious. They simply seek food, and will flee if startled or they are losing.\n* Levitation - Eyes produce a lighter than air gas that is stored in sacs down its body. These allow The creature to float and it can slowly propel itself through the air by making swimming motions.\n* Confusion - The creature's single, large eye doesn't seem to focus on anything and keeps moving about randomly. When a group of Wandering Eyes are seen, their weird, random eyes cause vertigo, confusion, fear, and sometimes madness. The Wandering Eye somehow feeds on this confusion and will attempt to trap victims and keep them in an intense state of confusion until they expire.\n* Weakness - Eyes are adjusted to life in the dark and are blinded by bright lights and large fires."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Water Elemental"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -1547,8 +1755,48 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Water Sprite"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wendigo", ":titles", "Abominable Snowman, Yeti", ":summary", "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Werebat"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Werebear"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wereboar"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Werecat", ":image", "images/bestiary/Lycanthrope_Weretiger.png", ":titles", "Rakshasa, Werejaguar, Werepanther, Weretiger", ":reference", "Every time it happens... you tell yourself it's love. But it isn't. It's blood. And death. - Cat People"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wandering Eye", ":titles", "Eye Killer", ":summary", "* Thw Wandering Eye is a bizarre, eel-like creature with a single, large, humanoid eye where a mouth and face would normally be. Eyes live in large groups underground and slowly float through the air like schools of fish. Their skin is a dark matte brown while their eye is highly reflective white, so usually the first view of Wandering Eyes is of a dozen disembodied eyes moving and blinking independently of one another in the dark.\n* Motivation - The Eyes are not intelligent nor malicious. They simply seek food, and will flee if startled or they are losing.\n* Levitation - Eyes produce a lighter than air gas that is stored in sacs down its body. These allow The creature to float and it can slowly propel itself through the air by making swimming motions.\n* Confusion - The creature's single, large eye doesn't seem to focus on anything and keeps moving about randomly. When a group of Wandering Eyes are seen, their weird, random eyes cause vertigo, confusion, fear, and sometimes madness. The Wandering Eye somehow feeds on this confusion and will attempt to trap victims and keep them in an intense state of confusion until they expire.\n* Weakness - Eyes are adjusted to life in the dark and are blinded by bright lights and large fires."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Werecrow",
+        ":image",
+        "images/bestiary/Lycanthrope_Tengu.png",
+        ":titles",
+        "Tengu, Wereraven",
+        ":summary",
+        "* Able to fly, the Werecrows make terrific scouts and spies.  Their overwhelming curiousity is matched only by their tendency to gossip.",
+        ":unitpowermap",
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_unitpowermap},
+          "Natural Weaponry",
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitpower},
+            ":name",
+            "Natural Weaponry",
+            ":unitabilitymap",
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_unitabilitymap},
+              "Feather Blades",
+              vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Feather Blades"),
+              "Feather Knives",
+              vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Feather Knives")
+            )
+          )
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_abilities(
+            tactics,
+            "Hunting",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Scouting")
+          )
+        )
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -1557,6 +1805,45 @@ export default class nx_tactics_decks_unit {
         "images/bestiary/Lycanthrope_Wererat.png",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Stealth")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Werespider",
+        ":titles",
+        "Anasi, Arachne, Kumo",
+        ":unitpowermap",
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_unitpowermap},
+          ":Illusion",
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitpower},
+            ":name",
+            "Illusion",
+            ":unitabilitymap",
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_unitabilitymap},
+              "Dazzling Beauty",
+              vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Dazzling Beauty"),
+              "Mirror Image",
+              vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Mirror Image")
+            )
+          ),
+          "Toxins",
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitpower},
+            ":name",
+            "Toxins",
+            ":unitabilitymap",
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_unitabilitymap},
+              "Poison Bite",
+              vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Poison Bite"),
+              "Poison Spit",
+              vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Poison Spit")
+            )
+          )
+        )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Werewolf", ":image", "images/bestiary/Lycanthrope_Werewolf.png", ":reference", "* The crescent moon is a double-edged sword. Be wary, lest it cut you.", ":titles", "French/Old English: Loup-garou, Japanese: Ookami otoko"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Whale: Blue"),

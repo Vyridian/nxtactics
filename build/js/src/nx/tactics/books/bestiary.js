@@ -36,11 +36,11 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Frog",
+            "Frog",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Frog"),
-            ":Salamander",
+            "Salamander",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Salamander"),
-            ":Toad",
+            "Toad",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Toad")
           )
         ),
@@ -796,13 +796,9 @@ export default class nx_tactics_books_bestiary {
       ":titles",
       "Goblinoid",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Bugbear",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Bugbear", ":reference", "* Serial Killer", ":summary", "* Appearance - Bugbears are the largest of the goblin races. They are 7ft tall, are covered in fur, have long ears, and have long fangs. They have a tough hide and dislike armor.\n* Personality - Brutal hunters and survivalists. They are butish like other goblins, but they are shrewd hunters and trappers. They are strictly carnivorous and treat everything as prey. They have been known to eat goblin in a pinch and would probably do so more if the flavor agreed with them more. They have little patience and are easily provoked. They are usually encountered alone while hunting or in a goblin nest acting as champion or leader.\n* Morale - Normal\n* Units - Skimisher, Trapper, Berserker, Light Axeman, Light Spearman, Light Polearm\n* Skills - Melee, Spear, Axe, Net, Hunting, Stealth, Survival, Close Combat, Knife\n* 7ft 400lbs.", ":titles", "Babau, Bogy, Bogey, Bogeyman, Bogill, Boogeyman, Bugaboo"),
-        ":Caprians",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Caprians", ":titles", "Goatmen"),
-        ":Gnolls",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -872,7 +868,6 @@ export default class nx_tactics_books_bestiary {
             )
           )
         ),
-        ":Goblins",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -936,21 +931,12 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Goblin Hunter",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Ranged",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+                  tactics,
                   "Ranged",
-                  ":level",
-                  "2",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    "Bow: Short",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Bow: Short")
-                  )
+                  2,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow: Short")
                 )
               )
             ),
@@ -1014,7 +1000,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goblin War Drummer")
           )
         ),
-        ":Hobgoblins",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1046,15 +1031,12 @@ export default class nx_tactics_books_bestiary {
               ":image",
               "images/bestiary/Hobgoblin_Swordsman.png",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "4")
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Military", 4)
               )
             )
           )
         ),
-        ":Kobolds",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1102,9 +1084,7 @@ export default class nx_tactics_books_bestiary {
             )
           )
         ),
-        ":Trogladytes",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Trogladytes", ":titles", "Crawlers, Morlocks", ":reference", "* In choosing the name 'Morlocks', Wells may have been inspired by Moloch, the Caananite god of child sacrifice, with the Eloi analogous to children. Alternatively, he may have also been inspired by the Morlachs, an ethnic group in the Balkans which attracted attention from Western travellers as a perceived archetype of barbarism and backwardness... The Time Traveller speculates that the relationship developed from a class distinction present in his own time: the Morlocks are the working class who were relegated to working and living underground so that the rich upper class could live in luxury on the surface. - H.G. Wells, The Time Machine\n* The Descent\n* Neaderthals", ":summary", "* Description - Trogladytes have dull grey-to-white skin, chinless faces, large greyish-red eyes that reflect light, and flaxen hair on the head and back. Their bodies are muscular with short limbs which increases their strength but inhibits their speed. Their bodies are typically scarred from brutal infighting and are often missing limbs or eyes. They do not have any concept of hygiene and their dens are notorious for their stench.\n* Abilities - They are highly adapted to living in the dark with keen sense of hearing and smell but poor eyesight, and they cannot tolerate bright light. They are exceedingly primitive, but they are cunning and have learning to cultivate mushrooms, grubs and fishing pools. Trogladytes recognize each other by smell.\n* History - Trogladytes are an offshoot of mankind that lived in large cavern systems but were cut off from the surface. Since then they have adapted to underground life. Sparse living has made them merciless and cannibalistic.\n* Society - Pure survival of the fittest: Anything that can't defend itself is food."),
-        ":Uruks",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1782,9 +1762,7 @@ export default class nx_tactics_books_bestiary {
       ":name",
       "Giant Races",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Lesser Giants",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1800,7 +1778,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Troll", ":summary", "* Preferred Skills - Close Combat, Hunting\n* Morale - Normal\n* Units - Elite Heavy Infantry (Note: Full units are very rare)")
           )
         ),
-        "Greater Giants",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1828,7 +1805,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Giant: Storm")
           )
         ),
-        "Unique Giants",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1842,7 +1818,6 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ymir", ":summary", "* Jotunheim", ":reference", "* Ymir was the founder of the race of frost giants and an important figure in Norse cosmology. Odin and his brothers killed Ymir, and when Ymir fell the blood from his wounds drowned almost the entire tribe of frost giants or jotuns. Then they used Ymir's body to create Midgard, the earth. His flesh became the earth. His blood formed seas and lakes. From his bones mountains were erected. From his hair grew trees and maggots from his flesh became the race of dwarfs. The gods set Ymir's skull above Ginnungagap and made the sky.")
           )
         ),
-        "Titans",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1856,19 +1831,19 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Chronos", ":titles", "Yog-Sothoth"),
             ":Echidna",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Echidna", ":summary", "* Mother of Monsters\n* Children - Cerberus, Chimera, Ethon, Gorgon, Graeae, Gelonus, Ladon, Lernaean Hydra, Nemean Lion, Orthrus, Phaea, Scylla, Sphinx", ":titles", "Shub-Niggurath"),
-            ":Gaia",
+            "Gaia",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Gaia", ":titles", "Mother Earth, Wyld, Azathoth"),
-            ":Helios",
+            "Helios",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Helios", ":titles", "The Sun"),
-            ":Mene",
+            "Mene",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mene", ":titles", "Selene, The Moon"),
-            ":Oceanus",
+            "Oceanus",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Oceanus"),
-            ":Prometheus",
+            "Prometheus",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Prometheus", ":titles", "The Serpent, Nyarlathotep, Phoenix"),
-            ":Tartarus",
+            "Tartarus",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tartarus", ":titles", "Oblivion"),
-            ":Typhon",
+            "Typhon",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Typhon", ":summary", "* The enemy of Zeus\n* A vast grisly monster with a hundred snakelike heads that extends in serpentine coils from the waist down.")
           )
         )
@@ -2906,9 +2881,7 @@ export default class nx_tactics_books_bestiary {
       ":name",
       "Mythical Beasts",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Beasts",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -2916,15 +2889,15 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Aeroplasm",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Aeroplasm", ":summary", "* The Aeroplasm is an unusual 15 foot tall invertibrate that lives entirely in the sky. It floats by means of air bladders filled with hydrogen gas which makes them spectacularly flammable if their bladders are ruptured by fire. They have long tendrils that contain a potent neurotoxin which they use to paralyze the birds and insects that they prey upon. During the Aeroplasm mating season, the males produce a luminous secretion that makes them glow in various colors to attract females. It is said that the sight of hundreds of Aeroplasms glowing in different shades in the night sky is a spectacular sight.", ":titles", "Floating Jellyfish"),
-            ":Basilisk",
+            "Aeroplasm",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Aeroplasm", ":titles", "Floating Jellyfish", ":summary", "* The Aeroplasm is an unusual 15 foot tall invertibrate that lives entirely in the sky. It floats by means of air bladders filled with hydrogen gas which makes them spectacularly flammable if their bladders are ruptured by fire. They have long tendrils that contain a potent neurotoxin which they use to paralyze the birds and insects that they prey upon. During the Aeroplasm mating season, the males produce a luminous secretion that makes them glow in various colors to attract females. It is said that the sight of hundreds of Aeroplasms glowing in different shades in the night sky is a spectacular sight."),
+            "Basilisk",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Basilisk"),
-            ":Behemoth",
+            "Behemoth",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Behemoth"),
             "Boo Hag",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Boo Hag"),
-            ":Catoblepas",
+            "Catoblepas",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -2950,23 +2923,23 @@ export default class nx_tactics_books_bestiary {
                 )
               )
             ),
-            ":Chimera",
+            "Chimera",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Chimera", ":image", "images/bestiary/Chimera.png"),
-            ":Chonchon",
+            "Chonchon",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Chonchon"),
-            ":Cockatrice",
+            "Cockatrice",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cockatrice"),
-            ":Doppelganger",
+            "Doppelganger",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Doppelganger"),
-            ":Gargoyle",
+            "Gargoyle",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Gargoyle"),
             "Gazer",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Gazer", ":titles", "Beholder, Evil Eye, Eye Killer, Eye of the Beholder, Floating Eye"),
-            ":Griffin",
+            "Griffin",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Griffin", ":image", "images/bestiary/Griffin.png"),
             "Goblin Spider",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Goblin Spider"),
-            ":Gorgon",
+            "Gorgon",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -2992,41 +2965,33 @@ export default class nx_tactics_books_bestiary {
                 )
               ),
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Ranged",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_items(
+                  tactics,
                   "Ranged",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    "Bow: Short",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Bow: Short")
-                  )
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow: Short")
                 )
               )
             ),
-            ":Hippogriff",
+            "Hippogriff",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hippogriff"),
-            ":Hydra",
+            "Hydra",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hydra"),
-            ":Jabberwocky",
+            "Jabberwocky",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Jabberwocky"),
-            ":Kirin",
+            "Kirin",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Kirin", ":titles", "Dragon Horse"),
-            ":Kraken",
+            "Kraken",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Kraken"),
-            ":Lamassu",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lamassu", ":summary", "* Protective winged bull or lion; with the head of a human female.  Shedu is the male equivalent.", ":titles", "Shedu"),
-            ":Manticore",
+            "Lamassu",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lamassu", ":titles", "Shedu", ":summary", "* Protective winged bull or lion; with the head of a human female.  Shedu is the male equivalent."),
+            "Manticore",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Manticore", ":reference", "* Persian Mythology", ":summary", "* A savage predator with the body of a lion, the tail of a scorpion, and the wings of a bat.\n* It has rows of razor sharp teeth and will bite off limbs and eat victims whole, bones and all.\n* Its tail stinger is, of course, poisonous. The poison is not especially deadly, but the shear amount of toxin injected from the large stinger makes survival unlikely.\n* It also has non-poisonous quills on its tail that can be flung at a target with a tail whip."),
-            ":Minotaur",
+            "Minotaur",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Minotaur"),
-            ":Pegasus",
+            "Pegasus",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pegasus"),
-            ":Phoenix",
+            "Phoenix",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phoenix"),
             "Primal Ooze",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Primal Ooze"),
@@ -3046,17 +3011,16 @@ export default class nx_tactics_books_bestiary {
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Terraphant"),
             "Thunderbird",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Thunderbird"),
-            ":Unicorn",
+            "Unicorn",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Unicorn"),
-            ":Yeti",
+            "Yeti",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Yeti"),
             "Wandering Eye",
             nx_tactics_base.f_unit_from_tactics_key(tactics, "Wandering Eye"),
-            ":Ziz",
+            "Ziz",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ziz")
           )
         ),
-        "Unique Beasts",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -3064,11 +3028,11 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Cerberus",
+            "Cerberus",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cerberus"),
-            ":Charybdis",
+            "Charybdis",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Charybdis", ":summary", "* Scylla and Charybdis are two sea monsters situated on opposite sides of a narrow channel of water, so close that sailors avoiding Charybdis will pass too close to Scylla and vice versa.\n* She takes form as a monstrous mouth. She swallows huge amounts of water three times a day and then belches them back out again creating whirlpools."),
-            ":Scylla",
+            "Scylla",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Scylla", ":reference", "* You consider me the young apprentice...Caught between the Scylla and Charybdis...Hypnotized by you if I should linger...Staring at the ring around your finger - The Police, Wrapped around your Finger", ":summary", "* Scylla and Charybdis are two sea monsters situated on opposite sides of a narrow channel of water, so close that sailors avoiding Charybdis will pass too close to Scylla and vice versa.\n* Scylla is a horribly grotesque sea monster, with six long necks equipped with grisly heads, each of which contained three rows of sharp teeth. Her body consisted of twelve canine legs and a fish's tail.")
           )
         )
@@ -3365,9 +3329,7 @@ export default class nx_tactics_books_bestiary {
       ":name",
       "Shapeshifters",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Lycanthropes",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -3379,99 +3341,7 @@ export default class nx_tactics_books_bestiary {
           ":summary",
           "* Description - A hereditary trait carried by humans and animals.\n* Personality - Their savagery is their greatest strength, but it threatens to consume them and leave only rage.\n* Some lycanthropes are more animal-like and hostile to humans.\n* [Vulnerability] to [Silver]\n* Loses control under the moon\n* Preferred Skills: [Lycanthropy], [Natural Weaponry]\n!Groups\n* Black Spirals - [[Corrupted]] Werewolves\n\nHistory\n* The Impergium - 8,000 years ago, humankind was becoming more organized and began systematically killing wolves or destroying their habitats. The Werewolves born from wolves decided that the humans were out of control and leading the world to chaos. They declared the open hunt (or culling) of humans called the 	Impergium. The Werewolves born from humans saw their own kin murdered by other Werewolves. Whatever the merits of the Impergium, it triggered a civil war between the Werewolf clans with mounting killings and atrocities. The other shapeshifters tried to stay out of the conflict but were quickly forced to take sides. The conflict only ended after the number of Shapeshifters across the world was decimated, especially those born to wolves. Since then the low birth rate of Shapeshifters has taken many races to the brink of extinction. The Impergium remains as a grim reminder of the dangers of letting ones [Rage] overcome reason. The Werewolves are embarassed by their clans' actions. The other Shapeshifters have never forgiven the Werewolves for their folly. Also, many of the Werewolves born of wolves hold deep hatred for the other Werewolves both for their betrayal and for the current state of the wolves in the world.",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Werebat",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Werebat"),
-            "Werebear",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Werebear"),
-            "Wereboar",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wereboar"),
-            "Werecat",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Wererat"),
-            "Werecrow",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Werecrow",
-              ":image",
-              "images/bestiary/Lycanthrope_Tengu.png",
-              ":titles",
-              "Tengu, Wereraven",
-              ":summary",
-              "* Able to fly, the Werecrows make terrific scouts and spies.  Their overwhelming curiousity is matched only by their tendency to gossip.",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                "Natural Weaponry",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
-                  "Natural Weaponry",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Feather Blades",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Feather Blades"),
-                    "Feather Knives",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Feather Knives")
-                  )
-                )
-              ),
-              ":unitskillmap",
-              nx_tactics_base.f_unitskillmap_from_unitskilllist(
-                nx_tactics_base.f_unitskill_from_tactics_key_abilities(
-                  tactics,
-                  "Hunting",
-                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Scouting")
-                )
-              )
-            ),
-            "Wererat",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Wererat"),
-            "Werespider",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Werespider",
-              ":titles",
-              "Anasi, Arachne, Kumo",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Illusion",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
-                  "Illusion",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Dazzling Beauty",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Dazzling Beauty"),
-                    "Mirror Image",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Mirror Image")
-                  )
-                ),
-                "Toxins",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
-                  "Toxins",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Poison Bite",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Poison Bite"),
-                    "Poison Spit",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Poison Spit")
-                  )
-                )
-              )
-            ),
-            "Werewolf",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Werewolf")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Werebat", "Werebear", "Wereboar", "Werecat", "Werecrow", "Wererat", "Werespider", "Werewolf")
         )
       )
     )
@@ -3512,112 +3382,14 @@ export default class nx_tactics_books_bestiary {
           ":summary",
           "* Vulnerable: [Fire], [Impact]",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Barghest",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Barghest", ":titles", "Black Shuck, Ghost Hound"),
-            "Burning Dead",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Burning Dead"),
-            "Dead of Night",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Dead of Night"),
-            "Dead of Winter",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Dead of Winter"),
-            "Dhampyr",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Dhampyr"),
-            "Drowned",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Drowned"),
-            "Ghost Ship",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Ghost Ship"),
-            "Ghoul",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Ghoul"),
-            "Husk",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Husk", ":summary", "A person who has been completely drained of their lifeforce."),
-            "Lich",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Lich"),
-            "Mummy",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Mummy",
-              ":reference",
-              "The Mummy",
-              ":summary",
-              "* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.\n* Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk.",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Longevity",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitpower},
-                  ":name",
-                  "Longevity",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Reanimation",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Reanimation")
-                  )
-                )
-              )
-            ),
-            "Night Terror",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Night Terror"),
-            "Pestilence Horse",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pestilence Horse", ":summary", "* A Pestience Horse is a zombie horse that carries deadly diseases. It's decaying body is not as fast as its original body, but may still trot fairly quickly. It is not as agressive as other undead, instead travelling around spreading disease and fleeing when confronted."),
-            "Scarecrow",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Scarecrow"),
-            "Skeletal Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Skeletal Dragon"),
-            "Skeletal Knight",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Skeletal Knight"),
-            "Skeleton",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Skeleton"),
-            "Skeleton Warrior",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Skeleton Warrior"),
-            "Slayer Dead",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slayer Dead", ":titles", "Murderous Dead, War Dead", ":reference", "* Jason Voorhees\n* Nightmare on Elm Street\n* Vinland Saga", ":summary", "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines."),
-            "Wendigo",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wendigo", ":titles", "Abominable Snowman, Yeti", ":summary", "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims."),
-            "Wight",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Wight"),
-            "Zombie: Walker",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Zombie: Walker")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Barghest", "Burning Dead", "Dead of Night", "Dead of Winter", "Dhampyr", "Drowned", "Ghost Ship", "Ghoul", "Husk", "Lich", "Mummy", "Night Terror", "Pestilence Horse", "Scarecrow", "Skeletal Dragon", "Skeletal Knight", "Skeleton", "Skeleton Warrior", "Slayer Dead", "Wendigo", "Wight", "Zombie: Walker")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Noncorporeal Undead",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Haunt",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Haunt"),
-            "Lemure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lemure", ":summary", "* The wandering and vengeful spirits of those not afforded proper burial or funeral rites.", ":titles", "Larvae, Lemur"),
-            "Lost Soul",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lost Soul"),
-            "Phantom",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantom", ":summary", "* Phantoms are the remnants of those who were lost in the Astral/Dream Realm. The Astral Realm is the realm of imagination, so those trapped here are gradually driven mad. Therefore, Phantoms have varying and unpredictable insanities."),
-            "Poltergeist",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Poltergeist"),
-            "Reaper",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Reaper", ":reference", "Charon the Ferryman", ":summary", "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon."),
-            "Shade",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shade", ":reference", "The Ring", ":summary", "* Description - lank and ghastly beings with no feet, floating suspended above the ground.\n* Shades are the spirits of those who died in suicide, accident, murder, or wrongful execution. They are bound to this plane by the anger they felt at their deaths.\n* Suicide and accident victims attempt to compel those most like their former selves to die in the same manner.\n* Murder and wrongful death victims attempt to revenge themselves upon the killer or his descendents.", ":titles", "Aghast, Ghast, Ghastly, Shoryo"),
-            ":Shadow",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shadow"),
-            ":Sluagh",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sluagh", ":reference", "* The spirits of the sinners, or generally evil people who were welcome in neither heaven nor hell.\n* They were seen to fly in groups like flocks of birds, coming from the west, and were known to try to enter the house of a dying person in an effort to carry the soul away with them. West-facing windows were sometimes kept closed to keep them out. Some consider the Sluagh to also carry with them the souls of innocent people who were kidnapped by these destructive spirits.", ":summary", "* The Sluagh are thin, pale, snake-like, and grotesque, though they remain strangely compelling. They favor archaic, intricate, black clothing. Their joints can dislocate allowing them to slither our of bonds and into disquieting shapes.\n* They may only speak in whispers and dislike any social situations except among their own kind. They prefer to overserve other from hidden corners, and the secrets they obtain are their stock and trade."),
-            "Spectre",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Spectre"),
-            "Spectral Horse",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectral Horse"),
-            "Will-O-Wisp",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Will-O-Wisp"),
-            "Wraith",
-            nx_tactics_base.f_unit_from_tactics_key(tactics, "Wraith")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Haunt", "Lemure", "Lost Soul", "Phantom", "Poltergeist", "Reaper", "Shade", "Shadow", "Sluagh", "Spectral Horse", "Spectre", "Will-O-Wisp", "Wraith")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

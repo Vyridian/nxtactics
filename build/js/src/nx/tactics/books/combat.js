@@ -325,7 +325,7 @@ export default class nx_tactics_books_combat {
             "Armor: Leather Cuirass",
             nx_tactics_base.f_item_from_tactics_key(tactics, "Armor: Leather Cuirass"),
             "Armor: Leather Helmet",
-            nx_tactics_base.f_item_from_tactics_key(tactics, "Armor: Leather Hemlet"),
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Armor: Leather Helmet"),
             "Armor: Leather Pants",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Armor: Leather Pants", ":armor", "0mm"),
             "Armor: Leather Shirt",

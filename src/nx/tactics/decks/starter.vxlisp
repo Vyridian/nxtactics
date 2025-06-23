@@ -20,38 +20,38 @@
    "Conflict: Play this when playing a Conflict card to indicate that the upper choice on the card is being used (i.e. the side facing away from you)."))
 
 (func card-player : base/card
- [color : string
-  num : int]
- (base/card
-  :id (string "card-player-" color "-" num)
-  :name "Player"
-  :image (string "images/card-" color ".svg")
-  :summary
-   "* [Setup]: Place your Units on the [Status Bar] with a [Unit#] card. Arrange your other Unit cards in front of you.
-    * [Round End]: [Draw]:1 and [Recover]."))
+ [tactics : base/tactics
+  color   : string]
+ (let : base/card
+  [rule : base/rule :=
+   (base/rule<-tactics-key tactics "Player")]
+  (copy rule
+   :id (string "player-" color)
+   :image (string "images/rule-player-" color ".svg")
+  )))
 
 (func card-rotated : base/card
- [color : string
-  num : int]
- (base/card
-  :id (string "card-rotated-" color "-" num)
-  :name "Rotated Cards"
-  :image (string "images/card-" color ".svg")
-  :summary
-   "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated card.
-    * [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."))
+ [tactics : base/tactics
+  color   : string]
+ (let : base/card
+  [rule : base/rule :=
+   (base/rule<-tactics-key tactics "Rotated Cards")]
+  (copy rule
+   :id (string "rotatedcards-" color)
+   :image (string "images/rule-player-" color ".svg")
+  )))
 
 (func card-target : base/card
  [tactics : base/tactics
-  color : string
-  num : int]
+  color   : string
+  num     : int]
  (let : base/card
   [rule : base/rule :=
    (base/rule<-tactics-key tactics "Target#")]
   (copy rule
-   :id (string "card-target-" color "-" num)
+   :id (string "target-" color "-" num)
    :name (string "Target#" num)
-   :image (string "images/card-" color ".svg")
+   :image (string "images/rule-player-" color ".svg")
   )))
 
 (func card-unit : base/card
@@ -67,19 +67,37 @@
    :image (string "images/rule-player-" color ".svg")
   )))
 
+(func card-unitnum : base/card
+ [tactics : base/tactics
+  color   : string
+  num     : int]
+ (let : base/card
+  [rule : base/rule :=
+    (base/rule<-tactics-key tactics "Unit Num#")]
+  (copy rule
+   :id (string "unitnum-" color "-" num)
+   :name (string "Unit Num#" num)
+   :image (string "images/rule-player-" color ".svg")
+  )))
+
 (func deck-player : base/deck
  [tactics : base/tactics
   color   : string]
  (let : base/deck
   [cardlist : base/cardlist :=
     (base/cardlist
-     (card-player color 1)
-     (card-rotated color 1)
+     (card-player tactics color)
+     (card-rotated tactics color)
      (card-unit tactics color 1)
      (card-unit tactics color 2)
      (card-unit tactics color 3)
      (card-unit tactics color 4)
      (card-unit tactics color 5)
+     (card-unitnum tactics color 1)
+     (card-unitnum tactics color 2)
+     (card-unitnum tactics color 3)
+     (card-unitnum tactics color 4)
+     (card-unitnum tactics color 5)
      (card-target tactics color 1)
      (card-target tactics color 2)
      (card-target tactics color 3)

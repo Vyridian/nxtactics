@@ -33,6 +33,18 @@
   :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap
+    (base/cardlist
+     (base/rulelist<-tactics-keys
+      tactics
+      "Roles"
+      "Role: Attacker"
+      "Role: Blaster"
+      "Role: Defender"
+      "Role: Disrupter"
+      "Role: Skirmisher"
+      "Role: Sniper"
+      "Role: Supporter"
+      "Role: Taunter"))
     (base/cardlist-copy<-tactics-rulekey-count-isnum
      tactics "Skill Point" 5 true)
     (base/cardlist-copy<-tactics-rulekey-count-isnum

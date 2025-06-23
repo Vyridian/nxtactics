@@ -34,36 +34,36 @@
 
 (func chapter_bestiary_overview : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "Bestiary Overview"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Why Tactics: Bestiary?"
-     (section
+     (base/section
       :name "Why Tactics: Bestiary?"))))
 
 (func chapter_amphibians : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "Amphibians"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Common Amphibians"
-     (section
+     (base/section
       :name "Common Amphibians"
       :unitmap
        (base/unitmap
-        :Frog
+        "Frog"
          (base/unit
           :name "Frog")
-        :Salamander
+        "Salamander"
          (base/unit
           :name "Salamander")
-        :Toad
+        "Toad"
          (base/unit
           :name "Toad")))
     "Fantastic Amphibians"
-     (section
+     (base/section
       :name "Fantastic Amphibians"
       :unitmap
        (base/unitmap
@@ -79,12 +79,12 @@
 
 (func chapter_arthropods : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "Arthropods"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Ants
-     (section
+     (base/section
       :name "Ants"
       :unitmap
        (base/unitmap
@@ -101,7 +101,7 @@
          (base/unit
           :name "Red Ants")))
     :Arachnids
-     (section
+     (base/section
       :name "Arachnids"
       :unitmap
        (base/unitmap
@@ -115,7 +115,7 @@
          (base/unit
           :name "Tarantula")))
     :Bees
-     (section
+     (base/section
       :name "Bees"
       :unitmap
        (base/unitmap
@@ -129,7 +129,7 @@
          (base/unit
           :name "Wasp")))
     :Beetles
-     (section
+     (base/section
       :name "Beetles"
       :unitmap
        (base/unitmap
@@ -146,7 +146,7 @@
          (base/unit
           :name "Stag Beetle")))
     "Flying Insects"
-     (section
+     (base/section
       :name "Flying Insects"
       :unitmap
        (base/unitmap
@@ -161,7 +161,7 @@
          (base/unit
           :name "Praying Mantis")))
     "Fantastic Arthropods"
-     (section
+     (base/section
       :name "Fantastic Arthropods"
       :unitmap
        (base/unitmap
@@ -288,9 +288,9 @@
  (chapter
   :name "Avians"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Birds
-     (section
+     (base/section
       :name "Birds"
       :unitmap
        (base/unitmap
@@ -322,7 +322,7 @@
          (base/unit
           :name "Vulture")))
     "Fantastic Avians"
-     (section
+     (base/section
       :name "Fantastic Avians"
       :unitmap
        (base/unitmap
@@ -352,20 +352,22 @@
         :Skyfish
          (base/unit
           :name "Skyfish"
-          :summary "* Skyfish have developed their flotation bladders to hold lighter than air gases. Their bodies and bones are porous and very lightweight, so they are somewhat more vulnerable to impact damage. If their flotation bladder is ruptured, they will sink. Some skyfish have adapted to live at very high altitudes to avoid predators.")
+          :summary
+           "* Skyfish have developed their flotation bladders to hold lighter than air gases. Their bodies and bones are porous and very lightweight, so they are somewhat more vulnerable to impact damage. If their flotation bladder is ruptured, they will sink. Some skyfish have adapted to live at very high altitudes to avoid predators.")
         "Winged Viper"
          (base/unit
           :name "Winged Viper"
-          :summary "* A snake with feathered wings and a mildly poisonous bite. They are generally small but can grow to 10 feet. They feed on small creatures, but will attack larger targets when hungry or disturbed."))))))
+          :summary
+           "* A snake with feathered wings and a mildly poisonous bite. They are generally small but can grow to 10 feet. They feed on small creatures, but will attack larger targets when hungry or disturbed."))))))
 
 (func chapter_mammals_marsupials : base/chapter
  [tactics : base/tactics]
  (chapter
   :name "Mammals/Marsupials"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Apes
-     (section
+     (base/section
       :name "Apes"
       :unitmap
        (base/unitmap
@@ -388,7 +390,7 @@
          (base/unit
           :name "Orangutan")))
     :Bats
-     (section
+     (base/section
       :name "Bats"
       :unitmap
        (base/unitmap<-tactics-keys
@@ -406,7 +408,7 @@
         "Bear: Grizzly"
         "Bear: Polar"))
     :Cats
-     (section
+     (base/section
       :name "Cats"
       :unitmap
        (base/unitmap
@@ -442,7 +444,7 @@
          (base/unit
           :name "Wildcat")))
     :Canines
-     (section
+     (base/section
       :name "Canines"
       :unitmap
        (base/unitmap
@@ -481,7 +483,7 @@
         "Wolf"
          (base/unit<-tactics-key tactics "Wolf")))
     :Elephants
-     (section
+     (base/section
       :name "Elephants"
       :unitmap
        (base/unitmap
@@ -502,7 +504,7 @@
          (base/unit
           :name "War Elephant")))
     "Herd Animals"
-     (section
+     (base/section
       :name "Herd Animals"
       :unitmap
        (base/unitmap
@@ -551,7 +553,7 @@
           :speedland "32kph"
           :mass "600kg")))
     :Marsupials
-     (section
+     (base/section
       :name "Marsupials"
       :unitmap
        (base/unitmap
@@ -565,7 +567,7 @@
          (base/unit
           :name "Opossum")))
     :Rodents
-     (section
+     (base/section
       :name "Rodents"
       :unitmap
        (base/unitmap
@@ -605,7 +607,7 @@
          (base/unit
           :name "Rat: Sewer")))
     :Swine
-     (section
+     (base/section
       :name "Swine"
       :unitmap
        (base/unitmap
@@ -623,7 +625,7 @@
          (base/unit
           :name "Warthog")))
     "Other Mammals"
-     (section
+     (base/section
       :name "Other Mammals"
       :unitmap
        (base/unitmap
@@ -658,7 +660,7 @@
          (base/unit
           :name "Wolverine")))
     "Fantastic Mammals"
-     (section
+     (base/section
       :name "Fantastic Mammals"
       :unitmap
        (base/unitmap
@@ -709,9 +711,9 @@
  (chapter
   :name "Marine Creatures"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Crustaceans
-     (section
+     (base/section
       :name "Crustaceans"
       :unitmap
        (base/unitmap
@@ -728,7 +730,7 @@
          (base/unit
           :name "Lobster")))
     :Fish
-     (section
+     (base/section
       :name "Fish"
       :unitmap
        (base/unitmap
@@ -757,7 +759,7 @@
          (base/unit
           :name "Sting Ray")))
     "Marine Mammals"
-     (section
+     (base/section
       :name "Marine Mammals"
       :unitmap
        (base/unitmap<-tactics-keys
@@ -815,7 +817,7 @@
                  (base/unitability
                   :name "Electromagnetic Vision")))))))
     "Other Marine"
-     (section
+     (base/section
       :name "Other Marine"
       :unitmap
        (base/unitmap
@@ -835,7 +837,7 @@
          (base/unit
           :name "Squid: Giant")))
     "Fantastic Marine Creatures"
-     (section
+     (base/section
       :name "Fantastic Marine Creatures"
       :unitmap
        (base/unitmap
@@ -872,9 +874,9 @@
  (chapter
   :name "Reptiles"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Alligators/Crocodiles
-     (section
+     (base/section
       :name "Alligators/Crocodiles"
       :unitmap
        (base/unitmap
@@ -888,7 +890,7 @@
          (base/unit
           :name "Emperor Crocodile")))
     :Lizards
-     (section
+     (base/section
       :name "Lizards"
       :unitmap
        (base/unitmap
@@ -899,7 +901,7 @@
          (base/unit
           :name "Lizard")))
     :Snakes
-     (section
+     (base/section
       :name "Snakes"
       :unitmap
        (base/unitmap<-tactics-keys
@@ -913,7 +915,7 @@
         "Snake: Python"
         "Snake: Viper"))
     :Toads
-     (section
+     (base/section
       :name "Toads"
       :unitmap
        (base/unitmap
@@ -921,7 +923,7 @@
          (base/unit
           :name "Poisonous Toad")))
     "Fantastic Reptiles"
-     (section
+     (base/section
       :name "Fantastic Reptiles"
       :unitmap
        (base/unitmap
@@ -961,9 +963,9 @@
  (chapter
   :name "Plants"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Herbs
-     (section
+     (base/section
       :name "Herbs"
       :summary
        "* Acacia - aka gum arabic. Protection, Psychic Powers. Burn with sandalwood to open psychic centers. Parts used: dried gum, leaves, wood
@@ -1412,7 +1414,7 @@
             * Oral Poisoning - In a few minutes ingesting a poisonous dose of aconite, marked symptoms supervene. There is a sensation of burning, tingling, and numbness in the mouth, and of burning in the abdomen. After about an hour, there is severe vomiting with much motor weakness. The pulse and respiration steadily fail, death occurring from asphyxia. As in strychnine poisoning, the patient is conscious and clear-minded to the last. The only post-mortem signs are those of asphyxia. The treatment is to empty the stomach by tube or by inducing extreme vomiting.
             * Contact Poisoning - It may also be easily absorbed through the skin, and poisoning may occur through this route simply by picking the leaves without gloves. The toxin in the sap is absorbed through the skin. From practical experience, the sap oozing from eleven picked leaves will cause cardiac symptoms for a couple of hours. Tingling will start at the point of absorption, and extend up the arm to the shoulder, after which the heart will start to be affected. The tingling will be followed by numbness which is fairly unpleasant.")))
     :Trees
-     (section
+     (base/section
       :name "Trees"
       :itemmap
        (itemmap
@@ -1438,7 +1440,7 @@
          (item
           :name "Pine")))
     :Spices
-     (section
+     (base/section
       :name "Spices"
       :itemmap
        (itemmap
@@ -1447,7 +1449,7 @@
           :name "Salt"
           :summary "A symbol of purity")))
     "Fantastic Plants"
-     (section
+     (base/section
       :name "Fantastic Plants"
       :itemmap
        (itemmap
@@ -1567,9 +1569,9 @@
  (chapter
   :name "Microorganisms"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Diseases
-     (section
+     (base/section
       :name "Diseases"
       :itemmap
        (itemmap
@@ -1589,7 +1591,7 @@
          (item
           :name "Small Pox")))
     "Fantastic Diseases"
-     (section
+     (base/section
       :name "Fantastic Diseases"
       :itemmap
        (itemmap
@@ -1619,9 +1621,9 @@
  (chapter
   :name "Underground Creatures"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Centipedes
-     (section
+     (base/section
       :name "Centipedes"
       :unitmap
        (base/unitmap
@@ -1632,7 +1634,7 @@
          (base/unit
           :name "Centipede: Amazonian Giant")))
     :Worms
-     (section
+     (base/section
       :name "Worms"
       :unitmap
        (base/unitmap
@@ -1640,7 +1642,7 @@
          (base/unit
           :name "Worm: Maggots")))
     "Fantastic Underground Creatures"
-     (section
+     (base/section
       :name "Fantastic Underground Creatures"
       :unitmap
        (base/unitmap
@@ -1676,9 +1678,9 @@
  (chapter
   :name "Humanoids"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Humans
-     (section
+     (base/section
       :name "Humans"
       :unitmap
        (base/unitmap
@@ -1712,9 +1714,9 @@
     ** Tradespeak - Merchants have created this simple language to facilitate trade. It is a very limited language, but can be used for basic communication if there is no alternative. It uses a simple format with no plurals, conjegation or tense: {Adjective(s)} {Subject Noun} {Adverb(s)} {Verb} {Adjective(s)} {Object Noun}. Examples: Trustworthy me offer 10 healthy sheep. Honorable you please each pay 20 silver.
     ** Thieves' Cant - A variant on Tradespeak that emphasizes secret or silent communication to mask criminal activity."
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Claymores
-     (section
+     (base/section
       :name "Claymores"
       :summary
        "* Claymores are a group of mostly female mercenary who wield large Claymore swords. The are tasked with killing demonic Yoma or die trying.
@@ -1825,7 +1827,7 @@
             * Size - Voracious Eaters are hulking giants easily 15ft/3m tall.
             * Stretching - Voracious Eaters have more control of their bodies and can stretch parts of themselves to create spearlike stabbing weapons that can attack in a large area.")))
     "Stone Kingdoms"
-     (section
+     (base/section
       :name "Stone Kingdoms"
       :reference
        "* Down and down into the deep,
@@ -1947,7 +1949,7 @@
           :name "Stone Skald"
           :summary "* Dwarves love tales of their history, so Skald sing and tell these tales for coin. During battle they play wardrums, anvils, or horns to boost morale.")))
     "Alfar, Dark"
-     (section
+     (base/section
       :name "Alfar, Dark"
       :reference
        "* Norse Dökkálfar (Dark Elf), or Svartalfar (Black Elf) - Subterranean creatures who dwell in the world of Svartalfaheim. Dark elves are often said to be responsible for many of the maladies befalling humanity.  In particular, bad dreams are said to be within the domain of the Dökkálfar, as indicated by the German word for nightmare, Albtraum ('Elf-dream').
@@ -1961,7 +1963,7 @@
         * Long ago, Elvish scholars came to the conclusion that the seaons of the world were changing and that the race of man would eventually drive the Elves from the world. The majority grudgingly accepted this as the way of things, but a vocal minority refused to accept their fate. They began searching for the tools to battle back against men. This search led them to release mind shattering demonic forces. The rest of the elves were horrified by this blashphemy and called the Great Hunt to systematically eradicate the renegades and put an end to their abominations. The renegades fled, but the hunters relentlessly pursued them, until the renegades bargained with the Dwarves for asylum in their caverns. These activities created a deep hatred between the Elves and Dark Elves as well as the deep distrust between the Elves and Dwarves."
       :titles "Dark Elf, Dark Elv, Dökkálfar, Drow, Svartalfar")
     "Alfar, Light"
-     (section
+     (base/section
       :name "Alfar, Light"
       :reference "* Seven Deadly Sins: Pride"
       :summary
@@ -1979,7 +1981,7 @@
         * High Alfar - Some Sidhe have settled down to build beautiful towns of stone and wood. Here they study the arts, sciences, and magick. The two cultures have grown distrustful of each other over their fundamentally different outlooks on life."
       :titles "Eld, Eldar, Elf, Elv, Elves, Ljósálfar, Sidhe, Sylvan")
     :Fae
-     (section
+     (base/section
       :name "Fae"
       :reference
        "* All the world's a stage, And all the men and women merely players: They have their exits and their entrances - William Shakespere, As You Like It"
@@ -2228,7 +2230,7 @@
          (base/unit
           :name "Sprite")))
     "Unique Fae"
-     (section
+     (base/section
       :name "Unique Fae"
       :unitmap
        (base/unitmap
@@ -2248,7 +2250,7 @@
           :name "Puck"
           :reference "Lord, what fools these mortals be! - Puck, A Midsummer Night's Dream")))
     :Curses
-     (section
+     (base/section
       :name "Curses"
       :unitmap
        (base/unitmap
@@ -2340,7 +2342,7 @@
           :name "Trust Curse"
           :summary "* Causes people to trust others without reservation.")))
     :Gnomes
-     (section
+     (base/section
       :name "Gnomes"
       :reference "Gnomes of Zurich, Jewish Sterotypes (Short, Miserly, Balding, Moneylenders, Jewelers)"
       :summary
@@ -2349,14 +2351,14 @@
         * Morale - Normal
         * Units - Elite Observers, Light Infantry, Light Pikemen, Heavy Pikemen, Light Crossbow, Heavy Crossbow, Light Cavalry, Elite Siege Crews, Balloon Crews, Sorcerous")
     :Halflings
-     (section
+     (base/section
       :name "Halflings"
       :reference "Lord of the Rings"
       :summary
        "* Morale - Low
         * Units - Elite Scouts, Elite Spies, Light Infantry, Light Spearmen, Light Archers, Light Pony Cavalry")
     :Seraphim
-     (section
+     (base/section
       :name "Seraphim"
       :summary "* Aerie"
       :titles "Zephyr"))))
@@ -2922,9 +2924,9 @@
   :summary
    "* All summoned Elementals are tied to their summoning point. If at any time, the elemental cannot trace a continuous line through their element to the summoning point, they are immediately banished back to their home plane. This is easiest for Air and Earth Elementals and hardest for Water and Fire Elementals. The most straightforward way to leverage this weakness is to isolate the summoning point using a different element."
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Air Elementals"
-     (section
+     (base/section
       :name "Air Elementals"
       :unitmap
        (base/unitmap
@@ -2967,7 +2969,7 @@
           :name "Zephyr"
           :titles "Wind Sprite")))
     "Earth Elementals"
-     (section
+     (base/section
       :name "Earth Elementals"
       :unitmap
        (base/unitmap
@@ -3002,7 +3004,7 @@
          (base/unit
           :name "Monolith")))
     "Fire Elementals"
-     (section
+     (base/section
       :name "Fire Elementals"
       :unitmap
        (base/unitmap
@@ -3046,7 +3048,7 @@
             * Since slimes store magical energy they are highly sought after by mages and alchemists."
           :titles "Fire Slime, Pyro Slime, Pyrolon")))
     "Lightning Elementals"
-     (section
+     (base/section
       :name "Lightning Elementals"
       :unitmap
        (base/unitmap
@@ -3085,9 +3087,9 @@
  (chapter
   :name "Extra-Dimensional"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Celestine
-     (section
+     (base/section
       :name "Celestine"
       :summary
        "* The Angels have been fighting a cold war against the Fiends for millenia. Each side claims their right over the mortal realm, and each side recruits souls to increase their faction's power.
@@ -3231,7 +3233,7 @@
           :name "Seraphim"
           :summary "* Six Winged")))
     :Abyssal
-     (section
+     (base/section
       :name "Abyssal"
       :summary
        "* Demons are creatures of Chaos from the swirling outer void where reality itself is fluid. Unlike Fiends, there are an infinite number and variety of Demons. Some believe our universe is a tiny light of order in a sea of Demons and Chaos. Like the Chaos that spawned them, demons are creatures of destruction and random mayhem. They delight in carnage and fear and have little concern for their own safety. Though Demons are sometimes cunning, they generally have little patience for communication or study, preferring to take action. They do not create tools or clothing of any kind, though they might be able to use those they pick up (especially weapons). They value free will above all things and will not tolerate servitude including contracts, deals or agreements of any kind.
@@ -3359,7 +3361,7 @@
           :name "Demogorgon"
           :reference "John Milton's Paradise Lost")))
     :Infernal
-     (section
+     (base/section
       :name "Infernal"
       :reference "* The greatest trick the Devil ever pulled was convincing the world he didn't exist. - Verbal, The Usual Suspects"
       :summary
@@ -3711,7 +3713,7 @@
             * Patience - They are patient, sophisticated, and knowledgeable. Their seduction talents go far beyond sex, and they will often offer aid or information to befriend and manipulate their target. They are in no rush to accomplish their mission."
           :titles "Incubus, Sex Fiend, Temptress")))
     :Flatlands
-     (section
+     (base/section
       :name "Flatlands"
       :summary "* A bizarre two-dimensional realm."
       :unitmap
@@ -3726,7 +3728,7 @@
            ** [Resistance]: [Resist Impact], [Resist Pierce], [Resist Electricity], [Resist Vacuum], [Resist Radiation], [Immune Vaccuum], [Cannot Eat], [Cannot Sleep]
            ** [Vulnerability]: [Vulnerable to Slash], [Vulnerable to Fire], [Vulnerable to Cold]")))
     :Mirrorlands
-     (section
+     (base/section
       :name "Mirrorlands"
       :unitmap
        (base/unitmap
@@ -3744,745 +3746,661 @@
 
 (func chapter_darkling : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "Darkling"
   :titles "Goblinoid"
   :sectionmap
-   (sectionmap
-    :Bugbear
-     (section
-      :name "Bugbear"
-      :reference "* Serial Killer"
-      :summary
-       "* Appearance - Bugbears are the largest of the goblin races. They are 7ft tall, are covered in fur, have long ears, and have long fangs. They have a tough hide and dislike armor.
-        * Personality - Brutal hunters and survivalists. They are butish like other goblins, but they are shrewd hunters and trappers. They are strictly carnivorous and treat everything as prey. They have been known to eat goblin in a pinch and would probably do so more if the flavor agreed with them more. They have little patience and are easily provoked. They are usually encountered alone while hunting or in a goblin nest acting as champion or leader.
-        * Morale - Normal
-        * Units - Skimisher, Trapper, Berserker, Light Axeman, Light Spearman, Light Polearm
-        * Skills - Melee, Spear, Axe, Net, Hunting, Stealth, Survival, Close Combat, Knife
-        * 7ft 400lbs."
-      :titles "Babau, Bogy, Bogey, Bogeyman, Bogill, Boogeyman, Bugaboo")
-    :Caprians
-     (section
-      :name "Caprians"
-      :titles "Goatmen")
-    :Gnolls
-     (section
-      :name "Gnolls"
-      :reference
-       "* Seven Deadly Sins: Sloth
-        * Typical Gnolls... strong to the weak, weak to the strong. - Roi, King's Raid"
-      :summary
-       "* Personality - Slothful by nature, they do anything they can to avoid work in any form. The slave trade comes naturally to gnolls, though they are poor guards.
-        * Morale - Low
-        * Units - Light Infantry, Elite Pikemen, Enslaved Siege Crews
-        * The largest of gnolls can grow to the size of an ogre."
-      :unitmap
-       (base/unitmap
-        "Gnoll Axeman"
-         (base/unit<-tactics-key tactics "Gnoll Axeman")
-        "Gnoll Chieftain"
-         (base/unit
-          :name "Gnoll Chieftain"
-          :summary "* Gnoll leadership is determined through intimidation and power. Gnoll leaders are usually the largest and strongest of their breed. Like bull walruses they maintain a harem of brides, so the position is coveted by upstarts. Challenges to a Chief's rule are usually not fatal, but the loser must put himself at the mercy of the victor. A good leader is expected to accept the subservient gesture, but some victors will commit a political faux pas to permanently remove a rival."
-          :unitskillmap
-           (base/unitskillmap
-            :Melee
-             (base/unitskill
-              :name "Melee"
-              :level "7"
-              :unititemmap
-               (base/unititemmap
-                "War Hammer"
-                 (base/unititem
-                  :name "War Hammer")))))
-        "Gnoll Pikeman"
-         (base/unit<-tactics-key tactics "Gnoll Pikeman")
-        "Gnoll Skirmisher"
-         (base/unit<-tactics-key tactics "Gnoll Skirmisher")
-        "Gnoll Slaver"
-         (base/unit
-          :name "Gnoll Slaver"
-          :unitskillmap
-           (base/unitskillmap
-            :Ranged
-             (base/unitskill
-              :name "Ranged"
-              :unititemmap
-               (base/unititemmap
-                :Net
-                 (base/unititem
-                  :name "Net")
-                :Whip
-                 (base/unititem
-                  :name "Whip")))))))
-    :Goblins
-     (section
-      :name "Goblins"
-      :reference
-       "* Seven Deadly Sins: Gluttony
-        * So raise your glass if you are wrong, in all the right ways.  All my underdogs, we will never be, never be anything
-        but loud and nitty-gritty, dirty, little freaks - Pink, Raise Your Glass.
-        * Gremlins (1984)
-        * Descent
-        * Nezumi-Kozo
-        * Gollum"
-      :summary
-       "* Description - Goblins are a small, savage, cave-dwelling humanoid species common to many mountainous regions. They live primarily underground and are very sensitive to bright light. They are the most numerous of the humanoid races (far outnumbering humans), though most Goblins are found underground where they wage war with their age old enemies, the Dwarves. These wretched man-like creatures are short and wiry, rarely exceeding 4 feet tall. They have soot-grey skin, large pointed ears, sharp fangs, and distorted features. They are physically weak and lack personal hygene. They do, however, have keen senses including superb night vision.
-        * Personality - Goblins are hedonistic and brash. They are generally quirky and obsessive with their personal interests. This makes them excellent inventors, but they lack patience with details, so their inventions are usually highly flawed especially with regards to safety for which they have no consideration. They seem to have no recognizable morals and have been known to resort to any number of deviant behaviors including torture, cannibalism, and diabolism. They have a particular obsession with eating and will talk about food and preparation endlessly even when not hungry. They prefer knives and cleavers as weapons. They have no restrictions on what they eat, and they do not hold prisoners for long.... Selfish, undisciplined cowards by nature, they only gain confidence in numbers, and they always fight as a mob. Even their allies consider them to be reprehensible and ultimately expendable. The goblins are aware of how their allies and masters view them, so they show no real respect to power and are total anarchists by nature. Many races try to enlist or impress the goblins into service, but these relationships never last, because the goblins are unmanageable.
-        * Preferred Skills - They have excellent manual dexterity and good at Ranged Combat and Thievery. They also have a talent for Kitbashing which they use to supplement their Artifice, Alchemy and Siegecraft. Their reliance on Kitbashing unfortunately makes their inventions extremely unreliable, but the goblins seem to have complete confidence in their own work.
-        * Morale - Low
-        * Units - Light Infantry, Light Spearmen, Light Archers, Elite Worg Cavalry, Siege Crews
-        * History - The goblins once had a sophisticated society and ancient goblins are responsible for most of the finely worked tunnels throughout the land, but they are becoming increasing barbaric from generation to generation."
-      :unitmap
-       (base/unitmap
-        "Goblin Aeronaut"
-         (base/unit
-          :name "Goblin Aeronaut"
-          :titles "Goblin Balloonisht, Goblin Flyer, Goblin Kite Rider")
-        "Goblin Artillerist"
-         (base/unit
-          :name "Goblin Artillerist"
-          :unitskillmap
-           (base/unitskillmap
-            :Siegecraft
-             (base/unitskill
-              :name "Siegecraft"
-              :level "3"
-              :unititemmap
-               (base/unititemmap
-                :Ballista
-                 (base/unititem
-                  :name "Ballista")
-                :Catapult
-                 (base/unititem
-                  :name "Catapult")))))
-        "Goblin Captain"
-         (base/unit
-          :name "Goblin Captain"
-          :image "images/bestiary/Goblin_Captain.png"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "Goblin Champion"
-         (base/unit
-          :name "Goblin Champion")
-        "Goblin Chirurgeon"
-         (base/unit
-          :name "Goblin Chirurgeon")
-        "Goblin Hunter"
-         (base/unit
-          :name "Goblin Hunter"
-          :unitskillmap
-           (base/unitskillmap
-            :Ranged
-             (base/unitskill
-              :name "Ranged"
-              :level "2"
-              :unititemmap
-               (base/unititemmap
-                "Bow: Short"
-                 (base/unititem
-                  :name "Bow: Short")))))
-        "Goblin King"
-         (base/unit
-          :name "Goblin King")
-        "Goblin Lord"
-         (base/unit
-          :name "Goblin Lord")
-        "Goblin Miner"
-         (base/unit
-          :name "Goblin Miner"
-          :unitskillmap
-           (base/unitskillmap
-            :Siegecraft
-             (base/unitskill
-              :name "Siegecraft"
-              :level "2"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Sapping
-                 (base/unitability
-                  :name "Sapping")))))
-        "Goblin Raider"
-         (base/unit<-tactics-key tactics "Goblin Raider")
-        "Goblin Saboteur"
-         (base/unit
-          :name "Goblin Saboteur")
-        "Goblin Scout"
-         (base/unit<-tactics-key tactics "Goblin Scout")
-        "Goblin Shaman"
-         (base/unit
-          :name "Goblin Shaman")
-        "Goblin Soothsayer"
-         (base/unit
-          :name "Goblin Soothsayer")
-        "Goblin Tinker"
-         (base/unit
-          :name "Goblin Tinker"
-          :unitpowermap
-           (base/unitpowermap
-            :Artifice
-             (base/unitpower
-              :name "Artifice"
-              :level "3"))
-          :unitskillmap
-           (base/unitskillmap
-            :Mechanics
-             (base/unitskill
-              :name "Mechanics"
-              :level "3")))
-        "Goblin War Drummer"
-         (base/unit
-          :name "Goblin War Drummer")))
-    :Hobgoblins
-     (section
-      :name "Hobgoblins"
-      :summary
-       "* Description - The military elite of the goblin race. They are a rare genetic throwback to the days when the Goblins were an advanced race. They appear less and less frequently as the Goblins regress to barbarism.
-        * Personality - Brave, militaristic, and orderly, they are everything their goblin kin are not. Highly disciplined, they are considered to be natural leaders in goblin society, rising quickly in goblin ranks. Though goblin prejudices keep them from ultimate leadership, they frequently are the power behind goblin kings.
-        * Preferred Skills - Military, Melee, Strategy
-        * Morale - High
-        * Units - Elite Light Infantry, Light Pikemen, Elite Light Archers, Elite Worg Cavalry (Note: Full units are very rare)"
-      :titles "Hob"
-      :unitmap
-       (base/unitmap
-        "Hobgoblin Archer"
-         (base/unit
-          :name "Hobgoblin Archer")
-        "Hobgoblin Cavalry"
-         (base/unit
-          :name "Hobgoblin Cavalry")
-        "Hobgoblin Lord"
-         (base/unit
-          :name "Hobgoblin Lord")
-        "Hobgoblin Spearman"
-         (base/unit
-          :name "Hobgoblin Spearman")
-        "Hobgoblin Strategist"
-         (base/unit
-          :name "Hobgoblin Strategist")
-        "Hobgoblin Tracker"
-         (base/unit
-          :name "Hobgoblin Tracker"
-          :summary "* Hobgoblins are reknowned less for their skill (their dogs do the actual tracking) than their tenacity and merciless efficiency. They are employed as scouts, border troops, and to hunt down criminals, dissidents, and escaped slaves.")
-        "Hobgoblin Swordsman"
-         (base/unit
-          :name "Hobgoblin Swordsman"
-          :image "images/bestiary/Hobgoblin_Swordsman.png"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))))
-    :Kobolds
-     (section
-      :name "Kobolds"
-      :summary
-       "* Description - Kobolds are small relatives of goblins. They have bright blue skin and the color Cobalt is named after them.
-        * Personality - Viscious opportunists readily attack anyone perceived as a weaker opponent. Their favorite skill is [Backstab].
-        * Preferred Skills - Mechanics (Traps), Stealth, Military
-        * Morale - Normal
-        * Units - Scout, Spy, Light Spearmen, Light Wolf Cavalry"
-      :unitmap
-       (base/unitmap
-        "Kobold Slinger"
-         (base/unit
-          :name "Kobold Slinger"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "1")))
-        "Kobold Spearman"
-         (base/unit
-          :name "Kobold Spearman"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "1")))
-        "Kobold Trapper"
-         (base/unit
-          :name "Kobold Trapper"
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "1")))))
-    :Trogladytes
-     (section
-      :name "Trogladytes"
-      :titles "Crawlers, Morlocks"
-      :reference
-       "* In choosing the name 'Morlocks', Wells may have been inspired by Moloch, the Caananite god of child sacrifice, with the Eloi analogous to children. Alternatively, he may have also been inspired by the Morlachs, an ethnic group in the Balkans which attracted attention from Western travellers as a perceived archetype of barbarism and backwardness... The Time Traveller speculates that the relationship developed from a class distinction present in his own time: the Morlocks are the working class who were relegated to working and living underground so that the rich upper class could live in luxury on the surface. - H.G. Wells, The Time Machine
-        * The Descent
-        * Neaderthals"
-      :summary
-       "* Description - Trogladytes have dull grey-to-white skin, chinless faces, large greyish-red eyes that reflect light, and flaxen hair on the head and back. Their bodies are muscular with short limbs which increases their strength but inhibits their speed. Their bodies are typically scarred from brutal infighting and are often missing limbs or eyes. They do not have any concept of hygiene and their dens are notorious for their stench.
-        * Abilities - They are highly adapted to living in the dark with keen sense of hearing and smell but poor eyesight, and they cannot tolerate bright light. They are exceedingly primitive, but they are cunning and have learning to cultivate mushrooms, grubs and fishing pools. Trogladytes recognize each other by smell.
-        * History - Trogladytes are an offshoot of mankind that lived in large cavern systems but were cut off from the surface. Since then they have adapted to underground life. Sparse living has made them merciless and cannibalistic.
-        * Society - Pure survival of the fittest: Anything that can't defend itself is food.")
-    :Uruks
-     (section
-      :name "Uruks"
-      :reference
-       "* Cro-magnon Man, Goths, Huns, Mongols, Vandals
-        * Seven Deadly Sins: Wrath"
-      :summary
-       "* Description - Uruks are a relatively primitive species of barrel-chested humanoids distantly related to Humans. They are sturdy and imposing figures, trained by hard labor and warfare since birth. They range in height from 5 feet to 7 feet tall and typically have yellowish/grey/green skin, red/black/brown eyes, and long black/grey/white hair. Their noses are flat and they have a notably large mouth with uneven teeth.
-        * Personality - Uruks are typically violent, impatient, and crude. They take what they want by force and are difficult to bargain with. Their culture and leaders claim that they are destined to take over the world and take back all that has been taken from them. Now they are consumed with wrath and envy of the achievements of other races and other orc tribes.
-        * Culture - Their civilization is still in a hunter/gatherer stage. They lack the patience and desire to read, cultivate crops, domesticate herd animals, or invent sophisticated equipment. They live a semi-nomadic existence depending on the availability of resources and the charisma of their leaders. Uruk 'kingdoms' are short lived. The race's genius for battle does not extend itself to statecraft, and their conquests inevitably collapse under a struggle for power between rival leaders. Uruk society is completely male dominated. Females are expected to find a male to support them and begin their life's purpose: breeding. Any female of breeding age that has no male protector is considered available to any male that chooses to take her and support her. Other cultures consider this to be rape. Uruks call it marriage. They extend this practice to captured females from other races.
-        * Warfare - Uruks wage constant war on any group near them until they take what is 'rightfully' theirs. When warbands grow large enough, they spill down into neighboring settlements to rape, murder, raid, and pillage. These bands can take on the proportions of a large town or small city, and roll across the countryside leaving burning wreckage in their wake.
-        * Language - Uruks speak the rough and unflattering Uruk tongue, which has no alphabet. Uruk culture and history is passed along in an oral tradition.
-        * Morale - Normal
-        * Preferred Skills - Melee, Rage
-        * Units - Light Infantry, Light Spearmen, Light Archers, Light Cavalry, King
-        * Factions - Skullsplitter, Bonegrinder"
-      :titles "Orc"
-      :unitmap
-       (base/unitmap
-        "Uruk Butcher"
-         (base/unit<-tactics-key tactics "Uruk Butcher")
-        "Uruk-hai Champion"
-         (base/unit
-          :name "Uruk-hai Champion"
-          :titles "Brawler, Bodyguard")
-        "Uruk Raider"
-         (base/unit
-          :name "Uruk Raider")
-        "Uruk Shaman"
-         (base/unit
-          :name "Uruk Shaman"
-          :summary
-           "* Uruk Shamans teach that everything the Uruks once had was stolen by the other races, and urges them on to ever-greater acts of violence and revenge.")
-        "Uruk Taskmaster"
-         (base/unit
-          :name "Uruk Taskmaster")
-        "Uruk Veteran"
-         (base/unit
-          :name "Uruk Veteran")
-        "Uruk War Chief"
-         (base/unit
-          :name "Uruk War Chief")
-        "Uruk Warrior"
-         (base/unit<-tactics-key tactics "Uruk Warrior"))))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Bugbear"
+     :reference
+      "* Serial Killer"
+     :summary
+      "* Appearance - Bugbears are the largest of the goblin races. They are 7ft tall, are covered in fur, have long ears, and have long fangs. They have a tough hide and dislike armor.
+       * Personality - Brutal hunters and survivalists. They are butish like other goblins, but they are shrewd hunters and trappers. They are strictly carnivorous and treat everything as prey. They have been known to eat goblin in a pinch and would probably do so more if the flavor agreed with them more. They have little patience and are easily provoked. They are usually encountered alone while hunting or in a goblin nest acting as champion or leader.
+       * Morale - Normal
+       * Units - Skimisher, Trapper, Berserker, Light Axeman, Light Spearman, Light Polearm
+       * Skills - Melee, Spear, Axe, Net, Hunting, Stealth, Survival, Close Combat, Knife
+       * 7ft 400lbs."
+     :titles "Babau, Bogy, Bogey, Bogeyman, Bogill, Boogeyman, Bugaboo")
+    (base/section
+     :name "Caprians"
+     :titles "Goatmen")
+    (base/section
+     :name "Gnolls"
+     :reference
+      "* Seven Deadly Sins: Sloth
+       * Typical Gnolls... strong to the weak, weak to the strong. - Roi, King's Raid"
+     :summary
+      "* Personality - Slothful by nature, they do anything they can to avoid work in any form. The slave trade comes naturally to gnolls, though they are poor guards.
+       * Morale - Low
+       * Units - Light Infantry, Elite Pikemen, Enslaved Siege Crews
+       * The largest of gnolls can grow to the size of an ogre."
+     :unitmap
+      (base/unitmap
+       "Gnoll Axeman"
+        (base/unit<-tactics-key tactics "Gnoll Axeman")
+       "Gnoll Chieftain"
+        (base/unit
+         :name "Gnoll Chieftain"
+         :summary "* Gnoll leadership is determined through intimidation and power. Gnoll leaders are usually the largest and strongest of their breed. Like bull walruses they maintain a harem of brides, so the position is coveted by upstarts. Challenges to a Chief's rule are usually not fatal, but the loser must put himself at the mercy of the victor. A good leader is expected to accept the subservient gesture, but some victors will commit a political faux pas to permanently remove a rival."
+         :unitskillmap
+          (base/unitskillmap
+           :Melee
+            (base/unitskill
+             :name "Melee"
+             :level "7"
+             :unititemmap
+              (base/unititemmap
+               "War Hammer"
+                (base/unititem
+                 :name "War Hammer")))))
+       "Gnoll Pikeman"
+        (base/unit<-tactics-key tactics "Gnoll Pikeman")
+       "Gnoll Skirmisher"
+        (base/unit<-tactics-key tactics "Gnoll Skirmisher")
+       "Gnoll Slaver"
+        (base/unit
+         :name "Gnoll Slaver"
+         :unitskillmap
+          (base/unitskillmap
+           :Ranged
+            (base/unitskill
+             :name "Ranged"
+             :unititemmap
+              (base/unititemmap
+               :Net
+                (base/unititem
+                 :name "Net")
+               :Whip
+                (base/unititem
+                 :name "Whip")))))))
+    (base/section
+     :name "Goblins"
+     :reference
+      "* Seven Deadly Sins: Gluttony
+       * So raise your glass if you are wrong, in all the right ways.  All my underdogs, we will never be, never be anything
+       but loud and nitty-gritty, dirty, little freaks - Pink, Raise Your Glass.
+       * Gremlins (1984)
+       * Descent
+       * Nezumi-Kozo
+       * Gollum"
+     :summary
+      "* Description - Goblins are a small, savage, cave-dwelling humanoid species common to many mountainous regions. They live primarily underground and are very sensitive to bright light. They are the most numerous of the humanoid races (far outnumbering humans), though most Goblins are found underground where they wage war with their age old enemies, the Dwarves. These wretched man-like creatures are short and wiry, rarely exceeding 4 feet tall. They have soot-grey skin, large pointed ears, sharp fangs, and distorted features. They are physically weak and lack personal hygene. They do, however, have keen senses including superb night vision.
+       * Personality - Goblins are hedonistic and brash. They are generally quirky and obsessive with their personal interests. This makes them excellent inventors, but they lack patience with details, so their inventions are usually highly flawed especially with regards to safety for which they have no consideration. They seem to have no recognizable morals and have been known to resort to any number of deviant behaviors including torture, cannibalism, and diabolism. They have a particular obsession with eating and will talk about food and preparation endlessly even when not hungry. They prefer knives and cleavers as weapons. They have no restrictions on what they eat, and they do not hold prisoners for long.... Selfish, undisciplined cowards by nature, they only gain confidence in numbers, and they always fight as a mob. Even their allies consider them to be reprehensible and ultimately expendable. The goblins are aware of how their allies and masters view them, so they show no real respect to power and are total anarchists by nature. Many races try to enlist or impress the goblins into service, but these relationships never last, because the goblins are unmanageable.
+       * Preferred Skills - They have excellent manual dexterity and good at Ranged Combat and Thievery. They also have a talent for Kitbashing which they use to supplement their Artifice, Alchemy and Siegecraft. Their reliance on Kitbashing unfortunately makes their inventions extremely unreliable, but the goblins seem to have complete confidence in their own work.
+       * Morale - Low
+       * Units - Light Infantry, Light Spearmen, Light Archers, Elite Worg Cavalry, Siege Crews
+       * History - The goblins once had a sophisticated society and ancient goblins are responsible for most of the finely worked tunnels throughout the land, but they are becoming increasing barbaric from generation to generation."
+     :unitmap
+      (base/unitmap
+       "Goblin Aeronaut"
+        (base/unit
+         :name "Goblin Aeronaut"
+         :titles "Goblin Balloonisht, Goblin Flyer, Goblin Kite Rider")
+       "Goblin Artillerist"
+        (base/unit
+         :name "Goblin Artillerist"
+         :unitskillmap
+          (base/unitskillmap
+           :Siegecraft
+            (base/unitskill
+             :name "Siegecraft"
+             :level "3"
+             :unititemmap
+              (base/unititemmap
+               :Ballista
+                (base/unititem
+                 :name "Ballista")
+               :Catapult
+                (base/unititem
+                 :name "Catapult")))))
+       "Goblin Captain"
+        (base/unit
+         :name "Goblin Captain"
+         :image "images/bestiary/Goblin_Captain.png"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "3")))
+       "Goblin Champion"
+        (base/unit
+         :name "Goblin Champion")
+       "Goblin Chirurgeon"
+        (base/unit
+         :name "Goblin Chirurgeon")
+       "Goblin Hunter"
+        (base/unit
+         :name "Goblin Hunter"
+         :unitskillmap
+          (base/unitskillmap<-unitskilllist
+           (base/unitskill<-tactics-key-lvl-items
+            tactics "Ranged" 2
+            (stringlist "Bow: Short"))))
+       "Goblin King"
+        (base/unit
+         :name "Goblin King")
+       "Goblin Lord"
+        (base/unit
+         :name "Goblin Lord")
+       "Goblin Miner"
+        (base/unit
+         :name "Goblin Miner"
+         :unitskillmap
+          (base/unitskillmap
+           :Siegecraft
+            (base/unitskill
+             :name "Siegecraft"
+             :level "2"
+             :unitabilitymap
+              (base/unitabilitymap
+               :Sapping
+                (base/unitability
+                 :name "Sapping")))))
+       "Goblin Raider"
+        (base/unit<-tactics-key tactics "Goblin Raider")
+       "Goblin Saboteur"
+        (base/unit
+         :name "Goblin Saboteur")
+       "Goblin Scout"
+        (base/unit<-tactics-key tactics "Goblin Scout")
+       "Goblin Shaman"
+        (base/unit
+         :name "Goblin Shaman")
+       "Goblin Soothsayer"
+        (base/unit
+         :name "Goblin Soothsayer")
+       "Goblin Tinker"
+        (base/unit
+         :name "Goblin Tinker"
+         :unitpowermap
+          (base/unitpowermap
+           :Artifice
+            (base/unitpower
+             :name "Artifice"
+             :level "3"))
+         :unitskillmap
+          (base/unitskillmap
+           :Mechanics
+            (base/unitskill
+             :name "Mechanics"
+             :level "3")))
+       "Goblin War Drummer"
+        (base/unit
+         :name "Goblin War Drummer")))
+    (base/section
+     :name "Hobgoblins"
+     :summary
+      "* Description - The military elite of the goblin race. They are a rare genetic throwback to the days when the Goblins were an advanced race. They appear less and less frequently as the Goblins regress to barbarism.
+       * Personality - Brave, militaristic, and orderly, they are everything their goblin kin are not. Highly disciplined, they are considered to be natural leaders in goblin society, rising quickly in goblin ranks. Though goblin prejudices keep them from ultimate leadership, they frequently are the power behind goblin kings.
+       * Preferred Skills - Military, Melee, Strategy
+       * Morale - High
+       * Units - Elite Light Infantry, Light Pikemen, Elite Light Archers, Elite Worg Cavalry (Note: Full units are very rare)"
+     :titles "Hob"
+     :unitmap
+      (base/unitmap
+       "Hobgoblin Archer"
+        (base/unit
+         :name "Hobgoblin Archer")
+       "Hobgoblin Cavalry"
+        (base/unit
+         :name "Hobgoblin Cavalry")
+       "Hobgoblin Lord"
+        (base/unit
+         :name "Hobgoblin Lord")
+       "Hobgoblin Spearman"
+        (base/unit
+         :name "Hobgoblin Spearman")
+       "Hobgoblin Strategist"
+        (base/unit
+         :name "Hobgoblin Strategist")
+       "Hobgoblin Tracker"
+        (base/unit
+         :name "Hobgoblin Tracker"
+         :summary
+          "* Hobgoblins are reknowned less for their skill (their dogs do the actual tracking) than their tenacity and merciless efficiency. They are employed as scouts, border troops, and to hunt down criminals, dissidents, and escaped slaves.")
+       "Hobgoblin Swordsman"
+        (base/unit
+         :name "Hobgoblin Swordsman"
+         :image "images/bestiary/Hobgoblin_Swordsman.png"
+         :unitskillmap
+          (base/unitskillmap<-unitskilllist
+           (base/unitskill<-tactics-key-lvl
+            tactics "Military" 4)))))
+    (base/section
+     :name "Kobolds"
+     :summary
+      "* Description - Kobolds are small relatives of goblins. They have bright blue skin and the color Cobalt is named after them.
+       * Personality - Viscious opportunists readily attack anyone perceived as a weaker opponent. Their favorite skill is [Backstab].
+       * Preferred Skills - Mechanics (Traps), Stealth, Military
+       * Morale - Normal
+       * Units - Scout, Spy, Light Spearmen, Light Wolf Cavalry"
+     :unitmap
+      (base/unitmap
+       "Kobold Slinger"
+        (base/unit
+         :name "Kobold Slinger"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "1")))
+       "Kobold Spearman"
+        (base/unit
+         :name "Kobold Spearman"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "1")))
+       "Kobold Trapper"
+        (base/unit
+         :name "Kobold Trapper"
+         :unitskillmap
+          (base/unitskillmap
+           :Military
+            (base/unitskill
+             :name "Military"
+             :level "1")))))
+    (base/section
+     :name "Trogladytes"
+     :titles "Crawlers, Morlocks"
+     :reference
+      "* In choosing the name 'Morlocks', Wells may have been inspired by Moloch, the Caananite god of child sacrifice, with the Eloi analogous to children. Alternatively, he may have also been inspired by the Morlachs, an ethnic group in the Balkans which attracted attention from Western travellers as a perceived archetype of barbarism and backwardness... The Time Traveller speculates that the relationship developed from a class distinction present in his own time: the Morlocks are the working class who were relegated to working and living underground so that the rich upper class could live in luxury on the surface. - H.G. Wells, The Time Machine
+       * The Descent
+       * Neaderthals"
+     :summary
+      "* Description - Trogladytes have dull grey-to-white skin, chinless faces, large greyish-red eyes that reflect light, and flaxen hair on the head and back. Their bodies are muscular with short limbs which increases their strength but inhibits their speed. Their bodies are typically scarred from brutal infighting and are often missing limbs or eyes. They do not have any concept of hygiene and their dens are notorious for their stench.
+       * Abilities - They are highly adapted to living in the dark with keen sense of hearing and smell but poor eyesight, and they cannot tolerate bright light. They are exceedingly primitive, but they are cunning and have learning to cultivate mushrooms, grubs and fishing pools. Trogladytes recognize each other by smell.
+       * History - Trogladytes are an offshoot of mankind that lived in large cavern systems but were cut off from the surface. Since then they have adapted to underground life. Sparse living has made them merciless and cannibalistic.
+       * Society - Pure survival of the fittest: Anything that can't defend itself is food.")
+    (base/section
+     :name "Uruks"
+     :reference
+      "* Cro-magnon Man, Goths, Huns, Mongols, Vandals
+       * Seven Deadly Sins: Wrath"
+     :summary
+      "* Description - Uruks are a relatively primitive species of barrel-chested humanoids distantly related to Humans. They are sturdy and imposing figures, trained by hard labor and warfare since birth. They range in height from 5 feet to 7 feet tall and typically have yellowish/grey/green skin, red/black/brown eyes, and long black/grey/white hair. Their noses are flat and they have a notably large mouth with uneven teeth.
+       * Personality - Uruks are typically violent, impatient, and crude. They take what they want by force and are difficult to bargain with. Their culture and leaders claim that they are destined to take over the world and take back all that has been taken from them. Now they are consumed with wrath and envy of the achievements of other races and other orc tribes.
+       * Culture - Their civilization is still in a hunter/gatherer stage. They lack the patience and desire to read, cultivate crops, domesticate herd animals, or invent sophisticated equipment. They live a semi-nomadic existence depending on the availability of resources and the charisma of their leaders. Uruk 'kingdoms' are short lived. The race's genius for battle does not extend itself to statecraft, and their conquests inevitably collapse under a struggle for power between rival leaders. Uruk society is completely male dominated. Females are expected to find a male to support them and begin their life's purpose: breeding. Any female of breeding age that has no male protector is considered available to any male that chooses to take her and support her. Other cultures consider this to be rape. Uruks call it marriage. They extend this practice to captured females from other races.
+       * Warfare - Uruks wage constant war on any group near them until they take what is 'rightfully' theirs. When warbands grow large enough, they spill down into neighboring settlements to rape, murder, raid, and pillage. These bands can take on the proportions of a large town or small city, and roll across the countryside leaving burning wreckage in their wake.
+       * Language - Uruks speak the rough and unflattering Uruk tongue, which has no alphabet. Uruk culture and history is passed along in an oral tradition.
+       * Morale - Normal
+       * Preferred Skills - Melee, Rage
+       * Units - Light Infantry, Light Spearmen, Light Archers, Light Cavalry, King
+       * Factions - Skullsplitter, Bonegrinder"
+     :titles "Orc"
+     :unitmap
+      (base/unitmap
+       "Uruk Butcher"
+        (base/unit<-tactics-key tactics "Uruk Butcher")
+       "Uruk-hai Champion"
+        (base/unit
+         :name "Uruk-hai Champion"
+         :titles "Brawler, Bodyguard")
+       "Uruk Raider"
+        (base/unit
+         :name "Uruk Raider")
+       "Uruk Shaman"
+        (base/unit
+         :name "Uruk Shaman"
+         :summary
+          "* Uruk Shamans teach that everything the Uruks once had was stolen by the other races, and urges them on to ever-greater acts of violence and revenge.")
+       "Uruk Taskmaster"
+        (base/unit
+         :name "Uruk Taskmaster")
+       "Uruk Veteran"
+        (base/unit
+         :name "Uruk Veteran")
+       "Uruk War Chief"
+        (base/unit
+         :name "Uruk War Chief")
+       "Uruk Warrior"
+        (base/unit<-tactics-key tactics "Uruk Warrior"))))))
 
 (func chapter_giant_races : base/chapter
  [tactics : base/tactics]
  (chapter
   :name "Giant Races"
   :sectionmap
-   (sectionmap
-    "Lesser Giants"
-     (section
-      :name "Lesser Giants"
-      :unitmap
-       (base/unitmap
-        "Ogre"
-         (base/unit<-tactics-key tactics "Ogre")
-        "Oni"
-         (base/unit
-          :name "Oni")
-        "Troll"
-         (base/unit
-          :name "Troll"
-          :summary
-           "* Preferred Skills - Close Combat, Hunting
-            * Morale - Normal
-            * Units - Elite Heavy Infantry (Note: Full units are very rare)")))
-    "Greater Giants"
-     (section
-      :name "Greater Giants"
-      :summary "* Units - Elite Heavy Infantry (Note: Full units are very rare)"
-      :unitmap
-       (base/unitmap
-        "Giant: Cloud"
-         (base/unit
-          :name "Giant: Cloud")
-        "Giant: Cyclops"
-         (base/unit
-          :name "Giant: Cyclops")
-        "Giant: Fire"
-         (base/unit
-          :name "Giant: Fire"
-          :titles "Eldjotunn")
-        "Giant: Hill"
-         (base/unit
-          :name "Giant: Hill")
-        "Giant: Ice"
-         (base/unit
-          :name "Giant: Ice"
-          :titles "Frost Giant, Jotunn")
-        "Giant: Mountain"
-         (base/unit
-          :name "Giant: Mountain")
-        "Giant: Stone"
-         (base/unit
-          :name "Giant: Stone")
-        "Giant: Storm"
-         (base/unit
-          :name "Giant: Storm")))
-    "Unique Giants"
-     (section
-      :name "Unique Giants"
-      :unitmap
-       (base/unitmap
-        "Surtr"
-         (base/unit
-          :name "Surtr"
-          :titles "The Black One"          
-          :reference
-           "* Surtr is foretold as being a major figure during the events of Ragnarok; carrying his bright sword, he will go to battle against the Aesir, he will do battle with the major god Freyr, and afterward the flames that he brings forth will engulf the earth.")
-        "Ymir"
-         (base/unit
-          :name "Ymir"
-          :summary
-           "* Jotunheim"
-          :reference
-           "* Ymir was the founder of the race of frost giants and an important figure in Norse cosmology. Odin and his brothers killed Ymir, and when Ymir fell the blood from his wounds drowned almost the entire tribe of frost giants or jotuns. Then they used Ymir's body to create Midgard, the earth. His flesh became the earth. His blood formed seas and lakes. From his bones mountains were erected. From his hair grew trees and maggots from his flesh became the race of dwarfs. The gods set Ymir's skull above Ginnungagap and made the sky.")))
-    "Titans"
-     (base/section
-      :name "Titans"
-      :unitmap
-       (base/unitmap
-        :Atlas
-         (base/unit
-          :name "Atlas")
-        :Chronos
-         (base/unit
-          :name "Chronos"
-          :titles "Yog-Sothoth")
-        :Echidna
-         (base/unit
-          :name "Echidna"
-          :summary
-           "* Mother of Monsters
-            * Children - Cerberus, Chimera, Ethon, Gorgon, Graeae, Gelonus, Ladon, Lernaean Hydra, Nemean Lion, Orthrus, Phaea, Scylla, Sphinx"
-          :titles "Shub-Niggurath")
-        :Gaia
-         (base/unit
-          :name "Gaia"
-          :titles "Mother Earth, Wyld, Azathoth")
-        :Helios
-         (base/unit
-          :name "Helios"
-          :titles "The Sun")
-        :Mene
-         (base/unit
-          :name "Mene"
-          :titles "Selene, The Moon")
-        :Oceanus
-         (base/unit
-          :name "Oceanus")
-        :Prometheus
-         (base/unit
-          :name "Prometheus"
-          :titles "The Serpent, Nyarlathotep, Phoenix")
-        :Tartarus
-         (base/unit
-          :name "Tartarus"
-          :titles "Oblivion")
-        :Typhon
-         (base/unit
-          :name "Typhon"
-          :summary
-           "* The enemy of Zeus
-            * A vast grisly monster with a hundred snakelike heads that extends in serpentine coils from the waist down."))))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Lesser Giants"
+     :unitmap
+      (base/unitmap
+       "Ogre"
+        (base/unit<-tactics-key tactics "Ogre")
+       "Oni"
+        (base/unit
+         :name "Oni")
+       "Troll"
+        (base/unit
+         :name "Troll"
+         :summary
+          "* Preferred Skills - Close Combat, Hunting
+           * Morale - Normal
+           * Units - Elite Heavy Infantry (Note: Full units are very rare)")))
+    (base/section
+     :name "Greater Giants"
+     :summary "* Units - Elite Heavy Infantry (Note: Full units are very rare)"
+     :unitmap
+      (base/unitmap
+       "Giant: Cloud"
+        (base/unit
+         :name "Giant: Cloud")
+       "Giant: Cyclops"
+        (base/unit
+         :name "Giant: Cyclops")
+       "Giant: Fire"
+        (base/unit
+         :name "Giant: Fire"
+         :titles "Eldjotunn")
+       "Giant: Hill"
+        (base/unit
+         :name "Giant: Hill")
+       "Giant: Ice"
+        (base/unit
+         :name "Giant: Ice"
+         :titles "Frost Giant, Jotunn")
+       "Giant: Mountain"
+        (base/unit
+         :name "Giant: Mountain")
+       "Giant: Stone"
+        (base/unit
+         :name "Giant: Stone")
+       "Giant: Storm"
+        (base/unit
+         :name "Giant: Storm")))
+    (base/section
+     :name "Unique Giants"
+     :unitmap
+      (base/unitmap
+       "Surtr"
+        (base/unit
+         :name "Surtr"
+         :titles "The Black One"          
+         :reference
+          "* Surtr is foretold as being a major figure during the events of Ragnarok; carrying his bright sword, he will go to battle against the Aesir, he will do battle with the major god Freyr, and afterward the flames that he brings forth will engulf the earth.")
+       "Ymir"
+        (base/unit
+         :name "Ymir"
+         :summary
+          "* Jotunheim"
+         :reference
+          "* Ymir was the founder of the race of frost giants and an important figure in Norse cosmology. Odin and his brothers killed Ymir, and when Ymir fell the blood from his wounds drowned almost the entire tribe of frost giants or jotuns. Then they used Ymir's body to create Midgard, the earth. His flesh became the earth. His blood formed seas and lakes. From his bones mountains were erected. From his hair grew trees and maggots from his flesh became the race of dwarfs. The gods set Ymir's skull above Ginnungagap and made the sky.")))
+    (base/section
+     :name "Titans"
+     :unitmap
+      (base/unitmap
+       :Atlas
+        (base/unit
+         :name "Atlas")
+       :Chronos
+        (base/unit
+         :name "Chronos"
+         :titles "Yog-Sothoth")
+       :Echidna
+        (base/unit
+         :name "Echidna"
+         :summary
+          "* Mother of Monsters
+           * Children - Cerberus, Chimera, Ethon, Gorgon, Graeae, Gelonus, Ladon, Lernaean Hydra, Nemean Lion, Orthrus, Phaea, Scylla, Sphinx"
+         :titles "Shub-Niggurath")
+       "Gaia"
+        (base/unit
+         :name "Gaia"
+         :titles "Mother Earth, Wyld, Azathoth")
+       "Helios"
+        (base/unit
+         :name "Helios"
+         :titles "The Sun")
+       "Mene"
+        (base/unit
+         :name "Mene"
+         :titles "Selene, The Moon")
+       "Oceanus"
+        (base/unit
+         :name "Oceanus")
+       "Prometheus"
+        (base/unit
+         :name "Prometheus"
+         :titles "The Serpent, Nyarlathotep, Phoenix")
+       "Tartarus"
+        (base/unit
+         :name "Tartarus"
+         :titles "Oblivion")
+       "Typhon"
+        (base/unit
+         :name "Typhon"
+         :summary
+          "* The enemy of Zeus
+           * A vast grisly monster with a hundred snakelike heads that extends in serpentine coils from the waist down."))))))
 
 (func chapter_mythical_beasts : base/chapter
  [tactics : base/tactics]
  (chapter
   :name "Mythical Beasts"
   :sectionmap
-   (sectionmap
-    :Beasts
-     (section
-      :name "Beasts"
-      :unitmap
-       (base/unitmap
-        :Aeroplasm
-         (base/unit
-          :name "Aeroplasm"
-          :summary
-           "* The Aeroplasm is an unusual 15 foot tall invertibrate that lives entirely in the sky. It floats by means of air bladders filled with hydrogen gas which makes them spectacularly flammable if their bladders are ruptured by fire. They have long tendrils that contain a potent neurotoxin which they use to paralyze the birds and insects that they prey upon. During the Aeroplasm mating season, the males produce a luminous secretion that makes them glow in various colors to attract females. It is said that the sight of hundreds of Aeroplasms glowing in different shades in the night sky is a spectacular sight."
-          :titles "Floating Jellyfish")
-        :Basilisk
-         (base/unit
-          :name "Basilisk")
-        :Behemoth
-         (base/unit
-          :name "Behemoth")
-        "Boo Hag"
-         (base/unit
-          :name "Boo Hag")
-        :Catoblepas
-         (base/unit
-          :name "Catoblepas"
-          :reference
-           "* The catoblepas (from the Greek 'to look downwards') is a legendary creature from Ethiopia. It is thought to be based on real-life encounters with wildebeest."
-          :summary
-           "* It is said to resemble a cape buffalo, with its head always pointing downwards due to its great weight. Its stare or breath could either turn people into stone, or kill them."
-          :unitpowermap
-           (base/unitpowermap
-            "Transform Other"
-             (base/unitpower
-              :name "Transform Other"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Petrification
-                 (base/unitability
-                  :name "Petrification")))))
-        :Chimera
-         (base/unit
-          :name "Chimera"
-          :image "images/bestiary/Chimera.png")
-        :Chonchon
-         (base/unit
-          :name "Chonchon")
-        :Cockatrice
-         (base/unit
-          :name "Cockatrice")
-        :Doppelganger
-         (base/unit
-          :name "Doppelganger")
-        :Gargoyle
-         (base/unit
-          :name "Gargoyle")
-        "Gazer"
-         (base/unit
-          :name "Gazer"
-          :titles "Beholder, Evil Eye, Eye Killer, Eye of the Beholder, Floating Eye")
-        :Griffin
-         (base/unit
-          :name "Griffin"
-          :image "images/bestiary/Griffin.png")
-        "Goblin Spider"
-         (base/unit<-tactics-key tactics "Goblin Spider")
-        :Gorgon
-         (base/unit
-          :name "Gorgon"
-          :image "images/bestiary/Medusa.png"
-          :titles "Medusa"
-          :unitpowermap
-           (base/unitpowermap
-            "Transform Other"
-             (base/unitpower
-              :name "Transform Other"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Petrification
-                 (base/unitability
-                  :name "Petrification"))))
-          :unitskillmap
-           (base/unitskillmap
-            :Ranged
-             (base/unitskill
-              :name "Ranged"
-              :unititemmap
-               (base/unititemmap
-                "Bow: Short"
-                 (base/unititem
-                  :name "Bow: Short")))))
-        :Hippogriff
-         (base/unit
-          :name "Hippogriff")
-        :Hydra
-         (base/unit
-          :name "Hydra")
-        :Jabberwocky
-         (base/unit
-          :name "Jabberwocky")
-        :Kirin
-         (base/unit
-          :name "Kirin"
-          :titles "Dragon Horse")
-        :Kraken
-         (base/unit
-          :name "Kraken")
-        :Lamassu
-         (base/unit
-          :name "Lamassu"
-          :summary "* Protective winged bull or lion; with the head of a human female.  Shedu is the male equivalent."
-          :titles "Shedu")
-        :Manticore
-         (base/unit
-          :name "Manticore"
-          :reference "* Persian Mythology"
-          :summary
-           "* A savage predator with the body of a lion, the tail of a scorpion, and the wings of a bat.
-            * It has rows of razor sharp teeth and will bite off limbs and eat victims whole, bones and all.
-            * Its tail stinger is, of course, poisonous. The poison is not especially deadly, but the shear amount of toxin injected from the large stinger makes survival unlikely.
-            * It also has non-poisonous quills on its tail that can be flung at a target with a tail whip.")
-        :Minotaur
-         (base/unit
-          :name "Minotaur")
-        :Pegasus
-         (base/unit
-          :name "Pegasus")
-        :Phoenix
-         (base/unit
-          :name "Phoenix")
-        "Primal Ooze"
-         (base/unit<-tactics-key tactics "Primal Ooze")
-        "Rukh"
-         (base/unit<-tactics-key tactics "Rukh")
-        "Rukh Hatchling"
-         (base/unit<-tactics-key tactics "Rukh Hatchling")
-        "Sea Horse"
-         (base/unit
-          :name "Sea Horse")
-        "Sphinx"
-         (base/unit<-tactics-key tactics "Sphinx")
-        "Strix"
-         (base/unit<-tactics-key tactics "Strix")
-        "Tentacle Terror"
-         (base/unit<-tactics-key tactics "Tentacle Terror")
-        "Terraphant"
-         (base/unit<-tactics-key tactics "Terraphant")
-        "Thunderbird"
-         (base/unit<-tactics-key tactics "Thunderbird")
-        :Unicorn
-         (base/unit
-          :name "Unicorn")
-        :Yeti
-         (base/unit
-          :name "Yeti")
-        "Wandering Eye"
-         (base/unit<-tactics-key tactics "Wandering Eye")
-        :Ziz
-         (base/unit
-          :name "Ziz")))
-    "Unique Beasts"
-     (section
-      :name "Unique Beasts"
-      :unitmap
-       (base/unitmap
-        :Cerberus
-         (base/unit
-          :name "Cerberus")
-        :Charybdis
-         (base/unit
-          :name "Charybdis"
-          :summary
-           "* Scylla and Charybdis are two sea monsters situated on opposite sides of a narrow channel of water, so close that sailors avoiding Charybdis will pass too close to Scylla and vice versa.
-            * She takes form as a monstrous mouth. She swallows huge amounts of water three times a day and then belches them back out again creating whirlpools.")
-        :Scylla
-         (base/unit
-          :name "Scylla"
-          :reference
-           "* You consider me the young apprentice...Caught between the Scylla and Charybdis...Hypnotized by you if I should linger...Staring at the ring around your finger - The Police, Wrapped around your Finger"
-          :summary
-           "* Scylla and Charybdis are two sea monsters situated on opposite sides of a narrow channel of water, so close that sailors avoiding Charybdis will pass too close to Scylla and vice versa.
-            * Scylla is a horribly grotesque sea monster, with six long necks equipped with grisly heads, each of which contained three rows of sharp teeth. Her body consisted of twelve canine legs and a fish's tail."))))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Beasts"
+     :unitmap
+      (base/unitmap
+       "Aeroplasm"
+        (base/unit
+         :name "Aeroplasm"
+         :titles "Floating Jellyfish"
+         :summary
+          "* The Aeroplasm is an unusual 15 foot tall invertibrate that lives entirely in the sky. It floats by means of air bladders filled with hydrogen gas which makes them spectacularly flammable if their bladders are ruptured by fire. They have long tendrils that contain a potent neurotoxin which they use to paralyze the birds and insects that they prey upon. During the Aeroplasm mating season, the males produce a luminous secretion that makes them glow in various colors to attract females. It is said that the sight of hundreds of Aeroplasms glowing in different shades in the night sky is a spectacular sight.")
+       "Basilisk"
+        (base/unit
+         :name "Basilisk")
+       "Behemoth"
+        (base/unit
+         :name "Behemoth")
+       "Boo Hag"
+        (base/unit
+         :name "Boo Hag")
+       "Catoblepas"
+        (base/unit
+         :name "Catoblepas"
+         :reference
+          "* The catoblepas (from the Greek 'to look downwards') is a legendary creature from Ethiopia. It is thought to be based on real-life encounters with wildebeest."
+         :summary
+          "* It is said to resemble a cape buffalo, with its head always pointing downwards due to its great weight. Its stare or breath could either turn people into stone, or kill them."
+         :unitpowermap
+          (base/unitpowermap
+           "Transform Other"
+            (base/unitpower
+             :name "Transform Other"
+             :unitabilitymap
+              (base/unitabilitymap
+               :Petrification
+                (base/unitability
+                 :name "Petrification")))))
+       "Chimera"
+        (base/unit
+         :name "Chimera"
+         :image "images/bestiary/Chimera.png")
+       "Chonchon"
+        (base/unit
+         :name "Chonchon")
+       "Cockatrice"
+        (base/unit
+         :name "Cockatrice")
+       "Doppelganger"
+        (base/unit
+         :name "Doppelganger")
+       "Gargoyle"
+        (base/unit
+         :name "Gargoyle")
+       "Gazer"
+        (base/unit
+         :name "Gazer"
+         :titles "Beholder, Evil Eye, Eye Killer, Eye of the Beholder, Floating Eye")
+       "Griffin"
+        (base/unit
+         :name "Griffin"
+         :image "images/bestiary/Griffin.png")
+       "Goblin Spider"
+        (base/unit<-tactics-key tactics "Goblin Spider")
+       "Gorgon"
+        (base/unit
+         :name "Gorgon"
+         :image "images/bestiary/Medusa.png"
+         :titles "Medusa"
+         :unitpowermap
+          (base/unitpowermap
+           "Transform Other"
+            (base/unitpower
+             :name "Transform Other"
+             :unitabilitymap
+              (base/unitabilitymap
+               :Petrification
+                (base/unitability
+                 :name "Petrification"))))
+         :unitskillmap
+          (base/unitskillmap<-unitskilllist
+           (base/unitskill<-tactics-key-items
+            tactics "Ranged"
+            (stringlist "Bow: Short"))))
+       "Hippogriff"
+        (base/unit
+         :name "Hippogriff")
+       "Hydra"
+        (base/unit
+         :name "Hydra")
+       "Jabberwocky"
+        (base/unit
+         :name "Jabberwocky")
+       "Kirin"
+        (base/unit
+         :name "Kirin"
+         :titles "Dragon Horse")
+       "Kraken"
+        (base/unit
+         :name "Kraken")
+       "Lamassu"
+        (base/unit
+         :name "Lamassu"
+         :titles "Shedu"
+         :summary
+          "* Protective winged bull or lion; with the head of a human female.  Shedu is the male equivalent.")
+       "Manticore"
+        (base/unit
+         :name "Manticore"
+         :reference "* Persian Mythology"
+         :summary
+          "* A savage predator with the body of a lion, the tail of a scorpion, and the wings of a bat.
+           * It has rows of razor sharp teeth and will bite off limbs and eat victims whole, bones and all.
+           * Its tail stinger is, of course, poisonous. The poison is not especially deadly, but the shear amount of toxin injected from the large stinger makes survival unlikely.
+           * It also has non-poisonous quills on its tail that can be flung at a target with a tail whip.")
+       "Minotaur"
+        (base/unit
+         :name "Minotaur")
+       "Pegasus"
+        (base/unit
+         :name "Pegasus")
+       "Phoenix"
+        (base/unit
+         :name "Phoenix")
+       "Primal Ooze"
+        (base/unit<-tactics-key tactics "Primal Ooze")
+       "Rukh"
+        (base/unit<-tactics-key tactics "Rukh")
+       "Rukh Hatchling"
+        (base/unit<-tactics-key tactics "Rukh Hatchling")
+       "Sea Horse"
+        (base/unit
+         :name "Sea Horse")
+       "Sphinx"
+        (base/unit<-tactics-key tactics "Sphinx")
+       "Strix"
+        (base/unit<-tactics-key tactics "Strix")
+       "Tentacle Terror"
+        (base/unit<-tactics-key tactics "Tentacle Terror")
+       "Terraphant"
+        (base/unit<-tactics-key tactics "Terraphant")
+       "Thunderbird"
+        (base/unit<-tactics-key tactics "Thunderbird")
+       "Unicorn"
+        (base/unit
+         :name "Unicorn")
+       "Yeti"
+        (base/unit
+         :name "Yeti")
+       "Wandering Eye"
+        (base/unit<-tactics-key tactics "Wandering Eye")
+       "Ziz"
+        (base/unit
+         :name "Ziz")))
+    (base/section
+     :name "Unique Beasts"
+     :unitmap
+      (base/unitmap
+       "Cerberus"
+        (base/unit
+         :name "Cerberus")
+       "Charybdis"
+        (base/unit
+         :name "Charybdis"
+         :summary
+          "* Scylla and Charybdis are two sea monsters situated on opposite sides of a narrow channel of water, so close that sailors avoiding Charybdis will pass too close to Scylla and vice versa.
+           * She takes form as a monstrous mouth. She swallows huge amounts of water three times a day and then belches them back out again creating whirlpools.")
+       "Scylla"
+        (base/unit
+         :name "Scylla"
+         :reference
+          "* You consider me the young apprentice...Caught between the Scylla and Charybdis...Hypnotized by you if I should linger...Staring at the ring around your finger - The Police, Wrapped around your Finger"
+         :summary
+          "* Scylla and Charybdis are two sea monsters situated on opposite sides of a narrow channel of water, so close that sailors avoiding Charybdis will pass too close to Scylla and vice versa.
+           * Scylla is a horribly grotesque sea monster, with six long necks equipped with grisly heads, each of which contained three rows of sharp teeth. Her body consisted of twelve canine legs and a fish's tail."))))))
 
 (func chapter_shapeshifters : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "Shapeshifters"
   :sectionmap
-   (sectionmap
-    :Lycanthropes
-     (section
-      :name "Lycanthropes"
-      :titles "Skinwalker"
-      :reference
-       "* Beauty and the Beast
-        * The Howling
-        * Underworld
-        * Wolfen"
-      :summary
-       "* Description - A hereditary trait carried by humans and animals.
-        * Personality - Their savagery is their greatest strength, but it threatens to consume them and leave only rage.
-        * Some lycanthropes are more animal-like and hostile to humans.
-        * [Vulnerability] to [Silver]
-        * Loses control under the moon
-        * Preferred Skills: [Lycanthropy], [Natural Weaponry]
-        !Groups
-        * Black Spirals - [[Corrupted]] Werewolves
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Lycanthropes"
+     :titles "Skinwalker"
+     :reference
+      "* Beauty and the Beast
+       * The Howling
+       * Underworld
+       * Wolfen"
+     :summary
+      "* Description - A hereditary trait carried by humans and animals.
+       * Personality - Their savagery is their greatest strength, but it threatens to consume them and leave only rage.
+       * Some lycanthropes are more animal-like and hostile to humans.
+       * [Vulnerability] to [Silver]
+       * Loses control under the moon
+       * Preferred Skills: [Lycanthropy], [Natural Weaponry]
+       !Groups
+       * Black Spirals - [[Corrupted]] Werewolves
 
-        History
-        * The Impergium - 8,000 years ago, humankind was becoming more organized and began systematically killing wolves or destroying their habitats. The Werewolves born from wolves decided that the humans were out of control and leading the world to chaos. They declared the open hunt (or culling) of humans called the 	Impergium. The Werewolves born from humans saw their own kin murdered by other Werewolves. Whatever the merits of the Impergium, it triggered a civil war between the Werewolf clans with mounting killings and atrocities. The other shapeshifters tried to stay out of the conflict but were quickly forced to take sides. The conflict only ended after the number of Shapeshifters across the world was decimated, especially those born to wolves. Since then the low birth rate of Shapeshifters has taken many races to the brink of extinction. The Impergium remains as a grim reminder of the dangers of letting ones [Rage] overcome reason. The Werewolves are embarassed by their clans' actions. The other Shapeshifters have never forgiven the Werewolves for their folly. Also, many of the Werewolves born of wolves hold deep hatred for the other Werewolves both for their betrayal and for the current state of the wolves in the world."
-      :unitmap
-       (base/unitmap
-        "Werebat"
-         (base/unit
-          :name "Werebat")
-        "Werebear"
-         (base/unit
-          :name "Werebear")
-        "Wereboar"
-         (base/unit
-          :name "Wereboar")
-        "Werecat"
-         (base/unit<-tactics-key tactics "Wererat")
-        "Werecrow"
-         (base/unit
-          :name "Werecrow"
-          :image "images/bestiary/Lycanthrope_Tengu.png"
-          :titles "Tengu, Wereraven"
-          :summary
-           "* Able to fly, the Werecrows make terrific scouts and spies.  Their overwhelming curiousity is matched only by their tendency to gossip."
-          :unitpowermap
-           (base/unitpowermap
-            "Natural Weaponry"
-             (base/unitpower
-              :name "Natural Weaponry"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Feather Blades"
-                 (base/unitability
-                  :name "Feather Blades")
-                "Feather Knives"
-                 (base/unitability
-                  :name "Feather Knives"))))
-          :unitskillmap
-           (base/unitskillmap<-unitskilllist
-            (base/unitskill<-tactics-key-abilities
-             tactics "Hunting"
-             (stringlist "Scouting"))))
-        "Wererat"
-         (base/unit<-tactics-key tactics "Wererat")
-        "Werespider"
-         (base/unit
-          :name "Werespider"
-          :titles "Anasi, Arachne, Kumo"
-          :unitpowermap
-           (base/unitpowermap
-            :Illusion
-             (base/unitpower
-              :name "Illusion"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Dazzling Beauty"
-                 (base/unitability
-                  :name "Dazzling Beauty")
-                "Mirror Image"
-                 (base/unitability
-                  :name "Mirror Image")))
-            "Toxins"
-             (base/unitpower
-              :name "Toxins"
-              :unitabilitymap
-               (base/unitabilitymap
-                "Poison Bite"
-                 (base/unitability
-                  :name "Poison Bite")
-                "Poison Spit"
-                 (base/unitability
-                  :name "Poison Spit")))))
-        "Werewolf"
-         (base/unit<-tactics-key tactics "Werewolf"))))))
+       History
+       * The Impergium - 8,000 years ago, humankind was becoming more organized and began systematically killing wolves or destroying their habitats. The Werewolves born from wolves decided that the humans were out of control and leading the world to chaos. They declared the open hunt (or culling) of humans called the 	Impergium. The Werewolves born from humans saw their own kin murdered by other Werewolves. Whatever the merits of the Impergium, it triggered a civil war between the Werewolf clans with mounting killings and atrocities. The other shapeshifters tried to stay out of the conflict but were quickly forced to take sides. The conflict only ended after the number of Shapeshifters across the world was decimated, especially those born to wolves. Since then the low birth rate of Shapeshifters has taken many races to the brink of extinction. The Impergium remains as a grim reminder of the dangers of letting ones [Rage] overcome reason. The Werewolves are embarassed by their clans' actions. The other Shapeshifters have never forgiven the Werewolves for their folly. Also, many of the Werewolves born of wolves hold deep hatred for the other Werewolves both for their betrayal and for the current state of the wolves in the world."
+     :unitmap
+      (base/unitmap<-tactics-keys
+       tactics
+       "Werebat"
+       "Werebear"
+       "Wereboar"
+       "Werecat"
+       "Werecrow"
+       "Wererat"
+       "Werespider"
+       "Werewolf")))))
 
 (func chapter_undead_creatures : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "Undead Creatures"
   :reference "* Seven Deadly Sins: Envy"
   :summary
@@ -4502,143 +4420,48 @@
      :name "Corporeal Undead"
      :summary "* Vulnerable: [Fire], [Impact]"
      :unitmap
-      (base/unitmap
+      (base/unitmap<-tactics-keys
+       tactics
        "Barghest"
-        (base/unit
-         :name "Barghest"
-         :titles "Black Shuck, Ghost Hound")
        "Burning Dead"
-        (base/unit<-tactics-key tactics "Burning Dead")
        "Dead of Night"
-        (base/unit<-tactics-key tactics "Dead of Night")
        "Dead of Winter"
-        (base/unit<-tactics-key tactics "Dead of Winter")
        "Dhampyr"
-        (base/unit<-tactics-key tactics "Dhampyr")
        "Drowned"
-        (base/unit<-tactics-key tactics "Drowned")
        "Ghost Ship"
-        (base/unit<-tactics-key tactics "Ghost Ship")
        "Ghoul"
-        (base/unit<-tactics-key tactics "Ghoul")
        "Husk"
-        (base/unit
-         :name "Husk"
-         :summary
-          "A person who has been completely drained of their lifeforce.")
        "Lich"
-        (base/unit<-tactics-key tactics "Lich")
        "Mummy"
-        (base/unit
-         :name "Mummy"
-         :reference "The Mummy"
-         :summary
-          "* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.
-           * Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk."
-         :unitpowermap
-          (base/unitpowermap
-           :Longevity
-            (base/unitpower
-             :name "Longevity"
-             :unitabilitymap
-              (base/unitabilitymap
-               :Reanimation
-                (base/unitability
-                 :name "Reanimation")))))
        "Night Terror"
-        (base/unit<-tactics-key tactics "Night Terror")
        "Pestilence Horse"
-        (base/unit
-         :name "Pestilence Horse"
-         :summary
-          "* A Pestience Horse is a zombie horse that carries deadly diseases. It's decaying body is not as fast as its original body, but may still trot fairly quickly. It is not as agressive as other undead, instead travelling around spreading disease and fleeing when confronted.")
        "Scarecrow"
-        (base/unit<-tactics-key tactics "Scarecrow")
        "Skeletal Dragon"
-        (base/unit
-         :name "Skeletal Dragon")
        "Skeletal Knight"
-        (base/unit<-tactics-key tactics "Skeletal Knight")
        "Skeleton"
-        (base/unit<-tactics-key tactics "Skeleton")
        "Skeleton Warrior"
-        (base/unit<-tactics-key tactics "Skeleton Warrior")
        "Slayer Dead"
-        (base/unit
-         :name "Slayer Dead"
-         :titles "Murderous Dead, War Dead"
-         :reference
-          "* Jason Voorhees
-           * Nightmare on Elm Street
-           * Vinland Saga"
-         :summary
-          "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines.")
        "Wendigo"
-        (base/unit
-         :name "Wendigo"
-         :titles "Abominable Snowman, Yeti"
-         :summary "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims.")
        "Wight"
-        (base/unit<-tactics-key tactics "Wight")
-       "Zombie: Walker"
-        (base/unit<-tactics-key tactics "Zombie: Walker")))
+       "Zombie: Walker"))
     (base/section
      :name "Noncorporeal Undead"
      :unitmap
-      (base/unitmap
+      (base/unitmap<-tactics-keys
+       tactics
        "Haunt"
-        (base/unit<-tactics-key tactics "Haunt")
        "Lemure"
-        (base/unit
-         :name "Lemure"
-         :summary "* The wandering and vengeful spirits of those not afforded proper burial or funeral rites."
-         :titles "Larvae, Lemur")
        "Lost Soul"
-        (base/unit
-         :name "Lost Soul")
        "Phantom"
-        (base/unit
-         :name "Phantom"
-         :summary "* Phantoms are the remnants of those who were lost in the Astral/Dream Realm. The Astral Realm is the realm of imagination, so those trapped here are gradually driven mad. Therefore, Phantoms have varying and unpredictable insanities.")
        "Poltergeist"
-        (base/unit
-         :name "Poltergeist")
        "Reaper"
-        (base/unit
-         :name "Reaper"
-         :reference "Charon the Ferryman"
-         :summary "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon.")
        "Shade"
-        (base/unit
-         :name "Shade"
-         :reference "The Ring"
-         :summary
-          "* Description - lank and ghastly beings with no feet, floating suspended above the ground.
-           * Shades are the spirits of those who died in suicide, accident, murder, or wrongful execution. They are bound to this plane by the anger they felt at their deaths.
-           * Suicide and accident victims attempt to compel those most like their former selves to die in the same manner.
-           * Murder and wrongful death victims attempt to revenge themselves upon the killer or his descendents."
-         :titles "Aghast, Ghast, Ghastly, Shoryo")
-       :Shadow
-        (base/unit
-         :name "Shadow")
-       :Sluagh
-        (base/unit
-         :name "Sluagh"
-         :reference
-          "* The spirits of the sinners, or generally evil people who were welcome in neither heaven nor hell.
-           * They were seen to fly in groups like flocks of birds, coming from the west, and were known to try to enter the house of a dying person in an effort to carry the soul away with them. West-facing windows were sometimes kept closed to keep them out. Some consider the Sluagh to also carry with them the souls of innocent people who were kidnapped by these destructive spirits."
-         :summary
-          "* The Sluagh are thin, pale, snake-like, and grotesque, though they remain strangely compelling. They favor archaic, intricate, black clothing. Their joints can dislocate allowing them to slither our of bonds and into disquieting shapes.
-           * They may only speak in whispers and dislike any social situations except among their own kind. They prefer to overserve other from hidden corners, and the secrets they obtain are their stock and trade.")
-       "Spectre"
-        (base/unit<-tactics-key tactics "Spectre")
+       "Shadow"
+       "Sluagh"
        "Spectral Horse"
-        (base/unit
-         :name "Spectral Horse")
+       "Spectre"
        "Will-O-Wisp"
-        (base/unit<-tactics-key tactics "Will-O-Wisp")
-       "Wraith"
-        (base/unit<-tactics-key tactics "Wraith")))
+       "Wraith"))
     (base/section
      :name "Vampires"
      :reference

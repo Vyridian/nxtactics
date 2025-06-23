@@ -669,7 +669,7 @@
         "Armor: Leather Cuirass"
          (base/item<-tactics-key tactics "Armor: Leather Cuirass")
         "Armor: Leather Helmet"
-         (base/item<-tactics-key tactics "Armor: Leather Hemlet")
+         (base/item<-tactics-key tactics "Armor: Leather Helmet")
         "Armor: Leather Pants"
          (base/item
           :name "Armor: Leather Pants"

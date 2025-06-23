@@ -107,8 +107,54 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bottle: Molotov Cocktail", ":image", "images/cards/item-bottle-molotovcocktail.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow: Composite", ":summary", "* [Skill]: [Ranged]\n* [Damage]: 10x1 [Pierce] [Slash]\n* [Range]: 10x1 100m/300ft\n* [Location]: [2-hand]\n* The main advantage of composite bows over self bows (made from a single piece of wood) is their combination of smaller size with high power. They are more suitable for use from horseback or chariot.\n* Constructing composite bows requires much more time and materials than self bows, and the animal glue traditionally used can lose strength in humid conditions and be quickly ruined by submersion. For most practical non-mounted archery purposes, composite construction offers no advantage; 'the initial velocity is about the same for all types of bow, the design parameters appear to be less important than is often claimed.' However, their compact size make them superior for horsemen.", ":energy", "170J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow: Compound"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow: Long", ":titles", "Daikyu", ":summary", "* [Skill]: [Ranged]\n* [Damage]: 10x1 [Pierce] [Slash]\n* [Range]: 10x1 100m/300ft\n* [Location]: [2-hand]", ":energy", "156J"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow: Short", ":image", "images/cards/item-bow-short.svg", ":titles", "Hankyu, Recurve Bow", ":reference", "Can fire about 6 aimed shots or 12 unaimed shots per minute.", ":summary", "* [Skill]: [Ranged]\n* [Damage]: 8x1 [Pierce] [Slash]\n* [Range]: 2x1 20m/60ft\n* [Location]: [2-hand]\n* [Uses]: 0 Max:1\n* [Reload]: [Action]", ":energy", "80J", ":body", "10x-1", ":mass", "1kg/2lb"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Bow: Long",
+        ":titles",
+        "Daikyu",
+        ":summary",
+        "* [Requires]: An [Arrow] in another hand\n* [Range]: 10x1 100m/300ft",
+        ":energy",
+        "156J",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(
+            tactics,
+            "Weapon",
+            "10x1",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "1-Handed", "Ranged Weapon")
+          )
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Bow: Short",
+        ":image",
+        "images/cards/item-bow-short.svg",
+        ":titles",
+        "Hankyu, Recurve Bow",
+        ":reference",
+        "Can fire about 6 aimed shots or 12 unaimed shots per minute.",
+        ":summary",
+        "* [Requires]: An [Arrow] in another hand\n* [Range]: 2x1 20m/60ft",
+        ":energy",
+        "80J",
+        ":body",
+        "10x-1",
+        ":mass",
+        "1kg/2lb",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(
+            tactics,
+            "Weapon",
+            "8x1",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "1-Handed", "Ranged Weapon")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Campfire", ":image", "images/cards/item-campfire.svg", ":body", "2x1", ":mass", "20kg/45lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Candle"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Cloak"),
@@ -120,6 +166,7 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Coins: Silver", ":image", "images/cards/item-coins-silver.svg", ":summary", "* A few (~5=$50) coins.\n* Spending money.\n* 10 Copper = 1 Silver\n* 10 Silver = 1 Gold\n* 2 nice meals, 3 bottles wine, round of drinks, a private room, week supplies, cheap gear.", ":body", "10x-2", ":mass", "100g/.2lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Door: Heavy Wooden", ":image", "images/cards/item-door-heavy-wooden.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Door: Wooden", ":image", "images/cards/item-door-wooden.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Drug: Evergreen", ":summary", "A life extending drug"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Grenade: White Phosphorous"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hammer", ":image", "images/cards/item-hammer.svg", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+3 [Bash]\n* [Location]: [1-hand]", ":body", "2x0", ":mass", "2kg/4.4lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Improvised Weapon", ":summary", "* Any item can be a weapon.\n* [Melee] or [Close Combat]: vs [Body]\n* [Damage]: [Body] Damage Types based on item."),

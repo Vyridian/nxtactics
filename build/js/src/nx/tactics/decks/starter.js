@@ -45,8 +45,8 @@ export default class nx_tactics_decks_starter {
 
   /**
    * @function card_player
+   * @param  {tactics} tactics
    * @param  {string} color
-   * @param  {int} num
    * @return {card}
    */
   static t_card_player = {
@@ -57,26 +57,29 @@ export default class nx_tactics_decks_starter {
   }
 
   // (func card-player)
-  static f_card_player(color, num) {
+  static f_card_player(tactics, color) {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_card},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "card-player-", color, "-", num),
-      ":name",
-      "Player",
-      ":image",
-      vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
-      ":summary",
-      "* [Setup]: Place your Units on the [Status Bar] with a [Unit#] card. Arrange your other Unit cards in front of you.\n* [Round End]: [Draw]:1 and [Recover]."
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const rule = nx_tactics_base.f_rule_from_tactics_key(tactics, "Player")
+        return vx_core.f_copy(
+          rule,
+          ":id",
+          vx_core.f_new({"any-1": vx_core.t_string}, "player-", color),
+          ":image",
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, ".svg")
+        )
+      })
     )
     return output
   }
 
   /**
    * @function card_rotated
+   * @param  {tactics} tactics
    * @param  {string} color
-   * @param  {int} num
    * @return {card}
    */
   static t_card_rotated = {
@@ -87,18 +90,21 @@ export default class nx_tactics_decks_starter {
   }
 
   // (func card-rotated)
-  static f_card_rotated(color, num) {
+  static f_card_rotated(tactics, color) {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_card},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "card-rotated-", color, "-", num),
-      ":name",
-      "Rotated Cards",
-      ":image",
-      vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
-      ":summary",
-      "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated card.\n* [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const rule = nx_tactics_base.f_rule_from_tactics_key(tactics, "Rotated Cards")
+        return vx_core.f_copy(
+          rule,
+          ":id",
+          vx_core.f_new({"any-1": vx_core.t_string}, "rotatedcards-", color),
+          ":image",
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, ".svg")
+        )
+      })
     )
     return output
   }
@@ -128,11 +134,11 @@ export default class nx_tactics_decks_starter {
         return vx_core.f_copy(
           rule,
           ":id",
-          vx_core.f_new({"any-1": vx_core.t_string}, "card-target-", color, "-", num),
+          vx_core.f_new({"any-1": vx_core.t_string}, "target-", color, "-", num),
           ":name",
           vx_core.f_new({"any-1": vx_core.t_string}, "Target#", num),
           ":image",
-          vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg")
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, ".svg")
         )
       })
     )
@@ -176,6 +182,42 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
+   * @function card_unitnum
+   * @param  {tactics} tactics
+   * @param  {string} color
+   * @param  {int} num
+   * @return {card}
+   */
+  static t_card_unitnum = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_unitnum = {
+    vx_type: nx_tactics_decks_starter.t_card_unitnum
+  }
+
+  // (func card-unitnum)
+  static f_card_unitnum(tactics, color, num) {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_card},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const rule = nx_tactics_base.f_rule_from_tactics_key(tactics, "Unit Num#")
+        return vx_core.f_copy(
+          rule,
+          ":id",
+          vx_core.f_new({"any-1": vx_core.t_string}, "unitnum-", color, "-", num),
+          ":name",
+          vx_core.f_new({"any-1": vx_core.t_string}, "Unit Num#", num),
+          ":image",
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, ".svg")
+        )
+      })
+    )
+    return output
+  }
+
+  /**
    * @function deck_player
    * @param  {tactics} tactics
    * @param  {string} color
@@ -197,13 +239,18 @@ export default class nx_tactics_decks_starter {
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const cardlist = vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_starter.f_card_player(color, 1),
-          nx_tactics_decks_starter.f_card_rotated(color, 1),
+          nx_tactics_decks_starter.f_card_player(tactics, color),
+          nx_tactics_decks_starter.f_card_rotated(tactics, color),
           nx_tactics_decks_starter.f_card_unit(tactics, color, 1),
           nx_tactics_decks_starter.f_card_unit(tactics, color, 2),
           nx_tactics_decks_starter.f_card_unit(tactics, color, 3),
           nx_tactics_decks_starter.f_card_unit(tactics, color, 4),
           nx_tactics_decks_starter.f_card_unit(tactics, color, 5),
+          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 1),
+          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 2),
+          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 3),
+          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 4),
+          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 5),
           nx_tactics_decks_starter.f_card_target(tactics, color, 1),
           nx_tactics_decks_starter.f_card_target(tactics, color, 2),
           nx_tactics_decks_starter.f_card_target(tactics, color, 3),
@@ -242,6 +289,7 @@ export default class nx_tactics_decks_starter {
       "card-rotated": nx_tactics_decks_starter.e_card_rotated,
       "card-target": nx_tactics_decks_starter.e_card_target,
       "card-unit": nx_tactics_decks_starter.e_card_unit,
+      "card-unitnum": nx_tactics_decks_starter.e_card_unitnum,
       "deck-player": nx_tactics_decks_starter.e_deck_player
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
@@ -251,6 +299,7 @@ export default class nx_tactics_decks_starter {
       "card-rotated": nx_tactics_decks_starter.t_card_rotated,
       "card-target": nx_tactics_decks_starter.t_card_target,
       "card-unit": nx_tactics_decks_starter.t_card_unit,
+      "card-unitnum": nx_tactics_decks_starter.t_card_unitnum,
       "deck-player": nx_tactics_decks_starter.t_deck_player
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -371,6 +420,24 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_unit
+    }
+
+    // (func card-unitnum)
+    nx_tactics_decks_starter.t_card_unitnum['vx_value'] = {
+      name          : "card-unitnum",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_unitnum
     }
 
     // (func deck-player)

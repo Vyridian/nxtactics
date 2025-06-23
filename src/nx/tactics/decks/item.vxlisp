@@ -152,26 +152,39 @@
    :name "Bow: Long"
    :titles "Daikyu"
    :summary
-    "* [Skill]: [Ranged]
-     * [Damage]: 10x1 [Pierce] [Slash]
-     * [Range]: 10x1 100m/300ft
-     * [Location]: [2-hand]"
-   :energy "156J")
+    "* [Requires]: An [Arrow] in another hand
+     * [Range]: 10x1 100m/300ft"
+   :energy "156J"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "10x1"
+      (stringlist
+       "Pierce"
+       "Slash"
+       "1-Handed"
+       "Ranged Weapon"))))
   (base/item
    :name "Bow: Short"
    :image "images/cards/item-bow-short.svg"
    :titles "Hankyu, Recurve Bow"
-   :reference "Can fire about 6 aimed shots or 12 unaimed shots per minute."
+   :reference
+    "Can fire about 6 aimed shots or 12 unaimed shots per minute."
    :summary
-    "* [Skill]: [Ranged]
-     * [Damage]: 8x1 [Pierce] [Slash]
-     * [Range]: 2x1 20m/60ft
-     * [Location]: [2-hand]
-     * [Uses]: 0 Max:1
-     * [Reload]: [Action]"
+    "* [Requires]: An [Arrow] in another hand
+     * [Range]: 2x1 20m/60ft"
    :energy "80J"
    :body "10x-1"
-   :mass "1kg/2lb")
+   :mass "1kg/2lb"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "8x1"
+      (stringlist
+       "Pierce"
+       "Slash"
+       "1-Handed"
+       "Ranged Weapon"))))
   (base/item
    :name "Campfire"
    :image "images/cards/item-campfire.svg"
@@ -242,6 +255,10 @@
   (base/item
    :name "Door: Wooden"
    :image "images/cards/item-door-wooden.svg")
+  (base/item
+   :name "Drug: Evergreen"
+   :summary
+    "A life extending drug")
   (base/item
    :name "Grenade: White Phosphorous")
   (base/item

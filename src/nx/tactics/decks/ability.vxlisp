@@ -42,6 +42,28 @@
   (base/ability
    :name "Absorb Electricity")
   (base/ability
+   :name "Acid Bite"
+   :summary
+    "* [Power]: [Acidic]")
+  (base/ability
+   :name "Acid Blood"
+   :reference
+    "Gestates in a human host and has concentrated acid for blood - Aliens"
+   :summary
+    "* [Power]: [Acidic]")
+  (base/ability
+   :name "Acid Spray"
+   :summary
+    "* [Power]: [Acidic]")
+  (base/ability
+   :name "Acid Spit"
+   :summary
+    "* [Power]: [Acidic]")
+  (base/ability
+   :name "Acid Sting"
+   :summary
+    "* [Power]: [Acidic]")
+  (base/ability
    :name "Administration"
    :titles "Administrator, Secretary")
   (base/ability
@@ -936,6 +958,11 @@
      * Oh, my God... I just killed six billion people... - George Orr, The Lathe of Heaven"
    :summary
     "* [Skill]: [Dreaming]")
+  (base/ability
+   :name "Dream Mirroring"
+   :summary
+    "* The ability to swap dreams with another. They are in your dream. You are in their's.
+     * [Skill]: [Dreaming]")
   (base/ability
    :name "Dream Riding"
    :summary

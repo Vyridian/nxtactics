@@ -57,6 +57,16 @@
      (base/unitskill<-tactics-key-lvl
       tactics "Espionage" 5)))
   (base/unit
+   :name "Arinni Taybor"
+   :summary
+    "* Human Priest/Monk"
+   :titles "Taybor the Red"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Melee" 5
+      (stringlist "Quarterstaff"))))
+  (base/unit
    :name "Automaton")
   (base/unit
    :name "Bandit"
@@ -98,6 +108,9 @@
    :name "Bane: Poison")
   (base/unit
    :name "Bane: Radiation")
+  (base/unit
+   :name "Barghest"
+   :titles "Black Shuck, Ghost Hound")
   (base/unit
    :name "Bat: Fruit")
   (base/unit
@@ -426,8 +439,20 @@
    :summary
     "* Their metabolism is based on carbon dioxide instead of oxygen; their blood is dark green in color. The nervous system of the Elder Things is quite complex, with five-lobed brains and many ganglial centers. The prismatic cilia on top of the creatures' head suggest that they have senses other than sight, smell, touch, hearing, and taste. Elder Things reproduce through spores. They can derive nourishment from inorganic substances, but prefer to feed on organic life.")
   (base/unit
+   :name "Eldruf Grundel"
+   :summary "Gnome Thief Illusionist")
+  (base/unit
    :name "Fish: Small"
    :image "images/cards/unit-fish-small.svg")
+  (base/unit
+   :name "Flint"
+   :image "images/fantasy/Flint.png"
+   :summary "Half-Elven Thief"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Stealth" 9
+      (stringlist "Backstab"))))
   (base/unit
    :name "Flint (Early)"
    :image "images/cards/unit-flint.svg"
@@ -466,6 +491,19 @@
     * They are able to levitate and fly despite lacking any visible means of doing so, and leave telltale massive footprints when on the ground. Their amorphous bodies can turn invisible at will, though this ability appears somewhat negated by whistling noises associated with them in general. In battle, their ability to control and direct powerful winds is put to use as a weapon.
     * When the Great Race of Yith came to Earth, they warred with the polyps and soon drove them underground with their advanced technology. The Great Race then sealed the entryways to the polyps' subterranean abode with trapdoors, which afterwards were diligently guarded. The polyps' cities were left abandoned, perhaps as a reminder of the horrors that dwelt below.
     * Eventually, the polyps rose up and almost exterminated the Great Race, afterwards returning to their subterranean haunts. Having no conception of light, the polyps seem content to remain there, annihilating the few intruders that chance upon them. The entrances to their dwellings are mostly deep within ancient ruins where there are great wells sealed over with stone.")
+  (base/unit
+   :name "Galamir Mirlesem"
+   :image "images/fantasy/GalamirMirlesem.png"
+   :demeanor "Imperious"
+   :nature "Self-Absorbed"
+   :summary
+    "* Human Mage
+     * Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.
+     * History - Galamir was born to Chantry trainers, and as a child he was allowed special access to the arcane academy. As a teen, he became obsessed with magic and its effect on the world. His brilliance and magical aptitude were soon recognized and he was accepted into the academy. For the next 25 years he completed his full wizardry and elemental training and received top honors. He was a logical 	candidate to become a trainer himself, but he was bored of the cloistered life, so he began visiting other Chantries across the world. Along the way he encountered a naive, young half-elf rogue named Phirax living on a simple farm. Galamir recruited Phirax to join him to perform the more dangerous and mundane tasks while Galamir provided the leadership and strategy. Later, he recruited the Warrior Stam and the Cleric Sarak into their party to rounded out their abilities."
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl
+      tactics "Wizardry" 11)))
   (base/unit
    :name "Ghost Ship"
    :titles "Chaos Fleet, Skeleton Crew"
@@ -528,6 +566,8 @@
   (base/unit
    :name "Goblin Raider"
    :image "images/cards/unit-goblin-raider.svg"
+   :summary
+    "* [Role: Attacker]"
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
@@ -553,6 +593,8 @@
    :value "2x0"
    :mass "22kg/50lb"
    :height "1m/3ft"
+   :summary
+    "* [Role: Skirmisher]"
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
@@ -635,6 +677,20 @@
    :name "Herbalist"
    :image "images/cards/unit-herbalist.svg")
   (base/unit
+   :name "Hetman Undrig"
+   :summary
+    "* Orc Assassin
+     * A pragmatic, hardened survivalist who began his career as a lowly militia man in the Orc Army who would later form the infamous mercenary guild, the Blackguard.
+     * Personality - Hetman is noteworthy for his lack of personal pride or conscience. He dislikes authority.  He strongly believes the ends justify the means and has no compunction about using any means available.
+     * The Blackguard - When establishing the Blackguard, he insisted that it should never have a central authority and that all decisions were made by popular vote."
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Melee" 5
+      (stringlist
+       "Sword: Long"
+       "Knife: Dagger"))))
+  (base/unit
    :name "Hidden"
    :image "images/cards/unit-hidden.svg")
   (base/unit
@@ -671,6 +727,10 @@
    :name "Hunting Horror"
    :image "cthulhu/huntingHorror.png")
   (base/unit
+   :name "Husk"
+   :summary
+    "A person who has been completely drained of their lifeforce.")
+  (base/unit
    :name "Hydro Essence"
    :summary
     "* A mindless, condensed blob of Hydro energy.
@@ -682,6 +742,18 @@
   (base/unit
    :name "Jabba the Hutt"
    :image "images/starwars/unit-jabbathehutt.png")
+  (base/unit
+   :name "Jaris Ransun"
+   :image "images/fantasy/Ransun.png"
+   :summary "Human Hunter"
+   :titles "Valen the Hunter"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Defense" 5
+      (stringlist
+       "Armor: Chain Mail"
+       "Shield: Round"))))
   (base/unit
    :name "Jes Aveer"
    :titles "Jessana Aveer"
@@ -741,6 +813,11 @@
   (base/unit
    :name "Juggernaut")
   (base/unit
+   :name "Lemure"
+   :titles "Larvae, Lemur"
+   :summary
+    "* The wandering and vengeful spirits of those not afforded proper burial or funeral rites.")
+  (base/unit
    :name "Leopard"
    :titles "Panther, King Leopard - a [Large] Leopard with distinctive patterns of spots."
    :unitpowermap
@@ -796,6 +873,8 @@
   (base/unit
    :name "Lion")
   (base/unit
+   :name "Lost Soul")
+  (base/unit
    :name "Mi-Go"
    :image "cthulhu/unit-migo.png"
    :titles "Fungi from Yuggoth"
@@ -816,6 +895,22 @@
    :body "6x1"
    :mass "60kg/130lb"
    :height "1.5m/5ft")
+  (base/unit
+   :name "Mummy"
+   :reference "The Mummy"
+   :summary
+    "* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.
+     * Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk."
+   :unitpowermap
+    (base/unitpowermap
+     :Longevity
+      (base/unitpower
+       :name "Longevity"
+       :unitabilitymap
+        (base/unitabilitymap
+         :Reanimation
+          (base/unitability
+           :name "Reanimation")))))
   (base/unit
    :name "Naiad"
    :titles "Nereid, Nyad")
@@ -882,6 +977,10 @@
    :image "images/cards/unit-ox.svg"
    :imgmirror true)
   (base/unit
+   :name "Pestilence Horse"
+   :summary
+    "* A Pestience Horse is a zombie horse that carries deadly diseases. It's decaying body is not as fast as its original body, but may still trot fairly quickly. It is not as agressive as other undead, instead travelling around spreading disease and fleeing when confronted.")
+  (base/unit
    :name "Phantasmal Force")
   (base/unit
    :name "Phantasmal Mount")
@@ -890,8 +989,40 @@
   (base/unit
    :name "Phantasmal Warrior")
   (base/unit
+   :name "Phantom"
+   :summary
+    "* Phantoms are the remnants of those who were lost in the Astral/Dream Realm. The Astral Realm is the realm of imagination, so those trapped here are gradually driven mad. Therefore, Phantoms have varying and unpredictable insanities.")
+  (base/unit
    :name "Pheasant"
    :image "images/cards/unit-pheasant.svg")
+  (base/unit
+   :name "Phirax Alganon"
+   :image "images/fantasy/PhiraxAlganon.png"
+   :demeanor "Personable"
+   :nature "Self Righteous"
+   :summary
+    "* Half-Elven Bard
+     * Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.
+     * Beliefs - Phirax believes that improving the lives of those around him will also improves his own life. He sees this as selfishness through selflessness, therefore it is always in his own interest to help others. He could easily manipulate those around him, but he abhors the idea of exploiting others and is quick to judge abusers of any kind. He follows the lesser god Seker on his mission to destroy undead, specifically those who feed on or otherwise exploit the living (which is pretty much all of them).
+     * History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure."
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl-abilities
+      tactics "Empathy" 12
+      (stringlist "Demoralize")))
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Stealth" 9
+      (stringlist
+       "Backstab"
+       "Sneak"))
+     (base/unitskill<-tactics-key-lvl-abilities-items
+      tactics "Performance" 9
+      (stringlist
+       "Inspire")
+      (stringlist
+       "Lute"))))
   (base/unit
    :name "Pig"
    :image "images/cards/unit-pig.svg")
@@ -909,6 +1040,8 @@
    :name "Plough"
    :image "images/cards/unit-plough.svg"
    :imgmirror true)
+  (base/unit
+   :name "Poltergeist")
   (base/unit
    :name "Primal Ooze"
    :titles "Blob, Slime Beast")
@@ -945,6 +1078,11 @@
    :body "5x0"
    :mass "5kg/10lb")
   (base/unit
+   :name "Reaper"
+   :reference "Charon the Ferryman"
+   :summary
+    "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon.")
+  (base/unit
    :name "Rukh"
    :titles "Roc"
    :reference
@@ -956,6 +1094,20 @@
     * Intelligence - Rukhs also appear to have some degree of intelligence, using boulders to smash prey.")
   (base/unit
    :name "Rukh Hatchling")
+  (base/unit
+   :name "Sarak Ishimar"
+   :image "images/fantasy/SarakIshimar.png"
+   :summary "Human Cleric"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-lvl
+      tactics "Faith" 8)
+     (base/unitpower<-tactics-key-lvl
+      tactics "Invocation" 10))
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl
+      tactics "Melee" 8)))
   (base/unit
    :name "Sarani Kalea"
    :summary "Human Priestess"
@@ -1002,6 +1154,17 @@
    :body "3x2"
    :mass "300kg")
   (base/unit
+   :name "Shade"
+   :titles "Aghast, Ghast, Ghastly, Shoryo"
+   :reference "The Ring"
+   :summary
+    "* Description - lank and ghastly beings with no feet, floating suspended above the ground.
+     * Shades are the spirits of those who died in suicide, accident, murder, or wrongful execution. They are bound to this plane by the anger they felt at their deaths.
+     * Suicide and accident victims attempt to compel those most like their former selves to die in the same manner.
+     * Murder and wrongful death victims attempt to revenge themselves upon the killer or his descendents.")
+  (base/unit
+   :name "Shadow")
+  (base/unit
    :name "Sheep"
    :image "images/cards/unit-sheep.svg"
    :body "8x1"
@@ -1024,6 +1187,24 @@
     "Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so tenuous in composition that its limbs vanish as quickly as they materialize, its very form dividing constantly into a surplus of smaller abominations that are either reabsorbed into its great form, or that escape to some hideous life elsewhere. Not the spitting image of a fertility goddess but this is as close as the mythos gets. Shub-Niggurath may well be the most widely revered amoung the other gods, infuence reaching not only to the Greeks, Cretans, Egyptions, and some druids, but to races so far-flung across the cosmos as the Mi-go of Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new life, especially intelligent life, is held as a sacred act. Many humans derive joy and self-import from the notion that their kind was toild over by some kind of divine intelligence. Shub-Niggurath with her blind, indifferent, prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's affirmation that life itself is nothing extrodinary. - Tale Foundry"
    :summary
     "* Mother's Gift - The milk of Shub-Niggurath with powerful healing and corrupting properties.")
+  (base/unit
+   :name "Skeletal Dragon")
+  (base/unit
+   :name "Skeletal Knight"
+   :summary "* Morale - High"
+   :titles "Death Knight"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Special Ability"
+      (stringlist
+       "Savage"
+       "Skeletal"
+       "Undead")))
+   :unitskillmap
+    (base/unitskillmap<-tactics-keys
+     tactics
+     "Riding"))
   (base/unit
    :name "Skeleton"
    :unitpowermap
@@ -1065,21 +1246,22 @@
    :titles "Firespray-31"
    :classification "Med. Spacecraft")
   (base/unit
-   :name "Skeletal Knight"
-   :summary "* Morale - High"
-   :titles "Death Knight"
-   :unitpowermap
-    (base/unitpowermap<-unitpowerlist
-     (base/unitpower<-tactics-key-abilities
-      tactics "Special Ability"
-      (stringlist
-       "Savage"
-       "Skeletal"
-       "Undead")))
-   :unitskillmap
-    (base/unitskillmap<-tactics-keys
-     tactics
-     "Riding"))
+   :name "Slayer Dead"
+   :titles "Murderous Dead, War Dead"
+   :reference
+    "* Jason Voorhees
+     * Nightmare on Elm Street
+     * Vinland Saga"
+   :summary
+    "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines.")
+  (base/unit
+   :name "Sluagh"
+   :reference
+    "* The spirits of the sinners, or generally evil people who were welcome in neither heaven nor hell.
+     * They were seen to fly in groups like flocks of birds, coming from the west, and were known to try to enter the house of a dying person in an effort to carry the soul away with them. West-facing windows were sometimes kept closed to keep them out. Some consider the Sluagh to also carry with them the souls of innocent people who were kidnapped by these destructive spirits."
+   :summary
+    "* The Sluagh are thin, pale, snake-like, and grotesque, though they remain strangely compelling. They favor archaic, intricate, black clothing. Their joints can dislocate allowing them to slither our of bonds and into disquieting shapes.
+     * They may only speak in whispers and dislike any social situations except among their own kind. They prefer to overserve other from hidden corners, and the secrets they obtain are their stock and trade.")
   (base/unit
    :name "Snake: Anaconda"
    :unitpowermap
@@ -1133,6 +1315,8 @@
   (base/unit
    :name "Snake: Viper")
   (base/unit
+   :name "Spectral Horse")
+  (base/unit
    :name "Spectre"
    :reference
     "* Cenobites from Hellraiser"
@@ -1153,6 +1337,15 @@
    :image "images/cards/unit-sphinx.svg"
    :summary
     "* Highly intelligent")
+  (base/unit
+   :name "Stam Domindor"
+   :image "images/fantasy/Stam.png"
+   :summary "Dwarven Warrior"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Ranged" 7
+      (stringlist "Bow: Short"))))
   (base/unit
    :name "Strix"
    :titles "Stirges (plural), Vampire Owls"
@@ -1511,6 +1704,15 @@
    :name "Waif"
    :image "images/cards/unit-waif.svg")
   (base/unit
+   :name "Wandering Eye"
+   :titles "Eye Killer"
+   :summary
+    "* Thw Wandering Eye is a bizarre, eel-like creature with a single, large, humanoid eye where a mouth and face would normally be. Eyes live in large groups underground and slowly float through the air like schools of fish. Their skin is a dark matte brown while their eye is highly reflective white, so usually the first view of Wandering Eyes is of a dozen disembodied eyes moving and blinking independently of one another in the dark.
+     * Motivation - The Eyes are not intelligent nor malicious. They simply seek food, and will flee if startled or they are losing.
+     * Levitation - Eyes produce a lighter than air gas that is stored in sacs down its body. These allow The creature to float and it can slowly propel itself through the air by making swimming motions.
+     * Confusion - The creature's single, large eye doesn't seem to focus on anything and keeps moving about randomly. When a group of Wandering Eyes are seen, their weird, random eyes cause vertigo, confusion, fear, and sometimes madness. The Wandering Eye somehow feeds on this confusion and will attempt to trap victims and keep them in an intense state of confusion until they expire.
+     * Weakness - Eyes are adjusted to life in the dark and are blinded by bright lights and large fires.")
+  (base/unit
    :name "Water Elemental")
   (base/unit
    :name "Water Elemental Lord"
@@ -1523,20 +1725,46 @@
   (base/unit
    :name "Water Sprite")
   (base/unit
+   :name "Wendigo"
+   :titles "Abominable Snowman, Yeti"
+   :summary
+    "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims.")
+  (base/unit
+   :name "Werebat")
+  (base/unit
+   :name "Werebear")
+  (base/unit
+   :name "Wereboar")
+  (base/unit
    :name "Werecat"
    :image "images/bestiary/Lycanthrope_Weretiger.png"
    :titles "Rakshasa, Werejaguar, Werepanther, Weretiger"
    :reference
     "Every time it happens... you tell yourself it's love. But it isn't. It's blood. And death. - Cat People")
   (base/unit
-   :name "Wandering Eye"
-   :titles "Eye Killer"
+   :name "Werecrow"
+   :image "images/bestiary/Lycanthrope_Tengu.png"
+   :titles "Tengu, Wereraven"
    :summary
-    "* Thw Wandering Eye is a bizarre, eel-like creature with a single, large, humanoid eye where a mouth and face would normally be. Eyes live in large groups underground and slowly float through the air like schools of fish. Their skin is a dark matte brown while their eye is highly reflective white, so usually the first view of Wandering Eyes is of a dozen disembodied eyes moving and blinking independently of one another in the dark.
-     * Motivation - The Eyes are not intelligent nor malicious. They simply seek food, and will flee if startled or they are losing.
-     * Levitation - Eyes produce a lighter than air gas that is stored in sacs down its body. These allow The creature to float and it can slowly propel itself through the air by making swimming motions.
-     * Confusion - The creature's single, large eye doesn't seem to focus on anything and keeps moving about randomly. When a group of Wandering Eyes are seen, their weird, random eyes cause vertigo, confusion, fear, and sometimes madness. The Wandering Eye somehow feeds on this confusion and will attempt to trap victims and keep them in an intense state of confusion until they expire.
-     * Weakness - Eyes are adjusted to life in the dark and are blinded by bright lights and large fires.")
+    "* Able to fly, the Werecrows make terrific scouts and spies.  Their overwhelming curiousity is matched only by their tendency to gossip."
+   :unitpowermap
+    (base/unitpowermap
+     "Natural Weaponry"
+      (base/unitpower
+       :name "Natural Weaponry"
+       :unitabilitymap
+        (base/unitabilitymap
+         "Feather Blades"
+          (base/unitability
+           :name "Feather Blades")
+         "Feather Knives"
+          (base/unitability
+           :name "Feather Knives"))))
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-abilities
+      tactics "Hunting"
+      (stringlist "Scouting"))))
   (base/unit
    :name "Wererat"
    :image "images/bestiary/Lycanthrope_Wererat.png"
@@ -1544,6 +1772,33 @@
     (base/unitskillmap<-tactics-keys
      tactics
      "Stealth"))
+  (base/unit
+   :name "Werespider"
+   :titles "Anasi, Arachne, Kumo"
+   :unitpowermap
+    (base/unitpowermap
+     :Illusion
+      (base/unitpower
+       :name "Illusion"
+       :unitabilitymap
+        (base/unitabilitymap
+         "Dazzling Beauty"
+          (base/unitability
+           :name "Dazzling Beauty")
+         "Mirror Image"
+          (base/unitability
+           :name "Mirror Image")))
+     "Toxins"
+      (base/unitpower
+       :name "Toxins"
+       :unitabilitymap
+        (base/unitabilitymap
+         "Poison Bite"
+          (base/unitability
+           :name "Poison Bite")
+         "Poison Spit"
+          (base/unitability
+           :name "Poison Spit")))))
   (base/unit
    :name "Werewolf"
    :image "images/bestiary/Lycanthrope_Werewolf.png"

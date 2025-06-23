@@ -33,7 +33,7 @@
      * Pickup/Put Down an Item
      * Move an Item from one hand to another
      * Move an Item from hands to storage
-     * Reload an Item with one shot/clip/quickloader from another hand or a bandolier/quiver.
+     * Reload an Item with one use/clip/quickloader from another hand or a bandolier/quiver.
      * Give or take an Item from a willing Unit.")
   (base/rule
    :name "Action: Interact"
@@ -52,10 +52,10 @@
    //:image "images/rule-action-free.svg"
    :summary
     "Actions without normal Action cost:
-     * Skip - Discard Move or Turn tokens.
-     * Drop - Drop an item in front of you.
-     * Equip - Move:-1 to move/pickup/trade/reload an item
-     * Notice - Stun:+1 to attempt to detect hidden things
+     * Skip - Discard Move or Turn tokens
+     * Drop - Drop an item in front of you
+     * Equip - Move:-1 to move, pickup, trade, or reload an item
+     * Notice - Stun:+1 to detect hidden
      * Push the Limit - Fatigue:+1 to gain Skill:+1 this Round
      * State of Mind - Stun:+1 to remove a Fatigue, Stress, or Slow
      * Grit Your Teeth - Stress:+1 to ignore Penalties this Round
@@ -328,7 +328,7 @@ There are two types of damage:
     "* Be Kind - Don't badger others
      * Have Fun - Don't take anything too seriously
      * Speed is Key - Keep the game moving. Fast=Fun
-     * Oops - If you forget something, ignore it and move on. Suboptimal is fine
+     * Oops - If you forget something, ignore it. Suboptimal is fine
      * New Rules - Cards can override the standard rules
      * Be Fair - Don't exploit the rules")
   (base/rule
@@ -367,10 +367,14 @@ There are two types of damage:
   (base/rule
    :name "Hits: Rank"
    :summary
-    "Hits:+1 for each card (including Combo):
-     * IF A-J
-     OR
-     * Rank + Level Bonus > Difficulty")
+    "Determine Hits scored in the Conflict
+     Hits:+1 for each card IF:
+     * A-J
+       OR
+     * Rank + Level Bonus > Difficulty
+
+     IF Hits = 0
+     THEN Apply an appropriate facedown Damage card and the Conflict ends")
   (base/rule
    :name "How to Play"
    :summary
@@ -382,7 +386,7 @@ There are two types of damage:
      * Move - Spend Move to move a Unit
      * Action - Spend 1/2 of starting Move to perform an Action
      * Conflict - Skill Checks use opposed cards from Conflict decks
-     * Resolution - The results of a Conflict including Damage
+     * Resolution - Result including Damage
      * Round End - Draw a Card, Recover, and resolve Events
      * Rewards - Gain any rewards
      * Advancement - Improve Abilities
@@ -486,7 +490,10 @@ There are two types of damage:
   (base/rule
    :name "Place")
   (base/rule
-   :name "Player")
+   :name "Player"
+   :summary
+    "* [Setup]: Place your Units on the [Status Bar] with a [Unit#] card. Arrange your other Unit cards in front of you.
+     * [Round End]: [Draw]:1 and [Recover].")
   (base/rule
    :name "Poisoned"
    :summary
@@ -514,6 +521,84 @@ There are two types of damage:
    :name "Ritual"
    :summary
     "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event.")
+  (base/rule
+   :name "Role: Attacker"
+   :summary
+    "Attacker Units usually do the following:
+     * Target weak points in the enemy from lines
+     * Move into Range
+     * Attack")
+  (base/rule
+   :name "Role: Blaster"
+   :summary
+    "Blaster Units usually do the following:
+     * Target groups of enemies
+     * Move into Range
+     * Attack to maximize enemy losses
+     * Move to safety")
+  (base/rule
+   :name "Role: Defender"
+   :summary
+    "Defender Units usually do the following:
+     * Target an enemy threatening a nearby vulnerable ally
+     * Move into Range protecting the ally
+     * Attack")
+  (base/rule
+   :name "Role: Disrupter"
+   :summary
+    "Disrupter Units usually do the following:
+     * Target groups of enemies
+     * Move into Range
+     * Attack to maximize enemy disruption
+     * Move to safety")
+  (base/rule
+   :name "Role: Skirmisher"
+   :summary
+    "Skirmisher Units usually do the following:
+     * Target the closest enemy
+     * Move into Range
+     * Attack
+     * Move to safety")
+  (base/rule
+   :name "Role: Sniper"
+   :summary
+    "Sniper Units usually do the following:
+     * Target a vulnerable or important enemy
+     * Move into Range
+     * Attack
+     * Move to safety")
+  (base/rule
+   :name "Role: Supporter"
+   :summary
+    "Supporter Units usually do the following:
+     * Target ally(s) to assist
+     * Move into Range
+     * Aid the ally(s)")
+  (base/rule
+   :name "Role: Taunter"
+   :summary
+    "Taunter Units usually do the following:
+     * Target a dangerous enemy
+     * Move into Range
+     * Attack and attempt to draw attention")
+  (base/rule
+   :name "Roles"
+   :summary
+    "A Role describes a Unit's loose goals
+     * Attacker - Engage enemies
+     * Blaster - Reduce enemy numbers
+     * Defender - Protect allies
+     * Disrupter - Disrupt enemy abilities
+     * Skirmisher - Maintain Range and Strike
+     * Sniper - Eliminate big threats
+     * Supporter - Helps allies
+     * Taunter - Draw enemy attention")
+  (base/rule
+   :name "Rotated Cards"
+   :summary
+    "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated card.
+
+     * [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation.")
   (base/rule
    :name "Round: Actions"
    :summary
@@ -554,7 +639,7 @@ There are two types of damage:
   (base/rule
    :name "Round: Start"
    :summary
-    "Refresh Status Bar - Place tokens on each Unit# card:
+    "Refresh Status Bar - Place tokens on each [Unit#] card:
      * Action Cost:Speed/2 (rounded down)
      * Move:Speed
      * Turn:2")
@@ -644,7 +729,7 @@ There are two types of damage:
   (base/rule
    :name "Scene: Overview"
    :summary
-    "Scene describes a location and situation:
+    "Scene describes a situation:
      * Introduction - Intro and instructions
      * Map - The location and its layout
      * Factions - Groups with differing goals
@@ -679,19 +764,17 @@ There are two types of damage:
    :name "Scene: Sample")
   (base/rule
    :name "Scene: Status Bar"
+   :image "images/rule-scene-status-bar.svg"
    :summary
     "The Status Bar is an area near the board where all Units are displayed
-     * Place each Unit card on the Status Bar with a Unit# card above it.")
+     * Place each Unit card on the Status Bar with a [Unit#] card above it.")
   (base/rule
    :name "Scene: Units"
    :image "images/rule-scene-units.svg"
    :summary
     "Gather and layout your Unit cards
-     * Unit - Unit stat and mini cards
-     * Skills - Skill cards on the Unit
-     * Abilities - Ability cards on the Unit
-     * Specialties - Specialty cards
-     * Items - Item cards on the Unit. Arrange these like a paper doll to show what you are wearing or holding.")
+     * Unit stats, Minis, Skills, Abilities, Specialties, and Items
+     * Arrange equipped Items like a paper doll")
   (base/rule
    :name "Setup: Decks"
    :image "images/rule-setup-decks.svg"
@@ -709,8 +792,7 @@ There are two types of damage:
      * Colored Player Deck
      * Conflict Deck for Skill Checks - Shuffle and draw 5 cards
 
-     Optional:
-     A Character Deck of their personal character cards")
+     Optional: Character Deck of personal character cards")
   (base/rule
    :name "Setup: Tokens"
    :image "images/rule-setup-tokens.svg"
@@ -799,17 +881,9 @@ There are two types of damage:
   (base/rule
    :name "Target#"
    :summary
-   "* [Round: Targets]: Place this card above a Unit.
-    * [Damage] and [Target] cards are placed near this card.
+   "The current target of Unit#
 
-
-    * [Action Cost]:[Speed]/2 round down
-
-
-    * [Move]:[Speed]
-
-
-    * [Turn]:2")
+    * [Round Start]: Place on a Unit on the Status Bar")
   (base/rule
    :name "Task: Damaging"
    :summary
@@ -848,8 +922,6 @@ There are two types of damage:
    :name "Terms"
    :summary
     "* Scene - An short scenario
-     * Place - A map or location
-     * Item - A thing to interact with
      * Skill - A capability a Unit has learned
      * Power - A superhuman Skill
      * Ability - A specific ability / feat
@@ -859,11 +931,9 @@ There are two types of damage:
      * Cooldown - A sideways card
      * Narrator - The host / game master(s)
      * Space - A dot on the Map
-     * Requires - A requirement to use
      * Uses - # of uses before reload
      * [Key]:Value - Key refers to another Card. Value is the value/modifier.
      * Level Bonus - Higher level gains a bonus equal to difference")
-//     * Unit - A person, creature or vehicle
   (base/rule
    :name "Thirst"
    :summary
@@ -882,8 +952,13 @@ There are two types of damage:
   (base/rule
    :name "Unit#"
    :summary
-   "* [Setup]: Place this card above a Unit on the Status Bar.
-    * [Damage] and [Target] cards are placed near this card.
+   "Shows the Player and Unit#
+    * [Setup]: Place under a Unit on the Status Bar so Color and # are visible")
+  (base/rule
+   :name "Unit Num#"
+   :summary
+   "A Numbered Unit
+    * [Setup]: Place near a Unit's cards
 
 
     * [Action Cost]:[Speed]/2 round down

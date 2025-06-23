@@ -1082,12 +1082,12 @@
         "* If the user knows the True Name of his subject, he gains +1 [Synchonicity] against that subject.")))
   (base/power
    :name "Darkness"
+   :titles
+    "Dark Lord, Dark Magician, Dark Master, Dread Knight, Lord of Night, Shadow Caster, Shadow Knight, Shadow Lord, Shadow Mage, Shadow Master, Shadow Rider, Shadow Walker, Shadow Warrior"
    :reference
     "* The blackness gathers about, so thick, so clinging, so penetrating, so oppressive, that all other darkness that I have ever conceived would be like bright light beside it. - Aleister Crowley, Magick Without Tears
      * When the shadows are devoured by even darker shadows, the curtain pulls back and reveals a world without light! - Dark Signers, Yugioh 5Ds
      * To go in the dark with a light is to know the light. To know the dark, go dark. Go without sight and find that the dark, too, blooms and sings, and is traveled by dark feet and dark wings. - Wendell Berry, To Know the Dark"
-   :titles
-    "Dark Lord, Dark Magician, Dark Master, Dread Knight, Lord of Night, Shadow Caster, Shadow Knight, Shadow Lord, Shadow Mage, Shadow Master, Shadow Rider, Shadow Walker, Shadow Warrior"
    :stat "Shadow"
    :abilitymap
     (base/abilitymap
@@ -1095,41 +1095,87 @@
       (base/ability
        :name "Cast Shadows"
        :summary
-        "* Animate shadows. Like [Illusions], they have full power but are destroyed on any hit.")
+        "* Animate shadows
+         * [Power]: [Darkness]
+         * Like [Illusions], they have full power but are destroyed on any hit.")
+     "Cast a Long Shadow"
+      (base/ability
+       :name "Cast a Long Shadow"
+       :summary
+         "* [Power]: [Darkness]")
      "Circle of Darkness"
       (base/ability
-       :name "Circle of Darkness")
+       :name "Circle of Darkness"
+       :summary
+         "* [Power]: [Darkness]")
      "Cloak of Shadows"
       (base/ability
        :name "Cloak of Shadows"
-       :summary "* Increase Stealth"
-       :titles "Shroud of Night")
+       :titles "Shroud of Night"
+       :summary
+        "* Increase Stealth
+         * [Power]: [Darkness]")
      "Darkest Hour"
       (base/ability
        :name "Darkest Hour"
-       :titles "Witching Hour")
+       :titles "Witching Hour"
+       :summary
+        "* [Power]: [Darkness]")
+     "Draw out the Darkness"
+      (base/ability
+       :name "Draw out the Darkness"
+       :summary
+         "* [Power]: [Darkness]")
+     "Dweller in Darkness"
+      (base/ability
+       :name "Dweller in Darkness"
+       :summary
+         "* [Power]: [Darkness]")
+     "Engulfed in Darkness"
+      (base/ability
+       :name "Engulfed in Darkness"
+       :summary
+         "* [Power]: [Darkness]")
      "Eye of Shadow"
       (base/ability
        :name "Eye of Shadow"
-       :summary "* See perfectly in any form of darkness."
        :titles "Dark Sight, Night Vision")
+       :summary
+        "* See perfectly in any form of darkness.
+         * [Power]: [Darkness]")
      "Heart of Darkness"
       (base/ability
-       :name "Heart of Darkness")
+       :name "Heart of Darkness"
+       :summary
+         "* [Power]: [Darkness]")
      "Nightfall"
       (base/ability<-tactics-key tactics "Nightfall")
      "Oubliette"
       (base/ability<-tactics-key tactics "Oubliette")
+     "Shadow Boxing"
+      (base/ability
+       :name "Shadow Boxing"
+       :summary
+         "* [Power]: [Darkness]")
      "Shadow Step"
       (base/ability<-tactics-key tactics "Shadow Step")
      "Shadow Strike"
       (base/ability<-tactics-key tactics "Shadow Strike")
+     "Speed of Night"
+      (base/ability
+       :name "Speed of Night"
+       :summary
+         "* [Power]: [Darkness]")
      "Tendrils of Night"
       (base/ability
-       :name "Tendrils of Night")
+       :name "Tendrils of Night"
+       :summary
+         "* [Power]: [Darkness]")
      "Wall of Darkness"
       (base/ability
-       :name "Wall of Darkness")))
+       :name "Wall of Darkness"
+       :summary
+         "* [Power]: [Darkness]"))
   (base/power
    :name "Demonic"
    :titles "Demon, Demon Soul, Yoki, Yoma"
@@ -1159,29 +1205,43 @@
      "All Seeing Eye"
       (base/ability
        :name "All Seeing Eye"
-       :reference "The Eye of  Providence")
+       :reference
+        "The Eye of Providence"
+       :summary
+        "* [Power]: [Divination]")
      "Augury"
       (base/ability
-       :name "Augury")
+       :name "Augury"
+       :summary
+        "* [Power]: [Divination]")
      "Cartomancy"
       (base/ability
        :name "Cartomancy"
-       :summary "* The art of reading the future through playing cards or tarot cards.")
+       :summary
+        "* The art of reading the future through playing cards or tarot cards.
+         * [Power]: [Divination]")
      "Clairaudience"
       (base/ability
-       :name "Clairaudience")
+       :name "Clairaudience"
+       :summary
+        "* [Power]: [Divination]")
      "Clairvoyance"
       (base/ability
-       :name "Clairvoyance")
+       :name "Clairvoyance"
+       :summary
+        "* [Power]: [Divination]")
      "Dowsing"
       (base/ability
        :name "Dowsing"
-       :summary "* Through the use of a divining rod the user may detect desired items hidden underground below them.")
+       :summary
+        "* Through the use of a divining rod the user may detect desired items hidden underground below them.
+         * [Power]: [Divination]")
      "Fortune Telling"
       (base/ability
        :name "Fortune Telling"
        :summary
-        "* [Deploy]: Roll vs. target Spirit. If you succeed, you receive +1 on all actions against him this encounter.
+        "* [Power]: [Divination]
+         * [Deploy]: Roll vs. target Spirit. If you succeed, you receive +1 on all actions against him this encounter.
          * Casting - In various methods of divination, bones, stones, cards, sticks and other objects are cast onto the ground or a special cloth so that an insight into the life patterns can be revealed.
          * Bibliomancy - Reading random passages from a book, such as Liber Legis or the I Ching.
          * Tea Leaves
@@ -1189,7 +1249,9 @@
      "Hallmark"
       (base/ability
        :name "Hallmark"
-       :summary "* Analyze a magical effect to learn information about its caster.")
+       :summary
+        "* Analyze a magical effect to learn information about its caster.
+         * [Power]: [Divination]")
      "Kismet"
       (base/ability
        :name "Kismet")
@@ -1197,7 +1259,9 @@
       (base/ability
        :name "Mirror of Truth"
        :summary
-        "* Enchant a reflective surface to show the true nature of the reflected scene. This reveals illusions, hidden things, and can even reveal the nature of those concealing terrible secrets.")
+        "* Enchant a reflective surface to show the true nature of the reflected scene.
+         * [Power]: [Divination]
+         * This reveals illusions, hidden things, and can even reveal the nature of those concealing terrible secrets.")
      :Portent
       (base/ability
        :name "Portent"
@@ -1206,37 +1270,53 @@
        :titles "Omen")
      :Postcognition
       (base/ability
-       :name "Postcognition")
+       :name "Postcognition"
+       :summary
+        "* [Power]: [Divination]")
      :Precognition
       (base/ability
-       :name "Precognition")
+       :name "Precognition"
+       :summary
+        "* [Power]: [Divination]")
      :Prediction
       (base/ability
-       :name "Prediction")
+       :name "Prediction"
+       :summary
+        "* [Power]: [Divination]")
      :Premonition
       (base/ability
-       :name "Premonition")
+       :name "Premonition"
+       :summary
+        "* [Power]: [Divination]")
      :Prophesy
       (base/ability
-       :name "Prophesy")
+       :name "Prophesy"
+       :summary
+        "* [Power]: [Divination]")
      :Providence
       (base/ability
        :name "Providence"
-       :summary "* [Action]: Divine a time and place nearby that will be beneficial if the user goes there. The roll result is not known by the user, and the success determines the benefit.")
+       :summary
+        "* [Power]: [Divination]
+         * [Action]: Divine a time and place nearby that will be beneficial if the user goes there. The roll result is not known by the user, and the success determines the benefit.")
      :Revelation
       (base/ability
-       :name "Revelation")
+       :name "Revelation"
+       :summary
+        "* [Power]: [Divination]")
      :Foresight
       (base/ability
        :name "Foresight"
-       :summary "* Foresight is a passive form of extra-sensory perception whereby a person spontaneously perceives information, in the form of vision, about future events before they happen.  It is distinguished from [Precognition] in that it is passive.")
+       :summary
+        "* [Power]: [Divination]
+         * Foresight is a passive form of extra-sensory perception whereby a person spontaneously perceives information, in the form of vision, about future events before they happen. It is distinguished from [Precognition] in that it is passive.")
      "Twist of Fate"
       (base/ability
        :name "Twist of Fate")
-     :Visions
+     "Visions"
       (base/ability
        :name "Visions")
-     :Wyrding
+     "Wyrding"
       (base/ability
        :name "Wyrding"))
    :specialtymap
@@ -1269,6 +1349,7 @@
      "Dreamriding"
      "Dreamquest"
      "Dream Effectively"
+     "Dream Mirroring"
      "Dream Riding"
      "Dream Sight"
      "Dream Speak"
@@ -1342,15 +1423,15 @@
       (base/ability
        :name "Evil Eye"
        :summary "* Reduces Spirit")
-     "Fertile Loins"
+     "Fertile Field"
       (base/ability
-       :name "Fertile Loins"
-       :summary "* Next intercourse will have doubled chance to conceive a child, if possible.")
-     :Haste
+       :name "Fertile Field"
+       :summary "* Target has double chance to conceive a child.")
+     "Haste"
       (base/ability
        :name "Haste"
        :summary
-        "* [Effect]: +1 Move
+        "* [Effect]: Move:+1
          * [Target]: [Area]
          * [Duration]: [Hits]")
      "Inscribe Rune"
@@ -2371,25 +2452,36 @@
      "Analyze Magic"
       (base/ability
        :name "Analyze Magic"
-       :summary "* Gain understanding of a magical item or effect.")
-     :Counterspell
+       :summary
+        "* Gain understanding of a magical item or effect.")
+     "Counterspell"
       (base/ability
        :name "Counterspell"
-       :summary "* [Interrupt]: Roll a defense roll against a magical ability. If the defense succeeds, the ability has no effect.")
-     :Dampen
+       :summary
+        "* [Interrupt]: Roll a defense roll against a magical ability. If the defense succeeds, the ability has no effect.")
+     "Dampen"
       (base/ability
        :name "Dampen"
-       :summary "* Magic can easily be reduced since magic already has a tentative hold on reality.")
-     :Dispel
+       :summary
+        "* Magic can easily be reduced since magic already has a tentative hold on reality.")
+     "Dispel"
       (base/ability
        :name "Dispel"
-       :summary "* Attack a placed magical ability.  Each hit weakens its abilities.")
-     :Fork
+       :summary
+        "* Attack a placed magical ability.  Each hit weakens its abilities.")
+     "Fork"
       (base/ability
        :name "Fork"
        :summary
         "* Duplicate an allied caster's magical ability. The other caster fully controls both abilities but may not aim both at the same target.")
-     :Magnify
+     "Mage Sight"
+      (base/ability
+       :name "Mage Sight"
+       :titles "Detect Magic, Detect Dweomer"
+       :summary
+        "* See Magic around you.
+         * [Power]: [Wizardry]")
+     "Magnify"
       (base/ability
        :name "Magnify"
        :summary
@@ -2432,47 +2524,42 @@
      "Power Surge"
       (base/ability
        :name "Power Surge")
-     :Redirect
+     "Redirect"
       (base/ability
        :name "Redirect"
        :summary "* [Reaction]: Redirect an Energy or Physical Ranged attack that has a single target to another target.")
-     :Stasis
+     "Stasis"
       (base/ability
        :name "Stasis"
-       :summary "* Place an equal number of White Stasis Tokens on yourself and your target.")
+       :summary
+        "* Place an equal number of White Stasis Tokens on yourself and your target.")
      "White Noise"
       (base/ability
        :name "White Noise"
-       :summary "Sounds are garbled preventing eavesdropping")
+       :summary
+        "Sounds are garbled preventing eavesdropping")
      "Wizard Armor"
       (base/ability
        :name "Wizard Armor"
-       :summary "* Defense against Energy that creates [Feedback].")
+       :titles "Mage Armor"
+       :summary
+        "* Defense against Energy that creates [Feedback].")
      "Wizard Lock"
       (base/ability
        :name "Wizard Lock"
+       :titles "Magic Seal"
        :summary
         "* Wizard Lock alters an existing magical effect by freezing it in place. It becomes permanent until dispelled, but it no longer has an active effect. In this way a wall of fire would be a permanent wall that does not move or produce heat. This is often used to make a seal last indefinitely.")))
   (base/power
    :name "Acidic"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Acid Bite"
-      (base/ability
-       :name "Acid Bite")
      "Acid Blood"
-      (base/ability
-       :name "Acid Blood"
-       :reference "Gestates in a human host and has concentrated acid for blood - Aliens")
-     "Acid Spray"
-      (base/ability
-       :name "Acid Spray")
      "Acid Spit"
-      (base/ability
-       :name "Acid Spit")
-     "Acid Sting"
-      (base/ability
-       :name "Acid Sting")))
+     "Acid Spray"
+     "Acid Sting"))
   (base/power
    :name "Adaptation"
    :summary
