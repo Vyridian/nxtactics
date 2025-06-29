@@ -4418,7 +4418,8 @@
    (base/sectionmap<-sectionlist
     (base/section
      :name "Corporeal Undead"
-     :summary "* Vulnerable: [Fire], [Impact]"
+     :summary
+      "* Vulnerable: [Fire], [Impact]"
      :unitmap
       (base/unitmap<-tactics-keys
        tactics

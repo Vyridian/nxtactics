@@ -8,42 +8,6 @@ import vx_type from "../../../vx/type.js"
 export default class nx_tactics_decks_starter {
 
   /**
-   * @function card_conflictlower
-   * @return {card}
-   */
-  static t_card_conflictlower = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_conflictlower = {
-    vx_type: nx_tactics_decks_starter.t_card_conflictlower
-  }
-
-  // (func card-conflictlower)
-  static f_card_conflictlower() {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "conflictlower", ":name", "Conflict: Lower", ":image", "images/card-conflict-lower.svg", ":summary", "Conflict: Play this when playing a Conflict card to indicate that the lower choice on the card is being used (i.e. the side facing toward you).")
-    return output
-  }
-
-  /**
-   * @function card_conflictupper
-   * @return {card}
-   */
-  static t_card_conflictupper = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_conflictupper = {
-    vx_type: nx_tactics_decks_starter.t_card_conflictupper
-  }
-
-  // (func card-conflictupper)
-  static f_card_conflictupper() {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "conflictupper", ":name", "Conflict: Upper", ":image", "images/card-conflict-upper.svg", ":summary", "Conflict: Play this when playing a Conflict card to indicate that the upper choice on the card is being used (i.e. the side facing away from you).")
-    return output
-  }
-
-  /**
    * @function card_player
    * @param  {tactics} tactics
    * @param  {string} color
@@ -182,42 +146,6 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
-   * @function card_unitnum
-   * @param  {tactics} tactics
-   * @param  {string} color
-   * @param  {int} num
-   * @return {card}
-   */
-  static t_card_unitnum = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_unitnum = {
-    vx_type: nx_tactics_decks_starter.t_card_unitnum
-  }
-
-  // (func card-unitnum)
-  static f_card_unitnum(tactics, color, num) {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_let(
-      {"any-1": nx_tactics_base.t_card},
-      [],
-      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const rule = nx_tactics_base.f_rule_from_tactics_key(tactics, "Unit Num#")
-        return vx_core.f_copy(
-          rule,
-          ":id",
-          vx_core.f_new({"any-1": vx_core.t_string}, "unitnum-", color, "-", num),
-          ":name",
-          vx_core.f_new({"any-1": vx_core.t_string}, "Unit Num#", num),
-          ":image",
-          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, ".svg")
-        )
-      })
-    )
-    return output
-  }
-
-  /**
    * @function deck_player
    * @param  {tactics} tactics
    * @param  {string} color
@@ -246,11 +174,6 @@ export default class nx_tactics_decks_starter {
           nx_tactics_decks_starter.f_card_unit(tactics, color, 3),
           nx_tactics_decks_starter.f_card_unit(tactics, color, 4),
           nx_tactics_decks_starter.f_card_unit(tactics, color, 5),
-          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 1),
-          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 2),
-          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 3),
-          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 4),
-          nx_tactics_decks_starter.f_card_unitnum(tactics, color, 5),
           nx_tactics_decks_starter.f_card_target(tactics, color, 1),
           nx_tactics_decks_starter.f_card_target(tactics, color, 2),
           nx_tactics_decks_starter.f_card_target(tactics, color, 3),
@@ -283,23 +206,17 @@ export default class nx_tactics_decks_starter {
       
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "card-conflictlower": nx_tactics_decks_starter.e_card_conflictlower,
-      "card-conflictupper": nx_tactics_decks_starter.e_card_conflictupper,
       "card-player": nx_tactics_decks_starter.e_card_player,
       "card-rotated": nx_tactics_decks_starter.e_card_rotated,
       "card-target": nx_tactics_decks_starter.e_card_target,
       "card-unit": nx_tactics_decks_starter.e_card_unit,
-      "card-unitnum": nx_tactics_decks_starter.e_card_unitnum,
       "deck-player": nx_tactics_decks_starter.e_deck_player
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "card-conflictlower": nx_tactics_decks_starter.t_card_conflictlower,
-      "card-conflictupper": nx_tactics_decks_starter.t_card_conflictupper,
       "card-player": nx_tactics_decks_starter.t_card_player,
       "card-rotated": nx_tactics_decks_starter.t_card_rotated,
       "card-target": nx_tactics_decks_starter.t_card_target,
       "card-unit": nx_tactics_decks_starter.t_card_unit,
-      "card-unitnum": nx_tactics_decks_starter.t_card_unitnum,
       "deck-player": nx_tactics_decks_starter.t_deck_player
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -313,42 +230,6 @@ export default class nx_tactics_decks_starter {
       "typemap": typemap
     })
     vx_core.vx_global_package_set(pkg)
-
-    // (func card-conflictlower)
-    nx_tactics_decks_starter.t_card_conflictlower['vx_value'] = {
-      name          : "card-conflictlower",
-      pkgname       : "nx/tactics/decks/starter",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_conflictlower
-    }
-
-    // (func card-conflictupper)
-    nx_tactics_decks_starter.t_card_conflictupper['vx_value'] = {
-      name          : "card-conflictupper",
-      pkgname       : "nx/tactics/decks/starter",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_conflictupper
-    }
 
     // (func card-player)
     nx_tactics_decks_starter.t_card_player['vx_value'] = {
@@ -420,24 +301,6 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_unit
-    }
-
-    // (func card-unitnum)
-    nx_tactics_decks_starter.t_card_unitnum['vx_value'] = {
-      name          : "card-unitnum",
-      pkgname       : "nx/tactics/decks/starter",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_unitnum
     }
 
     // (func deck-player)

@@ -1266,7 +1266,7 @@ export default class nx_tactics_ui_stylesheet {
       ":align",
       vx_ui_ui.c_align_center,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 7, ":y", 1),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 7, ":y", 2),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 51)
     ))
@@ -1704,7 +1704,7 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 32, ":y", 16),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 33, ":y", 16),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 30, ":y", 31)
     ))
@@ -1719,7 +1719,7 @@ export default class nx_tactics_ui_stylesheet {
       ":pointpos",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 2, ":y", 39),
       ":pointsize",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 60, ":y", 37)
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 60, ":y", 38)
     ))
 
     // (const style-place-image)
@@ -1778,7 +1778,9 @@ export default class nx_tactics_ui_stylesheet {
       ":type",
       vx_ui_ui.c_styletype_shared,
       ":font",
-      nx_tactics_ui_stylesheet.c_font_header1
+      nx_tactics_ui_stylesheet.c_font_header1,
+      ":color-font",
+      "0000FF"
     ))
 
     // (const style-text-header2)
@@ -1965,7 +1967,7 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 34, ":y", 13),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 33, ":y", 13),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 29, ":y", 5)
     ))
@@ -1978,9 +1980,9 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 2, ":y", 50),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 3, ":y", 49),
       ":pointsize",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 60, ":y", 37)
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 57, ":y", 36)
     ))
 
     // (const style-unit-image)
@@ -2019,7 +2021,7 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 34, ":y", 22),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 33, ":y", 22),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 29, ":y", 5)
     ))
@@ -2047,7 +2049,7 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 34, ":y", 40),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 33, ":y", 40),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 29, ":y", 5)
     ))
@@ -2077,7 +2079,7 @@ export default class nx_tactics_ui_stylesheet {
       ":align",
       vx_ui_ui.c_align_center,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 50, ":y", 0),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 50, ":y", 2),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 13, ":y", 6)
     ))
@@ -2105,7 +2107,7 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 34, ":y", 31),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 33, ":y", 31),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 29, ":y", 5)
     ))

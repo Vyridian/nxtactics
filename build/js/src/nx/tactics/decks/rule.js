@@ -30,7 +30,7 @@ export default class nx_tactics_decks_rule {
           {"any-1": nx_tactics_base.t_cardlist},
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Drawn to Destiny", "Overview", "Features", "Warning", "Golden Rules", "Terms", "Stat", "Unit: Sample", "Unit", "Item: Sample", "Item", "How to Play", "Setup: Players", "Setup: Decks", "Setup: Tokens", "Scene: Overview", "Scene: Introduction", "Scene: Minis", "Scene: Map", "Scene: Map#1", "Scene: Map#2", "Scene: Factions", "Scene: Units", "Scene: Status Bar", "Scene: Rounds", "Scene: Events", "Scene: Conclusion", "Scene: Rewards", "Scene: Advancement", "Scene: Sample", "Round: Overview", "Round: Start", "Round: Targets", "Round: Groups", "Round: Moves", "Round: Actions", "Round: End", "Move: Overview", "Move: Facing", "Move: Moving", "Action: Free", "Action: Equip", "Action: Notice", "Action: Recover", "Action: Hide", "Action: Search", "Action: Attack", "Action: Interact", "Arc", "Range", "Line of Sight", "Task: Overview", "Task: Test", "Task: Extended", "Task: Damaging", "Conflict: Overview", "Conflict: Suit", "Conflict: Approach", "Conflict: Rank", "Conflict: Reveal", "Conflict: Compare", "Conflict: Chart", "Hits: Overview", "Hits: Combo", "Hits: Rank", "Hits: Damage Decks", "Hit Location", "Hit Location Person", "Hit Location Vehicle", "Hits: Power", "Damage: Overview", "Damage: Mitigation", "Damage: Crits", "Character", "Body", "Mind", "Will", "Speed", "Beast", "Shadow", "Conscience", "Leveling", "Skill", "Power", "Ability", "Specialty", "Place", "Scene", "Map: Exploration", "Map: Personal", "Map: Vehicle", "Scale", "Scaled", "Advantage", "Disadvantage", "Area Effect", "Reach", "Flanking", "Surrounded", "Surprise", "Unskilled", "Unfamiliar Item", "Choking", "Hunger", "Thirst", "Exposure", "Weather: Clouds", "Weather: Humidity", "Weather: Temperature", "Weather: Wind", "Build: Unit", "Build: Character", "Build: Item", "Build: Vehicle")
+            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Drawn to Destiny", "Disclaimer", "How to Play", "Description", "Features", "Golden Rules", "Terms", "Unit: Sample", "Unit: Guide", "Item: Sample", "Item: Guide", "Stat", "How to Play", "Setup: Players", "Setup: Decks", "Setup: Tokens", "Scene: Overview", "Scene: Introduction", "Scene: Minis", "Scene: Map", "Scene: Map#1", "Scene: Map#2", "Scene: Factions", "Scene: Units", "Scene: Rounds", "Scene: Events", "Round: Overview", "Round: Start", "Round: Targets", "Round: Groups", "Round: Moves", "Round: Actions", "Round: End", "Move: Overview", "Move: Facing", "Move: Moving", "Action: Free", "Action: Equip", "Action: Notice", "Action: Recover", "Action: Hide", "Action: Search", "Action: Attack", "Action: Interact", "Arc", "Range", "Line of Sight", "Task: Overview", "Task: Test", "Task: Extended", "Task: Damaging", "Conflict: Overview", "Conflict: Suit", "Conflict: Approach", "Conflict: Rank", "Conflict: Reveal", "Conflict: Compare", "Conflict: Chart", "Hits: Overview", "Hits: Combo", "Hits: Rank", "Hits: Damage Decks", "Hit Location", "Hit Location Person", "Hit Location Vehicle", "Hits: Power", "Damage: Overview", "Damage: Mitigation", "Damage: Crits", "Conclusion", "Rewards", "Advancement", "Character", "Body", "Mind", "Will", "Speed", "Beast", "Shadow", "Conscience", "Leveling", "Skill", "Power", "Ability", "Specialty", "Place", "Scene", "Map: Exploration", "Map: Personal", "Map: Vehicle", "Scale", "Scaled", "Advantage", "Disadvantage", "Area Effect", "Reach", "Flanking", "Surrounded", "Surprise", "Unskilled", "Unfamiliar Item", "Choking", "Hunger", "Thirst", "Exposure", "Weather: Clouds", "Weather: Humidity", "Weather: Temperature", "Weather: Wind", "Build: Unit", "Build: Character", "Build: Item", "Build: Vehicle")
           )
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
@@ -66,6 +66,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Action: Notice", ":summary", "Stun:+1 to attempt to detect hidden things:\n* Sight - IF a Hidden Unit in Range:Mindx2 enters your Arc:Forward [Task: Test] Mind vs Body to notice them.\n* Hearing - IF a Hidden Unit enters Range:Mindx1 THEN [Task: Test] Mind vs Body to notice them."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Action: Recover", ":summary", "Move:-[Action Cost]\n* Remove a [Fatigue], [Stun], [Stress], or [Slow]\n\nOR\n\nMove:-[Action Cost]\n* Ready an [Ability] in [Cooldown]\n    \nOR\n\nMove:-[Action Cost]x2\n* Bind Wound - Remove a [Bleeding] from yourself or an adjacent unit."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Action: Search", ":summary", "Move:-[Action Cost]x2\n    * Test [Investigate] vs [Conflict] to search the [Place] you occupy. IF you Win THEN you find something for each [Effect]."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Advancement", ":summary", "Skill Points (SP)\n* Respec - Take Skill:-1 on ONE Skill for SP:+(lower Skill level)\n* 2 Week - Train/Research and spend SP:-(current Skill Level) for Skill:+1.\nAbility Points (AP)\n* Respec - Remove 1 Ability for AP:+1\n* 1 Week - Train/Research and AP:-1 for an Ability, Specialty, or Item in a Skill OR Rating:+0x1 to a Power.\n* Specialty - IF you gain an Ability in your Specialty THEN every third Ability costs 0 AP."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Advantage", ":summary", "* [Reveal]: IF both play the same [Suit] THEN you may flip to the other [Approach]\n* IF you have Advantage and rival has [Disadvantage] and both play the same Color THEN you may flip to the other [Approach]"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -88,6 +89,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Choking", ":summary", "* This includes any obstruction of airways such as smoke, water, sand, fungus, disease, physical choking, etc. It also includes damage to filters and other aspiration/ventilation systems on machines.\n* Will:-1\n* Event: IF a Unit breathes < 1 minute/2 minutes THEN Choking:+1 ELSE Choking:-1"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Clock", ":image", "images/rule-clock.svg", ":summary", "Represents the current Clock time.\n* Scene Start: Order with Clock#1 on top or bottom based on [Scene]\n* Round End: Discard the top Clock\n** Resolve any revealed [Event]\n** IF no Clocks THEN resolve according to the [Scene]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Combat", ":summary", "* Target a unit with a damaging Skill/Power.\n* Each player chooses a Conflict card from their hand or a random card from Shared Conflict.\n* Conflict Cards are compared like Rock/Paper/Scissors.\n* Fight Speed: Block/Counter > Fast > Evade > Strong > Block/Counter\n* If both play Fast or Strong then compare by Rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.\n* Discard used cards (except Keep)"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Conclusion", ":summary", "* Epilogue - Read the Epilogue of the Scene.\n* Rewards - Gather and allocate any rewards.\n* Advancement - Players spend Character Points, Skill Points, and Ability Points.\n* Downtime - Players declare intentions before the next Scene.\n* Intentions - Players declare desires for the next Scene."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -142,7 +144,25 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Damage: Crits", ":summary", "* Crits are face-up [Damage] cards.\n* 10 [Hits] = 1 Crit"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Damage: Mitigation", ":summary", "* Shielding - \n* Armor - "),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Damage: Overview", ":summary", "When a char takes damage they take the Damage card onto their character.\n* Rank - Hit Location A=Head, 2=Right Foot\n* Suit - Damage Type (Bash, Pierce, Hack, Slash)\n* Severity - Rotating the card increases the severity (4 severities per card. The last is very nasty.)\nThere are two types of damage:\n* Hits - Cause Fatigue - Face Down Damage\n* Crits - Cause Wounds - Face Up Damage. Rotate for each additional Crit. Armor in the locations turns Crits to Hits.\n    1) Damage Types - Determine the [Damage Types] of the weapon.\n2) Reveal Damage - Reveal cards equal to [Hits].\n3) Separate Damage - Separate them into 2 piles: Those that match the [Damage Types] (Damage) and those that don't (Fatigue).\n4) Hit Location - The top card from the matching pile is the Hit Location (or the mismatch pile if no matches). Move it aside and flip the Fatigue pile to its facedown side.\n5) Armor - Check [Armor] in the [Hit Location] and then the target reduces the Damage or Fatigue for each point of armor. The Hit Location can only be removed last.\n6) Fatigue - The target may take the Fatigue cards as long they have Body. Any remaining Fatigue are flipped faceup and added to the Damage pile.\n7) Damage - Count the Damage pile and apply the effect on the Hit Location card to the target.\n8) Cleanup - Discard other cards. Shuffle if a Wild was revealed."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Description",
+        ":image",
+        "images/rule-description.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Disadvantage", ":summary", "* [Reveal]: IF both play the same [Suit] THEN your Rival may rotate yours to the opposite [Approach]"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Disclaimer",
+        ":image",
+        "images/rule-disclaimer.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -154,7 +174,15 @@ export default class nx_tactics_decks_rule {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Damaged", ":summary", "* [Body]:-1\n* When using a damaged item or body part take [Skill]:-1/Damaged.\n* An item with no [Body] remaining is [Broken]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Exposure", ":summary", "* Move:-1\n* Event: IF a Unit has shelter < 6 hours/day THEN Exposure:+1 ELSE Exposure:-1."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Features", ":summary", "* Tactical Card, War, Board, Roleplaying Game\n* Supports any genre at any scale\n* Based in physics\n* Everything is a card - Designed to stay compact and modular\n* Simultaneously Play - Max Uptime\n* Agency - Players choose their 'rolls'\n* Detailed Damage / Hit Location\n* Mental and Emotional Trauma\n* Detailed combat including Martial Arts and Grappling\n* Vast Magic and Superpowers\n* Encourage Broad vs Vertical Investment"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Features",
+        ":image",
+        "images/rule-features.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -164,8 +192,15 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Game", ":summary", "* Create [Characters] or [Factions] to play [Scenes].\n* Each [Scene] contains various [Threats] and [Goals].\n* Try to complete them using your [Skills] and [Powers] for [Rewards].\n* Some [Rewards] are items, others are [Skill Point]s or [Ability Point]s that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties].\n* A Game is broken up into Rounds.\n* Each Round every Player takes a Turn.\n* Each Turn each Player takes 2 Actions."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Golden Rules", ":summary", "* Be Kind - Don't badger others\n* Have Fun - Don't take anything too seriously\n* Speed is Key - Keep the game moving. Fast=Fun\n* Oops - If you forget something, ignore it. Suboptimal is fine\n* New Rules - Cards can override the standard rules\n* Be Fair - Don't exploit the rules"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Golden Rules",
+        ":image",
+        "images/rule-goldenrules.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hit Location", ":image", "images/rule-hit-location.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -190,10 +225,34 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hits: Overview", ":summary", "Hits are the degree of success\n* Combo - Optional. Discard cards to increase Hits\n* Rank - Each card may increase Hits\n* Powers - Powers including those on Weapons and Items may increase Hits"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hits: Power", ":image", "images/rule-hits-power.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hits: Rank", ":summary", "Determine Hits scored in the Conflict\nHits:+1 for each card IF:\n* A-J\n  OR\n* Rank + Level Bonus > Difficulty\n\nIF Hits = 0\nTHEN Apply an appropriate facedown Damage card and the Conflict ends"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "How to Play", ":summary", "This is an overview of the game steps:\n* Setup - Shuffle Decks. Place Tokens\n* Scene - Layout a Scene to play\n* Rounds - Players act simultaneously\n* Round Start - Place Move Tokens\n* Move - Spend Move to move a Unit\n* Action - Spend 1/2 of starting Move to perform an Action\n* Conflict - Skill Checks use opposed cards from Conflict decks\n* Resolution - Result including Damage\n* Round End - Draw a Card, Recover, and resolve Events\n* Rewards - Gain any rewards\n* Advancement - Improve Abilities\n* Conclusion - Downtime after a Scene"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "How to Play",
+        ":image",
+        "images/rule-howtoplay.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hunger", ":summary", "* Body:-1\n* Event: IF a Unit eats < 4 days/week THEN Hunger:+1 ELSE Hunger:-1"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Item", ":image", "images/rule-item.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Item: Sample", ":image", "images/rule-item-sample.svg"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Item: Guide",
+        ":image",
+        "images/rule-item-guide.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Item: Sample",
+        ":image",
+        "images/rule-item-sample.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Leveling", ":summary", "* Major Achievement: Completion gains a [Skill Point] with level equal to your 2nd highest Skill.\n* Minor Achievement: Completion gains an [Ability Point]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Line of Sight", ":summary", "Line of Sight - Most distance effects require line of sight to the target.\n* Use a straight edge from center of your space to center of target space. IF no obstacle THEN Line of Sight\n\nCover - Cover makes it harder to hit and absorbs damage. Opponents, Allies, and even smoke provide Cover\n1) Find the leftmost and rightmost Spaces surrounding the Target\n2) Sweep the edge between these Spaces.\n3) Cover:+25% AND Skill:-1 for each occupied Space"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map"),
@@ -222,14 +281,14 @@ export default class nx_tactics_decks_rule {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Move: Overview", ":summary", "At the beginning of the Round, each Unit set their [Action Cost] and gained [Move]=]Speed] and [Turn]=2 tokens. Now it may spend them to Move, Turn, or take Actions:\n* Facing - Units must always be facing a compass heading\n* Moving - Move:-1 to move the Unit 1 space. Turn:-1 to turn the Unit 45 degrees.\n* Action - Spend Move equal to [Action Cost] to take an Action. Therefore, 2 Actions per Round are possible."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Off-handed", ":reference", "I admit it. You are better than I am. Then why are you smiling? Because I know something you don't know...I am not left handed...There's something I ought to tell you...I am not left handed either. - Princess Bride", ":summary", "* [Action]: IF an [Ability] is used in the incorrect hand or using fewer hands than normal THEN [Skill]:-1."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Overview", ":summary", "* Drawn to Destiny (D2D) is a free, print-and-play game for tactical mini board/war/role-playing\n* It is Classless and Skill-based with GM optional rules\n* It is a crunchy AND rules-light tabletop game for any genre\n* It is 'batteries-included' with reusable minies, maps, and terrain\n* Magic the Gathering and Arkham Horror TCG are the models for cards as the perfect platform for compact and modular rules\n* Car Wars, Tales from the Red Dragon Inn, and X-Wing minis are the models for tactical movement and powers"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Place"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Player", ":summary", "* [Setup]: Place your Units on the [Status Bar] with a [Unit#] card. Arrange your other Unit cards in front of you.\n* [Round End]: [Draw]:1 and [Recover]."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Player", ":summary", "* [Setup]: Gather your Units and assign a [Unit#] card to each. Arrange each Unit's equipped items like a paper doll.\n* [Round End]: [Draw]:1 and [Recover]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Poisoned", ":summary", "* Body:-1\n* Event: Reveal Conflict. IF Ace THEN Poisoned:-1. IF 2 THEN Poisoned:+1."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Power"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Range", ":summary", "Count the Spaces to the Target to determine Range\n* Close Combat - Range:0 or 1\n* Melee - Range:0 or 1. IF 0 THEN Skill:-1\n* Reach - Range:1 or 2. IF 0 THEN Disadvantage\n* Other - Range:Depends on Item/Skill. IF 0 or 1 THEN Disadvantage"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rank", ":summary", "* The number on a card or the first part of a value."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reach", ":summary", "* Can target one additional Space away [Scaled]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rewards", ":summary", "Completing Milestones typically give some reward.\n* Treasure - You can gain currency and other useful items\n* Status - You can gain or lose status among different Factions\n* Favor - You can gain or lose favor among different individuals\n* Experience\n-- Character Points (CP) - CP:+1 IF significant Character event\n-- Skill Points (SP) - SP:+1 IF Major Milestone (e.g. Chapter End)\n-- Ability Points (AP) - AP:+1 IF Minor Milestone (e.g. Significant Event)"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Ritual", ":summary", "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Attacker", ":summary", "Attacker Units usually do the following:\n* Target weak points in the enemy from lines\n* Move into Range\n* Attack"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Blaster", ":summary", "Blaster Units usually do the following:\n* Target groups of enemies\n* Move into Range\n* Attack to maximize enemy losses\n* Move to safety"),
@@ -254,14 +313,12 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Round: Start", ":summary", "Refresh Status Bar - Place tokens on each [Unit#] card:\n* Action Cost:Speed/2 (rounded down)\n* Move:Speed\n* Turn:2"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Round: Targets", ":summary", "Each Round, place Target cards:\n* Choose Targets - Choose a Target (if any) for each Unit and place the Target# card on their target on the Status Bar.\n* Change Targets - Players can change after others reveal. IF in conflict THEN use High Card."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Round: Start", ":summary", "Refresh - Place tokens on each [Unit#] card:\n* Action Cost:Speed/2 (rounded down)\n* Move:Speed\n* Turn:2"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Round: Targets", ":summary", "Each Round, place Target cards:\n* Choose Targets - Choose a Target (if any) for each Unit and place the Target# card on that Unit\n* Change Targets - Players can change after others reveal. IF in conflict THEN use High Card."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rule"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scale", ":summary", "* Each stat/skill/power has a number after the letter 'x'.\n* This is the scale of that ability.\n* The number represents the number of zeroes. E.g. 5x3 translates to 5000.\n* x1 denotes human scale. E.g. 2x1=20kg, 20IQ+50, 20Will, 20kph"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scaled", ":summary", "* Scaled refers to the comparison between the Scale of a stat/ability/map to another.\n* If the scales are the same, no change is required.\n* If the scales are different, multiple or divide the Level by 10 for each difference in scale.\n* E.g. On an x1 map a Speed:3x2 would move 30 spaces instead of 3."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Advancement", ":summary", "Skill Points (SP)\n* Respec - Take Skill:-1 on ONE Skill for SP:+(lower Skill level)\n* 2 Week - Train/Research and spend SP:-(current Skill Level) for Skill:+1.\nAbility Points (AP)\n* Respec - Remove 1 Ability for AP:+1\n* 1 Week - Train/Research and AP:-1 for an Ability, Specialty, or Item in a Skill OR Rating:+0x1 to a Power.\n* Specialty - IF you gain an Ability in your Specialty THEN every third Ability costs 0 AP."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Conclusion", ":summary", "* Epilogue - Read the Epilogue of the Scene.\n* Rewards - Gather and allocate any rewards.\n* Advancement - Players spend Character Points, Skill Points, and Ability Points.\n* Downtime - Players declare intentions before the next Scene.\n* Intentions - Players declare desires for the next Scene."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Events", ":summary", "A Scene may have a number of events that happen over time.\n* Timed Events - May be placed in the Clock Deck to be revealed when that Clock strikes\n* Location Events - May be placed under a location on the Map to be revealed when searched or explored.\n* Fog of War Events - May be face down locations or events that are revealed when entering that location."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Factions", ":summary", "Factions represent groups with differing goals.\n* Goal - The Goal of the faction\n* Players - Choose their Faction\n* Units - Allocate Units within the Faction among those Players."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Introduction", ":summary", "Some Scenes have backstory or exposition. Note: IF you have Narrators THEN they should control these steps.\n* Reveal - Reveal the top card in the scene deck and follow its instructions.\n* Backstory - Previous events that affect the situation.\n* Description - Description of the current situation, Unit placement, and goals.\n* Meetup - Events leading to the party coming together."),
@@ -269,11 +326,8 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Minis", ":image", "images/rule-scene-minis.svg", ":summary", "The map is large enough for any mini including other minitures and toy cars. Included paper minis can be printed on card stock and placed on stands or laid flat."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Map#1", ":image", "images/rule-scene-map-1.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Map#2", ":image", "images/rule-scene-map-2.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Overview", ":summary", "Scene describes a situation:\n* Introduction - Intro and instructions\n* Map - The location and its layout\n* Factions - Groups with differing goals\n* Units - The Units within each Faction\n* Status Bar - Display of Units and statuses\n* Rounds - Game play over a number of Rounds\n* Events - Things that could happen\n* Rewards - Treasure, Experience, Status, Favor.\n* Advancement - Increase Abilities\n* Conclusion - Epilogue and rewards\n* Sample - A sample Scene"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Rewards", ":summary", "Completing Milestones typically give some reward.\n* Treasure - You can gain currency and other useful items\n* Status - You can gain or lose status among different Factions\n* Favor - You can gain or lose favor among different individuals\n* Experience\n-- Character Points (CP) - CP:+1 IF significant Character event\n-- Skill Points (SP) - SP:+1 IF Major Milestone (e.g. Chapter End)\n-- Ability Points (AP) - AP:+1 IF Minor Milestone (e.g. Significant Event)"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Overview", ":summary", "Scene describes a situation:\n* Introduction - Intro and instructions\n* Map - The location and its layout\n* Factions - Groups with differing goals\n* Units - The Units within each Faction\n* Events - Things that could happen"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Rounds", ":summary", "Scenes take a number of Rounds\n* Time - Map Scale determins Round length. Personal:6 sec, Traval:6 min, Exploration:6 hours\n* Groups - Each Round, divide Units into the Groups based their Targets. Groups resolve separately until Round End.\n* Moves - Within a Group, Units move and act simultaneously by gradually spending their Move tokens.\n* Actions - Units may take an Action by spending half of their starting Move tokens, so they can take up to 2 Actions."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Sample"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Status Bar", ":image", "images/rule-scene-status-bar.svg", ":summary", "The Status Bar is an area near the board where all Units are displayed\n* Place each Unit card on the Status Bar with a [Unit#] card above it."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene: Units", ":image", "images/rule-scene-units.svg", ":summary", "Gather and layout your Unit cards\n* Unit stats, Minis, Skills, Abilities, Specialties, and Items\n* Arrange equipped Items like a paper doll"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Setup: Decks", ":image", "images/rule-setup-decks.svg", ":summary", "* Damage Decks - Shuffle the Wound, Disorder, Trauma, and Burden decks\n* Fate Deck - Shuffle an extra Conflict Deck to be the Fate Deck. Anyone may use this instead of cards from hand\n* Library Deck - Keep sorted\n* Scene Deck - Keep as is\n* Clock Deck - Sort the Clock Deck"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Setup: Players", ":image", "images/rule-setup-players.svg", ":summary", "Some Players may be designated Narrators (Game Masters). All Players get the following:\n* Colored Player Deck\n* Conflict Deck for Skill Checks - Shuffle and draw 5 cards\n\nOptional: Character Deck of personal character cards"),
@@ -291,20 +345,42 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Stat", ":image", "images/rule-stat.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Surprise", ":summary", "* IF a unit suddenly appears adjacent or upon a unit.\n* THEN\n** Lose half of starting [Move].\n** Reveal [Conflict]. Unit takes temporary damage based on the [Suit].\n** [Wands] = [Fatigue]\n** [Coins] = [Stun]\n** [Cups] = [Stress]\n** [Swords] = [Slow]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Surrounded", ":summary", "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Target#", ":summary", "The current target of Unit#\n\n* [Round Start]: Place on a Unit on the Status Bar"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Target#", ":summary", "The current target of Unit#\n\n* [Round Start]: Place on a Unit"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Task: Damaging", ":summary", "A damaging attack. The degree of Success determines wound severity\n* Conflict - Perform a Conflict\n* Effect - Determine Effect for the Winner\n* Success - Challenge:-Effect"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Task: Overview", ":summary", "Any skill/ability/power/stat test is called a Task. There are 3 types:\n* Test - A quick test. Any success passes\n* Extended - An extended task over multiple Rounds\n* Damaging - A damaging attack. The degree of success determines wound severity"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Task: Extended", ":summary", "An extended task over multiple Rounds\n* Task Start - Determine the Difficulty. Place Tokens on the upper (Progress) and lower (Challenge) part of of this card each equal to the Difficulty\n* Conflict - Perform a Conflict\n* Effect - Determine Effect\n* Success - Challenge:-Effect\n* Failure - Progress:-Effect\n* Round End: Progress:-1\n* IF Challenge = 0 THEN the Task Ends in Success\n* IF Progress = 0 THEN the Task Ends in Failure\n* Task End - Discard the tokens and Task card."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Task: Test", ":summary", "A quick test. Any success passes\n* Difficulty - Determine the Difficulty. This is usually a Stat like the target's Body.\n* Conflict - Perform a Conflict. Reveal and Compare cards.\n* Success - Pass the Test. Effect describes the degree of Success"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Terms", ":summary", "* Scene - An short scenario\n* Skill - A capability a Unit has learned\n* Power - A superhuman Skill\n* Ability - A specific ability / feat\n* Specialty - A style or focus area\n* Ready - An upright card\n* Inverted - An upsidedown card\n* Cooldown - A sideways card\n* Narrator - The host / game master(s)\n* Space - A dot on the Map\n* Uses - # of uses before reload\n* [Key]:Value - Key refers to another Card. Value is the value/modifier.\n* Level Bonus - Higher level gains a bonus equal to difference"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Terms",
+        ":image",
+        "images/rule-terms.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Thirst", ":summary", "* Mind:-1\n* Event: IF a Unit drinks < 1 liter/day THEN Thirst:+1 ELSE Thirst:-1."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unfamiliar Item", ":summary", "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at [Level]:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled]."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit", ":image", "images/rule-unit.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit: Sample", ":image", "images/rule-unit-sample.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit#", ":summary", "Shows the Player and Unit#\n* [Setup]: Place under a Unit on the Status Bar so Color and # are visible"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit Num#", ":summary", "A Numbered Unit\n* [Setup]: Place near a Unit's cards\n\n\n* [Action Cost]:[Speed]/2 round down\n\n\n* [Move]:[Speed]\n\n\n* [Turn]:2"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Unit: Guide",
+        ":image",
+        "images/rule-unit-guide.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Unit: Sample",
+        ":image",
+        "images/rule-unit-sample.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit#", ":summary", "Shows the Player and Unit#\n* [Setup]: Place near a Unit\n\n\n* [Action Cost]:[Speed]/2 round down\n\n\n* [Move]:[Speed]\n\n\n* [Turn]:2"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unskilled", ":summary", "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Level:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item]."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Warning", ":summary", "* This game attempts to bring more reality and popular fiction into games. For this reason, it includes physical, mental, and emotional trauma. I know little of the realities of these serious concepts, so I apologize in advance for any inaccuracies or clumsy representations.\n* I am not an artist, and AI art is fast and convenient. No art here is original.\n* This project has no intention of monetization or ownership. References to other copyrighted material is provided as examples and inspiration and are not intended to imply any ownership."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",

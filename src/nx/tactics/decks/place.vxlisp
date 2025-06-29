@@ -43,6 +43,11 @@
    :image "images/cards/place-cave.svg"
    :titles "Cavern")
   (base/place
+   :name "Celestial Realm"
+   :titles "Afterworld, Angelic Realm, Celestine Realm"
+   :summary
+    "* Powerful beings of order inhabit this Realm. They are not overtly hostile, but they unyielding and have a severe approach to justice that makes one wonder if anyone can survive their scrutiny.")
+  (base/place
    :name "Chasm"
    :image "images/cards/place-chasm.svg")
   (base/place
@@ -113,6 +118,20 @@
    :name "Ice"
    :image "images/cards/place-ice.svg")
   (base/place
+   :name "Imaginary Space"
+   :titles "Astral Plane, Astral Realm, Complex Space, Ether, Etheral Plane, Etheral Realm, Hyperspace, I-Space, Imaginary Realm, Subjective Reality, Subspace, Superspace, The Pale, Ultraspace"
+   :reference
+    "* Though the story is fictional, as far as the characters are concerned, their fate is real. Therein lies the rub, are you and I the audience? Or characters on the stage? Nobody can know for sure. Afterall, nothing is easier to fool than the senses. - Furina, Genshin Impact"
+   :summary
+    "* The Imaginary Realm is the realm of the Mind and of possibilities. It connects all other realms, and some believe all realms are birthed from the infinite potential of the Imaginary Realm.
+     * Description - The realm is filled with a glowing fog and motes of crackly energy called Astral Luminaries (Tachyons). Touching a luminary fills one with energy and inspiration, but contacting too many too quickly will overload the body in a violent explosion.
+     * Transition - When entering the Imaginary Realm, there is a sudden, frightening sensation of fliping forward and sideways at once and then it is over.
+     * Speed - In the Imaginary Realm, the speed of light is the lowest speed that an object can move. Due to relativity, the speed of light is effectively zero speed. Here physical objects move at wildly accelerated speeds and can easily become lost or destroyed in the insane speeds and energies of this Realm.
+     * Mind and Will - Everyone seems to experience the Imaginary Realm differently with many experiencing wild and terrible hallicinations. Those entering this Realm with just their minds find that their abilities are vastly increased. They are filled with a sense of power and appear massive in this realm, dwarfing stars. They appear as an idealized version of themselves with Body equal to Mind and all abilities may use Mind instead.
+     * Body - Physical rules barely apply. Resistences use Mind instead of Body.")
+  (base/place
+   :name "Island")
+  (base/place
    :name "Jungle"
    :image "images/cards/place-jungle.svg"
    :summary
@@ -143,6 +162,18 @@
    :name "Mudslide"
    :image "images/cards/place-mudslide.svg")
   (base/place
+   :name "Oblivion"
+   :reference
+    "* Leviathan - Hellraiser II
+     * The Great Evil - The Fifth Element"
+   :titles "Abyss, End of All Things, Heat Death of the Universe, Lakhesis, Order, Pattern, Primal Destroyer, Primal Void, The End"
+   :summary
+    "* At the end of the Universe, lies a metaphysical Black Hole, the Anti-Sun: Oblivion.
+     * It is null, ultimate order, ultimate death, the beginning and the end of the Universe.
+     * Few living beings have managed to survive being close enough to see Oblivion.
+     * As the [Underworld] is in many ways the reverse of the living world, Oblivion hangs above the [Underworld] like a massive Sun. Unlike a sun, however, Oblivion devours light and steals warmth. What little light and warmth that exists in the [Underworld] seeps instead from the land of the living.
+     * Some believe that through Oblivion lies rebirth, but few are willing to personally put that theory to the test, and none who enter has ever returned.")
+  (base/place
    :name "Open Water")
   (base/place
    :name "Path: Dirt"
@@ -163,6 +194,11 @@
    :image "images/cards/place-pond.svg")
   (base/place
    :name "Quicksand")
+  (base/place
+   :name "Realm of Light"
+   :titles "Tindalos"
+   :summary
+    "* This is an area of space near the center of the Universe. It is said to be based upon lines and angles instead of surfaces and curves, and it is known to be a region of intense and deadly energies. The realm appears much like a negative image of the known Universe with dark stars on a backdrop of intense light. Few organic creatures can survive in this region regardless of defenses, but this is the home of such creatures as the [Radiance] and the [Hounds of Tindalos].")
   (base/place
    :name "River"
    :image "images/cards/place-river.svg")
@@ -216,6 +252,14 @@
    :summary
     "* Accumulation: Each token on Snow is 10cm/4in of snow. Move:-1/Accumulation")
   (base/place
+   :name "Source, The"
+   :titles "Ascension, Azathoth, Atropos, Apep, Apophis, Jormungand (Midgard Serpent), Primal Chaos, The Beginning, The Big Bang, The First Thing, Truth, Sublime"
+   :reference "...I started with loathing when told of the monstrous nuclear chaos beyond angled space which the Necronomicon had mercifully cloaked under the name of Azathoth. - The Whisperer in Darkness"
+   :summary
+    "* The Source is the bubbling font at the beginning of existence. It lies at the opposite end of all existence from [Oblivion]. The Source is bursting with the densely packed proto matter/energy of all creation in the septillionth of a second before exploding into all realities. It is also, necessarily, the most destructive place in all existence.
+     * Sublime - Those who somehow survive entering the Sublime find a very different existence. Where our multiverse is a vast empty space containing trace motes of dust, the Sublime is an endless fountain of possiblities. Everywhere you gaze, the Sublime offers a kaleidescope of intriguing details. Even infinity is meaningless where time, distance, and reality cease to matter.
+     * Sublimating - Nothing physical can survive exposure to the Source, but it is possible to transcend the physical and enter Source. This is called Sublimating. There are many magical, spiritual and technological ways to enter the Sublime and entire civilizations have done so. Any who enter the Sublime begin to expand themselves. Absorbing and evolving with each eternal instant. Almost none who enter ever returns regardless of promises or bonds. The few that have returned are very different and almost always quickly return to the Sublime. After being exposed to the endless possiblities of existence, perhaps they no longer see the our existence or our way of understanding our existence as real or important anymore.")
+  (base/place
    :name "Stables"
    :image "images/cards/place-stables.svg")
   (base/place
@@ -255,6 +299,19 @@
    :name "Tavern Dining"
    :image "images/cards/place-tavern-dining.svg")
   (base/place
+   :name "Tempest, The"
+   :titles "Event Horizon, The Great Barrier, The Edge of the World"
+   :reference "* The Galactic Barrier - Star Trek"
+   :summary
+    "* The final line before ultimate chaos. A swirling mass of chaos and fear on the border of annihilation.
+     * Like a Black Hole, [Oblivion] has a swirling event horizon at its surface. It is the interface between substance and nothingness.
+     * The [Tempest] is a sea of souls and madness. The dreams and memories of those lost within sometimes drift like flotsam in the Tempest.
+     * The Tempest usually manifests as an roiling ocean, sometimes of water, sometimes of blood or souls.
+     * It is rare to see the Tempest calm except in the presence of a [Ferryman].
+     * Often it is a storm-tossed sea of towering waves and shrieking winds. Fog, foam, and spray obscures vision and rips the words from ones mouth.
+     * Harrowing - [Wraiths] that are destroyed, fall into the sky toward [Oblivion]. Before entering [Oblivion] they pass through the Tempest and find themselves tested. The test is called a [Harrowing] and is always a spiritual confrontation with the [Wraith]'s own weakness. If the [Wraith] passes the test, it will find it has regained the strength to return to the [Underworld]. If it fails, it falls finally and eternally into the cold embrace of [Oblivion]. The appearance of the Tempest during a Harrowing is ever-changing: a drafty dripping dungeon with flagstones and chains, a subway tunnel with flickering buzzing fluorescent lights, a rough-hewn tunnel of sickly pink marble shot through with black veins.
+     * Regardless of where one enters, all its twisting maze-like tunnels lead in the same direction: toward the dark heart of [Oblivion].")
+  (base/place
    :name "Temple"
    :image "images/cards/place-temple.svg")
   (base/place
@@ -267,11 +324,33 @@
    :name "Trading Post"
    :image "images/cards/place-tradingpost.svg")
   (base/place
+   :name "Volcano")
+  (base/place
    :name "Wall: Stone"
    :image "images/cards/place-wall-stone.svg")
   (base/place
+   :name "Wave")
+  (base/place
    :name "Whitewater")
-  )
+  (base/place
+   :name "Wyver"
+   :summary
+    "* Wyver is the Creator Being that manifests as a mirror dimension reflecting the world of order.
+     * Travel - Creatures of order can enter Wyvr through any reflective surface."
+   :titles "Weaver")
+  (base/place
+   :name "Wyld"
+   :summary
+    "* Wyld is the Life Bringer Being that manifests as a mirror dimension reflecting the natural world. It is thought that Wyld is the source of all life.
+     * The Wild has stunning natural beauty, but is also a merciless place dominated by natural selection.
+     * Travel - Natural creatures can enter Wyld through any reflective surface."
+   :titles "Manitou, Wellspring")
+  (base/place
+   :name "Wyrm"
+   :reference
+    "* Sitting in a bunker, here behind my wall. Waiting for the worms to come. In perfect isolation, , here behind my wall. Waiting for the worms to come. Waiting, to cut out the dead wood. Waiting, to clean up the city. Waiting, to follow the worms. Waiting, to put on a black shirt. Waiting, to weed out the weaklings. Waiting, to smash in their windows and kick in their doors. Waiting, for the final solution to strengthen the strain. Waiting, to follow the worms. - Waiting for the Worms, Pink Floyd"
+   :summary
+    "* Wyrm is the Time/Destructor Being that manifests as mirror dimension reflecting the world of entropy and  and corruption. Corrupted creatures can enter Wyrm through any reflective surface."))
  :doc "Returns the base placemap")
 
 (func tactics-placemap<-tactics : base/tactics

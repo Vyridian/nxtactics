@@ -7,7 +7,7 @@
    viewBox="0 0 63 88"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
    sodipodi:docname="card-item.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,28 +24,17 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.8727261"
-     inkscape:cx="-103.69806"
-     inkscape:cy="-85.937615"
+     inkscape:zoom="1.2342211"
+     inkscape:cx="229.69953"
+     inkscape:cy="231.7251"
      inkscape:window-width="1350"
      inkscape:window-height="1008"
-     inkscape:window-x="130"
-     inkscape:window-y="0"
+     inkscape:window-x="691"
+     inkscape:window-y="77"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1"
-       id="radialGradient2"
-       cx="58.925697"
-       cy="3.3495736"
-       fx="58.925697"
-       fy="3.3495736"
-       r="3.7013359"
-       gradientTransform="matrix(1.707443,0,0,0.89394564,-44.199046,-0.16694138)"
-       gradientUnits="userSpaceOnUse" />
     <linearGradient
        id="linearGradient1"
        inkscape:collect="always">
@@ -58,14 +47,49 @@
          offset="1"
          id="stop2" />
     </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="radialGradient2-4"
+       cx="58.925697"
+       cy="3.3495736"
+       fx="58.925697"
+       fy="3.3495736"
+       r="3.7013359"
+       gradientTransform="matrix(1.3545253,0,0,0.84266808,-25.117349,2.8189904)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
+  <g
+     id="g1-9-8"
+     transform="matrix(0.34806697,0,0,0.34782562,-2.958629,-2.9564571)"
+     inkscape:label="template"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <g
+       id="g104-5">
+      <path
+         fill="none"
+         stroke="#ec1e28"
+         d="m 9,252 c 0,4.971 4.029,9 9,9 h 162 c 4.971,0 9,-4.029 9,-9 V 18 c 0,-4.971 -4.029,-9 -9,-9 H 18 c -4.971,0 -9,4.029 -9,9 z"
+         id="path104-4-7" />
+    </g>
+    <g
+       id="g105-6">
+      <path
+         fill="none"
+         stroke="#2ba6de"
+         stroke-dasharray="1.44"
+         d="m 18.13,21.906 c 0,-2.156 1.714,-3.9 3.828,-3.9 h 154.084 c 2.114,0 3.828,1.744 3.828,3.9 v 226.188 c 0,2.154 -1.714,3.9 -3.828,3.9 H 21.958 c -2.114,0 -3.828,-1.746 -3.828,-3.9 z"
+         id="path105-8-1" />
+    </g>
+  </g>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <g
        id="body"
-       transform="matrix(0.03392854,0,0,0.03392854,5.5728898,11.788504)"
+       transform="matrix(0.03392782,0,0,0.03392854,4.2132875,11.988753)"
        inkscape:label="body">
       <path
          fill="#37b2df"
@@ -243,11 +267,11 @@
        d="m -47.745406,31.349569 a 0.10866871,17.151642 0 0 1 -0.07944,16.053207 0.10866871,17.151642 0 0 1 -0.120607,-7.249544 0.10866871,17.151642 0 0 1 0.0083,-20.327155 0.10866871,17.151642 0 0 1 0.125524,-4.734269"
        transform="rotate(-90)" />
     <rect
-       style="fill:url(#radialGradient2);fill-opacity:1;stroke:none;stroke-width:0.162987;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
-       id="rect10"
-       width="12.439079"
-       height="6.4851332"
-       x="50.193684"
-       y="-0.41517097" />
+       style="fill:url(#radialGradient2-4);fill-opacity:1;stroke:none;stroke-width:0.140946;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-3"
+       width="9.868"
+       height="6.1131396"
+       x="49.764999"
+       y="2.585" />
   </g>
 </svg>

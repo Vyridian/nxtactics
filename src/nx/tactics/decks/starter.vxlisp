@@ -3,22 +3,6 @@
        (lib typ  :path vx/type)
  :doc  "Tactics Starter Decks")
 
-(func card-conflictlower : base/card
- (base/card
-  :id "conflictlower"
-  :name "Conflict: Lower"
-  :image "images/card-conflict-lower.svg"
-  :summary
-   "Conflict: Play this when playing a Conflict card to indicate that the lower choice on the card is being used (i.e. the side facing toward you)."))
-
-(func card-conflictupper : base/card
- (base/card
-  :id "conflictupper"
-  :name "Conflict: Upper"
-  :image "images/card-conflict-upper.svg"
-  :summary
-   "Conflict: Play this when playing a Conflict card to indicate that the upper choice on the card is being used (i.e. the side facing away from you)."))
-
 (func card-player : base/card
  [tactics : base/tactics
   color   : string]
@@ -67,19 +51,6 @@
    :image (string "images/rule-player-" color ".svg")
   )))
 
-(func card-unitnum : base/card
- [tactics : base/tactics
-  color   : string
-  num     : int]
- (let : base/card
-  [rule : base/rule :=
-    (base/rule<-tactics-key tactics "Unit Num#")]
-  (copy rule
-   :id (string "unitnum-" color "-" num)
-   :name (string "Unit Num#" num)
-   :image (string "images/rule-player-" color ".svg")
-  )))
-
 (func deck-player : base/deck
  [tactics : base/tactics
   color   : string]
@@ -93,11 +64,6 @@
      (card-unit tactics color 3)
      (card-unit tactics color 4)
      (card-unit tactics color 5)
-     (card-unitnum tactics color 1)
-     (card-unitnum tactics color 2)
-     (card-unitnum tactics color 3)
-     (card-unitnum tactics color 4)
-     (card-unitnum tactics color 5)
      (card-target tactics color 1)
      (card-target tactics color 2)
      (card-target tactics color 3)

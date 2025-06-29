@@ -273,11 +273,11 @@
 
 (const style-app-navbar-button : ui/style
  (ui/style
-  :name             "style-app-navbar-button"
-  :type             ui/styletype-shared
+  :name      "style-app-navbar-button"
+  :type      ui/styletype-shared
   :color-bkg "A9C8FF"
-  :layout           ui/layout-button
-  :pointsize        point-iconsize)
+  :layout    ui/layout-button
+  :pointsize point-iconsize)
  :doc "")
 
 (const style-app-navdrawer : ui/style
@@ -314,27 +314,27 @@
 
 (const style-app-titlebar : ui/style
  (ui/style
-  :name             "style-app-titlebar"
-  :type             ui/styletype-shared
+  :name      "style-app-titlebar"
+  :type      ui/styletype-shared
   :color-bkg "0000F0"
-  :layout           ui/layout-titlebar
-  :pin              ui/pin-top
-  :pointpos         (ui/point
-                     :x 6
-                     :y 6)
-  :pointsize        (ui/point
-                     :y 6))
+  :layout    ui/layout-titlebar
+  :pin       ui/pin-top
+  :pointpos  (ui/point
+              :x 6
+              :y 6)
+  :pointsize (ui/point
+              :y 6))
  :doc "")
 
 (const style-app-titlebar-print : ui/style
  (ui/style
-  :name             "style-app-titlebar-print"
-  :type             ui/styletype-shared
+  :name      "style-app-titlebar-print"
+  :type      ui/styletype-shared
   :color-bkg "A9C8FF"
-  :layout           ui/layout-button
-  :pointpos         (ui/point
-                     :x 57)
-  :pointsize        point-iconsize)
+  :layout    ui/layout-button
+  :pointpos  (ui/point
+              :x 57)
+  :pointsize point-iconsize)
  :doc "")
 
 (const style-app-titlebar-title : ui/style
@@ -454,7 +454,7 @@
   :pointpos
    (ui/point
     :x 7
-    :y 1)
+    :y 2)
   :pointsize
    (ui/point
     :x 51))
@@ -735,7 +735,7 @@
   :layout ui/layout-label
   :pointpos
    (ui/point
-    :x 32
+    :x 33
     :y 16)
   :pointsize
    (ui/point
@@ -754,7 +754,7 @@
   :pointsize
    (ui/point
     :x 60
-    :y 37))
+    :y 38))
  :doc "")
 
 (const style-place-image : ui/style
@@ -774,8 +774,8 @@
 
 (const style-selected : ui/style
  (ui/style
-  :name         "style-selected"
-  :type         ui/styletype-shared
+  :name "style-selected"
+  :type ui/styletype-shared
   :color-border "E2CCCC")
  :doc "")
 
@@ -795,16 +795,17 @@
 
 (const style-textarea : ui/style
  (ui/style
-  :name  "style-textarea"
-  :type  ui/styletype-shared
-  :font  font-textarea)
+  :name "style-textarea"
+  :type ui/styletype-shared
+  :font font-textarea)
  :doc "Returns the style for text area")
 
 (const style-text-header1 : ui/style
  (ui/style
-  :name  "style-text-header1"
-  :type  ui/styletype-shared
-  :font  font-header1)
+  :name "style-text-header1"
+  :type ui/styletype-shared
+  :font font-header1
+  :color-font "0000FF")
  :doc "Returns the style for header1 text")
 
 (const style-text-header2 : ui/style
@@ -879,7 +880,7 @@
   :layout ui/layout-label
   :pointpos
    (ui/point
-    :x 34
+    :x 33
     :y 13)
   :pointsize
    (ui/point
@@ -893,12 +894,12 @@
   :layout ui/layout-label
   :pointpos
    (ui/point
-    :x 2
-    :y 50)
+    :x 3
+    :y 49)
   :pointsize
    (ui/point
-    :x 60
-    :y 37))
+    :x 57
+    :y 36))
  :doc "")
 
 (const style-unit-image : ui/style
@@ -936,7 +937,7 @@
   :layout ui/layout-label
   :pointpos
    (ui/point
-    :x 34
+    :x 33
     :y 22)
   :pointsize
    (ui/point
@@ -965,7 +966,7 @@
   :layout ui/layout-label
   :pointpos
    (ui/point
-    :x 34
+    :x 33
     :y 31)
   :pointsize
    (ui/point
@@ -994,7 +995,7 @@
   :layout ui/layout-label
   :pointpos
    (ui/point
-    :x 34
+    :x 33
     :y 40)
   :pointsize
    (ui/point
@@ -1025,7 +1026,7 @@
   :pointpos
    (ui/point
     :x 50
-    :y 0)
+    :y 2)
   :pointsize
    (ui/point
     :x 13

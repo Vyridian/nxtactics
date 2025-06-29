@@ -2539,6 +2539,35 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function placemap_from_tactics_keys
+   * Return an placemap from tactics and keys
+   * @param  {tactics} tactics
+   * @param  {stringlist} ... keys
+   * @return {placemap}
+   */
+  static t_placemap_from_tactics_keys = {
+    vx_type: vx_core.t_type
+  }
+  static e_placemap_from_tactics_keys = {
+    vx_type: nx_tactics_base.t_placemap_from_tactics_keys
+  }
+
+  // (func placemap<-tactics-keys)
+  static f_placemap_from_tactics_keys(tactics, ...keys) {
+    let output = nx_tactics_base.e_placemap
+    keys = vx_core.f_new_from_type(vx_core.t_stringlist, ...keys)
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_placemap},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const placelist = nx_tactics_base.f_placelist_from_tactics_keys(tactics, ...keys)
+        return nx_tactics_base.f_placemap_from_placelist(placelist)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function power_from_tactics_key
    * Returns a power from tactics
    * @param  {tactics} tactics
@@ -5195,6 +5224,7 @@ export default class nx_tactics_base {
       "placelist<-tactics-keys": nx_tactics_base.e_placelist_from_tactics_keys,
       "placelistlist<-sectionlist": nx_tactics_base.e_placelistlist_from_sectionlist,
       "placemap<-placelist": nx_tactics_base.e_placemap_from_placelist,
+      "placemap<-tactics-keys": nx_tactics_base.e_placemap_from_tactics_keys,
       "power<-tactics-key": nx_tactics_base.e_power_from_tactics_key,
       "powerlist<-powerlistlist": nx_tactics_base.e_powerlist_from_powerlistlist,
       "powerlist<-powermap": nx_tactics_base.e_powerlist_from_powermap,
@@ -5325,6 +5355,7 @@ export default class nx_tactics_base {
       "placelist<-tactics-keys": nx_tactics_base.t_placelist_from_tactics_keys,
       "placelistlist<-sectionlist": nx_tactics_base.t_placelistlist_from_sectionlist,
       "placemap<-placelist": nx_tactics_base.t_placemap_from_placelist,
+      "placemap<-tactics-keys": nx_tactics_base.t_placemap_from_tactics_keys,
       "power<-tactics-key": nx_tactics_base.t_power_from_tactics_key,
       "powerlist<-powerlistlist": nx_tactics_base.t_powerlist_from_powerlistlist,
       "powerlist<-powermap": nx_tactics_base.t_powerlist_from_powermap,
@@ -11493,6 +11524,24 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_placemap_from_placelist
+    }
+
+    // (func placemap<-tactics-keys)
+    nx_tactics_base.t_placemap_from_tactics_keys['vx_value'] = {
+      name          : "placemap<-tactics-keys",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_placemap_from_tactics_keys
     }
 
     // (func power<-tactics-key)

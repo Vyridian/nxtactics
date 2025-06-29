@@ -103,136 +103,6 @@
        :summary
         "* Force a substance to make a minor state change (e.g. Liquids become solids, soft substances turn to liquid, hard substances become soft, water evaporates, ice melts.")))
   (base/power
-   :name "Anima"
-   :titles
-    "Animal Mastery, Beast Lord, Beast Master"
-   :summary
-    "* Animal Friendship and Command
-     * Restrictions - Must not harm animals."
-   :abilitymap
-    (base/abilitymap
-     "Animal Magnetism"
-      (base/ability
-       :name "Animal Magnetism"
-       :summary
-        "* [Power]: [Anima]")
-     "Animal Ward"
-      (base/ability
-       :name "Animal Ward"
-       :summary
-        "* [Ward] - Defends against animals.
-         * [Power]: [Anima]")
-     "Banish Vermin"
-      (base/ability
-       :name "Banish Vermin"
-       :summary
-        "* [Power]: [Anima]")
-     "Beast Lore"
-      (base/ability
-       :name "Beast Lore"
-       :summary
-        "* [Power]: [Anima]")
-     "Beast Tongue"
-      (base/ability
-       :name "Beast Tongue"
-       :summary
-        "* [Tongue] - Speak with Animal
-         * [Power]: [Anima]")
-     "Bird's Eye"
-      (base/ability
-       :name "Bird's Eye"
-       :summary
-        "* Have a bird spy for you.
-         * [Power]: [Anima]")
-     "Call of the Wild"
-      (base/ability
-       :name "Call of the Wild"
-       :summary
-        "* [Action]: Make an emotional plea for aid to any [Beast]s or [Animal]s within [Range].
-         * [Power]: [Anima]
-         Note that creatures will only help if it serves their own interests, and they will act indepentently according to their intelligence and nature.")
-     "Calm the Beast"
-      (base/ability
-       :name "Calm the Beast"
-       :summary
-        "* [Power]: [Anima]")
-     "Commune with Animals"
-      (base/ability
-       :name "Commune with Animals"
-       :summary
-        "* [Action]: Sense if animals in [Range] notice anything significant. The higher the [Success], the more subtle information received.
-         * [Power]: [Anima]")
-     "Control Beast"
-      (base/ability
-       :name "Control Beast"
-       :summary
-        "* [Power]: [Anima]")
-     "Purge Venom"
-      (base/ability
-       :name "Purge Venom"
-       :summary
-        "* By sucking on a bite, the user may rapidly remove a creature's venom from a wound.
-         * [Action]: Remove 1 Poison Counter for each success.
-         * [Power]: [Anima]")
-     "Creeping Doom"
-      (base/ability
-       :name "Creeping Doom"
-       :summary
-        "* [Power]: [Anima]")
-     "Giant Animal"
-      (base/ability
-       :name "Giant Animal"
-       :summary
-        "* [Power]: [Anima]")
-     :Infestation
-      (base/ability
-       :name "Infestation"
-       :summary
-        "* [Power]: [Anima]")
-     "Insect Swarm"
-      (base/ability
-       :name "Insect Swarm"
-       :summary
-        "* Distracts targets and transfers up to 3 conditions from you to the target.
-         * [Power]: [Anima]")
-     "Locate Animal"
-      (base/ability
-       :name "Locate Animal"
-       :summary
-        "* [Power]: [Anima]")
-     "Nature of the Beast"
-      (base/ability
-       :name "Nature of the Beast"
-       :summary
-        "* [Power]: [Anima]")
-     "Natural Order"
-      (base/ability
-       :name "Natural Order"
-       :summary
-        "* [Power]: [Anima]")
-     "Scent of the Wild"
-      (base/ability
-       :name "Scent of the Wild"
-       :summary
-        "* [Action]: Cover the unnatural and threatening scent of creatures and gear in range. Natural creatures will treat them as if they were large herbivores.
-         * [Power]: [Anima]")
-     "Shrink Animal"
-      (base/ability
-       :name "Shrink Animal"
-       :summary
-        "* [Power]: [Anima]")
-     "Speak with Animals"
-      (base/ability
-       :name "Speak with Animals"
-       :summary
-        "* [Power]: [Anima]")
-     "Survival of the Fittest"
-      (base/ability
-       :name "Survival of the Fittest"
-       :titles "Natural Selection"
-       :summary
-        "* [Power]: [Anima]")))
-  (base/power
    :name "Artifice"
    :summary "* Synergy with Mechanics"
    :titles "Artificer, Engineer, Inventor, Inventress, Machinist, Mechanic"
@@ -6843,6 +6713,136 @@
      "Tracer Rounds"))
   (base/power
    :name "Weather")
+  (base/power
+   :name "Wild"
+   :titles
+    "Animal Mastery, Anima, Beast Lord, Beast Master"
+   :summary
+    "* Animal Friendship and Command
+     * Restrictions - Must not harm animals."
+   :abilitymap
+    (base/abilitymap
+     "Animal Magnetism"
+      (base/ability
+       :name "Animal Magnetism"
+       :summary
+        "* [Power]: [Wild]")
+     "Animal Ward"
+      (base/ability
+       :name "Animal Ward"
+       :summary
+        "* [Ward] - Defends against animals.
+         * [Power]: [Wild]")
+     "Banish Vermin"
+      (base/ability
+       :name "Banish Vermin"
+       :summary
+        "* [Power]: [Wild]")
+     "Beast Lore"
+      (base/ability
+       :name "Beast Lore"
+       :summary
+        "* [Power]: [Wild]")
+     "Beast Tongue"
+      (base/ability
+       :name "Beast Tongue"
+       :summary
+        "* [Tongue] - Speak with Animal
+         * [Power]: [Wild]")
+     "Bird's Eye"
+      (base/ability
+       :name "Bird's Eye"
+       :summary
+        "* Have a bird spy for you.
+         * [Power]: [Wild]")
+     "Call of the Wild"
+      (base/ability
+       :name "Call of the Wild"
+       :summary
+        "* [Action]: Make an emotional plea for aid to any [Beast]s or [Animal]s within [Range].
+         * [Power]: [Wild]
+         Note that creatures will only help if it serves their own interests, and they will act indepentently according to their intelligence and nature.")
+     "Calm the Beast"
+      (base/ability
+       :name "Calm the Beast"
+       :summary
+        "* [Power]: [Wild]")
+     "Commune with Animals"
+      (base/ability
+       :name "Commune with Animals"
+       :summary
+        "* [Action]: Sense if animals in [Range] notice anything significant. The higher the [Success], the more subtle information received.
+         * [Power]: [Wild]")
+     "Control Beast"
+      (base/ability
+       :name "Control Beast"
+       :summary
+        "* [Power]: [Wild]")
+     "Purge Venom"
+      (base/ability
+       :name "Purge Venom"
+       :summary
+        "* By sucking on a bite, the user may rapidly remove a creature's venom from a wound.
+         * [Action]: Remove 1 Poison Counter for each success.
+         * [Power]: [Wild]")
+     "Creeping Doom"
+      (base/ability
+       :name "Creeping Doom"
+       :summary
+        "* [Power]: [Wild]")
+     "Giant Animal"
+      (base/ability
+       :name "Giant Animal"
+       :summary
+        "* [Power]: [Wild]")
+     :Infestation
+      (base/ability
+       :name "Infestation"
+       :summary
+        "* [Power]: [Wild]")
+     "Insect Swarm"
+      (base/ability
+       :name "Insect Swarm"
+       :summary
+        "* Distracts targets and transfers up to 3 conditions from you to the target.
+         * [Power]: [Wild]")
+     "Locate Animal"
+      (base/ability
+       :name "Locate Animal"
+       :summary
+        "* [Power]: [Wild]")
+     "Nature of the Beast"
+      (base/ability
+       :name "Nature of the Beast"
+       :summary
+        "* [Power]: [Wild]")
+     "Natural Order"
+      (base/ability
+       :name "Natural Order"
+       :summary
+        "* [Power]: [Wild]")
+     "Scent of the Wild"
+      (base/ability
+       :name "Scent of the Wild"
+       :summary
+        "* [Action]: Cover the unnatural and threatening scent of creatures and gear in range. Natural creatures will treat them as if they were large herbivores.
+         * [Power]: [Wild]")
+     "Shrink Animal"
+      (base/ability
+       :name "Shrink Animal"
+       :summary
+        "* [Power]: [Wild]")
+     "Speak with Animals"
+      (base/ability
+       :name "Speak with Animals"
+       :summary
+        "* [Power]: [Wild]")
+     "Survival of the Fittest"
+      (base/ability
+       :name "Survival of the Fittest"
+       :titles "Natural Selection"
+       :summary
+        "* [Power]: [Wild]")))
  )
  :doc "Returns the base powermap")
 

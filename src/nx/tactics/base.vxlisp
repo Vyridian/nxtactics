@@ -1394,6 +1394,15 @@
    (:name place)))
  :doc "Returns a placemap from a given placelist")
 
+(func placemap<-tactics-keys : placemap
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : placemap
+  [placelist : placelist :=
+    (placelist<-tactics-keys tactics keys)]
+  (placemap<-placelist placelist))
+ :doc "Return an placemap from tactics and keys")
+
 (func power<-tactics-key : power
  [tactics : tactics
   key : string]
