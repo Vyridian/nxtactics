@@ -1,0 +1,101 @@
+(package nx/tactics/decks/reference
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Reference Deck")
+
+(const bleeding : base/cardback
+ (base/cardback
+  :id "bleeding"
+  :name "Bleeding"
+  :image "images/card-bleeding.svg"
+  :summary
+   "* Turn End: [Fatigue]:1 for each [Bleeding]. IF [Body]:0 THEN [Blood Loss]:1 instead."))
+
+(const bloodloss : base/card
+ (base/card
+  :id "bloodloss"
+  :name "Blood Loss"
+  :image "images/card-bloodloss.svg"
+  :summary
+   "* Day End: Discard one [Blood Loss]"))
+
+(const poisoned : base/card
+ (base/card
+  :id "poisoned"
+  :name "Poisoned"
+  :image "images/card-poisoned.svg")
+)
+
+(func deck-reference : base/deck
+ [tactics : base/tactics]
+ (base/deck
+  :name "Reference Deck"
+  :image "images/deck-reference.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap
+    (base/cardlist
+     (base/rulelist<-tactics-keys
+      tactics
+      "Roles"
+      "Role: Attacker"
+      "Role: Blaster"
+      "Role: Defender"
+      "Role: Disrupter"
+      "Role: Skirmisher"
+      "Role: Sniper"
+      "Role: Supporter"
+      "Role: Taunter"
+      "Character"
+      "Body"
+      "Mind"
+      "Will"
+      "Speed"
+      "Beast"
+      "Shadow"
+      "Conscience"
+      "Leveling"
+      "Skill"
+      "Power"
+      "Ability"
+      "Specialty"
+      "Place"
+      "Scene"
+      "Map: Exploration"
+      "Map: Personal"
+      "Map: Vehicle"
+      "Scale"
+      "Scaled"
+      "Advantage"
+      "Disadvantage"
+      "Area Effect"
+      "Reach"
+      "Flanking"
+      "Surrounded"
+      "Surprise"
+      "Unskilled"
+      "Unfamiliar Item"
+      "Choking"
+      "Hunger"
+      "Thirst"
+      "Exposure"
+      "Weather: Clouds"
+      "Weather: Humidity"
+      "Weather: Temperature"
+      "Weather: Wind"
+      "Build: Unit"
+      "Build: Character"
+      "Build: Item"
+      "Build: Vehicle"
+    ))
+    (base/cardlist-copy<-tactics-rulekey-count-isnum
+     tactics "Skill Point" 5 true)
+    (base/cardlist-copy<-tactics-rulekey-count-isnum
+     tactics "Ability Point" 5 true)
+    (base/cardmap-copy<-card-count-isnum
+     bleeding 10 true)
+    (base/cardmap-copy<-card-count-isnum
+     bloodloss 10 true)
+    (base/cardmap-copy<-card-count-isnum
+     poisoned 10 true)
+    ))
+ :doc "Reference Deck")

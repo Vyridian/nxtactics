@@ -15,7 +15,17 @@
      * An Ability Point may be exchanged for an Ability, Specialty, or a Power Rating increase.
      * Ability Points may be saved.")
   (base/rule
-   :name "Action: Attack"
+   :name "Action"
+   :summary
+    "Generally, you spend half your starting Move to take an Action. Therefore, up to 2 Actions a Round.
+     * Free - Actions with no Move cost
+     * Attack - Initiate or react to Combat
+     * Interact - Interact with Unit or Item
+     * Recover - Remove a Fatigue, Stun, Stress, or Slow OR Ready an Ability in Cooldown
+     * Equip - Swap, Reload, Trade Items
+     * Search - Search the area")
+  (base/rule
+   :name "Action: Fight"
    :summary
     "Move:-[Action Cost]
      Includes combat, communication, investigation, flipping switches, opening/closing doors:
@@ -24,7 +34,7 @@
      * Item - Choose an item/weapon. Spend Uses, if any
      * Verify - Verify Target is in Arc, Range, Line of Sight.
      * Target Action - Target must also choose a logical Skill/Power and may spend an Action, IF not they gain no benefits if they Succeed
-     * Task - Perform a Task:Damaging
+     * Resolution - Perform a Resolution: Damage
      * Resume - Resume the Countdown")
   (base/rule
    :name "Action: Equip"
@@ -189,6 +199,13 @@
      * Downtime - Players declare intentions before the next Scene.
      * Intentions - Players declare desires for the next Scene.")
   (base/rule
+   :name "Conflict"
+   :summary
+    "Conflict is how tests are resolved (similar to To Hit/Saving Throws). Each card is effectively a pre-rolled die that you choose when to use
+     1) Choose - Each Player chooses a card from hand
+     2) Reveal - Both are revealed at once
+     3) Compare - Compare Approaches to determines who Wins. IF both Fast or both Strong THEN use Rank")
+  (base/rule
    :name "Conflict: Approach"
    :image "images/rule-conflict-approach.svg"
    :layout base/cardlayout-imageonly)
@@ -212,13 +229,6 @@
      ** Reduce Higher Skill's Rank by Higher Skill - Lower Skill (min 1)
      ** Compare Ranks. Lower Rank Wins.
      ** IF Still Tied THEN Both Win.")
-  (base/rule
-   :name "Conflict: Overview"
-   :summary
-    "Conflict is how tests are resolved (similar to To Hit/Saving Throws). Each card is effectively a pre-rolled die that you choose when to use
-     1) Choose - Each Player chooses a card from hand
-     2) Reveal - Both are revealed at once
-     3) Compare - Compare Approaches to determines who Wins. IF both Fast or both Strong THEN use Rank")
   (base/rule
    :name "Conflict: Reveal"
    :image "images/rule-conflict-reveal.svg"
@@ -266,25 +276,15 @@ Fight - Go to Damage.
      ** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
      ** Unit: That unit is the new target. Resolve a new Combat with it instead.")
   (base/rule
-   :name "Damage: Crits"
-   :summary
-    "* Crits are face-up [Damage] cards.
-     * 10 [Hits] = 1 Crit")
-  (base/rule
-   :name "Damage: Mitigation"
-   :summary
-    "* Shielding - 
-     * Armor - ")
-  (base/rule
-   :name "Damage: Overview"
+   :name "Crits"
    :summary
     "When a char takes damage they take the Damage card onto their character.
-* Rank - Hit Location A=Head, 2=Right Foot
-* Suit - Damage Type (Bash, Pierce, Hack, Slash)
-* Severity - Rotating the card increases the severity (4 severities per card. The last is very nasty.)
-There are two types of damage:
-* Hits - Cause Fatigue - Face Down Damage
-* Crits - Cause Wounds - Face Up Damage. Rotate for each additional Crit. Armor in the locations turns Crits to Hits.
+     * Rank - Hit Location A=Head, 2=Right Foot
+     * Suit - Damage Type (Bash, Pierce, Hack, Slash)
+     * Severity - Rotating the card increases the severity (4 severities per card. The last is very nasty.)
+     There are two types of damage:
+     * Hits - Cause Fatigue - Face Down Damage
+     * Crits - Cause Wounds - Face Up Damage. Rotate for each additional Crit. Armor in the locations turns Crits to Hits.
     1) Damage Types - Determine the [Damage Types] of the weapon.
      2) Reveal Damage - Reveal cards equal to [Hits].
      3) Separate Damage - Separate them into 2 piles: Those that match the [Damage Types] (Damage) and those that don't (Fatigue).
@@ -316,6 +316,18 @@ There are two types of damage:
      * When using a damaged item or body part take [Skill]:-1/Damaged.
      * An item with no [Body] remaining is [Broken].")
   (base/rule
+   :name "Erosion: Mental"
+   :summary
+    "* A gradual loss of memory.")
+  (base/rule
+   :name "Erosion: Physical"
+   :summary
+    "* A gradual whithering of physical abilities.")
+  (base/rule
+   :name "Erosion: Spiritual"
+   :summary
+    "* A gradual loss of personality and individualality.")
+  (base/rule
    :name "Exposure"
    :summary
     "* Move:-1
@@ -344,6 +356,13 @@ There are two types of damage:
    :image "images/rule-hit-location-vehicle.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Hits"
+   :summary
+    "Hits are the degree of success
+     * Combo - Optional. Discard cards to increase Hits
+     * Rank - Each card may increase Hits
+     * Powers - Powers including those on Weapons and Items may increase Hits")
+  (base/rule
    :name "Hits: Combo"
    :summary
     "Optional. Winner may discard cards to make Sets. Allowed Sets:
@@ -355,13 +374,6 @@ There are two types of damage:
   (base/rule
    :name "Hits: Damage Decks"
    :image "images/rule-hits-damage-decks.svg")
-  (base/rule
-   :name "Hits: Overview"
-   :summary
-    "Hits are the degree of success
-     * Combo - Optional. Discard cards to increase Hits
-     * Rank - Each card may increase Hits
-     * Powers - Powers including those on Weapons and Items may increase Hits")
   (base/rule
    :name "Hits: Power"
    :image "images/rule-hits-power.svg")
@@ -449,6 +461,14 @@ There are two types of damage:
      * Toughness
      * Body")
   (base/rule
+   :name "Move"
+   :summary
+    "Each Group will separately count down from 10 with each Unit choosing to Move, take an Action, or Wait. This continues until the count is 0 or no one can act:
+     * Facing - Units must always be facing a compass heading
+     * Wait - Do nothing. Anyone with Move >= Count must discard until below Count
+     * Moving - Move:-1 to move the Unit 1 space. Turn:-1 to turn the Unit 45 degrees
+     * Action - Move:-[Action Cost] to take an Action. 2 Actions per Round are possible")
+  (base/rule
    :name "Move: Facing"
    :image "images/rule-move-facing.svg"
    :layout base/cardlayout-imageonly)
@@ -456,13 +476,6 @@ There are two types of damage:
    :name "Move: Moving"
    :image "images/rule-move-moving.svg"
    :layout base/cardlayout-imageonly)
-  (base/rule
-   :name "Move: Overview"
-   :summary
-    "At the beginning of the Round, each Unit set their [Action Cost] and gained [Move]=]Speed] and [Turn]=2 tokens. Now it may spend them to Move, Turn, or take Actions:
-     * Facing - Units must always be facing a compass heading
-     * Moving - Move:-1 to move the Unit 1 space. Turn:-1 to turn the Unit 45 degrees.
-     * Action - Spend Move equal to [Action Cost] to take an Action. Therefore, 2 Actions per Round are possible.")
   (base/rule
    :name "Off-handed"
    :reference
@@ -494,7 +507,7 @@ There are two types of damage:
   (base/rule
    :name "Rank"
    :summary
-    "* The number on a card or the first part of a value.")
+    "* The number on a card or the part of a Value before the x.")
   (base/rule
    :name "Reach"
    :summary
@@ -593,16 +606,6 @@ There are two types of damage:
 
      * [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation.")
   (base/rule
-   :name "Round: Actions"
-   :summary
-    "Generally, you spend half your starting Move to take an Action. Therefore, up to 2 Actions a Round.
-     * Free - Actions with no Move cost
-     * Attack - Initiate or react to Combat
-     * Interact - Interact with Unit or Item
-     * Recover - Remove a Fatigue, Stun, Stress, or Slow OR Ready an Ability in Cooldown
-     * Equip - Swap, Reload, Trade Items
-     * Search - Search the area")
-  (base/rule
    :name "Round: End"
    :summary
     "Any triggered events happen here.
@@ -613,35 +616,22 @@ There are two types of damage:
      * Clock Ticks - Discard the top card of the Clock and resolve any Clock Events.
      * Task Clock - Tasks get Progress:-1.")
   (base/rule
-   :name "Round: Groups"
-   :summary
-    "Split Units into Groups by Target.
-     * Simultaneous - Each group resolves their Round separately then waits until all Groups are finished before doing Events.
-     * NPCs - Players in each Group perform the actions of any NPCs in their Group. This should be done in good faith or can use a High Card if an Action is not obvious.")
-  (base/rule
-   :name "Round: Moves"
-   :summary
-    "Each Group will separately count down from 10 with each Unit choosing to Move, take an Action, or Wait. This continues until the count is 0 or no one can act:
-     * Wait - Do nothing. Anyone with Move >= Count must discard until below Count.
-     * Move - Pay a Move to move a Space
-     * Action - Pay the [Action Cost] to take an Action")
-  (base/rule
-   :name "Round: Overview"
-   :image "images/rule-round-overview.svg"
-   :layout base/cardlayout-imageonly)
-  (base/rule
    :name "Round: Start"
    :summary
     "Refresh - Place tokens on each [Unit#] card:
      * Action Cost:Speed/2 (rounded down)
      * Move:Speed
-     * Turn:2")
-  (base/rule
-   :name "Round: Targets"
-   :summary
-    "Each Round, place Target cards:
+     * Turn:2
+     Targets - Each Round, place Target cards:
      * Choose Targets - Choose a Target (if any) for each Unit and place the Target# card on that Unit
-     * Change Targets - Players can change after others reveal. IF in conflict THEN use High Card.")
+     * Change Targets - Players can change after others reveal. IF in conflict THEN use High Card.
+     Groups - Split Units into Groups by Target.
+     * Simultaneous - Each group resolves their Round separately then waits until all Groups are finished before doing Events.
+     * NPCs - Players in each Group perform the actions of any NPCs in their Group. This should be done in good faith or can use a High Card if an Action is not obvious.")
+  (base/rule
+   :name "Rounds"
+   :image "images/rule-rounds.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Rule")
   (base/rule
@@ -659,7 +649,9 @@ There are two types of damage:
      * If the scales are different, multiple or divide the Level by 10 for each difference in scale.
      * E.g. On an x1 map a Speed:3x2 would move 30 spaces instead of 3.")
   (base/rule
-   :name "Scene")
+   :name "Scene"
+   :image "images/rule-scene.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Scene: Events"
    :summary
@@ -668,86 +660,29 @@ There are two types of damage:
      * Location Events - May be placed under a location on the Map to be revealed when searched or explored.
      * Fog of War Events - May be face down locations or events that are revealed when entering that location.")
   (base/rule
-   :name "Scene: Factions"
-   :summary
-    "Factions represent groups with differing goals.
-     * Goal - The Goal of the faction
-     * Players - Choose their Faction
-     * Units - Allocate Units within the Faction among those Players.")
-  (base/rule
-   :name "Scene: Introduction"
-   :summary
-    "Some Scenes have backstory or exposition. Note: IF you have Narrators THEN they should control these steps.
-     * Reveal - Reveal the top card in the scene deck and follow its instructions.
-     * Backstory - Previous events that affect the situation.
-     * Description - Description of the current situation, Unit placement, and goals.
-     * Meetup - Events leading to the party coming together.")
-  (base/rule
-   :name "Scene: Map"
-   :summary
-    "A Map includes a number of items:
-     * Scale - The Map Scale to use
-     * Boards - A Board is a page-sized map depicting some type of terrain (e.g. Dirt, Forest, Ocean, Sky, Space). Lay the Boards on the table as described by the Scene.
-     * Places - A Place is a Card that depicts a location (e.g. Rock, Tavern, Tunnel, Mountain). Lay the Places on the table as described by the Scene.
-     * Units - Deploy Units on the map as described by the Scene. They must be placed on a valid Space (dot) with a valid Facing.")
-  (base/rule
    :name "Scene: Minis"
    :image "images/rule-scene-minis.svg"
-   :summary
-    "The map is large enough for any mini including other minitures and toy cars. Included paper minis can be printed on card stock and placed on stands or laid flat.")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Scene: Map#1"
-   :image "images/rule-scene-map-1.svg")
+   :image "images/rule-scene-map-1.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Scene: Map#2"
-   :image "images/rule-scene-map-2.svg")
-  (base/rule
-   :name "Scene: Overview"
-   :summary
-    "Scene describes a situation:
-     * Introduction - Intro and instructions
-     * Map - The location and its layout
-     * Factions - Groups with differing goals
-     * Units - The Units within each Faction
-     * Events - Things that could happen")
-  (base/rule
-   :name "Scene: Rounds"
-   :summary
-    "Scenes take a number of Rounds
-     * Time - Map Scale determins Round length. Personal:6 sec, Traval:6 min, Exploration:6 hours
-     * Groups - Each Round, divide Units into the Groups based their Targets. Groups resolve separately until Round End.
-     * Moves - Within a Group, Units move and act simultaneously by gradually spending their Move tokens.
-     * Actions - Units may take an Action by spending half of their starting Move tokens, so they can take up to 2 Actions.")
+   :image "images/rule-scene-map-2.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Scene: Units"
    :image "images/rule-scene-units.svg"
-   :summary
-    "Gather and layout your Unit cards
-     * Unit stats, Minis, Skills, Abilities, Specialties, and Items
-     * Arrange equipped Items like a paper doll")
+   :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Setup: Decks"
-   :image "images/rule-setup-decks.svg"
-   :summary
-    "* Damage Decks - Shuffle the Wound, Disorder, Trauma, and Burden decks
-     * Fate Deck - Shuffle an extra Conflict Deck to be the Fate Deck. Anyone may use this instead of cards from hand
-     * Library Deck - Keep sorted
-     * Scene Deck - Keep as is
-     * Clock Deck - Sort the Clock Deck")
+   :name "Setup"
+   :image "images/rule-setup.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Setup: Players"
    :image "images/rule-setup-players.svg"
-   :summary
-    "Some Players may be designated Narrators (Game Masters). All Players get the following:
-     * Colored Player Deck
-     * Conflict Deck for Skill Checks - Shuffle and draw 5 cards
-
-     Optional: Character Deck of personal character cards")
-  (base/rule
-   :name "Setup: Tokens"
-   :image "images/rule-setup-tokens.svg"
-   :summary
-    "Some cards require Tokens. Small metal cubes or coins are ideal, but cards work as well")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Skill")
   (base/rule
@@ -774,7 +709,8 @@ There are two types of damage:
      * Advancement - When you gain an Ability under a Specialty, you may gain another one for free")
   (base/rule
    :name "Shadow"
-   :titles "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin"          :reference
+   :titles "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin"
+   :reference
     "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence
      * Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil
      * Hannibal Lecter
@@ -812,14 +748,15 @@ There are two types of damage:
     "* Special: IF Speed over 5 THEN penalty is Speed:-2.")
   (base/rule
    :name "Stat"
-   :image "images/rule-stat.svg")
+   :image "images/rule-stat.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Surprise"
    :summary
     "* IF a unit suddenly appears adjacent or upon a unit.
      * THEN
      ** Lose half of starting [Move].
-     ** Reveal [Conflict]. Unit takes temporary damage based on the [Suit].
+     ** Reveal [Conflict]. Unit takes [Light Damage] based on the [Suit].
      ** [Wands] = [Fatigue]
      ** [Coins] = [Stun]
      ** [Cups] = [Stress]
@@ -830,39 +767,36 @@ There are two types of damage:
     "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent.")
   (base/rule
    :name "Target#"
-   :summary
-   "The current target of Unit#
-
-    * [Round Start]: Place on a Unit")
+   :image "images/rule-target-num.svg")
   (base/rule
-   :name "Task: Damaging"
-   :summary
-    "A damaging attack. The degree of Success determines wound severity
-     * Conflict - Perform a Conflict
-     * Effect - Determine Effect for the Winner
-     * Success - Challenge:-Effect")
-  (base/rule
-   :name "Task: Overview"
+   :name "Resolution"
    :summary
     "Any skill/ability/power/stat test is called a Task. There are 3 types:
      * Test - A quick test. Any success passes
      * Extended - An extended task over multiple Rounds
      * Damaging - A damaging attack. The degree of success determines wound severity")
   (base/rule
-   :name "Task: Extended"
+   :name "Resolution: Damage"
+   :summary
+    "A damaging attack. The degree of Success determines wound severity
+     * Conflict - Perform a Conflict
+     * Effect - Determine Effect for the Winner
+     * Success - Challenge:-Effect")
+  (base/rule
+   :name "Resolution: Extended"
    :summary
     "An extended task over multiple Rounds
      * Task Start - Determine the Difficulty. Place Tokens on the upper (Progress) and lower (Challenge) part of of this card each equal to the Difficulty
      * Conflict - Perform a Conflict
      * Effect - Determine Effect
-     * Success - Challenge:-Effect
-     * Failure - Progress:-Effect
+     * Win - Challenge:-Hits
+     * Lose - Progress:-Hits
      * Round End: Progress:-1
      * IF Challenge = 0 THEN the Task Ends in Success
      * IF Progress = 0 THEN the Task Ends in Failure
      * Task End - Discard the tokens and Task card.")
   (base/rule
-   :name "Task: Test"
+   :name "Resolution: Test"
    :summary
     "A quick test. Any success passes
      * Difficulty - Determine the Difficulty. This is usually a Stat like the target's Body.
@@ -891,18 +825,7 @@ There are two types of damage:
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Unit#"
-   :summary
-   "Shows the Player and Unit#
-    * [Setup]: Place near a Unit
-
-
-    * [Action Cost]:[Speed]/2 round down
-
-
-    * [Move]:[Speed]
-
-
-    * [Turn]:2")
+   :image "images/rule-unit-num.svg")
   (base/rule
    :name "Unskilled"
    :summary
@@ -983,52 +906,39 @@ There are two types of damage:
        "Item: Guide"
        "Stat"
        "How to Play"
+       "Setup"
        "Setup: Players"
-       "Setup: Decks"
-       "Setup: Tokens"
-       "Scene: Overview"
-       "Scene: Introduction"
-       "Scene: Minis"
-       "Scene: Map"
+       "Scene"
        "Scene: Map#1"
        "Scene: Map#2"
-       "Scene: Factions"
+       "Scene: Minis"
        "Scene: Units"
-       "Scene: Rounds"
        "Scene: Events"
-       "Round: Overview"
+       "Rounds"
        "Round: Start"
-       "Round: Targets"
-       "Round: Groups"
-       "Round: Moves"
-       "Round: Actions"
-       "Round: End"
-       "Move: Overview"
+       "Move"
        "Move: Facing"
        "Move: Moving"
+       "Action"
        "Action: Free"
        "Action: Equip"
        "Action: Notice"
        "Action: Recover"
        "Action: Hide"
        "Action: Search"
-       "Action: Attack"
+       "Action: Fight"
        "Action: Interact"
        "Arc"
        "Range"
        "Line of Sight"
-       "Task: Overview"
-       "Task: Test"
-       "Task: Extended"
-       "Task: Damaging"
-       "Conflict: Overview"
+       "Conflict"
        "Conflict: Suit"
        "Conflict: Approach"
        "Conflict: Rank"
        "Conflict: Reveal"
        "Conflict: Compare"
        "Conflict: Chart"
-       "Hits: Overview"
+       "Hits"
        "Hits: Combo"
        "Hits: Rank"
        "Hits: Damage Decks"
@@ -1036,53 +946,15 @@ There are two types of damage:
        "Hit Location Person"
        "Hit Location Vehicle"
        "Hits: Power"
-       "Damage: Overview"
-       "Damage: Mitigation"
-       "Damage: Crits"
+       "Crits"
+       "Resolution"
+       "Resolution: Test"
+       "Resolution: Extended"
+       "Resolution: Damage"
+       "Round: End"
        "Conclusion"
        "Rewards"
        "Advancement"
-       "Character"
-       "Body"
-       "Mind"
-       "Will"
-       "Speed"
-       "Beast"
-       "Shadow"
-       "Conscience"
-       "Leveling"
-       "Skill"
-       "Power"
-       "Ability"
-       "Specialty"
-       "Place"
-       "Scene"
-       "Map: Exploration"
-       "Map: Personal"
-       "Map: Vehicle"
-       "Scale"
-       "Scaled"
-       "Advantage"
-       "Disadvantage"
-       "Area Effect"
-       "Reach"
-       "Flanking"
-       "Surrounded"
-       "Surprise"
-       "Unskilled"
-       "Unfamiliar Item"
-       "Choking"
-       "Hunger"
-       "Thirst"
-       "Exposure"
-       "Weather: Clouds"
-       "Weather: Humidity"
-       "Weather: Temperature"
-       "Weather: Wind"
-       "Build: Unit"
-       "Build: Character"
-       "Build: Item"
-       "Build: Vehicle"
       )))
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist

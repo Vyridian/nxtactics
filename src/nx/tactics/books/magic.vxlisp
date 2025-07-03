@@ -82,9 +82,9 @@
       (base/powermap<-tactics-keys
        tactics
        "Animalism"
+       "Beastial"
        "Herbalism"
-       "Naturalism"
-       "Wild"))
+       "Naturalism"))
     (base/section
      :name "Spiritual"
      :titles "Spiritualism"

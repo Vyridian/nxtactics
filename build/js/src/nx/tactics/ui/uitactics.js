@@ -2024,11 +2024,11 @@ export default class nx_tactics_ui_uitactics {
           datatype,
           vx_core.f_case_1(
             nx_tactics_base.t_item,
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return "images/card-item.svg"})
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return "images/item.svg"})
           ),
           vx_core.f_case_1(
             nx_tactics_base.t_unit,
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return "images/card-unit.svg"})
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return "images/unit.svg"})
           ),
           vx_core.f_case_1(
             nx_tactics_base.t_place,

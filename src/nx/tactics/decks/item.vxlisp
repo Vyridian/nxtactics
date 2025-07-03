@@ -208,6 +208,11 @@
    :body "3x0"
    :mass "3kg/7lb")
   (base/item
+   :name "Club: Staff"
+   :titles "Quarterstaff"
+   :reference
+    "* Held at the bottom like a polearm. not in the middle. Holding in the middle was invented by the Boy Scouts in Victorian times for sport fighting.")
+  (base/item
    :name "Coins: Copper"
    :image "images/cards/item-coins-copper.svg"
    :summary

@@ -47,10 +47,6 @@
         * [Activate]: Remove one White token."
       :rulemap
        (rulemap
-        :Faith
-         (rule
-          :name "Faith"
-          :image "Tokens/FaithToken.png")
         :Rage
          (rule
           :name "Rage"
@@ -83,17 +79,7 @@
           :name "Curse"
           :summary
            "* [Anytime]: When unit gains a [Red Token] or a [Black Token], roll for each Curse Token.
-            * For each [Hit], replace a Curse Token with a Token of any type just gained.")
-        :Petrified
-         (rule
-          :name "Petrified")
-        :Radiation
-         (rule
-          :name "Radiation"
-          :image "Tokens/RadiationToken.png")
-        :Shapeshift
-         (rule
-          :name "Shapeshift"))))))
+            * For each [Hit], replace a Curse Token with a Token of any type just gained."))))))
 
 (func chapter_advanced_rules : base/chapter
  [tactics : base/tactics]

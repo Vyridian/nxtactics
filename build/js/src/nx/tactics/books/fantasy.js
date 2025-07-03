@@ -26,9 +26,7 @@ export default class nx_tactics_books_fantasy {
       ":name",
       "Fantasy Overview",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Fantasy Armor",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -38,11 +36,10 @@ export default class nx_tactics_books_fantasy {
           ":itemmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
-            "Moon Disc",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Moon Disc", ":summary", "* A [Silver] Shield.", ":classification", "Shield")
+            "Shield: Moon Disc",
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield: Moon Disc", ":summary", "* A [Silver] Shield.", ":classification", "Shield")
           )
         ),
-        "Fantasy Weapons",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Fantasy Weapons", ":summary", "* Faeblades")
       )
     )
@@ -69,9 +66,7 @@ export default class nx_tactics_books_fantasy {
       ":name",
       "Genshin Impact",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Archons",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -116,9 +111,7 @@ export default class nx_tactics_books_fantasy {
       ":name",
       "God of War",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "God of War Equipment",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -130,7 +123,6 @@ export default class nx_tactics_books_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pandora's Box", ":reference", "* The box was actually mistranslated.  It is actually Pandora's Jar.", ":summary", "* After the great war with the Titans, Zeus gathered the great evils of the war and bid Hephaestus construct a box to hold them.  Later Kratos seeks out the box to use the evils inside against Ares.")
           )
         ),
-        "God of War Units",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -167,9 +159,7 @@ export default class nx_tactics_books_fantasy {
       ":name",
       "Lord of the Rings",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Lord of the Rings Units",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -210,17 +200,13 @@ export default class nx_tactics_books_fantasy {
       ":titles",
       "Areth, Archea, Gaia, Koltho, Material Realm, Middle Earth, Middle Kingdom, Middle Realm, Midgard, Mortal Realm, Mother Earth",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Africana",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Africana",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            ":Aegyptus",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -252,7 +238,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Kemet Tomb Robber", ":summary", "* The tomb robbers are nomadic folk who have found a profitable lifestyle by digging in dangerous tombs for untold riches. They can act as guides for expeditions into the desert.")
               )
             ),
-            ":Batrea",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -268,9 +253,7 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Batrean Grunt", ":summary", "* Batrean men are huge, slope shouldered, and remarkably ugly. They are slow and brutish and are constantly arguing and fighting among themselves. They generally ignore the beautiful females except during their week-long mating season.")
               )
             ),
-            "Burning Waste",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Burning Waste", ":reference", "Sahara Desert", ":summary", "* The Burning Waste is a massive desert (the largest in the world) that stretches across the northern Africana continent. Where the desert meet the Mediterrainean, the water creates a long strip of jungles or swamps. These are also the only inhabited areas near the Burning Waste.\n* Red Iron - The sand of the Burning Wastes has a high iron content in the form of rust dust. With difficulty, the sand can be smelted back into iron. Typically, the red tinge is left in to show its origination.\n* Politics - Many nations claim large sections of the desert, but no one really maintains any ownership over such a harsh realm."),
-            ":Djaffa",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -288,7 +271,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Djaffir Wizard", ":summary", "* The Wizards are well regarded by their people as seers and mystics. Like the rest of their people they are superstitious and see omens everywhere.")
               )
             ),
-            ":Dracarta",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -316,9 +298,7 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dracartam Duneship", ":summary", "* The legendary duneships of the Dracartan army. They race across the desert sand on adamantine runners. They are powered by storm crystals produced and ignited by the Alchemists into the huge wind funnels that propel the duneships across the sand.\n* The duneships serve as troop carriers and mobile siege engines. Light Ballistas and light greek fire catapults are typically carried.\n* Despite the name, duneships cannot climb hills and may only travel on level sand. They also lack manueverability and may not travel into headwinds by tacking.\n* The forward section of the hull can be lowered to allow mounts to enter and exit.\n* The duneships are expensive to use and maintain, so they are only deployed in special occassions, especially when a show of force is required.")
               )
             ),
-            ":Carthage",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Carthage", ":summary", "* City/State\n* Worship the Devil King [Baal Moloch]."),
-            "Chana Jungles",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -340,39 +320,20 @@ export default class nx_tactics_books_fantasy {
                   ":summary",
                   "* The Witchmen revere the forces of darkness and despise the enemies of their gods the forces of light. They live a completely nocturnal lifestyle and are skilled at witchcraft and herbalism.\n* They sing songs of fear and death that are said to strike madness in those that hear them.\n* They create shrunken heads from their victims and wear them as jujus. It is said that they can capture a person's soul and control their body like a mindless zombie.\n* Some have trained Death's Head Vipers as pets and wear them as bracelets.",
                   ":unitpowermap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitpowermap},
-                    ":Sympathy",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Sympathy"),
-                    ":Enchantment",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Enchantment"),
-                    ":Naturalism",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Naturalism"),
-                    ":Madness",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Madness")
-                  ),
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Curses", "Enchantment", "Naturalism", "Madness"),
                   ":unitskillmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitskillmap},
-                    "Animal Handling",
-                    vx_core.f_new(
-                      {"any-1": nx_tactics_base.t_unitskill},
-                      ":name",
+                  nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                    nx_tactics_base.f_unitskill_from_tactics_key_abilities(
+                      tactics,
                       "Animal Handling",
-                      ":unitabilitymap",
-                      vx_core.f_new(
-                        {"any-1": nx_tactics_base.t_unitabilitymap},
-                        "Snake Charming",
-                        vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Snake Charming")
-                      )
+                      vx_core.f_new({"any-1": vx_core.t_stringlist}, "Snake Charming")
                     )
                   )
                 ),
-                "Death's Head Viper",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Death's Head Viper", ":summary", "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled.", ":titles", "Wrist Viper")
+                "Snake: Death's Head Viper",
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Death's Head Viper", ":titles", "Wrist Viper", ":summary", "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled.")
               )
             ),
-            ":Jhagara",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -388,9 +349,7 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Jhagaran Outcast")
               )
             ),
-            "Serpentine River",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Serpentine River", ":summary", "* The [Serpentine River] is actually more of a slow moving swamp that flows from the south and pours into the ocean. At the mouth of the river, a large set of thick posts have been sunk into the silt, simultaneously providing tradeships with a place to tie up while blocking entrance into the river.  Porters must then be paid to bring goods to [Fiaqua] by barge. This is mostly just another opportunity for corruption. The [Naga] in the area do not allow boat traffic farther upstream from [Fiaqua]."),
-            "Shadow Isles",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -410,7 +369,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shadow Wizard", ":summary", "* Comprised of animate darkness, these spirits of deceased magicians resemble man-like shadows. They cloak themselves inn hooded vestments and bear ebony runestaves studded with black diamonds, and their eyes burn with a fiery incandescense.\n* They Shadow Wizards consort with beings from the lower planes and perform bizarre magical experiments. The reason for their actions remains unknown, but some fear they are creating an army of monstrosities to unleash upon an unsuspecting world.")
               )
             ),
-            "Sinking Land",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -424,7 +382,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sludge", ":summary", "* The Sludge are a man-sized race of semi-intelligent Slugs that live within the Sinking Land. They swim quickly through the shallow water pushing off of the bottom. The Sludge are very curious and gather around visitors in large numbers. Though intimidating and pushy, they are largely harmless and flee if harmed. The main danger is they have been known to accidentally capsize boats in their enthusiasm. They are knowledgable about the area, but their lack of language makes communication a challenge.")
               )
             ),
-            ":Tunis",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -444,21 +401,16 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Queen Amelia Tremont")
               )
             ),
-            ":Shinsenkyo",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Shinsenkyo", ":reference", "* Hell's Paradise\n* In Chinese legend, Shinsenkyo is an island on which gods reside, a place of true beauty and nature.", ":summary", "* An island of great natural beauty, but it is filled with bizarre, unnatural beings. It is rumored to be the source of the Elixir of Life which is the source of its strange ecology."),
-            ":Wraeclast",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Wraeclast", ":reference", "* Alba, Madagascar, Australia, Count of Monte Cristo, Mayan civilization, Path of Exile", ":summary", "* Wraeclast is a large subtropical island in the southern hemisphere. It is infamous as a thoughly cursed place where criminals and political prisoners are exiled, never to return.\n* Cursed - An evil force prevades the land. Here the dead always rise again as zombies or worse. Sleep is filled with dark thoughts of madness and violence. The evil influence has twisted plants and animals into bizarre and hateful things.\n* Settlements - There are a handful of small towns composed of exiles and shipwreck survivors carving out a meager living from the hostile land. Agriculture is difficult, but ironically hunting is good for those who can avoid becoming the hunted themselves.\n* Ruins - Though there are no native people on Wraeclast, there is ample evidence of early advanced cultures, apparently predating the evil influences that currently makes civilization so challenging. Many speculate that this previous civilization was destroyed when they unleashed the curse that still devastates the land.")
           )
         ),
-        ":Atlantia",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Atlantia",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            ":Antillia",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -472,7 +424,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Antillan Triton")
               )
             ),
-            ":Briton",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -503,9 +454,7 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalon Squire")
               )
             ),
-            ":Eire",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Eire", ":reference", "Ireland", ":titles", "Emerald Island"),
-            ":Melnibone",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -549,7 +498,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Xiombarg", ":summary", "* Xiombarg is a Chaos Lord. She prefers to appear as a beautiful young woman but is sometimes referred to with the male pronoun. She is prone to shapeshifting and carries a giant sword. She sometimes rides a creature with the head of a lion and the body of a bull.\n* Though she prefers the form of a beautiful woman, it is possible her true form is more insect-like.", ":titles", "Queen of the Swords")
               )
             ),
-            "Sargasso Sea",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -563,19 +511,15 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sargassos Sea Nomad", ":summary", "* Expert fisherman and salvagers. The sea nomads can be known to be ruthless, since life in the Sargasso can be difficult.")
               )
             ),
-            ":Y'ha-nthlei",
-            vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Y'ha-nthlei", ":reference", "We shall swim out to that brooding reef in the sea and dive down through black abysses to Cyclopean and many-columned Y'ha-nthlei, and in that lair of the Deep Ones we shall dwell amidst wonder and glory forever. - The Shadow Over Innsmouth", ":summary", "* Deep Ones, Human Hybrids, Human Slaves", ":titles", "City of the Deep Ones")
+            vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Y'ha-nthlei", ":titles", "City of the Deep Ones", ":reference", "We shall swim out to that brooding reef in the sea and dive down through black abysses to Cyclopean and many-columned Y'ha-nthlei, and in that lair of the Deep Ones we shall dwell amidst wonder and glory forever. - The Shadow Over Innsmouth", ":summary", "* Deep Ones, Human Hybrids, Human Slaves")
           )
         ),
-        ":Asiana",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Asiana",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            "Jade Empire",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -613,7 +557,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wudang Monk", ":summary", "* A Taoist Monk")
               )
             ),
-            ":Nepal",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -631,7 +574,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nepal Sherpa")
               )
             ),
-            ":Nippon",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -659,7 +601,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nippon Sohei")
               )
             ),
-            ":Tibet",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -673,15 +614,12 @@ export default class nx_tactics_books_fantasy {
             )
           )
         ),
-        ":Caucasia",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Caucasia",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            ":Anatolia",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -727,7 +665,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Romani Thespian", ":titles", "Puppeteer")
               )
             ),
-            ":Balkan",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -749,7 +686,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Carpathian Witchhunter", ":summary", "* Some of the survivors of the Carpathian disaster formed a group to discover the cause of the disaster and to repair it. They seek magical knowledge of all sorts and fund themselves by using their talents as bounty hunters for the more dangerous bounties.", ":titles", "Witcher")
               )
             ),
-            ":Byzantium",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -787,7 +723,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Byzantine Spy")
               )
             ),
-            "Caspian Sea",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -803,7 +738,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caspian Rogue")
               )
             ),
-            ":Hesperia",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -833,15 +767,12 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Amazon Warrior")
               )
             ),
-            ":Scythia",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
               "Scythia",
               ":sectionmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_sectionmap},
-                ":Arim",
+              nx_tactics_base.f_sectionmap_from_sectionlist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_section},
                   ":name",
@@ -859,7 +790,6 @@ export default class nx_tactics_books_fantasy {
                 )
               )
             ),
-            "Shattered Lands",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -891,7 +821,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ur Warrior", ":summary", "* The Ur Warrior is the typical shocktrooper of the Ur clans. Most adult Ur, male or female are considered warriors.")
               )
             ),
-            "Volcanic Hills",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -909,7 +838,6 @@ export default class nx_tactics_books_fantasy {
             )
           )
         ),
-        ":Northlands",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -925,9 +853,7 @@ export default class nx_tactics_books_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Unknown Kadath")
           ),
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            ":Aurorea",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -963,7 +889,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Auroran Ice Schooner", ":titles", "Ice Outrigger")
               )
             ),
-            ":Jotunheim",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -977,7 +902,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Ymir's Teeth", ":summary", "* A massive ridge of jagged moutains that the Frost Giants believe are the teeth of an inconceivably large god and that the world lies in its open maw awaiting the day when the being awakes.\n* Home of the Frost Giants, this is also the main location where blue diamonds can be found. Mining of blue diamonds began the war between the Aurorans and Ice Giants.")
               )
             ),
-            ":Khazad",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -993,7 +917,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Necron", ":summary", "* There are stories of an entire city and its inhabitants buried beneath the earth. All of its inhabitants supposedly mummified and interred in stone sarcophagi. Very little reliable information is available about this supposed necropolis.")
               )
             ),
-            ":Nefaratus",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1015,7 +938,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Black Ship", ":summary", "* The Savant's midnight black vessels are said to sail the cursed waters at the edge of the world. It is claimed that they are propelled by demons chained to the oars with silver shackles and driven by giant copper skinned devils. These ships have been known to pull into port cities on moonless nights only to leave again before dawn.")
               )
             ),
-            ":Nordland",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1049,19 +971,15 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nord Valkyrie")
               )
             ),
-            "Worlds Edge",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Worlds Edge", ":summary", "*")
           )
         ),
-        ":Mediterranea",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Mediterranea",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            ":Aegea",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1105,7 +1023,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spartan Warrior")
               )
             ),
-            ":Arden",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1151,7 +1068,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goddess Selene", ":reference", "* The Moon is our Goddess, the night her kingdom! - Diana, Legends of Runeterra", ":summary", "* Most Alfar revere the Moon Goddess Selene.")
               )
             ),
-            ":Gaul",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1169,9 +1085,7 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Mistridge", ":summary", "* A walled town housing the main lodge of the Order of Hermes magical society. Mistridge is loosely affiliated with the Arcanum to the East, but the members of the Mistridge lodge keep a low profile as opposed to the grandiose towers of the Arcanum.")
               ),
               ":sectionmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_sectionmap},
-                ":Elysia",
+              nx_tactics_base.f_sectionmap_from_sectionlist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_section},
                   ":name",
@@ -1211,7 +1125,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Gallic Warrior")
               )
             ),
-            ":Bavaria",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1223,7 +1136,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Blackmarsh")
               )
             ),
-            ":Iberia",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1231,9 +1143,7 @@ export default class nx_tactics_books_fantasy {
               ":reference",
               "Portugal, Spain",
               ":sectionmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_sectionmap},
-                "Order, The",
+              nx_tactics_base.f_sectionmap_from_sectionlist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_section},
                   ":name",
@@ -1287,7 +1197,6 @@ export default class nx_tactics_books_fantasy {
                 )
               )
             ),
-            ":Imperium",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1337,7 +1246,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Borderland Legionnaire", ":summary", "* The far eastern outposts of the empire are manned by the Legion of the Borderlands. This is body of hard-bitten mercenaries, outcasts, and criminals from many lands. Being assigned to the Legion of the Borderlands one way that the Imperium makes use of troublemakers.")
               )
             ),
-            ":Teuton",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1345,7 +1253,7 @@ export default class nx_tactics_books_fantasy {
               ":reference",
               "Germany",
               ":summary",
-              "* Description - Currently claimed as a territory of the Imperium.\n           * Dwarves",
+              "* Description - Currently claimed as a territory of the Imperium.\n* Dwarves",
               ":itemmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_itemmap},
@@ -1363,7 +1271,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Deep Roads", ":summary", "* A fantastic labyrinth of inter-connected, underground tunnels deep within the earth. The tunnels were mostly created by volcanic activity and underground rivers ages ago. Since then Dholes, Kobolds, and Dwarves have extended and refined the tunnels. They are so extensive that many civilizations live within the Deep Roads.", ":titles", "Dark Roads, Underdark, Underlands")
               )
             ),
-            ":Zura",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1399,17 +1306,13 @@ export default class nx_tactics_books_fantasy {
             )
           )
         ),
-        "Middle East",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Middle East",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            ":Arabia",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Arabia", ":reference", "Saudi Arabia"),
-            ":Assyria",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1419,9 +1322,7 @@ export default class nx_tactics_books_fantasy {
               ":summary",
               "* Twin Rivers - Assyria is a verdent valley nestled between the Tigris and Euphrates Rivers.",
               ":sectionmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_sectionmap},
-                ":Magisterium",
+              nx_tactics_base.f_sectionmap_from_sectionlist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_section},
                   ":name",
@@ -1443,7 +1344,6 @@ export default class nx_tactics_books_fantasy {
                 )
               )
             ),
-            ":Canaan",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1463,7 +1363,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Dead Sea")
               )
             ),
-            ":Pars",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1471,9 +1370,7 @@ export default class nx_tactics_books_fantasy {
               ":reference",
               "Persia",
               ":sectionmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_sectionmap},
-                ":Farad",
+              nx_tactics_base.f_sectionmap_from_sectionlist(
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_section},
                   ":name",
@@ -1497,7 +1394,6 @@ export default class nx_tactics_books_fantasy {
                     vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Faradun Procurer", ":summary", "* A specialized merchant skilled at obtaining any entertainment or diversion imaginable regardless of its legal status ... for the right price. Procurers are famous for their discretion in this 'no questions asked' business. The Farad legal system does not hold Procurers liable for the actions of their customers, so they act with impunity.")
                   )
                 ),
-                ":Phatas",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_section},
                   ":name",
@@ -1521,7 +1417,6 @@ export default class nx_tactics_books_fantasy {
                 )
               )
             ),
-            ":Raja",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1541,7 +1436,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rajan Black Mystic", ":summary", "* The Black Mystics are necromancer/priest who lead the Rajan cult. They are religious fanatics and believe that they channel the will of their dread gods.\n* Black Mystic religious ceremonies typically feature ritual executions symbolizing conversion of non-believers to the cult. Demons perform the executions which draw great crowds of worshippers to the temples.")
               )
             ),
-            "Desert Wastes",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1561,7 +1455,6 @@ export default class nx_tactics_books_fantasy {
             )
           )
         ),
-        ":Oceania",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1569,9 +1462,7 @@ export default class nx_tactics_books_fantasy {
           ":titles",
           "Pacific Ocean",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            "Cresent Isles",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1583,11 +1474,9 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Nauticus Reef", ":summary", "* A great mass of coral filled with beautiful and dangerous sea life. The reef has been the cause of many shipwrecks over the years and is the subject of many perilous salvage operations over the years.")
               )
             ),
-            ":Lemuria",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Lemuria")
           )
         ),
-        "Underground, The",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1595,13 +1484,10 @@ export default class nx_tactics_books_fantasy {
           ":titles",
           "Underdark, Underdeep",
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            "Underground Highway",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Underground Highway", ":summary", "* An extensive tunnel system that covers hundreds of miles and travels deep under many countries.\n* Ages ago an underground river flowed through this region carving out the massive tunnels and tributaries. The receding waters developed a vast underground ecosystem. Phosphorescent fungi even allowed sighted beings to thrive in this spectacular and bizarre underground world.")
           )
         ),
-        ":Wilderlands",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1623,13 +1509,9 @@ export default class nx_tactics_books_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Sea of Glass", ":summary", "* The sea of glass is a vast expanse of mostly flat glass. The sea was presumably formed by a massive firestorm detonating over a sandy desert, but no cause had been discovered. Travelling over the glass is similar to travelling over ice though the glass is much harder and the weather is very hot. The glass creates a blinding glare when the Sun is at the right angle, and the surface can seem like a giant frying pan under the noonday Sun.")
           ),
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            ":Azteka",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Azteka"),
-            ":Maya",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Maya"),
-            ":Mandragora",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1752,17 +1634,11 @@ export default class nx_tactics_books_fantasy {
       ":titles",
       "Multiverse, Realties, Realms",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Universe",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Universe", ":summary", "* Location: +x, +y, +z, +t, 0i", ":titles", "Material Realm, Material Universe, Real World, Space"),
-        ":Antiverse",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Antiverse", ":summary", "* Antispace was created with the Big Bang. In this multiverse a larger amount of anti-matter than matter was created. They are very similar to the Material Realms, but their particles are deadly to beings from the Physical Realms and vis-versa.", ":titles", "Antispace, Anti Realm, Negative Zone"),
-        ":Void",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Void", ":summary", "* The Void was created with the Big Bang. In this multiverse a roughly equal amount of matter and anti-matter were created. Almost nothing remains in this desolate lightless physical multiverse."),
-        ":Limbo",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Limbo", ":summary", "* The Limbo was created with the Big Bang. In this multiverse a roughly equal amount of matter and anti-matter were created. Almost nothing remains in this desolate lightless spirit multiverse.\n* Beings with Will perceive everything as endless white."),
-        "Positive Planes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1780,7 +1656,6 @@ export default class nx_tactics_books_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Source", ":reference", "* I am kindness. I am unity. I am bigotry. I am expansion. I am the end! The DEATH that comes for expansion! For existence! The NULL that comes unto us all. Because I AM the PHOENIX! Life and death INCARNATE! The resurrection and renewal that will never end. Memories reawakened. A life lived and ended, again and again. A perpetual cycle of joy and sorrow. Anger and gratitude. Bliss and grief. All of them, just small parts of what relentlessly perseveres. Infinite, Absolute, Unconditional. - Madelyn Prior, X-men", ":summary", "* Location: 0x, 0y, 0z, t, +infinity-i\n* The White Hot Room is a single point at the infinite edge of [Positive Space]. As such, it holds infinite energy.\n* It is the home of the [Phoenix Force].\n* It is speculated that beyond the Source, lies [Oblivion] in an endless cycle.\n* Some say all of reality is just shadows cast between the Source and Oblivion.", ":titles", "Absolute Order, Positive Infinity, The Beginning, The Fountain, The Source, The White Hole, True Order, White Hot Room")
           )
         ),
-        "Negative Space",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1800,7 +1675,6 @@ export default class nx_tactics_books_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Wyld", ":titles", "Wildspace, Wylderlands, Wyldspace")
           )
         ),
-        "Temporal Realms",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1814,7 +1688,6 @@ export default class nx_tactics_books_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Vortex", ":reference", "* The Christmas tree, which can be traced in its origins back to pre-Christian European beliefs, represents an axis mundi.\n* The axis mundi (also cosmic axis, world axis, world pillar and center of the world) is a symbol representing the point of connection between sky and earth. It offers means of travel and correspondence between the two realms. It is also the place where the four compass directions unite.\n* It was an All-in-One and One-in-All of limitless being and self - not merely a thing of one Space-Time continuum, but allied to the ultimate animating essence of existence's whole unbounded sweep - the last, utter sweep which has no confines and which outreaches fancy and mathematics alike. It was perhaps that which certain secret cults of earth have whispered of as YOG-SOTHOTH, and which has been a deity under other names; that which the crustaceans of Yuggoth worship as the Beyond-One, and which the vaporous brains of the spiral nebulae know by an untranslatable Sign... - Through the Gates of the Silver Key", ":summary", "* The spiraling tunnel to infinity down all black holes, a corridor where the rules of time and space cease to have meaning. Some theorize that the Vortex is the eye of the storm within [Oblivion] and is the ultimate connection between [Oblivilion] and the [Source].\n* It is said that the World Tree's roots are the [Ley Line]s and its fruit are the stars. It grows up through the [Underworld] and soars into the heavens where it suspends the sky. The World Tree is eternal and is connected through both time and space.\n* The Norns are found here.", ":titles", "Axis Mundi, Chronos, Eye of Harmony, Irminsul, Temporal Zero Point, Tree of Life, Tree of Knowledge of Good and Evil, World Pillar, World Tree, Yggdrasil, Yog-Sothoth")
           )
         ),
-        "Inner Realms",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1843,7 +1716,7 @@ export default class nx_tactics_books_fantasy {
               "* The Spirit Realm of the Moon",
               ":unitmap",
               nx_tactics_base.f_unitmap_from_unitlist(
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goddess Selene", ":titles", "Full Moon, Moon Queen, Silver Queen", ":summary", "* Selene is the Goddess of the Moon, the Alfar, and the Werebeasts.\n					          * She has 4 aspects:\n** Full - \n** Waxing - \n** Waning - \n** New -")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goddess Selene", ":titles", "Full Moon, Moon Queen, Silver Queen", ":summary", "* Selene is the Goddess of the Moon, the Alfar, and the Werebeasts.\n* She has 4 aspects:\n** Full - \n** Waxing - \n** Waning - \n** New -")
               )
             ),
             "Hollow World",
@@ -1868,9 +1741,7 @@ export default class nx_tactics_books_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Veil", ":summary", "* The Veil is a barrier between the natural world and the supernatural worlds.\n* The Veil is not only a physical barrier but also has an effect on perception and memory. Those without supernatural abilities who encounter supernatural beings will tend to rationalize the supernatural aspects of the encounter, instead interpretting them as natural phenomenon. They will irrationally deny that any supernatural aspect was involved regardless of the evidence. This quality of the Veil applies to recordings and any other evidence and has kept the mythical status of supernatural beings for millenia.", ":titles", "Gauntlet, Mists, Shroud")
           ),
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            "Elemental Air Realm",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1884,9 +1755,7 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "h'Haarshann", ":reference", "Elric of Melnibone", ":summary", "* Wind Elemental Lord")
               )
             ),
-            "Elemental Cold Realm",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Elemental Cold Realm", ":summary", "* The realm of elemental cold is a vast, barren, snowscape under a sunless sky. Harsh blizzards sweep across the snow that covers the glaciers and frozen seas. There is no heat in this realm.\n* Elementals are generally highly emotional and of low intelligence. This is natural given that they have no need for intelligence in their harsh realm. They do not have cities or wars but are more divided into pods of friends and family."),
-            "Elemental Earth Realm",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1900,11 +1769,8 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Grome", ":reference", "Elric of Melnibone", ":summary", "* Earth Elemental Lord")
               )
             ),
-            "Elemental Fire Realm",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Elemental Fire Realm", ":summary", "* The realm of elemental fire is a vast volcanic space seemingly from the dawn of the world. It is all lava, and scorching heat. Here, fire is pure without oxygen or smoke or fuel to burn.\n* Elementals are generally highly emotional and of low intelligence. This is natural given that they have no need for intelligence in their harsh realm. They do not have cities or wars but are more divided into pods of friends and family."),
-            "Elemental Lightning Realm",
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Elemental Lightning Realm", ":summary", "* The realm of elemental lightning is a vast lightning storm lighting up the sky, pounding the ground, and electrifying the seas.\n* Elementals are generally highly emotional and of low intelligence. This is natural given that they have no need for intelligence in their harsh realm. They do not have cities or wars but are more divided into pods of friends and family."),
-            "Elemental Water Realm",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1920,7 +1786,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pyaray", ":reference", "Elric of Melnibone", ":summary", "* Pyaray is a Chaos Lord who rules the deepest parts of the ocean. He appears as a giant red octopus-like creature, and his soul is kept in a blue crystal on his head. Sailors who drown at sea are taken into his Chaos Fleet. One portent of the end of the world is the ascent of the Chaos Fleet to the surface. Pyaray and Straasha are bitter enemies.", ":titles", "Tentacled Whisperer of Impossible Secrets")
               )
             ),
-            ":Elysium",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -1942,7 +1807,6 @@ export default class nx_tactics_books_fantasy {
             )
           )
         ),
-        "Higher Realms",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1952,7 +1816,6 @@ export default class nx_tactics_books_fantasy {
           ":placemap",
           nx_tactics_base.f_placemap_from_tactics_keys(tactics, "Celestial Realm", "Imaginary Space", "Realm of Light", "Wyver", "Wyld", "Wyrm")
         ),
-        "Lower Realms",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -2003,7 +1866,6 @@ export default class nx_tactics_books_fantasy {
             )
           )
         ),
-        "Outer Realms",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -2037,9 +1899,7 @@ export default class nx_tactics_books_fantasy {
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Hell: Wicked City", ":summary", "* Wicked City is a place of endless urban blight stretching to the horizon in all directions. The perpetually overcast air is dark and thick with acrid vapors and burning smog. The stench of urine, vomit, blood, and excrement blows out of every alley. The streets and buildings are packed with the souls who mindlessly slave away in inescapable agonies and the power-mad demons who torment them.\n* Souls - This hell is the destination of those who have fallen into the corruption, isolation, and anoymity of urban life. Politicians, artists, criminals, wage slaves, executive, and police are pulled into the sweat shops and dark streets of this doomed megalopolis. The souls are worked beyond their limits, and when they falter or fail the foremen arrive instantly to punish them for their incompetence. Their routine jobs continue day after day with no hope of improving their lot, and their pitiful wages allow them to almost support themselves. Those that fail to keep up are laughed out of their offices and become the homeless of Wicked City, available for demons and embittered salary drones to beat, torture, or set ablaze. There are no safe places in Wicked City. Every coworker could be a demon. Even the doomed may betray each other for advancement. It is a place where the worst elements of greed and capitalism meet.\n* Ruler - The Yama-king Mikaboshi rules this realm from the Mikaboshi Tower. The tower is a hideous tower of blackened steel and glass whose peak disappears into the clouds. Mikaboshi's executives administer Wicked City from this lofty tower, and Mikaboshi himself is often linked directly into the tower's strange devices allowing him to see, hear, and feel any part of Wicked City.\n* Undercity - The twisted spires are built atop the crumbling temples and castles of eras past. The cities are built upon cities upon cities, and the farther down one goes, the more monstrous the demonic inhabitants. Some creatures have not seen the sky in centuries. What these monsters have become is unknown, but no one who has entered the abandoned tunnels and subways has returned sane (if they return at all).\n* Feng Shui - The Yama-king Mikaboshi wants all those who see his city to understand his grand vision of a hellish metropolis. He undermines the known and comfortable trapping of the daily world to increase his subjects' feelings of dread and suffering, and his power over them. The feng shui of the Wicked city is beyond negative, bordering on the impossible. The entire landscape assaults the Chi of the city's victims. 'Poison Arrows' point everywhere, spiraling in directions that cause veritgo from the merest glance. Disharmony saps the will and impedes rational thought.\n* Gates - It is possible to travel to Wicked City from many of the worst urban hellholes in the mortal world. In these places of corruption and anguish, the [Veil] is weak. The door also swings both ways and denizens of this hell sometimes travel to the mortal realm in search of new souls.")
           ),
           ":sectionmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_sectionmap},
-            ":Pandemonium",
+          nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
@@ -2057,7 +1917,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Council-Chamber of Pandæmonium", ":summary", "* The Stygian Council debates here.")
               )
             ),
-            ":Phyrexia",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",

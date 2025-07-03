@@ -137,7 +137,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Melee",
             5,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Quarterstaff")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Club: Staff")
           )
         )
       ),
@@ -163,13 +163,9 @@ export default class nx_tactics_decks_unit {
         ":speedland",
         "6kph/4mph",
         ":mass",
-        "80kg/180",
+        "80kg/175",
         ":height",
         "1.8m/6ft",
-        ":mass",
-        "80kg/220lb",
-        ":height",
-        "1.9m/6'3ft",
         ":demeanor",
         "Opportunistic",
         ":nature",
@@ -1202,12 +1198,12 @@ export default class nx_tactics_decks_unit {
         "Human Cleric",
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Faith", 8),
           nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Invocation", 10)
         ),
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Melee", 8)
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Melee", 8),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Faith", 8)
         )
       ),
       vx_core.f_new(

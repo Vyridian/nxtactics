@@ -1011,7 +1011,7 @@
   :pointpos
    (ui/point
     :x 7
-    :y 5)
+    :y 6)
   :pointsize
    (ui/point
     :x 51

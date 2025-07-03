@@ -103,6 +103,136 @@
        :summary
         "* Force a substance to make a minor state change (e.g. Liquids become solids, soft substances turn to liquid, hard substances become soft, water evaporates, ice melts.")))
   (base/power
+   :name "Animalism"
+   :titles
+    "Animal Mastery, Anima, Beast Lord, Beast Master, Wild"
+   :summary
+    "* Animal Friendship and Command
+     * Restrictions - Must not harm animals."
+   :abilitymap
+    (base/abilitymap
+     "Animal Magnetism"
+      (base/ability
+       :name "Animal Magnetism"
+       :summary
+        "* [Power]: [Wild]")
+     "Animal Ward"
+      (base/ability
+       :name "Animal Ward"
+       :summary
+        "* [Ward] - Defends against animals.
+         * [Power]: [Wild]")
+     "Banish Vermin"
+      (base/ability
+       :name "Banish Vermin"
+       :summary
+        "* [Power]: [Wild]")
+     "Beast Lore"
+      (base/ability
+       :name "Beast Lore"
+       :summary
+        "* [Power]: [Wild]")
+     "Beast Tongue"
+      (base/ability
+       :name "Beast Tongue"
+       :summary
+        "* [Tongue] - Speak with Animal
+         * [Power]: [Wild]")
+     "Bird's Eye"
+      (base/ability
+       :name "Bird's Eye"
+       :summary
+        "* Have a bird spy for you.
+         * [Power]: [Wild]")
+     "Call of the Wild"
+      (base/ability
+       :name "Call of the Wild"
+       :summary
+        "* [Action]: Make an emotional plea for aid to any [Beast]s or [Animal]s within [Range].
+         * [Power]: [Wild]
+         Note that creatures will only help if it serves their own interests, and they will act indepentently according to their intelligence and nature.")
+     "Calm the Beast"
+      (base/ability
+       :name "Calm the Beast"
+       :summary
+        "* [Power]: [Wild]")
+     "Commune with Animals"
+      (base/ability
+       :name "Commune with Animals"
+       :summary
+        "* [Action]: Sense if animals in [Range] notice anything significant. The higher the [Success], the more subtle information received.
+         * [Power]: [Wild]")
+     "Control Beast"
+      (base/ability
+       :name "Control Beast"
+       :summary
+        "* [Power]: [Wild]")
+     "Purge Venom"
+      (base/ability
+       :name "Purge Venom"
+       :summary
+        "* By sucking on a bite, the user may rapidly remove a creature's venom from a wound.
+         * [Action]: Remove 1 Poison Counter for each success.
+         * [Power]: [Wild]")
+     "Creeping Doom"
+      (base/ability
+       :name "Creeping Doom"
+       :summary
+        "* [Power]: [Wild]")
+     "Giant Animal"
+      (base/ability
+       :name "Giant Animal"
+       :summary
+        "* [Power]: [Wild]")
+     :Infestation
+      (base/ability
+       :name "Infestation"
+       :summary
+        "* [Power]: [Wild]")
+     "Insect Swarm"
+      (base/ability
+       :name "Insect Swarm"
+       :summary
+        "* Distracts targets and transfers up to 3 conditions from you to the target.
+         * [Power]: [Wild]")
+     "Locate Animal"
+      (base/ability
+       :name "Locate Animal"
+       :summary
+        "* [Power]: [Wild]")
+     "Nature of the Beast"
+      (base/ability
+       :name "Nature of the Beast"
+       :summary
+        "* [Power]: [Wild]")
+     "Natural Order"
+      (base/ability
+       :name "Natural Order"
+       :summary
+        "* [Power]: [Wild]")
+     "Scent of the Wild"
+      (base/ability
+       :name "Scent of the Wild"
+       :summary
+        "* [Action]: Cover the unnatural and threatening scent of creatures and gear in range. Natural creatures will treat them as if they were large herbivores.
+         * [Power]: [Wild]")
+     "Shrink Animal"
+      (base/ability
+       :name "Shrink Animal"
+       :summary
+        "* [Power]: [Wild]")
+     "Speak with Animals"
+      (base/ability
+       :name "Speak with Animals"
+       :summary
+        "* [Power]: [Wild]")
+     "Survival of the Fittest"
+      (base/ability
+       :name "Survival of the Fittest"
+       :titles "Natural Selection"
+       :summary
+        "* [Power]: [Wild]")))
+  (base/power
    :name "Artifice"
    :summary "* Synergy with Mechanics"
    :titles "Artificer, Engineer, Inventor, Inventress, Machinist, Mechanic"
@@ -816,6 +946,8 @@
          * A martial artist would likely have to train for many years to be capable of mushin. This allows time for combinations of movements and exchanges of techniques to be practiced repetitively many thousands of times, until they can be performed spontaneously, without conscious thought.")))
   (base/power
    :name "Curses"
+   :titles
+    "Correspondence, Fetishism, Hexer, Shintoist, Soulcraft, Sympathy, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor"
    :reference
     "* Synchronicity is a phenomenon where people interpret two seemingly unrelated experiences as being meaningfully intertwined."
    :summary
@@ -824,8 +956,6 @@
      * Cursed Spirit - Cursed Spirits are apparitions manifested entirely from cursed energy. Even their bodies are composed of cursed energy, making cursed spirits invisible to non-sorcerers. The emission of cursed energy from humans collects like sediment until a cursed spirit is born from the collective negative energy. Cursed Spirits born with strong feelings directed toward a certain aspect are especially strong. The stronger humanity's fear and anger is directed at cursing a certain aspect of the world, like natural disasters, the more powerful Curse Spirits spawned from those negative sentiments will be.
      * Law of Similarity - Like produces like. An effect resembles its cause.
      * Law of Contact/Contagion - Things which have once been in contact with each other continue to act on each other at a distance."
-   :titles
-    "Correspondence, Fetishism, Hexer, Shintoist, Soulcraft, Sympathy, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor"
    :abilitymap
     (base/abilitymap
      "Black Vise"
@@ -1425,17 +1555,17 @@
    :name "Herbalism"
    :titles "Herbalist"
    :summary
-    "The ability to harvest medicinal and magical herbs.")
-   (base/power
-    :name "Hydromancy"
-    :summary
-     "* Hydro is the magical version of Water.
-      * Hydro effects can be sustained without a source, but they can also be canceled by counter-magic.
-      * Hydro reacts with Pyro to produce the [Vaporize] effect.
-      * Hydro reacts with Cryo to produce the [Freeze] effect.
-      * Hydro reacts with Geo to produce the [Quagmire] effect.
-      * Hydro reacts with Electro to produce the [Electrocharged] effect.
-      * Hydro reacts with Aero to produce the [Fog] effect.")
+    "The ability to harvest medicinal and magical herbs to create potions, elixirs, charms, and wards.")
+  (base/power
+   :name "Hydromancy"
+   :summary
+    "* Hydro is the magical version of Water.
+     * Hydro effects can be sustained without a source, but they can also be canceled by counter-magic.
+     * Hydro reacts with Pyro to produce the [Vaporize] effect.
+     * Hydro reacts with Cryo to produce the [Freeze] effect.
+     * Hydro reacts with Geo to produce the [Quagmire] effect.
+     * Hydro reacts with Electro to produce the [Electrocharged] effect.
+     * Hydro reacts with Aero to produce the [Fog] effect.")
   (base/power
    :name "Invocation"
    :reference
@@ -1458,10 +1588,8 @@
       (base/ability
        :name "Armageddon"
        :titles "Cataclysm")
-     :Aspecting
-      (base/ability
-       :name "Aspecting"
-       :summary "The practitioner manifests a particular aspect of a goddess or god (whether in speech, appearanve, behaviour or thought).")
+     "Aspecting"
+      (base/ability<-tactics-key tactics "Aspecting")
      :Avatar
       (base/ability
        :name "Avatar"
@@ -1549,17 +1677,21 @@
      "Poison Backlash"
       (base/ability
        :name "Poison Backlash"
-       :summary "* [Action]: Touch a unit with a [Poison] ability.  The target is affected as if the ability was used against itself at full strength.")
+       :summary
+        "* [Action]: Touch a unit with a [Poison] ability. The target is affected as if the ability was used against itself at full strength.")
      :Regenerate
       (base/ability
        :name "Regenerate")
      :Replenish
       (base/ability
        :name "Replenish")
-     :Resurrect
+     "Resurrect"
       (base/ability
        :name "Resurrect"
-       :summary "* The ability to truly bring the dead back to life is one of the most desired and difficult of all abilities. The ritual is long and complicated with a high chance of failure.  Only one of the same race as the deceased has sufficient self understanding to succeed at all.  The caster must also get at least 10 [Successes] and/or [Criticals] or the ritual fails.  Each subsequent attempt to raise the same target requires 1 additional success.")
+       :summary
+        "* The ability to truly bring the dead back to life is one of the most desired and difficult of all abilities.
+         * [Power]: [Invocation]
+         * The ritual is long and complicated with a high chance of failure. Only one of the same race as the deceased has sufficient self understanding to succeed at all. The caster must also get at least 5 [Hits] or the ritual fails. Each subsequent attempt to raise the same target requires 1 additional success.")
      :Simulacrum
       (base/ability
        :name "Simulacrum"
@@ -1904,18 +2036,6 @@
          * [Action]: Create a small Plane (pocket dimension) in the [Etherial Realm] that lasts up to [Level] days. This Plane has a radius of [Skill] x 100 miles.
          * [Action]: Sustain a previously created Plane for an additional [Level] days.
          * [Action]: Make a single alteration to a previously create Plane. This alteration may be anything that the user chooses, has a radius of [Skill] miles, and is permanent.")
-     "Primal Accuracy"
-      (base/ability
-       :name "Primal Accuracy"
-       :summary
-        "* [Requires]: Spend a [Primal]
-         * [Free]: The current [Attack] ignores target [Evade]. It may also be targetted to affect only one type of material.")
-     "Primal Armor"
-      (base/ability
-       :name "Primal Armor"
-       :summary
-        "* [Requires]: Spend a [Primus]
-         * [Free]: For this turn, gain [Armor] equal to [Skill] vs. any type of attack including [Primal Strike].")
      "Primal Avatar"
       (base/ability
        :name "Primal Avatar")
@@ -1949,12 +2069,6 @@
        :summary
         "* [Requires]: Spend a [Primal]
          * [Free]: Enable survival in any environment for the next [Skill] days.")
-     "Primal Reach"
-      (base/ability
-       :name "Primal Reach"
-       :summary
-        "* [Requires]: Spend a [Primal]
-         * [Free]: Another ability has unlimited [Range] with no penalty for distance. This can even apply to [Melee] and [Close Combat].")
      "Primal Regeneration"
       (base/ability
        :name "Primal Regeneration"
@@ -1984,24 +2098,12 @@
        :summary
         "* [Requires]: Spend a [Primal]
          * [Free]: Perform any feat of strength.")
-     "Primal Strike"
-      (base/ability
-       :name "Primal Strike"
-       :summary
-        "* [Requires]: Spend a [Primal]
-         * [Free]: The current [Attack] ignores target [Armor].")
      "Primal Transfer"
       (base/ability
        :name "Primal Transfer"
        :summary
         "* [Requires]: Spend a [Primal]
          * [Action]: Target gains a [Primal].")
-     "Primal Vision"
-      (base/ability
-       :name "Primal Vision"
-       :summary
-        "* [Requires]: Spend a [Primal]
-         * [Action]: View any area that is known or the area that a known person occupies.")
      "Soul Binding"
       (base/ability
        :name "Soul Binding"
@@ -2012,7 +2114,43 @@
        :name "Sphere of Control"
        :summary
         "* Sphere of control is an idea, activity, or philosophy with which the user is strongly associated.
-         * Developing a Sphere of Control is difficult, but allows the user to have far reaching powers whenever the Sphere is present. This benefits both the user and his followers.")))
+         * Developing a Sphere of Control is difficult, but allows the user to have far reaching powers whenever the Sphere is present. This benefits both the user and his followers.")
+     "True Armor"
+      (base/ability
+       :name "True Armor"
+       :titles "Primal Armor"
+       :summary
+        "* [Requires]: Spend a [Primus]
+         * [Free]: For this turn, gain [Armor] equal to [Skill] vs. any type of attack including [Primal Strike].")
+     "True Damage"
+      (base/ability
+       :name "True Damage"
+       :titles "Primal Damage"
+       :summary
+        "* [Requires]: Spend a [Primal]
+         * [Free]: The current [Attack] ignores target [Armor].")
+     "True Reach"
+      (base/ability
+       :name "True Reach"
+       :titles "Primal Reach"
+       :summary
+        "* [Requires]: Spend a [Primal]
+         * [Free]: Another ability has unlimited [Range] with no penalty for distance. This can even apply to [Melee] and [Close Combat].")
+     "True Sight"
+      (base/ability
+       :name "True Sight"
+       :titles "Primal Vision"
+       :summary
+        "* [Requires]: Spend a [Primal]
+         * [Action]: See clearly though any darkness, obscurement, or illusion.")
+     "True Strike"
+      (base/ability
+       :name "True Strike"
+       :titles "Primal Accuracy"
+       :summary
+        "* [Requires]: Spend a [Primal]
+         * [Free]: The current [Attack] ignores target [Evade]. It may also be targetted to affect only one type of material.")
+   ))
   (base/power
    :name "Protection"
    :titles "Abjuration"
@@ -2676,90 +2814,6 @@
        :summary
         "* [Action]: Apply [Wind] in a radius around user, lift enemies off the ground with Level weight, and hurl them down, if they strike a surface they take Level damage .")))
   (base/power
-   :name "Animalism"
-   :titles "Shapeshifter"
-   :reference "Beast Boy, Teen Titans"
-   :summary
-    "* Gain the powers of an animal"
-   :abilitymap
-    (base/abilitymap
-     "Adhesive Grip"
-      (base/ability
-       :name "Adhesive Grip")
-     "Aspect of Wolf"
-      (base/ability
-       :name "Aspect of Wolf"
-       :reference "Everquest")
-     "Bat Sight"
-      (base/ability
-       :name "Bat Sight")
-     "Bear Form"
-      (base/ability
-       :name "Bear Form")
-     "Bear Strength"
-      (base/ability
-       :name "Bear Strength")
-     "Cat Feet"
-      (base/ability
-       :name "Cat Feet"
-       :summary "* Reduce damage from falls")
-     "Chameleon Skin"
-      (base/ability<-tactics-key tactics "Chameleon Skin")
-     "Extra Limbs"
-      (base/ability
-       :name "Extra Limbs")
-     "Fish Eye"
-      (base/ability
-       :name "Fish Eye")
-     "Fish Form"
-      (base/ability
-       :name "Fish Form")
-     "Gills"
-      (base/ability
-       :name "Gills")
-     "Hawk Eye"
-      (base/ability
-       :name "Hawk Eye"
-       :titles "Eagle Eye")
-     "Hawk Form"
-      (base/ability
-       :name "Hawk Form")
-     "Puff Up"
-      (base/ability
-       :name "Puff Up"
-       :summary
-        "* Increase your size to be more intimidating.")
-     "Quills"
-      (base/ability
-       :name "Quills")
-     "Rat Form"
-      (base/ability
-       :name "Rat Form")
-     "Snake Bite"
-      (base/ability
-       :name "Snake Bite")
-     "Snake Form"
-      (base/ability
-       :name "Snake Form")
-     "Spider Climb"
-      (base/ability
-       :name "Spider Climb")
-     "Spines"
-      (base/ability
-       :name "Spines")
-     "Tendrils"
-      (base/ability
-       :name "Tendrils")
-     "Wings"
-      (base/ability
-       :name "Wings")
-     "Wolf Form"
-      (base/ability
-       :name "Wolf Form")
-     "Wolf Scent"
-      (base/ability
-       :name "Wolf Scent")))
-  (base/power
    :name "Appearance"
    :abilitymap
     (base/abilitymap
@@ -3230,6 +3284,90 @@
      tactics
      "Destruction"
      "Disintegrate"))
+  (base/power
+   :name "Beastial"
+   :titles "Shapeshifter"
+   :reference "Beast Boy, Teen Titans"
+   :summary
+    "* Gain the powers of an animal"
+   :abilitymap
+    (base/abilitymap
+     "Adhesive Grip"
+      (base/ability
+       :name "Adhesive Grip")
+     "Aspect of Wolf"
+      (base/ability
+       :name "Aspect of Wolf"
+       :reference "Everquest")
+     "Bat Sight"
+      (base/ability
+       :name "Bat Sight")
+     "Bear Form"
+      (base/ability
+       :name "Bear Form")
+     "Bear Strength"
+      (base/ability
+       :name "Bear Strength")
+     "Cat Feet"
+      (base/ability
+       :name "Cat Feet"
+       :summary "* Reduce damage from falls")
+     "Chameleon Skin"
+      (base/ability<-tactics-key tactics "Chameleon Skin")
+     "Extra Limbs"
+      (base/ability
+       :name "Extra Limbs")
+     "Fish Eye"
+      (base/ability
+       :name "Fish Eye")
+     "Fish Form"
+      (base/ability
+       :name "Fish Form")
+     "Gills"
+      (base/ability
+       :name "Gills")
+     "Hawk Eye"
+      (base/ability
+       :name "Hawk Eye"
+       :titles "Eagle Eye")
+     "Hawk Form"
+      (base/ability
+       :name "Hawk Form")
+     "Puff Up"
+      (base/ability
+       :name "Puff Up"
+       :summary
+        "* Increase your size to be more intimidating.")
+     "Quills"
+      (base/ability
+       :name "Quills")
+     "Rat Form"
+      (base/ability
+       :name "Rat Form")
+     "Snake Bite"
+      (base/ability
+       :name "Snake Bite")
+     "Snake Form"
+      (base/ability
+       :name "Snake Form")
+     "Spider Climb"
+      (base/ability
+       :name "Spider Climb")
+     "Spines"
+      (base/ability
+       :name "Spines")
+     "Tendrils"
+      (base/ability
+       :name "Tendrils")
+     "Wings"
+      (base/ability
+       :name "Wings")
+     "Wolf Form"
+      (base/ability
+       :name "Wolf Form")
+     "Wolf Scent"
+      (base/ability
+       :name "Wolf Scent")))
   (base/power
    :name "Charm"
    :abilitymap
@@ -6713,136 +6851,6 @@
      "Tracer Rounds"))
   (base/power
    :name "Weather")
-  (base/power
-   :name "Wild"
-   :titles
-    "Animal Mastery, Anima, Beast Lord, Beast Master"
-   :summary
-    "* Animal Friendship and Command
-     * Restrictions - Must not harm animals."
-   :abilitymap
-    (base/abilitymap
-     "Animal Magnetism"
-      (base/ability
-       :name "Animal Magnetism"
-       :summary
-        "* [Power]: [Wild]")
-     "Animal Ward"
-      (base/ability
-       :name "Animal Ward"
-       :summary
-        "* [Ward] - Defends against animals.
-         * [Power]: [Wild]")
-     "Banish Vermin"
-      (base/ability
-       :name "Banish Vermin"
-       :summary
-        "* [Power]: [Wild]")
-     "Beast Lore"
-      (base/ability
-       :name "Beast Lore"
-       :summary
-        "* [Power]: [Wild]")
-     "Beast Tongue"
-      (base/ability
-       :name "Beast Tongue"
-       :summary
-        "* [Tongue] - Speak with Animal
-         * [Power]: [Wild]")
-     "Bird's Eye"
-      (base/ability
-       :name "Bird's Eye"
-       :summary
-        "* Have a bird spy for you.
-         * [Power]: [Wild]")
-     "Call of the Wild"
-      (base/ability
-       :name "Call of the Wild"
-       :summary
-        "* [Action]: Make an emotional plea for aid to any [Beast]s or [Animal]s within [Range].
-         * [Power]: [Wild]
-         Note that creatures will only help if it serves their own interests, and they will act indepentently according to their intelligence and nature.")
-     "Calm the Beast"
-      (base/ability
-       :name "Calm the Beast"
-       :summary
-        "* [Power]: [Wild]")
-     "Commune with Animals"
-      (base/ability
-       :name "Commune with Animals"
-       :summary
-        "* [Action]: Sense if animals in [Range] notice anything significant. The higher the [Success], the more subtle information received.
-         * [Power]: [Wild]")
-     "Control Beast"
-      (base/ability
-       :name "Control Beast"
-       :summary
-        "* [Power]: [Wild]")
-     "Purge Venom"
-      (base/ability
-       :name "Purge Venom"
-       :summary
-        "* By sucking on a bite, the user may rapidly remove a creature's venom from a wound.
-         * [Action]: Remove 1 Poison Counter for each success.
-         * [Power]: [Wild]")
-     "Creeping Doom"
-      (base/ability
-       :name "Creeping Doom"
-       :summary
-        "* [Power]: [Wild]")
-     "Giant Animal"
-      (base/ability
-       :name "Giant Animal"
-       :summary
-        "* [Power]: [Wild]")
-     :Infestation
-      (base/ability
-       :name "Infestation"
-       :summary
-        "* [Power]: [Wild]")
-     "Insect Swarm"
-      (base/ability
-       :name "Insect Swarm"
-       :summary
-        "* Distracts targets and transfers up to 3 conditions from you to the target.
-         * [Power]: [Wild]")
-     "Locate Animal"
-      (base/ability
-       :name "Locate Animal"
-       :summary
-        "* [Power]: [Wild]")
-     "Nature of the Beast"
-      (base/ability
-       :name "Nature of the Beast"
-       :summary
-        "* [Power]: [Wild]")
-     "Natural Order"
-      (base/ability
-       :name "Natural Order"
-       :summary
-        "* [Power]: [Wild]")
-     "Scent of the Wild"
-      (base/ability
-       :name "Scent of the Wild"
-       :summary
-        "* [Action]: Cover the unnatural and threatening scent of creatures and gear in range. Natural creatures will treat them as if they were large herbivores.
-         * [Power]: [Wild]")
-     "Shrink Animal"
-      (base/ability
-       :name "Shrink Animal"
-       :summary
-        "* [Power]: [Wild]")
-     "Speak with Animals"
-      (base/ability
-       :name "Speak with Animals"
-       :summary
-        "* [Power]: [Wild]")
-     "Survival of the Fittest"
-      (base/ability
-       :name "Survival of the Fittest"
-       :titles "Natural Selection"
-       :summary
-        "* [Power]: [Wild]")))
  )
  :doc "Returns the base powermap")
 

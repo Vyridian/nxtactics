@@ -215,6 +215,11 @@
    :name "As if in a Dream"
    :summary "* Confuse a target's senses to perceive a single thing incorrectly.")
   (base/ability
+   :name "Aspecting"
+   :summary
+    "* The practitioner manifests a particular aspect of a goddess or god (whether in speech, appearanve, behaviour or thought).
+     * [Power]: [Invocation]")
+  (base/ability
    :name "Authority"
    :summary
     "* [Skill]: [Law]")
@@ -2578,6 +2583,12 @@
    :summary
     "* [Skill]: [Shielding]
      * Alter the Shields to increase Shielding in a single Arc by 1 by decreasing all other Arcs by 1.")
+  (base/ability
+   :name "Shield Sacrifice"
+   :summary
+   :summary
+    "* [Skill]: [Defense]
+     * [Resolution] [Block] [Wand]: The shield becomes the target of any [Overrun] damage.")
   (base/ability
    :name "Shield Snare"
    :summary

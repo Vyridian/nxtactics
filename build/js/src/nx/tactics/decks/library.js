@@ -53,7 +53,7 @@ export default class nx_tactics_decks_library {
         {"any-1": nx_tactics_base.t_cardmap},
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Roles", "Role: Attacker", "Role: Blaster", "Role: Defender", "Role: Disrupter", "Role: Skirmisher", "Role: Sniper", "Role: Supporter", "Role: Taunter")
+          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Roles", "Role: Attacker", "Role: Blaster", "Role: Defender", "Role: Disrupter", "Role: Skirmisher", "Role: Sniper", "Role: Supporter", "Role: Taunter", "Character", "Body", "Mind", "Will", "Speed", "Beast", "Shadow", "Conscience", "Leveling", "Skill", "Power", "Ability", "Specialty", "Place", "Scene", "Map: Exploration", "Map: Personal", "Map: Vehicle", "Scale", "Scaled", "Advantage", "Disadvantage", "Area Effect", "Reach", "Flanking", "Surrounded", "Surprise", "Unskilled", "Unfamiliar Item", "Choking", "Hunger", "Thirst", "Exposure", "Weather: Clouds", "Weather: Humidity", "Weather: Temperature", "Weather: Wind", "Build: Unit", "Build: Character", "Build: Item", "Build: Vehicle")
         ),
         nx_tactics_base.f_cardlist_copy_from_tactics_rulekey_count_isnum(
           tactics,

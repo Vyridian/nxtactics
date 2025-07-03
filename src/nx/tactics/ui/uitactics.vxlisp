@@ -1098,8 +1098,8 @@
    imgback : string :=
     (switch : string
      datatype
-     (case base/item "images/card-item.svg")
-     (case base/unit "images/card-unit.svg")
+     (case base/item "images/item.svg")
+     (case base/unit "images/unit.svg")
      (case base/place "")
      (case base/cardimage "")
      (else image))

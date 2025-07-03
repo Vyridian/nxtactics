@@ -821,11 +821,8 @@
         :Nightstick
          (base/item
           :name "Nightstick")
-        :Quarterstaff
-         (base/item
-          :name "Quarterstaff"
-          :reference
-           "* Held at the bottom like a polearm. not in the middle. Holding in the middle was invented by the Boy Scouts in Victorian times for sport fighting.")
+        "Club: Staff"
+         (base/item<-tactics-key tactics "Club: Staff")
         :Shillelagh
          (base/item
           :name "Shillelagh")

@@ -6,7 +6,7 @@ import nx_tactics_decks_burden from "../../../nx/tactics/decks/burden.js"
 import nx_tactics_decks_conflict from "../../../nx/tactics/decks/conflict.js"
 import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
-import nx_tactics_decks_library from "../../../nx/tactics/decks/library.js"
+import nx_tactics_decks_reference from "../../../nx/tactics/decks/reference.js"
 import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
 import nx_tactics_decks_scene_murintrail from "../../../nx/tactics/decks/scene-murintrail.js"
 import nx_tactics_decks_scene_nightonthetown from "../../../nx/tactics/decks/scene-nightonthetown.js"
@@ -156,7 +156,7 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_disorder.f_deck_disorder(),
           nx_tactics_decks_trauma.f_deck_trauma(),
           nx_tactics_decks_burden.f_deck_burden(),
-          nx_tactics_decks_library.f_deck_library(tactics)
+          nx_tactics_decks_reference.f_deck_reference(tactics)
         )
       )
     )

@@ -920,12 +920,7 @@ x +1DMG vs. Crouching."
         "* [Skill]: [Defense]
          * [Reaction] [Resolution]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor].")
      "Shield Sacrifice"
-      (base/ability
-       :name "Shield Sacrifice"
-       :summary
-       :summary
-        "* [Skill]: [Defense]
-         * [Resolution] [Block] [Wand]: The shield becomes the target of any [Overrun] damage."))
+      (base/ability<-tactics-key tactics "Shield Sacrifice"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -3095,6 +3090,13 @@ x +1DMG vs. Crouching."
        :name "Berserker"
        :summary
         "* [Skill]: [Rage]")
+     "Call Out"
+      (base/ability
+       :name "Call Out"
+       :reference
+        "* Warriors, Come Out to PLAY-AY! - The Warriors"
+       :summary
+        "* Taunt a large group to fight")
      "Frenzy"
       (base/ability
        :name "Frenzy"
@@ -3121,7 +3123,8 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Taunt"
        :titles "Goad"
-       :reference "* Kirk: We tried it once your way, Khan, are you game for a rematch? Khan, I'm laughing at the 'superior intellect.' Khan: Full impulse power! Joachim: No, sir! You have Genesis! You can have whatever... Khan: FULL POWER! DAMN YOU! - Star Trek II: The Wrath of Khan"
+       :reference
+        "* Kirk: We tried it once your way, Khan, are you game for a rematch? Khan, I'm laughing at the 'superior intellect.' Khan: Full impulse power! Joachim: No, sir! You have Genesis! You can have whatever... Khan: FULL POWER! DAMN YOU! - Star Trek II: The Wrath of Khan"
        :summary
         "* Dishonor Rival's mother.
          * [Skill]: [Rage] vs [Mind]. If successful, opponent must attack you.")

@@ -65,7 +65,7 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 5
-      (stringlist "Quarterstaff"))))
+      (stringlist "Club: Staff"))))
   (base/unit
    :name "Automaton")
   (base/unit
@@ -79,10 +79,8 @@
    :will "5x1"
    :speed "6x0"
    :speedland "6kph/4mph"
-   :mass "80kg/180"
+   :mass "80kg/175"
    :height "1.8m/6ft"
-   :mass "80kg/220lb"
-   :height "1.9m/6'3ft"
    :demeanor "Opportunistic"
    :nature "Ruthless"
    :beast "2x0"
@@ -1101,13 +1099,13 @@
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl
-      tactics "Faith" 8)
-     (base/unitpower<-tactics-key-lvl
       tactics "Invocation" 10))
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl
-      tactics "Melee" 8)))
+      tactics "Melee" 8)
+     (base/unitskill<-tactics-key-lvl
+      tactics "Faith" 8)))
   (base/unit
    :name "Sarani Kalea"
    :summary "Human Priestess"

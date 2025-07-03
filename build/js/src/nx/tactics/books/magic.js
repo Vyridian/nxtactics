@@ -140,7 +140,7 @@ export default class nx_tactics_books_magic {
           ":name",
           "Nature Magic",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Animalism", "Herbalism", "Naturalism", "Wild")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Animalism", "Beastial", "Herbalism", "Naturalism")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

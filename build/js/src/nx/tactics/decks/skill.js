@@ -265,7 +265,7 @@ export default class nx_tactics_decks_skill {
           "Shield Guard",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Shield Guard", ":summary", "* [Skill]: [Defense]\n* [Reaction] [Resolution]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor]."),
           "Shield Sacrifice",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Shield Sacrifice", ":summary", ":summary", "* [Skill]: [Defense]\n* [Resolution] [Block] [Wand]: The shield becomes the target of any [Overrun] damage.")
+          nx_tactics_base.f_ability_from_tactics_key(tactics, "Shield Sacrifice")
         ),
         ":specialtymap",
         nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Medium Armor", "Heavy Armor", "Powered Armor", "Shields")
@@ -1491,6 +1491,8 @@ export default class nx_tactics_decks_skill {
           {"any-1": nx_tactics_base.t_abilitymap},
           "Berserker",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Berserker", ":summary", "* [Skill]: [Rage]"),
+          "Call Out",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Call Out", ":reference", "* Warriors, Come Out to PLAY-AY! - The Warriors", ":summary", "* Taunt a large group to fight"),
           "Frenzy",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Frenzy", ":summary", "* [Skill]: [Rage]"),
           "Fury",
