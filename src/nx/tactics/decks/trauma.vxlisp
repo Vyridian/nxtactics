@@ -4,14 +4,10 @@
 
 (const stress : base/cardback
  (base/cardback
-  :id "stress"
-  :name "Trauma: Stress"
+  :name "Stress"
   :titles "Emotional Trauma/Stress/Duress/Horror"
-  :image "images/card-trauma-stress.svg"
-  :summary
-   "Temporary duress or horror
-    * If [Will]:0 then gain [Shaken]
-    * [Shaken]: [Disadvantage]. Flip extra [Stress] to Trauma"
+  :image "images/damage-trauma-stress.svg"
+  :layout base/cardlayout-imageonly
   :reference
    "Because love's such an old-fashioned word
     And love dares you to care for
@@ -617,7 +613,7 @@
 (func deck-trauma : base/deck
  (base/deck
   :name "Trauma"
-  :image "images/card-trauma-deck.svg"
+  :image "images/damage-trauma-stress.svg"
   :layout base/cardlayout-imageonly
   :summary
    "* C-Anger/Fury/Surly/Suicidal Rage

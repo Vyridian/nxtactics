@@ -5,7 +5,7 @@
    version="1.1"
    id="svg2593"
    sodipodi:docname="rule-clock-deck.svg"
-   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
    xml:space="preserve"
    inkscape:export-filename="C:\apps\projects\vxlisp\nxtactics\work\cards\rule-arc.png"
    inkscape:export-xdpi="96"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.1867753"
-     inkscape:cx="219.92369"
-     inkscape:cy="135.66174"
+     inkscape:zoom="1.6783537"
+     inkscape:cx="170.40508"
+     inkscape:cy="232.96639"
      inkscape:window-width="1382"
      inkscape:window-height="1032"
      inkscape:window-x="151"
@@ -1810,6 +1810,58 @@
          offset="1"
          stop-color="#324A5D"
          id="stop2556" /></linearGradient></defs><rect
+     style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.29499;stroke-dasharray:none"
+     id="rect16-4"
+     width="238.11401"
+     height="332.6011"
+     x="2.8500185e-06"
+     y="0"
+     rx="0.54742265"
+     ry="0.53913611"
+     inkscape:label="background"
+     sodipodi:insensitive="true" /><g
+     id="g1-9-9"
+     transform="matrix(1.3155368,0,0,1.3146289,-11.182063,-11.174346)"
+     inkscape:label="template"
+     style="display:none"
+     sodipodi:insensitive="true"><g
+       id="g104-4"
+       style="display:inline">
+	
+	<path
+   fill="none"
+   stroke="#ec1e28"
+   d="m 9,252 c 0,4.971 4.029,9 9,9 h 162 c 4.971,0 9,-4.029 9,-9 V 18 c 0,-4.971 -4.029,-9 -9,-9 H 18 c -4.971,0 -9,4.029 -9,9 z"
+   id="path104-4-8" />
+</g><g
+       id="g105-8"
+       style="display:inline">
+	<path
+   fill="none"
+   stroke="#2ba6de"
+   stroke-dasharray="1.44"
+   d="m 18.13,21.906 c 0,-2.156 1.714,-3.9 3.828,-3.9 h 154.084 c 2.114,0 3.828,1.744 3.828,3.9 v 226.188 c 0,2.154 -1.714,3.9 -3.828,3.9 H 21.958 c -2.114,0 -3.828,-1.746 -3.828,-3.9 z"
+   id="path105-8-2" />
+</g></g><text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6663px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.986082;stroke-dasharray:none"
+     x="106.69689"
+     y="319.6076"
+     id="text9-0-4-34-1-3-9"
+     inkscape:label="deck"
+     transform="scale(0.99994921,1.0000508)"><tspan
+       sodipodi:role="line"
+       id="tspan3">Clock</tspan></text><text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:1.28883;stroke-dasharray:none"
+     x="98.39019"
+     y="23.594673"
+     id="text9"
+     inkscape:label="title"><tspan
+       sodipodi:role="line"
+       id="tspan2"
+       x="98.39019"
+       y="23.594673">Clock</tspan></text><rect
      style="opacity:0.5;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.28895;stroke-dasharray:none"
      id="rect16"
      width="236.82127"
@@ -1878,14 +1930,4 @@
        style="stroke-width:0.104611" /><path
        d="m 347.58597,253.45933 c -0.0571,-0.002 -0.0962,-0.002 -0.15054,-0.009 -0.17145,-0.0215 -0.33768,-0.10629 -0.43842,-0.24918 -0.086,-0.12209 -0.0904,-0.28737 -0.10127,-0.43173 -0.072,-0.95155 -0.0273,-1.93719 -0.0403,-2.89312 -0.0121,-0.89956 -0.1316,-1.94891 0.01,-2.82827 0.0397,-0.24772 0.21832,-0.36467 0.40966,-0.49397 0.0753,-5.9e-4 0.15105,-0.003 0.22606,0.007 0.20263,0.0261 0.38152,0.1113 0.49376,0.28695 0.0419,0.0656 0.0588,0.11653 0.0718,0.19509 0.064,0.38581 -0.002,0.89045 3.1e-4,1.28641 l 0.0137,2.99815 c 4.2e-4,0.59429 0.048,1.25282 -0.0705,1.83467 -0.11193,0.15848 -0.25263,0.21403 -0.42378,0.29688 z"
        id="path21"
-       style="stroke-width:0.104611" /></g><text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.644039;stroke-opacity:0.498188"
-     x="78.721512"
-     y="22.010582"
-     id="text1-8-1"
-     inkscape:label="title"><tspan
-       sodipodi:role="line"
-       id="tspan1"
-       x="78.721512"
-       y="22.010582">Clock Deck</tspan></text></svg>
+       style="stroke-width:0.104611" /></g></svg>

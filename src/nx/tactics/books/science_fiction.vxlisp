@@ -2913,13 +2913,11 @@ weapons load for a small ship.
           :length "35m"
           :width "26m"
           :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armor")
-            :Shielding
-             (base/unitpower
-              :name "Shielding"))
+           (base/unitpowermap<-tactics-keys
+            tactics
+            (stringlist
+             "Armor"
+             "Shielding"))
           :unitskillmap
            (base/unitskillmap
             :Gunnery

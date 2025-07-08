@@ -356,7 +356,7 @@ export default class nx_tactics_decks_trauma {
       ":name",
       "Trauma",
       ":image",
-      "images/card-trauma-deck.svg",
+      "images/damage-trauma-stress.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -530,7 +530,19 @@ export default class nx_tactics_decks_trauma {
     }
 
     // (const stress)
-    Object.assign(nx_tactics_decks_trauma.c_stress, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "stress", ":name", "Trauma: Stress", ":titles", "Emotional Trauma/Stress/Duress/Horror", ":image", "images/card-trauma-stress.svg", ":summary", "Temporary duress or horror\n* If [Will]:0 then gain [Shaken]\n* [Shaken]: [Disadvantage]. Flip extra [Stress] to Trauma", ":reference", "Because love's such an old-fashioned word\nAnd love dares you to care for\nThe people on the edge of the night\nAnd love dares you to change our way of\nCaring about ourselves\nThis is our last dance\nThis is ourselves under pressure - Queen and David Bowie, Under Pressure"))
+    Object.assign(nx_tactics_decks_trauma.c_stress, vx_core.f_new(
+      {"any-1": nx_tactics_base.t_cardback},
+      ":name",
+      "Stress",
+      ":titles",
+      "Emotional Trauma/Stress/Duress/Horror",
+      ":image",
+      "images/damage-trauma-stress.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":reference",
+      "Because love's such an old-fashioned word\nAnd love dares you to care for\nThe people on the edge of the night\nAnd love dares you to change our way of\nCaring about ourselves\nThis is our last dance\nThis is ourselves under pressure - Queen and David Bowie, Under Pressure"
+    ))
 
     // (const trauma-2c)
     Object.assign(nx_tactics_decks_trauma.c_trauma_2c, vx_core.f_new(

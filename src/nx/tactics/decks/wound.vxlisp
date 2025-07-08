@@ -4,14 +4,10 @@
 
 (const fatigue : base/cardback
  (base/cardback
-  :id "fatigue"
-  :name "Wound: Fatigue"
+  :name "Fatigue"
   :titles "Physical Damage/Fatigue/Weaken/Exertion"
-  :image "images/card-wound-fatigue.svg"
-  :summary
-   "Temporary weaknesss or exertion
-    * IF [Body]:0 THEN [Exhausted]
-    * [Exhausted]: [Disadvantage]. Extra [Fatigue] is flipped to Wound"))
+  :image "images/damage-wound-fatigue.svg"
+  :layout base/cardlayout-imageonly))
 
 (const wound-wild-black : base/damage
  (base/damage
@@ -660,7 +656,7 @@
 (func deck-wound : base/deck
  (base/deck
   :name "Wounds"
-  :image "images/card-wound-deck.svg"
+  :image "images/damage-wound-fatigue.svg"
   :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap
@@ -727,7 +723,7 @@
 (func deck-woundback : base/deck
  (base/deck
   :name "Wound Back"
-  :image "images/card-wound-fatigue.svg"
+  :image "images/damage-wound-fatigue.svg"
   :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap-copy<-card-count-isnum

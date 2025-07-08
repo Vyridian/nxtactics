@@ -2536,12 +2536,9 @@ export default class nx_tactics_books_science_fiction {
               ":width",
               "26m",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
-                ":Shielding",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Shielding")
+              nx_tactics_base.f_unitpowermap_from_tactics_keys(
+                tactics,
+                vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor", "Shielding")
               ),
               ":unitskillmap",
               vx_core.f_new(

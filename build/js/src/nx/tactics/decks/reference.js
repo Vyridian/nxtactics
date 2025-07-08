@@ -43,9 +43,9 @@ export default class nx_tactics_decks_reference {
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_deck},
       ":name",
-      "Reference Deck",
+      "Reference",
       ":image",
-      "images/deck-reference.svg",
+      "images/rule-reference.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":cardmap",

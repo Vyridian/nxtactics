@@ -4,15 +4,10 @@
 
 (const slow : base/cardback
  (base/cardback
-  :id "slow"
-  :name "Burden: Slow"
+  :name "Slow"
   :titles "Constraint/Burden"
-  :image "images/card-burden-slow.svg"
-  :summary
-   "Temporary movement penalty
-    * If [Speed]:0 gain [Encumbered]
-    * [Encumbered]: [Disadvantage]. Extra [Slow] is flipped
-    * Special*: IF [Speed] over 5 THEN Speed:-2"))
+  :image "images/damage-burden-slow.svg"
+  :layout base/cardlayout-imageonly))
 
 (const burden-wild-black : base/damage
  (base/damage
@@ -637,7 +632,7 @@
 (func deck-burden : base/deck
  (base/deck
   :name "Burden"
-  :image "images/card-burden-deck.svg"
+  :image "images/damage-burden-slow.svg"
   :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap

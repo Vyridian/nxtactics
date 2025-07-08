@@ -4,14 +4,10 @@
 
 (const stun : base/cardback
  (base/cardback
-  :id "stun"
-  :name "Disorder: Stun"
+  :name "Stun"
   :titles "Mental Damage/Strain/Distraction/Surprise/Shock"
-  :image "images/card-disorder-stun.svg"
-  :summary
-   "Temporary Distraction or suprise
-    * If [Mind]:0 become [Confused]
-    * [Confused]: Cannot play odd [Strong] cards. Extra [Stun] is flipped to Disorder"))
+  :image "images/damage-disorder-stun.svg"
+  :layout base/cardlayout-imageonly))
 
 (const disorder-wild-black : base/damage
  (base/damage
@@ -618,7 +614,7 @@
  (base/deck
   :name "Disorder"
   :titles "Crazed, Insane, Nonsensical, Obsessed, Unhinged"
-  :image "images/card-disorder-deck.svg"
+  :image "images/damage-disorder-stun.svg"
   :layout base/cardlayout-imageonly
   :summary
    "* C-Loss/Dysfunction/Misunderstand/Miscommunicate/Amnesia/Aphasia

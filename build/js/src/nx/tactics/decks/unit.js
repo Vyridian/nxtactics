@@ -1160,6 +1160,25 @@ export default class nx_tactics_decks_unit {
         true
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Poltergeist"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Pooka",
+        ":summary",
+        "* Overview - Pooka are trickster shapeshifters. They are scoundrels and are perhaps the most charming and congenial of the Fae. Extremely lazy, Pooka hate work and love to play. Though generally well-intentioned, they are deceitful, devious, and more than a little goofy. Mundaneness disturbs them, and they have a particular fear of Banality.\n* Empathy - Though they seem immature, they are capable of great sadness and empathy, which they try to assuage by telling jokes and playing pranks. Lack of humor mystifies them and usually drives them to 'cheer up' their quarry with more manic pranks. Naturally, Unseelie pranks tend to be sick and twisted. For all their mischief, they have a strong sense of nobility and are loyal to friends and courageous in battle.\n* Deceitful - Truth is boring to Pooka, so they will pepper it with lies to make it more interesting. 	Because of their trickster nature, they are actually unable to tell a completely true statement. Though pookas never tell the entire truth, they also never lie completely which is crass and banal. Partially truths and partial lies are what pookas enjoy.\n* Manipulating - Pooka are masters of manipulation. While their actions appear random and sometimes comical, events seem to play out toward their grand designs.\n* Unpredictable - Pooka are never one thing. They are usually calm and humorous, but they are very capable of being cunning and cruel and can change moods in an instant.\n* Limited Shapechange - A pooka naturally has an animal form but may change to human form when no one is watching. They may stay in either form indefinitely with no effort, but a part of them always hints at their true nature. Sometimes a tail or fur remains. Sometimes hair can appear like long ears. Sometimes they hide a large animal tattoo.\n* Tails - Powerful Pooka have additional tails. The most powerful have nine. They start with 1 tail at level 1 and gain a tail every odd level up to 9 tails at level 17.\n* Illusion - Pooka are practiced illusionists and love using illusions for pranks and generally harmless fun. Consistent with their nature, Pooka illusions always have some truth mixed with lies. Their illusions always have hidden flaws that the Pooka purposely addes for their own entertainment.\n* Traps -",
+        ":titles",
+        "Badger, Fox Spirit, Kitsune, Inari, Nine-tailed Fox, Tanuki, Youko",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_tactics_keys(
+          tactics,
+          vx_core.f_new({"any-1": vx_core.t_stringlist}, "Illusion")
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_tactics_keys(
+          tactics,
+          vx_core.f_new({"any-1": vx_core.t_stringlist}, "Persuasion")
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Primal Ooze", ":titles", "Blob, Slime Beast"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},

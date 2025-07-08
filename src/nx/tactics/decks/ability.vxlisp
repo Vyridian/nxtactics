@@ -1847,6 +1847,12 @@
    :summary
     "* [Power]: [Cabin]")
   (base/ability
+   :name "Marriage"
+   :summary
+    "* The formal act of binding a couples' fate together.
+     * [Skill]: [Faith]
+     * As long as the bond lasts, each person gains Level:+1 whenever directly defending or supporting the other.")
+  (base/ability
    :name "Master Plan"
    :summary
     "* [Skill]: [Brilliance]")
@@ -2092,6 +2098,11 @@
    :summary
     "* Shielding moves to block attacks
      * [Power]: [Shielding]")
+  (base/ability
+   :name "Poison Backlash"
+   :summary
+    "* [Power]: [Life]
+     * [Action]: Touch a unit with a [Poison] ability. The target is affected as if the ability was used against itself at full strength.")
   (base/ability
    :name "Poison Bite"
    :summary

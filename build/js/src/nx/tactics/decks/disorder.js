@@ -358,7 +358,7 @@ export default class nx_tactics_decks_disorder {
       ":titles",
       "Crazed, Insane, Nonsensical, Obsessed, Unhinged",
       ":image",
-      "images/card-disorder-deck.svg",
+      "images/damage-disorder-stun.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -1238,7 +1238,17 @@ export default class nx_tactics_decks_disorder {
     ))
 
     // (const stun)
-    Object.assign(nx_tactics_decks_disorder.c_stun, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "stun", ":name", "Disorder: Stun", ":titles", "Mental Damage/Strain/Distraction/Surprise/Shock", ":image", "images/card-disorder-stun.svg", ":summary", "Temporary Distraction or suprise\n* If [Mind]:0 become [Confused]\n* [Confused]: Cannot play odd [Strong] cards. Extra [Stun] is flipped to Disorder"))
+    Object.assign(nx_tactics_decks_disorder.c_stun, vx_core.f_new(
+      {"any-1": nx_tactics_base.t_cardback},
+      ":name",
+      "Stun",
+      ":titles",
+      "Mental Damage/Strain/Distraction/Surprise/Shock",
+      ":image",
+      "images/damage-disorder-stun.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly
+    ))
 
   }
 }

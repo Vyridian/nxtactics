@@ -364,7 +364,7 @@ export default class nx_tactics_decks_wound {
       ":name",
       "Wounds",
       ":image",
-      "images/card-wound-deck.svg",
+      "images/damage-wound-fatigue.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":cardmap",
@@ -459,7 +459,7 @@ export default class nx_tactics_decks_wound {
       ":name",
       "Wound Back",
       ":image",
-      "images/card-wound-fatigue.svg",
+      "images/damage-wound-fatigue.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":cardmap",
@@ -589,7 +589,17 @@ export default class nx_tactics_decks_wound {
     }
 
     // (const fatigue)
-    Object.assign(nx_tactics_decks_wound.c_fatigue, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "fatigue", ":name", "Wound: Fatigue", ":titles", "Physical Damage/Fatigue/Weaken/Exertion", ":image", "images/card-wound-fatigue.svg", ":summary", "Temporary weaknesss or exertion\n* IF [Body]:0 THEN [Exhausted]\n* [Exhausted]: [Disadvantage]. Extra [Fatigue] is flipped to Wound"))
+    Object.assign(nx_tactics_decks_wound.c_fatigue, vx_core.f_new(
+      {"any-1": nx_tactics_base.t_cardback},
+      ":name",
+      "Fatigue",
+      ":titles",
+      "Physical Damage/Fatigue/Weaken/Exertion",
+      ":image",
+      "images/damage-wound-fatigue.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly
+    ))
 
     // (const wound-2c)
     Object.assign(nx_tactics_decks_wound.c_wound_2c, vx_core.f_new(

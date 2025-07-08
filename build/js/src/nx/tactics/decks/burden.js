@@ -356,7 +356,7 @@ export default class nx_tactics_decks_burden {
       ":name",
       "Burden",
       ":image",
-      "images/card-burden-deck.svg",
+      "images/damage-burden-slow.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":cardmap",
@@ -1294,7 +1294,17 @@ export default class nx_tactics_decks_burden {
     ))
 
     // (const slow)
-    Object.assign(nx_tactics_decks_burden.c_slow, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "slow", ":name", "Burden: Slow", ":titles", "Constraint/Burden", ":image", "images/card-burden-slow.svg", ":summary", "Temporary movement penalty\n* If [Speed]:0 gain [Encumbered]\n* [Encumbered]: [Disadvantage]. Extra [Slow] is flipped\n* Special*: IF [Speed] over 5 THEN Speed:-2"))
+    Object.assign(nx_tactics_decks_burden.c_slow, vx_core.f_new(
+      {"any-1": nx_tactics_base.t_cardback},
+      ":name",
+      "Slow",
+      ":titles",
+      "Constraint/Burden",
+      ":image",
+      "images/damage-burden-slow.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly
+    ))
 
   }
 }

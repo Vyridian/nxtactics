@@ -28,8 +28,8 @@
 (func deck-reference : base/deck
  [tactics : base/tactics]
  (base/deck
-  :name "Reference Deck"
-  :image "images/deck-reference.svg"
+  :name "Reference"
+  :image "images/rule-reference.svg"
   :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap

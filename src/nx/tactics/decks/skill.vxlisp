@@ -2037,9 +2037,8 @@ x +1DMG vs. Crouching."
        :name "Initiation"
        :summary
         "* Used to describe the profound spiritual experience that occurs when one's unity with Deity and the Universe is realised; when one is welcomed as a fully-fledged member of a particular group; and the celebration of a successful ritual.")
-     :Marriage
-      (base/ability
-       :name "Marriage")
+     "Marriage"
+      (base/ability<-tactics-key tactics "Marriage")
      :Mass
       (base/ability
        :name "Mass")

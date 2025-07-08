@@ -156,7 +156,8 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_disorder.f_deck_disorder(),
           nx_tactics_decks_trauma.f_deck_trauma(),
           nx_tactics_decks_burden.f_deck_burden(),
-          nx_tactics_decks_reference.f_deck_reference(tactics)
+          nx_tactics_decks_reference.f_deck_reference(tactics),
+          nx_tactics_decks_deck.f_deck_clock(tactics)
         )
       )
     )

@@ -178,5 +178,6 @@
      (disorder/deck-disorder)
      (trauma/deck-trauma)
      (burden/deck-burden)
-     (reference/deck-reference tactics))))
+     (reference/deck-reference tactics)
+     (deck-clock tactics))))
  :doc "Setup Deck")

@@ -16,104 +16,20 @@
      * Ability Points may be saved.")
   (base/rule
    :name "Action"
-   :summary
-    "Generally, you spend half your starting Move to take an Action. Therefore, up to 2 Actions a Round.
-     * Free - Actions with no Move cost
-     * Attack - Initiate or react to Combat
-     * Interact - Interact with Unit or Item
-     * Recover - Remove a Fatigue, Stun, Stress, or Slow OR Ready an Ability in Cooldown
-     * Equip - Swap, Reload, Trade Items
-     * Search - Search the area")
-  (base/rule
-   :name "Action: Fight"
-   :summary
-    "Move:-[Action Cost]
-     Includes combat, communication, investigation, flipping switches, opening/closing doors:
-     * Interrupt - Pause the Countdown
-     * Skill/Power - Choose a Skill or Power
-     * Item - Choose an item/weapon. Spend Uses, if any
-     * Verify - Verify Target is in Arc, Range, Line of Sight.
-     * Target Action - Target must also choose a logical Skill/Power and may spend an Action, IF not they gain no benefits if they Succeed
-     * Resolution - Perform a Resolution: Damage
-     * Resume - Resume the Countdown")
-  (base/rule
-   :name "Action: Equip"
-   :summary
-    "Move:-1 to do one of the following:
-     * Pickup/Put Down an Item
-     * Move an Item from one hand to another
-     * Move an Item from hands to storage
-     * Reload an Item with one use/clip/quickloader from another hand or a bandolier/quiver.
-     * Give or take an Item from a willing Unit.")
+   :image "images/rule-action.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Action: Interact"
-   :summary
-    "Move:-[Action Cost]
-     Includes combat, communication, investigation, flipping switches, opening/closing doors:
-     * Interrupt - Pause the Countdown
-     * Skill/Power - Choose a Skill or Power
-     * Item - Choose a item. Spend Uses, if any
-     * Verify - Verify Target is in Arc, Range, Line of Sight.
-     * Target Action - Target must also choose a logical Skill/Power and may spend an Action, IF not they gain no benefits if they Succeed
-     * Task - Perform an appropriate Task
-     * Resume - Resume the Countdown")
+   :image "images/rule-action-interact.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Action: Free"
-   //:image "images/rule-action-free.svg"
-   :summary
-    "Actions without normal Action cost:
-     * Skip - Discard Move or Turn tokens
-     * Drop - Drop an item in front of you
-     * Equip - Move:-1 to move, pickup, trade, or reload an item
-     * Notice - Stun:+1 to detect hidden
-     * Push the Limit - Fatigue:+1 to gain Skill:+1 this Round
-     * State of Mind - Stun:+1 to remove a Fatigue, Stress, or Slow
-     * Grit Your Teeth - Stress:+1 to ignore Penalties this Round
-     * Burst of Speed - Slow:+1 to Move:+2 AND Turn:+1
-     * Heroic Feat - Character Point:-1 to Hits:+1 or -1 (e.g. Damage)")
-  (base/rule
-   :name "Action: Hide"
-   :summary
-    "Move:-[Action Cost]
-     * Find a hiding place
-     * IF You have [Full Cover] AND Rivals are at least your [Body] spaces away.
-     * THEN [Continuous]: Replace your figure with a [Hidden] one AND Rivals must attempt to [Notice] or [Search] for you.")
-  (base/rule
-   :name "Action: Notice"
-   :summary
-    "Stun:+1 to attempt to detect hidden things:
-     * Sight - IF a Hidden Unit in Range:Mindx2 enters your Arc:Forward [Task: Test] Mind vs Body to notice them.
-     * Hearing - IF a Hidden Unit enters Range:Mindx1 THEN [Task: Test] Mind vs Body to notice them.")
-  (base/rule
-   :name "Action: Recover"
-   :summary
-    "Move:-[Action Cost]
-     * Remove a [Fatigue], [Stun], [Stress], or [Slow]
-
-     OR
-
-     Move:-[Action Cost]
-     * Ready an [Ability] in [Cooldown]
-    
-     OR
-
-     Move:-[Action Cost]x2
-     * Bind Wound - Remove a [Bleeding] from yourself or an adjacent unit.")
-  (base/rule
-   :name "Action: Search"
-   :summary
-    "Move:-[Action Cost]x2
-    * Test [Investigate] vs [Conflict] to search the [Place] you occupy. IF you Win THEN you find something for each [Effect].")
+   :image "images/rule-action-free.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Advancement"
-   :summary
-    "Skill Points (SP)
-     * Respec - Take Skill:-1 on ONE Skill for SP:+(lower Skill level)
-     * 2 Week - Train/Research and spend SP:-(current Skill Level) for Skill:+1.
-     Ability Points (AP)
-     * Respec - Remove 1 Ability for AP:+1
-     * 1 Week - Train/Research and AP:-1 for an Ability, Specialty, or Item in a Skill OR Rating:+0x1 to a Power.
-     * Specialty - IF you gain an Ability in your Specialty THEN every third Ability costs 0 AP.")
+   :image "images/rule-advancement.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Advantage"
    :summary
@@ -192,25 +108,18 @@
      * Discard used cards (except Keep)")
   (base/rule
    :name "Conclusion"
-   :summary
-    "* Epilogue - Read the Epilogue of the Scene.
-     * Rewards - Gather and allocate any rewards.
-     * Advancement - Players spend Character Points, Skill Points, and Ability Points.
-     * Downtime - Players declare intentions before the next Scene.
-     * Intentions - Players declare desires for the next Scene.")
+   :image "images/rule-conclusion.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Conflict"
-   :summary
-    "Conflict is how tests are resolved (similar to To Hit/Saving Throws). Each card is effectively a pre-rolled die that you choose when to use
-     1) Choose - Each Player chooses a card from hand
-     2) Reveal - Both are revealed at once
-     3) Compare - Compare Approaches to determines who Wins. IF both Fast or both Strong THEN use Rank")
+   :image "images/rule-conflict.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Conflict: Approach"
+   :name "*Conflict: Approach"
    :image "images/rule-conflict-approach.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Conflict: Compare"
+   :name "*Conflict: Compare"
    :image "images/rule-conflict-compare.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -218,7 +127,7 @@
    :image "images/rule-conflict-chart.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Conflict: Clash"
+   :name "*Conflict: Clash"
    :summary
     "A Clash occurs when two [Fast] or two [Strong] face each other.
      * A - Win: any
@@ -230,27 +139,15 @@
      ** Compare Ranks. Lower Rank Wins.
      ** IF Still Tied THEN Both Win.")
   (base/rule
-   :name "Conflict: Reveal"
-   :image "images/rule-conflict-reveal.svg"
+   :name "Conflict: Sample"
+   :image "images/rule-conflict-sample.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Conflict: Resolution"
-   :summary
-    "Discard used Conflict cards and resolve one of the following:
-Action - IF the Winner did not spend an Action during this Conflict THEN there is no further resolution.
-Evade - IF the Winner played an Evade THEN they regain the Move spent on the Action.
-Test - The Conflict resolved with one side victorious. Effect determines how much it passed or failed.
-Task
-Progress - IF you Win THEN move Task Tokens (top) to Progress (bottom) equal to the Effect. IF no Task remains then the Task is complete.
-Task - IF you Fail THEN remove Progress Tokens (bottom) equal to the number of your Rival’s Effect. IF no Progress remains then the Task ends in failure.
-Fight - Go to Damage.
-")
-  (base/rule
-   :name "Conflict: Rank"
+   :name "*Conflict: Rank"
    :image "images/rule-conflict-rank.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Conflict: Suit"
+   :name "*Conflict: Suit"
    :summary
     "Each Suit represents a Stat and has 2 Approaches to choose from:
      * Wands - Body. Strong and Block
@@ -277,6 +174,7 @@ Fight - Go to Damage.
      ** Unit: That unit is the new target. Resolve a new Combat with it instead.")
   (base/rule
    :name "Crits"
+   :image "images/rule-crits.svg"
    :summary
     "When a char takes damage they take the Damage card onto their character.
      * Rank - Hit Location A=Head, 2=Right Foot
@@ -346,7 +244,8 @@ Fight - Go to Damage.
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Hit Location"
-   :image "images/rule-hit-location.svg")
+   :image "images/rule-hit-location.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Hit Location Person"
    :image "images/rule-hit-location-person.svg"
@@ -357,10 +256,13 @@ Fight - Go to Damage.
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Hits"
+   :image "images/rule-hits.svg"
    :summary
     "Hits are the degree of success
-     * Combo - Optional. Discard cards to increase Hits
+     * Difficulty
      * Rank - Each card may increase Hits
+     * Combo - Optional. Discard cards to increase Hits
+     * Hit Location
      * Powers - Powers including those on Weapons and Items may increase Hits")
   (base/rule
    :name "Hits: Combo"
@@ -373,10 +275,12 @@ Fight - Go to Damage.
      Bonus: Gain any OTHER card from Discard for each card in the Set over 2")
   (base/rule
    :name "Hits: Damage Decks"
-   :image "images/rule-hits-damage-decks.svg")
+   :image "images/rule-hits-damage-decks.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Hits: Power"
-   :image "images/rule-hits-power.svg")
+   :image "images/rule-hits-power.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Hits: Rank"
    :summary
@@ -412,14 +316,8 @@ Fight - Go to Damage.
      * Minor Achievement: Completion gains an [Ability Point].")
   (base/rule
    :name "Line of Sight"
-   :summary
-    "Line of Sight - Most distance effects require line of sight to the target.
-     * Use a straight edge from center of your space to center of target space. IF no obstacle THEN Line of Sight
-
-     Cover - Cover makes it harder to hit and absorbs damage. Opponents, Allies, and even smoke provide Cover
-     1) Find the leftmost and rightmost Spaces surrounding the Target
-     2) Sweep the edge between these Spaces.
-     3) Cover:+25% AND Skill:-1 for each occupied Space")
+   :image "images/rule-lineofsight.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Map")
   (base/rule
@@ -462,19 +360,11 @@ Fight - Go to Damage.
      * Body")
   (base/rule
    :name "Move"
-   :summary
-    "Each Group will separately count down from 10 with each Unit choosing to Move, take an Action, or Wait. This continues until the count is 0 or no one can act:
-     * Facing - Units must always be facing a compass heading
-     * Wait - Do nothing. Anyone with Move >= Count must discard until below Count
-     * Moving - Move:-1 to move the Unit 1 space. Turn:-1 to turn the Unit 45 degrees
-     * Action - Move:-[Action Cost] to take an Action. 2 Actions per Round are possible")
-  (base/rule
-   :name "Move: Facing"
-   :image "images/rule-move-facing.svg"
+   :image "images/rule-move.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Move: Moving"
-   :image "images/rule-move-moving.svg"
+   :name "Movement"
+   :image "images/rule-movement.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Off-handed"
@@ -498,12 +388,8 @@ Fight - Go to Damage.
    :name "Power")
   (base/rule
    :name "Range"
-   :summary
-    "Count the Spaces to the Target to determine Range
-     * Close Combat - Range:0 or 1
-     * Melee - Range:0 or 1. IF 0 THEN Skill:-1
-     * Reach - Range:1 or 2. IF 0 THEN Disadvantage
-     * Other - Range:Depends on Item/Skill. IF 0 or 1 THEN Disadvantage")
+   :image "images/rule-range.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Rank"
    :summary
@@ -513,16 +399,48 @@ Fight - Go to Damage.
    :summary
     "* Can target one additional Space away [Scaled]")
   (base/rule
-   :name "Rewards"
+   :name "Resolution"
+   :image "images/rule-resolution.svg"
    :summary
-    "Completing Milestones typically give some reward.
-     * Treasure - You can gain currency and other useful items
-     * Status - You can gain or lose status among different Factions
-     * Favor - You can gain or lose favor among different individuals
-     * Experience
-     -- Character Points (CP) - CP:+1 IF significant Character event
-     -- Skill Points (SP) - SP:+1 IF Major Milestone (e.g. Chapter End)
-     -- Ability Points (AP) - AP:+1 IF Minor Milestone (e.g. Significant Event)")
+    "Any skill/ability/power/stat test is called a Task. There are 3 types:
+     * Test - A quick test. Any success passes
+     * Task - An extended task over multiple Rounds
+     * Damaging - A damaging attack. The degree of success determines wound severity
+     Discard used Conflict cards and resolve one of the following:
+     Action - IF the Winner did not spend an Action during this Conflict THEN there is no further resolution.
+     Evade - IF the Winner played an Evade THEN they regain the Move spent on the Action.
+     Test - The Conflict resolved with one side victorious. Effect determines how much it passed or failed.
+     Task
+     Progress - IF you Win THEN move Task Tokens (top) to Progress (bottom) equal to the Effect. IF no Task remains then the Task is complete.
+     Task - IF you Fail THEN remove Progress Tokens (bottom) equal to the number of your Rival’s Effect. IF no Progress remains then the Task ends in failure.
+     Combat - Go to Damage.")
+  (base/rule
+   :name "Resolution: Damage"
+   :summary
+    "A damaging attack. The degree of Success determines wound severity
+     * Conflict - Perform a Conflict
+     * Effect - Determine Effect for the Winner
+     * Success - Challenge:-Effect")
+  (base/rule
+   :name "Resolution: Task"
+   :summary
+    "An extended task over multiple Rounds
+     * Task Start - Determine the Difficulty. Place Tokens on the upper (Progress) and lower (Challenge) part of of this card each equal to the Difficulty
+     * Conflict - Perform a Conflict
+     * Effect - Determine Effect
+     * Win - Challenge:-Hits
+     * Lose - Progress:-Hits
+     * Round End: Progress:-1
+     * IF Challenge = 0 THEN the Task Ends in Success
+     * IF Progress = 0 THEN the Task Ends in Failure
+     * Task End - Discard the tokens and Task card.")
+  (base/rule
+   :name "Resolution: Test"
+   :summary
+    "A quick test. Any success passes
+     * Difficulty - Determine the Difficulty. This is usually a Stat like the target's Body.
+     * Conflict - Perform a Conflict. Reveal and Compare cards.
+     * Success - Pass the Test. Effect describes the degree of Success")
   (base/rule
    :name "Ritual"
    :summary
@@ -607,30 +525,11 @@ Fight - Go to Damage.
      * [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation.")
   (base/rule
    :name "Round: End"
-   :summary
-    "Any triggered events happen here.
-     * Draw - Each Player draws a card
-     * Recover - Each Unit may remove a Fatigue, Stun, Stress, or Slow OR Ready an Ability in Cooldown
-     * Power Events - Continuous and Area Effect are resolved here.
-     * Triggered Events - Any events that triggered during the Round happen here. E.g. If a door was opened, it resolves now.
-     * Clock Ticks - Discard the top card of the Clock and resolve any Clock Events.
-     * Task Clock - Tasks get Progress:-1.")
+   :image "images/rule-round-end.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Round: Start"
-   :summary
-    "Refresh - Place tokens on each [Unit#] card:
-     * Action Cost:Speed/2 (rounded down)
-     * Move:Speed
-     * Turn:2
-     Targets - Each Round, place Target cards:
-     * Choose Targets - Choose a Target (if any) for each Unit and place the Target# card on that Unit
-     * Change Targets - Players can change after others reveal. IF in conflict THEN use High Card.
-     Groups - Split Units into Groups by Target.
-     * Simultaneous - Each group resolves their Round separately then waits until all Groups are finished before doing Events.
-     * NPCs - Players in each Group perform the actions of any NPCs in their Group. This should be done in good faith or can use a High Card if an Action is not obvious.")
-  (base/rule
-   :name "Rounds"
-   :image "images/rule-rounds.svg"
+   :image "images/rule-round-start.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Rule")
@@ -654,11 +553,8 @@ Fight - Go to Damage.
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Scene: Events"
-   :summary
-    "A Scene may have a number of events that happen over time.
-     * Timed Events - May be placed in the Clock Deck to be revealed when that Clock strikes
-     * Location Events - May be placed under a location on the Map to be revealed when searched or explored.
-     * Fog of War Events - May be face down locations or events that are revealed when entering that location.")
+   :image "images/rule-scene-events.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Scene: Minis"
    :image "images/rule-scene-minis.svg"
@@ -768,40 +664,6 @@ Fight - Go to Damage.
   (base/rule
    :name "Target#"
    :image "images/rule-target-num.svg")
-  (base/rule
-   :name "Resolution"
-   :summary
-    "Any skill/ability/power/stat test is called a Task. There are 3 types:
-     * Test - A quick test. Any success passes
-     * Extended - An extended task over multiple Rounds
-     * Damaging - A damaging attack. The degree of success determines wound severity")
-  (base/rule
-   :name "Resolution: Damage"
-   :summary
-    "A damaging attack. The degree of Success determines wound severity
-     * Conflict - Perform a Conflict
-     * Effect - Determine Effect for the Winner
-     * Success - Challenge:-Effect")
-  (base/rule
-   :name "Resolution: Extended"
-   :summary
-    "An extended task over multiple Rounds
-     * Task Start - Determine the Difficulty. Place Tokens on the upper (Progress) and lower (Challenge) part of of this card each equal to the Difficulty
-     * Conflict - Perform a Conflict
-     * Effect - Determine Effect
-     * Win - Challenge:-Hits
-     * Lose - Progress:-Hits
-     * Round End: Progress:-1
-     * IF Challenge = 0 THEN the Task Ends in Success
-     * IF Progress = 0 THEN the Task Ends in Failure
-     * Task End - Discard the tokens and Task card.")
-  (base/rule
-   :name "Resolution: Test"
-   :summary
-    "A quick test. Any success passes
-     * Difficulty - Determine the Difficulty. This is usually a Stat like the target's Body.
-     * Conflict - Perform a Conflict. Reveal and Compare cards.
-     * Success - Pass the Test. Effect describes the degree of Success")
   (base/rule
    :name "Terms"
    :image "images/rule-terms.svg"
@@ -914,30 +776,18 @@ Fight - Go to Damage.
        "Scene: Minis"
        "Scene: Units"
        "Scene: Events"
-       "Rounds"
        "Round: Start"
        "Move"
-       "Move: Facing"
-       "Move: Moving"
+       "Movement"
        "Action"
        "Action: Free"
-       "Action: Equip"
-       "Action: Notice"
-       "Action: Recover"
-       "Action: Hide"
-       "Action: Search"
-       "Action: Fight"
        "Action: Interact"
        "Arc"
        "Range"
        "Line of Sight"
        "Conflict"
-       "Conflict: Suit"
-       "Conflict: Approach"
-       "Conflict: Rank"
-       "Conflict: Reveal"
-       "Conflict: Compare"
        "Conflict: Chart"
+       "Conflict: Sample"
        "Hits"
        "Hits: Combo"
        "Hits: Rank"
@@ -949,11 +799,10 @@ Fight - Go to Damage.
        "Crits"
        "Resolution"
        "Resolution: Test"
-       "Resolution: Extended"
+       "Resolution: Task"
        "Resolution: Damage"
        "Round: End"
        "Conclusion"
-       "Rewards"
        "Advancement"
       )))
    cardmap : base/cardmap :=
