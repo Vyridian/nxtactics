@@ -925,6 +925,8 @@ export default class nx_tactics_decks_power {
         {"any-1": nx_tactics_base.t_power},
         ":name",
         "Life",
+        ":reference",
+        "* Life abides no reason, for none are born by their own consent. - Genshin Impact",
         ":abilitymap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_abilitymap},
@@ -1032,7 +1034,7 @@ export default class nx_tactics_decks_power {
         ":name",
         "Necromancy",
         ":reference",
-        "* Necromancy is the communication with the spirits of the dead sometimes via a ouija board, on which messages are spelled out and interpreted.",
+        "* Necromancy is the communication with the spirits of the dead sometimes via a ouija board, on which messages are spelled out and interpreted.\n* Death abides no reason, for it cannot be defied even by those who see it coming. - Genshin Impact",
         ":titles",
         "Black Savant, Bone Caster, Grave Robber, Necromancer, Necrosavant",
         ":stat",
@@ -3621,6 +3623,8 @@ export default class nx_tactics_decks_power {
         {"any-1": nx_tactics_base.t_power},
         ":name",
         "Time",
+        ":reference",
+        "* Time abides no reason, for it deprives us all equally. - Genshin Impact",
         ":abilitymap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_abilitymap},

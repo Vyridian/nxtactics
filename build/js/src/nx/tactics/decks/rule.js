@@ -30,7 +30,7 @@ export default class nx_tactics_decks_rule {
           {"any-1": nx_tactics_base.t_cardlist},
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Drawn to Destiny", "Disclaimer", "How to Play", "Description", "Features", "Golden Rules", "Terms", "Unit: Sample", "Unit: Guide", "Item: Sample", "Item: Guide", "Stat", "How to Play", "Setup", "Setup: Players", "Scene", "Scene: Map#1", "Scene: Map#2", "Scene: Minis", "Scene: Units", "Scene: Events", "Round: Start", "Move", "Movement", "Action", "Action: Free", "Action: Interact", "Arc", "Range", "Line of Sight", "Conflict", "Conflict: Chart", "Conflict: Sample", "Hits", "Hits: Combo", "Hits: Rank", "Hits: Damage Decks", "Hit Location", "Hit Location Person", "Hit Location Vehicle", "Hits: Power", "Crits", "Resolution", "Resolution: Test", "Resolution: Task", "Resolution: Damage", "Round: End", "Conclusion", "Advancement")
+            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Drawn to Destiny", "Disclaimer", "How to Play", "Description", "Features", "Golden Rules", "Terms", "Unit: Sample", "Unit: Guide", "Item: Sample", "Item: Guide", "Stat", "How to Play", "Setup", "Setup: Players", "Scene", "Scene: Map#1", "Scene: Map#2", "Scene: Minis", "Scene: Units", "Scene: Events", "Round: Start", "Move", "Movement", "Action", "Action: Free", "Action: Interact", "Arc", "Range", "Line of Sight", "Conflict", "Conflict: Chart", "Conflict: Sample", "Hits", "Hits: Sample", "Crits", "Crits: Rating", "Crits: Damage", "Crits: Types", "Crits: Person", "Crits: Vehicle", "Resolution", "Round: End", "Conclusion", "Advancement")
           )
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
@@ -183,7 +183,60 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "*Conflict: Suit", ":summary", "Each Suit represents a Stat and has 2 Approaches to choose from:\n* Wands - Body. Strong and Block\n* Coins - Mind. Strong and Counter\n* Cups - Will. Fast and Block\n* Swords - Speed. Fast and Evade\nNote: Suit generally doesn't matter, but it may trigger Abilities."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Conscience", ":summary", "* Conscience"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Cover", ":summary", "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.\n* If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Skill:-1.\n** 50% Cover: Skill:-2.\n** 75% Cover: Skill:-3.\n** 100% Cover: Skill:-4.\n* If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Conflict]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Crits", ":image", "images/rule-crits.svg", ":summary", "When a char takes damage they take the Damage card onto their character.\n* Rank - Hit Location A=Head, 2=Right Foot\n* Suit - Damage Type (Bash, Pierce, Hack, Slash)\n* Severity - Rotating the card increases the severity (4 severities per card. The last is very nasty.)\nThere are two types of damage:\n* Hits - Cause Fatigue - Face Down Damage\n* Crits - Cause Wounds - Face Up Damage. Rotate for each additional Crit. Armor in the locations turns Crits to Hits.\n    1) Damage Types - Determine the [Damage Types] of the weapon.\n2) Reveal Damage - Reveal cards equal to [Hits].\n3) Separate Damage - Separate them into 2 piles: Those that match the [Damage Types] (Damage) and those that don't (Fatigue).\n4) Hit Location - The top card from the matching pile is the Hit Location (or the mismatch pile if no matches). Move it aside and flip the Fatigue pile to its facedown side.\n5) Armor - Check [Armor] in the [Hit Location] and then the target reduces the Damage or Fatigue for each point of armor. The Hit Location can only be removed last.\n6) Fatigue - The target may take the Fatigue cards as long they have Body. Any remaining Fatigue are flipped faceup and added to the Damage pile.\n7) Damage - Count the Damage pile and apply the effect on the Hit Location card to the target.\n8) Cleanup - Discard other cards. Shuffle if a Wild was revealed."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Crits",
+        ":image",
+        "images/rule-crits.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Crits: Damage",
+        ":image",
+        "images/rule-crits-damage.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Crits: Person",
+        ":image",
+        "images/rule-crits-person.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Crits: Rating",
+        ":image",
+        "images/rule-crits-rating.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Crits: Types",
+        ":image",
+        "images/rule-crits-types.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Crits: Vehicle",
+        ":image",
+        "images/rule-crits-vehicle.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -247,51 +300,21 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Hit Location",
+        "Hits",
         ":image",
-        "images/rule-hit-location.svg",
+        "images/rule-hits.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Hit Location Person",
+        "Hits: Sample",
         ":image",
-        "images/rule-hit-location-person.svg",
+        "images/rule-hits-sample.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_rule},
-        ":name",
-        "Hit Location Vehicle",
-        ":image",
-        "images/rule-hit-location-vehicle.svg",
-        ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
-      ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hits", ":image", "images/rule-hits.svg", ":summary", "Hits are the degree of success\n* Difficulty\n* Rank - Each card may increase Hits\n* Combo - Optional. Discard cards to increase Hits\n* Hit Location\n* Powers - Powers including those on Weapons and Items may increase Hits"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hits: Combo", ":summary", "Optional. Winner may discard cards to make Sets. Allowed Sets:\n* Agent - AA, AAA, AAAA\n* Royal - QQ, KK, KKK\n* Common - 3+ card Straight\n\nBonus: Gain any OTHER card from Discard for each card in the Set over 2"),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_rule},
-        ":name",
-        "Hits: Damage Decks",
-        ":image",
-        "images/rule-hits-damage-decks.svg",
-        ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
-      ),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_rule},
-        ":name",
-        "Hits: Power",
-        ":image",
-        "images/rule-hits-power.svg",
-        ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
-      ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hits: Rank", ":summary", "Determine Hits scored in the Conflict\nHits:+1 for each card IF:\n* A-J\n  OR\n* Rank + Level Bonus > Difficulty\n\nIF Hits = 0\nTHEN Apply an appropriate facedown Damage card and the Conflict ends"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -370,10 +393,15 @@ export default class nx_tactics_decks_rule {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rank", ":summary", "* The number on a card or the part of a Value before the x."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reach", ":summary", "* Can target one additional Space away [Scaled]"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Resolution", ":image", "images/rule-resolution.svg", ":summary", "Any skill/ability/power/stat test is called a Task. There are 3 types:\n* Test - A quick test. Any success passes\n* Task - An extended task over multiple Rounds\n* Damaging - A damaging attack. The degree of success determines wound severity\nDiscard used Conflict cards and resolve one of the following:\nAction - IF the Winner did not spend an Action during this Conflict THEN there is no further resolution.\nEvade - IF the Winner played an Evade THEN they regain the Move spent on the Action.\nTest - The Conflict resolved with one side victorious. Effect determines how much it passed or failed.\nTask\nProgress - IF you Win THEN move Task Tokens (top) to Progress (bottom) equal to the Effect. IF no Task remains then the Task is complete.\nTask - IF you Fail THEN remove Progress Tokens (bottom) equal to the number of your Rival’s Effect. IF no Progress remains then the Task ends in failure.\nCombat - Go to Damage."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Resolution: Damage", ":summary", "A damaging attack. The degree of Success determines wound severity\n* Conflict - Perform a Conflict\n* Effect - Determine Effect for the Winner\n* Success - Challenge:-Effect"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Resolution: Task", ":summary", "An extended task over multiple Rounds\n* Task Start - Determine the Difficulty. Place Tokens on the upper (Progress) and lower (Challenge) part of of this card each equal to the Difficulty\n* Conflict - Perform a Conflict\n* Effect - Determine Effect\n* Win - Challenge:-Hits\n* Lose - Progress:-Hits\n* Round End: Progress:-1\n* IF Challenge = 0 THEN the Task Ends in Success\n* IF Progress = 0 THEN the Task Ends in Failure\n* Task End - Discard the tokens and Task card."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Resolution: Test", ":summary", "A quick test. Any success passes\n* Difficulty - Determine the Difficulty. This is usually a Stat like the target's Body.\n* Conflict - Perform a Conflict. Reveal and Compare cards.\n* Success - Pass the Test. Effect describes the degree of Success"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Resolution",
+        ":image",
+        "images/rule-resolution.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Ritual", ":summary", "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Attacker", ":summary", "Attacker Units usually do the following:\n* Target weak points in the enemy from lines\n* Move into Range\n* Attack"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Blaster", ":summary", "Blaster Units usually do the following:\n* Target groups of enemies\n* Move into Range\n* Attack to maximize enemy losses\n* Move to safety"),

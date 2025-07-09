@@ -175,22 +175,27 @@
   (base/rule
    :name "Crits"
    :image "images/rule-crits.svg"
-   :summary
-    "When a char takes damage they take the Damage card onto their character.
-     * Rank - Hit Location A=Head, 2=Right Foot
-     * Suit - Damage Type (Bash, Pierce, Hack, Slash)
-     * Severity - Rotating the card increases the severity (4 severities per card. The last is very nasty.)
-     There are two types of damage:
-     * Hits - Cause Fatigue - Face Down Damage
-     * Crits - Cause Wounds - Face Up Damage. Rotate for each additional Crit. Armor in the locations turns Crits to Hits.
-    1) Damage Types - Determine the [Damage Types] of the weapon.
-     2) Reveal Damage - Reveal cards equal to [Hits].
-     3) Separate Damage - Separate them into 2 piles: Those that match the [Damage Types] (Damage) and those that don't (Fatigue).
-     4) Hit Location - The top card from the matching pile is the Hit Location (or the mismatch pile if no matches). Move it aside and flip the Fatigue pile to its facedown side.
-     5) Armor - Check [Armor] in the [Hit Location] and then the target reduces the Damage or Fatigue for each point of armor. The Hit Location can only be removed last.
-     6) Fatigue - The target may take the Fatigue cards as long they have Body. Any remaining Fatigue are flipped faceup and added to the Damage pile.
-     7) Damage - Count the Damage pile and apply the effect on the Hit Location card to the target.
-     8) Cleanup - Discard other cards. Shuffle if a Wild was revealed.")
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Crits: Damage"
+   :image "images/rule-crits-damage.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Crits: Person"
+   :image "images/rule-crits-person.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Crits: Rating"
+   :image "images/rule-crits-rating.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Crits: Types"
+   :image "images/rule-crits-types.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Crits: Vehicle"
+   :image "images/rule-crits-vehicle.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Description"
    :image "images/rule-description.svg"
@@ -243,55 +248,13 @@
    :image "images/rule-goldenrules.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Hit Location"
-   :image "images/rule-hit-location.svg"
-   :layout base/cardlayout-imageonly)
-  (base/rule
-   :name "Hit Location Person"
-   :image "images/rule-hit-location-person.svg"
-   :layout base/cardlayout-imageonly)
-  (base/rule
-   :name "Hit Location Vehicle"
-   :image "images/rule-hit-location-vehicle.svg"
-   :layout base/cardlayout-imageonly)
-  (base/rule
    :name "Hits"
    :image "images/rule-hits.svg"
-   :summary
-    "Hits are the degree of success
-     * Difficulty
-     * Rank - Each card may increase Hits
-     * Combo - Optional. Discard cards to increase Hits
-     * Hit Location
-     * Powers - Powers including those on Weapons and Items may increase Hits")
-  (base/rule
-   :name "Hits: Combo"
-   :summary
-    "Optional. Winner may discard cards to make Sets. Allowed Sets:
-     * Agent - AA, AAA, AAAA
-     * Royal - QQ, KK, KKK
-     * Common - 3+ card Straight
-     
-     Bonus: Gain any OTHER card from Discard for each card in the Set over 2")
-  (base/rule
-   :name "Hits: Damage Decks"
-   :image "images/rule-hits-damage-decks.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Hits: Power"
-   :image "images/rule-hits-power.svg"
+   :name "Hits: Sample"
+   :image "images/rule-hits-sample.svg"
    :layout base/cardlayout-imageonly)
-  (base/rule
-   :name "Hits: Rank"
-   :summary
-    "Determine Hits scored in the Conflict
-     Hits:+1 for each card IF:
-     * A-J
-       OR
-     * Rank + Level Bonus > Difficulty
-
-     IF Hits = 0
-     THEN Apply an appropriate facedown Damage card and the Conflict ends")
   (base/rule
    :name "How to Play"
    :image "images/rule-howtoplay.svg"
@@ -401,46 +364,7 @@
   (base/rule
    :name "Resolution"
    :image "images/rule-resolution.svg"
-   :summary
-    "Any skill/ability/power/stat test is called a Task. There are 3 types:
-     * Test - A quick test. Any success passes
-     * Task - An extended task over multiple Rounds
-     * Damaging - A damaging attack. The degree of success determines wound severity
-     Discard used Conflict cards and resolve one of the following:
-     Action - IF the Winner did not spend an Action during this Conflict THEN there is no further resolution.
-     Evade - IF the Winner played an Evade THEN they regain the Move spent on the Action.
-     Test - The Conflict resolved with one side victorious. Effect determines how much it passed or failed.
-     Task
-     Progress - IF you Win THEN move Task Tokens (top) to Progress (bottom) equal to the Effect. IF no Task remains then the Task is complete.
-     Task - IF you Fail THEN remove Progress Tokens (bottom) equal to the number of your Rival’s Effect. IF no Progress remains then the Task ends in failure.
-     Combat - Go to Damage.")
-  (base/rule
-   :name "Resolution: Damage"
-   :summary
-    "A damaging attack. The degree of Success determines wound severity
-     * Conflict - Perform a Conflict
-     * Effect - Determine Effect for the Winner
-     * Success - Challenge:-Effect")
-  (base/rule
-   :name "Resolution: Task"
-   :summary
-    "An extended task over multiple Rounds
-     * Task Start - Determine the Difficulty. Place Tokens on the upper (Progress) and lower (Challenge) part of of this card each equal to the Difficulty
-     * Conflict - Perform a Conflict
-     * Effect - Determine Effect
-     * Win - Challenge:-Hits
-     * Lose - Progress:-Hits
-     * Round End: Progress:-1
-     * IF Challenge = 0 THEN the Task Ends in Success
-     * IF Progress = 0 THEN the Task Ends in Failure
-     * Task End - Discard the tokens and Task card.")
-  (base/rule
-   :name "Resolution: Test"
-   :summary
-    "A quick test. Any success passes
-     * Difficulty - Determine the Difficulty. This is usually a Stat like the target's Body.
-     * Conflict - Perform a Conflict. Reveal and Compare cards.
-     * Success - Pass the Test. Effect describes the degree of Success")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Ritual"
    :summary
@@ -789,18 +713,14 @@
        "Conflict: Chart"
        "Conflict: Sample"
        "Hits"
-       "Hits: Combo"
-       "Hits: Rank"
-       "Hits: Damage Decks"
-       "Hit Location"
-       "Hit Location Person"
-       "Hit Location Vehicle"
-       "Hits: Power"
+       "Hits: Sample"
        "Crits"
+       "Crits: Rating"
+       "Crits: Damage"
+       "Crits: Types"
+       "Crits: Person"
+       "Crits: Vehicle"
        "Resolution"
-       "Resolution: Test"
-       "Resolution: Task"
-       "Resolution: Damage"
        "Round: End"
        "Conclusion"
        "Advancement"

@@ -1654,6 +1654,8 @@
        :name "Wrath of God")))
   (base/power
    :name "Life"
+   :reference
+    "* Life abides no reason, for none are born by their own consent. - Genshin Impact"
    :abilitymap
     (base/abilitymap
      :Aneurysm
@@ -1815,7 +1817,8 @@
   (base/power
    :name "Necromancy"
    :reference
-    "* Necromancy is the communication with the spirits of the dead sometimes via a ouija board, on which messages are spelled out and interpreted."
+    "* Necromancy is the communication with the spirits of the dead sometimes via a ouija board, on which messages are spelled out and interpreted.
+     * Death abides no reason, for it cannot be defied even by those who see it coming. - Genshin Impact"
    :titles "Black Savant, Bone Caster, Grave Robber, Necromancer, Necrosavant"
    :stat "Shadow"
    :abilitymap
@@ -5914,6 +5917,8 @@
          * Level determines size of object/objects and distance.")))
   (base/power
    :name "Time"
+   :reference
+    "* Time abides no reason, for it deprives us all equally, yet brooks not a second to be reclaimed. - Genshin Impact"
    :abilitymap
     (base/abilitymap
      "Age Alteration"

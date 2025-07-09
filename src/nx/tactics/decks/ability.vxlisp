@@ -2068,6 +2068,8 @@
      * Modify an image to improve or mislead.")
   (base/ability
    :name "Pick Pocket"
+   :reference
+    "* You name it, I'll nick it. - Chempunk Pickpocket, Runeterra"
    :summary
     "* [Skill]: [Deception]")
   (base/ability

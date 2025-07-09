@@ -436,7 +436,7 @@ export default class nx_tactics_decks_ability {
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Philosophy", ":reference", "* I went to see the doctor of Philosophy, with a poster of Rasputin and a beard down to his knees. He never did marry or see a B-grade movie. He graded my performance. He said he could see through me. I spent 4 years prostrate to the higher mind, got my paper and I was free. - Indigo Girls, Closer I Am To Fine", ":summary", "* [Skill]: [Science: Social]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Photographic Memory"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Photoshopping", ":summary", "* [Skill]: [Art]\n* Modify an image to improve or mislead."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pick Pocket", ":summary", "* [Skill]: [Deception]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pick Pocket", ":reference", "* You name it, I'll nick it. - Chempunk Pickpocket, Runeterra", ":summary", "* [Skill]: [Deception]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pierce", ":summary", "* Pointy Penetraing Damage. Causes internal damage and [Stun].\n* [Power]: [Weapon]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Piercing Shot", ":summary", "* [Skill]: [Ranged]\n* [Requires]: Bow or Crossbow\n* [Armor Piercing]:1"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Piercing Strike", ":summary", "* [Action]: Trades damage to increase armor penetration."),
