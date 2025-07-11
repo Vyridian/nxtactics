@@ -2737,11 +2737,11 @@ export default class nx_tactics_books_superheroes {
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
-                "Natural Weaponry",
+                "Beastial",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Natural Weaponry",
+                  "Beastial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},

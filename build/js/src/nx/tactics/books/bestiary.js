@@ -415,11 +415,11 @@ export default class nx_tactics_books_bestiary {
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
-                "Natural Weaponry",
+                "Beastial",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Natural Weaponry",
+                  "Beastial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -1475,7 +1475,7 @@ export default class nx_tactics_books_bestiary {
           ":name",
           "Abyssal",
           ":summary",
-          "* Demons are creatures of Chaos from the swirling outer void where reality itself is fluid. Unlike Fiends, there are an infinite number and variety of Demons. Some believe our universe is a tiny light of order in a sea of Demons and Chaos. Like the Chaos that spawned them, demons are creatures of destruction and random mayhem. They delight in carnage and fear and have little concern for their own safety. Though Demons are sometimes cunning, they generally have little patience for communication or study, preferring to take action. They do not create tools or clothing of any kind, though they might be able to use those they pick up (especially weapons). They value free will above all things and will not tolerate servitude including contracts, deals or agreements of any kind.\n* Demons are dominated by their [Beast]s.\n* Preferred Skills: [Demonic Power], [Natural Weaponry]\n\n* Description - Demons take any number of monstrous forms and are among the most powerful beings in existence. As beings of chaos, their appearance is often unsettling and asymetrical. They eat any living creature including humans though they don't require ordinary sustanence. Most are larger and more muscular than humans and can be enormous. Many have rows of stubby spikes growing from their upper backs, with elongated limbs that end in clawed digits, large fang-filled jaws and pointed ears, giving them a bestial appearance. Some have bat-like wings. Others burrow in the earth.\n* Personality - Demons are wildly arrogant and destructive and have no sense of consequences for their actions. Unlike Fiends who secretly harbor intense guilt and long for the souls they have lost, Demons are enthralled by their excess. Demons are sustained by chaos; if they are not surrounded by chaos, they will wither and die. Demons care nothing for life, least of all their own; they think only in the moment and cannot tolerate sitting still. They treat everything as if they were in a fictional world where nothing matters except their own immediate gratification.\n* Control - As beings of chaos, Demons can never be controlled. Attempts to control them damage them instead.\n* Abilities - Demons have the most varied abilities among all creatures. They generally have great strength, speed, and durability and can regenerate wounds. Some can extend their limbs and digits. All Demons can be identified by their [Demonic Power].",
+          "* Demons are creatures of Chaos from the swirling outer void where reality itself is fluid. Unlike Fiends, there are an infinite number and variety of Demons. Some believe our universe is a tiny light of order in a sea of Demons and Chaos. Like the Chaos that spawned them, demons are creatures of destruction and random mayhem. They delight in carnage and fear and have little concern for their own safety. Though Demons are sometimes cunning, they generally have little patience for communication or study, preferring to take action. They do not create tools or clothing of any kind, though they might be able to use those they pick up (especially weapons). They value free will above all things and will not tolerate servitude including contracts, deals or agreements of any kind.\n* Demons are dominated by their [Beast]s.\n* Preferred Skills: [Demonic Power], [Beastial]\n\n* Description - Demons take any number of monstrous forms and are among the most powerful beings in existence. As beings of chaos, their appearance is often unsettling and asymetrical. They eat any living creature including humans though they don't require ordinary sustanence. Most are larger and more muscular than humans and can be enormous. Many have rows of stubby spikes growing from their upper backs, with elongated limbs that end in clawed digits, large fang-filled jaws and pointed ears, giving them a bestial appearance. Some have bat-like wings. Others burrow in the earth.\n* Personality - Demons are wildly arrogant and destructive and have no sense of consequences for their actions. Unlike Fiends who secretly harbor intense guilt and long for the souls they have lost, Demons are enthralled by their excess. Demons are sustained by chaos; if they are not surrounded by chaos, they will wither and die. Demons care nothing for life, least of all their own; they think only in the moment and cannot tolerate sitting still. They treat everything as if they were in a fictional world where nothing matters except their own immediate gratification.\n* Control - As beings of chaos, Demons can never be controlled. Attempts to control them damage them instead.\n* Abilities - Demons have the most varied abilities among all creatures. They generally have great strength, speed, and durability and can regenerate wounds. Some can extend their limbs and digits. All Demons can be identified by their [Demonic Power].",
           ":titles",
           "Demonic",
           ":unitmap",
@@ -2129,11 +2129,11 @@ export default class nx_tactics_books_bestiary {
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
-                "Natural Weaponry",
+                "Beastial",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Natural Weaponry",
+                  "Beastial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2157,11 +2157,11 @@ export default class nx_tactics_books_bestiary {
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
-                "Natural Weaponry",
+                "Beastial",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Natural Weaponry",
+                  "Beastial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2671,11 +2671,11 @@ export default class nx_tactics_books_bestiary {
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
-                "Natural Weaponry",
+                "Beastial",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Natural Weaponry",
+                  "Beastial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -3319,7 +3319,7 @@ export default class nx_tactics_books_bestiary {
           ":reference",
           "* Beauty and the Beast\n* The Howling\n* Underworld\n* Wolfen",
           ":summary",
-          "* Description - A hereditary trait carried by humans and animals.\n* Personality - Their savagery is their greatest strength, but it threatens to consume them and leave only rage.\n* Some lycanthropes are more animal-like and hostile to humans.\n* [Vulnerability] to [Silver]\n* Loses control under the moon\n* Preferred Skills: [Lycanthropy], [Natural Weaponry]\n!Groups\n* Black Spirals - [[Corrupted]] Werewolves\n\nHistory\n* The Impergium - 8,000 years ago, humankind was becoming more organized and began systematically killing wolves or destroying their habitats. The Werewolves born from wolves decided that the humans were out of control and leading the world to chaos. They declared the open hunt (or culling) of humans called the 	Impergium. The Werewolves born from humans saw their own kin murdered by other Werewolves. Whatever the merits of the Impergium, it triggered a civil war between the Werewolf clans with mounting killings and atrocities. The other shapeshifters tried to stay out of the conflict but were quickly forced to take sides. The conflict only ended after the number of Shapeshifters across the world was decimated, especially those born to wolves. Since then the low birth rate of Shapeshifters has taken many races to the brink of extinction. The Impergium remains as a grim reminder of the dangers of letting ones [Rage] overcome reason. The Werewolves are embarassed by their clans' actions. The other Shapeshifters have never forgiven the Werewolves for their folly. Also, many of the Werewolves born of wolves hold deep hatred for the other Werewolves both for their betrayal and for the current state of the wolves in the world.",
+          "* Description - A hereditary trait carried by humans and animals.\n* Personality - Their savagery is their greatest strength, but it threatens to consume them and leave only rage.\n* Some lycanthropes are more animal-like and hostile to humans.\n* [Vulnerability] to [Silver]\n* Loses control under the moon\n* Preferred Skills: [Lycanthropy], [Beastial]\n!Groups\n* Black Spirals - [[Corrupted]] Werewolves\n\nHistory\n* The Impergium - 8,000 years ago, humankind was becoming more organized and began systematically killing wolves or destroying their habitats. The Werewolves born from wolves decided that the humans were out of control and leading the world to chaos. They declared the open hunt (or culling) of humans called the 	Impergium. The Werewolves born from humans saw their own kin murdered by other Werewolves. Whatever the merits of the Impergium, it triggered a civil war between the Werewolf clans with mounting killings and atrocities. The other shapeshifters tried to stay out of the conflict but were quickly forced to take sides. The conflict only ended after the number of Shapeshifters across the world was decimated, especially those born to wolves. Since then the low birth rate of Shapeshifters has taken many races to the brink of extinction. The Impergium remains as a grim reminder of the dangers of letting ones [Rage] overcome reason. The Werewolves are embarassed by their clans' actions. The other Shapeshifters have never forgiven the Werewolves for their folly. Also, many of the Werewolves born of wolves hold deep hatred for the other Werewolves both for their betrayal and for the current state of the wolves in the world.",
           ":unitmap",
           nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Werebat", "Werebear", "Wereboar", "Werecat", "Werecrow", "Wererat", "Werespider", "Werewolf")
         )

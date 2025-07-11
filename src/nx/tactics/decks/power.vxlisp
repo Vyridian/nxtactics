@@ -864,7 +864,7 @@
      * Cryo reacts with Aero to produce the [Chill] effect.")
   (base/power
    :name "Cultivation"
-   :titles "Chi Powers, Combat Focus, Ki Powers"
+   :titles "Chi Powers, Combat Focus, Internal Alchemy, Ki Powers, Neidan"
    :reference
     "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono, Hell's Paradise"
    :stat "Will"
@@ -3291,83 +3291,57 @@
    :summary
     "* Gain the powers of an animal"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Adhesive Grip"
-      (base/ability
-       :name "Adhesive Grip")
      "Aspect of Wolf"
-      (base/ability
-       :name "Aspect of Wolf"
-       :reference "Everquest")
+     "Autotomy"
      "Bat Sight"
-      (base/ability
-       :name "Bat Sight")
      "Bear Form"
-      (base/ability
-       :name "Bear Form")
      "Bear Strength"
-      (base/ability
-       :name "Bear Strength")
+     "Bite"
+     "Bull Rush"
+     "Burrowing"
      "Cat Feet"
-      (base/ability
-       :name "Cat Feet"
-       :summary "* Reduce damage from falls")
      "Chameleon Skin"
-      (base/ability<-tactics-key tactics "Chameleon Skin")
+     "Claw"
+     "Claw Rake"
+     "Constrict"
+     "Death Roll"
      "Extra Limbs"
-      (base/ability
-       :name "Extra Limbs")
+     "Feather Blades"
+     "Feather Knives"
      "Fish Eye"
-      (base/ability
-       :name "Fish Eye")
      "Fish Form"
-      (base/ability
-       :name "Fish Form")
      "Gills"
-      (base/ability
-       :name "Gills")
      "Hawk Eye"
-      (base/ability
-       :name "Hawk Eye"
-       :titles "Eagle Eye")
      "Hawk Form"
-      (base/ability
-       :name "Hawk Form")
+     "Horns"
+     "Jaw Lock"
+     "Jaws of Death"
+     "Neck Bite"
+     "Overwhelm"
+     "Pounce"
      "Puff Up"
-      (base/ability
-       :name "Puff Up"
-       :summary
-        "* Increase your size to be more intimidating.")
+     "Quill Attack"
      "Quills"
-      (base/ability
-       :name "Quills")
      "Rat Form"
-      (base/ability
-       :name "Rat Form")
+     "Ripping Bite"
+     "Savage Genitalia"
      "Snake Bite"
-      (base/ability
-       :name "Snake Bite")
      "Snake Form"
-      (base/ability
-       :name "Snake Form")
      "Spider Climb"
-      (base/ability
-       :name "Spider Climb")
      "Spines"
-      (base/ability
-       :name "Spines")
+     "Sting"
+     "Swallow Whole"
+     "Tail Sweep"
      "Tendrils"
-      (base/ability
-       :name "Tendrils")
+     "Tongue Lash"
+     "Trample"
+     "Tusk Gore"
      "Wings"
-      (base/ability
-       :name "Wings")
      "Wolf Form"
-      (base/ability
-       :name "Wolf Form")
-     "Wolf Scent"
-      (base/ability
-       :name "Wolf Scent")))
+     "Wolf Scent"))
   (base/power
    :name "Charm"
    :abilitymap
@@ -4933,7 +4907,7 @@
         "* Action: Change to specific animal unit.
          ** +1 Move, -2 Mind, +1 Spirit.
          ** Clothes and Armor are destroyed or dropped.  All Equipment is dropped.
-         ** Gain [Natural Weaponry] and [Regeneration] Abilities.
+         ** Gain [Beastial] and [Regeneration] Abilities.
          ** Duration: Until sunrise.")
      "Primal Animal Form"
       (base/ability
@@ -4959,7 +4933,7 @@
          ** +2 Body, -2 Mind, +1 Spirit.
          ** Clothes and Armor are destroyed or dropped.
          ** All Equipment not in hands is dropped.
-         ** Gain [Natural Weaponry], [Armor], and [Regeneration] Abilities.
+         ** Gain [Beastial], [Armor], and [Regeneration] Abilities.
          ** Each [Bleeding] or [Damage] Token taken grants a [Rage] Token.
          ** Each [Bleeding] Token inflicted grants a [Rage] Token.
          ** Each adjacent Ally or Foe slain grants a [Rage] Token.
@@ -5089,9 +5063,6 @@
      :Confusion
       (base/ability
        :name "Confusion")
-     "Intellect Fortress"
-      (base/ability
-       :name "Intellect Fortress")
      :Lingua-Franca
       (base/ability
        :name "Lingua-Franca"
@@ -5124,6 +5095,14 @@
      "Mental Projection"
       (base/ability
        :name "Mental Projection")
+     "Mind Blade"
+      (base/ability
+       :name "Mind Blade"
+       :titles "Psionic Blade")
+     "Mind Knife"
+      (base/ability
+       :name "Mind Knife"
+       :titles "Psionic Knife")
      "Mind Reading"
       (base/ability
        :name "Mind Reading"
@@ -5132,12 +5111,6 @@
       (base/ability
        :name "Mind's Eye"
        :summary "* Eye - The caster can close his eyes and see into the astral world instead of the real world.")
-     "Psionic Blade"
-      (base/ability
-       :name "Psionic Blade")
-     "Psionic Knife"
-      (base/ability
-       :name "Psionic Knife")
      "Store Consciousness"
       (base/ability
        :name "Store Consciousness"
@@ -5179,11 +5152,7 @@
      "Peace of Mind"
       (base/ability
        :name "Peace of Mind"
-       :summary "Find the Quiet Place in your mind")
-     "Tower of Iron Will"
-      (base/ability
-       :name "Tower of Iron Will"
-       :summary "Ward")))
+       :summary "Find the Quiet Place in your mind")))
   (base/power
    :name "Mind Over Matter"
    :titles "Telekinesis, Psychokinesis"
@@ -5359,37 +5328,6 @@
      :Submersible
       (base/ability
        :name "Submersible")))
-  (base/power
-   :name "Natural Weaponry"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Autotomy"
-     "Bite"
-     "Bull Rush"
-     "Burrowing"
-     "Claw"
-     "Claw Rake"
-     "Constrict"
-     "Death Roll"
-     "Feather Blades"
-     "Feather Knives"
-     "Horns"
-     "Jaw Lock"
-     "Jaws of Death"
-     "Neck Bite"
-     "Overwhelm"
-     "Pounce"
-     "Quill Attack"
-     "Ripping Bite"
-     "Savage Genitalia"
-     "Spines"
-     "Sting"
-     "Swallow Whole"
-     "Tail Sweep"
-     "Tongue Lash"
-     "Trample"
-     "Tusk Gore"))
   (base/power
    :name "Phasing"
    :titles "Intangibility"

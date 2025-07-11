@@ -338,7 +338,7 @@
  (base/cardback
   :id "card-conflict-back"
   :name "Conflict Back"
-  :image (string "images/card-conflict-back.svg")
+  :image (string "images/conflict.svg")
   :layout base/cardlayout-imageonly))
 
 (func deck-conflict : base/deck
@@ -346,7 +346,7 @@
   [card : base/card := (card-conflict-back)]
   (base/deck
    :name "Conflict Deck"
-   :image "images/card-conflict-deck.svg"
+   :image "images/conflict.svg"
    :layout base/cardlayout-imageonly
    :cardmap
     (base/cardmap

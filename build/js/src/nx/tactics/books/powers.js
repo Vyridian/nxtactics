@@ -353,7 +353,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Physical Powers",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Agility", "Appearance", "Armor", "Healing", "Movement", "Natural Weaponry", "Quickness", "Senses", "Shielding", "Strength", "Toughness")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Agility", "Appearance", "Armor", "Healing", "Movement", "Beastial", "Quickness", "Senses", "Shielding", "Strength", "Toughness")
         )
       )
     )

@@ -2827,8 +2827,8 @@ export default class nx_tactics_books_high_technology {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                "Natural Weaponry",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Natural Weaponry")
+                "Beastial",
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Beastial")
               )
             ),
             "Terminator Hunter Killer",

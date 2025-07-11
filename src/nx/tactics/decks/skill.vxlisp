@@ -1691,91 +1691,25 @@ x +1DMG vs. Crouching."
     "Bandit, Brigand, Crime Boss, Crook, Cutthroat, Fixer, Highwayman, Pimp, Yakuza, Yakuza - Oyabun"
    :stat "Shadow"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Armed Robbery"
-      (base/ability<-tactics-key tactics "Armed Robbery")
      "Blackmail"
-      (base/ability
-       :name "Blackmail"
-       :summary
-        "* [Skill]: [Crime]")
-     "Burglary"
-      (base/ability
-       :name "Burglary"
-       :summary
-        "* [Skill]: [Crime]")
      "Bribery"
-      (base/ability
-       :name "Bribery"
-       :summary
-        "* [Skill]: [Crime]")
+     "Burglary"
      "Crime Syndicate"
-      (base/ability
-       :name "Crime Syndicate"
-       :summary
-        "* [Skill]: [Crime]")
      "Crime Wave"
-      (base/ability
-       :name "Crime Wave"
-       :summary
-        "* [Skill]: [Crime]")
      "Criminal Mastermind"
-      (base/ability
-       :name "Criminal Mastermind"
-       :summary
-        "* [Skill]: [Crime]")
      "Extortion"
-      (base/ability
-       :name "Extortion"
-       :summary
-        "* [Skill]: [Crime]")
      "Fence Goods"
-      (base/ability
-       :name "Fence Goods"
-       :summary
-        "* [Skill]: [Crime]")
      "Fixing"
-      (base/ability
-       :name "Fixing"
-       :summary
-        "* [Skill]: [Crime]")
      "Kidnapping"
-      (base/ability
-       :name "Kidnapping"
-       :summary
-        "* [Skill]: [Crime]")
      "Mafia Connections"
-      (base/ability
-       :name "Mafia Connections"
-       :summary
-        "* [Skill]: [Crime]")
      "Pimping"
-      (base/ability
-       :name "Pimping"
-       :summary
-        "* [Skill]: [Crime]")
      "Piracy"
-      (base/ability
-       :name "Piracy"
-       :summary
-        "* Armed robbery of large shipments of goods without damaging the merchandise.
-         * [Skill]: [Crime]")
-     :Prostitution
-      (base/ability
-       :name "Prostitution"
-       :summary
-        "* [Skill]: [Crime]")
-     :Rustling
-      (base/ability
-       :name "Rustling"
-       :summary "* Stealing and selling livestock"
-       :summary
-        "* [Skill]: [Crime]")
-     :Waylay
-      (base/ability
-       :name "Waylay"
-       :summary
-        "* [Skill]: [Crime]")))
+     "Prostitution"
+     "Rustling"
+     "Waylay"))
   (base/skill
    :name "Deception"
    :reference "* I whisper Truth, into Lies... - Leblanc, Runeterra"

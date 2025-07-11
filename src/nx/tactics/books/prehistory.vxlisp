@@ -54,9 +54,9 @@
           :summary "Turkey sized carnivore"
           :unitskillmap
            (base/unitskillmap
-            "Natural Weaponry"
+            "Beastial"
              (base/unitskill
-              :name "Natural Weaponry"
+              :name "Beastial"
               :unitabilitymap
                (base/unitabilitymap
                 "Jaws of Death"
@@ -67,9 +67,9 @@
           :name "Tyrannosaurus Rex"
           :unitskillmap
            (base/unitskillmap
-            "Natural Weaponry"
+            "Beastial"
              (base/unitskill
-              :name "Natural Weaponry"
+              :name "Beastial"
               :unitabilitymap
                (base/unitabilitymap
                 "Jaws of Death"
@@ -114,9 +114,9 @@
           :summary "70 ft shark.  Highly developed killing machine kills with no remorse, no pity, no feeling of satisfaction.  Their only apparent emotion is [[Bloodlust]]."
           :unitskillmap
            (base/unitskillmap
-            "Natural Weaponry"
+            "Beastial"
              (base/unitskill
-              :name "Natural Weaponry"
+              :name "Beastial"
               :unitabilitymap
                (base/unitabilitymap
                 "Jaws of Death"

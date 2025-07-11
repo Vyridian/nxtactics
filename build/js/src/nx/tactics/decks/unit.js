@@ -571,7 +571,7 @@ export default class nx_tactics_decks_unit {
         "Gaki, Ghul, Hungry Dead, Necrophage",
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Natural Weaponry", 3),
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Beastial", 3),
           nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
             tactics,
             "Digging",
@@ -956,7 +956,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
             tactics,
-            "Natural Weaponry",
+            "Beastial",
             4,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Neck Bite", "Pounce")
           )
@@ -984,7 +984,7 @@ export default class nx_tactics_decks_unit {
         ":summary",
         "* A lich is a powerful animated corpse created by [Necromancy] through the use of [Lich Form]. The necromaner curses itself to a horrific undead existence in exchange for eternal 'life'. The lich retains most of the abilities of its former life and gains some additional undead powers as well.\n* Because of their solitary nature, a lich cannot gain social skills nor increase their existing skills. Further these skills have a tendency to degrade the longer the lich exists.",
         ":unitpowermap",
-        nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Natural Weaponry", "Necromancy")
+        nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Beastial", "Necromancy")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -1330,7 +1330,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           nx_tactics_base.f_unitpower_from_tactics_key_abilities(
             tactics,
-            "Natural Weaponry",
+            "Beastial",
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Swallow Whole")
           )
         )
@@ -1788,11 +1788,11 @@ export default class nx_tactics_decks_unit {
         ":unitpowermap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitpowermap},
-          "Natural Weaponry",
+          "Beastial",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitpower},
             ":name",
-            "Natural Weaponry",
+            "Beastial",
             ":unitabilitymap",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -1988,7 +1988,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
             tactics,
-            "Natural Weaponry",
+            "Beastial",
             1,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
           ),
@@ -2036,7 +2036,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
             tactics,
-            "Natural Weaponry",
+            "Beastial",
             1,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
           ),
@@ -2084,7 +2084,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
             tactics,
-            "Natural Weaponry",
+            "Beastial",
             1,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
           ),
@@ -2128,7 +2128,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
             tactics,
-            "Natural Weaponry",
+            "Beastial",
             1,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
           ),

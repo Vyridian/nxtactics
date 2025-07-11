@@ -351,7 +351,7 @@ export default class nx_tactics_decks_conflict {
       ":name",
       "Conflict Back",
       ":image",
-      vx_core.f_new({"any-1": vx_core.t_string}, "images/card-conflict-back.svg"),
+      vx_core.f_new({"any-1": vx_core.t_string}, "images/conflict.svg"),
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     )
@@ -383,7 +383,7 @@ export default class nx_tactics_decks_conflict {
           ":name",
           "Conflict Deck",
           ":image",
-          "images/card-conflict-deck.svg",
+          "images/conflict.svg",
           ":layout",
           nx_tactics_base.c_cardlayout_imageonly,
           ":cardmap",

@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
-   sodipodi:docname="card-unit.svg"
+   sodipodi:docname="unit.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -3769,7 +3769,7 @@
   <g
      id="move"
      inkscape:label="move"
-     transform="matrix(0.47822633,0,0,0.47822633,31.37079,35.519353)">
+     transform="matrix(0.47822886,0,0,0.47822633,31.370792,36.421668)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51525px;font-family:Amiri;-inkscape-font-specification:'Amiri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0173914;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
@@ -3838,7 +3838,7 @@
   <g
      id="will"
      inkscape:label="will"
-     transform="matrix(0.0335828,0,0,0.0335828,31.240061,26.751213)">
+     transform="matrix(0.03358298,0,0,0.0335828,31.240062,27.225442)">
     <path
        fill="#af1613"
        d="m 75.740921,39.648023 c 2.505751,-3.047108 6.000609,-5.229545 9.984101,-5.62375 3.923183,-0.388225 7.741156,0.7666 10.783757,3.276275 3.143952,2.593394 5.077141,6.367282 5.452261,10.412016 0.36315,3.915136 -0.87832,7.95309 -3.397119,10.97454 L 75.782689,81.648299 60.783292,66.446138 l 3.547924,0.01309 11.422678,11.671915 c 0.239127,-0.173559 0.453126,-0.430914 0.662199,-0.640378 l 1.173702,-1.176177 4.158258,-4.147341 9.904037,-9.901183 2.97416,-2.969113 c 1.08481,-1.086 2.171061,-2.117196 3.005768,-3.418122 1.840221,-2.868098 2.330978,-6.292463 1.612534,-9.60113 -0.724965,-3.33891 -2.676845,-6.199167 -5.557663,-8.044916 -2.586938,-1.65748 -5.826182,-2.360509 -8.84896,-1.684347 -4.032173,0.901915 -6.916169,3.528299 -9.064158,6.936113 l -0.07831,-0.03615 z"
@@ -3896,7 +3896,7 @@
   <g
      id="mind"
      inkscape:label="mind"
-     transform="matrix(0.03371796,0,0,0.03371796,31.394165,17.041355)">
+     transform="matrix(0.03371814,0,0,0.03371796,31.394167,17.829912)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:134.956px;font-family:Amiri;-inkscape-font-specification:'Amiri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#e8322c;fill-opacity:1;stroke:none;stroke-width:0.269287;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
@@ -3962,7 +3962,7 @@
   </g>
   <g
      id="body"
-     transform="matrix(0.03392854,0,0,0.03392854,4.2126978,11.788504)"
+     transform="matrix(0.03392872,0,0,0.03392854,4.2125562,12.554754)"
      inkscape:label="body">
     <path
        fill="#37b2df"
@@ -4113,18 +4113,19 @@
        inkscape:transform-center-x="0.20880535" />
   </g>
   <path
-     style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.00572897;stroke-linecap:round;stroke-miterlimit:0"
+     style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.00572899;stroke-linecap:round;stroke-miterlimit:0"
      id="path9"
      sodipodi:type="arc"
      sodipodi:cx="31.084013"
-     sodipodi:cy="26.367844"
-     sodipodi:rx="0.10866871"
+     sodipodi:cy="27.134094"
+     sodipodi:rx="0.10866928"
      sodipodi:ry="17.151642"
      sodipodi:start="0.027304543"
      sodipodi:end="5.1136159"
      sodipodi:open="true"
      sodipodi:arc-type="arc"
-     d="m 31.192641,26.836103 a 0.10866871,17.151642 0 0 1 -0.07944,16.053208 0.10866871,17.151642 0 0 1 -0.120608,-7.249545 0.10866871,17.151642 0 0 1 0.0083,-20.327155 0.10866871,17.151642 0 0 1 0.125523,-4.734269" />
+     d="m 31.192642,27.602354 a 0.10866928,17.151642 0 0 1 -0.07944,16.053207 0.10866928,17.151642 0 0 1 -0.120608,-7.249545 0.10866928,17.151642 0 0 1 0.0083,-20.327155 0.10866928,17.151642 0 0 1 0.125525,-4.734268"
+     inkscape:label="pathvertical" />
   <path
      style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.00572897;stroke-linecap:round;stroke-miterlimit:0"
      id="path9-4"
@@ -4138,7 +4139,8 @@
      sodipodi:open="true"
      sodipodi:arc-type="arc"
      d="m -47.745406,31.349569 a 0.10866871,17.151642 0 0 1 -0.07944,16.053207 0.10866871,17.151642 0 0 1 -0.120607,-7.249544 0.10866871,17.151642 0 0 1 0.0083,-20.327155 0.10866871,17.151642 0 0 1 0.125524,-4.734269"
-     transform="rotate(-90)" />
+     transform="rotate(-90)"
+     inkscape:label="pathhorizontal" />
   <rect
      style="fill:url(#radialGradient2);fill-opacity:1;stroke:none;stroke-width:0.140946;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect10"

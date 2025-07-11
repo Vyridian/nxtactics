@@ -2491,9 +2491,9 @@
             * Powers - Strength, Speed, Resistance, Leaping, Regeneration, Transformation, Tracking Scent, Cunning but limited intelligence."
           :unitpowermap
            (base/unitpowermap
-            "Natural Weaponry"
+            "Beastial"
              (base/unitpower
-              :name "Natural Weaponry"
+              :name "Beastial"
               :unitabilitymap
                (base/unitabilitymap
                 :Claw

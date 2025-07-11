@@ -57,11 +57,11 @@ export default class nx_tactics_books_prehistory {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                "Natural Weaponry",
+                "Beastial",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Natural Weaponry",
+                  "Beastial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -79,11 +79,11 @@ export default class nx_tactics_books_prehistory {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                "Natural Weaponry",
+                "Beastial",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Natural Weaponry",
+                  "Beastial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -145,11 +145,11 @@ export default class nx_tactics_books_prehistory {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                "Natural Weaponry",
+                "Beastial",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Natural Weaponry",
+                  "Beastial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},

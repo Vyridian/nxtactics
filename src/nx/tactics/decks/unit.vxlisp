@@ -523,7 +523,7 @@
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl
-      tactics "Natural Weaponry" 3)
+      tactics "Beastial" 3)
      (base/unitpower<-tactics-key-lvl-abilities
       tactics "Digging" 3
       (stringlist "Tunneling"))
@@ -821,7 +821,7 @@
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
-      tactics "Natural Weaponry" 4
+      tactics "Beastial" 4
       (stringlist
        "Neck Bite"
        "Pounce")))
@@ -842,7 +842,7 @@
    :unitpowermap
     (base/unitpowermap<-tactics-keys
      tactics
-     "Natural Weaponry"
+     "Beastial"
      "Necromancy"))
   (base/unit
    :name "Lili Ducon"
@@ -1286,7 +1286,7 @@
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-abilities
-      tactics "Natural Weaponry"
+      tactics "Beastial"
       (stringlist "Swallow Whole"))))
   (base/unit
    :name "Snake: Asp"
@@ -1768,9 +1768,9 @@
     "* Able to fly, the Werecrows make terrific scouts and spies.  Their overwhelming curiousity is matched only by their tendency to gossip."
    :unitpowermap
     (base/unitpowermap
-     "Natural Weaponry"
+     "Beastial"
       (base/unitpower
-       :name "Natural Weaponry"
+       :name "Beastial"
        :unitabilitymap
         (base/unitabilitymap
          "Feather Blades"
@@ -1928,7 +1928,7 @@
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
-      tactics "Natural Weaponry" 1
+      tactics "Beastial" 1
       (stringlist "Bite"))
      (base/unitpower<-tactics-key-abilities
       tactics "Special Ability"
@@ -1954,7 +1954,7 @@
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
-      tactics "Natural Weaponry" 1
+      tactics "Beastial" 1
       (stringlist "Bite"))
      (base/unitpower<-tactics-key-abilities
       tactics "Special Ability"
@@ -1980,7 +1980,7 @@
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
-      tactics "Natural Weaponry" 1
+      tactics "Beastial" 1
       (stringlist "Bite"))
      (base/unitpower<-tactics-key-abilities
       tactics "Special Ability"
@@ -2006,7 +2006,7 @@
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower<-tactics-key-lvl-abilities
-     tactics "Natural Weaponry" 1
+     tactics "Beastial" 1
      (stringlist "Bite"))
     (base/unitpower<-tactics-key-abilities
      tactics "Special Ability"

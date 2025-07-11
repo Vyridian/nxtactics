@@ -781,9 +781,9 @@
           :name "Great White Shark"
           :unitpowermap
            (base/unitpowermap
-            "Natural Weaponry"
+            "Beastial"
              (base/unitpower
-              :name "Natural Weaponry"
+              :name "Beastial"
               :unitabilitymap
                (base/unitabilitymap
                 "Jaws of Death"
@@ -2102,10 +2102,15 @@
           :summary
            "* The most unusual Fae are Changelings who are Fae Spirits that reincarnate within mortal children in the womb. These Changeling children usually do not remember their Fae self until an event of self realization called the Chrysalis when they become aware of their Fae heritage. The Chrysalis is a turmultuous time for the Fae that attracts others attuned to the Dreaming. Other Fae are obliged to assist the Changeling in their self-discovery. Since Fae are perpetually reincarnated, their Fae form may be millenia old while their mortal form may be just a child. As Changelings grow older the weight of mortal life tends to make it increasingly difficult to manifest their Fae form. Eventually, they tend to forget they were ever Fae at all, and their Fae form is trapped until their mortal body dies and they can reincarnate again.
             * Seeming - Changelings appear as normal people most of the time. Their Fae self can become aware accidentally during dreams and with practice can be called at will. When the Fae self is aware, the Changeling appears in their Fae form to other supernatural beings and those with strong imaginations (like young children). To others the Changeling aways appears as a normal person. Changeling activities are often mistaken for sleepwalking or psychotic behavior by normal people.")
+        "Clurichaun"
+         (base/unit
+          :name "Clurichaun"
+          :summary
+           "* A mischievous fairy known for its great love of drinking, haunting bars, pubs and wine cellars.")
         "Fae Dragon"
          (base/unit
           :name "Fae Dragon")
-        :Gremlin
+        "Gremlin"
          (base/unit
           :name "Gremlin"
           :reference
@@ -2159,9 +2164,9 @@
             * Redcaps are said to murder travelers who stray into their homes and dye their hats with their victims' blood (from which they get their name)."
           :unitpowermap
            (base/unitpowermap
-            "Natural Weaponry"
+            "Beastial"
              (base/unitpower
-              :name "Natural Weaponry"
+              :name "Beastial"
               :unitabilitymap
                (base/unitabilitymap
                 "Jaws of Death"
@@ -2179,9 +2184,9 @@
           :titles "Faun"
           :unitpowermap
            (base/unitpowermap
-            "Natural Weaponry"
+            "Beastial"
              (base/unitpower
-              :name "Natural Weaponry"
+              :name "Beastial"
               :unitabilitymap
                (base/unitabilitymap
                 "Bull Rush"
@@ -2393,9 +2398,9 @@
          :reference "* I don't believe I require a menu. - Tahm Kench, Runeterra"
          :unitpowermap
           (base/unitpowermap
-           "Natural Weaponry"
+           "Beastial"
             (base/unitpower
-             :name "Natural Weaponry"
+             :name "Beastial"
              :unitabilitymap
               (base/unitabilitymap
                "Swallow Whole"
@@ -3216,7 +3221,7 @@
       :summary
        "* Demons are creatures of Chaos from the swirling outer void where reality itself is fluid. Unlike Fiends, there are an infinite number and variety of Demons. Some believe our universe is a tiny light of order in a sea of Demons and Chaos. Like the Chaos that spawned them, demons are creatures of destruction and random mayhem. They delight in carnage and fear and have little concern for their own safety. Though Demons are sometimes cunning, they generally have little patience for communication or study, preferring to take action. They do not create tools or clothing of any kind, though they might be able to use those they pick up (especially weapons). They value free will above all things and will not tolerate servitude including contracts, deals or agreements of any kind.
         * Demons are dominated by their [Beast]s.
-        * Preferred Skills: [Demonic Power], [Natural Weaponry]
+        * Preferred Skills: [Demonic Power], [Beastial]
 
         * Description - Demons take any number of monstrous forms and are among the most powerful beings in existence. As beings of chaos, their appearance is often unsettling and asymetrical. They eat any living creature including humans though they don't require ordinary sustanence. Most are larger and more muscular than humans and can be enormous. Many have rows of stubby spikes growing from their upper backs, with elongated limbs that end in clawed digits, large fang-filled jaws and pointed ears, giving them a bestial appearance. Some have bat-like wings. Others burrow in the earth.
         * Personality - Demons are wildly arrogant and destructive and have no sense of consequences for their actions. Unlike Fiends who secretly harbor intense guilt and long for the souls they have lost, Demons are enthralled by their excess. Demons are sustained by chaos; if they are not surrounded by chaos, they will wither and die. Demons care nothing for life, least of all their own; they think only in the moment and cannot tolerate sitting still. They treat everything as if they were in a fictional world where nothing matters except their own immediate gratification.
@@ -4358,7 +4363,7 @@
        * Some lycanthropes are more animal-like and hostile to humans.
        * [Vulnerability] to [Silver]
        * Loses control under the moon
-       * Preferred Skills: [Lycanthropy], [Natural Weaponry]
+       * Preferred Skills: [Lycanthropy], [Beastial]
        !Groups
        * Black Spirals - [[Corrupted]] Werewolves
 

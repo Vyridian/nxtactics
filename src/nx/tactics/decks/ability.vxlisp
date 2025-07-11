@@ -64,6 +64,10 @@
    :summary
     "* [Power]: [Acidic]")
   (base/ability
+   :name "Adhesive Grip"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
    :name "Administration"
    :titles "Administrator, Secretary")
   (base/ability
@@ -215,6 +219,11 @@
    :name "As if in a Dream"
    :summary "* Confuse a target's senses to perceive a single thing incorrectly.")
   (base/ability
+   :name "Aspect of Wolf"
+   :reference "Everquest"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
    :name "Aspecting"
    :summary
     "* The practitioner manifests a particular aspect of a goddess or god (whether in speech, appearanve, behaviour or thought).
@@ -301,6 +310,18 @@
     "* Impact or Explosive Damage. Causes [Fatigue] and [Push].
      * [Power]: [Weapon]")
   (base/ability
+   :name "Bat Sight"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
+   :name "Bear Form"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
+   :name "Bear Strength"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
    :name "Beatdown"
    :summary
     "* [Skill]: [Close Combat]
@@ -314,6 +335,10 @@
    :summary
     "* [Skill]: [Close Combat]
      * IF you have a [Hold] on a target THEN [Damage]: [Body] [Pierce] [Slash] [Hack]")
+  (base/ability
+   :name "Blackmail"
+   :summary
+    "* [Skill]: [Crime]")
   (base/ability
    :name "Blacksmithing"
    :titles "Blacksmith"
@@ -428,12 +453,20 @@
      * Brew Wine"
    :titles "Brewer, Vintner")
   (base/ability
+   :name "Bribery"
+   :summary
+    "* [Skill]: [Crime]")
+  (base/ability
    :name "Bug Hunt"
    :reference
     "* H:Is this going to be a stand-up fight, sir? Is it going to be another bug hunt? G:A Xenomorph may be involved... H:It's a bug hunt. - Hudson and Gorman, Aliens")
   (base/ability
    :name "Bull Rush"
    :titles "Charge")
+  (base/ability
+   :name "Burglary"
+   :summary
+    "* [Skill]: [Crime]")
   (base/ability
    :name "Burrowing")
   (base/ability
@@ -501,6 +534,11 @@
    :titles "Carpenter"
    :summary
     "* [Skill]: [Tradeskill]")
+  (base/ability
+   :name "Cat Feet"
+   :summary "* Reduce damage from falls"
+   :summary
+    "* [Power]: [Beastial]")
   (base/ability
    :name "Catapult Launcher"
    :summary
@@ -570,7 +608,7 @@
    :name "Claw Rake"
    :summary
     "* A quick raking claw attack with one set of claws.
-     * [Power]: [Natural Weaponry]
+     * [Power]: [Beastial]
      * [Skill]:+2
      * [Move]:+1
      * [Crits] - [Bleeding]")
@@ -711,6 +749,18 @@
    :name "Crime and Punishment"
    :summary
     "* [Skill]: [Law]")
+  (base/ability
+   :name "Crime Syndicate"
+   :summary
+    "* [Skill]: [Crime]")
+  (base/ability
+   :name "Crime Wave"
+   :summary
+    "* [Skill]: [Crime]")
+  (base/ability
+   :name "Criminal Mastermind"
+   :summary
+    "* [Skill]: [Crime]")
   (base/ability
    :name "Crouching Strike"
    :titles "Ducking Punch"
@@ -1184,6 +1234,14 @@
     "* Experienced using various small explosives in combat.
      * [Skill]: [Demolitions]")
   (base/ability
+   :name "Extortion"
+   :summary
+    "* [Skill]: [Crime]")
+  (base/ability
+   :name "Extra Limbs"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
    :name "Eyes of a Child"
    :summary "* All Chimera become visible to those you chose.")
   (base/ability
@@ -1237,6 +1295,10 @@
    :summary
     "* [Power]: [Special Ability]")
   (base/ability
+   :name "Fence Goods"
+   :summary
+    "* [Skill]: [Crime]")
+  (base/ability
    :name "Fend Off"
    :summary
     "* [Requires]: Weapon with [Reach]
@@ -1270,6 +1332,14 @@
      * [Arc]: [Arc:Front]
      * [Range]: [Skill]")
   (base/ability
+   :name "Fish Eye"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
+   :name "Fish Form"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
    :name "Fishing"
    :titles "Fisherman"
    :summary
@@ -1277,6 +1347,10 @@
      * [Skill]: [Hunting]
         :summary
      * 6 Hours: IF practical THEN catch 1kg of game/Level")
+  (base/ability
+   :name "Fixing"
+   :summary
+    "* [Skill]: [Crime]")
   (base/ability
    :name "Flaming Shot"
    :summary "* [Requires]: Bow or Crossbow")
@@ -1430,6 +1504,10 @@
     "* [Power]: [Special Ability]
      * [Body]:+0x2")
   (base/ability
+   :name "Gills"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
    :name "Halo Drop"
    :summary
     "* [Skill]: [Military]")
@@ -1441,6 +1519,15 @@
      * Initiative:-1
      * Move:-1
      * Rating:+1")
+  (base/ability
+   :name "Hawk Eye"
+   :titles "Eagle Eye"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
+   :name "Hawk Form"
+   :summary
+    "* [Power]: [Beastial]")
   (base/ability
    :name "High-Explosive"
    :titles "HE"
@@ -1722,6 +1809,10 @@
      * [Skill]: [Close Combat]-1
      * [Damage]: [Body]+1 [Bash]")
   (base/ability
+   :name "Kidnapping"
+   :summary
+    "* [Skill]: [Crime]")
+  (base/ability
    :name "Kiss of Death")
   (base/ability
    :name "Knife Throwing")
@@ -1825,6 +1916,10 @@
    :name "Luxury Facilities"
    :summary
     "* [Power]: [Cabin]")
+  (base/ability
+   :name "Mafia Connections"
+   :summary
+    "* [Skill]: [Crime]")
   (base/ability
    :name "Makeup"
    :reference
@@ -2093,6 +2188,15 @@
     "* By exercising one's imagination, a soft barrier can provide real defense but only for the Dreamer.
      * [Action]: Any material may be chosen to provide [Skill] defense for the user.")
   (base/ability
+   :name "Pimping"
+   :summary
+    "* [Skill]: [Crime]")
+  (base/ability
+   :name "Piracy"
+   :summary
+    "* Armed robbery of large shipments of goods without damaging the merchandise.
+     * [Skill]: [Crime]")
+  (base/ability
    :name "Plumbing"
    :titles "Plumber")
   (base/ability
@@ -2162,7 +2266,7 @@
   (base/ability
    :name "Pounce"
    :summary
-    "* [Power]: [Natural Weaponry] vs. [Body]
+    "* [Power]: [Beastial] vs. [Body]
      * Drop into a crouch and then explode into a mighty leap at his prey attempting to knock down the opponent.
      * [Aerial]
      * +1 Accuracy
@@ -2207,6 +2311,10 @@
    :summary
     "* [Skill]: [Law]")
   (base/ability
+   :name "Prostitution"
+   :summary
+    "* [Skill]: [Crime]")
+  (base/ability
    :name "Psychic Duel"
    :reference
     "Professor X vs. Shadow King")
@@ -2214,6 +2322,11 @@
    :name "Psychic Knife"
    :reference
     "Psylocke, X-men")
+  (base/ability
+   :name "Puff Up"
+   :summary
+    "* Increase your size to be more intimidating.
+     * [Power]: [Beastial]")
   (base/ability
    :name "Punch"
    :summary
@@ -2247,6 +2360,10 @@
      * [Free]: Move:-1 to draw a Hand weapon from holster to hip where he can [Hip Shoot].")
   (base/ability
    :name "Quill Attack")
+  (base/ability
+   :name "Quills"
+   :summary
+    "* [Power]: [Beastial]")
   (base/ability
    :name "Rabid"
    :summary
@@ -2291,6 +2408,10 @@
    :summary
     "* An extremely difficult and rare ability of self-discovery to create Glamour from oneself. Only at a moment of sudden self-realization can a Rapture be attained.
      * [Passive] - While in a Rapture, all [Critical] results generate [Glamour Token]s.")
+  (base/ability
+   :name "Rat Form"
+   :summary
+    "* [Power]: [Beastial]")
   (base/ability
    :name "Rationalize"
    :summary
@@ -2462,6 +2583,11 @@
    :name "Roar"
    :summary
     "* [Skill]: [Intimidation] vs [Will]")
+  (base/ability
+   :name "Rustling"
+   :summary "* Stealing and selling livestock"
+   :summary
+    "* [Skill]: [Crime]")
   (base/ability
    :name "Salvo"
    :summary
@@ -2673,9 +2799,17 @@
    :summary
     "* [Skill]: [Deception]")
   (base/ability
+   :name "Snake Bite"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
    :name "Snake Charming"
    :summary
     "* [Skill]: [Animal Handling]")
+  (base/ability
+   :name "Snake Form"
+   :summary
+    "* [Power]: [Beastial]")
   (base/ability
    :name "Snare")
   (base/ability
@@ -2752,7 +2886,13 @@
   (base/ability
    :name "Speed Reading")
   (base/ability
-   :name "Spines")
+   :name "Spider Climb"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
+   :name "Spines"
+   :summary
+    "* [Power]: [Beastial]")
   (base/ability
    :name "Spinning Bird Kick"
    :reference
@@ -2937,6 +3077,10 @@
    :summary
     "* Stuff and Mount creatures for display
      * [Skill]: [Tradeskill]")
+  (base/ability
+   :name "Tendrils"
+   :summary
+    "* [Power]: [Beastial]")
   (base/ability
    :name "Terrorize"
    :summary
@@ -3158,6 +3302,10 @@
      * [Continuous]: Maintain the weapon
      * [Action]: Dissolve the weapon into a nearby container")
   (base/ability
+   :name "Waylay"
+   :summary
+    "* [Skill]: [Crime]")
+  (base/ability
    :name "Weapon Block"
    :summary
     "* Deflect, catch, or even turn strike back with a weapon used against the fighter.
@@ -3180,6 +3328,10 @@
    :summary
     "* Allows multiple attacks to different targets by trading accuracy for extra attacks.")
   (base/ability
+   :name "Wings"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
    :name "Wingsuit Combat"
    :summary
     "* [Skill]: [Military]")
@@ -3187,6 +3339,14 @@
    :name "Without a Trace"
    :summary
     "* Extremely difficult tor track you.")
+  (base/ability
+   :name "Wolf Form"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
+   :name "Wolf Scent"
+   :summary
+    "* [Power]: [Beastial]")
   (base/ability
    :name "Woodworking"
    :titles "Carver, Whittler, Woodworker"

@@ -3148,9 +3148,9 @@
           :mass "150kg"
           :unitskillmap
            (base/unitskillmap
-            "Natural Weaponry"
+            "Beastial"
              (base/unitskill
-              :name "Natural Weaponry")))
+              :name "Beastial")))
         "Terminator Hunter Killer"
          (base/unit
           :name "Terminator Hunter Killer"
