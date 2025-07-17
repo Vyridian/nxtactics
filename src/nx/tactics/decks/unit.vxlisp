@@ -440,6 +440,57 @@
    :name "Eldruf Grundel"
    :summary "Gnome Thief Illusionist")
   (base/unit
+   :name "Eye Killer"
+   :titles "Beholder, Evil Eye, Eye of the Beholder, Floating Eye, Gazer"
+   :summary
+    "Piercing Gaze - Sees through illusions, invisibility, shapeshifting, and disguises.
+
+Watcher’s Eye – Places a magical eye to spy from afar.
+
+Eye of Truth – Dispels lies, glamours, or falsehoods.
+
+Foresight Gaze – Grants short-term precognition.
+
+Eye of Memory – Reveals a scene from the past.
+
+Dead Man's Stare - Induces fear or paralysis.
+
+Omen Eye - Grants the ability to see glimpses of possible futures in chaotic flashes.
+
+Eye of Recall - Remembers everything the eye has ever seen; perfect visual memory.
+
+Sight Beyond Sight - Perceives places far away as though seen directly; scrying-like ability.
+
+Thousandfold Vision - Can view multiple perspectives at once, even through solid objects.
+
+
+Mindpierce - Overwhelms the target's thoughts with maddening visions or raw truth.
+
+Stare of Submission - Compels obedience or paralysis through unblinking dominance.
+
+Withering Gaze - Saps vitality and weakens defenses with a withering glance.
+Wink of the Void - Momentarily erases itself from the vision and memory of others.
+
+Hallucin-eye-tion - Induces visual hallucinations; walls become monsters, allies seem enemies.
+
+Veilpiercer - Sees through lies, glamours, and falsehoods of the world.
+Blinkshield - Redirects spells or projectiles aimed at the eye back at their caster.
+
+Allseer - Grants resistance to being surprised or flanked.
+
+"
+   :powermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Animism"
+      (stringlist "Evil Eye"))
+     (base/unitpower<-tactics-key-abilities
+      tactics "Mentalism"
+      (stringlist "Mind's Eye"))
+     (base/unitpower<-tactics-key-abilities
+      tactics "Transmutation"
+      (stringlist "Petrifying Stare"))))
+  (base/unit
    :name "Fish: Small"
    :image "images/cards/unit-fish-small.svg")
   (base/unit
@@ -608,6 +659,20 @@
   (base/unit
    :name "Goose"
    :image "images/cards/unit-goose.svg")
+  (base/unit
+   :name "Gorgon"
+   :image "images/bestiary/Medusa.png"
+   :titles "Medusa"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Transmutation"
+      (stringlist "Petrifying Stare")))
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-items
+      tactics "Ranged"
+      (stringlist "Bow: Short"))))
   (base/unit
    :name "Great Race of Yith"
    :image "cthulhu/unit-greatraceofyith.png")
@@ -894,21 +959,34 @@
    :mass "60kg/130lb"
    :height "1.5m/5ft")
   (base/unit
+   :name "Mirror Reflection"
+   :summary
+    "* A Mirror Reflection is being from the Mirrorlands that has no personal definition but longs for the definition of others. To this end, they become a mirror image of another being and try to impersonate the person though they lack any memories of the original. It would be practical to dispose of the original, but they are always only a reflection so they would die as well.")
+  (base/unit
+   :name "Mirror Shard"
+   :summary
+    "* A Mirror Shard is a weaker form of a [Mirror Reflection]. It copies some single aspect of the original but is otherwise an empty shell. This incompleteness drives them mad with desperation. They are always drawn to the those they copy and are usually irrationally destructive.
+     * [Action] [Target]: The Mirror Shard becomes the same [Mass] as the target. Then choose one [Skill] or [Power] to copy. The Mirror Shard gains that Skill/Power and loses all other Skills and Powers. It [Body], [Mind], and [Will] are altered accordingly.")
+  (base/unit
    :name "Mummy"
    :reference "The Mummy"
    :summary
     "* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.
      * Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk."
    :unitpowermap
-    (base/unitpowermap
-     :Longevity
-      (base/unitpower
-       :name "Longevity"
-       :unitabilitymap
-        (base/unitabilitymap
-         :Reanimation
-          (base/unitability
-           :name "Reanimation")))))
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Longevity"
+      (stringlist "Reanimation"))))
+  (base/unit
+   :name "Naga Chieftan"
+   :traits "Naga")
+  (base/unit
+   :name "Naga Enforcer"
+   :traits "Naga")
+  (base/unit
+   :name "Naga Hunter"
+   :traits "Naga")
   (base/unit
    :name "Naiad"
    :titles "Nereid, Nyad")
@@ -925,6 +1003,10 @@
      * By day it may take the form of a shriveled old woman. At night it becomes a horrific corpse-like creature. In this form it sneaks into houses and sucks the breath from the lips of children, leaving them cold and lifeless.
      * It can only enter a house into which it has been invited, so during the day it poses as a woeful traveler to gain admittance to houses where babies live.
      * Night Terrors, being exclusively female, can only reproduce by mating with a male member of another species. The hag often slays her mate. The child born looks like a normal member of her species with black or blue hair and is often given into foster care by the hag disguised as a normal woman. When the young girl reaches puberty, the mother Night Hag might visit the child several times and, after several rituals, transforms her offspring into another hag.")
+  (base/unit
+   :name "Nightmare"
+   :titles "Shadowmane"
+   :traits "Devil")
   (base/unit
    :name "Normality"
    :titles "Normals"

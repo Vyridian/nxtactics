@@ -41,10 +41,10 @@
        tactics
        "Alchemy"
        "Artifice"
+       "Artistry"
        "Astrology"
        "Chronomancy"
        "Conjuration"
-       "Papercraft"
        "Protection"
        "Sorcery"
        "Thaumaturgy"
@@ -91,11 +91,11 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Cultivation"
-       "Curses"
+       "Animism"
        "Divination"
        "Dreaming"
        "Enchantment"
+       "Mysticism"
        "Shamanism")))))
 
 (func chapter_magic_items : base/chapter

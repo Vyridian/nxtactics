@@ -22,7 +22,7 @@
    (base/rule<-tactics-key tactics "Rotated Cards")]
   (copy rule
    :id (string "rotatedcards-" color)
-   :image (string "images/rule-player-" color ".svg")
+   :image (string "images/rule-rotated-" color ".svg")
   )))
 
 (func card-target : base/card
@@ -35,7 +35,7 @@
   (copy rule
    :id (string "target-" color "-" num)
    :name (string "Target#" num)
-   :image (string "images/rule-player-" color ".svg")
+   :image (string "images/rule-target-" color "-" num ".svg")
   )))
 
 (func card-unit : base/card
@@ -48,7 +48,7 @@
   (copy rule
    :id (string "unit-" color "-" num)
    :name (string "Unit#" num)
-   :image (string "images/rule-player-" color ".svg")
+   :image (string "images/rule-unit-num-" color "-" num ".svg")
   )))
 
 (func deck-player : base/deck

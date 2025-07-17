@@ -150,7 +150,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Alteration Powers",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Acidic", "Adaptation", "Altered Skin", "Animalism", "Diseases", "Explosive", "Flexible", "Invisibility", "Longevity", "Lycanthropy", "Phasing", "Reality Warping", "Shape Shift", "Size", "Spawning", "Toxins", "Transformation", "Vampirism")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Acidic", "Adaptation", "Altered Skin", "Animalism", "Diseases", "Explosive", "Flexible", "Invisibility", "Longevity", "Lycanthropy", "Phasing", "Reality", "Shapeshift", "Size", "Spawning", "Toxins", "Transformation", "Vampirism")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

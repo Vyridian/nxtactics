@@ -341,9 +341,7 @@
        id="text9-0-8-1"
        inkscape:label="text"><tspan
          sodipodi:role="line"
-         id="tspan7"
-         x="20.951223"
-         y="131.79591">Each Count do one of the following:</tspan></text><text
+         id="tspan7">One each Count, do one of the following:</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
        x="66.133408"
@@ -372,9 +370,7 @@
        id="text9-0"
        inkscape:label="text"><tspan
          sodipodi:role="line"
-         id="tspan16"
-         x="21.714605"
-         y="88.801575">Units must always face a compass heading:</tspan></text><text
+         id="tspan4">Units must always face a compass heading</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
        x="45.044724"
@@ -402,7 +398,7 @@
      id="text9-0-4"
      inkscape:label="text"><tspan
        sodipodi:role="line"
-       id="tspan4">Move is spend for Movement or for Actions.</tspan></text><text
+       id="tspan1">Move is spent for Movement or for Actions</tspan></text><text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
      x="12.285081"
@@ -410,4 +406,4 @@
      id="text9-0-4-8"
      inkscape:label="text"><tspan
        sodipodi:role="line"
-       id="tspan2">Move is a resource on the Unit# card.</tspan></text></svg>
+       id="tspan2">Move is a resource on the Unit# card</tspan></text></svg>

@@ -465,6 +465,33 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Duck", ":image", "images/cards/unit-duck.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Elder Thing", ":image", "Cthulhu/ElderThing.png", ":reference", "* The toughness of the things was almost incredible. Even the terrific pressure of the deepest sea bottoms appeared powerless to harm them. Very few seemed to die at all except for violence, and their burial places were very limited. - At the Mountains of Madness", ":summary", "* Their metabolism is based on carbon dioxide instead of oxygen; their blood is dark green in color. The nervous system of the Elder Things is quite complex, with five-lobed brains and many ganglial centers. The prismatic cilia on top of the creatures' head suggest that they have senses other than sight, smell, touch, hearing, and taste. Elder Things reproduce through spores. They can derive nourishment from inorganic substances, but prefer to feed on organic life."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Eldruf Grundel", ":summary", "Gnome Thief Illusionist"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Eye Killer",
+        ":titles",
+        "Beholder, Evil Eye, Eye of the Beholder, Floating Eye, Gazer",
+        ":summary",
+        "Piercing Gaze - Sees through illusions, invisibility, shapeshifting, and disguises.\n\nWatcher’s Eye – Places a magical eye to spy from afar.\n\nEye of Truth – Dispels lies, glamours, or falsehoods.\n\nForesight Gaze – Grants short-term precognition.\n\nEye of Memory – Reveals a scene from the past.\n\nDead Man's Stare - Induces fear or paralysis.\n\nOmen Eye - Grants the ability to see glimpses of possible futures in chaotic flashes.\n\nEye of Recall - Remembers everything the eye has ever seen; perfect visual memory.\n\nSight Beyond Sight - Perceives places far away as though seen directly; scrying-like ability.\n\nThousandfold Vision - Can view multiple perspectives at once, even through solid objects.\n\n\nMindpierce - Overwhelms the target's thoughts with maddening visions or raw truth.\n\nStare of Submission - Compels obedience or paralysis through unblinking dominance.\n\nWithering Gaze - Saps vitality and weakens defenses with a withering glance.\nWink of the Void - Momentarily erases itself from the vision and memory of others.\n\nHallucin-eye-tion - Induces visual hallucinations; walls become monsters, allies seem enemies.\n\nVeilpiercer - Sees through lies, glamours, and falsehoods of the world.\nBlinkshield - Redirects spells or projectiles aimed at the eye back at their caster.\n\nAllseer - Grants resistance to being surprised or flanked.\n\n",
+        ":powermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Animism",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Evil Eye")
+          ),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Mentalism",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Mind's Eye")
+          ),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Transmutation",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Petrifying Stare")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Fish: Small", ":image", "images/cards/unit-fish-small.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -700,6 +727,31 @@ export default class nx_tactics_decks_unit {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goblin Spider", ":summary", "* Traditional Japanese folk-lore understood that goblin-spiders had the power to transform from ordinary spiders to assume the form of men when night fell."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goose", ":image", "images/cards/unit-goose.svg"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Gorgon",
+        ":image",
+        "images/bestiary/Medusa.png",
+        ":titles",
+        "Medusa",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Transmutation",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Petrifying Stare")
+          )
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_items(
+            tactics,
+            "Ranged",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow: Short")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Great Race of Yith", ":image", "cthulhu/unit-greatraceofyith.png"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -1035,6 +1087,8 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lion"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lost Soul"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mi-Go", ":image", "cthulhu/unit-migo.png", ":titles", "Fungi from Yuggoth", ":reference", "* Fact: Migoi or Mi-go (pronounced mey-goo) is a Tibetan name for the Yeti and translates as 'wild man'.", ":summary", "* Mi-go are an alien race of fungus-like creatures, approximately man-sized, pinkish in color, with crustaceous bodies bearing vast pairs of membranous wings and several sets of articulate limbs. The Mi-Go have a sort of convoluted ellipsoid where its head should be, covered with a multitude of very short antennae.\n    * They have a colony on Pluto (i.e. Yuggoth) and have mining colonies in high mountains looking for rare minerals.\n    * The Mi-go are not wholly native to our phyical universe. Thus, they cannot eat food from Earth, and photographs of them are blurry and indistinct. They can also fly unassisted through interstellar space at fantastic speeds. They dissolve shortly after death.\n    * They are unaccustomed to light which confuses them.\n    * They seem to be highly focused on their scientific pursuits and are most often encountered in search of obscure minerals in remote places. Trespassers are usually eliminated, though they have been known to have human agents work on their behalf.\n    * Mi-go have access to a number of advanced weapons. The mist projector releases a cloud of frigid gas. They have an organic 'armor' that humans can use, but it is extremely sticky and will damage the user each time it is removed. The armor will also weaken each day unless immersed in the proper nutrient bath.\n    * The Mi-Go are advanced in the sphere of surgery. With surgical alterations the Mi-Go are able to speak human languages, though their voice is buzzy and irritating. They can also surgically move the brain of other species into metal cylinders for transportation to other worlds through space.\n    * Essentially a space fungus, the crablike form we're accustom to is actually a pressure suit that allows them to walk around, speak and fly in Earth's atmosphere. They grow their 'bodies' likes coral and can form appendages to anything they require - wings, arms, shells. Each of these shells is alive and using grafting, they can switch out limbs as needed. The discarded limbs are kept alive like potted plants until they are needed again.\n    * They are alien extremophiles, perfectly suited for deep space travel. They don't require air to breathe, are capable of periods of hibernation lasting hundreds of thousands of years, feed off minerals and cosmic radiation, using something like photosynthesis to make food.\n    * They procreate by budding, a form of cloning, to make copies of the older, mature individuals and use spores to create their workforce - bred to labor and die in the mines. They can bore deep into the mantel of worlds, and as they don't require air to breath and can survive incredible heat, cold and pressure, they can just keep going deeper while most species would die in moments.\n    * They communicate and see via radiation, the flowerlike sensory organ we view as their head, emits and receives radioactive wavelengths, allowing them to see through walls and for miles clearly as they have no eyes to focus. They can see the background radiation of the universe and use it to travel with precision between stars. This also means they can see the elemental make up of asteroids and planets just by looking at them.", ":body", "6x1", ":mass", "60kg/130lb", ":height", "1.5m/5ft"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mirror Reflection", ":summary", "* A Mirror Reflection is being from the Mirrorlands that has no personal definition but longs for the definition of others. To this end, they become a mirror image of another being and try to impersonate the person though they lack any memories of the original. It would be practical to dispose of the original, but they are always only a reflection so they would die as well."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mirror Shard", ":summary", "* A Mirror Shard is a weaker form of a [Mirror Reflection]. It copies some single aspect of the original but is otherwise an empty shell. This incompleteness drives them mad with desperation. They are always drawn to the those they copy and are usually irrationally destructive.\n* [Action] [Target]: The Mirror Shard becomes the same [Mass] as the target. Then choose one [Skill] or [Power] to copy. The Mirror Shard gains that Skill/Power and loses all other Skills and Powers. It [Body], [Mind], and [Will] are altered accordingly."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -1044,24 +1098,20 @@ export default class nx_tactics_decks_unit {
         ":summary",
         "* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.\n* Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk.",
         ":unitpowermap",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitpowermap},
-          ":Longevity",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitpower},
-            ":name",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
             "Longevity",
-            ":unitabilitymap",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unitabilitymap},
-              ":Reanimation",
-              vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Reanimation")
-            )
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Reanimation")
           )
         )
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Naga Chieftan", ":traits", "Naga"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Naga Enforcer", ":traits", "Naga"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Naga Hunter", ":traits", "Naga"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Naiad", ":titles", "Nereid, Nyad"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Night Terror", ":titles", "Night Hag", ":reference", "* A night terror is a sleep disorder characterized by extreme terror and a temporary inability to regain full consciousness. The subject wakes abruptly usually accompanied by gasping, moaning, or screaming.  It is often impossible to fully awaken the person, and after the episode the subject normally settles back to sleep without waking.\n* Night terrors are distinct from nightmares in several key ways. First, the subject is not fully awake when roused, and even when efforts are made to awaken the sleeper, he/she may continue to experience the night terror for ten to twenty minutes. Unlike nightmares, which occur during REM sleep, night terrors occur during slow-wave sleep, the deepest levels of non-REM sleep. Even if awakened, the subject often cannot remember the episode except for a sense of panic, while nightmares usually can be easily recalled. The subject often has no recollection of the incident.\n* Unlike nightmares, which are frequently dreams of a frightening nature, night terrors are not dreams. Usually there is no situation or event (scary or otherwise) that is dreamt, but rather the emotion of fear itself is felt. The lack of a dream itself leaves those awakened from a night terror in a state of disorientation much more severe than that caused by a normal nightmare. This can include a short period of amnesia during which the subjects may be unable to recall their names, locations, ages, or any other identifying features of themselves.\n* Children from age two to six are most prone to night terrors, and they affect about fifteen percent of all children.", ":summary", "* Evil women who died in childbirth and now returned to slay children.\n* By day it may take the form of a shriveled old woman. At night it becomes a horrific corpse-like creature. In this form it sneaks into houses and sucks the breath from the lips of children, leaving them cold and lifeless.\n* It can only enter a house into which it has been invited, so during the day it poses as a woeful traveler to gain admittance to houses where babies live.\n* Night Terrors, being exclusively female, can only reproduce by mating with a male member of another species. The hag often slays her mate. The child born looks like a normal member of her species with black or blue hair and is often given into foster care by the hag disguised as a normal woman. When the young girl reaches puberty, the mother Night Hag might visit the child several times and, after several rituals, transforms her offspring into another hag."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Nightmare", ":titles", "Shadowmane", ":traits", "Devil"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",

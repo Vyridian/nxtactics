@@ -946,7 +946,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":image",
-      "images/card-conflict-da.svg"
+      "images/conflict-ad.svg"
     ))
 
     // (const conflict-ah)

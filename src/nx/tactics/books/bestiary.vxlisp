@@ -2232,7 +2232,7 @@
          (base/unit
           :name "Puck"
           :reference "Lord, what fools these mortals be! - Puck, A Midsummer Night's Dream")))
-    :Curses
+    "Curses"
      (base/section
       :name "Curses"
       :unitmap
@@ -2367,22 +2367,25 @@
          :image "images/bestiary/Draconian.png"
          :summary "* Elite Draconians are awarded Dractyl steeds. The Dractyl are unwieldy flyers and may only fly short distances with a heavy Draconian soldier.")))
     (base/section
-     :name "Gryphon"
+     :name "Gryph"
      :summary
       "* An impressive race of winged, man-like beings. They stand up to seven feet tall, with wingspans in excess of 24 feet. Their bodies are covered with thick feathery down, and they have hawk-like visages and bright, piercing eyes.
-       * Like the birds of prey they resemble, the Gryphons are hunters by nature. They have exceptionally keen vision which enables them to spot the slightest movement at great distances.
-       * Gryphons live in eyries built on cliffsides or at the tops of high trees. Their dwellings resemble great bird's nests composed of woven vines and leafy canopies.
-       * Occassionally the avians will take to adventuring for profit, accepting mercenary posts as scouts, guides, or bouty hunters. The majority, however, would never consider leaving their homes. Gryphons are an independent, strong-willed race that values freedom above all else which can make them difficult employees.
+       * Like the birds of prey they resemble, Gryphs are hunters by nature. They have exceptionally keen vision which enables them to spot the slightest movement at great distances.
+       * Arms - Some Gryph have arms and hands while others have hands at the elbow of their wings instead. The ones without arms rely more on their feet for dexterous tasks.
+       * Gryphs live in eyries built on cliffsides or at the tops of high trees. Their dwellings resemble great bird's nests composed of woven vines and leafy canopies.
+       * Occassionally the avians will take to adventuring for profit, accepting mercenary posts as scouts, guides, or bouty hunters. The majority, however, would never consider leaving their homes. Gryphs are an independent, strong-willed race that values freedom above all else which can make them difficult employees.
        * Morale - Normal"
-     :titles "Gryph, Harpy"
+     :titles "Gryphon, Harpy"
      :unitmap
       (base/unitmap
-       "Gryphon Javelineer"
+       "Gryph Javelineer"
         (base/unit
-         :name "Gryphon Javelineer")
-       "Gryphon Light Infantry"
+         :name "Gryph Javelineer"
+         :traits "Gryph")
+       "Gryph Light Infantry"
         (base/unit
-         :name "Gryphon Light Infantry")))
+         :name "Gryph Light Infantry"
+         :traits "Gryph")))
     (base/section
      :name "Krukan"
      :summary
@@ -2460,31 +2463,26 @@
        * Maximum Body - 6"
      :titles "Lamia"
      :unitmap
-      (base/unitmap
+      (base/unitmap<-tactics-keys
+       tactics
        "Naga Chieftan"
-        (base/unit
-         :name "Naga Chieftan")
        "Naga Enforcer"
-        (base/unit
-         :name "Naga Enforcer")
-       "Naga Hunter"
-        (base/unit
-         :name "Naga Hunter")))
+       "Naga Hunter"))
     (base/section
-     :name "Sagittarians"
+     :name "Sagitan"
      :summary
       "* Maximum Body - 7
        * Morale - Normal
        * Preferred Skills (Sagittarian) - Melee (Spear), Ranged (Javelin, Bow: Short)"
-     :titles "Centaur, Minotaur"
+     :titles "Centaur, Minotaur, Sagittarian"
      :unitmap
       (base/unitmap
-       "Sagittarian Horse Archer"
+       "Sagitan Horse Archer"
         (base/unit
-         :name "Sagittarian Horse Archer")
-       "Sagittarian Light Cavalry"
+         :name "Sagitan Horse Archer")
+       "Sagitan Light Cavalry"
         (base/unit
-         :name "Sagittarian Light Cavalry")))
+         :name "Sagitan Light Cavalry")))
     (base/section
      :name "Saurids"
      :reference "* Mezoamerican tribes"
@@ -3070,662 +3068,712 @@
  (chapter
   :name "Extra-Dimensional"
   :sectionmap
-   (base/sectionmap
-    :Celestine
-     (base/section
-      :name "Celestine"
-      :summary
-       "* The Angels have been fighting a cold war against the Fiends for millenia. Each side claims their right over the mortal realm, and each side recruits souls to increase their faction's power.
-        * The Archangels are the oldest and most powerful of the Angels. Individually, they can lay waste to armies.
-        * The Aeons are the primal concepts of divinity and are beyond physicality."
-      :titles "Archons, Aeons, Angels, Angelics, Devas, Malaikah, Watchers"
-      :unitmap
-       (base/unitmap
-        "Aeon Demiurge"
-         (base/unit
-          :name "Aeon Demiurge")
-        "Aeon Great Archon"
-         (base/unit
-          :name "Aeon Great Archon")
-        "Aeon Sophia"
-         (base/unit
-          :name "Aeon Sophia")
-        "Archangel Auriel"
-         (base/unit
-          :name "Archangel Auriel"
-          :reference "Diablo 3"
-          :summary "* Al'maiesh, the Cord of Hope - Twin whips of burning light."
-          :titles "Archangel of Hope")
-        "Archangel Gabriel"
-         (base/unit
-          :name "Archangel Gabriel"
-          :summary "* Performs acts of justice and power"
-          :titles "Translation: God is my strength")
-        "Archangel Itherael"
-         (base/unit
-          :name "Archangel Itherael"
-          :reference "Diablo 3"
-          :summary
-           "* Neither male nor female, Itherael remains neutral at all times.
-            * He always teleport instead of moving.
-            * Talus'ar, the Scroll of Fate - Allows him to predict the actions of others.
-            * Presides over the Library of Fate where possible futures are divined."
-          :titles "Archangel of Fate, Archangel of Balance")
-        "Archangel Jophiel"
-         (base/unit
-          :name "Archangel Jophiel"
-          :summary "* Expelled Adam and Eve from the Garden of Eden holding a flaming sword and punishes those who  transgress against God."
-          :titles "Translation: Beauty of God")
-        "Archangel Malthael"
-         (base/unit
-          :name "Archangel Malthael"
-          :reference "Diablo 3"
-          :summary
-           "* Wields twin sickle swords and can deflect and redirect enemy attack with only the slightest use of force.
-            * Calad'ar, the Chalice of Wisdom - Allows him to see all things."
-          :titles "Archangel of Wisdom")
-        "Archangel Michael"
-         (base/unit
-          :name "Archangel Michael"
-          :summary "* Stands up for the children of mankind"
-          :titles "Translation: Who is like God?, Kindness of God")
-        "Archangel Raphael"
-         (base/unit
-          :name "Archangel Raphael"
-          :summary "* God's healing force"
-          :titles "Translation: It is God who heals")
-        "Archangel Samael"
-         (base/unit
-          :name "Archangel Samael"
-          :titles "Translation: Venom of God, Angel of Death, Azrael")
-        "Archangel Sandalphon"
-         (base/unit
-          :name "Archangel Sandalphon"
-          :summary "* Battles Samael and brings mankind together"
-          :titles "Translation: Bringing Together")
-        "Archangel Uriel"
-         (base/unit
-          :name "Archangel Uriel"
-          :summary "* Leads us to destiny"
-          :titles "Translation: God is my light")
-        "Archangel Tyrael"
-         (base/unit
-          :name "Archangel Tyrael"
-          :reference "Diablo 3"
-          :summary "* El'durin, the Sword of Justice - Twin whips of burning light."
-          :titles "Archangel of Justice")
-        :Cherubim
-         (base/unit
-          :name "Cherubim")
-        :Deva
-         (base/unit
-          :name "Deva")
-        "Fallen Angel"
-         (base/unit
-          :name "Fallen Angel"
-          :summary
-           "* An angel who loses faith in his/her god.
-            * Its wings change from white to black like a raven's.
-            * Like mortals, their personalities and goals are much more varied than the angels.
-            * Fallen angels are persecuted by other angels for their impurity."
-          :titles "Fallen")
-        :Grace
-         (base/unit
-          :name "Grace")
-        "Guardian Angel"
-         (base/unit
-          :name "Guardian Angel")
-        :Irin
-         (base/unit
-          :name "Irin"
-          :reference "* Irin - In the Book of Enoch, the Watchers, are angels dispatched to Earth to watch over the humans. They soon begin to lust for human women and, at the prodding of their leader Samyaza, defect en masse to illicitly instruct humanity and procreate among them. The offspring of these unions are the Nephilim, savage giants who pillage the earth and endanger humanity. Samyaza and his associates further taught their human charges arts and technologies such as weaponry, cosmetics, mirrors, sorcery, and other techniques that would otherwise be discovered gradually over time by humans, not foisted upon them all at once. Eventually God allows a Great Flood to rid the earth of the Nephilim, but first sends Uriel to warn Noah so as not to eradicate the human race. The Watchers are bound 'in the valleys of the Earth' until Judgment Day."
-          :summary
-           "* Araqiel (also Arakiel, Araqael, Araciel, Arqael, Sarquael, Arkiel, Arkas) taught humans the signs of the earth. However, in the Sibylline Oracles, Araqiel is referred to not as a fallen angel, or Watcher, but as one of the 5 angels who lead the souls of men to judgement, the other 4 being Ramiel, Uriel, Samiel, and Azazel.
-            * Armaros (also Amaros) in Enoch I taught men the resolving of enchantments.
-            * Azazel taught men to make knives, swords, shields, and how to devise ornaments and cosmetics.
-            * Gadreel (or Gader'el) taught the art of cosmetics, the use of weapons and killing blows. It was he who led Eve astray in the garden of eden.[citation needed]
-            * Baraqel (Baraqiel) taught men astrology
-            * Bezaliel mentioned in Enoch I, left out of most translations because of damaged manuscripts and problematic transmission of the text.
-            * Chazaqiel (sometimes Ezeqeel or Cambriel) taught men the signs of the clouds (meteorology).
-            * Kokabiel (also Kakabel, Kochbiel, Kokbiel, Kabaiel, and Kochab), In the Book of Raziel he is a high-ranking, holy angel. In Enoch I, he is a fallen Watcher, resident of the nether realms, and commands 365,000 surrogate spirits to do his bidding. Among other duties, he instructs his fellows in astrology.
-            * Penemue taught mankind the art of writing with ink and paper, and taught the children of men the bitter and the sweet and the secrets of wisdom. (I Enoch 69.8)
-            * Sariel (also Suriel) taught mankind about the courses of the moon (at one time regarded as forbidden knowledge).
-            * Samyaza (also Shemyazaz, Shamazya, Semiaza, Shemhazi, Semyaza and Amezyarak) is one of the leaders of the fall from heaven in Vocabulaire de l' Angelologie.
-            * Shamsiel, once a guardian of Eden as stated in the Zohar, served as one of the two chief aides to the archangel Uriel (the other aide being Hasdiel) when Uriel bore his standard into battle, and is the head of 365 legions of angels and also crowns prayers, accompanying them to the 5th heaven. In Jubilees, he is referred to as one of the Watchers. He is a fallen angel who teaches the signs of the sun.
-            * Yeqon (also Jeqon or Yaqum, he shall rise) was the ringleader who first tempted the other Watchers into having sexual relations with humans. His accomplices were Asbeel, Gadreel, Penemue, and Kasdaye (or Kasadya), who were all identified as individual satans."
-          :titles "The Watchers")
-        :Ophanim
-         (base/unit
-          :name "Ophanim"
-          :reference
-           "Ezekiel saw the wheel
-            Way up in the middle of the air
-            Ezekiel saw the wheel
-            Way up in the middle of the air
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Celestine"
+     :summary
+      "* The Angels have been fighting a cold war against the Fiends for millenia. Each side claims their right over the mortal realm, and each side recruits souls to increase their faction's power.
+       * The Archangels are the oldest and most powerful of the Angels. Individually, they can lay waste to armies.
+       * The Aeons are the primal concepts of divinity and are beyond physicality."
+     :titles "Archons, Aeons, Angels, Angelics, Devas, Malaikah, Watchers"
+     :unitmap
+      (base/unitmap
+       "Aeon Demiurge"
+        (base/unit
+         :name "Aeon Demiurge")
+       "Aeon Great Archon"
+        (base/unit
+         :name "Aeon Great Archon")
+       "Aeon Sophia"
+        (base/unit
+         :name "Aeon Sophia")
+       "Archangel Auriel"
+        (base/unit
+         :name "Archangel Auriel"
+         :reference "Diablo 3"
+         :summary "* Al'maiesh, the Cord of Hope - Twin whips of burning light."
+         :titles "Archangel of Hope")
+       "Archangel Gabriel"
+        (base/unit
+         :name "Archangel Gabriel"
+         :summary "* Performs acts of justice and power"
+         :titles "Translation: God is my strength")
+       "Archangel Itherael"
+        (base/unit
+         :name "Archangel Itherael"
+         :reference "Diablo 3"
+         :summary
+          "* Neither male nor female, Itherael remains neutral at all times.
+           * He always teleport instead of moving.
+           * Talus'ar, the Scroll of Fate - Allows him to predict the actions of others.
+           * Presides over the Library of Fate where possible futures are divined."
+         :titles "Archangel of Fate, Archangel of Balance")
+       "Archangel Jophiel"
+        (base/unit
+         :name "Archangel Jophiel"
+         :summary "* Expelled Adam and Eve from the Garden of Eden holding a flaming sword and punishes those who  transgress against God."
+         :titles "Translation: Beauty of God")
+       "Archangel Malthael"
+        (base/unit
+         :name "Archangel Malthael"
+         :reference "Diablo 3"
+         :summary
+          "* Wields twin sickle swords and can deflect and redirect enemy attack with only the slightest use of force.
+           * Calad'ar, the Chalice of Wisdom - Allows him to see all things."
+         :titles "Archangel of Wisdom")
+       "Archangel Michael"
+        (base/unit
+         :name "Archangel Michael"
+         :summary "* Stands up for the children of mankind"
+         :titles "Translation: Who is like God?, Kindness of God")
+       "Archangel Raphael"
+        (base/unit
+         :name "Archangel Raphael"
+         :summary "* God's healing force"
+         :titles "Translation: It is God who heals")
+       "Archangel Samael"
+        (base/unit
+         :name "Archangel Samael"
+         :titles "Translation: Venom of God, Angel of Death, Azrael")
+       "Archangel Sandalphon"
+        (base/unit
+         :name "Archangel Sandalphon"
+         :summary "* Battles Samael and brings mankind together"
+         :titles "Translation: Bringing Together")
+       "Archangel Uriel"
+        (base/unit
+         :name "Archangel Uriel"
+         :summary "* Leads us to destiny"
+         :titles "Translation: God is my light")
+       "Archangel Tyrael"
+        (base/unit
+         :name "Archangel Tyrael"
+         :reference "Diablo 3"
+         :summary "* El'durin, the Sword of Justice - Twin whips of burning light."
+         :titles "Archangel of Justice")
+       :Cherubim
+        (base/unit
+         :name "Cherubim")
+       :Deva
+        (base/unit
+         :name "Deva")
+       "Fallen Angel"
+        (base/unit
+         :name "Fallen Angel"
+         :summary
+          "* An angel who loses faith in his/her god.
+           * Its wings change from white to black like a raven's.
+           * Like mortals, their personalities and goals are much more varied than the angels.
+           * Fallen angels are persecuted by other angels for their impurity."
+         :titles "Fallen")
+       :Grace
+        (base/unit
+         :name "Grace")
+       "Guardian Angel"
+        (base/unit
+         :name "Guardian Angel")
+       :Irin
+        (base/unit
+         :name "Irin"
+         :reference "* Irin - In the Book of Enoch, the Watchers, are angels dispatched to Earth to watch over the humans. They soon begin to lust for human women and, at the prodding of their leader Samyaza, defect en masse to illicitly instruct humanity and procreate among them. The offspring of these unions are the Nephilim, savage giants who pillage the earth and endanger humanity. Samyaza and his associates further taught their human charges arts and technologies such as weaponry, cosmetics, mirrors, sorcery, and other techniques that would otherwise be discovered gradually over time by humans, not foisted upon them all at once. Eventually God allows a Great Flood to rid the earth of the Nephilim, but first sends Uriel to warn Noah so as not to eradicate the human race. The Watchers are bound 'in the valleys of the Earth' until Judgment Day."
+         :summary
+          "* Araqiel (also Arakiel, Araqael, Araciel, Arqael, Sarquael, Arkiel, Arkas) taught humans the signs of the earth. However, in the Sibylline Oracles, Araqiel is referred to not as a fallen angel, or Watcher, but as one of the 5 angels who lead the souls of men to judgement, the other 4 being Ramiel, Uriel, Samiel, and Azazel.
+           * Armaros (also Amaros) in Enoch I taught men the resolving of enchantments.
+           * Azazel taught men to make knives, swords, shields, and how to devise ornaments and cosmetics.
+           * Gadreel (or Gader'el) taught the art of cosmetics, the use of weapons and killing blows. It was he who led Eve astray in the garden of eden.[citation needed]
+           * Baraqel (Baraqiel) taught men astrology
+           * Bezaliel mentioned in Enoch I, left out of most translations because of damaged manuscripts and problematic transmission of the text.
+           * Chazaqiel (sometimes Ezeqeel or Cambriel) taught men the signs of the clouds (meteorology).
+           * Kokabiel (also Kakabel, Kochbiel, Kokbiel, Kabaiel, and Kochab), In the Book of Raziel he is a high-ranking, holy angel. In Enoch I, he is a fallen Watcher, resident of the nether realms, and commands 365,000 surrogate spirits to do his bidding. Among other duties, he instructs his fellows in astrology.
+           * Penemue taught mankind the art of writing with ink and paper, and taught the children of men the bitter and the sweet and the secrets of wisdom. (I Enoch 69.8)
+           * Sariel (also Suriel) taught mankind about the courses of the moon (at one time regarded as forbidden knowledge).
+           * Samyaza (also Shemyazaz, Shamazya, Semiaza, Shemhazi, Semyaza and Amezyarak) is one of the leaders of the fall from heaven in Vocabulaire de l' Angelologie.
+           * Shamsiel, once a guardian of Eden as stated in the Zohar, served as one of the two chief aides to the archangel Uriel (the other aide being Hasdiel) when Uriel bore his standard into battle, and is the head of 365 legions of angels and also crowns prayers, accompanying them to the 5th heaven. In Jubilees, he is referred to as one of the Watchers. He is a fallen angel who teaches the signs of the sun.
+           * Yeqon (also Jeqon or Yaqum, he shall rise) was the ringleader who first tempted the other Watchers into having sexual relations with humans. His accomplices were Asbeel, Gadreel, Penemue, and Kasdaye (or Kasadya), who were all identified as individual satans."
+         :titles "The Watchers")
+       "Ophanim"
+        (base/unit
+         :name "Ophanim"
+         :reference
+          "Ezekiel saw the wheel
+           Way up in the middle of the air
+           Ezekiel saw the wheel
+           Way up in the middle of the air
 
-            And the little wheel run by faith
-            And the big wheel run by the grace of God
-            A wheel in a wheel
-            Way up in the middle of the air"
-          :summary
-           "* Chariots for the Seraphim.
-            * Four eye-covered interlocking wheels"
-          :titles "The Many Eyed Ones")
-        :Seraphim
-         (base/unit
-          :name "Seraphim"
-          :summary "* Six Winged")))
-    :Abyssal
-     (base/section
-      :name "Abyssal"
-      :summary
-       "* Demons are creatures of Chaos from the swirling outer void where reality itself is fluid. Unlike Fiends, there are an infinite number and variety of Demons. Some believe our universe is a tiny light of order in a sea of Demons and Chaos. Like the Chaos that spawned them, demons are creatures of destruction and random mayhem. They delight in carnage and fear and have little concern for their own safety. Though Demons are sometimes cunning, they generally have little patience for communication or study, preferring to take action. They do not create tools or clothing of any kind, though they might be able to use those they pick up (especially weapons). They value free will above all things and will not tolerate servitude including contracts, deals or agreements of any kind.
-        * Demons are dominated by their [Beast]s.
-        * Preferred Skills: [Demonic Power], [Beastial]
+           And the little wheel run by faith
+           And the big wheel run by the grace of God
+           A wheel in a wheel
+           Way up in the middle of the air"
+         :summary
+          "* Chariots for the Seraphim.
+           * Four eye-covered interlocking wheels"
+         :titles "The Many Eyed Ones")
+       "Seraphim"
+        (base/unit
+         :name "Seraphim"
+         :summary "* Six Winged")))
+    (base/section
+     :name "Abyssal"
+     :summary
+      "* Demons are creatures of Chaos from the swirling outer void where reality itself is fluid. Unlike Fiends, there are an infinite number and variety of Demons. Some believe our universe is a tiny light of order in a sea of Demons and Chaos. Like the Chaos that spawned them, demons are creatures of destruction and random mayhem. They delight in carnage and fear and have little concern for their own safety. Though Demons are sometimes cunning, they generally have little patience for communication or study, preferring to take action. They do not create tools or clothing of any kind, though they might be able to use those they pick up (especially weapons). They value free will above all things and will not tolerate servitude including contracts, deals or agreements of any kind.
+       * Demons are dominated by their [Beast]s.
+       * Preferred Skills: [Demonic Power], [Beastial]
 
-        * Description - Demons take any number of monstrous forms and are among the most powerful beings in existence. As beings of chaos, their appearance is often unsettling and asymetrical. They eat any living creature including humans though they don't require ordinary sustanence. Most are larger and more muscular than humans and can be enormous. Many have rows of stubby spikes growing from their upper backs, with elongated limbs that end in clawed digits, large fang-filled jaws and pointed ears, giving them a bestial appearance. Some have bat-like wings. Others burrow in the earth.
-        * Personality - Demons are wildly arrogant and destructive and have no sense of consequences for their actions. Unlike Fiends who secretly harbor intense guilt and long for the souls they have lost, Demons are enthralled by their excess. Demons are sustained by chaos; if they are not surrounded by chaos, they will wither and die. Demons care nothing for life, least of all their own; they think only in the moment and cannot tolerate sitting still. They treat everything as if they were in a fictional world where nothing matters except their own immediate gratification.
-        * Control - As beings of chaos, Demons can never be controlled. Attempts to control them damage them instead.
-        * Abilities - Demons have the most varied abilities among all creatures. They generally have great strength, speed, and durability and can regenerate wounds. Some can extend their limbs and digits. All Demons can be identified by their [Demonic Power]."
-      :titles "Demonic"
-      :unitmap
-       (base/unitmap
-        "Abyssal Horror"
-         (base/unit
-          :name "Abyssal Horror")
-        "Abyssal Hound"
-         (base/unit
-          :name "Abyssal Hound"
-          :titles "Demon Dog"
-          :summary "* Resembles large muscular bulldog/pit bull 3ft at the shoulder. Their eyes pulse a faint red with their heartbeat. They love to chase prey and are completely silent in pursuit. They are aggressive bullies, but will flee a determined foe unless the scent of blood drives them into a murderous frenzy.")
-        "Abyssal Hunter"
-         (base/unit
-          :name "Abyssal Hunter")
-        "Chaos Demon"
-         (base/unit
-          :name "Chaos Demon"
-          :summary
-           "* A Chaos Demon is a creature drawn from the stuff of Chaos. The results of summoning a Chaos Demon are necessarily difficult to predict. Randomly select each Body Part. For each [Hit], add one random ability. For each [Critical Hit], add one ability of your choice.
-            ** Body Parts
-            *** Head
-            **** Headless
-            **** Mindless
-            **** Cunning
-            **** Brilliant
-            *** Mouth
-            **** Mouthless
-            **** Taste
-            *** Ears
-            **** Deaf
-            **** Big Ears
-            **** Sonar
-            *** Eyes
-            **** Blind
-            **** Bug Eyes
-            **** Eye Stalks
-            *** Nose
-            **** Snout
-            *** Body
-            **** Armor
-            **** Acid Blood
-            **** Blob
-            **** Boat
-            **** Mist
-            **** Slime
-            **** Spines
-            *** Arms
-            **** Armless
-            **** Claws
-            **** Hands
-            *** Wings
-            **** Bat Wings
-            **** Bird Wings
-            **** Insect Wings
-            **** Wingless
-            *** Legs
-            **** Caterpillar Legs
-            **** Hopping
-            **** Insect Legs
-            **** Legless
-            **** Slug
-            **** Spider Legs
-            ** Abilities
-            *** Burrowing
-            *** Clairvoyance
-            *** Confusion
-            *** [[Darkness]]
-            *** Darts
-            *** Disease
-            *** Dust Cloud
-            *** Emotion Control
-            *** Empathy
-            *** Ethereal
-            *** Freezing Attack
-            *** Hellfire
-            *** Horde
-            *** Insect Plague
-            *** Lore
-            *** Poison
-            *** Shape Change
-            *** Shock
-            *** Stinger
-            *** Telekinesis
-            *** Web")
-        "Demon Bear"
-         (base/unit
-          :name "Demon Bear"
-          :reference
-           "* Inside every person there are two bears. One bear is all the good things, compassion, love trust. The other is all the bad things, fear, shame, self-destruction. I asked, Which one wins? He answered, The one you feed. - New Mutants")
-        "Empusa"
-         (base/unit
-          :name "Empusa")
-        "Lilin"
-         (base/unit
-          :name "Lilin")
-        "Mist Demon"
-         (base/unit
-          :name "Mist Demon")
-        :Pazuzu
-         (base/unit
-          :name "Pazuzu"
-          :reference "Exorcist, Exorcist II"
-          :summary "Dark Angel of the Four Winds with rotting genitals from which he howls through sharpened teeth over stricken cities."
-          :titles "Lord of Fevers and Plagues")
-        :Orcus
-         (base/unit
-          :name "Orcus"
-          :reference "John Milton's Paradise Lost")
-        :Ades
-         (base/unit
-          :name "Ades"
-          :reference "John Milton's Paradise Lost")
-        :Demogorgon
-         (base/unit
-          :name "Demogorgon"
-          :reference "John Milton's Paradise Lost")))
-    :Infernal
-     (base/section
-      :name "Infernal"
-      :reference "* The greatest trick the Devil ever pulled was convincing the world he didn't exist. - Verbal, The Usual Suspects"
-      :summary
-       "* Fiends are dangerous creatures both physically and mentally. They are sometimes mistaken for Demons, but Demons are forces of random destruction while Fiends possess a sinister intellect and seek to install their own order on the mortal realm.
-        * Conflict - Fiends are powerful creatures that have been engaged in a cold war with the Angels for millenia. As in any longstanding dipute, their history is convuluted and both sides maintain conflicting claims why their causes are just. They both seek to recruit souls from the mortal realm to increase their faction's power. The Angels promise protection while the Fiends see this protection as oppressive control. The Fiends promise freedom while the Angels see this as freedom to suffer. Essentially, their conflict is socialism vs. capitalism.
-        * Soul Collection - The prime motivation for fiends is collecting corrupted souls. Fiends cannot corrupt a soul by forcing one to do evil. Instead they must manipulate and tempt. Therefore, fiends spend most of their time on earth in mortal form stalking people, learning their secrets, poisoning their emotions, and gaining their trust in any way they can. The best minions of Hell are never noticed at all. With their powers, fiends could cause tremendous destruction, but that would drive people away. They would have the corpses but not the souls.
-        * Contract - Devil's Bargain. Fiends are willing to engage in contracts with mortals, usually in exchange for their soul but sometimes for lesser mischief. The fiend hierarchy ensures that these contracts are always binding to both parties. Some magi believe they can deal with fiends, learn from them, and not be corrupted themselves. This rarely goes to plan and fiends are more than willing to pit their intelligence against a mage's.
-        * Deceiver - Fiends are deceivers first and foremost. No ability can reveal whether they are telling the truth.
-        * Corrupted - No ability can change them into virtuous beings. They are too far gone to turn.
-        * Tormented - Though fiends appear to be all-powerful embodiments of evil, they are ruled by their [Shadow] and forever tormented by the remnants of their [Will]. They are secretly filled with regret and self-loathing and have even been known to strangely act in ways that lead to their own defeat.
-        * Shaitan are the original and most powerful fiends. Most are ancient fallen angels, who through millenia of worship now possess godlike power.
-        * Archfiends are the most powerful sorts of Fiends below the godlike Shaitan. They stand 10 to 20 feet tall and have red or coal black skin. They live in stone castles and observe a medieval heirarchy of princes, 	princesses, barons, ministers, and knights. They profess undying loyalty to the Shaitan, though, in fact, they crave power, wealth, and position and are throughly unscrupulous and untrustworthy in all their dealings."
-      :titles "Devilish, Devils, Diabolic, Fiends, Shaitan, Shayatin"
-      :unitmap
-       (base/unitmap
-        :Baphomet
-         (base/unit
-          :name "Baphomet")
-        "Count Andromalius"
-         (base/unit
-          :name "Count Andromalius")
-        "Count Bifrons"
-         (base/unit
-          :name "Count Bifrons")
-        "Count Furfur"
-         (base/unit
-          :name "Count Furfur")
-        "Count Halphas"
-         (base/unit
-          :name "Count Halphas")
-        "Count Räum"
-         (base/unit
-          :name "Count Räum")
-        "Duke Agares"
-         (base/unit
-          :name "Duke Agares")
-        "Duke Aim"
-         (base/unit
-          :name "Duke Aim")
-        "Duke Alloces"
-         (base/unit
-          :name "Duke Alloces")
-        "Duke Amdusias"
-         (base/unit
-          :name "Duke Amdusias")
-        "Duke Astaroth"
-         (base/unit
-          :name "Duke Astaroth")
-        "Duke Barbatos"
-         (base/unit
-          :name "Duke Barbatos")
-        "Duke Bathin"
-         (base/unit
-          :name "Duke Bathin")
-        "Duke Buné"
-         (base/unit
-          :name "Duke Buné")
-        "Duke Berith"
-         (base/unit
-          :name "Duke Berith")
-        "Duke Crocell"
-         (base/unit
-          :name "Duke Crocell")
-        "Duke Dantalion"
-         (base/unit
-          :name "Duke Dantalion")
-        "Duke Eligos"
-         (base/unit
-          :name "Duke Eligos")
-        "Duke Focalor"
-         (base/unit
-          :name "Duke Focalor")
-        "Duke Gremory"
-         (base/unit
-          :name "Duke Gremory")
-        "Duke Gusion"
-         (base/unit
-          :name "Duke Gusion")
-        "Duke Haures"
-         (base/unit
-          :name "Duke Haures")
-        "Duke Murmur"
-         (base/unit
-          :name "Duke Murmur")
-        "Duke Sallos"
-         (base/unit
-          :name "Duke Sallos")
-        "Duke Valefor"
-         (base/unit
-          :name "Duke Valefor")
-        "Duke Vapula"
-         (base/unit
-          :name "Duke Vapula")
-        "Duke Vepar"
-         (base/unit
-          :name "Duke Vepar")
-        "Duke Vual"
-         (base/unit
-          :name "Duke Vual")
-        "Duke Zepar"
-         (base/unit
-          :name "Duke Zepar")
-        "Dust Devil"
-         (base/unit
-          :name "Dust Devil")
-        "Fury Devil"
-         (base/unit
-          :name "Fury Devil"
-          :titles "Erinyes")
-        :Grimalkin
-         (base/unit
-          :name "Grimalkin"
-          :reference
-           "* During the early modern period, the name grimalkin, and cats in general, became associated with the devil and witchcraft. Women tried as witches were often accused of having a familiar, frequently a grimalkin."
-          :summary
-           "* The Grimalkin is a small, black, furry devil with glowing eyes and sharp claws. It is wickedly, intelligent but lazy and weak, so it prefers to get involved in the schemes of others. It takes the role of scout, messenger, and advisor. It enjoys providing information that causes suffering and sitting 	back and watching their handiwork unfold.
-            * The Grimalkin is commonly used as a familiar by black magicians. In order to remain on the mortal plane, it must possess a small animal. It will choose a creature which closely suits its personality, often an old or evil-looking female cat."
-          :titles "Greymalkin, Shadowcat")
-        :Hellhound
-         (base/unit
-          :name "Hellhound"
-          :summary
-           "* Hellhounds may appear as ordinary large dogs with black coats (usually Dobermans).
-            * In combat, they may take a more monstrous form and may spawn up to 2 additional heads and have been known to breathe fire.
-            * Be aware that Hellhounds only appear as dogs. Like all devils, they are corrupted souls of humanoids and possess a calm, calculating intelligence. They often work as a pack, creating ambushes and using decoys to lure their prey to their doom."
-          :titles "Cereberus, Devil Dog, Fenris Wolf, Garm, Kerberos")
-        :Hellion
-         (base/unit
-          :name "Hellion"
-          :titles "Hellcat")
-        :Hellspawn
-         (base/unit
-          :name "Hellspawn"
-          :titles "Lemure")
-        "Ice Devil"
-         (base/unit
-          :name "Ice Devil")
-        :Imp
-         (base/unit
-          :name "Imp"
-          :summary
-           "* The Imp is a foot tall, bat-winged minor Devil with a long forked tail that can be used for grasping. Imps can find and squeeze through the tiniest dimensional cracks and are therefore the most common of all of Hell's legions infesting the world. They can speak, but are mostly incoherent, muttering, lunatics. Their flesh is rubbery and their bones are soft, so they can withstand the massive physical abuse that greater devils heap on them. Though physically weak, they are fast flyers with keen vision and make excellent messengers.
-            * Origin - Imps are the Fiend form of cruel children who chose to go to hell to continue their cruelty. Of course, this does not go well for evil child.
-            * Personality - They are clever and may try to design intricate plans, or they may just cause trouble and hope that will please their masters.
-            * Powers - They may communicate mentally with other devils and it is in this way that they are the most useful. Powerful diabolists have been known to capture Imps and cram them into magical bottles. Anyone who possesess the bottle may converse with the Imp inside. Though the Imp is troublesome and somewhat incoherent, it may be used as a go between to converse with greater devils to negotiate for knowledge or power. While channelling greater devils, the Imp becomes immeditately conherent and possesses a dark intelligence that it uses to conspire with its master.
-            * In their home realm, Imps occupy the unenviable position at the bottom of the devil hierarchy. At best, servitors may be employed as scullery workers or menial laborers. Worse they are used as living tools serving as a plunger, polishing, or scrapping instrument. Devils sometimes amuse themselves by squeezing an imp's head into funny faces."
-          :titles "Bottle Imp, Sardonicus")
-        "King Baal Moloch"
-         (base/unit
-          :name "King Baal Moloch"
-          :summary
-           "* A King of [Devils] with [Godlike] power.
-            * Baal appears as a man with a bull's head.
-            * Worship involves child sacrifice by fire (to Moloch)."
-          :titles "Bael")
-        "King Balam"
-         (base/unit
-          :name "King Balam")
-        "King Beleth"
-         (base/unit
-          :name "King Beleth")
-        "King Belial"
-         (base/unit
-          :name "King Belial")
-        "King Paimon"
-         (base/unit
-          :name "King Paimon")
-        "King Purson"
-         (base/unit
-          :name "King Purson")
-        "King Viné"
-         (base/unit
-          :name "King Viné")
-        "King Zagan"
-         (base/unit
-          :name "King Zagan")
-        "Knight Furcas"
-         (base/unit
-          :name "Knight Furcas")
-        "Marquis Amon"
-         (base/unit
-          :name "Marquis Amon")
-        "Marquis Andras"
-         (base/unit
-          :name "Marquis Andras")
-        "Marquis Andrealphus"
-         (base/unit
-          :name "Marquis Andrealphus")
-        "Marquis Cimeies"
-         (base/unit
-          :name "Marquis Cimeies")
-        "Marquis Decarabia"
-         (base/unit
-          :name "Marquis Decarabia")
-        "Marquis Leraje"
-         (base/unit
-          :name "Marquis Leraje")
-        "Marquis Forneus"
-         (base/unit
-          :name "Marquis Forneus")
-        "Marquis Marchosias"
-         (base/unit
-          :name "Marquis Marchosias")
-        "Marquis Naberius"
-         (base/unit
-          :name "Marquis Naberius")
-        "Marquis Oriax"
-         (base/unit
-          :name "Marquis Oriax"
-          :titles "Orias")
-        "Marquis Phenex"
-         (base/unit
-          :name "Marquis Phenex")
-        "Marquis Ronové"
-         (base/unit
-          :name "Marquis Ronové")
-        "Marquis Samigina"
-         (base/unit
-          :name "Marquis Samigina")
-        "Marquis Shax"
-         (base/unit
-          :name "Marquis Shax")
-        "Marquis Sabnock"
-         (base/unit
-          :name "Marquis Sabnock")
-        :Nightmare
-         (base/unit
-          :name "Nightmare"
-          :titles "Shadowmane"
-          :traits "[Devil]")
-        "Pit Fiend"
-         (base/unit<-tactics-key tactics "Pit Fiend")
-        "Pit Wyrm"
-         (base/unit
-          :name "Pit Wyrm")
-        "President Amy"
-         (base/unit
-          :name "President Amy")
-        "President Botis"
-         (base/unit
-          :name "President Botis")
-        "President Buer"
-         (base/unit
-          :name "President Buer")
-        "President Caim"
-         (base/unit
-          :name "President Caim")
-        "President Foras"
-         (base/unit
-          :name "President Foras")
-        "President Glasya-Labolas"
-         (base/unit
-          :name "President Glasya-Labolas")
-        "President Haagenti"
-         (base/unit
-          :name "President Haagenti")
-        "President Malphas"
-         (base/unit
-          :name "President Malphas")
-        "President Marbas"
-         (base/unit
-          :name "President Marbas")
-        "President Marax"
-         (base/unit
-          :name "President Marax")
-        "President Ose"
-         (base/unit
-          :name "President Ose")
-        "President Valac"
-         (base/unit
-          :name "President Valac")
-        :Azazel
-         (base/unit
-          :name "Azazel")
-        "Prince Asmodeus"
-         (base/unit
-          :name "Prince Asmodeus"
-          :summary
-           "* Spreads lust through the land. Embodies the sin of lust.
-            * Part man part animal hybrid."
-          :titles "Asmoday")
-        "Prince Beelzebub"
-         (base/unit
-          :name "Prince Beelzebub"
-          :summary "* Fallen angel second only to Lucifer. Demon of pestilences. Consumes everything in his path."
-          :titles "Lord of Gluttony, Lord of Flies, Lord of Flyers")
-        "Prince Belphagor"
-         (base/unit
-          :name "Prince Belphagor"
-          :summary
-           "* The lord of fire and laziness. Prince of manipulation and deceit. He embodies the sin of sloth.
-            * Formerly the Archangel Belpior, he took no side during Lucifer's rebellion and was cast down for his inaction.
-            * He is a shape changer."
-          :titles "Lord of Sloth")
-        "Prince Gäap"
-         (base/unit
-          :name "Prince Gäap")
-        "Prince Ipos"
-         (base/unit
-          :name "Prince Ipos")
-        "Prince Leviathan"
-         (base/unit
-          :name "Prince Leviathan"
-          :summary "* Swallows whole those consumed with envy. Embodies the sin of envy."
-          :titles "Gates of Hell, Hellmouth, Lord of Envy")
-        "Prince Lucifer"
-         (base/unit
-          :name "Prince Lucifer"
-          :reference
-           "* The are very few things that I will defend with true passion: medical marijuana, the biblical Satan as a metaphor against tyranny, and motherfucking, goddamn cryptocurrency. - Gilfoyle, Silicon Valley
-            * Guilt is like a bag of fuckin' bricks. All you gotta do is set it down. ... Who are you carrying all those bricks for anyway? God. ... God likes to watch. He's a prankster. .. He gives man instincts ... He sets the rules in opposition. It's the goof of all time. Look but don't touch. Touch but don't taste. Taste but don't swallow. ... And while you're jumping from one foot to the other, what is he doing? He's laughing his sick, fucking ass off. ... He's a sadist. He's an absentee landlord. Worship that? Never. ... Freedom, baby is never having to say you're sorry. - Devil's Advocate"
-          :summary "* The archangel who rebelled and was cast out. He embodies the sin of pride."
-          :titles "Lord of Pride")
-        "Prince Mammon"
-         (base/unit
-          :name "Prince Mammon"
-          :summary "* Enslaves those who pursue wealth. Embodies the sin of greed."
-          :titles "Lord of Greed")
-        "Prince Orobas"
-         (base/unit
-          :name "Prince Orobas")
-        "Prince Satan"
-         (base/unit
-          :name "Prince Satan"
-          :titles "Lord of Wrath")
-        "Prince Seere"
-         (base/unit
-          :name "Prince Seere")
-        "Prince Sitri"
-         (base/unit
-          :name "Prince Sitri")
-        "Prince Stolas"
-         (base/unit
-          :name "Prince Stolas")
-        "Prince Vassago"
-         (base/unit
-          :name "Prince Vassago")
-        "Shaitan, Devil"
-         (base/unit
-          :name "Shaitan, Devil")
-        :Succubus
-         (base/unit
-          :name "Succubus"
-          :summary
-           "* Appearance - A powerful Devil who appears as an alluring person with unearthly beauty. In their true form they have a terrifying regal presense with glowing eyes, sharp fangs, bat-like wings, elegant horns like a tiara, and cloven feet. They have distinct male and female genders, but they have no sexual preference (a soul is a soul after all).
-            * Energy Drain - They seduce people to have intercourse, providing untold pleasures while drawing their energy, often to the point of exhaustion or death.
-            * Illusion - They are masters of [Illusion] and will almost never appear in their true form in the mortal realm.
-            * Strength - They are physically powerful with strength similar to a bear or gorilla, but despite their power, they consider violence to be beneath them and will negotiate or flee if given the chance.
-            * Patience - They are patient, sophisticated, and knowledgeable. Their seduction talents go far beyond sex, and they will often offer aid or information to befriend and manipulate their target. They are in no rush to accomplish their mission."
-          :titles "Incubus, Sex Fiend, Temptress")))
-    :Flatlands
-     (base/section
-      :name "Flatlands"
-      :summary "* A bizarre two-dimensional realm."
-      :unitmap
-       (base/unitmap
-        "Ribbon Guard"
-         (base/unit
-          :name "Ribbon Guard"
-          :summary
-           "* Ribbons are unusual, two-dimensional entities. They never communicate, but they understand orders and always follow them accurately without concern for their own safety, so they are favored as guards or servants.
-           * Description - They appear as floating banners of fabric of varying colors, but they have no actual depth. They ripple slowly through air or water like snakes and may strike or grapple opponents. They do not seem to eat, sleep or even breathe. It is unclear if they have independent thought or are merely automatons.
-           * Powers:
-           ** [Resistance]: [Resist Impact], [Resist Pierce], [Resist Electricity], [Resist Vacuum], [Resist Radiation], [Immune Vaccuum], [Cannot Eat], [Cannot Sleep]
-           ** [Vulnerability]: [Vulnerable to Slash], [Vulnerable to Fire], [Vulnerable to Cold]")))
-    :Mirrorlands
-     (base/section
-      :name "Mirrorlands"
-      :unitmap
-       (base/unitmap
-        "Mirror Reflection"
-         (base/unit
-          :name "Mirror Reflection"
-          :summary
-           "* A Mirror Reflection is being from the Mirrorlands that has no personal definition but longs for the definition of others. To this end, they become a mirror image of another being and try to impersonate the person though they lack any memories of the original. It would be practical to dispose of the original, but they are always only a reflection so they would die as well.")
-        "Mirror Shard"
-         (base/unit
-          :name "Mirror Shard"
-          :summary
-           "* A Mirror Shard is a weaker form of a [Mirror Reflection]. It copies some single aspect of the original but is otherwise an empty shell. This incompleteness drives them mad with desperation. They are always drawn to the those they copy and are usually irrationally destructive.
-            * [Action] [Target]: The Mirror Shard becomes the same [Mass] as the target. Then choose one [Skill] or [Power] to copy. The Mirror Shard gains that Skill/Power and loses all other Skills and Powers. It [Body], [Mind], and [Will] are altered accordingly."))))))
+       * Description - Demons take any number of monstrous forms and are among the most powerful beings in existence. As beings of chaos, their appearance is often unsettling and asymetrical. They eat any living creature including humans though they don't require ordinary sustanence. Most are larger and more muscular than humans and can be enormous. Many have rows of stubby spikes growing from their upper backs, with elongated limbs that end in clawed digits, large fang-filled jaws and pointed ears, giving them a bestial appearance. Some have bat-like wings. Others burrow in the earth.
+       * Personality - Demons are wildly arrogant and destructive and have no sense of consequences for their actions. Unlike Fiends who secretly harbor intense guilt and long for the souls they have lost, Demons are enthralled by their excess. Demons are sustained by chaos; if they are not surrounded by chaos, they will wither and die. Demons care nothing for life, least of all their own; they think only in the moment and cannot tolerate sitting still. They treat everything as if they were in a fictional world where nothing matters except their own immediate gratification.
+       * Control - As beings of chaos, Demons can never be controlled. Attempts to control them damage them instead.
+       * Abilities - Demons have the most varied abilities among all creatures. They generally have great strength, speed, and durability and can regenerate wounds. Some can extend their limbs and digits. All Demons can be identified by their [Demonic Power]."
+     :titles "Demonic"
+     :unitmap
+      (base/unitmap
+       "Abyssal Horror"
+        (base/unit
+         :name "Abyssal Horror")
+       "Abyssal Hound"
+        (base/unit
+         :name "Abyssal Hound"
+         :titles "Demon Dog"
+         :summary "* Resembles large muscular bulldog/pit bull 3ft at the shoulder. Their eyes pulse a faint red with their heartbeat. They love to chase prey and are completely silent in pursuit. They are aggressive bullies, but will flee a determined foe unless the scent of blood drives them into a murderous frenzy.")
+       "Abyssal Hunter"
+        (base/unit
+         :name "Abyssal Hunter")
+       "Chaos Demon"
+        (base/unit
+         :name "Chaos Demon"
+         :summary
+          "* A Chaos Demon is a creature drawn from the stuff of Chaos. The results of summoning a Chaos Demon are necessarily difficult to predict. Randomly select each Body Part. For each [Hit], add one random ability. For each [Critical Hit], add one ability of your choice.
+           ** Body Parts
+           *** Head
+           **** Headless
+           **** Mindless
+           **** Cunning
+           **** Brilliant
+           *** Mouth
+           **** Mouthless
+           **** Taste
+           *** Ears
+           **** Deaf
+           **** Big Ears
+           **** Sonar
+           *** Eyes
+           **** Blind
+           **** Bug Eyes
+           **** Eye Stalks
+           *** Nose
+           **** Snout
+           *** Body
+           **** Armor
+           **** Acid Blood
+           **** Blob
+           **** Boat
+           **** Mist
+           **** Slime
+           **** Spines
+           *** Arms
+           **** Armless
+           **** Claws
+           **** Hands
+           *** Wings
+           **** Bat Wings
+           **** Bird Wings
+           **** Insect Wings
+           **** Wingless
+           *** Legs
+           **** Caterpillar Legs
+           **** Hopping
+           **** Insect Legs
+           **** Legless
+           **** Slug
+           **** Spider Legs
+           ** Abilities
+           *** Burrowing
+           *** Clairvoyance
+           *** Confusion
+           *** [[Darkness]]
+           *** Darts
+           *** Disease
+           *** Dust Cloud
+           *** Emotion Control
+           *** Empathy
+           *** Ethereal
+           *** Freezing Attack
+           *** Hellfire
+           *** Horde
+           *** Insect Plague
+           *** Lore
+           *** Poison
+           *** Shape Change
+           *** Shock
+           *** Stinger
+           *** Telekinesis
+           *** Web")
+       "Demon Bear"
+        (base/unit
+         :name "Demon Bear"
+         :reference
+          "* Inside every person there are two bears. One bear is all the good things, compassion, love trust. The other is all the bad things, fear, shame, self-destruction. I asked, Which one wins? He answered, The one you feed. - New Mutants")
+       "Empusa"
+        (base/unit
+         :name "Empusa")
+       "Lilin"
+        (base/unit
+         :name "Lilin")
+       "Mist Demon"
+        (base/unit
+         :name "Mist Demon")
+       "Pazuzu"
+        (base/unit
+         :name "Pazuzu"
+         :titles "Lord of Fevers and Plagues"
+         :reference
+          "Exorcist, Exorcist II"
+         :summary
+          "Dark Angel of the Four Winds with rotting genitals from which he howls through sharpened teeth over stricken cities.")
+       "Orcus"
+        (base/unit
+         :name "Orcus"
+         :reference
+          "John Milton's Paradise Lost")
+       "Ades"
+        (base/unit
+         :name "Ades"
+         :reference
+          "John Milton's Paradise Lost")
+       "Demogorgon"
+        (base/unit
+         :name "Demogorgon"
+         :reference
+          "John Milton's Paradise Lost")))
+    (base/section
+     :name "Infernal"
+     :titles "Devilish, Devils, Diabolic, Fiends, Shaitan, Shayatin"
+     :reference
+      "* The greatest trick the Devil ever pulled was convincing the world he didn't exist. - Verbal, The Usual Suspects"
+     :summary
+      "* Fiends are dangerous creatures both physically and mentally. They are sometimes mistaken for Demons, but Demons are forces of random destruction while Fiends possess a sinister intellect and seek to install their own order on the mortal realm.
+       * Conflict - Fiends are powerful creatures that have been engaged in a cold war with the Angels for millenia. As in any longstanding dipute, their history is convuluted and both sides maintain conflicting claims why their causes are just. They both seek to recruit souls from the mortal realm to increase their faction's power. The Angels promise protection while the Fiends see this protection as oppressive control. The Fiends promise freedom while the Angels see this as freedom to suffer. Essentially, their conflict is socialism vs. capitalism.
+       * Soul Collection - The prime motivation for fiends is collecting corrupted souls. Fiends cannot corrupt a soul by forcing one to do evil. Instead they must manipulate and tempt. Therefore, fiends spend most of their time on earth in mortal form stalking people, learning their secrets, poisoning their emotions, and gaining their trust in any way they can. The best minions of Hell are never noticed at all. With their powers, fiends could cause tremendous destruction, but that would drive people away. They would have the corpses but not the souls.
+       * Contract - Devil's Bargain. Fiends are willing to engage in contracts with mortals, usually in exchange for their soul but sometimes for lesser mischief. The fiend hierarchy ensures that these contracts are always binding to both parties. Some magi believe they can deal with fiends, learn from them, and not be corrupted themselves. This rarely goes to plan and fiends are more than willing to pit their intelligence against a mage's.
+       * Deceiver - Fiends are deceivers first and foremost. No ability can reveal whether they are telling the truth.
+       * Corrupted - No ability can change them into virtuous beings. They are too far gone to turn.
+       * Tormented - Though fiends appear to be all-powerful embodiments of evil, they are ruled by their [Shadow] and forever tormented by the remnants of their [Will]. They are secretly filled with regret and self-loathing and have even been known to strangely act in ways that lead to their own defeat.
+       * Shaitan are the original and most powerful fiends. Most are ancient fallen angels, who through millenia of worship now possess godlike power.
+       * Archfiends are the most powerful sorts of Fiends below the godlike Shaitan. They stand 10 to 20 feet tall and have red or coal black skin. They live in stone castles and observe a medieval heirarchy of princes, 	princesses, barons, ministers, and knights. They profess undying loyalty to the Shaitan, though, in fact, they crave power, wealth, and position and are throughly unscrupulous and untrustworthy in all their dealings."
+     :unitmap
+      (base/unitmap
+       "Baphomet"
+        (base/unit
+         :name "Baphomet"
+         :traits "Devil")
+       "Count Andromalius"
+        (base/unit
+         :name "Count Andromalius"
+         :traits "Devil")
+       "Count Bifrons"
+        (base/unit
+         :name "Count Bifrons"
+         :traits "Devil")
+       "Count Furfur"
+        (base/unit
+         :name "Count Furfur"
+         :traits "Devil")
+       "Count Halphas"
+        (base/unit
+         :name "Count Halphas"
+         :traits "Devil")
+       "Count Räum"
+        (base/unit
+         :name "Count Räum"
+         :traits "Devil")
+       "Duke Agares"
+        (base/unit
+         :name "Duke Agares"
+         :traits "Devil")
+       "Duke Aim"
+        (base/unit
+         :name "Duke Aim"
+         :traits "Devil")
+       "Duke Alloces"
+        (base/unit
+         :name "Duke Alloces"
+         :traits "Devil")
+       "Duke Amdusias"
+        (base/unit
+         :name "Duke Amdusias"
+         :traits "Devil")
+       "Duke Astaroth"
+        (base/unit
+         :name "Duke Astaroth"
+         :traits "Devil")
+       "Duke Barbatos"
+        (base/unit
+         :name "Duke Barbatos"
+         :traits "Devil")
+       "Duke Bathin"
+        (base/unit
+         :name "Duke Bathin"
+         :traits "Devil")
+       "Duke Buné"
+        (base/unit
+         :name "Duke Buné"
+         :traits "Devil")
+       "Duke Berith"
+        (base/unit
+         :name "Duke Berith"
+         :traits "Devil")
+       "Duke Crocell"
+        (base/unit
+         :name "Duke Crocell"
+         :traits "Devil")
+       "Duke Dantalion"
+        (base/unit
+         :name "Duke Dantalion"
+         :traits "Devil")
+       "Duke Eligos"
+        (base/unit
+         :name "Duke Eligos"
+         :traits "Devil")
+       "Duke Focalor"
+        (base/unit
+         :name "Duke Focalor"
+         :traits "Devil")
+       "Duke Gremory"
+        (base/unit
+         :name "Duke Gremory"
+         :traits "Devil")
+       "Duke Gusion"
+        (base/unit
+         :name "Duke Gusion"
+         :traits "Devil")
+       "Duke Haures"
+        (base/unit
+         :name "Duke Haures"
+         :traits "Devil")
+       "Duke Murmur"
+        (base/unit
+         :name "Duke Murmur"
+         :traits "Devil")
+       "Duke Sallos"
+        (base/unit
+         :name "Duke Sallos"
+         :traits "Devil")
+       "Duke Valefor"
+        (base/unit
+         :name "Duke Valefor"
+         :traits "Devil")
+       "Duke Vapula"
+        (base/unit
+         :name "Duke Vapula"
+         :traits "Devil")
+       "Duke Vepar"
+        (base/unit
+         :name "Duke Vepar"
+         :traits "Devil")
+       "Duke Vual"
+        (base/unit
+         :name "Duke Vual"
+         :traits "Devil")
+       "Duke Zepar"
+        (base/unit
+         :name "Duke Zepar"
+         :traits "Devil")
+       "Dust Devil"
+        (base/unit
+         :name "Dust Devil"
+         :traits "Devil")
+       "Fury Devil"
+        (base/unit
+         :name "Fury Devil"
+         :titles "Erinyes"
+         :traits "Devil")
+       :Grimalkin
+        (base/unit
+         :name "Grimalkin"
+         :traits "Devil"
+         :reference
+          "* During the early modern period, the name grimalkin, and cats in general, became associated with the devil and witchcraft. Women tried as witches were often accused of having a familiar, frequently a grimalkin."
+         :summary
+          "* The Grimalkin is a small, black, furry devil with glowing eyes and sharp claws. It is wickedly, intelligent but lazy and weak, so it prefers to get involved in the schemes of others. It takes the role of scout, messenger, and advisor. It enjoys providing information that causes suffering and sitting 	back and watching their handiwork unfold.
+           * The Grimalkin is commonly used as a familiar by black magicians. In order to remain on the mortal plane, it must possess a small animal. It will choose a creature which closely suits its personality, often an old or evil-looking female cat."
+         :titles "Greymalkin, Shadowcat")
+       "Hellhound"
+        (base/unit
+         :name "Hellhound"
+         :summary
+          "* Hellhounds may appear as ordinary large dogs with black coats (usually Dobermans).
+           * In combat, they may take a more monstrous form and may spawn up to 2 additional heads and have been known to breathe fire.
+           * Be aware that Hellhounds only appear as dogs. Like all devils, they are corrupted souls of humanoids and possess a calm, calculating intelligence. They often work as a pack, creating ambushes and using decoys to lure their prey to their doom."
+         :titles "Cereberus, Devil Dog, Fenris Wolf, Garm, Kerberos")
+       :Hellion
+        (base/unit
+         :name "Hellion"
+         :titles "Hellcat"
+         :traits "Devil")
+       :Hellspawn
+        (base/unit
+         :name "Hellspawn"
+         :titles "Lemure"
+         :traits "Devil")
+       "Ice Devil"
+        (base/unit
+         :name "Ice Devil"
+         :traits "Devil")
+       "Imp"
+        (base/unit
+         :name "Imp"
+         :titles "Bottle Imp, Sardonicus"
+         :traits "Devil"
+         :summary
+          "* The Imp is a foot tall, bat-winged minor Devil with a long forked tail that can be used for grasping. Imps can find and squeeze through the tiniest dimensional cracks and are therefore the most common of all of Hell's legions infesting the world. They can speak, but are mostly incoherent, muttering, lunatics. Their flesh is rubbery and their bones are soft, so they can withstand the massive physical abuse that greater devils heap on them. Though physically weak, they are fast flyers with keen vision and make excellent messengers.
+           * Origin - Imps are the Fiend form of cruel children who chose to go to hell to continue their cruelty. Of course, this does not go well for evil child.
+           * Personality - They are clever and may try to design intricate plans, or they may just cause trouble and hope that will please their masters.
+           * Powers - They may communicate mentally with other devils and it is in this way that they are the most useful. Powerful diabolists have been known to capture Imps and cram them into magical bottles. Anyone who possesess the bottle may converse with the Imp inside. Though the Imp is troublesome and somewhat incoherent, it may be used as a go between to converse with greater devils to negotiate for knowledge or power. While channelling greater devils, the Imp becomes immeditately conherent and possesses a dark intelligence that it uses to conspire with its master.
+           * In their home realm, Imps occupy the unenviable position at the bottom of the devil hierarchy. At best, servitors may be employed as scullery workers or menial laborers. Worse they are used as living tools serving as a plunger, polishing, or scrapping instrument. Devils sometimes amuse themselves by squeezing an imp's head into funny faces.")
+       "King Baal Moloch"
+        (base/unit
+         :name "King Baal Moloch"
+         :summary
+          "* A King of [Devils] with [Godlike] power.
+           * Baal appears as a man with a bull's head.
+           * Worship involves child sacrifice by fire (to Moloch)."
+         :titles "Bael"
+         :traits "Devil")
+       "King Balam"
+        (base/unit
+         :name "King Balam"
+         :traits "Devil")
+       "King Beleth"
+        (base/unit
+         :name "King Beleth"
+         :traits "Devil")
+       "King Belial"
+        (base/unit
+         :name "King Belial"
+         :traits "Devil")
+       "King Paimon"
+        (base/unit
+         :name "King Paimon"
+         :traits "Devil")
+       "King Purson"
+        (base/unit
+         :name "King Purson"
+         :traits "Devil")
+       "King Viné"
+        (base/unit
+         :name "King Viné"
+         :traits "Devil")
+       "King Zagan"
+        (base/unit
+         :name "King Zagan"
+         :traits "Devil")
+       "Knight Furcas"
+        (base/unit
+         :name "Knight Furcas"
+         :traits "Devil")
+       "Marquis Amon"
+        (base/unit
+         :name "Marquis Amon"
+         :traits "Devil")
+       "Marquis Andras"
+        (base/unit
+         :name "Marquis Andras"
+         :traits "Devil")
+       "Marquis Andrealphus"
+        (base/unit
+         :name "Marquis Andrealphus"
+         :traits "Devil")
+       "Marquis Cimeies"
+        (base/unit
+         :name "Marquis Cimeies"
+         :traits "Devil")
+       "Marquis Decarabia"
+        (base/unit
+         :name "Marquis Decarabia"
+         :traits "Devil")
+       "Marquis Leraje"
+        (base/unit
+         :name "Marquis Leraje"
+         :traits "Devil")
+       "Marquis Forneus"
+        (base/unit
+         :name "Marquis Forneus"
+         :traits "Devil")
+       "Marquis Marchosias"
+        (base/unit
+         :name "Marquis Marchosias"
+         :traits "Devil")
+       "Marquis Naberius"
+        (base/unit
+         :name "Marquis Naberius"
+         :traits "Devil")
+       "Marquis Oriax"
+        (base/unit
+         :name "Marquis Oriax"
+         :titles "Orias"
+         :traits "Devil")
+       "Marquis Phenex"
+        (base/unit
+         :name "Marquis Phenex"
+         :traits "Devil")
+       "Marquis Ronové"
+        (base/unit
+         :name "Marquis Ronové"
+         :traits "Devil")
+       "Marquis Samigina"
+        (base/unit
+         :name "Marquis Samigina"
+         :traits "Devil")
+       "Marquis Shax"
+        (base/unit
+         :name "Marquis Shax"
+         :traits "Devil")
+       "Marquis Sabnock"
+        (base/unit
+         :name "Marquis Sabnock"
+         :traits "Devil")
+       "Nightmare"
+        (base/unit<-tactics-key tactics "Nightmare")
+       "Pit Fiend"
+        (base/unit<-tactics-key tactics "Pit Fiend")
+       "Pit Wyrm"
+        (base/unit
+         :name "Pit Wyrm")
+       "President Amy"
+        (base/unit
+         :name "President Amy")
+       "President Botis"
+        (base/unit
+         :name "President Botis")
+       "President Buer"
+        (base/unit
+         :name "President Buer")
+       "President Caim"
+        (base/unit
+         :name "President Caim")
+       "President Foras"
+        (base/unit
+         :name "President Foras")
+       "President Glasya-Labolas"
+        (base/unit
+         :name "President Glasya-Labolas")
+       "President Haagenti"
+        (base/unit
+         :name "President Haagenti")
+       "President Malphas"
+        (base/unit
+         :name "President Malphas")
+       "President Marbas"
+        (base/unit
+         :name "President Marbas")
+       "President Marax"
+        (base/unit
+         :name "President Marax")
+       "President Ose"
+        (base/unit
+         :name "President Ose")
+       "President Valac"
+        (base/unit
+         :name "President Valac")
+       :Azazel
+        (base/unit
+         :name "Azazel")
+       "Prince Asmodeus"
+        (base/unit
+         :name "Prince Asmodeus"
+         :summary
+          "* Spreads lust through the land. Embodies the sin of lust.
+           * Part man part animal hybrid."
+         :titles "Asmoday")
+       "Prince Beelzebub"
+        (base/unit
+         :name "Prince Beelzebub"
+         :summary "* Fallen angel second only to Lucifer. Demon of pestilences. Consumes everything in his path."
+         :titles "Lord of Gluttony, Lord of Flies, Lord of Flyers")
+       "Prince Belphagor"
+        (base/unit
+         :name "Prince Belphagor"
+         :summary
+          "* The lord of fire and laziness. Prince of manipulation and deceit. He embodies the sin of sloth.
+           * Formerly the Archangel Belpior, he took no side during Lucifer's rebellion and was cast down for his inaction.
+           * He is a shape changer."
+         :titles "Lord of Sloth")
+       "Prince Gäap"
+        (base/unit
+         :name "Prince Gäap")
+       "Prince Ipos"
+        (base/unit
+         :name "Prince Ipos")
+       "Prince Leviathan"
+        (base/unit
+         :name "Prince Leviathan"
+         :summary "* Swallows whole those consumed with envy. Embodies the sin of envy."
+         :titles "Gates of Hell, Hellmouth, Lord of Envy")
+       "Prince Lucifer"
+        (base/unit
+         :name "Prince Lucifer"
+         :reference
+          "* The are very few things that I will defend with true passion: medical marijuana, the biblical Satan as a metaphor against tyranny, and motherfucking, goddamn cryptocurrency. - Gilfoyle, Silicon Valley
+           * Guilt is like a bag of fuckin' bricks. All you gotta do is set it down. ... Who are you carrying all those bricks for anyway? God. ... God likes to watch. He's a prankster. .. He gives man instincts ... He sets the rules in opposition. It's the goof of all time. Look but don't touch. Touch but don't taste. Taste but don't swallow. ... And while you're jumping from one foot to the other, what is he doing? He's laughing his sick, fucking ass off. ... He's a sadist. He's an absentee landlord. Worship that? Never. ... Freedom, baby is never having to say you're sorry. - Devil's Advocate"
+         :summary "* The archangel who rebelled and was cast out. He embodies the sin of pride."
+         :titles "Lord of Pride")
+       "Prince Mammon"
+        (base/unit
+         :name "Prince Mammon"
+         :summary "* Enslaves those who pursue wealth. Embodies the sin of greed."
+         :titles "Lord of Greed")
+       "Prince Orobas"
+        (base/unit
+         :name "Prince Orobas")
+       "Prince Satan"
+        (base/unit
+         :name "Prince Satan"
+         :titles "Lord of Wrath")
+       "Prince Seere"
+        (base/unit
+         :name "Prince Seere")
+       "Prince Sitri"
+        (base/unit
+         :name "Prince Sitri")
+       "Prince Stolas"
+        (base/unit
+         :name "Prince Stolas")
+       "Prince Vassago"
+        (base/unit
+         :name "Prince Vassago")
+       "Shaitan, Devil"
+        (base/unit
+         :name "Shaitan, Devil")
+       :Succubus
+        (base/unit
+         :name "Succubus"
+         :summary
+          "* Appearance - A powerful Devil who appears as an alluring person with unearthly beauty. In their true form they have a terrifying regal presense with glowing eyes, sharp fangs, bat-like wings, elegant horns like a tiara, and cloven feet. They have distinct male and female genders, but they have no sexual preference (a soul is a soul after all).
+           * Energy Drain - They seduce people to have intercourse, providing untold pleasures while drawing their energy, often to the point of exhaustion or death.
+           * Illusion - They are masters of [Illusion] and will almost never appear in their true form in the mortal realm.
+           * Strength - They are physically powerful with strength similar to a bear or gorilla, but despite their power, they consider violence to be beneath them and will negotiate or flee if given the chance.
+           * Patience - They are patient, sophisticated, and knowledgeable. Their seduction talents go far beyond sex, and they will often offer aid or information to befriend and manipulate their target. They are in no rush to accomplish their mission."
+         :titles "Incubus, Sex Fiend, Temptress")))
+    (base/section
+     :name "Flatlands"
+     :summary "* A bizarre two-dimensional realm."
+     :unitmap
+      (base/unitmap
+       "Ribbon Guard"
+        (base/unit
+         :name "Ribbon Guard"
+         :summary
+          "* Ribbons are unusual, two-dimensional entities. They never communicate, but they understand orders and always follow them accurately without concern for their own safety, so they are favored as guards or servants.
+          * Description - They appear as floating banners of fabric of varying colors, but they have no actual depth. They ripple slowly through air or water like snakes and may strike or grapple opponents. They do not seem to eat, sleep or even breathe. It is unclear if they have independent thought or are merely automatons.
+          * Powers:
+          ** [Resistance]: [Resist Impact], [Resist Pierce], [Resist Electricity], [Resist Vacuum], [Resist Radiation], [Immune Vaccuum], [Cannot Eat], [Cannot Sleep]
+          ** [Vulnerability]: [Vulnerable to Slash], [Vulnerable to Fire], [Vulnerable to Cold]")))
+    (base/section
+     :name "Mirrorlands"
+     :unitmap
+      (base/unitmap<-tactics-keys
+       tactics
+       "Mirror Reflection"
+       "Mirror Shard")))))
 
 (func chapter_darkling : base/chapter
  [tactics : base/tactics]
@@ -3766,18 +3814,14 @@
        "Gnoll Chieftain"
         (base/unit
          :name "Gnoll Chieftain"
-         :summary "* Gnoll leadership is determined through intimidation and power. Gnoll leaders are usually the largest and strongest of their breed. Like bull walruses they maintain a harem of brides, so the position is coveted by upstarts. Challenges to a Chief's rule are usually not fatal, but the loser must put himself at the mercy of the victor. A good leader is expected to accept the subservient gesture, but some victors will commit a political faux pas to permanently remove a rival."
+         :traits "Gnoll"
+         :summary
+          "* Gnoll leadership is determined through intimidation and power. Gnoll leaders are usually the largest and strongest of their breed. Like bull walruses they maintain a harem of brides, so the position is coveted by upstarts. Challenges to a Chief's rule are usually not fatal, but the loser must put himself at the mercy of the victor. A good leader is expected to accept the subservient gesture, but some victors will commit a political faux pas to permanently remove a rival."
          :unitskillmap
-          (base/unitskillmap
-           :Melee
-            (base/unitskill
-             :name "Melee"
-             :level "7"
-             :unititemmap
-              (base/unititemmap
-               "War Hammer"
-                (base/unititem
-                 :name "War Hammer")))))
+          (base/unitskillmap<-unitskilllist
+           (base/unitskill<-tactics-key-lvl-items
+            tactics "Melee" 7
+            (stringlist "Hammer: War"))))
        "Gnoll Pikeman"
         (base/unit<-tactics-key tactics "Gnoll Pikeman")
        "Gnoll Skirmisher"
@@ -3785,19 +3829,14 @@
        "Gnoll Slaver"
         (base/unit
          :name "Gnoll Slaver"
+         :traits "Gnoll"
          :unitskillmap
-          (base/unitskillmap
-           :Ranged
-            (base/unitskill
-             :name "Ranged"
-             :unititemmap
-              (base/unititemmap
-               :Net
-                (base/unititem
-                 :name "Net")
-               :Whip
-                (base/unititem
-                 :name "Whip")))))))
+          (base/unitskillmap<-unitskilllist
+           (base/unitskill<-tactics-key-items
+            tactics "Ranged"
+            (stringlist
+             "Net"
+             "Whip"))))))
     (base/section
      :name "Goblins"
      :reference
@@ -4181,7 +4220,9 @@
           "* The Aeroplasm is an unusual 15 foot tall invertibrate that lives entirely in the sky. It floats by means of air bladders filled with hydrogen gas which makes them spectacularly flammable if their bladders are ruptured by fire. They have long tendrils that contain a potent neurotoxin which they use to paralyze the birds and insects that they prey upon. During the Aeroplasm mating season, the males produce a luminous secretion that makes them glow in various colors to attract females. It is said that the sight of hundreds of Aeroplasms glowing in different shades in the night sky is a spectacular sight.")
        "Basilisk"
         (base/unit
-         :name "Basilisk")
+         :name "Basilisk"
+         :summary
+          "The basilisk of Cyrene is a small snake, being not more than twelve inches in length that is so venomous, it leaves a wide trail of deadly venom in its path, and its gaze is likewise lethal.")
        "Behemoth"
         (base/unit
          :name "Behemoth")
@@ -4196,15 +4237,12 @@
          :summary
           "* It is said to resemble a cape buffalo, with its head always pointing downwards due to its great weight. Its stare or breath could either turn people into stone, or kill them."
          :unitpowermap
-          (base/unitpowermap
-           "Transform Other"
-            (base/unitpower
-             :name "Transform Other"
-             :unitabilitymap
-              (base/unitabilitymap
-               :Petrification
-                (base/unitability
-                 :name "Petrification")))))
+          (base/unitpowermap<-unitpowerlist
+           (base/unitpower<-tactics-key-abilities
+            tactics "Transmutation"
+            (stringlist
+             "Petrifying Breath"
+             "Petrifying Stare"))))
        "Chimera"
         (base/unit
          :name "Chimera"
@@ -4218,13 +4256,11 @@
        "Doppelganger"
         (base/unit
          :name "Doppelganger")
+       "Eye Killer"
+        (base/unit<-tactics-key tactics "Eye Killer")
        "Gargoyle"
         (base/unit
          :name "Gargoyle")
-       "Gazer"
-        (base/unit
-         :name "Gazer"
-         :titles "Beholder, Evil Eye, Eye Killer, Eye of the Beholder, Floating Eye")
        "Griffin"
         (base/unit
          :name "Griffin"
@@ -4232,25 +4268,7 @@
        "Goblin Spider"
         (base/unit<-tactics-key tactics "Goblin Spider")
        "Gorgon"
-        (base/unit
-         :name "Gorgon"
-         :image "images/bestiary/Medusa.png"
-         :titles "Medusa"
-         :unitpowermap
-          (base/unitpowermap
-           "Transform Other"
-            (base/unitpower
-             :name "Transform Other"
-             :unitabilitymap
-              (base/unitabilitymap
-               :Petrification
-                (base/unitability
-                 :name "Petrification"))))
-         :unitskillmap
-          (base/unitskillmap<-unitskilllist
-           (base/unitskill<-tactics-key-items
-            tactics "Ranged"
-            (stringlist "Bow: Short"))))
+        (base/unit<-tactics-key tactics "Gorgon")
        "Hippogriff"
         (base/unit
          :name "Hippogriff")
@@ -4389,7 +4407,7 @@
   :summary
    "* Description - The dead are normally at rest, but under certain circumstances their spirits return from the [Spirit Realm] and they rise again. Created through different means, the Undead share a common trait. Their life is artificial, a soulless parody of true life. Above all they envy the life that they lack, and they may only maintain their unlife by taking life from others.
     * Personality - Despite their reputation, the Undead are not innately evil. They retain at least some of their original personalities, but their new existence often forces them to reevaluate their morals. Most of the more 'ethical' Undead end their own miserable existences.
-    * Spirit - Undead cannot recover Spirit except by stealing it from the living. Slaying the living is always worth 1 extra [Will] to any undead. Note: Undead are more connected to the spirit world than the living world and therefore are permanently banished from the living world if their Spirit ever drops to zero. Without a [Will], they many never use any [Naturalism] or [Spiritualism] magics.
+    * Will - Undead cannot recover Will except by stealing it from the living. Slaying the living gives Will:+1 to any undead. Note: Undead are more connected to the spirit world than the living world and therefore are permanently banished from the living world if their Spirit ever drops to zero. Without [Will], they many never use any [Naturalism] or [Spiritualism] magics.
 
     Types
     * Traumatic death - Focused completely on the trauma of their death, they are drawn to the living and end up reenacting their death with others. - Burning Dead, Drowned, Frozen Dead, Scarecrow, Wendigo.

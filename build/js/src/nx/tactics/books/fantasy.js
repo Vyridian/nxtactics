@@ -320,7 +320,7 @@ export default class nx_tactics_books_fantasy {
                   ":summary",
                   "* The Witchmen revere the forces of darkness and despise the enemies of their gods the forces of light. They live a completely nocturnal lifestyle and are skilled at witchcraft and herbalism.\n* They sing songs of fear and death that are said to strike madness in those that hear them.\n* They create shrunken heads from their victims and wear them as jujus. It is said that they can capture a person's soul and control their body like a mindless zombie.\n* Some have trained Death's Head Vipers as pets and wear them as bracelets.",
                   ":unitpowermap",
-                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Curses", "Enchantment", "Naturalism", "Madness"),
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Animism", "Enchantment", "Naturalism", "Madness"),
                   ":unitskillmap",
                   nx_tactics_base.f_unitskillmap_from_unitskilllist(
                     nx_tactics_base.f_unitskill_from_tactics_key_abilities(
@@ -1704,7 +1704,7 @@ export default class nx_tactics_books_fantasy {
             "Digital Realm",
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Digital Realm", ":titles", "Cyberspace, Cyberrealm"),
             "Dreaming, The",
-            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Dreaming, The", ":titles", "Dreamlands, Dreamworld, Fade, Imaginary World, Nod"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Dreaming, The", ":titles", "Dreamlands, Dreamworld, Fade, Imaginary World, Nod", ":reference", "* This is my home, my place of power. Reality here conforms to my design. - Dream, The Sandman"),
             "Fade, The",
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Fade, The", ":summary", "* The Fade is a Mirror Realm that is a sort of Dream Realm but is driven by strong emotions.\n* Fade Curse - A Curse is a spirit that has manifested from strong emotions over a long period of time."),
             ":Luna",

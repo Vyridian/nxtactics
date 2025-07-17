@@ -332,7 +332,7 @@
             :unitpowermap
              (base/unitpowermap<-tactics-keys
               tactics
-              "Curses"
+              "Animism"
               "Enchantment"
               "Naturalism"
               "Madness")
@@ -1895,7 +1895,9 @@
       "Dreaming, The"
        (base/place
         :name "Dreaming, The"
-        :titles "Dreamlands, Dreamworld, Fade, Imaginary World, Nod")
+        :titles "Dreamlands, Dreamworld, Fade, Imaginary World, Nod"
+        :reference
+         "* This is my home, my place of power. Reality here conforms to my design. - Dream, The Sandman")
       "Fade, The"
        (base/place
         :name "Fade, The"

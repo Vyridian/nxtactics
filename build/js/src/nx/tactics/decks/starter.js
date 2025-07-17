@@ -66,7 +66,7 @@ export default class nx_tactics_decks_starter {
           ":id",
           vx_core.f_new({"any-1": vx_core.t_string}, "rotatedcards-", color),
           ":image",
-          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, ".svg")
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-rotated-", color, ".svg")
         )
       })
     )
@@ -102,7 +102,7 @@ export default class nx_tactics_decks_starter {
           ":name",
           vx_core.f_new({"any-1": vx_core.t_string}, "Target#", num),
           ":image",
-          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, ".svg")
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-target-", color, "-", num, ".svg")
         )
       })
     )
@@ -138,7 +138,7 @@ export default class nx_tactics_decks_starter {
           ":name",
           vx_core.f_new({"any-1": vx_core.t_string}, "Unit#", num),
           ":image",
-          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-player-", color, ".svg")
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-unit-num-", color, "-", num, ".svg")
         )
       })
     )

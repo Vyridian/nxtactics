@@ -24,7 +24,7 @@
  (base/conflict
   :name "Lust"
   :ranksuit base/ranksuit-ad
-  :image "images/card-conflict-da.svg"))
+  :image "images/conflict-ad.svg"))
 
 (const conflict-ah : base/conflict
  (base/conflict

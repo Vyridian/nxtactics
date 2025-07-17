@@ -439,39 +439,6 @@ export default class nx_tactics_decks_wound {
     return output
   }
 
-  /**
-   * @function deck_woundback
-   * Wound Back Deck
-   * @return {deck}
-   */
-  static t_deck_woundback = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_woundback = {
-    vx_type: nx_tactics_decks_wound.t_deck_woundback
-  }
-
-  // (func deck-woundback)
-  static f_deck_woundback() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_deck},
-      ":name",
-      "Wound Back",
-      ":image",
-      "images/damage-wound-fatigue.svg",
-      ":layout",
-      nx_tactics_base.c_cardlayout_imageonly,
-      ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
-        nx_tactics_decks_wound.c_fatigue,
-        54,
-        false
-      )
-    )
-    return output
-  }
-
 
 
   static {
@@ -533,12 +500,10 @@ export default class nx_tactics_decks_wound {
       "wound-wild-red": nx_tactics_decks_wound.c_wound_wild_red
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "deck-wound": nx_tactics_decks_wound.e_deck_wound,
-      "deck-woundback": nx_tactics_decks_wound.e_deck_woundback
+      "deck-wound": nx_tactics_decks_wound.e_deck_wound
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "deck-wound": nx_tactics_decks_wound.t_deck_wound,
-      "deck-woundback": nx_tactics_decks_wound.t_deck_woundback
+      "deck-wound": nx_tactics_decks_wound.t_deck_wound
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -568,24 +533,6 @@ export default class nx_tactics_decks_wound {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_wound.f_deck_wound
-    }
-
-    // (func deck-woundback)
-    nx_tactics_decks_wound.t_deck_woundback['vx_value'] = {
-      name          : "deck-woundback",
-      pkgname       : "nx/tactics/decks/wound",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_wound.f_deck_woundback
     }
 
     // (const fatigue)
@@ -1089,8 +1036,10 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":image",
-      "images/card-wound-head.svg",
-      ":summary",
+      "images/damage-wound-ac.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":secrets",
       "Minor: Head Ringing. Stun:1\nMajor: Concussion. Stun:1 Push:1\nCritical: Skull Fracture. Unconscious. Stun:1 Fatigue:1 Push:1 Knockdown:1\nExtreme: Skull Crushed. Dead."
     ))
 
@@ -1102,9 +1051,11 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":image",
-      "images/card-wound-head.svg",
-      ":summary",
-      "Minor: Head Grazed. Stun:1\nMajor: Pierced Throat. Can't speak. Stun: 1, Stress:1\nCritical: Blinded in one Eye. Partly Blind. Stun:2 Stress:1\nExtreme: Brain Pierced. Dying. Disorder:2"
+      "images/damage-wound-ad.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":secrets",
+      "Minor: Head Grazed. Stun:1\nMajor: Throat Pierced. Can't speak. Stun: 1 Stress:1\nCritical: Blinded in one Eye. Partly Blind. Stun:2 Stress:1\nExtreme: Brain Pierced. Dying. Disorder:2"
     ))
 
     // (const wound-ah)
@@ -1115,10 +1066,12 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":image",
-      "images/card-wound-head.svg",
+      "images/damage-wound-ah.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":reference",
       "* Not the face!",
-      ":summary",
+      ":secrets",
       "Minor: Head Graze. Stress:1\nMajor: Head Slash. Slow:1 Bleeding:1\nCritical: Neck Fracture. Immobilized. Slow:3 Bleeding:1\nExtreme: Spine Severed. Paralyzed. Stress:3 Bleeding:2"
     ))
 
@@ -1132,7 +1085,9 @@ export default class nx_tactics_decks_wound {
       ":image",
       "images/damage-wound-as.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":secrets",
+      "Minor: Head Cut. Bleeding:1\nMajor: Face Gash. Stress:1 Bleeding:1\nCritical: Throat Slashed. Bleeding:3 Stress:2\nExtreme: Beheaded. Dead."
     ))
 
     // (const wound-jc)
@@ -1203,8 +1158,10 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kc,
       ":image",
-      "images/card-wound-shoulders.svg",
-      ":summary",
+      "images/damage-wound-kc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":secrets",
       "Minor: Shoulder Bruise. Fatigue:1\nMajor: Bruised Ribs. Slow:1 Fatigue:1 Push:1\nCritical: Broken Ribs. Hobbled. Slow:2 Push:1\nExtreme: Rib Cage Collapse. Dead. Push:1"
     ))
 
@@ -1371,11 +1328,13 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_wild_black, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Wound: Deck",
+      "Wild: Black",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerblack,
       ":image",
-      "images/card-hitlocation-jester-black.svg",
+      "images/damage-wound-wb.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Search the Deck for any card and play it. Then Shuffle Discards into Deck."
     ))
@@ -1384,11 +1343,13 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_wild_red, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Wound: Discard",
+      "Wild: Red",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerred,
       ":image",
-      "images/card-hitlocation-jester-red.svg",
+      "images/damage-wound-wr.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."
     ))

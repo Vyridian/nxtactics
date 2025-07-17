@@ -208,7 +208,7 @@
    :name "Art Imitates Life"
    :reference "Dorian Gray"
    :summary
-    "* [Power]: [Papercraft]
+    "* [Power]: [Artistry]
      * Artwork become real")
   (base/ability
    :name "Artificial Gills"
@@ -249,6 +249,10 @@
    :summary
     "* Self-amputation is the behaviour whereby a creature sheds or discards an appendage, usually as a self-defense mechanism to elude a predator's grasp.
      * It is often paired with Regeneration.")
+  (base/ability
+   :name "Awestrike"
+   :summary
+    "* [Power]: [Presence]")
   (base/ability
    :name "Back Fist"
    :titles "Backhand, Bitch Slap"
@@ -390,7 +394,7 @@
   (base/ability
    :name "Blind Fighting"
    :summary
-    "* [Power]: [Cultivation]")
+    "* [Power]: [Mysticism]")
   (base/ability
    :name "Blind Justice"
    :summary
@@ -560,15 +564,15 @@
     "* [Action]: [Activate] up to [Command] units directly or indirectly adjacent to this unit. These units (including this one) may spend [Speed] or [Actions] in any order this [Turn].
      * [Interrupt]: May not be used as an Interrupt.")
   (base/ability
-   :name "Chaotic"
-   :summary
-    "* [Power]: [Special Ability]")
-  (base/ability
    :name "Chameleon Skin"
    :summary
     "* Change skin color catch attention, threaten, or blend in.
      * [Power]: [Animalism] or [Appearance]
      * [Stealth]:+1 or [Intimidation]:+1")
+  (base/ability
+   :name "Chaotic"
+   :summary
+    "* [Power]: [Special Ability]")
   (base/ability
    :name "Charge"
    :reference
@@ -591,6 +595,12 @@
    :summary
     "* [Power]: [Astrology] [Presence]
      * [Action]: Gain [Synergy] on unit's next communication skill. Duration 1 turn.")
+  (base/ability
+   :name "Chastity Lock"
+   :summary
+    "* A magical barrier prevents unwanted sex.
+     * [Power]: [Purity]
+     * This powerful magic is sustained by the user's Will and lasted until voluntarily released (cannot be coerced).")
   (base/ability
    :name "Circular Logic"
    :reference
@@ -1168,6 +1178,14 @@
    :summary "Reduces Movement"
    :titles "Tanglers")
   (base/ability
+   :name "Enthrall"
+   :summary
+    "* [Power]: [Presence]")
+  (base/ability
+   :name "Entrance"
+   :summary
+    "* [Power]: [Presence]")
+  (base/ability
    :name "Environmental Containment"
    :summary
     "* Suit is sealed against chemical and biological weapons except corrosive ones. It is also water-proof.")
@@ -1689,6 +1707,18 @@
      * Let's write something on the carpet... I know how about 'Mother SUCKS'. - Drop Dead Fred"
    :summary "Create a character with a distinct personality of your choice that only the target can see.")
   (base/ability
+   :name "Imitation: Creature"
+   :reference
+    "* So, how do we know who's human? If I was an imitation, a perfect imitation, how would you know it was really me? - Childs, The Thing"
+   :summary
+    "* Imititate another creature
+     * [Power]: [Shapeshift]")
+  (base/ability
+   :name "Imitation: Inanimate"
+   :summary
+    "* Imititate an inanimate object
+     * [Power]: [Shapeshift]")
+  (base/ability
    :name "Impact Absorption"
    :summary
     "* [Power]: [Inertia]")
@@ -1921,6 +1951,12 @@
    :summary
     "* [Skill]: [Crime]")
   (base/ability
+   :name "Mage Sight"
+   :titles "Detect Magic, Detect Dweomer"
+   :summary
+    "* See Magic around you.
+     * [Power]: [Wizardry]")
+  (base/ability
    :name "Makeup"
    :reference
     "* I hate having to put my face on. - Leblanc, Runeterra"
@@ -2017,6 +2053,16 @@
    :summary
     "* Can mine for ore. Must be modified for each type of ore.
      * [Power]: [Factory]")
+  (base/ability
+   :name "Mirror Blink"
+   :summary
+    "* [Power]: [Illusion]
+     * If you have a [Illusion], you may replace your Unit with the Illusion")
+  (base/ability
+   :name "Mirror Image"
+   :summary
+    "* [Power]: [Illusion]
+     * Replace the unit with a [Phantasm] and place Crit additional [Phantasm]s 1 space from the unit. Secretly note one of these as the Unit. When all other Mirror Images are destroyed, replace the final [Phantasm] with the unit.")
   (base/ability
    :name "Misdirection"
    :summary
@@ -2141,13 +2187,24 @@
    :reference
     "* A small victory is still a victory. Good work. - Kai'sa, Runeterra")
   (base/ability
-   :name "Petrification"
+   :name "Petrifying Breath"
    :summary
-    "* [Skill]: [Transformation] vs. [Will] and place [Petrification] counters on the target body location.
+    "* Place [Petrification] counters on the target body location.
+     * [Power]: [Transformation] vs [Will]")
+  (base/ability
+   :name "Petrifying Stare"
+   :summary
+    "* Place [Petrification] counters on the target body location.
+     * [Power]: [Transformation] vs [Will]
      * Any body location with a [Petrification] is encased in stone. It requires an [Action] to remove a [Petrification]. Any area that suffers 3 [Petrification] turns completely to stone. If any other area is so petrified, then complete petrification immediately spreads across the entire body and then the body and all its gear immediately converts to a stone statue.
      * Additional Effects: A petrified arm cannot move. A petrified leg reduces Move by half. A petrified head is unable to see or hear. Other petrifed areas have no additional effect. Petrified Arms or legs can break off like a clean amputation without blood loss.
      * This ability can also be used to restore a petrified target back to its original form if the skill is at least equal to the original. Lost limbs may also be restored by reattaching the limb before restoration.
      * This ability can also be used on any sort of earth to harden the earth to equivalent stone.")
+  (base/ability
+   :name "Petrifying Touch"
+   :summary
+    "* Place [Petrification] counters on the target body location.
+     * [Power]: [Transformation] vs [Will]")
   (base/ability
    :name "Philosophy"
    :reference
@@ -3031,7 +3088,7 @@
    :name "Swap Sensations"
    :summary
     "* Swap sensations with Rival.
-     * [Power]: [Empathy] or [Curses]")
+     * [Power]: [Empathy] or [Animism]")
   (base/ability
    :name "Sweep"
    :summary

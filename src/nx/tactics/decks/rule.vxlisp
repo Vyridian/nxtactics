@@ -52,6 +52,12 @@
     "* The Beast
      * Beast Unleashed: The Beast is now in control of this unit. Set Conscience = Will; set Will = Beast stat; and set Beast=blank")
   (base/rule
+   :name "Blatant"
+   :summary
+    "* Blatant Abilities are obviously linked to the user.
+     * [Blatant] is the opposite of [Subtle]
+     * Blatant Magic is harder to use and has [Disadvantage]")
+  (base/rule
    :name "Body"
    :summary
     "* Body is the measure of a unit's mass and durability.
@@ -339,6 +345,8 @@
    :name "Place")
   (base/rule
    :name "Player"
+   :image "images/rule-player.svg"
+   :layout base/cardlayout-imageonly
    :summary
     "* [Setup]: Gather your Units and assign a [Unit#] card to each. Arrange each Unit's equipped items like a paper doll.
      * [Round End]: [Draw]:1 and [Recover].")
@@ -443,6 +451,8 @@
      * Taunter - Draw enemy attention")
   (base/rule
    :name "Rotated Cards"
+   :image "images/rule-rotated.svg"
+   :layout base/cardlayout-imageonly
    :summary
     "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated card.
 
@@ -571,6 +581,19 @@
    :image "images/rule-stat.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Subtle"
+   :summary
+    "* Subtle Abilities are not obviously linked to the user.
+     * [Blatant] is the opposite of [Subtle]")
+  (base/rule
+   :name "Suit"
+   :summary
+    "Each Suit represents a Stat:
+     * Wands - Power. Body
+     * Coins - Planning. Mind
+     * Cups - Perseverance. Will
+     * Swords - Skill. Speed")
+  (base/rule
    :name "Surprise"
    :summary
     "* IF a unit suddenly appears adjacent or upon a unit.
@@ -587,7 +610,8 @@
     "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent.")
   (base/rule
    :name "Target#"
-   :image "images/rule-target-num.svg")
+   :image "images/rule-target-num.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Terms"
    :image "images/rule-terms.svg"
@@ -611,7 +635,8 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Unit#"
-   :image "images/rule-unit-num.svg")
+   :image "images/rule-unit-num.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Unskilled"
    :summary

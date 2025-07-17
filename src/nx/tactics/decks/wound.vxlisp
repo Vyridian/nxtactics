@@ -11,17 +11,19 @@
 
 (const wound-wild-black : base/damage
  (base/damage
-  :name "Wound: Deck"
+  :name "Wild: Black"
   :ranksuit base/ranksuit-jokerblack
-  :image "images/card-hitlocation-jester-black.svg"
+  :image "images/damage-wound-wb.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
 
 (const wound-wild-red : base/damage
  (base/damage
-  :name "Wound: Discard"
+  :name "Wild: Red"
   :ranksuit base/ranksuit-jokerred
-  :image "images/card-hitlocation-jester-red.svg"
+  :image "images/damage-wound-wr.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
 
@@ -29,8 +31,9 @@
  (base/damage
   :name "Bash: Head"
   :ranksuit base/ranksuit-ac
-  :image "images/card-wound-head.svg"
-  :summary
+  :image "images/damage-wound-ac.svg"
+  :layout base/cardlayout-imageonly
+  :secrets
    "Minor: Head Ringing. Stun:1
     Major: Concussion. Stun:1 Push:1
     Critical: Skull Fracture. Unconscious. Stun:1 Fatigue:1 Push:1 Knockdown:1
@@ -40,10 +43,11 @@
  (base/damage
   :name "Pierce: Head"
   :ranksuit base/ranksuit-ad
-  :image "images/card-wound-head.svg"
-  :summary
+  :image "images/damage-wound-ad.svg"
+  :layout base/cardlayout-imageonly
+  :secrets
    "Minor: Head Grazed. Stun:1
-    Major: Pierced Throat. Can't speak. Stun: 1, Stress:1
+    Major: Throat Pierced. Can't speak. Stun: 1 Stress:1
     Critical: Blinded in one Eye. Partly Blind. Stun:2 Stress:1
     Extreme: Brain Pierced. Dying. Disorder:2"))
 
@@ -51,10 +55,11 @@
  (base/damage
   :name "Hack: Head"
   :ranksuit base/ranksuit-ah
-  :image "images/card-wound-head.svg"
+  :image "images/damage-wound-ah.svg"
+  :layout base/cardlayout-imageonly
   :reference
    "* Not the face!"
-  :summary
+  :secrets
    "Minor: Head Graze. Stress:1
     Major: Head Slash. Slow:1 Bleeding:1
     Critical: Neck Fracture. Immobilized. Slow:3 Bleeding:1
@@ -66,19 +71,19 @@
   :ranksuit base/ranksuit-as
   :image "images/damage-wound-as.svg"
   :layout base/cardlayout-imageonly
-//  :summary
-//   "Minor: Head Cut. Bleeding:1
-//    Major: Face Gash. Stress:1 Bleeding:1
-//    Critical: Throat Slashed. Bleeding:3 Stress:2
-//    Extreme: Beheaded. Dead."
-))
+  :secrets
+   "Minor: Head Cut. Bleeding:1
+    Major: Face Gash. Stress:1 Bleeding:1
+    Critical: Throat Slashed. Bleeding:3 Stress:2
+    Extreme: Beheaded. Dead."))
 
 (const wound-kc : base/damage
  (base/damage
   :name "Bash: Shoulders"
   :ranksuit base/ranksuit-kc
-  :image "images/card-wound-shoulders.svg"
-  :summary
+  :image "images/damage-wound-kc.svg"
+  :layout base/cardlayout-imageonly
+  :secrets
    "Minor: Shoulder Bruise. Fatigue:1
     Major: Bruised Ribs. Slow:1 Fatigue:1 Push:1
     Critical: Broken Ribs. Hobbled. Slow:2 Push:1
@@ -719,13 +724,3 @@
    (base/cardmap-copy<-card-count-isnum
     fatigue 54 false)))
  :doc "Wound Deck")
-
-(func deck-woundback : base/deck
- (base/deck
-  :name "Wound Back"
-  :image "images/damage-wound-fatigue.svg"
-  :layout base/cardlayout-imageonly
-  :cardmap
-   (base/cardmap-copy<-card-count-isnum
-    fatigue 54 false))
- :doc "Wound Back Deck")

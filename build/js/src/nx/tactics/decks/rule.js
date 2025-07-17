@@ -106,6 +106,7 @@ export default class nx_tactics_decks_rule {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Area Effect", ":image", "images/card-areaeffect.svg", ":summary", "* Powers can attack in an area.\n* Level:-1 or Rating:-1 to get an Area Effect. Extra reductions double the cards.\n* Arrange cards into a shape starting from the unit."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Beast", ":summary", "* The Beast\n* Beast Unleashed: The Beast is now in control of this unit. Set Conscience = Will; set Will = Beast stat; and set Beast=blank"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Blatant", ":summary", "* Blatant Abilities are obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]\n* Blatant Magic is harder to use and has [Disadvantage]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Body", ":summary", "* Body is the measure of a unit's mass and durability.\n* A unit with Body:0 is incapacitated.\n* It is derived from the mass in kg. E.g. 300kg = 3x10^2 = 3x2"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Broken", ":summary", "* A broken [Item] can only be used as an [Improvised Weapon]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Character", ":summary", ""),
@@ -379,7 +380,17 @@ export default class nx_tactics_decks_rule {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Off-handed", ":reference", "I admit it. You are better than I am. Then why are you smiling? Because I know something you don't know...I am not left handed...There's something I ought to tell you...I am not left handed either. - Princess Bride", ":summary", "* [Action]: IF an [Ability] is used in the incorrect hand or using fewer hands than normal THEN [Skill]:-1."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Place"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Player", ":summary", "* [Setup]: Gather your Units and assign a [Unit#] card to each. Arrange each Unit's equipped items like a paper doll.\n* [Round End]: [Draw]:1 and [Recover]."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Player",
+        ":image",
+        "images/rule-player.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "* [Setup]: Gather your Units and assign a [Unit#] card to each. Arrange each Unit's equipped items like a paper doll.\n* [Round End]: [Draw]:1 and [Recover]."
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Poisoned", ":summary", "* Body:-1\n* Event: Reveal Conflict. IF Ace THEN Poisoned:-1. IF 2 THEN Poisoned:+1."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Power"),
       vx_core.f_new(
@@ -412,7 +423,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Supporter", ":summary", "Supporter Units usually do the following:\n* Target ally(s) to assist\n* Move into Range\n* Aid the ally(s)"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Taunter", ":summary", "Taunter Units usually do the following:\n* Target a dangerous enemy\n* Move into Range\n* Attack and attempt to draw attention"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Roles", ":summary", "A Role describes a Unit's loose goals\n* Attacker - Engage enemies\n* Blaster - Reduce enemy numbers\n* Defender - Protect allies\n* Disrupter - Disrupt enemy abilities\n* Skirmisher - Maintain Range and Strike\n* Sniper - Eliminate big threats\n* Supporter - Helps allies\n* Taunter - Draw enemy attention"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rotated Cards", ":summary", "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated card.\n\n* [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Rotated Cards",
+        ":image",
+        "images/rule-rotated.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated card.\n\n* [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -525,9 +546,19 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Subtle", ":summary", "* Subtle Abilities are not obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suit", ":summary", "Each Suit represents a Stat:\n* Wands - Power. Body\n* Coins - Planning. Mind\n* Cups - Perseverance. Will\n* Swords - Skill. Speed"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Surprise", ":summary", "* IF a unit suddenly appears adjacent or upon a unit.\n* THEN\n** Lose half of starting [Move].\n** Reveal [Conflict]. Unit takes [Light Damage] based on the [Suit].\n** [Wands] = [Fatigue]\n** [Coins] = [Stun]\n** [Cups] = [Stress]\n** [Swords] = [Slow]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Surrounded", ":summary", "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Target#", ":image", "images/rule-target-num.svg"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Target#",
+        ":image",
+        "images/rule-target-num.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -557,7 +588,15 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit#", ":image", "images/rule-unit-num.svg"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Unit#",
+        ":image",
+        "images/rule-unit-num.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unskilled", ":summary", "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Level:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item]."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
