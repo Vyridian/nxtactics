@@ -1227,6 +1227,14 @@
     "* [Skill]: [Deception]
      * Ability to correctly evaluate the opponent's pursuit style and outwit the pursuer.")
   (base/ability
+   :name "Evil Eye"
+   :reference
+    "* Evil Eye, Dadadan"
+   :summary
+    "* Staring at the Target creates intense feelings of unease and self doubt.
+     * [Power]: [Animism]
+     * Reduces Spirit")
+  (base/ability
    :name "Excavating"
    :summary
     "* [Power]: [Digging]

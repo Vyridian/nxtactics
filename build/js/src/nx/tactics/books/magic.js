@@ -115,7 +115,7 @@ export default class nx_tactics_books_magic {
           ":titles",
           "Arcanist",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Alchemy", "Artifice", "Artistry", "Astrology", "Chronomancy", "Conjuration", "Protection", "Sorcery", "Thaumaturgy", "Wizardry")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Abjuration", "Alchemy", "Artifice", "Artistry", "Astrology", "Chronomancy", "Conjuration", "Sorcery", "Thaumaturgy", "Wizardry")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -133,7 +133,7 @@ export default class nx_tactics_books_magic {
           ":titles",
           "Channelling, Miracle Working, White Magic",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Conviction", "Blessing", "Invocation", "Life", "Primus", "Purity", "Radiant")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Conviction", "Blessing", "Invocation", "Life", "Primordial", "Purity", "Radiant")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

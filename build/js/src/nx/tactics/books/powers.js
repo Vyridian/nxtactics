@@ -236,7 +236,7 @@ export default class nx_tactics_books_powers {
           ":titles",
           "Primal Order",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Primus")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Primordial")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

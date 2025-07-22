@@ -1745,7 +1745,8 @@
           :name "Dr. Doom"
           :image "Superheroes/DrDoom.png"
           :reference
-           "* I love my people. I do, but they are MY people. I keep them safe from harm. I give them a better life, and at night, before they sleep, to whatever god they pray, they give thanks for me. - Doom"
+           "* I love my people. I do, but they are MY people. I keep them safe from harm. I give them a better life, and at night, before they sleep, to whatever god they pray, they give thanks for me. - Doom
+            * I try to move my broken limbs, FORCING them despite the shards of my broken bones cutting at my muscles. Nothing. And for a moment, a MOMENT, I permit myself to consider that I have LOST. Doom gives himself the smallest TASTE of defeat, and my entire SOUL rejects it. It is ANTITHETICAL to every cell of my being. I direct the totality of my will toward my shattered arms, and a single finger MOVES... The pain is INDESCRIBABLE. Beyond physical. Lesser men would do anything. PROMISE anything. For only a chance to never feel this way again. But DOOM is not lesser men. I have lost everything. True. But Doom is not the MASK. Doom is not the ARMOR. Doom is not the MAGIC. And Doom is not the NAME. Doom is ME. I am Doom. AND DOOM - NEVER - FAILS!!! Other men would be exhausted, RUINED. Doom is merely DETERMINED. - Doom, One World Under Doom"
           :unitpowermap
            (base/unitpowermap
             :Strength

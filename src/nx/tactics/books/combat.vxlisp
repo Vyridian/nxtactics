@@ -861,9 +861,8 @@
         :Manriki
          (base/item
           :name "Manriki")
-        :Net
-         (base/item
-          :name "Net")
+        "Net"
+         (base/item<-tactics-key tactics "Net")
         :Noose
          (base/item
           :name "Noose")
@@ -954,10 +953,8 @@
          (base/item
           :name "Throwing Hammer"
           :energy "50J")
-        "War Hammer"
-         (base/item
-          :name "War Hammer"
-          :energy "100J")))
+        "Hammer: War"
+         (base/item<-tactics-key tactics "Hammer: War")))
     :Knives
      (section
       :name "Knives"

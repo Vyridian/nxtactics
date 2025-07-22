@@ -276,6 +276,9 @@
    :body "2x0"
    :mass "2kg/4.4lb")
   (base/item
+   :name "Hammer: War"
+   :energy "100J")
+  (base/item
    :name "Improvised Weapon"
    :summary
     "* Any item can be a weapon.
@@ -332,6 +335,8 @@
    :image "images/cards/item-mushrooms.svg"
    :summary
     "* Nutrition for a day. After eating [Reveal Fate]. IF [Coins] THEN you spend 6 hours tripping or sleeping. IF [Cups] THEN Poison:+1")
+  (base/item
+   :name "Net")
   (base/item
    :name "Onions: Wild"
    :classification "Plant"

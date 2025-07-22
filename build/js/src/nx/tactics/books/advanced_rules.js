@@ -26,9 +26,7 @@ export default class nx_tactics_books_advanced_rules {
       ":name",
       "Advanced Rules",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Advanced Setup Rules",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -36,15 +34,14 @@ export default class nx_tactics_books_advanced_rules {
           ":rulemap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
-            ":Campaigns",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaigns", ":summary", "* Starting a New Campaign\n* Creating Player Characters\n* Creating Plots\n* Conflict\n* Creating Scenes\n* Continuing a Campaign"),
+            "Campaign",
+            nx_tactics_base.f_rule_from_tactics_key(tactics, "Campaign"),
             "Randomized Scenes",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Randomized Scenes", ":summary", "* Choose a Map - Any map, indoor or outdoor, square or hex map may be used. The scale must be approximately 1 inch=1.5 meters (5 feet).\n* Choose Starting Positions - Each side rolls 2d6.  From highest to lowest, each side chooses one of the starting positions (usually corners) of the map to start.\n* Deploy Teams - In the same order from highest to lowest each player deploys their teams up to 5 hexes from the edges of the map."),
             "Recruit Teams",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Recruit Teams", ":summary", "* Choose Recruitment Points for each Side.\n* Recruit units by spending these points using the [Double Down] rule.\n* Usually, only units from a single Faction may be purchased.")
           )
         ),
-        ":Goals",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -53,13 +50,13 @@ export default class nx_tactics_books_advanced_rules {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
             ":Experience",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Experience", ":summary", "* Experience allows a unit to gain permanent ability increases.\n* Something major must be on the line, such that if the character fails he will incur a significant loss (e.g. a valuable item, his life). This is why characters seek out high stakes gambles and are not satisfied unless a great deal is on the line.\n* The character must face an opponent or difficulty no more than 1 level below his own or he must declare he is using the [Honor System].\n    * Minor Achievement - Gain an [Latent Ability] 2 levels below your highest level (minimum 1).\n    * Major Achievement - Gain a [Latent Skill] 2 levels below your highest level (minimum 1)."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Experience", ":summary", "* Experience allows a unit to gain permanent ability increases.\n* Something major must be on the line, such that if the character fails he will incur a significant loss (e.g. a valuable item, his life). This is why characters seek out high stakes gambles and are not satisfied unless a great deal is on the line.\n* The character must face an opponent or difficulty no more than 1 level below his own or he must declare he is using the [Honor System].\n* Minor Achievement - Gain an [Latent Ability] 2 levels below your highest level (minimum 1).\n* Major Achievement - Gain a [Latent Skill] 2 levels below your highest level (minimum 1)."),
             "Latent Skill/Ability",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Latent Skill/Ability", ":summary", "* Latent Skills and Abilities represent potential capabilities that have not yet expressed.\n* Like Skills, they have levels and may be combined and split."),
             "Gain a Skill/Power, Ability/Specialty",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Gain a Skill/Power, Ability/Specialty", ":summary", "* In order to gain a new ability, a user must perform research, practice, and experimentation.\n* Each week of practice and experimentation, the user may draw a Fate card.\n    ** If the Fate is a critical it is successful and may do EITHER of the following:\n    *** Gaining a Skill/Power - The user may convert a [Latent Skill] to a Skill or Power (if\n    allowed) of equal level.\n    *** Gaining an Ability/Specialty - The user may convert or [Latent Ability] into an\n    actual Ability or Specialty on an equal level.\n* Training Area/Laboratory - +1 Die if a dedicated training area with\nappropriate resources is available.\n* Assistants - Assistants reduce the difficulty of a task as well as allowing\nthem to learn on the job. See [Followers].\n* Mentor - +1 Die if a mentor is available.\n* Experimentation - Trial and error can produce some fascinating or useless random results.\n* Invention - Permanent Devices and Enchantments can be created over time.\n** Cost - Great care and cost must be expended to obtain or create an item of\nsufficient quality to hold an enchantment.\n** Difficulty - Inventions may be created instead of acquiring a new ability.\n** Time"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Gain a Skill/Power, Ability/Specialty", ":summary", "* In order to gain a new ability, a user must perform research, practice, and experimentation.\n* Each week of practice and experimentation, the user may draw a Fate card.\n** If the Fate is a critical it is successful and may do EITHER of the following:\n*** Gaining a Skill/Power - The user may convert a [Latent Skill] to a Skill or Power (if allowed) of equal level.\n*** Gaining an Ability/Specialty - The user may convert or [Latent Ability] into an actual Ability or Specialty on an equal level.\n* Training Area/Laboratory - +1 Die if a dedicated training area with appropriate resources is available.\n* Assistants - Assistants reduce the difficulty of a task as well as allowing them to learn on the job. See [Followers].\n* Mentor - +1 Die if a mentor is available.\n* Experimentation - Trial and error can produce some fascinating or useless random results.\n* Invention - Permanent Devices and Enchantments can be created over time.\n** Cost - Great care and cost must be expended to obtain or create an item of sufficient quality to hold an enchantment.\n** Difficulty - Inventions may be created instead of acquiring a new ability.\n** Time"),
             "Honor System",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Honor System", ":summary", "* Normally a character cannot gain experience from a foe more than 1 level\nbelow his own. If a character wants to gain experience against such a lower\nlevel foe, he must declare that he wants to compete 'On His Honor' using the\nHonor System.\n* The Honor System basically allows a character to metaphorically (or\nliterally) fight an opponent with one hand tied behind his back.\n* The character must challenge the opponent to a 'fair fight'. The challenge\nmakes the fight formal to any observers and places the character's honor\nsquarely on the line.\n* The character must offer some special incentive if the opponent wins (e.g.\na special treasure, his daughter's hand in marriage, safe passage for his\nopponents, not invading the Earth, his own head on a pike, etc.)\n* For the duration of the challenge, others must not interfere.\n* For the duration of the challenge, the character must refrain from using\nany skills that are more than 1 level higher than the opponent's defense.\nFurther he must limit his own defense rolls to 1 more than the opponents\nskill.\n* If the opponent or his allies breaks these terms, the challenge is void.\n* If the character or his allies breaks these terms, it is a serious blow to\nthe honor of the character and he immediately loses one level from one of his\nhighest skills.\n* If the character wins the competition, he may gain experience normally\nagainst this opponent."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Honor System", ":summary", "* Normally a character cannot gain experience from a foe more than 1 level below his own. If a character wants to gain experience against such a lower level foe, he must declare that he wants to compete 'On His Honor' using the Honor System.\n* The Honor System basically allows a character to metaphorically (or literally) fight an opponent with one hand tied behind his back.\n* The character must challenge the opponent to a 'fair fight'. The challenge makes the fight formal to any observers and places the character's honor squarely on the line.\n* The character must offer some special incentive if the opponent wins (e.g. a special treasure, his daughter's hand in marriage, safe passage for his opponents, not invading the Earth, his own head on a pike, etc.)\n* For the duration of the challenge, others must not interfere.\n* For the duration of the challenge, the character must refrain from using any skills that are more than 1 level higher than the opponent's defense. Further he must limit his own defense rolls to 1 more than the opponents skill.\n* If the opponent or his allies breaks these terms, the challenge is void.\n* If the character or his allies breaks these terms, it is a serious blow to the honor of the character and he immediately loses one level from one of his highest skills.\n* If the character wins the competition, he may gain experience normally against this opponent."),
             ":Study",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Study", ":summary", "* Books\n* Instruction\n* Time"),
             ":Rewards",
@@ -68,7 +65,6 @@ export default class nx_tactics_books_advanced_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Treasure", ":summary", "A Treasure Roll is made when a random treasure is needed.")
           )
         ),
-        "Turn Sequence Rules",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -82,7 +78,6 @@ export default class nx_tactics_books_advanced_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Simultaneous Movement", ":summary", "* After initiative is determined, each player chooses a unit or formation to activate. Each unit is compared to determine the one with the highest movement. This number is the number of phases in this turn. Each unit may choose to move or act on any phase of the turn with their chosen unit. They may also choose to react with any other unit, but a reacting unit may only move or use an action not both.")
           )
         ),
-        "Action Rules",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -102,7 +97,6 @@ export default class nx_tactics_books_advanced_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Synergy Dice", ":summary", "* Abilities that work together should be a benefit without breaking game balance.  Synergies allow skills and equipment to work together without unbalancing the game or requiring specific combinations of abilities to be effective.\n* Note: Limited and Synergy dice cancel each other in equals numbers so no roll may have both Synergy and Limited dice.\n* 1, 2, 3 = No Effect\n* 4, 5 = Hit\n* 6 = Hit and roll 2 Critical Dice")
           )
         ),
-        "Effect Rules",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -132,7 +126,6 @@ export default class nx_tactics_books_advanced_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "System Shock", ":summary", "* When the body sustains a significant amount of damage, the body goes into shock.")
           )
         ),
-        "Hit Location Rules",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -152,7 +145,6 @@ export default class nx_tactics_books_advanced_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hit Location - Movement", ":summary", "* 6 - Engine: Acc and recharging reduced by 1/4.\n* 5 - Movement: Acc and Max Speed for 1 movement system reduced by 1/4 (minimum 1).  If it loses all Movement in the currently used Movement type, it will crash or sink as applicable.\n* 4 - Manueverability: -1 Facing changes per turn\n* 1-3 - Fuel/Reaction Mass: Range reduced by 1/4")
           )
         ),
-        "Damage Cards",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -441,11 +433,8 @@ export default class nx_tactics_books_advanced_rules {
       ":name",
       "Genres",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Carrier Command",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Carrier Command", ":summary", "Carrier Command is a set of rules for use with units that hold other units in a [Hanger].\n\n       Common Actions\n       * Enter or Exit Hanger - Move and Action (Unit): Place a unit from the [Hanger] on the [Flight Deck] OR from the [Flight Deck] to the [Hanger].\n       Only 1 unit may be on the [Flight Deck] at any given moment and may be targetted normally there.\n       * Launch or Land - Move and Action (Unit): Move a unit onto or off of the [Flight Deck].  If the carrier has a [Launch Catapult], a launching\n       unit gains +2 movement.\n       * Dive Bomb - Action: -4 Altitude and drop bombs attacking the top of the target creating [Fire] and damaging weapons, crew, and [Flight Deck].\n       Normally only the target and opposing aircraft can [Interrupt] before the bombs are dropped.  Can only be performed from exactly +5 Altitude\n       and with no [White Tokens].\n       * Torpedo Bomb - Action: Drop torpedo attacking a side of the target below the water line creating [Flooding] and damaging [Speed].  Can only be\n       performed from exactly +1 Altitude and with no [White Tokens].\n       * Landing - Move and Action (Unit): Move a unit and place it on the [Flight Deck].  Only 1 unit may be on the [Flight Deck] at any given moment\n       and may be targetted normally there.\n       * Refuel or Reload - Move and Action (Unit): Any unit on the [Flight Deck] or in the [Hanger] may refuel OR reload weapons (changing weapons if\n       desired)."),
-        ":RTS/4X",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Carrier Command", ":summary", "Carrier Command is a set of rules for use with units that hold other units in a [Hanger].\n\n      Common Actions\n      * Enter or Exit Hanger - Move and Action (Unit): Place a unit from the [Hanger] on the [Flight Deck] OR from the [Flight Deck] to the [Hanger].\n      Only 1 unit may be on the [Flight Deck] at any given moment and may be targetted normally there.\n      * Launch or Land - Move and Action (Unit): Move a unit onto or off of the [Flight Deck].  If the carrier has a [Launch Catapult], a launching\n      unit gains +2 movement.\n      * Dive Bomb - Action: -4 Altitude and drop bombs attacking the top of the target creating [Fire] and damaging weapons, crew, and [Flight Deck].\n      Normally only the target and opposing aircraft can [Interrupt] before the bombs are dropped.  Can only be performed from exactly +5 Altitude\n      and with no [White Tokens].\n      * Torpedo Bomb - Action: Drop torpedo attacking a side of the target below the water line creating [Flooding] and damaging [Speed].  Can only be\n      performed from exactly +1 Altitude and with no [White Tokens].\n      * Landing - Move and Action (Unit): Move a unit and place it on the [Flight Deck].  Only 1 unit may be on the [Flight Deck] at any given moment\n      and may be targetted normally there.\n      * Refuel or Reload - Move and Action (Unit): Any unit on the [Flight Deck] or in the [Hanger] may refuel OR reload weapons (changing weapons if\n      desired)."),
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "RTS/4X", ":summary", "4X:\n* eXplore\n* eXpand\n* eXploit\n* eXterminate")
       )
     )

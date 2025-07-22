@@ -32,20 +32,16 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Advantage"
-   :summary
-    "* [Reveal]: IF both play the same [Suit] THEN you may flip to the other [Approach]
-     * IF you have Advantage and rival has [Disadvantage] and both play the same Color THEN you may flip to the other [Approach]")
+   :image "images/rule-advantage.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Arc"
    :image "images/rule-arc.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Area Effect"
-   :image "images/card-areaeffect.svg"
-   :summary
-    "* Powers can attack in an area.
-     * Level:-1 or Rating:-1 to get an Area Effect. Extra reductions double the cards.
-     * Arrange cards into a shape starting from the unit.")
+   :image "images/rule-areaeffect.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Beast"
    :summary
@@ -58,11 +54,17 @@
      * [Blatant] is the opposite of [Subtle]
      * Blatant Magic is harder to use and has [Disadvantage]")
   (base/rule
+   :name "Bleeding"
+   :image "images/rule-bleeding.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Blood Loss"
+   :image "images/rule-bloodloss.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
    :name "Body"
-   :summary
-    "* Body is the measure of a unit's mass and durability.
-     * A unit with Body:0 is incapacitated.
-     * It is derived from the mass in kg. E.g. 300kg = 3x10^2 = 3x2")
+   :image "images/rule-body.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Broken"
    :summary
@@ -84,9 +86,29 @@
    :summary
     "")
   (base/rule
+   :name "Campaign"
+   :summary
+    "* Starting a New Campaign
+     * Creating Player Characters
+     * Creating Plots
+     * Conflict
+     * Creating Scenes
+     * Continuing a Campaign")
+  (base/rule
+   :name "Campaign: New"
+   :summary
+    "* The Elevator Pitch
+     * Theme
+     * Character Creation
+     * Character Development
+     * Maps
+     * The Hook
+     * The Finale")
+  (base/rule
    :name "Character")
   (base/rule
    :name "Choking"
+   :image "images/rule-choking.svg"
    :summary
     "* This includes any obstruction of airways such as smoke, water, sand, fungus, disease, physical choking, etc. It also includes damage to filters and other aspiration/ventilation systems on machines.
      * Will:-1
@@ -94,6 +116,7 @@
   (base/rule
    :name "Clock"
    :image "images/rule-clock.svg"
+   :layout base/cardlayout-imageonly
    :summary
     "Represents the current Clock time.
      * Scene Start: Order with Clock#1 on top or bottom based on [Scene]
@@ -125,42 +148,13 @@
    :image "images/rule-conflict-approach.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "*Conflict: Compare"
-   :image "images/rule-conflict-compare.svg"
-   :layout base/cardlayout-imageonly)
-  (base/rule
    :name "Conflict: Chart"
    :image "images/rule-conflict-chart.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "*Conflict: Clash"
-   :summary
-    "A Clash occurs when two [Fast] or two [Strong] face each other.
-     * A - Win: any
-     * J - Win: 2-10, Q, K
-     * Q - Win: 2-10, K
-     * K - Win: 2-10
-     * 2-10 - Lower number Wins (after modifiers)
-     ** Reduce Higher Skill's Rank by Higher Skill - Lower Skill (min 1)
-     ** Compare Ranks. Lower Rank Wins.
-     ** IF Still Tied THEN Both Win.")
-  (base/rule
    :name "Conflict: Sample"
    :image "images/rule-conflict-sample.svg"
    :layout base/cardlayout-imageonly)
-  (base/rule
-   :name "*Conflict: Rank"
-   :image "images/rule-conflict-rank.svg"
-   :layout base/cardlayout-imageonly)
-  (base/rule
-   :name "*Conflict: Suit"
-   :summary
-    "Each Suit represents a Stat and has 2 Approaches to choose from:
-     * Wands - Body. Strong and Block
-     * Coins - Mind. Strong and Counter
-     * Cups - Will. Fast and Block
-     * Swords - Speed. Fast and Evade
-     Note: Suit generally doesn't matter, but it may trigger Abilities.")
   (base/rule
    :name "Conscience"
    :summary
@@ -208,12 +202,18 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Disadvantage"
-   :summary
-    "* [Reveal]: IF both play the same [Suit] THEN your Rival may rotate yours to the opposite [Approach]")
+   :image "images/rule-disadvantage.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Disclaimer"
    :image "images/rule-disclaimer.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Diseased"
+   :image "images/rule-diseased.svg"
+   :summary
+    "* Move:-1
+     * Event: Reveal Conflict. IF Ace THEN Diseased:-1. IF 2 THEN Diseased:+1.")
   (base/rule
    :name "Drawn to Destiny"
    :image "images/rule-drawntodestiny.svg"
@@ -224,6 +224,10 @@
     "* [Body]:-1
      * When using a damaged item or body part take [Skill]:-1/Damaged.
      * An item with no [Body] remaining is [Broken].")
+  (base/rule
+   :name "Elevation"
+   :image "images/rule-elevation.svg"
+   :summary "Elevation")
   (base/rule
    :name "Erosion: Mental"
    :summary
@@ -238,6 +242,7 @@
     "* A gradual loss of personality and individualality.")
   (base/rule
    :name "Exposure"
+   :image "images/rule-exposure.svg"
    :summary
     "* Move:-1
      * Event: IF a Unit has shelter < 6 hours/day THEN Exposure:+1 ELSE Exposure:-1.")
@@ -267,6 +272,7 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Hunger"
+   :image "images/rule-hunger.svg"
    :summary
     "* Body:-1
      * Event: IF a Unit eats < 4 days/week THEN Hunger:+1 ELSE Hunger:-1")
@@ -314,10 +320,8 @@
      * Note: Car (max speed 2x2 = 200kph/125mph) slow at 40kph/25mph/11mps. 1sec move = 4 spaces (11m).")
   (base/rule
    :name "Mind"
-   :summary
-    "* Mind is the measure of a unit's intellect and problem solving ability.
-     * A unit with Mind:0 is delirious.
-     * It is lossly derived from the IQ-50. E.g. 100IQ = 5x10^1 = 5x1, 140IQ = 9x10^1 = 9x1")
+   :image "images/rule-mind.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Mitigation"
    :summary
@@ -327,6 +331,13 @@
      * Armor
      * Toughness
      * Body")
+  (base/rule
+   :name "Mount"
+   :summary
+    "Anything you can ride is a Mount
+     eg Horses, Cars, Planes
+     * Driver - Spend an Action each Round to control
+     * Passenger - IF unstable or in Combat THEN Spend an Action to remain stable")
   (base/rule
    :name "Move"
    :image "images/rule-move.svg"
@@ -352,6 +363,7 @@
      * [Round End]: [Draw]:1 and [Recover].")
   (base/rule
    :name "Poisoned"
+   :image "images/rule-poisoned.svg"
    :summary
     "* Body:-1
      * Event: Reveal Conflict. IF Ace THEN Poisoned:-1. IF 2 THEN Poisoned:+1.")
@@ -514,30 +526,6 @@
    :image "images/rule-setup-players.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Skill")
-  (base/rule
-   :name "Skill Point"
-   :summary
-    "* [Major Achievement]: Gain a Skill Point equal to your 2nd highest Skill level. You may also reduce 1 of your existing Skill levels by 1 to gain a Skill Point equal to the reduced level.
-     * A Skill Point may be spent on a [Skill] of equal level to raise that skill by 1.
-     * Skill Points may be saved.
-     * A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.
-     * 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level.")
-  (base/rule
-   :name "Space"
-   :summary
-    "A point on the map")
-  (base/rule
-   :name "Space: Inner")
-  (base/rule
-   :name "Space: Outer")
-  (base/rule
-   :name "Specialty"
-   :summary
-    "A field of specialization
-     * Setup - When you prepare Abilities, for each Specialty you may prepare an additional Ability under the Specialty
-     * Advancement - When you gain an Ability under a Specialty, you may gain another one for free")
-  (base/rule
    :name "Shadow"
    :titles "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin"
    :reference
@@ -568,12 +556,35 @@
      * Extended: The user may continue this test on different turns until a Success or Fail.
      * See Also: [Unskilled] [Unfamiliar Item].")
   (base/rule
+   :name "Skill Point"
+   :summary
+    "* [Major Achievement]: Gain a Skill Point equal to your 2nd highest Skill level. You may also reduce 1 of your existing Skill levels by 1 to gain a Skill Point equal to the reduced level.
+     * A Skill Point may be spent on a [Skill] of equal level to raise that skill by 1.
+     * Skill Points may be saved.
+     * A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.
+     * 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level.")
+  (base/rule
    :name "Sleep Deprived"
    :summary
     "* Mind:-1
      * Event: IF a Unit sleeps < 6 hours/day THEN Sleep Deprived:+1 ELSE Sleep Deprived:-1.")
   (base/rule
+   :name "Space"
+   :summary
+    "A point on the map")
+  (base/rule
+   :name "Space: Inner")
+  (base/rule
+   :name "Space: Outer")
+  (base/rule
+   :name "Specialty"
+   :summary
+    "A field of specialization
+     * Setup - When you prepare Abilities, for each Specialty you may prepare an additional Ability under the Specialty
+     * Advancement - When you gain an Ability under a Specialty, you may gain another one for free")
+  (base/rule
    :name "Speed"
+   :image "images/rule-speed.svg"
    :summary
     "* Special: IF Speed over 5 THEN penalty is Speed:-2.")
   (base/rule
@@ -595,6 +606,7 @@
      * Swords - Skill. Speed")
   (base/rule
    :name "Surprise"
+   :image "images/rule-surprise.svg"
    :summary
     "* IF a unit suddenly appears adjacent or upon a unit.
      * THEN
@@ -606,6 +618,7 @@
      ** [Swords] = [Slow]")
   (base/rule
    :name "Surrounded"
+   :image "images/rule-surrounded.svg"
    :summary
     "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent.")
   (base/rule
@@ -618,9 +631,18 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Thirst"
+   :image "images/rule-thirst.svg"
    :summary
     "* Mind:-1
      * Event: IF a Unit drinks < 1 liter/day THEN Thirst:+1 ELSE Thirst:-1.")
+  (base/rule
+   :name "Time: Afternoon")
+  (base/rule
+   :name "Time: Evening")
+  (base/rule
+   :name "Time: Morning")
+  (base/rule
+   :name "Time: Night")
   (base/rule
    :name "Unfamiliar Item"
    :summary
@@ -639,17 +661,22 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Unskilled"
+   :image "images/rule-unskilled.svg"
    :summary
     "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Level:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item].")
   (base/rule
+   :name "Weather"
+   :image "images/rule-weather.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
    :name "Weather: Clouds"
-   :image "images/cards/rule-weather-clouds.svg"
+   :image "images/rule-weather-clouds.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Weather: Downpour")
   (base/rule
    :name "Weather: Humidity"
-   :image "images/cards/rule-weather-humidity.svg"
+   :image "images/rule-weather-humidity.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Weather: Hurricane")
@@ -669,13 +696,13 @@
      * Blizzard")
   (base/rule
    :name "Weather: Temperature"
-   :image "images/cards/rule-weather-temperature.svg"
+   :image "images/rule-weather-temperature.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Weather: Tornado")
   (base/rule
    :name "Weather: Thunderstorm"
-   :image "images/cards/rule-weather-thunderstorm.svg"
+   :image "images/rule-weather-thunderstorm.svg"
    :summary
     "* Conditions: Stormy Humid+ Windy+
      * [Event]: Every 6 hours, [Reveal Fate].
@@ -684,16 +711,12 @@
      ** Effects - A lightning bolt holds 5 GigaJoules or 5x9 damage for a direct strike, but most lightning strikes go through smaller feelers or are splashes. Even a direct strike is survivable because it usually travels across the surface of the skin instead of through the body.")
   (base/rule
    :name "Weather: Wind"
-   :image "images/cards/rule-weather-wind.svg"
+   :image "images/rule-weather-wind.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Will"
-   :reference
-    "* R:Your father failed to act. B:The man had a gun. R:Would that stop you? B:I've had training. R:The training is nothing! Will is everything! The will to act. - Bruce Wayne and Ra's al Ghul, Batman Begins"
-   :summary
-    "* Will is the measure of a unit's grit, determination and psychological stability.
-     * A unit with Will:0 is panicked.
-     * It is lossly derived from an average person having a 100 score. E.g. 100 = 5x10^1 = 5x1, 140 = 9x10^1 = 9x1")
+   :image "images/rule-will.svg"
+   :layout base/cardlayout-imageonly)
 ))
 
 (func deck-rules : base/deck

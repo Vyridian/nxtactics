@@ -560,7 +560,7 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Primus"))
+       "Primordial"))
     (base/section
      :name "Projectiles"
      :powermap

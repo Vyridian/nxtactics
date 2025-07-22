@@ -20,6 +20,39 @@ import nx_tactics_decks_wound from "../../../nx/tactics/decks/wound.js"
 export default class nx_tactics_decks_deck {
 
   /**
+   * @function card_clock
+   * @param  {tactics} tactics
+   * @param  {int} num
+   * @return {card}
+   */
+  static t_card_clock = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_clock = {
+    vx_type: nx_tactics_decks_deck.t_card_clock
+  }
+
+  // (func card-clock)
+  static f_card_clock(tactics, num) {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_card},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const rule = nx_tactics_base.f_rule_from_tactics_key(tactics, "Clock")
+        return vx_core.f_copy(
+          rule,
+          ":id",
+          vx_core.f_new({"any-1": vx_core.t_string}, "clock-", num),
+          ":image",
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-clock-", num, ".svg")
+        )
+      })
+    )
+    return output
+  }
+
+  /**
    * @function deck_abilities
    * Ability Deck
    * @param  {tactics} tactics
@@ -98,27 +131,37 @@ export default class nx_tactics_decks_deck {
   // (func deck-clock)
   static f_deck_clock(tactics) {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_let(
+    output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_deck},
-      [],
-      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const clock = nx_tactics_base.f_rule_from_tactics_key(tactics, "Clock")
-        return vx_core.f_new(
-          {"any-1": nx_tactics_base.t_deck},
-          ":name",
-          "Clock Deck",
-          ":image",
-          "images/rule-clock-deck.svg",
-          ":layout",
-          nx_tactics_base.c_cardlayout_imageonly,
-          ":cardmap",
-          nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
-            clock,
-            54,
-            true
-          )
-        )
-      })
+      ":name",
+      "Clock Deck",
+      ":image",
+      "images/rule-clock-deck.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":cardmap",
+      nx_tactics_base.f_cardmap_from_cardlist(
+        nx_tactics_decks_deck.f_card_clock(tactics, 1),
+        nx_tactics_decks_deck.f_card_clock(tactics, 2),
+        nx_tactics_decks_deck.f_card_clock(tactics, 3),
+        nx_tactics_decks_deck.f_card_clock(tactics, 4),
+        nx_tactics_decks_deck.f_card_clock(tactics, 5),
+        nx_tactics_decks_deck.f_card_clock(tactics, 6),
+        nx_tactics_decks_deck.f_card_clock(tactics, 7),
+        nx_tactics_decks_deck.f_card_clock(tactics, 8),
+        nx_tactics_decks_deck.f_card_clock(tactics, 9),
+        nx_tactics_decks_deck.f_card_clock(tactics, 10),
+        nx_tactics_decks_deck.f_card_clock(tactics, 11),
+        nx_tactics_decks_deck.f_card_clock(tactics, 12),
+        nx_tactics_decks_deck.f_card_clock(tactics, 13),
+        nx_tactics_decks_deck.f_card_clock(tactics, 14),
+        nx_tactics_decks_deck.f_card_clock(tactics, 15),
+        nx_tactics_decks_deck.f_card_clock(tactics, 16),
+        nx_tactics_decks_deck.f_card_clock(tactics, 17),
+        nx_tactics_decks_deck.f_card_clock(tactics, 18),
+        nx_tactics_decks_deck.f_card_clock(tactics, 19),
+        nx_tactics_decks_deck.f_card_clock(tactics, 20)
+      )
     )
     return output
   }
@@ -442,6 +485,7 @@ export default class nx_tactics_decks_deck {
       
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
+      "card-clock": nx_tactics_decks_deck.e_card_clock,
       "deck-abilities": nx_tactics_decks_deck.e_deck_abilities,
       "deck-books": nx_tactics_decks_deck.e_deck_books,
       "deck-clock": nx_tactics_decks_deck.e_deck_clock,
@@ -456,6 +500,7 @@ export default class nx_tactics_decks_deck {
       "deck-units": nx_tactics_decks_deck.e_deck_units
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "card-clock": nx_tactics_decks_deck.t_card_clock,
       "deck-abilities": nx_tactics_decks_deck.t_deck_abilities,
       "deck-books": nx_tactics_decks_deck.t_deck_books,
       "deck-clock": nx_tactics_decks_deck.t_deck_clock,
@@ -480,6 +525,24 @@ export default class nx_tactics_decks_deck {
       "typemap": typemap
     })
     vx_core.vx_global_package_set(pkg)
+
+    // (func card-clock)
+    nx_tactics_decks_deck.t_card_clock['vx_value'] = {
+      name          : "card-clock",
+      pkgname       : "nx/tactics/decks/deck",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_deck.f_card_clock
+    }
 
     // (func deck-abilities)
     nx_tactics_decks_deck.t_deck_abilities['vx_value'] = {

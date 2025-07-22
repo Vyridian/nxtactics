@@ -39,13 +39,13 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
+       "Abjuration"
        "Alchemy"
        "Artifice"
        "Artistry"
        "Astrology"
        "Chronomancy"
        "Conjuration"
-       "Protection"
        "Sorcery"
        "Thaumaturgy"
        "Wizardry"))
@@ -73,7 +73,7 @@
        "Blessing"
        "Invocation"
        "Life"
-       "Primus"
+       "Primordial"
        "Purity"
        "Radiant"))
     (base/section

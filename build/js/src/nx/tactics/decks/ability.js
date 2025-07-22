@@ -273,6 +273,7 @@ export default class nx_tactics_decks_ability {
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Eternal Youth", ":titles", "Ageless", ":summary", "* [Power]: [Longevity]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ethereal", ":summary", "* [Power]: [Special Ability]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Evade Pursuit", ":summary", "* [Skill]: [Deception]\n* Ability to correctly evaluate the opponent's pursuit style and outwit the pursuer."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Evil Eye", ":reference", "* Evil Eye, Dadadan", ":summary", "* Staring at the Target creates intense feelings of unease and self doubt.\n* [Power]: [Animism]\n* Reduces Spirit"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Excavating", ":summary", "* [Power]: [Digging]\n* Expose a large buried area."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Exile", ":summary", "* [Skill]: [Law]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Existential Riddle", ":summary", "Demoralize unwitting rivals by questioning their purpose in life."),

@@ -464,8 +464,8 @@ export default class nx_tactics_books_combat {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lasso"),
             ":Manriki",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Manriki"),
-            ":Net",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Net"),
+            "Net",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Net"),
             ":Noose",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Noose"),
             ":Nunchaku",
@@ -524,8 +524,8 @@ export default class nx_tactics_books_combat {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Star Mace", ":energy", "100J"),
             "Throwing Hammer",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Throwing Hammer", ":energy", "50J"),
-            "War Hammer",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "War Hammer", ":energy", "100J")
+            "Hammer: War",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Hammer: War")
           )
         ),
         ":Knives",

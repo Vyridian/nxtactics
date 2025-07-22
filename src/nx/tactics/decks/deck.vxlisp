@@ -15,6 +15,17 @@
        (lib wound          :path nx/tactics/decks/wound)
  :doc  "Tactics Decks")
 
+(func card-clock : base/card
+ [tactics : base/tactics
+  num     : int]
+ (let : base/card
+  [rule : base/rule :=
+   (base/rule<-tactics-key tactics "Clock")]
+  (copy rule
+   :id (string "clock-" num)
+   :image (string "images/rule-clock-" num ".svg")
+  )))
+
 (func deck-home : base/deck
  (let : base/deck
   [tactics : base/tactics :=
@@ -60,17 +71,33 @@
 
 (func deck-clock : base/deck
  [tactics : base/tactics]
- (let : base/deck
-  [clock : base/card :=
-    (base/rule<-tactics-key
-     tactics "Clock")]
-  (base/deck
-   :name "Clock Deck"
-   :image "images/rule-clock-deck.svg"
-   :layout base/cardlayout-imageonly
-   :cardmap
-    (base/cardmap-copy<-card-count-isnum
-     clock 54 true))))
+ (base/deck
+  :name "Clock Deck"
+  :image "images/rule-clock-deck.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap<-cardlist
+    (card-clock tactics 1)
+    (card-clock tactics 2)
+    (card-clock tactics 3)
+    (card-clock tactics 4)
+    (card-clock tactics 5)
+    (card-clock tactics 6)
+    (card-clock tactics 7)
+    (card-clock tactics 8)
+    (card-clock tactics 9)
+    (card-clock tactics 10)
+    (card-clock tactics 11)
+    (card-clock tactics 12)
+    (card-clock tactics 13)
+    (card-clock tactics 14)
+    (card-clock tactics 15)
+    (card-clock tactics 16)
+    (card-clock tactics 17)
+    (card-clock tactics 18)
+    (card-clock tactics 19)
+    (card-clock tactics 20)
+   )))
 
 (func deck-items : base/deck
  [tactics : base/tactics]

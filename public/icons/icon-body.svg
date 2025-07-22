@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="6.6098919mm"
-   height="8.0833597mm"
+   width="4.6511683mm"
+   height="5.6880002mm"
    version="1.1"
    id="svg8"
    sodipodi:docname="icon-body.svg"
    inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
-   viewBox="0 0 102.34724 125.16235"
+   viewBox="0 0 72.018461 88.072724"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +23,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="18.32078"
-     inkscape:cx="13.236336"
-     inkscape:cy="28.110156"
+     inkscape:cx="13.209045"
+     inkscape:cy="28.055574"
      inkscape:window-width="1350"
      inkscape:window-height="1040"
      inkscape:window-x="325"
@@ -34,7 +34,7 @@
      inkscape:document-units="mm" />
   <g
      id="body"
-     transform="matrix(1.0519535,0,0,1.0519535,-861.54458,94.712551)"
+     transform="matrix(0.74022582,0,0,0.74022582,-606.24119,66.646174)"
      inkscape:label="body">
     <path
        fill="#37b2df"
