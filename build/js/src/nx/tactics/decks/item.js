@@ -80,6 +80,7 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe: Fire", ":image", "images/cards/item-axe-fire.svg", ":summary", "* [Skill]: [Melee]-1\n* [Damage]: [Body]:+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]:2x1", ":body", "3x0", ":mass", "3.1kg/7lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe: Hand", ":image", "images/cards/item-axe-hand.svg", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+1 [Hack] [Slash]\n* [Location]: [1-hand]", ":body", "9x-1", ":mass", "900g/2lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe: Wood", ":titles", "Splitting Maul", ":image", "images/cards/item-axe-wood.svg", ":summary", "* [Skill]: [Melee]:-1\n* [Damage]: [Body]:+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]: 2x1", ":body", "3x0", ":mass", "3.1kg/7lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Balefire"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_item},
         ":name",
@@ -171,6 +172,8 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Grenade: White Phosphorous"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hammer", ":image", "images/cards/item-hammer.svg", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+3 [Bash]\n* [Location]: [1-hand]", ":body", "2x0", ":mass", "2kg/4.4lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hammer: War", ":energy", "100J"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hellchain"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hellfire"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Improvised Weapon", ":summary", "* Any item can be a weapon.\n* [Melee] or [Close Combat]: vs [Body]\n* [Damage]: [Body] Damage Types based on item."),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Jerry Can", ":image", "images/cards/item-jerrycan.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Keys", ":image", "images/cards/item-keys.svg"),

@@ -34,7 +34,7 @@ export default class nx_tactics_decks_reference {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Body", "Mind", "Will", "Speed", "Advantage", "Disadvantage", "Flanking", "Surrounded", "Surprise", "Elevation", "Unskilled", "Area Effect", "Weather", "Weather: Clouds", "Weather: Humidity", "Weather: Temperature", "Weather: Wind", "Bleeding", "Blood Loss", "Diseased", "Poisoned", "Choking", "Hunger", "Thirst", "Exposure")
+          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Ability", "Ability Point", "Advantage", "Area Effect", "Bleeding", "Blood Loss", "Body", "Burning", "Character Point", "Choking", "Collision", "Collision: Angle", "Disadvantage", "Diseased", "Elevation", "Exposure", "Falling", "Flanking", "Hunger", "Mind", "Poisoned", "Power", "Rating", "Skill", "Skill Point", "Specialty", "Speed", "Stat: Add", "Stat: Multiply", "Surrounded", "Surprise", "Task", "Thirst", "Unskilled", "Weather", "Weather: Clouds", "Weather: Humidity", "Weather: Temperature", "Weather: Wind", "Will")
         )
       )
     )

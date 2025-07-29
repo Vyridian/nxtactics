@@ -7,7 +7,9 @@
  [tactics : base/tactics]
  (base/rulemap<-rulelist
   (base/rule
-   :name "Ability")
+   :name "Ability"
+   :image "images/rule-ability.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Ability Point"
    :summary
@@ -49,6 +51,7 @@
      * Beast Unleashed: The Beast is now in control of this unit. Set Conscience = Will; set Will = Beast stat; and set Beast=blank")
   (base/rule
    :name "Blatant"
+   :titles "Overt"
    :summary
     "* Blatant Abilities are obviously linked to the user.
      * [Blatant] is the opposite of [Subtle]
@@ -86,6 +89,10 @@
    :summary
     "")
   (base/rule
+   :name "Burning"
+   :image "images/rule-burning.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
    :name "Campaign"
    :summary
     "* Starting a New Campaign
@@ -107,22 +114,29 @@
   (base/rule
    :name "Character")
   (base/rule
+   :name "Character Point"
+   :summary
+    "CP")
+  (base/rule
    :name "Choking"
    :image "images/rule-choking.svg"
-   :summary
-    "* This includes any obstruction of airways such as smoke, water, sand, fungus, disease, physical choking, etc. It also includes damage to filters and other aspiration/ventilation systems on machines.
-     * Will:-1
-     * Event: IF a Unit breathes < 1 minute/2 minutes THEN Choking:+1 ELSE Choking:-1")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Clock"
    :image "images/rule-clock.svg"
-   :layout base/cardlayout-imageonly
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Collision"
+   :image "images/rule-collision.svg"
    :summary
-    "Represents the current Clock time.
-     * Scene Start: Order with Clock#1 on top or bottom based on [Scene]
-     * Round End: Discard the top Clock
-     ** Resolve any revealed [Event]
-     ** IF no Clocks THEN resolve according to the [Scene]")
+    "A collision between two objects. The heavier is H, the lighter L
+     TimeImpact - 1/0.1s = 10
+     Force = MassL*SpeedL2*TimeImpact"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Collision: Angle"
+   :image "images/rule-collision-angle.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Combat"
    :summary
@@ -211,9 +225,7 @@
   (base/rule
    :name "Diseased"
    :image "images/rule-diseased.svg"
-   :summary
-    "* Move:-1
-     * Event: Reveal Conflict. IF Ace THEN Diseased:-1. IF 2 THEN Diseased:+1.")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Drawn to Destiny"
    :image "images/rule-drawntodestiny.svg"
@@ -227,7 +239,7 @@
   (base/rule
    :name "Elevation"
    :image "images/rule-elevation.svg"
-   :summary "Elevation")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Erosion: Mental"
    :summary
@@ -243,9 +255,11 @@
   (base/rule
    :name "Exposure"
    :image "images/rule-exposure.svg"
-   :summary
-    "* Move:-1
-     * Event: IF a Unit has shelter < 6 hours/day THEN Exposure:+1 ELSE Exposure:-1.")
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Falling"
+   :image "images/rule-falling.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Features"
    :image "images/rule-features.svg"
@@ -273,9 +287,7 @@
   (base/rule
    :name "Hunger"
    :image "images/rule-hunger.svg"
-   :summary
-    "* Body:-1
-     * Event: IF a Unit eats < 4 days/week THEN Hunger:+1 ELSE Hunger:-1")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Item: Guide"
    :image "images/rule-item-guide.svg"
@@ -332,13 +344,6 @@
      * Toughness
      * Body")
   (base/rule
-   :name "Mount"
-   :summary
-    "Anything you can ride is a Mount
-     eg Horses, Cars, Planes
-     * Driver - Spend an Action each Round to control
-     * Passenger - IF unstable or in Combat THEN Spend an Action to remain stable")
-  (base/rule
    :name "Move"
    :image "images/rule-move.svg"
    :layout base/cardlayout-imageonly)
@@ -364,11 +369,11 @@
   (base/rule
    :name "Poisoned"
    :image "images/rule-poisoned.svg"
-   :summary
-    "* Body:-1
-     * Event: Reveal Conflict. IF Ace THEN Poisoned:-1. IF 2 THEN Poisoned:+1.")
+   :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Power")
+   :name "Power"
+   :image "images/rule-power.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Range"
    :image "images/rule-range.svg"
@@ -377,6 +382,10 @@
    :name "Rank"
    :summary
     "* The number on a card or the part of a Value before the x.")
+  (base/rule
+   :name "Rating"
+   :summary
+    "")
   (base/rule
    :name "Reach"
    :summary
@@ -545,16 +554,8 @@
      * Rising Shadow - While the Shadow is dominant, the person always uses its Shadow rating instead of [Will]. The Shadow will always act toward its, usually immediate, self interest. It will usually not aid its allies in any way. Because the Shadow is self absorbed, all [Retreats] against it are doubled, but failure feeds its insecurities, so retreat is emotionally devastating and can lead to the [Will] taking charge again.")
   (base/rule
    :name "Skill"
-   :summary
-    "* Action: Assign your Unit's Target card to the target.
-     * Difficulty: The Skill test has a target Stat or number.
-     * Resolve: Resolve the Skill as if it was Combat.
-     * Damage: Any stat reductions are added to the Skill card instead of the target.
-     * Success: If the stat is reduced to 0, the Skill succeeds.
-     * Fail: If the user abandons the test or has any stat reduced to 0, the Skill fails and the Skill card is returned losing all reductions.
-     * Test: Some Tests only require a single success or failure.
-     * Extended: The user may continue this test on different turns until a Success or Fail.
-     * See Also: [Unskilled] [Unfamiliar Item].")
+   :image "images/rule-skill.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Skill Point"
    :summary
@@ -578,19 +579,48 @@
    :name "Space: Outer")
   (base/rule
    :name "Specialty"
-   :summary
-    "A field of specialization
-     * Setup - When you prepare Abilities, for each Specialty you may prepare an additional Ability under the Specialty
-     * Advancement - When you gain an Ability under a Specialty, you may gain another one for free")
+   :titles "Class"
+   :image "images/rule-specialty.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Speed"
    :image "images/rule-speed.svg"
-   :summary
-    "* Special: IF Speed over 5 THEN penalty is Speed:-2.")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Stat"
    :image "images/rule-stat.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Stat: Add"
+   :summary
+    "How to add or substract Stats
+     IF Scale1 <> Scale2
+       Stat = Higher Stat
+     ELSE
+     * Add
+        Rank = Rank1+Rank2
+        IF Rank > 10
+          Rank:-10 and Scale:+1
+     * Subtract
+        Rank = Rank1-Rank2
+        IF Rank < 1
+          Rank:+10 and Scale:-1")
+  (base/rule
+   :name "Stat: Multiply"
+   :summary
+    "How to do multiply or divide Stats
+     * Multiply or Divide by 10
+         Add or Subtract 1 from Scale
+     * Multiply
+         Rank = Rank1*Rank2
+         Scale = Scale1+Scale2
+         IF Rank > 10
+           Rank:-10 and Scale:+1
+     * Divide
+         Rank:Rank1/Rank2 Round to 1 digit
+         Scale:Scale1-Scale2
+         IF Rank < 1
+           Rank:+10 and Scale:-1")
   (base/rule
    :name "Subtle"
    :summary
@@ -607,23 +637,18 @@
   (base/rule
    :name "Surprise"
    :image "images/rule-surprise.svg"
-   :summary
-    "* IF a unit suddenly appears adjacent or upon a unit.
-     * THEN
-     ** Lose half of starting [Move].
-     ** Reveal [Conflict]. Unit takes [Light Damage] based on the [Suit].
-     ** [Wands] = [Fatigue]
-     ** [Coins] = [Stun]
-     ** [Cups] = [Stress]
-     ** [Swords] = [Slow]")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Surrounded"
    :image "images/rule-surrounded.svg"
-   :summary
-    "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent.")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Target#"
    :image "images/rule-target-num.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Task"
+   :image "images/rule-task.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Terms"
@@ -632,9 +657,7 @@
   (base/rule
    :name "Thirst"
    :image "images/rule-thirst.svg"
-   :summary
-    "* Mind:-1
-     * Event: IF a Unit drinks < 1 liter/day THEN Thirst:+1 ELSE Thirst:-1.")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Time: Afternoon")
   (base/rule
@@ -644,9 +667,13 @@
   (base/rule
    :name "Time: Night")
   (base/rule
-   :name "Unfamiliar Item"
+   :name "Transport"
+   :titles "Mount, Vehicle"
    :summary
-    "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at [Level]:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled].")
+    "Anything you can ride is a Transport
+     eg Horses, Cars, Planes
+     * Driver - Spend an Action each Round to control
+     * Passenger - IF unstable or in Combat THEN Spend an Action to remain stable")
   (base/rule
    :name "Unit: Guide"
    :image "images/rule-unit-guide.svg"
@@ -662,8 +689,7 @@
   (base/rule
    :name "Unskilled"
    :image "images/rule-unskilled.svg"
-   :summary
-    "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Level:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item].")
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Weather"
    :image "images/rule-weather.svg"
@@ -716,7 +742,12 @@
   (base/rule
    :name "Will"
    :image "images/rule-will.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :titles
+    "Chi, Confidence, Determination, Ego, Emotion, Faith, Grit, Guts, Heart, Instinct, Ki, Mana, Perseverence, Resolve, Spirit, Spiritualism, Will, Willpower"
+   :reference
+    "* I think, therefore I am. - Descartes, Cogito Ergo Sum
+     * The nature of existence is subjective. I have experience and thoughts in this precise moment, beyond that I can prove nothing. Does time actually pass as I understand it? Is anything else but me real? Am I living in a dream/hallucination/simulation? Am I just insane? Our experience is the only thing we can be sure of. Therefore, we may as well choose to live as we see fit. No amount of evidence can definitively prove otherwise.")
 ))
 
 (func deck-rules : base/deck

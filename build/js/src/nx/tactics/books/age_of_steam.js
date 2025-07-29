@@ -43,7 +43,7 @@ export default class nx_tactics_books_age_of_steam {
             ".44 Winchester Model 1873",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".44 Winchester Model 1873", ":image", "images/age-of-steam/Winchester1873.jpg", ":reference", "The Winchester is among the earliest repeating rifles, and has become synonymous with lever-action firearms. Known as 'The Gun that Won the West' for its immense popularity at that time.", ":summary", "Lever action, repeating", ":classification", "Rifle", ":length", "125.2cm", ":mass", "4.3kg", ":muzzlevelocity", "379m/s", ":range", "100m"),
             "12g Winchester Model 1887",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "12g Winchester Model 1887", ":reference", "Considered the first truly successful repeating shotgun", ":summary", "Level action\n* [Skill]: [Firearms]\n* [Scattershot]", ":classification", "Shotgun", ":length", "1m", ":mass", "3.6kg", ":modifiers", "Bleeding", ":range", "30m", ":rounds", "5"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "12g Winchester Model 1887", ":reference", "Considered the first truly successful repeating shotgun", ":summary", "Level action\n* [Skill]: [Firearms]\n* [Scatter]", ":classification", "Shotgun", ":length", "1m", ":mass", "3.6kg", ":modifiers", "Bleeding", ":range", "30m", ":rounds", "5"),
             ".50 Gatling Gun",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".50 Gatling Gun", ":image", "images/age-of-steam/GatlingGun1876.jpg.jpg", ":classification", "Hvy. MG", ":modifiers", "Auto, Bleeding", ":range", "100m"),
             "Napoleon Cannon",

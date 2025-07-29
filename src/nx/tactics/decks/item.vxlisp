@@ -104,6 +104,8 @@
    :body "3x0"
    :mass "3.1kg/7lb")
   (base/item
+   :name "Balefire")
+  (base/item
    :name "Bare Handed"
    :image "images/cards/item-barehanded.svg"
    :summary
@@ -278,6 +280,10 @@
   (base/item
    :name "Hammer: War"
    :energy "100J")
+  (base/item
+   :name "Hellchain")
+  (base/item
+   :name "Hellfire")
   (base/item
    :name "Improvised Weapon"
    :summary

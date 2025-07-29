@@ -583,14 +583,6 @@
      * [Action]: Melee Attack costs no [Speed].
      * [Attack], [Damage]: Any [Critical Hits] may be [Morale Tokens]")
   (base/ability
-   :name "Charm"
-   :titles "Warding Sign"
-   :summary
-    "* [Power]: [Enchantment]
-     * The opposite of [Malediction]. Charm reduces the severity of negative effects.
-     * [Requires]: Target cannot have any [Charm] Tokens.
-     * [Action]: Roll vs. Spirit and add a Black [Charm] Token for each [Hit].")
-  (base/ability
    :name "Charm of Virgo"
    :summary
     "* [Power]: [Astrology] [Presence]
@@ -2685,12 +2677,12 @@
    :summary
     "* [Skill]: [Law]")
   (base/ability
-   :name "Scattershot"
+   :name "Scatter"
    :titles "Glaser, Shot"
    :summary
     "* [Power]: [Weapon]
      * [Conflict]: 2 random Units adjacent to the Target are also attacked.
-     * [Hit Location]: IF multiple valid Hit Locations are revealed THEN separate them into separate Hit Locations. Crits are only applied to the primary location.")
+     * [Hit Location]: IF multiple valid Hit Locations are revealed THEN separate them into separate Hit Locations. Crits are applied to each location.")
   (base/ability
    :name "Scientific Genius")
   (base/ability
@@ -3347,6 +3339,13 @@
    :name "War Training"
    :summary
     "* [Skill]: [Animal Handling]")
+  (base/ability
+   :name "Warding Sign"
+   :summary
+    "* [Power]: [Enchantment]
+     * The opposite of [Malediction]. Warding Sign reduces the severity of negative effects.
+     * [Requires]: Target cannot have any [Charm] Tokens.
+     * [Action]: Roll vs. Spirit and add a Black [Charm] Token for each [Hit].")
   (base/ability
    :name "Water Walking"
    :summary

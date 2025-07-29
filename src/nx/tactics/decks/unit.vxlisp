@@ -440,45 +440,39 @@
    :name "Eldruf Grundel"
    :summary "Gnome Thief Illusionist")
   (base/unit
+   :name "Elephant: African"
+   :speedland "40kph"
+   :mass "10tons")
+  (base/unit
+   :name "Elephant: Asian"
+   :speedland "40kph"
+   :mass "5tons")
+  (base/unit
+   :name "Elephant: Rogue")
+  (base/unit
+   :name "Elephant: War")
+  (base/unit
    :name "Eye Killer"
    :titles "Beholder, Evil Eye, Eye of the Beholder, Floating Eye, Gazer"
    :summary
     "Piercing Gaze - Sees through illusions, invisibility, shapeshifting, and disguises.
-
-Watcher’s Eye – Places a magical eye to spy from afar.
-
-Eye of Truth – Dispels lies, glamours, or falsehoods.
-
-Foresight Gaze – Grants short-term precognition.
-
-Eye of Memory – Reveals a scene from the past.
-
+Watcher's Eye - Places a magical eye to spy from afar.
+Eye of Truth - Dispels lies, glamours, or falsehoods.
+Foresight Gaze - Grants short-term precognition.
+Eye of Memory - Reveals a scene from the past.
 Dead Man's Stare - Induces fear or paralysis.
-
 Omen Eye - Grants the ability to see glimpses of possible futures in chaotic flashes.
-
 Eye of Recall - Remembers everything the eye has ever seen; perfect visual memory.
-
 Sight Beyond Sight - Perceives places far away as though seen directly; scrying-like ability.
-
 Thousandfold Vision - Can view multiple perspectives at once, even through solid objects.
-
-
 Mindpierce - Overwhelms the target's thoughts with maddening visions or raw truth.
-
 Stare of Submission - Compels obedience or paralysis through unblinking dominance.
-
 Withering Gaze - Saps vitality and weakens defenses with a withering glance.
 Wink of the Void - Momentarily erases itself from the vision and memory of others.
-
 Hallucin-eye-tion - Induces visual hallucinations; walls become monsters, allies seem enemies.
-
 Veilpiercer - Sees through lies, glamours, and falsehoods of the world.
 Blinkshield - Redirects spells or projectiles aimed at the eye back at their caster.
-
-Allseer - Grants resistance to being surprised or flanked.
-
-"
+Allseer - Grants resistance to being surprised or flanked."
    :powermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-abilities

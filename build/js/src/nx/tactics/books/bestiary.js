@@ -1558,6 +1558,10 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Fury Devil", ":titles", "Erinyes", ":traits", "Devil"),
             ":Grimalkin",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Grimalkin", ":traits", "Devil", ":reference", "* During the early modern period, the name grimalkin, and cats in general, became associated with the devil and witchcraft. Women tried as witches were often accused of having a familiar, frequently a grimalkin.", ":summary", "* The Grimalkin is a small, black, furry devil with glowing eyes and sharp claws. It is wickedly, intelligent but lazy and weak, so it prefers to get involved in the schemes of others. It takes the role of scout, messenger, and advisor. It enjoys providing information that causes suffering and sitting 	back and watching their handiwork unfold.\n* The Grimalkin is commonly used as a familiar by black magicians. In order to remain on the mortal plane, it must possess a small animal. It will choose a creature which closely suits its personality, often an old or evil-looking female cat.", ":titles", "Greymalkin, Shadowcat"),
+            "Hellchain Devil",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellchain Devil", ":summary", "* Sadistic torturer devils. They use [Hellchain] as weapons."),
+            "Hellchain Weaver",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellchain Weaver", ":summary", "* A powerful devil spider that weaves [Hellchain] into webs. The Weaver uses stealth to hunt its prey. It chooses to wound and terrorize its prey before finally coming in for the kill."),
             "Hellhound",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellhound", ":summary", "* Hellhounds may appear as ordinary large dogs with black coats (usually Dobermans).\n* In combat, they may take a more monstrous form and may spawn up to 2 additional heads and have been known to breathe fire.\n* Be aware that Hellhounds only appear as dogs. Like all devils, they are corrupted souls of humanoids and possess a calm, calculating intelligence. They often work as a pack, creating ambushes and using decoys to lure their prey to their doom.", ":titles", "Cereberus, Devil Dog, Fenris Wolf, Garm, Kerberos"),
             ":Hellion",
@@ -2371,17 +2375,7 @@ export default class nx_tactics_books_bestiary {
           ":name",
           "Elephants",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "African Elephant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "African Elephant", ":speedland", "40kph", ":mass", "10tons"),
-            "Asian Elephant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Asian Elephant", ":speedland", "40kph", ":mass", "5tons"),
-            "Rogue Elephant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rogue Elephant"),
-            "War Elephant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "War Elephant")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Elephant: African", "Elephant: Asian", "Elephant: Rogue", "Elephant: War")
         ),
         "Herd Animals",
         vx_core.f_new(
@@ -3064,9 +3058,9 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Black Lotus", ":image", "images/bestiary/BlackLotus.jpg", ":reference", "* Blue Lotus - Recent studies have shown Nymphaea caerulea to have psychedelic properties, and may have been used as a sacrament in ancient Egypt and certain ancient South American cultures.  Dosages of 5 to 10 grams of the flowers induces slight stimulation, a shift in thought processes, enhanced visual perception, and mild closed-eye visuals.", ":summary", "* Black Lotus is a medium sized blue/black flower that has strong hallucinogenic and magical properties. Eating the petals of the Lotus creates pleasant hallucinations that are strongly addictive over time. The greatest danger of eating lotus petals is that the potency grows from mild euphoria at the tip of the petal to intense hallucinations, madness, and death near the flower.  The trick is to only eat the amount that will give you the effect you desire, but the flower is hard to get and the temptation is strong to go back for more. The desperately addicted Lotus-Eaters eventually use too much and go mad or die.\n* Black Lotus grows only in deep swamps such as those near the city of [Fiaqua] (the Flower on the Water) and must be cultivated to gain its full potential. The Lotus retains its potency for about a month after picking, but the petals wither shortly after being removed, so the flower is typically kept intact despite the dangers."),
             "Black Rose",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Black Rose", ":reference", "* The Black Rose blooms once more! - LeBlanc, Runeterra\n* Another rose for the garden. - LeBlanc, Runeterra", ":summary", "* Black roses have often been associated with mystery, hatred, death, dishonor, tragic romance, and the supernatural in different cultures and traditions. In literature and art, they frequently symbolize tragic love or the darker aspects of human emotions. Despite their associations with darkness, black roses can also convey elegance, sophistication, and rebirth in some contexts. This dual symbolism has contributed to their enduring allure and cultural significance.", ":titles", "Rosa Black Baccara"),
-            ":Devilroot",
+            "Devilroot",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Devilroot", ":summary", "* A rare species of plant recognizable by its forked leaves and crimson forked root. The powdered root is a deadly poison."),
-            ":K'Tallah",
+            "K'Tallah",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "K'Tallah", ":summary", "* A rare swamp plant with gray-green leaves. It is also a highly addictive euphoric that can provide visions of the near future. After a half dozen uses, the user becomes hopelessly addicted and must consume a leaf each day or suffer horrible and ultimately fatal consequences. The first symptoms are stomach pains and the uneasy feeling that some is growing within. Next the snakelike tentrils of new K'Tallah plants sprout from the eyes, ears, and mouth. Death follows quickly. Heavy users, arguably the most wretched folk in existence, claim that leaves plucked from the body of a deceased addict are especially savory."),
             ":Mandrake",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Mandrake", ":summary", "* A long leaved (nearly a foot long) dark green plant with small greenish-yellow or purple bell-shaped flowers that grow on 3-4 inch stalks. It is best known for the large brown root, running 3 to 4 feet into the ground sometimes single and sometimes forked into two or three distinctive branches which gives the plant a rough resemblance to that of a human monster form.\n* It was supposed to grow under the feet of a hanged man where his semen dripped on to the earth; this would appear to be the reason for the methods employed by the alchemists who 'projected human seed into animal earth'. It could only be pulled from the ground after performing the necessary rituals. It was advisable to put wax in the ears before one attempted to do this: the mandrake would scream when pulled free and this could cause deafness.\n* A whole Mandrake root placed in the home, will give the house protection, fertility, and prosperity. Also, where there is Mandrake, demons cannot abide. Money placed beside the root is said to multiply. It was also recommended for discovering treasures, and as an ingredient for charm for pregnancy."),

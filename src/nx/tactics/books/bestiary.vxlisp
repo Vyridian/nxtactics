@@ -486,23 +486,12 @@
      (base/section
       :name "Elephants"
       :unitmap
-       (base/unitmap
-        "African Elephant"
-         (base/unit
-          :name "African Elephant"
-          :speedland "40kph"
-          :mass "10tons")
-        "Asian Elephant"
-         (base/unit
-          :name "Asian Elephant"
-          :speedland "40kph"
-          :mass "5tons")
-        "Rogue Elephant"
-         (base/unit
-          :name "Rogue Elephant")
-        "War Elephant"
-         (base/unit
-          :name "War Elephant")))
+       (base/unitmap<-tactics-keys
+        tactics
+        "Elephant: African"
+        "Elephant: Asian"
+        "Elephant: Rogue"
+        "Elephant: War"))
     "Herd Animals"
      (base/section
       :name "Herd Animals"
@@ -1471,11 +1460,11 @@
           :summary
            "* Black roses have often been associated with mystery, hatred, death, dishonor, tragic romance, and the supernatural in different cultures and traditions. In literature and art, they frequently symbolize tragic love or the darker aspects of human emotions. Despite their associations with darkness, black roses can also convey elegance, sophistication, and rebirth in some contexts. This dual symbolism has contributed to their enduring allure and cultural significance."
           :titles "Rosa Black Baccara")
-        :Devilroot
+        "Devilroot"
          (item
           :name "Devilroot"
           :summary "* A rare species of plant recognizable by its forked leaves and crimson forked root. The powdered root is a deadly poison.")
-        :K'Tallah
+        "K'Tallah"
          (item
           :name "K'Tallah"
           :summary "* A rare swamp plant with gray-green leaves. It is also a highly addictive euphoric that can provide visions of the near future. After a half dozen uses, the user becomes hopelessly addicted and must consume a leaf each day or suffer horrible and ultimately fatal consequences. The first symptoms are stomach pains and the uneasy feeling that some is growing within. Next the snakelike tentrils of new K'Tallah plants sprout from the eyes, ears, and mouth. Death follows quickly. Heavy users, arguably the most wretched folk in existence, claim that leaves plucked from the body of a deceased addict are especially savory.")
@@ -3496,6 +3485,16 @@
           "* The Grimalkin is a small, black, furry devil with glowing eyes and sharp claws. It is wickedly, intelligent but lazy and weak, so it prefers to get involved in the schemes of others. It takes the role of scout, messenger, and advisor. It enjoys providing information that causes suffering and sitting 	back and watching their handiwork unfold.
            * The Grimalkin is commonly used as a familiar by black magicians. In order to remain on the mortal plane, it must possess a small animal. It will choose a creature which closely suits its personality, often an old or evil-looking female cat."
          :titles "Greymalkin, Shadowcat")
+       "Hellchain Devil"
+        (base/unit
+         :name "Hellchain Devil"
+         :summary
+          "* Sadistic torturer devils. They use [Hellchain] as weapons.")
+       "Hellchain Weaver"
+        (base/unit
+         :name "Hellchain Weaver"
+         :summary
+          "* A powerful devil spider that weaves [Hellchain] into webs. The Weaver uses stealth to hunt its prey. It chooses to wound and terrorize its prey before finally coming in for the kill.")
        "Hellhound"
         (base/unit
          :name "Hellhound"

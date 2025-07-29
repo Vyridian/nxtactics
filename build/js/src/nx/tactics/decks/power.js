@@ -838,8 +838,6 @@ export default class nx_tactics_decks_power {
           {"any-1": nx_tactics_base.t_abilitymap},
           "Barren Loins",
           nx_tactics_base.f_ability_from_tactics_key(tactics, "Barren Loins"),
-          "Charm",
-          nx_tactics_base.f_ability_from_tactics_key(tactics, "Charm"),
           "Craft Incense",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Craft Incense"),
           "Craft Perfume",
@@ -878,6 +876,8 @@ export default class nx_tactics_decks_power {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Spirit Ward", ":summary", "* Provides increased defense against spirit beings and attack against [Will]."),
           "Stone Ward",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stone Ward", ":summary", "* Provides increased defense against predominately stone weapons."),
+          "Warding Sign",
+          nx_tactics_base.f_ability_from_tactics_key(tactics, "Warding Sign"),
           ":Weaken",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Weaken", ":summary", "* Reduces Body"),
           "Wood Ward",
@@ -1192,7 +1192,7 @@ export default class nx_tactics_decks_power {
         ":name",
         "Primordial",
         ":titles",
-        "Arch Demon, Arch Fiend, Celestials, Deity, Demigod, Divine Power, Galactus, Godling, Godly, Godlike, Greater Deity, Lesser Deity, Planeswalker, Power Cosmic, Prime, Primal, Primal Order, Primordial, Primus, Supreme Deity",
+        "Arch Demon, Arch Fiend, Celestials, Deity, Demigod, Divine Power, Galactus, Godling, Godly, Godlike, Greater Deity, Incarnate, Lesser Deity, Planeswalker, Power Cosmic, Prime, Primal, Primal Order, Primordial, Primus, Supreme Deity",
         ":reference",
         "* It might take the suffering or worship of 10,000 souls to produce a grain of Divinity...but a single grain is beyond all the power of this world.",
         ":summary",
@@ -1950,8 +1950,10 @@ export default class nx_tactics_decks_power {
         {"any-1": nx_tactics_base.t_power},
         ":name",
         "Charm",
+        ":titles",
+        "Glamour",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Commanding Presense")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Awestrike", "Charm of Virgo", "Commanding Presense", "Desire", "Enthrall", "Entrance")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
@@ -3215,7 +3217,7 @@ export default class nx_tactics_decks_power {
         ":name",
         "Presence",
         ":abilitymap",
-        vx_core.f_new({"any-1": nx_tactics_base.t_abilitymap}, tactics, "Awestrike", "Charm of Virgo", "Desire", "Enthrall", "Entrance")
+        vx_core.f_new({"any-1": nx_tactics_base.t_abilitymap}, tactics, "Awestrike", "Charm of Virgo", "Commanding Presense", "Desire", "Enthrall", "Entrance")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
@@ -4135,7 +4137,7 @@ export default class nx_tactics_decks_power {
         ":summary",
         "* A weapon of some kind. Must have [Weapon: Melee], [Weapon: Close Combat], [Weapon: Ranged], [Weapon: Firearm] or [Weapon: Gunnery]",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "1-Handed", "2-Handed", "Arc:1-Side", "Arc:Front", "Autofire", "Bash", "Burstfire", "Close Weapon", "Firearm Weapon", "Gunnery Weapon", "Hack", "High-Explosive", "Melee Weapon", "Pierce", "Ranged Weapon", "Scattershot", "Slash", "Tracer Rounds")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "1-Handed", "2-Handed", "Arc:1-Side", "Arc:Front", "Autofire", "Bash", "Burstfire", "Close Weapon", "Firearm Weapon", "Gunnery Weapon", "Hack", "High-Explosive", "Melee Weapon", "Pierce", "Ranged Weapon", "Scatter", "Slash", "Tracer Rounds")
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Weather")
     )

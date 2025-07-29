@@ -1257,12 +1257,14 @@
      transform="translate(0.00949035,137.08791)"><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
-       x="20.293335"
+       x="19.973328"
        y="56.735821"
        id="text9-0-4-34-9-5-4"
        inkscape:label="text"><tspan
          sodipodi:role="line"
-         id="tspan6">Simulate reality whenever possible</tspan></text><text
+         id="tspan6"
+         x="19.973328"
+         y="56.735821">The closer to reality the better</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
        x="12.563596"
