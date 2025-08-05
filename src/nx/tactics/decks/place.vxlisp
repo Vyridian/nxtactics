@@ -324,6 +324,14 @@
    :name "Trading Post"
    :image "images/cards/place-tradingpost.svg")
   (base/place
+   :name "Train Car: Engine"
+   :summary
+    "")
+  (base/place
+   :name "Train Car: Passenger"
+   :summary
+    "* Train cars are usually 3m/9ft/2spaces wide")
+  (base/place
    :name "Volcano")
   (base/place
    :name "Wall: Stone"

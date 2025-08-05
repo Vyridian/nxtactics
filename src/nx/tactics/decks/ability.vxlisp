@@ -318,6 +318,11 @@
    :summary
     "* [Power]: [Beastial]")
   (base/ability
+   :name "Blast"
+   :titles "Concussive, Explosive"
+   :image "images/rule-blast.svg"
+   :layout base/cardlayout-imageonly)
+  (base/ability
    :name "Bear Form"
    :summary
     "* [Power]: [Beastial]")
@@ -2682,7 +2687,7 @@
    :summary
     "* [Power]: [Weapon]
      * [Conflict]: 2 random Units adjacent to the Target are also attacked.
-     * [Hit Location]: IF multiple valid Hit Locations are revealed THEN separate them into separate Hit Locations. Crits are applied to each location.")
+     * [Hit Location]: Reveal Crits Hit Locations. IF multiple valid Hit Locations are revealed THEN separate them into separate Hit Locations. Crits are applied to each location.")
   (base/ability
    :name "Scientific Genius")
   (base/ability

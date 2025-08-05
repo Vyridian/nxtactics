@@ -1015,9 +1015,6 @@ x +1DMG vs. Crouching."
        :name "Armor Piercing"
        :summary "* [Action]: Enemy at [-2 Armor]"
        :titles "Depleted Uraniumn")
-     "Blast"
-      (base/ability
-       :name "Blast")
      "Bombardment"
       (base/ability
        :name "Bombardment")

@@ -174,7 +174,6 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hammer: War", ":energy", "100J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hellchain"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hellfire"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Improvised Weapon", ":summary", "* Any item can be a weapon.\n* [Melee] or [Close Combat]: vs [Body]\n* [Damage]: [Body] Damage Types based on item."),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Jerry Can", ":image", "images/cards/item-jerrycan.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Keys", ":image", "images/cards/item-keys.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Knife", ":image", "images/cards/item-knife.svg", ":summary", "* [Combat]: [Close Combat]\n* [Damage]: [Body] [Pierce] [Slash]\n* [Location]: [1-hand]", ":body", "5x-1", ":mass", "500g/1lb", ":length", "25cm/10in"),

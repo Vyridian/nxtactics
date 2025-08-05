@@ -22,21 +22,26 @@ export default class nx_tactics_decks_reference {
   // (func deck-reference)
   static f_deck_reference(tactics) {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_deck},
-      ":name",
-      "Reference",
-      ":image",
-      "images/rule-reference.svg",
-      ":layout",
-      nx_tactics_base.c_cardlayout_imageonly,
-      ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        vx_core.f_list_from_list(
-          {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Ability", "Ability Point", "Advantage", "Area Effect", "Bleeding", "Blood Loss", "Body", "Burning", "Character Point", "Choking", "Collision", "Collision: Angle", "Disadvantage", "Diseased", "Elevation", "Exposure", "Falling", "Flanking", "Hunger", "Mind", "Poisoned", "Power", "Rating", "Skill", "Skill Point", "Specialty", "Speed", "Stat: Add", "Stat: Multiply", "Surrounded", "Surprise", "Task", "Thirst", "Unskilled", "Weather", "Weather: Clouds", "Weather: Humidity", "Weather: Temperature", "Weather: Wind", "Will")
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const rulelist = nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Ability", "Ability Point", "Advantage", "Area Effect", "Blast", "Bleeding", "Blood Loss", "Body", "Burning", "Character Point", "Choking", "Collision", "Collision: Angle", "Collision: Headon", "Damaged", "Disadvantage", "Diseased", "Elevation", "Exposure", "Falling", "Flanking", "Hunger", "Isolation", "Map: Car Chase", "Map: Dogfight", "Map: Exploration", "Map: Galactic", "Map: Global", "Map: Narrative", "Map: Naval", "Map: Orbital", "Map: Personal", "Map: Planetary", "Map: Regional", "Map: Road Trip", "Map: Starship", "Map: Stellar", "Mind", "Poisoned", "Power", "Skill", "Skill Point", "Specialty", "Speed", "Stat: Add", "Stat: Multiply", "Surprise", "Surrounded", "Task", "Thirst", "Unskilled", "Weapon: Barehanded", "Weapon: Improvised", "Weather", "Weather: Clouds", "Weather: Humidity", "Weather: Temperature", "Weather: Wind", "Will")
+        const cardmap = nx_tactics_base.f_cardmap_from_cardlist(
+          vx_core.f_list_from_list({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist}, rulelist)
         )
-      )
+        return vx_core.f_new(
+          {"any-1": nx_tactics_base.t_deck},
+          ":name",
+          "Reference",
+          ":image",
+          "images/rule-reference.svg",
+          ":layout",
+          nx_tactics_base.c_cardlayout_imageonly,
+          ":cardmap",
+          cardmap
+        )
+      })
     )
     return output
   }

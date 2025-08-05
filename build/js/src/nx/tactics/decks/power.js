@@ -550,10 +550,12 @@ export default class nx_tactics_decks_power {
         {"any-1": nx_tactics_base.t_power},
         ":name",
         "Conjuration",
-        ":summary",
-        "* Conjuration is the art of creating things directly from the imagination. Conjured items are relatively fragile and erode quickly with use, but otherwise will last indefinitely. An item is perfectly visualized and then drawn into reality from the Astral Realm. Conjuration is similar to [Illusion], but its creations are real though they are rarely permanent.\n* Action: Check Skill vs. the Value of the item to create. If successful, the item can be used a number of times equal to the result before disintegrating. If the user has a specialty with an item, that specialty may be applied to the check.\n* Benefits - Conjuration is the natural ability of the Astral Realm and Dream Realm. All abilities are +1 in these Realms.\n* Limitations - Creation magic is exceedingly difficult with only relatively minor creations possible. The process of Conjuration is different from natural things, so all Conjured things have some imperfection or mark that distinquishes itself from a natural thing.\n* Concidental - Conjuring in ways that appear like the object was already there is [Coincidental Magic]. E.g. Drawing an illusionary sword from a real scabbard.",
         ":titles",
         "Conjurer, Creation, Creator, Manifestation",
+        ":reference",
+        "* Don't think I won't unmake you, because I Will! - Flower Child, Runeterra",
+        ":summary",
+        "* Conjuration is the art of creating things directly from the imagination. Conjured items are relatively fragile and erode quickly with use, but otherwise will last indefinitely. An item is perfectly visualized and then drawn into reality from the Astral Realm. Conjuration is similar to [Illusion], but its creations are real though they are rarely permanent.\n* Action: Check Skill vs. the Value of the item to create. If successful, the item can be used a number of times equal to the result before disintegrating. If the user has a specialty with an item, that specialty may be applied to the check.\n* Benefits - Conjuration is the natural ability of the Astral Realm and Dream Realm. All abilities are +1 in these Realms.\n* Limitations - Creation magic is exceedingly difficult with only relatively minor creations possible. The process of Conjuration is different from natural things, so all Conjured things have some imperfection or mark that distinquishes itself from a natural thing.\n* Concidental - Conjuring in ways that appear like the object was already there is [Coincidental Magic]. E.g. Drawing an illusionary sword from a real scabbard.",
         ":abilitymap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_abilitymap},
@@ -2968,6 +2970,8 @@ export default class nx_tactics_decks_power {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dementia"),
           "False Memories",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "False Memories", ":summary", "* Alter the memories of the target."),
+          "Grip of Madness",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hyteria"),
           ":Hyteria",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hyteria"),
           "Induce Paranoia",
@@ -3729,10 +3733,10 @@ export default class nx_tactics_decks_power {
         {"any-1": nx_tactics_base.t_power},
         ":name",
         "Transmutation",
-        ":summary",
-        "* The ability to transform others.",
         ":titles",
         "Polymorpher, Reality Warper, Shaper, Transmuter",
+        ":summary",
+        "* The ability to transform others\n* Note: Ranged Transmutation can be reflected by mirrors",
         ":stat",
         "Mind",
         ":abilitymap",
@@ -4137,7 +4141,7 @@ export default class nx_tactics_decks_power {
         ":summary",
         "* A weapon of some kind. Must have [Weapon: Melee], [Weapon: Close Combat], [Weapon: Ranged], [Weapon: Firearm] or [Weapon: Gunnery]",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "1-Handed", "2-Handed", "Arc:1-Side", "Arc:Front", "Autofire", "Bash", "Burstfire", "Close Weapon", "Firearm Weapon", "Gunnery Weapon", "Hack", "High-Explosive", "Melee Weapon", "Pierce", "Ranged Weapon", "Scatter", "Slash", "Tracer Rounds")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "1-Handed", "2-Handed", "Arc:1-Side", "Arc:Front", "Autofire", "Bash", "Blast", "Burstfire", "Close Weapon", "Firearm Weapon", "Gunnery Weapon", "Hack", "High-Explosive", "Melee Weapon", "Pierce", "Ranged Weapon", "Scatter", "Slash", "Tracer Rounds")
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Weather")
     )

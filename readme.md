@@ -6,6 +6,7 @@ It is also a test bed for new features for vxlisp. Obvious ones are UI and datab
 
 ## Links
 * [Rules](DrawnToDestiny.pdf)
+* [Reference](DrawnToDestinyReference.pdf)
 * [Main Application](public/runjs.html)
 * [Test Suite Js](public/testjs.html)
 * [API Documentation](doc/doc.html)

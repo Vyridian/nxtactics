@@ -65,7 +65,15 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Ability Point", ":summary", "* [Minor Achievment]: Gain an Ability Point. You may also convert 1 of your existing Abilities into an Ability Point.\n* An Ability Point may be exchanged for an Ability, Specialty, or a Power Rating increase.\n* Ability Points may be saved."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Ability Point",
+        ":image",
+        "images/rule-ability-point.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -130,6 +138,15 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Beast", ":summary", "* The Beast\n* Beast Unleashed: The Beast is now in control of this unit. Set Conscience = Will; set Will = Beast stat; and set Beast=blank"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Blast",
+        ":image",
+        "images/rule-blast.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Blatant", ":titles", "Overt", ":summary", "* Blatant Abilities are obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]\n* Blatant Magic is harder to use and has [Disadvantage]"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -158,7 +175,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Broken", ":summary", "* A broken [Item] can only be used as an [Improvised Weapon]."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Broken", ":summary", "* A broken [Item] can only be used as an [Weapon: Improvised]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Character", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Item", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Unit", ":summary", ""),
@@ -175,7 +192,15 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaign", ":summary", "* Starting a New Campaign\n* Creating Player Characters\n* Creating Plots\n* Conflict\n* Creating Scenes\n* Continuing a Campaign"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaign: New", ":summary", "* The Elevator Pitch\n* Theme\n* Character Creation\n* Character Development\n* Maps\n* The Hook\n* The Finale"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Character"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Character Point", ":summary", "CP"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Character Point",
+        ":image",
+        "images/rule-character-point.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -200,8 +225,6 @@ export default class nx_tactics_decks_rule {
         "Collision",
         ":image",
         "images/rule-collision.svg",
-        ":summary",
-        "A collision between two objects. The heavier is H, the lighter L\nTimeImpact - 1/0.1s = 10\nForce = MassL*SpeedL2*TimeImpact",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
@@ -214,7 +237,15 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Combat", ":summary", "* Target a unit with a damaging Skill/Power.\n* Each player chooses a Conflict card from their hand or a random card from Shared Conflict.\n* Conflict Cards are compared like Rock/Paper/Scissors.\n* Fight Speed: Block/Counter > Fast > Evade > Strong > Block/Counter\n* If both play Fast or Strong then compare by Rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.\n* Discard used cards (except Keep)"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Collision: Headon",
+        ":image",
+        "images/rule-collision-headon.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -361,7 +392,15 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Damaged", ":summary", "* [Body]:-1\n* When using a damaged item or body part take [Skill]:-1/Damaged.\n* An item with no [Body] remaining is [Broken]."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Damaged",
+        ":image",
+        "images/rule-damaged.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -458,6 +497,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Isolation",
+        ":image",
+        "images/rule-isolation.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":reference",
+        "* Their sharing a drink they call loneliness. It's better than drinking alone. - Billy Joel, Piano Man"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Item: Guide",
         ":image",
         "images/rule-item-guide.svg",
@@ -473,7 +523,6 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Leveling", ":summary", "* Major Achievement: Completion gains a [Skill Point] with level equal to your 2nd highest Skill.\n* Minor Achievement: Completion gains an [Ability Point]."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -484,9 +533,132 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map: Exploration", ":summary", "* Human Scale\n* Space Size: 1m\n* Turn Length: 2sec\n* Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).\n* Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map: Personal", ":summary", "* Human Scale\n* Space Size: 1m\n* Turn Length: 2sec\n* Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).\n* Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map: Vehicle", ":summary", "* Vehicle Map\n* Space Size: 3m\n* Turn Length: 1sec\n* Note: Car (max speed 2x2 = 200kph/125mph) slow at 40kph/25mph/11mps. 1sec move = 4 spaces (11m)."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Car Chase",
+        ":image",
+        "images/rule-map-car-chase.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Dogfight",
+        ":image",
+        "images/rule-map-dogfight.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Exploration",
+        ":image",
+        "images/rule-map-exploration.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Galactic",
+        ":image",
+        "images/rule-map-galactic.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Global",
+        ":image",
+        "images/rule-map-global.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Narrative",
+        ":image",
+        "images/rule-map-narrative.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Naval",
+        ":image",
+        "images/rule-map-naval.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Orbital",
+        ":image",
+        "images/rule-map-orbital.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Personal",
+        ":image",
+        "images/rule-map-personal.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Planetary",
+        ":image",
+        "images/rule-map-planetary.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Regional",
+        ":image",
+        "images/rule-map-regional.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Road Trip",
+        ":image",
+        "images/rule-map-road-trip.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Starship",
+        ":image",
+        "images/rule-map-starship.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Map: Stellar",
+        ":image",
+        "images/rule-map-stellar.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -681,7 +853,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shadow", ":titles", "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin", ":reference", "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence\n* Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil\n* Hannibal Lecter\n* Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas\n* If once you start down the dark path, forever will it dominate your destiny - Yoda, Star Wars: The Empire Strikes Back\n* A farmer comes home one day to find ... everything that he loved, taken from him. His children. One can only 	imagine the pit of despair, the hours of Job-like lamentations, the burden of existence. He makes a promise to 	himself in those dark hours. A life's work erupts from his knotted mind... Years go by... The farmer, who is no longer a farmer, sees the wreckage that he has left in his wake. It is now he who burns. It is he who slaughters, ... and he knows in his heart, he must pay. - Red Reddington, The Blacklist\n* No one escapes their shadow. - Zed, Runeterra\n* When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker", ":summary", "* Lurking Shadow - The Shadow is a devious, sociopathic, latent personality. It is normally powerless, surpressed by the [Will] in civilized men. It can, however, gain power and even dominance in those with weak wills or those who cultivate it such as from [Corruption], [Darkness], [Fleshcraft], [Intimidation], or [Necromancy].\n* Cruel and Unusual - The Shadow silently observes all that the person experiences. It has nothing but contempt for others as well as the [Will] that keeps it contained. As the manifestation of the unit's dark dreams, twisted desires, and bizarre megalomania, the Shadow reinforces its own superiority by exerting power over others. Manipulating, dominating, and causing physical or emotional pain is a siren's call that the Shadow cannot\nrefuse.\n* Consumed by Shadow - Whenever a unit's [Will] is lowered to 0 or below its Shadow rating, test Shadow vs. [Will]. If the Shadow wins, it gains control of the unit until [Will] exceeds Shadow again (if ever). Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank.\n* Rising Shadow - While the Shadow is dominant, the person always uses its Shadow rating instead of [Will]. The Shadow will always act toward its, usually immediate, self interest. It will usually not aid its allies in any way. Because the Shadow is self absorbed, all [Retreats] against it are doubled, but failure feeds its insecurities, so retreat is emotionally devastating and can lead to the [Will] taking charge again."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shadow", ":titles", "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin", ":reference", "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence\n* I am your darkness! I am your TRUTH! - Morgana, Runeterra\n* Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil\n* Hannibal Lecter\n* Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas\n* If once you start down the dark path, forever will it dominate your destiny - Yoda, Star Wars: The Empire Strikes Back\n* A farmer comes home one day to find ... everything that he loved, taken from him. His children. One can only 	imagine the pit of despair, the hours of Job-like lamentations, the burden of existence. He makes a promise to 	himself in those dark hours. A life's work erupts from his knotted mind... Years go by... The farmer, who is no longer a farmer, sees the wreckage that he has left in his wake. It is now he who burns. It is he who slaughters, ... and he knows in his heart, he must pay. - Red Reddington, The Blacklist\n* No one escapes their shadow. - Zed, Runeterra\n* When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker", ":summary", "* Lurking Shadow - The Shadow is a devious, sociopathic, latent personality. It is normally powerless, surpressed by the [Will] in civilized men. It can, however, gain power and even dominance in those with weak wills or those who cultivate it such as from [Corruption], [Darkness], [Fleshcraft], [Intimidation], or [Necromancy].\n* Cruel and Unusual - The Shadow silently observes all that the person experiences. It has nothing but contempt for others as well as the [Will] that keeps it contained. As the manifestation of the unit's dark dreams, twisted desires, and bizarre megalomania, the Shadow reinforces its own superiority by exerting power over others. Manipulating, dominating, and causing physical or emotional pain is a siren's call that the Shadow cannot\nrefuse.\n* Consumed by Shadow - Whenever a unit's [Will] is lowered to 0 or below its Shadow rating, test Shadow vs. [Will]. If the Shadow wins, it gains control of the unit until [Will] exceeds Shadow again (if ever). Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank.\n* Rising Shadow - While the Shadow is dominant, the person always uses its Shadow rating instead of [Will]. The Shadow will always act toward its, usually immediate, self interest. It will usually not aid its allies in any way. Because the Shadow is self absorbed, all [Retreats] against it are doubled, but failure feeds its insecurities, so retreat is emotionally devastating and can lead to the [Will] taking charge again."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -691,7 +863,15 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Skill Point", ":summary", "* [Major Achievement]: Gain a Skill Point equal to your 2nd highest Skill level. You may also reduce 1 of your existing Skill levels by 1 to gain a Skill Point equal to the reduced level.\n* A Skill Point may be spent on a [Skill] of equal level to raise that skill by 1.\n* Skill Points may be saved.\n* A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.\n* 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Skill Point",
+        ":image",
+        "images/rule-skill-point.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Sleep Deprived", ":summary", "* Mind:-1\n* Event: IF a Unit sleeps < 6 hours/day THEN Sleep Deprived:+1 ELSE Sleep Deprived:-1."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Space", ":summary", "A point on the map"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Space: Inner"),
@@ -725,8 +905,24 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Stat: Add", ":summary", "How to add or substract Stats\nIF Scale1 <> Scale2\n  Stat = Higher Stat\nELSE\n* Add\n   Rank = Rank1+Rank2\n   IF Rank > 10\n     Rank:-10 and Scale:+1\n* Subtract\n   Rank = Rank1-Rank2\n   IF Rank < 1\n     Rank:+10 and Scale:-1"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Stat: Multiply", ":summary", "How to do multiply or divide Stats\n* Multiply or Divide by 10\n    Add or Subtract 1 from Scale\n* Multiply\n    Rank = Rank1*Rank2\n    Scale = Scale1+Scale2\n    IF Rank > 10\n      Rank:-10 and Scale:+1\n* Divide\n    Rank:Rank1/Rank2 Round to 1 digit\n    Scale:Scale1-Scale2\n    IF Rank < 1\n      Rank:+10 and Scale:-1"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Stat: Add",
+        ":image",
+        "images/rule-stat-add.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Stat: Multiply",
+        ":image",
+        "images/rule-stat-multiply.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Subtle", ":summary", "* Subtle Abilities are not obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suit", ":summary", "Each Suit represents a Stat:\n* Wands - Power. Body\n* Coins - Planning. Mind\n* Cups - Perseverance. Will\n* Swords - Skill. Speed"),
       vx_core.f_new(
@@ -821,6 +1017,24 @@ export default class nx_tactics_decks_rule {
         "Unskilled",
         ":image",
         "images/rule-unskilled.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Weapon: Barehanded",
+        ":image",
+        "images/rule-weapon-barehanded.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Weapon: Improvised",
+        ":image",
+        "images/rule-weapon-improvised.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),

@@ -1232,6 +1232,26 @@ Allseer - Grants resistance to being surprised or flanked."
   (base/unit
    :name "Seal")
   (base/unit
+   :name "Semi: Dry Van"
+   :summary
+    "* A typical enclosed trailer")
+  (base/unit
+   :name "Semi: Day Cab"
+   :summary
+    "* A short haul cab without a sleeping area")
+  (base/unit
+   :name "Semi: Flatbed")
+  (base/unit
+   :name "Semi: Reefer"
+   :summary
+    "* Refrigerated Trailer")
+  (base/unit
+   :name "Semi: Sleeper"
+   :summary
+    "* A cab with sleeping area")
+  (base/unit
+   :name "Semi: Tanker")
+  (base/unit
    :name "Senturion"
    :titles "Mech Man"
    :summary
@@ -1598,6 +1618,14 @@ Allseer - Grants resistance to being surprised or flanked."
    :name "Tie Reaper")
   (base/unit
    :name "Tie Striker")
+  (base/unit
+   :name "Train: Engine"
+   :summary
+    "")
+  (base/unit
+   :name "Train: Passenger"
+   :summary
+    "* Train cars are usually 3m/9ft/2spaces wide")
   (base/unit
    :name "Turkey"
    :image "images/cards/unit-turkey.svg"

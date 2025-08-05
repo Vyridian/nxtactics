@@ -949,13 +949,15 @@
        :titles "Time Warp")))
   (base/power
    :name "Conjuration"
+   :titles "Conjurer, Creation, Creator, Manifestation"
+   :reference
+    "* Don't think I won't unmake you, because I Will! - Flower Child, Runeterra"
    :summary
     "* Conjuration is the art of creating things directly from the imagination. Conjured items are relatively fragile and erode quickly with use, but otherwise will last indefinitely. An item is perfectly visualized and then drawn into reality from the Astral Realm. Conjuration is similar to [Illusion], but its creations are real though they are rarely permanent.
      * Action: Check Skill vs. the Value of the item to create. If successful, the item can be used a number of times equal to the result before disintegrating. If the user has a specialty with an item, that specialty may be applied to the check.
      * Benefits - Conjuration is the natural ability of the Astral Realm and Dream Realm. All abilities are +1 in these Realms.
      * Limitations - Creation magic is exceedingly difficult with only relatively minor creations possible. The process of Conjuration is different from natural things, so all Conjured things have some imperfection or mark that distinquishes itself from a natural thing.
      * Concidental - Conjuring in ways that appear like the object was already there is [Coincidental Magic]. E.g. Drawing an illusionary sword from a real scabbard."
-   :titles "Conjurer, Creation, Creator, Manifestation"
    :abilitymap
     (base/abilitymap
      "Conjure Weapon"
@@ -5023,6 +5025,9 @@
       (base/ability
        :name "False Memories"
        :summary "* Alter the memories of the target.")
+     "Grip of Madness"
+      (base/ability
+       :name "Hyteria")
      :Hyteria
       (base/ability
        :name "Hyteria")
@@ -5042,14 +5047,16 @@
      "Through the Looking Glass"
       (base/ability
        :name "Through the Looking Glass"
-       :reference "* I'm sorry to tell you this, but you've suffered a schizoid embolism. We can't snap you out of your fantasy... and I've been sent in to try to talk you down. - Total Recall")
+       :reference
+        "* I'm sorry to tell you this, but you've suffered a schizoid embolism. We can't snap you out of your fantasy... and I've been sent in to try to talk you down. - Total Recall")
      :Tripping
       (base/ability
        :name "Tripping")
      "Twisted Words"
       (base/ability
        :name "Twisted Words"
-       :summary "* This subtle power is a sort of malicious therapy, and it requires nothing more than casual conversation. Its influence is hidden by inflections and suggestions. The victim finds themselves increasing agitated as their inner demons bubble to the surface. This can lead to confusion, a panic attack, nervous breakdown or even a psychotic break.")
+       :summary
+        "* This subtle power is a sort of malicious therapy, and it requires nothing more than casual conversation. Its influence is hidden by inflections and suggestions. The victim finds themselves increasing agitated as their inner demons bubble to the surface. This can lead to confusion, a panic attack, nervous breakdown or even a psychotic break.")
      "Warped Image"
       (base/ability
        :name "Warped Image"
@@ -5064,7 +5071,8 @@
      "Control Magnetism"
       (base/ability
        :name "Control Magnetism"
-       :summary "* [Reaction]: Redirect a magnetic effect to another target.")
+       :summary
+        "* [Reaction]: Redirect a magnetic effect to another target.")
      "Magnetic Field"
       (base/ability
        :name "Magnetic Field")
@@ -6123,8 +6131,11 @@
        :name "Quick Change")))
   (base/power
    :name "Transmutation"
-   :summary "* The ability to transform others."
-   :titles "Polymorpher, Reality Warper, Shaper, Transmuter"
+   :titles
+    "Polymorpher, Reality Warper, Shaper, Transmuter"
+   :summary
+    "* The ability to transform others
+     * Note: Ranged Transmutation can be reflected by mirrors"
    :stat "Mind"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -6831,6 +6842,7 @@
      "Arc:Front"
      "Autofire"
      "Bash"
+     "Blast"
      "Burstfire"
      "Close Weapon"
      "Firearm Weapon"

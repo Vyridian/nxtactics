@@ -12,10 +12,8 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Ability Point"
-   :summary
-    "* [Minor Achievment]: Gain an Ability Point. You may also convert 1 of your existing Abilities into an Ability Point.
-     * An Ability Point may be exchanged for an Ability, Specialty, or a Power Rating increase.
-     * Ability Points may be saved.")
+   :image "images/rule-ability-point.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Action"
    :image "images/rule-action.svg"
@@ -50,6 +48,10 @@
     "* The Beast
      * Beast Unleashed: The Beast is now in control of this unit. Set Conscience = Will; set Will = Beast stat; and set Beast=blank")
   (base/rule
+   :name "Blast"
+   :image "images/rule-blast.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
    :name "Blatant"
    :titles "Overt"
    :summary
@@ -71,7 +73,7 @@
   (base/rule
    :name "Broken"
    :summary
-    "* A broken [Item] can only be used as an [Improvised Weapon].")
+    "* A broken [Item] can only be used as an [Weapon: Improvised].")
   (base/rule
    :name "Build: Character"
    :summary
@@ -115,8 +117,8 @@
    :name "Character")
   (base/rule
    :name "Character Point"
-   :summary
-    "CP")
+   :image "images/rule-character-point.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Choking"
    :image "images/rule-choking.svg"
@@ -128,27 +130,15 @@
   (base/rule
    :name "Collision"
    :image "images/rule-collision.svg"
-   :summary
-    "A collision between two objects. The heavier is H, the lighter L
-     TimeImpact - 1/0.1s = 10
-     Force = MassL*SpeedL2*TimeImpact"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Collision: Angle"
    :image "images/rule-collision-angle.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Combat"
-   :summary
-    "* Target a unit with a damaging Skill/Power.
-     * Each player chooses a Conflict card from their hand or a random card from Shared Conflict.
-     * Conflict Cards are compared like Rock/Paper/Scissors.
-     * Fight Speed: Block/Counter > Fast > Evade > Strong > Block/Counter
-     * If both play Fast or Strong then compare by Rank (lower is faster).
-     * Order: AJQK2-10
-     * If Tied, there is no result.
-     * If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.
-     * Discard used cards (except Keep)")
+   :name "Collision: Headon"
+   :image "images/rule-collision-headon.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Conclusion"
    :image "images/rule-conclusion.svg"
@@ -232,10 +222,8 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Damaged"
-   :summary
-    "* [Body]:-1
-     * When using a damaged item or body part take [Skill]:-1/Damaged.
-     * An item with no [Body] remaining is [Broken].")
+   :image "images/rule-damaged.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Elevation"
    :image "images/rule-elevation.svg"
@@ -289,6 +277,12 @@
    :image "images/rule-hunger.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Isolation"
+   :image "images/rule-isolation.svg"
+   :layout base/cardlayout-imageonly
+   :reference
+    "* Their sharing a drink they call loneliness. It's better than drinking alone. - Billy Joel, Piano Man")
+  (base/rule
    :name "Item: Guide"
    :image "images/rule-item-guide.svg"
    :layout base/cardlayout-imageonly)
@@ -297,39 +291,67 @@
    :image "images/rule-item-sample.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Leveling"
-   :summary
-    "* Major Achievement: Completion gains a [Skill Point] with level equal to your 2nd highest Skill.
-     * Minor Achievement: Completion gains an [Ability Point].")
-  (base/rule
    :name "Line of Sight"
    :image "images/rule-lineofsight.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Map")
   (base/rule
+   :name "Map: Car Chase"
+   :image "images/rule-map-car-chase.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Dogfight"
+   :image "images/rule-map-dogfight.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
    :name "Map: Exploration"
-   :summary
-    "* Human Scale
-     * Space Size: 1m
-     * Turn Length: 2sec
-     * Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).
-     * Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)")
+   :image "images/rule-map-exploration.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Galactic"
+   :image "images/rule-map-galactic.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Global"
+   :image "images/rule-map-global.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Narrative"
+   :image "images/rule-map-narrative.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Naval"
+   :image "images/rule-map-naval.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Orbital"
+   :image "images/rule-map-orbital.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Map: Personal"
-   :summary
-    "* Human Scale
-     * Space Size: 1m
-     * Turn Length: 2sec
-     * Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).
-     * Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)")
+   :image "images/rule-map-personal.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Vehicle"
-   :summary
-    "* Vehicle Map
-     * Space Size: 3m
-     * Turn Length: 1sec
-     * Note: Car (max speed 2x2 = 200kph/125mph) slow at 40kph/25mph/11mps. 1sec move = 4 spaces (11m).")
+   :name "Map: Planetary"
+   :image "images/rule-map-planetary.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Regional"
+   :image "images/rule-map-regional.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Road Trip"
+   :image "images/rule-map-road-trip.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Starship"
+   :image "images/rule-map-starship.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Map: Stellar"
+   :image "images/rule-map-stellar.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Mind"
    :image "images/rule-mind.svg"
@@ -539,6 +561,7 @@
    :titles "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin"
    :reference
     "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence
+     * I am your darkness! I am your TRUTH! - Morgana, Runeterra
      * Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil
      * Hannibal Lecter
      * Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas
@@ -558,12 +581,8 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Skill Point"
-   :summary
-    "* [Major Achievement]: Gain a Skill Point equal to your 2nd highest Skill level. You may also reduce 1 of your existing Skill levels by 1 to gain a Skill Point equal to the reduced level.
-     * A Skill Point may be spent on a [Skill] of equal level to raise that skill by 1.
-     * Skill Points may be saved.
-     * A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.
-     * 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level.")
+   :image "images/rule-skill-point.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Sleep Deprived"
    :summary
@@ -592,35 +611,12 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Stat: Add"
-   :summary
-    "How to add or substract Stats
-     IF Scale1 <> Scale2
-       Stat = Higher Stat
-     ELSE
-     * Add
-        Rank = Rank1+Rank2
-        IF Rank > 10
-          Rank:-10 and Scale:+1
-     * Subtract
-        Rank = Rank1-Rank2
-        IF Rank < 1
-          Rank:+10 and Scale:-1")
+   :image "images/rule-stat-add.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Stat: Multiply"
-   :summary
-    "How to do multiply or divide Stats
-     * Multiply or Divide by 10
-         Add or Subtract 1 from Scale
-     * Multiply
-         Rank = Rank1*Rank2
-         Scale = Scale1+Scale2
-         IF Rank > 10
-           Rank:-10 and Scale:+1
-     * Divide
-         Rank:Rank1/Rank2 Round to 1 digit
-         Scale:Scale1-Scale2
-         IF Rank < 1
-           Rank:+10 and Scale:-1")
+   :image "images/rule-stat-multiply.svg"
+   :layout base/cardlayout-imageonly)
   (base/rule
    :name "Subtle"
    :summary
@@ -689,6 +685,14 @@
   (base/rule
    :name "Unskilled"
    :image "images/rule-unskilled.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Weapon: Barehanded"
+   :image "images/rule-weapon-barehanded.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Weapon: Improvised"
+   :image "images/rule-weapon-improvised.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Weather"

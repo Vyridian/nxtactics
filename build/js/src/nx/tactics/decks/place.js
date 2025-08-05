@@ -107,6 +107,8 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Thera", ":image", "images/cards/place-thera.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tile", ":image", "images/cards/place-tile.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Trading Post", ":image", "images/cards/place-tradingpost.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Train Car: Engine", ":summary", ""),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Train Car: Passenger", ":summary", "* Train cars are usually 3m/9ft/2spaces wide"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Volcano"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Wall: Stone", ":image", "images/cards/place-wall-stone.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Wave"),

@@ -323,8 +323,6 @@ export default class nx_tactics_decks_skill {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Anti-Personnel", ":summary", "* [Action]: [+1 Damage] or [-1 Damage] vs. 2 or more Armor", ":titles", "Hollow Point"),
           "Armor Piercing",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Armor Piercing", ":summary", "* [Action]: Enemy at [-2 Armor]", ":titles", "Depleted Uraniumn"),
-          "Blast",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Blast"),
           "Bombardment",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bombardment"),
           "Capacitors",
