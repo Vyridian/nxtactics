@@ -99,7 +99,7 @@
    "Minor: Glance off Shoulder. Stun:1
     Major: Pierced Shoulder. Stun:1 Bleeding:1
     Critical: Pierced Chest. Stun:2 Bleeding:2
-    Extreme: Pierced Throat. Bleeding:2 Stun:2")
+    Extreme: Pierced Throat. Bleeding:2 Choking:2")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
 (const wound-kh : base/damage
@@ -123,34 +123,33 @@
    "Minor: Shoulder Cut. Bleeding:1
     Major: Shoulder Slash. Slow:1 Bleeding:1
     Critical: Throat Cut. Bleeding:2 Stress:2
-    Extreme: Throat Slashed. Bleeding:4 Stun:2")
-  :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
+    Extreme: Throat Slashed. Bleeding:4 Stun:2"))
 
 (const wound-qc : base/damage
  (base/damage
   :name "Bash: Chest"
   :titles "Bash: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qc
-  :image "images/card-wound-chest.svg"
+  :image "images/damage-wound-qc.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Chest Bruise. Fatigue:1
     Major: Wind Knocked Out. Slow:1 Fatigue:1 Push:1
     Critical: Heart Trauma. Slow:2 Stress:2 Push:1
-    Extreme: Heart Stopped. Dying. Push:1")
-  :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
+    Extreme: Heart Stopped. Dying. Push:1"))
 
 (const wound-qd : base/damage
  (base/damage
   :name "Pierce: Chest"
   :titles "Pierce: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qd
-  :image "images/card-wound-chest.svg"
+  :image "images/damage-wound-qd.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Chest Graze. Bleeding:1
     Major: Chest Pierced. Stun:1 Bleeding:1
     Critical: Lung Punctured. Hobbled. Bleeding:2 Stun:2
-    Extreme: Heart Pierced. Dying. Bleeding:4 Stun:2")
-  :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
+    Extreme: Heart Pierced. Dying. Bleeding:4 Stun:2"))
 
 (const wound-qh : base/damage
  (base/damage
@@ -162,8 +161,7 @@
    "Minor: Chest Cut. Bleeding:1
     Major: Chest Slash. Bleeding:1 Push:1
     Critical: Collapsed Lung. Hobbled. Slow:2 Push:1
-    Extreme: Lungs Collapsed. Dying. Hobbled. Stress:4")
-  :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
+    Extreme: Lungs Collapsed. Dying. Hobbled. Stress:4"))
 
 (const wound-qs : base/damage
  (base/damage
@@ -175,15 +173,15 @@
    "Minor: Chest Cut. Bleeding:1
     Major: Chest Slash. Slow:1 Bleeding:1
     Critical: Long Chest Slash. Slow:2 Bleeding:2
-    Extreme: Spine Severed. [Paralyzed]. Stress:4")
-  :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
+    Extreme: Spine Severed. [Paralyzed]. Stress:4"))
 
 (const wound-jc : base/damage
  (base/damage
   :name "Bash: Abdomen"
   :titles "Bash: Abdomen/Lower Back"
   :ranksuit base/ranksuit-jc
-  :image "images/card-wound-abdomen.svg"
+  :image "images/damage-wound-jc.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Stomach Bruise. Push:1
     Major: Solar Plexus Bruise. Slow:1 Fatigue:1
@@ -231,7 +229,8 @@
   :name "Bash: Vitals"
   :titles "Bash: Hips/Groin"
   :ranksuit base/ranksuit-tc
-  :image "images/card-wound-vitals.svg"
+  :image "images/damage-wound-tc.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Hip Bruise. Stun:1
     Major: Genital Slam. Slow:1 Stun:1 Stress:1
@@ -279,7 +278,8 @@
   :name "Bash: Left Arm"
   :titles "Bash: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9c
-  :image "images/card-wound-arm-left.svg"
+  :image "images/damage-wound-9c.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Arm Bruise. Push:1
     Major: Arm Battered. Fatigue:1 Push:1
@@ -327,7 +327,8 @@
   :name "Bash: Right Arm"
   :titles "Bash: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8c
-  :image "images/card-wound-arm-right.svg"
+  :image "images/damage-wound-8c.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Arm Bruise. Push:1
     Major: Arm Battered. Fatigue:1 Push:1
@@ -375,7 +376,8 @@
   :name "Bash: Left Hand"
   :titles "Bash: Left Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-7c
-  :image "images/card-wound-hand-left.svg"
+  :image "images/damage-wound-7c.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Bruise. Fatigue:1
     Major: Hand Numb. Drop:1 Stress:1 Stun:1
@@ -423,7 +425,8 @@
   :name "Bash: Right Hand"
   :titles "Bash: Right Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-6c
-  :image "images/card-wound-hand-right.svg"
+  :image "images/damage-wound-6c.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Bruise. Fatigue:1
     Major: Hand Numb. Drop:1 Stress:1 Stun:1
@@ -471,7 +474,8 @@
   :name "Bash: Left Leg"
   :titles "Bash: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5c
-  :image "images/card-wound-leg-left.svg"
+  :image "images/damage-wound-5c.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Bruise. Fatigue:1
     Major: Knee Damage. Slow:1 Fatigue:1
@@ -519,7 +523,8 @@
   :name "Bash: Right Leg"
   :titles "Bash: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4c
-  :image "images/card-wound-leg-right.svg"
+  :image "images/damage-wound-4c.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Bruise. Fatigue:1
     Major: Knee Damage. Slow:1 Fatigue:1
@@ -567,7 +572,8 @@
   :name "Bash: Left Foot"
   :titles "Bash: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3c
-  :image "images/card-wound-foot-left.svg"
+  :image "images/damage-wound-3c.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Shin Bruised. Slow:1
     Major: Foot Smash. Slow:1 Stress:1
@@ -615,7 +621,8 @@
   :name "Bash: Right Foot"
   :titles "Bash: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2c
-  :image "images/card-wound-foot-right.svg"
+  :image "images/damage-wound-2c.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Shin Bruised. Slow:1
     Major: Foot Smash. Slow:1 Stress:1

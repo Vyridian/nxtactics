@@ -275,35 +275,30 @@ export default class nx_tactics_decks_wound {
 
   /**
    * Constant: wound-ks
-   * Hack: Upper Chest/Back/Shoulders/Ribs
    * {damage}
    */
   static c_wound_ks = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'wound-ks', type: nx_tactics_base.t_damage}}
 
   /**
    * Constant: wound-qc
-   * Hack: Upper Chest/Back/Shoulders/Ribs
    * {damage}
    */
   static c_wound_qc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'wound-qc', type: nx_tactics_base.t_damage}}
 
   /**
    * Constant: wound-qd
-   * Hack: Upper Chest/Back/Shoulders/Ribs
    * {damage}
    */
   static c_wound_qd = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'wound-qd', type: nx_tactics_base.t_damage}}
 
   /**
    * Constant: wound-qh
-   * Hack: Upper Chest/Back/Shoulders/Ribs
    * {damage}
    */
   static c_wound_qh = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'wound-qh', type: nx_tactics_base.t_damage}}
 
   /**
    * Constant: wound-qs
-   * Hack: Upper Chest/Back/Shoulders/Ribs
    * {damage}
    */
   static c_wound_qs = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'wound-qs', type: nx_tactics_base.t_damage}}
@@ -558,7 +553,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":image",
-      "images/card-wound-foot-right.svg",
+      "images/damage-wound-2c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Shin Bruised. Slow:1\nMajor: Foot Smash. Slow:1 Stress:1\nCritical: Ankle Fracture. Hobbled. Slow:2\nExtreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"
     ))
@@ -618,7 +615,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
       ":image",
-      "images/card-wound-foot-left.svg",
+      "images/damage-wound-3c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Shin Bruised. Slow:1\nMajor: Foot Smash. Slow:1 Stress:1\nCritical: Ankle Fracture. Hobbled. Slow:2\nExtreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"
     ))
@@ -678,7 +677,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":image",
-      "images/card-wound-leg-right.svg",
+      "images/damage-wound-4c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Thigh Bruise. Fatigue:1\nMajor: Knee Damage. Slow:1 Fatigue:1\nCritical: Knee Fracture. Hobbled. Slow:2 Fatigue: 1\nExtreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"
     ))
@@ -738,7 +739,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
-      "images/card-wound-leg-left.svg",
+      "images/damage-wound-5c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Thigh Bruise. Fatigue:1\nMajor: Knee Damage. Slow:1 Fatigue:1\nCritical: Knee Fracture. Hobbled. Slow:2 Fatigue: 1\nExtreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"
     ))
@@ -798,7 +801,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":image",
-      "images/card-wound-hand-right.svg",
+      "images/damage-wound-6c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Forearm Bruise. Fatigue:1\nMajor: Hand Numb. Drop:1 Stress:1 Stun:1\nCritical: Hand Fracture. Impaired. Stun:2 Fatigue:1\nExtreme: Hand Shattered. Impaired. Stun:2 Stress:2"
     ))
@@ -858,7 +863,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":image",
-      "images/card-wound-hand-left.svg",
+      "images/damage-wound-7c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Forearm Bruise. Fatigue:1\nMajor: Hand Numb. Drop:1 Stress:1 Stun:1\nCritical: Hand Fracture. Impaired. Stun:2 Fatigue:1\nExtreme: Hand Shattered. Impaired. Stun:2 Stress:2"
     ))
@@ -918,7 +925,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":image",
-      "images/card-wound-arm-right.svg",
+      "images/damage-wound-8c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Arm Bruise. Push:1\nMajor: Arm Battered. Fatigue:1 Push:1\nCritical: Arm Fracture. Impaired. Stress:2 Fatigue:2\nExtreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"
     ))
@@ -978,7 +987,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":image",
-      "images/card-wound-arm-left.svg",
+      "images/damage-wound-9c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Arm Bruise. Push:1\nMajor: Arm Battered. Fatigue:1 Push:1\nCritical: Arm Fracture. Impaired. Stress:2 Fatigue:2\nExtreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"
     ))
@@ -1100,7 +1111,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":image",
-      "images/card-wound-abdomen.svg",
+      "images/damage-wound-jc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Stomach Bruise. Push:1\nMajor: Solar Plexus Bruise. Slow:1 Fatigue:1\nCritical: Hip Fracture. Hobbled. Slow:3 Bleeding:1\nExtreme: Crushed Hip. Immobilized. Bleeding:3 Stress:2"
     ))
@@ -1214,7 +1227,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
       ":image",
-      "images/card-wound-chest.svg",
+      "images/damage-wound-qc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Chest Bruise. Fatigue:1\nMajor: Wind Knocked Out. Slow:1 Fatigue:1 Push:1\nCritical: Heart Trauma. Slow:2 Stress:2 Push:1\nExtreme: Heart Stopped. Dying. Push:1"
     ))
@@ -1229,7 +1244,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qd,
       ":image",
-      "images/card-wound-chest.svg",
+      "images/damage-wound-qd.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Chest Graze. Bleeding:1\nMajor: Chest Pierced. Stun:1 Bleeding:1\nCritical: Lung Punctured. Hobbled. Bleeding:2 Stun:2\nExtreme: Heart Pierced. Dying. Bleeding:4 Stun:2"
     ))
@@ -1274,7 +1291,9 @@ export default class nx_tactics_decks_wound {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
       ":image",
-      "images/card-wound-vitals.svg",
+      "images/damage-wound-tc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Hip Bruise. Stun:1\nMajor: Genital Slam. Slow:1 Stun:1 Stress:1\nCritical: Kidney Rupture. Slow:2 Bleeding:1 Fatigue:1\nExtreme: Hip Fracture: Hobbled. Slow:2 Fatigue:2"
     ))

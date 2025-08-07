@@ -25,7 +25,7 @@ export default class nx_tactics_decks_wound_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/wound", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 55), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 16, ":tests", 9, ":total", 56), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 56), 
       "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
