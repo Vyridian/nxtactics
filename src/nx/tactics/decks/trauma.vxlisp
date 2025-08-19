@@ -21,7 +21,8 @@
  (base/damage
   :name "Trauma: Deck"
   :ranksuit base/ranksuit-jokerblack
-  :image "images/card-hitlocation-jester-black.svg"
+  :image "images/damage-trauma-wb.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
 
@@ -29,7 +30,8 @@
  (base/damage
   :name "Trauma: Discard"
   :ranksuit base/ranksuit-jokerred
-  :image "images/card-hitlocation-jester-red.svg"
+  :image "images/damage-trauma-wr.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
 
@@ -37,47 +39,49 @@
  (base/damage
   :name "Anger: Death"
   :ranksuit base/ranksuit-ac
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-ac.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Frustrated by the randomness and cruelty of death.
-    Major: Create meaning in death by choosing who dies. [Beast]:1
-    Critical: Hair Trigger. Witnessing death sends you into an uncontrolled rage. [Beast]:2
-    Extreme: Killing machine. Murderous Rage until death. [Beast Unleashed]"))
+   "Minor: Frustrated by unfairness of death. Stress:1
+    Major: Give meaning by choosing who dies. Stress:1. Beast:1
+    Critical: Death triggers uncontrolled rage. Stress:2 Beast:2
+    Extreme: Unstoppable murderous rage. Beast Unleashed"))
 
 (const trauma-ad : base/damage
  (base/damage
   :name "Despair: Death"
   :ranksuit base/ranksuit-ad
-  :image "images/card-trauma-despair.svg"
+  :image "images/card-trauma-ad.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Grieving. Thinks and talks about death of self and others.
-    Major: Fatalistic. Longs for death. May only obtain Skills/Abilities directly related to Death (including Combat).
-    Critical: Tormented. Plans and creates opportunities for death.
-    Extreme: Suicidal. Death is inevitable."))
+   "Minor: Grieving. Talks about death about death. Stress:1
+    Major: Fatalistic. Take death Abilities. Stress:1. Shadow:1
+    Critical: Tormented. Seeks death. Stress:2 Shadow:2
+    Extreme: Suicidal. Death is inevitable. Shadow Triumphant"))
 
 (const trauma-ah : base/damage
  (base/damage
   :name "Desire: Death"
   :ranksuit base/ranksuit-ah
-  :image "images/card-trauma-desire.svg"
+  :image "images/card-trauma-ah.svg"
   :summary
-   "Minor: Study and discuss wounds and death.
-    Major: Necrophile. May only take Skills/Abilities associated with death.
-    Critical: Death Cultist. Obsessive focus on death, spirits, and necromancy.
-    Extreme: Suicidal. Take the final step. Try to cross over."))
+   "Minor: Macabre. Study wounds and death. Stress:1
+    Major: Necrophile. Take Death Abilities. Stress:1 Shadow:1
+    Critical: Death Cult. Focus on necromancy. Stress:2 Shadow:2
+    Extreme: Suicidal. Try to cross over. Shadow Triumphant"))
 
 (const trauma-as : base/damage
  (base/damage
   :name "Fear: Death"
   :ranksuit base/ranksuit-as
-  :image "images/card-trauma-fear.svg"
+  :image "images/card-trauma-as.svg"
   :summary
-   "Minor: Become agitated, shaky and incoherent when facing death.
-    Major: Death is coming. Run.
-    Critical: Collapse in terror of death.
-    Extreme: Die of Fright. [Dead]"
+   "Minor: Anxiety. Agitated around death. Stress:1
+    Major: Death is coming. Run. Stress:2 Withdraw:2
+    Critical: Petrified. Collapse in fear of death. Stress:2 Shadow:2
+    Extreme: Die of Fright. Dying. Beast Unleashed"
   :reference
-   "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over."))
+   "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over. - Doctor Who, Heaven Sent"))
 
 (const trauma-kc : base/damage
  (base/damage

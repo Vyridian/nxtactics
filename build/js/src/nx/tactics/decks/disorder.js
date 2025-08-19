@@ -959,9 +959,11 @@ export default class nx_tactics_decks_disorder {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":image",
-      "images/card-disorder-loss.svg",
+      "images/damage-disorder-ad.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Space out. Fatigue:1\nMajor: Must sleep half the day. Fatigue:2\nCritical: Must sleep 3/4 of day. Falls asleep randomly. Fatigue:4\nExtreme: Comatose. [Immobilized]"
+      "Minor: Space out. Fatigue:1\nMajor: Sleep 18 Hours a Day. Fatigue:2\nCritical: Sleep All Day. Fall Asleep Randomly. Fatigue:4\nExtreme: Comatose. Immobilized"
     ))
 
     // (const disorder-ad)
@@ -1220,6 +1222,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_jokerblack,
       ":image",
       "images/card-hitlocation-jester-black.svg",
+      ":image",
+      "images/damage-disorder-wb.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Search the Deck for any card and play it. Then Shuffle Discards into Deck."
     ))
@@ -1232,7 +1238,9 @@ export default class nx_tactics_decks_disorder {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerred,
       ":image",
-      "images/card-hitlocation-jester-red.svg",
+      "images/damage-disorder-wr.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."
     ))

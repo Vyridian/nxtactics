@@ -1,0 +1,558 @@
+(package nx/tactics/decks/vehicle
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Tactics vehicle Decks")
+
+(const malfunction : base/cardback
+ (base/cardback
+  :name "Malfunction"
+  :image "images/damage-vehicle-malfunction.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-wild-black : base/damage
+ (base/damage
+  :name "Wild: Black"
+  :image "images/damage-vehicle-wb.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-wild-red : base/damage
+ (base/damage
+  :name "Wild: Red"
+  :image "images/damage-vehicle-wr.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-ac : base/damage
+ (base/damage
+  :name "Bash: Structure"
+  :image "images/damage-vehicle-ac.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "* Minor: Dents. Malfunction:1
+    * Major: Hull Crack. Front Armor:-1
+    * Critical: 
+    * Extreme: Structural Collapse. Impaired. Part-Damage:All"))
+
+(const vehicle-ad : base/damage
+ (base/damage
+  :name "Pierce: Structure"
+  :image "images/damage-vehicle-ad.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-ah : base/damage
+ (base/damage
+  :name "Hack: Structure"
+  :image "images/damage-vehicle-ah.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-as : base/damage
+ (base/damage
+  :name "Slash: Structure"
+  :image "images/damage-vehicle-as.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-kc : base/damage
+ (base/damage
+  :name "Bash: Shoulders"
+  :image "images/damage-vehicle-kc.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-kd : base/damage
+ (base/damage
+  :name "Pierce: Shoulders"
+  :image "images/damage-vehicle-kd.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-kh : base/damage
+ (base/damage
+  :name "Hack: Shoulders"
+  :image "images/damage-vehicle-kh.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-ks : base/damage
+ (base/damage
+  :name "Slash: Shoulders"
+  :image "images/damage-vehicle-ks.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-qc : base/damage
+ (base/damage
+  :name "Bash: Chest"
+  :titles "Bash: Middle Chest/Back/Lungs/Heart"
+  :image "images/damage-vehicle-qc.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-qd : base/damage
+ (base/damage
+  :name "Pierce: Chest"
+  :titles "Pierce: Middle Chest/Back/Lungs/Heart"
+  :image "images/damage-vehicle-qd.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-qh : base/damage
+ (base/damage
+  :name "Hack: Chest"
+  :titles "Hack: Middle Chest/Back/Lungs/Heart"
+  :image "images/damage-vehicle-qh.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-qs : base/damage
+ (base/damage
+  :name "Slash: Chest"
+  :titles "Slash: Middle Chest/Back/Lungs/Heart"
+  :image "images/damage-vehicle-qs.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-jc : base/damage
+ (base/damage
+  :name "Bash: Abdomen"
+  :titles "Bash: Abdomen/Lower Back"
+  :image "images/damage-vehicle-jc.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-jd : base/damage
+ (base/damage
+  :name "Pierce: Abdomen"
+  :titles "Pierce: Abdomen/Lower Back"
+  :image "images/damage-vehicle-jd.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-jh : base/damage
+ (base/damage
+  :name "Hack: Abdomen"
+  :titles "Hack: Abdomen/Lower Back"
+  :image "images/damage-vehicle-jh.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-js : base/damage
+ (base/damage
+  :name "Slash: Abdomen"
+  :titles "Slash: Abdomen/Lower Back"
+  :image "images/damage-vehicle-js.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-tc : base/damage
+ (base/damage
+  :name "Bash: Vitals"
+  :titles "Bash: Hips/Groin"
+  :image "images/damage-vehicle-tc.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-td : base/damage
+ (base/damage
+  :name "Pierce: Vitals"
+  :titles "Pierce: Hips/Groin"
+  :image "images/damage-vehicle-td.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-th : base/damage
+ (base/damage
+  :name "Hack: Vitals"
+  :titles "Hack: Hips/Groin"
+  :image "images/damage-vehicle-th.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-ts : base/damage
+ (base/damage
+  :name "Slash: Vitals"
+  :titles "Slash: Hips/Groin"
+  :image "images/damage-vehicle-ts.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-9c : base/damage
+ (base/damage
+  :name "Bash: Left Arm"
+  :titles "Bash: Left Upper Arm/Elbow"
+  :image "images/damage-vehicle-9c.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-9d : base/damage
+ (base/damage
+  :name "Pierce: Left Arm"
+  :titles "Pierce: Left Upper Arm/Elbow"
+  :image "images/damage-vehicle-9d.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-9h : base/damage
+ (base/damage
+  :name "Hack: Left Arm"
+  :titles "Hack: Left Upper Arm/Elbow"
+  :image "images/damage-vehicle-9h.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-9s : base/damage
+ (base/damage
+  :name "Slash: Left Arm"
+  :titles "Slash: Left Upper Arm/Elbow"
+  :image "images/damage-vehicle-9s.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-8c : base/damage
+ (base/damage
+  :name "Bash: Right Arm"
+  :titles "Bash: Right Upper Arm/Elbow"
+  :image "images/damage-vehicle-8c.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-8d : base/damage
+ (base/damage
+  :name "Pierce: Right Arm"
+  :titles "Pierce: Right Upper Arm/Elbow"
+  :image "images/damage-vehicle-8d.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-8h : base/damage
+ (base/damage
+  :name "Hack: Right Arm"
+  :titles "Hack: Right Upper Arm/Elbow"
+  :image "images/damage-vehicle-8h.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-8s : base/damage
+ (base/damage
+  :name "Slash: Right Arm"
+  :titles "Slash: Right Upper Arm/Elbow"
+  :image "images/damage-vehicle-8s.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-7c : base/damage
+ (base/damage
+  :name "Bash: Left Hand"
+  :titles "Bash: Left Lower Arm/Wrist/Hand"
+  :image "images/damage-vehicle-7c.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-7d : base/damage
+ (base/damage
+  :name "Pierce: Left Hand"
+  :titles "Pierce: Left Lower Arm/Wrist/Hand"
+  :image "images/damage-vehicle-7d.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Forearm Graze. Stun:1
+    Major: Forearm Pierced. Stun:1 Bleeding:1
+    Critical: Wrist Pierced. Impaired. Stun:1 Bleeding:2
+    Extreme: Artery Cut. Impaired. Stun:2 Stress:1 Bleeding:2"))
+
+(const vehicle-7h : base/damage
+ (base/damage
+  :name "Hack: Left Hand"
+  :titles "Hack: Left Lower Arm/Wrist/Hand"
+  :image "images/damage-vehicle-7h.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Forearm Graze. Withdraw:1
+    Major: Forearm Gash. Drop Item. Stress:1 Bleeding:1
+    Critical: Hand Slash. Impaired. Stress:2 Bleeding:2
+    Extreme: Hand Mangled. Impaired. Stress:2 Bleeding:2"))
+
+(const vehicle-7s : base/damage
+ (base/damage
+  :name "Slash: Left Hand"
+  :titles "Slash: Left Lower Arm/Wrist/Hand"
+  :image "images/damage-vehicle-7s.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Forearm Cut. Bleeding:1
+    Major: Forearm Slash. Drop Item. Slow:1 Bleeding:1
+    Extreme: Artery Severed. Impaired. Stress:1 Bleeding:3
+    Extreme: Hand Severed. Stress:2 Bleeding:2"))
+
+(const vehicle-6c : base/damage
+ (base/damage
+  :name "Bash: Right Hand"
+  :titles "Bash: Right Lower Arm/Wrist/Hand"
+  :image "images/damage-vehicle-6c.svg"
+  :layout base/cardlayout-imageonly))
+
+(const vehicle-6d : base/damage
+ (base/damage
+  :name "Pierce: Right Hand"
+  :titles "Pierce: Right Lower Arm/Wrist/Hand"
+  :image "images/damage-vehicle-6d.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Forearm Graze. Stun:1
+    Major: Forearm Pierced. Stun:1 Bleeding:1
+    Critical: Wrist Pierced. Impaired. Stun:1 Bleeding:2
+    Extreme: Artery Cut. Impaired. Stun:2 Stress:1 Bleeding:2"))
+
+(const vehicle-6h : base/damage
+ (base/damage
+  :name "Hack: Right Hand"
+  :titles "Hack: Right Lower Arm/Wrist/Hand"
+  :image "images/damage-vehicle-6h.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Forearm Graze. Withdraw:1
+    Major: Forearm Gash. Drop Item. Stress:1 Bleeding:1
+    Critical: Hand Slash. Impaired. Stress:2 Bleeding:2
+    Extreme: Hand Mangled. Impaired. Stress:2 Bleeding:2"))
+
+(const vehicle-6s : base/damage
+ (base/damage
+  :name "Slash: Left Steering"
+  :image "images/damage-vehicle-6s.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor:
+    Major: Left Turn requires Turn:+1. Slow:1
+    Critical: Left Turn requires Turn:+1. Impaired. Slow:2. Part-Damage:1
+    Extreme: Left Turn Unavailable. Impaired. Slow:2. Part-Damage:All"))
+
+(const vehicle-5c : base/damage
+ (base/damage
+  :name "Bash: Left Leg"
+  :titles "Bash: Left Upper Leg/Thigh/Knee"
+  :image "images/damage-vehicle-5c.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Thigh Bruise. Fatigue:1
+    Major: Knee Damage. Fatigue:1 Slow:1
+    Critical: Knee Fracture. Impaired. Fatigue:1 Slow:2
+    Extreme: Thigh Fracture. Impaired. Fatigue:1 Slow:3"))
+
+(const vehicle-5d : base/damage
+ (base/damage
+  :name "Pierce: Left Leg"
+  :titles "Pierce: Left Upper Leg/Thigh/Knee"
+  :image "images/damage-vehicle-5d.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Thigh Graze. Stun:1
+    Major: Thigh Pierced. Stun:1 Bleeding:1
+    Critical: Knee Pierced. Impaired. Stun:2 Bleeding:1
+    Extreme: Knee Disabled. Impaired. Stun:2 Bleeding:2"))
+
+(const vehicle-5h : base/damage
+ (base/damage
+  :name "Hack: Left Leg"
+  :titles "Hack: Left Upper Leg/Thigh/Knee"
+  :image "images/damage-vehicle-5h.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Thigh Graze. Withdraw:1
+    Major: Thigh Slash. Stress:1 Bleeding:1
+    Critical: Wide Thigh Gash. Stress:2 Bleeding:2
+    Extreme: Severed at Knee. Impaired. Stress:2 Bleeding:3"))
+
+(const vehicle-5s : base/damage
+ (base/damage
+  :name "Slash: Left Leg"
+  :titles "Slash: Left Upper Leg/Thigh/Knee"
+  :image "images/damage-vehicle-5s.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Thigh Cut. Bleeding:1
+    Major: Thigh Slash. Slow:1 Bleeding:1
+    Critical: Hamstring Cut. Impaired. Slow:2 Bleeding:2
+    Extreme: Artery Severed. Impaired. Stress:2 Bleeding:4"))
+
+(const vehicle-4c : base/damage
+ (base/damage
+  :name "Bash: Right Leg"
+  :titles "Bash: Right Upper Leg/Thigh/Knee"
+  :image "images/damage-vehicle-4c.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Thigh Bruise. Fatigue:1
+    Major: Knee Damage. Fatigue:1 Slow:1
+    Critical: Knee Fracture. Impaired. Fatigue:1 Slow:2
+    Extreme: Thigh Fracture. Impaired. Fatigue:1 Slow:3"))
+
+(const vehicle-4d : base/damage
+ (base/damage
+  :name "Pierce: Right Leg"
+  :titles "Pierce: Right Upper Leg/Thigh/Knee"
+  :image "images/damage-vehicle-4d.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Thigh Graze. Stun:1
+    Major: Thigh Pierced. Stun:1 Bleeding:1
+    Critical: Knee Pierced. Impaired. Stun:2 Bleeding:1
+    Extreme: Knee Disabled. Impaired. Stun:2 Bleeding:2"))
+
+(const vehicle-4h : base/damage
+ (base/damage
+  :name "Hack: Right Leg"
+  :titles "Hack: Right Upper Leg/Thigh/Knee"
+  :image "images/damage-vehicle-4h.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Thigh Graze. Withdraw:1
+    Major: Thigh Slash. Stress:1 Bleeding:1
+    Critical: Wide Thigh Gash. Stress:2 Bleeding:2
+    Extreme: Severed at Knee. Impaired. Stress:2 Bleeding:3"))
+
+(const vehicle-4s : base/damage
+ (base/damage
+  :name "Slash: Right Leg"
+  :titles "Slash: Right Upper Leg/Thigh/Knee"
+  :image "images/damage-vehicle-4s.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Thigh Cut. Bleeding:1
+    Major: Thigh Slash. Slow:1 Bleeding:1
+    Critical: Hamstring Cut. Impaired. Slow:2 Bleeding:2
+    Extreme: Artery Severed. Impaired. Stress:2 Bleeding:4"))
+
+(const vehicle-3c : base/damage
+ (base/damage
+  :name "Bash: Left Foot"
+  :titles "Bash: Left Lower Leg/Shin/Ankle/Foot"
+  :image "images/damage-vehicle-3c.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Shin Bruise. Fatigue:1
+    Major: Foot Smash. Fatigue:1 Slow:1
+    Critical: Ankle Fracture. Impaired. Fatigue. Slow:2
+    Extreme: Foot Shattered. Impaired. Fatigue:2 Slow:2"))
+
+(const vehicle-3d : base/damage
+ (base/damage
+  :name "Pierce: Left Foot"
+  :titles "Pierce: Left Lower Leg/Shin/Ankle/Foot"
+  :image "images/damage-vehicle-3d.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Ankle Graze. Stun:1
+    Major: Foot Slash. Slow:1 Bleeding:1
+    Critical: Foot Pierced. Slow:3 Bleeding:1
+    Extreme: Ankle Useless. Impaired. Stun:2 Bleeding:1"))
+
+(const vehicle-3h : base/damage
+ (base/damage
+  :name "Hack: Left Foot"
+  :titles "Hack: Left Lower Leg/Shin/Ankle/Foot"
+  :image "images/damage-vehicle-3h.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Ankle Grazed. Withdraw:1
+    Major: Ankle Gash. Withdraw:1 Bleeding:1
+    Critical: Lost Toes. Impaired. Stress:2 Bleeding:1
+    Extreme: Foot Mangled. Impaired. Stress:2 Bleeding:2"))
+
+(const vehicle-3s : base/damage
+ (base/damage
+  :name "Slash: Left Foot"
+  :titles "Slash: Left Lower Leg/Shin/Ankle/Foot"
+  :image "images/damage-vehicle-3s.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Foot Cut. Bleeding:1
+    Major: Ankle Slash. Slow:1 Bleeding:1
+    Critical: Achilles Tendon Cut. Impaired. Slow:3 Bleeding:1
+    Extreme: Foot Severed. Impaired. Slow:4 Bleeding:2"))
+
+(const vehicle-2c : base/damage
+ (base/damage
+  :name "Bash: Right Foot"
+  :titles "Bash: Right Lower Leg/Shin/Ankle/Foot"
+  :image "images/damage-vehicle-2c.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Shin Bruise. Fatigue:1
+    Major: Foot Smash. Fatigue:1 Slow:1
+    Critical: Ankle Fracture. Impaired. Fatigue. Slow:2
+    Extreme: Foot Shattered. Impaired. Fatigue:2 Slow:2"))
+
+(const vehicle-2d : base/damage
+ (base/damage
+  :name "Pierce: Right Foot"
+  :titles "Pierce: Right Lower Leg/Shin/Ankle/Foot"
+  :image "images/damage-vehicle-2d.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Ankle Graze. Stun:1
+    Major: Foot Slash. Slow:1 Bleeding:1
+    Critical: Foot Pierced. Slow:3 Bleeding:1
+    Extreme: Ankle Useless. Impaired. Stun:2 Bleeding:1"))
+
+(const vehicle-2h : base/damage
+ (base/damage
+  :name "Hack: Right Foot"
+  :titles "Hack: Right Lower Leg/Shin/Ankle/Foot"
+  :image "images/damage-vehicle-2h.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Ankle Grazed. Withdraw:1
+    Major: Ankle Gash. Withdraw:1 Bleeding:1
+    Critical: Lost Toes. Impaired. Stress:2 Bleeding:1
+    Extreme: Foot Mangled. Impaired. Stress:2 Bleeding:2"))
+
+(const vehicle-2s : base/damage
+ (base/damage
+  :name "Slash: Right Foot"
+  :titles "Slash: Right Lower Leg/Shin/Ankle/Foot"
+  :image "images/damage-vehicle-2s.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Foot Cut. Bleeding:1
+    Major: Ankle Slash. Slow:1 Bleeding:1
+    Critical: Achilles Tendon Cut. Impaired. Slow:3 Bleeding:1
+    Extreme: Foot Severed. Impaired. Slow:4 Bleeding:2"))
+
+(func deck-vehicle : base/deck
+ (base/deck
+  :name "vehicles"
+  :image "images/damage-vehicle-malfunction.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      vehicle-wild-black
+      vehicle-wild-red
+      vehicle-ac
+      vehicle-ad
+      vehicle-ah
+      vehicle-as
+      vehicle-kc
+      vehicle-kd
+      vehicle-kh
+      vehicle-ks
+      vehicle-qc
+      vehicle-qd
+      vehicle-qh
+      vehicle-qs
+      vehicle-jc
+      vehicle-jd
+      vehicle-jh
+      vehicle-js
+      vehicle-tc
+      vehicle-td
+      vehicle-th
+      vehicle-ts
+      vehicle-9c
+      vehicle-9d
+      vehicle-9h
+      vehicle-9s
+      vehicle-8c
+      vehicle-8d
+      vehicle-8h
+      vehicle-8s
+      vehicle-7c
+      vehicle-7d
+      vehicle-7h
+      vehicle-7s
+      vehicle-6c
+      vehicle-6d
+      vehicle-6h
+      vehicle-6s
+      vehicle-5c
+      vehicle-5d
+      vehicle-5h
+      vehicle-5s
+      vehicle-4c
+      vehicle-4d
+      vehicle-4h
+      vehicle-4s
+      vehicle-3c
+      vehicle-3d
+      vehicle-3h
+      vehicle-3s
+      vehicle-2c
+      vehicle-2d
+      vehicle-2h
+      vehicle-2s))
+   (base/cardmap-copy<-card-count-isnum
+    malfunction 54 false)))
+ :doc "vehicle Deck")

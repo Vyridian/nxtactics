@@ -65,6 +65,7 @@ import nx_tactics_decks_specialty_test from "./nx/tactics/decks/specialty_test.j
 import nx_tactics_decks_starter_test from "./nx/tactics/decks/starter_test.js"
 import nx_tactics_decks_trauma_test from "./nx/tactics/decks/trauma_test.js"
 import nx_tactics_decks_unit_test from "./nx/tactics/decks/unit_test.js"
+import nx_tactics_decks_vehicle_test from "./nx/tactics/decks/vehicle_test.js"
 import nx_tactics_decks_wound_test from "./nx/tactics/decks/wound_test.js"
 import vx_data_file_test from "./vx/data/file_test.js"
 import vx_data_xml_test from "./vx/data/xml_test.js"
@@ -165,6 +166,7 @@ export default class app_test {
       nx_tactics_decks_starter_test.test_package(context),
       nx_tactics_decks_trauma_test.test_package(context),
       nx_tactics_decks_unit_test.test_package(context),
+      nx_tactics_decks_vehicle_test.test_package(context),
       nx_tactics_decks_wound_test.test_package(context),
       vx_data_file_test.test_package(context),
       vx_data_xml_test.test_package(context),

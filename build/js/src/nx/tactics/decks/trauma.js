@@ -970,9 +970,11 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-ac.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Frustrated by the randomness and cruelty of death.\nMajor: Create meaning in death by choosing who dies. [Beast]:1\nCritical: Hair Trigger. Witnessing death sends you into an uncontrolled rage. [Beast]:2\nExtreme: Killing machine. Murderous Rage until death. [Beast Unleashed]"
+      "Minor: Frustrated by unfairness of death. Stress:1\nMajor: Give meaning by choosing who dies. Stress:1. Beast:1\nCritical: Death triggers uncontrolled rage. Stress:2 Beast:2\nExtreme: Unstoppable murderous rage. Beast Unleashed"
     ))
 
     // (const trauma-ad)
@@ -983,9 +985,11 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/card-trauma-ad.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Grieving. Thinks and talks about death of self and others.\nMajor: Fatalistic. Longs for death. May only obtain Skills/Abilities directly related to Death (including Combat).\nCritical: Tormented. Plans and creates opportunities for death.\nExtreme: Suicidal. Death is inevitable."
+      "Minor: Grieving. Talks about death about death. Stress:1\nMajor: Fatalistic. Take death Abilities. Stress:1. Shadow:1\nCritical: Tormented. Seeks death. Stress:2 Shadow:2\nExtreme: Suicidal. Death is inevitable. Shadow Triumphant"
     ))
 
     // (const trauma-ah)
@@ -996,9 +1000,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/card-trauma-ah.svg",
       ":summary",
-      "Minor: Study and discuss wounds and death.\nMajor: Necrophile. May only take Skills/Abilities associated with death.\nCritical: Death Cultist. Obsessive focus on death, spirits, and necromancy.\nExtreme: Suicidal. Take the final step. Try to cross over."
+      "Minor: Macabre. Study wounds and death. Stress:1\nMajor: Necrophile. Take Death Abilities. Stress:1 Shadow:1\nCritical: Death Cult. Focus on necromancy. Stress:2 Shadow:2\nExtreme: Suicidal. Try to cross over. Shadow Triumphant"
     ))
 
     // (const trauma-as)
@@ -1009,11 +1013,11 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/card-trauma-as.svg",
       ":summary",
-      "Minor: Become agitated, shaky and incoherent when facing death.\nMajor: Death is coming. Run.\nCritical: Collapse in terror of death.\nExtreme: Die of Fright. [Dead]",
+      "Minor: Anxiety. Agitated around death. Stress:1\nMajor: Death is coming. Run. Stress:2 Withdraw:2\nCritical: Petrified. Collapse in fear of death. Stress:2 Shadow:2\nExtreme: Die of Fright. Dying. Beast Unleashed",
       ":reference",
-      "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over."
+      "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over. - Doctor Who, Heaven Sent"
     ))
 
     // (const trauma-jc)
@@ -1234,7 +1238,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerblack,
       ":image",
-      "images/card-hitlocation-jester-black.svg",
+      "images/damage-trauma-wb.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Search the Deck for any card and play it. Then Shuffle Discards into Deck."
     ))
@@ -1247,7 +1253,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerred,
       ":image",
-      "images/card-hitlocation-jester-red.svg",
+      "images/damage-trauma-wr.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."
     ))

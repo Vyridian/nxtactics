@@ -201,6 +201,10 @@
    :image "images/rule-crits-vehicle.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Damaged"
+   :image "images/rule-damaged.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
    :name "Description"
    :image "images/rule-description.svg"
    :layout base/cardlayout-imageonly)
@@ -217,12 +221,17 @@
    :image "images/rule-diseased.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Diving"
+   :summary
+    "A Diving Unit is rapidly losing Elevation
+     * Round End - Elevation:-1 for each Diving:1")
+  (base/rule
    :name "Drawn to Destiny"
    :image "images/rule-drawntodestiny.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Damaged"
-   :image "images/rule-damaged.svg"
+   :name "Dying"
+   :image "images/rule-dying.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Elevation"
@@ -275,6 +284,14 @@
   (base/rule
    :name "Hunger"
    :image "images/rule-hunger.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Immobilized"
+   :image "images/rule-immobilized.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Impaired"
+   :image "images/rule-impaired.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Isolation"
@@ -395,6 +412,10 @@
   (base/rule
    :name "Power"
    :image "images/rule-power.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Pull/Push"
+   :image "images/rule-pull-push.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Range"
@@ -610,6 +631,10 @@
    :image "images/rule-stat.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Stat: 0"
+   :image "images/rule-stat-0.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
    :name "Stat: Add"
    :image "images/rule-stat-add.svg"
    :layout base/cardlayout-imageonly)
@@ -752,6 +777,10 @@
    :reference
     "* I think, therefore I am. - Descartes, Cogito Ergo Sum
      * The nature of existence is subjective. I have experience and thoughts in this precise moment, beyond that I can prove nothing. Does time actually pass as I understand it? Is anything else but me real? Am I living in a dream/hallucination/simulation? Am I just insane? Our experience is the only thing we can be sure of. Therefore, we may as well choose to live as we see fit. No amount of evidence can definitively prove otherwise.")
+  (base/rule
+   :name "Withdraw"
+   :image "images/rule-withdraw.svg"
+   :layout base/cardlayout-imageonly)
 ))
 
 (func deck-rules : base/deck

@@ -12,6 +12,7 @@
        (lib scene-starter  :path nx/tactics/decks/scene-starter)
        (lib starter        :path nx/tactics/decks/starter)
        (lib trauma         :path nx/tactics/decks/trauma)
+       (lib vehicle        :path nx/tactics/decks/vehicle)
        (lib wound          :path nx/tactics/decks/wound)
  :doc  "Tactics Decks")
 
@@ -205,6 +206,7 @@
      (disorder/deck-disorder)
      (trauma/deck-trauma)
      (burden/deck-burden)
+     (vehicle/deck-vehicle)
      (reference/deck-reference tactics)
      (deck-clock tactics))))
  :doc "Setup Deck")

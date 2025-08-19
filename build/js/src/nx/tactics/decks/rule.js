@@ -350,6 +350,15 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Damaged",
+        ":image",
+        "images/rule-damaged.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Description",
         ":image",
         "images/rule-description.svg",
@@ -383,6 +392,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Diving", ":summary", "A Diving Unit is rapidly losing Elevation\n* Round End - Elevation:-1 for each Diving:1"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -395,9 +405,9 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Damaged",
+        "Dying",
         ":image",
-        "images/rule-damaged.svg",
+        "images/rule-dying.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
@@ -491,6 +501,24 @@ export default class nx_tactics_decks_rule {
         "Hunger",
         ":image",
         "images/rule-hunger.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Immobilized",
+        ":image",
+        "images/rule-immobilized.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Impaired",
+        ":image",
+        "images/rule-impaired.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
@@ -721,6 +749,15 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Pull/Push",
+        ":image",
+        "images/rule-pull-push.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Range",
         ":image",
         "images/rule-range.svg",
@@ -902,6 +939,15 @@ export default class nx_tactics_decks_rule {
         "Stat",
         ":image",
         "images/rule-stat.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Stat: 0",
+        ":image",
+        "images/rule-stat-0.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
@@ -1101,6 +1147,15 @@ export default class nx_tactics_decks_rule {
         "Chi, Confidence, Determination, Ego, Emotion, Faith, Grit, Guts, Heart, Instinct, Ki, Mana, Perseverence, Resolve, Spirit, Spiritualism, Will, Willpower",
         ":reference",
         "* I think, therefore I am. - Descartes, Cogito Ergo Sum\n* The nature of existence is subjective. I have experience and thoughts in this precise moment, beyond that I can prove nothing. Does time actually pass as I understand it? Is anything else but me real? Am I living in a dream/hallucination/simulation? Am I just insane? Our experience is the only thing we can be sure of. Therefore, we may as well choose to live as we see fit. No amount of evidence can definitively prove otherwise."
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Withdraw",
+        ":image",
+        "images/rule-withdraw.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
       )
     )
     return output

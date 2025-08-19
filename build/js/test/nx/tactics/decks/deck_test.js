@@ -16,6 +16,7 @@ import nx_tactics_decks_scene_ontherun from "../../../../src/nx/tactics/decks/sc
 import nx_tactics_decks_scene_starter from "../../../../src/nx/tactics/decks/scene-starter.js"
 import nx_tactics_decks_starter from "../../../../src/nx/tactics/decks/starter.js"
 import nx_tactics_decks_trauma from "../../../../src/nx/tactics/decks/trauma.js"
+import nx_tactics_decks_vehicle from "../../../../src/nx/tactics/decks/vehicle.js"
 import nx_tactics_decks_wound from "../../../../src/nx/tactics/decks/wound.js"
 
 export default class nx_tactics_decks_deck_test {

@@ -1930,7 +1930,7 @@
          y="44.745728">Altitude</tspan></text></g><g
      id="g17"
      inkscape:label="section"
-     transform="matrix(1.0000068,0,0,1.0000068,0.14805959,111.87372)"><text
+     transform="matrix(1.0000068,0,0,1.0000068,0.14805959,112.25167)"><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
        x="50.861038"
@@ -1953,7 +1953,7 @@
          y="44.745728">Combat</tspan></text></g><g
      id="g17-5-7"
      inkscape:label="section"
-     transform="matrix(1.0000068,0,0,1.0000068,-0.11860567,98.561932)"><text
+     transform="matrix(1.0000068,0,0,1.0000068,-0.11860567,99.317837)"><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
        x="40.330406"
@@ -1976,7 +1976,7 @@
          y="44.745728">Range</tspan></text></g><g
      id="g17-5-7-2"
      inkscape:label="section"
-     transform="matrix(1.0000068,0,0,1.0000068,-0.09728384,86.241164)"><text
+     transform="matrix(1.0000068,0,0,1.0000068,-0.09728384,86.619116)"><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
        x="40.330406"
@@ -1999,7 +1999,7 @@
          y="44.745728">Prone</tspan></text></g><g
      id="g17-5-7-94"
      inkscape:label="section"
-     transform="matrix(1.0000068,0,0,1.0000068,0.36139993,53.748565)"><g
+     transform="matrix(1.0000068,0,0,1.0000068,0.36139993,53.370121)"><g
        id="g17-5-7-94-5-7"
        inkscape:label="section"
        transform="translate(55.206838,20.696839)"
@@ -2035,9 +2035,9 @@
          id="text9-0-4-34-9-5-6-8-1"
          inkscape:label="text"><tspan
            sodipodi:role="line"
-           id="tspan6"
+           id="tspan3"
            x="46.376282"
-           y="44.746014"> - Gaining Elevation costs Move:-1</tspan></text><text
+           y="44.746014"> - Gaining Elevation costs Move:-2</tspan></text><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
          x="13.06494"
@@ -2055,7 +2055,9 @@
        id="text9-0-4-34-9-5-6-8"
        inkscape:label="text"><tspan
          sodipodi:role="line"
-         id="tspan14"> - Elevations Changes often alters Move</tspan></text><text
+         id="tspan14"
+         x="36.92844"
+         y="44.746014"> - Elevations Changes often alters Move</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
        x="12.563596"
@@ -2068,7 +2070,7 @@
          y="44.745728">Move</tspan></text></g><g
      id="g17-5-7-9"
      inkscape:label="section"
-     transform="matrix(1.0000068,0,0,1.0000068,-0.13994784,28.96271)"><text
+     transform="matrix(1.0000068,0,0,1.0000068,-0.13994784,28.206804)"><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6666px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.28881;stroke-dasharray:none"
        x="20.218611"

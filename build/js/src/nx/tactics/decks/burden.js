@@ -1016,8 +1016,10 @@ export default class nx_tactics_decks_burden {
       nx_tactics_base.c_ranksuit_ac,
       ":image",
       "images/card-burden-head.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Ensnared. Slow:1\nModerate: Face Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Skull Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Neck Constricted. [Choking] [Dying] Remove:3 Damage"
+      "Minor: Hair Pulled. Slow:1\nModerate: Face Constricted. Remove:1 Damage. Round End:Slow:1\nMajor: Skull Constricted. Remove:2 Damage. Round End:Slow:2\nExtreme: Neck Constricted. Remove:3 Damage. Slow:2 Round End:Choking:2"
     ))
 
     // (const burden-ad)
@@ -1029,8 +1031,10 @@ export default class nx_tactics_decks_burden {
       nx_tactics_base.c_ranksuit_ad,
       ":image",
       "images/card-burden-head.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Ensnared. Slow:1\nModerate: Face Ensnared. Slow:2 Remove:1 Actions\nMajor: Head Ensnared. Slow:3 Remove:2 Actions\nExtreme: Head Bound. Blood and Air cut off from Head. [Choking] [Dying]"
+      "Minor: Hair Ensnared. Slow:1\nModerate: Face Ensnared. Remove:1 Action Round End:Slow:1\nMajor: Head Ensnared. Remove:2 Actions Round End:Slow:2\nExtreme: Neck Noose. Remove:3 Actions. Round End:Choking:2"
     ))
 
     // (const burden-ah)
@@ -1042,8 +1046,10 @@ export default class nx_tactics_decks_burden {
       nx_tactics_base.c_ranksuit_ah,
       ":image",
       "images/card-burden-head.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Held. Pull:1. Remove:Any Hit\nModerate: Jaw Held. Pull:1. Remove:1 Damage\nMajor: Head Held. Pull:1. Remove:2 Damage\nExtreme: Neck Held. Knockdown. Pull:1. Remove:3 Damage"
+      "Minor: Hair Held. Remove:Any Hit. Move Target:1\nModerate: Jaw Held. Remove:1 Damage. Move Target:1\nMajor: Head Held. Remove:2 Damage. Move Target:1\nExtreme: Neck Held. Remove:3 Damage. Move Target:1. Knockdown"
     ))
 
     // (const burden-as)
@@ -1056,7 +1062,7 @@ export default class nx_tactics_decks_burden {
       ":image",
       "images/card-burden-head.svg",
       ":summary",
-      "Minor: Hair caught. Slow:1. Remove:Any Hit\nModerate: Head lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Neck sprained. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Neck dislocated. [Paralyzed] Stun:3. Remove:3 Damage"
+      "Minor: Hair Caught. Remove:Any Hit. Slow:1\nModerate: Head Lock. Remove:1 Damage. Stun:1 Slow:1\nMajor: Neck Sprained. Remove:2 Damage. Stun:2 Slow:2\nExtreme: Neck Dislocated. Paralyzed. Stun:3 Stress:3"
     ))
 
     // (const burden-jc)
@@ -1272,10 +1278,10 @@ export default class nx_tactics_decks_burden {
       {"any-1": nx_tactics_base.t_damage},
       ":name",
       "Burden: Deck",
-      ":ranksuit",
-      nx_tactics_base.c_ranksuit_jokerblack,
       ":image",
-      "images/card-hitlocation-jester-black.svg",
+      "images/damage-burden-wb.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Search the Deck for any card and play it. Then Shuffle Discards into Deck."
     ))
@@ -1285,10 +1291,10 @@ export default class nx_tactics_decks_burden {
       {"any-1": nx_tactics_base.t_damage},
       ":name",
       "Burden: Discard",
-      ":ranksuit",
-      nx_tactics_base.c_ranksuit_jokerred,
       ":image",
-      "images/card-hitlocation-jester-red.svg",
+      "images/damage-burden-wr.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."
     ))
