@@ -463,6 +463,13 @@ export default class nx_tactics_decks_power {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
+        "Bonds",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Entanglement", "Line Swinging")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
         "Chaos",
         ":reference",
         "* Do what thou wilt shall be the whole of the Law. - Alesiter Crowley, Book of the Law\n* The Butterfly Effect - Any 'seemingly' insignificant event in the universe has the potential to trigger a chain reaction that will change the whole system.\n* Do I really look like a plan? ... I just...do things. The mob has plans. The cops have plans. Gordon's got plans. They're schemers, schemers trying to control their little worlds. I'm not a schemer. I try to show the schemers how pathetic their attempts to control things really are. ... I just do what I do best, I took your little plan and turned it on itself. Look at what happened to this city with a few drums of gas and a couple of bullets. ... Introduce a little anarchy. Upset the established order and everything becomes chaos. I'm an agent of chaos. - Joker, The Dark Knight",
@@ -3409,9 +3416,11 @@ export default class nx_tactics_decks_power {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
-        "Bonds",
+        "Reproduction",
+        ":stat",
+        "Body",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Entanglement", "Line Swinging")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Brood Parasitism", "Copy Host", "Egg Laying", "Large Litter", "Parasitic Offspring", "Rapid Gestation", "Rapid Maturity")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
@@ -4141,7 +4150,7 @@ export default class nx_tactics_decks_power {
         ":summary",
         "* A weapon of some kind. Must have [Weapon: Melee], [Weapon: Close Combat], [Weapon: Ranged], [Weapon: Firearm] or [Weapon: Gunnery]",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "1-Handed", "2-Handed", "Arc:1-Side", "Arc:Front", "Autofire", "Bash", "Blast", "Burstfire", "Close Weapon", "Firearm Weapon", "Gunnery Weapon", "Hack", "High-Explosive", "Melee Weapon", "Pierce", "Ranged Weapon", "Scatter", "Slash", "Tracer Rounds")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "1-Handed", "2-Handed", "Arc:1-Side", "Arc:Front", "Autofire", "Bash", "Blast", "Burstfire", "Close Weapon", "Firearm Weapon", "Gunnery Weapon", "Hack", "High-Explosive", "Melee Weapon", "Pierce", "Ranged Weapon", "Scatter", "Slash", "Tracer Rounds", "Turret")
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Weather")
     )

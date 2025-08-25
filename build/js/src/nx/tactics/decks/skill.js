@@ -360,11 +360,9 @@ export default class nx_tactics_decks_skill {
           "Targeting Laser",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Targeting Laser"),
           "Telescopic Sight",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Telescopic Sight", ":summary", "Reduces penalties for Medium Range to Short Range and Long Range to Medium Range"),
+          nx_tactics_base.f_ability_from_tactics_key(tactics, "Telescopic Sight"),
           "Tracking Rounds",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tracking Rounds"),
-          "Turret",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Turret", ":image", "Tokens/Arrow.png", ":summary", "* Turret mounted weapons may turn their turret toward any direction and fire from the side the turret is facing.\n[Cost]:+1\n* Turrets are normally assumed to be facing forward.  At the beginning of its [Action], a unit may change the turret facing by 1 side (Use a [Vector] Token) indicate where the Turret is pointing.")
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tracking Rounds")
         ),
         ":specialtymap",
         nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Energy Weapons", "Duelling", "Handguns", "Rifles", "Shotguns")

@@ -22,30 +22,62 @@
 
 (const vehicle-ac : base/damage
  (base/damage
-  :name "Bash: Structure"
+  :name "Bash: Frame"
   :image "images/damage-vehicle-ac.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "* Minor: Dents. Malfunction:1
-    * Major: Hull Crack. Front Armor:-1
-    * Critical: 
-    * Extreme: Structural Collapse. Impaired. Part-Damage:All"))
+   "* Minor: Dents. Push:1
+    * Major: Hull Breach. Push:1 Armor:-1
+    * Critical: Frame Crack. Push:1 Armor:-2
+    * Extreme: Structural Collapse. Push:1 Armor:-3. Part:DamageAll"))
+
+/*
+// D Frame:Pierced Through
+// H Frame:Split in Two
+// S Frame:
+// D Control:Haywire
+// S Control:Controls Severed. No Control
+// Steering
+// Life
+// Cabin
+// Systems
+// Thrust
+// Crew:Damage1
+// Crew:DamageAll
+// Crew:Lost1
+// Crew:LostAll
+// Part:Damage1
+// Part:DamageAll
+// Part:Lost1
+// Part:LostAll
+// Electrical Failure
+// Ventilation Failure
+// Cabin Smoke
+// Cabin Fire
+// Control line cut
+// Control Fire
+// Fuel line cut
+// Fuel fire
+// Fuel explosion
+// Communication interference
+// Communication cut
+*/
 
 (const vehicle-ad : base/damage
  (base/damage
-  :name "Pierce: Structure"
+  :name "Pierce: Frame"
   :image "images/damage-vehicle-ad.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-ah : base/damage
  (base/damage
-  :name "Hack: Structure"
+  :name "Hack: Frame"
   :image "images/damage-vehicle-ah.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-as : base/damage
  (base/damage
-  :name "Slash: Structure"
+  :name "Slash: Frame"
   :image "images/damage-vehicle-as.svg"
   :layout base/cardlayout-imageonly))
 
@@ -492,7 +524,7 @@
 
 (func deck-vehicle : base/deck
  (base/deck
-  :name "vehicles"
+  :name "Vehicle"
   :image "images/damage-vehicle-malfunction.svg"
   :layout base/cardlayout-imageonly
   :cardmap
@@ -555,4 +587,4 @@
       vehicle-2s))
    (base/cardmap-copy<-card-count-isnum
     malfunction 54 false)))
- :doc "vehicle Deck")
+ :doc "Vehicle Deck")

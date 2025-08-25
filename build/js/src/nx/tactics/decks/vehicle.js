@@ -338,7 +338,7 @@ export default class nx_tactics_decks_vehicle {
 
   /**
    * @function deck_vehicle
-   * vehicle Deck
+   * Vehicle Deck
    * @return {deck}
    */
   static t_deck_vehicle = {
@@ -354,7 +354,7 @@ export default class nx_tactics_decks_vehicle {
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_deck},
       ":name",
-      "vehicles",
+      "Vehicle",
       ":image",
       "images/damage-vehicle-malfunction.svg",
       ":layout",
@@ -1000,20 +1000,20 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ac, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Structure",
+      "Bash: Frame",
       ":image",
       "images/damage-vehicle-ac.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "* Minor: Dents. Malfunction:1\n* Major: Hull Crack. Front Armor:-1\n* Critical: \n* Extreme: Structural Collapse. Impaired. Part-Damage:All"
+      "* Minor: Dents. Push:1\n* Major: Hull Breach. Push:1 Armor:-1\n* Critical: Frame Crack. Push:1 Armor:-2\n* Extreme: Structural Collapse. Push:1 Armor:-3. Part:DamageAll"
     ))
 
     // (const vehicle-ad)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ad, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Structure",
+      "Pierce: Frame",
       ":image",
       "images/damage-vehicle-ad.svg",
       ":layout",
@@ -1024,7 +1024,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ah, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Structure",
+      "Hack: Frame",
       ":image",
       "images/damage-vehicle-ah.svg",
       ":layout",
@@ -1035,7 +1035,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_as, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Structure",
+      "Slash: Frame",
       ":image",
       "images/damage-vehicle-as.svg",
       ":layout",

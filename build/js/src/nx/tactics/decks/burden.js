@@ -537,7 +537,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":image",
-      "images/card-burden-foot-right.svg",
+      "images/damage-burden-2c.svg",
       ":summary",
       "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Ankle Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Shin Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"
     ))
@@ -552,7 +552,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2d,
       ":image",
-      "images/card-burden-foot-right.svg",
+      "images/damage-burden-2d.svg",
       ":summary",
       "Minor: Toes Ensnared. Slow:1 Remove:1 Action\nModerate: Foot Ensnared. Slow:2 Remove:2 Actions\nMajor: Ankle Ensnared. Slow:3 Remove:3 Actions\nExtreme: Shin Ensnared. [Hobbled] Remove:4 Actions"
     ))
@@ -567,7 +567,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2h,
       ":image",
-      "images/card-burden-foot-right.svg",
+      "images/damage-burden-2h.svg",
       ":summary",
       "Minor: Toes Held. Pull:1. Remove:Any Hit\nModerate: Foot Held. Pull:1. Remove:1 Damage\nMajor: Ankle Held. Pull:1. Remove:2 Damage\nExtreme: Shin Held. Knockdown. Pull:1. Remove:3 Damage"
     ))
@@ -582,7 +582,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
       ":image",
-      "images/card-burden-foot-right.svg",
+      "images/damage-burden-2s.svg",
       ":summary",
       "Minor: Foot lock. Slow:1. Remove:Any Hit\nModerate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Foot bones dislocated. Foot useless. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Ankle dislocated. Ankle useless. [Hobbled] Stun:3. Remove:3 Damage"
     ))
@@ -595,9 +595,9 @@ export default class nx_tactics_decks_burden {
       ":titles",
       "Constrict: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
-      nx_tactics_base.c_ranksuit_2c,
+      nx_tactics_base.c_ranksuit_3c,
       ":image",
-      "images/card-burden-foot-left.svg",
+      "images/damage-burden-3c.svg",
       ":summary",
       "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Ankle Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Shin Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"
     ))
@@ -610,9 +610,9 @@ export default class nx_tactics_decks_burden {
       ":titles",
       "Restrain: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
-      nx_tactics_base.c_ranksuit_2d,
+      nx_tactics_base.c_ranksuit_3d,
       ":image",
-      "images/card-burden-foot-left.svg",
+      "images/damage-burden-3d.svg",
       ":summary",
       "Minor: Toes Ensnared. Slow:1 Remove:1 Action\nModerate: Foot Ensnared. Slow:2 Remove:2 Actions\nMajor: Ankle Ensnared. Slow:3 Remove:3 Actions\nExtreme: Shin Ensnared. [Hobbled] Remove:4 Actions"
     ))
@@ -625,9 +625,9 @@ export default class nx_tactics_decks_burden {
       ":titles",
       "Hold: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
-      nx_tactics_base.c_ranksuit_2h,
+      nx_tactics_base.c_ranksuit_3h,
       ":image",
-      "images/card-burden-foot-left.svg",
+      "images/damage-burden-3h.svg",
       ":summary",
       "Minor: Toes Held. Pull:1. Remove:Any Hit\nModerate: Foot Held. Pull:1. Remove:1 Damage\nMajor: Ankle Held. Pull:1. Remove:2 Damage\nExtreme: Shin Held. Knockdown. Pull:1. Remove:3 Damage"
     ))
@@ -640,9 +640,9 @@ export default class nx_tactics_decks_burden {
       ":titles",
       "Disable: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
-      nx_tactics_base.c_ranksuit_2s,
+      nx_tactics_base.c_ranksuit_3s,
       ":image",
-      "images/card-burden-foot-left.svg",
+      "images/damage-burden-3s.svg",
       ":summary",
       "Minor: Foot lock. Slow:1. Remove:Any Hit\nModerate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Foot bones dislocated. Foot useless. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Ankle dislocated. Ankle useless. [Hobbled] Stun:3. Remove:3 Damage"
     ))
@@ -657,7 +657,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":image",
-      "images/card-burden-leg-right.svg",
+      "images/damage-burden-4c.svg",
       ":summary",
       "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Knee Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Thigh Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"
     ))
@@ -672,7 +672,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4d,
       ":image",
-      "images/card-burden-leg-right.svg",
+      "images/damage-burden-4d.svg",
       ":summary",
       "Minor: Leg Ensnared. Slow:1 Remove:1 Action\nModerate: Leg Ensnared. Slow:2 Remove:2 Actions\nMajor: Knee Ensnared. Slow:3 Remove:3 Actions\nExtreme: Thigh Ensnared. [Hobbled] Remove:4 Actions"
     ))
@@ -687,7 +687,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4h,
       ":image",
-      "images/card-burden-leg-right.svg",
+      "images/damage-burden-4h.svg",
       ":summary",
       "Minor: Leg Held. Pull:1. Remove:Any Hit\nModerate: Leg Held. Pull:1. Remove:1 Damage\nMajor: Knee Held. Pull:1. Remove:2 Damage\nExtreme: Thigh Held. Knockdown. Pull:1. Remove:3 Damage"
     ))
@@ -702,7 +702,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4s,
       ":image",
-      "images/card-burden-leg-right.svg",
+      "images/damage-burden-4s.svg",
       ":summary",
       "Minor: Thigh held. Slow:1. Remove:Any Hit\nModerate: Knee held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Knee lock. Foot useless. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Knee dislocated. Knee useless. [Hobbled] Stun:3. Remove:3 Damage"
     ))
@@ -717,7 +717,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
-      "images/card-burden-leg-left.svg",
+      "images/damage-burden-5c.svg",
       ":summary",
       "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Knee Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Thigh Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"
     ))
@@ -732,7 +732,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5d,
       ":image",
-      "images/card-burden-leg-left.svg",
+      "images/damage-burden-5d.svg",
       ":summary",
       "Minor: Leg Ensnared. Slow:1 Remove:1 Action\nModerate: Leg Ensnared. Slow:2 Remove:2 Actions\nMajor: Knee Ensnared. Slow:3 Remove:3 Actions\nExtreme: Thigh Ensnared. [Hobbled] Remove:4 Actions"
     ))
@@ -747,7 +747,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5h,
       ":image",
-      "images/card-burden-leg-left.svg",
+      "images/damage-burden-5h.svg",
       ":summary",
       "Minor: Leg Held. Pull:1. Remove:Any Hit\nModerate: Leg Held. Pull:1. Remove:1 Damage\nMajor: Knee Held. Pull:1. Remove:2 Damage\nExtreme: Thigh Held. Knockdown. Pull:1. Remove:3 Damage"
     ))
@@ -762,7 +762,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5s,
       ":image",
-      "images/card-burden-leg-left.svg",
+      "images/damage-burden-5s.svg",
       ":summary",
       "Minor: Thigh held. Slow:1. Remove:Any Hit\nModerate: Knee held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Knee lock. Foot useless. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Knee dislocated. Knee useless. [Hobbled] Stun:3. Remove:3 Damage"
     ))
@@ -777,7 +777,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":image",
-      "images/card-burden-hand-right.svg",
+      "images/damage-burden-6c.svg",
       ":summary",
       "Minor: Fingers Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Hand Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Wrist Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Forearm Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"
     ))
@@ -792,7 +792,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6d,
       ":image",
-      "images/card-burden-hand-right.svg",
+      "images/damage-burden-6d.svg",
       ":summary",
       "Minor: Fingers Ensnared. Slow:1 Remove:1 Action\nModerate: Hand Ensnared. Slow:2 Remove:2 Actions\nMajor: Wrist Ensnared. Slow:3 Remove:3 Actions\nExtreme: Forearm Ensnared. [Impaired] Remove:4 Actions"
     ))
@@ -807,7 +807,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6h,
       ":image",
-      "images/card-burden-hand-right.svg",
+      "images/damage-burden-6h.svg",
       ":summary",
       "Minor: Fingers Held. Pull:1. Remove:Any Hit\nModerate: Hand Held. Pull:1. Remove:1 Damage\nMajor: Wrist Held. Pull:1. Remove:2 Damage\nExtreme: Forearm Held. Knockdown. Pull:1. Remove:3 Damage"
     ))
@@ -822,7 +822,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s,
       ":image",
-      "images/card-burden-hand-right.svg",
+      "images/damage-burden-6s.svg",
       ":summary",
       "Minor: Hand lock. Slow:1. Remove:Any Hit\nModerate: Wrist lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Hand bones dislocated. Hand useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Wrist dislocated. Wrist useless. [Impaired] Stun:3. Remove:3 Damage"
     ))
@@ -837,7 +837,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":image",
-      "images/card-burden-hand-left.svg",
+      "images/damage-burden-7c.svg",
       ":summary",
       "Minor: Fingers Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Hand Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Wrist Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Forearm Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"
     ))
@@ -852,7 +852,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7d,
       ":image",
-      "images/card-burden-hand-left.svg",
+      "images/damage-burden-7d.svg",
       ":summary",
       "Minor: Fingers Ensnared. Slow:1 Remove:1 Action\nModerate: Hand Ensnared. Slow:2 Remove:2 Actions\nMajor: Wrist Ensnared. Slow:3 Remove:3 Actions\nExtreme: Forearm Ensnared. [Impaired] Remove:4 Actions"
     ))
@@ -867,7 +867,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h,
       ":image",
-      "images/card-burden-hand-left.svg",
+      "images/damage-burden-7h.svg",
       ":summary",
       "Minor: Fingers Held. Pull:1. Remove:Any Hit\nModerate: Hand Held. Pull:1. Remove:1 Damage\nMajor: Wrist Held. Pull:1. Remove:2 Damage\nExtreme: Forearm Held. Knockdown. Pull:1. Remove:3 Damage"
     ))
@@ -882,7 +882,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7s,
       ":image",
-      "images/card-burden-hand-left.svg",
+      "images/damage-burden-7s.svg",
       ":summary",
       "Minor: Hand lock. Slow:1. Remove:Any Hit\nModerate: Wrist lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Hand bones dislocated. Hand useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Wrist dislocated. Wrist useless. [Impaired] Stun:3. Remove:3 Damage"
     ))
@@ -897,7 +897,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":image",
-      "images/card-burden-arm-right.svg",
+      "images/damage-burden-8c.svg",
       ":summary",
       "Minor: Arm Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Arm Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Elbow Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Bicep Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"
     ))
@@ -912,7 +912,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8d,
       ":image",
-      "images/card-burden-arm-right.svg",
+      "images/damage-burden-8d.svg",
       ":summary",
       "Minor: Elbow Ensnared.\nModerate: Elbow Bond. Slow:1 Remove:1 Actions\nMajor: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions\nExtreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"
     ))
@@ -927,7 +927,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8h,
       ":image",
-      "images/card-burden-arm-right.svg",
+      "images/damage-burden-8h.svg",
       ":summary",
       "Minor: Arm Held. Pull:1. Remove:Any Hit\nModerate: Arm Held. Pull:1. Remove:1 Damage\nMajor: Elbow Held. Pull:1. Remove:2 Damage\nExtreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"
     ))
@@ -942,7 +942,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8s,
       ":image",
-      "images/card-burden-arm-right.svg",
+      "images/damage-burden-8s.svg",
       ":summary",
       "Minor: Bicep held. Slow:1. Remove:Any Hit\nModerate: Elbow held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"
     ))
@@ -957,7 +957,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":image",
-      "images/card-burden-arm-left.svg",
+      "images/damage-burden-9c.svg",
       ":summary",
       "Minor: Arm Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Arm Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Elbow Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Bicep Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"
     ))
@@ -972,7 +972,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9d,
       ":image",
-      "images/card-burden-arm-left.svg",
+      "images/damage-burden-9d.svg",
       ":summary",
       "Minor: Elbow Ensnared.\nModerate: Elbow Bond. Slow:1 Remove:1 Actions\nMajor: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions\nExtreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"
     ))
@@ -987,7 +987,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9h,
       ":image",
-      "images/card-burden-arm-left.svg",
+      "images/damage-burden-9h.svg",
       ":summary",
       "Minor: Arm Held. Pull:1. Remove:Any Hit\nModerate: Arm Held. Pull:1. Remove:1 Damage\nMajor: Elbow Held. Pull:1. Remove:2 Damage\nExtreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"
     ))
@@ -1002,7 +1002,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9s,
       ":image",
-      "images/card-burden-arm-left.svg",
+      "images/damage-burden-9s.svg",
       ":summary",
       "Minor: Bicep held. Slow:1. Remove:Any Hit\nModerate: Elbow held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"
     ))
@@ -1015,7 +1015,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":image",
-      "images/card-burden-head.svg",
+      "images/damage-burden-ac.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -1030,7 +1030,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":image",
-      "images/card-burden-head.svg",
+      "images/damage-burden-ad.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -1045,7 +1045,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":image",
-      "images/card-burden-head.svg",
+      "images/damage-burden-ah.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -1060,7 +1060,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":image",
-      "images/card-burden-head.svg",
+      "images/damage-burden-as.svg",
       ":summary",
       "Minor: Hair Caught. Remove:Any Hit. Slow:1\nModerate: Head Lock. Remove:1 Damage. Stun:1 Slow:1\nMajor: Neck Sprained. Remove:2 Damage. Stun:2 Slow:2\nExtreme: Neck Dislocated. Paralyzed. Stun:3 Stress:3"
     ))
@@ -1073,7 +1073,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":image",
-      "images/card-burden-abdomen.svg",
+      "images/damage-burden-jc.svg",
       ":summary",
       "Minor: Belly Ensnared. Slow:1\nModerate: Belly Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Stomach Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Diaphram constricted. Cannot inhale. [Choking]"
     ))
@@ -1086,7 +1086,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jd,
       ":image",
-      "images/card-burden-abdomen.svg",
+      "images/damage-burden-js.svg",
       ":summary",
       "Minor: Abdomen Ensnared.\nModerate: Abdomen Ensnared. Slow:1 Remove:1 Actions\nMajor: Abdomen Ensnared. Slow:2 Remove:2 Actions\nExtreme: Abdomen Bound. Slow:3 Remove:3 Actions"
     ))
@@ -1099,7 +1099,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":image",
-      "images/card-burden-abdomen.svg",
+      "images/damage-burden-jc.svg",
       ":summary",
       "Minor: Abdomen Held. Pull:1. Remove:Any Hit\nModerate: Abdomen Held. Pull:1. Remove:1 Damage\nMajor: Waist Held. Pull:1. Remove:2 Damage\nExtreme: Waist Held. Pull:1. Remove:3 Damage"
     ))
@@ -1112,7 +1112,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_js,
       ":image",
-      "images/card-burden-abdomen.svg",
+      "images/damage-burden-js.svg",
       ":summary",
       "Minor: Abdomen Held. Pull:1. Remove:Any Hit\nModerate: Abdomen Held. Pull:1. Remove:1 Damage\nMajor: Waist Held. Pull:1. Remove:2 Damage\nExtreme: Waist Held. Pull:1. Remove:3 Damage"
     ))
@@ -1125,7 +1125,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kc,
       ":image",
-      "images/card-burden-shoulders.svg",
+      "images/damage-burden-kc.svg",
       ":summary",
       "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulder Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Shoulders Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Blood and Air cut off from Head. [Choking] [Dying]"
     ))
@@ -1138,7 +1138,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kd,
       ":image",
-      "images/card-burden-shoulders.svg",
+      "images/damage-burden-kd.svg",
       ":summary",
       "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulders Ensnared. Slow:2 Remove:1 Actions\nMajor: Shoulders Bound. [Impaired]. Slow:3 Remove:2 Actions\nExtreme: Neck Bound. [Choking] Remove:3 Actions"
     ))
@@ -1151,7 +1151,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kh,
       ":image",
-      "images/card-burden-shoulders.svg",
+      "images/damage-burden-kh.svg",
       ":summary",
       "Minor: Shoulder Held. Pull:1. Remove:Any Hit\nModerate: Shoulder Held. Pull:1. Remove:1 Damage\nMajor: Shoulders Held. Pull:1. Remove:2 Damage\nExtreme: Shoulders Held. Pull:1. Remove:3 Damage"
     ))
@@ -1164,7 +1164,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ks,
       ":image",
-      "images/card-burden-shoulders.svg",
+      "images/damage-burden-ks.svg",
       ":summary",
       "Minor: Shoulder caught. Slow:1. Remove:Any Hit\nModerate: Shoulder lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Shoulder sprained. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Shoulder dislocated. [Impaired] Stun:3. Remove:3 Damage"
     ))
@@ -1177,7 +1177,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
       ":image",
-      "images/card-burden-chest.svg",
+      "images/damage-burden-qc.svg",
       ":summary",
       "Minor: Ribs Ensnared. Slow:1\nModerate: Ribs Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Chest Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Lungs constricted. Cannot inhale. [Choking]"
     ))
@@ -1190,7 +1190,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qd,
       ":image",
-      "images/card-burden-chest.svg",
+      "images/damage-burden-qd.svg",
       ":summary",
       "Minor: Chest Ensnared.\nModerate: Chest Ensnared. Slow:1 Remove:1 Actions\nMajor: Chest Ensnared. Slow:2 Remove:2 Actions\nExtreme: Chest Bound. [Impaired] Remove:3 Actions"
     ))
@@ -1203,7 +1203,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qh,
       ":image",
-      "images/card-burden-chest.svg",
+      "images/damage-burden-qh.svg",
       ":summary",
       "Minor: Chest Held. Pull:1. Remove:Any Hit\nModerate: Chest Held. Pull:1. Slow:1 Remove:Any Hit\nMajor: Chest Held. Pull:1. Remove:1 Damage\nExtreme: Chest Held. Pull:1. Remove:2 Damage"
     ))
@@ -1216,7 +1216,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qs,
       ":image",
-      "images/card-burden-chest.svg",
+      "images/damage-burden-qs.svg",
       ":summary",
       "Minor: Chest Held. Pull:1. Remove:Any Hit\nModerate: Chest Held. Pull:1. Slow:1 Remove:Any Hit\nMajor: Chest Held. Pull:1. Remove:1 Damage\nExtreme: Chest Held. Pull:1. Remove:2 Damage"
     ))
@@ -1229,7 +1229,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
       ":image",
-      "images/card-burden-vitals.svg",
+      "images/damage-burden-tc.svg",
       ":summary",
       "Minor: Hips Ensnared. Slow:1\nModerate: Hips Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Bladder Constricted. [Impaired]. Relieve yourself. Slow:2 Every turn. Remove:2 Damage\nExtreme: Bowels Constricted. [Immobilized]. Relieve yourself. Take 1 Damage to Vitals every turn."
     ))
@@ -1242,7 +1242,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_td,
       ":image",
-      "images/card-burden-vitals.svg",
+      "images/damage-burden-td.svg",
       ":summary",
       "Minor: Hips Ensnared.\nModerate: Hips Ensnared. Slow:1 Remove:1 Actions\nMajor: Hips Ensnared. Slow:2 Remove:2 Actions\nExtreme: Hips Bound. [Hobbled] Slow:3 Remove:3 Actions"
     ))
@@ -1255,7 +1255,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_th,
       ":image",
-      "images/card-burden-vitals.svg",
+      "images/damage-burden-th.svg",
       ":summary",
       "Minor: Hips Held. Pull:1. Remove:Any Hit\nModerate: Hips Held. Pull:1. Remove:1 Damage\nMajor: Buttocks Held. Pull:1. Remove:2 Damage\nExtreme: Crotch Held. Pull:1. Remove:3 Damage"
     ))
@@ -1268,7 +1268,7 @@ export default class nx_tactics_decks_burden {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ts,
       ":image",
-      "images/card-burden-vitals.svg",
+      "images/damage-burden-ts.svg",
       ":summary",
       "Minor: Hip caught. Slow:1. Remove:Any Hit\nModerate: Hip lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Hip sprained. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Hip dislocated. [Hobbled] Stun:3. Remove:3 Damage"
     ))

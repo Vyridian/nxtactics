@@ -819,6 +819,13 @@
       (base/ability
        :name "Out for Blood")))
   (base/power
+   :name "Bonds"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Entanglement"
+     "Line Swinging"))
+  (base/power
    :name "Chaos"
    :reference
     "* Do what thou wilt shall be the whole of the Law. - Alesiter Crowley, Book of the Law
@@ -5685,12 +5692,18 @@
        :summary
         "* Exits from a location loop back upon themselves to leave a person back where they started.")))
   (base/power
-   :name "Bonds"
+   :name "Reproduction"
+   :stat "Body"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
-     "Entanglement"
-     "Line Swinging"))
+     "Brood Parasitism"
+     "Copy Host"
+     "Egg Laying"
+     "Large Litter"
+     "Parasitic Offspring"
+     "Rapid Gestation"
+     "Rapid Maturity"))
   (base/power
    :name "Senses"
    :abilitymap
@@ -6854,7 +6867,8 @@
      "Ranged Weapon"
      "Scatter"
      "Slash"
-     "Tracer Rounds"))
+     "Tracer Rounds"
+     "Turret"))
   (base/power
    :name "Weather")
  )

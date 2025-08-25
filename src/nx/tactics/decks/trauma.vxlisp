@@ -45,41 +45,43 @@
    "Minor: Frustrated by unfairness of death. Stress:1
     Major: Give meaning by choosing who dies. Stress:1. Beast:1
     Critical: Death triggers uncontrolled rage. Stress:2 Beast:2
-    Extreme: Unstoppable murderous rage. Beast Unleashed"))
+    Extreme: Unstoppable murderous rage. Beast:Unleashed"))
 
 (const trauma-ad : base/damage
  (base/damage
   :name "Despair: Death"
   :ranksuit base/ranksuit-ad
-  :image "images/card-trauma-ad.svg"
+  :image "images/damage-trauma-ad.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Grieving. Talks about death about death. Stress:1
+   "Minor: Grieving. Focused on death. Stress:1
     Major: Fatalistic. Take death Abilities. Stress:1. Shadow:1
     Critical: Tormented. Seeks death. Stress:2 Shadow:2
-    Extreme: Suicidal. Death is inevitable. Shadow Triumphant"))
+    Extreme: Suicidal. Death is inevitable. Shadow:Triumphant"))
 
 (const trauma-ah : base/damage
  (base/damage
   :name "Desire: Death"
   :ranksuit base/ranksuit-ah
-  :image "images/card-trauma-ah.svg"
+  :image "images/damage-trauma-ah.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Macabre. Study wounds and death. Stress:1
     Major: Necrophile. Take Death Abilities. Stress:1 Shadow:1
     Critical: Death Cult. Focus on necromancy. Stress:2 Shadow:2
-    Extreme: Suicidal. Try to cross over. Shadow Triumphant"))
+    Extreme: Suicidal. Try to cross over. Shadow:Triumphant"))
 
 (const trauma-as : base/damage
  (base/damage
   :name "Fear: Death"
   :ranksuit base/ranksuit-as
-  :image "images/card-trauma-as.svg"
+  :image "images/damage-trauma-as.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Anxiety. Agitated around death. Stress:1
     Major: Death is coming. Run. Stress:2 Withdraw:2
     Critical: Petrified. Collapse in fear of death. Stress:2 Shadow:2
-    Extreme: Die of Fright. Dying. Beast Unleashed"
+    Extreme: Die of Fright. Dying. Beast:Unleashed"
   :reference
    "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over. - Doctor Who, Heaven Sent"))
 
@@ -87,18 +89,18 @@
  (base/damage
   :name "Anger: Power"
   :ranksuit base/ranksuit-kc
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-kc.svg"
   :summary
    "Minor: Rebel. You hate those who seek to control others.
     Major: Revolutionary. You openly discuss revolution and seek to bring others to your cause. [Beast]:1
     Critical: Insurgent. You despise those in power and are dedicated to putting a blade to them. [Beast]:2
-    Extreme: Antifa. Violently attack anyone who commands others. [Beast Unleashed]"))
+    Extreme: Antifa. Violently attack anyone who commands others. Beast:Unleashed"))
 
 (const trauma-kd : base/damage
  (base/damage
   :name "Despair: Power"
   :ranksuit base/ranksuit-kd
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-kd.svg"
   :summary
    "Minor: Indifferent. Completely apathetic and dismissive of authority.
     Major: Distressed. Unable to obey authority. [Shadow]:1
@@ -109,7 +111,7 @@
  (base/damage
   :name "Desire: Power"
   :ranksuit base/ranksuit-kh
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-kh.svg"
   :summary
    "Minor: Bossy. If only they just listened to you.
     Major: Overbearing. You order everyone around and have no tolerance of opposition.
@@ -120,7 +122,7 @@
  (base/damage
   :name "Fear: Power"
   :ranksuit base/ranksuit-ks
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-ks.svg"
   :summary
    "Minor: Become agitated, shaky and incoherent when facing authority.
     Major: Fawning. Obviously frightened of authority. Will obey easily.
@@ -131,7 +133,7 @@
  (base/damage
   :name "Anger: Self"
   :ranksuit base/ranksuit-qc
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-qc.svg"
   :reference
    "* And, oh, my love remind me, what was it that I said? I can't help but pull the earth around me to make my bed. And, oh, my love remind me, what was it that I did? Did I drink too much? Am I losing touch? Did I build a ship to wreck? - Florence and the Machine, Ship to Wreck"
   :summary
@@ -144,7 +146,7 @@
  (base/damage
   :name "Despair: Self"
   :ranksuit base/ranksuit-qd
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-qd.svg"
   :summary
    "Minor: Self Doubt. No confidence.
     Major: Self Pity. Completely apathetic and dismissive of self.
@@ -155,7 +157,7 @@
  (base/damage
   :name "Desire: Self"
   :ranksuit base/ranksuit-qh
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-qh.svg"
   :summary
    "Minor: Vainglory. You brag about own appearance, abilities, and status.
     Major: Gloryhound. You seek praise at the expense of others.
@@ -166,7 +168,7 @@
  (base/damage
   :name "Fear: Self"
   :ranksuit base/ranksuit-qs
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-qs.svg"
   :summary
    "Minor: Self-conscious. Success and praise makes you uneasy.
     Major: Unworthy. You are a fraud.
@@ -177,18 +179,18 @@
  (base/damage
   :name "Anger: Violence"
   :ranksuit base/ranksuit-jc
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-jc.svg"
   :summary
    "Minor: Viscious. Revel in the kill.
     Major: Bloodthirsty. Find a way to keep the kills coming.
-    Critical: Butcher. [Beast]:1 Cleave a bloody path wherever you go. [Beast]:2
-    Extreme: Animalistic. Kill indiscriminately. [Beast Unleased]"))
+    Critical: Butcher. Beast:1 Cleave a bloody path wherever you go. Beast:2
+    Extreme: Animalistic. Kill indiscriminately. Beast:Unleased"))
 
 (const trauma-jd : base/damage
  (base/damage
   :name "Despair: Violence"
   :ranksuit base/ranksuit-jd
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-jd.svg"
   :summary
    "Minor: Mediator. Perhaps there is an alternative to violence.
     Major: Non-violent. Cannot fight or work with combatants.
@@ -199,7 +201,7 @@
  (base/damage
   :name "Desire: Violence"
   :ranksuit base/ranksuit-jh
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-jh.svg"
   :summary
    "Minor: Tough. You have a suprisingly high pain threshold.
     Major: Masochist. You enjoy pain. [Shadow]:1
@@ -210,7 +212,7 @@
  (base/damage
   :name "Fear: Violence"
   :ranksuit base/ranksuit-js
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-js.svg"
   :summary
    "Minor: Watched. You feel you are being watched.
     Major: Hunted. You are convinced that something is hunting you. Protect yourself above all else.
@@ -221,18 +223,18 @@
  (base/damage
   :name "Anger: Reality"
   :ranksuit base/ranksuit-tc
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-tc.svg"
   :summary
    "Minor: Angry drunk. Obnoxious and pushy when intoxicated.
-    Major: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. [Beast]:1
-    Critical: Violent Addict. You're violent when high and will take anything for a high. [Beast]:2
-    Extreme:Wildly Violent Addict. Do anything it takes to stay high. [Beast Unleashed]"))
+    Major: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. Beast:1
+    Critical: Violent Addict. You're violent when high and will take anything for a high. Beast:2
+    Extreme:Wildly Violent Addict. Do anything it takes to stay high. Beast:Unleashed"))
 
 (const trauma-td : base/damage
  (base/damage
   :name "Despair: Reality"
   :ranksuit base/ranksuit-td
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-td.svg"
   :summary
    "Minor: Demoralized.
     Major: Gloomy.
@@ -243,7 +245,7 @@
  (base/damage
   :name "Desire: Reality"
   :ranksuit base/ranksuit-th
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-th.svg"
   :summary
    "Minor: Boozer. You seek alchohol and drugs to change your state of mind.
     Major: Hooked. Always looking for a fix.
@@ -254,29 +256,29 @@
  (base/damage
   :name "Fear: Reality"
   :ranksuit base/ranksuit-ts
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-ts.svg"
   :summary
-   "Minor: Paranoid. Unnerved about everything.
-    Major: Panicked about everyting. Full Move this turn in the safest direction.
-    Critical: Terrified of Everything, must be restrained or will harm others or self.
-    Extreme: Catatonic with bouts of screaming. [Beast Unleashed]."))
+   "Minor: Paranoid. Unnerved about everything
+    Major: Panicked about everyting. Full Move this turn in the safest direction
+    Critical: Terrified of Everything, must be restrained or will harm others or self
+    Extreme: Catatonic with bouts of screaming. Beast:Unleashed"))
 
 (const trauma-9c : base/damage
  (base/damage
   :name "Anger: Belief"
   :ranksuit base/ranksuit-9c
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-9c.svg"
   :summary
    "Minor: Skeptic. Completely apathetic and dismissive of religious figures or icons.
     Major: Sacreligeous. Has a tendency toward sacrilege and blasphemy.
     Critical: Violent secularist. Blame faith for everything. Unable to work with those who with strong beliefs.
-    Extreme: Jihadist. Holy War. Mercilessly slay all unbelievers. Your own safety doesn't matter. [Beast Unleashed]"))
+    Extreme: Jihadist. Holy War. Mercilessly slay all unbelievers. Your own safety doesn't matter. Beast:Unleashed"))
 
 (const trauma-9d : base/damage
  (base/damage
   :name "Despair: Belief"
   :ranksuit base/ranksuit-9d
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-9d.svg"
   :summary
    "Minor: Doubtful. Questions own beliefs.
     Major: Broken Faith. Part of your beliefs unravel.
@@ -287,7 +289,7 @@
  (base/damage
   :name "Desire: Belief"
   :ranksuit base/ranksuit-9h
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-9h.svg"
   :summary
    "Minor: Gullible. Crave something to believe in.
     Major: Believer. Become very religious.
@@ -298,7 +300,7 @@
  (base/damage
   :name "Fear: Belief"
   :ranksuit base/ranksuit-9s
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-9s.svg"
   :summary
    "Minor: Become agitated, shaky and incoherent when facing any religious figures or icons.
     Major: Theophobia. Irrational fear of gods and religion.
@@ -309,18 +311,18 @@
  (base/damage
   :name "Anger: Status"
   :ranksuit base/ranksuit-8c
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-8c.svg"
   :summary
    "Minor: Jealous. Frustrated by showoffs.
-    Major: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. [Beast]:1
+    Major: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. Beast:1
     Critical: Smear Campaign. Dedicated to embarassing and undermining the elite.
-    Extreme: Punish the elite for their hubris. Kill them all. [Beast Unleashed]"))
+    Extreme: Punish the elite for their hubris. Kill them all. Beast:Unleashed"))
 
 (const trauma-8d : base/damage
  (base/damage
   :name "Despair: Status"
   :ranksuit base/ranksuit-8d
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-8d.svg"
   :summary
    "Minor: Cowed by high status.
     Major:  Follows those in high status.
@@ -331,7 +333,7 @@
  (base/damage
   :name "Desire: Status"
   :ranksuit base/ranksuit-8h
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-8h.svg"
   :summary
    "Minor: Poser. Crave status and try to show your fashion.
     Major: Attention Seeker. Regularly attempt to be accepted by the in crowd.
@@ -341,7 +343,7 @@
  (base/damage
   :name "Fear: Status"
   :ranksuit base/ranksuit-8s
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-8s.svg"
   :summary
    "Minor: Performance Anxiety. Can't be the focus of attention.
     Major: Terrified of judgement. Can only take actions with trusted companions.
@@ -352,18 +354,18 @@
  (base/damage
   :name "Anger: Companions"
   :ranksuit base/ranksuit-7c
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-7c.svg"
   :summary
    "Minor: Vindictive. Aggressively protective of companions.
     Major: Hunter. Take merciless revenge on any wrongs against companions.
     Critical: Punisher. There are more who deserve punishment. Relentlessly hunt them down.
-    Extreme: Angel of Death. Remove all their filth from the world. Endless bloodshed. [Beast Unleashed]"))
+    Extreme: Angel of Death. Remove all their filth from the world. Endless bloodshed. Beast:Unleashed"))
 
 (const trauma-7d : base/damage
  (base/damage
   :name "Despair: Companions"
   :ranksuit base/ranksuit-7d
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-7d.svg"
   :summary
    "Minor: Withdrawn. Eroded bonds with companions.
     Major: Rejected.
@@ -374,7 +376,7 @@
  (base/damage
   :name "Desire: Companions"
   :ranksuit base/ranksuit-7h
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-7h.svg"
   :summary
    "Minor: Unsure. Get approval before making decisions.
     Major: Joiner. Always be in a group.
@@ -385,7 +387,7 @@
  (base/damage
   :name "Fear: Companions"
   :ranksuit base/ranksuit-7s
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-7s.svg"
   :summary
    "Minor: Anxious about companions' hidden meaning and discussions.
     Major: Fear of being alone. Cannot take actions without line of sight to a companion.
@@ -396,18 +398,18 @@
  (base/damage
   :name "Anger: Strangers"
   :ranksuit base/ranksuit-6c
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-6c.svg"
   :summary
    "Minor: Resentful. Talks about others with sweeping sterotypes.
     Major: Hateful. Uses overtly hateful language and is uncomfortable working in certain groups.
     Critical: Terrorist. Hates other groups and actively seeks to undermine or harm them.
-    Extreme: Genocidal. Actively works to wipe out certain groups. [Beast Unleashed]"))
+    Extreme: Genocidal. Actively works to wipe out certain groups. Beast:Unleashed"))
 
 (const trauma-6d : base/damage
  (base/damage
   :name "Despair: Strangers"
   :ranksuit base/ranksuit-6d
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-6d.svg"
   :summary
    "Minor: Lonely.
     Major: Alienated.
@@ -418,7 +420,7 @@
  (base/damage
   :name "Desire: Strangers"
   :ranksuit base/ranksuit-6h
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-6h.svg"
   :summary
    "Minor: Seek and study dangerous people.
     Major: You want to challenge dangerous people.
@@ -429,7 +431,7 @@
  (base/damage
   :name "Fear: Strangers"
   :ranksuit base/ranksuit-6s
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-6s.svg"
   :summary
    "Minor: Distrust. Suspicious of 'others' around them.
     Major: Avoidant. Become agitated, shaky and incoherent when facing different 'races'.
@@ -440,18 +442,18 @@
  (base/damage
   :name "Anger: Strangers"
   :ranksuit base/ranksuit-5c
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-5c.svg"
   :summary
    "Minor: Possessive. Drawn to abusive relationships.
     Major: Controlling. You are a manipulator.
     Critical: Stalker. You are a sexual abuser.
-    Extreme: Jealous Rage. Kill your rivals. If you can't have them. No one can. [Beast Unleashed]"))
+    Extreme: Jealous Rage. Kill your rivals. If you can't have them. No one can. Beast:Unleashed"))
 
 (const trauma-5d : base/damage
  (base/damage
   :name "Despair: Love"
   :ranksuit base/ranksuit-5d
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-5d.svg"
   :summary
    "Minor: Insecure. Negative of their own attractiveness.
     Major: Embarassed.
@@ -462,7 +464,7 @@
  (base/damage
   :name "Desire: Love"
   :ranksuit base/ranksuit-5h
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-5h.svg"
   :summary
    "Minor: Infatuated.
     Major: Clingy. Obsessed with finding and keeping a mate.
@@ -473,7 +475,7 @@
  (base/damage
   :name "Fear: Love"
   :ranksuit base/ranksuit-5s
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-5s.svg"
   :summary
    "Minor: Prudish about affection.
     Major: Become agitated, shaky and incoherent when facing affection.
@@ -484,7 +486,7 @@
  (base/damage
   :name "Anger: Change"
   :ranksuit base/ranksuit-4c
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-4c.svg"
   :summary
    "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.
     Major: Reactionary. Cannot tolerate anything new or modern.
@@ -495,7 +497,7 @@
  (base/damage
   :name "Despair: Change"
   :ranksuit base/ranksuit-4d
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-4d.svg"
   :summary
    "Minor: Remorseful. Concerned about actions previously taken.
     Major: Anguished. Extremely guilty about actions previously taken.
@@ -506,7 +508,7 @@
  (base/damage
   :name "Desire: Change"
   :ranksuit base/ranksuit-4h
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-4h.svg"
   :summary
    "Minor: Hyperactive. Axious when not active.
     Major: Change for changes sake.
@@ -517,7 +519,7 @@
  (base/damage
   :name "Fear: Change"
   :ranksuit base/ranksuit-4s
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-4s.svg"
   :summary
    "Minor: Unnerved by new things or ideas.
     Major: Afraid of new things or ideas. Can only follow others.
@@ -528,20 +530,20 @@
  (base/damage
   :name "Anger: Things"
   :ranksuit base/ranksuit-3c
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-3c.svg"
   :reference
    "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra"
   :summary
    "Minor: Graphetti Artist. Make your mark on the world.
-    Major: Vandal. Take out your anger by defacing and damaging objects. [Beast]:1
-    Critical: Arsonist. Kill them with fire. [Beast]:2
-    Extreme: Destroyer. The world is too far gone. Burn it all down. [Beast Unleashed]"))
+    Major: Vandal. Take out your anger by defacing and damaging objects. Beast:1
+    Critical: Arsonist. Kill them with fire. Beast:2
+    Extreme: Destroyer. The world is too far gone. Burn it all down. Beast:Unleashed"))
 
 (const trauma-3d : base/damage
  (base/damage
   :name "Despair: Things"
   :ranksuit base/ranksuit-3d
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-3d.svg"
   :summary
    "Minor: Hollow. The spark is missing from the things you do.
     Major: Apathy. Your efforts seem pointless. You feel numb.
@@ -552,7 +554,7 @@
  (base/damage
   :name "Desire: Things"
   :ranksuit base/ranksuit-3h
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-3h.svg"
   :summary
    "Minor: Collector. Keep mementoes of your life.
     Major: Pack Rat. You have a hard time leaving anything behind.
@@ -563,7 +565,7 @@
  (base/damage
   :name "Fear: Things"
   :ranksuit base/ranksuit-3s
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-3s.svg"
   :summary
    "Minor: Terrified of heights.
     Major: Hyterical near fire.
@@ -574,18 +576,18 @@
  (base/damage
   :name "Anger: Fortune"
   :ranksuit base/ranksuit-2c
-  :image "images/card-trauma-anger.svg"
+  :image "images/damage-trauma-2c.svg"
   :summary
    "Minor: Frustrated by an arbitrary world.
     Major: Random outbursts. Your temper seems to surge at random times.
-    Critical: Lash out. Choose enemy targets at random. [Beast]:2
-    Extreme: Blind Rage. Choose targets completely at random. [Beast Unleashed]"))
+    Critical: Lash out. Choose enemy targets at random. Beast:2
+    Extreme: Blind Rage. Choose targets completely at random. Beast:Unleashed"))
 
 (const trauma-2d : base/damage
  (base/damage
   :name "Despair: Fortune"
   :ranksuit base/ranksuit-2d
-  :image "images/card-trauma-despair.svg"
+  :image "images/damage-trauma-2d.svg"
   :summary
    "Minor: Pessimist. Glass is half empty.
     Major: Nothing good ever happens to you.
@@ -596,7 +598,7 @@
  (base/damage
   :name "Desire: Fortune"
   :ranksuit base/ranksuit-2h
-  :image "images/card-trauma-desire.svg"
+  :image "images/damage-trauma-2h.svg"
   :summary
    "Minor: Frugal. A penny saved is a penny earned.
     Major: Stingy. You only buy what is absolutely necessary.
@@ -607,7 +609,7 @@
  (base/damage
   :name "Fear: Fortune"
   :ranksuit base/ranksuit-2s
-  :image "images/card-trauma-fear.svg"
+  :image "images/damage-trauma-2s.svg"
   :summary
    "Minor: Superstitious. Some things are lucky or unlucky.
     Major: Can only do lucky things.

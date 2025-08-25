@@ -466,6 +466,11 @@
    :summary
     "* [Skill]: [Crime]")
   (base/ability
+   :name "Brood Parasitism"
+   :summary
+    "Manipulate a host to raise its young as if it were its own, usually using egg mimicry
+     * [Power]: [Reproduction]")
+  (base/ability
    :name "Bug Hunt"
    :reference
     "* H:Is this going to be a stand-up fight, sir? Is it going to be another bug hunt? G:A Xenomorph may be involved... H:It's a bug hunt. - Hudson and Gorman, Aliens")
@@ -732,6 +737,14 @@
    :name "Cooping"
    :summary "* Make Sealable Barrel"
    :titles "Cooper")
+  (base/ability
+   :name "Copy Host"
+   :titles "DNA Reflex, Horizontal Gene Transfer"
+   :reference
+    "* Alien"
+   :summary
+    "Take on characteristics of the host
+     * [Power]: [Reproduction]")
   (base/ability
    :name "Corrupted"
    :summary
@@ -1108,6 +1121,11 @@
    :name "Duress"
    :summary
     "* [Skill]: [Intimidation] vs [Will]")
+  (base/ability
+   :name "Egg Laying"
+   :summary
+    "Can lay eggs
+     * [Power]: [Reproduction]")
   (base/ability
    :name "Ego Whip"
    :summary
@@ -1864,6 +1882,11 @@
      * Grow Trees"
    :titles "Groundskeeper, Landscaper, Lawnboy")
   (base/ability
+   :name "Large Litter"
+   :summary
+    "Many offspring from each pregnancy
+     * [Power]: [Reproduction]")
+  (base/ability
    :name "Leatherworking"
    :summary
     "* Fashion Leather Goods
@@ -2177,6 +2200,14 @@
   (base/ability
    :name "Paralyzing Sting")
   (base/ability
+   :name "Parasitic Offspring"
+   :reference
+    "* Parasitic Wasps
+     * Alien"
+   :summary
+    "Offspring are injected into a host
+     * [Power]: [Reproduction]")
+  (base/ability
    :name "Parry"
    :summary
     "* The fighter uses his weapon to block an opponent's attack.
@@ -2453,6 +2484,16 @@
      * [Arc]: [Arc:Front]
      * [Range]: [Body] + [Skill]
      * [Damage]: [Body] + Item [Body]")
+  (base/ability
+   :name "Rapid Gestation"
+   :summary
+    "Short period between fertilization and birth
+     * [Power]: [Reproduction]")
+  (base/ability
+   :name "Rapid Maturity"
+   :summary
+    "Offspring mature fully very quickly
+     * [Power]: [Reproduction]")
   (base/ability
    :name "Rapid Metabolism"
    :summary
@@ -3140,6 +3181,12 @@
     "* Stuff and Mount creatures for display
      * [Skill]: [Tradeskill]")
   (base/ability
+   :name "Telescopic Sight"
+   :summary
+    "* Improved Long Range accuracy
+     * [Skill]: [Firearms]
+     * IF you haven't moved for 1 Round THEN treat Long Range as Medium Range")
+  (base/ability
    :name "Tendrils"
    :summary
     "* [Power]: [Beastial]")
@@ -3256,6 +3303,12 @@
   (base/ability
    :name "Turbo Booster"
    :titles "Boost, Nitro, Turbo, Turbo Charger")
+  (base/ability
+   :name "Turret"
+   :summary
+    "* Turret mounted weapons may turn their turret toward any Arc and fire from the side the turret is facing.
+     * Track the Turret facing. Unit may spend Turn:1 to change the turret facing by 1 side.
+     * Armor - Turrets are considered an additional location and must be Armored separately.")
   (base/ability
    :name "Turret Mount"
    :summary "* A special mount to add a turreted weapon on the back of the armor.")

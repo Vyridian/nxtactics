@@ -29,7 +29,7 @@
  (base/damage
   :name "Constrict: Head"
   :ranksuit base/ranksuit-ac
-  :image "images/card-burden-head.svg"
+  :image "images/damage-burden-ac.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hair Pulled. Slow:1
@@ -41,7 +41,7 @@
  (base/damage
   :name "Restrain: Head"
   :ranksuit base/ranksuit-ad
-  :image "images/card-burden-head.svg"
+  :image "images/damage-burden-ad.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hair Ensnared. Slow:1
@@ -53,7 +53,7 @@
  (base/damage
   :name "Hold: Head"
   :ranksuit base/ranksuit-ah
-  :image "images/card-burden-head.svg"
+  :image "images/damage-burden-ah.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hair Held. Remove:Any Hit. Move Target:1
@@ -65,7 +65,7 @@
  (base/damage
   :name "Disable: Head"
   :ranksuit base/ranksuit-as
-  :image "images/card-burden-head.svg"
+  :image "images/damage-burden-as.svg"
   :summary
    "Minor: Hair Caught. Remove:Any Hit. Slow:1
     Moderate: Head Lock. Remove:1 Damage. Stun:1 Slow:1
@@ -76,7 +76,7 @@
  (base/damage
   :name "Constrict: Shoulders"
   :ranksuit base/ranksuit-kc
-  :image "images/card-burden-shoulders.svg"
+  :image "images/damage-burden-kc.svg"
   :summary
    "Minor: Shoulder Ensnared. Slow:1
     Moderate: Shoulder Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -87,7 +87,7 @@
  (base/damage
   :name "Restrain: Shoulders"
   :ranksuit base/ranksuit-kd
-  :image "images/card-burden-shoulders.svg"
+  :image "images/damage-burden-kd.svg"
   :summary
    "Minor: Shoulder Ensnared. Slow:1
     Moderate: Shoulders Ensnared. Slow:2 Remove:1 Actions
@@ -98,7 +98,7 @@
  (base/damage
   :name "Hold: Shoulders"
   :ranksuit base/ranksuit-kh
-  :image "images/card-burden-shoulders.svg"
+  :image "images/damage-burden-kh.svg"
   :summary
    "Minor: Shoulder Held. Pull:1. Remove:Any Hit
     Moderate: Shoulder Held. Pull:1. Remove:1 Damage
@@ -109,7 +109,7 @@
  (base/damage
   :name "Disable: Shoulders"
   :ranksuit base/ranksuit-ks
-  :image "images/card-burden-shoulders.svg"
+  :image "images/damage-burden-ks.svg"
   :summary
    "Minor: Shoulder caught. Slow:1. Remove:Any Hit
     Moderate: Shoulder lock. Slow:1 Stun:1. Remove:1 Damage
@@ -120,7 +120,7 @@
  (base/damage
   :name "Constrict: Chest"
   :ranksuit base/ranksuit-qc
-  :image "images/card-burden-chest.svg"
+  :image "images/damage-burden-qc.svg"
   :summary
    "Minor: Ribs Ensnared. Slow:1
     Moderate: Ribs Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -131,7 +131,7 @@
  (base/damage
   :name "Restrain: Chest"
   :ranksuit base/ranksuit-qd
-  :image "images/card-burden-chest.svg"
+  :image "images/damage-burden-qd.svg"
   :summary
    "Minor: Chest Ensnared.
     Moderate: Chest Ensnared. Slow:1 Remove:1 Actions
@@ -142,7 +142,7 @@
  (base/damage
   :name "Hold: Chest"
   :ranksuit base/ranksuit-qh
-  :image "images/card-burden-chest.svg"
+  :image "images/damage-burden-qh.svg"
   :summary
    "Minor: Chest Held. Pull:1. Remove:Any Hit
     Moderate: Chest Held. Pull:1. Slow:1 Remove:Any Hit
@@ -153,7 +153,7 @@
  (base/damage
   :name "Disable: Chest"
   :ranksuit base/ranksuit-qs
-  :image "images/card-burden-chest.svg"
+  :image "images/damage-burden-qs.svg"
   :summary
    "Minor: Chest Held. Pull:1. Remove:Any Hit
     Moderate: Chest Held. Pull:1. Slow:1 Remove:Any Hit
@@ -164,7 +164,7 @@
  (base/damage
   :name "Constrict: Abdomen"
   :ranksuit base/ranksuit-jc
-  :image "images/card-burden-abdomen.svg"
+  :image "images/damage-burden-jc.svg"
   :summary
    "Minor: Belly Ensnared. Slow:1
     Moderate: Belly Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -175,7 +175,7 @@
  (base/damage
   :name "Restrain: Abdomen"
   :ranksuit base/ranksuit-jd
-  :image "images/card-burden-abdomen.svg"
+  :image "images/damage-burden-js.svg"
   :summary
    "Minor: Abdomen Ensnared.
     Moderate: Abdomen Ensnared. Slow:1 Remove:1 Actions
@@ -186,7 +186,7 @@
  (base/damage
   :name "Hold: Abdomen"
   :ranksuit base/ranksuit-jc
-  :image "images/card-burden-abdomen.svg"
+  :image "images/damage-burden-jc.svg"
   :summary
    "Minor: Abdomen Held. Pull:1. Remove:Any Hit
     Moderate: Abdomen Held. Pull:1. Remove:1 Damage
@@ -197,7 +197,7 @@
  (base/damage
   :name "Disable: Abdomen"
   :ranksuit base/ranksuit-js
-  :image "images/card-burden-abdomen.svg"
+  :image "images/damage-burden-js.svg"
   :summary
    "Minor: Abdomen Held. Pull:1. Remove:Any Hit
     Moderate: Abdomen Held. Pull:1. Remove:1 Damage
@@ -208,7 +208,7 @@
  (base/damage
   :name "Constrict: Vitals"
   :ranksuit base/ranksuit-tc
-  :image "images/card-burden-vitals.svg"
+  :image "images/damage-burden-tc.svg"
   :summary
    "Minor: Hips Ensnared. Slow:1
     Moderate: Hips Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -219,7 +219,7 @@
  (base/damage
   :name "Restrain: Vitals"
   :ranksuit base/ranksuit-td
-  :image "images/card-burden-vitals.svg"
+  :image "images/damage-burden-td.svg"
   :summary
    "Minor: Hips Ensnared.
     Moderate: Hips Ensnared. Slow:1 Remove:1 Actions
@@ -230,7 +230,7 @@
  (base/damage
   :name "Hold: Vitals"
   :ranksuit base/ranksuit-th
-  :image "images/card-burden-vitals.svg"
+  :image "images/damage-burden-th.svg"
   :summary
    "Minor: Hips Held. Pull:1. Remove:Any Hit
     Moderate: Hips Held. Pull:1. Remove:1 Damage
@@ -241,7 +241,7 @@
  (base/damage
   :name "Disable: Vitals"
   :ranksuit base/ranksuit-ts
-  :image "images/card-burden-vitals.svg"
+  :image "images/damage-burden-ts.svg"
   :summary
    "Minor: Hip caught. Slow:1. Remove:Any Hit
     Moderate: Hip lock. Slow:1 Stun:1. Remove:1 Damage
@@ -253,7 +253,7 @@
   :name "Constrict: Left Arm"
   :titles "Constrict: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9c
-  :image "images/card-burden-arm-left.svg"
+  :image "images/damage-burden-9c.svg"
   :summary
    "Minor: Arm Constricted. Slow:1 Every turn. Remove:Any Hit
     Moderate: Arm Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -265,7 +265,7 @@
   :name "Restrain: Left Arm"
   :titles "Restrain: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9d
-  :image "images/card-burden-arm-left.svg"
+  :image "images/damage-burden-9d.svg"
   :summary
    "Minor: Elbow Ensnared.
     Moderate: Elbow Bond. Slow:1 Remove:1 Actions
@@ -277,7 +277,7 @@
   :name "Hold: Left Arm"
   :titles "Hold: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9h
-  :image "images/card-burden-arm-left.svg"
+  :image "images/damage-burden-9h.svg"
   :summary
    "Minor: Arm Held. Pull:1. Remove:Any Hit
     Moderate: Arm Held. Pull:1. Remove:1 Damage
@@ -289,7 +289,7 @@
   :name "Disable: Left Arm"
   :titles "Disable: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9s
-  :image "images/card-burden-arm-left.svg"
+  :image "images/damage-burden-9s.svg"
   :summary
    "Minor: Bicep held. Slow:1. Remove:Any Hit
     Moderate: Elbow held. Slow:1 Stun:1. Remove:1 Damage
@@ -301,7 +301,7 @@
   :name "Constrict: Right Arm"
   :titles "Constrict: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8c
-  :image "images/card-burden-arm-right.svg"
+  :image "images/damage-burden-8c.svg"
   :summary
    "Minor: Arm Constricted. Slow:1 Every turn. Remove:Any Hit
     Moderate: Arm Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -313,7 +313,7 @@
   :name "Restrain: Right Arm"
   :titles "Restrain: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8d
-  :image "images/card-burden-arm-right.svg"
+  :image "images/damage-burden-8d.svg"
   :summary
    "Minor: Elbow Ensnared.
     Moderate: Elbow Bond. Slow:1 Remove:1 Actions
@@ -325,7 +325,7 @@
   :name "Hold: Right Arm"
   :titles "Hold: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8h
-  :image "images/card-burden-arm-right.svg"
+  :image "images/damage-burden-8h.svg"
   :summary
    "Minor: Arm Held. Pull:1. Remove:Any Hit
     Moderate: Arm Held. Pull:1. Remove:1 Damage
@@ -337,7 +337,7 @@
   :name "Disable: Right Arm"
   :titles "Disable: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8s
-  :image "images/card-burden-arm-right.svg"
+  :image "images/damage-burden-8s.svg"
   :summary
    "Minor: Bicep held. Slow:1. Remove:Any Hit
     Moderate: Elbow held. Slow:1 Stun:1. Remove:1 Damage
@@ -349,7 +349,7 @@
   :name "Constrict: Left Hand"
   :titles "Constrict: Left Hand/Wrist"
   :ranksuit base/ranksuit-7c
-  :image "images/card-burden-hand-left.svg"
+  :image "images/damage-burden-7c.svg"
   :summary
    "Minor: Fingers Constricted. Slow:1 Every turn. Remove:Any Hit
     Moderate: Hand Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -361,7 +361,7 @@
   :name "Restrain: Left Hand"
   :titles "Restrain: Left Hand/Wrist"
   :ranksuit base/ranksuit-7d
-  :image "images/card-burden-hand-left.svg"
+  :image "images/damage-burden-7d.svg"
   :summary
    "Minor: Fingers Ensnared. Slow:1 Remove:1 Action
     Moderate: Hand Ensnared. Slow:2 Remove:2 Actions
@@ -373,7 +373,7 @@
   :name "Hold: Left Hand"
   :titles "Hold: Left Hand/Wrist"
   :ranksuit base/ranksuit-7h
-  :image "images/card-burden-hand-left.svg"
+  :image "images/damage-burden-7h.svg"
   :summary
    "Minor: Fingers Held. Pull:1. Remove:Any Hit
     Moderate: Hand Held. Pull:1. Remove:1 Damage
@@ -385,7 +385,7 @@
   :name "Disable: Left Hand"
   :titles "Disable: Left Hand/Wrist"
   :ranksuit base/ranksuit-7s
-  :image "images/card-burden-hand-left.svg"
+  :image "images/damage-burden-7s.svg"
   :summary
    "Minor: Hand lock. Slow:1. Remove:Any Hit
     Moderate: Wrist lock. Slow:1 Stun:1. Remove:1 Damage
@@ -397,7 +397,7 @@
   :name "Constrict: Right Hand"
   :titles "Constrict: Right Hand/Wrist"
   :ranksuit base/ranksuit-6c
-  :image "images/card-burden-hand-right.svg"
+  :image "images/damage-burden-6c.svg"
   :summary
    "Minor: Fingers Constricted. Slow:1 Every turn. Remove:Any Hit
     Moderate: Hand Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -409,7 +409,7 @@
   :name "Restrain: Right Hand"
   :titles "Restrain: Right Hand/Wrist"
   :ranksuit base/ranksuit-6d
-  :image "images/card-burden-hand-right.svg"
+  :image "images/damage-burden-6d.svg"
   :summary
    "Minor: Fingers Ensnared. Slow:1 Remove:1 Action
     Moderate: Hand Ensnared. Slow:2 Remove:2 Actions
@@ -421,7 +421,7 @@
   :name "Hold: Right Hand"
   :titles "Hold: Right Hand/Wrist"
   :ranksuit base/ranksuit-6h
-  :image "images/card-burden-hand-right.svg"
+  :image "images/damage-burden-6h.svg"
   :summary
    "Minor: Fingers Held. Pull:1. Remove:Any Hit
     Moderate: Hand Held. Pull:1. Remove:1 Damage
@@ -433,7 +433,7 @@
   :name "Disable: Right Hand"
   :titles "Disable: Right Hand/Wrist"
   :ranksuit base/ranksuit-6s
-  :image "images/card-burden-hand-right.svg"
+  :image "images/damage-burden-6s.svg"
   :summary
    "Minor: Hand lock. Slow:1. Remove:Any Hit
     Moderate: Wrist lock. Slow:1 Stun:1. Remove:1 Damage
@@ -445,7 +445,7 @@
   :name "Constrict: Left Leg"
   :titles "Constrict: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5c
-  :image "images/card-burden-leg-left.svg"
+  :image "images/damage-burden-5c.svg"
   :summary
    "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit
     Moderate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -457,7 +457,7 @@
   :name "Restrain: Left Leg"
   :titles "Restrain: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5d
-  :image "images/card-burden-leg-left.svg"
+  :image "images/damage-burden-5d.svg"
   :summary
    "Minor: Leg Ensnared. Slow:1 Remove:1 Action
     Moderate: Leg Ensnared. Slow:2 Remove:2 Actions
@@ -469,7 +469,7 @@
   :name "Hold: Left Leg"
   :titles "Hold: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5h
-  :image "images/card-burden-leg-left.svg"
+  :image "images/damage-burden-5h.svg"
   :summary
    "Minor: Leg Held. Pull:1. Remove:Any Hit
     Moderate: Leg Held. Pull:1. Remove:1 Damage
@@ -481,7 +481,7 @@
   :name "Disable: Left Leg"
   :titles "Disable: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5s
-  :image "images/card-burden-leg-left.svg"
+  :image "images/damage-burden-5s.svg"
   :summary
    "Minor: Thigh held. Slow:1. Remove:Any Hit
     Moderate: Knee held. Slow:1 Stun:1. Remove:1 Damage
@@ -493,7 +493,7 @@
   :name "Constrict: Right Leg"
   :titles "Constrict: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4c
-  :image "images/card-burden-leg-right.svg"
+  :image "images/damage-burden-4c.svg"
   :summary
    "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit
     Moderate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -505,7 +505,7 @@
   :name "Restrain: Right Leg"
   :titles "Restrain: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4d
-  :image "images/card-burden-leg-right.svg"
+  :image "images/damage-burden-4d.svg"
   :summary
    "Minor: Leg Ensnared. Slow:1 Remove:1 Action
     Moderate: Leg Ensnared. Slow:2 Remove:2 Actions
@@ -517,7 +517,7 @@
   :name "Hold: Right Leg"
   :titles "Hold: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4h
-  :image "images/card-burden-leg-right.svg"
+  :image "images/damage-burden-4h.svg"
   :summary
    "Minor: Leg Held. Pull:1. Remove:Any Hit
     Moderate: Leg Held. Pull:1. Remove:1 Damage
@@ -529,7 +529,7 @@
   :name "Disable: Right Leg"
   :titles "Disable: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4s
-  :image "images/card-burden-leg-right.svg"
+  :image "images/damage-burden-4s.svg"
   :summary
    "Minor: Thigh held. Slow:1. Remove:Any Hit
     Moderate: Knee held. Slow:1 Stun:1. Remove:1 Damage
@@ -540,8 +540,8 @@
  (base/damage
   :name "Constrict: Left Foot"
   :titles "Constrict: Left Lower Leg/Shin/Ankle/Foot"
-  :ranksuit base/ranksuit-2c
-  :image "images/card-burden-foot-left.svg"
+  :ranksuit base/ranksuit-3c
+  :image "images/damage-burden-3c.svg"
   :summary
    "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit
     Moderate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -552,8 +552,8 @@
  (base/damage
   :name "Restrain: Left Foot"
   :titles "Restrain: Left Lower Leg/Shin/Ankle/Foot"
-  :ranksuit base/ranksuit-2d
-  :image "images/card-burden-foot-left.svg"
+  :ranksuit base/ranksuit-3d
+  :image "images/damage-burden-3d.svg"
   :summary
    "Minor: Toes Ensnared. Slow:1 Remove:1 Action
     Moderate: Foot Ensnared. Slow:2 Remove:2 Actions
@@ -564,8 +564,8 @@
  (base/damage
   :name "Hold: Left Foot"
   :titles "Hold: Left Lower Leg/Shin/Ankle/Foot"
-  :ranksuit base/ranksuit-2h
-  :image "images/card-burden-foot-left.svg"
+  :ranksuit base/ranksuit-3h
+  :image "images/damage-burden-3h.svg"
   :summary
    "Minor: Toes Held. Pull:1. Remove:Any Hit
     Moderate: Foot Held. Pull:1. Remove:1 Damage
@@ -576,8 +576,8 @@
  (base/damage
   :name "Disable: Left Foot"
   :titles "Disable: Left Lower Leg/Shin/Ankle/Foot"
-  :ranksuit base/ranksuit-2s
-  :image "images/card-burden-foot-left.svg"
+  :ranksuit base/ranksuit-3s
+  :image "images/damage-burden-3s.svg"
   :summary
    "Minor: Foot lock. Slow:1. Remove:Any Hit
     Moderate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage
@@ -589,7 +589,7 @@
   :name "Constrict: Right Foot"
   :titles "Constrict: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2c
-  :image "images/card-burden-foot-right.svg"
+  :image "images/damage-burden-2c.svg"
   :summary
    "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit
     Moderate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage
@@ -601,7 +601,7 @@
   :name "Restrain: Right Foot"
   :titles "Restrain: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2d
-  :image "images/card-burden-foot-right.svg"
+  :image "images/damage-burden-2d.svg"
   :summary
    "Minor: Toes Ensnared. Slow:1 Remove:1 Action
     Moderate: Foot Ensnared. Slow:2 Remove:2 Actions
@@ -613,7 +613,7 @@
   :name "Hold: Right Foot"
   :titles "Hold: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2h
-  :image "images/card-burden-foot-right.svg"
+  :image "images/damage-burden-2h.svg"
   :summary
    "Minor: Toes Held. Pull:1. Remove:Any Hit
     Moderate: Foot Held. Pull:1. Remove:1 Damage
@@ -625,7 +625,7 @@
   :name "Disable: Right Foot"
   :titles "Disable: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2s
-  :image "images/card-burden-foot-right.svg"
+  :image "images/damage-burden-2s.svg"
   :summary
    "Minor: Foot lock. Slow:1. Remove:Any Hit
     Moderate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage

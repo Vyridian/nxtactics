@@ -1099,21 +1099,10 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Targeting Laser")
      "Telescopic Sight"
-      (base/ability
-       :name "Telescopic Sight"
-       :summary
-        "Reduces penalties for Medium Range to Short Range and Long Range to Medium Range")
+      (base/ability<-tactics-key tactics "Telescopic Sight")
      "Tracking Rounds"
       (base/ability
-       :name "Tracking Rounds")
-     "Turret"
-      (base/ability
-       :name "Turret"
-       :image "Tokens/Arrow.png"
-       :summary
-        "* Turret mounted weapons may turn their turret toward any direction and fire from the side the turret is facing.
-         [Cost]:+1
-         * Turrets are normally assumed to be facing forward.  At the beginning of its [Action], a unit may change the turret facing by 1 side (Use a [Vector] Token) indicate where the Turret is pointing."))
+       :name "Tracking Rounds"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics

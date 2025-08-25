@@ -552,9 +552,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-2c.svg",
       ":summary",
-      "Minor: Frustrated by an arbitrary world.\nMajor: Random outbursts. Your temper seems to surge at random times.\nCritical: Lash out. Choose enemy targets at random. [Beast]:2\nExtreme: Blind Rage. Choose targets completely at random. [Beast Unleashed]"
+      "Minor: Frustrated by an arbitrary world.\nMajor: Random outbursts. Your temper seems to surge at random times.\nCritical: Lash out. Choose enemy targets at random. Beast:2\nExtreme: Blind Rage. Choose targets completely at random. Beast:Unleashed"
     ))
 
     // (const trauma-2d)
@@ -565,7 +565,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2d,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-2d.svg",
       ":summary",
       "Minor: Pessimist. Glass is half empty.\nMajor: Nothing good ever happens to you.\nCritical: Defeatist. Everything you try fails.\nExtreme: Absolute Defeatist. You've lost the game of life. Surrender to darkness. [Shadow Trimumpant]"
     ))
@@ -578,7 +578,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2h,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-2h.svg",
       ":summary",
       "Minor: Frugal. A penny saved is a penny earned.\nMajor: Stingy. You only buy what is absolutely necessary.\nCritical: Miserly. Hoard your treasure. Mine. Mine. Mine.\nExtreme: Heartless Miser. Nothing will separate you from a penny. [Shadow Triumphant]"
     ))
@@ -591,7 +591,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-2s.svg",
       ":summary",
       "Minor: Superstitious. Some things are lucky or unlucky.\nMajor: Can only do lucky things.\nCritical: Cannot act with a fortune telling. Can only do lucky things, and almost everything is unlucky.\nExtreme: Cursed. Everything is unlucky. Step on a crack. Can't perform actions."
     ))
@@ -604,11 +604,11 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-3c.svg",
       ":reference",
       "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra",
       ":summary",
-      "Minor: Graphetti Artist. Make your mark on the world.\nMajor: Vandal. Take out your anger by defacing and damaging objects. [Beast]:1\nCritical: Arsonist. Kill them with fire. [Beast]:2\nExtreme: Destroyer. The world is too far gone. Burn it all down. [Beast Unleashed]"
+      "Minor: Graphetti Artist. Make your mark on the world.\nMajor: Vandal. Take out your anger by defacing and damaging objects. Beast:1\nCritical: Arsonist. Kill them with fire. Beast:2\nExtreme: Destroyer. The world is too far gone. Burn it all down. Beast:Unleashed"
     ))
 
     // (const trauma-3d)
@@ -619,7 +619,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3d,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-3d.svg",
       ":summary",
       "Minor: Hollow. The spark is missing from the things you do.\nMajor: Apathy. Your efforts seem pointless. You feel numb.\nCritical: Emptiness. You only do things when others push you.\nExtreme: Complete apathy about everything. Do nothing. [Shadow Triumphant]"
     ))
@@ -632,7 +632,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3h,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-3h.svg",
       ":summary",
       "Minor: Collector. Keep mementoes of your life.\nMajor: Pack Rat. You have a hard time leaving anything behind.\nCritical: Hoarder. Keep everything.\nExtreme: Collect everything but never use them. [Shadow Triumphant]"
     ))
@@ -645,7 +645,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3s,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-3s.svg",
       ":summary",
       "Minor: Terrified of heights.\nMajor: Hyterical near fire.\nCritical: Hyterical in enclosed spaces.\nExtreme: Hyterical around animals and creatures."
     ))
@@ -658,7 +658,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-4c.svg",
       ":summary",
       "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.\nMajor: Reactionary. Cannot tolerate anything new or modern.\nCritical: Luddite. Destroy anything modern or new.\nExtreme: Violent Primitivist. Destroy anything that is more advanced than would be on a farm."
     ))
@@ -671,7 +671,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4d,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-4d.svg",
       ":summary",
       "Minor: Remorseful. Concerned about actions previously taken.\nMajor: Anguished. Extremely guilty about actions previously taken.\nCritical: Devastated. Cannot tolerate their actions.\nExtreme: Repentant. Accept all the blame, make amends and end yourself to recapture some semblance of honor."
     ))
@@ -684,7 +684,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4h,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-4h.svg",
       ":summary",
       "Minor: Hyperactive. Axious when not active.\nMajor: Change for changes sake.\nCritical: Stream of consciousness. Needs to be 'All In' all the time.\nExtreme: Cannot focus on any topic. No downtime. Work yourself to death."
     ))
@@ -697,7 +697,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4s,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-4s.svg",
       ":summary",
       "Minor: Unnerved by new things or ideas.\nMajor: Afraid of new things or ideas. Can only follow others.\nCritical: Cannot try anything remotely new. Only highest level skills can be used.\nExtreme: Hysterical fear of change. Isolate yourself."
     ))
@@ -710,9 +710,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-5c.svg",
       ":summary",
-      "Minor: Possessive. Drawn to abusive relationships.\nMajor: Controlling. You are a manipulator.\nCritical: Stalker. You are a sexual abuser.\nExtreme: Jealous Rage. Kill your rivals. If you can't have them. No one can. [Beast Unleashed]"
+      "Minor: Possessive. Drawn to abusive relationships.\nMajor: Controlling. You are a manipulator.\nCritical: Stalker. You are a sexual abuser.\nExtreme: Jealous Rage. Kill your rivals. If you can't have them. No one can. Beast:Unleashed"
     ))
 
     // (const trauma-5d)
@@ -723,7 +723,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5d,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-5d.svg",
       ":summary",
       "Minor: Insecure. Negative of their own attractiveness.\nMajor: Embarassed.\nCritical: Humiliated.\nExtreme: You have never been and will never be loved. Surrender to darkness. [Shadow Triumphant]"
     ))
@@ -736,7 +736,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5h,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-5h.svg",
       ":summary",
       "Minor: Infatuated.\nMajor: Clingy. Obsessed with finding and keeping a mate.\nCritical: Exhausting. You need almost constant attention.\nExtreme: Desperate. Bottomless need for love and attention. Life is over if you are rejected."
     ))
@@ -749,7 +749,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5s,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-5s.svg",
       ":summary",
       "Minor: Prudish about affection.\nMajor: Become agitated, shaky and incoherent when facing affection.\nCritical: Panicked distress in mixed gender situations or any suggestion of affection.\nExtreme: Terrified of even the possibility of mixed gender situations. Barricade yourself in."
     ))
@@ -762,9 +762,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-6c.svg",
       ":summary",
-      "Minor: Resentful. Talks about others with sweeping sterotypes.\nMajor: Hateful. Uses overtly hateful language and is uncomfortable working in certain groups.\nCritical: Terrorist. Hates other groups and actively seeks to undermine or harm them.\nExtreme: Genocidal. Actively works to wipe out certain groups. [Beast Unleashed]"
+      "Minor: Resentful. Talks about others with sweeping sterotypes.\nMajor: Hateful. Uses overtly hateful language and is uncomfortable working in certain groups.\nCritical: Terrorist. Hates other groups and actively seeks to undermine or harm them.\nExtreme: Genocidal. Actively works to wipe out certain groups. Beast:Unleashed"
     ))
 
     // (const trauma-6d)
@@ -775,7 +775,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6d,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-6d.svg",
       ":summary",
       "Minor: Lonely.\nMajor: Alienated.\nCritical: Isolated.\nExtreme: Hermit. Positive that everyone is evil. Leave. [Shadow Triumphant]"
     ))
@@ -788,7 +788,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6h,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-6h.svg",
       ":summary",
       "Minor: Seek and study dangerous people.\nMajor: You want to challenge dangerous people.\nCritical: Rush into danger with no concern for safety.\nExtreme: Obsessively seeks and engages the most danger opponents possible."
     ))
@@ -801,7 +801,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-6s.svg",
       ":summary",
       "Minor: Distrust. Suspicious of 'others' around them.\nMajor: Avoidant. Become agitated, shaky and incoherent when facing different 'races'.\nCritical: Xenophobia. Terrified of strangers. Cannot take actions around non-companions.\nExtreme: Fight or Flight around other groups or 'races'."
     ))
@@ -814,9 +814,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-7c.svg",
       ":summary",
-      "Minor: Vindictive. Aggressively protective of companions.\nMajor: Hunter. Take merciless revenge on any wrongs against companions.\nCritical: Punisher. There are more who deserve punishment. Relentlessly hunt them down.\nExtreme: Angel of Death. Remove all their filth from the world. Endless bloodshed. [Beast Unleashed]"
+      "Minor: Vindictive. Aggressively protective of companions.\nMajor: Hunter. Take merciless revenge on any wrongs against companions.\nCritical: Punisher. There are more who deserve punishment. Relentlessly hunt them down.\nExtreme: Angel of Death. Remove all their filth from the world. Endless bloodshed. Beast:Unleashed"
     ))
 
     // (const trauma-7d)
@@ -827,7 +827,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7d,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-7d.svg",
       ":summary",
       "Minor: Withdrawn. Eroded bonds with companions.\nMajor: Rejected.\nCritical: Abandoned.\nExtreme: Betrayed."
     ))
@@ -840,7 +840,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-7h.svg",
       ":summary",
       "Minor: Unsure. Get approval before making decisions.\nMajor: Joiner. Always be in a group.\nCritical: Dependent. Can't do anything without a group.\nExtreme: Spend all your time and fortune maintaining a growing posse of 'friends'"
     ))
@@ -853,7 +853,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7s,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-7s.svg",
       ":summary",
       "Minor: Anxious about companions' hidden meaning and discussions.\nMajor: Fear of being alone. Cannot take actions without line of sight to a companion.\nCritical: Terrified of being alone. Cannot take actions without companion in unobscured line of sight. Cannot take actions without adjacent companion.\nExtreme: Terrified of abandonment. Cannot take actions without adjacent companion."
     ))
@@ -866,9 +866,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-8c.svg",
       ":summary",
-      "Minor: Jealous. Frustrated by showoffs.\nMajor: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. [Beast]:1\nCritical: Smear Campaign. Dedicated to embarassing and undermining the elite.\nExtreme: Punish the elite for their hubris. Kill them all. [Beast Unleashed]"
+      "Minor: Jealous. Frustrated by showoffs.\nMajor: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. Beast:1\nCritical: Smear Campaign. Dedicated to embarassing and undermining the elite.\nExtreme: Punish the elite for their hubris. Kill them all. Beast:Unleashed"
     ))
 
     // (const trauma-8d)
@@ -879,7 +879,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8d,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-8d.svg",
       ":summary",
       "Minor: Cowed by high status.\nMajor:  Follows those in high status.\nCritical: Gives up when confronted by those with high status.\nExtreme: Servile. You are unworthy and unclean. You don't matter. [Shadow Triumphant]"
     ))
@@ -892,7 +892,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8h,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-8h.svg",
       ":summary",
       "Minor: Poser. Crave status and try to show your fashion.\nMajor: Attention Seeker. Regularly attempt to be accepted by the in crowd.\nCritical: Suck Up. Nothing else matters but status. Show off. Beg. Do something. Anything. Extreme: Sychophant. Spend all your time and fortune weaseling into elite social circles."
     ))
@@ -905,7 +905,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8s,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-8s.svg",
       ":summary",
       "Minor: Performance Anxiety. Can't be the focus of attention.\nMajor: Terrified of judgement. Can only take actions with trusted companions.\nCritical: Terrified of public failure. Cannot take actions with any witnesses. \nExtreme: Terrified of failure. Cannot take actions."
     ))
@@ -918,9 +918,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-9c.svg",
       ":summary",
-      "Minor: Skeptic. Completely apathetic and dismissive of religious figures or icons.\nMajor: Sacreligeous. Has a tendency toward sacrilege and blasphemy.\nCritical: Violent secularist. Blame faith for everything. Unable to work with those who with strong beliefs.\nExtreme: Jihadist. Holy War. Mercilessly slay all unbelievers. Your own safety doesn't matter. [Beast Unleashed]"
+      "Minor: Skeptic. Completely apathetic and dismissive of religious figures or icons.\nMajor: Sacreligeous. Has a tendency toward sacrilege and blasphemy.\nCritical: Violent secularist. Blame faith for everything. Unable to work with those who with strong beliefs.\nExtreme: Jihadist. Holy War. Mercilessly slay all unbelievers. Your own safety doesn't matter. Beast:Unleashed"
     ))
 
     // (const trauma-9d)
@@ -931,7 +931,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9d,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-9d.svg",
       ":summary",
       "Minor: Doubtful. Questions own beliefs.\nMajor: Broken Faith. Part of your beliefs unravel.\nCritical: Shattered Faith. Your beliefs lie in ruins around you. What is the point of everything?\nExtreme: Converted. Join the other side. [Shadow Triumphant]"
     ))
@@ -944,7 +944,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9h,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-9h.svg",
       ":summary",
       "Minor: Gullible. Crave something to believe in.\nMajor: Believer. Become very religious.\nCritical: Devout. Believe everything your religion says.\nExtreme: Acolyte. Slavishly follow the leaders of your religion."
     ))
@@ -957,7 +957,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9s,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-9s.svg",
       ":summary",
       "Minor: Become agitated, shaky and incoherent when facing any religious figures or icons.\nMajor: Theophobia. Irrational fear of gods and religion.\nCritical: Repentent. Cannot face religious opposition.\nExtreme: Persecuted. Delirious with fear of divine retribution."
     ))
@@ -974,7 +974,7 @@ export default class nx_tactics_decks_trauma {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Frustrated by unfairness of death. Stress:1\nMajor: Give meaning by choosing who dies. Stress:1. Beast:1\nCritical: Death triggers uncontrolled rage. Stress:2 Beast:2\nExtreme: Unstoppable murderous rage. Beast Unleashed"
+      "Minor: Frustrated by unfairness of death. Stress:1\nMajor: Give meaning by choosing who dies. Stress:1. Beast:1\nCritical: Death triggers uncontrolled rage. Stress:2 Beast:2\nExtreme: Unstoppable murderous rage. Beast:Unleashed"
     ))
 
     // (const trauma-ad)
@@ -985,11 +985,11 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":image",
-      "images/card-trauma-ad.svg",
+      "images/damage-trauma-ad.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Grieving. Talks about death about death. Stress:1\nMajor: Fatalistic. Take death Abilities. Stress:1. Shadow:1\nCritical: Tormented. Seeks death. Stress:2 Shadow:2\nExtreme: Suicidal. Death is inevitable. Shadow Triumphant"
+      "Minor: Grieving. Focused on death. Stress:1\nMajor: Fatalistic. Take death Abilities. Stress:1. Shadow:1\nCritical: Tormented. Seeks death. Stress:2 Shadow:2\nExtreme: Suicidal. Death is inevitable. Shadow:Triumphant"
     ))
 
     // (const trauma-ah)
@@ -1000,9 +1000,11 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":image",
-      "images/card-trauma-ah.svg",
+      "images/damage-trauma-ah.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Macabre. Study wounds and death. Stress:1\nMajor: Necrophile. Take Death Abilities. Stress:1 Shadow:1\nCritical: Death Cult. Focus on necromancy. Stress:2 Shadow:2\nExtreme: Suicidal. Try to cross over. Shadow Triumphant"
+      "Minor: Macabre. Study wounds and death. Stress:1\nMajor: Necrophile. Take Death Abilities. Stress:1 Shadow:1\nCritical: Death Cult. Focus on necromancy. Stress:2 Shadow:2\nExtreme: Suicidal. Try to cross over. Shadow:Triumphant"
     ))
 
     // (const trauma-as)
@@ -1013,9 +1015,11 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":image",
-      "images/card-trauma-as.svg",
+      "images/damage-trauma-as.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Anxiety. Agitated around death. Stress:1\nMajor: Death is coming. Run. Stress:2 Withdraw:2\nCritical: Petrified. Collapse in fear of death. Stress:2 Shadow:2\nExtreme: Die of Fright. Dying. Beast Unleashed",
+      "Minor: Anxiety. Agitated around death. Stress:1\nMajor: Death is coming. Run. Stress:2 Withdraw:2\nCritical: Petrified. Collapse in fear of death. Stress:2 Shadow:2\nExtreme: Die of Fright. Dying. Beast:Unleashed",
       ":reference",
       "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over. - Doctor Who, Heaven Sent"
     ))
@@ -1028,9 +1032,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-jc.svg",
       ":summary",
-      "Minor: Viscious. Revel in the kill.\nMajor: Bloodthirsty. Find a way to keep the kills coming.\nCritical: Butcher. [Beast]:1 Cleave a bloody path wherever you go. [Beast]:2\nExtreme: Animalistic. Kill indiscriminately. [Beast Unleased]"
+      "Minor: Viscious. Revel in the kill.\nMajor: Bloodthirsty. Find a way to keep the kills coming.\nCritical: Butcher. Beast:1 Cleave a bloody path wherever you go. Beast:2\nExtreme: Animalistic. Kill indiscriminately. Beast:Unleased"
     ))
 
     // (const trauma-jd)
@@ -1041,7 +1045,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jd,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-jd.svg",
       ":summary",
       "Minor: Mediator. Perhaps there is an alternative to violence.\nMajor: Non-violent. Cannot fight or work with combatants.\nCritical: Pacifist. Must avoid harming any living thing.\nExtreme: Collapses in combat. Immediately Surrenders."
     ))
@@ -1054,7 +1058,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jh,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-jh.svg",
       ":summary",
       "Minor: Tough. You have a suprisingly high pain threshold.\nMajor: Masochist. You enjoy pain. [Shadow]:1\nCritical: Self-destructive. You revel in extreme sensation of any kind.\nExtreme: Suffering. Explorers in the further regions of experience. Demons to some. Angels to others. [Shadow Triumphant]"
     ))
@@ -1067,7 +1071,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_js,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-js.svg",
       ":summary",
       "Minor: Watched. You feel you are being watched.\nMajor: Hunted. You are convinced that something is hunting you. Protect yourself above all else.\nCritical: Haunted. It may get through any defenses. Keep moving. Don't sleep.\nExtreme: Terrorized. Run until it catches you and then die of fright."
     ))
@@ -1080,9 +1084,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kc,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-kc.svg",
       ":summary",
-      "Minor: Rebel. You hate those who seek to control others.\nMajor: Revolutionary. You openly discuss revolution and seek to bring others to your cause. [Beast]:1\nCritical: Insurgent. You despise those in power and are dedicated to putting a blade to them. [Beast]:2\nExtreme: Antifa. Violently attack anyone who commands others. [Beast Unleashed]"
+      "Minor: Rebel. You hate those who seek to control others.\nMajor: Revolutionary. You openly discuss revolution and seek to bring others to your cause. [Beast]:1\nCritical: Insurgent. You despise those in power and are dedicated to putting a blade to them. [Beast]:2\nExtreme: Antifa. Violently attack anyone who commands others. Beast:Unleashed"
     ))
 
     // (const trauma-kd)
@@ -1093,7 +1097,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kd,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-kd.svg",
       ":summary",
       "Minor: Indifferent. Completely apathetic and dismissive of authority.\nMajor: Distressed. Unable to obey authority. [Shadow]:1\nCritical: Powerless. You can't beat them. Life is miserable. [Shadow]:2\nExtreme: Subservient. Give up all hope and just follow the most powerful. [Shadow]:4"
     ))
@@ -1106,7 +1110,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kh,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-kh.svg",
       ":summary",
       "Minor: Bossy. If only they just listened to you.\nMajor: Overbearing. You order everyone around and have no tolerance of opposition.\nCritical: Tyranical. Your need for power justifies any action.\nExtreme: Megalomaniac. You crave all power and will do anything and everything for the slightest advantage."
     ))
@@ -1119,7 +1123,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ks,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-ks.svg",
       ":summary",
       "Minor: Become agitated, shaky and incoherent when facing authority.\nMajor: Fawning. Obviously frightened of authority. Will obey easily.\nCritical: Cowering. Fearful of authority. Will run or obey.\nExtreme: Panicked. Terrified by Power of any kind."
     ))
@@ -1132,7 +1136,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-qc.svg",
       ":reference",
       "* And, oh, my love remind me, what was it that I said? I can't help but pull the earth around me to make my bed. And, oh, my love remind me, what was it that I did? Did I drink too much? Am I losing touch? Did I build a ship to wreck? - Florence and the Machine, Ship to Wreck",
       ":summary",
@@ -1147,7 +1151,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qd,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-qd.svg",
       ":summary",
       "Minor: Self Doubt. No confidence.\nMajor: Self Pity. Completely apathetic and dismissive of self.\nCritical: Unwilling to tend to self or defend self. Can't block.\nExtreme: Suicidal."
     ))
@@ -1160,7 +1164,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qh,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-qh.svg",
       ":summary",
       "Minor: Vainglory. You brag about own appearance, abilities, and status.\nMajor: Gloryhound. You seek praise at the expense of others.\nCritical: Nascissist. Only think in terms of yourself. Take offense at anyone who questions you. Acts alone and refuses all help.\nExtreme: Messiah Complex. Your every action changes the world. Solo all comers. None can interfere."
     ))
@@ -1173,7 +1177,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qs,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-qs.svg",
       ":summary",
       "Minor: Self-conscious. Success and praise makes you uneasy.\nMajor: Unworthy. You are a fraud.\nCritical: You can't trust your own actions.\nExtreme: You are a monster. You must be locked away."
     ))
@@ -1186,9 +1190,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
       ":image",
-      "images/card-trauma-anger.svg",
+      "images/damage-trauma-tc.svg",
       ":summary",
-      "Minor: Angry drunk. Obnoxious and pushy when intoxicated.\nMajor: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. [Beast]:1\nCritical: Violent Addict. You're violent when high and will take anything for a high. [Beast]:2\nExtreme:Wildly Violent Addict. Do anything it takes to stay high. [Beast Unleashed]"
+      "Minor: Angry drunk. Obnoxious and pushy when intoxicated.\nMajor: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. Beast:1\nCritical: Violent Addict. You're violent when high and will take anything for a high. Beast:2\nExtreme:Wildly Violent Addict. Do anything it takes to stay high. Beast:Unleashed"
     ))
 
     // (const trauma-td)
@@ -1199,7 +1203,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_td,
       ":image",
-      "images/card-trauma-despair.svg",
+      "images/damage-trauma-td.svg",
       ":summary",
       "Minor: Demoralized.\nMajor: Gloomy.\nCritical: Hopeless.\nExtreme: Absolute Nihilist. Nothing matters. Do nothing."
     ))
@@ -1212,7 +1216,7 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_th,
       ":image",
-      "images/card-trauma-desire.svg",
+      "images/damage-trauma-th.svg",
       ":summary",
       "Minor: Boozer. You seek alchohol and drugs to change your state of mind.\nMajor: Hooked. Always looking for a fix.\nCritical: Addict. You spend your time high or trying to get high.\nExtreme: Hopeless Addict. You will eventually starve or overdose."
     ))
@@ -1225,9 +1229,9 @@ export default class nx_tactics_decks_trauma {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ts,
       ":image",
-      "images/card-trauma-fear.svg",
+      "images/damage-trauma-ts.svg",
       ":summary",
-      "Minor: Paranoid. Unnerved about everything.\nMajor: Panicked about everyting. Full Move this turn in the safest direction.\nCritical: Terrified of Everything, must be restrained or will harm others or self.\nExtreme: Catatonic with bouts of screaming. [Beast Unleashed]."
+      "Minor: Paranoid. Unnerved about everything\nMajor: Panicked about everyting. Full Move this turn in the safest direction\nCritical: Terrified of Everything, must be restrained or will harm others or self\nExtreme: Catatonic with bouts of screaming. Beast:Unleashed"
     ))
 
     // (const trauma-wild-black)

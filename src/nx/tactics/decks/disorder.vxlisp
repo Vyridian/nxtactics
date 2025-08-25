@@ -32,7 +32,7 @@
  (base/damage
   :name "Loss: Awareness"
   :ranksuit base/ranksuit-ac
-  :image "images/damage-disorder-ad.svg"
+  :image "images/damage-disorder-ac.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Space out. Fatigue:1
@@ -44,51 +44,54 @@
  (base/damage
   :name "Delusion: Death"
   :ranksuit base/ranksuit-ad
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-ad.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: You hear the dead. Stun:1
-    Major: You see the dead. Some are scary. Some are nice. Stun:2
-    Critical: Dedicate yourself to the dead. Stun:4
-    Extreme: Cannot sense the living world. Incoherent. Catatonic. Stun:4"))
+   "Minor: Hear voices of the dead. Stun:1
+    Major: Visions of the dead. Stun:2
+    Critical: Dedicated to the dead. Stun:4
+    Extreme: Cannot sense the living. Stun:4. Incoherent"))
 
 (const disorder-ah : base/damage
  (base/damage
   :name "Compulsion: Death"
   :ranksuit base/ranksuit-ah
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-ah.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: You contemplate murder.
-    Major: You follow potential targets and plan how you could kill them.
-    Critical: Serial Killer. Methodically plan and execute your murders.
-    Extreme: Kill as often as possible in increasingly elaborate ways. [Shadow Triumphant]"))
+   "Minor: Contemplate killing. Stun:1
+    Major: Pursue targets and plan kills. Stun:1. Shadow:1
+    Critical: Serial Killer. Plan and execute kills. Stun:2 Shadow:2
+    Extreme: Increasingly elaborate kills. Stun:4. Shadow:Triumphant"))
 
 (const disorder-as : base/damage
  (base/damage
   :name "Nervous: Head"
   :ranksuit base/ranksuit-as
-  :image "images/card-disorder-head.svg"
+  :image "images/damage-disorder-as.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Headache. Stun:1
     Major: Intense Migraine. Stun:1 Slow:1
-    Critical:Stroke. Half of body paralyzed. [Hobbled] Stun:2 Slow:2
-    Extreme:Stroke. Body paralyzed. [Immobilized] Stun:4"))
+    Critical:Stroke. Paralyzed:Half. Speed:-2. Stun:2 Slow:2
+    Extreme:Stroke. Paralyzed:Body. Stun:4. Immobilized"))
 
 (const disorder-kc : base/damage
  (base/damage
   :name "Loss: Concentration"
   :ranksuit base/ranksuit-kc
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-kc.svg"
   :summary
-   "Minor: Perplexed. Hard to focus [Stun]:1
-    Major: Dazed. [Stun]:2
+   "Minor: Perplexed. Hard to focus Stun:1
+    Major: Dazed. Stun:2
     Critical: Disoriented. Cannot play Focus cards.
-    Extreme: Delirious. Absolute confusion. Cannot act without aid. All skills are 0."))
+    Extreme: Delirious. Cannot act without aid. All Skills:0"))
 
 (const disorder-kd : base/damage
  (base/damage
   :name "Delusion: Power"
   :ranksuit base/ranksuit-kd
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-kd.svg"
   :summary
    "Minor: Irritated by authority and fight for leadership
     Major: You are special. Destined for greatness since birth.
@@ -99,7 +102,7 @@
  (base/damage
   :name "Compulsion: Power"
   :ranksuit base/ranksuit-kh
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-kh.svg"
   :summary
    "Minor: You complain about the system.
     Major: Subversive. You plot to overthrow the system.
@@ -110,7 +113,7 @@
  (base/damage
   :name "Nervous: Shoulders"
   :ranksuit base/ranksuit-ks
-  :image "images/card-disorder-shoulders.svg"
+  :image "images/damage-disorder-ks.svg"
   :summary
    "Minor: Back Pain. Stun:1
     Major: Heavy breathing. Stun:1 Slow:1
@@ -121,7 +124,7 @@
  (base/damage
   :name "Loss: Personality"
   :ranksuit base/ranksuit-qc
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-qc.svg"
   :summary
    "Minor: Irritable and Emotional. Stress:1
     Major: Denial of problem. Aggressive and impatient. Can't handle stress. Stress:2
@@ -132,7 +135,7 @@
  (base/damage
   :name "Delusion: Self"
   :ranksuit base/ranksuit-qd
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-qd.svg"
   :summary
    "Minor: Acting. Change your mannerisms and speech patterns sometimes.
     Major: Personality Shift. Act like a completely different person sometimes.
@@ -143,7 +146,7 @@
  (base/damage
   :name "Compulsion: Self"
   :ranksuit base/ranksuit-qh
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-qh.svg"
   :summary
    "Minor: Compulsive picking at your body.
     Major: Excessive body decoration, tattoos, scarring.
@@ -154,7 +157,7 @@
  (base/damage
   :name "Nervous: Chest"
   :ranksuit base/ranksuit-qs
-  :image "images/card-disorder-chest.svg"
+  :image "images/damage-disorder-qs.svg"
   :summary
    "Minor: Chest Pain
     Major: Restricted movement
@@ -165,7 +168,7 @@
  (base/damage
   :name "Loss: Vitality"
   :ranksuit base/ranksuit-jc
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-jc.svg"
   :summary
    "Minor: Periodic Weakness
     Major: Hypotonia. Weakness.
@@ -176,7 +179,7 @@
  (base/damage
   :name "Delusion: Violence"
   :ranksuit base/ranksuit-jd
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-jd.svg"
   :summary
    "Minor: Daydream of violent acts.
     Major: Sudden visions of violence appear at random times.
@@ -187,7 +190,7 @@
  (base/damage
   :name "Compulsion: Violence"
   :ranksuit base/ranksuit-jh
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-jh.svg"
   :summary
    "Minor: Nasty. You enjoy little acts of cruelty.
     Major: Cruel. You go out of your way to be cruel and cause pain.
@@ -198,7 +201,7 @@
  (base/damage
   :name "Nervous: Abdomen"
   :ranksuit base/ranksuit-js
-  :image "images/card-disorder-abdomen.svg"
+  :image "images/damage-disorder-js.svg"
   :summary
    "Minor: Nausea and Stomach Pain
     Major: Vomiting
@@ -209,7 +212,7 @@
  (base/damage
   :name "Loss: Balance"
   :ranksuit base/ranksuit-tc
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-tc.svg"
   :summary
    "Minor: Occasional dizziness. [Stun]:1
     Major: Repeated nausea and vomiting.
@@ -220,7 +223,7 @@
  (base/damage
   :name "Delusion: Reality"
   :ranksuit base/ranksuit-td
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-td.svg"
   :summary
    "Minor: Daydreamer.
     Major: Mind Elsewhere. Regularly distracted by imaginary world.
@@ -231,7 +234,7 @@
  (base/damage
   :name "Compulsion: Reality"
   :ranksuit base/ranksuit-th
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-th.svg"
   :summary
    "Minor: You conceal yourself with white lies.
     Major: You lie for the smallest reasons. You are good at it so it might not catch up to you for a while.
@@ -242,7 +245,7 @@
  (base/damage
   :name "Nervous: Vitals"
   :ranksuit base/ranksuit-ts
-  :image "images/card-disorder-vitals.svg"
+  :image "images/damage-disorder-ts.svg"
   :summary
    "Minor: Groin Pain
     Major: Persistent Lower Back Pain. [Impaired]
@@ -253,7 +256,7 @@
  (base/damage
   :name "Loss: Memory"
   :ranksuit base/ranksuit-9c
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-9c.svg"
   :summary
    "Minor: Forgetful. Stress:1
     Major: Significant memory loss. Half of Skills at 0. Stun:1 Stress:1
@@ -264,7 +267,7 @@
  (base/damage
   :name "Delusion: Belief"
   :ranksuit base/ranksuit-9d
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-9d.svg"
   :summary
    "Minor: Belief that their actions have tremendous religious significance and must be done a specific way.
     Major: Overwhelming visions of religious symbolism, divine and infernal entities.
@@ -274,7 +277,7 @@
  (base/damage
   :name "Compulsion: Belief"
   :ranksuit base/ranksuit-9h
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-9h.svg"
   :summary
    "Minor: Evangelist. You constantly share your belief whether they like it or not.
     Major: Wild Theories. Your beliefs are increasingly strange and you try to convert others.
@@ -285,7 +288,7 @@
  (base/damage
   :name "Nervous: Left Arm"
   :ranksuit base/ranksuit-9s
-  :image "images/card-disorder-arm-left.svg"
+  :image "images/damage-disorder-9s.svg"
   :summary
    "Minor: Arm Pain
     Major: Arm Cramps and Weakness. Restricted movement.
@@ -296,7 +299,7 @@
  (base/damage
   :name "Loss: Understanding"
   :ranksuit base/ranksuit-8c
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-8c.svg"
   :summary
    "Minor: Occasionally takes time to recognize objects.
     Major: Agnosis. Cannot recognize many objects.
@@ -307,7 +310,7 @@
  (base/damage
   :name "Delusion: Status"
   :ranksuit base/ranksuit-8d
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-8d.svg"
   :summary
    "Minor: You are amazing. Remind everyone.
     Major: You are special. Things will work out. Don't plan.
@@ -318,7 +321,7 @@
  (base/damage
   :name "Compulsion: Status"
   :ranksuit base/ranksuit-8h
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-8h.svg"
   :summary
    "Minor: Super fan. You pay close attention to famous people.
     Major: Obsessed fan. You only think in terms of famous people.
@@ -329,7 +332,7 @@
  (base/damage
   :name "Nervous: Right Arm"
   :ranksuit base/ranksuit-8s
-  :image "images/card-disorder-arm-right.svg"
+  :image "images/damage-disorder-8s.svg"
   :summary
    "Minor: Arm Pain
     Major: Arm Cramps and Weakness. Restricted movement.
@@ -340,7 +343,7 @@
  (base/damage
   :name "Loss: Language"
   :ranksuit base/ranksuit-7c
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-7c.svg"
   :summary
    "Minor: Dyslexia. Difficulty reading/writing
     Major: Speech Impediment
@@ -351,7 +354,7 @@
  (base/damage
   :name "Delusion: Companions"
   :ranksuit base/ranksuit-7d
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-7d.svg"
   :summary
    "Minor: You feel like you have a guardian angel to help you.
     Major: You have an imaginary friend.
@@ -362,7 +365,7 @@
  (base/damage
   :name "Compulsion: Companions"
   :ranksuit base/ranksuit-7h
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-7h.svg"
   :summary
    "Minor: You damage your friendships.
     Major: You systematically ruin your friendships.
@@ -373,7 +376,7 @@
  (base/damage
   :name "Nervous: Left Hand"
   :ranksuit base/ranksuit-7s
-  :image "images/card-disorder-hand-left.svg"
+  :image "images/damage-disorder-7s.svg"
   :summary
    "Minor: Occassional Hand Tremors. [Stun]:1
     Major: Hand Pain and Trembling. [Stun]:2
@@ -384,7 +387,7 @@
  (base/damage
   :name "Loss: Vision"
   :ranksuit base/ranksuit-6c
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-6c.svg"
   :summary
    "Minor: Light Sensitivity [Stun]:1
     Major: Blurry Vision. [Stress]:1
@@ -395,7 +398,7 @@
  (base/damage
   :name "Delusion: Strangers"
   :ranksuit base/ranksuit-6d
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-6d.svg"
   :summary
    "Minor: Belief that other races are responsible for unrelated events.
     Major: Belief that other races are secretly murdering people.
@@ -406,7 +409,7 @@
  (base/damage
   :name "Compulsion: Strangers"
   :ranksuit base/ranksuit-6h
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-6h.svg"
   :summary
    "Minor: Drawn to mysterious, shady people.
     Major: Excited by dangerous and mysterious people.
@@ -417,7 +420,7 @@
  (base/damage
   :name "Nervous: Right Hand"
   :ranksuit base/ranksuit-6s
-  :image "images/card-disorder-hand-left.svg"
+  :image "images/damage-disorder-6s.svg"
   :summary
    "Minor: Occassional Hand Tremors. [Stun]:1
     Major: Hand Pain and Trembling. [Stun]:2
@@ -428,7 +431,7 @@
  (base/damage
   :name "Loss: Hearing"
   :ranksuit base/ranksuit-5c
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-5c.svg"
   :summary
    "Minor: Sound Sensitivity [Stun]:1
     Major: Loud Ringing in Ears. [Stun]:2
@@ -439,7 +442,7 @@
  (base/damage
   :name "Delusion: Love"
   :ranksuit base/ranksuit-5d
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-5d.svg"
   :reference
    "* What's love got to do, got to do with it? what's love but a second-hand emotion. What's love got to do, got to do with? Who needs a heart when a heart can be browen? - Tina Turner, What's Love Got to do with it?"
   :summary
@@ -451,7 +454,7 @@
  (base/damage
   :name "Compulsion: Love"
   :ranksuit base/ranksuit-5h
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-5h.svg"
   :reference
    "* Sometimes I wish that I could stop you from talking. When I hear the silly things that you say. I think somebody better put out the big light. 'Cause I can't stand to see you this way - Elvis Costello, Allison"
   :summary
@@ -464,7 +467,7 @@
  (base/damage
   :name "Nervous: Left Leg"
   :ranksuit base/ranksuit-5s
-  :image "images/card-disorder-leg-left.svg"
+  :image "images/damage-disorder-5s.svg"
   :summary
    "Minor: Leg Pain
     Major: Leg Cramps and Weakness. Restricted movement.
@@ -475,7 +478,7 @@
  (base/damage
   :name "Loss: Sensation"
   :ranksuit base/ranksuit-5c
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-5c.svg"
   :summary
    "Minor: Temperature Sensitivity
     Major: Painful Skin sensitivity
@@ -486,7 +489,7 @@
  (base/damage
   :name "Delusion: Change"
   :ranksuit base/ranksuit-4d
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-4d.svg"
   :summary
    "Minor: Suspicious: Something is different but you can't figure it out.
     Major: Unnerved. Random things change around you. It's hard to tell what is real.
@@ -497,7 +500,7 @@
  (base/damage
   :name "Compulsion: Change"
   :ranksuit base/ranksuit-4h
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-4h.svg"
   :summary
    "Minor: Changes appearance daily.
     Major: Make majors changes regularly.
@@ -508,7 +511,7 @@
  (base/damage
   :name "Nervous: Right Leg"
   :ranksuit base/ranksuit-4s
-  :image "images/card-disorder-leg-right.svg"
+  :image "images/damage-disorder-4s.svg"
   :summary
    "Minor: Leg Pain
     Major: Leg Cramps and Weakness. Restricted movement.
@@ -519,7 +522,7 @@
  (base/damage
   :name "Loss: Social"
   :ranksuit base/ranksuit-3c
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-3c.svg"
   :summary
    "Minor: Awkward. Difficulty in social interaction.
     Major: Out of Touch. Severly narrow interests.
@@ -530,7 +533,7 @@
  (base/damage
   :name "Delusion: Things"
   :ranksuit base/ranksuit-3d
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-3d.svg"
   :summary
    "Minor: Belief that random items have hidden critical importance.
     Major: Visions of inanimate objects becoming animate and talking.
@@ -541,7 +544,7 @@
  (base/damage
   :name "Compulsion: Things"
   :ranksuit base/ranksuit-3h
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-3h.svg"
   :summary
    "Minor: Trophy Collector. You pickup lots of of little things.
     Major: Theft. You take random things for your collection.
@@ -552,7 +555,7 @@
  (base/damage
   :name "Nervous: Left Foot"
   :ranksuit base/ranksuit-3s
-  :image "images/card-disorder-foot-left.svg"
+  :image "images/damage-disorder-3s.svg"
   :summary
    "Minor: Foot Pain
     Major: Foot Cramps and Weakness. Restricted movement.
@@ -563,7 +566,7 @@
  (base/damage
   :name "Nervous: Left Foot"
   :ranksuit base/ranksuit-3s
-  :image "images/card-disorder-foot-left.svg"
+  :image "images/damage-disorder-3s.svg"
   :summary
    "Minor: Foot Pain. [Slow]:1
     Major: Foot Cramps and Weakness. Restricted movement. [Slow]:1
@@ -574,7 +577,7 @@
  (base/damage
   :name "Loss: Sleep"
   :ranksuit base/ranksuit-2c
-  :image "images/card-disorder-loss.svg"
+  :image "images/damage-disorder-2c.svg"
   :summary
    "Minor: Hypersomnia. Excessive Sleep.
     Major: Narcolepsy. Sleep at random times.
@@ -585,7 +588,7 @@
  (base/damage
   :name "Delusion: Fortune"
   :ranksuit base/ranksuit-2d
-  :image "images/card-disorder-delusion.svg"
+  :image "images/damage-disorder-2d.svg"
   :summary
    "Minor: You are lucky. Take chances.
     Major: Risk Taker.
@@ -596,7 +599,7 @@
  (base/damage
   :name "Compulsion: Fortune"
   :ranksuit base/ranksuit-2h
-  :image "images/card-disorder-compulsion.svg"
+  :image "images/damage-disorder-2h.svg"
   :summary
    "Minor: Play games a lot.
     Major: Play games every spare moment especially gambling.
@@ -607,7 +610,7 @@
  (base/damage
   :name "Nervous: Right Foot"
   :ranksuit base/ranksuit-2s
-  :image "images/card-disorder-foot-right.svg"
+  :image "images/damage-disorder-2s.svg"
   :summary
    "Minor: Foot Pain. [Slow]:1
     Major: Foot Cramps and Weakness. Restricted movement. [Slow]:1
