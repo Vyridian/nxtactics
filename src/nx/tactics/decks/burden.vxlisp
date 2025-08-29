@@ -33,9 +33,9 @@
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hair Pulled. Slow:1
-    Moderate: Face Constricted. Remove:1 Damage. Round End:Slow:1
-    Major: Skull Constricted. Remove:2 Damage. Round End:Slow:2
-    Extreme: Neck Constricted. Remove:3 Damage. Slow:2 Round End:Choking:2"))
+    Moderate: Face Constricted. Held:1 Body:-1
+    Major: Skull Constricted. Held:2 Body:-2
+    Extreme: Neck Constricted. Held:3 Body:-3 Chocking:2"))
 
 (const burden-ad : base/damage
  (base/damage
@@ -45,9 +45,9 @@
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hair Ensnared. Slow:1
-    Moderate: Face Ensnared. Remove:1 Action Round End:Slow:1
-    Major: Head Ensnared. Remove:2 Actions Round End:Slow:2
-    Extreme: Neck Noose. Remove:3 Actions. Round End:Choking:2"))
+    Moderate: Face Ensnared. Held:1 Speed:-1
+    Major: Head Ensnared. Held:2 Speed:-2
+    Extreme: Neck Noose. Dying Held:3 Choking:2"))
 
 (const burden-ah : base/damage
  (base/damage
@@ -56,10 +56,10 @@
   :image "images/damage-burden-ah.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Hair Held. Remove:Any Hit. Move Target:1
-    Moderate: Jaw Held. Remove:1 Damage. Move Target:1
-    Major: Head Held. Remove:2 Damage. Move Target:1
-    Extreme: Neck Held. Remove:3 Damage. Move Target:1. Knockdown"))
+   "Minor: Hair Held. Held:1. Drag
+    Moderate: Jaw Held. Held:2. Drag
+    Major: Head Held. Held:3. Drag
+    Extreme: Neck Held. Held:4. Drag Knockdown:1"))
 
 (const burden-as : base/damage
  (base/damage
@@ -67,10 +67,10 @@
   :ranksuit base/ranksuit-as
   :image "images/damage-burden-as.svg"
   :summary
-   "Minor: Hair Caught. Remove:Any Hit. Slow:1
-    Moderate: Head Lock. Remove:1 Damage. Stun:1 Slow:1
-    Major: Neck Sprained. Remove:2 Damage. Stun:2 Slow:2
-    Extreme: Neck Dislocated. Paralyzed. Stun:3 Stress:3"))
+   "Minor: Hair Caught. Slow:1
+    Moderate: Head Lock. Held:1. Stun:1 Speed:-1
+    Major: Neck Sprained. Stun:2 Speed:-1
+    Extreme: Neck Dislocated. Stun:3 Stress:3 Paralyzed"))
 
 (const burden-kc : base/damage
  (base/damage
@@ -79,9 +79,9 @@
   :image "images/damage-burden-kc.svg"
   :summary
    "Minor: Shoulder Ensnared. Slow:1
-    Moderate: Shoulder Constricted. Slow:1 Every turn. Remove:1 Damage
-    Major: Shoulders Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
-    Extreme: Blood and Air cut off from Head. [Choking] [Dying]"))
+    Moderate: Shoulder Constricted. Speed:-1 Remove:1 Damage
+    Major: Shoulders Constricted. Impaired Speed:-2 Remove:2 Damage
+    Extreme: Blood and Air cut off from Head. Choking:2 Dying Remove:2 Damage"))
 
 (const burden-kd : base/damage
  (base/damage
@@ -90,9 +90,9 @@
   :image "images/damage-burden-kd.svg"
   :summary
    "Minor: Shoulder Ensnared. Slow:1
-    Moderate: Shoulders Ensnared. Slow:2 Remove:1 Actions
-    Major: Shoulders Bound. [Impaired]. Slow:3 Remove:2 Actions
-    Extreme: Neck Bound. [Choking] Remove:3 Actions"))
+    Moderate: Shoulders Ensnared. Slow:2 Remove:1 Action
+    Major: Shoulders Bound. Impaired Slow:3 Remove:2 Actions
+    Extreme: Neck Bound. Choking:2 Remove:3 Actions"))
 
 (const burden-kh : base/damage
  (base/damage

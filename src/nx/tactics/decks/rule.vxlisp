@@ -45,8 +45,10 @@
   (base/rule
    :name "Beast"
    :summary
-    "* The Beast
-     * Beast Unleashed: The Beast is now in control of this unit. Set Conscience = Will; set Will = Beast stat; and set Beast=blank")
+    "* The Beast is the Id, the raw, primal mind buried beneath reason and morality. It is only fight or flight, hunger and fear, demonic rage and instinct.
+     * Beast:X - IF a Unit gains Beast greater than Will THEN test Will vs Beast or Beast:Unleashed
+     * Beast:Unleashed - The Beast gains control. It cannot use any Mind Skills and will only fight or flee combat. Set Conscience=Will, Will=Beast, and Beast=blank
+     * Beast:Calmed - IF an Unleashed Unit is in a peaceful situation and gains Will greater than Beast THEN test Will vs Beast to reverse Beast:Unleashed")
   (base/rule
    :name "Blast"
    :image "images/rule-blast.svg"
@@ -226,6 +228,11 @@
     "A Diving Unit is rapidly losing Elevation
      * Round End - Elevation:-1 for each Diving:1")
   (base/rule
+   :name "Drag"
+   :summary
+    "Move the Target 1 Space adjacent to you
+     * Movement - IF your Body >= Target Body THEN for each Movement, you may spend Move:+1 to move the Target with you")
+  (base/rule
    :name "Drawn to Destiny"
    :image "images/rule-drawntodestiny.svg"
    :layout base/cardlayout-imageonly)
@@ -270,6 +277,12 @@
    :image "images/rule-goldenrules.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Held"
+   :summary
+    "Unit is held by a Unit or Item
+     * Penalty - Disadvantage vs the Rival
+     * Escape - Get Hits:3+ vs the Rival")
+  (base/rule
    :name "Hits"
    :image "images/rule-hits.svg"
    :layout base/cardlayout-imageonly)
@@ -307,6 +320,11 @@
    :name "Item: Sample"
    :image "images/rule-item-sample.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Knockdown"
+   :summary
+    "Target is knocked down Elevation:-X
+     * Surface - IF it hits something it takes Fatigue:X Stun:X and is Prone")
   (base/rule
    :name "Line of Sight"
    :image "images/rule-lineofsight.svg"

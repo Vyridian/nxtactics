@@ -68,6 +68,25 @@ export default class nx_tactics_decks_scene_murintrail {
     return output
   }
 
+  /**
+   * @function scene_zurakthal
+   * @param  {tactics} tactics
+   * @return {scene}
+   */
+  static t_scene_zurakthal = {
+    vx_type: vx_core.t_type
+  }
+  static e_scene_zurakthal = {
+    vx_type: nx_tactics_decks_scene_murintrail.t_scene_zurakthal
+  }
+
+  // (func scene-zurakthal)
+  static f_scene_zurakthal(tactics) {
+    let output = nx_tactics_base.e_scene
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Zurak'Thal Scene", ":titles", "Coiling Depths", ":secrets", "* Zurak'Thal (Coiling Depths) - The city of serpents.\n* Dvergholt (Dwarven Forest hold) - The abandoned dwarven outpost\n* Sandvagr (Sand Place) - The human settlement with fragrant sandalwood.\n* Wolfshafen (Wolf's Haven) - The human town\n* Stahlgrim (Steel Fortress) - The distant dwarven city")
+    return output
+  }
+
 
 
   static {
@@ -76,11 +95,13 @@ export default class nx_tactics_decks_scene_murintrail {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-murintrail": nx_tactics_decks_scene_murintrail.e_deck_murintrail,
-      "scene-murintrail": nx_tactics_decks_scene_murintrail.e_scene_murintrail
+      "scene-murintrail": nx_tactics_decks_scene_murintrail.e_scene_murintrail,
+      "scene-zurakthal": nx_tactics_decks_scene_murintrail.e_scene_zurakthal
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "deck-murintrail": nx_tactics_decks_scene_murintrail.t_deck_murintrail,
-      "scene-murintrail": nx_tactics_decks_scene_murintrail.t_scene_murintrail
+      "scene-murintrail": nx_tactics_decks_scene_murintrail.t_scene_murintrail,
+      "scene-zurakthal": nx_tactics_decks_scene_murintrail.t_scene_zurakthal
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -128,6 +149,24 @@ export default class nx_tactics_decks_scene_murintrail {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scene_murintrail.f_scene_murintrail
+    }
+
+    // (func scene-zurakthal)
+    nx_tactics_decks_scene_murintrail.t_scene_zurakthal['vx_value'] = {
+      name          : "scene-zurakthal",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scene_murintrail.f_scene_zurakthal
     }
 
   }

@@ -73,7 +73,7 @@
   :summary
    "Minor: Headache. Stun:1
     Major: Intense Migraine. Stun:1 Slow:1
-    Critical:Stroke. Paralyzed:Half. Speed:-2. Stun:2 Slow:2
+    Critical:Stroke. Paralyzed:Half. Speed:-2 Stun:2 Slow:2
     Extreme:Stroke. Paralyzed:Body. Stun:4. Immobilized"))
 
 (const disorder-kc : base/damage
@@ -81,55 +81,60 @@
   :name "Loss: Concentration"
   :ranksuit base/ranksuit-kc
   :image "images/damage-disorder-kc.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Perplexed. Hard to focus Stun:1
     Major: Dazed. Stun:2
-    Critical: Disoriented. Cannot play Focus cards.
-    Extreme: Delirious. Cannot act without aid. All Skills:0"))
+    Critical: Disoriented. Cannot play Strong
+    Extreme: Delirious. All Skills:0"))
 
 (const disorder-kd : base/damage
  (base/damage
   :name "Delusion: Power"
   :ranksuit base/ranksuit-kd
   :image "images/damage-disorder-kd.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Irritated by authority and fight for leadership
-    Major: You are special. Destined for greatness since birth.
-    Critical: Rightful Ruler. A complex series of events has removed you from your throne. Take it back.
-    Extreme: Messiah Complex. You are an infallible God King. Kill the heretics. [Shadow Triumphant]"))
+   "Minor: Powermonger. Must lead. Stun:1
+    Major: Conceited. Destined for greatness. Stun:2
+    Critical: Rightful Ruler. Retake your throne. Stun:4
+    Extreme: God King. Execute heretics. Stun:4 Shadow:Triumphant"))
 
 (const disorder-kh : base/damage
  (base/damage
   :name "Compulsion: Power"
   :ranksuit base/ranksuit-kh
   :image "images/damage-disorder-kh.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: You complain about the system.
-    Major: Subversive. You plot to overthrow the system.
-    Critical: Saboteur. You act on your plots.
-    Extreme: Traitor. You can't stop acting against anyone in power regardless of the risk. [Shadow Triumphant]"))
+   "Minor: Rebellious. Challenge the system. Stun:1
+    Major: Subversive. Plot against the system. Stun:1 Shadow:1
+    Critical: Saboteur. Overthrow the system. Stun:2 Shadow:2
+    Extreme: Traitor. Overthrow regardless of risk. Stun:4. Shadow:Triumphant"))
 
 (const disorder-ks : base/damage
  (base/damage
   :name "Nervous: Shoulders"
   :ranksuit base/ranksuit-ks
   :image "images/damage-disorder-ks.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Back Pain. Stun:1
-    Major: Heavy breathing. Stun:1 Slow:1
-    Critical: Shortness of Breath. [Hobbled] Stun:2 Slow:2
-    Extreme: Lung Failure [Suffocating] Stun:4"))
+    Major: Labored Breathing. Stun:1 Slow:1
+    Critical: Short of Breath. Speed:-1 Stun:2 Slow:2
+    Extreme: Lung Failure. Immobilized. Choking:3 Stun:2"))
 
 (const disorder-qc : base/damage
  (base/damage
   :name "Loss: Personality"
   :ranksuit base/ranksuit-qc
   :image "images/damage-disorder-qc.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Irritable and Emotional. Stress:1
-    Major: Denial of problem. Aggressive and impatient. Can't handle stress. Stress:2
-    Critical: Major personality change. Stun:2 Stress:3
-    Extreme: Become a completely different person. Become an NPC. Stun:2 Stress:2"))
+    Major: Denial. Aggressive and Impatient. Stress:2
+    Critical: Major Personality Change. Stun:2 Stress:2
+    Extreme: Totally Changed. Become an NPC. Stun:3 Stress:3"))
 
 (const disorder-qd : base/damage
  (base/damage
@@ -140,29 +145,31 @@
    "Minor: Acting. Change your mannerisms and speech patterns sometimes.
     Major: Personality Shift. Act like a completely different person sometimes.
     Critical: Multiple personalities. Shift between other personalities in times of stress. These personalities may be the Beast, Shadow, past lives, or beings from other places or dimensions.
-    Extreme: Shadow takes over. [Shadow Triumphant]"))
+    Extreme: Shadow takes over. Stun:4. Shadow:Triumphant"))
 
 (const disorder-qh : base/damage
  (base/damage
   :name "Compulsion: Self"
   :ranksuit base/ranksuit-qh
   :image "images/damage-disorder-qh.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Compulsive picking at your body.
-    Major: Excessive body decoration, tattoos, scarring.
-    Critical: Cutting.
-    Extreme: Self-mutilation. Progressivly mutilate and maim self."))
+   "Minor: Compulsive Body Picking. Stun:1
+    Major: Extreme Piercings, Tattoos, Scarring. Stun:2
+    Critical: Cutting. Body:-1 Stun:3 Shadow:1
+    Extreme: Self-mutilation. Mutilate and maim self. Stun:4 Shadow:2"))
 
 (const disorder-qs : base/damage
  (base/damage
   :name "Nervous: Chest"
   :ranksuit base/ranksuit-qs
   :image "images/damage-disorder-qs.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Chest Pain
-    Major: Restricted movement
-    Critical: Heart Attack [Dying]
-    Extreme: Massive Heart Attack [Dead]"))
+   "Minor: Chest Tightness. Stun:1
+    Major: Chest Pain. Stun:1 Slow:1
+    Critical: Heart Attack. Immobilized Choking:2 Stun:2
+    Extreme: Massive Heart Attack. Dying Immobilized Stun:4"))
 
 (const disorder-jc : base/damage
  (base/damage
@@ -170,10 +177,10 @@
   :ranksuit base/ranksuit-jc
   :image "images/damage-disorder-jc.svg"
   :summary
-   "Minor: Periodic Weakness
-    Major: Hypotonia. Weakness.
-    Critical: Hypertonia. Stiffness
-    Extreme: Atrophy"))
+   "Minor: Periodic Weakness. Fatigue:1
+    Major: Hypotonia. Weakness. Fatigue:2 Stun:2
+    Critical: Hypertonia. Stiffness. Move:-1 Fatigue:2 Stun:2
+    Extreme: Atrophy. Move:-2 Fatigue:3 Stun:2"))
 
 (const disorder-jd : base/damage
  (base/damage
@@ -181,10 +188,10 @@
   :ranksuit base/ranksuit-jd
   :image "images/damage-disorder-jd.svg"
   :summary
-   "Minor: Daydream of violent acts.
-    Major: Sudden visions of violence appear at random times.
-    Critical: Overwhelming visions of extreme violence.
-    Extreme: Crusader. You are a mighty warrior who must violently vanquish the evil all around and that no act is too extreme in your righteous goal."))
+   "Minor: Daydream of violent acts. Stun:1
+    Major: Sudden random visions of violence. Stun:2
+    Critical: Visions of extreme violence. Mind:-1 Stun:3
+    Extreme: Crusader. Violently vanquish evil. Mind:-2 Stun:2"))
 
 (const disorder-jh : base/damage
  (base/damage
@@ -192,21 +199,22 @@
   :ranksuit base/ranksuit-jh
   :image "images/damage-disorder-jh.svg"
   :summary
-   "Minor: Nasty. You enjoy little acts of cruelty.
-    Major: Cruel. You go out of your way to be cruel and cause pain.
-    Critical: Sadist. Pain and torture fill your day.
-    Extreme: Torturer. You revel in gore and viscera. [Shadow Triumphant]"))
+   "Minor: Nasty. Enjoy acts of cruelty. Stun:1
+    Major: Cruel. Aggressively cause pain. Stun:2 Shadow:2
+    Critical: Sadist. Pain and torture fill your day. Stun:3 Shadow:2
+    Extreme: Torturer. You revel in gore and viscera. Stun:4 Shadow:Triumphant"))
 
 (const disorder-js : base/damage
  (base/damage
   :name "Nervous: Abdomen"
   :ranksuit base/ranksuit-js
   :image "images/damage-disorder-js.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Nausea and Stomach Pain
-    Major: Vomiting
-    Critical: Convulsions
-    Extreme: Violent Seizure eventually leading to death."))
+   "Minor: Nausea and Stomach Pain. Stun:1
+    Major: Vomiting. Stun:1 Slow:1
+    Critical: Convulsions. Immobilized Stun:4
+    Extreme: Violent Seizures. Dying Immobilized Stun:4"))
 
 (const disorder-tc : base/damage
  (base/damage
@@ -214,10 +222,10 @@
   :ranksuit base/ranksuit-tc
   :image "images/damage-disorder-tc.svg"
   :summary
-   "Minor: Occasional dizziness. [Stun]:1
-    Major: Repeated nausea and vomiting.
-    Critical: Severe Vertigo. [Impaired] [Hobbled] [Stun]:2
-    Extreme: Endless Vertigo. Vomiting, screaming, completely irrational. [Impaired] [Hobbled] [Stun]:4"))
+   "Minor: Occasional dizziness. Stun:1
+    Major: Repeated nausea and vomiting. Speed:-1 Stun:2
+    Critical: Severe Vertigo. Speed:-2 Stun:3
+    Extreme: Endless Vertigo. Vomiting, screaming, irrational. Speed:-2 Stun:4"))
 
 (const disorder-td : base/damage
  (base/damage
@@ -226,9 +234,9 @@
   :image "images/damage-disorder-td.svg"
   :summary
    "Minor: Daydreamer.
-    Major: Mind Elsewhere. Regularly distracted by imaginary world.
+    Major: Mind Elsewhere. Distracted by imaginary world.
     Critical: In a fantasy world.
-    Extreme: Living hell. Horrific physical and mental hallucinations."))
+    Extreme: Living hell. Horrific hallucinations. Beast:2 Stun:4"))
 
 (const disorder-th : base/damage
  (base/damage
@@ -236,21 +244,22 @@
   :ranksuit base/ranksuit-th
   :image "images/damage-disorder-th.svg"
   :summary
-   "Minor: You conceal yourself with white lies.
-    Major: You lie for the smallest reasons. You are good at it so it might not catch up to you for a while.
-    Critical: Compulsive Liar. You lie for no reason. Break all your trusts.
-    Extreme: Pathological Liar. Blatant lies pour from your mouth like a fountain. Nothing you say is believable."))
+   "Minor: White Lies. Lie to Conceal your privacy. Stun:1
+    Major: Little Lies. Lie for no reason. Stun:2 Shadow:1
+    Critical: Compulsive Liar. Lie even when obvious. Break trusts. Stun:3 Shadow:2
+    Extreme: Pathological Liar. Not credible. Stun:4 Shadow:Triumphant"))
 
 (const disorder-ts : base/damage
  (base/damage
   :name "Nervous: Vitals"
   :ranksuit base/ranksuit-ts
   :image "images/damage-disorder-ts.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Groin Pain
-    Major: Persistent Lower Back Pain. [Impaired]
-    Critical: Extreme Lower Back Pain and Weakness. [Impaired] [Hobbled].
-    Extreme: Paralyzed from the waist down."))
+   "Minor: Groin Pain. Stun:1
+    Major: Persistent Back Pain. Impaired Stun:2 Speed:-1
+    Critical: Extreme Back Pain and Weakness. Impaired Stun:2 Speed:-2
+    Extreme: Paralyzed:Waist Down. Immobilized Stun:4 Stress:4"))
 
 (const disorder-9c : base/damage
  (base/damage
@@ -289,11 +298,12 @@
   :name "Nervous: Left Arm"
   :ranksuit base/ranksuit-9s
   :image "images/damage-disorder-9s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Arm Pain
-    Major: Arm Cramps and Weakness. Restricted movement.
-    Critical: Arm Numbness. [Impaired]
-    Extreme: Nerve Damage. Arm unresponsive. [Impaired]. [Stun]:4"))
+   "Minor: Arm Pain. Stun:1
+    Major: Arm Cramps and Weakness. Fatigue:1 Stun:1
+    Critical: Arm Numbness. Impaired Fatigue:2 Stun:2
+    Extreme: Nerve Damage. Arm useless. Impaired Stun:2 Stress:1"))
 
 (const disorder-8c : base/damage
  (base/damage
@@ -333,11 +343,12 @@
   :name "Nervous: Right Arm"
   :ranksuit base/ranksuit-8s
   :image "images/damage-disorder-8s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Arm Pain
-    Major: Arm Cramps and Weakness. Restricted movement.
-    Critical: Arm Numbness. [Impaired]
-    Extreme: Nerve Damage. Arm unresponsive. [Impaired]. [Stun]:4"))
+   "Minor: Arm Pain. Stun:1
+    Major: Arm Cramps and Weakness. Fatigue:1 Stun:1
+    Critical: Arm Numbness. Impaired Fatigue:2 Stun:2
+    Extreme: Nerve Damage. Arm useless. Impaired Stun:2 Stress:1"))
 
 (const disorder-7c : base/damage
  (base/damage
@@ -377,11 +388,12 @@
   :name "Nervous: Left Hand"
   :ranksuit base/ranksuit-7s
   :image "images/damage-disorder-7s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Occassional Hand Tremors. [Stun]:1
-    Major: Hand Pain and Trembling. [Stun]:2
-    Critical: Hand Numbness and Weakness. [Impaired]
-    Extreme: Hand Paralyzed."))
+   "Minor: Hand Tremors. Stun:1
+    Major: Hand Pain and Trembling. Fatigue:1 Stun:1
+    Critical: Hand Numbness and Weakness. Impaired Fatigue:2 Stun:2
+    Extreme: Hand Paralyzed. Impaired Stun:2 Stress:1"))
 
 (const disorder-6c : base/damage
  (base/damage
@@ -421,11 +433,12 @@
   :name "Nervous: Right Hand"
   :ranksuit base/ranksuit-6s
   :image "images/damage-disorder-6s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Occassional Hand Tremors. [Stun]:1
-    Major: Hand Pain and Trembling. [Stun]:2
-    Critical: Hand Numbness and Weakness. [Impaired]
-    Extreme: Hand Paralyzed."))
+   "Minor: Hand Tremors. Stun:1
+    Major: Hand Pain and Trembling. Fatigue:1 Stun:1
+    Critical: Hand Numbness and Weakness. Impaired Fatigue:2 Stun:2
+    Extreme: Hand Paralyzed. Impaired Stun:2 Stress:1"))
 
 (const disorder-5c : base/damage
  (base/damage
@@ -446,8 +459,9 @@
   :reference
    "* What's love got to do, got to do with it? what's love but a second-hand emotion. What's love got to do, got to do with? Who needs a heart when a heart can be browen? - Tina Turner, What's Love Got to do with it?"
   :summary
-   "Minor: Belief that everyone desires you.
-    Major: Belief that they have a true romantic relationship with an inappropriate person. Critical: Overwhelming visions of elaborate and extreme sexual encounters.
+   "Minor: Everyone desires you. Stun:1
+    Major: Belief that they have a true romantic relationship with an inappropriate person.
+    Critical: Overwhelming visions of elaborate and extreme sexual encounters.
     Extreme: Bliss. Overwhelmed by intense sexual fantasies. Comatose."))
 
 (const disorder-5h : base/damage
@@ -458,7 +472,7 @@
   :reference
    "* Sometimes I wish that I could stop you from talking. When I hear the silly things that you say. I think somebody better put out the big light. 'Cause I can't stand to see you this way - Elvis Costello, Allison"
   :summary
-   "Minor: Fetishes.
+   "Minor: Fetishes. Stun:1
     Major: Deviant. Bizarre lusts fill your thoughts. Pushes to play them out.
     Critical: Monster. Compelled to push for relations as often as possible even if it defies social norms and sexual preference, forcing the issue if necessary.
     Extreme: Abomination. You are committed to perform appalling acts. [Shadow Triumphant]"))
@@ -468,11 +482,12 @@
   :name "Nervous: Left Leg"
   :ranksuit base/ranksuit-5s
   :image "images/damage-disorder-5s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Leg Pain
-    Major: Leg Cramps and Weakness. Restricted movement.
-    Critical: Leg Numbness. [Hobbled]
-    Extreme: Nerve Damage. Leg unresponsive. [Hobbled]. [Slow]:4"))
+   "Minor: Leg Pain. Stun:1
+    Major: Leg Cramps and Weakness. Stun:1 Slow:1
+    Critical: Leg Numbness. Impaired. Stun:2 Slow:2
+    Extreme: Nerve Damage. Leg unresponsive. Impaired. Stun:3 Slow:3"))
 
 (const disorder-4c : base/damage
  (base/damage
@@ -512,11 +527,12 @@
   :name "Nervous: Right Leg"
   :ranksuit base/ranksuit-4s
   :image "images/damage-disorder-4s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Leg Pain
-    Major: Leg Cramps and Weakness. Restricted movement.
-    Critical: Leg Numbness. [Hobbled]
-    Extreme: Nerve Damage. Leg unresponsive. [Hobbled]. [Slow]:4"))
+   "Minor: Leg Pain. Stun:1
+    Major: Leg Cramps and Weakness. Stun:1 Slow:1
+    Critical: Leg Numbness. Impaired. Stun:2 Slow:2
+    Extreme: Nerve Damage. Leg unresponsive. Impaired. Stun:3 Slow:3"))
 
 (const disorder-3c : base/damage
  (base/damage
@@ -556,22 +572,12 @@
   :name "Nervous: Left Foot"
   :ranksuit base/ranksuit-3s
   :image "images/damage-disorder-3s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Foot Pain
-    Major: Foot Cramps and Weakness. Restricted movement.
-    Critical: Foot Numbness. [Hobbled]
-    Extreme: Nerve Damage. Foot unresponsive. [Hobbled]. [Slow]:3"))
-
-(const disorder-3s : base/damage
- (base/damage
-  :name "Nervous: Left Foot"
-  :ranksuit base/ranksuit-3s
-  :image "images/damage-disorder-3s.svg"
-  :summary
-   "Minor: Foot Pain. [Slow]:1
-    Major: Foot Cramps and Weakness. Restricted movement. [Slow]:1
-    Critical:Foot Numbness. [Hobbled]. [Slow]:2
-    Extreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"))
+   "Minor: Foot Pain. Slow:1
+    Major: Foot Cramps and Weakness. Stun:1 Slow:1
+    Critical:Foot Numbness. Impaired Stun:2 Slow:2
+    Extreme:Nerve damage. Foot unresponsive. Impaired Stun:3 Slow:3"))
 
 (const disorder-2c : base/damage
  (base/damage
@@ -611,11 +617,12 @@
   :name "Nervous: Right Foot"
   :ranksuit base/ranksuit-2s
   :image "images/damage-disorder-2s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Foot Pain. [Slow]:1
-    Major: Foot Cramps and Weakness. Restricted movement. [Slow]:1
-    Critical:Foot Numbness. [Hobbled]. [Slow]:2
-    Extreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"))
+   "Minor: Foot Pain. Slow:1
+    Major: Foot Cramps and Weakness. Stun:1 Slow:1
+    Critical:Foot Numbness. Impaired Stun:2 Slow:2
+    Extreme:Nerve damage. Foot unresponsive. Impaired Stun:3 Slow:3"))
 
 (func deck-disorder : base/deck
  (base/deck

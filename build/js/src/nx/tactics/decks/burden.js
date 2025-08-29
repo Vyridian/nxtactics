@@ -1019,7 +1019,7 @@ export default class nx_tactics_decks_burden {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Pulled. Slow:1\nModerate: Face Constricted. Remove:1 Damage. Round End:Slow:1\nMajor: Skull Constricted. Remove:2 Damage. Round End:Slow:2\nExtreme: Neck Constricted. Remove:3 Damage. Slow:2 Round End:Choking:2"
+      "Minor: Hair Pulled. Slow:1\nModerate: Face Constricted. Held:1 Body:-1\nMajor: Skull Constricted. Held:2 Body:-2\nExtreme: Neck Constricted. Held:3 Body:-3 Chocking:2"
     ))
 
     // (const burden-ad)
@@ -1034,7 +1034,7 @@ export default class nx_tactics_decks_burden {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Ensnared. Slow:1\nModerate: Face Ensnared. Remove:1 Action Round End:Slow:1\nMajor: Head Ensnared. Remove:2 Actions Round End:Slow:2\nExtreme: Neck Noose. Remove:3 Actions. Round End:Choking:2"
+      "Minor: Hair Ensnared. Slow:1\nModerate: Face Ensnared. Held:1 Speed:-1\nMajor: Head Ensnared. Held:2 Speed:-2\nExtreme: Neck Noose. Dying Held:3 Choking:2"
     ))
 
     // (const burden-ah)
@@ -1049,7 +1049,7 @@ export default class nx_tactics_decks_burden {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Held. Remove:Any Hit. Move Target:1\nModerate: Jaw Held. Remove:1 Damage. Move Target:1\nMajor: Head Held. Remove:2 Damage. Move Target:1\nExtreme: Neck Held. Remove:3 Damage. Move Target:1. Knockdown"
+      "Minor: Hair Held. Held:1. Drag\nModerate: Jaw Held. Held:2. Drag\nMajor: Head Held. Held:3. Drag\nExtreme: Neck Held. Held:4. Drag Knockdown:1"
     ))
 
     // (const burden-as)
@@ -1062,7 +1062,7 @@ export default class nx_tactics_decks_burden {
       ":image",
       "images/damage-burden-as.svg",
       ":summary",
-      "Minor: Hair Caught. Remove:Any Hit. Slow:1\nModerate: Head Lock. Remove:1 Damage. Stun:1 Slow:1\nMajor: Neck Sprained. Remove:2 Damage. Stun:2 Slow:2\nExtreme: Neck Dislocated. Paralyzed. Stun:3 Stress:3"
+      "Minor: Hair Caught. Slow:1\nModerate: Head Lock. Held:1. Stun:1 Speed:-1\nMajor: Neck Sprained. Stun:2 Speed:-1\nExtreme: Neck Dislocated. Stun:3 Stress:3 Paralyzed"
     ))
 
     // (const burden-jc)
@@ -1127,7 +1127,7 @@ export default class nx_tactics_decks_burden {
       ":image",
       "images/damage-burden-kc.svg",
       ":summary",
-      "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulder Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Shoulders Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Blood and Air cut off from Head. [Choking] [Dying]"
+      "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulder Constricted. Speed:-1 Remove:1 Damage\nMajor: Shoulders Constricted. Impaired Speed:-2 Remove:2 Damage\nExtreme: Blood and Air cut off from Head. Choking:2 Dying Remove:2 Damage"
     ))
 
     // (const burden-kd)
@@ -1140,7 +1140,7 @@ export default class nx_tactics_decks_burden {
       ":image",
       "images/damage-burden-kd.svg",
       ":summary",
-      "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulders Ensnared. Slow:2 Remove:1 Actions\nMajor: Shoulders Bound. [Impaired]. Slow:3 Remove:2 Actions\nExtreme: Neck Bound. [Choking] Remove:3 Actions"
+      "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulders Ensnared. Slow:2 Remove:1 Action\nMajor: Shoulders Bound. Impaired Slow:3 Remove:2 Actions\nExtreme: Neck Bound. Choking:2 Remove:3 Actions"
     ))
 
     // (const burden-kh)

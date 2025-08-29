@@ -553,8 +553,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_2c,
       ":image",
       "images/damage-trauma-2c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Frustrated by an arbitrary world.\nMajor: Random outbursts. Your temper seems to surge at random times.\nCritical: Lash out. Choose enemy targets at random. Beast:2\nExtreme: Blind Rage. Choose targets completely at random. Beast:Unleashed"
+      "Minor: Frustrated by an arbitrary world. Stress:1\nMajor: Random outbursts. Your temper seems to surge randomly. Stress:1 Beast:1\nCritical: Lash out. Choose enemies at random. Stress:2 Beast:2\nExtreme: Blind Rage. Choose any target at random. Beast:Unleashed"
     ))
 
     // (const trauma-2d)
@@ -605,10 +607,12 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_3c,
       ":image",
       "images/damage-trauma-3c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":reference",
       "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra",
       ":summary",
-      "Minor: Graphetti Artist. Make your mark on the world.\nMajor: Vandal. Take out your anger by defacing and damaging objects. Beast:1\nCritical: Arsonist. Kill them with fire. Beast:2\nExtreme: Destroyer. The world is too far gone. Burn it all down. Beast:Unleashed"
+      "Minor: Graffiti Artist. Make your mark. Stress:1\nMajor: Vandal. Deface and damage objects. Stress:1 Beast:1\nCritical: Arsonist. Kill them with fire. Stress:2 Beast:2\nExtreme: Destroyer. The world is too far gone. Burn it all down. Beast:Unleashed"
     ))
 
     // (const trauma-3d)
@@ -659,8 +663,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_4c,
       ":image",
       "images/damage-trauma-4c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.\nMajor: Reactionary. Cannot tolerate anything new or modern.\nCritical: Luddite. Destroy anything modern or new.\nExtreme: Violent Primitivist. Destroy anything that is more advanced than would be on a farm."
+      "Minor: Curmudgeon. New things frustrate. Stress:1\nMajor: Reactionary. Cannot tolerate the new. Stress:1 Beast:1\nCritical: Luddite. Stop anything new. Stress:2 Beast:2\nExtreme: Violent Primitivist. Destroy everything new. Beast:Unleashed"
     ))
 
     // (const trauma-4d)
@@ -711,8 +717,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_5c,
       ":image",
       "images/damage-trauma-5c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Possessive. Drawn to abusive relationships.\nMajor: Controlling. You are a manipulator.\nCritical: Stalker. You are a sexual abuser.\nExtreme: Jealous Rage. Kill your rivals. If you can't have them. No one can. Beast:Unleashed"
+      "Minor: Possessive. Abusive relationships. Stress:1\nMajor: Controlling. Manipulate others. Stress:1 Beast:1\nCritical: Stalker. Find vulnerable to abuse. Stress:2 Beast:2\nExtreme: Jealous Rage. Tolerate no challenges. Beast:Unleashed"
     ))
 
     // (const trauma-5d)
@@ -763,8 +771,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_6c,
       ":image",
       "images/damage-trauma-6c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Resentful. Talks about others with sweeping sterotypes.\nMajor: Hateful. Uses overtly hateful language and is uncomfortable working in certain groups.\nCritical: Terrorist. Hates other groups and actively seeks to undermine or harm them.\nExtreme: Genocidal. Actively works to wipe out certain groups. Beast:Unleashed"
+      "Minor: Resentful. Stereotype others. Stress:1\nMajor: Hateful. Spiteful in certain groups. Stress:1 Beast:1\nCritical: Terrorist. Harm other groups. Stress:2 Beast:2\nExtreme: Genocidal. Wipe out other groups. Beast:Unleashed"
     ))
 
     // (const trauma-6d)
@@ -777,7 +787,7 @@ export default class nx_tactics_decks_trauma {
       ":image",
       "images/damage-trauma-6d.svg",
       ":summary",
-      "Minor: Lonely.\nMajor: Alienated.\nCritical: Isolated.\nExtreme: Hermit. Positive that everyone is evil. Leave. [Shadow Triumphant]"
+      "Minor: Lonely.\nMajor: Alienated.\nCritical: Isolated.\nExtreme: Hermit. Convinced everyone is evil. Shadow:Triumphant"
     ))
 
     // (const trauma-6h)
@@ -815,8 +825,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_7c,
       ":image",
       "images/damage-trauma-7c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Vindictive. Aggressively protective of companions.\nMajor: Hunter. Take merciless revenge on any wrongs against companions.\nCritical: Punisher. There are more who deserve punishment. Relentlessly hunt them down.\nExtreme: Angel of Death. Remove all their filth from the world. Endless bloodshed. Beast:Unleashed"
+      "Minor: Vindictive. Aggressive protector. Stress:1\nMajor: Hunter. Avenge your companions. Stress:1 Beast:1\nCritical: Punisher. More deserve punishment. Stress:2 Beast:2\nExtreme: Angel of Death. Remove all threats. Beast:Unleashed"
     ))
 
     // (const trauma-7d)
@@ -867,8 +879,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_8c,
       ":image",
       "images/damage-trauma-8c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Jealous. Frustrated by showoffs.\nMajor: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. Beast:1\nCritical: Smear Campaign. Dedicated to embarassing and undermining the elite.\nExtreme: Punish the elite for their hubris. Kill them all. Beast:Unleashed"
+      "Minor: Jealous. Frustrated by showoffs. Stress:1\nMajor: Contemptuous. Undermine the elite. Stress:1 Beast:1\nCritical: Smear campaign against the elite. Stress:2 Beast:2\nExtreme: Off with their Heads. Punish all elites. Beast:Unleashed"
     ))
 
     // (const trauma-8d)
@@ -919,8 +933,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_9c,
       ":image",
       "images/damage-trauma-9c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Skeptic. Completely apathetic and dismissive of religious figures or icons.\nMajor: Sacreligeous. Has a tendency toward sacrilege and blasphemy.\nCritical: Violent secularist. Blame faith for everything. Unable to work with those who with strong beliefs.\nExtreme: Jihadist. Holy War. Mercilessly slay all unbelievers. Your own safety doesn't matter. Beast:Unleashed"
+      "Minor: Skeptic. Dismissive of religions. Stress:1\nMajor: Sacrilegious. Enjoys blasphemy. Stress:1 Beast:1\nCritical: Secularist. Blame faith for everything. Stress:2 Beast:2\nExtreme: Jihadist. Mercilessly slay believers. Beast:Unleashed"
     ))
 
     // (const trauma-9d)
@@ -1033,8 +1049,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_jc,
       ":image",
       "images/damage-trauma-jc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Viscious. Revel in the kill.\nMajor: Bloodthirsty. Find a way to keep the kills coming.\nCritical: Butcher. Beast:1 Cleave a bloody path wherever you go. Beast:2\nExtreme: Animalistic. Kill indiscriminately. Beast:Unleased"
+      "Minor: Viscious. Revel in the kill. Stress:1\nMajor: Bloodthirsty. Keep the kills coming. Stress:1 Beast:1\nCritical: Butcher. Cleave a bloody path. Stress:2 Beast:2\nExtreme: Animalistic. Kill indiscriminately. Beast:Unleased"
     ))
 
     // (const trauma-jd)
@@ -1085,8 +1103,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_kc,
       ":image",
       "images/damage-trauma-kc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Rebel. You hate those who seek to control others.\nMajor: Revolutionary. You openly discuss revolution and seek to bring others to your cause. [Beast]:1\nCritical: Insurgent. You despise those in power and are dedicated to putting a blade to them. [Beast]:2\nExtreme: Antifa. Violently attack anyone who commands others. Beast:Unleashed"
+      "Minor: Rebel. Hate those who control others. Stress:1\nMajor: Revolutionary. Openly incite revolution. Stress:1 Beast:1\nCritical: Insurgent. Eliminate those in power. Stress:2 Beast:2\nExtreme: Violently attack those in command. Beast:Unleashed"
     ))
 
     // (const trauma-kd)
@@ -1137,10 +1157,12 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_qc,
       ":image",
       "images/damage-trauma-qc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":reference",
       "* And, oh, my love remind me, what was it that I said? I can't help but pull the earth around me to make my bed. And, oh, my love remind me, what was it that I did? Did I drink too much? Am I losing touch? Did I build a ship to wreck? - Florence and the Machine, Ship to Wreck",
       ":summary",
-      "Minor: Self Critical. You feel extreme guilt for your actions.\nMajor: Self loathing.\nCritical: Self Destructive.\nExtreme: Suicidal. You are worthless and disgusting. End it in a way befitting of your self loathing."
+      "Minor: Self Critical. Feel extreme guilt. Stress:1\nMajor: Self Loathing. Stress:1 Beast:1\nCritical: Self Destructive. Stress:2 Beast:2\nExtreme: Violently Suicidal. Worthless and disgusting. Beast:Unleashed"
     ))
 
     // (const trauma-qd)
@@ -1191,8 +1213,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_tc,
       ":image",
       "images/damage-trauma-tc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Angry drunk. Obnoxious and pushy when intoxicated.\nMajor: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. Beast:1\nCritical: Violent Addict. You're violent when high and will take anything for a high. Beast:2\nExtreme:Wildly Violent Addict. Do anything it takes to stay high. Beast:Unleashed"
+      "Minor: Angry drunk. Obnoxious and pushy. Stress:1\nMajor: Violent Alcoholic. Stay drunk and angry. Stress:1 Beast:1\nCritical: Violent Addict. Desperate for a fix. Stress:2 Beast:2\nExtreme:Hyperviolent Addict. Never come down. Beast:Unleashed"
     ))
 
     // (const trauma-td)

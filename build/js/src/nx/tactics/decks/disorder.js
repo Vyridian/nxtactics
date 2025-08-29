@@ -579,8 +579,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_2s,
       ":image",
       "images/damage-disorder-2s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Foot Pain. [Slow]:1\nMajor: Foot Cramps and Weakness. Restricted movement. [Slow]:1\nCritical:Foot Numbness. [Hobbled]. [Slow]:2\nExtreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"
+      "Minor: Foot Pain. Slow:1\nMajor: Foot Cramps and Weakness. Stun:1 Slow:1\nCritical:Foot Numbness. Impaired Stun:2 Slow:2\nExtreme:Nerve damage. Foot unresponsive. Impaired Stun:3 Slow:3"
     ))
 
     // (const disorder-3c)
@@ -631,8 +633,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_3s,
       ":image",
       "images/damage-disorder-3s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Foot Pain. [Slow]:1\nMajor: Foot Cramps and Weakness. Restricted movement. [Slow]:1\nCritical:Foot Numbness. [Hobbled]. [Slow]:2\nExtreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"
+      "Minor: Foot Pain. Slow:1\nMajor: Foot Cramps and Weakness. Stun:1 Slow:1\nCritical:Foot Numbness. Impaired Stun:2 Slow:2\nExtreme:Nerve damage. Foot unresponsive. Impaired Stun:3 Slow:3"
     ))
 
     // (const disorder-4c)
@@ -683,8 +687,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_4s,
       ":image",
       "images/damage-disorder-4s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Leg Pain\nMajor: Leg Cramps and Weakness. Restricted movement.\nCritical: Leg Numbness. [Hobbled]\nExtreme: Nerve Damage. Leg unresponsive. [Hobbled]. [Slow]:4"
+      "Minor: Leg Pain. Stun:1\nMajor: Leg Cramps and Weakness. Stun:1 Slow:1\nCritical: Leg Numbness. Impaired. Stun:2 Slow:2\nExtreme: Nerve Damage. Leg unresponsive. Impaired. Stun:3 Slow:3"
     ))
 
     // (const disorder-5c)
@@ -712,7 +718,7 @@ export default class nx_tactics_decks_disorder {
       ":reference",
       "* What's love got to do, got to do with it? what's love but a second-hand emotion. What's love got to do, got to do with? Who needs a heart when a heart can be browen? - Tina Turner, What's Love Got to do with it?",
       ":summary",
-      "Minor: Belief that everyone desires you.\nMajor: Belief that they have a true romantic relationship with an inappropriate person. Critical: Overwhelming visions of elaborate and extreme sexual encounters.\nExtreme: Bliss. Overwhelmed by intense sexual fantasies. Comatose."
+      "Minor: Everyone desires you. Stun:1\nMajor: Belief that they have a true romantic relationship with an inappropriate person.\nCritical: Overwhelming visions of elaborate and extreme sexual encounters.\nExtreme: Bliss. Overwhelmed by intense sexual fantasies. Comatose."
     ))
 
     // (const disorder-5h)
@@ -727,7 +733,7 @@ export default class nx_tactics_decks_disorder {
       ":reference",
       "* Sometimes I wish that I could stop you from talking. When I hear the silly things that you say. I think somebody better put out the big light. 'Cause I can't stand to see you this way - Elvis Costello, Allison",
       ":summary",
-      "Minor: Fetishes.\nMajor: Deviant. Bizarre lusts fill your thoughts. Pushes to play them out.\nCritical: Monster. Compelled to push for relations as often as possible even if it defies social norms and sexual preference, forcing the issue if necessary.\nExtreme: Abomination. You are committed to perform appalling acts. [Shadow Triumphant]"
+      "Minor: Fetishes. Stun:1\nMajor: Deviant. Bizarre lusts fill your thoughts. Pushes to play them out.\nCritical: Monster. Compelled to push for relations as often as possible even if it defies social norms and sexual preference, forcing the issue if necessary.\nExtreme: Abomination. You are committed to perform appalling acts. [Shadow Triumphant]"
     ))
 
     // (const disorder-5s)
@@ -739,8 +745,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_5s,
       ":image",
       "images/damage-disorder-5s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Leg Pain\nMajor: Leg Cramps and Weakness. Restricted movement.\nCritical: Leg Numbness. [Hobbled]\nExtreme: Nerve Damage. Leg unresponsive. [Hobbled]. [Slow]:4"
+      "Minor: Leg Pain. Stun:1\nMajor: Leg Cramps and Weakness. Stun:1 Slow:1\nCritical: Leg Numbness. Impaired. Stun:2 Slow:2\nExtreme: Nerve Damage. Leg unresponsive. Impaired. Stun:3 Slow:3"
     ))
 
     // (const disorder-6c)
@@ -791,8 +799,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_6s,
       ":image",
       "images/damage-disorder-6s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Occassional Hand Tremors. [Stun]:1\nMajor: Hand Pain and Trembling. [Stun]:2\nCritical: Hand Numbness and Weakness. [Impaired]\nExtreme: Hand Paralyzed."
+      "Minor: Hand Tremors. Stun:1\nMajor: Hand Pain and Trembling. Fatigue:1 Stun:1\nCritical: Hand Numbness and Weakness. Impaired Fatigue:2 Stun:2\nExtreme: Hand Paralyzed. Impaired Stun:2 Stress:1"
     ))
 
     // (const disorder-7c)
@@ -843,8 +853,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_7s,
       ":image",
       "images/damage-disorder-7s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Occassional Hand Tremors. [Stun]:1\nMajor: Hand Pain and Trembling. [Stun]:2\nCritical: Hand Numbness and Weakness. [Impaired]\nExtreme: Hand Paralyzed."
+      "Minor: Hand Tremors. Stun:1\nMajor: Hand Pain and Trembling. Fatigue:1 Stun:1\nCritical: Hand Numbness and Weakness. Impaired Fatigue:2 Stun:2\nExtreme: Hand Paralyzed. Impaired Stun:2 Stress:1"
     ))
 
     // (const disorder-8c)
@@ -895,8 +907,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_8s,
       ":image",
       "images/damage-disorder-8s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Arm Pain\nMajor: Arm Cramps and Weakness. Restricted movement.\nCritical: Arm Numbness. [Impaired]\nExtreme: Nerve Damage. Arm unresponsive. [Impaired]. [Stun]:4"
+      "Minor: Arm Pain. Stun:1\nMajor: Arm Cramps and Weakness. Fatigue:1 Stun:1\nCritical: Arm Numbness. Impaired Fatigue:2 Stun:2\nExtreme: Nerve Damage. Arm useless. Impaired Stun:2 Stress:1"
     ))
 
     // (const disorder-9c)
@@ -947,8 +961,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_9s,
       ":image",
       "images/damage-disorder-9s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Arm Pain\nMajor: Arm Cramps and Weakness. Restricted movement.\nCritical: Arm Numbness. [Impaired]\nExtreme: Nerve Damage. Arm unresponsive. [Impaired]. [Stun]:4"
+      "Minor: Arm Pain. Stun:1\nMajor: Arm Cramps and Weakness. Fatigue:1 Stun:1\nCritical: Arm Numbness. Impaired Fatigue:2 Stun:2\nExtreme: Nerve Damage. Arm useless. Impaired Stun:2 Stress:1"
     ))
 
     // (const disorder-ac)
@@ -1008,7 +1024,7 @@ export default class nx_tactics_decks_disorder {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Headache. Stun:1\nMajor: Intense Migraine. Stun:1 Slow:1\nCritical:Stroke. Paralyzed:Half. Speed:-2. Stun:2 Slow:2\nExtreme:Stroke. Paralyzed:Body. Stun:4. Immobilized"
+      "Minor: Headache. Stun:1\nMajor: Intense Migraine. Stun:1 Slow:1\nCritical:Stroke. Paralyzed:Half. Speed:-2 Stun:2 Slow:2\nExtreme:Stroke. Paralyzed:Body. Stun:4. Immobilized"
     ))
 
     // (const disorder-jc)
@@ -1021,7 +1037,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/damage-disorder-jc.svg",
       ":summary",
-      "Minor: Periodic Weakness\nMajor: Hypotonia. Weakness.\nCritical: Hypertonia. Stiffness\nExtreme: Atrophy"
+      "Minor: Periodic Weakness. Fatigue:1\nMajor: Hypotonia. Weakness. Fatigue:2 Stun:2\nCritical: Hypertonia. Stiffness. Move:-1 Fatigue:2 Stun:2\nExtreme: Atrophy. Move:-2 Fatigue:3 Stun:2"
     ))
 
     // (const disorder-jd)
@@ -1034,7 +1050,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/damage-disorder-jd.svg",
       ":summary",
-      "Minor: Daydream of violent acts.\nMajor: Sudden visions of violence appear at random times.\nCritical: Overwhelming visions of extreme violence.\nExtreme: Crusader. You are a mighty warrior who must violently vanquish the evil all around and that no act is too extreme in your righteous goal."
+      "Minor: Daydream of violent acts. Stun:1\nMajor: Sudden random visions of violence. Stun:2\nCritical: Visions of extreme violence. Mind:-1 Stun:3\nExtreme: Crusader. Violently vanquish evil. Mind:-2 Stun:2"
     ))
 
     // (const disorder-jh)
@@ -1047,7 +1063,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/damage-disorder-jh.svg",
       ":summary",
-      "Minor: Nasty. You enjoy little acts of cruelty.\nMajor: Cruel. You go out of your way to be cruel and cause pain.\nCritical: Sadist. Pain and torture fill your day.\nExtreme: Torturer. You revel in gore and viscera. [Shadow Triumphant]"
+      "Minor: Nasty. Enjoy acts of cruelty. Stun:1\nMajor: Cruel. Aggressively cause pain. Stun:2 Shadow:2\nCritical: Sadist. Pain and torture fill your day. Stun:3 Shadow:2\nExtreme: Torturer. You revel in gore and viscera. Stun:4 Shadow:Triumphant"
     ))
 
     // (const disorder-js)
@@ -1059,8 +1075,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_js,
       ":image",
       "images/damage-disorder-js.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Nausea and Stomach Pain\nMajor: Vomiting\nCritical: Convulsions\nExtreme: Violent Seizure eventually leading to death."
+      "Minor: Nausea and Stomach Pain. Stun:1\nMajor: Vomiting. Stun:1 Slow:1\nCritical: Convulsions. Immobilized Stun:4\nExtreme: Violent Seizures. Dying Immobilized Stun:4"
     ))
 
     // (const disorder-kc)
@@ -1072,8 +1090,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_kc,
       ":image",
       "images/damage-disorder-kc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Perplexed. Hard to focus Stun:1\nMajor: Dazed. Stun:2\nCritical: Disoriented. Cannot play Focus cards.\nExtreme: Delirious. Cannot act without aid. All Skills:0"
+      "Minor: Perplexed. Hard to focus Stun:1\nMajor: Dazed. Stun:2\nCritical: Disoriented. Cannot play Strong\nExtreme: Delirious. All Skills:0"
     ))
 
     // (const disorder-kd)
@@ -1085,8 +1105,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_kd,
       ":image",
       "images/damage-disorder-kd.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Irritated by authority and fight for leadership\nMajor: You are special. Destined for greatness since birth.\nCritical: Rightful Ruler. A complex series of events has removed you from your throne. Take it back.\nExtreme: Messiah Complex. You are an infallible God King. Kill the heretics. [Shadow Triumphant]"
+      "Minor: Powermonger. Must lead. Stun:1\nMajor: Conceited. Destined for greatness. Stun:2\nCritical: Rightful Ruler. Retake your throne. Stun:4\nExtreme: God King. Execute heretics. Stun:4 Shadow:Triumphant"
     ))
 
     // (const disorder-kh)
@@ -1098,8 +1120,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_kh,
       ":image",
       "images/damage-disorder-kh.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: You complain about the system.\nMajor: Subversive. You plot to overthrow the system.\nCritical: Saboteur. You act on your plots.\nExtreme: Traitor. You can't stop acting against anyone in power regardless of the risk. [Shadow Triumphant]"
+      "Minor: Rebellious. Challenge the system. Stun:1\nMajor: Subversive. Plot against the system. Stun:1 Shadow:1\nCritical: Saboteur. Overthrow the system. Stun:2 Shadow:2\nExtreme: Traitor. Overthrow regardless of risk. Stun:4. Shadow:Triumphant"
     ))
 
     // (const disorder-ks)
@@ -1111,8 +1135,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_ks,
       ":image",
       "images/damage-disorder-ks.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Back Pain. Stun:1\nMajor: Heavy breathing. Stun:1 Slow:1\nCritical: Shortness of Breath. [Hobbled] Stun:2 Slow:2\nExtreme: Lung Failure [Suffocating] Stun:4"
+      "Minor: Back Pain. Stun:1\nMajor: Labored Breathing. Stun:1 Slow:1\nCritical: Short of Breath. Speed:-1 Stun:2 Slow:2\nExtreme: Lung Failure. Immobilized. Choking:3 Stun:2"
     ))
 
     // (const disorder-qc)
@@ -1124,8 +1150,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_qc,
       ":image",
       "images/damage-disorder-qc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Irritable and Emotional. Stress:1\nMajor: Denial of problem. Aggressive and impatient. Can't handle stress. Stress:2\nCritical: Major personality change. Stun:2 Stress:3\nExtreme: Become a completely different person. Become an NPC. Stun:2 Stress:2"
+      "Minor: Irritable and Emotional. Stress:1\nMajor: Denial. Aggressive and Impatient. Stress:2\nCritical: Major Personality Change. Stun:2 Stress:2\nExtreme: Totally Changed. Become an NPC. Stun:3 Stress:3"
     ))
 
     // (const disorder-qd)
@@ -1138,7 +1166,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/damage-disorder-qd.svg",
       ":summary",
-      "Minor: Acting. Change your mannerisms and speech patterns sometimes.\nMajor: Personality Shift. Act like a completely different person sometimes.\nCritical: Multiple personalities. Shift between other personalities in times of stress. These personalities may be the Beast, Shadow, past lives, or beings from other places or dimensions.\nExtreme: Shadow takes over. [Shadow Triumphant]"
+      "Minor: Acting. Change your mannerisms and speech patterns sometimes.\nMajor: Personality Shift. Act like a completely different person sometimes.\nCritical: Multiple personalities. Shift between other personalities in times of stress. These personalities may be the Beast, Shadow, past lives, or beings from other places or dimensions.\nExtreme: Shadow takes over. Stun:4. Shadow:Triumphant"
     ))
 
     // (const disorder-qh)
@@ -1150,8 +1178,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_qh,
       ":image",
       "images/damage-disorder-qh.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Compulsive picking at your body.\nMajor: Excessive body decoration, tattoos, scarring.\nCritical: Cutting.\nExtreme: Self-mutilation. Progressivly mutilate and maim self."
+      "Minor: Compulsive Body Picking. Stun:1\nMajor: Extreme Piercings, Tattoos, Scarring. Stun:2\nCritical: Cutting. Body:-1 Stun:3 Shadow:1\nExtreme: Self-mutilation. Mutilate and maim self. Stun:4 Shadow:2"
     ))
 
     // (const disorder-qs)
@@ -1163,8 +1193,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_qs,
       ":image",
       "images/damage-disorder-qs.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Chest Pain\nMajor: Restricted movement\nCritical: Heart Attack [Dying]\nExtreme: Massive Heart Attack [Dead]"
+      "Minor: Chest Tightness. Stun:1\nMajor: Chest Pain. Stun:1 Slow:1\nCritical: Heart Attack. Immobilized Choking:2 Stun:2\nExtreme: Massive Heart Attack. Dying Immobilized Stun:4"
     ))
 
     // (const disorder-tc)
@@ -1177,7 +1209,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/damage-disorder-tc.svg",
       ":summary",
-      "Minor: Occasional dizziness. [Stun]:1\nMajor: Repeated nausea and vomiting.\nCritical: Severe Vertigo. [Impaired] [Hobbled] [Stun]:2\nExtreme: Endless Vertigo. Vomiting, screaming, completely irrational. [Impaired] [Hobbled] [Stun]:4"
+      "Minor: Occasional dizziness. Stun:1\nMajor: Repeated nausea and vomiting. Speed:-1 Stun:2\nCritical: Severe Vertigo. Speed:-2 Stun:3\nExtreme: Endless Vertigo. Vomiting, screaming, irrational. Speed:-2 Stun:4"
     ))
 
     // (const disorder-td)
@@ -1190,7 +1222,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/damage-disorder-td.svg",
       ":summary",
-      "Minor: Daydreamer.\nMajor: Mind Elsewhere. Regularly distracted by imaginary world.\nCritical: In a fantasy world.\nExtreme: Living hell. Horrific physical and mental hallucinations."
+      "Minor: Daydreamer.\nMajor: Mind Elsewhere. Distracted by imaginary world.\nCritical: In a fantasy world.\nExtreme: Living hell. Horrific hallucinations. Beast:2 Stun:4"
     ))
 
     // (const disorder-th)
@@ -1203,7 +1235,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/damage-disorder-th.svg",
       ":summary",
-      "Minor: You conceal yourself with white lies.\nMajor: You lie for the smallest reasons. You are good at it so it might not catch up to you for a while.\nCritical: Compulsive Liar. You lie for no reason. Break all your trusts.\nExtreme: Pathological Liar. Blatant lies pour from your mouth like a fountain. Nothing you say is believable."
+      "Minor: White Lies. Lie to Conceal your privacy. Stun:1\nMajor: Little Lies. Lie for no reason. Stun:2 Shadow:1\nCritical: Compulsive Liar. Lie even when obvious. Break trusts. Stun:3 Shadow:2\nExtreme: Pathological Liar. Not credible. Stun:4 Shadow:Triumphant"
     ))
 
     // (const disorder-ts)
@@ -1215,8 +1247,10 @@ export default class nx_tactics_decks_disorder {
       nx_tactics_base.c_ranksuit_ts,
       ":image",
       "images/damage-disorder-ts.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Groin Pain\nMajor: Persistent Lower Back Pain. [Impaired]\nCritical: Extreme Lower Back Pain and Weakness. [Impaired] [Hobbled].\nExtreme: Paralyzed from the waist down."
+      "Minor: Groin Pain. Stun:1\nMajor: Persistent Back Pain. Impaired Stun:2 Speed:-1\nCritical: Extreme Back Pain and Weakness. Impaired Stun:2 Speed:-2\nExtreme: Paralyzed:Waist Down. Immobilized Stun:4 Stress:4"
     ))
 
     // (const disorder-wild-black)

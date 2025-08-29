@@ -18,6 +18,18 @@
     * A priest (Xeib) in town makes and sells anti-venom.
     * Xeib is travelling to Murintown, but he does not want to travel unguarded."))
 
+(func scene-zurakthal : base/scene
+ [tactics : base/tactics]
+ (base/scene
+  :name "Zurak'Thal Scene"
+  :titles "Coiling Depths"
+  :secrets
+   "* Zurak'Thal (Coiling Depths) - The city of serpents.
+    * Dvergholt (Dwarven Forest hold) - The abandoned dwarven outpost
+    * Sandvagr (Sand Place) - The human settlement with fragrant sandalwood.
+    * Wolfshafen (Wolf's Haven) - The human town
+    * Stahlgrim (Steel Fortress) - The distant dwarven city"))
+
 (func deck-murintrail : base/deck
  [tactics : base/tactics]
  (base/deck

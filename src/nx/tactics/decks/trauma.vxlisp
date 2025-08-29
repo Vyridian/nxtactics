@@ -90,11 +90,12 @@
   :name "Anger: Power"
   :ranksuit base/ranksuit-kc
   :image "images/damage-trauma-kc.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Rebel. You hate those who seek to control others.
-    Major: Revolutionary. You openly discuss revolution and seek to bring others to your cause. [Beast]:1
-    Critical: Insurgent. You despise those in power and are dedicated to putting a blade to them. [Beast]:2
-    Extreme: Antifa. Violently attack anyone who commands others. Beast:Unleashed"))
+   "Minor: Rebel. Hate those who control others. Stress:1
+    Major: Revolutionary. Openly incite revolution. Stress:1 Beast:1
+    Critical: Insurgent. Eliminate those in power. Stress:2 Beast:2
+    Extreme: Violently attack those in command. Beast:Unleashed"))
 
 (const trauma-kd : base/damage
  (base/damage
@@ -134,13 +135,14 @@
   :name "Anger: Self"
   :ranksuit base/ranksuit-qc
   :image "images/damage-trauma-qc.svg"
+  :layout base/cardlayout-imageonly
   :reference
    "* And, oh, my love remind me, what was it that I said? I can't help but pull the earth around me to make my bed. And, oh, my love remind me, what was it that I did? Did I drink too much? Am I losing touch? Did I build a ship to wreck? - Florence and the Machine, Ship to Wreck"
   :summary
-   "Minor: Self Critical. You feel extreme guilt for your actions.
-    Major: Self loathing.
-    Critical: Self Destructive.
-    Extreme: Suicidal. You are worthless and disgusting. End it in a way befitting of your self loathing."))
+   "Minor: Self Critical. Feel extreme guilt. Stress:1
+    Major: Self Loathing. Stress:1 Beast:1
+    Critical: Self Destructive. Stress:2 Beast:2
+    Extreme: Violently Suicidal. Worthless and disgusting. Beast:Unleashed"))
 
 (const trauma-qd : base/damage
  (base/damage
@@ -180,10 +182,11 @@
   :name "Anger: Violence"
   :ranksuit base/ranksuit-jc
   :image "images/damage-trauma-jc.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Viscious. Revel in the kill.
-    Major: Bloodthirsty. Find a way to keep the kills coming.
-    Critical: Butcher. Beast:1 Cleave a bloody path wherever you go. Beast:2
+   "Minor: Viscious. Revel in the kill. Stress:1
+    Major: Bloodthirsty. Keep the kills coming. Stress:1 Beast:1
+    Critical: Butcher. Cleave a bloody path. Stress:2 Beast:2
     Extreme: Animalistic. Kill indiscriminately. Beast:Unleased"))
 
 (const trauma-jd : base/damage
@@ -224,11 +227,12 @@
   :name "Anger: Reality"
   :ranksuit base/ranksuit-tc
   :image "images/damage-trauma-tc.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Angry drunk. Obnoxious and pushy when intoxicated.
-    Major: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. Beast:1
-    Critical: Violent Addict. You're violent when high and will take anything for a high. Beast:2
-    Extreme:Wildly Violent Addict. Do anything it takes to stay high. Beast:Unleashed"))
+   "Minor: Angry drunk. Obnoxious and pushy. Stress:1
+    Major: Violent Alcoholic. Stay drunk and angry. Stress:1 Beast:1
+    Critical: Violent Addict. Desperate for a fix. Stress:2 Beast:2
+    Extreme:Hyperviolent Addict. Never come down. Beast:Unleashed"))
 
 (const trauma-td : base/damage
  (base/damage
@@ -268,11 +272,12 @@
   :name "Anger: Belief"
   :ranksuit base/ranksuit-9c
   :image "images/damage-trauma-9c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Skeptic. Completely apathetic and dismissive of religious figures or icons.
-    Major: Sacreligeous. Has a tendency toward sacrilege and blasphemy.
-    Critical: Violent secularist. Blame faith for everything. Unable to work with those who with strong beliefs.
-    Extreme: Jihadist. Holy War. Mercilessly slay all unbelievers. Your own safety doesn't matter. Beast:Unleashed"))
+   "Minor: Skeptic. Dismissive of religions. Stress:1
+    Major: Sacrilegious. Enjoys blasphemy. Stress:1 Beast:1
+    Critical: Secularist. Blame faith for everything. Stress:2 Beast:2
+    Extreme: Jihadist. Mercilessly slay believers. Beast:Unleashed"))
 
 (const trauma-9d : base/damage
  (base/damage
@@ -312,11 +317,12 @@
   :name "Anger: Status"
   :ranksuit base/ranksuit-8c
   :image "images/damage-trauma-8c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Jealous. Frustrated by showoffs.
-    Major: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. Beast:1
-    Critical: Smear Campaign. Dedicated to embarassing and undermining the elite.
-    Extreme: Punish the elite for their hubris. Kill them all. Beast:Unleashed"))
+   "Minor: Jealous. Frustrated by showoffs. Stress:1
+    Major: Contemptuous. Undermine the elite. Stress:1 Beast:1
+    Critical: Smear campaign against the elite. Stress:2 Beast:2
+    Extreme: Off with their Heads. Punish all elites. Beast:Unleashed"))
 
 (const trauma-8d : base/damage
  (base/damage
@@ -355,11 +361,12 @@
   :name "Anger: Companions"
   :ranksuit base/ranksuit-7c
   :image "images/damage-trauma-7c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Vindictive. Aggressively protective of companions.
-    Major: Hunter. Take merciless revenge on any wrongs against companions.
-    Critical: Punisher. There are more who deserve punishment. Relentlessly hunt them down.
-    Extreme: Angel of Death. Remove all their filth from the world. Endless bloodshed. Beast:Unleashed"))
+   "Minor: Vindictive. Aggressive protector. Stress:1
+    Major: Hunter. Avenge your companions. Stress:1 Beast:1
+    Critical: Punisher. More deserve punishment. Stress:2 Beast:2
+    Extreme: Angel of Death. Remove all threats. Beast:Unleashed"))
 
 (const trauma-7d : base/damage
  (base/damage
@@ -399,11 +406,12 @@
   :name "Anger: Strangers"
   :ranksuit base/ranksuit-6c
   :image "images/damage-trauma-6c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Resentful. Talks about others with sweeping sterotypes.
-    Major: Hateful. Uses overtly hateful language and is uncomfortable working in certain groups.
-    Critical: Terrorist. Hates other groups and actively seeks to undermine or harm them.
-    Extreme: Genocidal. Actively works to wipe out certain groups. Beast:Unleashed"))
+   "Minor: Resentful. Stereotype others. Stress:1
+    Major: Hateful. Spiteful in certain groups. Stress:1 Beast:1
+    Critical: Terrorist. Harm other groups. Stress:2 Beast:2
+    Extreme: Genocidal. Wipe out other groups. Beast:Unleashed"))
 
 (const trauma-6d : base/damage
  (base/damage
@@ -414,7 +422,7 @@
    "Minor: Lonely.
     Major: Alienated.
     Critical: Isolated.
-    Extreme: Hermit. Positive that everyone is evil. Leave. [Shadow Triumphant]"))
+    Extreme: Hermit. Convinced everyone is evil. Shadow:Triumphant"))
 
 (const trauma-6h : base/damage
  (base/damage
@@ -443,11 +451,12 @@
   :name "Anger: Strangers"
   :ranksuit base/ranksuit-5c
   :image "images/damage-trauma-5c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Possessive. Drawn to abusive relationships.
-    Major: Controlling. You are a manipulator.
-    Critical: Stalker. You are a sexual abuser.
-    Extreme: Jealous Rage. Kill your rivals. If you can't have them. No one can. Beast:Unleashed"))
+   "Minor: Possessive. Abusive relationships. Stress:1
+    Major: Controlling. Manipulate others. Stress:1 Beast:1
+    Critical: Stalker. Find vulnerable to abuse. Stress:2 Beast:2
+    Extreme: Jealous Rage. Tolerate no challenges. Beast:Unleashed"))
 
 (const trauma-5d : base/damage
  (base/damage
@@ -487,11 +496,12 @@
   :name "Anger: Change"
   :ranksuit base/ranksuit-4c
   :image "images/damage-trauma-4c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.
-    Major: Reactionary. Cannot tolerate anything new or modern.
-    Critical: Luddite. Destroy anything modern or new.
-    Extreme: Violent Primitivist. Destroy anything that is more advanced than would be on a farm."))
+   "Minor: Curmudgeon. New things frustrate. Stress:1
+    Major: Reactionary. Cannot tolerate the new. Stress:1 Beast:1
+    Critical: Luddite. Stop anything new. Stress:2 Beast:2
+    Extreme: Violent Primitivist. Destroy everything new. Beast:Unleashed"))
 
 (const trauma-4d : base/damage
  (base/damage
@@ -531,12 +541,13 @@
   :name "Anger: Things"
   :ranksuit base/ranksuit-3c
   :image "images/damage-trauma-3c.svg"
+  :layout base/cardlayout-imageonly
   :reference
    "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra"
   :summary
-   "Minor: Graphetti Artist. Make your mark on the world.
-    Major: Vandal. Take out your anger by defacing and damaging objects. Beast:1
-    Critical: Arsonist. Kill them with fire. Beast:2
+   "Minor: Graffiti Artist. Make your mark. Stress:1
+    Major: Vandal. Deface and damage objects. Stress:1 Beast:1
+    Critical: Arsonist. Kill them with fire. Stress:2 Beast:2
     Extreme: Destroyer. The world is too far gone. Burn it all down. Beast:Unleashed"))
 
 (const trauma-3d : base/damage
@@ -577,11 +588,12 @@
   :name "Anger: Fortune"
   :ranksuit base/ranksuit-2c
   :image "images/damage-trauma-2c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Frustrated by an arbitrary world.
-    Major: Random outbursts. Your temper seems to surge at random times.
-    Critical: Lash out. Choose enemy targets at random. Beast:2
-    Extreme: Blind Rage. Choose targets completely at random. Beast:Unleashed"))
+   "Minor: Frustrated by an arbitrary world. Stress:1
+    Major: Random outbursts. Your temper seems to surge randomly. Stress:1 Beast:1
+    Critical: Lash out. Choose enemies at random. Stress:2 Beast:2
+    Extreme: Blind Rage. Choose any target at random. Beast:Unleashed"))
 
 (const trauma-2d : base/damage
  (base/damage

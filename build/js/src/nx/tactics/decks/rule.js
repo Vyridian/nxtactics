@@ -137,7 +137,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Beast", ":summary", "* The Beast\n* Beast Unleashed: The Beast is now in control of this unit. Set Conscience = Will; set Will = Beast stat; and set Beast=blank"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Beast", ":summary", "* The Beast is the Id, the raw, primal mind buried beneath reason and morality. It is only fight or flight, hunger and fear, demonic rage and instinct.\n* Beast:X - IF a Unit gains Beast greater than Will THEN test Will vs Beast or Beast:Unleashed\n* Beast:Unleashed - The Beast gains control. It cannot use any Mind Skills and will only fight or flee combat. Set Conscience=Will, Will=Beast, and Beast=blank\n* Beast:Calmed - IF an Unleashed Unit is in a peaceful situation and gains Will greater than Beast THEN test Will vs Beast to reverse Beast:Unleashed"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -393,6 +393,7 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Diving", ":summary", "A Diving Unit is rapidly losing Elevation\n* Round End - Elevation:-1 for each Diving:1"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Drag", ":summary", "Move the Target 1 Space adjacent to you\n* Movement - IF your Body >= Target Body THEN for each Movement, you may spend Move:+1 to move the Target with you"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -468,6 +469,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Held", ":summary", "Unit is held by a Unit or Item\n* Penalty - Disadvantage vs the Rival\n* Escape - Get Hits:3+ vs the Rival"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -551,6 +553,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Knockdown", ":summary", "Target is knocked down Elevation:-X\n* Surface - IF it hits something it takes Fatigue:X Stun:X and is Prone"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
