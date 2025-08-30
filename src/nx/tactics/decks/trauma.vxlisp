@@ -80,8 +80,8 @@
   :summary
    "Minor: Anxiety. Agitated around death. Stress:1
     Major: Death is coming. Run. Stress:2 Withdraw:2
-    Critical: Petrified. Collapse in fear of death. Stress:2 Shadow:2
-    Extreme: Die of Fright. Dying. Beast:Unleashed"
+    Critical: Petrified. Collapse in fear of death. Stress:2 Beast:2
+    Extreme: Die of Fright. Dying Beast:Unleashed"
   :reference
    "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over. - Doctor Who, Heaven Sent"))
 
@@ -125,10 +125,10 @@
   :ranksuit base/ranksuit-ks
   :image "images/damage-trauma-ks.svg"
   :summary
-   "Minor: Become agitated, shaky and incoherent when facing authority.
-    Major: Fawning. Obviously frightened of authority. Will obey easily.
-    Critical: Cowering. Fearful of authority. Will run or obey.
-    Extreme: Panicked. Terrified by Power of any kind."))
+   "Minor: Cowed. Unnerved by authority. Stress:1
+    Major: Fawning. Obey authority. Stress:1 Withdraw:1
+    Critical: Cowering. Fear authority. Stress:2 Beast:2
+    Extreme: Groveling. Surrender and beg. Stress:3 Beast:3"))
 
 (const trauma-qc : base/damage
  (base/damage
@@ -171,11 +171,12 @@
   :name "Fear: Self"
   :ranksuit base/ranksuit-qs
   :image "images/damage-trauma-qs.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Self-conscious. Success and praise makes you uneasy.
-    Major: Unworthy. You are a fraud.
-    Critical: You can't trust your own actions.
-    Extreme: You are a monster. You must be locked away."))
+   "Minor: Self-conscious. Uneasy with praise. Stress:1
+    Major: Unworthy. You are a fraud. Stress:1 Withdraw:1
+    Critical: Self-doubt. Question everything. Stress:2 Beast:2
+    Extreme: Impostor. Impostor. Beg to be locked up. Stress:3 Beast:3"))
 
 (const trauma-jc : base/damage
  (base/damage
@@ -216,11 +217,12 @@
   :name "Fear: Violence"
   :ranksuit base/ranksuit-js
   :image "images/damage-trauma-js.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Watched. You feel you are being watched.
-    Major: Hunted. You are convinced that something is hunting you. Protect yourself above all else.
-    Critical: Haunted. It may get through any defenses. Keep moving. Don't sleep.
-    Extreme: Terrorized. Run until it catches you and then die of fright."))
+   "Minor: Watched. You're being watched. Stress:1
+    Major: Hunted. You're being hunted. Stress:1 Withdraw:1
+    Critical: Haunted. Keep moving. Don't sleep. Stress:2 Beast:2
+    Extreme: Terrorized. Run! Don't stop! Beast:Unleashed"))
 
 (const trauma-tc : base/damage
  (base/damage
@@ -261,11 +263,12 @@
   :name "Fear: Reality"
   :ranksuit base/ranksuit-ts
   :image "images/damage-trauma-ts.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Paranoid. Unnerved about everything
-    Major: Panicked about everyting. Full Move this turn in the safest direction
-    Critical: Terrified of Everything, must be restrained or will harm others or self
-    Extreme: Catatonic with bouts of screaming. Beast:Unleashed"))
+   "Minor: Unnerved. Jumpy. Stress:1
+    Major: Paranoid. Nothing is safe. Stress:1 Withdraw:1
+    Critical: Terrified. Flee. Stress:2 Withdraw:2 Beast:2
+    Extreme: Irrational and screaming. Beast:Unleashed"))
 
 (const trauma-9c : base/damage
  (base/damage
@@ -306,11 +309,12 @@
   :name "Fear: Belief"
   :ranksuit base/ranksuit-9s
   :image "images/damage-trauma-9s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Become agitated, shaky and incoherent when facing any religious figures or icons.
-    Major: Theophobia. Irrational fear of gods and religion.
-    Critical: Repentent. Cannot face religious opposition.
-    Extreme: Persecuted. Delirious with fear of divine retribution."))
+   "Minor: Guilt over your sins. Stress:1
+    Major: Repent your sins. Stress:2
+    Critical: Sinner. No escaping your sins. Stress:2 Beast:2
+    Extreme: Persecuted. Retribution is coming. Beast:Unleashed"))
 
 (const trauma-8c : base/damage
  (base/damage
@@ -351,10 +355,10 @@
   :ranksuit base/ranksuit-8s
   :image "images/damage-trauma-8s.svg"
   :summary
-   "Minor: Performance Anxiety. Can't be the focus of attention.
-    Major: Terrified of judgement. Can only take actions with trusted companions.
-    Critical: Terrified of public failure. Cannot take actions with any witnesses. 
-    Extreme: Terrified of failure. Cannot take actions."))
+   "Minor: Performance Anxiety. Stress:1
+    Major: Judgment. Only act with companions. Stress:2
+    Critical: Anonymous. Only act secretly. Stress:2 Beast:2
+    Extreme: Terrified of failure. Take no action. Immobilized. Beast:Unleashed"))
 
 (const trauma-7c : base/damage
  (base/damage
@@ -395,11 +399,12 @@
   :name "Fear: Companions"
   :ranksuit base/ranksuit-7s
   :image "images/damage-trauma-7s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Anxious about companions' hidden meaning and discussions.
-    Major: Fear of being alone. Cannot take actions without line of sight to a companion.
-    Critical: Terrified of being alone. Cannot take actions without companion in unobscured line of sight. Cannot take actions without adjacent companion.
-    Extreme: Terrified of abandonment. Cannot take actions without adjacent companion."))
+   "Minor: Distrustful. Fear others motives. Stress:1
+    Major: Needy. Needs others near. Stress:1 Withdraw:1
+    Critical: Alone. Terrified of being alone. Stress:2 Withdraw:2 Beast:2
+    Extreme: Abandoned. Hysterical when alone. Beast:Unleashed"))
 
 (const trauma-6c : base/damage
  (base/damage
@@ -440,11 +445,12 @@
   :name "Fear: Strangers"
   :ranksuit base/ranksuit-6s
   :image "images/damage-trauma-6s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Distrust. Suspicious of 'others' around them.
-    Major: Avoidant. Become agitated, shaky and incoherent when facing different 'races'.
-    Critical: Xenophobia. Terrified of strangers. Cannot take actions around non-companions.
-    Extreme: Fight or Flight around other groups or 'races'."))
+   "Minor: Suspicious of 'others'. Stress:1
+    Major: Avoids 'others'. Stress:1 Withdraw:1
+    Critical: Xenophobe. Terrified of 'others'. Stress:2 Withdraw:2 Beast:2
+    Extreme: Fight or Flight around 'others'. Beast:Unleashed"))
 
 (const trauma-5c : base/damage
  (base/damage
@@ -485,11 +491,12 @@
   :name "Fear: Love"
   :ranksuit base/ranksuit-5s
   :image "images/damage-trauma-5s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Prudish about affection.
-    Major: Become agitated, shaky and incoherent when facing affection.
-    Critical: Panicked distress in mixed gender situations or any suggestion of affection.
-    Extreme: Terrified of even the possibility of mixed gender situations. Barricade yourself in."))
+   "Minor: Prudish about affection. Stress:1
+    Major: Intolerant of affection. Stress:1 Withdraw:1
+    Critical: Panicked around opposite gender. Stress:2 Withdraw:2 Beast:2
+    Extreme: Terrified of other gender. Hide. Beast:Unleashed"))
 
 (const trauma-4c : base/damage
  (base/damage
@@ -530,11 +537,12 @@
   :name "Fear: Change"
   :ranksuit base/ranksuit-4s
   :image "images/damage-trauma-4s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Unnerved by new things or ideas.
-    Major: Afraid of new things or ideas. Can only follow others.
-    Critical: Cannot try anything remotely new. Only highest level skills can be used.
-    Extreme: Hysterical fear of change. Isolate yourself."))
+   "Minor: Unnerved by change. Stress:1
+    Major: Afraid of change. Stress:1 Withdraw:1
+    Critical: Panicked at change. Stress:2 Withdraw:2 Beast:2
+    Extreme: Hysterical of change. Isolate. Beast:Unleashed"))
 
 (const trauma-3c : base/damage
  (base/damage
@@ -548,7 +556,7 @@
    "Minor: Graffiti Artist. Make your mark. Stress:1
     Major: Vandal. Deface and damage objects. Stress:1 Beast:1
     Critical: Arsonist. Kill them with fire. Stress:2 Beast:2
-    Extreme: Destroyer. The world is too far gone. Burn it all down. Beast:Unleashed"))
+    Extreme: Destroyer. Burn it all down. Beast:Unleashed"))
 
 (const trauma-3d : base/damage
  (base/damage
@@ -577,11 +585,12 @@
   :name "Fear: Things"
   :ranksuit base/ranksuit-3s
   :image "images/damage-trauma-3s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Terrified of heights.
-    Major: Hyterical near fire.
-    Critical: Hyterical in enclosed spaces.
-    Extreme: Hyterical around animals and creatures."))
+   "Minor: Terrified of heights. Stress:1
+    Major: Hysterical near fire. Stress:2 Withdraw:1
+    Critical: Hysterical in enclosed spaces. Stress:2 Beast:2
+    Extreme: Hysterical with creatures. Stress:4 Beast:2"))
 
 (const trauma-2c : base/damage
  (base/damage
@@ -591,9 +600,9 @@
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Frustrated by an arbitrary world. Stress:1
-    Major: Random outbursts. Your temper seems to surge randomly. Stress:1 Beast:1
-    Critical: Lash out. Choose enemies at random. Stress:2 Beast:2
-    Extreme: Blind Rage. Choose any target at random. Beast:Unleashed"))
+    Major: Random outbursts. Temper surges. Stress:1 Beast:1
+    Critical: Lash out. Choose enemies randomly. Stress:2 Beast:2
+    Extreme: Blind Rage. Choose targets randomly. Beast:Unleashed"))
 
 (const trauma-2d : base/damage
  (base/damage
@@ -615,18 +624,19 @@
    "Minor: Frugal. A penny saved is a penny earned.
     Major: Stingy. You only buy what is absolutely necessary.
     Critical: Miserly. Hoard your treasure. Mine. Mine. Mine.
-    Extreme: Heartless Miser. Nothing will separate you from a penny. [Shadow Triumphant]"))
+    Extreme: Heartless Miser. Nothing will separate you from a penny. Shadow:Triumphant"))
 
 (const trauma-2s : base/damage
  (base/damage
   :name "Fear: Fortune"
   :ranksuit base/ranksuit-2s
   :image "images/damage-trauma-2s.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Superstitious. Some things are lucky or unlucky.
-    Major: Can only do lucky things.
-    Critical: Cannot act with a fortune telling. Can only do lucky things, and almost everything is unlucky.
-    Extreme: Cursed. Everything is unlucky. Step on a crack. Can't perform actions."))
+   "Minor: Superstitious. Lucky/unlucky items. Stress:1
+    Major: Lucky. Only use lucky items. Stress:2
+    Critical: Unlucky. Most items are unlucky. Stress:3 Beast:1
+    Extreme: Cursed. Everything is unlucky. Can't act. Stress:4 Beast:2"))
 
 (func deck-trauma : base/deck
  (base/deck

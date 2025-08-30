@@ -45,10 +45,10 @@
   (base/rule
    :name "Beast"
    :summary
-    "* The Beast is the Id, the raw, primal mind buried beneath reason and morality. It is only fight or flight, hunger and fear, demonic rage and instinct.
-     * Beast:X - IF a Unit gains Beast greater than Will THEN test Will vs Beast or Beast:Unleashed
-     * Beast:Unleashed - The Beast gains control. It cannot use any Mind Skills and will only fight or flee combat. Set Conscience=Will, Will=Beast, and Beast=blank
-     * Beast:Calmed - IF an Unleashed Unit is in a peaceful situation and gains Will greater than Beast THEN test Will vs Beast to reverse Beast:Unleashed")
+    "* The Id. The raw, primal mind buried beneath reason and morality. It knows only fight or flight, hunger and fear, demonic rage and instinct.
+     * Beast:X - IF a Unit gains Beast greater than Will THEN test Will vs Beast or gain Unleashed
+     * Unleashed - The Beast gains control. It cannot use any Mind Skills and will only fight or flee combat.
+     * Calmed - IF an Unleashed Unit is in a peaceful situation and gains Will greater than Beast THEN test Will vs Beast to remove Unleashed")
   (base/rule
    :name "Blast"
    :image "images/rule-blast.svg"
@@ -278,10 +278,12 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Held"
+   :image "images/rule-held.svg"
+   :layout base/cardlayout-imageonly
    :summary
     "Unit is held by a Unit or Item
      * Penalty - Disadvantage vs the Rival
-     * Escape - Get Hits:3+ vs the Rival")
+     * Escape - IF a total of Hits:X+ vs the Rival THEN remove Held")
   (base/rule
    :name "Hits"
    :image "images/rule-hits.svg"
@@ -610,10 +612,9 @@
      * When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker"
    :summary
     "* Lurking Shadow - The Shadow is a devious, sociopathic, latent personality. It is normally powerless, surpressed by the [Will] in civilized men. It can, however, gain power and even dominance in those with weak wills or those who cultivate it such as from [Corruption], [Darkness], [Fleshcraft], [Intimidation], or [Necromancy].
-     * Cruel and Unusual - The Shadow silently observes all that the person experiences. It has nothing but contempt for others as well as the [Will] that keeps it contained. As the manifestation of the unit's dark dreams, twisted desires, and bizarre megalomania, the Shadow reinforces its own superiority by exerting power over others. Manipulating, dominating, and causing physical or emotional pain is a siren's call that the Shadow cannot
-     refuse.
-     * Consumed by Shadow - Whenever a unit's [Will] is lowered to 0 or below its Shadow rating, test Shadow vs. [Will]. If the Shadow wins, it gains control of the unit until [Will] exceeds Shadow again (if ever). Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank.
-     * Rising Shadow - While the Shadow is dominant, the person always uses its Shadow rating instead of [Will]. The Shadow will always act toward its, usually immediate, self interest. It will usually not aid its allies in any way. Because the Shadow is self absorbed, all [Retreats] against it are doubled, but failure feeds its insecurities, so retreat is emotionally devastating and can lead to the [Will] taking charge again.")
+     * Cruel and Unusual - The Shadow silently observes all that the person experiences. It has nothing but contempt for others as well as the [Will] that keeps it contained. As the manifestation of the unit's dark dreams, twisted desires, and bizarre megalomania, the Shadow reinforces its own superiority by exerting power over others. Manipulating, dominating, and causing physical or emotional pain is a siren's call that the Shadow cannot refuse.
+     * Shadow:Triumphant - IF a unit's [Will] is lowered below Shadow THEN test Shadow vs. [Will] or it gains control of the unit until [Will] exceeds Shadow again (if ever). Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank.
+     * Rising Shadow - The Shadow will always act toward its, usually immediate, self interest. It will usually not aid its allies in any way. Because the Shadow is self absorbed, all [Withdraw]s against it are doubled, but failure feeds its insecurities, so retreat is emotionally devastating and can lead to the [Will] taking charge again.")
   (base/rule
    :name "Skill"
    :image "images/rule-skill.svg"
