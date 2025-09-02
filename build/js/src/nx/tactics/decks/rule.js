@@ -137,7 +137,19 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Beast", ":summary", "* The Beast is the Id, the raw, primal mind buried beneath reason and morality. It is only fight or flight, hunger and fear, demonic rage and instinct.\n* Beast:X - IF a Unit gains Beast greater than Will THEN test Will vs Beast or Beast:Unleashed\n* Beast:Unleashed - The Beast gains control. It cannot use any Mind Skills and will only fight or flee combat. Set Conscience=Will, Will=Beast, and Beast=blank\n* Beast:Calmed - IF an Unleashed Unit is in a peaceful situation and gains Will greater than Beast THEN test Will vs Beast to reverse Beast:Unleashed"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Beast",
+        ":image",
+        "images/rule-beast.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":reference",
+        "Dr. Jekyll and Mr. Hyde",
+        ":summary",
+        "The Beast represents our raw, primitive mind buried beneath reason and morality. It knows only rage, fear, hunger, and instinct. During periods of desperation and duress the Beast may emerge.\n* Unleashed - The Beast gains control. It cannot use Mind Skills and will only fight or flee.\n* Beast:X - IF Beast > Will THEN test Will vs Beast or gain Unleashed\n* Soothed - IF Unleashed Unit is in a peaceful situation and Will > Beast THEN test Will vs Beast to remove Unleashed"
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -469,7 +481,17 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Held", ":summary", "Unit is held by a Unit or Item\n* Penalty - Disadvantage vs the Rival\n* Escape - Get Hits:3+ vs the Rival"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Held",
+        ":image",
+        "images/rule-held.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Unit is held by a Unit or Item\n* Penalty - Disadvantage vs the Rival\n* Escape - IF a total of Hits:X+ vs the Rival THEN remove Held"
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -893,7 +915,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shadow", ":titles", "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin", ":reference", "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence\n* I am your darkness! I am your TRUTH! - Morgana, Runeterra\n* Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil\n* Hannibal Lecter\n* Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas\n* If once you start down the dark path, forever will it dominate your destiny - Yoda, Star Wars: The Empire Strikes Back\n* A farmer comes home one day to find ... everything that he loved, taken from him. His children. One can only 	imagine the pit of despair, the hours of Job-like lamentations, the burden of existence. He makes a promise to 	himself in those dark hours. A life's work erupts from his knotted mind... Years go by... The farmer, who is no longer a farmer, sees the wreckage that he has left in his wake. It is now he who burns. It is he who slaughters, ... and he knows in his heart, he must pay. - Red Reddington, The Blacklist\n* No one escapes their shadow. - Zed, Runeterra\n* When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker", ":summary", "* Lurking Shadow - The Shadow is a devious, sociopathic, latent personality. It is normally powerless, surpressed by the [Will] in civilized men. It can, however, gain power and even dominance in those with weak wills or those who cultivate it such as from [Corruption], [Darkness], [Fleshcraft], [Intimidation], or [Necromancy].\n* Cruel and Unusual - The Shadow silently observes all that the person experiences. It has nothing but contempt for others as well as the [Will] that keeps it contained. As the manifestation of the unit's dark dreams, twisted desires, and bizarre megalomania, the Shadow reinforces its own superiority by exerting power over others. Manipulating, dominating, and causing physical or emotional pain is a siren's call that the Shadow cannot\nrefuse.\n* Consumed by Shadow - Whenever a unit's [Will] is lowered to 0 or below its Shadow rating, test Shadow vs. [Will]. If the Shadow wins, it gains control of the unit until [Will] exceeds Shadow again (if ever). Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank.\n* Rising Shadow - While the Shadow is dominant, the person always uses its Shadow rating instead of [Will]. The Shadow will always act toward its, usually immediate, self interest. It will usually not aid its allies in any way. Because the Shadow is self absorbed, all [Retreats] against it are doubled, but failure feeds its insecurities, so retreat is emotionally devastating and can lead to the [Will] taking charge again."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shadow", ":titles", "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin", ":reference", "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence\n* Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil\n* Hannibal Lecter\n* Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas\n* If once you start down the dark path, forever will it dominate your destiny - Yoda, Star Wars: The Empire Strikes Back\n* A farmer comes home one day to find ... everything that he loved, taken from him... He makes a promise to himself in those dark hours. A life's work erupts from his knotted mind... Years go by... The farmer, who is no longer a farmer, sees the wreckage that he has left in his wake. It is now he who burns. It is he who slaughters, ... and he knows in his heart, he must pay. - Red Reddington, The Blacklist\n* When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker", ":summary", "The Shadow represents our repressed, selfish, and cruel desires. It is normally powerless, frustrated, and suppressed, but it can gain dominance in those whose Will falters or those who cultivate it.\n* Triumphant - The Shadow gains control. If uses Shadow instead of Will for tests. It acts in its immediate self interest and rarely aids anyone.\n* Shadow:X - IF Shadow > Will THEN test Will vs Shadow or gain Triumphant\n* Bitter Defeat - Because the Shadow is self absorbed, failure is devastating. IF Shadow is defeated THEN Shadow:-1. IF Will > Shadow THEN test Will vs Shadow to remove Triumphant."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",

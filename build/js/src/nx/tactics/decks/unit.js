@@ -1155,6 +1155,7 @@ export default class nx_tactics_decks_unit {
         ":imgmirror",
         true
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pattern Spider", ":summary", "Pattern Spiders are primitive beings that are extensions of the [Wyver].\n* Description - They appear as tiny flat squares with four flat legs. Thery visual similarity to computer chips is probably not accidental.\n* Behaviour - The spiders weave webs of pure light that mirror electrical systems and networks. They work diligently to repair any damage to the webs with no concern for their own safety. If they are destroyed, more will appear until the damage is repaired. Destroyed spiders dissolve into light."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pestilence Horse", ":summary", "* A Pestience Horse is a zombie horse that carries deadly diseases. It's decaying body is not as fast as its original body, but may still trot fairly quickly. It is not as agressive as other undead, instead travelling around spreading disease and fleeing when confronted."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Force"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Phantasmal Mount"),

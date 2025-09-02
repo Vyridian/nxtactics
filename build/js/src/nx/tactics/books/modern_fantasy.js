@@ -748,9 +748,9 @@ export default class nx_tactics_books_modern_fantasy {
           ":name",
           "Spirits",
           ":summary",
-          "* Bane - A corruption spirit that exists in the [Spirit Realm].\n* [Bane]s are attracted to hatred, cruelty, lust, and fear, and they are repelled by happiness, generosity, love, and kindness.\nNature Spirit Pattern Spider",
+          "* Bane - A corruption spirit that exists in the [Spirit Realm].\n* [Bane]s are attracted to hatred, cruelty, lust, and fear, and they are repelled by happiness, generosity, love, and kindness.",
           ":unitmap",
-          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Bane: Disease", "Bane: Madness", "Bane: Poison", "Bane: Radiation")
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Bane: Disease", "Bane: Madness", "Bane: Poison", "Bane: Radiation", "Pattern Spider")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

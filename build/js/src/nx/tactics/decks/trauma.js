@@ -556,7 +556,7 @@ export default class nx_tactics_decks_trauma {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Frustrated by an arbitrary world. Stress:1\nMajor: Random outbursts. Your temper seems to surge randomly. Stress:1 Beast:1\nCritical: Lash out. Choose enemies at random. Stress:2 Beast:2\nExtreme: Blind Rage. Choose any target at random. Beast:Unleashed"
+      "Minor: Frustrated by an arbitrary world. Stress:1\nMajor: Random outbursts. Temper surges. Stress:1 Beast:1\nCritical: Lash out. Choose enemies randomly. Stress:2 Beast:2\nExtreme: Blind Rage. Choose targets randomly. Beast:Unleashed"
     ))
 
     // (const trauma-2d)
@@ -568,8 +568,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_2d,
       ":image",
       "images/damage-trauma-2d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Pessimist. Glass is half empty.\nMajor: Nothing good ever happens to you.\nCritical: Defeatist. Everything you try fails.\nExtreme: Absolute Defeatist. You've lost the game of life. Surrender to darkness. [Shadow Trimumpant]"
+      "Minor: Pessimist. Glass half empty. Stress:1\nMajor: Luckless. Nothing good happens. Stress:1 Shadow:1\nCritical: Defeatist. You never win. Stress:2 Shadow:2\nExtreme: Hopeless. This is the end. Suicidal. Shadow:Trimumpant"
     ))
 
     // (const trauma-2h)
@@ -581,8 +583,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_2h,
       ":image",
       "images/damage-trauma-2h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Frugal. A penny saved is a penny earned.\nMajor: Stingy. You only buy what is absolutely necessary.\nCritical: Miserly. Hoard your treasure. Mine. Mine. Mine.\nExtreme: Heartless Miser. Nothing will separate you from a penny. [Shadow Triumphant]"
+      "Minor: Frugal. A penny saved. Stress:1\nMajor: Stingy. Don't spend. Stress:1 Shadow:1\nCritical: Miserly. Hoard treasure. Stress:2 Shadow:2\nExtreme: Heartless Miser. Mine, mine, mine. Shadow:Triumphant"
     ))
 
     // (const trauma-2s)
@@ -594,8 +598,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_2s,
       ":image",
       "images/damage-trauma-2s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Superstitious. Some things are lucky or unlucky.\nMajor: Can only do lucky things.\nCritical: Cannot act with a fortune telling. Can only do lucky things, and almost everything is unlucky.\nExtreme: Cursed. Everything is unlucky. Step on a crack. Can't perform actions."
+      "Minor: Superstitious. Lucky/unlucky items. Stress:1\nMajor: Lucky. Only use lucky items. Stress:2\nCritical: Unlucky. Most items are unlucky. Stress:3 Beast:1\nExtreme: Cursed. Everything is unlucky. Can't act. Stress:4 Beast:2"
     ))
 
     // (const trauma-3c)
@@ -612,7 +618,7 @@ export default class nx_tactics_decks_trauma {
       ":reference",
       "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra",
       ":summary",
-      "Minor: Graffiti Artist. Make your mark. Stress:1\nMajor: Vandal. Deface and damage objects. Stress:1 Beast:1\nCritical: Arsonist. Kill them with fire. Stress:2 Beast:2\nExtreme: Destroyer. The world is too far gone. Burn it all down. Beast:Unleashed"
+      "Minor: Graffiti Artist. Make your mark. Stress:1\nMajor: Vandal. Deface and damage objects. Stress:1 Beast:1\nCritical: Arsonist. Kill them with fire. Stress:2 Beast:2\nExtreme: Destroyer. Burn it all down. Beast:Unleashed"
     ))
 
     // (const trauma-3d)
@@ -624,8 +630,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_3d,
       ":image",
       "images/damage-trauma-3d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hollow. The spark is missing from the things you do.\nMajor: Apathy. Your efforts seem pointless. You feel numb.\nCritical: Emptiness. You only do things when others push you.\nExtreme: Complete apathy about everything. Do nothing. [Shadow Triumphant]"
+      "Minor: Hollow. Spark is missing. Stress:1\nMajor: Apathy. Effort is pointless. Stress:1 Shadow:1\nCritical: Empty. Don't bother. Stress:2 Shadow:2\nExtreme: Do Nothing. Immobile. Shadow:Triumphant"
     ))
 
     // (const trauma-3h)
@@ -637,8 +645,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_3h,
       ":image",
       "images/damage-trauma-3h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Collector. Keep mementoes of your life.\nMajor: Pack Rat. You have a hard time leaving anything behind.\nCritical: Hoarder. Keep everything.\nExtreme: Collect everything but never use them. [Shadow Triumphant]"
+      "Minor: Collector. Keep mementoes. Stress:1\nMajor: Pack Rat. Might need that. Stress:1 Shadow:1\nCritical: Hoarder. Keep anything. Stress:2 Shadow:2\nExtreme: Keep but never use EVERYTHING. Shadow:Triumphant"
     ))
 
     // (const trauma-3s)
@@ -650,8 +660,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_3s,
       ":image",
       "images/damage-trauma-3s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Terrified of heights.\nMajor: Hyterical near fire.\nCritical: Hyterical in enclosed spaces.\nExtreme: Hyterical around animals and creatures."
+      "Minor: Terrified of heights. Stress:1\nMajor: Hysterical near fire. Stress:2 Withdraw:1\nCritical: Hysterical in enclosed spaces. Stress:2 Beast:2\nExtreme: Hysterical with creatures. Stress:4 Beast:2"
     ))
 
     // (const trauma-4c)
@@ -691,8 +703,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_4h,
       ":image",
       "images/damage-trauma-4h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hyperactive. Axious when not active.\nMajor: Change for changes sake.\nCritical: Stream of consciousness. Needs to be 'All In' all the time.\nExtreme: Cannot focus on any topic. No downtime. Work yourself to death."
+      "Minor: Hyperactive. Anxious when inactive. Stress:1\nMajor: Flighty. Change for change sake. Stress:1 Shadow:1\nCritical: Can't Stop. ALL in ALL the time. Stress:2 Shadow:2\nExtreme: Do or Die. No downtime. Shadow:Triumphant"
     ))
 
     // (const trauma-4s)
@@ -704,15 +718,17 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_4s,
       ":image",
       "images/damage-trauma-4s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Unnerved by new things or ideas.\nMajor: Afraid of new things or ideas. Can only follow others.\nCritical: Cannot try anything remotely new. Only highest level skills can be used.\nExtreme: Hysterical fear of change. Isolate yourself."
+      "Minor: Unnerved by change. Stress:1\nMajor: Afraid of change. Stress:1 Withdraw:1\nCritical: Panicked at change. Stress:2 Withdraw:2 Beast:2\nExtreme: Hysterical of change. Isolate. Beast:Unleashed"
     ))
 
     // (const trauma-5c)
     Object.assign(nx_tactics_decks_trauma.c_trauma_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Strangers",
+      "Anger: Love",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
@@ -732,8 +748,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_5d,
       ":image",
       "images/damage-trauma-5d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Insecure. Negative of their own attractiveness.\nMajor: Embarassed.\nCritical: Humiliated.\nExtreme: You have never been and will never be loved. Surrender to darkness. [Shadow Triumphant]"
+      "Minor: Insecure. Feel unattractive. Stress:1\nMajor: Embarrassed. Feelings exposed. Stress:1 Shadow:1\nCritical: Humiliated. Laughing stock. Stress:2 Shadow:2\nExtreme: Unloved. Suicidal. Shadow:Triumphant"
     ))
 
     // (const trauma-5h)
@@ -745,8 +763,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_5h,
       ":image",
       "images/damage-trauma-5h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Infatuated.\nMajor: Clingy. Obsessed with finding and keeping a mate.\nCritical: Exhausting. You need almost constant attention.\nExtreme: Desperate. Bottomless need for love and attention. Life is over if you are rejected."
+      "Minor: Infatuated. Fixate on someone. Stress:1\nMajor: Clingy. Obsess over someone. Stress:1 Shadow:1\nCritical: Exhausting. Endless needs. Stress:2 Shadow:2\nExtreme: Desperate. Never satisfied. Shadow:Triumphant"
     ))
 
     // (const trauma-5s)
@@ -758,8 +778,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_5s,
       ":image",
       "images/damage-trauma-5s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Prudish about affection.\nMajor: Become agitated, shaky and incoherent when facing affection.\nCritical: Panicked distress in mixed gender situations or any suggestion of affection.\nExtreme: Terrified of even the possibility of mixed gender situations. Barricade yourself in."
+      "Minor: Prudish about affection. Stress:1\nMajor: Intolerant of affection. Stress:1 Withdraw:1\nCritical: Panicked around opposite gender. Stress:2 Withdraw:2 Beast:2\nExtreme: Terrified of other gender. Hide. Beast:Unleashed"
     ))
 
     // (const trauma-6c)
@@ -786,8 +808,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_6d,
       ":image",
       "images/damage-trauma-6d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Lonely.\nMajor: Alienated.\nCritical: Isolated.\nExtreme: Hermit. Convinced everyone is evil. Shadow:Triumphant"
+      "Minor: Shy. Withdraws from strangers. Stress:1\nMajor: Lonely. Deeply alone. Stress:1 Shadow:1\nCritical: Isolated. Everyone is a stranger. Stress:2 Shadow:2\nExtreme: Hermit. Everyone is evil. Shadow:Triumphant"
     ))
 
     // (const trauma-6h)
@@ -799,8 +823,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_6h,
       ":image",
       "images/damage-trauma-6h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Seek and study dangerous people.\nMajor: You want to challenge dangerous people.\nCritical: Rush into danger with no concern for safety.\nExtreme: Obsessively seeks and engages the most danger opponents possible."
+      "Minor: Nosy. Study others. Stress:1\nMajor: Vicarious. Envious of others. Stress:1 Shadow:1\nCritical: Intrusive. Invade other lives. Stress:2 Shadow:2\nExtreme: Abductor. Possess other lives. Shadow:Triumphant"
     ))
 
     // (const trauma-6s)
@@ -812,8 +838,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_6s,
       ":image",
       "images/damage-trauma-6s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Distrust. Suspicious of 'others' around them.\nMajor: Avoidant. Become agitated, shaky and incoherent when facing different 'races'.\nCritical: Xenophobia. Terrified of strangers. Cannot take actions around non-companions.\nExtreme: Fight or Flight around other groups or 'races'."
+      "Minor: Suspicious of 'others'. Stress:1\nMajor: Avoids 'others'. Stress:1 Withdraw:1\nCritical: Xenophobe. Terrified of 'others'. Stress:2 Withdraw:2 Beast:2\nExtreme: Fight or Flight around 'others'. Beast:Unleashed"
     ))
 
     // (const trauma-7c)
@@ -840,8 +868,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_7d,
       ":image",
       "images/damage-trauma-7d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Withdrawn. Eroded bonds with companions.\nMajor: Rejected.\nCritical: Abandoned.\nExtreme: Betrayed."
+      "Minor: Withdrawn. Eroded bonds. Stress:1\nMajor: Rejected. Feel cast out. Stress:1 Shadow:1\nCritical: Abandoned. The all leave me. Stress:2 Shadow:2\nExtreme: Betrayed. All against me. Shadow:Triumphant"
     ))
 
     // (const trauma-7h)
@@ -853,8 +883,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_7h,
       ":image",
       "images/damage-trauma-7h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Unsure. Get approval before making decisions.\nMajor: Joiner. Always be in a group.\nCritical: Dependent. Can't do anything without a group.\nExtreme: Spend all your time and fortune maintaining a growing posse of 'friends'"
+      "Minor: Unsure. Needs others support. Stress:1\nMajor: Joiner. Always in a group. Stress:1 Shadow:1\nCritical: Dependent. Lost without a group. Stress:2 Shadow:2\nExtreme: Hanger On. Useless. Helpless. Shadow:Triumphant"
     ))
 
     // (const trauma-7s)
@@ -866,8 +898,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_7s,
       ":image",
       "images/damage-trauma-7s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Anxious about companions' hidden meaning and discussions.\nMajor: Fear of being alone. Cannot take actions without line of sight to a companion.\nCritical: Terrified of being alone. Cannot take actions without companion in unobscured line of sight. Cannot take actions without adjacent companion.\nExtreme: Terrified of abandonment. Cannot take actions without adjacent companion."
+      "Minor: Distrustful. Fear others motives. Stress:1\nMajor: Needy. Needs others near. Stress:1 Withdraw:1\nCritical: Alone. Terrified of being alone. Stress:2 Withdraw:2 Beast:2\nExtreme: Abandoned. Hysterical when alone. Beast:Unleashed"
     ))
 
     // (const trauma-8c)
@@ -894,8 +928,12 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_8d,
       ":image",
       "images/damage-trauma-8d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":reference",
+      "Outcast unclean. - Thomas Covenant",
       ":summary",
-      "Minor: Cowed by high status.\nMajor:  Follows those in high status.\nCritical: Gives up when confronted by those with high status.\nExtreme: Servile. You are unworthy and unclean. You don't matter. [Shadow Triumphant]"
+      "Minor: Outsider. No influence. Stress:1\nMajor: Outcast. Don't belong. Stress:1 Shadow:1\nCritical: Exile. Leave now. Stress:2 Shadow:2.\nExtreme: Traitor. The lowest. Suicidal. Shadow:Triumphant"
     ))
 
     // (const trauma-8h)
@@ -907,8 +945,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_8h,
       ":image",
       "images/damage-trauma-8h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Poser. Crave status and try to show your fashion.\nMajor: Attention Seeker. Regularly attempt to be accepted by the in crowd.\nCritical: Suck Up. Nothing else matters but status. Show off. Beg. Do something. Anything. Extreme: Sychophant. Spend all your time and fortune weaseling into elite social circles."
+      "Minor: Poser. Crave status. Stress:1\nMajor: Attention Seeker. Needs acceptance. Stress:1 Shadow:1\nCritical: Suck Up. Desperate for acceptance. Stress:2 Shadow:2\nExtreme: Sycophant. Spend everything for status. Shadow:Triumphant"
     ))
 
     // (const trauma-8s)
@@ -921,7 +961,7 @@ export default class nx_tactics_decks_trauma {
       ":image",
       "images/damage-trauma-8s.svg",
       ":summary",
-      "Minor: Performance Anxiety. Can't be the focus of attention.\nMajor: Terrified of judgement. Can only take actions with trusted companions.\nCritical: Terrified of public failure. Cannot take actions with any witnesses. \nExtreme: Terrified of failure. Cannot take actions."
+      "Minor: Performance Anxiety. Stress:1\nMajor: Judgment. Only act with companions. Stress:2\nCritical: Anonymous. Only act secretly. Stress:2 Beast:2\nExtreme: Terrified of failure. Take no action. Immobilized. Beast:Unleashed"
     ))
 
     // (const trauma-9c)
@@ -948,8 +988,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_9d,
       ":image",
       "images/damage-trauma-9d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Doubtful. Questions own beliefs.\nMajor: Broken Faith. Part of your beliefs unravel.\nCritical: Shattered Faith. Your beliefs lie in ruins around you. What is the point of everything?\nExtreme: Converted. Join the other side. [Shadow Triumphant]"
+      "Minor: Questioning. Doubt beliefs. Stress:1\nMajor: Disillusioned. Beliefs unravel. Stress:1 Shadow:1\nCritical: Shattered Faith. Beliefs lie in ruins. Stress:2 Shadow:2\nExtreme: Converted. Join opposite faith. Shadow:Triumphant"
     ))
 
     // (const trauma-9h)
@@ -961,8 +1003,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_9h,
       ":image",
       "images/damage-trauma-9h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Gullible. Crave something to believe in.\nMajor: Believer. Become very religious.\nCritical: Devout. Believe everything your religion says.\nExtreme: Acolyte. Slavishly follow the leaders of your religion."
+      "Minor: Gullible. Crave a religion. Stress:1\nMajor: Believer. Become very religious. Stress:1 Shadow:1\nCritical: Devout. Completely believe religion. Stress:2 Shadow:2\nExtreme: Fanatic. Slavishly follow religion. Shadow:Triumphant"
     ))
 
     // (const trauma-9s)
@@ -974,8 +1018,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_9s,
       ":image",
       "images/damage-trauma-9s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Become agitated, shaky and incoherent when facing any religious figures or icons.\nMajor: Theophobia. Irrational fear of gods and religion.\nCritical: Repentent. Cannot face religious opposition.\nExtreme: Persecuted. Delirious with fear of divine retribution."
+      "Minor: Guilt over your sins. Stress:1\nMajor: Repent your sins. Stress:2\nCritical: Sinner. No escaping your sins. Stress:2 Beast:2\nExtreme: Persecuted. Retribution is coming. Beast:Unleashed"
     ))
 
     // (const trauma-ac)
@@ -1035,7 +1081,7 @@ export default class nx_tactics_decks_trauma {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Anxiety. Agitated around death. Stress:1\nMajor: Death is coming. Run. Stress:2 Withdraw:2\nCritical: Petrified. Collapse in fear of death. Stress:2 Shadow:2\nExtreme: Die of Fright. Dying. Beast:Unleashed",
+      "Minor: Anxiety. Agitated around death. Stress:1\nMajor: Death is coming. Run. Stress:2 Withdraw:2\nCritical: Petrified. Collapse in fear of death. Stress:2 Beast:2\nExtreme: Die of Fright. Dying Beast:Unleashed",
       ":reference",
       "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over. - Doctor Who, Heaven Sent"
     ))
@@ -1065,7 +1111,7 @@ export default class nx_tactics_decks_trauma {
       ":image",
       "images/damage-trauma-jd.svg",
       ":summary",
-      "Minor: Mediator. Perhaps there is an alternative to violence.\nMajor: Non-violent. Cannot fight or work with combatants.\nCritical: Pacifist. Must avoid harming any living thing.\nExtreme: Collapses in combat. Immediately Surrenders."
+      "Minor: Mediator. Alternative to violence. Stress:1\nMajor: Nonviolent. Won't attack. Stress:1 Shadow:1\nCritical: Pacifist. Avoid harming anything. Stress:2 Shadow:2\nExtreme: Incapable of Violence. Surrender. Shadow:Triumphant"
     ))
 
     // (const trauma-jh)
@@ -1077,8 +1123,12 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_jh,
       ":image",
       "images/damage-trauma-jh.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":reference",
+      "* And to think... I hesitated. - Dr. Channard, Hellraiser II",
       ":summary",
-      "Minor: Tough. You have a suprisingly high pain threshold.\nMajor: Masochist. You enjoy pain. [Shadow]:1\nCritical: Self-destructive. You revel in extreme sensation of any kind.\nExtreme: Suffering. Explorers in the further regions of experience. Demons to some. Angels to others. [Shadow Triumphant]"
+      "Minor: Tough Guy. Can take a beating. Stress:1\nMajor: Thrill Seeker. Drawn to danger. Stress:1 Shadow:1\nCritical: Masochist. Enjoy pain. Stress:2 Shadow:2\nExtreme: Divine Agony. Experience everything. Shadow Triumphant"
     ))
 
     // (const trauma-js)
@@ -1090,8 +1140,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_js,
       ":image",
       "images/damage-trauma-js.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Watched. You feel you are being watched.\nMajor: Hunted. You are convinced that something is hunting you. Protect yourself above all else.\nCritical: Haunted. It may get through any defenses. Keep moving. Don't sleep.\nExtreme: Terrorized. Run until it catches you and then die of fright."
+      "Minor: Watched. You're being watched. Stress:1\nMajor: Hunted. You're being hunted. Stress:1 Withdraw:1\nCritical: Haunted. Keep moving. Don't sleep. Stress:2 Beast:2\nExtreme: Terrorized. Run! Don't stop! Beast:Unleashed"
     ))
 
     // (const trauma-kc)
@@ -1118,8 +1170,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_kd,
       ":image",
       "images/damage-trauma-kd.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Indifferent. Completely apathetic and dismissive of authority.\nMajor: Distressed. Unable to obey authority. [Shadow]:1\nCritical: Powerless. You can't beat them. Life is miserable. [Shadow]:2\nExtreme: Subservient. Give up all hope and just follow the most powerful. [Shadow]:4"
+      "Minor: Indifferent. Ignore authority. Stress:1\nMajor: Distressed. Avoid authority. Stress:1 Shadow:1\nCritical: Powerless. You can't beat them. Stress:2 Shadow:2\nExtreme: Subservient. Give up and obey. Shadow:Triumphant"
     ))
 
     // (const trauma-kh)
@@ -1131,8 +1185,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_kh,
       ":image",
       "images/damage-trauma-kh.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Bossy. If only they just listened to you.\nMajor: Overbearing. You order everyone around and have no tolerance of opposition.\nCritical: Tyranical. Your need for power justifies any action.\nExtreme: Megalomaniac. You crave all power and will do anything and everything for the slightest advantage."
+      "Minor: Bossy. If they only listened. Stress:1\nMajor: Overbearing. Always take command. Stress:1 Shadow:1\nCritical: Tyrannical. Accept no opposition. Stress:2 Shadow:2\nExtreme: Megalomania. Fulfill your destiny. Shadow:Unleashed"
     ))
 
     // (const trauma-ks)
@@ -1144,8 +1200,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_ks,
       ":image",
       "images/damage-trauma-ks.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Become agitated, shaky and incoherent when facing authority.\nMajor: Fawning. Obviously frightened of authority. Will obey easily.\nCritical: Cowering. Fearful of authority. Will run or obey.\nExtreme: Panicked. Terrified by Power of any kind."
+      "Minor: Cowed. Unnerved by authority. Stress:1\nMajor: Fawning. Obey authority. Stress:1 Withdraw:1\nCritical: Cowering. Fear authority. Stress:2 Beast:2\nExtreme: Groveling. Surrender and beg. Stress:3 Beast:3"
     ))
 
     // (const trauma-qc)
@@ -1174,8 +1232,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_qd,
       ":image",
       "images/damage-trauma-qd.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Self Doubt. No confidence.\nMajor: Self Pity. Completely apathetic and dismissive of self.\nCritical: Unwilling to tend to self or defend self. Can't block.\nExtreme: Suicidal."
+      "Minor: Self Doubt. No confidence. Stress:1\nMajor: Insecure. Focused on flaws. Stress:1 Shadow:1\nCritical: Uncaring. Don't tend to self. Can't block. Stress:2 Shadow:2\nExtreme: Absent. No one is home. Catatonic. Shadow:Triumphant"
     ))
 
     // (const trauma-qh)
@@ -1187,8 +1247,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_qh,
       ":image",
       "images/damage-trauma-qh.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Vainglory. You brag about own appearance, abilities, and status.\nMajor: Gloryhound. You seek praise at the expense of others.\nCritical: Nascissist. Only think in terms of yourself. Take offense at anyone who questions you. Acts alone and refuses all help.\nExtreme: Messiah Complex. Your every action changes the world. Solo all comers. None can interfere."
+      "Minor: Vainglory. Brag constantly. Stress:1\nMajor: Gloryhound. Take the credit. Stress:1 Shadow:1\nCritical: Narcissist. Ignore others. Stress:2 Shadow:2\nExtreme: Messiah. You are all important. Shadow:Triumphant"
     ))
 
     // (const trauma-qs)
@@ -1200,8 +1262,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_qs,
       ":image",
       "images/damage-trauma-qs.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Self-conscious. Success and praise makes you uneasy.\nMajor: Unworthy. You are a fraud.\nCritical: You can't trust your own actions.\nExtreme: You are a monster. You must be locked away."
+      "Minor: Self-conscious. Uneasy with praise. Stress:1\nMajor: Unworthy. You are a fraud. Stress:1 Withdraw:1\nCritical: Self-doubt. Question everything. Stress:2 Beast:2\nExtreme: Impostor. Impostor. Beg to be locked up. Stress:3 Beast:3"
     ))
 
     // (const trauma-tc)
@@ -1228,8 +1292,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_td,
       ":image",
       "images/damage-trauma-td.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Demoralized.\nMajor: Gloomy.\nCritical: Hopeless.\nExtreme: Absolute Nihilist. Nothing matters. Do nothing."
+      "Minor: Demoralized. Life is unfair. Stress:1\nMajor: Gloomy. No future. Stress:1 Shadow:1\nCritical: Futile. Pointless. Stress:2 Shadow:2\nExtreme: Nihilist. Nothing matters. Do nothing. Shadow:Triumphant"
     ))
 
     // (const trauma-th)
@@ -1241,8 +1307,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_th,
       ":image",
       "images/damage-trauma-th.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Boozer. You seek alchohol and drugs to change your state of mind.\nMajor: Hooked. Always looking for a fix.\nCritical: Addict. You spend your time high or trying to get high.\nExtreme: Hopeless Addict. You will eventually starve or overdose."
+      "Minor: Boozer. Need alcohol and drugs. Stress:1\nMajor: Hooked. Always looking for a fix. Stress:1 Shadow:1\nCritical: Addict. Stay high all the time. Stress:2 Shadow:2\nExtreme: Hopeless Addict. Starve or overdose. Shadow:Triumphant"
     ))
 
     // (const trauma-ts)
@@ -1254,8 +1322,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_ts,
       ":image",
       "images/damage-trauma-ts.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Paranoid. Unnerved about everything\nMajor: Panicked about everyting. Full Move this turn in the safest direction\nCritical: Terrified of Everything, must be restrained or will harm others or self\nExtreme: Catatonic with bouts of screaming. Beast:Unleashed"
+      "Minor: Unnerved. Jumpy. Stress:1\nMajor: Paranoid. Nothing is safe. Stress:1 Withdraw:1\nCritical: Terrified. Flee. Stress:2 Withdraw:2 Beast:2\nExtreme: Irrational and screaming. Beast:Unleashed"
     ))
 
     // (const trauma-wild-black)

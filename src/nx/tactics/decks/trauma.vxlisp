@@ -102,28 +102,31 @@
   :name "Despair: Power"
   :ranksuit base/ranksuit-kd
   :image "images/damage-trauma-kd.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Indifferent. Completely apathetic and dismissive of authority.
-    Major: Distressed. Unable to obey authority. [Shadow]:1
-    Critical: Powerless. You can't beat them. Life is miserable. [Shadow]:2
-    Extreme: Subservient. Give up all hope and just follow the most powerful. [Shadow]:4"))
+   "Minor: Indifferent. Ignore authority. Stress:1
+    Major: Distressed. Avoid authority. Stress:1 Shadow:1
+    Critical: Powerless. You can't beat them. Stress:2 Shadow:2
+    Extreme: Subservient. Give up and obey. Shadow:Triumphant"))
 
 (const trauma-kh : base/damage
  (base/damage
   :name "Desire: Power"
   :ranksuit base/ranksuit-kh
   :image "images/damage-trauma-kh.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Bossy. If only they just listened to you.
-    Major: Overbearing. You order everyone around and have no tolerance of opposition.
-    Critical: Tyranical. Your need for power justifies any action.
-    Extreme: Megalomaniac. You crave all power and will do anything and everything for the slightest advantage."))
+   "Minor: Bossy. If they only listened. Stress:1
+    Major: Overbearing. Always take command. Stress:1 Shadow:1
+    Critical: Tyrannical. Accept no opposition. Stress:2 Shadow:2
+    Extreme: Megalomania. Fulfill your destiny. Shadow:Unleashed"))
 
 (const trauma-ks : base/damage
  (base/damage
   :name "Fear: Power"
   :ranksuit base/ranksuit-ks
   :image "images/damage-trauma-ks.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Cowed. Unnerved by authority. Stress:1
     Major: Fawning. Obey authority. Stress:1 Withdraw:1
@@ -149,22 +152,24 @@
   :name "Despair: Self"
   :ranksuit base/ranksuit-qd
   :image "images/damage-trauma-qd.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Self Doubt. No confidence.
-    Major: Self Pity. Completely apathetic and dismissive of self.
-    Critical: Unwilling to tend to self or defend self. Can't block.
-    Extreme: Suicidal."))
+   "Minor: Self Doubt. No confidence. Stress:1
+    Major: Insecure. Focused on flaws. Stress:1 Shadow:1
+    Critical: Uncaring. Don't tend to self. Can't block. Stress:2 Shadow:2
+    Extreme: Absent. No one is home. Catatonic. Shadow:Triumphant"))
 
 (const trauma-qh : base/damage
  (base/damage
   :name "Desire: Self"
   :ranksuit base/ranksuit-qh
   :image "images/damage-trauma-qh.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Vainglory. You brag about own appearance, abilities, and status.
-    Major: Gloryhound. You seek praise at the expense of others.
-    Critical: Nascissist. Only think in terms of yourself. Take offense at anyone who questions you. Acts alone and refuses all help.
-    Extreme: Messiah Complex. Your every action changes the world. Solo all comers. None can interfere."))
+   "Minor: Vainglory. Brag constantly. Stress:1
+    Major: Gloryhound. Take the credit. Stress:1 Shadow:1
+    Critical: Narcissist. Ignore others. Stress:2 Shadow:2
+    Extreme: Messiah. You are all important. Shadow:Triumphant"))
 
 (const trauma-qs : base/damage
  (base/damage
@@ -196,21 +201,24 @@
   :ranksuit base/ranksuit-jd
   :image "images/damage-trauma-jd.svg"
   :summary
-   "Minor: Mediator. Perhaps there is an alternative to violence.
-    Major: Non-violent. Cannot fight or work with combatants.
-    Critical: Pacifist. Must avoid harming any living thing.
-    Extreme: Collapses in combat. Immediately Surrenders."))
+   "Minor: Mediator. Alternative to violence. Stress:1
+    Major: Nonviolent. Won't attack. Stress:1 Shadow:1
+    Critical: Pacifist. Avoid harming anything. Stress:2 Shadow:2
+    Extreme: Incapable of Violence. Surrender. Shadow:Triumphant"))
 
 (const trauma-jh : base/damage
  (base/damage
   :name "Desire: Violence"
   :ranksuit base/ranksuit-jh
   :image "images/damage-trauma-jh.svg"
+  :layout base/cardlayout-imageonly
+  :reference
+   "* And to think... I hesitated. - Dr. Channard, Hellraiser II"
   :summary
-   "Minor: Tough. You have a suprisingly high pain threshold.
-    Major: Masochist. You enjoy pain. [Shadow]:1
-    Critical: Self-destructive. You revel in extreme sensation of any kind.
-    Extreme: Suffering. Explorers in the further regions of experience. Demons to some. Angels to others. [Shadow Triumphant]"))
+   "Minor: Tough Guy. Can take a beating. Stress:1
+    Major: Thrill Seeker. Drawn to danger. Stress:1 Shadow:1
+    Critical: Masochist. Enjoy pain. Stress:2 Shadow:2
+    Extreme: Divine Agony. Experience everything. Shadow Triumphant"))
 
 (const trauma-js : base/damage
  (base/damage
@@ -241,22 +249,24 @@
   :name "Despair: Reality"
   :ranksuit base/ranksuit-td
   :image "images/damage-trauma-td.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Demoralized.
-    Major: Gloomy.
-    Critical: Hopeless.
-    Extreme: Absolute Nihilist. Nothing matters. Do nothing."))
+   "Minor: Demoralized. Life is unfair. Stress:1
+    Major: Gloomy. No future. Stress:1 Shadow:1
+    Critical: Futile. Pointless. Stress:2 Shadow:2
+    Extreme: Nihilist. Nothing matters. Do nothing. Shadow:Triumphant"))
 
 (const trauma-th : base/damage
  (base/damage
   :name "Desire: Reality"
   :ranksuit base/ranksuit-th
   :image "images/damage-trauma-th.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Boozer. You seek alchohol and drugs to change your state of mind.
-    Major: Hooked. Always looking for a fix.
-    Critical: Addict. You spend your time high or trying to get high.
-    Extreme: Hopeless Addict. You will eventually starve or overdose."))
+   "Minor: Boozer. Need alcohol and drugs. Stress:1
+    Major: Hooked. Always looking for a fix. Stress:1 Shadow:1
+    Critical: Addict. Stay high all the time. Stress:2 Shadow:2
+    Extreme: Hopeless Addict. Starve or overdose. Shadow:Triumphant"))
 
 (const trauma-ts : base/damage
  (base/damage
@@ -287,22 +297,24 @@
   :name "Despair: Belief"
   :ranksuit base/ranksuit-9d
   :image "images/damage-trauma-9d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Doubtful. Questions own beliefs.
-    Major: Broken Faith. Part of your beliefs unravel.
-    Critical: Shattered Faith. Your beliefs lie in ruins around you. What is the point of everything?
-    Extreme: Converted. Join the other side. [Shadow Triumphant]"))
+   "Minor: Questioning. Doubt beliefs. Stress:1
+    Major: Disillusioned. Beliefs unravel. Stress:1 Shadow:1
+    Critical: Shattered Faith. Beliefs lie in ruins. Stress:2 Shadow:2
+    Extreme: Converted. Join opposite faith. Shadow:Triumphant"))
 
 (const trauma-9h : base/damage
  (base/damage
   :name "Desire: Belief"
   :ranksuit base/ranksuit-9h
   :image "images/damage-trauma-9h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Gullible. Crave something to believe in.
-    Major: Believer. Become very religious.
-    Critical: Devout. Believe everything your religion says.
-    Extreme: Acolyte. Slavishly follow the leaders of your religion."))
+   "Minor: Gullible. Crave a religion. Stress:1
+    Major: Believer. Become very religious. Stress:1 Shadow:1
+    Critical: Devout. Completely believe religion. Stress:2 Shadow:2
+    Extreme: Fanatic. Slavishly follow religion. Shadow:Triumphant"))
 
 (const trauma-9s : base/damage
  (base/damage
@@ -333,21 +345,26 @@
   :name "Despair: Status"
   :ranksuit base/ranksuit-8d
   :image "images/damage-trauma-8d.svg"
+  :layout base/cardlayout-imageonly
+  :reference
+   "Outcast unclean. - Thomas Covenant"
   :summary
-   "Minor: Cowed by high status.
-    Major:  Follows those in high status.
-    Critical: Gives up when confronted by those with high status.
-    Extreme: Servile. You are unworthy and unclean. You don't matter. [Shadow Triumphant]"))
+   "Minor: Outsider. No influence. Stress:1
+    Major: Outcast. Don't belong. Stress:1 Shadow:1
+    Critical: Exile. Leave now. Stress:2 Shadow:2.
+    Extreme: Traitor. The lowest. Suicidal. Shadow:Triumphant"))
 
 (const trauma-8h : base/damage
  (base/damage
   :name "Desire: Status"
   :ranksuit base/ranksuit-8h
   :image "images/damage-trauma-8h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Poser. Crave status and try to show your fashion.
-    Major: Attention Seeker. Regularly attempt to be accepted by the in crowd.
-    Critical: Suck Up. Nothing else matters but status. Show off. Beg. Do something. Anything. Extreme: Sychophant. Spend all your time and fortune weaseling into elite social circles."))
+   "Minor: Poser. Crave status. Stress:1
+    Major: Attention Seeker. Needs acceptance. Stress:1 Shadow:1
+    Critical: Suck Up. Desperate for acceptance. Stress:2 Shadow:2
+    Extreme: Sycophant. Spend everything for status. Shadow:Triumphant"))
 
 (const trauma-8s : base/damage
  (base/damage
@@ -377,22 +394,24 @@
   :name "Despair: Companions"
   :ranksuit base/ranksuit-7d
   :image "images/damage-trauma-7d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Withdrawn. Eroded bonds with companions.
-    Major: Rejected.
-    Critical: Abandoned.
-    Extreme: Betrayed."))
+   "Minor: Withdrawn. Eroded bonds. Stress:1
+    Major: Rejected. Feel cast out. Stress:1 Shadow:1
+    Critical: Abandoned. The all leave me. Stress:2 Shadow:2
+    Extreme: Betrayed. All against me. Shadow:Triumphant"))
 
 (const trauma-7h : base/damage
  (base/damage
   :name "Desire: Companions"
   :ranksuit base/ranksuit-7h
   :image "images/damage-trauma-7h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Unsure. Get approval before making decisions.
-    Major: Joiner. Always be in a group.
-    Critical: Dependent. Can't do anything without a group.
-    Extreme: Spend all your time and fortune maintaining a growing posse of 'friends'"))
+   "Minor: Unsure. Needs others support. Stress:1
+    Major: Joiner. Always in a group. Stress:1 Shadow:1
+    Critical: Dependent. Lost without a group. Stress:2 Shadow:2
+    Extreme: Hanger On. Useless. Helpless. Shadow:Triumphant"))
 
 (const trauma-7s : base/damage
  (base/damage
@@ -423,22 +442,24 @@
   :name "Despair: Strangers"
   :ranksuit base/ranksuit-6d
   :image "images/damage-trauma-6d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Lonely.
-    Major: Alienated.
-    Critical: Isolated.
-    Extreme: Hermit. Convinced everyone is evil. Shadow:Triumphant"))
+   "Minor: Shy. Withdraws from strangers. Stress:1
+    Major: Lonely. Deeply alone. Stress:1 Shadow:1
+    Critical: Isolated. Everyone is a stranger. Stress:2 Shadow:2
+    Extreme: Hermit. Everyone is evil. Shadow:Triumphant"))
 
 (const trauma-6h : base/damage
  (base/damage
   :name "Desire: Strangers"
   :ranksuit base/ranksuit-6h
   :image "images/damage-trauma-6h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Seek and study dangerous people.
-    Major: You want to challenge dangerous people.
-    Critical: Rush into danger with no concern for safety.
-    Extreme: Obsessively seeks and engages the most danger opponents possible."))
+   "Minor: Nosy. Study others. Stress:1
+    Major: Vicarious. Envious of others. Stress:1 Shadow:1
+    Critical: Intrusive. Invade other lives. Stress:2 Shadow:2
+    Extreme: Abductor. Possess other lives. Shadow:Triumphant"))
 
 (const trauma-6s : base/damage
  (base/damage
@@ -454,7 +475,7 @@
 
 (const trauma-5c : base/damage
  (base/damage
-  :name "Anger: Strangers"
+  :name "Anger: Love"
   :ranksuit base/ranksuit-5c
   :image "images/damage-trauma-5c.svg"
   :layout base/cardlayout-imageonly
@@ -469,22 +490,24 @@
   :name "Despair: Love"
   :ranksuit base/ranksuit-5d
   :image "images/damage-trauma-5d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Insecure. Negative of their own attractiveness.
-    Major: Embarassed.
-    Critical: Humiliated.
-    Extreme: You have never been and will never be loved. Surrender to darkness. [Shadow Triumphant]"))
+   "Minor: Insecure. Feel unattractive. Stress:1
+    Major: Embarrassed. Feelings exposed. Stress:1 Shadow:1
+    Critical: Humiliated. Laughing stock. Stress:2 Shadow:2
+    Extreme: Unloved. Suicidal. Shadow:Triumphant"))
 
 (const trauma-5h : base/damage
  (base/damage
   :name "Desire: Love"
   :ranksuit base/ranksuit-5h
   :image "images/damage-trauma-5h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Infatuated.
-    Major: Clingy. Obsessed with finding and keeping a mate.
-    Critical: Exhausting. You need almost constant attention.
-    Extreme: Desperate. Bottomless need for love and attention. Life is over if you are rejected."))
+   "Minor: Infatuated. Fixate on someone. Stress:1
+    Major: Clingy. Obsess over someone. Stress:1 Shadow:1
+    Critical: Exhausting. Endless needs. Stress:2 Shadow:2
+    Extreme: Desperate. Never satisfied. Shadow:Triumphant"))
 
 (const trauma-5s : base/damage
  (base/damage
@@ -516,21 +539,22 @@
   :ranksuit base/ranksuit-4d
   :image "images/damage-trauma-4d.svg"
   :summary
-   "Minor: Remorseful. Concerned about actions previously taken.
-    Major: Anguished. Extremely guilty about actions previously taken.
-    Critical: Devastated. Cannot tolerate their actions.
-    Extreme: Repentant. Accept all the blame, make amends and end yourself to recapture some semblance of honor."))
+   "Minor: Remorseful. Replay past mistakes. Stress:1
+    Major: Anguished. Extreme guilt. Stress:1 Shadow:1
+    Critical: Devastated. Cannot act. Stress:2 Shadow:2
+    Extreme: Repentant. Accept blame and end it. Suicidal. Shadow:Triumphant"))
 
 (const trauma-4h : base/damage
  (base/damage
   :name "Desire: Change"
   :ranksuit base/ranksuit-4h
   :image "images/damage-trauma-4h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Hyperactive. Axious when not active.
-    Major: Change for changes sake.
-    Critical: Stream of consciousness. Needs to be 'All In' all the time.
-    Extreme: Cannot focus on any topic. No downtime. Work yourself to death."))
+   "Minor: Hyperactive. Anxious when inactive. Stress:1
+    Major: Flighty. Change for change sake. Stress:1 Shadow:1
+    Critical: Can't Stop. ALL in ALL the time. Stress:2 Shadow:2
+    Extreme: Do or Die. No downtime. Shadow:Triumphant"))
 
 (const trauma-4s : base/damage
  (base/damage
@@ -563,22 +587,24 @@
   :name "Despair: Things"
   :ranksuit base/ranksuit-3d
   :image "images/damage-trauma-3d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Hollow. The spark is missing from the things you do.
-    Major: Apathy. Your efforts seem pointless. You feel numb.
-    Critical: Emptiness. You only do things when others push you.
-    Extreme: Complete apathy about everything. Do nothing. [Shadow Triumphant]"))
+   "Minor: Hollow. Spark is missing. Stress:1
+    Major: Apathy. Effort is pointless. Stress:1 Shadow:1
+    Critical: Empty. Don't bother. Stress:2 Shadow:2
+    Extreme: Do Nothing. Immobile. Shadow:Triumphant"))
 
 (const trauma-3h : base/damage
  (base/damage
   :name "Desire: Things"
   :ranksuit base/ranksuit-3h
   :image "images/damage-trauma-3h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Collector. Keep mementoes of your life.
-    Major: Pack Rat. You have a hard time leaving anything behind.
-    Critical: Hoarder. Keep everything.
-    Extreme: Collect everything but never use them. [Shadow Triumphant]"))
+   "Minor: Collector. Keep mementoes. Stress:1
+    Major: Pack Rat. Might need that. Stress:1 Shadow:1
+    Critical: Hoarder. Keep anything. Stress:2 Shadow:2
+    Extreme: Keep but never use EVERYTHING. Shadow:Triumphant"))
 
 (const trauma-3s : base/damage
  (base/damage
@@ -609,22 +635,24 @@
   :name "Despair: Fortune"
   :ranksuit base/ranksuit-2d
   :image "images/damage-trauma-2d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Pessimist. Glass is half empty.
-    Major: Nothing good ever happens to you.
-    Critical: Defeatist. Everything you try fails.
-    Extreme: Absolute Defeatist. You've lost the game of life. Surrender to darkness. [Shadow Trimumpant]"))
+   "Minor: Pessimist. Glass half empty. Stress:1
+    Major: Luckless. Nothing good happens. Stress:1 Shadow:1
+    Critical: Defeatist. You never win. Stress:2 Shadow:2
+    Extreme: Hopeless. This is the end. Suicidal. Shadow:Trimumpant"))
 
 (const trauma-2h : base/damage
  (base/damage
   :name "Desire: Fortune"
   :ranksuit base/ranksuit-2h
   :image "images/damage-trauma-2h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Frugal. A penny saved is a penny earned.
-    Major: Stingy. You only buy what is absolutely necessary.
-    Critical: Miserly. Hoard your treasure. Mine. Mine. Mine.
-    Extreme: Heartless Miser. Nothing will separate you from a penny. Shadow:Triumphant"))
+   "Minor: Frugal. A penny saved. Stress:1
+    Major: Stingy. Don't spend. Stress:1 Shadow:1
+    Critical: Miserly. Hoard treasure. Stress:2 Shadow:2
+    Extreme: Heartless Miser. Mine, mine, mine. Shadow:Triumphant"))
 
 (const trauma-2s : base/damage
  (base/damage

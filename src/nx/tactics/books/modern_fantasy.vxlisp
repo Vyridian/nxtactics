@@ -706,15 +706,15 @@
      :name "Spirits"
      :summary
       "* Bane - A corruption spirit that exists in the [Spirit Realm].
-       * [Bane]s are attracted to hatred, cruelty, lust, and fear, and they are repelled by happiness, generosity, love, and kindness.
-       Nature Spirit Pattern Spider"
+       * [Bane]s are attracted to hatred, cruelty, lust, and fear, and they are repelled by happiness, generosity, love, and kindness."
      :unitmap
       (base/unitmap<-tactics-keys
        tactics
        "Bane: Disease"
        "Bane: Madness"
        "Bane: Poison"
-       "Bane: Radiation"))
+       "Bane: Radiation"
+       "Pattern Spider"))
     (base/section
      :name "Abominations"
      :reference
