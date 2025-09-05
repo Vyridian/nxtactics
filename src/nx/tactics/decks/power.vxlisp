@@ -4894,6 +4894,8 @@
        :name "Watertight")))
   (base/power
    :name "Light"
+   :titles
+    "Lightbringer, Lightkeeper"
    :abilitymap
     (base/abilitymap
      "Blinding Light"
@@ -4906,13 +4908,13 @@
       (base/ability
        :name "Control Light"
        :summary "* [Reaction]: Redirect a light effect to another target.")
-     :Flash
+     "Flash"
       (base/ability
        :name "Flash")
-     :Glow
+     "Glow"
       (base/ability
        :name "Glow")
-     :Laser
+     "Laser"
       (base/ability
        :name "Laser")
      "Light Form"
@@ -5017,6 +5019,8 @@
   (base/power
    :name "Madness"
    :titles "Lunatic, Madman, Manic"
+   :reference
+    "* Rules were made to be broken, like buildings, and people. - Jinx, Runeterra"
    :abilitymap
     (base/abilitymap
      :Delirium
@@ -5046,7 +5050,7 @@
        :name "Maze of the Mind"
        :summary
         "* Confuses the target's senses so it cannot accurately choose its direction. This can be extremely hazardous to fast moving units.
-         * [Skill]: [Brilliance]
+         * [Power]: [Madness]
          * [Move]: Whenever the unit moves, its direction is randomized from among its normal movement options (including diving and climbing for air units).")
      "Mind Twist"
       (base/ability
@@ -5067,7 +5071,8 @@
      "Warped Image"
       (base/ability
        :name "Warped Image"
-       :summary "* Share your own derangements with the target. This also rouses the Shadow.")
+       :summary
+        "* Share your own derangements with the target. This also rouses the Shadow.")
      "Wave of Madness"
       (base/ability
        :name "Wave of Madness")))

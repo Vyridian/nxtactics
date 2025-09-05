@@ -690,8 +690,10 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_4d,
       ":image",
       "images/damage-trauma-4d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Remorseful. Concerned about actions previously taken.\nMajor: Anguished. Extremely guilty about actions previously taken.\nCritical: Devastated. Cannot tolerate their actions.\nExtreme: Repentant. Accept all the blame, make amends and end yourself to recapture some semblance of honor."
+      "Minor: Remorseful. Replay past mistakes. Stress:1\nMajor: Anguished. Extreme guilt. Stress:1 Shadow:1\nCritical: Devastated. Cannot act. Stress:2 Shadow:2\nExtreme: Repentant. Accept blame and end it. Suicidal. Shadow:Triumphant"
     ))
 
     // (const trauma-4h)
@@ -960,6 +962,8 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_8s,
       ":image",
       "images/damage-trauma-8s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Performance Anxiety. Stress:1\nMajor: Judgment. Only act with companions. Stress:2\nCritical: Anonymous. Only act secretly. Stress:2 Beast:2\nExtreme: Terrified of failure. Take no action. Immobilized. Beast:Unleashed"
     ))
@@ -1110,6 +1114,8 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_jd,
       ":image",
       "images/damage-trauma-jd.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Mediator. Alternative to violence. Stress:1\nMajor: Nonviolent. Won't attack. Stress:1 Shadow:1\nCritical: Pacifist. Avoid harming anything. Stress:2 Shadow:2\nExtreme: Incapable of Violence. Surrender. Shadow:Triumphant"
     ))

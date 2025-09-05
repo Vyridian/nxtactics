@@ -49,7 +49,7 @@
    :reference
     "Dr. Jekyll and Mr. Hyde"
    :summary
-    "The Beast represents our raw, primitive mind buried beneath reason and morality. It knows only rage, fear, hunger, and instinct. During periods of desperation and duress the Beast may emerge.
+    "The Beast represents our raw, primitive mind buried beneath reason and morality. It knows only rage, fear, hunger, and instinct. Pain and fear can release the Beast. Bold or desperate people might harness its power.
      * Unleashed - The Beast gains control. It cannot use Mind Skills and will only fight or flee.
      * Beast:X - IF Beast > Will THEN test Will vs Beast or gain Unleashed
      * Soothed - IF Unleashed Unit is in a peaceful situation and Will > Beast THEN test Will vs Beast to remove Unleashed")
@@ -234,12 +234,20 @@
   (base/rule
    :name "Drag"
    :summary
-    "Move the Target 1 Space adjacent to you
-     * Movement - IF your Body >= Target Body THEN for each Movement, you may spend Move:+1 to move the Target with you")
+    "Move Target 1 Space adjacent to or on to you
+     * Movement - IF your Body >= Target Body THEN you may spend Move:+1 to Move:1 the Target with you")
   (base/rule
    :name "Drawn to Destiny"
    :image "images/rule-drawntodestiny.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Drop"
+   :summary
+    "Drop Items from anywhere on the body
+     * Drop:X - Drop X Items from hand, arms, then body starting with most logical
+     * Drop:All - Drop every Item being carried
+     * Free - Drop item from hands or arms
+     * Move:-1 - Drop item after moving to hands")
   (base/rule
    :name "Dying"
    :image "images/rule-dying.svg"
@@ -286,8 +294,9 @@
    :layout base/cardlayout-imageonly
    :summary
     "Unit is held by a Unit or Item
-     * Penalty - Disadvantage vs the Rival
-     * Escape - IF a total of Hits:X+ vs the Rival THEN remove Held")
+     * Conflict - Disadvantage vs Holder
+     * Move - IF Holder Body > Held Body THEN Held Move:+1
+     * Escape - IF out of Holder reach OR total of Hits:X+ vs Holder THEN remove Held")
   (base/rule
    :name "Hits"
    :image "images/rule-hits.svg"
@@ -604,6 +613,8 @@
   (base/rule
    :name "Shadow"
    :titles "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin"
+   :image "images/rule-shadow.svg"
+   :layout base/cardlayout-imageonly
    :reference
     "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence
      * Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil

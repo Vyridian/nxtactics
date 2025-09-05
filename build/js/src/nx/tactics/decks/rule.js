@@ -148,7 +148,7 @@ export default class nx_tactics_decks_rule {
         ":reference",
         "Dr. Jekyll and Mr. Hyde",
         ":summary",
-        "The Beast represents our raw, primitive mind buried beneath reason and morality. It knows only rage, fear, hunger, and instinct. During periods of desperation and duress the Beast may emerge.\n* Unleashed - The Beast gains control. It cannot use Mind Skills and will only fight or flee.\n* Beast:X - IF Beast > Will THEN test Will vs Beast or gain Unleashed\n* Soothed - IF Unleashed Unit is in a peaceful situation and Will > Beast THEN test Will vs Beast to remove Unleashed"
+        "The Beast represents our raw, primitive mind buried beneath reason and morality. It knows only rage, fear, hunger, and instinct. Pain and fear can release the Beast. Bold or desperate people might harness its power.\n* Unleashed - The Beast gains control. It cannot use Mind Skills and will only fight or flee.\n* Beast:X - IF Beast > Will THEN test Will vs Beast or gain Unleashed\n* Soothed - IF Unleashed Unit is in a peaceful situation and Will > Beast THEN test Will vs Beast to remove Unleashed"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -405,7 +405,7 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Diving", ":summary", "A Diving Unit is rapidly losing Elevation\n* Round End - Elevation:-1 for each Diving:1"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Drag", ":summary", "Move the Target 1 Space adjacent to you\n* Movement - IF your Body >= Target Body THEN for each Movement, you may spend Move:+1 to move the Target with you"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Drag", ":summary", "Move Target 1 Space adjacent to or on to you\n* Movement - IF your Body >= Target Body THEN you may spend Move:+1 to Move:1 the Target with you"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -415,6 +415,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Drop", ":summary", "Drop Items from anywhere on the body\n* Drop:X - Drop X Items from hand, arms, then body starting with most logical\n* Drop:All - Drop every Item being carried\n* Free - Drop item from hands or arms\n* Move:-1 - Drop item after moving to hands"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -490,7 +491,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Unit is held by a Unit or Item\n* Penalty - Disadvantage vs the Rival\n* Escape - IF a total of Hits:X+ vs the Rival THEN remove Held"
+        "Unit is held by a Unit or Item\n* Conflict - Disadvantage vs Holder\n* Move - IF Holder Body > Held Body THEN Held Move:+1\n* Escape - IF out of Holder reach OR total of Hits:X+ vs Holder THEN remove Held"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -915,7 +916,21 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shadow", ":titles", "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin", ":reference", "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence\n* Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil\n* Hannibal Lecter\n* Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas\n* If once you start down the dark path, forever will it dominate your destiny - Yoda, Star Wars: The Empire Strikes Back\n* A farmer comes home one day to find ... everything that he loved, taken from him... He makes a promise to himself in those dark hours. A life's work erupts from his knotted mind... Years go by... The farmer, who is no longer a farmer, sees the wreckage that he has left in his wake. It is now he who burns. It is he who slaughters, ... and he knows in his heart, he must pay. - Red Reddington, The Blacklist\n* When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker", ":summary", "The Shadow represents our repressed, selfish, and cruel desires. It is normally powerless, frustrated, and suppressed, but it can gain dominance in those whose Will falters or those who cultivate it.\n* Triumphant - The Shadow gains control. If uses Shadow instead of Will for tests. It acts in its immediate self interest and rarely aids anyone.\n* Shadow:X - IF Shadow > Will THEN test Will vs Shadow or gain Triumphant\n* Bitter Defeat - Because the Shadow is self absorbed, failure is devastating. IF Shadow is defeated THEN Shadow:-1. IF Will > Shadow THEN test Will vs Shadow to remove Triumphant."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Shadow",
+        ":titles",
+        "Darkness, Darkside, Pedophile, Sadist, Serial Killer, Sociopath, Yin",
+        ":image",
+        "images/rule-shadow.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":reference",
+        "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence\n* Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil\n* Hannibal Lecter\n* Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas\n* If once you start down the dark path, forever will it dominate your destiny - Yoda, Star Wars: The Empire Strikes Back\n* A farmer comes home one day to find ... everything that he loved, taken from him... He makes a promise to himself in those dark hours. A life's work erupts from his knotted mind... Years go by... The farmer, who is no longer a farmer, sees the wreckage that he has left in his wake. It is now he who burns. It is he who slaughters, ... and he knows in his heart, he must pay. - Red Reddington, The Blacklist\n* When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker",
+        ":summary",
+        "The Shadow represents our repressed, selfish, and cruel desires. It is normally powerless, frustrated, and suppressed, but it can gain dominance in those whose Will falters or those who cultivate it.\n* Triumphant - The Shadow gains control. If uses Shadow instead of Will for tests. It acts in its immediate self interest and rarely aids anyone.\n* Shadow:X - IF Shadow > Will THEN test Will vs Shadow or gain Triumphant\n* Bitter Defeat - Because the Shadow is self absorbed, failure is devastating. IF Shadow is defeated THEN Shadow:-1. IF Will > Shadow THEN test Will vs Shadow to remove Triumphant."
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",

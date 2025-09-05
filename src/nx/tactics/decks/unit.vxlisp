@@ -932,6 +932,13 @@ Allseer - Grants resistance to being surprised or flanked."
   (base/unit
    :name "Lost Soul")
   (base/unit
+   :name "Luminary"
+   :titles "Tachyons"
+   :summary
+    "Luminaries are spirits of the Astral Realm.
+     * Luminaries appear as crackling motes of energy.
+     * Touching a luminary fills one with energy and inspiration, but contacting too many too quickly will overload the body in a violent explosion.")
+  (base/unit
    :name "Mi-Go"
    :image "cthulhu/unit-migo.png"
    :titles "Fungi from Yuggoth"

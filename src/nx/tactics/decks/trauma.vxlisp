@@ -200,6 +200,7 @@
   :name "Despair: Violence"
   :ranksuit base/ranksuit-jd
   :image "images/damage-trauma-jd.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Mediator. Alternative to violence. Stress:1
     Major: Nonviolent. Won't attack. Stress:1 Shadow:1
@@ -371,6 +372,7 @@
   :name "Fear: Status"
   :ranksuit base/ranksuit-8s
   :image "images/damage-trauma-8s.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Performance Anxiety. Stress:1
     Major: Judgment. Only act with companions. Stress:2
@@ -538,6 +540,7 @@
   :name "Despair: Change"
   :ranksuit base/ranksuit-4d
   :image "images/damage-trauma-4d.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Remorseful. Replay past mistakes. Stress:1
     Major: Anguished. Extreme guilt. Stress:1 Shadow:1

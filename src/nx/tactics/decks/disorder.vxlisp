@@ -73,7 +73,7 @@
   :summary
    "Minor: Headache. Stun:1
     Major: Intense Migraine. Stun:1 Slow:1
-    Critical:Stroke. Paralyzed:Half. Speed:-2 Stun:2 Slow:2
+    Critical:Stroke. Paralyzed:Half. Stun:2 Slow:2 Impaired
     Extreme:Stroke. Paralyzed:Body. Stun:4. Immobilized"))
 
 (const disorder-kc : base/damage
@@ -85,8 +85,8 @@
   :summary
    "Minor: Perplexed. Hard to focus Stun:1
     Major: Dazed. Stun:2
-    Critical: Disoriented. Cannot play Strong
-    Extreme: Delirious. All Skills:0"))
+    Critical: Disoriented. Stun:3 Cannot play Strong
+    Extreme: Delirious. Stun:4 All Skills:0"))
 
 (const disorder-kd : base/damage
  (base/damage
@@ -98,7 +98,7 @@
    "Minor: Powermonger. Must lead. Stun:1
     Major: Conceited. Destined for greatness. Stun:2
     Critical: Rightful Ruler. Retake your throne. Stun:4
-    Extreme: God King. Execute heretics. Stun:4 Shadow:Triumphant"))
+    Extreme: Megalomaina. God King. Stun:4 Shadow:Triumphant"))
 
 (const disorder-kh : base/damage
  (base/damage
@@ -141,11 +141,12 @@
   :name "Delusion: Self"
   :ranksuit base/ranksuit-qd
   :image "images/damage-disorder-qd.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Acting. Change your mannerisms and speech patterns sometimes.
-    Major: Personality Shift. Act like a completely different person sometimes.
-    Critical: Multiple personalities. Shift between other personalities in times of stress. These personalities may be the Beast, Shadow, past lives, or beings from other places or dimensions.
-    Extreme: Shadow takes over. Stun:4. Shadow:Triumphant"))
+   "Minor: Affected. Change mannerisms. Stun:1
+    Major: Personality Shift. Act differently. Stun:1 Shadow:1
+    Critical: Multiple Personalities. Stun:2 Shadow:2
+    Extreme: Random Radical Shifts. Stun:4. Beast:Unleashed Shadow:Triumphant"))
 
 (const disorder-qh : base/damage
  (base/damage
@@ -156,7 +157,7 @@
   :summary
    "Minor: Compulsive Body Picking. Stun:1
     Major: Extreme Piercings, Tattoos, Scarring. Stun:2
-    Critical: Cutting. Body:-1 Stun:3 Shadow:1
+    Critical: Cutting. Stun:3 Shadow:1 Body:-1
     Extreme: Self-mutilation. Mutilate and maim self. Stun:4 Shadow:2"))
 
 (const disorder-qs : base/damage
@@ -168,41 +169,44 @@
   :summary
    "Minor: Chest Tightness. Stun:1
     Major: Chest Pain. Stun:1 Slow:1
-    Critical: Heart Attack. Immobilized Choking:2 Stun:2
-    Extreme: Massive Heart Attack. Dying Immobilized Stun:4"))
+    Critical: Heart Attack. Stun:2 Choking:2 Immobilized
+    Extreme: Massive Heart Attack. Stun:4 Immobilized Dying"))
 
 (const disorder-jc : base/damage
  (base/damage
   :name "Loss: Vitality"
   :ranksuit base/ranksuit-jc
   :image "images/damage-disorder-jc.svg"
+  :layout base/cardlayout-imageonly
   :summary
    "Minor: Periodic Weakness. Fatigue:1
-    Major: Hypotonia. Weakness. Fatigue:2 Stun:2
-    Critical: Hypertonia. Stiffness. Move:-1 Fatigue:2 Stun:2
-    Extreme: Atrophy. Move:-2 Fatigue:3 Stun:2"))
+    Major: Hypotonia. General Weakness. Fatigue:2
+    Critical: Hypertonia. Stiffness. Fatigue:2 Stun:2 Move:-1
+    Extreme: Atrophy. Fatigue:3 Move:-2 Impaired"))
 
 (const disorder-jd : base/damage
  (base/damage
   :name "Delusion: Violence"
   :ranksuit base/ranksuit-jd
   :image "images/damage-disorder-jd.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Daydream of violent acts. Stun:1
-    Major: Sudden random visions of violence. Stun:2
-    Critical: Visions of extreme violence. Mind:-1 Stun:3
-    Extreme: Crusader. Violently vanquish evil. Mind:-2 Stun:2"))
+   "Minor: Daydream of violence. Stun:1
+    Major: Sudden visions of violence. Stun:1 Beast:1
+    Critical: Visions of extreme violence. Stun:2 Beast:2
+    Extreme: Deranged Killer. Stun:4 Beast:Unleashed"))
 
 (const disorder-jh : base/damage
  (base/damage
   :name "Compulsion: Violence"
   :ranksuit base/ranksuit-jh
   :image "images/damage-disorder-jh.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Nasty. Enjoy acts of cruelty. Stun:1
-    Major: Cruel. Aggressively cause pain. Stun:2 Shadow:2
-    Critical: Sadist. Pain and torture fill your day. Stun:3 Shadow:2
-    Extreme: Torturer. You revel in gore and viscera. Stun:4 Shadow:Triumphant"))
+   "Minor: Nasty. Enjoy misfortune. Stun:1
+    Major: Cruel. Aggressively cause pain. Stun:1 Shadow:2
+    Critical: Sadist. Pain and torture fill your day. Stun:2 Shadow:3
+    Extreme: Torturer. Revel in gore and agony. Stun:4 Shadow:Triumphant"))
 
 (const disorder-js : base/damage
  (base/damage
@@ -213,41 +217,44 @@
   :summary
    "Minor: Nausea and Stomach Pain. Stun:1
     Major: Vomiting. Stun:1 Slow:1
-    Critical: Convulsions. Immobilized Stun:4
-    Extreme: Violent Seizures. Dying Immobilized Stun:4"))
+    Critical: Convulsions. Stun:4 Immobilized
+    Extreme: Violent Seizures. Stun:4 Immobilized Dying"))
 
 (const disorder-tc : base/damage
  (base/damage
   :name "Loss: Balance"
   :ranksuit base/ranksuit-tc
   :image "images/damage-disorder-tc.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Occasional dizziness. Stun:1
-    Major: Repeated nausea and vomiting. Speed:-1 Stun:2
-    Critical: Severe Vertigo. Speed:-2 Stun:3
-    Extreme: Endless Vertigo. Vomiting, screaming, irrational. Speed:-2 Stun:4"))
+   "Minor: Clumsy. Stun:1
+    Major: Dizzy. Nausea. Stun:1 Beast:1
+    Critical: Vertigo. Vomiting. Stun:2 Beast:2 Can't Evade
+    Extreme: Spinning. Vomiting and screaming. Stun:4 Immobilized Beast:Unleashed"))
 
 (const disorder-td : base/damage
  (base/damage
   :name "Delusion: Reality"
   :ranksuit base/ranksuit-td
   :image "images/damage-disorder-td.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Daydreamer.
-    Major: Mind Elsewhere. Distracted by imaginary world.
-    Critical: In a fantasy world.
-    Extreme: Living hell. Horrific hallucinations. Beast:2 Stun:4"))
+   "Minor: Daydreamer. Stun:1
+    Major: Distracted. Lost in Thought. Stun:2 Mind:-1
+    Critical: Psychedelic Trip. Stun:2 Beast:2
+    Extreme: Living hell. Horrific hallucinations. Stun:4 Beast:Unleashed"))
 
 (const disorder-th : base/damage
  (base/damage
   :name "Compulsion: Reality"
   :ranksuit base/ranksuit-th
   :image "images/damage-disorder-th.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: White Lies. Lie to Conceal your privacy. Stun:1
-    Major: Little Lies. Lie for no reason. Stun:2 Shadow:1
-    Critical: Compulsive Liar. Lie even when obvious. Break trusts. Stun:3 Shadow:2
-    Extreme: Pathological Liar. Not credible. Stun:4 Shadow:Triumphant"))
+   "Minor: White Lies. Keep your privacy. Stun:1
+    Major: Fibber. Lie without reason. Stun:1 Shadow:1
+    Critical: Compulsive Liar. Blatant lies. Stun:2 Shadow:2
+    Extreme: Pathological Liar. Lord of lies. Stun:4 Shadow:Triumphant"))
 
 (const disorder-ts : base/damage
  (base/damage
@@ -257,41 +264,45 @@
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Groin Pain. Stun:1
-    Major: Persistent Back Pain. Impaired Stun:2 Speed:-1
-    Critical: Extreme Back Pain and Weakness. Impaired Stun:2 Speed:-2
-    Extreme: Paralyzed:Waist Down. Immobilized Stun:4 Stress:4"))
+    Major: Persistent Back Pain. Stun:2 Speed:-1 Impaired
+    Critical: Extreme Back Pain and Weakness. Stun:2 Speed:-2 Impaired
+    Extreme: Paralyzed:Waist Down. Stun:2 Stress:4 Immobilized"))
 
 (const disorder-9c : base/damage
  (base/damage
   :name "Loss: Memory"
   :ranksuit base/ranksuit-9c
   :image "images/damage-disorder-9c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Forgetful. Stress:1
-    Major: Significant memory loss. Half of Skills at 0. Stun:1 Stress:1
-    Critical: Amnesia. Most memories lost. All skills at 0. Stun:2 Stress:2
-    Extreme: Total Amnesia. Cannot remember or retain memories. Stun:3 Stress:3"))
+   "Minor: Forgetful. Stun:1
+    Major: Memory Loss. Stun:1 Stress:1 Mind Skills Halved
+    Critical: Amnesia. Stun:2 Stress:2 All Skills:0
+    Extreme: Total Amnesia. Can't retain memories. Stun:3 Stress:3 All Skills:0"))
 
 (const disorder-9d : base/damage
  (base/damage
   :name "Delusion: Belief"
   :ranksuit base/ranksuit-9d
   :image "images/damage-disorder-9d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Belief that their actions have tremendous religious significance and must be done a specific way.
-    Major: Overwhelming visions of religious symbolism, divine and infernal entities.
-    Extreme: Agent of Darkness. Convinced that you or others are possessed by infernal entities."))
+   "Minor: Theorist. Connect the dots. Stun:1
+    Major: Crackpot. Far fetched. Stun:1 Beast:1
+    Critical: Nutcase. Wild conspiracies. Stun:2 Beast:2
+    Extreme: Raving Lunatic. Babbling. Stun:4 Beast:Unleashed Incoherent"))
 
 (const disorder-9h : base/damage
  (base/damage
   :name "Compulsion: Belief"
   :ranksuit base/ranksuit-9h
   :image "images/damage-disorder-9h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Evangelist. You constantly share your belief whether they like it or not.
-    Major: Wild Theories. Your beliefs are increasingly strange and you try to convert others.
-    Critical: Conspiracy nut. Your beliefs are increasingly strange and varied. You can't control your enthusiasm to share them and argue with others.
-    Extreme: Crackpot. You are deeply involved in every lunatic idea, the more irrational the better."))
+   "Minor: Rituals. Formalize your beliefs. Stun:1
+    Major: Guard Against Heresy. Stun:1 Shadow:1
+    Critical: Inquisitor. Force all others. Stun:2 Shadow:2
+    Extreme: Ultraorthadox. Life is ritual. Stun:4 Shadow:Triumphant"))
 
 (const disorder-9s : base/damage
  (base/damage
@@ -302,41 +313,44 @@
   :summary
    "Minor: Arm Pain. Stun:1
     Major: Arm Cramps and Weakness. Fatigue:1 Stun:1
-    Critical: Arm Numbness. Impaired Fatigue:2 Stun:2
-    Extreme: Nerve Damage. Arm useless. Impaired Stun:2 Stress:1"))
+    Critical: Arm Numbness. Fatigue:2 Stun:2 Impaired
+    Extreme: Nerve Damage. Arm useless. Stun:2 Stress:1 Impaired"))
 
 (const disorder-8c : base/damage
  (base/damage
   :name "Loss: Understanding"
   :ranksuit base/ranksuit-8c
   :image "images/damage-disorder-8c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Occasionally takes time to recognize objects.
-    Major: Agnosis. Cannot recognize many objects.
-    Critical: Prosopagnosia. Cannot Recognize faces.
-    Extreme: Deeply Confused. Cannot recognize anything."))
+   "Minor: Slow to Recognize Items. Stun:1
+    Major: Can't Recognize Items. Stun:1 Stress:1
+    Critical: Can't Recognize Faces. Stun:2 Stress:2 Impaired
+    Extreme: Can't Recognize Anything. Stun:2 Stress:4 Impaired"))
 
 (const disorder-8d : base/damage
  (base/damage
   :name "Delusion: Status"
   :ranksuit base/ranksuit-8d
   :image "images/damage-disorder-8d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: You are amazing. Remind everyone.
-    Major: You are special. Things will work out. Don't plan.
-    Critical: You have a destiny. Never hesitate. Nothing can stop you. Can't Defend.
-    Extreme: Grandeur. You are royalty and life is all sunshine and rainbows. You cannot take Combat or Skill Actions."))
+   "Minor: I'm amazing. Remind everyone. Stun:1
+    Major: I'm special. Things work out. Stun:2 Can't plan
+    Critical: Destined. Nothing stops you. Stun:3 Can't Block
+    Extreme: Grandeur. Worship me. Stun:4 Shadow:Triumphant. All Skills:0"))
 
 (const disorder-8h : base/damage
  (base/damage
   :name "Compulsion: Status"
   :ranksuit base/ranksuit-8h
   :image "images/damage-disorder-8h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Super fan. You pay close attention to famous people.
-    Major: Obsessed fan. You only think in terms of famous people.
-    Critical: Irrational stalker of the famous. Inject yourself into their lives.
-    Extreme: Insane Stalker. Kidnap famous people and keep them somehow."))
+   "Minor: Super fan. Study the famous. Stun:1
+    Major: Obsessed Fan. Follow the famous. Stun:1 Shadow:1
+    Critical: Stalker. Enter their lives. Stun:2 Shadow:2
+    Extreme: Insane Stalker. Take their lives. Stun:4 Shadow:Triumphant"))
 
 (const disorder-8s : base/damage
  (base/damage
@@ -347,41 +361,44 @@
   :summary
    "Minor: Arm Pain. Stun:1
     Major: Arm Cramps and Weakness. Fatigue:1 Stun:1
-    Critical: Arm Numbness. Impaired Fatigue:2 Stun:2
-    Extreme: Nerve Damage. Arm useless. Impaired Stun:2 Stress:1"))
+    Critical: Arm Numbness. Fatigue:2 Stun:2 Impaired
+    Extreme: Nerve Damage. Arm useless. Stun:2 Stress:1 Impaired"))
 
 (const disorder-7c : base/damage
  (base/damage
   :name "Loss: Language"
   :ranksuit base/ranksuit-7c
   :image "images/damage-disorder-7c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Dyslexia. Difficulty reading/writing
-    Major: Speech Impediment
-    Critical: Dysarthria. Slurred Speech/Partial language loss.
-    Extreme: Aphasia. Cannot comprehend speech or speak."))
+   "Minor: Dyslexia. Difficulty with words. Stun:1
+    Major: Speech Impediment. Stun:1 Stress:1 Social Skills:-1
+    Critical: Dysarthria. Slurred Speech. Stun:2 Stress:2 Social Skills:0
+    Extreme: Aphasia. Stress:2 Mind:-2 Incoherent"))
 
 (const disorder-7d : base/damage
  (base/damage
   :name "Delusion: Companions"
   :ranksuit base/ranksuit-7d
   :image "images/damage-disorder-7d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: You feel like you have a guardian angel to help you.
-    Major: You have an imaginary friend.
-    Critical: There are so many imaginary friends, you can't tell who is real.
-    Extreme: Comatose. You join them in the imaginary land."))
+   "Minor: Guardian Angel. Unseen protector. Stun:1
+    Major: Imaginary Friend. Stun:2
+    Critical: Imaginary People. Who is real? Stun:4 Slow:1
+    Extreme: Imaginary Land. Join them. Mind:-2 Comatose"))
 
 (const disorder-7h : base/damage
  (base/damage
   :name "Compulsion: Companions"
   :ranksuit base/ranksuit-7h
   :image "images/damage-disorder-7h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: You damage your friendships.
-    Major: You systematically ruin your friendships.
-    Critical: You purposely abuse anyone who gets near you.
-    Extreme: You lash out and attack anyone who gets near you."))
+   "Minor: Demanding. Pushy. Stun:1
+    Major: Transactional. Rules for companions. Stun:1 Shadow:1
+    Critical: Controlling. Oppressive control. Stun:2 Shadow:2
+    Extreme: Smothering. Dominate companions. Stun:4 Shadow:Triumphant"))
 
 (const disorder-7s : base/damage
  (base/damage
@@ -400,33 +417,36 @@
   :name "Loss: Vision"
   :ranksuit base/ranksuit-6c
   :image "images/damage-disorder-6c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Light Sensitivity [Stun]:1
-    Major: Blurry Vision. [Stress]:1
-    Critical: Double Vision. [Impaired] [Hobbled] [Stress]:2.
-    Extreme: Blindness. [Stress]:4"))
+   "Minor: Light Sensitivity. Stun:1
+    Major: Blurry Vision. Stun:1 Stun:1 Long Range:Disadvantage
+    Critical: Double Vision. Stun:2 Range:Disadvantage Impaired
+    Extreme: Blind. Stun:4 Range:None Impaired"))
 
 (const disorder-6d : base/damage
  (base/damage
   :name "Delusion: Strangers"
   :ranksuit base/ranksuit-6d
   :image "images/damage-disorder-6d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Belief that other races are responsible for unrelated events.
-    Major: Belief that other races are secretly murdering people.
-    Critical: Belief that other races are actually monsters in disguise that only you can see.
-    Extreme: Belief that everyone is a monster and you are the only person left."))
+   "Minor: Watchful. Strangers seem sinister. Stress:1
+    Major: Distrust. Sense hidden motives. Stress:1 Beast:1
+    Critical: Impostors. Disguised monsters. Stress:2 Beast:2
+    Extreme: Alone. They're all monsters. Stress:4 Beast:Unleashed"))
 
 (const disorder-6h : base/damage
  (base/damage
   :name "Compulsion: Strangers"
   :ranksuit base/ranksuit-6h
   :image "images/damage-disorder-6h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Drawn to mysterious, shady people.
-    Major: Excited by dangerous and mysterious people.
-    Critical: Pursue increasingly risky encounters with strangers.
-    Extreme: Danger Magnet. Dedicate all waking hours to shady encounters with strangers."))
+   "Minor: Superficial. Label others at a glance. Stun:1
+    Major: Categorize others into stereotypes. Stun:1 Shadow:1
+    Critical: Dehumanize others to labels. Stun:2 Shadow:2
+    Extreme: Genocidal. Eliminate the unneeded. Stun:4 Shadow:Unleashed"))
 
 (const disorder-6s : base/damage
  (base/damage
@@ -445,37 +465,40 @@
   :name "Loss: Hearing"
   :ranksuit base/ranksuit-5c
   :image "images/damage-disorder-5c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Sound Sensitivity [Stun]:1
-    Major: Loud Ringing in Ears. [Stun]:2
-    Critical: Partial Hearing Loss. [Stress]:2
-    Extreme: Deafness. [Stress]:4"))
+   "Minor: Sound Sensitivity. Stun:1
+    Major: Tinnitus. Ear Ringing. Stun:1 Stress:1
+    Critical: Partial Hearing Loss. Stun:2 Stress:2 Impaired
+    Extreme: Total Hearing Loss. Stress:4. Impaired"))
 
 (const disorder-5d : base/damage
  (base/damage
   :name "Delusion: Love"
   :ranksuit base/ranksuit-5d
   :image "images/damage-disorder-5d.svg"
+  :layout base/cardlayout-imageonly
   :reference
    "* What's love got to do, got to do with it? what's love but a second-hand emotion. What's love got to do, got to do with? Who needs a heart when a heart can be browen? - Tina Turner, What's Love Got to do with it?"
   :summary
-   "Minor: Everyone desires you. Stun:1
-    Major: Belief that they have a true romantic relationship with an inappropriate person.
-    Critical: Overwhelming visions of elaborate and extreme sexual encounters.
-    Extreme: Bliss. Overwhelmed by intense sexual fantasies. Comatose."))
+   "Minor: Fetish. Unusual tastes. Stun:1
+    Major: Deviant. Bizarre desires. Stun:1 Shadow:1
+    Critical: Aberrant. Manifest desires. Stun:2 Shadow:2
+    Extreme: Monster. Perform appalling acts. Stun:4 Shadow:Triumphant"))
 
 (const disorder-5h : base/damage
  (base/damage
   :name "Compulsion: Love"
   :ranksuit base/ranksuit-5h
   :image "images/damage-disorder-5h.svg"
+  :layout base/cardlayout-imageonly
   :reference
    "* Sometimes I wish that I could stop you from talking. When I hear the silly things that you say. I think somebody better put out the big light. 'Cause I can't stand to see you this way - Elvis Costello, Allison"
   :summary
-   "Minor: Fetishes. Stun:1
-    Major: Deviant. Bizarre lusts fill your thoughts. Pushes to play them out.
-    Critical: Monster. Compelled to push for relations as often as possible even if it defies social norms and sexual preference, forcing the issue if necessary.
-    Extreme: Abomination. You are committed to perform appalling acts. [Shadow Triumphant]"))
+   "Minor: Flirt. Rather forward. Stun:1
+    Major: Player. Raise the body count. Stun:1 Shadow:1
+    Critical: Cheater. Unfaithful. Stun:2 Shadow:2
+    Extreme: Intolerable Manipulator. Stun:4 Shadow:Triumphant"))
 
 (const disorder-5s : base/damage
  (base/damage
@@ -486,41 +509,44 @@
   :summary
    "Minor: Leg Pain. Stun:1
     Major: Leg Cramps and Weakness. Stun:1 Slow:1
-    Critical: Leg Numbness. Impaired. Stun:2 Slow:2
-    Extreme: Nerve Damage. Leg unresponsive. Impaired. Stun:3 Slow:3"))
+    Critical: Leg Numbness. Stun:2 Slow:2 Impaired
+    Extreme: Nerve Damage. Leg unresponsive. Stun:3 Slow:3 Impaired"))
 
 (const disorder-4c : base/damage
  (base/damage
   :name "Loss: Sensation"
   :ranksuit base/ranksuit-5c
   :image "images/damage-disorder-5c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Temperature Sensitivity
-    Major: Painful Skin sensitivity
-    Critical: Burning Sensation
-    Extreme: Agonizingly painful Skin Sensitivity"))
+   "Minor: Temperature Sensitivity. Stress:1
+    Major: Painful Skin Sensitivity. Stress:1 Beast:1
+    Critical: Burning Sensation. Stress:2 Beast:2
+    Extreme: Agonizing Pain. Stress:4 Beast:Unleashed"))
 
 (const disorder-4d : base/damage
  (base/damage
   :name "Delusion: Change"
   :ranksuit base/ranksuit-4d
   :image "images/damage-disorder-4d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Suspicious: Something is different but you can't figure it out.
-    Major: Unnerved. Random things change around you. It's hard to tell what is real.
-    Critical: Overwhelmed. Everything around you changes from minute to minute.
-    Extreme: Dumbstruck. The world is a swirling kaleidscope of random visions. Comatose."))
+   "Minor: Unnerved. Something is off. Stress:1
+    Major: Unstable. Random things change. Stress:1 Beast:1
+    Critical: Fractured. Everything changes. Stun:2 Stress:2 Beast:2
+    Extreme: Dumbstruck. Kaleidoscope of visions. Stun:3 Beast:3 Incoherent"))
 
 (const disorder-4h : base/damage
  (base/damage
   :name "Compulsion: Change"
   :ranksuit base/ranksuit-4h
   :image "images/damage-disorder-4h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Changes appearance daily.
-    Major: Make majors changes regularly.
-    Critical: Reinvent yourself. Leave everything behind.
-    Extreme: Exhausting constant change of location and lifestyle."))
+   "Minor: Trendy. Change appearance daily. Stun:1
+    Major: Fickle. Regular majors changes. Stun:1 Stress:1
+    Critical: Mercurial. Reinvent yourself. Stun:2 Stress:2 Beast:1
+    Extreme: Manic. Keep changing. Stun:3 Stress:4 Beast:2"))
 
 (const disorder-4s : base/damage
  (base/damage
@@ -531,41 +557,47 @@
   :summary
    "Minor: Leg Pain. Stun:1
     Major: Leg Cramps and Weakness. Stun:1 Slow:1
-    Critical: Leg Numbness. Impaired. Stun:2 Slow:2
-    Extreme: Nerve Damage. Leg unresponsive. Impaired. Stun:3 Slow:3"))
+    Critical: Leg Numbness. Stun:2 Slow:2 Impaired
+    Extreme: Nerve Damage. Leg unresponsive. Stun:3 Slow:3 Impaired"))
 
 (const disorder-3c : base/damage
  (base/damage
   :name "Loss: Social"
   :ranksuit base/ranksuit-3c
   :image "images/damage-disorder-3c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Awkward. Difficulty in social interaction.
-    Major: Out of Touch. Severly narrow interests.
-    Criitcal: Schizoid. Keeps drifting back into own thoughts.
-    Extreme: Lost in Thought. Cannot pay attention to the real world."))
+   "Minor: Anxious. Butterflies. Stress:1
+    Major: Shy. Socially Awkward. Stress:1 Shadow:1
+    Criitcal: Withdrawn. Stay away. Stress:2 Shadow:2
+    Extreme: Hermit. Isolate. Stress:4 Shadow:Triumphant"))
 
 (const disorder-3d : base/damage
  (base/damage
   :name "Delusion: Things"
   :ranksuit base/ranksuit-3d
   :image "images/damage-disorder-3d.svg"
+  :layout base/cardlayout-imageonly
+  :reference
+   "* If I could talk to the animals - Doctor Dolittle, Talk to the Animals
+    * Snow White, Sleepying Beauty, Phantasia"
   :summary
-   "Minor: Belief that random items have hidden critical importance.
-    Major: Visions of inanimate objects becoming animate and talking.
-    Critical: Surrounded by animate talking objects.
-    Extreme: Everything comes alive and comes to get you."))
+   "Minor: Pets. Animals are friends. Stun:1
+    Major: Anthropomorphize. Talk to things. Stun:2
+    Critical: Animated. Things move and talk. Stun:2 Stress:2
+    Extreme: Animate Nightmare. All things alive. Stun:4 Incoherent"))
 
 (const disorder-3h : base/damage
  (base/damage
   :name "Compulsion: Things"
   :ranksuit base/ranksuit-3h
   :image "images/damage-disorder-3h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Trophy Collector. You pickup lots of of little things.
-    Major: Theft. You take random things for your collection.
-    Critical: Compulsive Thief. When you see something, you have to find a way to get it.
-    Extreme: Pathological Thief. Steal even when you will obviously be caught and then pretend it didn't happen."))
+   "Minor: Trophy Collector. Stun:1
+    Major: Shoplifter. Take random things. Stun:1 Shadow:1
+    Critical: Compulsive Thief. Have to have it. Stun:2 Shadow:2
+    Extreme: Pathological Thief. Steal everything. Stun:4 Shadow:Triumphant"))
 
 (const disorder-3s : base/damage
  (base/damage
@@ -576,41 +608,44 @@
   :summary
    "Minor: Foot Pain. Slow:1
     Major: Foot Cramps and Weakness. Stun:1 Slow:1
-    Critical:Foot Numbness. Impaired Stun:2 Slow:2
-    Extreme:Nerve damage. Foot unresponsive. Impaired Stun:3 Slow:3"))
+    Critical:Foot Numbness. Stun:2 Slow:2 Impaired
+    Extreme:Nerve damage. Foot unresponsive. Stun:3 Slow:3 Impaired"))
 
 (const disorder-2c : base/damage
  (base/damage
   :name "Loss: Sleep"
   :ranksuit base/ranksuit-2c
   :image "images/damage-disorder-2c.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Hypersomnia. Excessive Sleep.
-    Major: Narcolepsy. Sleep at random times.
-    Critical: Sleeps all the time.
-    Extreme: Comatose."))
+   "Minor: Hypersomnia. Fatigue:1 Sleep excessively
+    Major: Narcolepsy. Fatigue:2 Fall asleep randomly
+    Critical: Sleeper. Sleep all the time. Fatigue:4 Awake 2 hours
+    Extreme: Eternal Sleep. Fatigue:4 Comatose"))
 
 (const disorder-2d : base/damage
  (base/damage
   :name "Delusion: Fortune"
   :ranksuit base/ranksuit-2d
   :image "images/damage-disorder-2d.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: You are lucky. Take chances.
-    Major: Risk Taker.
-    Critical: Daredevil.
-    Extreme: Leap into the fray. Cannot see danger."))
+   "Minor: Lucky. Take chances. Stun:1
+    Major: Risk Taker. Don't tell me the odds. Stun:2
+    Critical: Daredevil. Stun:3 Can't Block
+    Extreme: Leap into the fray. Stun:4 Can't Block or Evade"))
 
 (const disorder-2h : base/damage
  (base/damage
   :name "Compulsion: Fortune"
   :ranksuit base/ranksuit-2h
   :image "images/damage-disorder-2h.svg"
+  :layout base/cardlayout-imageonly
   :summary
-   "Minor: Play games a lot.
-    Major: Play games every spare moment especially gambling.
-    Critical: Addict. Can't stop gambling.
-    Extreme: Spiraling Addict. Bet on everything until you have nothing and then keep betting."))
+   "Minor: Gamer. Play games a lot. Stress:1
+    Major: Gambler. Gamble when possible. Stress:1 Shadow:1
+    Critical: Addict. Won't stop gambling. Stress:2 Shadow:2
+    Extreme: All In. Bet everything. Stress:4 Shadow:Triumphant"))
 
 (const disorder-2s : base/damage
  (base/damage
@@ -621,8 +656,8 @@
   :summary
    "Minor: Foot Pain. Slow:1
     Major: Foot Cramps and Weakness. Stun:1 Slow:1
-    Critical:Foot Numbness. Impaired Stun:2 Slow:2
-    Extreme:Nerve damage. Foot unresponsive. Impaired Stun:3 Slow:3"))
+    Critical:Foot Numbness. Stun:2 Slow:2 Impaired
+    Extreme:Nerve damage. Foot unresponsive. Stun:3 Slow:3 Impaired"))
 
 (func deck-disorder : base/deck
  (base/deck
