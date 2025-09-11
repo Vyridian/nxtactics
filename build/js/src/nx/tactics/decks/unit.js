@@ -481,7 +481,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           nx_tactics_base.f_unitpower_from_tactics_key_abilities(
             tactics,
-            "Animism",
+            "Hexcraft",
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Evil Eye")
           ),
           nx_tactics_base.f_unitpower_from_tactics_key_abilities(
@@ -666,7 +666,7 @@ export default class nx_tactics_decks_unit {
         ":image",
         "images/cards/unit-goblin-raider.svg",
         ":summary",
-        "* [Role: Attacker]",
+        "* [Role:Attacker]",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
@@ -712,7 +712,7 @@ export default class nx_tactics_decks_unit {
         ":height",
         "1m/3ft",
         ":summary",
-        "* [Role: Skirmisher]",
+        "* [Role:Skirmisher]",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
@@ -1278,7 +1278,7 @@ export default class nx_tactics_decks_unit {
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Melee", 8),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Faith", 8)
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Religion", 8)
         )
       ),
       vx_core.f_new(
@@ -2012,7 +2012,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
             tactics,
-            "Animal Handling",
+            "Animals",
             3,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Harvest Poison", "Snake Charming")
           )

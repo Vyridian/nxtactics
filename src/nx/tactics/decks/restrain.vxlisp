@@ -1,0 +1,712 @@
+(package nx/tactics/decks/restrain
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Restrain Deck")
+
+(const slow : base/cardback
+ (base/cardback
+  :name "Slow"
+  :image "images/damage-restrain-slow.svg"
+  :layout base/cardlayout-imageonly))
+
+(const restrain-wild-black : base/damage
+ (base/damage
+  :id "damage-restrain-wb"
+  :name "Restrain: Deck"
+  :image "images/damage-restrain-wb.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
+
+(const restrain-wild-red : base/damage
+ (base/damage
+  :id "damage-restrain-wr"
+  :name "Restrain: Discard"
+  :image "images/damage-restrain-wr.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
+
+(const restrain-ac : base/damage
+ (base/damage
+  :id "damage-restrain-ac"
+  :name "Constrict: Head"
+  :ranksuit base/ranksuit-ac
+  :image "images/damage-restrain-ac.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Hair Pulled. Slow:1
+    Moderate: Face Constricted. Held:1 Body:-1
+    Major: Skull Constricted. Held:2 Body:-2
+    Extreme: Neck Constricted. Held:3 Body:-3 Chocking:2"))
+
+(const restrain-ad : base/damage
+ (base/damage
+  :id "damage-restrain-ad"
+  :name "Restrain: Head"
+  :ranksuit base/ranksuit-ad
+  :image "images/damage-restrain-ad.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Hair Ensnared. Slow:1
+    Moderate: Face Ensnared. Held:1 Speed:-1
+    Major: Head Ensnared. Held:2 Speed:-2
+    Extreme: Neck Noose. Dying Held:3 Choking:2"))
+
+(const restrain-ah : base/damage
+ (base/damage
+  :id "damage-restrain-ah"
+  :name "Hold: Head"
+  :ranksuit base/ranksuit-ah
+  :image "images/damage-restrain-ah.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Hair Held. Held:1. Drag
+    Moderate: Jaw Held. Held:2. Drag
+    Major: Head Held. Held:3. Drag
+    Extreme: Neck Held. Held:4. Drag Knockdown:1"))
+
+(const restrain-as : base/damage
+ (base/damage
+  :id "damage-restrain-as"
+  :name "Disable: Head"
+  :ranksuit base/ranksuit-as
+  :image "images/damage-restrain-as.svg"
+  :summary
+   "Minor: Hair Caught. Slow:1
+    Moderate: Head Lock. Held:1. Stun:1 Speed:-1
+    Major: Neck Sprained. Stun:2 Speed:-1
+    Extreme: Neck Dislocated. Stun:3 Stress:3 Paralyzed"))
+
+(const restrain-kc : base/damage
+ (base/damage
+  :id "damage-restrain-kc"
+  :name "Restrain: Shoulders"
+  :ranksuit base/ranksuit-kc
+  :image "images/damage-restrain-kc.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Shoulder Caught. Slow:1
+    Moderate: Shoulder Limited. Slow:1 Impaired
+    Major: Shoulders Restrained. Slow:2 Immobilized
+    Extreme: Throat Restricted. Choking:3 Can't Speak"))
+
+(const restrain-kd : base/damage
+ (base/damage
+  :id "damage-restrain-kd"
+  :name "Restrain: Shoulders"
+  :ranksuit base/ranksuit-kd
+  :image "images/damage-restrain-kd.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Shoulder Caught. Slow:1
+    Moderate: Shoulder Limited. Slow:1 Impaired
+    Major: Shoulders Restrained. Slow:2 Immobilized
+    Extreme: Throat Restricted. Choking:3 Can't Speak"))
+
+(const restrain-kh : base/damage
+ (base/damage
+  :name "Hold: Shoulders"
+  :ranksuit base/ranksuit-kh
+  :image "images/damage-restrain-kh.svg"
+  :summary
+   "Minor: Shoulder Held. Pull:1. Remove:Any Hit
+    Moderate: Shoulder Held. Pull:1. Remove:1 Damage
+    Major: Shoulders Held. Pull:1. Remove:2 Damage
+    Extreme: Shoulders Held. Pull:1. Remove:3 Damage"))
+
+(const restrain-ks : base/damage
+ (base/damage
+  :name "Disable: Shoulders"
+  :ranksuit base/ranksuit-ks
+  :image "images/damage-restrain-ks.svg"
+  :summary
+   "Minor: Shoulder caught. Slow:1. Remove:Any Hit
+    Moderate: Shoulder lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Shoulder sprained. [Impaired] Stun:2. Remove:2 Damage
+    Extreme: Shoulder dislocated. [Impaired] Stun:3. Remove:3 Damage"))
+
+(const restrain-qc : base/damage
+ (base/damage
+  :name "Constrict: Chest"
+  :ranksuit base/ranksuit-qc
+  :image "images/damage-restrain-qc.svg"
+  :summary
+   "Minor: Ribs Ensnared. Slow:1
+    Moderate: Ribs Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Chest Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Lungs constricted. Cannot inhale. [Choking]"))
+
+(const restrain-qd : base/damage
+ (base/damage
+  :name "Restrain: Chest"
+  :ranksuit base/ranksuit-qd
+  :image "images/damage-restrain-qd.svg"
+  :summary
+   "Minor: Chest Ensnared.
+    Moderate: Chest Ensnared. Slow:1 Remove:1 Actions
+    Major: Chest Ensnared. Slow:2 Remove:2 Actions
+    Extreme: Chest Bound. [Impaired] Remove:3 Actions"))
+
+(const restrain-qh : base/damage
+ (base/damage
+  :name "Hold: Chest"
+  :ranksuit base/ranksuit-qh
+  :image "images/damage-restrain-qh.svg"
+  :summary
+   "Minor: Chest Held. Pull:1. Remove:Any Hit
+    Moderate: Chest Held. Pull:1. Slow:1 Remove:Any Hit
+    Major: Chest Held. Pull:1. Remove:1 Damage
+    Extreme: Chest Held. Pull:1. Remove:2 Damage"))
+
+(const restrain-qs : base/damage
+ (base/damage
+  :name "Disable: Chest"
+  :ranksuit base/ranksuit-qs
+  :image "images/damage-restrain-qs.svg"
+  :summary
+   "Minor: Chest Held. Pull:1. Remove:Any Hit
+    Moderate: Chest Held. Pull:1. Slow:1 Remove:Any Hit
+    Major: Chest Held. Pull:1. Remove:1 Damage
+    Extreme: Chest Held. Pull:1. Remove:2 Damage"))
+
+(const restrain-jc : base/damage
+ (base/damage
+  :name "Constrict: Abdomen"
+  :ranksuit base/ranksuit-jc
+  :image "images/damage-restrain-jc.svg"
+  :summary
+   "Minor: Belly Ensnared. Slow:1
+    Moderate: Belly Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Stomach Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Diaphram constricted. Cannot inhale. [Choking]"))
+
+(const restrain-jd : base/damage
+ (base/damage
+  :name "Restrain: Abdomen"
+  :ranksuit base/ranksuit-jd
+  :image "images/damage-restrain-js.svg"
+  :summary
+   "Minor: Abdomen Ensnared.
+    Moderate: Abdomen Ensnared. Slow:1 Remove:1 Actions
+    Major: Abdomen Ensnared. Slow:2 Remove:2 Actions
+    Extreme: Abdomen Bound. Slow:3 Remove:3 Actions"))
+
+(const restrain-jh : base/damage
+ (base/damage
+  :name "Hold: Abdomen"
+  :ranksuit base/ranksuit-jc
+  :image "images/damage-restrain-jc.svg"
+  :summary
+   "Minor: Abdomen Held. Pull:1. Remove:Any Hit
+    Moderate: Abdomen Held. Pull:1. Remove:1 Damage
+    Major: Waist Held. Pull:1. Remove:2 Damage
+    Extreme: Waist Held. Pull:1. Remove:3 Damage"))
+
+(const restrain-js : base/damage
+ (base/damage
+  :name "Disable: Abdomen"
+  :ranksuit base/ranksuit-js
+  :image "images/damage-restrain-js.svg"
+  :summary
+   "Minor: Abdomen Held. Pull:1. Remove:Any Hit
+    Moderate: Abdomen Held. Pull:1. Remove:1 Damage
+    Major: Waist Held. Pull:1. Remove:2 Damage
+    Extreme: Waist Held. Pull:1. Remove:3 Damage"))
+
+(const restrain-tc : base/damage
+ (base/damage
+  :name "Constrict: Vitals"
+  :ranksuit base/ranksuit-tc
+  :image "images/damage-restrain-tc.svg"
+  :summary
+   "Minor: Hips Ensnared. Slow:1
+    Moderate: Hips Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Bladder Constricted. [Impaired]. Relieve yourself. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Bowels Constricted. [Immobilized]. Relieve yourself. Take 1 Damage to Vitals every turn."))
+
+(const restrain-td : base/damage
+ (base/damage
+  :name "Restrain: Vitals"
+  :ranksuit base/ranksuit-td
+  :image "images/damage-restrain-td.svg"
+  :summary
+   "Minor: Hips Ensnared.
+    Moderate: Hips Ensnared. Slow:1 Remove:1 Actions
+    Major: Hips Ensnared. Slow:2 Remove:2 Actions
+    Extreme: Hips Bound. [Hobbled] Slow:3 Remove:3 Actions"))
+
+(const restrain-th : base/damage
+ (base/damage
+  :name "Hold: Vitals"
+  :ranksuit base/ranksuit-th
+  :image "images/damage-restrain-th.svg"
+  :summary
+   "Minor: Hips Held. Pull:1. Remove:Any Hit
+    Moderate: Hips Held. Pull:1. Remove:1 Damage
+    Major: Buttocks Held. Pull:1. Remove:2 Damage
+    Extreme: Crotch Held. Pull:1. Remove:3 Damage"))
+
+(const restrain-ts : base/damage
+ (base/damage
+  :name "Disable: Vitals"
+  :ranksuit base/ranksuit-ts
+  :image "images/damage-restrain-ts.svg"
+  :summary
+   "Minor: Hip caught. Slow:1. Remove:Any Hit
+    Moderate: Hip lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Hip sprained. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Hip dislocated. [Hobbled] Stun:3. Remove:3 Damage"))
+
+(const restrain-9c : base/damage
+ (base/damage
+  :name "Constrict: Left Arm"
+  :titles "Constrict: Left Upper Arm/Elbow"
+  :ranksuit base/ranksuit-9c
+  :image "images/damage-restrain-9c.svg"
+  :summary
+   "Minor: Arm Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Arm Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Elbow Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Bicep Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restrain-9d : base/damage
+ (base/damage
+  :name "Restrain: Left Arm"
+  :titles "Restrain: Left Upper Arm/Elbow"
+  :ranksuit base/ranksuit-9d
+  :image "images/damage-restrain-9d.svg"
+  :summary
+   "Minor: Elbow Ensnared.
+    Moderate: Elbow Bond. Slow:1 Remove:1 Actions
+    Major: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions
+    Extreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"))
+
+(const restrain-9h : base/damage
+ (base/damage
+  :name "Hold: Left Arm"
+  :titles "Hold: Left Upper Arm/Elbow"
+  :ranksuit base/ranksuit-9h
+  :image "images/damage-restrain-9h.svg"
+  :summary
+   "Minor: Arm Held. Pull:1. Remove:Any Hit
+    Moderate: Arm Held. Pull:1. Remove:1 Damage
+    Major: Elbow Held. Pull:1. Remove:2 Damage
+    Extreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"))
+
+(const restrain-9s : base/damage
+ (base/damage
+  :name "Disable: Left Arm"
+  :titles "Disable: Left Upper Arm/Elbow"
+  :ranksuit base/ranksuit-9s
+  :image "images/damage-restrain-9s.svg"
+  :summary
+   "Minor: Bicep held. Slow:1. Remove:Any Hit
+    Moderate: Elbow held. Slow:1 Stun:1. Remove:1 Damage
+    Major: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage
+    Extreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"))
+
+(const restrain-8c : base/damage
+ (base/damage
+  :name "Constrict: Right Arm"
+  :titles "Constrict: Right Upper Arm/Elbow"
+  :ranksuit base/ranksuit-8c
+  :image "images/damage-restrain-8c.svg"
+  :summary
+   "Minor: Arm Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Arm Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Elbow Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Bicep Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restrain-8d : base/damage
+ (base/damage
+  :name "Restrain: Right Arm"
+  :titles "Restrain: Right Upper Arm/Elbow"
+  :ranksuit base/ranksuit-8d
+  :image "images/damage-restrain-8d.svg"
+  :summary
+   "Minor: Elbow Ensnared.
+    Moderate: Elbow Bond. Slow:1 Remove:1 Actions
+    Major: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions
+    Extreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"))
+
+(const restrain-8h : base/damage
+ (base/damage
+  :name "Hold: Right Arm"
+  :titles "Hold: Right Upper Arm/Elbow"
+  :ranksuit base/ranksuit-8h
+  :image "images/damage-restrain-8h.svg"
+  :summary
+   "Minor: Arm Held. Pull:1. Remove:Any Hit
+    Moderate: Arm Held. Pull:1. Remove:1 Damage
+    Major: Elbow Held. Pull:1. Remove:2 Damage
+    Extreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"))
+
+(const restrain-8s : base/damage
+ (base/damage
+  :name "Disable: Right Arm"
+  :titles "Disable: Right Upper Arm/Elbow"
+  :ranksuit base/ranksuit-8s
+  :image "images/damage-restrain-8s.svg"
+  :summary
+   "Minor: Bicep held. Slow:1. Remove:Any Hit
+    Moderate: Elbow held. Slow:1 Stun:1. Remove:1 Damage
+    Major: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage
+    Extreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"))
+
+(const restrain-7c : base/damage
+ (base/damage
+  :name "Constrict: Left Hand"
+  :titles "Constrict: Left Hand/Wrist"
+  :ranksuit base/ranksuit-7c
+  :image "images/damage-restrain-7c.svg"
+  :summary
+   "Minor: Fingers Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Hand Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Wrist Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Forearm Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restrain-7d : base/damage
+ (base/damage
+  :name "Restrain: Left Hand"
+  :titles "Restrain: Left Hand/Wrist"
+  :ranksuit base/ranksuit-7d
+  :image "images/damage-restrain-7d.svg"
+  :summary
+   "Minor: Fingers Ensnared. Slow:1 Remove:1 Action
+    Moderate: Hand Ensnared. Slow:2 Remove:2 Actions
+    Major: Wrist Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Forearm Ensnared. [Impaired] Remove:4 Actions"))
+
+(const restrain-7h : base/damage
+ (base/damage
+  :name "Hold: Left Hand"
+  :titles "Hold: Left Hand/Wrist"
+  :ranksuit base/ranksuit-7h
+  :image "images/damage-restrain-7h.svg"
+  :summary
+   "Minor: Fingers Held. Pull:1. Remove:Any Hit
+    Moderate: Hand Held. Pull:1. Remove:1 Damage
+    Major: Wrist Held. Pull:1. Remove:2 Damage
+    Extreme: Forearm Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restrain-7s : base/damage
+ (base/damage
+  :name "Disable: Left Hand"
+  :titles "Disable: Left Hand/Wrist"
+  :ranksuit base/ranksuit-7s
+  :image "images/damage-restrain-7s.svg"
+  :summary
+   "Minor: Hand lock. Slow:1. Remove:Any Hit
+    Moderate: Wrist lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Hand bones dislocated. Hand useless. [Impaired] Stun:2. Remove:2 Damage
+    Extreme: Wrist dislocated. Wrist useless. [Impaired] Stun:3. Remove:3 Damage"))
+
+(const restrain-6c : base/damage
+ (base/damage
+  :name "Constrict: Right Hand"
+  :titles "Constrict: Right Hand/Wrist"
+  :ranksuit base/ranksuit-6c
+  :image "images/damage-restrain-6c.svg"
+  :summary
+   "Minor: Fingers Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Hand Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Wrist Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Forearm Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restrain-6d : base/damage
+ (base/damage
+  :name "Restrain: Right Hand"
+  :titles "Restrain: Right Hand/Wrist"
+  :ranksuit base/ranksuit-6d
+  :image "images/damage-restrain-6d.svg"
+  :summary
+   "Minor: Fingers Ensnared. Slow:1 Remove:1 Action
+    Moderate: Hand Ensnared. Slow:2 Remove:2 Actions
+    Major: Wrist Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Forearm Ensnared. [Impaired] Remove:4 Actions"))
+
+(const restrain-6h : base/damage
+ (base/damage
+  :name "Hold: Right Hand"
+  :titles "Hold: Right Hand/Wrist"
+  :ranksuit base/ranksuit-6h
+  :image "images/damage-restrain-6h.svg"
+  :summary
+   "Minor: Fingers Held. Pull:1. Remove:Any Hit
+    Moderate: Hand Held. Pull:1. Remove:1 Damage
+    Major: Wrist Held. Pull:1. Remove:2 Damage
+    Extreme: Forearm Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restrain-6s : base/damage
+ (base/damage
+  :name "Disable: Right Hand"
+  :titles "Disable: Right Hand/Wrist"
+  :ranksuit base/ranksuit-6s
+  :image "images/damage-restrain-6s.svg"
+  :summary
+   "Minor: Hand lock. Slow:1. Remove:Any Hit
+    Moderate: Wrist lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Hand bones dislocated. Hand useless. [Impaired] Stun:2. Remove:2 Damage
+    Extreme: Wrist dislocated. Wrist useless. [Impaired] Stun:3. Remove:3 Damage"))
+
+(const restrain-5c : base/damage
+ (base/damage
+  :name "Constrict: Left Leg"
+  :titles "Constrict: Left Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-5c
+  :image "images/damage-restrain-5c.svg"
+  :summary
+   "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Knee Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Thigh Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restrain-5d : base/damage
+ (base/damage
+  :name "Restrain: Left Leg"
+  :titles "Restrain: Left Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-5d
+  :image "images/damage-restrain-5d.svg"
+  :summary
+   "Minor: Leg Ensnared. Slow:1 Remove:1 Action
+    Moderate: Leg Ensnared. Slow:2 Remove:2 Actions
+    Major: Knee Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Thigh Ensnared. [Hobbled] Remove:4 Actions"))
+
+(const restrain-5h : base/damage
+ (base/damage
+  :id "damage-restrain-5h"
+  :name "Hold: Left Leg"
+  :titles "Hold: Left Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-5h
+  :image "images/damage-restrain-5h.svg"
+  :summary
+   "Minor: Leg Held. Pull:1. Remove:Any Hit
+    Moderate: Leg Held. Pull:1. Remove:1 Damage
+    Major: Knee Held. Pull:1. Remove:2 Damage
+    Extreme: Thigh Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restrain-5s : base/damage
+ (base/damage
+  :id "damage-restrain-5s"
+  :name "Disable: Left Leg"
+  :titles "Disable: Left Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-5s
+  :image "images/damage-restrain-5s.svg"
+  :summary
+   "Minor: Thigh held. Slow:1. Remove:Any Hit
+    Moderate: Knee held. Slow:1 Stun:1. Remove:1 Damage
+    Major: Knee lock. Foot useless. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Knee dislocated. Knee useless. [Hobbled] Stun:3. Remove:3 Damage"))
+
+(const restrain-4c : base/damage
+ (base/damage
+  :name "Constrict: Right Leg"
+  :titles "Constrict: Right Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-4c
+  :image "images/damage-restrain-4c.svg"
+  :summary
+   "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Knee Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Thigh Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restrain-4d : base/damage
+ (base/damage
+  :name "Restrain: Right Leg"
+  :titles "Restrain: Right Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-4d
+  :image "images/damage-restrain-4d.svg"
+  :summary
+   "Minor: Leg Ensnared. Slow:1 Remove:1 Action
+    Moderate: Leg Ensnared. Slow:2 Remove:2 Actions
+    Major: Knee Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Thigh Ensnared. [Hobbled] Remove:4 Actions"))
+
+(const restrain-4h : base/damage
+ (base/damage
+  :name "Hold: Right Leg"
+  :titles "Hold: Right Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-4h
+  :image "images/damage-restrain-4h.svg"
+  :summary
+   "Minor: Leg Held. Pull:1. Remove:Any Hit
+    Moderate: Leg Held. Pull:1. Remove:1 Damage
+    Major: Knee Held. Pull:1. Remove:2 Damage
+    Extreme: Thigh Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restrain-4s : base/damage
+ (base/damage
+  :name "Disable: Right Leg"
+  :titles "Disable: Right Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-4s
+  :image "images/damage-restrain-4s.svg"
+  :summary
+   "Minor: Thigh held. Slow:1. Remove:Any Hit
+    Moderate: Knee held. Slow:1 Stun:1. Remove:1 Damage
+    Major: Knee lock. Foot useless. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Knee dislocated. Knee useless. [Hobbled] Stun:3. Remove:3 Damage"))
+
+(const restrain-3c : base/damage
+ (base/damage
+  :name "Constrict: Left Foot"
+  :titles "Constrict: Left Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-3c
+  :image "images/damage-restrain-3c.svg"
+  :summary
+   "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Ankle Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Shin Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restrain-3d : base/damage
+ (base/damage
+  :name "Restrain: Left Foot"
+  :titles "Restrain: Left Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-3d
+  :image "images/damage-restrain-3d.svg"
+  :summary
+   "Minor: Toes Ensnared. Slow:1 Remove:1 Action
+    Moderate: Foot Ensnared. Slow:2 Remove:2 Actions
+    Major: Ankle Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Shin Ensnared. [Hobbled] Remove:4 Actions"))
+
+(const restrain-3h : base/damage
+ (base/damage
+  :name "Hold: Left Foot"
+  :titles "Hold: Left Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-3h
+  :image "images/damage-restrain-3h.svg"
+  :summary
+   "Minor: Toes Held. Pull:1. Remove:Any Hit
+    Moderate: Foot Held. Pull:1. Remove:1 Damage
+    Major: Ankle Held. Pull:1. Remove:2 Damage
+    Extreme: Shin Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restrain-3s : base/damage
+ (base/damage
+  :name "Disable: Left Foot"
+  :titles "Disable: Left Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-3s
+  :image "images/damage-restrain-3s.svg"
+  :summary
+   "Minor: Foot lock. Slow:1. Remove:Any Hit
+    Moderate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Foot bones dislocated. Foot useless. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Ankle dislocated. Ankle useless. [Hobbled] Stun:3. Remove:3 Damage"))
+
+(const restrain-2c : base/damage
+ (base/damage
+  :name "Constrict: Right Foot"
+  :titles "Constrict: Right Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2c
+  :image "images/damage-restrain-2c.svg"
+  :summary
+   "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Ankle Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Shin Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restrain-2d : base/damage
+ (base/damage
+  :name "Restrain: Right Foot"
+  :titles "Restrain: Right Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2d
+  :image "images/damage-restrain-2d.svg"
+  :summary
+   "Minor: Toes Ensnared. Slow:1 Remove:1 Action
+    Moderate: Foot Ensnared. Slow:2 Remove:2 Actions
+    Major: Ankle Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Shin Ensnared. [Hobbled] Remove:4 Actions"))
+
+(const restrain-2h : base/damage
+ (base/damage
+  :name "Hold: Right Foot"
+  :titles "Hold: Right Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2h
+  :image "images/damage-restrain-2h.svg"
+  :summary
+   "Minor: Toes Held. Pull:1. Remove:Any Hit
+    Moderate: Foot Held. Pull:1. Remove:1 Damage
+    Major: Ankle Held. Pull:1. Remove:2 Damage
+    Extreme: Shin Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restrain-2s : base/damage
+ (base/damage
+  :id "damage-restrain-2s"
+  :name "Disable: Right Foot"
+  :titles "Disable: Right Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2s
+  :image "images/damage-restrain-2s.svg"
+  :summary
+   "Minor: Foot lock. Slow:1. Remove:Any Hit
+    Moderate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Foot bones dislocated. Foot useless. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Ankle dislocated. Ankle useless. [Hobbled] Stun:3. Remove:3 Damage"))
+
+(func deck-restrain : base/deck
+ (base/deck
+  :name "Restrain"
+  :image "images/damage-restrain-slow.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      restrain-wild-black
+      restrain-wild-red
+      restrain-ac
+      restrain-ad
+      restrain-ah
+      restrain-as
+      restrain-kc
+      restrain-kd
+      restrain-kh
+      restrain-ks
+      restrain-qc
+      restrain-qd
+      restrain-qh
+      restrain-qs
+      restrain-jc
+      restrain-jd
+      restrain-jh
+      restrain-js
+      restrain-tc
+      restrain-td
+      restrain-th
+      restrain-ts
+      restrain-9c
+      restrain-9d
+      restrain-9h
+      restrain-9s
+      restrain-8c
+      restrain-8d
+      restrain-8h
+      restrain-8s
+      restrain-7c
+      restrain-7d
+      restrain-7h
+      restrain-7s
+      restrain-6c
+      restrain-6d
+      restrain-6h
+      restrain-6s
+      restrain-5c
+      restrain-5d
+      restrain-5h
+      restrain-5s
+      restrain-4c
+      restrain-4d
+      restrain-4h
+      restrain-4s
+      restrain-3c
+      restrain-3d
+      restrain-3h
+      restrain-3s
+      restrain-2c
+      restrain-2d
+      restrain-2h
+      restrain-2s))
+    (base/cardmap-copy<-card-count-isnum
+     slow 54 false)))
+ :doc "Restrain Card Deck")

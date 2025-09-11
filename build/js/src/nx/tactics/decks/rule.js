@@ -30,7 +30,7 @@ export default class nx_tactics_decks_rule {
           {"any-1": nx_tactics_base.t_cardlist},
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Drawn to Destiny", "Disclaimer", "How to Play", "Description", "Features", "Golden Rules", "Terms", "Unit: Sample", "Unit: Guide", "Item: Sample", "Item: Guide", "Stat", "How to Play", "Setup", "Setup: Players", "Scene", "Scene: Map#1", "Scene: Map#2", "Scene: Minis", "Scene: Units", "Scene: Events", "Round: Start", "Move", "Movement", "Action", "Action: Free", "Action: Interact", "Arc", "Range", "Line of Sight", "Conflict", "Conflict: Chart", "Conflict: Sample", "Hits", "Hits: Sample", "Crits", "Crits: Rating", "Crits: Damage", "Crits: Types", "Crits: Person", "Crits: Vehicle", "Resolution", "Round: End", "Conclusion", "Advancement")
+            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Drawn to Destiny", "Disclaimer", "How to Play", "Description", "Features", "Golden Rules", "Terms", "Unit: Sample", "Unit: Guide", "Item:Sample", "Item:Guide", "Stat", "How to Play", "Setup", "Setup: Players", "Scene", "Scene: Map#1", "Scene: Map#2", "Scene: Minis", "Scene: Units", "Scene: Events", "Round: Start", "Move", "Movement", "Action", "Action: Free", "Action: Interact", "Arc", "Range", "Line of Sight", "Conflict", "Conflict: Chart", "Conflict: Sample", "Hits", "Hits: Sample", "Crits", "Crits: Rating", "Crits: Damage", "Crits: Types", "Crits: Person", "Crits: Vehicle", "Resolution", "Round: End", "Conclusion", "Advancement")
           )
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
@@ -172,6 +172,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Blind",
+        ":image",
+        "images/rule-blind.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Blind represents the inability to see\nPartial - Disadvantage at Range\nTotal - Cannot use Abilities at Range"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Blood Loss",
         ":image",
         "images/rule-bloodloss.svg",
@@ -187,7 +198,28 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Broken", ":summary", "* A broken [Item] can only be used as an [Weapon: Improvised]."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Bound",
+        ":image",
+        "images/rule-bound.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Bound represents binding or entanglement. Add this to related Damage\nMinor - Snagged\nMajor - Snared. Impaired\nCritical - Tangled. Stress:1 Impaired\nExtreme - Trapped. Stress:2 Immobilized\n* Head - Choking:3 Dying\nDamage - Each Damage dealt to Binder reduces Severity by 1\nEscape - IF out of Binder reach"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Broken",
+        ":image",
+        "images/rule-broken.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Broken represents a broken limb or Item. Add this to related Damage\nLimb - Cannot use Ability/Item with that limb\nItem - Can only be used as Weapon:Improvised"
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Character", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Item", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Unit", ":summary", ""),
@@ -201,6 +233,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Called Shot", ":summary", "Combat - Take Disadvantage. IF you win THEN during Hit:Location choose 3 adjacent Locations and draw until 1 of the 3 appears that matches your Damage Type. Use that as the Hit:Location"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaign", ":summary", "* Starting a New Campaign\n* Creating Player Characters\n* Creating Plots\n* Conflict\n* Creating Scenes\n* Continuing a Campaign"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaign: New", ":summary", "* The Elevator Pitch\n* Theme\n* Character Creation\n* Character Development\n* Maps\n* The Hook\n* The Finale"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Character"),
@@ -243,7 +276,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Collision: Angle",
+        "Collision:Angle",
         ":image",
         "images/rule-collision-angle.svg",
         ":layout",
@@ -252,7 +285,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Collision: Headon",
+        "Collision:Headon",
         ":image",
         "images/rule-collision-headon.svg",
         ":layout",
@@ -304,7 +337,18 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Conscience", ":summary", "* Conscience"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Cover", ":summary", "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.\n* If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Skill:-1.\n** 50% Cover: Skill:-2.\n** 75% Cover: Skill:-3.\n** 100% Cover: Skill:-4.\n* If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Conflict]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Constriction",
+        ":image",
+        "images/rule-constriction.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Constriction represents squeezing pressure. Add this to related Damage\nMinor - Squeeze\nMajor - Compress. Impaired\nCritical - Crush. Fatigue:1 Impaired\nExtreme - Collapse. Fatigue:2 Immobilized\n* Arm, Leg, Hand, Foot - Useless. Broken\n* Head, Chest, Abdomen - Choking:3 Dying\nDamage - Each Damage dealt to Constrictor reduces Severity by 1\nEscape - IF out of Constrictor reach"
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Cover", ":summary", "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.\n* If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Skill:-1.\n** 50% Cover: Skill:-2.\n** 75% Cover: Skill:-3.\n** 100% Cover: Skill:-4.\n* If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Conflict]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item:Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -371,6 +415,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Deaf",
+        ":image",
+        "images/rule-deaf.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Deaf represents the inability to hear\nPartial - Disadvantage to communicate or perceive by hearing\nTotal - Unable to communicate or perceive by hearing"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Description",
         ":image",
         "images/rule-description.svg",
@@ -404,7 +459,17 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Diving", ":summary", "A Diving Unit is rapidly losing Elevation\n* Round End - Elevation:-1 for each Diving:1"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Diving",
+        ":image",
+        "images/rule-diving.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "A Diving Unit is rapidly losing Elevation\n* Round End - Elevation:-1 for each Diving:1"
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Drag", ":summary", "Move Target 1 Space adjacent to or on to you\n* Movement - IF your Body >= Target Body THEN you may spend Move:+1 to Move:1 the Target with you"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -424,6 +489,17 @@ export default class nx_tactics_decks_rule {
         "images/rule-dying.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Electrified",
+        ":image",
+        "images/rule-electrified.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Electrified represents a continuous electrification. Add this to related Damage\nMinor - Shocked\nMajor - Jolted. Impaired\nCritical - Fried. Stun:1 Impaired\nExtreme - Electrocuted. Stun:2 Immobilized\n* Head, Chest - Dying\nDamage - Each Damage dealt to Electrifier reduces Severity by 1\nEscape - IF out of Electrifier reach"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -476,6 +552,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Freezing",
+        ":image",
+        "images/rule-freezing.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Freezing represents extreme cold. Add this to related Damage\nMinor - Chill\nMajor - Frost Caked. Exposure:1\nCritical - Ice Caked. Exposure:2\nExtreme - Frozen. Exposure:3 Frostbite\n* Arm, Leg, Hand, Foot - Useless\n* Head, Chest - Choking:3 Dying\n* Other Parts - Dying\nAction - Use heat to reduce Severity by 1"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Golden Rules",
         ":image",
         "images/rule-goldenrules.svg",
@@ -491,7 +578,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Unit is held by a Unit or Item\n* Conflict - Disadvantage vs Holder\n* Move - IF Holder Body > Held Body THEN Held Move:+1\n* Escape - IF out of Holder reach OR total of Hits:X+ vs Holder THEN remove Held"
+        "Unit is held by a Unit or Item\n* Conflict - Disadvantage vs Holder\n* Move - IF Holder Body > Held Body THEN Held Move:+1 cost\n* Damage - Each Damage dealt to Holder reduces Severity by 1\n* Escape - IF out of Holder reach"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -561,7 +648,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Item: Guide",
+        "Item:Guide",
         ":image",
         "images/rule-item-guide.svg",
         ":layout",
@@ -570,7 +657,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Item: Sample",
+        "Item:Sample",
         ":image",
         "images/rule-item-sample.svg",
         ":layout",
@@ -586,11 +673,22 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Magic List",
+        ":image",
+        "images/rule-magic-list.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Arcane\n* Abjuration\n* Alchemy\n* Artifice\n* Artistry\n* Astrology\n* Chronomancy\n* Conjuration\n* Sorcery\n* Thaumaturgy\n* Wizardry\nElemental\n* Aeromancy\n* Cryomancy\n* Electromancy\n* Geomancy\n* Pyromancy\n* Stormcraft\nNature\n* Animalism\n* Beastial\n* Herbalism\n* Naturalism\nBlack\n* Bloodcraft\n* Chaos\n* Corruption\n* Darkness\n* Demonic\n* Fleshcraft\n* Necromancy\nSpiritualism\n* Divination\n* Dreaming\n* Enchantment\n* Hexcraft\n* Mysticism\n* Shamanism\nThergy\n* Blessing\n* Conviction\n* Invocation\n* Life\n* Primordial\n* Purity\n* Radiant"
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Car Chase",
+        "Map:Car Chase",
         ":image",
         "images/rule-map-car-chase.svg",
         ":layout",
@@ -599,7 +697,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Dogfight",
+        "Map:Dogfight",
         ":image",
         "images/rule-map-dogfight.svg",
         ":layout",
@@ -608,7 +706,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Exploration",
+        "Map:Exploration",
         ":image",
         "images/rule-map-exploration.svg",
         ":layout",
@@ -617,7 +715,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Galactic",
+        "Map:Galactic",
         ":image",
         "images/rule-map-galactic.svg",
         ":layout",
@@ -626,7 +724,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Global",
+        "Map:Global",
         ":image",
         "images/rule-map-global.svg",
         ":layout",
@@ -635,7 +733,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Narrative",
+        "Map:Narrative",
         ":image",
         "images/rule-map-narrative.svg",
         ":layout",
@@ -644,7 +742,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Naval",
+        "Map:Naval",
         ":image",
         "images/rule-map-naval.svg",
         ":layout",
@@ -653,7 +751,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Orbital",
+        "Map:Orbital",
         ":image",
         "images/rule-map-orbital.svg",
         ":layout",
@@ -662,7 +760,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Personal",
+        "Map:Personal",
         ":image",
         "images/rule-map-personal.svg",
         ":layout",
@@ -671,7 +769,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Planetary",
+        "Map:Planetary",
         ":image",
         "images/rule-map-planetary.svg",
         ":layout",
@@ -680,7 +778,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Regional",
+        "Map:Regional",
         ":image",
         "images/rule-map-regional.svg",
         ":layout",
@@ -689,7 +787,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Road Trip",
+        "Map:Road Trip",
         ":image",
         "images/rule-map-road-trip.svg",
         ":layout",
@@ -698,7 +796,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Starship",
+        "Map:Starship",
         ":image",
         "images/rule-map-starship.svg",
         ":layout",
@@ -707,7 +805,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Map: Stellar",
+        "Map:Stellar",
         ":image",
         "images/rule-map-stellar.svg",
         ":layout",
@@ -742,6 +840,28 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Off-handed", ":reference", "I admit it. You are better than I am. Then why are you smiling? Because I know something you don't know...I am not left handed...There's something I ought to tell you...I am not left handed either. - Princess Bride", ":summary", "* [Action]: IF an [Ability] is used in the incorrect hand or using fewer hands than normal THEN [Skill]:-1."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Paralyzed",
+        ":image",
+        "images/rule-paralyzed.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Paralyzed represents losing the ability to move. Add this to related Damage\nMinor - Weakened\nMajor - Feeble. Impaired\nCritical - Disabled. Stress:1 Impaired\nExtreme - Paralyzed. Stress:2 Immobilized\n* Arm, Leg, Hand, Foot - Useless\n* Head - Paralyzed from neck down\n* Shoulders/Vitals - Arms/Legs paralyzed\n* Chest - Paralyzed from chest down\n* Abdomen - Paralyzed from waist down\nDamage - Each Damage dealt to Paralyzer reduces Severity by 1\nEscape - IF out of Paralyzer reach"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Petrified",
+        ":image",
+        "images/rule-petrified.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Petrified represents being turned to stone. Add this to related Damage\nMinor - Encrusted\nMajor - Confined. Impaired\nCritical - Enveloped. Stress:1 Impaired\nExtreme - Entombed. Stress:2 Immobilized\n* Arm, Leg, Hand, Foot - Useless\n* Head, Chest - Choking:3 Dying\n* Other Parts - Dying\nDamage - Each Damage dealt to Petrifier reduces Severity by 1\nEscape - IF out of Petrifier reach\nDead - A Unit that dies by Petrified instead is preserved and transforms to stone"
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Place"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -775,6 +895,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Power List",
+        ":image",
+        "images/rule-power-list.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Physical\n* Acidic\n* Agility\n* Combine\n* Diseases\n* Life Support\n* Longevity\n* Quickness\n* Reproduction\n* Senses\n* Size\n* Spawning\n* Special Ability\n* Strength\n* Toughness\n* Toxins\n* Weakness:Physical\nMental\n* Charm\n* Domination\n* Empathy\n* Illusion\n* Intuition\n* Madness\n* Mental Combat\n* Mental Fortitude\n* Mentalism\n* Mind Over Matter\n* Presence\n* Psychic Power\n* Weakness:Mental\n* Weakness:Social\nAlteration\n* Adaptation\n* Altered Skin\n* Flexible\n* Healing\n* Invisibility\n* Lycanthropy\n* Shapeshift\n* Transfiguration\n* Transform\n* Transformation\n* Transmutation\n* Vampirism\nElements\n* Air\n* Cold\n* Earth\n* Electricity\n* Fire\n* Water\n* Weather\nEnergies\n* Atomic Control\n* Density\n* Energy Control\n* Explosive\n* Forces\n* Gravity\n* Heat\n* Inertia\n* Light\n* Magnetism\n* Phasing\n* Power Control\n* Radiation\n* Reality\n* Sound\n* Time\n* Vibration\nGear\n* Armor\n* Bonds\n* Implants\n* Netrunning\n* Shielding\n* Weapon\n* Wealth\nTravel\n* Digging\n* Dimensional\n* Flight\n* Movement\n* Movement:Ground\n* Movement:Space\n* Movement:Stellar\n* Movement:Water\n* Teleportation\n* Time Travel\nVehicle\n* Cabin\n* Cargo\n* Equipment\n* Factory\n* Hanger\n* Laboratory"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Pull/Push",
         ":image",
         "images/rule-pull-push.svg",
@@ -803,14 +934,14 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Ritual", ":summary", "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Attacker", ":summary", "Attacker Units usually do the following:\n* Target weak points in the enemy from lines\n* Move into Range\n* Attack"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Blaster", ":summary", "Blaster Units usually do the following:\n* Target groups of enemies\n* Move into Range\n* Attack to maximize enemy losses\n* Move to safety"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Defender", ":summary", "Defender Units usually do the following:\n* Target an enemy threatening a nearby vulnerable ally\n* Move into Range protecting the ally\n* Attack"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Disrupter", ":summary", "Disrupter Units usually do the following:\n* Target groups of enemies\n* Move into Range\n* Attack to maximize enemy disruption\n* Move to safety"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Skirmisher", ":summary", "Skirmisher Units usually do the following:\n* Target the closest enemy\n* Move into Range\n* Attack\n* Move to safety"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Sniper", ":summary", "Sniper Units usually do the following:\n* Target a vulnerable or important enemy\n* Move into Range\n* Attack\n* Move to safety"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Supporter", ":summary", "Supporter Units usually do the following:\n* Target ally(s) to assist\n* Move into Range\n* Aid the ally(s)"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role: Taunter", ":summary", "Taunter Units usually do the following:\n* Target a dangerous enemy\n* Move into Range\n* Attack and attempt to draw attention"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Attacker", ":summary", "Attacker Units usually do the following:\n* Target weak points in the enemy from lines\n* Move into Range\n* Attack"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Blaster", ":summary", "Blaster Units usually do the following:\n* Target groups of enemies\n* Move into Range\n* Attack to maximize enemy losses\n* Move to safety"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Defender", ":summary", "Defender Units usually do the following:\n* Target an enemy threatening a nearby vulnerable ally\n* Move into Range protecting the ally\n* Attack"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Disrupter", ":summary", "Disrupter Units usually do the following:\n* Target groups of enemies\n* Move into Range\n* Attack to maximize enemy disruption\n* Move to safety"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Skirmisher", ":summary", "Skirmisher Units usually do the following:\n* Target the closest enemy\n* Move into Range\n* Attack\n* Move to safety"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Sniper", ":summary", "Sniper Units usually do the following:\n* Target a vulnerable or important enemy\n* Move into Range\n* Attack\n* Move to safety"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Supporter", ":summary", "Supporter Units usually do the following:\n* Target ally(s) to assist\n* Move into Range\n* Aid the ally(s)"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Taunter", ":summary", "Taunter Units usually do the following:\n* Target a dangerous enemy\n* Move into Range\n* Attack and attempt to draw attention"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Roles", ":summary", "A Role describes a Unit's loose goals\n* Attacker - Engage enemies\n* Blaster - Reduce enemy numbers\n* Defender - Protect allies\n* Disrupter - Disrupt enemy abilities\n* Skirmisher - Maintain Range and Strike\n* Sniper - Eliminate big threats\n* Supporter - Helps allies\n* Taunter - Draw enemy attention"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -943,6 +1074,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Skill List",
+        ":image",
+        "images/rule-skill-list.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Combat\n* Close Combat\n* Melee\n* Defense\n* Evasion\n* Ranged\n* Firearm\n* Gunnery\n* Demolitions\nBody\n* Animals\n* Assassination\n* Athletics\n* Crime\n* Driving\n* Hunting\n* Mechanics\n* Military\n* Seamanship\n* Stealth\n* Survival\n* Tradeskill\nMind\n* Business\n* Computers\n* Electronics\n* Intellect\n* Investigation\n* Knowledge\n* Law\n* Medicine\n* Piloting\n* Science:Life\n* Science:Physical\n* Science:Social\nWill\n* Art\n* Communication\n* Deception\n* Espionage\n* Influence\n* Intimidation\n* Leadership\n* Performance\n* Persuasion\n* Religion"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Skill Point",
         ":image",
         "images/rule-skill-point.svg",
@@ -985,7 +1127,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Stat: 0",
+        "Stat:0",
         ":image",
         "images/rule-stat-0.svg",
         ":layout",
@@ -994,7 +1136,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Stat: Add",
+        "Stat:Add",
         ":image",
         "images/rule-stat-add.svg",
         ":layout",
@@ -1003,11 +1145,22 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Stat: Multiply",
+        "Stat:Multiply",
         ":image",
         "images/rule-stat-multiply.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Stasis",
+        ":image",
+        "images/rule-stasis.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Stasis represents a time freeze effect. Add this to related Damage\nMinor - Skipping\nMajor - Stuck. Impaired\nCritical - Anchored. Slow:1 Impaired\nExtreme - Stopped. Slow:2 Immobilized\n* Head, Chest, Abdomen - Choking:3 Dying\nAction - Each Damage dealt to Binder reduces Severity by 1\nEscape - IF out of reach\nDead - A Unit that dies by Stasis instead is perfectly preserved until released"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Subtle", ":summary", "* Subtle Abilities are not obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suit", ":summary", "Each Suit represents a Stat:\n* Wands - Power. Body\n* Coins - Planning. Mind\n* Cups - Perseverance. Will\n* Swords - Skill. Speed"),
@@ -1056,6 +1209,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Touch"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -1069,6 +1223,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time: Evening"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time: Morning"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time: Night"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Transformed",
+        ":image",
+        "images/rule-transformed.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Transformed represents body transformation. Add this to related Damage\nMinor - Altered\nMajor - Turning. Impaired\nCritical - Mutating. Stress:1 Immobilized\nExtreme - Remade. Stress:2\nDamage - Each Damage dealt to Transformer reduces Severity by 1\nEscape - IF out of Transformer reach"
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Transport", ":titles", "Mount, Vehicle", ":summary", "Anything you can ride is a Transport\neg Horses, Cars, Planes\n* Driver - Spend an Action each Round to control\n* Passenger - IF unstable or in Combat THEN Spend an Action to remain stable"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -1109,7 +1274,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Weapon: Barehanded",
+        "Weapon:Barehanded",
         ":image",
         "images/rule-weapon-barehanded.svg",
         ":layout",
@@ -1118,7 +1283,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Weapon: Improvised",
+        "Weapon:Improvised",
         ":image",
         "images/rule-weapon-improvised.svg",
         ":layout",
@@ -1136,40 +1301,40 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Weather: Clouds",
+        "Weather:Clouds",
         ":image",
         "images/rule-weather-clouds.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Downpour"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather:Downpour"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Weather: Humidity",
+        "Weather:Humidity",
         ":image",
         "images/rule-weather-humidity.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Hurricane"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Rain", ":summary", "* Dew\n* Dizzle\n* Rain\n* Downpour"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Snow", ":summary", "* Sleet\n* Snowy\n* Snowstorm\n* Blizzard"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather:Hurricane"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather:Rain", ":summary", "* Dew\n* Dizzle\n* Rain\n* Downpour"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather:Snow", ":summary", "* Sleet\n* Snowy\n* Snowstorm\n* Blizzard"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Weather: Temperature",
+        "Weather:Temperature",
         ":image",
         "images/rule-weather-temperature.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Tornado"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Thunderstorm", ":image", "images/rule-weather-thunderstorm.svg", ":summary", "* Conditions: Stormy Humid+ Windy+\n* [Event]: Every 6 hours, [Reveal Fate].\n** IF a Black Wild THEN a nearby lightning strike\n** IF a Red Wild THEN a direct lightning strike\n** Effects - A lightning bolt holds 5 GigaJoules or 5x9 damage for a direct strike, but most lightning strikes go through smaller feelers or are splashes. Even a direct strike is survivable because it usually travels across the surface of the skin instead of through the body."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather:Tornado"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather:Thunderstorm", ":image", "images/rule-weather-thunderstorm.svg", ":summary", "* Conditions: Stormy Humid+ Windy+\n* [Event]: Every 6 hours, [Reveal Fate].\n** IF a Black Wild THEN a nearby lightning strike\n** IF a Red Wild THEN a direct lightning strike\n** Effects - A lightning bolt holds 5 GigaJoules or 5x9 damage for a direct strike, but most lightning strikes go through smaller feelers or are splashes. Even a direct strike is survivable because it usually travels across the surface of the skin instead of through the body."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Weather: Wind",
+        "Weather:Wind",
         ":image",
         "images/rule-weather-wind.svg",
         ":layout",

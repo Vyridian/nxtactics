@@ -2,7 +2,7 @@
 
 import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
-import nx_tactics_decks_burden from "../../../nx/tactics/decks/burden.js"
+import nx_tactics_decks_condition from "../../../nx/tactics/decks/condition.js"
 import nx_tactics_decks_conflict from "../../../nx/tactics/decks/conflict.js"
 import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
@@ -11,6 +11,7 @@ import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
 import nx_tactics_decks_scene_murintrail from "../../../nx/tactics/decks/scene-murintrail.js"
 import nx_tactics_decks_scene_nightonthetown from "../../../nx/tactics/decks/scene-nightonthetown.js"
 import nx_tactics_decks_scene_ontherun from "../../../nx/tactics/decks/scene-ontherun.js"
+import nx_tactics_decks_restrain from "../../../nx/tactics/decks/restrain.js"
 import nx_tactics_decks_scene_starter from "../../../nx/tactics/decks/scene-starter.js"
 import nx_tactics_decks_starter from "../../../nx/tactics/decks/starter.js"
 import nx_tactics_decks_trauma from "../../../nx/tactics/decks/trauma.js"
@@ -199,9 +200,10 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_wound.f_deck_wound(),
           nx_tactics_decks_disorder.f_deck_disorder(),
           nx_tactics_decks_trauma.f_deck_trauma(),
-          nx_tactics_decks_burden.f_deck_burden(),
+          nx_tactics_decks_restrain.f_deck_restrain(),
           nx_tactics_decks_vehicle.f_deck_vehicle(),
           nx_tactics_decks_reference.f_deck_reference(tactics),
+          nx_tactics_decks_condition.f_deck_condition(tactics),
           nx_tactics_decks_deck.f_deck_clock(tactics)
         )
       )

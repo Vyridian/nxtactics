@@ -476,7 +476,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :powermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-abilities
-      tactics "Animism"
+      tactics "Hexcraft"
       (stringlist "Evil Eye"))
      (base/unitpower<-tactics-key-abilities
       tactics "Mentalism"
@@ -610,7 +610,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :name "Goblin Raider"
    :image "images/cards/unit-goblin-raider.svg"
    :summary
-    "* [Role: Attacker]"
+    "* [Role:Attacker]"
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
@@ -637,7 +637,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :mass "22kg/50lb"
    :height "1m/3ft"
    :summary
-    "* [Role: Skirmisher]"
+    "* [Role:Skirmisher]"
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
@@ -1215,7 +1215,7 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl
       tactics "Melee" 8)
      (base/unitskill<-tactics-key-lvl
-      tactics "Faith" 8)))
+      tactics "Religion" 8)))
   (base/unit
    :name "Sarani Kalea"
    :summary "Human Priestess"
@@ -2016,7 +2016,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
-      tactics "Animal Handling" 3
+      tactics "Animals" 3
       (stringlist
        "Harvest Poison"
        "Snake Charming"))))

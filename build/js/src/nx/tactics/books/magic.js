@@ -127,13 +127,9 @@ export default class nx_tactics_books_magic {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Thergy",
-          ":reference",
-          "* Pray, not for the gods, or the betterment of others, but for yourself - Rosaria, Genshin Impact",
-          ":titles",
-          "Channelling, Miracle Working, White Magic",
+          "Elementalism",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Conviction", "Blessing", "Invocation", "Life", "Primordial", "Purity", "Radiant")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Aeromancy", "Electromancy", "Geomancy", "Hydromancy", "Pyromancy", "Stormcraft")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -149,7 +145,18 @@ export default class nx_tactics_books_magic {
           ":titles",
           "Spiritualism",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Animism", "Divination", "Dreaming", "Enchantment", "Mysticism", "Shamanism")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Divination", "Dreaming", "Enchantment", "Hexcraft", "Mysticism", "Shamanism")
+        ),
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_section},
+          ":name",
+          "Thergy",
+          ":reference",
+          "* Pray, not for the gods, or the betterment of others, but for yourself - Rosaria, Genshin Impact",
+          ":titles",
+          "Channelling, Miracle Working, White Magic",
+          ":powermap",
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Conviction", "Blessing", "Invocation", "Life", "Primordial", "Purity", "Radiant")
         )
       )
     )

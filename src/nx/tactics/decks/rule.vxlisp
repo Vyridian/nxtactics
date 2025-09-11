@@ -69,6 +69,14 @@
    :image "images/rule-bleeding.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Blind"
+   :image "images/rule-blind.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Blind represents the inability to see
+     Partial - Disadvantage at Range
+     Total - Cannot use Abilities at Range")
+  (base/rule
    :name "Blood Loss"
    :image "images/rule-bloodloss.svg"
    :layout base/cardlayout-imageonly)
@@ -77,9 +85,26 @@
    :image "images/rule-body.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Broken"
+   :name "Bound"
+   :image "images/rule-bound.svg"
+   :layout base/cardlayout-imageonly
    :summary
-    "* A broken [Item] can only be used as an [Weapon: Improvised].")
+    "Bound represents binding or entanglement. Add this to related Damage
+     Minor - Snagged
+     Major - Snared. Impaired
+     Critical - Tangled. Stress:1 Impaired
+     Extreme - Trapped. Stress:2 Immobilized
+     * Head - Choking:3 Dying
+     Damage - Each Damage dealt to Binder reduces Severity by 1
+     Escape - IF out of Binder reach")
+  (base/rule
+   :name "Broken"
+   :image "images/rule-broken.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Broken represents a broken limb or Item. Add this to related Damage
+     Limb - Cannot use Ability/Item with that limb
+     Item - Can only be used as Weapon:Improvised")
   (base/rule
    :name "Build: Character"
    :summary
@@ -100,6 +125,10 @@
    :name "Burning"
    :image "images/rule-burning.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Called Shot"
+   :summary
+    "Combat - Take Disadvantage. IF you win THEN during Hit:Location choose 3 adjacent Locations and draw until 1 of the 3 appears that matches your Damage Type. Use that as the Hit:Location")
   (base/rule
    :name "Campaign"
    :summary
@@ -138,11 +167,11 @@
    :image "images/rule-collision.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Collision: Angle"
+   :name "Collision:Angle"
    :image "images/rule-collision-angle.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Collision: Headon"
+   :name "Collision:Headon"
    :image "images/rule-collision-headon.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -170,6 +199,20 @@
    :summary
     "* Conscience")
   (base/rule
+   :name "Constriction"
+   :image "images/rule-constriction.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Constriction represents squeezing pressure. Add this to related Damage
+     Minor - Squeeze
+     Major - Compress. Impaired
+     Critical - Crush. Fatigue:1 Impaired
+     Extreme - Collapse. Fatigue:2 Immobilized
+     * Arm, Leg, Hand, Foot - Useless. Broken
+     * Head, Chest, Abdomen - Choking:3 Dying
+     Damage - Each Damage dealt to Constrictor reduces Severity by 1
+     Escape - IF out of Constrictor reach")
+  (base/rule
    :name "Cover"
    :summary
     "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.
@@ -180,7 +223,7 @@
      ** 100% Cover: Skill:-4.
      * If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Conflict]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.
      ** Insubstantial: Resolve damage normally.
-     ** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
+     ** Item:Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
      ** Unit: That unit is the new target. Resolve a new Combat with it instead.")
   (base/rule
    :name "Crits"
@@ -211,6 +254,14 @@
    :image "images/rule-damaged.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Deaf"
+   :image "images/rule-deaf.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Deaf represents the inability to hear
+     Partial - Disadvantage to communicate or perceive by hearing
+     Total - Unable to communicate or perceive by hearing")
+  (base/rule
    :name "Description"
    :image "images/rule-description.svg"
    :layout base/cardlayout-imageonly)
@@ -228,6 +279,8 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Diving"
+   :image "images/rule-diving.svg"
+   :layout base/cardlayout-imageonly
    :summary
     "A Diving Unit is rapidly losing Elevation
      * Round End - Elevation:-1 for each Diving:1")
@@ -252,6 +305,19 @@
    :name "Dying"
    :image "images/rule-dying.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Electrified"
+   :image "images/rule-electrified.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Electrified represents a continuous electrification. Add this to related Damage
+     Minor - Shocked
+     Major - Jolted. Impaired
+     Critical - Fried. Stun:1 Impaired
+     Extreme - Electrocuted. Stun:2 Immobilized
+     * Head, Chest - Dying
+     Damage - Each Damage dealt to Electrifier reduces Severity by 1
+     Escape - IF out of Electrifier reach")
   (base/rule
    :name "Elevation"
    :image "images/rule-elevation.svg"
@@ -285,6 +351,20 @@
    :image "images/rule-flanking.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Freezing"
+   :image "images/rule-freezing.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Freezing represents extreme cold. Add this to related Damage
+     Minor - Chill
+     Major - Frost Caked. Exposure:1
+     Critical - Ice Caked. Exposure:2
+     Extreme - Frozen. Exposure:3 Frostbite
+     * Arm, Leg, Hand, Foot - Useless
+     * Head, Chest - Choking:3 Dying
+     * Other Parts - Dying
+     Action - Use heat to reduce Severity by 1")
+  (base/rule
    :name "Golden Rules"
    :image "images/rule-goldenrules.svg"
    :layout base/cardlayout-imageonly)
@@ -295,8 +375,9 @@
    :summary
     "Unit is held by a Unit or Item
      * Conflict - Disadvantage vs Holder
-     * Move - IF Holder Body > Held Body THEN Held Move:+1
-     * Escape - IF out of Holder reach OR total of Hits:X+ vs Holder THEN remove Held")
+     * Move - IF Holder Body > Held Body THEN Held Move:+1 cost
+     * Damage - Each Damage dealt to Holder reduces Severity by 1
+     * Escape - IF out of Holder reach")
   (base/rule
    :name "Hits"
    :image "images/rule-hits.svg"
@@ -328,11 +409,11 @@
    :reference
     "* Their sharing a drink they call loneliness. It's better than drinking alone. - Billy Joel, Piano Man")
   (base/rule
-   :name "Item: Guide"
+   :name "Item:Guide"
    :image "images/rule-item-guide.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Item: Sample"
+   :name "Item:Sample"
    :image "images/rule-item-sample.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -345,61 +426,112 @@
    :image "images/rule-lineofsight.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Magic List"
+   :image "images/rule-magic-list.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Arcane
+     * Abjuration
+     * Alchemy
+     * Artifice
+     * Artistry
+     * Astrology
+     * Chronomancy
+     * Conjuration
+     * Sorcery
+     * Thaumaturgy
+     * Wizardry
+     Elemental
+     * Aeromancy
+     * Cryomancy
+     * Electromancy
+     * Geomancy
+     * Pyromancy
+     * Stormcraft
+     Nature
+     * Animalism
+     * Beastial
+     * Herbalism
+     * Naturalism
+     Black
+     * Bloodcraft
+     * Chaos
+     * Corruption
+     * Darkness
+     * Demonic
+     * Fleshcraft
+     * Necromancy
+     Spiritualism
+     * Divination
+     * Dreaming
+     * Enchantment
+     * Hexcraft
+     * Mysticism
+     * Shamanism
+     Thergy
+     * Blessing
+     * Conviction
+     * Invocation
+     * Life
+     * Primordial
+     * Purity
+     * Radiant")
+  (base/rule
    :name "Map")
   (base/rule
-   :name "Map: Car Chase"
+   :name "Map:Car Chase"
    :image "images/rule-map-car-chase.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Dogfight"
+   :name "Map:Dogfight"
    :image "images/rule-map-dogfight.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Exploration"
+   :name "Map:Exploration"
    :image "images/rule-map-exploration.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Galactic"
+   :name "Map:Galactic"
    :image "images/rule-map-galactic.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Global"
+   :name "Map:Global"
    :image "images/rule-map-global.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Narrative"
+   :name "Map:Narrative"
    :image "images/rule-map-narrative.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Naval"
+   :name "Map:Naval"
    :image "images/rule-map-naval.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Orbital"
+   :name "Map:Orbital"
    :image "images/rule-map-orbital.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Personal"
+   :name "Map:Personal"
    :image "images/rule-map-personal.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Planetary"
+   :name "Map:Planetary"
    :image "images/rule-map-planetary.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Regional"
+   :name "Map:Regional"
    :image "images/rule-map-regional.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Road Trip"
+   :name "Map:Road Trip"
    :image "images/rule-map-road-trip.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Starship"
+   :name "Map:Starship"
    :image "images/rule-map-starship.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Map: Stellar"
+   :name "Map:Stellar"
    :image "images/rule-map-stellar.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -430,6 +562,39 @@
    :summary
     "* [Action]: IF an [Ability] is used in the incorrect hand or using fewer hands than normal THEN [Skill]:-1.")
   (base/rule
+   :name "Paralyzed"
+   :image "images/rule-paralyzed.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Paralyzed represents losing the ability to move. Add this to related Damage
+     Minor - Weakened
+     Major - Feeble. Impaired
+     Critical - Disabled. Stress:1 Impaired
+     Extreme - Paralyzed. Stress:2 Immobilized
+     * Arm, Leg, Hand, Foot - Useless
+     * Head - Paralyzed from neck down
+     * Shoulders/Vitals - Arms/Legs paralyzed
+     * Chest - Paralyzed from chest down
+     * Abdomen - Paralyzed from waist down
+     Damage - Each Damage dealt to Paralyzer reduces Severity by 1
+     Escape - IF out of Paralyzer reach")
+  (base/rule
+   :name "Petrified"
+   :image "images/rule-petrified.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Petrified represents being turned to stone. Add this to related Damage
+     Minor - Encrusted
+     Major - Confined. Impaired
+     Critical - Enveloped. Stress:1 Impaired
+     Extreme - Entombed. Stress:2 Immobilized
+     * Arm, Leg, Hand, Foot - Useless
+     * Head, Chest - Choking:3 Dying
+     * Other Parts - Dying
+     Damage - Each Damage dealt to Petrifier reduces Severity by 1
+     Escape - IF out of Petrifier reach
+     Dead - A Unit that dies by Petrified instead is preserved and transforms to stone")
+  (base/rule
    :name "Place")
   (base/rule
    :name "Player"
@@ -446,6 +611,107 @@
    :name "Power"
    :image "images/rule-power.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Power List"
+   :image "images/rule-power-list.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Physical
+     * Acidic
+     * Agility
+     * Combine
+     * Diseases
+     * Life Support
+     * Longevity
+     * Quickness
+     * Reproduction
+     * Senses
+     * Size
+     * Spawning
+     * Special Ability
+     * Strength
+     * Toughness
+     * Toxins
+     * Weakness:Physical
+     Gear
+     * Armor
+     * Bonds
+     * Computer Control
+     * Implants
+     * Weapon
+     * Wealth
+     Alteration
+     * Adaptation
+     * Altered Skin
+     * Flexible
+     * Healing
+     * Invisibility
+     * Lycanthropy
+     * Metamorphose
+     * Mutate
+     * Shapeshift
+     * Transform
+     * Transmutation
+     * Vampirism
+     Mental
+     * Charm
+     * Domination
+     * Empathy
+     * Illusion
+     * Intuition
+     * Madness
+     * Mental Combat
+     * Mental Fortitude
+     * Mentalism
+     * Mind Over Matter
+     * Presence
+     * Psychic Power
+     * Weakness:Mental
+     * Weakness:Social
+     Elements
+     * Air
+     * Cold
+     * Earth
+     * Electricity
+     * Fire
+     * Water
+     * Weather
+     Energies
+     * Density
+     * Energy Control
+     * Explosive
+     * Forces
+     * Gravity
+     * Heat
+     * Inertia
+     * Light
+     * Magnetism
+     * Phasing
+     * Power Control
+     * Radiation
+     * Reality
+     * Shielding
+     * Sound
+     * Time
+     * Vibration
+     Travel
+     * Digging
+     * Dimensional
+     * Flight
+     * Movement
+     * Movement:Ground
+     * Movement:Space
+     * Movement:Stellar
+     * Movement:Water
+     * Teleportation
+     * Time Travel
+     Vehicle
+     * Cabin
+     * Cargo
+     * Equipment
+     * Factory
+     * Hanger
+     * Laboratory")
   (base/rule
    :name "Pull/Push"
    :image "images/rule-pull-push.svg"
@@ -475,14 +741,14 @@
    :summary
     "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event.")
   (base/rule
-   :name "Role: Attacker"
+   :name "Role:Attacker"
    :summary
     "Attacker Units usually do the following:
      * Target weak points in the enemy from lines
      * Move into Range
      * Attack")
   (base/rule
-   :name "Role: Blaster"
+   :name "Role:Blaster"
    :summary
     "Blaster Units usually do the following:
      * Target groups of enemies
@@ -490,14 +756,14 @@
      * Attack to maximize enemy losses
      * Move to safety")
   (base/rule
-   :name "Role: Defender"
+   :name "Role:Defender"
    :summary
     "Defender Units usually do the following:
      * Target an enemy threatening a nearby vulnerable ally
      * Move into Range protecting the ally
      * Attack")
   (base/rule
-   :name "Role: Disrupter"
+   :name "Role:Disrupter"
    :summary
     "Disrupter Units usually do the following:
      * Target groups of enemies
@@ -505,7 +771,7 @@
      * Attack to maximize enemy disruption
      * Move to safety")
   (base/rule
-   :name "Role: Skirmisher"
+   :name "Role:Skirmisher"
    :summary
     "Skirmisher Units usually do the following:
      * Target the closest enemy
@@ -513,7 +779,7 @@
      * Attack
      * Move to safety")
   (base/rule
-   :name "Role: Sniper"
+   :name "Role:Sniper"
    :summary
     "Sniper Units usually do the following:
      * Target a vulnerable or important enemy
@@ -521,14 +787,14 @@
      * Attack
      * Move to safety")
   (base/rule
-   :name "Role: Supporter"
+   :name "Role:Supporter"
    :summary
     "Supporter Units usually do the following:
      * Target ally(s) to assist
      * Move into Range
      * Aid the ally(s)")
   (base/rule
-   :name "Role: Taunter"
+   :name "Role:Taunter"
    :summary
     "Taunter Units usually do the following:
      * Target a dangerous enemy
@@ -633,6 +899,57 @@
    :image "images/rule-skill.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Skill List"
+   :image "images/rule-skill-list.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Combat
+     * Close Combat
+     * Melee
+     * Defense
+     * Evasion
+     * Ranged
+     * Firearm
+     * Gunnery
+     * Demolitions
+     Body
+     * Animals
+     * Assassination
+     * Athletics
+     * Crime
+     * Driving
+     * Hunting
+     * Mechanics
+     * Military
+     * Seamanship
+     * Stealth
+     * Survival
+     * Tradeskill
+     Mind
+     * Business
+     * Computers
+     * Electronics
+     * Intellect
+     * Investigation
+     * Knowledge
+     * Law
+     * Medicine
+     * Piloting
+     * Science:Life
+     * Science:Physical
+     * Science:Social
+     Will
+     * Art
+     * Communication
+     * Deception
+     * Espionage
+     * Influence
+     * Intimidation
+     * Leadership
+     * Performance
+     * Persuasion
+     * Religion")
+  (base/rule
    :name "Skill Point"
    :image "images/rule-skill-point.svg"
    :layout base/cardlayout-imageonly)
@@ -663,17 +980,31 @@
    :image "images/rule-stat.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Stat: 0"
+   :name "Stat:0"
    :image "images/rule-stat-0.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Stat: Add"
+   :name "Stat:Add"
    :image "images/rule-stat-add.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Stat: Multiply"
+   :name "Stat:Multiply"
    :image "images/rule-stat-multiply.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Stasis"
+   :image "images/rule-stasis.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Stasis represents a time freeze effect. Add this to related Damage
+     Minor - Skipping
+     Major - Stuck. Impaired
+     Critical - Anchored. Slow:1 Impaired
+     Extreme - Stopped. Slow:2 Immobilized
+     * Head, Chest, Abdomen - Choking:3 Dying
+     Action - Each Damage dealt to Binder reduces Severity by 1
+     Escape - IF out of reach
+     Dead - A Unit that dies by Stasis instead is perfectly preserved until released")
   (base/rule
    :name "Subtle"
    :summary
@@ -708,6 +1039,8 @@
    :image "images/rule-terms.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Touch")
+  (base/rule
    :name "Thirst"
    :image "images/rule-thirst.svg"
    :layout base/cardlayout-imageonly)
@@ -719,6 +1052,18 @@
    :name "Time: Morning")
   (base/rule
    :name "Time: Night")
+  (base/rule
+   :name "Transformed"
+   :image "images/rule-transformed.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Transformed represents body transformation. Add this to related Damage
+     Minor - Altered
+     Major - Turning. Impaired
+     Critical - Mutating. Stress:1 Immobilized
+     Extreme - Remade. Stress:2
+     Damage - Each Damage dealt to Transformer reduces Severity by 1
+     Escape - IF out of Transformer reach")
   (base/rule
    :name "Transport"
    :titles "Mount, Vehicle"
@@ -744,11 +1089,11 @@
    :image "images/rule-unskilled.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Weapon: Barehanded"
+   :name "Weapon:Barehanded"
    :image "images/rule-weapon-barehanded.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Weapon: Improvised"
+   :name "Weapon:Improvised"
    :image "images/rule-weapon-improvised.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -756,39 +1101,39 @@
    :image "images/rule-weather.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Weather: Clouds"
+   :name "Weather:Clouds"
    :image "images/rule-weather-clouds.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Weather: Downpour")
+   :name "Weather:Downpour")
   (base/rule
-   :name "Weather: Humidity"
+   :name "Weather:Humidity"
    :image "images/rule-weather-humidity.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Weather: Hurricane")
+   :name "Weather:Hurricane")
   (base/rule
-   :name "Weather: Rain"
+   :name "Weather:Rain"
    :summary
     "* Dew
      * Dizzle
      * Rain
      * Downpour")
   (base/rule
-   :name "Weather: Snow"
+   :name "Weather:Snow"
    :summary
     "* Sleet
      * Snowy
      * Snowstorm
      * Blizzard")
   (base/rule
-   :name "Weather: Temperature"
+   :name "Weather:Temperature"
    :image "images/rule-weather-temperature.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Weather: Tornado")
+   :name "Weather:Tornado")
   (base/rule
-   :name "Weather: Thunderstorm"
+   :name "Weather:Thunderstorm"
    :image "images/rule-weather-thunderstorm.svg"
    :summary
     "* Conditions: Stormy Humid+ Windy+
@@ -797,7 +1142,7 @@
      ** IF a Red Wild THEN a direct lightning strike
      ** Effects - A lightning bolt holds 5 GigaJoules or 5x9 damage for a direct strike, but most lightning strikes go through smaller feelers or are splashes. Even a direct strike is survivable because it usually travels across the surface of the skin instead of through the body.")
   (base/rule
-   :name "Weather: Wind"
+   :name "Weather:Wind"
    :image "images/rule-weather-wind.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -832,8 +1177,8 @@
        "Terms"
        "Unit: Sample"
        "Unit: Guide"
-       "Item: Sample"
-       "Item: Guide"
+       "Item:Sample"
+       "Item:Guide"
        "Stat"
        "How to Play"
        "Setup"

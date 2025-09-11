@@ -100,6 +100,7 @@ export default class nx_tactics_decks_specialty {
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Polearms", ":summary", "Fend Off", ":titles", "Glaivemaster, Halberdier, Poleman"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Powered Armor", ":summary", "* [Skill]: [Defense]\n* Specialized in Powered Armor"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Race Cars"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Riding", ":titles", "Caravan Driver, Cavalry, Driver, Dragoon, Horseman, Knight, Lancer, Outrider, Rider", ":summary", "* Level 1: Ride a horse\n* Level 2: Ride a Lt. Warhorse\n* Level 3: Ride a Med. Warhorse\n* Level 4: Ride a Hvy. Warhorse\n* Note: Riding a flying mount requires [Flying]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Rifles"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Royalty", ":titles", "Royal Lineage"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Rune Casting", ":summary", "* The art of divining the future through the throwing of small tiles with runes on them."),

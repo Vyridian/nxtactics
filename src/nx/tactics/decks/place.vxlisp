@@ -119,7 +119,7 @@
    :image "images/cards/place-ice.svg")
   (base/place
    :name "Imaginary Space"
-   :titles "Astral Plane, Astral Realm, Complex Space, Ether, Etheral Plane, Etheral Realm, Hyperspace, I-Space, Imaginary Realm, Subjective Reality, Subspace, Superspace, The Pale, Ultraspace"
+   :titles "Astral Plane, Astral Realm, Complex Space, Ether, Etheral Plane, Etheral Realm, Hyperspace, I-Space, Imaginary Realm, Liminal Realm, Subjective Reality, Sublime, Subliminal Realm, Subspace, Superspace, The Pale, Ultraspace"
    :reference
     "* Though the story is fictional, as far as the characters are concerned, their fate is real. Therein lies the rub, are you and I the audience? Or characters on the stage? Nobody can know for sure. Afterall, nothing is easier to fool than the senses. - Furina, Genshin Impact"
    :summary

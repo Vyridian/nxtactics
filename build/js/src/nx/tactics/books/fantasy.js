@@ -320,12 +320,12 @@ export default class nx_tactics_books_fantasy {
                   ":summary",
                   "* The Witchmen revere the forces of darkness and despise the enemies of their gods the forces of light. They live a completely nocturnal lifestyle and are skilled at witchcraft and herbalism.\n* They sing songs of fear and death that are said to strike madness in those that hear them.\n* They create shrunken heads from their victims and wear them as jujus. It is said that they can capture a person's soul and control their body like a mindless zombie.\n* Some have trained Death's Head Vipers as pets and wear them as bracelets.",
                   ":unitpowermap",
-                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Animism", "Enchantment", "Naturalism", "Madness"),
+                  nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Enchantment", "Hexcraft", "Naturalism", "Madness"),
                   ":unitskillmap",
                   nx_tactics_base.f_unitskillmap_from_unitskilllist(
                     nx_tactics_base.f_unitskill_from_tactics_key_abilities(
                       tactics,
-                      "Animal Handling",
+                      "Animals",
                       vx_core.f_new({"any-1": vx_core.t_stringlist}, "Snake Charming")
                     )
                   )

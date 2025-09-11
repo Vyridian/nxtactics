@@ -292,6 +292,11 @@
     "* [Requires]: Javelin
      * Criticals vs Large units are [Rage] Tokens.")
   (base/ability
+   :name "Bareback"
+   :summary
+    "* [Skill]: [Animals]
+     * Can ride without a saddle without penalty.")
+  (base/ability
    :name "Bargain"
    :titles "Haggler, Merchant"
    :summary
@@ -335,6 +340,10 @@
    :summary
     "* [Skill]: [Close Combat]
      * IF your [Rival] is [Prone] THEN [Damage]:+1")
+  (base/ability
+   :name "Berserker"
+   :summary
+    "* [Skill]: [Intimidation]")
   (base/ability
    :name "Besiege"
    :summary
@@ -526,6 +535,13 @@
    :name "Call Lightning"
    :summary "* Calls a lightning strike from an existing storm cloud.")
   (base/ability
+   :name "Call Out"
+   :reference
+    "* Warriors, Come Out to PLAY-AY! - The Warriors"
+   :summary
+    "* Taunt a large group to fight
+     * [Skill]: [Intimidation]")
+  (base/ability
    :name "Call Spirits"
    :summary
     "* [Power]: [Shamanism]")
@@ -553,6 +569,12 @@
    :summary "* Reduce damage from falls"
    :summary
     "* [Power]: [Beastial]")
+  (base/ability
+   :name "Catabatan Circle"
+   :summary
+    "* [Skill]: [Animals]
+     * [Formation]
+     * High Dodge and Concentrated firepower")
   (base/ability
    :name "Catapult Launcher"
    :summary
@@ -884,6 +906,7 @@
    :name "Destruction"
    :summary
     "* Effects only unliving objects
+     * [Power]: [Transmutation]
      * A target that takes Destruction Tokens equal to Body are completely destroyed.")
   (base/ability
    :name "Detail Oriented"
@@ -965,6 +988,7 @@
    :name "Disintegrate"
    :summary
     "* Causes wounds that are difficult to heal
+     * [Power]: [Transmutation]
      * A victim that takes Disintegrate Tokens equal to Body are completely destroyed.")
   (base/ability
    :name "Distraction"
@@ -1098,6 +1122,14 @@
      * [Skill]: [Close Combat]
      * [Attack] [J]: Push:+1, Stun:+1
      * [Aerial]")
+  (base/ability
+   :name "Drive Carriage"
+   :summary
+    "* [Skill]: [Animals]")
+  (base/ability
+   :name "Drive Cart"
+   :summary
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Drunken Monkey Roll"
    :summary
@@ -1247,7 +1279,7 @@
     "* Evil Eye, Dadadan"
    :summary
     "* Staring at the Target creates intense feelings of unease and self doubt.
-     * [Power]: [Animism]
+     * [Power]: [Hexcraft]
      * Reduces Spirit")
   (base/ability
    :name "Excavating"
@@ -1316,7 +1348,7 @@
   (base/ability
    :name "Falconry"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Feather Blades"
    :summary "* Feathers become as hard as steel and may be used as swords.")
@@ -1520,6 +1552,14 @@
      * [Skill]: [Military]
      * [+1 Retreat] Token if unit inflicts at least 1 [Retreat].")
   (base/ability
+   :name "Frenzy"
+   :summary
+    "* [Skill]: [Intimidation]")
+  (base/ability
+   :name "Faster than Light"
+   :summay
+    "* [Power]: [Movement:Stellar]")
+  (base/ability
    :name "Fuel Scoop"
    :summary
     "* Can scoop fuel directly into [Tanker Hold].
@@ -1528,6 +1568,10 @@
    :name "Fungal Growth"
    :summary
     "* [Power]: [Diseases]")
+  (base/ability
+   :name "Fury"
+   :summary
+    "* [Skill]: [Intimidation]")
   (base/ability
    :name "Gambling"
    :titles "Gambler, High Roller"
@@ -1561,6 +1605,13 @@
      * Move:-1
      * Rating:+1")
   (base/ability
+   :name "Hatred"
+   :reference
+    "* I killed Wesley. I shot him seven times. Because the clip ran out. He. Deserved. MORE! - Karen Page and Kingpin, Daredevil"
+   :summary
+    "* [Skill]: [Intimidation]
+     * Attack: +1 Speed vs. Tribal or long-standing personal enemies.")
+  (base/ability
    :name "Hawk Eye"
    :titles "Eagle Eye"
    :summary
@@ -1573,7 +1624,7 @@
    :name "High-Explosive"
    :titles "HE"
    :summary
-    "* [Power]: [Weapon: Firearm] or [Weapon: Cannon] or [Weapon: Missile]
+    "* [Power]: [Weapon:Firearm] or [Weapon:Cannon] or [Weapon:Missile]
      * [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.
      * [Damage]: All target's are [+2 Armor] against this attack.
      * [Damage]: Units surrounding the space are attacked at -1 Damage for each space distant.
@@ -1583,6 +1634,15 @@
      * [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.
      * [Damage]: All target's are [+2 Armor] against this attack.
      * [Damage]: Units surrounding the space are attacked by dividing the energy (in Joules, or tons of TNT) using the following reduction pattern for each space distant: 1/1, 1/3, 1/10, 1/30, 1/100, 1/300, 1/1000, etc. Then look up the new damage based on the new energy level.")
+  (base/ability
+   :name "Horse Archery"
+   :summary
+    "* [Skill]: [Animals]
+     Can use a bow while riding without penalty.")
+  (base/ability
+   :name "Howl"
+   :summary
+    "* [Skill]: [Intimidation]")
   (base/ability
    :name "Huge"
    :summary
@@ -1617,7 +1677,7 @@
   (base/ability
    :name "Guard Training"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Gunnery Weapon"
    :summary
@@ -1641,12 +1701,12 @@
   (base/ability
    :name "Harvest Poison"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Herding"
    :titles "Cowboy, Pig Farmer, Rancher, Shepherd"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Hide in Plain Sight"
    :summary
@@ -1695,7 +1755,7 @@
    :name "Husbandry"
    :summary
     "* The ability to raise and breed animals to emphasize certain traits.
-     * [Skill]: [Animal Handling]")
+     * [Skill]: [Animals]")
   (base/ability
    :name "Hyperdrive"
    :image "Units/SpaceAndTime/Hyperspace.jpg"
@@ -1942,7 +2002,7 @@
   :name "Livestock"
    :summary
     "* The ability to grow livestock.
-     * [Skill]: [Animal Handling]")
+     * [Skill]: [Animals]")
   (base/ability
    :name "Living Nightmare"
    :summary "* A chimerical monster formed from nightmares or madness."
@@ -2009,7 +2069,7 @@
    :name "Marriage"
    :summary
     "* The formal act of binding a couples' fate together.
-     * [Skill]: [Faith]
+     * [Skill]: [Religion]
      * As long as the bond lasts, each person gains Level:+1 whenever directly defending or supporting the other.")
   (base/ability
    :name "Master Plan"
@@ -2116,6 +2176,10 @@
    :summary
     "* [Power]: [Special Ability]
      * [Body]:+0x3")
+  (base/ability
+   :name "Mounted Combat"
+   :summary
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Multitasking")
   (base/ability
@@ -2246,7 +2310,7 @@
    :reference
     "* I went to see the doctor of Philosophy, with a poster of Rasputin and a beard down to his knees. He never did marry or see a B-grade movie. He graded my performance. He said he could see through me. I spent 4 years prostrate to the higher mind, got my paper and I was free. - Indigo Girls, Closer I Am To Fine"
    :summary
-    "* [Skill]: [Science: Social]")
+    "* [Skill]: [Science:Social]")
   (base/ability
    :name "Photographic Memory")
   (base/ability
@@ -2322,7 +2386,7 @@
    :reference
     "* B: To think, all that time it was your cup that was poisoned. M: They were both poisoned. I spent the last few years building up an immunity to Iocane powder. - Buttercup, Man In Black Princess Bride"
    :summary
-    "* [Skill]: [Assasination]
+    "* [Skill]: [Assassination]
      * Become resistant to a particular poison by taking small amounts of it over a long period.")
   (base/ability
    :name "Poison Touch")
@@ -2366,16 +2430,56 @@
      * +1 Move
      * Criticals - [Knockdown]")
   (base/ability
+   :name "Power Copy"
+   :summary
+    "* Temporarily copy a Power
+     * [Power]: [Power Control]")
+  (base/ability
+   :name "Power Disruption"
+   :summary
+    "* Temporarily prevent the use of a Power
+     * [Power]: [Power Control]")
+  (base/ability
+   :name "Power Drain"
+   :summary
+    "* Weaken a Power
+     * [Power]: [Power Control]")
+  (base/ability
+   :name "Power Feedback"
+   :summary
+    "* Cause a Unit to take Damge when they use a particular Power
+     * [Power]: [Power Control]")
+  (base/ability
+   :name "Power Fluctuation"
+   :summary
+    "* Temporarily cause a Power to randomly increase or decrease
+     * [Power]: [Power Control]")
+  (base/ability
    :name "Power Leap")
   (base/ability
    :name "Power Lift"
    :summary "* Lift additional kg equal to Power Rating.")
   (base/ability
+   :name "Power Reflection"
+   :summary
+    "* Cause a Power to change Targets
+     * [Power]: [Power Control]")
+  (base/ability
    :name "Power Strike"
    :summary "* Add Power Rating to weapon damage using Melee, or Close Combat.")
   (base/ability
+   :name "Power Theft"
+   :summary
+    "* A combination of [Power Copy] and [Power Disruption]
+     * [Power]: [Power Control]")
+  (base/ability
    :name "Power Throw"
    :summary "* Add Power Rating to weapon damage when throwing any object or weapon.")
+  (base/ability
+   :name "Power Vampire"
+   :summary
+    "* Weaken a Power and gain energy
+     * [Power]: [Power Control]")
   (base/ability
    :name "Precedent"
    :summary
@@ -2449,8 +2553,15 @@
    :name "Quick Draw"
    :summary
     "* [Skill]: [Ranged] or [Firearm]
-     * [Requires]: [1-Handed] [Weapon: Firearm] or [Weapon: Ranged]
+     * [Requires]: [1-Handed] [Weapon:Firearm] or [Weapon:Ranged]
      * [Free]: Move:-1 to draw a Hand weapon from holster to hip where he can [Hip Shoot].")
+  (base/ability
+   :name "Quick Study"
+   :reference
+    "I know Kung Fu. - Neo, The Matrix"
+   :summary
+    "* [Skill]: [Intellect]
+     * Cram to learn a low level skill very quickly. The skill doesn't last long, but often it doesn't have to.")
   (base/ability
    :name "Quill Attack")
   (base/ability
@@ -2652,7 +2763,7 @@
   (base/ability
    :name "Retrieve"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Returning Throw")
   (base/ability
@@ -2665,6 +2776,11 @@
   (base/ability
    :name "Richochet"
    :summary "* [Requires]: Thrown Object")
+  (base/ability
+   :name "Ride:Bull"
+   :summary
+    "* [Skill]: [Animals]
+     * While riding a hostile creature, the Scale of the creature considered to be one less for you.")
   (base/ability
    :name "Riposte"
    :reference "When your swords clash together, in one motion when your sword springs away from theirs, use a continuous motion to slash their head, body and legs."
@@ -2686,6 +2802,12 @@
    :name "Roar"
    :summary
     "* [Skill]: [Intimidation] vs [Will]")
+  (base/ability
+   :name "Run Down"
+   :summary
+    "* [Skill]: [Animals]
+     * [Damage]: +1 Damage when attacking from the rear.
+     * [Attack], [Damage]: Any [Critical Hits] may be [Retreats]")
   (base/ability
    :name "Rustling"
    :summary "* Stealing and selling livestock"
@@ -2756,7 +2878,7 @@
   (base/ability
    :name "Seeing Eye Training"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Seeming"
    :summary "* Take on the appearance of another.")
@@ -2868,6 +2990,11 @@
     "* [Power]: [Strength]
      * Knockdown everyone in the area.")
   (base/ability
+   :name "Side Saddle"
+   :summary
+    "* [Skill]: [Animals]
+     * Can ride side saddle without penalty.")
+  (base/ability
    :name "Sidestep")
   (base/ability
    :name "Signal Shot"
@@ -2908,7 +3035,7 @@
   (base/ability
    :name "Snake Charming"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Snake Form"
    :summary
@@ -3033,8 +3160,12 @@
   (base/ability
    :name "Stare Down"
    :summary
-    "* [Skill]: [Animal Handling] vs. [Will]
+    "* [Skill]: [Animals] vs. [Will]
      * Causes an animal to hesitate or back down.")
+  (base/ability
+   :name "Steed Trample"
+   :summary
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Sting")
   (base/ability
@@ -3134,7 +3265,7 @@
    :name "Swap Sensations"
    :summary
     "* Swap sensations with Rival.
-     * [Power]: [Empathy] or [Animism]")
+     * [Power]: [Empathy] or [Hexcraft]")
   (base/ability
    :name "Sweep"
    :summary
@@ -3175,6 +3306,14 @@
    :summary
     "* The hold is equipped to hold large amounts of liquids or gases at appropriate environments. This can be used for long range vessels to carry their own fuel or act as a fuel tanker.
      * [Power]: [Cargo]")
+  (base/ability
+   :name "Taunt"
+   :titles "Goad"
+   :reference
+    "* Kirk: We tried it once your way, Khan, are you game for a rematch? Khan, I'm laughing at the 'superior intellect.' Khan: Full impulse power! Joachim: No, sir! You have Genesis! You can have whatever... Khan: FULL POWER! DAMN YOU! - Star Trek II: The Wrath of Khan"
+   :summary
+    "* Dishonor Rival's mother.
+     * [Skill]: [Intimidation] vs [Mind]. If successful, opponent must attack you.")
   (base/ability
    :name "Taxadermy"
    :summary
@@ -3261,15 +3400,15 @@
   (base/ability
    :name "Train Dog"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Train Elephant"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Train Horse"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
   (base/ability
    :name "Trample")
   (base/ability
@@ -3374,6 +3513,13 @@
     "* [Skill]: [Deception] or [Stealth]
      * If you can momentarily break line of sight, you can immediately [Hide].")
   (base/ability
+   :name "Vengeance"
+   :reference
+    "* More names off the list, more names on it. - Pyke, Runeterra
+     * She opened a book and a box of tools. Sunny came home with a mission... Sunny came home with a list of names. She didn't believe in transcendence. 'It's time for a few small repairs.' she said. Sunny came home with a Vengence. - Shawn Colvin, Sunny Came Home"
+   :summary
+    "* [Skill]: [Intimidation]")
+  (base/ability
    :name "Ventriloquism"
    :summary
     "* [Skill]: [Deception]")
@@ -3396,7 +3542,11 @@
   (base/ability
    :name "War Training"
    :summary
-    "* [Skill]: [Animal Handling]")
+    "* [Skill]: [Animals]")
+  (base/ability
+   :name "Warcry"
+   :summary
+    "* [Skill]: [Intimidation]")
   (base/ability
    :name "Warding Sign"
    :summary

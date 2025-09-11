@@ -62,20 +62,16 @@
        "Fleshcraft"
        "Necromancy"))
     (base/section
-     :name "Thergy"
-     :reference
-      "* Pray, not for the gods, or the betterment of others, but for yourself - Rosaria, Genshin Impact"
-     :titles "Channelling, Miracle Working, White Magic"
+     :name "Elementalism"
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Conviction"
-       "Blessing"
-       "Invocation"
-       "Life"
-       "Primordial"
-       "Purity"
-       "Radiant"))
+       "Aeromancy"
+       "Electromancy"
+       "Geomancy"
+       "Hydromancy"
+       "Pyromancy"
+       "Stormcraft"))
     (base/section
      :name "Nature Magic"
      :powermap
@@ -91,12 +87,27 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Animism"
        "Divination"
        "Dreaming"
        "Enchantment"
+       "Hexcraft"
        "Mysticism"
-       "Shamanism")))))
+       "Shamanism"))
+    (base/section
+     :name "Thergy"
+     :reference
+      "* Pray, not for the gods, or the betterment of others, but for yourself - Rosaria, Genshin Impact"
+     :titles "Channelling, Miracle Working, White Magic"
+     :powermap
+      (base/powermap<-tactics-keys
+       tactics
+       "Conviction"
+       "Blessing"
+       "Invocation"
+       "Life"
+       "Primordial"
+       "Purity"
+       "Radiant")))))
 
 (func chapter_magic_items : base/chapter
  [tactics : base/tactics]

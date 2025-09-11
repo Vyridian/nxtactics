@@ -48,13 +48,14 @@ import nx_tactics_books_space_and_time_test from "./nx/tactics/books/space_and_t
 import nx_tactics_books_superheroes_test from "./nx/tactics/books/superheroes_test.js"
 import nx_tactics_books_world_wars_test from "./nx/tactics/books/world_wars_test.js"
 import nx_tactics_decks_ability_test from "./nx/tactics/decks/ability_test.js"
-import nx_tactics_decks_burden_test from "./nx/tactics/decks/burden_test.js"
+import nx_tactics_decks_condition_test from "./nx/tactics/decks/condition_test.js"
 import nx_tactics_decks_conflict_test from "./nx/tactics/decks/conflict_test.js"
 import nx_tactics_decks_disorder_test from "./nx/tactics/decks/disorder_test.js"
 import nx_tactics_decks_item_test from "./nx/tactics/decks/item_test.js"
 import nx_tactics_decks_place_test from "./nx/tactics/decks/place_test.js"
 import nx_tactics_decks_power_test from "./nx/tactics/decks/power_test.js"
 import nx_tactics_decks_reference_test from "./nx/tactics/decks/reference_test.js"
+import nx_tactics_decks_restrain_test from "./nx/tactics/decks/restrain_test.js"
 import nx_tactics_decks_rule_test from "./nx/tactics/decks/rule_test.js"
 import nx_tactics_decks_scene_murintrail_test from "./nx/tactics/decks/scene-murintrail_test.js"
 import nx_tactics_decks_scene_ontherun_test from "./nx/tactics/decks/scene-ontherun_test.js"
@@ -149,13 +150,14 @@ export default class app_test {
       nx_tactics_books_superheroes_test.test_package(context),
       nx_tactics_books_world_wars_test.test_package(context),
       nx_tactics_decks_ability_test.test_package(context),
-      nx_tactics_decks_burden_test.test_package(context),
+      nx_tactics_decks_condition_test.test_package(context),
       nx_tactics_decks_conflict_test.test_package(context),
       nx_tactics_decks_disorder_test.test_package(context),
       nx_tactics_decks_item_test.test_package(context),
       nx_tactics_decks_place_test.test_package(context),
       nx_tactics_decks_power_test.test_package(context),
       nx_tactics_decks_reference_test.test_package(context),
+      nx_tactics_decks_restrain_test.test_package(context),
       nx_tactics_decks_rule_test.test_package(context),
       nx_tactics_decks_scene_murintrail_test.test_package(context),
       nx_tactics_decks_scene_ontherun_test.test_package(context),

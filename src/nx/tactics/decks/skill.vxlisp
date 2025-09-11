@@ -289,6 +289,9 @@ x +1DMG vs. Crouching."
        :summary
         "-2 Move
          +1 Damage")
+     "Hogtie"
+      (base/ability
+       :name "Hogtie")
      "Hyperfist"
       (base/ability
        :name "Hyperfist"
@@ -1134,7 +1137,18 @@ x +1DMG vs. Crouching."
      "Flamethrowers"
      "Machineguns"))
   (base/skill
-   :name "Animal Handling"
+   :name "Demolitions"
+   :titles "Bomb Disposal, Bomb Squad, Bombardier, Bomber, Combat Engineers"
+   :summary
+    "* Experienced with setting up large explosives to destroy large structures."
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Bomb Disposal"
+     "Explosives"
+     "Sapping"))
+  (base/skill
+   :name "Animals"
    :summary
     "* Deploy: Deploy trained animals with total level equal to skill.
      * Each week, one animal may be trained one trick."
@@ -1143,20 +1157,35 @@ x +1DMG vs. Crouching."
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
+     "Bareback"
+     "Catabatan Circle"
+     "Charge"
+     "Drive Carriage"
+     "Drive Cart"
      "Falconry"
      "Guard Training"
      "Harvest Poison"
      "Herding"
+     "Horse Archery"
      "Husbandry"
      "Livestock"
+     "Mounted Combat"
      "Retrieve"
+     "Ride: Bull"
+     "Run Down"
      "Seeing Eye Training"
+     "Side Saddle"
      "Snake Charming"
      "Stare Down"
+     "Steed Trample"
      "Train Dog"
      "Train Elephant"
      "Train Horse"
-     "War Training"))
+     "War Training")
+   :specialtymap
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Riding"))
   (base/skill
    :name "Art"
    :reference
@@ -1200,19 +1229,24 @@ x +1DMG vs. Crouching."
    :titles "Athelte, Champion, Gym Rat, Jock, Lunkhead, Medalist, Olympian"
    :abilitymap
     (base/abilitymap
-     :Balance
+     "Acrobatics:Team"
       (base/ability
-       :name "Balance"
+       :name "Acrobatics:Team"
        :summary
-        "* User has extensive experience balancing under difficult circumstances.
-         * [Action]: Roll vs. difficulty to maintain balance. If any [Hits] are rolled, balance is maintained. Movement is at half speed while balancing, but additional [Hits] or [Criticals] improve movement speed by 10% each up to full speed.")
-     :Backflip
+        "* Allows a number of people with this ability to work together to form human pyramids, human ladders, etc.")
+     "Backflip"
       (base/ability
        :name "Backflip"
        :summary
         "+1 Initiative
          +0 Speed (Can only move backward, ignores terrain movement penalties)
          * A showy move that allows the unit to move directly backward without turning.")
+     "Balance"
+      (base/ability
+       :name "Balance"
+       :summary
+        "* User has extensive experience balancing under difficult circumstances.
+         * [Action]: Roll vs. difficulty to maintain balance. If any [Hits] are rolled, balance is maintained. Movement is at half speed while balancing, but additional [Hits] or [Criticals] improve movement speed by 10% each up to full speed.")
      "Body Building"
       (base/ability
        :name "Body Building"
@@ -1269,9 +1303,6 @@ x +1DMG vs. Crouching."
      "Rock Climbing"
       (base/ability
        :name "Rock Climbing")
-     "SCUBA Diving"
-      (base/ability
-       :name "SCUBA Diving")
      :Skateboarding
       (base/ability
        :name "Skateboarding")
@@ -1287,7 +1318,8 @@ x +1DMG vs. Crouching."
      :Slide
       (base/ability
        :name "Slide"
-       :summary "* Move at full speed under low obstacles like tables or overhangs.")
+       :summary
+        "* Move at full speed under low obstacles like tables or overhangs.")
      :Skating
       (base/ability
        :name "Skating")
@@ -1303,20 +1335,21 @@ x +1DMG vs. Crouching."
      :Sports
       (base/ability
        :name "Sports")
-     :Swimming
+     "Swimming"
       (base/ability
        :name "Swimming")
-     "Swimming, Cold Water"
+     "Swimming:Cave Diving"
       (base/ability
-       :name "Swimming, Cold Water")
-     "Swimming, Distance"
+       :name "Swimming:Cave Diving")
+     "Swimming:Cold Water"
       (base/ability
-       :name "Swimming, Distance")
-     "Team Acrobatics"
+       :name "Swimming:Cold Water")
+     "Swimming:Distance"
       (base/ability
-       :name "Team Acrobatics"
-       :summary
-        "* Allows a number of people with this ability to work together to form human pyramids, human ladders, etc.")
+       :name "Swimming:Distance")
+     "Swimming:SCUBA"
+      (base/ability
+       :name "Swimming:SCUBA")
      :Tightrope
       (base/ability
        :name "Tightrope")
@@ -1350,37 +1383,6 @@ x +1DMG vs. Crouching."
      tactics
      "Acrobatics"
      "Climbing"))
-  (base/skill
-   :name "Intellect"
-   :titles "Genius, Mastermind, Prodigy, Savant, Super Genius"
-   :stat "Mind"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Analyze Weakness"
-     "Calculator Mind"
-     "Circular Logic"
-     "Compartmentalize"
-     "Cryptography"
-     "Doublethink"
-     "Engineering Genius"
-     "Financial Genius"
-     "Investigative Genius"
-     "Linguistic Genius"
-     "Master Plan"
-     "Mathematical Genius"
-     "Maze Mastery"
-     "Mind Blank"
-     "Misinformation"
-     "Multitasking"
-     "Photographic Memory"
-     "Puzzles"
-     "Rationalize"
-     "Scientific Genius"
-     "Simplify, Simplify, Simplify"
-     "Speed Reading"
-     "Tactical Genius"
-     "Unsolvable Problem"))
   (base/skill
    :name "Business"
    :reference
@@ -1420,6 +1422,9 @@ x +1DMG vs. Crouching."
      :Finance
       (base/ability
        :name "Finance")
+     :Investing
+      (base/ability
+       :name "Investing")
      :Marketing
       (base/ability
        :name "Marketing")
@@ -1883,109 +1888,6 @@ x +1DMG vs. Crouching."
      (base/ability
       :name "Whispering Campaign")))
   (base/skill
-   :name "Demolitions"
-   :titles "Bomb Disposal, Bomb Squad, Bombardier, Bomber, Combat Engineers"
-   :summary
-    "* Experienced with setting up large explosives to destroy large structures."
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Bomb Disposal"
-     "Explosives"
-     "Sapping"))
-  (base/skill
-   :name "Faith"
-   :reference
-    "The argument goes something like this: 'I refuse to prove that I exist,' says God, 'for proof denies faith, and without faith I am nothing.' 'But,' says Man, 'The Babel fish is a dead giveaway, isn't it? It could not have evolved by chance. It proves you exist, and so therefore, by your own arguments, you don't. QED.' - Hitchhiker's Guide to the Galaxy"
-   :titles
-    "Abbot, Absolver, Archbishop, Bishop, Cardinal, Cleric, Ceremonial Guard, Gakusho, Missionary, Paladin, Priest, Redeemer, Sin	Eater, Theologist, Theurge, Theurgy"
-   :abilitymap
-    (base/abilitymap
-     :Absolution
-      (base/ability
-       :name "Absolution")
-     :Affirmation
-      (base/ability
-       :name "Affirmation"
-       :summary
-        "An affirmation is a statement designed to have a positive effect on the conscious mind when repeated at frequent intervals throughout meditation ritual spells.")
-     :Atonement
-      (base/ability
-       :name "Atonement")
-     :Blessing
-      (base/ability
-       :name "Blessing"
-       :summary
-        "* A simple incantation with a variety of subtle effects.
-         * [Action]: Touch. Target gains a new Blessing Token (max 1).  At any time, the target may remove the token and gain +1 on any Defense roll.
-         * [Duration]: up to 1 day/level.")
-     :Chant
-      (base/ability
-       :name "Chant"
-       :summary "* Aura: All Allies with same Religion within level spaces receive +1 on Defense rolls.")
-     :Confession
-      (base/ability
-       :name "Confession")
-     :Consecration
-      (base/ability
-       :name "Consecration"
-       :summary
-        "* To consecrate is to solemnly dedicate or devote something or someone to a sacred purpose, to cleanse and protect.")
-     :Contemplation
-      (base/ability
-       :name "Contemplation"
-       :summary
-        "* Contemplation is a focused and disiplined form of contemplation or reflecting, whereby one is able to alter an emotional state and to receive self-insight.")
-     :Conversion
-      (base/ability
-       :name "Conversion")
-     :Dedication
-      (base/ability
-       :name "Dedication"
-       :summary
-        "* [Death]: Unit enters specified Deity's realm.  It is not substantiated that this ability actually works. Those who have crossed over are changed and may not and will not return.")
-     :Drumming
-      (base/ability
-       :name "Drumming"
-       :summary
-        "* Drumming is literally pounding on a surface.  This is used to raise power and to change emotional states.")
-     :Excommunication
-      (base/ability
-       :name "Excommunication")
-     :Initiation
-      (base/ability
-       :name "Initiation"
-       :summary
-        "* Used to describe the profound spiritual experience that occurs when one's unity with Deity and the Universe is realised; when one is welcomed as a fully-fledged member of a particular group; and the celebration of a successful ritual.")
-     "Marriage"
-      (base/ability<-tactics-key tactics "Marriage")
-     :Mass
-      (base/ability
-       :name "Mass")
-     :Namegiving
-      (base/ability
-       :name "Namegiving")
-     :Ordainment
-      (base/ability
-       :name "Ordainment")
-     :Redemption
-      (base/ability
-       :name "Redemption")
-     :Sacrament
-      (base/ability
-       :name "Sacrament")
-     :Salvation
-      (base/ability
-       :name "Salvation")
-     :Sanctify
-      (base/ability
-       :name "Sanctify")
-     "Sin Eating"
-      (base/ability
-       :name "Sin Eating"
-       :summary
-        "* A willing subject may describe his dark desires, the Sin Eater then repeats the description replacing references to the subject with himself. After the ritual is complete, the subject will not feel the urges so strongly. Instead the Sin Eater will feel those emotions. If he acts on them, even symbolically, his [Shadow] gains power. If he can resolve them, he gains experience.")))
-  (base/skill
    :name "Hunting"
    :titles
     "Forward Observer, Gamekeeper, Hunter, Huntress, Huntsman, Huntmaster, Lookout, Mage Hunter, Master Huntsman, Master of the Hunt, Poacher, Ranger, Royal Huntsman, Scout, Sentinel, Stalker, Tracer, Tracker, Watchman"
@@ -2082,9 +1984,6 @@ x +1DMG vs. Crouching."
      :Intrigue
       (base/ability
        :name "Intrigue")
-     :Investing
-      (base/ability
-       :name "Investing")
      "Judicial Ties"
       (base/ability
        :name "Judicial Ties")
@@ -2131,29 +2030,70 @@ x +1DMG vs. Crouching."
      "Nobility"
      "Royalty"))
   (base/skill
+   :name "Intellect"
+   :titles "Genius, Mastermind, Prodigy, Savant, Super Genius"
+   :stat "Mind"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Analyze Weakness"
+     "Calculator Mind"
+     "Circular Logic"
+     "Compartmentalize"
+     "Cryptography"
+     "Doublethink"
+     "Engineering Genius"
+     "Financial Genius"
+     "Investigative Genius"
+     "Linguistic Genius"
+     "Master Plan"
+     "Mathematical Genius"
+     "Maze Mastery"
+     "Mind Blank"
+     "Misinformation"
+     "Multitasking"
+     "Photographic Memory"
+     "Puzzles"
+     "Quick Study"
+     "Rationalize"
+     "Scientific Genius"
+     "Simplify, Simplify, Simplify"
+     "Speed Reading"
+     "Tactical Genius"
+     "Unsolvable Problem"))
+  (base/skill
    :name "Intimidation"
    :reference
     "* I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain. - Bene Gesserit Litany, Dune
      * They tell him they want his territory: all his business. Soze looks over the faces of his family, then he showed these men of will what will really was. He tells him he would rather see his family dead, than live another day after this. ... He waits until his wife and kids are in the ground, and then he goes after the rest of the mob. He kills their kids. He kills their wives. He kills their parents and their parents friends. He burns down the houses they live in and the stores they work in. He kills people who owe them money. And like that, he's gone. - Verbal Kint, Usual Suspects"
-   :titles "Demagogue, Enforcer, Fearmonger, Overseer, Pimp, Slave Lord, Slaver, Tormentor, Torturer"
-   :stat "Shadow"
+   :titles "Berserker, Demagogue, Enforcer, Fearmonger, Marauder, Overseer, Pimp, Slave Lord, Slaver, Tormentor, Torturer, Wildman"
+   :stat "Beast"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
+     "Berserker"
+     "Call Out"
      "Coercion"
      "Death March"
      "Duress"
      "Enslave"
+     "Frenzy"
+     "Fury"
      "Grip of Fear"
      "Interrogate"
      "Intimidate"
+     "Hatred"
+     "Howl"
      "Oppress"
      "Reign of Terror"
      "Repress"
      "Roar"
+     "Taunt"
      "Terrorize"
      "Torment"
-     "Torture"))
+     "Torture"
+     "Vengeance"
+     "Warcry"))
   (base/skill
    :name "Investigation"
    :summary
@@ -2999,126 +2939,99 @@ x +1DMG vs. Crouching."
      "Helicopters"
      "Starships"))
   (base/skill
-   :name "Rage"
-   :titles "Berserker, Marauder, Wildman"
-   :stat "Beast"
+   :name "Religion"
+   :reference
+    "The argument goes something like this: 'I refuse to prove that I exist,' says God, 'for proof denies faith, and without faith I am nothing.' 'But,' says Man, 'The Babel fish is a dead giveaway, isn't it? It could not have evolved by chance. It proves you exist, and so therefore, by your own arguments, you don't. QED.' - Hitchhiker's Guide to the Galaxy"
+   :titles
+    "Abbot, Absolver, Archbishop, Bishop, Cardinal, Cleric, Ceremonial Guard, Gakusho, Missionary, Paladin, Priest, Redeemer, Sin	Eater, Theologist, Theurge, Theurgy"
    :abilitymap
     (base/abilitymap
-     "Berserker"
+     :Absolution
       (base/ability
-       :name "Berserker"
-       :summary
-        "* [Skill]: [Rage]")
-     "Call Out"
+       :name "Absolution")
+     :Affirmation
       (base/ability
-       :name "Call Out"
-       :reference
-        "* Warriors, Come Out to PLAY-AY! - The Warriors"
+       :name "Affirmation"
        :summary
-        "* Taunt a large group to fight")
-     "Frenzy"
+        "An affirmation is a statement designed to have a positive effect on the conscious mind when repeated at frequent intervals throughout meditation ritual spells.")
+     :Atonement
       (base/ability
-       :name "Frenzy"
-       :summary
-        "* [Skill]: [Rage]")
-     "Fury"
+       :name "Atonement")
+     :Blessing
       (base/ability
-       :name "Fury"
+       :name "Blessing"
        :summary
-        "* [Skill]: [Rage]")
-     "Hatred"
+        "* A simple incantation with a variety of subtle effects.
+         * [Action]: Touch. Target gains a new Blessing Token (max 1).  At any time, the target may remove the token and gain +1 on any Defense roll.
+         * [Duration]: up to 1 day/level.")
+     :Chant
       (base/ability
-       :name "Hatred"
-       :reference
-        "* I killed Wesley. I shot him seven times.. because the clip ran out. He.. deserved.. MORE! - Karen Page and Kingpin, Daredevil"
-       :summary
-        "* Attack: +1 Speed vs. Tribal or long-standing personal enemies.")
-     "Howl"
+       :name "Chant"
+       :summary "* Aura: All Allies with same Religion within level spaces receive +1 on Defense rolls.")
+     :Confession
       (base/ability
-       :name "Howl"
-       :summary
-        "* [Skill]: [Rage]")
-     "Taunt"
+       :name "Confession")
+     :Consecration
       (base/ability
-       :name "Taunt"
-       :titles "Goad"
-       :reference
-        "* Kirk: We tried it once your way, Khan, are you game for a rematch? Khan, I'm laughing at the 'superior intellect.' Khan: Full impulse power! Joachim: No, sir! You have Genesis! You can have whatever... Khan: FULL POWER! DAMN YOU! - Star Trek II: The Wrath of Khan"
+       :name "Consecration"
        :summary
-        "* Dishonor Rival's mother.
-         * [Skill]: [Rage] vs [Mind]. If successful, opponent must attack you.")
-     "Vengeance"
+        "* To consecrate is to solemnly dedicate or devote something or someone to a sacred purpose, to cleanse and protect.")
+     :Contemplation
       (base/ability
-       :name "Vengeance"
-       :reference
-        "* More names off the list, more names on it. - Pyke, Runeterra
-         * She opened a book and a box of tools. Sunny came home with a mission... Sunny came home with a list of names. She didn't believe in transcendence. 'It's time for a few small repairs.' she said. Sunny came home with a Vengence. - Shawn Colvin, Sunny Came Home"
+       :name "Contemplation"
        :summary
-        "* [Skill]: [Rage]")
-     "Warcry"
+        "* Contemplation is a focused and disiplined form of contemplation or reflecting, whereby one is able to alter an emotional state and to receive self-insight.")
+     :Conversion
       (base/ability
-       :name "Warcry"
+       :name "Conversion")
+     :Dedication
+      (base/ability
+       :name "Dedication"
        :summary
-        "* [Skill]: [Rage]")))
+        "* [Death]: Unit enters specified Deity's realm.  It is not substantiated that this ability actually works. Those who have crossed over are changed and may not and will not return.")
+     :Drumming
+      (base/ability
+       :name "Drumming"
+       :summary
+        "* Drumming is literally pounding on a surface.  This is used to raise power and to change emotional states.")
+     :Excommunication
+      (base/ability
+       :name "Excommunication")
+     :Initiation
+      (base/ability
+       :name "Initiation"
+       :summary
+        "* Used to describe the profound spiritual experience that occurs when one's unity with Deity and the Universe is realised; when one is welcomed as a fully-fledged member of a particular group; and the celebration of a successful ritual.")
+     "Marriage"
+      (base/ability<-tactics-key tactics "Marriage")
+     :Mass
+      (base/ability
+       :name "Mass")
+     :Namegiving
+      (base/ability
+       :name "Namegiving")
+     :Ordainment
+      (base/ability
+       :name "Ordainment")
+     :Redemption
+      (base/ability
+       :name "Redemption")
+     :Sacrament
+      (base/ability
+       :name "Sacrament")
+     :Salvation
+      (base/ability
+       :name "Salvation")
+     :Sanctify
+      (base/ability
+       :name "Sanctify")
+     "Sin Eating"
+      (base/ability
+       :name "Sin Eating"
+       :summary
+        "* A willing subject may describe his dark desires, the Sin Eater then repeats the description replacing references to the subject with himself. After the ritual is complete, the subject will not feel the urges so strongly. Instead the Sin Eater will feel those emotions. If he acts on them, even symbolically, his [Shadow] gains power. If he can resolve them, he gains experience.")))
   (base/skill
-   :name "Riding"
-   :summary
-    "* Level 1: Ride a horse
-     * Level 2: Ride a Lt. Warhorse
-     * Level 3: Ride a Med. Warhorse
-     * Level 4: Ride a Hvy. Warhorse
-     * Note: Riding a flying mount requires [Flying]"
-   :titles "Caravan Driver, Cavalry, Driver, Dragoon, Horseman, Knight, Lancer, Outrider, Rider"
-   :abilitymap
-    (base/abilitymap
-     "Bareback"
-      (base/ability
-       :name "Bareback"
-       :summary
-        "* Can ride without a saddle without penalty.")
-     "Catabatan Circle"
-      (base/ability
-       :name "Catabatan Circle"
-       :summary
-        "* [Formation]
-         * High Dodge and Concentrated firepower")
-     "Charge"
-      (base/ability<-tactics-key tactics "Charge")
-     "Drive Carriage"
-      (base/ability
-       :name "Drive Carriage")
-     "Drive Cart"
-      (base/ability
-       :name "Drive Cart")
-     "Horse Archery"
-      (base/ability
-       :name "Horse Archery"
-       :summary
-        "Can use a bow while riding without penalty.")
-     "Mounted Combat"
-      (base/ability
-       :name "Mounted Combat")
-     "Ride: Bull"
-      (base/ability
-       :name "Bull Riding"
-       :summary
-        "* While riding a hostile creature, the Scale of the creature considered to be one less for you.")
-     "Run Down"
-      (base/ability
-       :name "Run Down"
-       :summary
-        "* [Damage]: +1 Damage when attacking from the rear.
-         * [Attack], [Damage]: Any [Critical Hits] may be [Retreats]")
-     "Side Saddle"
-      (base/ability
-       :name "Side Saddle"
-       :summary
-        "* Can ride side saddle without penalty.")
-     "Steed Trample"
-      (base/ability
-       :name "Steed Trample")))
-  (base/skill
-   :name "Science: Life"
+   :name "Science:Life"
    :reference
     "* See [Equipment: Drugs]
      * See [Flora and Fauna: Plants]"
@@ -3134,13 +3047,13 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Biology"
        :titles "Biologist")
-     "Biology: Molecular"
+     "Biology:Molecular"
       (base/ability
-       :name "Biology: Molecular"
+       :name "Biology:Molecular"
        :titles "Molecular Biologist")
-     "Biology: Xeno"
+     "Biology:Xeno"
       (base/ability
-       :name "Biology: Xeno")
+       :name "Biology:Xeno")
      "Botony"
       (base/ability
        :name "Botony"
@@ -3254,9 +3167,11 @@ x +1DMG vs. Crouching."
          * Locate Animal"
        :titles "Zoologist")))
   (base/skill
-   :name "Science: Physical"
-   :reference "* Personally, I liked the university. They gave us money and facilities, we didn't have to produce anything! You've never been out of college! You don't know what it's like out there! I've worked in the private sector. They expect results. - Ghostbusters"
-   :summary "* Scientists believe that by studying a thing, one can learn its patterns and gain mastery over it."
+   :name "Science:Physical"
+   :reference
+    "* Personally, I liked the university. They gave us money and facilities, we didn't have to produce anything! You've never been out of college! You don't know what it's like out there! I've worked in the private sector. They expect results. - Ghostbusters"
+   :summary
+    "* Scientists believe that by studying a thing, one can learn its patterns and gain mastery over it."
    :titles "Sage, Scholar, Scientist"
    :stat "Mind"
    :abilitymap
@@ -3290,13 +3205,13 @@ x +1DMG vs. Crouching."
      :Experimentation
       (base/ability
        :name "Experimentation")
-     :Mathematics
+     "Mathematics"
       (base/ability
        :name "Mathematics"
        :titles "Algebra, Geometric, Probability, Trigonometry")
-     "Mathematics: Advanced"
+     "Mathematics:Advanced"
       (base/ability
-       :name "Mathematics: Advanced"
+       :name "Mathematics:Advanced"
        :reference
         "* Differential Calculus - The definition, properties, and applications of the derivative of a function. The process of finding the derivative is called differentiation.
          * Integral Calculus - The definitions, properties, and applications of two related concepts, the indefinite integral and the definite integral. The process of finding the value of an integral is called integration.
@@ -3306,61 +3221,54 @@ x +1DMG vs. Crouching."
          * Medicine - Calculus can be used to find the optimal branching angle of a blood vessel so as to maximize flow.
          * Economics - Calculus allows for the determination of maximal profit by providing a way to easily calculate both marginal cost and marginal revenue."
        :titles "Differential Calculus, Integral Calculus, Limits and Infintesimals, Linear Algebra")
-     :Metallurgy
+     "Metallurgy"
       (base/ability
        :name "Metallurgy")
-     :Meteorology
+     "Meteorology"
       (base/ability
        :name "Meteorology")
-     :Planetology
+     "Planetology"
       (base/ability
        :name "Planetology")
      "Publish or Perish"
       (base/ability
        :name "Publish or Perish"
        :summary "* Ability to create academic papers that increase Fame.")
-     :Optics
+     "Optics"
       (base/ability
        :name "Optics")
-     "Physics: Dimensional"
+     "Physics:Dimensional"
       (base/ability
-       :name "Physics: Dimensional")
-     "Physics: Electromagnetic"
+       :name "Physics:Dimensional")
+     "Physics:Electromagnetic"
       (base/ability
-       :name "Physics: Electromagnetic")
-     "Physics: Fluid Dynamics"
+       :name "Physics:Electromagnetic")
+     "Physics:Fluid Dynamics"
       (base/ability
-       :name "Physics: Fluid Dynamics")
-     "Physics: Forces"
+       :name "Physics:Fluid Dynamics")
+     "Physics:Forces"
       (base/ability
-       :name "Physics: Forces")
-     "Physics: Newtonian"
+       :name "Physics:Forces")
+     "Physics:Newtonian"
       (base/ability
-       :name "Physics: Newtonian")
-     "Physics: Nuclear"
+       :name "Physics:Newtonian")
+     "Physics:Nuclear"
       (base/ability
-       :name "Physics: Nuclear"
-       :reference "* You said crossing the streams was bad!  Cross the streams...  You're gonna endanger us, you're gonna endanger our client - the nice lady, who paid us in advance, before she became a dog...Not necessarily. There's definitely a *very slim* chance we'll survive. I love this plan!  I'm excited to be a part of it!  LET'S DO IT! - Ghostbusters")
-     "Physics: Quantum"
+       :name "Physics:Nuclear"
+       :reference
+        "* You said crossing the streams was bad!  Cross the streams...  You're gonna endanger us, you're gonna endanger our client - the nice lady, who paid us in advance, before she became a dog...Not necessarily. There's definitely a *very slim* chance we'll survive. I love this plan!  I'm excited to be a part of it!  LET'S DO IT! - Ghostbusters")
+     "Physics:Quantum"
       (base/ability
-       :name "Physics: Quantum")
-     "Physics: Temporal"
+       :name "Physics:Quantum")
+     "Physics:Temporal"
       (base/ability
-       :name "Physics: Temporal"
+       :name "Physics:Temporal"
        :reference "* The future is not set. There's no fate but what we make for ourselves. - Reece, The Terminator")
-     "Physics: Thermodynamics"
+     "Physics:Thermodynamics"
       (base/ability
-       :name "Physics: Thermodynamics")
-     "Quick Study"
-      (base/ability
-       :name "Quick Study"
-       :reference "I know Kung Fu. - Neo, The Matrix"
-       :summary "* Cram to learn a low level skill very quickly. The skill doesn't last long, but often it doesn't have to.")
-     :Study
-      (base/ability
-       :name "Study")))
+       :name "Physics:Thermodynamics")))
   (base/skill
-   :name "Science: Social"
+   :name "Science:Social"
    :abilitymap
     (base/abilitymap
      :Anthropology

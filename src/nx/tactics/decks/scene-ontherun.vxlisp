@@ -49,10 +49,10 @@
     (list<-list : base/cardlist
      (base/rulelist<-tactics-keys
       tactics
-      "Weather: Temperature"
-      "Weather: Clouds"
-      "Weather: Humidity"
-      "Weather: Wind"
+      "Weather:Temperature"
+      "Weather:Clouds"
+      "Weather:Humidity"
+      "Weather:Wind"
       "Exposure"
       "Hunger"
       "Thirst"

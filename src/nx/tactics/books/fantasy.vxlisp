@@ -332,14 +332,14 @@
             :unitpowermap
              (base/unitpowermap<-tactics-keys
               tactics
-              "Animism"
               "Enchantment"
+              "Hexcraft"
               "Naturalism"
               "Madness")
             :unitskillmap
              (base/unitskillmap<-unitskilllist
               (base/unitskill<-tactics-key-abilities
-               tactics "Animal Handling"
+               tactics "Animals"
                (stringlist "Snake Charming"))))
           "Snake: Death's Head Viper"
            (base/unit

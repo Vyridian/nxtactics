@@ -32,7 +32,7 @@ export default class nx_tactics_books_skills {
           ":name",
           "Physical Skills",
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Animal Handling", "Assassination", "Athletics", "Hunting", "Rage", "Survival", "Tradeskill")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Animals", "Assassination", "Athletics", "Hunting", "Rage", "Survival", "Tradeskill")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -46,14 +46,14 @@ export default class nx_tactics_books_skills {
           ":name",
           "Academic Skills",
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Computers", "Electronics", "Intellect", "Investigation", "Knowledge", "Mechanics", "Medicine", "Science: Life", "Science: Physical")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Computers", "Electronics", "Intellect", "Investigation", "Knowledge", "Mechanics", "Medicine", "Science:Life", "Science:Physical")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Social Skills",
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Art", "Business", "Communication", "Crime", "Deception", "Espionage", "Faith", "Influence", "Intimidation", "Law", "Leadership", "Performance", "Persuasion", "Science: Social", "Stealth")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Art", "Business", "Communication", "Crime", "Deception", "Espionage", "Influence", "Intimidation", "Law", "Leadership", "Performance", "Persuasion", "Religion", "Science:Social", "Stealth")
         )
       )
     )

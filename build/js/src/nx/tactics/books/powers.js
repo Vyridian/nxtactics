@@ -320,7 +320,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Travel",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Digging", "Dimensional", "Flight", "Movement: Ground", "Movement: Interstellar", "Movement: Space", "Movement: Water", "Teleportation", "Time Travel")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Digging", "Dimensional", "Flight", "Movement", "Movement:Ground", "Movement:Space", "Movement:Stellar", "Movement:Water", "Teleportation", "Time Travel")
         )
       )
     )
@@ -566,7 +566,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Weaknesses",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Weakness: Cursed", "Weakness: Mental", "Weakness: Physical", "Weakness: Social")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Weakness:Cursed", "Weakness:Mental", "Weakness:Physical", "Weakness:Social")
         )
       )
     )

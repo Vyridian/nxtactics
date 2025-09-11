@@ -362,10 +362,10 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Weakness: Cursed"
-       "Weakness: Mental"
-       "Weakness: Physical"
-       "Weakness: Social")))))
+       "Weakness:Cursed"
+       "Weakness:Mental"
+       "Weakness:Physical"
+       "Weakness:Social")))))
 
 (func chapter_mental_powers : base/chapter
  [tactics : base/tactics]
@@ -405,10 +405,11 @@
        "Digging"
        "Dimensional"
        "Flight"
-       "Movement: Ground"
-       "Movement: Interstellar"
-       "Movement: Space"
-       "Movement: Water"
+       "Movement"
+       "Movement:Ground"
+       "Movement:Space"
+       "Movement:Stellar"
+       "Movement:Water"
        "Teleportation"
        "Time Travel")))))
 

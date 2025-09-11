@@ -22,7 +22,7 @@
      :skillmap
       (base/skillmap<-tactics-keys
        tactics
-       "Animal Handling"
+       "Animals"
        "Assassination"
        "Athletics"
        "Hunting"
@@ -50,8 +50,8 @@
        "Knowledge"
        "Mechanics"
        "Medicine"
-       "Science: Life"
-       "Science: Physical"))
+       "Science:Life"
+       "Science:Physical"))
     (base/section
      :name "Social Skills"
      :skillmap
@@ -63,12 +63,12 @@
        "Crime"
        "Deception"
        "Espionage"
-       "Faith"
        "Influence"
        "Intimidation"
        "Law"
        "Leadership"
        "Performance"
        "Persuasion"
-       "Science: Social"
+       "Religion"
+       "Science:Social"
        "Stealth")))))

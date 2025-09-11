@@ -1,0 +1,52 @@
+(package nx/tactics/decks/condition
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Condition Deck")
+
+(func deck-condition : base/deck
+ [tactics : base/tactics]
+ (let : base/deck
+  [rulelist : base/rulelist :=
+    (base/rulelist<-tactics-keys
+     tactics
+     "Ability Point"
+     "Bleeding"
+     "Blind"
+     "Blood Loss"
+     "Bound"
+     "Broken"
+     "Burning"
+     "Character Point"
+     "Choking"
+     "Constriction"
+     "Damaged"
+     "Deaf"
+     "Diseased"
+     "Diving"
+     "Dying"
+     "Electrified"
+     "Elevation"
+     "Exposure"
+     "Freezing"
+     "Held"
+     "Hunger"
+     "Immobilized"
+     "Impaired"
+     "Isolation"
+     "Paralyzed"
+     "Petrified"
+     "Poisoned"
+     "Skill Point"
+     "Stasis"
+     "Thirst"
+     "Transformed"
+    )
+   cardmap : base/cardmap :=
+    (base/cardmap<-cardlist
+     (list<-list : base/cardlist rulelist))
+  ]
+  (base/deck
+   :name "Condition"
+   :image "images/rule-condition.svg"
+   :layout base/cardlayout-imageonly
+   :cardmap cardmap))
+ :doc "Condition Deck")

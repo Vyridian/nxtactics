@@ -621,6 +621,16 @@
   (base/specialty
    :name "Race Cars")
   (base/specialty
+   :name "Riding"
+   :titles
+    "Caravan Driver, Cavalry, Driver, Dragoon, Horseman, Knight, Lancer, Outrider, Rider"   
+   :summary
+    "* Level 1: Ride a horse
+     * Level 2: Ride a Lt. Warhorse
+     * Level 3: Ride a Med. Warhorse
+     * Level 4: Ride a Hvy. Warhorse
+     * Note: Riding a flying mount requires [Flying]")
+  (base/specialty
    :name "Rifles")
   (base/specialty
    :name "Royalty"
