@@ -478,7 +478,7 @@
    :name "Brood Parasitism"
    :summary
     "Manipulate a host to raise its young as if it were its own, usually using egg mimicry
-     * [Power]: [Reproduction]")
+     * [Power]: [Spawning]")
   (base/ability
    :name "Bug Hunt"
    :reference
@@ -599,7 +599,7 @@
    :name "Chameleon Skin"
    :summary
     "* Change skin color catch attention, threaten, or blend in.
-     * [Power]: [Animalism] or [Appearance]
+     * [Power]: [Animalism] or [Appearance] or [Shapeshift]
      * [Stealth]:+1 or [Intimidation]:+1")
   (base/ability
    :name "Chaotic"
@@ -766,7 +766,17 @@
     "* Alien"
    :summary
     "Take on characteristics of the host
-     * [Power]: [Reproduction]")
+     * [Power]: [Spawning]")
+  (base/ability
+   :name "Copy Other"
+   :summary
+    "Split target into 2 copies, each with -1 on all abilities
+     * [Power]: [Spawning]")
+  (base/ability
+   :name "Copy Self"
+   :summary
+    "Split yourself into 2 copies, each with -1 on all abilities
+     * [Power]: [Spawning]")
   (base/ability
    :name "Corrupted"
    :summary
@@ -908,6 +918,10 @@
     "* Effects only unliving objects
      * [Power]: [Transmutation]
      * A target that takes Destruction Tokens equal to Body are completely destroyed.")
+  (base/ability
+   :name "Detach Body Parts"
+   :summary
+     "* [Power]: [Spawning]")
   (base/ability
    :name "Detail Oriented"
    :summary
@@ -1157,7 +1171,7 @@
    :name "Egg Laying"
    :summary
     "Can lay eggs
-     * [Power]: [Reproduction]")
+     * [Power]: [Spawning]")
   (base/ability
    :name "Ego Whip"
    :summary
@@ -1558,7 +1572,7 @@
   (base/ability
    :name "Faster than Light"
    :summay
-    "* [Power]: [Movement:Stellar]")
+    "* [Power]: [Move:Stellar]")
   (base/ability
    :name "Fuel Scoop"
    :summary
@@ -1790,14 +1804,14 @@
      * Let's write something on the carpet... I know how about 'Mother SUCKS'. - Drop Dead Fred"
    :summary "Create a character with a distinct personality of your choice that only the target can see.")
   (base/ability
-   :name "Imitation: Creature"
+   :name "Imitation:Creature"
    :reference
     "* So, how do we know who's human? If I was an imitation, a perfect imitation, how would you know it was really me? - Childs, The Thing"
    :summary
     "* Imititate another creature
      * [Power]: [Shapeshift]")
   (base/ability
-   :name "Imitation: Inanimate"
+   :name "Imitation:Inanimate"
    :summary
     "* Imititate an inanimate object
      * [Power]: [Shapeshift]")
@@ -1945,7 +1959,7 @@
    :name "Large Litter"
    :summary
     "Many offspring from each pregnancy
-     * [Power]: [Reproduction]")
+     * [Power]: [Spawning]")
   (base/ability
    :name "Leatherworking"
    :summary
@@ -2270,7 +2284,7 @@
      * Alien"
    :summary
     "Offspring are injected into a host
-     * [Power]: [Reproduction]")
+     * [Power]: [Spawning]")
   (base/ability
    :name "Parry"
    :summary
@@ -2599,12 +2613,12 @@
    :name "Rapid Gestation"
    :summary
     "Short period between fertilization and birth
-     * [Power]: [Reproduction]")
+     * [Power]: [Spawning]")
   (base/ability
    :name "Rapid Maturity"
    :summary
     "Offspring mature fully very quickly
-     * [Power]: [Reproduction]")
+     * [Power]: [Spawning]")
   (base/ability
    :name "Rapid Metabolism"
    :summary
@@ -3528,7 +3542,9 @@
    :summary
     "* [Power]: [Shamanism]")
   (base/ability
-   :name "Wall Crawling")
+   :name "Wall Crawling"
+   :summary
+    "* [Power]: [Move:Ground]")
   (base/ability
    :name "Wall of Wonders"
    :summary
@@ -3537,7 +3553,7 @@
   (base/ability
    :name "Wall Running"
    :summary
-    "* [Power]: [Movement]
+    "* [Power]: [Move:Ground]
      * Requires: [Wall Crawling]")
   (base/ability
    :name "War Training"

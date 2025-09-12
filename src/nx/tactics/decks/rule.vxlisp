@@ -266,6 +266,22 @@
    :image "images/rule-description.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Disabled"
+   :image "images/rule-disabled.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Disabled represents joint holds and locks. Add this to related Damage
+     Minor - Joint Twist
+     Major - Joint Lock. Impaired
+     Critical - Joint Bar. Stun:1 Impaired
+     Extreme - Dislocation. Stun:2 Immobilized
+     * Arm, Leg, Hand, Foot - Dislocated. Useless
+     * Head - Strangle Hold. Choking:3 Dying
+     * Shoulders - Shoulder Dislocated. Useless
+     * Vitals - Hip Dislocated. Useless
+     Damage - Each Damage dealt to Disabler reduces Severity by 1
+     Escape - IF out of Disabler reach")
+  (base/rule
    :name "Disadvantage"
    :image "images/rule-disadvantage.svg"
    :layout base/cardlayout-imageonly)
@@ -612,37 +628,37 @@
    :image "images/rule-power.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Power List"
-   :image "images/rule-power-list.svg"
+   :name "Power List 1"
+   :image "images/rule-power-list-1.svg"
    :layout base/cardlayout-imageonly
    :summary
     "Physical
      * Acidic
      * Agility
-     * Combine
+     * Armor
+     * Bonds
      * Diseases
-     * Life Support
+     * Implants
      * Longevity
      * Quickness
-     * Reproduction
      * Senses
      * Size
-     * Spawning
-     * Special Ability
      * Strength
      * Toughness
      * Toxins
-     * Weakness:Physical
-     Gear
-     * Armor
-     * Bonds
-     * Computer Control
-     * Implants
      * Weapon
      * Wealth
+     Vehicle
+     * Cabin
+     * Cargo
+     * Equipment
+     * Factory
+     * Hanger
+     * Laboratory
+     * Life Support
      Alteration
      * Adaptation
-     * Altered Skin
+     * Combine
      * Flexible
      * Healing
      * Invisibility
@@ -650,39 +666,31 @@
      * Metamorphose
      * Mutate
      * Shapeshift
+     * Spawning
+     * Special Ability
      * Transform
      * Transmutation
      * Vampirism
-     Mental
-     * Charm
-     * Domination
-     * Empathy
-     * Illusion
-     * Intuition
-     * Madness
-     * Mental Combat
-     * Mental Fortitude
-     * Mentalism
-     * Mind Over Matter
-     * Presence
-     * Psychic Power
-     * Weakness:Mental
-     * Weakness:Social
      Elements
      * Air
      * Cold
      * Earth
      * Electricity
      * Fire
+     * Heat
      * Water
-     * Weather
-     Energies
+     * Weather")
+  (base/rule
+   :name "Power List 2"
+   :image "images/rule-power-list-2.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Energies
      * Density
      * Energy Control
      * Explosive
      * Forces
      * Gravity
-     * Heat
      * Inertia
      * Light
      * Magnetism
@@ -694,24 +702,32 @@
      * Sound
      * Time
      * Vibration
+     Weakness
+     * Weakness:Physical
+     * Weakness:Mental
+     * Weakness:Social
+     Mental
+     * Charm
+     * Computer Control
+     * Domination
+     * Empathy
+     * Intuition
+     * Madness
+     * Mental Combat
+     * Mentalism
+     * Mind Over Matter
+     * Presence
+     * Psychic Combat
      Travel
      * Digging
      * Dimensional
      * Flight
-     * Movement
-     * Movement:Ground
-     * Movement:Space
-     * Movement:Stellar
-     * Movement:Water
+     * Move:Ground
+     * Move:Space
+     * Move:Stellar
+     * Move:Water
      * Teleportation
-     * Time Travel
-     Vehicle
-     * Cabin
-     * Cargo
-     * Equipment
-     * Factory
-     * Hanger
-     * Laboratory")
+     * Time Travel")
   (base/rule
    :name "Pull/Push"
    :image "images/rule-pull-push.svg"

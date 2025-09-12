@@ -435,6 +435,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Disabled",
+        ":image",
+        "images/rule-disabled.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Disabled represents joint holds and locks. Add this to related Damage\nMinor - Joint Twist\nMajor - Joint Lock. Impaired\nCritical - Joint Bar. Stun:1 Impaired\nExtreme - Dislocation. Stun:2 Immobilized\n* Arm, Leg, Hand, Foot - Dislocated. Useless\n* Head - Strangle Hold. Choking:3 Dying\n* Shoulders - Shoulder Dislocated. Useless\n* Vitals - Hip Dislocated. Useless\nDamage - Each Damage dealt to Disabler reduces Severity by 1\nEscape - IF out of Disabler reach"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Disadvantage",
         ":image",
         "images/rule-disadvantage.svg",
@@ -895,13 +906,24 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Power List",
+        "Power List 1",
         ":image",
-        "images/rule-power-list.svg",
+        "images/rule-power-list-1.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Physical\n* Acidic\n* Agility\n* Combine\n* Diseases\n* Life Support\n* Longevity\n* Quickness\n* Reproduction\n* Senses\n* Size\n* Spawning\n* Special Ability\n* Strength\n* Toughness\n* Toxins\n* Weakness:Physical\nMental\n* Charm\n* Domination\n* Empathy\n* Illusion\n* Intuition\n* Madness\n* Mental Combat\n* Mental Fortitude\n* Mentalism\n* Mind Over Matter\n* Presence\n* Psychic Power\n* Weakness:Mental\n* Weakness:Social\nAlteration\n* Adaptation\n* Altered Skin\n* Flexible\n* Healing\n* Invisibility\n* Lycanthropy\n* Shapeshift\n* Transfiguration\n* Transform\n* Transformation\n* Transmutation\n* Vampirism\nElements\n* Air\n* Cold\n* Earth\n* Electricity\n* Fire\n* Water\n* Weather\nEnergies\n* Atomic Control\n* Density\n* Energy Control\n* Explosive\n* Forces\n* Gravity\n* Heat\n* Inertia\n* Light\n* Magnetism\n* Phasing\n* Power Control\n* Radiation\n* Reality\n* Sound\n* Time\n* Vibration\nGear\n* Armor\n* Bonds\n* Implants\n* Netrunning\n* Shielding\n* Weapon\n* Wealth\nTravel\n* Digging\n* Dimensional\n* Flight\n* Movement\n* Movement:Ground\n* Movement:Space\n* Movement:Stellar\n* Movement:Water\n* Teleportation\n* Time Travel\nVehicle\n* Cabin\n* Cargo\n* Equipment\n* Factory\n* Hanger\n* Laboratory"
+        "Physical\n* Acidic\n* Agility\n* Armor\n* Bonds\n* Diseases\n* Implants\n* Longevity\n* Quickness\n* Senses\n* Size\n* Strength\n* Toughness\n* Toxins\n* Weapon\n* Wealth\nVehicle\n* Cabin\n* Cargo\n* Equipment\n* Factory\n* Hanger\n* Laboratory\n* Life Support\nAlteration\n* Adaptation\n* Combine\n* Flexible\n* Healing\n* Invisibility\n* Lycanthropy\n* Metamorphose\n* Mutate\n* Shapeshift\n* Spawning\n* Special Ability\n* Transform\n* Transmutation\n* Vampirism\nElements\n* Air\n* Cold\n* Earth\n* Electricity\n* Fire\n* Heat\n* Water\n* Weather"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Power List 2",
+        ":image",
+        "images/rule-power-list-2.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Energies\n* Density\n* Energy Control\n* Explosive\n* Forces\n* Gravity\n* Inertia\n* Light\n* Magnetism\n* Phasing\n* Power Control\n* Radiation\n* Reality\n* Shielding\n* Sound\n* Time\n* Vibration\nWeakness\n* Weakness:Physical\n* Weakness:Mental\n* Weakness:Social\nMental\n* Charm\n* Computer Control\n* Domination\n* Empathy\n* Intuition\n* Madness\n* Mental Combat\n* Mentalism\n* Mind Over Matter\n* Presence\n* Psychic Combat\nTravel\n* Digging\n* Dimensional\n* Flight\n* Move:Ground\n* Move:Space\n* Move:Stellar\n* Move:Water\n* Teleportation\n* Time Travel"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},

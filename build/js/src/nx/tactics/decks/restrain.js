@@ -530,21 +530,27 @@ export default class nx_tactics_decks_restrain {
     // (const restrain-2c)
     Object.assign(nx_tactics_decks_restrain.c_restrain_2c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-2c",
       ":name",
-      "Constrict: Right Foot",
+      "Restrain: Right Foot",
       ":titles",
-      "Constrict: Right Lower Leg/Shin/Ankle/Foot",
+      "Restrain: Right Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":image",
       "images/damage-restrain-2c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Ankle Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Shin Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"
+      "Minor: Toe Hold. Slow:1\nMajor: Ankle Hooked. Slow:1 Impaired\nCritical: Foot Trapped. Slow:2 Impaired\nExtreme: Foot Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-2d)
     Object.assign(nx_tactics_decks_restrain.c_restrain_2d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-2d",
       ":name",
       "Restrain: Right Foot",
       ":titles",
@@ -553,23 +559,29 @@ export default class nx_tactics_decks_restrain {
       nx_tactics_base.c_ranksuit_2d,
       ":image",
       "images/damage-restrain-2d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Toes Ensnared. Slow:1 Remove:1 Action\nModerate: Foot Ensnared. Slow:2 Remove:2 Actions\nMajor: Ankle Ensnared. Slow:3 Remove:3 Actions\nExtreme: Shin Ensnared. [Hobbled] Remove:4 Actions"
+      "Minor: Toe Hold. Slow:1\nMajor: Ankle Hooked. Slow:1 Impaired\nCritical: Foot Trapped. Slow:2 Impaired\nExtreme: Foot Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-2h)
     Object.assign(nx_tactics_decks_restrain.c_restrain_2h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-2h",
       ":name",
-      "Hold: Right Foot",
+      "Restrain: Right Foot",
       ":titles",
-      "Hold: Right Lower Leg/Shin/Ankle/Foot",
+      "Restrain: Right Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2h,
       ":image",
       "images/damage-restrain-2h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Toes Held. Pull:1. Remove:Any Hit\nModerate: Foot Held. Pull:1. Remove:1 Damage\nMajor: Ankle Held. Pull:1. Remove:2 Damage\nExtreme: Shin Held. Knockdown. Pull:1. Remove:3 Damage"
+      "Minor: Toe Hold. Slow:1\nMajor: Ankle Hooked. Slow:1 Impaired\nCritical: Foot Trapped. Slow:2 Impaired\nExtreme: Foot Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-2s)
@@ -578,35 +590,43 @@ export default class nx_tactics_decks_restrain {
       ":id",
       "damage-restrain-2s",
       ":name",
-      "Disable: Right Foot",
+      "Restrain: Right Foot",
       ":titles",
-      "Disable: Right Lower Leg/Shin/Ankle/Foot",
+      "Restrain: Right Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
       ":image",
       "images/damage-restrain-2s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Foot lock. Slow:1. Remove:Any Hit\nModerate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Foot bones dislocated. Foot useless. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Ankle dislocated. Ankle useless. [Hobbled] Stun:3. Remove:3 Damage"
+      "Minor: Toe Hold. Slow:1\nMajor: Ankle Hooked. Slow:1 Impaired\nCritical: Foot Trapped. Slow:2 Impaired\nExtreme: Foot Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-3c)
     Object.assign(nx_tactics_decks_restrain.c_restrain_3c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-3c",
       ":name",
-      "Constrict: Left Foot",
+      "Restrain: Left Foot",
       ":titles",
-      "Constrict: Left Lower Leg/Shin/Ankle/Foot",
+      "Restrain: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
       ":image",
       "images/damage-restrain-3c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Ankle Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Shin Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"
+      "Minor: Toe Hold. Slow:1\nMajor: Ankle Hooked. Slow:1 Impaired\nCritical: Foot Trapped. Slow:2 Impaired\nExtreme: Foot Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-3d)
     Object.assign(nx_tactics_decks_restrain.c_restrain_3d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-3d",
       ":name",
       "Restrain: Left Foot",
       ":titles",
@@ -615,58 +635,74 @@ export default class nx_tactics_decks_restrain {
       nx_tactics_base.c_ranksuit_3d,
       ":image",
       "images/damage-restrain-3d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Toes Ensnared. Slow:1 Remove:1 Action\nModerate: Foot Ensnared. Slow:2 Remove:2 Actions\nMajor: Ankle Ensnared. Slow:3 Remove:3 Actions\nExtreme: Shin Ensnared. [Hobbled] Remove:4 Actions"
+      "Minor: Toe Hold. Slow:1\nMajor: Ankle Hooked. Slow:1 Impaired\nCritical: Foot Trapped. Slow:2 Impaired\nExtreme: Foot Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-3h)
     Object.assign(nx_tactics_decks_restrain.c_restrain_3h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-3h",
       ":name",
-      "Hold: Left Foot",
+      "Restrain: Left Foot",
       ":titles",
-      "Hold: Left Lower Leg/Shin/Ankle/Foot",
+      "Restrain: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3h,
       ":image",
       "images/damage-restrain-3h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Toes Held. Pull:1. Remove:Any Hit\nModerate: Foot Held. Pull:1. Remove:1 Damage\nMajor: Ankle Held. Pull:1. Remove:2 Damage\nExtreme: Shin Held. Knockdown. Pull:1. Remove:3 Damage"
+      "Minor: Toe Hold. Slow:1\nMajor: Ankle Hooked. Slow:1 Impaired\nCritical: Foot Trapped. Slow:2 Impaired\nExtreme: Foot Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-3s)
     Object.assign(nx_tactics_decks_restrain.c_restrain_3s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-3s",
       ":name",
-      "Disable: Left Foot",
+      "Restrain: Left Foot",
       ":titles",
-      "Disable: Left Lower Leg/Shin/Ankle/Foot",
+      "Restrain: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3s,
       ":image",
       "images/damage-restrain-3s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Foot lock. Slow:1. Remove:Any Hit\nModerate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Foot bones dislocated. Foot useless. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Ankle dislocated. Ankle useless. [Hobbled] Stun:3. Remove:3 Damage"
+      "Minor: Toe Hold. Slow:1\nMajor: Ankle Hooked. Slow:1 Impaired\nCritical: Foot Trapped. Slow:2 Impaired\nExtreme: Foot Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-4c)
     Object.assign(nx_tactics_decks_restrain.c_restrain_4c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-4c",
       ":name",
-      "Constrict: Right Leg",
+      "Restrain: Right Leg",
       ":titles",
-      "Constrict: Right Upper Leg/Thigh/Knee",
+      "Restrain: Right Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":image",
       "images/damage-restrain-4c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Knee Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Thigh Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"
+      "Minor: Thigh Hold. Slow:1\nMajor: Knee Hooked. Slow:1 Impaired\nCritical: Leg Trapped. Slow:2 Impaired\nExtreme: Leg Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-4d)
     Object.assign(nx_tactics_decks_restrain.c_restrain_4d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-4d",
       ":name",
       "Restrain: Right Leg",
       ":titles",
@@ -675,58 +711,74 @@ export default class nx_tactics_decks_restrain {
       nx_tactics_base.c_ranksuit_4d,
       ":image",
       "images/damage-restrain-4d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Leg Ensnared. Slow:1 Remove:1 Action\nModerate: Leg Ensnared. Slow:2 Remove:2 Actions\nMajor: Knee Ensnared. Slow:3 Remove:3 Actions\nExtreme: Thigh Ensnared. [Hobbled] Remove:4 Actions"
+      "Minor: Thigh Hold. Slow:1\nMajor: Knee Hooked. Slow:1 Impaired\nCritical: Leg Trapped. Slow:2 Impaired\nExtreme: Leg Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-4h)
     Object.assign(nx_tactics_decks_restrain.c_restrain_4h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-4h",
       ":name",
-      "Hold: Right Leg",
+      "Restrain: Right Leg",
       ":titles",
-      "Hold: Right Upper Leg/Thigh/Knee",
+      "Restrain: Right Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4h,
       ":image",
       "images/damage-restrain-4h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Leg Held. Pull:1. Remove:Any Hit\nModerate: Leg Held. Pull:1. Remove:1 Damage\nMajor: Knee Held. Pull:1. Remove:2 Damage\nExtreme: Thigh Held. Knockdown. Pull:1. Remove:3 Damage"
+      "Minor: Thigh Hold. Slow:1\nMajor: Knee Hooked. Slow:1 Impaired\nCritical: Leg Trapped. Slow:2 Impaired\nExtreme: Leg Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-4s)
     Object.assign(nx_tactics_decks_restrain.c_restrain_4s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-4s",
       ":name",
-      "Disable: Right Leg",
+      "Restrain: Right Leg",
       ":titles",
-      "Disable: Right Upper Leg/Thigh/Knee",
+      "Restrain: Right Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4s,
       ":image",
       "images/damage-restrain-4s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh held. Slow:1. Remove:Any Hit\nModerate: Knee held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Knee lock. Foot useless. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Knee dislocated. Knee useless. [Hobbled] Stun:3. Remove:3 Damage"
+      "Minor: Thigh Hold. Slow:1\nMajor: Knee Hooked. Slow:1 Impaired\nCritical: Leg Trapped. Slow:2 Impaired\nExtreme: Leg Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-5c)
     Object.assign(nx_tactics_decks_restrain.c_restrain_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-5c",
       ":name",
-      "Constrict: Left Leg",
+      "Restrain: Left Leg",
       ":titles",
-      "Constrict: Left Upper Leg/Thigh/Knee",
+      "Restrain: Left Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
       "images/damage-restrain-5c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Knee Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Thigh Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"
+      "Minor: Thigh Hold. Slow:1\nMajor: Knee Hooked. Slow:1 Impaired\nCritical: Leg Trapped. Slow:2 Impaired\nExtreme: Leg Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-5d)
     Object.assign(nx_tactics_decks_restrain.c_restrain_5d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-5d",
       ":name",
       "Restrain: Left Leg",
       ":titles",
@@ -735,8 +787,10 @@ export default class nx_tactics_decks_restrain {
       nx_tactics_base.c_ranksuit_5d,
       ":image",
       "images/damage-restrain-5d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Leg Ensnared. Slow:1 Remove:1 Action\nModerate: Leg Ensnared. Slow:2 Remove:2 Actions\nMajor: Knee Ensnared. Slow:3 Remove:3 Actions\nExtreme: Thigh Ensnared. [Hobbled] Remove:4 Actions"
+      "Minor: Thigh Hold. Slow:1\nMajor: Knee Hooked. Slow:1 Impaired\nCritical: Leg Trapped. Slow:2 Impaired\nExtreme: Leg Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-5h)
@@ -745,15 +799,17 @@ export default class nx_tactics_decks_restrain {
       ":id",
       "damage-restrain-5h",
       ":name",
-      "Hold: Left Leg",
+      "Restrain: Left Leg",
       ":titles",
-      "Hold: Left Upper Leg/Thigh/Knee",
+      "Restrain: Left Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5h,
       ":image",
       "images/damage-restrain-5h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Leg Held. Pull:1. Remove:Any Hit\nModerate: Leg Held. Pull:1. Remove:1 Damage\nMajor: Knee Held. Pull:1. Remove:2 Damage\nExtreme: Thigh Held. Knockdown. Pull:1. Remove:3 Damage"
+      "Minor: Thigh Hold. Slow:1\nMajor: Knee Hooked. Slow:1 Impaired\nCritical: Leg Trapped. Slow:2 Impaired\nExtreme: Leg Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-5s)
@@ -762,35 +818,43 @@ export default class nx_tactics_decks_restrain {
       ":id",
       "damage-restrain-5s",
       ":name",
-      "Disable: Left Leg",
+      "Restrain: Left Leg",
       ":titles",
-      "Disable: Left Upper Leg/Thigh/Knee",
+      "Restrain: Left Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5s,
       ":image",
       "images/damage-restrain-5s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh held. Slow:1. Remove:Any Hit\nModerate: Knee held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Knee lock. Foot useless. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Knee dislocated. Knee useless. [Hobbled] Stun:3. Remove:3 Damage"
+      "Minor: Thigh Hold. Slow:1\nMajor: Knee Hooked. Slow:1 Impaired\nCritical: Leg Trapped. Slow:2 Impaired\nExtreme: Leg Pinned. Slow:2 Immobilized"
     ))
 
     // (const restrain-6c)
     Object.assign(nx_tactics_decks_restrain.c_restrain_6c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-6c",
       ":name",
-      "Constrict: Right Hand",
+      "Restrain: Right Hand",
       ":titles",
-      "Constrict: Right Hand/Wrist",
+      "Restrain: Right Hand/Wrist",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":image",
       "images/damage-restrain-6c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Fingers Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Hand Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Wrist Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Forearm Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"
+      "Minor: Forearm Hold. Stun:1\nMajor: Wrist Hooked. Stun:1 Impaired\nCritical: Forearm Trapped. Stun:2 Impaired\nExtreme: Forearm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-6d)
     Object.assign(nx_tactics_decks_restrain.c_restrain_6d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-6d",
       ":name",
       "Restrain: Right Hand",
       ":titles",
@@ -799,58 +863,74 @@ export default class nx_tactics_decks_restrain {
       nx_tactics_base.c_ranksuit_6d,
       ":image",
       "images/damage-restrain-6d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Fingers Ensnared. Slow:1 Remove:1 Action\nModerate: Hand Ensnared. Slow:2 Remove:2 Actions\nMajor: Wrist Ensnared. Slow:3 Remove:3 Actions\nExtreme: Forearm Ensnared. [Impaired] Remove:4 Actions"
+      "Minor: Forearm Hold. Stun:1\nMajor: Wrist Hooked. Stun:1 Impaired\nCritical: Forearm Trapped. Stun:2 Impaired\nExtreme: Forearm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-6h)
     Object.assign(nx_tactics_decks_restrain.c_restrain_6h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-6h",
       ":name",
-      "Hold: Right Hand",
+      "Restrain: Right Hand",
       ":titles",
-      "Hold: Right Hand/Wrist",
+      "Restrain: Right Hand/Wrist",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6h,
       ":image",
       "images/damage-restrain-6h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Fingers Held. Pull:1. Remove:Any Hit\nModerate: Hand Held. Pull:1. Remove:1 Damage\nMajor: Wrist Held. Pull:1. Remove:2 Damage\nExtreme: Forearm Held. Knockdown. Pull:1. Remove:3 Damage"
+      "Minor: Forearm Hold. Stun:1\nMajor: Wrist Hooked. Stun:1 Impaired\nCritical: Forearm Trapped. Stun:2 Impaired\nExtreme: Forearm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-6s)
     Object.assign(nx_tactics_decks_restrain.c_restrain_6s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-6s",
       ":name",
-      "Disable: Right Hand",
+      "Restrain: Right Hand",
       ":titles",
-      "Disable: Right Hand/Wrist",
+      "Restrain: Right Hand/Wrist",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s,
       ":image",
       "images/damage-restrain-6s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hand lock. Slow:1. Remove:Any Hit\nModerate: Wrist lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Hand bones dislocated. Hand useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Wrist dislocated. Wrist useless. [Impaired] Stun:3. Remove:3 Damage"
+      "Minor: Forearm Hold. Stun:1\nMajor: Wrist Hooked. Stun:1 Impaired\nCritical: Forearm Trapped. Stun:2 Impaired\nExtreme: Forearm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-7c)
     Object.assign(nx_tactics_decks_restrain.c_restrain_7c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-7c",
       ":name",
-      "Constrict: Left Hand",
+      "Restrain: Left Hand",
       ":titles",
-      "Constrict: Left Hand/Wrist",
+      "Restrain: Left Hand/Wrist",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":image",
       "images/damage-restrain-7c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Fingers Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Hand Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Wrist Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Forearm Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"
+      "Minor: Forearm Hold. Stun:1\nMajor: Wrist Hooked. Stun:1 Impaired\nCritical: Forearm Trapped. Stun:2 Impaired\nExtreme: Forearm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-7d)
     Object.assign(nx_tactics_decks_restrain.c_restrain_7d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-7d",
       ":name",
       "Restrain: Left Hand",
       ":titles",
@@ -859,58 +939,74 @@ export default class nx_tactics_decks_restrain {
       nx_tactics_base.c_ranksuit_7d,
       ":image",
       "images/damage-restrain-7d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Fingers Ensnared. Slow:1 Remove:1 Action\nModerate: Hand Ensnared. Slow:2 Remove:2 Actions\nMajor: Wrist Ensnared. Slow:3 Remove:3 Actions\nExtreme: Forearm Ensnared. [Impaired] Remove:4 Actions"
+      "Minor: Forearm Hold. Stun:1\nMajor: Wrist Hooked. Stun:1 Impaired\nCritical: Forearm Trapped. Stun:2 Impaired\nExtreme: Forearm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-7h)
     Object.assign(nx_tactics_decks_restrain.c_restrain_7h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-7h",
       ":name",
-      "Hold: Left Hand",
+      "Restrain: Left Hand",
       ":titles",
-      "Hold: Left Hand/Wrist",
+      "Restrain: Left Hand/Wrist",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h,
       ":image",
       "images/damage-restrain-7h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Fingers Held. Pull:1. Remove:Any Hit\nModerate: Hand Held. Pull:1. Remove:1 Damage\nMajor: Wrist Held. Pull:1. Remove:2 Damage\nExtreme: Forearm Held. Knockdown. Pull:1. Remove:3 Damage"
+      "Minor: Forearm Hold. Stun:1\nMajor: Wrist Hooked. Stun:1 Impaired\nCritical: Forearm Trapped. Stun:2 Impaired\nExtreme: Forearm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-7s)
     Object.assign(nx_tactics_decks_restrain.c_restrain_7s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-7s",
       ":name",
-      "Disable: Left Hand",
+      "Restrain: Left Hand",
       ":titles",
-      "Disable: Left Hand/Wrist",
+      "Restrain: Left Hand/Wrist",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7s,
       ":image",
       "images/damage-restrain-7s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hand lock. Slow:1. Remove:Any Hit\nModerate: Wrist lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Hand bones dislocated. Hand useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Wrist dislocated. Wrist useless. [Impaired] Stun:3. Remove:3 Damage"
+      "Minor: Forearm Hold. Stun:1\nMajor: Wrist Hooked. Stun:1 Impaired\nCritical: Forearm Trapped. Stun:2 Impaired\nExtreme: Forearm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-8c)
     Object.assign(nx_tactics_decks_restrain.c_restrain_8c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-8c",
       ":name",
-      "Constrict: Right Arm",
+      "Restrain: Right Arm",
       ":titles",
-      "Constrict: Right Upper Arm/Elbow",
+      "Restrain: Right Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":image",
       "images/damage-restrain-8c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Arm Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Arm Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Elbow Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Bicep Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"
+      "Minor: Upper Arm Hold. Stun:1\nMajor: Elbow Hooked. Stun:1 Impaired\nCritical: Arm Trapped. Stun:2 Impaired\nExtreme: Arm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-8d)
     Object.assign(nx_tactics_decks_restrain.c_restrain_8d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-8d",
       ":name",
       "Restrain: Right Arm",
       ":titles",
@@ -919,58 +1015,74 @@ export default class nx_tactics_decks_restrain {
       nx_tactics_base.c_ranksuit_8d,
       ":image",
       "images/damage-restrain-8d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Elbow Ensnared.\nModerate: Elbow Bond. Slow:1 Remove:1 Actions\nMajor: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions\nExtreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"
+      "Minor: Upper Arm Hold. Stun:1\nMajor: Elbow Hooked. Stun:1 Impaired\nCritical: Arm Trapped. Stun:2 Impaired\nExtreme: Arm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-8h)
     Object.assign(nx_tactics_decks_restrain.c_restrain_8h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-8h",
       ":name",
-      "Hold: Right Arm",
+      "Restrain: Right Arm",
       ":titles",
-      "Hold: Right Upper Arm/Elbow",
+      "Restrain: Right Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8h,
       ":image",
       "images/damage-restrain-8h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Arm Held. Pull:1. Remove:Any Hit\nModerate: Arm Held. Pull:1. Remove:1 Damage\nMajor: Elbow Held. Pull:1. Remove:2 Damage\nExtreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"
+      "Minor: Upper Arm Hold. Stun:1\nMajor: Elbow Hooked. Stun:1 Impaired\nCritical: Arm Trapped. Stun:2 Impaired\nExtreme: Arm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-8s)
     Object.assign(nx_tactics_decks_restrain.c_restrain_8s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-8s",
       ":name",
-      "Disable: Right Arm",
+      "Restrain: Right Arm",
       ":titles",
-      "Disable: Right Upper Arm/Elbow",
+      "Restrain: Right Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8s,
       ":image",
       "images/damage-restrain-8s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Bicep held. Slow:1. Remove:Any Hit\nModerate: Elbow held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"
+      "Minor: Upper Arm Hold. Stun:1\nMajor: Elbow Hooked. Stun:1 Impaired\nCritical: Arm Trapped. Stun:2 Impaired\nExtreme: Arm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-9c)
     Object.assign(nx_tactics_decks_restrain.c_restrain_9c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-9c",
       ":name",
-      "Constrict: Left Arm",
+      "Restrain: Left Arm",
       ":titles",
-      "Constrict: Left Upper Arm/Elbow",
+      "Restrain: Left Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":image",
       "images/damage-restrain-9c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Arm Constricted. Slow:1 Every turn. Remove:Any Hit\nModerate: Arm Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Elbow Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Bicep Constricted. [Impaired]. Slow:3 Every turn. Remove:3 Damage"
+      "Minor: Upper Arm Hold. Stun:1\nMajor: Elbow Hooked. Stun:1 Impaired\nCritical: Arm Trapped. Stun:2 Impaired\nExtreme: Arm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-9d)
     Object.assign(nx_tactics_decks_restrain.c_restrain_9d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-9d",
       ":name",
       "Restrain: Left Arm",
       ":titles",
@@ -979,38 +1091,48 @@ export default class nx_tactics_decks_restrain {
       nx_tactics_base.c_ranksuit_9d,
       ":image",
       "images/damage-restrain-9d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Elbow Ensnared.\nModerate: Elbow Bond. Slow:1 Remove:1 Actions\nMajor: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions\nExtreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"
+      "Minor: Upper Arm Hold. Stun:1\nMajor: Elbow Hooked. Stun:1 Impaired\nCritical: Arm Trapped. Stun:2 Impaired\nExtreme: Arm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-9h)
     Object.assign(nx_tactics_decks_restrain.c_restrain_9h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-9h",
       ":name",
-      "Hold: Left Arm",
+      "Restrain: Left Arm",
       ":titles",
-      "Hold: Left Upper Arm/Elbow",
+      "Restrain: Left Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9h,
       ":image",
       "images/damage-restrain-9h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Arm Held. Pull:1. Remove:Any Hit\nModerate: Arm Held. Pull:1. Remove:1 Damage\nMajor: Elbow Held. Pull:1. Remove:2 Damage\nExtreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"
+      "Minor: Upper Arm Hold. Stun:1\nMajor: Elbow Hooked. Stun:1 Impaired\nCritical: Arm Trapped. Stun:2 Impaired\nExtreme: Arm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-9s)
     Object.assign(nx_tactics_decks_restrain.c_restrain_9s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-9s",
       ":name",
-      "Disable: Left Arm",
+      "Restrain: Left Arm",
       ":titles",
-      "Disable: Left Upper Arm/Elbow",
+      "Restrain: Left Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9s,
       ":image",
       "images/damage-restrain-9s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Bicep held. Slow:1. Remove:Any Hit\nModerate: Elbow held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"
+      "Minor: Upper Arm Hold. Stun:1\nMajor: Elbow Hooked. Stun:1 Impaired\nCritical: Arm Trapped. Stun:2 Impaired\nExtreme: Arm Pinned. Stun:2 Immobilized"
     ))
 
     // (const restrain-ac)
@@ -1019,7 +1141,7 @@ export default class nx_tactics_decks_restrain {
       ":id",
       "damage-restrain-ac",
       ":name",
-      "Constrict: Head",
+      "Restrain: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":image",
@@ -1027,7 +1149,7 @@ export default class nx_tactics_decks_restrain {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Pulled. Slow:1\nModerate: Face Constricted. Held:1 Body:-1\nMajor: Skull Constricted. Held:2 Body:-2\nExtreme: Neck Constricted. Held:3 Body:-3 Chocking:2"
+      "Minor: Hair Caught. Stress:1\nMajor: Neck Hooked. Stress:1 Impaired\nCritical: Head Trapped. Stress:2 Impaired\nExtreme: Head Pinned. Stress:2 Immobilized"
     ))
 
     // (const restrain-ad)
@@ -1044,7 +1166,7 @@ export default class nx_tactics_decks_restrain {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Ensnared. Slow:1\nModerate: Face Ensnared. Held:1 Speed:-1\nMajor: Head Ensnared. Held:2 Speed:-2\nExtreme: Neck Noose. Dying Held:3 Choking:2"
+      "Minor: Hair Caught. Stress:1\nMajor: Neck Hooked. Stress:1 Impaired\nCritical: Head Trapped. Stress:2 Impaired\nExtreme: Head Pinned. Stress:2 Immobilized"
     ))
 
     // (const restrain-ah)
@@ -1053,7 +1175,7 @@ export default class nx_tactics_decks_restrain {
       ":id",
       "damage-restrain-ah",
       ":name",
-      "Hold: Head",
+      "Restrain: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":image",
@@ -1061,7 +1183,7 @@ export default class nx_tactics_decks_restrain {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Held. Held:1. Drag\nModerate: Jaw Held. Held:2. Drag\nMajor: Head Held. Held:3. Drag\nExtreme: Neck Held. Held:4. Drag Knockdown:1"
+      "Minor: Hair Caught. Stress:1\nMajor: Neck Hooked. Stress:1 Impaired\nCritical: Head Trapped. Stress:2 Impaired\nExtreme: Head Pinned. Stress:2 Immobilized"
     ))
 
     // (const restrain-as)
@@ -1070,65 +1192,83 @@ export default class nx_tactics_decks_restrain {
       ":id",
       "damage-restrain-as",
       ":name",
-      "Disable: Head",
+      "Restrain: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":image",
       "images/damage-restrain-as.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hair Caught. Slow:1\nModerate: Head Lock. Held:1. Stun:1 Speed:-1\nMajor: Neck Sprained. Stun:2 Speed:-1\nExtreme: Neck Dislocated. Stun:3 Stress:3 Paralyzed"
+      "Minor: Hair Caught. Stress:1\nMajor: Neck Hooked. Stress:1 Impaired\nCritical: Head Trapped. Stress:2 Impaired\nExtreme: Head Pinned. Stress:2 Immobilized"
     ))
 
     // (const restrain-jc)
     Object.assign(nx_tactics_decks_restrain.c_restrain_jc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-jc",
       ":name",
-      "Constrict: Abdomen",
+      "Restrain: Abdomen",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":image",
       "images/damage-restrain-jc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Belly Ensnared. Slow:1\nModerate: Belly Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Stomach Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Diaphram constricted. Cannot inhale. [Choking]"
+      "Minor: Abdomen Hold. Fatigue:1\nMajor: Abdomen Hooked. Fatigue:1 Impaired\nCritical: Waist Trapped. Fatigue:2 Impaired\nExtreme: Waist Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-jd)
     Object.assign(nx_tactics_decks_restrain.c_restrain_jd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-jd",
       ":name",
       "Restrain: Abdomen",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jd,
       ":image",
       "images/damage-restrain-js.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Abdomen Ensnared.\nModerate: Abdomen Ensnared. Slow:1 Remove:1 Actions\nMajor: Abdomen Ensnared. Slow:2 Remove:2 Actions\nExtreme: Abdomen Bound. Slow:3 Remove:3 Actions"
+      "Minor: Abdomen Hold. Fatigue:1\nMajor: Abdomen Hooked. Fatigue:1 Impaired\nCritical: Waist Trapped. Fatigue:2 Impaired\nExtreme: Waist Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-jh)
     Object.assign(nx_tactics_decks_restrain.c_restrain_jh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-jh",
       ":name",
-      "Hold: Abdomen",
+      "Restrain: Abdomen",
       ":ranksuit",
-      nx_tactics_base.c_ranksuit_jc,
+      nx_tactics_base.c_ranksuit_jh,
       ":image",
       "images/damage-restrain-jc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Abdomen Held. Pull:1. Remove:Any Hit\nModerate: Abdomen Held. Pull:1. Remove:1 Damage\nMajor: Waist Held. Pull:1. Remove:2 Damage\nExtreme: Waist Held. Pull:1. Remove:3 Damage"
+      "Minor: Abdomen Hold. Fatigue:1\nMajor: Abdomen Hooked. Fatigue:1 Impaired\nCritical: Waist Trapped. Fatigue:2 Impaired\nExtreme: Waist Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-js)
     Object.assign(nx_tactics_decks_restrain.c_restrain_js, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-js",
       ":name",
-      "Disable: Abdomen",
+      "Restrain: Abdomen",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_js,
       ":image",
       "images/damage-restrain-js.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Abdomen Held. Pull:1. Remove:Any Hit\nModerate: Abdomen Held. Pull:1. Remove:1 Damage\nMajor: Waist Held. Pull:1. Remove:2 Damage\nExtreme: Waist Held. Pull:1. Remove:3 Damage"
+      "Minor: Abdomen Hold. Fatigue:1\nMajor: Abdomen Hooked. Fatigue:1 Impaired\nCritical: Waist Trapped. Fatigue:2 Impaired\nExtreme: Waist Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-kc)
@@ -1145,7 +1285,7 @@ export default class nx_tactics_decks_restrain {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Shoulder Caught. Slow:1\nModerate: Shoulder Limited. Slow:1 Impaired\nMajor: Shoulders Restrained. Slow:2 Immobilized\nExtreme: Throat Restricted. Choking:3 Can't Speak"
+      "Minor: Shoulder Hold. Fatigue:1\nMajor: Shoulder Hooked. Fatigue:1 Impaired\nCritical: Shoulder Trapped. Fatigue:2 Impaired\nExtreme: Shoulder Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-kd)
@@ -1162,137 +1302,177 @@ export default class nx_tactics_decks_restrain {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Shoulder Caught. Slow:1\nModerate: Shoulder Limited. Slow:1 Impaired\nMajor: Shoulders Restrained. Slow:2 Immobilized\nExtreme: Throat Restricted. Choking:3 Can't Speak"
+      "Minor: Shoulder Hold. Fatigue:1\nMajor: Shoulder Hooked. Fatigue:1 Impaired\nCritical: Shoulder Trapped. Fatigue:2 Impaired\nExtreme: Shoulder Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-kh)
     Object.assign(nx_tactics_decks_restrain.c_restrain_kh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-kh",
       ":name",
-      "Hold: Shoulders",
+      "Restrain: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kh,
       ":image",
       "images/damage-restrain-kh.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Shoulder Held. Pull:1. Remove:Any Hit\nModerate: Shoulder Held. Pull:1. Remove:1 Damage\nMajor: Shoulders Held. Pull:1. Remove:2 Damage\nExtreme: Shoulders Held. Pull:1. Remove:3 Damage"
+      "Minor: Shoulder Hold. Fatigue:1\nMajor: Shoulder Hooked. Fatigue:1 Impaired\nCritical: Shoulder Trapped. Fatigue:2 Impaired\nExtreme: Shoulder Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-ks)
     Object.assign(nx_tactics_decks_restrain.c_restrain_ks, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-ks",
       ":name",
-      "Disable: Shoulders",
+      "Restrain: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ks,
       ":image",
       "images/damage-restrain-ks.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Shoulder caught. Slow:1. Remove:Any Hit\nModerate: Shoulder lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Shoulder sprained. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Shoulder dislocated. [Impaired] Stun:3. Remove:3 Damage"
+      "Minor: Shoulder Hold. Fatigue:1\nMajor: Shoulder Hooked. Fatigue:1 Impaired\nCritical: Shoulder Trapped. Fatigue:2 Impaired\nExtreme: Shoulder Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-qc)
     Object.assign(nx_tactics_decks_restrain.c_restrain_qc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-qc",
       ":name",
-      "Constrict: Chest",
+      "Restrain: Chest",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
       ":image",
       "images/damage-restrain-qc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Ribs Ensnared. Slow:1\nModerate: Ribs Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Chest Constricted. [Impaired]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Lungs constricted. Cannot inhale. [Choking]"
+      "Minor: Chest Hold. Fatigue:1\nMajor: Chest Caught. Fatigue:1 Impaired\nCritical: Chest Trapped. Fatigue:2 Impaired\nExtreme: Chest Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-qd)
     Object.assign(nx_tactics_decks_restrain.c_restrain_qd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-qd",
       ":name",
       "Restrain: Chest",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qd,
       ":image",
       "images/damage-restrain-qd.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Chest Ensnared.\nModerate: Chest Ensnared. Slow:1 Remove:1 Actions\nMajor: Chest Ensnared. Slow:2 Remove:2 Actions\nExtreme: Chest Bound. [Impaired] Remove:3 Actions"
+      "Minor: Chest Hold. Fatigue:1\nMajor: Chest Caught. Fatigue:1 Impaired\nCritical: Chest Trapped. Fatigue:2 Impaired\nExtreme: Chest Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-qh)
     Object.assign(nx_tactics_decks_restrain.c_restrain_qh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-qh",
       ":name",
-      "Hold: Chest",
+      "Restrain: Chest",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qh,
       ":image",
       "images/damage-restrain-qh.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Chest Held. Pull:1. Remove:Any Hit\nModerate: Chest Held. Pull:1. Slow:1 Remove:Any Hit\nMajor: Chest Held. Pull:1. Remove:1 Damage\nExtreme: Chest Held. Pull:1. Remove:2 Damage"
+      "Minor: Chest Hold. Fatigue:1\nMajor: Chest Caught. Fatigue:1 Impaired\nCritical: Chest Trapped. Fatigue:2 Impaired\nExtreme: Chest Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-qs)
     Object.assign(nx_tactics_decks_restrain.c_restrain_qs, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-qs",
       ":name",
-      "Disable: Chest",
+      "Restrain: Chest",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qs,
       ":image",
       "images/damage-restrain-qs.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Chest Held. Pull:1. Remove:Any Hit\nModerate: Chest Held. Pull:1. Slow:1 Remove:Any Hit\nMajor: Chest Held. Pull:1. Remove:1 Damage\nExtreme: Chest Held. Pull:1. Remove:2 Damage"
+      "Minor: Chest Hold. Fatigue:1\nMajor: Chest Caught. Fatigue:1 Impaired\nCritical: Chest Trapped. Fatigue:2 Impaired\nExtreme: Chest Pinned. Fatigue:2 Immobilized"
     ))
 
     // (const restrain-tc)
     Object.assign(nx_tactics_decks_restrain.c_restrain_tc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-tc",
       ":name",
-      "Constrict: Vitals",
+      "Restrain: Vitals",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
       ":image",
       "images/damage-restrain-tc.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hips Ensnared. Slow:1\nModerate: Hips Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Bladder Constricted. [Impaired]. Relieve yourself. Slow:2 Every turn. Remove:2 Damage\nExtreme: Bowels Constricted. [Immobilized]. Relieve yourself. Take 1 Damage to Vitals every turn."
+      "Minor: Hip Hold. Stress:1\nMajor: Hip Hooked. Stress:1 Impaired\nCritical: Hips Trapped. Stress:2 Impaired\nExtreme: Hips Pinned. Stress:2 Immobilized"
     ))
 
     // (const restrain-td)
     Object.assign(nx_tactics_decks_restrain.c_restrain_td, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-td",
       ":name",
       "Restrain: Vitals",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_td,
       ":image",
       "images/damage-restrain-td.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hips Ensnared.\nModerate: Hips Ensnared. Slow:1 Remove:1 Actions\nMajor: Hips Ensnared. Slow:2 Remove:2 Actions\nExtreme: Hips Bound. [Hobbled] Slow:3 Remove:3 Actions"
+      "Minor: Hip Hold. Stress:1\nMajor: Hip Hooked. Stress:1 Impaired\nCritical: Hips Trapped. Stress:2 Impaired\nExtreme: Hips Pinned. Stress:2 Immobilized"
     ))
 
     // (const restrain-th)
     Object.assign(nx_tactics_decks_restrain.c_restrain_th, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-th",
       ":name",
-      "Hold: Vitals",
+      "Restrain: Vitals",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_th,
       ":image",
       "images/damage-restrain-th.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hips Held. Pull:1. Remove:Any Hit\nModerate: Hips Held. Pull:1. Remove:1 Damage\nMajor: Buttocks Held. Pull:1. Remove:2 Damage\nExtreme: Crotch Held. Pull:1. Remove:3 Damage"
+      "Minor: Hip Hold. Stress:1\nMajor: Hip Hooked. Stress:1 Impaired\nCritical: Hips Trapped. Stress:2 Impaired\nExtreme: Hips Pinned. Stress:2 Immobilized"
     ))
 
     // (const restrain-ts)
     Object.assign(nx_tactics_decks_restrain.c_restrain_ts, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
+      ":id",
+      "damage-restrain-ts",
       ":name",
-      "Disable: Vitals",
+      "Restrain: Vitals",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ts,
       ":image",
       "images/damage-restrain-ts.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Hip caught. Slow:1. Remove:Any Hit\nModerate: Hip lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Hip sprained. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Hip dislocated. [Hobbled] Stun:3. Remove:3 Damage"
+      "Minor: Hip Hold. Stress:1\nMajor: Hip Hooked. Stress:1 Impaired\nCritical: Hips Trapped. Stress:2 Impaired\nExtreme: Hips Pinned. Stress:2 Immobilized"
     ))
 
     // (const restrain-wild-black)

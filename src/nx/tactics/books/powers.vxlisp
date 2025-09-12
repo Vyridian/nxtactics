@@ -405,11 +405,10 @@
        "Digging"
        "Dimensional"
        "Flight"
-       "Movement"
-       "Movement:Ground"
-       "Movement:Space"
-       "Movement:Stellar"
-       "Movement:Water"
+       "Move:Ground"
+       "Move:Space"
+       "Move:Stellar"
+       "Move:Water"
        "Teleportation"
        "Time Travel")))))
 
@@ -428,7 +427,6 @@
        "Appearance"
        "Armor"
        "Healing"
-       "Movement"
        "Beastial"
        "Quickness"
        "Senses"

@@ -2911,14 +2911,10 @@
    :name "Altered Skin"
    :abilitymap
     (base/abilitymap
-     "Chameleon Skin"
-      (base/ability<-tactics-key tactics "Chameleon Skin")
      "Slippery Skin"
       (base/ability
        :name "Slippery Skin")
-     "Toxic Skin"
-      (base/ability
-       :name "Toxic Skin")))
+))
   (base/power
    :name "Appearance"
    :abilitymap
@@ -5295,35 +5291,8 @@
      "Summon Id Monster"
      "Tabula Rasa"))
   (base/power
-   :name "Mental Fortitude"
-   :stat "Mind, Spirit"
-   :abilitymap
-    (base/abilitymap
-     :Gestalt
-      (base/ability
-       :name "Gestalt"
-       :reference "The whole is greater than the sum of its parts - Gestalt Psychology"
-       :summary "* This ability allows a unit to share knowledge with another unit that also has [Gestalt]. They may give information or loan an ability to the target."
-       :titles "Hive Mind")
-     "Intellect Fortress"
-      (base/ability
-       :name "Intellect Fortress"
-       :summary "Ward")
-     :Concentration
-      (base/ability
-       :name "Concentration"
-       :summary "* [Buff Self]: Place X Concentration Tokens on the user, and place 1 negative token under each Concentration token. Covered tokens are treated as if they do not exist while covered.")
-     "Mirror Mind"
-      (base/ability
-       :name "Mirror Mind"
-       :summary "Mental defense that creates Feedback.")
-     "Peace of Mind"
-      (base/ability
-       :name "Peace of Mind"
-       :summary "Find the Quiet Place in your mind")))
-  (base/power
    :name "Mentalism"
-   :titles "Esper, Mentalist, Psionic, Psychomancy, Scanner, Telepath"
+   :titles "Esper, Mental Fortitude, Mentalist, Psionic, Psychomancy, Scanner, Telepath"
    :reference "Scanners"
    :stat "Mind"
    :abilitymap
@@ -5333,9 +5302,24 @@
        :name "Cloud Senses"
        :reference "These aren't the droids you're looking for... - Obi-Wan Kenobi, Star Wars"
        :summary "Reduce chance that target will notice things.")
+     "Concentration"
+      (base/ability
+       :name "Concentration"
+       :summary "* [Buff Self]: Place X Concentration Tokens on the user, and place 1 negative token under each Concentration token. Covered tokens are treated as if they do not exist while covered.")
      "Confusion"
       (base/ability
        :name "Confusion")
+     "Gestalt"
+      (base/ability
+       :name "Gestalt"
+       :reference "The whole is greater than the sum of its parts - Gestalt Psychology"
+       :summary
+        "* This ability allows a unit to share knowledge with another unit that also has [Gestalt]. They may give information or loan an ability to the target."
+       :titles "Hive Mind")
+     "Intellect Fortress"
+      (base/ability
+       :name "Intellect Fortress"
+       :summary "Ward")
      "Lingua-Franca"
       (base/ability
        :name "Lingua-Franca"
@@ -5385,6 +5369,14 @@
        :name "Mind's Eye"
        :summary
         "* Eye - Unit may close their eyes and see into the astral world instead of the real world.")
+     "Mirror Mind"
+      (base/ability
+       :name "Mirror Mind"
+       :summary "Mental defense that creates Feedback.")
+     "Peace of Mind"
+      (base/ability
+       :name "Peace of Mind"
+       :summary "Find the Quiet Place in your mind")
      "Store Consciousness"
       (base/ability
        :name "Store Consciousness"
@@ -5475,16 +5467,7 @@
        :name "Telekinetic Touch"
        :summary "* Feel items from a distance.")))
   (base/power
-   :name "Movement"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Wall Crawling"
-     "Wall Running"
-     "Water Walking"
-     "Water Running"))
-  (base/power
-   :name "Movement:Ground"
+   :name "Move:Ground"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -5499,9 +5482,13 @@
      "Snowcraft"
      "Tracked"
      "Turbo Booster"
+     "Wall Crawling"
+     "Wall Running"
+     "Water Walking"
+     "Water Running"
      "Wheeled"))
   (base/power
-   :name "Movement:Space"
+   :name "Move:Space"
    :abilitymap
     (base/abilitymap
      "Chemical Rockets"
@@ -5555,7 +5542,7 @@
        :name "Vernier Thruster"
        :titles "Apogee Motor")))
   (base/power
-   :name "Movement:Stellar"
+   :name "Move:Stellar"
    :reference
     "* I created the Event Horizon to reach the stars, but she's gone much, much farther than that. She tore a hole in our universe, a gateway to another dimension. A dimension of pure chaos. Pure... evil. When she crossed over, she was just a ship. But when she came back... she was alive! - Dr. Weir, Event Horizon"
    :summary
@@ -5569,7 +5556,7 @@
      "Strategic Warp Jump"
      "Tactical Warp Jump"))
   (base/power
-   :name "Movement:Water"
+   :name "Move:Water"
    :abilitymap
     (base/abilitymap
      :Hydrofoil
@@ -5669,7 +5656,7 @@
      "Enthrall"
      "Entrance"))
   (base/power
-   :name "Psychic Power"
+   :name "Psychic Combat"
    :summary
     "* This skill is used when manifesting and controlling a [Power] that directly affect the [Will] of targets.
      * Psychic Powers must have range and see or 'know' the target."
@@ -5746,19 +5733,6 @@
          * Land of the Lost"
        :summary
         "* Exits from a location loop back upon themselves to leave a person back where they started.")))
-  (base/power
-   :name "Reproduction"
-   :stat "Body"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Brood Parasitism"
-     "Copy Host"
-     "Egg Laying"
-     "Large Litter"
-     "Parasitic Offspring"
-     "Rapid Gestation"
-     "Rapid Maturity"))
   (base/power
    :name "Senses"
    :abilitymap
@@ -5845,8 +5819,9 @@
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
-     "Imitation: Creature"
-     "Imitation: Inanimate"))
+     "Chameleon Skin"
+     "Imitation:Creature"
+     "Imitation:Inanimate"))
   (base/power
    :name "Shielding"
    :titles "Deflector, Shield, Shields"
@@ -5903,24 +5878,20 @@
        :name "Sound Carries")))
   (base/power
    :name "Spawning"
+   :stat "Body"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Brood Parasitism"
+     "Copy Host"
      "Copy Other"
-      (base/ability
-       :name "Copy Other"
-       :summary "Split target into 2 copies, each with -1 on all abilities.")
      "Copy Self"
-      (base/ability
-       :name "Copy Self"
-       :summary "Split yourself into 2 copies, each with -1 on all abilities.")
      "Detach Body Parts"
-      (base/ability
-       :name "Detach Body Parts")
-     :Offspring
-      (base/ability
-       :name "Offspring"
-       :reference
-        "* A Cell gets out, and it will IMITATE EVERYTHING on the face of the EARTH! AND NOTHING CAN STOP IT! - Blair, The Thing")))
+     "Egg Laying"
+     "Large Litter"
+     "Parasitic Offspring"
+     "Rapid Gestation"
+     "Rapid Maturity"))
   (base/power
    :name "Special Ability"
    :abilitymap

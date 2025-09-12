@@ -2268,7 +2268,7 @@ export default class nx_tactics_books_superheroes {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Movement",
+                  "Move:Ground",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2565,7 +2565,7 @@ export default class nx_tactics_books_superheroes {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Movement",
+                  "Move:Ground",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},

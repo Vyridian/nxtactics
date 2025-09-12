@@ -2047,7 +2047,7 @@
               :name "Agility")
             :Movement
              (base/unitpower
-              :name "Movement"
+              :name "Move:Ground"
               :unitabilitymap
                (base/unitabilitymap
                 "Wall Crawling"
@@ -2297,7 +2297,7 @@
                   :name "Glide")))
             :Movement
              (base/unitpower
-              :name "Movement"
+              :name "Move:Ground"
               :unitabilitymap
                (base/unitabilitymap
                 "Wall Crawling"
