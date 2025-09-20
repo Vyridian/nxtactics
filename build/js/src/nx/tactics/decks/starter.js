@@ -146,6 +146,40 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
+   * @function card_velocity
+   * @param  {tactics} tactics
+   * @param  {string} color
+   * @param  {int} num
+   * @return {card}
+   */
+  static t_card_velocity = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_velocity = {
+    vx_type: nx_tactics_decks_starter.t_card_velocity
+  }
+
+  // (func card-velocity)
+  static f_card_velocity(tactics, color, num) {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_card},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const rule = nx_tactics_base.f_rule_from_tactics_key(tactics, "Velocity")
+        return vx_core.f_copy(
+          rule,
+          ":id",
+          vx_core.f_new({"any-1": vx_core.t_string}, "velocity-", color, "-", num),
+          ":image",
+          vx_core.f_new({"any-1": vx_core.t_string}, "images/rule-velocity-", color, ".svg")
+        )
+      })
+    )
+    return output
+  }
+
+  /**
    * @function deck_player
    * @param  {tactics} tactics
    * @param  {string} color
@@ -178,7 +212,12 @@ export default class nx_tactics_decks_starter {
           nx_tactics_decks_starter.f_card_target(tactics, color, 2),
           nx_tactics_decks_starter.f_card_target(tactics, color, 3),
           nx_tactics_decks_starter.f_card_target(tactics, color, 4),
-          nx_tactics_decks_starter.f_card_target(tactics, color, 5)
+          nx_tactics_decks_starter.f_card_target(tactics, color, 5),
+          nx_tactics_decks_starter.f_card_velocity(tactics, color, 1),
+          nx_tactics_decks_starter.f_card_velocity(tactics, color, 2),
+          nx_tactics_decks_starter.f_card_velocity(tactics, color, 3),
+          nx_tactics_decks_starter.f_card_velocity(tactics, color, 4),
+          nx_tactics_decks_starter.f_card_velocity(tactics, color, 5)
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
         return vx_core.f_new(
@@ -210,6 +249,7 @@ export default class nx_tactics_decks_starter {
       "card-rotated": nx_tactics_decks_starter.e_card_rotated,
       "card-target": nx_tactics_decks_starter.e_card_target,
       "card-unit": nx_tactics_decks_starter.e_card_unit,
+      "card-velocity": nx_tactics_decks_starter.e_card_velocity,
       "deck-player": nx_tactics_decks_starter.e_deck_player
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
@@ -217,6 +257,7 @@ export default class nx_tactics_decks_starter {
       "card-rotated": nx_tactics_decks_starter.t_card_rotated,
       "card-target": nx_tactics_decks_starter.t_card_target,
       "card-unit": nx_tactics_decks_starter.t_card_unit,
+      "card-velocity": nx_tactics_decks_starter.t_card_velocity,
       "deck-player": nx_tactics_decks_starter.t_deck_player
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -301,6 +342,24 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_unit
+    }
+
+    // (func card-velocity)
+    nx_tactics_decks_starter.t_card_velocity['vx_value'] = {
+      name          : "card-velocity",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_velocity
     }
 
     // (func deck-player)

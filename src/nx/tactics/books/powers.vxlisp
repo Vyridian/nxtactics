@@ -262,9 +262,9 @@
             (base/ability
              :name "Fine Workmanship"
              :summary "* This item possesses fine details that are particularly attractive to collectors.")
-           "Resist: Fire"
+           "Resist:Fire"
             (base/ability<-tactics-key
-             tactics "Resist: Fire")
+             tactics "Resist:Fire")
            "High Durability"
             (base/ability
              :name "High Durability"

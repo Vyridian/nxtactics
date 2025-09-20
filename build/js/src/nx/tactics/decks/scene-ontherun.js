@@ -28,7 +28,7 @@ export default class nx_tactics_decks_scene_ontherun {
       "On The Run",
       ":cardmap",
       nx_tactics_base.f_cardmap_from_cardlist(
-        nx_tactics_base.f_cardlist_images_from_tactics_units(tactics, "Flint (Early)", "Hidden", "Fish: Small", "Hare", "Pheasant", "Pig: Wild Boar", "Snake: Emerald Viper", "Turkey"),
+        nx_tactics_base.f_cardlist_images_from_tactics_units(tactics, "Flint (Early)", "Hidden", "Fish: Small", "Hare", "Pheasant", "Pig: Wild Boar", "Snake:Emerald Viper", "Turkey"),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_skilllist},
           nx_tactics_base.f_skilllist_from_tactics_keys(tactics, "Close Combat", "Stealth")
@@ -39,7 +39,7 @@ export default class nx_tactics_decks_scene_ontherun {
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
-          nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife: Dagger", "Mushrooms", "Onions: Wild", "Raspberries", "Stone: Flint", "Torch", "Water: Pond", "Yams: Wild")
+          nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife:Dagger", "Mushrooms", "Onions: Wild", "Raspberries", "Stone: Flint", "Torch", "Water: Pond", "Yams: Wild")
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_power, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_powerlist},

@@ -127,8 +127,11 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Called Shot"
+   :image "images/rule-calledshot.svg"
+   :layout base/cardlayout-imageonly
    :summary
-    "Combat - Take Disadvantage. IF you win THEN during Hit:Location choose 3 adjacent Locations and draw until 1 of the 3 appears that matches your Damage Type. Use that as the Hit:Location")
+    "Called Shot allows you to target particular body parts
+    * Conflict - Before Reveal, announce a Skill:X penalty to take. IF you win THEN after Hit:Location, eveal X additional Damage. You may replace Hit:Location with 1 that matches one of your Damage Types")
   (base/rule
    :name "Campaign"
    :summary
@@ -148,6 +151,19 @@
      * Maps
      * The Hook
      * The Finale")
+  (base/rule
+   :name "Casualty"
+//   :image "images/rule-casualty.svg"
+//   :layout base/cardlayout-imageonly
+   :summary
+    "Casualty represent crew and equipment loss on a vehicle.
+     Determine - Draw Fate for each crew or equipment
+     * 25% - Cups represents a Casualty
+     * 50% - Red represents a Casualty
+     * 75% - Any but Cups represents a Casualty
+     Effect - Useless. Of those:
+     * Crew - Killed:25% Missing:25% Critcal Damage:25% Major Damage:25%
+     * Equipment - Irreparable:25% Missing:25% Broken:25% Damaged:25%")
   (base/rule
    :name "Character")
   (base/rule
@@ -294,13 +310,6 @@
    :image "images/rule-diseased.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Diving"
-   :image "images/rule-diving.svg"
-   :layout base/cardlayout-imageonly
-   :summary
-    "A Diving Unit is rapidly losing Elevation
-     * Round End - Elevation:-1 for each Diving:1")
-  (base/rule
    :name "Drag"
    :summary
     "Move Target 1 Space adjacent to or on to you
@@ -441,6 +450,12 @@
    :name "Line of Sight"
    :image "images/rule-lineofsight.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Magic"
+//   :image "images/rule-magic.svg"
+//   :layout base/cardlayout-imageonly
+   :summary
+    "Magic is indirect. It allows one to do the unlikely, not the impossible. Magic must always have a grounded source, so creating things from nothing is the hardest form of magic.")
   (base/rule
    :name "Magic List"
    :image "images/rule-magic-list.svg"
@@ -729,6 +744,14 @@
      * Teleportation
      * Time Travel")
   (base/rule
+   :name "Prone"
+   :image "images/rule-prone.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Unit is lying flat and is 1 Elevation lower
+     * Cover - Usually offers additional cover
+     * Elevation - Note Elevation modifiers")
+  (base/rule
    :name "Pull/Push"
    :image "images/rule-pull-push.svg"
    :layout base/cardlayout-imageonly)
@@ -911,6 +934,13 @@
      * Shadow:X - IF Shadow > Will THEN test Will vs Shadow or gain Triumphant
      * Bitter Defeat - Because the Shadow is self absorbed, failure is devastating. IF Shadow is defeated THEN Shadow:-1. IF Will > Shadow THEN test Will vs Shadow to remove Triumphant.")
   (base/rule
+   :name "Sinking"
+   :image "images/rule-sinking.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "A Sinking Unit is rapidly losing Elevation
+     * Round End - Elevation:-1 for each Sinking:1")
+  (base/rule
    :name "Skill"
    :image "images/rule-skill.svg"
    :layout base/cardlayout-imageonly)
@@ -927,7 +957,7 @@
      * Ranged
      * Firearm
      * Gunnery
-     * Demolitions
+     * Explosives
      Body
      * Animals
      * Assassination
@@ -1104,6 +1134,19 @@
    :name "Unskilled"
    :image "images/rule-unskilled.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Velocity"
+   :image "images/rule-velocity.svg"
+   :summary
+    "Velocity represents the speed and momentum of fast Units. It replaces normal movement
+     Round Start
+      Velocity - Starts at 0
+      Momentum = Velocity
+     Countdown - When Count is called, MAY spend Momentum:-1 instead of Move:-1 to move straight or Drift Forward
+      IF Count >= Momentum THEN not optional
+     Free Actions
+      Accelerate:X - Spend Move:X to gain Velocity:+1 (Min=2)
+      Brake:X - Spend Move:X to lose Velocity:-1 (Min=1)")
   (base/rule
    :name "Weapon:Barehanded"
    :image "images/rule-weapon-barehanded.svg"

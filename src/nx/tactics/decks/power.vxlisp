@@ -627,6 +627,8 @@
      "Quills"
      "Rat Form"
      "Ripping Bite"
+     "Sacrificial Limb"
+     "Sacrificial Tail"
      "Savage Genitalia"
      "Snake Bite"
      "Snake Form"
@@ -1172,7 +1174,7 @@
      * Yoki - 妖気, or 'demon essence' (the first character means demon, and second character is the same as the Chinese word commonly known as chi)."
    :summary
     "* Demon Soul is when a user has been partially or completely possessed by a demonic entity.
-     * Demon Soul allows the user a number of physical advantages including regeneration and natural weaponry, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit."
+     * Demon Soul allows the user a number of physical advantages including regeneration and beastial, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit."
    :stat "Beast")
   (base/power
    :name "Divination"
@@ -1383,7 +1385,7 @@
      "Lightning Lash"
      "Lightning Pillar"
      "Lightning Warp"
-     "Resist: Electricity"))
+     "Resist:Electricity"))
   (base/power
    :name "Enchantment"
    :summary
@@ -1809,10 +1811,7 @@
        :name "Heart Attack")
      "Poison Backlash"
       (base/ability<-tactics-key tactics "Poison Backlash")
-     :Regenerate
-      (base/ability
-       :name "Regenerate")
-     :Replenish
+     "Replenish"
       (base/ability
        :name "Replenish")
      "Resurrect"
@@ -2956,15 +2955,15 @@
      tactics
      "1-Handed"
      "Ablative Armor"
-     "Armor: Abdomen"
-     "Armor: Arms"
-     "Armor: Chest"
-     "Armor: Feet"
-     "Armor: Hands"
-     "Armor: Head"
-     "Armor: Legs"
-     "Armor: Shoulders"
-     "Armor: Vitals"
+     "Armor:Abdomen"
+     "Armor:Arms"
+     "Armor:Chest"
+     "Armor:Feet"
+     "Armor:Hands"
+     "Armor:Head"
+     "Armor:Legs"
+     "Armor:Shoulders"
+     "Armor:Vitals"
      "Auto Med System"
      "Body Flares"
      "Cryo Sleep System"
@@ -2977,19 +2976,19 @@
      "Radar Dampener"
      "Radar Jammer"
      "Reactive Armor"
-     "Resist: Bash"
-     "Resist: Cold"
-     "Resist: Corrosion"
-     "Resist: Electricity"
-     "Resist: Energy"
-     "Resist: Fire"
-     "Resist: Hack"
-     "Resist: Magnetism"
-     "Resist: Pierce"
-     "Resist: Plasma"
-     "Resist: Pressure"
-     "Resist: Radiation"
-     "Resist: Slash"
+     "Resist:Bash"
+     "Resist:Cold"
+     "Resist:Corrosion"
+     "Resist:Electricity"
+     "Resist:Energy"
+     "Resist:Fire"
+     "Resist:Hack"
+     "Resist:Magnetism"
+     "Resist:Pierce"
+     "Resist:Plasma"
+     "Resist:Pressure"
+     "Resist:Radiation"
+     "Resist:Slash"
      "Turret Mount"
      "Ultraviolet Jammer"
      "Underwater Operation"))
@@ -3589,7 +3588,7 @@
      "Lightning Lash"
      "Lightning Pillar"
      "Lightning Warp"
-     "Resist: Electricity"))
+     "Resist:Electricity"))
   (base/power
    :name "Empathy"
    :summary "The ability to feel the joys and pains of others"
@@ -4986,6 +4985,7 @@
      "Vanish"))
   (base/power
    :name "Laboratory"
+   :titles "Facilities"
    :summary
     "* Special labs for analyzing information. Science labs are very flexible and can be used for any number of quick analytics. Obviously, they are severly limited compared to proper research facilities.
      * Like [Transform] When purchasing a Laboratory, create one or more Units to represent the labooratories. The Rating of the Laboratory is the total cost of the Units."
@@ -6029,63 +6029,66 @@
    :stat "Body"
    :abilitymap
     (base/abilitymap
-     :Resilience
+     "Resilience"
       (base/ability
        :name "Resilience")
-     "Resist Acid"
+     "Resist:Acid"
       (base/ability
-       :name "Resist Acid")
-     "Resist Cold"
+       :name "Resist:Acid")
+     "Resist:Cold"
       (base/ability
-       :name "Resist Cold")
-     "Resist Disease"
+       :name "Resist:Cold")
+     "Resist:Disease"
       (base/ability
-       :name "Resist Disease")
-     "Resist Electricity"
+       :name "Resist:Disease")
+     "Resist:Electricity"
       (base/ability
-       :name "Resist Electricity")
-     "Resist Exposure"
+       :name "Resist:Electricity")
+     "Resist:Exposure"
       (base/ability
-       :name "Resist Exposure")
-     "Resist Fire"
+       :name "Resist:Exposure")
+     "Resist:Fire"
       (base/ability
-       :name "Resist Fire"
+       :name "Resist:Fire"
        :summary
         "[Reduce Damage]: Reduce [Weapon Rating] by [Rating].
          Note: Not the same as Resist Heat")
-     "Resist Gravity"
+     "Resist:Gravity"
       (base/ability
-       :name "Resist Gravity")
-     "Resist Heat"
+       :name "Resist:Gravity")
+     "Resist:Heat"
       (base/ability
-       :name "Resist Heat"
+       :name "Resist:Heat"
        :summary
         "[Reduce Damage]: Reduce [Weapon Rating] by [Rating].
          Note: Not the same as Resist Fire")
-     "Resist Hunger"
+     "Resist:Hunger"
       (base/ability
-       :name "Resist Hunger")
-     "Resist Poison"
+       :name "Resist:Hunger")
+     "Resist:Poison"
       (base/ability
-       :name "Resist Poison")
-     "Resist Pressure"
+       :name "Resist:Poison")
+     "Resist:Pressure"
       (base/ability
-       :name "Resist Pressure")
-     "Resist Radiation"
+       :name "Resist:Pressure")
+     "Resist:Radiation"
       (base/ability
-       :name "Resist Radiation")
-     "Resist Space"
+       :name "Resist:Radiation")
+     "Resist:Sleep"
       (base/ability
-       :name "Resist Space")
-     "Resist Thirst"
+       :name "Resist:Sleep")
+     "Resist:Space"
       (base/ability
-       :name "Resist Thirst")
-     "Resist Vacuum"
+       :name "Resist:Space")
+     "Resist:Thirst"
       (base/ability
-       :name "Resist Vacuum")
-     "Resist Water"
+       :name "Resist:Thirst")
+     "Resist:Vacuum"
       (base/ability
-       :name "Resist Water")
+       :name "Resist:Vacuum")
+     "Resist:Water"
+      (base/ability
+       :name "Resist:Water")
      "Suspended Animation"
       (base/ability
        :name "Suspended Animation")))

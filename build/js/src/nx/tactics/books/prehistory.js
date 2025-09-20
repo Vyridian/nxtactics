@@ -173,7 +173,7 @@ export default class nx_tactics_books_prehistory {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            ":Megatherium",
+            "Megatherium",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Megatherium", ":summary", "Elephant-sized ground sloth"),
             ":Sabrelion",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sabrelion"),

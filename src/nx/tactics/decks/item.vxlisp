@@ -22,11 +22,11 @@
    :name "Ammo: Shotgun"
    :image "images/cards/item-ammo-shotgun.svg")
   (base/item
-   :name "Armor: Breast Plate"
+   :name "Armor:Breast Plate"
    :summary "* [Hit Location]: Shoulders Chest Abdomen Vitals"
    :armor "1mm")
   (base/item
-   :name "Armor: Chain Mail"
+   :name "Armor:Chain Mail"
    :reference
     "* Shark expert and underwater filmmaker Valerie Taylor was among the first to develop and test shark suits in 1979 while diving with sharks.
      * Mail is widely used in industrial settings as shrapnel guards and splash guards in metal working operations.
@@ -36,15 +36,15 @@
    :titles "Chainmail, Mail, Byrnie, Hauberk"
    :armor "1mm")
   (base/item
-   :name "Armor: Chain Shirt"
+   :name "Armor:Chain Shirt"
    :summary "* [Hit Location]: Shoulders Chest Abdomen Vitals"
    :titles "Chainmail, Mail"
    :armor "1mm")
   (base/item
-   :name "Armor: Laminated"
+   :name "Armor:Laminated"
    :armor "1mm")
   (base/item
-   :name "Armor: Leather Cuirass"
+   :name "Armor:Leather Cuirass"
    :titles "Leather Body Armor"
    :image "images/cards/item-armor-leather-cuirass.svg"
    :body "7x0"
@@ -55,13 +55,13 @@
      (base/unitpower<-tactics-key-rating-abilities
       tactics "Armor" "2x1"
       (stringlist
-       "Armor: Shoulders"
-       "Armor: Chest"
-       "Armor: Abdomen"
-       "Armor: Vitals"
-       "Resist: Slash"))))
+       "Armor:Shoulders"
+       "Armor:Chest"
+       "Armor:Abdomen"
+       "Armor:Vitals"
+       "Resist:Slash"))))
   (base/item
-   :name "Armor: Leather Helmet"
+   :name "Armor:Leather Helmet"
    :image "images/cards/item-armor-leather-helmet.svg"
    :body "2x0"
    :mass "2kg/5lb"
@@ -71,8 +71,8 @@
      (base/unitpower<-tactics-key-rating-abilities
       tactics "Armor" "2x1"
       (stringlist
-       "Armor: Head"
-       "Resist: Slash"))))
+       "Armor:Head"
+       "Resist:Slash"))))
   (base/item
    :name "Axe: Fire"
    :image "images/cards/item-axe-fire.svg"
@@ -139,7 +139,7 @@
    :name "Bottle: Molotov Cocktail"
    :image "images/cards/item-bottle-molotovcocktail.svg")
   (base/item
-   :name "Bow: Composite"
+   :name "Bow:Composite"
    :summary
     "* [Skill]: [Ranged]
      * [Damage]: 10x1 [Pierce] [Slash]
@@ -149,9 +149,9 @@
      * Constructing composite bows requires much more time and materials than self bows, and the animal glue traditionally used can lose strength in humid conditions and be quickly ruined by submersion. For most practical non-mounted archery purposes, composite construction offers no advantage; 'the initial velocity is about the same for all types of bow, the design parameters appear to be less important than is often claimed.' However, their compact size make them superior for horsemen."
    :energy "170J")
   (base/item
-   :name "Bow: Compound")
+   :name "Bow:Compound")
   (base/item
-   :name "Bow: Long"
+   :name "Bow:Long"
    :titles "Daikyu"
    :summary
     "* [Requires]: An [Arrow] in another hand
@@ -167,7 +167,12 @@
        "1-Handed"
        "Ranged Weapon"))))
   (base/item
-   :name "Bow: Short"
+   :name "Bow:Moon"
+   :titles "Cresent Bow"
+   :summary
+    "An Alfar made bow designed like a cresent moon. Arrows fired from it are treated as [Silver].")
+  (base/item
+   :name "Bow:Short"
    :image "images/cards/item-bow-short.svg"
    :titles "Hankyu, Recurve Bow"
    :reference
@@ -215,7 +220,7 @@
    :reference
     "* Held at the bottom like a polearm. not in the middle. Holding in the middle was invented by the Boy Scouts in Victorian times for sport fighting.")
   (base/item
-   :name "Coins: Copper"
+   :name "Coins:Copper"
    :image "images/cards/item-coins-copper.svg"
    :summary
     "* A few (~5=$5) coins.
@@ -225,7 +230,7 @@
    :body "5x-2"
    :mass "50g/.1lb")
   (base/item
-   :name "Coins: Gold"
+   :name "Coins:Gold"
    :image "images/cards/item-coins-gold.svg"
    :summary
     "* A few (~5=$500) coins.
@@ -236,7 +241,7 @@
    :body "10x-2"
    :mass "150g/.3lb")
   (base/item
-   :name "Coins: Platinum"
+   :name "Coins:Platinum"
    :image "images/cards/item-coins-platinum.svg"
    :summary
     "* A few (~5=$5000) coins.
@@ -246,7 +251,7 @@
    :body "10x-2"
    :mass "150g/.3lb")
   (base/item
-   :name "Coins: Silver"
+   :name "Coins:Silver"
    :image "images/cards/item-coins-silver.svg"
    :summary
     "* A few (~5=$50) coins.
@@ -301,7 +306,7 @@
    :mass "500g/1lb"
    :length "25cm/10in")
   (base/item
-   :name "Knife: Dagger"
+   :name "Knife:Dagger"
    :image "images/cards/item-knife-dagger.svg"
    :body "5x-1"
    :mass "500g/1lb"
@@ -316,6 +321,11 @@
        "Slash"
        "1-Handed"
        "Close Weapon"))))
+  (base/item
+   :name "Knife:Moonblade"
+   :titles "Cresent Blade, Faeknife"
+   :summary
+    "An Alfar made curved knife designed like a cresent moon. It are treated as [Silver].")
   (base/item
    :name "Lattice")
   (base/item
@@ -400,7 +410,7 @@
   (item
    :name "Screen")
   (base/item
-   :name "Shield: Buckler"
+   :name "Shield:Buckler"
    :classification "Shield"
    :image "images/cards/item-shield-buckler.svg"
    :summary
@@ -411,7 +421,7 @@
    :body "10x-1"
    :mass "1kg/2lb")
   (base/item
-   :name "Shield: Heater"
+   :name "Shield:Heater"
    :image "images/cards/item-shield-heater.svg"
    :titles "Aegis"
    :classification "Shield"
@@ -423,15 +433,15 @@
    :body "3x0"
    :mass "3.2kg/7lb")
   (base/item
-   :name "Shield: Kite"
+   :name "Shield:Kite"
    :classification "Shield"
    :armor "2")
   (base/item
-   :name "Shield: Legionary"
+   :name "Shield:Legionary"
    :classification "Shield"
    :armor "2")
   (base/item
-   :name "Shield: Round"
+   :name "Shield:Round"
    :image "images/cards/item-shield-round.svg"
    :titles "Hoplon Shield, Target Shield"
    :classification "Shield"
@@ -442,15 +452,15 @@
      (base/unitpower<-tactics-key-rating-abilities
       tactics "Armor" "5x2"
       (stringlist
-       "Resist: Pierce"
+       "Resist:Pierce"
        "1-Handed"))))
   (base/item
-   :name "Shield: Tower"
+   :name "Shield:Tower"
    :titles "Hoplite Shield"
    :classification "Shield"
    :armor "3")
   (base/item
-   :name "Shield: Wicker"
+   :name "Shield:Wicker"
    :classification "Shield")
   (base/item
    :name "Shotgun"
@@ -479,64 +489,64 @@
    :name "Stone: Flint"
    :image "images/cards/item-stone-flint.svg")
   (base/item
-   :name "Sword: Back"
+   :name "Sword:Back"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Bastard"
+   :name "Sword:Bastard"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Bokken"
+   :name "Sword:Bokken"
    :classification "Sword")
   (base/item
-   :name "Sword: Broad"
+   :name "Sword:Broad"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Butterfly"
+   :name "Sword:Butterfly"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Cavalry"
+   :name "Sword:Cavalry"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Cutlass"
+   :name "Sword:Cutlass"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Epee"
+   :name "Sword:Epee"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Falchion"
+   :name "Sword:Falchion"
    :summary "* A short, cleaving sword for close-in combat used by many troops including archers."
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Foil"
+   :name "Sword:Foil"
    :classification "Sword"
    :energy "50J")
   (base/item
-   :name "Sword: Great"
+   :name "Sword:Great"
    :titles "Two-handed Sword"
    :classification "Sword"
    :energy "200J")
   (base/item
-   :name "Sword: Hook"
+   :name "Sword:Hook"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Katana"
+   :name "Sword:Katana"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Katar"
+   :name "Sword:Katar"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Long"
+   :name "Sword:Long"
    :image "images/cards/item-sword-long.svg"
    :classification "Sword"
    :body "10x-1"
@@ -555,27 +565,32 @@
      (base/unitpower<-tactics-key-rating
       tactics "Armor" "2x1")))
   (base/item
-   :name "Sword: Ninjato"
+   :name "Sword:Moon"
+   :titles "Cresent Sword, Faeblade"
+   :summary
+    "An Alfar made sword/scimitar designed like a cresent moon. It is treated as [Silver].")
+  (base/item
+   :name "Sword:Ninjato"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: No-Dachi"
+   :name "Sword:No-Dachi"
    :classification "Sword"
    :energy "200J")
   (base/item
-   :name "Sword: Rapier"
+   :name "Sword:Rapier"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Saber"
+   :name "Sword:Saber"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Scimitar"
+   :name "Sword:Scimitar"
    :classification "Sword"
    :energy "100J")
   (base/item
-   :name "Sword: Short"
+   :name "Sword:Short"
    :image "images/cards/item-sword-short.svg"
    :classification "Sword"
    :summary
@@ -588,7 +603,7 @@
    :mass "1kg/2.2lb"
    :energy "100J")
   (base/item
-   :name "Sword: Tanto"
+   :name "Sword:Tanto"
    :classification "Sword"
    :summary
     "* [Combat]: [Melee]
@@ -598,7 +613,7 @@
      * [Armor]: 2x1"
    :energy "100J")
   (base/item
-   :name "Sword: Wakizashi"
+   :name "Sword:Wakizashi"
    :classification "Sword"
    :energy "100J")
   (item

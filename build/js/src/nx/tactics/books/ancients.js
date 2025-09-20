@@ -329,8 +329,8 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Shield Wall",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Shield Wall")
+                    "Formation:Shield Wall",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Shield Wall")
                   )
                 )
               )
@@ -377,8 +377,8 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Skirmish",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Skirmish")
+                    "Formation:Skirmish",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Skirmish")
                   )
                 )
               )
@@ -407,8 +407,8 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Shield Wall",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Shield Wall")
+                    "Formation:Shield Wall",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Shield Wall")
                   )
                 )
               )
@@ -458,8 +458,8 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Shield Wall",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Shield Wall")
+                    "Formation:Shield Wall",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Shield Wall")
                   )
                 )
               )
@@ -604,10 +604,10 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Phalanx",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Phalanx"),
-                    "Formation: Shield Wall",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Shield Wall")
+                    "Formation:Phalanx",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Phalanx"),
+                    "Formation:Shield Wall",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Shield Wall")
                   )
                 )
               )
@@ -694,8 +694,8 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Skirmish",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Skirmish")
+                    "Formation:Skirmish",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Skirmish")
                   )
                 )
               )
@@ -811,8 +811,8 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Skirmish",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Skirmish")
+                    "Formation:Skirmish",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Skirmish")
                   )
                 )
               )
@@ -1021,10 +1021,10 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Shield Wall",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Shield Wall"),
-                    "Formation: Testudo",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Testudo")
+                    "Formation:Shield Wall",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Shield Wall"),
+                    "Formation:Testudo",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Testudo")
                   )
                 )
               )
@@ -1053,10 +1053,10 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Shield Wall",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Shield Wall"),
-                    "Formation: Testudo",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Testudo")
+                    "Formation:Shield Wall",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Shield Wall"),
+                    "Formation:Testudo",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Testudo")
                   )
                 )
               )
@@ -1085,12 +1085,12 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Phalanx",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Phalanx"),
-                    "Formation: Shield Wall",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Shield Wall"),
-                    "Formation: Testudo",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Testudo")
+                    "Formation:Phalanx",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Phalanx"),
+                    "Formation:Shield Wall",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Shield Wall"),
+                    "Formation:Testudo",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Testudo")
                   )
                 )
               )
@@ -1149,12 +1149,12 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Phalanx",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Phalanx"),
-                    "Formation: Shield Wall",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Shield Wall"),
-                    "Formation: Testudo",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Testudo")
+                    "Formation:Phalanx",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Phalanx"),
+                    "Formation:Shield Wall",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Shield Wall"),
+                    "Formation:Testudo",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Testudo")
                   )
                 )
               )
@@ -1183,8 +1183,8 @@ export default class nx_tactics_books_ancients {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Formation: Skirmish",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation: Skirmish")
+                    "Formation:Skirmish",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Formation:Skirmish")
                   )
                 )
               )
@@ -1272,7 +1272,7 @@ export default class nx_tactics_books_ancients {
                   nx_tactics_base.t_tactics,
                   "Military",
                   3,
-                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Formation: Skirmish")
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Formation:Skirmish")
                 )
               )
             ),
@@ -1291,7 +1291,7 @@ export default class nx_tactics_books_ancients {
                   nx_tactics_base.t_tactics,
                   "Military",
                   3,
-                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Formation: Skirmish")
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Formation:Skirmish")
                 )
               )
             ),
@@ -1330,7 +1330,7 @@ export default class nx_tactics_books_ancients {
                   nx_tactics_base.t_tactics,
                   "Military",
                   3,
-                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Formation: Skirmish")
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Formation:Skirmish")
                 )
               )
             ),

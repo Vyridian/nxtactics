@@ -182,7 +182,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Melee",
             3,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword: Short")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword:Short")
           ),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
             tactics,
@@ -292,7 +292,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Melee",
             4,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword: Long")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword:Long")
           ),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
             tactics,
@@ -551,7 +551,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Close Combat",
             1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife: Dagger")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife:Dagger")
           ),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
             tactics,
@@ -673,7 +673,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Melee",
             2,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Spear: Short", "Knife: Dagger")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Spear: Short", "Knife:Dagger")
           )
         )
       ),
@@ -719,7 +719,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Close Combat",
             1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife: Dagger")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife:Dagger")
           ),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
             tactics,
@@ -752,7 +752,7 @@ export default class nx_tactics_decks_unit {
           nx_tactics_base.f_unitskill_from_tactics_key_items(
             tactics,
             "Ranged",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow: Short")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow:Short")
           )
         )
       ),
@@ -833,7 +833,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Melee",
             5,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword: Long", "Knife: Dagger")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword:Long", "Knife:Dagger")
           )
         )
       ),
@@ -888,7 +888,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Defense",
             5,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor: Chain Mail", "Shield: Round")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor:Chain Mail", "Shield:Round")
           )
         )
       ),
@@ -1355,7 +1355,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Defense",
             1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Shield: Round")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Shield:Round")
           )
         )
       ),
@@ -1377,7 +1377,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Defense",
             3,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor: Breast Plate", "Shield: Round")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor:Breast Plate", "Shield:Round")
           )
         )
       ),
@@ -1387,7 +1387,7 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
-        "Snake: Anaconda",
+        "Snake:Anaconda",
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           nx_tactics_base.f_unitpower_from_tactics_key_abilities(
@@ -1397,14 +1397,14 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Asp", ":reference", "Asps. Very dangerous. You go first. - Raiders of the Lost Ark"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Black Mamba", ":summary", "* The black mamba receives its name from the black coloration inside of its mouth, rather than their skin color which is a gray to olive tone. The black mamba is the fastest moving snake in the world, capable of moving up to 20 km/h(12.5 mph). However it uses this speed to evade danger, rather than catch prey.\n* Black mambas are among the ten most venomous snakes in the world. A single bite may inject enough venom to kill from 20-40 grown men. When cornered, they will readily attack. In fact, many snake experts have cited the black mamba as the world's most aggressive snake, noting tendency to actively attack without provocation. When warding off a threat, the black mamba usually delivers multiple strikes, injecting its potent neuro-and cardiotoxin with each strike, often attacking the body or head, unlike most other snakes.\n* Black mambas tend to live in their lairs for long periods of time, which are often vacated insect mounds or hollow trees. Black mambas are diurnal snakes that hunt prey actively day or night.\n* The black mamba is more than 3 times as venomous as the Cape Cobra, over 5 times as venomous as the King cobra and about 40 times as venomous as the Gaboon viper. Black mamba venom contains powerful, rapid-acting neurotoxins and cardiotoxins. The initial symptom of the bite is local pain in the bite area, although not as severe as snakes with hemotoxins. The victim then experiences a tingling sensation in the extremities, drooping eyelids, tunnel vision, sweating, excessive salivation, and lack of muscle control (specifically the mouth and tongue). If the victim does not receive medical attention, symptoms rapidly progress to nausea, shortness of breath, confusion, and paralysis. Eventually, the victim experiences convulsions, respiratory failure, and coma, and dies due to suffocation resulting from paralysis of the muscles used for breathing. Without treatment the mortality rate is 100%, the highest among all venomous snakes in the world."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Boa Constrictor"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Cobra"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake:Asp", ":reference", "Asps. Very dangerous. You go first. - Raiders of the Lost Ark"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake:Black Mamba", ":summary", "* The black mamba receives its name from the black coloration inside of its mouth, rather than their skin color which is a gray to olive tone. The black mamba is the fastest moving snake in the world, capable of moving up to 20 km/h(12.5 mph). However it uses this speed to evade danger, rather than catch prey.\n* Black mambas are among the ten most venomous snakes in the world. A single bite may inject enough venom to kill from 20-40 grown men. When cornered, they will readily attack. In fact, many snake experts have cited the black mamba as the world's most aggressive snake, noting tendency to actively attack without provocation. When warding off a threat, the black mamba usually delivers multiple strikes, injecting its potent neuro-and cardiotoxin with each strike, often attacking the body or head, unlike most other snakes.\n* Black mambas tend to live in their lairs for long periods of time, which are often vacated insect mounds or hollow trees. Black mambas are diurnal snakes that hunt prey actively day or night.\n* The black mamba is more than 3 times as venomous as the Cape Cobra, over 5 times as venomous as the King cobra and about 40 times as venomous as the Gaboon viper. Black mamba venom contains powerful, rapid-acting neurotoxins and cardiotoxins. The initial symptom of the bite is local pain in the bite area, although not as severe as snakes with hemotoxins. The victim then experiences a tingling sensation in the extremities, drooping eyelids, tunnel vision, sweating, excessive salivation, and lack of muscle control (specifically the mouth and tongue). If the victim does not receive medical attention, symptoms rapidly progress to nausea, shortness of breath, confusion, and paralysis. Eventually, the victim experiences convulsions, respiratory failure, and coma, and dies due to suffocation resulting from paralysis of the muscles used for breathing. Without treatment the mortality rate is 100%, the highest among all venomous snakes in the world."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake:Boa Constrictor"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake:Cobra"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
-        "Snake: Emerald Viper",
+        "Snake:Emerald Viper",
         ":secrets",
         "* Movement - They can swim and climb trees.\n* Venomous Bite - Vipers carry a limited amount of venom. They can control the amount that injected including none at all.\n* Venom - Viperid venoms typically contain an abundance of protein-degrading enzymes, called proteases, that produce symptoms such as pain, strong local swelling and necrosis, blood loss from cardiovascular damage complicated disruption of the blood-clotting system. Death is usually caused by collapse in blood pressure. Due to the nature of proteolytic venom, a viperid bite is often a very painful experience and should always be taken seriously, though it may not necessarily prove fatal. Even with prompt and proper treatment, a bite can still result in a permanent scar, and in the worst cases, the affected limb may even have to be amputated.\n * Vision - They do not have heat vision unlike Pit Vipers",
         ":image",
@@ -1443,9 +1443,9 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: King Cobra"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Python"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Viper"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake:King Cobra"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake:Python"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake:Viper"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectral Horse"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectre", ":reference", "* Cenobites from Hellraiser", ":summary", "* A Spectre is a malevolent Wraith that has been so traumatized that it is has become completely obscessed with its suffering and reenacting that suffering with others. The Spectre has fallen completely under the controlled of it's [Shadow]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spectrum", ":image", "Superheroes/Vector.png", ":titles", "Alan Lietner, Shard, Vector", ":summary", "* Spectrum appears in glowing, angular, mirrored armor with a mirrored visor. The armor augments his strength to lift 800lbs. He can materialize angular blades and shields from his arms. He can also create glowing shards in different forms including a flying triangular plate, throwing knives, barriers, and cages.\n* Spectrum's armor is powered by light and the area will visibly darken when his powers are active. In a completely dark area, his powers are greatly diminished. Conversely, very bright light increases his power level. For this reason, he usually acts only in daylight.\n* Dr. Alex Lietner is an MIT physicist reseaching the creation of holograms with lasers. He discovered that through precise modulation, a hologram could temporarily be turned into an extremely rigid solid. With the help of some of his students, he was able to create a portable projection system in a wearable suit.\n* Blinding Flash - Intense light burst similar to a flash bomb.\n* Blinding Torrent - A dizzying kaleidoscope of intense light that causes vertigo and nausea."),
@@ -1464,7 +1464,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Ranged",
             7,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow: Short")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow:Short")
           )
         )
       ),
@@ -1519,7 +1519,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Ranged",
             1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow: Short")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow:Short")
           ),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
             tactics,

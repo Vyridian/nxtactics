@@ -37,7 +37,7 @@ export default class nx_tactics_decks_scene_nightonthetown {
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
-            nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Ammo: Revolver", "Ammo: Rifle", "Ammo: Shotgun", "Axe: Fire", "Bare Handed", "Bottle: Liquor", "Bottle: Molotov Cocktail", "Bow: Short", "Jerry Can", "Keys", "Knife", "Accessory: Monocle", "Paper: Lock Combination", "Pistol: Revolver", "Rifle", "Shotgun", "Spear")
+            nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Ammo: Revolver", "Ammo: Rifle", "Ammo: Shotgun", "Axe: Fire", "Bare Handed", "Bottle: Liquor", "Bottle: Molotov Cocktail", "Bow:Short", "Jerry Can", "Keys", "Knife", "Accessory: Monocle", "Paper: Lock Combination", "Pistol: Revolver", "Rifle", "Shotgun", "Spear")
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},

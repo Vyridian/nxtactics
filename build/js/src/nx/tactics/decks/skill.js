@@ -393,7 +393,7 @@ export default class nx_tactics_decks_skill {
         ":summary",
         "* Experienced with setting up large explosives to destroy large structures.",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Bomb Disposal", "Explosives", "Sapping")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Bomb Disposal", "Explosives", "Mine Laying", "Sapping")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_skill},
@@ -631,10 +631,16 @@ export default class nx_tactics_decks_skill {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sincerity", ":summary", "* Helps convince others when you are being truthful.\n* Helps improve long term relationships by increasing trust.\n* Limitation - May only be used when you truly believe that your are correct."),
           "Small Talk",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Small Talk", ":titles", "The Gift of Gab"),
-          ":Streetwise",
+          "Streetwise",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Streetwise", ":summary", "* [Action]: Gain knowledge where a good or service can be found in a city including black market goods or services."),
-          ":Translator",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Translator", ":summary", "* Can translate immediately"),
+          "Sylvan",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sylvan", ":summary", "The Language of the Fey\n* [Skill]: [Communication]"),
+          "Tradespeak",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tradespeak", ":titles", "Common Tongue", ":summary", "* [Skill]: [Communication]\n* Merchants created this simple language to facilitate trade. It is a very limited language, but can be used for basic communication if there is no alternative. It uses a simple format with no plurals, conjegation or tense: {Adjective(s)} {Subject Noun} {Adverb(s)} {Verb} {Adjective(s)} {Object Noun}. Examples: Trustworthy me offer 10 healthy sheep. Honorable you please each pay 20 silver."),
+          "Thieves Cant",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Thieves Cant", ":summary", "* [Skill]: [Communication]\n* A variant on Tradespeak that emphasizes secret or silent communication to mask criminal activity."),
+          "Translator",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Translator", ":summary", "* Can translate immediately\n* [Skill]: [Communication]"),
           "Trash Talk",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Trash Talk", ":reference", "* What's the matter Agent Scary Lips? You're Scary Lips tasting my hairy shit? You tasting Doug Wilson's World Famous beef stew? How's it going down, its kinda spicy right? You guys are so fucked right now, all I can think about is your wife and a horse. - Doug Wilson, Weeds", ":titles", "Put Down"),
           ":Videography",
@@ -833,7 +839,7 @@ export default class nx_tactics_decks_skill {
         ":reference",
         "* Royal Huntsman - Sleeping Beauty",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Bug Hunt", "Call of the Hunt", "Camouflage", "Cover your Tracks", "Cull the Herd", "Deadfall", "Field Dressing", "Fishing", "Hunter's Mark", "Lure", "Scouting", "Snare", "Tag and Bag", "There is No Escape", "Track"),
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Bug Hunt", "Call of the Hunt", "Camouflage", "Cover your Tracks", "Cull the Herd", "Deadfall", "Field Dressing", "Fishing", "Harvest:Parts", "Hunter's Mark", "Lure", "Scouting", "Snare", "Tag and Bag", "There is No Escape", "Track"),
         ":specialtymap",
         nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Alien Hunter", "Bounty Hunter", "Demon Hunter", "Devil Hunter", "Ghost Hunter", "Mage Hunter", "Monster Hunter", "Trapper", "Treasure Hunter", "Vampire Hunter", "Werewolf Hunter", "Witch Hunter")
       ),
@@ -1174,7 +1180,7 @@ export default class nx_tactics_decks_skill {
         ":stat",
         "Will",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Airborne Assault", "Amphibious Assault", "Besiege", "Close Assault", "Combat Driver", "Diversionary Tactics", "Divide and Conquer", "Field Fortifications", "Formation: Back to Back", "Formation: Cover", "Formation: March", "Formation: Parade", "Formation: Phalanx", "Formation: Shield Wall", "Formation: Skirmish", "Formation: Testudo", "Formation: Tight", "Formation: Wedge", "Halo Drop", "Jump Suit Combat", "Military Vehicle", "Mine Clearing", "Mine Laying", "Mobile Infantry", "Orbital Halo Drop", "Parachute Assault", "Space Combat", "Urban Assault", "Wingsuit Combat"),
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Airborne Assault", "Amphibious Assault", "Besiege", "Close Assault", "Combat Driver", "Diversionary Tactics", "Divide and Conquer", "Field Fortifications", "Formation:Back to Back", "Formation:Cover", "Formation:March", "Formation:Parade", "Formation:Phalanx", "Formation:Shield Wall", "Formation:Skirmish", "Formation:Testudo", "Formation:Tight", "Formation:Wedge", "Halo Drop", "Jump Suit Combat", "Military Vehicle", "Mobile Infantry", "Orbital Halo Drop", "Parachute Assault", "Space Combat", "Urban Assault", "Wingsuit Combat"),
         ":specialtymap",
         nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Siegecraft")
       ),

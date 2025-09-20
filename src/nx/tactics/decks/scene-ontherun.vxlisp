@@ -16,7 +16,7 @@
      "Hare"
      "Pheasant"
      "Pig: Wild Boar"
-     "Snake: Emerald Viper"
+     "Snake:Emerald Viper"
      "Turkey")
     (list<-list : base/cardlist
      (base/skilllist<-tactics-keys
@@ -34,7 +34,7 @@
      (base/itemlist<-tactics-keys
       tactics
       "Bare Handed"
-      "Knife: Dagger"
+      "Knife:Dagger"
       "Mushrooms"
       "Onions: Wild"
       "Raspberries"

@@ -233,9 +233,20 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Called Shot", ":summary", "Combat - Take Disadvantage. IF you win THEN during Hit:Location choose 3 adjacent Locations and draw until 1 of the 3 appears that matches your Damage Type. Use that as the Hit:Location"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Called Shot",
+        ":image",
+        "images/rule-calledshot.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Called Shot allows you to target particular body parts\n    * Conflict - Before Reveal, announce a Skill:X penalty to take. IF you win THEN after Hit:Location, eveal X additional Damage. You may replace Hit:Location with 1 that matches one of your Damage Types"
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaign", ":summary", "* Starting a New Campaign\n* Creating Player Characters\n* Creating Plots\n* Conflict\n* Creating Scenes\n* Continuing a Campaign"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaign: New", ":summary", "* The Elevator Pitch\n* Theme\n* Character Creation\n* Character Development\n* Maps\n* The Hook\n* The Finale"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Casualty", ":summary", "Casualty represent crew and equipment loss on a vehicle.\nDetermine - Draw Fate for each crew or equipment\n* 25% - Cups represents a Casualty\n* 50% - Red represents a Casualty\n* 75% - Any but Cups represents a Casualty\nEffect - Useless. Of those:\n* Crew - Killed:25% Missing:25% Critcal Damage:25% Major Damage:25%\n* Equipment - Irreparable:25% Missing:25% Broken:25% Damaged:25%"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Character"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -470,17 +481,6 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_rule},
-        ":name",
-        "Diving",
-        ":image",
-        "images/rule-diving.svg",
-        ":layout",
-        nx_tactics_base.c_cardlayout_imageonly,
-        ":summary",
-        "A Diving Unit is rapidly losing Elevation\n* Round End - Elevation:-1 for each Diving:1"
-      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Drag", ":summary", "Move Target 1 Space adjacent to or on to you\n* Movement - IF your Body >= Target Body THEN you may spend Move:+1 to Move:1 the Target with you"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -684,6 +684,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Magic", ":summary", "Magic is indirect. It allows one to do the unlikely, not the impossible. Magic must always have a grounded source, so creating things from nothing is the hardest form of magic."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -928,6 +929,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Prone",
+        ":image",
+        "images/rule-prone.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Unit is lying flat and is 1 Elevation lower\n* Cover - Usually offers additional cover\n* Elevation - Note Elevation modifiers"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Pull/Push",
         ":image",
         "images/rule-pull-push.svg",
@@ -1087,6 +1099,17 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Sinking",
+        ":image",
+        "images/rule-sinking.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "A Sinking Unit is rapidly losing Elevation\n* Round End - Elevation:-1 for each Sinking:1"
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Skill",
         ":image",
         "images/rule-skill.svg",
@@ -1102,7 +1125,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Combat\n* Close Combat\n* Melee\n* Defense\n* Evasion\n* Ranged\n* Firearm\n* Gunnery\n* Demolitions\nBody\n* Animals\n* Assassination\n* Athletics\n* Crime\n* Driving\n* Hunting\n* Mechanics\n* Military\n* Seamanship\n* Stealth\n* Survival\n* Tradeskill\nMind\n* Business\n* Computers\n* Electronics\n* Intellect\n* Investigation\n* Knowledge\n* Law\n* Medicine\n* Piloting\n* Science:Life\n* Science:Physical\n* Science:Social\nWill\n* Art\n* Communication\n* Deception\n* Espionage\n* Influence\n* Intimidation\n* Leadership\n* Performance\n* Persuasion\n* Religion"
+        "Combat\n* Close Combat\n* Melee\n* Defense\n* Evasion\n* Ranged\n* Firearm\n* Gunnery\n* Explosives\nBody\n* Animals\n* Assassination\n* Athletics\n* Crime\n* Driving\n* Hunting\n* Mechanics\n* Military\n* Seamanship\n* Stealth\n* Survival\n* Tradeskill\nMind\n* Business\n* Computers\n* Electronics\n* Intellect\n* Investigation\n* Knowledge\n* Law\n* Medicine\n* Piloting\n* Science:Life\n* Science:Physical\n* Science:Social\nWill\n* Art\n* Communication\n* Deception\n* Espionage\n* Influence\n* Intimidation\n* Leadership\n* Performance\n* Persuasion\n* Religion"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -1293,6 +1316,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Velocity", ":image", "images/rule-velocity.svg", ":summary", "Velocity represents the speed and momentum of fast Units. It replaces normal movement\nRound Start\n Velocity - Starts at 0\n Momentum = Velocity\nCountdown - When Count is called, MAY spend Momentum:-1 instead of Move:-1 to move straight or Drift Forward\n IF Count >= Momentum THEN not optional\nFree Actions\n Accelerate:X - Spend Move:X to gain Velocity:+1 (Min=2)\n Brake:X - Spend Move:X to lose Velocity:-1 (Min=1)"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",

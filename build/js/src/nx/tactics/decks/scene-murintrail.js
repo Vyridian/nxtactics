@@ -40,7 +40,7 @@ export default class nx_tactics_decks_scene_murintrail {
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
-            nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife: Dagger", "Sword: Long", "Sword: Short", "Hammer", "Axe: Hand", "Axe: Wood", "Spear", "Spear: Short", "Bow: Short", "Quiver: Arrows", "Shield: Buckler", "Shield: Heater", "Armor: Leather Cuirass", "Coins: Copper", "Coins: Silver", "Coins: Gold", "Coins: Platinum", "Salve: Healing", "Cloak: Fine Woodland", "Rations", "Waterskin")
+            nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife:Dagger", "Sword:Long", "Sword:Short", "Hammer", "Axe: Hand", "Axe: Wood", "Spear", "Spear: Short", "Bow:Short", "Quiver: Arrows", "Shield:Buckler", "Shield:Heater", "Armor:Leather Cuirass", "Coins:Copper", "Coins:Silver", "Coins:Gold", "Coins:Platinum", "Salve: Healing", "Cloak: Fine Woodland", "Rations", "Waterskin")
           ),
           nx_tactics_base.f_cardlist_images_from_tactics_places(tactics, "Sandalstad", "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Shop: General", "Shop: Herbalist", "Shrine", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
         )

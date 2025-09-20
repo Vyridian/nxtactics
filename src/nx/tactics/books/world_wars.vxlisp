@@ -2116,16 +2116,17 @@
           :classification "Hvy. Infantry"
           :unitskillmap
            (base/unitskillmap
-            :Military
+            "Military"
              (base/unitskill
               :name "Military"
+              :level "2")
+            "Demolitions"
+             (base/unitskill
+              :name "Demolitions"
               :level "3"
               :unitabilitymap
                (base/unitabilitymap
-                :Demolitions
-                 (base/unitability
-                  :name "Demolitions")
-                :Explosives
+                "Explosives"
                  (base/unitability
                   :name "Explosives")
                 "Mine Laying"

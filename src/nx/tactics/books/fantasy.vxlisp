@@ -32,9 +32,9 @@
        * Heavy Armor - Maximum Defense"
      :itemmap
       (base/itemmap
-       "Shield: Moon Disc"
+       "Shield:Moon Disc"
         (base/item
-         :name "Shield: Moon Disc"
+         :name "Shield:Moon Disc"
          :summary "* A [Silver] Shield."
          :classification "Shield")))
     (base/section
@@ -341,9 +341,9 @@
               (base/unitskill<-tactics-key-abilities
                tactics "Animals"
                (stringlist "Snake Charming"))))
-          "Snake: Death's Head Viper"
+          "Snake:Death's Head Viper"
            (base/unit
-            :name "Snake: Death's Head Viper"
+            :name "Snake:Death's Head Viper"
             :titles "Wrist Viper"
             :summary
              "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled.")))
@@ -1165,6 +1165,14 @@
        (base/section
         :name "Arden"
         :titles "Alfar, Ljossalfar, Elder, Elf, Sidhe, Sidheni, Sylvan, Sylvus"
+        :itemmap
+         (base/itemmap<-tactics-keys
+          tactics
+          (stringlist
+           "Bow:Moon"
+           "Knife:Moonblade"
+           "Shield:Moon"
+           "Sword:Moon"))
         :placemap
          (base/placemap
           :Alfheim
@@ -1173,10 +1181,18 @@
           :Ardenwood
            (base/place
             :name "Ardenwood"
-            :reference "* We had entered the Ardenwoods on a scouting mission to probe the Sidhe defenses. We had only been in the woods for half an hour before arrows started raining from the trees. Forms flitted among the leaves and brush all around, but we never saw our attackers. We were forced to flee, and they allowed us to leave. The exact nature and numbers of their defenders remains unknown, but their 	effectiveness was clear. - Imperial Expeditionary Log")
-          :Ashwood
+            :reference
+             "* We had entered the Ardenwoods on a scouting mission to probe the Sidhe defenses. We had only been in the woods for half an hour before arrows started raining from the trees. Forms flitted among the leaves and brush all around, but we never saw our attackers. We were forced to flee, and they allowed us to leave. The exact nature and numbers of their defenders remains unknown, but their 	effectiveness was clear. - Imperial Expeditionary Log")
+          "Ashwood"
            (base/place
-            :name "Ashwood"))
+            :name "Ashwood")
+          "Moon:Selene"
+           (base/place
+            :name "Moon:Selene"
+            :titles "Silvery Moon"
+            :summary
+             "The silver moon Selene appeared in the sky during the [Great Convergence]. The Alfar believe it is a portal to their homeland: [Elysium]
+             * Moonfall - It is said that long ago, [Mithral] fell from the moon."))
         :unitmap
          (base/unitmap
           "Arden Archer"
@@ -1218,12 +1234,7 @@
               * Dark green in color with shaggy fur and a long braided or curled tail.
               * Capable of hunting silently
               * Will occasionally let out three terrifying barks that can be heard for long distances, including by ships at sea. This was said to be a warning to farmers to lock up their women, lest the beast abduct them and take them to a fairy mound to supply milk for fairy children."
-            :titles "Fairy Dog (pronounced coo shee), Cu Sidhe")
-          "Goddess Selene"
-           (base/unit
-            :name "Goddess Selene"
-            :reference "* The Moon is our Goddess, the night her kingdom! - Diana, Legends of Runeterra"
-            :summary "* Most Alfar revere the Moon Goddess Selene.")))
+            :titles "Fairy Dog (pronounced coo shee), Cu Sidhe")))
        (base/section
         :name "Gaul"
         :reference "France, Gallia"
@@ -1913,6 +1924,8 @@
           (base/unit
            :name "Goddess Selene"
            :titles "Full Moon, Moon Queen, Silver Queen"
+           :reference
+            "* The Moon is our Goddess, the night her kingdom! - Diana, Legends of Runeterra"
            :summary
             "* Selene is the Goddess of the Moon, the Alfar, and the Werebeasts.
              * She has 4 aspects:

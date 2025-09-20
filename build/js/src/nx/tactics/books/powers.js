@@ -46,8 +46,8 @@ export default class nx_tactics_books_powers {
                 {"any-1": nx_tactics_base.t_abilitymap},
                 "Fine Workmanship",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fine Workmanship", ":summary", "* This item possesses fine details that are particularly attractive to collectors."),
-                "Resist: Fire",
-                nx_tactics_base.f_ability_from_tactics_key(tactics, "Resist: Fire"),
+                "Resist:Fire",
+                nx_tactics_base.f_ability_from_tactics_key(tactics, "Resist:Fire"),
                 "High Durability",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "High Durability", ":summary", "* This item is exceptionally well constructed and can withstand a suprising amount of punishment compared to a normal item of its type.")
               )

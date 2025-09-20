@@ -895,14 +895,14 @@
       :unitmap
        (base/unitmap<-tactics-keys
         tactics
-        "Snake: Anaconda"
-        "Snake: Asp"
-        "Snake: Black Mamba"
-        "Snake: Boa Constrictor"
-        "Snake: Cobra"
-        "Snake: King Cobra"
-        "Snake: Python"
-        "Snake: Viper"))
+        "Snake:Anaconda"
+        "Snake:Asp"
+        "Snake:Black Mamba"
+        "Snake:Boa Constrictor"
+        "Snake:Cobra"
+        "Snake:King Cobra"
+        "Snake:Python"
+        "Snake:Viper"))
     :Toads
      (base/section
       :name "Toads"
@@ -933,12 +933,12 @@
         "Serpent: Great"
          (base/unit
           :name "Serpent: Great")
-        "Snake: Crypt Cobra"
+        "Snake:Crypt Cobra"
          (base/unit
-          :name "Snake: Crypt Cobra")
-        "Snake: Swaying Cobra"
+          :name "Snake:Crypt Cobra")
+        "Snake:Swaying Cobra"
          (base/unit
-          :name "Snake: Swaying Cobra"
+          :name "Snake:Swaying Cobra"
           :summary
            "* This seemingly normal Cobra has the enhanced ability to hypnotise its victim.
             * Hypnotism - By slowly swaying back and forth and removing all hostile intent from its mind, the Cobra creates the illusion that it is peaceful and harmless. Its victim becomes enthralled and simply watches as the Cobra slowly advances. When the Cobra is face to face with its victim, it attacks with lightning speed to bite the face or throat to deposit its venom near the victim's brain."
@@ -1699,9 +1699,7 @@
     * They have minor differences in abilities, but these are cultural.
     * In this book, their physical and cultural differences are meant to be analogies for modern cultural differences and intolerance.
     * Languages:
-    ** Each nation has its own language. Most travellers learn many languages in addition to tradespeak.
-    ** Tradespeak - Merchants have created this simple language to facilitate trade. It is a very limited language, but can be used for basic communication if there is no alternative. It uses a simple format with no plurals, conjegation or tense: {Adjective(s)} {Subject Noun} {Adverb(s)} {Verb} {Adjective(s)} {Object Noun}. Examples: Trustworthy me offer 10 healthy sheep. Honorable you please each pay 20 silver.
-    ** Thieves' Cant - A variant on Tradespeak that emphasizes secret or silent communication to mask criminal activity."
+    ** Each nation has its own language. Most travellers learn many languages in addition to tradespeak."
   :sectionmap
    (base/sectionmap
     :Claymores
@@ -1937,7 +1935,7 @@
          (base/unit
           :name "Stone Skald"
           :summary "* Dwarves love tales of their history, so Skald sing and tell these tales for coin. During battle they play wardrums, anvils, or horns to boost morale.")))
-    "Alfar, Dark"
+    "Alfar:Dark"
      (base/section
       :name "Alfar, Dark"
       :reference
@@ -1951,9 +1949,10 @@
         * Units - Elite Spies, Light Infantry, Heavy Infantry, Elite Light Archers, Heavy Cavalry, Siege Crews
         * Long ago, Elvish scholars came to the conclusion that the seaons of the world were changing and that the race of man would eventually drive the Elves from the world. The majority grudgingly accepted this as the way of things, but a vocal minority refused to accept their fate. They began searching for the tools to battle back against men. This search led them to release mind shattering demonic forces. The rest of the elves were horrified by this blashphemy and called the Great Hunt to systematically eradicate the renegades and put an end to their abominations. The renegades fled, but the hunters relentlessly pursued them, until the renegades bargained with the Dwarves for asylum in their caverns. These activities created a deep hatred between the Elves and Dark Elves as well as the deep distrust between the Elves and Dwarves."
       :titles "Dark Elf, Dark Elv, Dökkálfar, Drow, Svartalfar")
-    "Alfar, Light"
+    "Alfar:Light"
      (base/section
-      :name "Alfar, Light"
+      :name "Alfar:Light"
+      :titles "Eld, Eldar, Elf, Elv, Elves, Ljósálfar, Sidhe, Sylvan"
       :reference "* Seven Deadly Sins: Pride"
       :summary
        "* Maximum Body - 4
@@ -1962,13 +1961,13 @@
         * Units - Elite Scouts, Light Infantry, Elite Light Archers, Elite Longbow Archers
 
         * Norse Ljósálfar (Light Elf) or Hvítálfar (White Elf)
-        * Personality - Whatever the Sidhe choose to do, they do it with grace and refinement. They have a strong sense of nobility and will not abide dishonorable acts. For this reason, they have little trust in Humans or Uruks. 
-        * Biology - Sidhe infants will often wander into the Dreaming to play with fae folk for their childhood years. Some Sidhe never grow up and stay with the fae, but most become teenagers and return to their community. They age and develop very slowly and can live for over 1000 years.
-        * Personalties - Though they seem severe from an outsiders' perspective, this is because of their deep distrust of others. They are actually a very happy people who remember the lessons of the fae to always keep music and joy in their hearts. Unfortunately, their long lives sometimes make them make decisions slowly as well. They are often surprised by rapidly changing circumstances.
+        * Personality - Whatever the Alfar choose to do, they do it with grace and refinement. They have a strong sense of nobility and will not abide dishonorable acts. For this reason, they have little trust in Humans or Uruks. 
+        * Biology - Alfar infants will often wander into the Dreaming to play with fae folk for their childhood years. Some Alfar never grow up and stay with the fae, but most become teenagers and return to their community. They age and develop very slowly and can live for over 1000 years. Their blood is red but has a distinctive silvery sheen.
+        * Personalties - Though they seem severe from an outsiders' perspective, this is because of their deep distrust of others. They are actually a very idealistic people who remember the lessons of the fae to always keep music and joy in their hearts. Unfortunately, their long lives sometimes make them make decisions slowly as well. They are often surprised by rapidly changing circumstances.
+        * History - The Alfar arrived on Thera during the Great Convergence when the Realms intersected. They worship the Moon Goddess Selene and believe the Moon is a portal back to Elysium where they long to return.
         * Abilities - Alfar have long ears with heightened sensitivity. This makes them keenly aware of intruders. Though their vision is unremarkable, they are accustomed to operating at night especially under moonlight.
         * Wild Alfar - Traditional Sidhe culture is closely connected to the woods. They live in semi-permanent settlements an live off the land similar to many native peoples.
-        * High Alfar - Some Sidhe have settled down to build beautiful towns of stone and wood. Here they study the arts, sciences, and magick. The two cultures have grown distrustful of each other over their fundamentally different outlooks on life."
-      :titles "Eld, Eldar, Elf, Elv, Elves, Ljósálfar, Sidhe, Sylvan")
+        * High Alfar - Some Sidhe have settled down to build beautiful towns of stone and wood. Here they study the arts, sciences, and magick. The two cultures have grown distrustful of each other over their fundamentally different outlooks on life.")
     :Fae
      (base/section
       :name "Fae"
@@ -3899,7 +3898,7 @@
           (base/unitskillmap<-unitskilllist
            (base/unitskill<-tactics-key-lvl-items
             tactics "Ranged" 2
-            (stringlist "Bow: Short"))))
+            (stringlist "Bow:Short"))))
        "Goblin King"
         (base/unit
          :name "Goblin King")

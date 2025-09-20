@@ -90,7 +90,7 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 3
-      (stringlist "Sword: Short"))
+      (stringlist "Sword:Short"))
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 1
       (stringlist "Ambush"))))
@@ -214,7 +214,7 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 4
-      (stringlist "Sword: Long"))
+      (stringlist "Sword:Long"))
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Close Combat" 2
       (stringlist "Grab"))
@@ -515,7 +515,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Close Combat" 1
-      (stringlist "Knife: Dagger"))
+      (stringlist "Knife:Dagger"))
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 1
       (stringlist "Sneak"))
@@ -617,7 +617,7 @@ Allseer - Grants resistance to being surprised or flanked."
       tactics "Melee" 2
       (stringlist
        "Spear: Short"
-       "Knife: Dagger"))))
+       "Knife:Dagger"))))
   (base/unit
    :name "Goblin Scout"
    :image "images/cards/unit-goblin-scout.svg"
@@ -642,7 +642,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Close Combat" 1
-      (stringlist "Knife: Dagger"))
+      (stringlist "Knife:Dagger"))
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 1
       (stringlist "Sneak"))))
@@ -666,7 +666,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-items
       tactics "Ranged"
-      (stringlist "Bow: Short"))))
+      (stringlist "Bow:Short"))))
   (base/unit
    :name "Great Race of Yith"
    :image "cthulhu/unit-greatraceofyith.png")
@@ -745,8 +745,8 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 5
       (stringlist
-       "Sword: Long"
-       "Knife: Dagger"))))
+       "Sword:Long"
+       "Knife:Dagger"))))
   (base/unit
    :name "Hidden"
    :image "images/cards/unit-hidden.svg")
@@ -809,8 +809,8 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl-items
       tactics "Defense" 5
       (stringlist
-       "Armor: Chain Mail"
-       "Shield: Round"))))
+       "Armor:Chain Mail"
+       "Shield:Round"))))
   (base/unit
    :name "Jes Aveer"
    :titles "Jessana Aveer"
@@ -1349,7 +1349,7 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl-items
       tactics "Defense" 1
       (stringlist
-       "Shield: Round"))))
+       "Shield:Round"))))
   (base/unit
    :name "Skeleton Warrior"
    :unitpowermap
@@ -1366,8 +1366,8 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl-items
       tactics "Defense" 3
       (stringlist
-       "Armor: Breast Plate"
-       "Shield: Round"))))
+       "Armor:Breast Plate"
+       "Shield:Round"))))
   (base/unit
    :name "Slave 1"
    :image "images/starwars/unit-slave1.png"
@@ -1391,28 +1391,28 @@ Allseer - Grants resistance to being surprised or flanked."
     "* The Sluagh are thin, pale, snake-like, and grotesque, though they remain strangely compelling. They favor archaic, intricate, black clothing. Their joints can dislocate allowing them to slither our of bonds and into disquieting shapes.
      * They may only speak in whispers and dislike any social situations except among their own kind. They prefer to overserve other from hidden corners, and the secrets they obtain are their stock and trade.")
   (base/unit
-   :name "Snake: Anaconda"
+   :name "Snake:Anaconda"
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-abilities
       tactics "Beastial"
       (stringlist "Swallow Whole"))))
   (base/unit
-   :name "Snake: Asp"
+   :name "Snake:Asp"
    :reference "Asps. Very dangerous. You go first. - Raiders of the Lost Ark")
   (base/unit
-   :name "Snake: Black Mamba"
+   :name "Snake:Black Mamba"
    :summary
     "* The black mamba receives its name from the black coloration inside of its mouth, rather than their skin color which is a gray to olive tone. The black mamba is the fastest moving snake in the world, capable of moving up to 20 km/h(12.5 mph). However it uses this speed to evade danger, rather than catch prey.
      * Black mambas are among the ten most venomous snakes in the world. A single bite may inject enough venom to kill from 20-40 grown men. When cornered, they will readily attack. In fact, many snake experts have cited the black mamba as the world's most aggressive snake, noting tendency to actively attack without provocation. When warding off a threat, the black mamba usually delivers multiple strikes, injecting its potent neuro-and cardiotoxin with each strike, often attacking the body or head, unlike most other snakes.
      * Black mambas tend to live in their lairs for long periods of time, which are often vacated insect mounds or hollow trees. Black mambas are diurnal snakes that hunt prey actively day or night.
      * The black mamba is more than 3 times as venomous as the Cape Cobra, over 5 times as venomous as the King cobra and about 40 times as venomous as the Gaboon viper. Black mamba venom contains powerful, rapid-acting neurotoxins and cardiotoxins. The initial symptom of the bite is local pain in the bite area, although not as severe as snakes with hemotoxins. The victim then experiences a tingling sensation in the extremities, drooping eyelids, tunnel vision, sweating, excessive salivation, and lack of muscle control (specifically the mouth and tongue). If the victim does not receive medical attention, symptoms rapidly progress to nausea, shortness of breath, confusion, and paralysis. Eventually, the victim experiences convulsions, respiratory failure, and coma, and dies due to suffocation resulting from paralysis of the muscles used for breathing. Without treatment the mortality rate is 100%, the highest among all venomous snakes in the world.")
   (base/unit
-   :name "Snake: Boa Constrictor")
+   :name "Snake:Boa Constrictor")
   (base/unit
-   :name "Snake: Cobra")
+   :name "Snake:Cobra")
   (base/unit
-   :name "Snake: Emerald Viper"
+   :name "Snake:Emerald Viper"
    :secrets
     "* Movement - They can swim and climb trees.
      * Venomous Bite - Vipers carry a limited amount of venom. They can control the amount that injected including none at all.
@@ -1437,11 +1437,11 @@ Allseer - Grants resistance to being surprised or flanked."
       tactics "Toxins" 2 "2x2"
       (stringlist "Poison Bite"))))
   (base/unit
-   :name "Snake: King Cobra")
+   :name "Snake:King Cobra")
   (base/unit
-   :name "Snake: Python")
+   :name "Snake:Python")
   (base/unit
-   :name "Snake: Viper")
+   :name "Snake:Viper")
   (base/unit
    :name "Spectral Horse")
   (base/unit
@@ -1473,7 +1473,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Ranged" 7
-      (stringlist "Bow: Short"))))
+      (stringlist "Bow:Short"))))
   (base/unit
    :name "Strix"
    :titles "Stirges (plural), Vampire Owls"
@@ -1519,7 +1519,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Ranged" 1
-      (stringlist "Bow: Short"))
+      (stringlist "Bow:Short"))
      (base/unitskill<-tactics-key-lvl-abilities-items
       tactics "Investigation" 1
       (stringlist "Detail Oriented")

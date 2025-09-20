@@ -133,7 +133,7 @@
       :name "Prehistoric Mammals"
       :unitmap
        (base/unitmap
-        :Megatherium
+        "Megatherium"
          (base/unit
           :name "Megatherium"
           :summary "Elephant-sized ground sloth")

@@ -640,84 +640,84 @@
       :name "Early Armor"
       :itemmap
        (base/itemmap
-        "Armor: Bezainted"
+        "Armor:Bezainted"
          (base/item
-          :name "Armor: Bezainted")
-        "Armor: Breast Plate"
-         (base/item<-tactics-key tactics "Armor: Breast Plate")
-        "Armor: Brigandine"
+          :name "Armor:Bezainted")
+        "Armor:Breast Plate"
+         (base/item<-tactics-key tactics "Armor:Breast Plate")
+        "Armor:Brigandine"
          (base/item
-          :name "Armor: Brigandine")
-        "Armor: Bronze"
+          :name "Armor:Brigandine")
+        "Armor:Bronze"
          (base/item
-          :name "Armor: Bronze"
+          :name "Armor:Bronze"
           :summary
            "* Bronze Cuirass, Helmet, Greaves"
           :armor "1mm")
-        "Armor: Chain Mail"
-         (base/item<-tactics-key tactics "Armor: Chain Mail")
-        "Armor: Chain Shirt"
-         (base/item<-tactics-key tactics "Armor: Chain Shirt")
-        "Armor: Cuirbouilli"
+        "Armor:Chain Mail"
+         (base/item<-tactics-key tactics "Armor:Chain Mail")
+        "Armor:Chain Shirt"
+         (base/item<-tactics-key tactics "Armor:Chain Shirt")
+        "Armor:Cuirbouilli"
          (base/item
-          :name "Armor: Cuirbouilli")
-        "Armor: Jazeraint"
+          :name "Armor:Cuirbouilli")
+        "Armor:Jazeraint"
          (base/item
-          :name "Armor: Jazeraint")
-        "Armor: Laminated"
-         (base/item<-tactics-key tactics "Armor: Laminated")
-        "Armor: Leather Cuirass"
-         (base/item<-tactics-key tactics "Armor: Leather Cuirass")
-        "Armor: Leather Helmet"
-         (base/item<-tactics-key tactics "Armor: Leather Helmet")
-        "Armor: Leather Pants"
+          :name "Armor:Jazeraint")
+        "Armor:Laminated"
+         (base/item<-tactics-key tactics "Armor:Laminated")
+        "Armor:Leather Cuirass"
+         (base/item<-tactics-key tactics "Armor:Leather Cuirass")
+        "Armor:Leather Helmet"
+         (base/item<-tactics-key tactics "Armor:Leather Helmet")
+        "Armor:Leather Pants"
          (base/item
-          :name "Armor: Leather Pants"
+          :name "Armor:Leather Pants"
           :armor "0mm")
-        "Armor: Leather Shirt"
+        "Armor:Leather Shirt"
          (base/item
-          :name "Armor: Leather Shirt"
+          :name "Armor:Leather Shirt"
           :armor "0mm")
-        "Armor: Leather Vest"
+        "Armor:Leather Vest"
          (base/item
-          :name "Armor: Leather Vest"
+          :name "Armor:Leather Vest"
           :armor "0mm")
-        "Armor: Padded"
+        "Armor:Padded"
          (base/item
-          :name "Armor: Padded"
+          :name "Armor:Padded"
           :armor "0mm")
-        "Armor: Plate"
+        "Armor:Plate"
          (base/item
-          :name "Armor: Plate"
+          :name "Armor:Plate"
           :armor "3mm")
-        "Armor: Platemail"
+        "Armor:Platemail"
          (base/item
-          :name "Armor: Platemail"
+          :name "Armor:Platemail"
           :armor "2mm")
-        "Armor: Quilted"
+        "Armor:Quilted"
          (base/item
-          :name "Armor: Quilted"
+          :name "Armor:Quilted"
           :armor "0mm")
-        "Armor: Ringmail"
+        "Armor:Ringmail"
          (base/item
-          :name "Armor: Ringmail"
+          :name "Armor:Ringmail"
           :armor "1mm")
-        "Armor: Scalemail"
+        "Armor:Scalemail"
          (base/item
-          :name "Armor: Scalemail"
+          :name "Armor:Scalemail"
           :armor "2mm")
-        "Armor: Scale Barding"
+        "Armor:Scale Barding"
          (base/item
-          :name "Armor: Scale Barding"
+          :name "Armor:Scale Barding"
           :armor "2mm")
-        "Armor: Splint"
+        "Armor:Splint"
          (base/item
-          :name "Armor: Splint"
+          :name "Armor:Splint"
           :titles "Lamellar"
           :armor "2mm")
-        "Armor: Studded Leather"
+        "Armor:Studded Leather"
          (base/item
-          :name "Armor: Studded Leather"
+          :name "Armor:Studded Leather"
           :armor "0mm")))
     :Shields
      (section
@@ -725,13 +725,13 @@
       :itemmap
        (base/itemmap<-tactics-keys
         tactics
-        "Shield: Buckler"
-        "Shield: Heater"
-        "Shield: Kite"
-        "Shield: Legionary"
-        "Shield: Round"
-        "Shield: Tower"
-        "Shield: Wicker"))
+        "Shield:Buckler"
+        "Shield:Heater"
+        "Shield:Kite"
+        "Shield:Legionary"
+        "Shield:Round"
+        "Shield:Tower"
+        "Shield:Wicker"))
     :Axes
      (section
       :name "Axes"
@@ -973,8 +973,8 @@
          (base/item
           :name "Cinqueda"
           :energy "50J")
-        "Knife: Dagger"
-         (base/item<-tactics-key tactics "Knife: Dagger")
+        "Knife:Dagger"
+         (base/item<-tactics-key tactics "Knife:Dagger")
         :Dirk
          (base/item
           :name "Dirk"
@@ -1124,29 +1124,29 @@
       :itemmap
        (base/itemmap<-tactics-keys
         tactics
-        "Sword: Back"
-        "Sword: Bastard"
-        "Sword: Bokken"
-        "Sword: Broad"
-        "Sword: Butterfly"
-        "Sword: Cavalry"
-        "Sword: Cutlass"
-        "Sword: Epee"
-        "Sword: Falchion"
-        "Sword: Foil"
-        "Sword: Great"
-        "Sword: Hook"
-        "Sword: Katana"
-        "Sword: Katar"
-        "Sword: Long"
-        "Sword: Ninjato"
-        "Sword: No-Dachi"
-        "Sword: Rapier"
-        "Sword: Saber"
-        "Sword: Scimitar"
-        "Sword: Short"
-        "Sword: Tanto"
-        "Sword: Wakizashi"
+        "Sword:Back"
+        "Sword:Bastard"
+        "Sword:Bokken"
+        "Sword:Broad"
+        "Sword:Butterfly"
+        "Sword:Cavalry"
+        "Sword:Cutlass"
+        "Sword:Epee"
+        "Sword:Falchion"
+        "Sword:Foil"
+        "Sword:Great"
+        "Sword:Hook"
+        "Sword:Katana"
+        "Sword:Katar"
+        "Sword:Long"
+        "Sword:Ninjato"
+        "Sword:No-Dachi"
+        "Sword:Rapier"
+        "Sword:Saber"
+        "Sword:Scimitar"
+        "Sword:Short"
+        "Sword:Tanto"
+        "Sword:Wakizashi"
        ))
     :Archery
      (section
@@ -1154,10 +1154,11 @@
       :itemmap
        (base/itemmap<-tactics-keys
         tactics
-        "Bow: Composite"
-        "Bow: Compound"
-        "Bow: Long"
-        "Bow: Short"))
+        "Bow:Composite"
+        "Bow:Compound"
+        "Bow:Long"
+        "Bow:Moon"
+        "Bow:Short"))
     :Crossbows
      (section
       :name "Crossbows"

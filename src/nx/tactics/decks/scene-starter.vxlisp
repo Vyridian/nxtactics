@@ -35,11 +35,11 @@
      (list<-list : base/cardlist
       (base/itemlist<-tactics-keys
        tactics
-       "Knife: Dagger"
-       "Sword: Long"
-       "Armor: Leather Cuirass"
-       "Armor: Leather Helmet"
-       "Shield: Round"
+       "Knife:Dagger"
+       "Sword:Long"
+       "Armor:Leather Cuirass"
+       "Armor:Leather Helmet"
+       "Shield:Round"
        "Campfire"
        ))
      (base/cardlist-images<-tactics-places

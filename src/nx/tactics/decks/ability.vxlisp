@@ -160,47 +160,47 @@
    :summary
     "* [Skill]: [Crime]")
   (base/ability
-   :name "Armor: Abdomen"
+   :name "Armor:Abdomen"
    :summary
     "* Protects Abdomen [J]
      * [Power]: [Armor]")
   (base/ability
-   :name "Armor: Arms"
+   :name "Armor:Arms"
    :summary
     "* Protects Arms [8] and [9]
      * [Power]: [Armor]")
   (base/ability
-   :name "Armor: Chest"
+   :name "Armor:Chest"
    :summary
     "* Protects Chest [Q]
      * [Power]: [Armor]")
   (base/ability
-   :name "Armor: Feet"
+   :name "Armor:Feet"
    :summary
     "* Protects Feet [2] and [3]
      * [Power]: [Armor]")
   (base/ability
-   :name "Armor: Hands"
+   :name "Armor:Hands"
    :summary
     "* Protects Arms [6] and [7]
      * [Power]: [Armor]")
   (base/ability
-   :name "Armor: Head"
+   :name "Armor:Head"
    :summary
     "* Protects Head [A]
      * [Power]: [Armor]")
   (base/ability
-   :name "Armor: Legs"
+   :name "Armor:Legs"
    :summary
     "* Protects Legs [4] and [5]
      * [Power]: [Armor]")
   (base/ability
-   :name "Armor: Shoulders"
+   :name "Armor:Shoulders"
    :summary
     "* Protects Shoulders [K]
      * [Power]: [Armor]")
   (base/ability
-   :name "Armor: Vitals"
+   :name "Armor:Vitals"
    :summary
     "* Protects Vitals [10]
      * [Power]: [Armor]")
@@ -1317,6 +1317,8 @@
    :summary "* [Requires]: Bow or Crossbow")
   (base/ability
    :name "Explosives"
+   :reference
+    "Catch! - Jinx, Runeterra"
    :summary
     "* Experienced using various small explosives in combat.
      * [Skill]: [Demolitions]")
@@ -1486,29 +1488,29 @@
      * The ability to forge money or documents. This ability is also used while creating money to prevent forgery.
      * [Extended Action]: Roll vs. object quality or anti-forgery level. Any [Hits] allow a forgery that can pass at a distance. The more [Hits] and [Criticals] rolled, the more indistinquishable from the original. High level forgeries are works of art unto themselves.")
   (base/ability
-   :name "Formation: Back to Back"
+   :name "Formation:Back to Back"
    :summary
     "* [Formation]: Not strictly a formation, units with their backs against each other largely protect each other's back.
      * [Skill]: [Military]")
   (base/ability
-   :name "Formation: Cover"
+   :name "Formation:Cover"
    :summary
     "* [Formation]: Not strictly a formation, units in Cover formation stay close enough together to protect each other's sides.
      * [Skill]: [Military]")
   (base/ability
-   :name "Formation: March"
+   :name "Formation:March"
    :summary
     "* [Formation]: Units move in columns.
      * [Skill]: [Military]
      * [+1 Speed]")
   (base/ability
-   :name "Formation: Parade"
+   :name "Formation:Parade"
    :summary
     "* [Formation]: A showy formation designed to look good.  Has no use in battle.
      * [Skill]: [Military]
      * [Intimidation]:+1")
   (base/ability
-   :name "Formation: Phalanx"
+   :name "Formation:Phalanx"
    :reference
     "* With his friends jostling and pushing on both sides and behind, and his enemies forming a solid wall in front of him, the hoplite had little opportunity for feats of technique and weapon skill, but great need for commitment and mental toughness. The hoplites had to trust their neighbors for mutual protection, so a phalanx was only as strong as its weakest elements. Its effectiveness depended on how well the hoplites could maintain this formation while in combat, and how well they could stand their ground, especially when engaged against another phalanx. The more disciplined and courageous the army, the more likely it was to win. The Greek word dynamis, the 'will' or 'ability to fight,' was used to express the drive that kept hoplites in formation."
    :summary
@@ -1518,14 +1520,14 @@
      * [+1 Attack], [+1 Defense] from Front
      * [-1 Defense] from Rear")
   (base/ability
-   :name "Formation: Shield Wall"
+   :name "Formation:Shield Wall"
    :summary
     "* [Formation]: Uses shields to form a wall.
      * [Skill]: [Military]
      * [Requires]: At least half must have Shields.
      +1 Defense from Front.")
   (base/ability
-   :name "Formation: Skirmish"
+   :name "Formation:Skirmish"
    :reference
     "Acting as light infantry with their light arms and minimal armor, they could run ahead of the main battle line, release a volley of arrows, slingshots or javelins, and retreat behind their main battle line before the clash of the opposing main forces. The aims of skirmishing were to disrupt enemy formations by causing casualties before the main battle, and to tempt the opposing infantry into attacking prematurely, throwing their organization into disarray. Skirmishers could also be effectively used to surround opposing soldiers in the absence of friendly cavalry."
    :summary
@@ -1538,7 +1540,7 @@
      * [-1 Defense] vs Small Melee and Close Combat Units"
    :titles "Skirmisher")
   (base/ability
-   :name "Formation: Testudo"
+   :name "Formation:Testudo"
    :image "Skills/Testudo.jpg"
    :summary
     "* [Formation]: Uses shields to form a shell around a unit.
@@ -1549,7 +1551,7 @@
      * Cannot Attack"
    :titles "Tortoise Formation, Turtle Up")
   (base/ability
-   :name "Formation: Tight"
+   :name "Formation:Tight"
    :summary
     "* [Formation]: Units stay tightly packed to maximize Melee defense.
      * [Skill]: [Military]
@@ -1560,7 +1562,7 @@
    :summary
     "* [Action]: When unit has [Line of Sight] on a opponent, any number of units with [Indirect Fire] may attack that unit even if they do not have [Line of Sight].")
   (base/ability
-   :name "Formation: Wedge"
+   :name "Formation:Wedge"
    :summary
     "* [Formation]: Units move in triangle and focus on breaking enemy formations.
      * [Skill]: [Military]
@@ -1618,6 +1620,12 @@
      * Initiative:-1
      * Move:-1
      * Rating:+1")
+  (base/ability
+   :name "Harvest:Parts"
+   :titles "Skinning"
+   :summary
+    "* Retrieve skin or other valuable parts from a carcass.
+     * [Skill]: [Hunting]")
   (base/ability
    :name "Hatred"
    :reference
@@ -2145,11 +2153,11 @@
   (base/ability
    :name "Mine Clearing"
    :summary
-    "* [Skill]: [Military]")
+    "* [Skill]: [Demolitions]")
   (base/ability
    :name "Mine Laying"
    :summary
-    "* [Skill]: [Military]")
+    "* [Skill]: [Demolitions]")
   (base/ability
    :name "Mining Rig"
    :summary
@@ -2716,58 +2724,58 @@
    :summary
     "* [Skill]: [Intimidation]")
   (base/ability
-   :name "Resist: Bash"
+   :name "Resist:Bash"
    :summary
     "* [Damage]: [Armor]:+1 if attack is a [Bash]")
   (base/ability
-   :name "Resist: Cold"
+   :name "Resist:Cold"
    :summary "* [Passive] - Armor:+1 vs. Cold")
   (base/ability
-   :name "Resist: Corrosion"
+   :name "Resist:Corrosion"
    :summary
     "* [Passive] - Armor:+1 vs. Corrosive Agents")
   (base/ability
-   :name "Resist: Electricity"
+   :name "Resist:Electricity"
    :summary "* [Passive] - Armor:+1 vs. Electricity")
   (base/ability
-   :name "Resist: Energy"
+   :name "Resist:Energy"
    :summary
     "* [Damage]: [+2 Armor] if attack is an [Energy Weapon]
      * Only 1 Hardened vs. ability may be taken")
   (base/ability
-   :name "Resist: Fire"
+   :name "Resist:Fire"
    :summary
     "* [Damage]: [Armor]:+1 if attack produces [Fire]")
   (base/ability
-   :name "Resist: Hack"
+   :name "Resist:Hack"
    :summary
     "* [Damage]: [Armor]:+1 if attack is a [Hack]")
   (base/ability
-   :name "Resist: Magnetism"
+   :name "Resist:Magnetism"
    :summary
     "* Reduces the chance that a magnetic attachment can hold on the armor (assuming it is metallic).
      * [Passive] - Armor:+1 vs. Magnetism")
   (base/ability
-   :name "Resist: Pierce"
+   :name "Resist:Pierce"
    :summary
     "* [Damage]: [Armor]:+1 if attack is a [Pierce]")
   (base/ability
-   :name "Resist: Plasma"
+   :name "Resist:Plasma"
    :summary
     "* Detects and disrupts the magnetic bottle surrounding plasma rounds causing them to detonate too early.
      * [Passive] - Armor:+1 vs. Plasma")
   (base/ability
-   :name "Resist: Poison"
+   :name "Resist:Poison"
    :reference
     "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an immunity to iocane powder. - Princess Bride")
   (base/ability
-   :name "Resist: Pressure"
+   :name "Resist:Pressure"
    :summary "* [Passive] - Armor:+1 vs. Pressure and Impact")
   (base/ability
-   :name "Resist: Radiation"
+   :name "Resist:Radiation"
    :summary "* [Passive] - Armor:+1 vs. Radiation")
   (base/ability
-   :name "Resist: Slash"
+   :name "Resist:Slash"
    :summary
     "* [Damage]: [Armor]:+1 if attack is a [Slash]")
   (base/ability
@@ -2846,9 +2854,20 @@
      * Must Attack if able.
      * Ignores Fear, Despair, and Morale")
   (base/ability
+   :name "Sacrificial Limb"
+   :summary
+    "Limbs can break off to escape
+     * [Power]: [Beastial]")
+  (base/ability
+   :name "Sacrificial Tail"
+   :summary
+    "Tail can break off to escape
+     * [Power]: [Beastial]")
+  (base/ability
    :name "Savage Genitalia"
    :summary
-    "* Male variations include excessive length, hardness, spines, and thorns.
+    "* [Power]: [Beastial]
+     * Male variations include excessive length, hardness, spines, and thorns.
      * Female variations include teeth, ripping suction, crushers, and grinders.
      * [Hidden Weapon]
      * -2 Initiative

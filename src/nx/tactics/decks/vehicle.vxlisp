@@ -27,17 +27,83 @@
   :layout base/cardlayout-imageonly
   :summary
    "* Minor: Dents. Push:1
-    * Major: Hull Breach. Push:1 Armor:-1
+    * Major: Hull Damage. Push:1 Armor:-1
     * Critical: Frame Crack. Push:1 Armor:-2
     * Extreme: Structural Collapse. Push:1 Armor:-3. Part:DamageAll"))
 
 /*
 // D Frame:Pierced Through
-// H Frame:Split in Two
+// H Frame:Split Apart Casualty:50%
 // S Frame:
 // D Control:Haywire
 // S Control:Controls Severed. No Control
+// Hull
+// AC
+//  Mj - Armor Breach
+//  Cr - Hull Breach
+//  Ex - Hull Collapse. Body:-3 Speed:-1 Casualty:75%
+// AD
+//  Ex - 
+// AH
+//  Ex - Structural Failure. Body:-3 Speed:-3 Casualty:75%
+// KD - Controls
+//  Mj - Shrapnel Damages Controls. 
+//  Cr - Shrapnel Causes Fire. 
+//  Ex - Controls Perforated. Broken. Stun:3 Speed:-3 Casualty:50%
+// QC - Cabin
+//  Mn - Shockwave. Fatigue:1
+//  Mj - Shrapnel Fragments. Fatigue:1 Stress:1 Casualty:25%
+//  Cr - Wall Collapse. Fatigue:2 Stress:2 Casualty:50%
+//  Ex - Room Collapse. Fatigue:3 Stress:3 Casualty:75%
+// QD - Cabin
+//  Mn - Wall Pierced. Leaking. Stress:1
+//  Mj - Smoke from Shrapnel. Stress:1 Choking:2 Casualty:25%
+//  Cr - Fire from Shrapnel. Stress:2 Burning:2 Casualty:50%
+//  Ex - Explosion from Shrapnel. Stress:3 Burning:3 Casualty:75%
+// QH - Cabin
+//  Mn - Wall Crumbling. Leaking. Stress:1
+//  Mj - Wall Cracked. Leaking. Stress:1 Exposure:1 Casualty:25%
+//  Cr - Wall Breach. Stress:2 Exposure:2 Casualty:50%
+//  Ex - Room Torn Open. Stress:3 Exposure:3 Casualty:75%
+// QS - Cabin
+//  Mn - Wall Pierced. Leaking. Stress:1
+//  Mj - Shrapnel Causes Toxic Smoke. Stress:1 Choking:2 Casualty:25%
+//  Cr - Shrapnel Causes Fire. Stress:2 Burning:2 Casualty:50%
+//  Ex - Shrapnel Causes Explosion. Stress:3 Burning:3 Casualty:75%
+// JC - Engine
+//  Mn - Engine Mount Broken. Slow:1
+//  Mj - Engine Dislodged. 
+//  Cr - 
+//  Ex - Engine Knockedover. Broken. Speed:-3 Casualty:50%
+// JD - Engine
+//  Mn - Engine Misfiring. Slow:1
+//  Mj - Engine Smoking. Slow:1 Choking:2 Casualty:25%
+//  Cr - Engine Fire. Speed:-1 Burning:2 Casualty:50%
+//  Ex - Engine Explosion. Broken. Speed:-2 Burning:3 Casualty:75%
+// JH - Engine
+//  Ex - Engine Split Open. Broken. Speed:-3 Casualty:25%
+// JS - Engine
+//  Mn - Fuel Leak. Slow:1
+//  Ex - Fuel Feeds Slashed. Broken. Speed:-3 Casualty:25%
+// TD - Supply
+//  Mj - Toxic Smoke. 
+//  Cr - Fire. 
+//  Ex - Explosion. 
 // Steering
+// 7C - Alignment
+//  Shudder
+//  Vibrations
+//  Ex - Violent Shaking. Speed:-1 Left Turn causes Random Damage:1
+// 7D - Direction
+//  Cr - Steering Jammed
+//  Ex - Jammed Turning Left
+// 7H
+//  Ex - Mechanism Severed. Left Turns become Left Drift
+// 7S - Control
+//  Mn - Control Damage. Slow:1
+//  Mj - Control Unresponsive. Slow:1 Can't Turn Left next Round
+//  Cr - Control Severed. Slow:2 Damaged. Can't Turn Left
+//  Ex - Control Ruined. Slow:3 Broken. Can't Turn Left
 // Life
 // Cabin
 // Systems
@@ -54,6 +120,7 @@
 // Ventilation Failure
 // Cabin Smoke
 // Cabin Fire
+// Explosion. Life Support Destroyed. Smoke:3 Fire:3 Crew Loss:50%
 // Control line cut
 // Control Fire
 // Fuel line cut
@@ -61,6 +128,25 @@
 // Fuel explosion
 // Communication interference
 // Communication cut
+// Power
+//  Energy Loss
+//  Power Failure
+// Thrust H, S (Strong) C, D (Weak)
+//  Hurtling Out of Control. Min Speed:+1*
+//  Stopped. Max Speed:-1*
+//  Transmission. Speed-Up:+1* (Can't increase Speed)
+//  Brake Failure. Speed-Down:+1* (Can't reduce Speed)
+// Controls
+//  C Steering Lost
+//  D Visibility Lost. Blind
+//  H
+//   Fire. Weapon Control Lost. Casualty:25%
+//   Explosion. Equipment Control Lost. Casualty:50%
+//  S - Mind:-1
+//   Comms Static. Stun:1
+//   Comms Garbled. 
+//   Comms Interrupted. Deaf:Partial
+//   Comms Cut. Deaf
 */
 
 (const vehicle-ad : base/damage
@@ -83,179 +169,157 @@
 
 (const vehicle-kc : base/damage
  (base/damage
-  :name "Bash: Shoulders"
+  :name "Bash: Controls"
   :image "images/damage-vehicle-kc.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-kd : base/damage
  (base/damage
-  :name "Pierce: Shoulders"
+  :name "Pierce: Controls"
   :image "images/damage-vehicle-kd.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-kh : base/damage
  (base/damage
-  :name "Hack: Shoulders"
+  :name "Hack: Controls"
   :image "images/damage-vehicle-kh.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-ks : base/damage
  (base/damage
-  :name "Slash: Shoulders"
+  :name "Slash: Controls"
   :image "images/damage-vehicle-ks.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-qc : base/damage
  (base/damage
-  :name "Bash: Chest"
-  :titles "Bash: Middle Chest/Back/Lungs/Heart"
+  :name "Bash: Cabin"
   :image "images/damage-vehicle-qc.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-qd : base/damage
  (base/damage
-  :name "Pierce: Chest"
-  :titles "Pierce: Middle Chest/Back/Lungs/Heart"
+  :name "Pierce: Cabin"
   :image "images/damage-vehicle-qd.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-qh : base/damage
  (base/damage
-  :name "Hack: Chest"
-  :titles "Hack: Middle Chest/Back/Lungs/Heart"
+  :name "Hack: Cabin"
   :image "images/damage-vehicle-qh.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-qs : base/damage
  (base/damage
-  :name "Slash: Chest"
-  :titles "Slash: Middle Chest/Back/Lungs/Heart"
+  :name "Slash: Cabin"
   :image "images/damage-vehicle-qs.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-jc : base/damage
  (base/damage
-  :name "Bash: Abdomen"
-  :titles "Bash: Abdomen/Lower Back"
+  :name "Bash: Engine"
   :image "images/damage-vehicle-jc.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-jd : base/damage
  (base/damage
-  :name "Pierce: Abdomen"
-  :titles "Pierce: Abdomen/Lower Back"
+  :name "Pierce: Engine"
   :image "images/damage-vehicle-jd.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-jh : base/damage
  (base/damage
-  :name "Hack: Abdomen"
-  :titles "Hack: Abdomen/Lower Back"
+  :name "Hack: Engine"
   :image "images/damage-vehicle-jh.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-js : base/damage
  (base/damage
-  :name "Slash: Abdomen"
-  :titles "Slash: Abdomen/Lower Back"
+  :name "Slash: Engine"
   :image "images/damage-vehicle-js.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-tc : base/damage
  (base/damage
-  :name "Bash: Vitals"
-  :titles "Bash: Hips/Groin"
+  :name "Bash: Supply"
   :image "images/damage-vehicle-tc.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-td : base/damage
  (base/damage
-  :name "Pierce: Vitals"
-  :titles "Pierce: Hips/Groin"
+  :name "Pierce: Supply"
   :image "images/damage-vehicle-td.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-th : base/damage
  (base/damage
-  :name "Hack: Vitals"
-  :titles "Hack: Hips/Groin"
+  :name "Hack: Supply"
   :image "images/damage-vehicle-th.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-ts : base/damage
  (base/damage
-  :name "Slash: Vitals"
-  :titles "Slash: Hips/Groin"
+  :name "Slash: Supply"
   :image "images/damage-vehicle-ts.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-9c : base/damage
  (base/damage
-  :name "Bash: Left Arm"
-  :titles "Bash: Left Upper Arm/Elbow"
+  :name "Bash: Left Steering"
   :image "images/damage-vehicle-9c.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-9d : base/damage
  (base/damage
-  :name "Pierce: Left Arm"
-  :titles "Pierce: Left Upper Arm/Elbow"
+  :name "Pierce: Left Steering"
   :image "images/damage-vehicle-9d.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-9h : base/damage
  (base/damage
-  :name "Hack: Left Arm"
-  :titles "Hack: Left Upper Arm/Elbow"
+  :name "Hack: Left Steering"
   :image "images/damage-vehicle-9h.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-9s : base/damage
  (base/damage
-  :name "Slash: Left Arm"
-  :titles "Slash: Left Upper Arm/Elbow"
+  :name "Slash: Left Steering"
   :image "images/damage-vehicle-9s.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-8c : base/damage
  (base/damage
-  :name "Bash: Right Arm"
-  :titles "Bash: Right Upper Arm/Elbow"
+  :name "Bash: Right Steering"
   :image "images/damage-vehicle-8c.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-8d : base/damage
  (base/damage
-  :name "Pierce: Right Arm"
-  :titles "Pierce: Right Upper Arm/Elbow"
+  :name "Pierce: Right Steering"
   :image "images/damage-vehicle-8d.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-8h : base/damage
  (base/damage
-  :name "Hack: Right Arm"
-  :titles "Hack: Right Upper Arm/Elbow"
+  :name "Hack: Right Steering"
   :image "images/damage-vehicle-8h.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-8s : base/damage
  (base/damage
-  :name "Slash: Right Arm"
-  :titles "Slash: Right Upper Arm/Elbow"
+  :name "Slash: Right Steering"
   :image "images/damage-vehicle-8s.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-7c : base/damage
  (base/damage
-  :name "Bash: Left Hand"
-  :titles "Bash: Left Lower Arm/Wrist/Hand"
+  :name "Bash: Left Lift"
   :image "images/damage-vehicle-7c.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-7d : base/damage
  (base/damage
-  :name "Pierce: Left Hand"
-  :titles "Pierce: Left Lower Arm/Wrist/Hand"
+  :name "Pierce: Left Lift"
   :image "images/damage-vehicle-7d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -266,39 +330,35 @@
 
 (const vehicle-7h : base/damage
  (base/damage
-  :name "Hack: Left Hand"
-  :titles "Hack: Left Lower Arm/Wrist/Hand"
+  :name "Hack: Left Lift"
   :image "images/damage-vehicle-7h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Graze. Withdraw:1
     Major: Forearm Gash. Drop Item. Stress:1 Bleeding:1
-    Critical: Hand Slash. Impaired. Stress:2 Bleeding:2
-    Extreme: Hand Mangled. Impaired. Stress:2 Bleeding:2"))
+    Critical: Lift Slash. Impaired. Stress:2 Bleeding:2
+    Extreme: Lift Mangled. Impaired. Stress:2 Bleeding:2"))
 
 (const vehicle-7s : base/damage
  (base/damage
-  :name "Slash: Left Hand"
-  :titles "Slash: Left Lower Arm/Wrist/Hand"
+  :name "Slash: Left Lift"
   :image "images/damage-vehicle-7s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Cut. Bleeding:1
     Major: Forearm Slash. Drop Item. Slow:1 Bleeding:1
     Extreme: Artery Severed. Impaired. Stress:1 Bleeding:3
-    Extreme: Hand Severed. Stress:2 Bleeding:2"))
+    Extreme: Lift Severed. Stress:2 Bleeding:2"))
 
 (const vehicle-6c : base/damage
  (base/damage
-  :name "Bash: Right Hand"
-  :titles "Bash: Right Lower Arm/Wrist/Hand"
+  :name "Bash: Right Lift"
   :image "images/damage-vehicle-6c.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-6d : base/damage
  (base/damage
-  :name "Pierce: Right Hand"
-  :titles "Pierce: Right Lower Arm/Wrist/Hand"
+  :name "Pierce: Right Lift"
   :image "images/damage-vehicle-6d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -309,19 +369,18 @@
 
 (const vehicle-6h : base/damage
  (base/damage
-  :name "Hack: Right Hand"
-  :titles "Hack: Right Lower Arm/Wrist/Hand"
+  :name "Hack: Right Lift"
   :image "images/damage-vehicle-6h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Graze. Withdraw:1
     Major: Forearm Gash. Drop Item. Stress:1 Bleeding:1
-    Critical: Hand Slash. Impaired. Stress:2 Bleeding:2
-    Extreme: Hand Mangled. Impaired. Stress:2 Bleeding:2"))
+    Critical: Lift Slash. Impaired. Stress:2 Bleeding:2
+    Extreme: Lift Mangled. Impaired. Stress:2 Bleeding:2"))
 
 (const vehicle-6s : base/damage
  (base/damage
-  :name "Slash: Left Steering"
+  :name "Slash: Left Lift"
   :image "images/damage-vehicle-6s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -332,8 +391,7 @@
 
 (const vehicle-5c : base/damage
  (base/damage
-  :name "Bash: Left Leg"
-  :titles "Bash: Left Upper Leg/Thigh/Knee"
+  :name "Bash: Left Systems"
   :image "images/damage-vehicle-5c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -344,8 +402,7 @@
 
 (const vehicle-5d : base/damage
  (base/damage
-  :name "Pierce: Left Leg"
-  :titles "Pierce: Left Upper Leg/Thigh/Knee"
+  :name "Pierce: Left Systems"
   :image "images/damage-vehicle-5d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -356,8 +413,7 @@
 
 (const vehicle-5h : base/damage
  (base/damage
-  :name "Hack: Left Leg"
-  :titles "Hack: Left Upper Leg/Thigh/Knee"
+  :name "Hack: Left Systems"
   :image "images/damage-vehicle-5h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -368,8 +424,7 @@
 
 (const vehicle-5s : base/damage
  (base/damage
-  :name "Slash: Left Leg"
-  :titles "Slash: Left Upper Leg/Thigh/Knee"
+  :name "Slash: Left Systems"
   :image "images/damage-vehicle-5s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -380,8 +435,7 @@
 
 (const vehicle-4c : base/damage
  (base/damage
-  :name "Bash: Right Leg"
-  :titles "Bash: Right Upper Leg/Thigh/Knee"
+  :name "Bash: Right Systems"
   :image "images/damage-vehicle-4c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -392,8 +446,7 @@
 
 (const vehicle-4d : base/damage
  (base/damage
-  :name "Pierce: Right Leg"
-  :titles "Pierce: Right Upper Leg/Thigh/Knee"
+  :name "Pierce: Right Systems"
   :image "images/damage-vehicle-4d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -404,8 +457,7 @@
 
 (const vehicle-4h : base/damage
  (base/damage
-  :name "Hack: Right Leg"
-  :titles "Hack: Right Upper Leg/Thigh/Knee"
+  :name "Hack: Right Systems"
   :image "images/damage-vehicle-4h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -416,8 +468,7 @@
 
 (const vehicle-4s : base/damage
  (base/damage
-  :name "Slash: Right Leg"
-  :titles "Slash: Right Upper Leg/Thigh/Knee"
+  :name "Slash: Right Systems"
   :image "images/damage-vehicle-4s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -428,99 +479,91 @@
 
 (const vehicle-3c : base/damage
  (base/damage
-  :name "Bash: Left Foot"
-  :titles "Bash: Left Lower Leg/Shin/Ankle/Foot"
+  :name "Bash: Left Thrust"
   :image "images/damage-vehicle-3c.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Shin Bruise. Fatigue:1
-    Major: Foot Smash. Fatigue:1 Slow:1
-    Critical: Ankle Fracture. Impaired. Fatigue. Slow:2
-    Extreme: Foot Shattered. Impaired. Fatigue:2 Slow:2"))
+   "Minor: Thruster Dent. Slow:1
+    Major: Thruster Misaligned. Slow:1 Push:1
+    Critical: Thruster Sputtering. Slow:2 Push:1 Accelerate:+1
+    Extreme: Thruster Stalling. Slow:3 Push:1 Accelerate:+2"))
 
 (const vehicle-3d : base/damage
  (base/damage
-  :name "Pierce: Left Foot"
-  :titles "Pierce: Left Lower Leg/Shin/Ankle/Foot"
+  :name "Pierce: Left Thrust"
   :image "images/damage-vehicle-3d.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Ankle Graze. Stun:1
-    Major: Foot Slash. Slow:1 Bleeding:1
-    Critical: Foot Pierced. Slow:3 Bleeding:1
-    Extreme: Ankle Useless. Impaired. Stun:2 Bleeding:1"))
+   "Minor: Thruster Pierced: Slow:1
+    Major: Accelerator Stuck. Slow:1 Velocity:+1
+    Critical: Accelerator Jammed. Slow:2 Velocity:+2
+    Extreme: Runaway Thruster. Slow:3 Each Round End:Velocity:+1"))
 
 (const vehicle-3h : base/damage
  (base/damage
-  :name "Hack: Left Foot"
-  :titles "Hack: Left Lower Leg/Shin/Ankle/Foot"
+  :name "Hack: Left Thrust"
   :image "images/damage-vehicle-3h.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Ankle Grazed. Withdraw:1
-    Major: Ankle Gash. Withdraw:1 Bleeding:1
-    Critical: Lost Toes. Impaired. Stress:2 Bleeding:1
-    Extreme: Foot Mangled. Impaired. Stress:2 Bleeding:2"))
+   "Minor: Thruster Gash. Slow:1
+    Major: Thruster Smoke. Slow:1 Choking:1
+    Critical: Thruster Fire. Slow:2 Burning:2 Casualty:25%
+    Extreme: Thruster Explosion. Speed:-2 Burning:3 Casualty:50%"))
 
 (const vehicle-3s : base/damage
  (base/damage
-  :name "Slash: Left Foot"
-  :titles "Slash: Left Lower Leg/Shin/Ankle/Foot"
+  :name "Slash: Left Thrust"
   :image "images/damage-vehicle-3s.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Foot Cut. Bleeding:1
-    Major: Ankle Slash. Slow:1 Bleeding:1
-    Critical: Achilles Tendon Cut. Impaired. Slow:3 Bleeding:1
-    Extreme: Foot Severed. Impaired. Slow:4 Bleeding:2"))
+   "Minor: Thruster Cut. Slow:1
+    Major: Brake Slash. Slow:1 Brake:+1
+    Critical: Brakes Cut. Slow:2 Brake:+2
+    Extreme: Thruster Torn Off. Speed:-4 Casualty:75%"))
 
 (const vehicle-2c : base/damage
  (base/damage
-  :name "Bash: Right Foot"
-  :titles "Bash: Right Lower Leg/Shin/Ankle/Foot"
+  :name "Bash: Right Thrust"
   :image "images/damage-vehicle-2c.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Shin Bruise. Fatigue:1
-    Major: Foot Smash. Fatigue:1 Slow:1
-    Critical: Ankle Fracture. Impaired. Fatigue. Slow:2
-    Extreme: Foot Shattered. Impaired. Fatigue:2 Slow:2"))
+   "Minor: Thruster Dent. Slow:1
+    Major: Thruster Misaligned. Slow:1 Push:1
+    Critical: Thruster Sputtering. Slow:2 Push:1 Accelerate:+1
+    Extreme: Thruster Stalling. Slow:3 Push:1 Accelerate:+2"))
 
 (const vehicle-2d : base/damage
  (base/damage
-  :name "Pierce: Right Foot"
-  :titles "Pierce: Right Lower Leg/Shin/Ankle/Foot"
+  :name "Pierce: Right Thrust"
   :image "images/damage-vehicle-2d.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Ankle Graze. Stun:1
-    Major: Foot Slash. Slow:1 Bleeding:1
-    Critical: Foot Pierced. Slow:3 Bleeding:1
-    Extreme: Ankle Useless. Impaired. Stun:2 Bleeding:1"))
+   "Minor: Thruster Pierced: Slow:1
+    Major: Accelerator Stuck. Slow:1 Velocity:+1
+    Critical: Accelerator Jammed. Slow:2 Velocity:+2
+    Extreme: Runaway Thruster. Slow:3 Each Round End:Velocity:+1"))
 
 (const vehicle-2h : base/damage
  (base/damage
-  :name "Hack: Right Foot"
-  :titles "Hack: Right Lower Leg/Shin/Ankle/Foot"
+  :name "Hack: Right Thrust"
   :image "images/damage-vehicle-2h.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Ankle Grazed. Withdraw:1
-    Major: Ankle Gash. Withdraw:1 Bleeding:1
-    Critical: Lost Toes. Impaired. Stress:2 Bleeding:1
-    Extreme: Foot Mangled. Impaired. Stress:2 Bleeding:2"))
+   "Minor: Thruster Gash. Slow:1
+    Major: Thruster Smoke. Slow:1 Choking:1
+    Critical: Thruster Fire. Slow:2 Burning:2 Casualty:25%
+    Extreme: Thruster Explosion. Speed:-2 Burning:3 Casualty:50%"))
 
 (const vehicle-2s : base/damage
  (base/damage
-  :name "Slash: Right Foot"
-  :titles "Slash: Right Lower Leg/Shin/Ankle/Foot"
+  :name "Slash: Right Thrust"
   :image "images/damage-vehicle-2s.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Foot Cut. Bleeding:1
+   "Minor: Thrust Cut. Bleeding:1
     Major: Ankle Slash. Slow:1 Bleeding:1
     Critical: Achilles Tendon Cut. Impaired. Slow:3 Bleeding:1
-    Extreme: Foot Severed. Impaired. Slow:4 Bleeding:2"))
+    Extreme: Thrust Severed. Impaired. Slow:4 Bleeding:2"))
 
 (func deck-vehicle : base/deck
  (base/deck

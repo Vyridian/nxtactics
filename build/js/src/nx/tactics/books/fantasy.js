@@ -36,8 +36,8 @@ export default class nx_tactics_books_fantasy {
           ":itemmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
-            "Shield: Moon Disc",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield: Moon Disc", ":summary", "* A [Silver] Shield.", ":classification", "Shield")
+            "Shield:Moon Disc",
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield:Moon Disc", ":summary", "* A [Silver] Shield.", ":classification", "Shield")
           )
         ),
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Fantasy Weapons", ":summary", "* Faeblades")
@@ -330,8 +330,8 @@ export default class nx_tactics_books_fantasy {
                     )
                   )
                 ),
-                "Snake: Death's Head Viper",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Death's Head Viper", ":titles", "Wrist Viper", ":summary", "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled.")
+                "Snake:Death's Head Viper",
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake:Death's Head Viper", ":titles", "Wrist Viper", ":summary", "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled.")
               )
             ),
             vx_core.f_new(
@@ -1029,6 +1029,11 @@ export default class nx_tactics_books_fantasy {
               "Arden",
               ":titles",
               "Alfar, Ljossalfar, Elder, Elf, Sidhe, Sidheni, Sylvan, Sylvus",
+              ":itemmap",
+              nx_tactics_base.f_itemmap_from_tactics_keys(
+                tactics,
+                vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow:Moon", "Knife:Moonblade", "Shield:Moon", "Sword:Moon")
+              ),
               ":placemap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_placemap},
@@ -1036,8 +1041,10 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Alfheim"),
                 ":Ardenwood",
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Ardenwood", ":reference", "* We had entered the Ardenwoods on a scouting mission to probe the Sidhe defenses. We had only been in the woods for half an hour before arrows started raining from the trees. Forms flitted among the leaves and brush all around, but we never saw our attackers. We were forced to flee, and they allowed us to leave. The exact nature and numbers of their defenders remains unknown, but their 	effectiveness was clear. - Imperial Expeditionary Log"),
-                ":Ashwood",
-                vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Ashwood")
+                "Ashwood",
+                vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Ashwood"),
+                "Moon:Selene",
+                vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Moon:Selene", ":titles", "Silvery Moon", ":summary", "The silver moon Selene appeared in the sky during the [Great Convergence]. The Alfar believe it is a portal to their homeland: [Elysium]\n             * Moonfall - It is said that long ago, [Mithral] fell from the moon.")
               ),
               ":unitmap",
               vx_core.f_new(
@@ -1063,9 +1070,7 @@ export default class nx_tactics_books_fantasy {
                 "Arden Unicorn Cavalry",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Arden Unicorn Cavalry"),
                 "Cu Sith Hunting Dog",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cu Sith Hunting Dog", ":summary", "* An enormous fairy hound roughly the size of a cow.\n* Dark green in color with shaggy fur and a long braided or curled tail.\n* Capable of hunting silently\n* Will occasionally let out three terrifying barks that can be heard for long distances, including by ships at sea. This was said to be a warning to farmers to lock up their women, lest the beast abduct them and take them to a fairy mound to supply milk for fairy children.", ":titles", "Fairy Dog (pronounced coo shee), Cu Sidhe"),
-                "Goddess Selene",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goddess Selene", ":reference", "* The Moon is our Goddess, the night her kingdom! - Diana, Legends of Runeterra", ":summary", "* Most Alfar revere the Moon Goddess Selene.")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cu Sith Hunting Dog", ":summary", "* An enormous fairy hound roughly the size of a cow.\n* Dark green in color with shaggy fur and a long braided or curled tail.\n* Capable of hunting silently\n* Will occasionally let out three terrifying barks that can be heard for long distances, including by ships at sea. This was said to be a warning to farmers to lock up their women, lest the beast abduct them and take them to a fairy mound to supply milk for fairy children.", ":titles", "Fairy Dog (pronounced coo shee), Cu Sidhe")
               )
             ),
             vx_core.f_new(
@@ -1716,7 +1721,7 @@ export default class nx_tactics_books_fantasy {
               "* The Spirit Realm of the Moon",
               ":unitmap",
               nx_tactics_base.f_unitmap_from_unitlist(
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goddess Selene", ":titles", "Full Moon, Moon Queen, Silver Queen", ":summary", "* Selene is the Goddess of the Moon, the Alfar, and the Werebeasts.\n* She has 4 aspects:\n** Full - \n** Waxing - \n** Waning - \n** New -")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goddess Selene", ":titles", "Full Moon, Moon Queen, Silver Queen", ":reference", "* The Moon is our Goddess, the night her kingdom! - Diana, Legends of Runeterra", ":summary", "* Selene is the Goddess of the Moon, the Alfar, and the Werebeasts.\n* She has 4 aspects:\n** Full - \n** Waxing - \n** Waning - \n** New -")
               )
             ),
             "Hollow World",

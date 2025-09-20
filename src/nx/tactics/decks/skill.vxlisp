@@ -1146,6 +1146,7 @@ x +1DMG vs. Crouching."
      tactics
      "Bomb Disposal"
      "Explosives"
+     "Mine Laying"
      "Sapping"))
   (base/skill
    :name "Animals"
@@ -1551,15 +1552,36 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Small Talk"
        :titles "The Gift of Gab")
-     :Streetwise
+     "Streetwise"
       (base/ability
        :name "Streetwise"
        :summary
         "* [Action]: Gain knowledge where a good or service can be found in a city including black market goods or services.")
-     :Translator
+     "Sylvan"
+      (base/ability
+       :name "Sylvan"
+       :summary
+        "The Language of the Fey
+         * [Skill]: [Communication]")
+     "Tradespeak"
+      (base/ability
+       :name "Tradespeak"
+       :titles "Common Tongue"
+       :summary
+        "* [Skill]: [Communication]
+         * Merchants created this simple language to facilitate trade. It is a very limited language, but can be used for basic communication if there is no alternative. It uses a simple format with no plurals, conjegation or tense: {Adjective(s)} {Subject Noun} {Adverb(s)} {Verb} {Adjective(s)} {Object Noun}. Examples: Trustworthy me offer 10 healthy sheep. Honorable you please each pay 20 silver.")
+     "Thieves Cant"
+      (base/ability
+       :name "Thieves Cant"
+       :summary
+        "* [Skill]: [Communication]
+         * A variant on Tradespeak that emphasizes secret or silent communication to mask criminal activity.")
+     "Translator"
       (base/ability
        :name "Translator"
-       :summary "* Can translate immediately")
+       :summary
+        "* Can translate immediately
+         * [Skill]: [Communication]")
      "Trash Talk"
       (base/ability
        :name "Trash Talk"
@@ -1904,6 +1926,7 @@ x +1DMG vs. Crouching."
      "Deadfall"
      "Field Dressing"
      "Fishing"
+     "Harvest:Parts"
      "Hunter's Mark"
      "Lure"
      "Scouting"
@@ -2471,21 +2494,19 @@ x +1DMG vs. Crouching."
      "Diversionary Tactics"
      "Divide and Conquer"
      "Field Fortifications"
-     "Formation: Back to Back"
-     "Formation: Cover"
-     "Formation: March"
-     "Formation: Parade"
-     "Formation: Phalanx"
-     "Formation: Shield Wall"
-     "Formation: Skirmish"
-     "Formation: Testudo"
-     "Formation: Tight"
-     "Formation: Wedge"
+     "Formation:Back to Back"
+     "Formation:Cover"
+     "Formation:March"
+     "Formation:Parade"
+     "Formation:Phalanx"
+     "Formation:Shield Wall"
+     "Formation:Skirmish"
+     "Formation:Testudo"
+     "Formation:Tight"
+     "Formation:Wedge"
      "Halo Drop"
      "Jump Suit Combat"
      "Military Vehicle"
-     "Mine Clearing"
-     "Mine Laying"
      "Mobile Infantry"
      "Orbital Halo Drop"
      "Parachute Assault"

@@ -542,45 +542,39 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_2c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Foot",
-      ":titles",
-      "Bash: Right Lower Leg/Shin/Ankle/Foot",
+      "Bash: Right Thrust",
       ":image",
       "images/damage-vehicle-2c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Shin Bruise. Fatigue:1\nMajor: Foot Smash. Fatigue:1 Slow:1\nCritical: Ankle Fracture. Impaired. Fatigue. Slow:2\nExtreme: Foot Shattered. Impaired. Fatigue:2 Slow:2"
+      "Minor: Thruster Dent. Slow:1\nMajor: Thruster Misaligned. Slow:1 Push:1\nCritical: Thruster Sputtering. Slow:2 Push:1 Accelerate:+1\nExtreme: Thruster Stalling. Slow:3 Push:1 Accelerate:+2"
     ))
 
     // (const vehicle-2d)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_2d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Foot",
-      ":titles",
-      "Pierce: Right Lower Leg/Shin/Ankle/Foot",
+      "Pierce: Right Thrust",
       ":image",
       "images/damage-vehicle-2d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Ankle Graze. Stun:1\nMajor: Foot Slash. Slow:1 Bleeding:1\nCritical: Foot Pierced. Slow:3 Bleeding:1\nExtreme: Ankle Useless. Impaired. Stun:2 Bleeding:1"
+      "Minor: Thruster Pierced: Slow:1\nMajor: Accelerator Stuck. Slow:1 Velocity:+1\nCritical: Accelerator Jammed. Slow:2 Velocity:+2\nExtreme: Runaway Thruster. Slow:3 Each Round End:Velocity:+1"
     ))
 
     // (const vehicle-2h)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_2h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Foot",
-      ":titles",
-      "Hack: Right Lower Leg/Shin/Ankle/Foot",
+      "Hack: Right Thrust",
       ":image",
       "images/damage-vehicle-2h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Ankle Grazed. Withdraw:1\nMajor: Ankle Gash. Withdraw:1 Bleeding:1\nCritical: Lost Toes. Impaired. Stress:2 Bleeding:1\nExtreme: Foot Mangled. Impaired. Stress:2 Bleeding:2"
+      "Minor: Thruster Gash. Slow:1\nMajor: Thruster Smoke. Slow:1 Choking:1\nCritical: Thruster Fire. Slow:2 Burning:2 Casualty:25%\nExtreme: Thruster Explosion. Speed:-2 Burning:3 Casualty:50%"
     ))
 
     // (const vehicle-2s)
@@ -602,60 +596,52 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_3c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Foot",
-      ":titles",
-      "Bash: Left Lower Leg/Shin/Ankle/Foot",
+      "Bash: Left Thrust",
       ":image",
       "images/damage-vehicle-3c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Shin Bruise. Fatigue:1\nMajor: Foot Smash. Fatigue:1 Slow:1\nCritical: Ankle Fracture. Impaired. Fatigue. Slow:2\nExtreme: Foot Shattered. Impaired. Fatigue:2 Slow:2"
+      "Minor: Thruster Dent. Slow:1\nMajor: Thruster Misaligned. Slow:1 Push:1\nCritical: Thruster Sputtering. Slow:2 Push:1 Accelerate:+1\nExtreme: Thruster Stalling. Slow:3 Push:1 Accelerate:+2"
     ))
 
     // (const vehicle-3d)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_3d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Foot",
-      ":titles",
-      "Pierce: Left Lower Leg/Shin/Ankle/Foot",
+      "Pierce: Left Thrust",
       ":image",
       "images/damage-vehicle-3d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Ankle Graze. Stun:1\nMajor: Foot Slash. Slow:1 Bleeding:1\nCritical: Foot Pierced. Slow:3 Bleeding:1\nExtreme: Ankle Useless. Impaired. Stun:2 Bleeding:1"
+      "Minor: Thruster Pierced: Slow:1\nMajor: Accelerator Stuck. Slow:1 Velocity:+1\nCritical: Accelerator Jammed. Slow:2 Velocity:+2\nExtreme: Runaway Thruster. Slow:3 Each Round End:Velocity:+1"
     ))
 
     // (const vehicle-3h)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_3h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Foot",
-      ":titles",
-      "Hack: Left Lower Leg/Shin/Ankle/Foot",
+      "Hack: Left Thrust",
       ":image",
       "images/damage-vehicle-3h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Ankle Grazed. Withdraw:1\nMajor: Ankle Gash. Withdraw:1 Bleeding:1\nCritical: Lost Toes. Impaired. Stress:2 Bleeding:1\nExtreme: Foot Mangled. Impaired. Stress:2 Bleeding:2"
+      "Minor: Thruster Gash. Slow:1\nMajor: Thruster Smoke. Slow:1 Choking:1\nCritical: Thruster Fire. Slow:2 Burning:2 Casualty:25%\nExtreme: Thruster Explosion. Speed:-2 Burning:3 Casualty:50%"
     ))
 
     // (const vehicle-3s)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_3s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Foot",
-      ":titles",
-      "Slash: Left Lower Leg/Shin/Ankle/Foot",
+      "Slash: Left Thrust",
       ":image",
       "images/damage-vehicle-3s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Foot Cut. Bleeding:1\nMajor: Ankle Slash. Slow:1 Bleeding:1\nCritical: Achilles Tendon Cut. Impaired. Slow:3 Bleeding:1\nExtreme: Foot Severed. Impaired. Slow:4 Bleeding:2"
+      "Minor: Thruster Cut. Slow:1\nMajor: Brake Slash. Slow:1 Brake:+1\nCritical: Brakes Cut. Slow:2 Brake:+2\nExtreme: Thruster Torn Off. Speed:-4 Casualty:75%"
     ))
 
     // (const vehicle-4c)
@@ -1006,7 +992,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "* Minor: Dents. Push:1\n* Major: Hull Breach. Push:1 Armor:-1\n* Critical: Frame Crack. Push:1 Armor:-2\n* Extreme: Structural Collapse. Push:1 Armor:-3. Part:DamageAll"
+      "* Minor: Dents. Push:1\n* Major: Hull Damage. Push:1 Armor:-1\n* Critical: Frame Crack. Push:1 Armor:-2\n* Extreme: Structural Collapse. Push:1 Armor:-3. Part:DamageAll"
     ))
 
     // (const vehicle-ad)

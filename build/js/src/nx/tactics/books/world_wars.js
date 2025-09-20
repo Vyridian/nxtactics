@@ -613,19 +613,19 @@ export default class nx_tactics_books_world_wars {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
+                "Military",
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "2"),
+                "Demolitions",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Military",
+                  "Demolitions",
                   ":level",
                   "3",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Demolitions",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Demolitions"),
-                    ":Explosives",
+                    "Explosives",
                     vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Explosives"),
                     "Mine Laying",
                     vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Mine Laying")
