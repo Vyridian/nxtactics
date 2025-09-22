@@ -29,7 +29,7 @@
    "* Minor: Dents. Push:1
     * Major: Hull Damage. Push:1 Armor:-1
     * Critical: Frame Crack. Push:1 Armor:-2
-    * Extreme: Structural Collapse. Push:1 Armor:-3. Part:DamageAll"))
+    * Extreme: Structural Collapse. Push:1 Armor:-3 Part:DamageAll"))
 
 /*
 // D Frame:Pierced Through
@@ -52,7 +52,7 @@
 //  Ex - Controls Perforated. Broken. Stun:3 Speed:-3 Casualty:50%
 // QC - Cabin
 //  Mn - Shockwave. Fatigue:1
-//  Mj - Shrapnel Fragments. Fatigue:1 Stress:1 Casualty:25%
+//  Mj - Spauling Fragments. Fatigue:1 Stress:1 Casualty:25%
 //  Cr - Wall Collapse. Fatigue:2 Stress:2 Casualty:50%
 //  Ex - Room Collapse. Fatigue:3 Stress:3 Casualty:75%
 // QD - Cabin
@@ -65,77 +65,76 @@
 //  Mj - Wall Cracked. Leaking. Stress:1 Exposure:1 Casualty:25%
 //  Cr - Wall Breach. Stress:2 Exposure:2 Casualty:50%
 //  Ex - Room Torn Open. Stress:3 Exposure:3 Casualty:75%
-// QS - Cabin
-//  Mn - Wall Pierced. Leaking. Stress:1
+// QH - Cabin
+//  Mn - Wall Crack. Stress:1
 //  Mj - Shrapnel Causes Toxic Smoke. Stress:1 Choking:2 Casualty:25%
 //  Cr - Shrapnel Causes Fire. Stress:2 Burning:2 Casualty:50%
 //  Ex - Shrapnel Causes Explosion. Stress:3 Burning:3 Casualty:75%
+// QS - Cabin
+//  Mn - Wall Crack. Stress:1
+//  Mj - Life Support Leak. Stress:1 Choking:1
+//  Cr - Life Support Diminished. Choking:2 Exposure:1
+//  Ex - Life Support Cut. Choking:3 Exposure:2
 // JC - Engine
-//  Mn - Engine Mount Broken. Slow:1
-//  Mj - Engine Dislodged. 
-//  Cr - 
-//  Ex - Engine Knockedover. Broken. Speed:-3 Casualty:50%
+//  Mn - Transmission Grinding. Slow:1
+//  Mj - Transmission Slipping. Slow:1 Speed:-1
+//  Cr - Transmission Stripped. Slow:2 Speed:-2
+//  Ex - Transmission Shattered. Slow:3 Speed:-3 Casualty:25%
 // JD - Engine
-//  Mn - Engine Misfiring. Slow:1
+//  Mn - Engine Misfire. Slow:1
 //  Mj - Engine Smoking. Slow:1 Choking:2 Casualty:25%
 //  Cr - Engine Fire. Speed:-1 Burning:2 Casualty:50%
 //  Ex - Engine Explosion. Broken. Speed:-2 Burning:3 Casualty:75%
 // JH - Engine
-//  Ex - Engine Split Open. Broken. Speed:-3 Casualty:25%
+//  Mn - Radiator Damage. Overheating. Slow:1
+//  Mj - Coolant Leak. Smoke. Slow:1 Choking:1
+//  Cr - Coolant Failure. Speed:-1 Burning:1 Choking:2
+//  Ex - Engine Fused. Speed:-3 Burning:2 Casualty:25%
 // JS - Engine
-//  Mn - Fuel Leak. Slow:1
-//  Ex - Fuel Feeds Slashed. Broken. Speed:-3 Casualty:25%
+//  Mn - Exhaust Damage. Energy Loss - Slow:1
+//  Mj - Intake Damage. Engine Stall - 
+//  Cr - Turbine Damage. Power Failure - 
+//  Ex - Engine Seized. Power Cut - Slow:2 Speed:-3
+// TC - Supply
+//  Mn - Cargo Damage. Fatigue:1
+//  Mj - Cargo Spill. Fatigue:2 Casualty:25%
+//  Cr - Cargo Loss. Fatigue:2 Casualty:50%
+//  Ex - Cargo Destroyed. Fatigue:3 Casualty:75%
 // TD - Supply
-//  Mj - Toxic Smoke. 
-//  Cr - Fire. 
-//  Ex - Explosion. 
+//  Cr - Hanger Broken. Fatigue:2 Casualty:50%
+//  Ex - Hanger Destroyed. Fatigue:3 Casualty:75%
+// TH - Supply
+//  Mn - Fluid Leak. Slow:1
+//  Mj - Gas Leak. Smoke. Slow:1 Choking:1
+//  Cr - Coolant Failure. Speed:-1 Burning:1 Choking:2
+//  Ex - Fuel Explosion. Speed:-3 Burning:2 Casualty:25%
+// TS - Supply
+//  Mn - Fuel Leak. Slow:1
+//  Mj - Fuel Contamination. Bleeding:1 Speed:-1
+//  Cr - Fuel Line Blocked. Bleeding:2 Speed:-2
+//  Ex - Fuel Line Cut. Bleeding:3 Speed:-3
 // Steering
 // 7C - Alignment
-//  Shudder
-//  Vibrations
+//  Mn - Dented - Stun:1
+//  Mj - Shuddering. Slow:1 Stun:1
+//  Mj - Vibrations. Slow:2 Left Turn causes Stun:1
 //  Ex - Violent Shaking. Speed:-1 Left Turn causes Random Damage:1
 // 7D - Direction
-//  Cr - Steering Jammed
-//  Ex - Jammed Turning Left
+//  Cr - 
+//  Ex - Jammed Turning Left. Always Turn Left if able
 // 7H
-//  Ex - Mechanism Severed. Left Turns become Left Drift
+//  Ex - Unstable Turns. Left Turns also Drift Left
 // 7S - Control
-//  Mn - Control Damage. Slow:1
+//  Mn - Control Slashed. Slow:1
 //  Mj - Control Unresponsive. Slow:1 Can't Turn Left next Round
-//  Cr - Control Severed. Slow:2 Damaged. Can't Turn Left
-//  Ex - Control Ruined. Slow:3 Broken. Can't Turn Left
-// Life
-// Cabin
+//  Cr - Control Sheared. Slow:2. Can't Turn Left
+//  Ex - Steering Severed. Speed:-3. Can't Turn Left
 // Systems
-// Thrust
-// Crew:Damage1
-// Crew:DamageAll
-// Crew:Lost1
-// Crew:LostAll
-// Part:Damage1
-// Part:DamageAll
-// Part:Lost1
-// Part:LostAll
-// Electrical Failure
-// Ventilation Failure
-// Cabin Smoke
-// Cabin Fire
-// Explosion. Life Support Destroyed. Smoke:3 Fire:3 Crew Loss:50%
 // Control line cut
 // Control Fire
-// Fuel line cut
-// Fuel fire
-// Fuel explosion
 // Communication interference
 // Communication cut
-// Power
-//  Energy Loss
-//  Power Failure
-// Thrust H, S (Strong) C, D (Weak)
-//  Hurtling Out of Control. Min Speed:+1*
-//  Stopped. Max Speed:-1*
-//  Transmission. Speed-Up:+1* (Can't increase Speed)
-//  Brake Failure. Speed-Down:+1* (Can't reduce Speed)
+// Engine
 // Controls
 //  C Steering Lost
 //  D Visibility Lost. Blind

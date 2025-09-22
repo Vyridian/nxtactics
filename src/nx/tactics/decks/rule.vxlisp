@@ -124,7 +124,11 @@
   (base/rule
    :name "Burning"
    :image "images/rule-burning.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :summary
+    "An open bleeding wound. For Vehicles this can be an energy leak
+     * Bind Wound - Action x2 to remove a Bleeding
+     * Round End - Slow:1 for each Bleeding. IF Speed:0 THEN Blood Loss:1 instead")
   (base/rule
    :name "Called Shot"
    :image "images/rule-calledshot.svg"
