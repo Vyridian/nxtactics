@@ -581,15 +581,13 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_2s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Foot",
-      ":titles",
-      "Slash: Right Lower Leg/Shin/Ankle/Foot",
+      "Slash: Right Thrust",
       ":image",
       "images/damage-vehicle-2s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Foot Cut. Bleeding:1\nMajor: Ankle Slash. Slow:1 Bleeding:1\nCritical: Achilles Tendon Cut. Impaired. Slow:3 Bleeding:1\nExtreme: Foot Severed. Impaired. Slow:4 Bleeding:2"
+      "Minor: Thrust Cut. Bleeding:1\nMajor: Ankle Slash. Slow:1 Bleeding:1\nCritical: Achilles Tendon Cut. Impaired. Slow:3 Bleeding:1\nExtreme: Thrust Severed. Impaired. Slow:4 Bleeding:2"
     ))
 
     // (const vehicle-3c)
@@ -648,9 +646,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Leg",
-      ":titles",
-      "Bash: Right Upper Leg/Thigh/Knee",
+      "Bash: Right Systems",
       ":image",
       "images/damage-vehicle-4c.svg",
       ":layout",
@@ -663,9 +659,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Leg",
-      ":titles",
-      "Pierce: Right Upper Leg/Thigh/Knee",
+      "Pierce: Right Systems",
       ":image",
       "images/damage-vehicle-4d.svg",
       ":layout",
@@ -678,9 +672,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Leg",
-      ":titles",
-      "Hack: Right Upper Leg/Thigh/Knee",
+      "Hack: Right Systems",
       ":image",
       "images/damage-vehicle-4h.svg",
       ":layout",
@@ -693,9 +685,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Leg",
-      ":titles",
-      "Slash: Right Upper Leg/Thigh/Knee",
+      "Slash: Right Systems",
       ":image",
       "images/damage-vehicle-4s.svg",
       ":layout",
@@ -708,9 +698,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Leg",
-      ":titles",
-      "Bash: Left Upper Leg/Thigh/Knee",
+      "Bash: Left Systems",
       ":image",
       "images/damage-vehicle-5c.svg",
       ":layout",
@@ -723,9 +711,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Leg",
-      ":titles",
-      "Pierce: Left Upper Leg/Thigh/Knee",
+      "Pierce: Left Systems",
       ":image",
       "images/damage-vehicle-5d.svg",
       ":layout",
@@ -738,9 +724,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Leg",
-      ":titles",
-      "Hack: Left Upper Leg/Thigh/Knee",
+      "Hack: Left Systems",
       ":image",
       "images/damage-vehicle-5h.svg",
       ":layout",
@@ -753,9 +737,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Leg",
-      ":titles",
-      "Slash: Left Upper Leg/Thigh/Knee",
+      "Slash: Left Systems",
       ":image",
       "images/damage-vehicle-5s.svg",
       ":layout",
@@ -768,9 +750,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_6c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Hand",
-      ":titles",
-      "Bash: Right Lower Arm/Wrist/Hand",
+      "Bash: Right Lift",
       ":image",
       "images/damage-vehicle-6c.svg",
       ":layout",
@@ -781,9 +761,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_6d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Hand",
-      ":titles",
-      "Pierce: Right Lower Arm/Wrist/Hand",
+      "Pierce: Right Lift",
       ":image",
       "images/damage-vehicle-6d.svg",
       ":layout",
@@ -796,22 +774,20 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_6h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Hand",
-      ":titles",
-      "Hack: Right Lower Arm/Wrist/Hand",
+      "Hack: Right Lift",
       ":image",
       "images/damage-vehicle-6h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Forearm Graze. Withdraw:1\nMajor: Forearm Gash. Drop Item. Stress:1 Bleeding:1\nCritical: Hand Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Hand Mangled. Impaired. Stress:2 Bleeding:2"
+      "Minor: Forearm Graze. Withdraw:1\nMajor: Forearm Gash. Drop Item. Stress:1 Bleeding:1\nCritical: Lift Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Lift Mangled. Impaired. Stress:2 Bleeding:2"
     ))
 
     // (const vehicle-6s)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_6s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Steering",
+      "Slash: Left Lift",
       ":image",
       "images/damage-vehicle-6s.svg",
       ":layout",
@@ -824,9 +800,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_7c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Hand",
-      ":titles",
-      "Bash: Left Lower Arm/Wrist/Hand",
+      "Bash: Left Lift",
       ":image",
       "images/damage-vehicle-7c.svg",
       ":layout",
@@ -837,9 +811,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_7d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Hand",
-      ":titles",
-      "Pierce: Left Lower Arm/Wrist/Hand",
+      "Pierce: Left Lift",
       ":image",
       "images/damage-vehicle-7d.svg",
       ":layout",
@@ -852,134 +824,128 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_7h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Hand",
-      ":titles",
-      "Hack: Left Lower Arm/Wrist/Hand",
+      "Hack: Left Lift",
       ":image",
       "images/damage-vehicle-7h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Forearm Graze. Withdraw:1\nMajor: Forearm Gash. Drop Item. Stress:1 Bleeding:1\nCritical: Hand Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Hand Mangled. Impaired. Stress:2 Bleeding:2"
+      "Minor: Forearm Graze. Withdraw:1\nMajor: Forearm Gash. Drop Item. Stress:1 Bleeding:1\nCritical: Lift Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Lift Mangled. Impaired. Stress:2 Bleeding:2"
     ))
 
     // (const vehicle-7s)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_7s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Hand",
-      ":titles",
-      "Slash: Left Lower Arm/Wrist/Hand",
+      "Slash: Left Lift",
       ":image",
       "images/damage-vehicle-7s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Forearm Cut. Bleeding:1\nMajor: Forearm Slash. Drop Item. Slow:1 Bleeding:1\nExtreme: Artery Severed. Impaired. Stress:1 Bleeding:3\nExtreme: Hand Severed. Stress:2 Bleeding:2"
+      "Minor: Forearm Cut. Bleeding:1\nMajor: Forearm Slash. Drop Item. Slow:1 Bleeding:1\nExtreme: Artery Severed. Impaired. Stress:1 Bleeding:3\nExtreme: Lift Severed. Stress:2 Bleeding:2"
     ))
 
     // (const vehicle-8c)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_8c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Arm",
-      ":titles",
-      "Bash: Right Upper Arm/Elbow",
+      "Bash: Left Steering",
       ":image",
       "images/damage-vehicle-8c.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Dented. Push:1\nMajor: Misaligned. Stun:1 Push:1 Turn:Left\nCritical: Pulling Left. Slow:2 Turn:Left 1/Round if able\nExtreme: Jammed Turning Left. Slow:3 Always Turn:Left if able"
     ))
 
     // (const vehicle-8d)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_8d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Arm",
-      ":titles",
-      "Pierce: Right Upper Arm/Elbow",
+      "Pierce: Left Steering",
       ":image",
       "images/damage-vehicle-8d.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Steering Perforated. Slow:1\nMajor: Steering Impaired. Stun:1 Slow:1\nCritical: Drifting. Any Turn:Left also Drift:Left\nExtreme: Out of Control. Speed:-1. Haywire:Steering"
     ))
 
     // (const vehicle-8h)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_8h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Arm",
-      ":titles",
-      "Hack: Right Upper Arm/Elbow",
+      "Hack: Left Steering",
       ":image",
       "images/damage-vehicle-8h.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Loud Noises. Slow:1\nMajor: Shuddering. Slow:1 Stun:1\nCritical: Vibrations. Slow:2 Turn:Left causes Stun:1\nExtreme: Violent Shaking. Speed:-1 Turn:Left causes Damage:1"
     ))
 
     // (const vehicle-8s)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_8s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Arm",
-      ":titles",
-      "Slash: Right Upper Arm/Elbow",
+      "Slash: Left Steering",
       ":image",
       "images/damage-vehicle-8s.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Control Slashed. Slow:1\nMajor: Control Unresponsive. Slow:1 Turn:Left max 1/Round\nCritical: Control Sheared. Slow:2. Can't Turn:Left\nExtreme: Steering Severed. Speed:-3. Can't Turn:Left"
     ))
 
     // (const vehicle-9c)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_9c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Arm",
-      ":titles",
-      "Bash: Left Upper Arm/Elbow",
+      "Bash: Right Steering",
       ":image",
       "images/damage-vehicle-9c.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Dented. Push:1\nMajor: Misaligned. Stun:1 Push:1 Turn:Right\nCritical: Pulling Right. Slow:2 Turn:Right 1/Round if able\nExtreme: Jammed Turning Right. Slow:3 Always Turn:Right if able"
     ))
 
     // (const vehicle-9d)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_9d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Arm",
-      ":titles",
-      "Pierce: Left Upper Arm/Elbow",
+      "Pierce: Right Steering",
       ":image",
       "images/damage-vehicle-9d.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Steering Perforated. Slow:1\nMajor: Steering Impaired. Stun:1 Slow:1\nCritical: Drifting. Any Turn:Right also Drift:Right\nExtreme: Out of Control. Speed:-1. Haywire:Steering"
     ))
 
     // (const vehicle-9h)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_9h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Arm",
-      ":titles",
-      "Hack: Left Upper Arm/Elbow",
+      "Hack: Right Steering",
       ":image",
       "images/damage-vehicle-9h.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      "Minor: Loud Noises. Slow:1\nMajor: Shuddering. Slow:1 Stun:1\nCritical: Vibrations. Slow:2 Turn:Right causes Stun:1\nExtreme: Violent Shaking. Speed:-1 Turn:Right causes Damage:1"
     ))
 
     // (const vehicle-9s)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_9s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Arm",
-      ":titles",
-      "Slash: Left Upper Arm/Elbow",
+      "Slash: Right Steering",
       ":image",
       "images/damage-vehicle-9s.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      "Minor: Control Slashed. Slow:1\nMajor: Control Unresponsive. Slow:1 Turn:Right max 1/Round\nCritical: Control Sheared. Slow:2. Can't Turn:Right\nExtreme: Steering Severed. Speed:-3. Can't Turn:Right"
     ))
 
     // (const vehicle-ac)
@@ -992,7 +958,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "* Minor: Dents. Push:1\n* Major: Hull Damage. Push:1 Armor:-1\n* Critical: Frame Crack. Push:1 Armor:-2\n* Extreme: Structural Collapse. Push:1 Armor:-3. Part:DamageAll"
+      "* Minor: Dents. Push:1\n* Major: Hull Damage. Push:1 Armor:-1\n* Critical: Frame Crack. Push:1 Armor:-2\n* Extreme: Structural Collapse. Push:1 Armor:-3 Part:DamageAll"
     ))
 
     // (const vehicle-ad)
@@ -1032,9 +998,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_jc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Abdomen",
-      ":titles",
-      "Bash: Abdomen/Lower Back",
+      "Bash: Engine",
       ":image",
       "images/damage-vehicle-jc.svg",
       ":layout",
@@ -1045,9 +1009,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_jd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Abdomen",
-      ":titles",
-      "Pierce: Abdomen/Lower Back",
+      "Pierce: Engine",
       ":image",
       "images/damage-vehicle-jd.svg",
       ":layout",
@@ -1058,9 +1020,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_jh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Abdomen",
-      ":titles",
-      "Hack: Abdomen/Lower Back",
+      "Hack: Engine",
       ":image",
       "images/damage-vehicle-jh.svg",
       ":layout",
@@ -1071,9 +1031,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_js, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Abdomen",
-      ":titles",
-      "Slash: Abdomen/Lower Back",
+      "Slash: Engine",
       ":image",
       "images/damage-vehicle-js.svg",
       ":layout",
@@ -1084,7 +1042,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_kc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Shoulders",
+      "Bash: Controls",
       ":image",
       "images/damage-vehicle-kc.svg",
       ":layout",
@@ -1095,7 +1053,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_kd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Shoulders",
+      "Pierce: Controls",
       ":image",
       "images/damage-vehicle-kd.svg",
       ":layout",
@@ -1106,7 +1064,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_kh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Shoulders",
+      "Hack: Controls",
       ":image",
       "images/damage-vehicle-kh.svg",
       ":layout",
@@ -1117,7 +1075,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ks, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Shoulders",
+      "Slash: Controls",
       ":image",
       "images/damage-vehicle-ks.svg",
       ":layout",
@@ -1128,9 +1086,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_qc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Chest",
-      ":titles",
-      "Bash: Middle Chest/Back/Lungs/Heart",
+      "Bash: Cabin",
       ":image",
       "images/damage-vehicle-qc.svg",
       ":layout",
@@ -1141,9 +1097,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_qd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Chest",
-      ":titles",
-      "Pierce: Middle Chest/Back/Lungs/Heart",
+      "Pierce: Cabin",
       ":image",
       "images/damage-vehicle-qd.svg",
       ":layout",
@@ -1154,9 +1108,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_qh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Chest",
-      ":titles",
-      "Hack: Middle Chest/Back/Lungs/Heart",
+      "Hack: Cabin",
       ":image",
       "images/damage-vehicle-qh.svg",
       ":layout",
@@ -1167,9 +1119,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_qs, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Chest",
-      ":titles",
-      "Slash: Middle Chest/Back/Lungs/Heart",
+      "Slash: Cabin",
       ":image",
       "images/damage-vehicle-qs.svg",
       ":layout",
@@ -1180,9 +1130,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_tc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Vitals",
-      ":titles",
-      "Bash: Hips/Groin",
+      "Bash: Supply",
       ":image",
       "images/damage-vehicle-tc.svg",
       ":layout",
@@ -1193,9 +1141,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_td, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Vitals",
-      ":titles",
-      "Pierce: Hips/Groin",
+      "Pierce: Supply",
       ":image",
       "images/damage-vehicle-td.svg",
       ":layout",
@@ -1206,9 +1152,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_th, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Vitals",
-      ":titles",
-      "Hack: Hips/Groin",
+      "Hack: Supply",
       ":image",
       "images/damage-vehicle-th.svg",
       ":layout",
@@ -1219,9 +1163,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ts, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Vitals",
-      ":titles",
-      "Slash: Hips/Groin",
+      "Slash: Supply",
       ":image",
       "images/damage-vehicle-ts.svg",
       ":layout",

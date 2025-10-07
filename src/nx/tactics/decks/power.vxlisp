@@ -1067,7 +1067,11 @@
      * Cryo reacts with Geo to produce the [Brittle] effect.
      * Cryo reacts with Hydro to produce the [Freeze] effect.
      * Cryo reacts with Electro to produce the [Superconduct] effect.
-     * Cryo reacts with Aero to produce the [Chill] effect.")
+     * Cryo reacts with Aero to produce the [Chill] effect."
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Icy Stare"))
   (base/power
    :name "Darkness"
    :titles
@@ -1287,12 +1291,12 @@
        :summary
         "* [Power]: [Divination]
          * [Action]: Divine a time and place nearby that will be beneficial if the user goes there. The roll result is not known by the user, and the success determines the benefit.")
-     :Revelation
+     "Revelation"
       (base/ability
        :name "Revelation"
        :summary
         "* [Power]: [Divination]")
-     :Foresight
+     "Foresight"
       (base/ability
        :name "Foresight"
        :summary

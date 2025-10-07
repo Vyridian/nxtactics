@@ -101,8 +101,10 @@
 //  Cr - Cargo Loss. Fatigue:2 Casualty:50%
 //  Ex - Cargo Destroyed. Fatigue:3 Casualty:75%
 // TD - Supply
-//  Cr - Hanger Broken. Fatigue:2 Casualty:50%
-//  Ex - Hanger Destroyed. Fatigue:3 Casualty:75%
+//  Mn - Hanger Pitted. Fatigue:1
+//  Mj - Landing Blocked. Fatigue:1 Casualty:25%. Can't Land
+//  Cr - Launcher Blocked. Fatigue:2 Casualty:50%. Can't Launch
+//  Ex - Hanger Destroyed. Fatigue:3 Casualty:75%. Broken
 // TH - Supply
 //  Mn - Fluid Leak. Slow:1
 //  Mj - Gas Leak. Smoke. Slow:1 Choking:1
@@ -113,28 +115,11 @@
 //  Mj - Fuel Contamination. Bleeding:1 Speed:-1
 //  Cr - Fuel Line Blocked. Bleeding:2 Speed:-2
 //  Ex - Fuel Line Cut. Bleeding:3 Speed:-3
-// Steering
-// 7C - Alignment
-//  Mn - Dented - Stun:1
-//  Mj - Shuddering. Slow:1 Stun:1
-//  Mj - Vibrations. Slow:2 Left Turn causes Stun:1
-//  Ex - Violent Shaking. Speed:-1 Left Turn causes Random Damage:1
-// 7D - Direction
-//  Cr - 
-//  Ex - Jammed Turning Left. Always Turn Left if able
-// 7H
-//  Ex - Unstable Turns. Left Turns also Drift Left
-// 7S - Control
-//  Mn - Control Slashed. Slow:1
-//  Mj - Control Unresponsive. Slow:1 Can't Turn Left next Round
-//  Cr - Control Sheared. Slow:2. Can't Turn Left
-//  Ex - Steering Severed. Speed:-3. Can't Turn Left
 // Systems
 // Control line cut
 // Control Fire
 // Communication interference
 // Communication cut
-// Engine
 // Controls
 //  C Steering Lost
 //  D Visibility Lost. Blind
@@ -264,51 +249,89 @@
 
 (const vehicle-9c : base/damage
  (base/damage
-  :name "Bash: Left Steering"
+  :name "Bash: Right Steering"
   :image "images/damage-vehicle-9c.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Dented. Push:1
+    Major: Misaligned. Stun:1 Push:1 Turn:Right
+    Critical: Pulling Right. Slow:2 Turn:Right 1/Round if able
+    Extreme: Jammed Turning Right. Slow:3 Always Turn:Right if able"))
 
 (const vehicle-9d : base/damage
  (base/damage
-  :name "Pierce: Left Steering"
+  :name "Pierce: Right Steering"
   :image "images/damage-vehicle-9d.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Steering Perforated. Slow:1
+    Major: Steering Impaired. Stun:1 Slow:1
+    Critical: Drifting. Any Turn:Right also Drift:Right
+    Extreme: Out of Control. Speed:-1. Haywire:Steering"))
 
 (const vehicle-9h : base/damage
  (base/damage
-  :name "Hack: Left Steering"
+  :name "Hack: Right Steering"
   :image "images/damage-vehicle-9h.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+   "Minor: Loud Noises. Slow:1
+    Major: Shuddering. Slow:1 Stun:1
+    Critical: Vibrations. Slow:2 Turn:Right causes Stun:1
+    Extreme: Violent Shaking. Speed:-1 Turn:Right causes Damage:1"))
 
 (const vehicle-9s : base/damage
  (base/damage
-  :name "Slash: Left Steering"
+  :name "Slash: Right Steering"
   :image "images/damage-vehicle-9s.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+   "Minor: Control Slashed. Slow:1
+    Major: Control Unresponsive. Slow:1 Turn:Right max 1/Round
+    Critical: Control Sheared. Slow:2. Can't Turn:Right
+    Extreme: Steering Severed. Speed:-3. Can't Turn:Right"))
 
 (const vehicle-8c : base/damage
  (base/damage
-  :name "Bash: Right Steering"
+  :name "Bash: Left Steering"
   :image "images/damage-vehicle-8c.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Dented. Push:1
+    Major: Misaligned. Stun:1 Push:1 Turn:Left
+    Critical: Pulling Left. Slow:2 Turn:Left 1/Round if able
+    Extreme: Jammed Turning Left. Slow:3 Always Turn:Left if able"))
 
 (const vehicle-8d : base/damage
  (base/damage
-  :name "Pierce: Right Steering"
+  :name "Pierce: Left Steering"
   :image "images/damage-vehicle-8d.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Steering Perforated. Slow:1
+    Major: Steering Impaired. Stun:1 Slow:1
+    Critical: Drifting. Any Turn:Left also Drift:Left
+    Extreme: Out of Control. Speed:-1. Haywire:Steering"))
 
 (const vehicle-8h : base/damage
  (base/damage
-  :name "Hack: Right Steering"
+  :name "Hack: Left Steering"
   :image "images/damage-vehicle-8h.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Loud Noises. Slow:1
+    Major: Shuddering. Slow:1 Stun:1
+    Critical: Vibrations. Slow:2 Turn:Left causes Stun:1
+    Extreme: Violent Shaking. Speed:-1 Turn:Left causes Damage:1"))
 
 (const vehicle-8s : base/damage
  (base/damage
-  :name "Slash: Right Steering"
+  :name "Slash: Left Steering"
   :image "images/damage-vehicle-8s.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Control Slashed. Slow:1
+    Major: Control Unresponsive. Slow:1 Turn:Left max 1/Round
+    Critical: Control Sheared. Slow:2. Can't Turn:Left
+    Extreme: Steering Severed. Speed:-3. Can't Turn:Left"))
 
 (const vehicle-7c : base/damage
  (base/damage

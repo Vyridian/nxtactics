@@ -26,7 +26,7 @@
      inkscape:document-units="mm"
      inkscape:zoom="1.6783537"
      inkscape:cx="100.09809"
-     inkscape:cy="213.90009"
+     inkscape:cy="214.49591"
      inkscape:window-width="1224"
      inkscape:window-height="1032"
      inkscape:window-x="160"
@@ -1820,30 +1820,7 @@
      rx="0.54741395"
      ry="0.53913182"
      inkscape:label="background"
-     sodipodi:insensitive="true" /><g
-     id="g1-9-9"
-     transform="matrix(1.3155159,0,0,1.3146183,-11.181873,-11.174256)"
-     inkscape:label="template"
-     style="display:none"
-     sodipodi:insensitive="true"><g
-       id="g104-4"
-       style="display:inline">
-	
-	<path
-   fill="none"
-   stroke="#ec1e28"
-   d="m 9,252 c 0,4.971 4.029,9 9,9 h 162 c 4.971,0 9,-4.029 9,-9 V 18 c 0,-4.971 -4.029,-9 -9,-9 H 18 c -4.971,0 -9,4.029 -9,9 z"
-   id="path104-4-8" />
-</g><g
-       id="g105-8"
-       style="display:inline">
-	<path
-   fill="none"
-   stroke="#2ba6de"
-   stroke-dasharray="1.44"
-   d="m 18.13,21.906 c 0,-2.156 1.714,-3.9 3.828,-3.9 h 154.084 c 2.114,0 3.828,1.744 3.828,3.9 v 226.188 c 0,2.154 -1.714,3.9 -3.828,3.9 H 21.958 c -2.114,0 -3.828,-1.746 -3.828,-3.9 z"
-   id="path105-8-2" />
-</g></g><text
+     sodipodi:insensitive="true" /><text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6661px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.98607;stroke-dasharray:none"
      x="97.110306"

@@ -1812,6 +1812,12 @@
      * Let's write something on the carpet... I know how about 'Mother SUCKS'. - Drop Dead Fred"
    :summary "Create a character with a distinct personality of your choice that only the target can see.")
   (base/ability
+   :name "Icy Stare"
+   :summary
+    "* See Cold
+     * [Power]: [Cryo]
+     * Your eyes frost over and you can only see in Arc:Forward, but you see different levels of cold like [Heat Sense]. You can also see through ice as if it was clear glass.")
+  (base/ability
    :name "Imitation:Creature"
    :reference
     "* So, how do we know who's human? If I was an imitation, a perfect imitation, how would you know it was really me? - Childs, The Thing"

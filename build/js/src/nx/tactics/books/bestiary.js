@@ -786,7 +786,7 @@ export default class nx_tactics_books_bestiary {
       ":name",
       "Darkling",
       ":titles",
-      "Goblinoid",
+      "Goblinkind, Goblinoid",
       ":sectionmap",
       nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Bugbear", ":reference", "* Serial Killer", ":summary", "* Appearance - Bugbears are the largest of the goblin races. They are 7ft tall, are covered in fur, have long ears, and have long fangs. They have a tough hide and dislike armor.\n* Personality - Brutal hunters and survivalists. They are butish like other goblins, but they are shrewd hunters and trappers. They are strictly carnivorous and treat everything as prey. They have been known to eat goblin in a pinch and would probably do so more if the flavor agreed with them more. They have little patience and are easily provoked. They are usually encountered alone while hunting or in a goblin nest acting as champion or leader.\n* Morale - Normal\n* Units - Skimisher, Trapper, Berserker, Light Axeman, Light Spearman, Light Polearm\n* Skills - Melee, Spear, Axe, Net, Hunting, Stealth, Survival, Close Combat, Knife\n* 7ft 400lbs.", ":titles", "Babau, Bogy, Bogey, Bogeyman, Bogill, Boogeyman, Bugaboo"),

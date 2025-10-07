@@ -398,6 +398,16 @@
    :image "images/rule-goldenrules.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Haywire"
+   :image "images/rule-haywire.svg"
+   :summary
+    "System acts randomly
+     * Round Start - Reveal Fate IF Coins/Cups THEN
+     ** Steering - Spend Turn:-1 to Turn:Left/Right
+     ** Thrust - Spend to Accelerate:1/Decelerate:1
+     ** Item/Ability - Exhaust with no effect
+     ** Lift - Spend to Elevation:+1/-1")
+  (base/rule
    :name "Held"
    :image "images/rule-held.svg"
    :layout base/cardlayout-imageonly

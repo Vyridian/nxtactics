@@ -3777,7 +3777,7 @@
  [tactics : base/tactics]
  (base/chapter
   :name "Darkling"
-  :titles "Goblinoid"
+  :titles "Goblinkind, Goblinoid"
   :sectionmap
    (base/sectionmap<-sectionlist
     (base/section

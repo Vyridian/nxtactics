@@ -231,7 +231,9 @@ export default class nx_tactics_decks_rule {
         ":image",
         "images/rule-burning.svg",
         ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "An open bleeding wound. For Vehicles this can be an energy leak\n* Bind Wound - Action x2 to remove a Bleeding\n* Round End - Slow:1 for each Bleeding. IF Speed:0 THEN Blood Loss:1 instead"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -580,6 +582,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Haywire", ":image", "images/rule-haywire.svg", ":summary", "System acts randomly\n* Round Start - Reveal Fate IF Coins/Cups THEN\n** Steering - Spend Turn:-1 to Turn:Left/Right\n** Thrust - Spend to Accelerate:1/Decelerate:1\n** Item/Ability - Exhaust with no effect\n** Lift - Spend to Elevation:+1/-1"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",

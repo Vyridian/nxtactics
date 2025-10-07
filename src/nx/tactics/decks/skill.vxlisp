@@ -1959,94 +1959,144 @@ x +1DMG vs. Crouching."
     (base/abilitymap
      "Black Market Ties"
       (base/ability
-       :name "Black Market Ties")
-     :Boon
+       :name "Black Market Ties"
+       :summary
+        "* [Skill]: [Influence]")
+     "Boon"
       (base/ability
-       :name "Boon")
-     :Business
+       :name "Boon"
+       :summary
+        "* [Skill]: [Influence]")
+     "Business"
       (base/ability
-       :name "Business")
+       :name "Business"
+       :summary
+        "* [Skill]: [Influence]")
      "Carte Blanche"
       (base/ability
        :name "Carte Blanche"
-       :titles "Blank Check")
+       :titles "Blank Check"
+       :summary
+        "* [Skill]: [Influence]")
      "Corporate Ties"
       (base/ability
-       :name "Corporate Ties")
+       :name "Corporate Ties"
+       :summary
+        "* [Skill]: [Influence]")
      "Entertainment Ties"
       (base/ability
-       :name "Entertainment Ties")
-     :Fame
+       :name "Entertainment Ties"
+       :summary
+        "* [Skill]: [Influence]")
+     "Fame"
       (base/ability
        :name "Fame"
        :summary
         "* Your reputation precedes you. People are drawn to the famous and will often do extraordinary things to be near them.
+         * [Skill]: [Influence]
          * [Synergy]: [Seduction]
          * [Action]: Leverage your fame to gain minor free goods or services including upgraded lodging, free meals, audience with nobles, etc.")
      "Family Ties"
       (base/ability
-       :name "Family Ties")
-     :Fortune
+       :name "Family Ties"
+       :summary
+        "* [Skill]: [Influence]")
+     "Fortune"
       (base/ability
-       :name "Fortune")
-     :Followers
+       :name "Fortune"
+       :summary
+        "* [Skill]: [Influence]")
+     "Followers"
       (base/ability
        :name "Followers"
-       :titles "Acolyte, Apprentice, Retinue, Servant, Serf, Shieldbearer")
+       :titles "Acolyte, Apprentice, Retinue, Servant, Serf, Shieldbearer"
+       :summary
+        "* [Skill]: [Influence]")
      "Friends in High Places"
       (base/ability
        :name "Friends in High Places"
-       :reference "* I'm telling you this guy is protected from up on high by the Prince of Darkness. - Jeff Rabin, Usual Suspects")
-     :Infamy
+       :reference
+        "* I'm telling you this guy is protected from up on high by the Prince of Darkness. - Jeff Rabin, Usual Suspects"
+       :summary
+        "* [Skill]: [Influence]")
+     "Infamy"
       (base/ability
        :name "Infamy"
        :summary
         "* Your dark reputation precedes you. People are intrigued by the infamous and will often do extraordinary things in fear and facination of them.
-         * [Synergy]: [Intimidation]
+         * [Skill]: [Influence]
          * [Action]: Leverage your infamy to gain minor free goods or services including upgraded lodging, free meals, etc.")
-     :Intrigue
+     "Intrigue"
       (base/ability
-       :name "Intrigue")
+       :name "Intrigue"
+       :summary
+        "* [Skill]: [Influence]")
      "Judicial Ties"
       (base/ability
-       :name "Judicial Ties")
+       :name "Judicial Ties"
+       :summary
+        "* [Skill]: [Influence]")
      "Law Enforcement Ties"
       (base/ability
-       :name "Law Enforcement Ties")
+       :name "Law Enforcement Ties"
+       :summary
+        "* [Skill]: [Influence]")
      "License to Kill"
       (base/ability
-       :name "License to Kill")
+       :name "License to Kill"
+       :summary
+        "* [Skill]: [Influence]")
      :Mansion
       (base/ability
-       :name "Mansion")
+       :name "Mansion"
+       :summary
+        "* [Skill]: [Influence]")
      "Media Ties"
       (base/ability
-       :name "Media Ties")
+       :name "Media Ties"
+       :summary
+        "* [Skill]: [Influence]")
      "Night Club"
       (base/ability
-       :name "Night Club")
+       :name "Night Club"
+       :summary
+        "* [Skill]: [Influence]")
      "Noble Birth"
       (base/ability
-       :name "Noble Birth")
+       :name "Noble Birth"
+       :summary
+        "* [Skill]: [Influence]")
      "Official Title"
       (base/ability
-       :name "Official Title")
+       :name "Official Title"
+       :summary
+        "* [Skill]: [Influence]")
      "Political Ties"
       (base/ability
        :name "Political Ties"
-       :titles "Ambassador, Minister, Politician, Senator")
+       :titles "Ambassador, Minister, Politician, Senator"
+       :summary
+        "* [Skill]: [Influence]")
      "Religious Ties"
       (base/ability
-       :name "Religious Ties")
+       :name "Religious Ties"
+       :summary
+        "* [Skill]: [Influence]")
      "Train Follower"
       (base/ability
-       :name "Train Follower")
+       :name "Train Follower"
+       :summary
+        "* [Skill]: [Influence]")
      "Underworld Ties"
       (base/ability
-       :name "Underworld Ties")
-     :Windfall
+       :name "Underworld Ties"
+       :summary
+        "* [Skill]: [Influence]")
+     "Windfall"
       (base/ability
-       :name "Windfall"))
+       :name "Windfall"
+       :summary
+        "* [Skill]: [Influence]"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -2185,13 +2235,19 @@ x +1DMG vs. Crouching."
       (base/ability<-tactics-key tactics "Archeology")
      "Current Events"
       (base/ability
-       :name "Current Events")
+       :name "Current Events"
+       :summary
+        "* [Skill]: [Knowledge]")
      "Geography"
       (base/ability
-       :name "Geography")
+       :name "Geography"
+       :summary
+        "* [Skill]: [Knowledge]")
      "History: Ancient"
       (base/ability
-       :name "History: Ancient")
+       :name "History: Ancient"
+       :summary
+        "* [Skill]: [Knowledge]")
      "History: Military"
       (base/ability
        :name "History: Military"
@@ -2396,7 +2452,8 @@ x +1DMG vs. Crouching."
        :name "Welding")))
   (base/skill
    :name "Medicine"
-   :titles "Caregiver, Caretaker, Dentist, Doctor, EMT, Medic, Medical Examiner, Nurse, Physician, Surgeon"
+   :titles
+    "Caregiver, Caretaker, Dentist, Doctor, EMT, Medic, Medical Examiner, Nurse, Physician, Surgeon"
    :stat "Mind"
    :abilitymap
     (base/abilitymap
@@ -2434,45 +2491,48 @@ x +1DMG vs. Crouching."
      "Physiology"
       (base/ability
        :name "Physiology")
-     "Surgery"
+     "Surgery:Abdominal"
       (base/ability
-       :name "Surgery")
-     "Surgery: Brain"
+       :name "Surgery:Abdominal")
+     "Surgery:Brain"
       (base/ability
-       :name "Surgery: Brain")
-     "Surgery: Dental"
+       :name "Surgery:Brain")
+     "Surgery:Cardiac"
       (base/ability
-       :name "Surgery: Dental")
-     "Surgery: Cosmetic"
+       :name "Surgery:Cardiac")
+     "Surgery:Dental"
       (base/ability
-       :name "Surgery: Cosmetic")
-     "Surgery: Cybernetic"
+       :name "Surgery:Dental")
+     "Surgery:Cosmetic"
       (base/ability
-       :name "Surgery: Cybernetic")
-     "Surgery: Nerve"
+       :name "Surgery:Cosmetic")
+     "Surgery:Cybernetic"
       (base/ability
-       :name "Surgery: Nerve")
-     "Surgery: Reconstructive"
+       :name "Surgery:Cybernetic")
+     "Surgery:Nerve"
       (base/ability
-       :name "Surgery: Reconstructive")
-     "Surgery: Veterinary"
+       :name "Surgery:Nerve")
+     "Surgery:Reconstructive"
       (base/ability
-       :name "Surgery: Veterinary")
-     "Treat Disease"
+       :name "Surgery:Reconstructive")
+     "Surgery:Veterinary"
       (base/ability
-       :name "Treat Disease")
-     "Treat Injury"
+       :name "Surgery:Veterinary")
+     "Treat:Disease"
       (base/ability
-       :name "Treat Injury")
-     "Treat Poison"
+       :name "Treat:Disease")
+     "Treat:Injury"
       (base/ability
-       :name "Treat Poison")
-     "Treat Radiation"
+       :name "Treat:Injury")
+     "Treat:Poison"
       (base/ability
-       :name "Treat Radiation")
-     "Veterinary Medicine"
+       :name "Treat:Poison")
+     "Treat:Radiation"
       (base/ability
-       :name "Veterinary Medicine")))
+       :name "Treat:Radiation")
+     "Veterinary:Medicine"
+      (base/ability
+       :name "Veterinary:Medicine")))
   (base/skill
    :name "Military"
    :reference

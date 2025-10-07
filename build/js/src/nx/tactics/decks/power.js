@@ -633,7 +633,15 @@ export default class nx_tactics_decks_power {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wither", ":titles", "Shrivelling")
         )
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Cryomancy", ":summary", "* Cryo is the magical version of Cold.\n* Cryo effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Cryo reacts with Pyro to produce the [Melt] effect.\n* Cryo reacts with Geo to produce the [Brittle] effect.\n* Cryo reacts with Hydro to produce the [Freeze] effect.\n* Cryo reacts with Electro to produce the [Superconduct] effect.\n* Cryo reacts with Aero to produce the [Chill] effect."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Cryomancy",
+        ":summary",
+        "* Cryo is the magical version of Cold.\n* Cryo effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Cryo reacts with Pyro to produce the [Melt] effect.\n* Cryo reacts with Geo to produce the [Brittle] effect.\n* Cryo reacts with Hydro to produce the [Freeze] effect.\n* Cryo reacts with Electro to produce the [Superconduct] effect.\n* Cryo reacts with Aero to produce the [Chill] effect.",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Icy Stare")
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
@@ -735,9 +743,9 @@ export default class nx_tactics_decks_power {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Prophesy", ":summary", "* [Power]: [Divination]"),
           ":Providence",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Providence", ":summary", "* [Power]: [Divination]\n* [Action]: Divine a time and place nearby that will be beneficial if the user goes there. The roll result is not known by the user, and the success determines the benefit."),
-          ":Revelation",
+          "Revelation",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Revelation", ":summary", "* [Power]: [Divination]"),
-          ":Foresight",
+          "Foresight",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Foresight", ":summary", "* [Power]: [Divination]\n* Foresight is a passive form of extra-sensory perception whereby a person spontaneously perceives information, in the form of vision, about future events before they happen. It is distinguished from [Precognition] in that it is passive."),
           "Twist of Fate",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Twist of Fate"),
