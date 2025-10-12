@@ -2586,6 +2586,8 @@ x +1DMG vs. Crouching."
    :stat "Spirit"
    :abilitymap
     (base/abilitymap
+     "Absurdist Comedy"
+      (base/ability<-tactics-key tactics "Absurdist Comedy")
      "Allure"
       (base/ability
        :name "Allure"
@@ -2611,12 +2613,6 @@ x +1DMG vs. Crouching."
        :summary
         "* For each success, the targets Move is reduced by 1.
          * [Skill]: [Performance]")
-     "Comedy"
-      (base/ability
-       :name "Comedy"
-       :titles "Clown, Comedian, Mime, Jester"
-       :summary
-        "* [Skill]: [Performance]")
      "Crescendo"
       (base/ability
        :name "Crescendo"
@@ -2811,6 +2807,7 @@ x +1DMG vs. Crouching."
     (base/specialtymap<-tactics-keys
      tactics
      "Acting"
+     "Comedy"
      "Courtesan"
      "Dance"
      "Music"))

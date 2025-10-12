@@ -32,105 +32,22 @@
     * Extreme: Structural Collapse. Push:1 Armor:-3 Part:DamageAll"))
 
 /*
-// D Frame:Pierced Through
-// H Frame:Split Apart Casualty:50%
-// S Frame:
-// D Control:Haywire
-// S Control:Controls Severed. No Control
-// Hull
-// AC
-//  Mj - Armor Breach
-//  Cr - Hull Breach
-//  Ex - Hull Collapse. Body:-3 Speed:-1 Casualty:75%
-// AD
-//  Ex - 
-// AH
-//  Ex - Structural Failure. Body:-3 Speed:-3 Casualty:75%
-// KD - Controls
-//  Mj - Shrapnel Damages Controls. 
-//  Cr - Shrapnel Causes Fire. 
-//  Ex - Controls Perforated. Broken. Stun:3 Speed:-3 Casualty:50%
-// QC - Cabin
-//  Mn - Shockwave. Fatigue:1
-//  Mj - Spauling Fragments. Fatigue:1 Stress:1 Casualty:25%
-//  Cr - Wall Collapse. Fatigue:2 Stress:2 Casualty:50%
-//  Ex - Room Collapse. Fatigue:3 Stress:3 Casualty:75%
-// QD - Cabin
-//  Mn - Wall Pierced. Leaking. Stress:1
-//  Mj - Smoke from Shrapnel. Stress:1 Choking:2 Casualty:25%
-//  Cr - Fire from Shrapnel. Stress:2 Burning:2 Casualty:50%
-//  Ex - Explosion from Shrapnel. Stress:3 Burning:3 Casualty:75%
-// QH - Cabin
-//  Mn - Wall Crumbling. Leaking. Stress:1
-//  Mj - Wall Cracked. Leaking. Stress:1 Exposure:1 Casualty:25%
-//  Cr - Wall Breach. Stress:2 Exposure:2 Casualty:50%
-//  Ex - Room Torn Open. Stress:3 Exposure:3 Casualty:75%
-// QH - Cabin
-//  Mn - Wall Crack. Stress:1
-//  Mj - Shrapnel Causes Toxic Smoke. Stress:1 Choking:2 Casualty:25%
-//  Cr - Shrapnel Causes Fire. Stress:2 Burning:2 Casualty:50%
-//  Ex - Shrapnel Causes Explosion. Stress:3 Burning:3 Casualty:75%
-// QS - Cabin
-//  Mn - Wall Crack. Stress:1
-//  Mj - Life Support Leak. Stress:1 Choking:1
-//  Cr - Life Support Diminished. Choking:2 Exposure:1
-//  Ex - Life Support Cut. Choking:3 Exposure:2
-// JC - Engine
-//  Mn - Transmission Grinding. Slow:1
-//  Mj - Transmission Slipping. Slow:1 Speed:-1
-//  Cr - Transmission Stripped. Slow:2 Speed:-2
-//  Ex - Transmission Shattered. Slow:3 Speed:-3 Casualty:25%
-// JD - Engine
-//  Mn - Engine Misfire. Slow:1
-//  Mj - Engine Smoking. Slow:1 Choking:2 Casualty:25%
-//  Cr - Engine Fire. Speed:-1 Burning:2 Casualty:50%
-//  Ex - Engine Explosion. Broken. Speed:-2 Burning:3 Casualty:75%
-// JH - Engine
-//  Mn - Radiator Damage. Overheating. Slow:1
-//  Mj - Coolant Leak. Smoke. Slow:1 Choking:1
-//  Cr - Coolant Failure. Speed:-1 Burning:1 Choking:2
-//  Ex - Engine Fused. Speed:-3 Burning:2 Casualty:25%
-// JS - Engine
-//  Mn - Exhaust Damage. Energy Loss - Slow:1
-//  Mj - Intake Damage. Engine Stall - 
-//  Cr - Turbine Damage. Power Failure - 
-//  Ex - Engine Seized. Power Cut - Slow:2 Speed:-3
-// TC - Supply
-//  Mn - Cargo Damage. Fatigue:1
-//  Mj - Cargo Spill. Fatigue:2 Casualty:25%
-//  Cr - Cargo Loss. Fatigue:2 Casualty:50%
-//  Ex - Cargo Destroyed. Fatigue:3 Casualty:75%
-// TD - Supply
-//  Mn - Hanger Pitted. Fatigue:1
-//  Mj - Landing Blocked. Fatigue:1 Casualty:25%. Can't Land
-//  Cr - Launcher Blocked. Fatigue:2 Casualty:50%. Can't Launch
-//  Ex - Hanger Destroyed. Fatigue:3 Casualty:75%. Broken
-// TH - Supply
-//  Mn - Fluid Leak. Slow:1
-//  Mj - Gas Leak. Smoke. Slow:1 Choking:1
-//  Cr - Coolant Failure. Speed:-1 Burning:1 Choking:2
-//  Ex - Fuel Explosion. Speed:-3 Burning:2 Casualty:25%
-// TS - Supply
-//  Mn - Fuel Leak. Slow:1
-//  Mj - Fuel Contamination. Bleeding:1 Speed:-1
-//  Cr - Fuel Line Blocked. Bleeding:2 Speed:-2
-//  Ex - Fuel Line Cut. Bleeding:3 Speed:-3
-// Systems
-// Control line cut
-// Control Fire
-// Communication interference
-// Communication cut
-// Controls
-//  C Steering Lost
-//  D Visibility Lost. Blind
-//  H
-//   Fire. Weapon Control Lost. Casualty:25%
-//   Explosion. Equipment Control Lost. Casualty:50%
-//  S - Mind:-1
-//   Comms Static. Stun:1
-//   Comms Garbled. 
-//   Comms Interrupted. Deaf:Partial
-//   Comms Cut. Deaf
+// Frame
+// AC - Shattered
+    Major: Structural Fatigue.
+    Critical: Shockwave
+    Extreme: Hull Collapse. Body:-3 Speed:-1 Casualty:75%
+// AD - Defense Disrupted
+    Critical
+    Extreme: Pierced Through
+// AH - Armor
+    Major: Armor Breach
+    Critical: Hull Breach
+//  Critical: Hull Rupture
+//  Extreme: Split Apart. Body:-3 Speed:-3 Casualty:75%
+// AS - Breakdowns
+//  Critical: Supports Severed
+//  Extreme: Structural Failure
 */
 
 (const vehicle-ad : base/damage
@@ -155,144 +72,182 @@
  (base/damage
   :name "Bash: Controls"
   :image "images/damage-vehicle-kc.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Thrust Control Cracked. Slow:1
+    Major: Thrust Control Impaired. Stun:1 Slow:1
+    Critical: Thrust Control Unresponsive. Stun:1 Slow:2 Accelerate:+1
+    Extreme: Thrust Control Smashed. Speed:-2 Haywire:Thrust"))
 
 (const vehicle-kd : base/damage
  (base/damage
   :name "Pierce: Controls"
   :image "images/damage-vehicle-kd.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Visibility Obscured. Stun:1
+    Major: Visibility Reduced. Stun:2
+    Critical: Visibility Impaired. Stun:3 Casualty:25% Blind:Partial
+    Extreme: Visibility Lost. Mind:-1 Casualty:50% Blind"))
 
 (const vehicle-kh : base/damage
  (base/damage
   :name "Hack: Controls"
   :image "images/damage-vehicle-kh.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Communication Interference. Stun:1
+    Major: Communication Garbled. Stun:2
+    Critical: Communication Interrupted. Stun:3 Deaf:Partial
+    Extreme: Communication Cut. Mind:-2 Deaf"))
 
 (const vehicle-ks : base/damage
  (base/damage
   :name "Slash: Controls"
   :image "images/damage-vehicle-ks.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Helm Control Slashed. Slow:1
+    Major: Helm Control Impaired. Stun:1 Slow:1
+    Critical: Helm Control Drifting. Stun:1 Slow:2 Haywire:Lift
+    Extreme: Helm Control Lost. Speed:-2. Haywire:Steering"))
 
 (const vehicle-qc : base/damage
  (base/damage
   :name "Bash: Cabin"
   :image "images/damage-vehicle-qc.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Shockwave. Fatigue:1
+    Major: Spauling Fragments. Fatigue:1 Stress:1 Casualty:25%
+    Critical: Wall Collapse. Fatigue:2 Stress:2 Casualty:50%
+    Extreme: Cabin Collapse. Fatigue:3 Stress:3 Casualty:75%"))
 
 (const vehicle-qd : base/damage
  (base/damage
   :name "Pierce: Cabin"
   :image "images/damage-vehicle-qd.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Cabin Wall Pierced. Stress:1
+    Major: Smoke from Shrapnel. Stress:1 Choking:1 Casualty:25%
+    Critical: Fire from Shrapnel. Stress:2 Burning:2 Casualty:50%
+    Extreme: Explosion from Shrapnel. Stress:3 Burning:3 Casualty:75%"))
 
 (const vehicle-qh : base/damage
  (base/damage
   :name "Hack: Cabin"
   :image "images/damage-vehicle-qh.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Cabin Wall Crumbling. Stress:1
+    Major: Cabin Wall Cracked. Stress:1 Exposure:1 Casualty:25%
+    Critical: Cabin Breach. Stress:2 Exposure:2 Casualty:50%
+    Extreme: Cabin Torn Open. Stress:3 Exposure:3 Casualty:75%"))
 
 (const vehicle-qs : base/damage
  (base/damage
   :name "Slash: Cabin"
   :image "images/damage-vehicle-qs.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Wall Crack. Stress:1
+    Major: Life Support Leak. Stress:1 Choking:1
+    Critical: Life Support Diminished. Choking:2 Exposure:1
+    Extreme: Life Support Cut. Choking:3 Exposure:2"))
 
 (const vehicle-jc : base/damage
  (base/damage
   :name "Bash: Engine"
   :image "images/damage-vehicle-jc.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Gears Grinding. Slow:1
+    Major: Gears Slipping. Slow:1 Speed:-1
+    Critical: Gears Stripped. Slow:2 Speed:-2
+    Extreme: Gears Shattered. Slow:3 Speed:-3 Casualty:25%"))
 
 (const vehicle-jd : base/damage
  (base/damage
   :name "Pierce: Engine"
   :image "images/damage-vehicle-jd.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Engine Running Hot. Fatigue:1
+    Major: Engine Overheating. Smoke. Fatigue:1 Choking:1
+    Critical: Engine Racing. Body:-1 Burning:1 Choking:2
+    Extreme: Engine Out of Control. Burning:2 Haywire:Engine"))
 
 (const vehicle-jh : base/damage
  (base/damage
   :name "Hack: Engine"
   :image "images/damage-vehicle-jh.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Engine Misfire. Fatigue:1
+    Major: Engine Smoking. Fatigue:1 Choking:2 Casualty:25%
+    Critical: Engine Fire. Body:-1 Burning:2 Casualty:50%
+    Extreme: Engine Explosion. Body:-2 Burning:3 Casualty:75%"))
 
 (const vehicle-js : base/damage
  (base/damage
   :name "Slash: Engine"
   :image "images/damage-vehicle-js.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Exhaust Damage. Energy Loss. Fatigue:1
+    Major: Intake Damage. Engine Stall. Fatigue:1 Slow:1
+    Critical: Turbine Damage. Power Failure. Fatigue:2 Speed:-1
+    Extreme: Engine Seized. Power Cut. Fatigue:3 Speed:-3"))
 
 (const vehicle-tc : base/damage
  (base/damage
   :name "Bash: Supply"
   :image "images/damage-vehicle-tc.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Cargo Shifted. Fatigue:1
+    Major: Cargo Spill. Fatigue:2 Casualty:25%
+    Critical: Cargo Loss. Fatigue:2 Casualty:50%
+    Extreme: Cargo Destroyed. Fatigue:3 Casualty:75%"))
 
 (const vehicle-td : base/damage
  (base/damage
   :name "Pierce: Supply"
   :image "images/damage-vehicle-td.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Hanger Pitted. Stun:1
+    Major: Hanger Landing Blocked. Stun:1 Casualty:25%. Can't Land
+    Critical: Hanger Launcher Blocked. Stun:2 Casualty:50%. Can't Launch
+    Extreme: Hanger Destroyed. Stun:3 Casualty:75%. Broken"))
 
 (const vehicle-th : base/damage
  (base/damage
   :name "Hack: Supply"
   :image "images/damage-vehicle-th.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Fluid Leak. Slow:1
+    Major: Gas Leak. Smoke. Slow:1 Choking:1
+    Critical: Coolant Failure. Speed:-1 Burning:1 Choking:2
+    Extreme: Fuel Explosion. Speed:-3 Burning:2 Casualty:25%"))
 
 (const vehicle-ts : base/damage
  (base/damage
   :name "Slash: Supply"
   :image "images/damage-vehicle-ts.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Fuel Leak. Slow:1
+    Major: Fuel Contamination. Bleeding:1 Speed:-1
+    Critical: Fuel Line Blocked. Bleeding:2 Speed:-2
+    Extreme: Fuel Line Severed. Bleeding:3 Speed:-3"))
 
 (const vehicle-9c : base/damage
  (base/damage
-  :name "Bash: Right Steering"
-  :image "images/damage-vehicle-9c.svg"
-  :layout base/cardlayout-imageonly
-  :summary
-   "Minor: Dented. Push:1
-    Major: Misaligned. Stun:1 Push:1 Turn:Right
-    Critical: Pulling Right. Slow:2 Turn:Right 1/Round if able
-    Extreme: Jammed Turning Right. Slow:3 Always Turn:Right if able"))
-
-(const vehicle-9d : base/damage
- (base/damage
-  :name "Pierce: Right Steering"
-  :image "images/damage-vehicle-9d.svg"
-  :layout base/cardlayout-imageonly
-  :summary
-   "Minor: Steering Perforated. Slow:1
-    Major: Steering Impaired. Stun:1 Slow:1
-    Critical: Drifting. Any Turn:Right also Drift:Right
-    Extreme: Out of Control. Speed:-1. Haywire:Steering"))
-
-(const vehicle-9h : base/damage
- (base/damage
-  :name "Hack: Right Steering"
-  :image "images/damage-vehicle-9h.svg"
-  :layout base/cardlayout-imageonly
-   "Minor: Loud Noises. Slow:1
-    Major: Shuddering. Slow:1 Stun:1
-    Critical: Vibrations. Slow:2 Turn:Right causes Stun:1
-    Extreme: Violent Shaking. Speed:-1 Turn:Right causes Damage:1"))
-
-(const vehicle-9s : base/damage
- (base/damage
-  :name "Slash: Right Steering"
-  :image "images/damage-vehicle-9s.svg"
-  :layout base/cardlayout-imageonly
-   "Minor: Control Slashed. Slow:1
-    Major: Control Unresponsive. Slow:1 Turn:Right max 1/Round
-    Critical: Control Sheared. Slow:2. Can't Turn:Right
-    Extreme: Steering Severed. Speed:-3. Can't Turn:Right"))
-
-(const vehicle-8c : base/damage
- (base/damage
   :name "Bash: Left Steering"
-  :image "images/damage-vehicle-8c.svg"
+  :image "images/damage-vehicle-9c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Dented. Push:1
@@ -300,10 +255,10 @@
     Critical: Pulling Left. Slow:2 Turn:Left 1/Round if able
     Extreme: Jammed Turning Left. Slow:3 Always Turn:Left if able"))
 
-(const vehicle-8d : base/damage
+(const vehicle-9d : base/damage
  (base/damage
   :name "Pierce: Left Steering"
-  :image "images/damage-vehicle-8d.svg"
+  :image "images/damage-vehicle-9d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Steering Perforated. Slow:1
@@ -311,10 +266,10 @@
     Critical: Drifting. Any Turn:Left also Drift:Left
     Extreme: Out of Control. Speed:-1. Haywire:Steering"))
 
-(const vehicle-8h : base/damage
+(const vehicle-9h : base/damage
  (base/damage
   :name "Hack: Left Steering"
-  :image "images/damage-vehicle-8h.svg"
+  :image "images/damage-vehicle-9h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Loud Noises. Slow:1
@@ -322,10 +277,10 @@
     Critical: Vibrations. Slow:2 Turn:Left causes Stun:1
     Extreme: Violent Shaking. Speed:-1 Turn:Left causes Damage:1"))
 
-(const vehicle-8s : base/damage
+(const vehicle-9s : base/damage
  (base/damage
   :name "Slash: Left Steering"
-  :image "images/damage-vehicle-8s.svg"
+  :image "images/damage-vehicle-9s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Control Slashed. Slow:1
@@ -333,11 +288,58 @@
     Critical: Control Sheared. Slow:2. Can't Turn:Left
     Extreme: Steering Severed. Speed:-3. Can't Turn:Left"))
 
+(const vehicle-8c : base/damage
+ (base/damage
+  :name "Bash: Right Steering"
+  :image "images/damage-vehicle-8c.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Dented. Push:1
+    Major: Misaligned. Stun:1 Push:1 Turn:Right
+    Critical: Pulling Right. Slow:2 Turn:Right 1/Round if able
+    Extreme: Jammed Turning Right. Slow:3 Always Turn:Right if able"))
+
+(const vehicle-8d : base/damage
+ (base/damage
+  :name "Pierce: Right Steering"
+  :image "images/damage-vehicle-8d.svg"
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Steering Perforated. Slow:1
+    Major: Steering Impaired. Stun:1 Slow:1
+    Critical: Drifting. Any Turn:Right also Drift:Right
+    Extreme: Out of Control. Speed:-1. Haywire:Steering"))
+
+(const vehicle-8h : base/damage
+ (base/damage
+  :name "Hack: Right Steering"
+  :image "images/damage-vehicle-8h.svg"
+  :layout base/cardlayout-imageonly
+   "Minor: Loud Noises. Slow:1
+    Major: Shuddering. Slow:1 Stun:1
+    Critical: Vibrations. Slow:2 Turn:Right causes Stun:1
+    Extreme: Violent Shaking. Speed:-1 Turn:Right causes Damage:1"))
+
+(const vehicle-8s : base/damage
+ (base/damage
+  :name "Slash: Right Steering"
+  :image "images/damage-vehicle-8s.svg"
+  :layout base/cardlayout-imageonly
+   "Minor: Control Slashed. Slow:1
+    Major: Control Unresponsive. Slow:1 Turn:Right max 1/Round
+    Critical: Control Sheared. Slow:2. Can't Turn:Right
+    Extreme: Steering Severed. Speed:-3. Can't Turn:Right"))
+
 (const vehicle-7c : base/damage
  (base/damage
   :name "Bash: Left Lift"
   :image "images/damage-vehicle-7c.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Lift Dented. Push:1
+    Major: Lift Misaligned. Stun:1 Push:1 Elevation:+1
+    Critical: Pulling Up. Slow:2 Push:1 Rising:+1
+    Extreme: Jammed Lifting. Slow:3 Push:1 Rising:+2"))
 
 (const vehicle-7d : base/damage
  (base/damage
@@ -345,10 +347,10 @@
   :image "images/damage-vehicle-7d.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Forearm Graze. Stun:1
-    Major: Forearm Pierced. Stun:1 Bleeding:1
-    Critical: Wrist Pierced. Impaired. Stun:1 Bleeding:2
-    Extreme: Artery Cut. Impaired. Stun:2 Stress:1 Bleeding:2"))
+   "Minor: Lift/Tire Puncture. Slow:1
+    Major: Lift Impaired. Stun:1 Slow:1
+    Critical: Drifting. Elevation change causes Drift:Left
+    Extreme: Out of Control. Speed:-1. Haywire:Lift"))
 
 (const vehicle-7h : base/damage
  (base/damage
@@ -356,10 +358,10 @@
   :image "images/damage-vehicle-7h.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Forearm Graze. Withdraw:1
-    Major: Forearm Gash. Drop Item. Stress:1 Bleeding:1
-    Critical: Lift Slash. Impaired. Stress:2 Bleeding:2
-    Extreme: Lift Mangled. Impaired. Stress:2 Bleeding:2"))
+   "Minor: Lift Loud Noises. Slow:1
+    Major: Lift Shuddering. Stun:1 Slow:1
+    Critical: Lift Vibrations. Slow:2 Elevation:+1 does Stun:1
+    Extreme: Lift Violent Shaking. Speed:-1 Elevation:+1 does Damage:1"))
 
 (const vehicle-7s : base/damage
  (base/damage
@@ -367,16 +369,21 @@
   :image "images/damage-vehicle-7s.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Forearm Cut. Bleeding:1
-    Major: Forearm Slash. Drop Item. Slow:1 Bleeding:1
-    Extreme: Artery Severed. Impaired. Stress:1 Bleeding:3
-    Extreme: Lift Severed. Stress:2 Bleeding:2"))
+   "Minor: Lift/Suspension Slashed. Slow:1
+    Major: Lift Unresponsive. Slow:1 Elevation:+1 max 1/Round
+    Critical: Lift Sheared. Slow:2. Can't Elevation:+1
+    Extreme: Lift Severed. Speed:-3. Can't Elevation:+1"))
 
 (const vehicle-6c : base/damage
  (base/damage
   :name "Bash: Right Lift"
   :image "images/damage-vehicle-6c.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Lift Dented. Push:1
+    Major: Lift Misaligned. Stun:1 Push:1 Elevation:-1
+    Critical: Pulling Down. Slow:2 Push:1 Sinking:+1
+    Extreme: Jammed Sinking. Slow:3 Push:1 Sinking:+2"))
 
 (const vehicle-6d : base/damage
  (base/damage
@@ -384,10 +391,10 @@
   :image "images/damage-vehicle-6d.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Forearm Graze. Stun:1
-    Major: Forearm Pierced. Stun:1 Bleeding:1
-    Critical: Wrist Pierced. Impaired. Stun:1 Bleeding:2
-    Extreme: Artery Cut. Impaired. Stun:2 Stress:1 Bleeding:2"))
+   "Minor: Lift/Tire Puncture. Slow:1
+    Major: Lift Impaired. Stun:1 Slow:1
+    Critical: Drifting. Elevation change causes Drift:Right
+    Extreme: Out of Control. Speed:-1. Haywire:Lift"))
 
 (const vehicle-6h : base/damage
  (base/damage
@@ -395,109 +402,109 @@
   :image "images/damage-vehicle-6h.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Forearm Graze. Withdraw:1
-    Major: Forearm Gash. Drop Item. Stress:1 Bleeding:1
-    Critical: Lift Slash. Impaired. Stress:2 Bleeding:2
-    Extreme: Lift Mangled. Impaired. Stress:2 Bleeding:2"))
+   "Minor: Lift Loud Noises. Slow:1
+    Major: Lift Shuddering. Stun:1 Slow:1
+    Critical: Lift Vibrations. Slow:2 Elevation:+1 does Stun:1
+    Extreme: Lift Violent Shaking. Speed:-1 Elevation:+1 does Damage:1"))
 
 (const vehicle-6s : base/damage
  (base/damage
-  :name "Slash: Left Lift"
+  :name "Slash: Right Lift"
   :image "images/damage-vehicle-6s.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor:
-    Major: Left Turn requires Turn:+1. Slow:1
-    Critical: Left Turn requires Turn:+1. Impaired. Slow:2. Part-Damage:1
-    Extreme: Left Turn Unavailable. Impaired. Slow:2. Part-Damage:All"))
+   "Minor: Lift/Suspension Slashed. Slow:1
+    Major: Lift Unresponsive. Slow:1 Elevation:-1 max 1/Round
+    Critical: Lift Sheared. Slow:2. Can't Elevation:-1
+    Extreme: Lift Severed. Speed:-3. Can't Elevation:-1"))
 
 (const vehicle-5c : base/damage
  (base/damage
-  :name "Bash: Left Systems"
+  :name "Bash: Left System"
   :image "images/damage-vehicle-5c.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Thigh Bruise. Fatigue:1
-    Major: Knee Damage. Fatigue:1 Slow:1
-    Critical: Knee Fracture. Impaired. Fatigue:1 Slow:2
-    Extreme: Thigh Fracture. Impaired. Fatigue:1 Slow:3"))
+   "Minor: System Dented. Push:1
+    Major:  System Misaligned. Stun:1 Left Skill Cooldown:+2
+    Critical: System Damaged. Stun:2 Left Skill Damaged:+2
+    Extreme: System Smashed. Stun:3 Left Skill Broken"))
 
 (const vehicle-5d : base/damage
  (base/damage
-  :name "Pierce: Left Systems"
+  :name "Pierce: Left System"
   :image "images/damage-vehicle-5d.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Thigh Graze. Stun:1
-    Major: Thigh Pierced. Stun:1 Bleeding:1
-    Critical: Knee Pierced. Impaired. Stun:2 Bleeding:1
-    Extreme: Knee Disabled. Impaired. Stun:2 Bleeding:2"))
+   "Minor: Systems Pierced. Stun:1
+    Major: Systems Impaired. Stun:2
+    Critical: Systems Shorting Out. Round Start:Cooldown an Item/Ability
+    Extreme: Systems Out of Control. Mind:-1. Haywire:Item/Ability"))
 
 (const vehicle-5h : base/damage
  (base/damage
-  :name "Hack: Left Systems"
+  :name "Hack: Left System"
   :image "images/damage-vehicle-5h.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Thigh Graze. Withdraw:1
-    Major: Thigh Slash. Stress:1 Bleeding:1
-    Critical: Wide Thigh Gash. Stress:2 Bleeding:2
-    Extreme: Severed at Knee. Impaired. Stress:2 Bleeding:3"))
+   "Minor: Ammo Damage. Stress:1
+    Major: Ammo Chemical Leak. Stress:2 Choking:1
+    Critical: Ammo Fire. Burning:2 Casualty:25%
+    Extreme: Ammo Explosion. Casualty:75% Left Item Destroyed"))
 
 (const vehicle-5s : base/damage
  (base/damage
-  :name "Slash: Left Systems"
+  :name "Slash: Left System"
   :image "images/damage-vehicle-5s.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Thigh Cut. Bleeding:1
-    Major: Thigh Slash. Slow:1 Bleeding:1
-    Critical: Hamstring Cut. Impaired. Slow:2 Bleeding:2
-    Extreme: Artery Severed. Impaired. Stress:2 Bleeding:4"))
+   "Minor: Item Cut. Stun:1
+    Major: Item Slashed. Stun:2 Left Item Cooldown:+2
+    Critical: Item Crippled. Stun:3 Left Item Damaged:+2
+    Extreme: Item Cut Off. Stun:4 Left Item Broken"))
 
 (const vehicle-4c : base/damage
  (base/damage
-  :name "Bash: Right Systems"
+  :name "Bash: Right System"
   :image "images/damage-vehicle-4c.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Thigh Bruise. Fatigue:1
-    Major: Knee Damage. Fatigue:1 Slow:1
-    Critical: Knee Fracture. Impaired. Fatigue:1 Slow:2
-    Extreme: Thigh Fracture. Impaired. Fatigue:1 Slow:3"))
+   "Minor: System Dented. Push:1
+    Major: System Misaligned. Stun:1 Right Skill Cooldown:+2
+    Critical: System Damaged. Stun:2 Right Skill Damaged:+2
+    Extreme: System Smashed. Stun:3 Right Skill Broken"))
 
 (const vehicle-4d : base/damage
  (base/damage
-  :name "Pierce: Right Systems"
+  :name "Pierce: Right System"
   :image "images/damage-vehicle-4d.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Thigh Graze. Stun:1
-    Major: Thigh Pierced. Stun:1 Bleeding:1
-    Critical: Knee Pierced. Impaired. Stun:2 Bleeding:1
-    Extreme: Knee Disabled. Impaired. Stun:2 Bleeding:2"))
+   "Minor: Systems Pierced. Stun:1
+    Major: Systems Impaired. Stun:2
+    Critical: Systems Shorting Out. Round Start:Cooldown an Item/Ability
+    Extreme: Systems Out of Control. Mind:-1. Haywire:Item/Ability"))
 
 (const vehicle-4h : base/damage
  (base/damage
-  :name "Hack: Right Systems"
+  :name "Hack: Right System"
   :image "images/damage-vehicle-4h.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Thigh Graze. Withdraw:1
-    Major: Thigh Slash. Stress:1 Bleeding:1
-    Critical: Wide Thigh Gash. Stress:2 Bleeding:2
-    Extreme: Severed at Knee. Impaired. Stress:2 Bleeding:3"))
+   "Minor: Ammo Damage. Stress:1
+    Major: Ammo Chemical Leak. Stress:2 Choking:1
+    Critical: Ammo Fire. Burning:2 Casualty:25%
+    Extreme: Ammo Explosion. Casualty:75% Left Item Destroyed"))
 
 (const vehicle-4s : base/damage
  (base/damage
-  :name "Slash: Right Systems"
+  :name "Slash: Right System"
   :image "images/damage-vehicle-4s.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Thigh Cut. Bleeding:1
-    Major: Thigh Slash. Slow:1 Bleeding:1
-    Critical: Hamstring Cut. Impaired. Slow:2 Bleeding:2
-    Extreme: Artery Severed. Impaired. Stress:2 Bleeding:4"))
+   "Minor: Item Cut. Stun:1
+    Major: Item Slashed. Stun:2 Right Item Cooldown:+2
+    Critical: Item Crippled. Stun:3 Right Item Damaged:+2
+    Extreme: Item Cut Off. Stun:4 Right Item Broken"))
 
 (const vehicle-3c : base/damage
  (base/damage
@@ -519,7 +526,7 @@
    "Minor: Thruster Pierced: Slow:1
     Major: Accelerator Stuck. Slow:1 Velocity:+1
     Critical: Accelerator Jammed. Slow:2 Velocity:+2
-    Extreme: Runaway Thruster. Slow:3 Each Round End:Velocity:+1"))
+    Extreme: Runaway Thruster. Slow:3 Haywire:Thrust"))
 
 (const vehicle-3h : base/damage
  (base/damage
@@ -563,7 +570,7 @@
    "Minor: Thruster Pierced: Slow:1
     Major: Accelerator Stuck. Slow:1 Velocity:+1
     Critical: Accelerator Jammed. Slow:2 Velocity:+2
-    Extreme: Runaway Thruster. Slow:3 Each Round End:Velocity:+1"))
+    Extreme: Runaway Thruster. Slow:3 Haywire:Thrust"))
 
 (const vehicle-2h : base/damage
  (base/damage
@@ -582,10 +589,10 @@
   :image "images/damage-vehicle-2s.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "Minor: Thrust Cut. Bleeding:1
-    Major: Ankle Slash. Slow:1 Bleeding:1
-    Critical: Achilles Tendon Cut. Impaired. Slow:3 Bleeding:1
-    Extreme: Thrust Severed. Impaired. Slow:4 Bleeding:2"))
+   "Minor: Thruster Cut. Slow:1
+    Major: Brake Slash. Slow:1 Brake:+1
+    Critical: Brakes Cut. Slow:2 Brake:+2
+    Extreme: Thruster Torn Off. Speed:-4 Casualty:75%"))
 
 (func deck-vehicle : base/deck
  (base/deck

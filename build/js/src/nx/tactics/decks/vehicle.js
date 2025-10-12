@@ -561,7 +561,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thruster Pierced: Slow:1\nMajor: Accelerator Stuck. Slow:1 Velocity:+1\nCritical: Accelerator Jammed. Slow:2 Velocity:+2\nExtreme: Runaway Thruster. Slow:3 Each Round End:Velocity:+1"
+      "Minor: Thruster Pierced: Slow:1\nMajor: Accelerator Stuck. Slow:1 Velocity:+1\nCritical: Accelerator Jammed. Slow:2 Velocity:+2\nExtreme: Runaway Thruster. Slow:3 Haywire:Thrust"
     ))
 
     // (const vehicle-2h)
@@ -587,7 +587,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thrust Cut. Bleeding:1\nMajor: Ankle Slash. Slow:1 Bleeding:1\nCritical: Achilles Tendon Cut. Impaired. Slow:3 Bleeding:1\nExtreme: Thrust Severed. Impaired. Slow:4 Bleeding:2"
+      "Minor: Thruster Cut. Slow:1\nMajor: Brake Slash. Slow:1 Brake:+1\nCritical: Brakes Cut. Slow:2 Brake:+2\nExtreme: Thruster Torn Off. Speed:-4 Casualty:75%"
     ))
 
     // (const vehicle-3c)
@@ -613,7 +613,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thruster Pierced: Slow:1\nMajor: Accelerator Stuck. Slow:1 Velocity:+1\nCritical: Accelerator Jammed. Slow:2 Velocity:+2\nExtreme: Runaway Thruster. Slow:3 Each Round End:Velocity:+1"
+      "Minor: Thruster Pierced: Slow:1\nMajor: Accelerator Stuck. Slow:1 Velocity:+1\nCritical: Accelerator Jammed. Slow:2 Velocity:+2\nExtreme: Runaway Thruster. Slow:3 Haywire:Thrust"
     ))
 
     // (const vehicle-3h)
@@ -646,104 +646,104 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Systems",
+      "Bash: Right System",
       ":image",
       "images/damage-vehicle-4c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh Bruise. Fatigue:1\nMajor: Knee Damage. Fatigue:1 Slow:1\nCritical: Knee Fracture. Impaired. Fatigue:1 Slow:2\nExtreme: Thigh Fracture. Impaired. Fatigue:1 Slow:3"
+      "Minor: System Dented. Push:1\nMajor: System Misaligned. Stun:1 Right Skill Cooldown:+2\nCritical: System Damaged. Stun:2 Right Skill Damaged:+2\nExtreme: System Smashed. Stun:3 Right Skill Broken"
     ))
 
     // (const vehicle-4d)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Systems",
+      "Pierce: Right System",
       ":image",
       "images/damage-vehicle-4d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh Graze. Stun:1\nMajor: Thigh Pierced. Stun:1 Bleeding:1\nCritical: Knee Pierced. Impaired. Stun:2 Bleeding:1\nExtreme: Knee Disabled. Impaired. Stun:2 Bleeding:2"
+      "Minor: Systems Pierced. Stun:1\nMajor: Systems Impaired. Stun:2\nCritical: Systems Shorting Out. Round Start:Cooldown an Item/Ability\nExtreme: Systems Out of Control. Mind:-1. Haywire:Item/Ability"
     ))
 
     // (const vehicle-4h)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Systems",
+      "Hack: Right System",
       ":image",
       "images/damage-vehicle-4h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh Graze. Withdraw:1\nMajor: Thigh Slash. Stress:1 Bleeding:1\nCritical: Wide Thigh Gash. Stress:2 Bleeding:2\nExtreme: Severed at Knee. Impaired. Stress:2 Bleeding:3"
+      "Minor: Ammo Damage. Stress:1\nMajor: Ammo Chemical Leak. Stress:2 Choking:1\nCritical: Ammo Fire. Burning:2 Casualty:25%\nExtreme: Ammo Explosion. Casualty:75% Left Item Destroyed"
     ))
 
     // (const vehicle-4s)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Systems",
+      "Slash: Right System",
       ":image",
       "images/damage-vehicle-4s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh Cut. Bleeding:1\nMajor: Thigh Slash. Slow:1 Bleeding:1\nCritical: Hamstring Cut. Impaired. Slow:2 Bleeding:2\nExtreme: Artery Severed. Impaired. Stress:2 Bleeding:4"
+      "Minor: Item Cut. Stun:1\nMajor: Item Slashed. Stun:2 Right Item Cooldown:+2\nCritical: Item Crippled. Stun:3 Right Item Damaged:+2\nExtreme: Item Cut Off. Stun:4 Right Item Broken"
     ))
 
     // (const vehicle-5c)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Systems",
+      "Bash: Left System",
       ":image",
       "images/damage-vehicle-5c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh Bruise. Fatigue:1\nMajor: Knee Damage. Fatigue:1 Slow:1\nCritical: Knee Fracture. Impaired. Fatigue:1 Slow:2\nExtreme: Thigh Fracture. Impaired. Fatigue:1 Slow:3"
+      "Minor: System Dented. Push:1\nMajor:  System Misaligned. Stun:1 Left Skill Cooldown:+2\nCritical: System Damaged. Stun:2 Left Skill Damaged:+2\nExtreme: System Smashed. Stun:3 Left Skill Broken"
     ))
 
     // (const vehicle-5d)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Systems",
+      "Pierce: Left System",
       ":image",
       "images/damage-vehicle-5d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh Graze. Stun:1\nMajor: Thigh Pierced. Stun:1 Bleeding:1\nCritical: Knee Pierced. Impaired. Stun:2 Bleeding:1\nExtreme: Knee Disabled. Impaired. Stun:2 Bleeding:2"
+      "Minor: Systems Pierced. Stun:1\nMajor: Systems Impaired. Stun:2\nCritical: Systems Shorting Out. Round Start:Cooldown an Item/Ability\nExtreme: Systems Out of Control. Mind:-1. Haywire:Item/Ability"
     ))
 
     // (const vehicle-5h)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Systems",
+      "Hack: Left System",
       ":image",
       "images/damage-vehicle-5h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh Graze. Withdraw:1\nMajor: Thigh Slash. Stress:1 Bleeding:1\nCritical: Wide Thigh Gash. Stress:2 Bleeding:2\nExtreme: Severed at Knee. Impaired. Stress:2 Bleeding:3"
+      "Minor: Ammo Damage. Stress:1\nMajor: Ammo Chemical Leak. Stress:2 Choking:1\nCritical: Ammo Fire. Burning:2 Casualty:25%\nExtreme: Ammo Explosion. Casualty:75% Left Item Destroyed"
     ))
 
     // (const vehicle-5s)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Systems",
+      "Slash: Left System",
       ":image",
       "images/damage-vehicle-5s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Thigh Cut. Bleeding:1\nMajor: Thigh Slash. Slow:1 Bleeding:1\nCritical: Hamstring Cut. Impaired. Slow:2 Bleeding:2\nExtreme: Artery Severed. Impaired. Stress:2 Bleeding:4"
+      "Minor: Item Cut. Stun:1\nMajor: Item Slashed. Stun:2 Left Item Cooldown:+2\nCritical: Item Crippled. Stun:3 Left Item Damaged:+2\nExtreme: Item Cut Off. Stun:4 Left Item Broken"
     ))
 
     // (const vehicle-6c)
@@ -754,7 +754,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-6c.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Lift Dented. Push:1\nMajor: Lift Misaligned. Stun:1 Push:1 Elevation:-1\nCritical: Pulling Down. Slow:2 Push:1 Sinking:+1\nExtreme: Jammed Sinking. Slow:3 Push:1 Sinking:+2"
     ))
 
     // (const vehicle-6d)
@@ -767,7 +769,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Forearm Graze. Stun:1\nMajor: Forearm Pierced. Stun:1 Bleeding:1\nCritical: Wrist Pierced. Impaired. Stun:1 Bleeding:2\nExtreme: Artery Cut. Impaired. Stun:2 Stress:1 Bleeding:2"
+      "Minor: Lift/Tire Puncture. Slow:1\nMajor: Lift Impaired. Stun:1 Slow:1\nCritical: Drifting. Elevation change causes Drift:Right\nExtreme: Out of Control. Speed:-1. Haywire:Lift"
     ))
 
     // (const vehicle-6h)
@@ -780,20 +782,20 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Forearm Graze. Withdraw:1\nMajor: Forearm Gash. Drop Item. Stress:1 Bleeding:1\nCritical: Lift Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Lift Mangled. Impaired. Stress:2 Bleeding:2"
+      "Minor: Lift Loud Noises. Slow:1\nMajor: Lift Shuddering. Stun:1 Slow:1\nCritical: Lift Vibrations. Slow:2 Elevation:+1 does Stun:1\nExtreme: Lift Violent Shaking. Speed:-1 Elevation:+1 does Damage:1"
     ))
 
     // (const vehicle-6s)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_6s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Lift",
+      "Slash: Right Lift",
       ":image",
       "images/damage-vehicle-6s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor:\nMajor: Left Turn requires Turn:+1. Slow:1\nCritical: Left Turn requires Turn:+1. Impaired. Slow:2. Part-Damage:1\nExtreme: Left Turn Unavailable. Impaired. Slow:2. Part-Damage:All"
+      "Minor: Lift/Suspension Slashed. Slow:1\nMajor: Lift Unresponsive. Slow:1 Elevation:-1 max 1/Round\nCritical: Lift Sheared. Slow:2. Can't Elevation:-1\nExtreme: Lift Severed. Speed:-3. Can't Elevation:-1"
     ))
 
     // (const vehicle-7c)
@@ -804,7 +806,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-7c.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Lift Dented. Push:1\nMajor: Lift Misaligned. Stun:1 Push:1 Elevation:+1\nCritical: Pulling Up. Slow:2 Push:1 Rising:+1\nExtreme: Jammed Lifting. Slow:3 Push:1 Rising:+2"
     ))
 
     // (const vehicle-7d)
@@ -817,7 +821,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Forearm Graze. Stun:1\nMajor: Forearm Pierced. Stun:1 Bleeding:1\nCritical: Wrist Pierced. Impaired. Stun:1 Bleeding:2\nExtreme: Artery Cut. Impaired. Stun:2 Stress:1 Bleeding:2"
+      "Minor: Lift/Tire Puncture. Slow:1\nMajor: Lift Impaired. Stun:1 Slow:1\nCritical: Drifting. Elevation change causes Drift:Left\nExtreme: Out of Control. Speed:-1. Haywire:Lift"
     ))
 
     // (const vehicle-7h)
@@ -830,7 +834,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Forearm Graze. Withdraw:1\nMajor: Forearm Gash. Drop Item. Stress:1 Bleeding:1\nCritical: Lift Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Lift Mangled. Impaired. Stress:2 Bleeding:2"
+      "Minor: Lift Loud Noises. Slow:1\nMajor: Lift Shuddering. Stun:1 Slow:1\nCritical: Lift Vibrations. Slow:2 Elevation:+1 does Stun:1\nExtreme: Lift Violent Shaking. Speed:-1 Elevation:+1 does Damage:1"
     ))
 
     // (const vehicle-7s)
@@ -843,109 +847,109 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Forearm Cut. Bleeding:1\nMajor: Forearm Slash. Drop Item. Slow:1 Bleeding:1\nExtreme: Artery Severed. Impaired. Stress:1 Bleeding:3\nExtreme: Lift Severed. Stress:2 Bleeding:2"
+      "Minor: Lift/Suspension Slashed. Slow:1\nMajor: Lift Unresponsive. Slow:1 Elevation:+1 max 1/Round\nCritical: Lift Sheared. Slow:2. Can't Elevation:+1\nExtreme: Lift Severed. Speed:-3. Can't Elevation:+1"
     ))
 
     // (const vehicle-8c)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_8c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Steering",
-      ":image",
-      "images/damage-vehicle-8c.svg",
-      ":layout",
-      nx_tactics_base.c_cardlayout_imageonly,
-      ":summary",
-      "Minor: Dented. Push:1\nMajor: Misaligned. Stun:1 Push:1 Turn:Left\nCritical: Pulling Left. Slow:2 Turn:Left 1/Round if able\nExtreme: Jammed Turning Left. Slow:3 Always Turn:Left if able"
-    ))
-
-    // (const vehicle-8d)
-    Object.assign(nx_tactics_decks_vehicle.c_vehicle_8d, vx_core.f_new(
-      {"any-1": nx_tactics_base.t_damage},
-      ":name",
-      "Pierce: Left Steering",
-      ":image",
-      "images/damage-vehicle-8d.svg",
-      ":layout",
-      nx_tactics_base.c_cardlayout_imageonly,
-      ":summary",
-      "Minor: Steering Perforated. Slow:1\nMajor: Steering Impaired. Stun:1 Slow:1\nCritical: Drifting. Any Turn:Left also Drift:Left\nExtreme: Out of Control. Speed:-1. Haywire:Steering"
-    ))
-
-    // (const vehicle-8h)
-    Object.assign(nx_tactics_decks_vehicle.c_vehicle_8h, vx_core.f_new(
-      {"any-1": nx_tactics_base.t_damage},
-      ":name",
-      "Hack: Left Steering",
-      ":image",
-      "images/damage-vehicle-8h.svg",
-      ":layout",
-      nx_tactics_base.c_cardlayout_imageonly,
-      ":summary",
-      "Minor: Loud Noises. Slow:1\nMajor: Shuddering. Slow:1 Stun:1\nCritical: Vibrations. Slow:2 Turn:Left causes Stun:1\nExtreme: Violent Shaking. Speed:-1 Turn:Left causes Damage:1"
-    ))
-
-    // (const vehicle-8s)
-    Object.assign(nx_tactics_decks_vehicle.c_vehicle_8s, vx_core.f_new(
-      {"any-1": nx_tactics_base.t_damage},
-      ":name",
-      "Slash: Left Steering",
-      ":image",
-      "images/damage-vehicle-8s.svg",
-      ":layout",
-      nx_tactics_base.c_cardlayout_imageonly,
-      ":summary",
-      "Minor: Control Slashed. Slow:1\nMajor: Control Unresponsive. Slow:1 Turn:Left max 1/Round\nCritical: Control Sheared. Slow:2. Can't Turn:Left\nExtreme: Steering Severed. Speed:-3. Can't Turn:Left"
-    ))
-
-    // (const vehicle-9c)
-    Object.assign(nx_tactics_decks_vehicle.c_vehicle_9c, vx_core.f_new(
-      {"any-1": nx_tactics_base.t_damage},
-      ":name",
       "Bash: Right Steering",
       ":image",
-      "images/damage-vehicle-9c.svg",
+      "images/damage-vehicle-8c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Dented. Push:1\nMajor: Misaligned. Stun:1 Push:1 Turn:Right\nCritical: Pulling Right. Slow:2 Turn:Right 1/Round if able\nExtreme: Jammed Turning Right. Slow:3 Always Turn:Right if able"
     ))
 
-    // (const vehicle-9d)
-    Object.assign(nx_tactics_decks_vehicle.c_vehicle_9d, vx_core.f_new(
+    // (const vehicle-8d)
+    Object.assign(nx_tactics_decks_vehicle.c_vehicle_8d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
       "Pierce: Right Steering",
       ":image",
-      "images/damage-vehicle-9d.svg",
+      "images/damage-vehicle-8d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
       "Minor: Steering Perforated. Slow:1\nMajor: Steering Impaired. Stun:1 Slow:1\nCritical: Drifting. Any Turn:Right also Drift:Right\nExtreme: Out of Control. Speed:-1. Haywire:Steering"
     ))
 
-    // (const vehicle-9h)
-    Object.assign(nx_tactics_decks_vehicle.c_vehicle_9h, vx_core.f_new(
+    // (const vehicle-8h)
+    Object.assign(nx_tactics_decks_vehicle.c_vehicle_8h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
       "Hack: Right Steering",
       ":image",
-      "images/damage-vehicle-9h.svg",
+      "images/damage-vehicle-8h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       "Minor: Loud Noises. Slow:1\nMajor: Shuddering. Slow:1 Stun:1\nCritical: Vibrations. Slow:2 Turn:Right causes Stun:1\nExtreme: Violent Shaking. Speed:-1 Turn:Right causes Damage:1"
+    ))
+
+    // (const vehicle-8s)
+    Object.assign(nx_tactics_decks_vehicle.c_vehicle_8s, vx_core.f_new(
+      {"any-1": nx_tactics_base.t_damage},
+      ":name",
+      "Slash: Right Steering",
+      ":image",
+      "images/damage-vehicle-8s.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      "Minor: Control Slashed. Slow:1\nMajor: Control Unresponsive. Slow:1 Turn:Right max 1/Round\nCritical: Control Sheared. Slow:2. Can't Turn:Right\nExtreme: Steering Severed. Speed:-3. Can't Turn:Right"
+    ))
+
+    // (const vehicle-9c)
+    Object.assign(nx_tactics_decks_vehicle.c_vehicle_9c, vx_core.f_new(
+      {"any-1": nx_tactics_base.t_damage},
+      ":name",
+      "Bash: Left Steering",
+      ":image",
+      "images/damage-vehicle-9c.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Dented. Push:1\nMajor: Misaligned. Stun:1 Push:1 Turn:Left\nCritical: Pulling Left. Slow:2 Turn:Left 1/Round if able\nExtreme: Jammed Turning Left. Slow:3 Always Turn:Left if able"
+    ))
+
+    // (const vehicle-9d)
+    Object.assign(nx_tactics_decks_vehicle.c_vehicle_9d, vx_core.f_new(
+      {"any-1": nx_tactics_base.t_damage},
+      ":name",
+      "Pierce: Left Steering",
+      ":image",
+      "images/damage-vehicle-9d.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Steering Perforated. Slow:1\nMajor: Steering Impaired. Stun:1 Slow:1\nCritical: Drifting. Any Turn:Left also Drift:Left\nExtreme: Out of Control. Speed:-1. Haywire:Steering"
+    ))
+
+    // (const vehicle-9h)
+    Object.assign(nx_tactics_decks_vehicle.c_vehicle_9h, vx_core.f_new(
+      {"any-1": nx_tactics_base.t_damage},
+      ":name",
+      "Hack: Left Steering",
+      ":image",
+      "images/damage-vehicle-9h.svg",
+      ":layout",
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Loud Noises. Slow:1\nMajor: Shuddering. Slow:1 Stun:1\nCritical: Vibrations. Slow:2 Turn:Left causes Stun:1\nExtreme: Violent Shaking. Speed:-1 Turn:Left causes Damage:1"
     ))
 
     // (const vehicle-9s)
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_9s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Steering",
+      "Slash: Left Steering",
       ":image",
       "images/damage-vehicle-9s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
-      "Minor: Control Slashed. Slow:1\nMajor: Control Unresponsive. Slow:1 Turn:Right max 1/Round\nCritical: Control Sheared. Slow:2. Can't Turn:Right\nExtreme: Steering Severed. Speed:-3. Can't Turn:Right"
+      ":summary",
+      "Minor: Control Slashed. Slow:1\nMajor: Control Unresponsive. Slow:1 Turn:Left max 1/Round\nCritical: Control Sheared. Slow:2. Can't Turn:Left\nExtreme: Steering Severed. Speed:-3. Can't Turn:Left"
     ))
 
     // (const vehicle-ac)
@@ -1002,7 +1006,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-jc.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Gears Grinding. Slow:1\nMajor: Gears Slipping. Slow:1 Speed:-1\nCritical: Gears Stripped. Slow:2 Speed:-2\nExtreme: Gears Shattered. Slow:3 Speed:-3 Casualty:25%"
     ))
 
     // (const vehicle-jd)
@@ -1013,7 +1019,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-jd.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Engine Running Hot. Fatigue:1\nMajor: Engine Overheating. Smoke. Fatigue:1 Choking:1\nCritical: Engine Racing. Body:-1 Burning:1 Choking:2\nExtreme: Engine Out of Control. Burning:2 Haywire:Engine"
     ))
 
     // (const vehicle-jh)
@@ -1024,7 +1032,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-jh.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Engine Misfire. Fatigue:1\nMajor: Engine Smoking. Fatigue:1 Choking:2 Casualty:25%\nCritical: Engine Fire. Body:-1 Burning:2 Casualty:50%\nExtreme: Engine Explosion. Body:-2 Burning:3 Casualty:75%"
     ))
 
     // (const vehicle-js)
@@ -1035,7 +1045,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-js.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Exhaust Damage. Energy Loss. Fatigue:1\nMajor: Intake Damage. Engine Stall. Fatigue:1 Slow:1\nCritical: Turbine Damage. Power Failure. Fatigue:2 Speed:-1\nExtreme: Engine Seized. Power Cut. Fatigue:3 Speed:-3"
     ))
 
     // (const vehicle-kc)
@@ -1046,7 +1058,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-kc.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Thrust Control Cracked. Slow:1\nMajor: Thrust Control Impaired. Stun:1 Slow:1\nCritical: Thrust Control Unresponsive. Stun:1 Slow:2 Accelerate:+1\nExtreme: Thrust Control Smashed. Speed:-2 Haywire:Thrust"
     ))
 
     // (const vehicle-kd)
@@ -1057,7 +1071,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-kd.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Visibility Obscured. Stun:1\nMajor: Visibility Reduced. Stun:2\nCritical: Visibility Impaired. Stun:3 Casualty:25% Blind:Partial\nExtreme: Visibility Lost. Mind:-1 Casualty:50% Blind"
     ))
 
     // (const vehicle-kh)
@@ -1068,7 +1084,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-kh.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Communication Interference. Stun:1\nMajor: Communication Garbled. Stun:2\nCritical: Communication Interrupted. Stun:3 Deaf:Partial\nExtreme: Communication Cut. Mind:-2 Deaf"
     ))
 
     // (const vehicle-ks)
@@ -1079,7 +1097,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-ks.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Helm Control Slashed. Slow:1\nMajor: Helm Control Impaired. Stun:1 Slow:1\nCritical: Helm Control Drifting. Stun:1 Slow:2 Haywire:Lift\nExtreme: Helm Control Lost. Speed:-2. Haywire:Steering"
     ))
 
     // (const vehicle-qc)
@@ -1090,7 +1110,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-qc.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Shockwave. Fatigue:1\nMajor: Spauling Fragments. Fatigue:1 Stress:1 Casualty:25%\nCritical: Wall Collapse. Fatigue:2 Stress:2 Casualty:50%\nExtreme: Cabin Collapse. Fatigue:3 Stress:3 Casualty:75%"
     ))
 
     // (const vehicle-qd)
@@ -1101,7 +1123,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-qd.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Cabin Wall Pierced. Stress:1\nMajor: Smoke from Shrapnel. Stress:1 Choking:1 Casualty:25%\nCritical: Fire from Shrapnel. Stress:2 Burning:2 Casualty:50%\nExtreme: Explosion from Shrapnel. Stress:3 Burning:3 Casualty:75%"
     ))
 
     // (const vehicle-qh)
@@ -1112,7 +1136,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-qh.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Cabin Wall Crumbling. Stress:1\nMajor: Cabin Wall Cracked. Stress:1 Exposure:1 Casualty:25%\nCritical: Cabin Breach. Stress:2 Exposure:2 Casualty:50%\nExtreme: Cabin Torn Open. Stress:3 Exposure:3 Casualty:75%"
     ))
 
     // (const vehicle-qs)
@@ -1123,7 +1149,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-qs.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Wall Crack. Stress:1\nMajor: Life Support Leak. Stress:1 Choking:1\nCritical: Life Support Diminished. Choking:2 Exposure:1\nExtreme: Life Support Cut. Choking:3 Exposure:2"
     ))
 
     // (const vehicle-tc)
@@ -1134,7 +1162,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-tc.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Cargo Shifted. Fatigue:1\nMajor: Cargo Spill. Fatigue:2 Casualty:25%\nCritical: Cargo Loss. Fatigue:2 Casualty:50%\nExtreme: Cargo Destroyed. Fatigue:3 Casualty:75%"
     ))
 
     // (const vehicle-td)
@@ -1145,7 +1175,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-td.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Hanger Pitted. Stun:1\nMajor: Hanger Landing Blocked. Stun:1 Casualty:25%. Can't Land\nCritical: Hanger Launcher Blocked. Stun:2 Casualty:50%. Can't Launch\nExtreme: Hanger Destroyed. Stun:3 Casualty:75%. Broken"
     ))
 
     // (const vehicle-th)
@@ -1156,7 +1188,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-th.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Fluid Leak. Slow:1\nMajor: Gas Leak. Smoke. Slow:1 Choking:1\nCritical: Coolant Failure. Speed:-1 Burning:1 Choking:2\nExtreme: Fuel Explosion. Speed:-3 Burning:2 Casualty:25%"
     ))
 
     // (const vehicle-ts)
@@ -1167,7 +1201,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-ts.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Fuel Leak. Slow:1\nMajor: Fuel Contamination. Bleeding:1 Speed:-1\nCritical: Fuel Line Blocked. Bleeding:2 Speed:-2\nExtreme: Fuel Line Severed. Bleeding:3 Speed:-3"
     ))
 
     // (const vehicle-wild-black)

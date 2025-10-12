@@ -131,6 +131,14 @@
      * Tree Climbing
      * Wall Climbing")
   (base/specialty
+   :name "Comedy"
+   :titles "Clown, Comedian, Mime, Jester"
+   :summary
+    "* [Skill]: [Performance]
+     * Absurdist Comedy
+     * Physical Comedy
+     * Puns")
+  (base/specialty
    :name "Commando Training"
    :summary
     "* Commando Training is a generic term for the fighting styles taught to armed forces members. It is a practical, sometimes brutal style that borrows from a variety of other styles and combines them into a style that can be taught to recruits quickly.
@@ -804,7 +812,8 @@
      * Castlevania
      * Fright Night
      * Lost Boys
-     * Vampire Hunter D")
+     * Vampire Hunter D
+     * Making the deadm, deader. Senna, Runeterra")
   (base/specialty
    :name "Werewolf Hunter")
   (base/specialty

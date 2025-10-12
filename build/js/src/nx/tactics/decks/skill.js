@@ -1199,6 +1199,8 @@ export default class nx_tactics_decks_skill {
         ":abilitymap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_abilitymap},
+          "Absurdist Comedy",
+          nx_tactics_base.f_ability_from_tactics_key(tactics, "Absurdist Comedy"),
           "Allure",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Allure", ":summary", "* [Skill]: [Performance]"),
           "Amplify",
@@ -1207,8 +1209,6 @@ export default class nx_tactics_decks_skill {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Calm", ":titles", "Pacify, Soothe the Savage", ":summary", "* [Skill]: [Performance]"),
           "Captivating Song",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Captivating Song", ":summary", "* For each success, the targets Move is reduced by 1.\n* [Skill]: [Performance]"),
-          "Comedy",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Comedy", ":titles", "Clown, Comedian, Mime, Jester", ":summary", "* [Skill]: [Performance]"),
           "Crescendo",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Crescendo", ":summary", "* [Skill]: [Performance]"),
           "Dance: Ballroom",
@@ -1285,7 +1285,7 @@ export default class nx_tactics_decks_skill {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Style", ":summary", "* [Skill]: [Performance]")
         ),
         ":specialtymap",
-        nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Acting", "Courtesan", "Dance", "Music")
+        nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Acting", "Comedy", "Courtesan", "Dance", "Music")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_skill},

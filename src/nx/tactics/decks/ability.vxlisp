@@ -42,6 +42,13 @@
   (base/ability
    :name "Absorb Electricity")
   (base/ability
+   :name "Absurdist Comedy"
+   :titles "Absurdist, Surreal Humor"
+   :summary
+    "Communicate something obviously impossible
+     * [Skill]: [Performance]
+     * Hits:+1 for those who would find that amusing. Hits:-1 for those who wouldn't.")
+  (base/ability
    :name "Acid Bite"
    :summary
     "* [Power]: [Acidic]")

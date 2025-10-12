@@ -56,7 +56,15 @@
   (base/rule
    :name "Blast"
    :image "images/rule-blast.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :summary
+    "Damage that can affect multiple locations
+     * Power - [Weapon]
+     * Hit Location
+     ** Reveal Hit Locations = Crits
+     ** IF multiple valid Hit Locations are revealed
+     *** Separate them into separate Hit Locations
+     *** Crits are applied to each location")
   (base/rule
    :name "Blatant"
    :titles "Overt"
@@ -102,9 +110,10 @@
    :image "images/rule-broken.svg"
    :layout base/cardlayout-imageonly
    :summary
-    "Broken represents a broken limb or Item. Add this to related Damage
+    "Broken represents a broken limb, Item, Ability, or Skill/Power. Add this to related Damage
      Limb - Cannot use Ability/Item with that limb
-     Item - Can only be used as Weapon:Improvised")
+     Item - Can only be used as Weapon:Improvised
+     Ability/Skill/Power - Cannot use")
   (base/rule
    :name "Build: Character"
    :summary
@@ -157,17 +166,18 @@
      * The Finale")
   (base/rule
    :name "Casualty"
-//   :image "images/rule-casualty.svg"
-//   :layout base/cardlayout-imageonly
+   :image "images/rule-casualty.svg"
+   :layout base/cardlayout-imageonly
    :summary
-    "Casualty represent crew and equipment loss on a vehicle.
-     Determine - Draw Fate for each crew or equipment
-     * 25% - Cups represents a Casualty
-     * 50% - Red represents a Casualty
-     * 75% - Any but Cups represents a Casualty
-     Effect - Useless. Of those:
-     * Crew - Killed:25% Missing:25% Critcal Damage:25% Major Damage:25%
-     * Equipment - Irreparable:25% Missing:25% Broken:25% Damaged:25%")
+    "Casualty represent crew and equipment losses on a vehicle.
+     Stress - Gain Stress:+1 for each 25%
+     Determine - Draw Fate for each crew or item
+     * Cups - 25%+ is a Casualty
+     * Coins - 50%+ is a Casualty
+     * Swords - 75%+ is a Casualty
+     Effect
+     * Crew - Missing:25% Extreme Damage:25% Critical Damage:25% Major Damage:25%
+     * Equipment - Missing:25% Irreparable:25% Broken:25% Damaged:25%")
   (base/rule
    :name "Character")
   (base/rule
@@ -272,7 +282,11 @@
   (base/rule
    :name "Damaged"
    :image "images/rule-damaged.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :summary
+    "Damaged represents a partially damaged limb, Item, Ability, or Skill/Power. Add this to related Damage
+    Skill - Skill:-1 for each Damaged
+    Broken - Object with Body:0 becomes [Broken]")
   (base/rule
    :name "Deaf"
    :image "images/rule-deaf.svg"
@@ -401,12 +415,13 @@
    :name "Haywire"
    :image "images/rule-haywire.svg"
    :summary
-    "System acts randomly
+    "System Out of Control
      * Round Start - Reveal Fate IF Coins/Cups THEN
+     ** Item/Ability - Cooldown with no effect
      ** Steering - Spend Turn:-1 to Turn:Left/Right
-     ** Thrust - Spend to Accelerate:1/Decelerate:1
-     ** Item/Ability - Exhaust with no effect
-     ** Lift - Spend to Elevation:+1/-1")
+     ** Lift - Spend to Elevation:+1/-1
+     ** Engine - Burning:+1/+2
+     ** Thrust - Spend to Accelerate:1/Decelerate:1")
   (base/rule
    :name "Held"
    :image "images/rule-held.svg"
@@ -790,6 +805,13 @@
    :image "images/rule-resolution.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Rising/Sinking"
+   :image "images/rule-rising-sinking.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "A Rising/Sinking Unit is rapidly gaining/losing Elevation
+     * Round End - Elevation:+1/-1 for each Rising/Sinking:1")
+  (base/rule
    :name "Ritual"
    :summary
     "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event.")
@@ -947,13 +969,6 @@
      * Triumphant - The Shadow gains control. If uses Shadow instead of Will for tests. It acts in its immediate self interest and rarely aids anyone.
      * Shadow:X - IF Shadow > Will THEN test Will vs Shadow or gain Triumphant
      * Bitter Defeat - Because the Shadow is self absorbed, failure is devastating. IF Shadow is defeated THEN Shadow:-1. IF Will > Shadow THEN test Will vs Shadow to remove Triumphant.")
-  (base/rule
-   :name "Sinking"
-   :image "images/rule-sinking.svg"
-   :layout base/cardlayout-imageonly
-   :summary
-    "A Sinking Unit is rapidly losing Elevation
-     * Round End - Elevation:-1 for each Sinking:1")
   (base/rule
    :name "Skill"
    :image "images/rule-skill.svg"

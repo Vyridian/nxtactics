@@ -34,6 +34,7 @@ export default class nx_tactics_decks_ability {
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Abdomen Timing of Two", ":reference", "Refers to feinting an attack, then striking an enemy as they are retracting from an attack, hitting them in the abdomen with the correct timing of either two moves or two seconds. Although the technique seems relatively simple, Musashi lists this as one of the hardest techniques to time correctly."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ablative Armor", ":summary", "* Armor that vaporizes when hit decreasing damage but also damaging the armor.\n* Ignore the first point of [Damage] and reduce [Armor] (on that facing) instead."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Absorb Electricity"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Absurdist Comedy", ":titles", "Absurdist, Surreal Humor", ":summary", "Communicate something obviously impossible\n* [Skill]: [Performance]\n* Hits:+1 for those who would find that amusing. Hits:-1 for those who wouldn't."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Acid Bite", ":summary", "* [Power]: [Acidic]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Acid Blood", ":reference", "Gestates in a human host and has concentrated acid for blood - Aliens", ":summary", "* [Power]: [Acidic]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Acid Spray", ":summary", "* [Power]: [Acidic]"),

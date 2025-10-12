@@ -157,7 +157,9 @@ export default class nx_tactics_decks_rule {
         ":image",
         "images/rule-blast.svg",
         ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Damage that can affect multiple locations\n* Power - [Weapon]\n* Hit Location\n** Reveal Hit Locations = Crits\n** IF multiple valid Hit Locations are revealed\n*** Separate them into separate Hit Locations\n*** Crits are applied to each location"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Blatant", ":titles", "Overt", ":summary", "* Blatant Abilities are obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]\n* Blatant Magic is harder to use and has [Disadvantage]"),
       vx_core.f_new(
@@ -218,7 +220,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Broken represents a broken limb or Item. Add this to related Damage\nLimb - Cannot use Ability/Item with that limb\nItem - Can only be used as Weapon:Improvised"
+        "Broken represents a broken limb, Item, Ability, or Skill/Power. Add this to related Damage\nLimb - Cannot use Ability/Item with that limb\nItem - Can only be used as Weapon:Improvised\nAbility/Skill/Power - Cannot use"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Character", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Item", ":summary", ""),
@@ -248,7 +250,17 @@ export default class nx_tactics_decks_rule {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaign", ":summary", "* Starting a New Campaign\n* Creating Player Characters\n* Creating Plots\n* Conflict\n* Creating Scenes\n* Continuing a Campaign"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaign: New", ":summary", "* The Elevator Pitch\n* Theme\n* Character Creation\n* Character Development\n* Maps\n* The Hook\n* The Finale"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Casualty", ":summary", "Casualty represent crew and equipment loss on a vehicle.\nDetermine - Draw Fate for each crew or equipment\n* 25% - Cups represents a Casualty\n* 50% - Red represents a Casualty\n* 75% - Any but Cups represents a Casualty\nEffect - Useless. Of those:\n* Crew - Killed:25% Missing:25% Critcal Damage:25% Major Damage:25%\n* Equipment - Irreparable:25% Missing:25% Broken:25% Damaged:25%"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Casualty",
+        ":image",
+        "images/rule-casualty.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Casualty represent crew and equipment losses on a vehicle.\nStress - Gain Stress:+1 for each 25%\nDetermine - Draw Fate for each crew or item\n* Cups - 25%+ is a Casualty\n* Coins - 50%+ is a Casualty\n* Swords - 75%+ is a Casualty\nEffect\n* Crew - Missing:25% Extreme Damage:25% Critical Damage:25% Major Damage:25%\n* Equipment - Missing:25% Irreparable:25% Broken:25% Damaged:25%"
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Character"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -423,7 +435,9 @@ export default class nx_tactics_decks_rule {
         ":image",
         "images/rule-damaged.svg",
         ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Damaged represents a partially damaged limb, Item, Ability, or Skill/Power. Add this to related Damage\n    Skill - Skill:-1 for each Damaged\n    Broken - Object with Body:0 becomes [Broken]"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -582,7 +596,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Haywire", ":image", "images/rule-haywire.svg", ":summary", "System acts randomly\n* Round Start - Reveal Fate IF Coins/Cups THEN\n** Steering - Spend Turn:-1 to Turn:Left/Right\n** Thrust - Spend to Accelerate:1/Decelerate:1\n** Item/Ability - Exhaust with no effect\n** Lift - Spend to Elevation:+1/-1"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Haywire", ":image", "images/rule-haywire.svg", ":summary", "System Out of Control\n* Round Start - Reveal Fate IF Coins/Cups THEN\n** Item/Ability - Cooldown with no effect\n** Steering - Spend Turn:-1 to Turn:Left/Right\n** Lift - Spend to Elevation:+1/-1\n** Engine - Burning:+1/+2\n** Thrust - Spend to Accelerate:1/Decelerate:1"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -970,6 +984,17 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Rising/Sinking",
+        ":image",
+        "images/rule-rising-sinking.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "A Rising/Sinking Unit is rapidly gaining/losing Elevation\n* Round End - Elevation:+1/-1 for each Rising/Sinking:1"
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Ritual", ":summary", "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Attacker", ":summary", "Attacker Units usually do the following:\n* Target weak points in the enemy from lines\n* Move into Range\n* Attack"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Blaster", ":summary", "Blaster Units usually do the following:\n* Target groups of enemies\n* Move into Range\n* Attack to maximize enemy losses\n* Move to safety"),
@@ -1098,17 +1123,6 @@ export default class nx_tactics_decks_rule {
         "* Hello darkness, my old friend. I've come to talk to you again. - Simon and Garfunkle, Sound of Silence\n* Anyone who fights with monsters should take care that he does not in the process become a monster. And if you gaze for long into an abyss, the abyss gazes also into you. - Friedrich Nietzsche, Beyond Good and Evil\n* Hannibal Lecter\n* Even if I wanted to go, my schedule wouldn't allow it. 4:00, wallow in self pity; 4:30, stare into the abyss; 5:00, solve world hunger, tell no one; 5:30, jazzercize; 6:30, dinner with me - I can't cancel that again; 7:00, wrestle with my self-loathing... I'm booked. Of course, if I bump the loathing to 9, I could still be done in time to lay in bed, stare at the ceiling and slip slowly into madness. But what would I wear? - Grinch, The Gringe Who Stole Christmas\n* If once you start down the dark path, forever will it dominate your destiny - Yoda, Star Wars: The Empire Strikes Back\n* A farmer comes home one day to find ... everything that he loved, taken from him... He makes a promise to himself in those dark hours. A life's work erupts from his knotted mind... Years go by... The farmer, who is no longer a farmer, sees the wreckage that he has left in his wake. It is now he who burns. It is he who slaughters, ... and he knows in his heart, he must pay. - Red Reddington, The Blacklist\n* When I find out someone murdered an innocent person, or sold somebody heroin, or did some graffiti, and I kill that person with my bare hands, their eyeballs popping out of their skulls... You think THAT gives ME pleasure?... Well, it does!... What separates us from the other killers, is we only kill bad people. Usually... Unless there's a mistake. Now, do I sound like a fucking maniac? - Vigilante, Peacemaker",
         ":summary",
         "The Shadow represents our repressed, selfish, and cruel desires. It is normally powerless, frustrated, and suppressed, but it can gain dominance in those whose Will falters or those who cultivate it.\n* Triumphant - The Shadow gains control. If uses Shadow instead of Will for tests. It acts in its immediate self interest and rarely aids anyone.\n* Shadow:X - IF Shadow > Will THEN test Will vs Shadow or gain Triumphant\n* Bitter Defeat - Because the Shadow is self absorbed, failure is devastating. IF Shadow is defeated THEN Shadow:-1. IF Will > Shadow THEN test Will vs Shadow to remove Triumphant."
-      ),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_rule},
-        ":name",
-        "Sinking",
-        ":image",
-        "images/rule-sinking.svg",
-        ":layout",
-        nx_tactics_base.c_cardlayout_imageonly,
-        ":summary",
-        "A Sinking Unit is rapidly losing Elevation\n* Round End - Elevation:-1 for each Sinking:1"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
