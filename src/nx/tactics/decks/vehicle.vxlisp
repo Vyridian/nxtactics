@@ -26,47 +26,43 @@
   :image "images/damage-vehicle-ac.svg"
   :layout base/cardlayout-imageonly
   :summary
-   "* Minor: Dents. Push:1
-    * Major: Hull Damage. Push:1 Armor:-1
-    * Critical: Frame Crack. Push:1 Armor:-2
-    * Extreme: Structural Collapse. Push:1 Armor:-3 Part:DamageAll"))
-
-/*
-// Frame
-// AC - Shattered
-    Major: Structural Fatigue.
-    Critical: Shockwave
-    Extreme: Hull Collapse. Body:-3 Speed:-1 Casualty:75%
-// AD - Defense Disrupted
-    Critical
-    Extreme: Pierced Through
-// AH - Armor
-    Major: Armor Breach
-    Critical: Hull Breach
-//  Critical: Hull Rupture
-//  Extreme: Split Apart. Body:-3 Speed:-3 Casualty:75%
-// AS - Breakdowns
-//  Critical: Supports Severed
-//  Extreme: Structural Failure
-*/
+   "Minor: Heavy Impact. Push:1
+    Major: Structural Fatigue. Fatigue:1 Push:1
+    Critical: Shockwave Through Vessel. Body:-1 Push:1 Casualty:25%
+    Extreme: Hull Collapse. Body:-3 Push:1 Casualty:75%"))
 
 (const vehicle-ad : base/damage
  (base/damage
   :name "Pierce: Frame"
   :image "images/damage-vehicle-ad.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Shield Disruption. Fatigue:1
+    Major: Shield Buckling. Fatigue:1 Stress:1 Shielding Damaged:1
+    Critical: Shield Pierced. Fatigue:2 Shielding Damaged:2
+    Extreme: Shield Shattered. Fatigue:3 Stress:2 Shielding Broken"))
 
 (const vehicle-ah : base/damage
  (base/damage
   :name "Hack: Frame"
   :image "images/damage-vehicle-ah.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Armor Gouged. Fatigue:1
+    Major: Armor Breach. Fatigue:1 Armor:-1
+    Critical: Hull Breach. Body:-1 Armor:-2 Casualty:25%
+    Extreme: Split Apart. Body:-3 Speed:-3 Casualty:75%"))
 
 (const vehicle-as : base/damage
  (base/damage
   :name "Slash: Frame"
   :image "images/damage-vehicle-as.svg"
-  :layout base/cardlayout-imageonly))
+  :layout base/cardlayout-imageonly
+  :summary
+   "Minor: Hull Scarring. Fatigue:1
+    Major: Supports Failing. Fatugue:2 Stress:2
+    Critical: Supports Severed. Body:-1 Casualty:25%
+    Extreme: Structural Failure. Body:-2 Speed:-2 Casualty:50%"))
 
 (const vehicle-kc : base/damage
  (base/damage
@@ -119,9 +115,9 @@
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Shockwave. Fatigue:1
-    Major: Spauling Fragments. Fatigue:1 Stress:1 Casualty:25%
-    Critical: Wall Collapse. Fatigue:2 Stress:2 Casualty:50%
-    Extreme: Cabin Collapse. Fatigue:3 Stress:3 Casualty:75%"))
+    Major: Spauling Fragments. Fatigue:1 Casualty:25%
+    Critical: Wall Collapse. Fatigue:2 Casualty:50%
+    Extreme: Cabin Collapse. Fatigue:3 Casualty:75%"))
 
 (const vehicle-qd : base/damage
  (base/damage
@@ -130,9 +126,9 @@
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Cabin Wall Pierced. Stress:1
-    Major: Smoke from Shrapnel. Stress:1 Choking:1 Casualty:25%
-    Critical: Fire from Shrapnel. Stress:2 Burning:2 Casualty:50%
-    Extreme: Explosion from Shrapnel. Stress:3 Burning:3 Casualty:75%"))
+    Major: Smoke from Shrapnel. Choking:1 Casualty:25%
+    Critical: Fire from Shrapnel. Burning:2 Casualty:50%
+    Extreme: Explosion from Shrapnel. Burning:3 Casualty:75%"))
 
 (const vehicle-qh : base/damage
  (base/damage
@@ -141,9 +137,9 @@
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Cabin Wall Crumbling. Stress:1
-    Major: Cabin Wall Cracked. Stress:1 Exposure:1 Casualty:25%
-    Critical: Cabin Breach. Stress:2 Exposure:2 Casualty:50%
-    Extreme: Cabin Torn Open. Stress:3 Exposure:3 Casualty:75%"))
+    Major: Cabin Wall Cracked. Exposure:1 Casualty:25%
+    Critical: Cabin Breach. Exposure:2 Casualty:50%
+    Extreme: Cabin Torn Open. Exposure:3 Casualty:75%"))
 
 (const vehicle-qs : base/damage
  (base/damage
