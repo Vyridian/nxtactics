@@ -25,19 +25,6 @@
   :sectionmap
    (base/sectionmap<-sectionlist
     (base/section
-     :name "Fantasy Armor"
-     :summary
-      "* Cloth Armor - Increases Magical Regeneration
-       * Light Armor - Increases Critical Strike change
-       * Heavy Armor - Maximum Defense"
-     :itemmap
-      (base/itemmap
-       "Shield:Moon Disc"
-        (base/item
-         :name "Shield:Moon Disc"
-         :summary "* A [Silver] Shield."
-         :classification "Shield")))
-    (base/section
      :name "Fantasy Weapons"
      :summary "* Faeblades"))))
 

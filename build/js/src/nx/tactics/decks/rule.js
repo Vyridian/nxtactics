@@ -941,7 +941,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Energies\n* Density\n* Energy Control\n* Explosive\n* Forces\n* Gravity\n* Inertia\n* Light\n* Magnetism\n* Phasing\n* Power Control\n* Radiation\n* Reality\n* Shielding\n* Sound\n* Time\n* Vibration\nWeakness\n* Weakness:Physical\n* Weakness:Mental\n* Weakness:Social\nMental\n* Charm\n* Computer Control\n* Domination\n* Empathy\n* Intuition\n* Madness\n* Mental Combat\n* Mentalism\n* Mind Over Matter\n* Presence\n* Psychic Combat\nTravel\n* Digging\n* Dimensional\n* Flight\n* Move:Ground\n* Move:Space\n* Move:Stellar\n* Move:Water\n* Teleportation\n* Time Travel"
+        "Energies\n* Density\n* Energy Control\n* Explosive\n* Forces\n* Gravity\n* Inertia\n* Light\n* Magnetism\n* Phasing\n* Power Control\n* Radiation\n* Reality\n* Shielding\n* Sound\n* Time\n* Vibration\nWeakness\n* Weakness:Physical\n* Weakness:Mental\n* Weakness:Social\nMental\n* Charm\n* Computer Control\n* Domination\n* Empathy\n// Illusion\n* Intuition\n* Madness\n* Mental Combat\n* Mentalism\n* Mind Over Matter\n* Presence\n* Psychic Combat\nTravel\n* Digging\n* Dimensional\n* Flight\n* Move:Ground\n* Move:Space\n* Move:Stellar\n* Move:Water\n* Teleportation\n* Time Travel"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},

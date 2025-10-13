@@ -1009,6 +1009,9 @@ export default class vx_core {
               if (typedef == valuetype) {
                 propmap = Object.assign(propmap, value['vx_value'])
               } else {
+console.log("error")
+console.log(type)
+console.log(values)
                 const msg = vx_core.f_msg_from_error_2(
                   'vx/core/new',
                   'invalidkey',

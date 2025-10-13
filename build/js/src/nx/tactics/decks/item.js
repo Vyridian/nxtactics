@@ -225,6 +225,7 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield:Heater", ":image", "images/cards/item-shield-heater.svg", ":titles", "Aegis", ":classification", "Shield", ":summary", "* [Armor]: 2x1 [Hardened vs Hack]\n* [Arc]: [Arc:Front], [Arc:Left] OR [Arc:Right]\n* [Location]: [1-hand]", ":armor", "2", ":body", "3x0", ":mass", "3.2kg/7lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield:Kite", ":classification", "Shield", ":armor", "2"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield:Legionary", ":classification", "Shield", ":armor", "2"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield:Moon", ":summary", "* A [Silver] Shield used by the Alfar.", ":classification", "Shield"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_item},
         ":name",
@@ -316,6 +317,7 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Wall: Stone", ":image", "images/cards/item-wall-stone.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Water: Pond", ":image", "images/cards/item-water-pond.svg", ":summary", "* IF drank [Reveal Fate] THEN IF [Cups] THEN [Diseased]:+1", ":body", "2x0", ":mass", "2kg/4.4lbs"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Waterskin", ":image", "images/cards/item-waterskin.svg", ":summary", "* 2 liters/.5 gallon. Enough Water for 2 days.\n* Cost: [Copper Coins]. Can be refilled from any clean water source.", ":body", "2x0", ":mass", "2kg/4.4lbs"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Whip"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Yams: Wild", ":classification", "Plant", ":image", "images/cards/item-yams-wild.svg", ":summary", "* Nutrition for a day.", ":body", "10x-1", ":mass", "1kg/2lbs")
     )
     return output

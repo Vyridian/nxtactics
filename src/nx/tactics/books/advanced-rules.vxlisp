@@ -1,0 +1,659 @@
+(package nx/tactics/books/advanced_rules
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ [tactics : base/tactics]
+ (base/book
+  :name "Advanced Rules"
+  :image "AdvancedRules.jpg"
+  :chaptermap
+   (base/chaptermap<-chapterlist
+    (chapter_advanced_rules_overview tactics)
+    (chapter_advanced_tokens tactics)
+    (chapter_advanced_rules tactics)
+    (chapter_genres tactics)
+   )))
+
+(func chapter_advanced_rules_overview : base/chapter
+ [tactics : base/tactics]
+ (chapter
+  :name "Advanced Rules Overview"
+  :sectionmap
+   (sectionmap
+    "Why Tactics: Advanced Rules?"
+     (section
+      :name "Why Tactics: Advanced Rules?"
+      :summary "The Tactics:Basic Rules are sufficient for running a board game, but they lack detail when simulating a specific genre. The Tactics system is designed to allow different sets of rules to be plugged into the basic rules on an ala carte basis. This Advanced Rule book provides many of the optional rules necessary to increase realism or pseudo-realism. The other genre-based rule books will add rules that are specific to each genre.")
+    "Advanced Rules Strategies"
+     (section
+      :name "Advanced Rules Strategies"
+      :summary
+       "* Strike First - Units are immediately penalized for damage taken, so do unto others before they do unto you.
+        * Maintain a Threat - The battlefield changes with each unit's move, so use pawns to control the map while saving powerful and valuable units until later in the Round.  If you are not careful your opponent will surround and eliminate your units that have already acted.
+        * Hold the Line - Opportunity and Hold Off abilities are deadly and allow you to protect weaker units.
+        * Use the Terrain - Cover and abilities linked to cover offer an outstanding defense that layers with normal defense. The difference is most pronounced with lesser units. Effective use of terrain will determine the victor in most battles."))))
+
+(func chapter_advanced_tokens : base/chapter
+ [tactics : base/tactics]
+ (chapter
+  :name "Advanced Tokens"
+  :sectionmap
+   (sectionmap
+    "Advanced Black Tokens"
+     (section
+      :name "Advanced Black Tokens"
+      :rulemap
+       (rulemap
+        :Aging
+         (rule
+          :name "Aging"
+          :summary "* Reduces all Abilites and Life Span."))))))
+
+(func chapter_advanced_rules : base/chapter
+ [tactics : base/tactics]
+ (base/chapter
+  :name "Advanced Rules"
+  :sectionmap
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Advanced Setup Rules"
+     :rulemap
+      (base/rulemap
+       "Campaign"
+        (base/rule<-tactics-key tactics "Campaign")
+       "Randomized Scenes"
+        (rule
+         :name "Randomized Scenes"
+         :summary
+          "* Choose a Map - Any map, indoor or outdoor, square or hex map may be used. The scale must be approximately 1 inch=1.5 meters (5 feet).
+           * Choose Starting Positions - Each side rolls 2d6.  From highest to lowest, each side chooses one of the starting positions (usually corners) of the map to start.
+           * Deploy Teams - In the same order from highest to lowest each player deploys their teams up to 5 hexes from the edges of the map.")
+       "Recruit Teams"
+        (rule
+         :name "Recruit Teams"
+         :summary
+          "* Choose Recruitment Points for each Side.
+           * Recruit units by spending these points using the [Double Down] rule.
+           * Usually, only units from a single Faction may be purchased.")))
+    (base/section
+     :name "Goals"
+     :rulemap
+      (rulemap
+       :Experience
+        (rule
+         :name "Experience"
+         :summary
+          "* Experience allows a unit to gain permanent ability increases.
+           * Something major must be on the line, such that if the character fails he will incur a significant loss (e.g. a valuable item, his life). This is why characters seek out high stakes gambles and are not satisfied unless a great deal is on the line.
+           * The character must face an opponent or difficulty no more than 1 level below his own or he must declare he is using the [Honor System].
+           * Minor Achievement - Gain an [Latent Ability] 2 levels below your highest level (minimum 1).
+           * Major Achievement - Gain a [Latent Skill] 2 levels below your highest level (minimum 1).")
+       "Latent Skill/Ability"
+        (rule
+         :name "Latent Skill/Ability"
+         :summary
+          "* Latent Skills and Abilities represent potential capabilities that have not yet expressed.
+           * Like Skills, they have levels and may be combined and split.")
+       "Gain a Skill/Power, Ability/Specialty"
+        (rule
+         :name "Gain a Skill/Power, Ability/Specialty"
+         :summary
+          "* In order to gain a new ability, a user must perform research, practice, and experimentation.
+           * Each week of practice and experimentation, the user may draw a Fate card.
+           ** If the Fate is a critical it is successful and may do EITHER of the following:
+           *** Gaining a Skill/Power - The user may convert a [Latent Skill] to a Skill or Power (if allowed) of equal level.
+           *** Gaining an Ability/Specialty - The user may convert or [Latent Ability] into an actual Ability or Specialty on an equal level.
+           * Training Area/Laboratory - +1 Die if a dedicated training area with appropriate resources is available.
+           * Assistants - Assistants reduce the difficulty of a task as well as allowing them to learn on the job. See [Followers].
+           * Mentor - +1 Die if a mentor is available.
+           * Experimentation - Trial and error can produce some fascinating or useless random results.
+           * Invention - Permanent Devices and Enchantments can be created over time.
+           ** Cost - Great care and cost must be expended to obtain or create an item of sufficient quality to hold an enchantment.
+           ** Difficulty - Inventions may be created instead of acquiring a new ability.
+           ** Time")
+       "Honor System"
+        (rule
+         :name "Honor System"
+         :summary
+          "* Normally a character cannot gain experience from a foe more than 1 level below his own. If a character wants to gain experience against such a lower level foe, he must declare that he wants to compete 'On His Honor' using the Honor System.
+           * The Honor System basically allows a character to metaphorically (or literally) fight an opponent with one hand tied behind his back.
+           * The character must challenge the opponent to a 'fair fight'. The challenge makes the fight formal to any observers and places the character's honor squarely on the line.
+           * The character must offer some special incentive if the opponent wins (e.g. a special treasure, his daughter's hand in marriage, safe passage for his opponents, not invading the Earth, his own head on a pike, etc.)
+           * For the duration of the challenge, others must not interfere.
+           * For the duration of the challenge, the character must refrain from using any skills that are more than 1 level higher than the opponent's defense. Further he must limit his own defense rolls to 1 more than the opponents skill.
+           * If the opponent or his allies breaks these terms, the challenge is void.
+           * If the character or his allies breaks these terms, it is a serious blow to the honor of the character and he immediately loses one level from one of his highest skills.
+           * If the character wins the competition, he may gain experience normally against this opponent.")
+       :Study
+        (rule
+         :name "Study"
+         :summary
+          "* Books
+           * Instruction
+           * Time")
+       :Rewards
+        (rule
+         :name "Rewards"
+         :summary
+          "* Survival
+           * Experience
+           ** +1 [Experience] for total or partial victory in the adventure.
+           ** +1 [Experience] for surviving life or death.
+           ** +1 [Experience] for the exceptional role playing and maintaining character concept.
+           ** +1 [Experience] for particularly heroic or infamous public actions (i.e. fame spread).
+           ** +1 [Experience] point toward a specific skill for training under a master 3 or more levels over your own.
+           ** +1 [Experience] point toward a specific skill after 1 month of experimentation. Experimentation requires
+           expense commensurate with the level of the skill.
+           * Treasure
+           * Knowledge
+           * Favor
+           * Allies
+           * Influence
+           * Prestige
+           * Patronage")
+       :Treasure
+        (rule
+         :name "Treasure"
+         :summary "A Treasure Roll is made when a random treasure is needed.")))
+    (base/section
+     :name "Turn Sequence Rules"
+     :rulemap
+      (rulemap
+       "Take the Initiative"
+        (rule
+         :name "Take the Initiative")
+       "Simultaneous Movement"
+        (rule
+         :name "Simultaneous Movement"
+         :summary "* After initiative is determined, each player chooses a unit or formation to activate. Each unit is compared to determine the one with the highest movement. This number is the number of phases in this turn. Each unit may choose to move or act on any phase of the turn with their chosen unit. They may also choose to react with any other unit, but a reacting unit may only move or use an action not both.")))
+    (base/section
+     :name "Action Rules"
+     :rulemap
+      (base/rulemap
+       "Dramatic Clinch"
+        (base/rule
+         :name "Dramatic Clinch"
+         :summary
+          "* During Melee or Close Combat, if the [Defense Roll] exactly cancelled the [Attack Roll], the [Units] may enter a Clinch where they may speak to one another briefly without anyone overhearing.")
+       "Dramatic Effect"
+        (base/rule
+         :name "Dramatic Effect"
+         :summary
+          "* At the discretion of the other players, [Crits] may be used to describe a dramatic display of skill. This has no game effect but add great flavor to the game.")
+       "Formation"
+        (base/rule
+         :name "Formation"
+         :summary
+          "* [Action]: Add a formation token of the appropriate type.
+           * [Damage]: If a unit takes 2 [Retreats], remove its formation token.
+           * Note: A unit only have 1 formation at a time.")
+       "Multiple Actions"
+        (rule
+         :name "Multiple Actions"
+         :summary "If the [Unit] has multiple [Crew] members, then each member may use a DIFFERENT [Ability] this turn.")
+       "Synergy Dice"
+        (rule
+         :name "Synergy Dice"
+         :summary
+          "* Abilities that work together should be a benefit without breaking game balance.  Synergies allow skills and equipment to work together without unbalancing the game or requiring specific combinations of abilities to be effective.
+           * Note: Limited and Synergy dice cancel each other in equals numbers so no roll may have both Synergy and Limited dice.
+           * 1, 2, 3 = No Effect
+           * 4, 5 = Hit
+           * 6 = Hit and roll 2 Critical Dice")))
+    (base/section
+     :name "Effect Rules"
+     :rulemap
+      (rulemap
+       :Cold
+        (rule
+         :name "Cold"
+         :summary "* [Critical Hits] may be used for [Slow Tokens]")
+       :Flame
+        (rule
+         :name "Flame"
+         :summary "* [Critical Hits] may be used for [Fire Tokens]")
+       :Infection
+        (rule
+         :name "Infection")
+       "Internal Bleeding"
+        (rule
+         :name "Internal Bleeding")
+       "Permanent Disability"
+        (rule
+         :name "Permanent Disability"
+         :titles "Aneurysm, Brain Damage, Crippling, Nerve Damage, Paralysis, Stroke")
+       :Piercing
+        (rule
+         :name "Piercing"
+         :summary "* [Damage]: [Critical Hits] may be used to roll 2 more [Damage] dice each.")
+       :Slashing
+        (rule
+         :name "Slashing"
+         :summary "* [Damage]: [Critical Hits] may be used for [Bleeding Tokens].")
+       :Smoke
+        (rule
+         :name "Smoke")
+       :Resistant
+        (rule
+         :name "Resistant"
+         :summary "* Armor rolls are doubled on a [Unit] that is stuck by an attack to which it is resistant.  Minimum: 2 dice.")
+       "System Shock"
+        (rule
+         :name "System Shock"
+         :summary "* When the body sustains a significant amount of damage, the body goes into shock.")))
+    (base/section
+     :name "Hit Location Rules"
+     :rulemap
+      (rulemap
+       "Hit Location - Command"
+        (rule
+         :name "Hit Location - Command"
+         :summary
+          "* 6 - Command: Unit skips its next turn.
+* 5 - Crew: Half of crew in space killed
+* 4 - Passengers: Half of Passengers in space killed.
+* 3 - Life Support System: 1 Life support or climate control system is Reduced by 1/2.
+* 2 - Safety System: 1 Safety or escape system is disabled.  A second hit destroys it.
+* 1 - Electronics: 1 Sensor, computer, or communication system is disabled.  A second hit destroys it.")
+       "Hit Location - Weapons"
+        (rule
+         :name "Hit Location - Weapons"
+         :summary
+          "* 5-6 - Weapon: 1 Weapon damage is reduced by 1.
+           * 3-4 - Arc of Fire: 1 weapon loses 1 arc of fire.
+           * 1-2 - Magazine: 1 Weapon rolls Damage against own unit with 1/2 Armor Defense")
+       "Hit Location - Mission"
+        (rule
+         :name "Hit Location - Mission"
+         :summary
+          "* 4-6 - Armor: Armor Facing is reduced by 1.
+           * 1-3 - Cargo: Half of Cargo in space destroyed.")
+       "Hit Location - Special Systems"
+        (rule
+         :name "Hit Location - Special Systems"
+         :summary
+          "* 4-6 - Special Equipment: 1 special system is disabled.  A second hit destroyes it.
+           * 1-3 - Fire: Fire Token")
+       "Hit Location - Movement"
+        (rule
+         :name "Hit Location - Movement"
+         :summary
+          "* 6 - Engine: Acc and recharging reduced by 1/4.
+           * 5 - Movement: Acc and Max Speed for 1 movement system reduced by 1/4 (minimum 1).  If it loses all Movement in the currently used Movement type, it will crash or sink as applicable.
+           * 4 - Manueverability: -1 Facing changes per turn
+           * 1-3 - Fuel/Reaction Mass: Range reduced by 1/4")))
+    (base/section
+     :name "Damage Cards"
+     :damagemap
+      (base/damagemap
+       "Air Reserve Loss"
+        (base/damage
+         :name "Air Reserve Loss"
+         :summary
+          "* Cups")
+       "Air Circulation Failure"
+        (base/damage
+         :name "Air Circulation Failure"
+         :summary
+          "* Cups")
+       "Air Purification Failure"
+        (base/damage
+         :name "Air Purification Failure"
+         :summary
+          "* Cups")
+       "Attitude Control Malfunction"
+        (base/damage
+         :name "Attitude Control Malfunction"
+         :summary
+          "* Swords")
+       "Cargo Damage"
+        (base/damage
+         :name "Cargo Damage"
+         :summary
+          "* Cups")
+       "Cargo Fire"
+        (base/damage
+         :name "Cargo Fire"
+         :summary
+          "* Cups")
+       "Cargo Loss"
+        (base/damage
+         :name "Cargo Loss"
+         :summary
+          "* Cups")
+       "Crew Casualties"
+        (base/damage
+         :name "Crew Casualties"
+         :summary
+          "* Cups")
+       "Crew Quarters Fire"
+        (base/damage
+         :name "Crew Quarters Fire"
+         :summary
+          "* Cups")
+       "Fire Suppression Failure"
+        (base/damage
+         :name "Fire Suppression Failure"
+         :summary
+          "* Coins")
+       "Movement Impaired"
+        (base/damage
+         :name "Movement Impaired"
+         :summary
+          "* Swords
+           * Effect: -25% [Move]
+           * Duration: Permanent until unit spends an entire turn repairing.")
+       "Movement Crippled"
+        (base/damage
+         :name "Movement Crippled"
+         :summary
+          "* Swords
+           * Effect: -25% [Move]
+           * Duration: Permanent until healed.")
+       "Movement Control Failure"
+        (base/damage
+         :name "Movement Control Failure"
+         :summary
+          "* Swords
+           * Unit must move at full speed until repaired.")
+       "Artificial Gravity Malfunction"
+        (base/damage
+         :name "Artificial Gravity Malfunction"
+         :summary
+          "* Coins")
+       "Bridge Damaged"
+        (base/damage
+         :name "Bridge Damaged"
+         :summary
+          "* Coins")
+       "Bridge Explosion"
+        (base/damage
+         :name "Bridge Explosion"
+         :summary
+          "* Coins")
+       "Bridge Fire"
+        (base/damage
+         :name "Bridge Fire"
+         :summary
+          "* Coins")
+       "Bulkhead Collapse"
+        (base/damage
+         :name "Bulkhead Collapse"
+         :summary
+          "* Wands")
+       "Cargo Hold Damaged"
+        (base/damage
+         :name "Cargo Hold Damaged"
+         :summary
+          "* Cups")
+       "Cargo Hold Explosion"
+        (base/damage
+         :name "Cargo Hold Explosion"
+         :summary
+          "* Cups")
+       "Cargo Hold Fire"
+        (base/damage
+         :name "Cargo Hold Fire"
+         :summary
+          "* Cups")
+       "Central Computer Malfunction"
+        (base/damage
+         :name "Central Computer Malfunction"
+         :summary
+          "* Coins")
+       "Central Computer Explosion"
+        (base/damage
+         :name "Central Computer Explosion"
+         :summary
+          "* Coins")
+       "Central Computer Fire"
+        (base/damage
+         :name "Central Computer Fire"
+         :summary
+          "* Coins")
+       "Command and Control Failure"
+        (base/damage
+         :name "Command and Control Failure"
+         :summary
+          "* Coins")
+       "Communications Failure"
+        (base/damage
+         :name "Communications Failure"
+         :summary
+          "* Coins
+           * Unit cannot communicate with other units.
+           * In Game: Player may not speak. He/she may write rules questions to game master or opponents.")
+       "Crew Quarters Damaged"
+        (base/damage
+         :name "Crew Quarters Damaged"
+         :summary
+          "* Cups")
+       "Damage Control Damaged"
+        (base/damage
+         :name "Damage Control Damaged"
+         :summary
+          "* Coins")
+       "Engineering Damage"
+        (base/damage
+         :name "Engineering Damage"
+         :summary
+          "* Wands")
+       "Fire Control System Malfunction"
+        (base/damage
+         :name "Fire Control System Malfunction")
+       "Flag Bridge Damaged"
+        (base/damage
+         :name "Flag Bridge Damaged"
+         :summary "* The Flag Bridge is used by senior executive officers to coordinate a fleet.")
+       "Food Stock Damaged"
+        (base/damage
+         :name "Food Stock Damaged"
+         :summary
+          "* Cups")
+       "Fuel Explosion"
+        (base/damage
+         :name "Fuel Explosion"
+         :summary
+          "* Wands")
+       "Fuel Fire"
+        (base/damage
+         :name "Fuel Fire"
+         :summary
+          "* Wands")
+       "Fuel Loss"
+        (base/damage
+         :name "Fuel Loss")
+       "Helm Control Malfunction"
+        (base/damage
+         :name "Helm Control Malfunction")
+       "Helm Fire"
+        (base/damage
+         :name "Helm Fire")
+       "Hydroponics Damage"
+        (base/damage
+         :name "Hydroponics Damage")
+       "Inertial Dampener Malfunction"
+        (base/damage
+         :name "Inertial Dampener Malfunction")
+       "Intercommunications Failure"
+        (base/damage
+         :name "Intercommunications Failure"
+         :summary "* Unit cannot communicate within the vehicle except person to person. On large vehicles, this can be a localized failure.")
+       "Life Support Malfunction"
+        (base/damage
+         :name "Life Support Malfunction")
+       "Medical Bay Damage"
+        (base/damage
+         :name "Medical Bay Damage")
+       "Medical Bay Explosion"
+        (base/damage
+         :name "Medical Bay Explosion")
+       "Medical Bay Fire"
+        (base/damage
+         :name "Medical Bay Fire")
+       "Missile Launcher Explosion"
+        (base/damage
+         :name "Missile Launcher Explosion")
+       "Missile Launcher Malfunction"
+        (base/damage
+         :name "Missile Launcher Malfunction")
+       "Missile Magazine Explosion"
+        (base/damage
+         :name "Missile Magazine Explosion")
+       "Missile Magazine Fire"
+        (base/damage
+         :name "Missile Magazine Fire")
+       "Movement Malfunction"
+        (base/damage
+         :name "Movement Malfunction")
+       "Navigation Failure"
+        (base/damage
+         :name "Navigation Failure")
+       "Navigation Light Failure"
+        (base/damage
+         :name "Navigation Light Failure"
+         :summary "* The vehicles navigation/landing lights are not working across all spectrums. In combat, these lights are normally off anyway, but they make any landing or docking manuever much more perilous.")
+       "Passenger Quarters Explosion"
+        (base/damage
+         :name "Passenger Quarters Explosion")
+       "Passenger Quarters Fire"
+        (base/damage
+         :name "Passenger Quarters Fire")
+       "Power Control Failure"
+        (base/damage
+         :name "Power Control Failure")
+       "Power Plant Coolant Failure"
+        (base/damage
+         :name "Power Plant Coolant Failure")
+       "Power Plant Damage"
+        (base/damage
+         :name "Power Plant Damage")
+       "Power Plant Explosion"
+        (base/damage
+         :name "Power Plant Explosion")
+       "Power Plant Fire"
+        (base/damage
+         :name "Power Plant Fire")
+       "Power Failure"
+        (base/damage
+         :name "Power Failure")
+       "Propellent Loss"
+        (base/damage
+         :name "Propellent Loss")
+       "Remote Systems Malfunction"
+        (base/damage
+         :name "Remote Systems Malfunction"
+         :summary "* Command over drones is lost.")
+       "Secondary Bridge Explosion"
+        (base/damage
+         :name "Secondary Bridge Explosion")
+       "Secondary Bridge Fire"
+        (base/damage
+         :name "Secondary Bridge Fire")
+       "Secondary Bridge Malfunction"
+        (base/damage
+         :name "Secondary Bridge Malfunction")
+       "Sensor (Short Range) Malfunction"
+        (base/damage
+         :name "Sensor (Short Range) Malfunction")
+       "Sensor (Long Range) Malfunction"
+        (base/damage
+         :name "Sensor (Long Range) Malfunction")
+       "Shield Malfunction"
+        (base/damage
+         :name "Shield Malfunction")
+       "Spine Cracks"
+        (base/damage
+         :name "Spine Cracks")
+       "Steering Malfunction"
+        (base/damage
+         :name "Steering Malfunction"
+         :summary "* Unit can only perform 1 change in direction during a Move.")
+       "Structural Collapse"
+        (base/damage
+         :name "Structural Collapse"
+         :summary
+          "Wands")
+       "Target Aquisition Failure"
+        (base/damage
+         :name "Target Aquisition Failure"
+         :summary
+          "Coins")
+       "Temperature Control Failure"
+        (base/damage
+         :name "Temperature Control Failure")
+       "Turning Malfunction"
+        (base/damage
+         :name "Turning Malfunction"
+         :summary
+          "* Swords
+           * Unit cannot turn toward one side.")
+       "Transponder Failure"
+        (base/damage
+         :name "Transponder Failure"
+         :titles
+          "IFF Damage, Not Running Colors"
+         :summary
+          "* Coins
+           * The vehicle no longer identifies as friend of foe, so it appears as a potential enemy vehicle. In a heated exchange it may take friendly fire.
+           * This can be as simple as a fallen flag on old navy ships.")
+       "Water Reserve Loss"
+        (base/damage
+         :name "Water Reserve Loss"
+         :summary
+          "* Cups")
+       "Weapon Magazine Explosion"
+        (base/damage
+         :name "Weapon Magazine Explosion")
+       "Weapon Magazine Fire"
+        (base/damage
+         :name "Weapon Magazine Fire")
+       "Weapon Malfunction"
+        (base/damage
+         :name "Weapon Malfunction")
+       "Weapon Explosion"
+        (base/damage
+         :name "Weapon Explosion")
+       "Weapon Fire"
+        (base/damage
+         :name "Weapon Fire")
+       "Weapon Power Failure"
+        (base/damage
+         :name "Weapon Power Failure")
+       "Weapon Traverse Malfunction"
+        (base/damage
+         :name "Weapon Traverse Malfunction"))))))
+
+(func chapter_genres : base/chapter
+ [tactics : base/tactics]
+ (base/chapter
+  :name "Genres"
+  :sectionmap
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Carrier Command"
+     :summary
+      "Carrier Command is a set of rules for use with units that hold other units in a [Hanger].
+
+      Common Actions
+      * Enter or Exit Hanger - Move and Action (Unit): Place a unit from the [Hanger] on the [Flight Deck] OR from the [Flight Deck] to the [Hanger].
+      Only 1 unit may be on the [Flight Deck] at any given moment and may be targetted normally there.
+      * Launch or Land - Move and Action (Unit): Move a unit onto or off of the [Flight Deck].  If the carrier has a [Launch Catapult], a launching
+      unit gains +2 movement.
+      * Dive Bomb - Action: -4 Altitude and drop bombs attacking the top of the target creating [Fire] and damaging weapons, crew, and [Flight Deck].
+      Normally only the target and opposing aircraft can [Interrupt] before the bombs are dropped.  Can only be performed from exactly +5 Altitude
+      and with no [White Tokens].
+      * Torpedo Bomb - Action: Drop torpedo attacking a side of the target below the water line creating [Flooding] and damaging [Speed].  Can only be
+      performed from exactly +1 Altitude and with no [White Tokens].
+      * Landing - Move and Action (Unit): Move a unit and place it on the [Flight Deck].  Only 1 unit may be on the [Flight Deck] at any given moment
+      and may be targetted normally there.
+      * Refuel or Reload - Move and Action (Unit): Any unit on the [Flight Deck] or in the [Hanger] may refuel OR reload weapons (changing weapons if
+      desired).")
+    (base/section
+     :name "RTS/4X"
+     :summary
+      "4X:
+       * eXplore
+       * eXpand
+       * eXploit
+       * eXterminate"))))

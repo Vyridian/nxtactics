@@ -441,6 +441,11 @@
    :classification "Shield"
    :armor "2")
   (base/item
+   :name "Shield:Moon"
+   :summary
+    "* A [Silver] Shield used by the Alfar."
+   :classification "Shield")
+  (base/item
    :name "Shield:Round"
    :image "images/cards/item-shield-round.svg"
    :titles "Hoplon Shield, Target Shield"
@@ -663,6 +668,8 @@
      * Cost: [Copper Coins]. Can be refilled from any clean water source."
    :body "2x0"
    :mass "2kg/4.4lbs")
+  (base/item
+   :name "Whip")
   (base/item
    :name "Yams: Wild"
    :classification "Plant"

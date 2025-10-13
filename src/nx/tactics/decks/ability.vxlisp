@@ -221,7 +221,7 @@
    :name "Artificial Gills"
    :summary
     "* Can breathe underwater for 15min/lvl.
-     * [Power]: [Artificial: Implants]")
+     * [Power]: [Implants]")
   (base/ability
    :name "As if in a Dream"
    :summary "* Confuse a target's senses to perceive a single thing incorrectly.")
@@ -294,6 +294,12 @@
   (base/ability
    :name "Ball Lightning")
   (base/ability
+   :name "Banishment"
+   :summary
+    "* [Action]: Return any [Outsider] to its original realm.
+     * [Power]: [Abjuration]
+     * This ability may only be attempted on a particular being once per month.")
+  (base/ability
    :name "Barbed Javelin"
    :summary
     "* [Requires]: Javelin
@@ -355,6 +361,20 @@
    :name "Besiege"
    :summary
     "* [Skill]: [Military]")
+  (base/ability
+   :name "Binding"
+   :summary
+    "* Any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may bind immediately or parley first and use the binding as a threat.
+     * [Power]: [Abjuration]
+     * [Requires]: The caster must describe the subject's past in detail and name his/her demands. If the description is in error or the demand cannot be completed, the Binding automatically fails.
+     * [Action]: If successful, the caster will know the subject is bound and it will perform the demand to the letter, but the subject is unwilling and will seek to defeat the caster's wishes through semantics or in passive/agressive ways.")
+  (base/ability
+   :name "Binding Contract"
+   :summary
+    "* Like [Binding], any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may parley and use the binding to enforce an agreement.
+     * [Power]: [Abjuration]
+     * [Requires]: The caster must name his/her demands and offer compensation to the subject. They may then negotiate for as long as desired.
+     * [Action]: If the subject refuses to bargain, the caster may still cast or threaten a [Binding]. If the subject agrees to the bargain, the subject and the caster are automatically bound to the terms of the bargain, and both must fulfill their commitments or be immediately subject to a [Summoning] and automatically successful forced [Binding] (even if neither party has these abilities).")
   (base/ability
    :name "Bite"
    :summary
@@ -617,7 +637,7 @@
    :reference
     "* We'll use the old ways...speed of horse! - Arthur, Excalibur"
    :summary
-    "* [Skill]: [Riding]
+    "* [Skill]: [Animals]
      * [Requires]: Unit must have moved at least 4 spaces in a straight line.
      * [Action]: Melee Attack costs no [Speed].
      * [Attack], [Damage]: Any [Critical Hits] may be [Morale Tokens]")
@@ -742,6 +762,15 @@
    :name "Constrict"
    :titles "Bear Hug")
   (base/ability
+   :name "Containment Jar"
+   :reference "* Evil Containment Wave - Dragon Ball"
+   :summary
+    "* A summoned being may be captured in a special container that permanently imprisons the creature.
+     * [Power]: [Abjuration]
+     * The being in the jar can telepathically communicate with anyone touching the jar. If the jar is broken, the being is immediately freed. The being may bargain for its freedom, and if it does so, it must fulfill its bargain.
+     * Imprisonment in a jar can be used as a threat or the caster may simply imprison the being to be used later."
+   :titles "Souljar")
+  (base/ability
    :name "Continuous Cut"
    :reference
     "The Flowing Water Cut is used when you are struggling blade to blade with the enemy. When he breaks and quickly withdraws trying to spring with his sword, expand your body and spirit and cut him as slowly as possible with your long sword, following your body like stagnant water. - Miyamoto Mushashi, The Book of Five Rings"
@@ -798,12 +827,17 @@
     "* Hide your tracks to make it difficult to track you.
      * [Skill]: [Hunting]")
   (base/ability
+   :name "Craft Chimera"
+   :summary
+    "A Chimera is an imaginary creation. It exists only to the user, though those with magical abilities, young children and the mentally impaired may see them. They only can affect those who can see them.")
+  (base/ability
+   :name "Craft Elder Sign"
+   :summary
+     "* [Power]: [Abjuration]")
+  (base/ability
    :name "Crafts"
    :summary
     "* [Skill]: [Art]")
-  (base/ability
-   :name "Create Chimera"
-   :summary "A Chimera is an imaginary creation. It exists only to the user, though those with magical abilities, young children and the mentally impaired may see them. They only can affect those who can see them.")
   (base/ability
    :name "Crime and Punishment"
    :summary
@@ -975,7 +1009,7 @@
    :reference "* Do you think that's air your breathing? - Morpheus, The Matrix"
    :summary
     "* A plug installed into the brain to directly connect to computer systems. Highly dangerous, but effective.
-     * [Power]: [Artificial: Interface]")
+     * [Power]: [Implants]")
   (base/ability
    :name "Dirty Fighting"
    :titles "Bite, Eye Gouge, Ear Pop, Hair Pulling, Low Blow")
@@ -1580,6 +1614,7 @@
     "* [Skill]: [Intimidation]")
   (base/ability
    :name "Faster than Light"
+   :titles "FTL"
    :summay
     "* [Power]: [Move:Stellar]")
   (base/ability
@@ -1615,6 +1650,11 @@
    :name "Gills"
    :summary
     "* [Power]: [Beastial]")
+  (base/ability
+   :name "Guards and Wards"
+   :summary
+    "* A protective barrier inscribed on the ground to protect the caster from summoned beings (usually his own).
+     * [Power]: [Abjuration]")
   (base/ability
    :name "Halo Drop"
    :summary
@@ -1809,15 +1849,22 @@
    :name "Ice Flow"
    :summary
     "* A floating block of ice suitable for a raft rises to the water's surface.
-     * [Skill]: [Cold]
+     * [Skill]: [Cold] or [Cryomancy]
      * [Requires]: May only be cast near water.")
+  (base/ability
+   :name "Ice Riding"
+   :titles "Ice Walk"
+   :summary
+    "* Provides [Skating] ability without the requirement of Skates.
+     * [Power]: [Cold] or [Cryomancy]")
   (base/ability
    :name "Imaginary Friend"
    :reference
     "* As I was walking up the stair, I met a man who wasn't there. He wasn't there again today. If only he would go away. - Children's Nursery Rhyme
      * Mother, do you remember when I was little, I had a friend, he was make-believe? No. Don't you remember? Only I could see him? No, I don't remember Drop Dead Fred at all. - Drop Dead Fred
      * Let's write something on the carpet... I know how about 'Mother SUCKS'. - Drop Dead Fred"
-   :summary "Create a character with a distinct personality of your choice that only the target can see.")
+   :summary
+    "Create a character with a distinct personality of your choice that only the target can see.")
   (base/ability
    :name "Icy Stare"
    :summary
@@ -2156,6 +2203,11 @@
      * Full defense against any attempt to detect the unit's mind.
      * Full defense against any attempt to detect lies.")
   (base/ability
+   :name "Mind's Eye"
+   :summary
+    "* Eye - Unit may close their eyes and see into the astral world instead of the real world.
+     * [Power]: [Mentalism]")
+  (base/ability
    :name "Mindless"
    :summary
     "* [Power]: [Special Ability]
@@ -2318,6 +2370,16 @@
    :summary
     "* [Power]: [Cabin]")
   (base/ability
+   :name "Pentagram"
+   :titles "Binding Circle, Devil's Door, Thaumaturgic Triangle"
+   :summary
+    "* A Triangle enclosed in a circle. A double triangle will form a Pentagram.
+     * [Power]: [Abjuration]
+     * The five points represent the four elements with the spirit presiding at the top. The triangles form a doorway.
+     * Time allowing, it is usually meticulously inscribed and used with a [Protective Circle].
+     * It serves to contain any being (and its minions) summoned by the caster.
+     * It provides defense equal to the success roll versus any being (and its minions) summoned by the caster. This defense applies to ALL attempts to act across the Pentagram. If an attack exceeds the defense of the Pentagram, the defense reduces by one.")
+  (base/ability
    :name "Pep Talk"
    :reference
     "* A small victory is still a victory. Good work. - Kai'sa, Runeterra")
@@ -2325,12 +2387,12 @@
    :name "Petrifying Breath"
    :summary
     "* Place [Petrification] counters on the target body location.
-     * [Power]: [Transformation] vs [Will]")
+     * [Power]: [Transmutation] vs [Will]")
   (base/ability
    :name "Petrifying Stare"
    :summary
     "* Place [Petrification] counters on the target body location.
-     * [Power]: [Transformation] vs [Will]
+     * [Power]: [Transmutation] vs [Will]
      * Any body location with a [Petrification] is encased in stone. It requires an [Action] to remove a [Petrification]. Any area that suffers 3 [Petrification] turns completely to stone. If any other area is so petrified, then complete petrification immediately spreads across the entire body and then the body and all its gear immediately converts to a stone statue.
      * Additional Effects: A petrified arm cannot move. A petrified leg reduces Move by half. A petrified head is unable to see or hear. Other petrifed areas have no additional effect. Petrified Arms or legs can break off like a clean amputation without blood loss.
      * This ability can also be used to restore a petrified target back to its original form if the skill is at least equal to the original. Lost limbs may also be restored by reattaching the limb before restoration.
@@ -2339,7 +2401,7 @@
    :name "Petrifying Touch"
    :summary
     "* Place [Petrification] counters on the target body location.
-     * [Power]: [Transformation] vs [Will]")
+     * [Power]: [Transmutation] vs [Will]")
   (base/ability
    :name "Philosophy"
    :reference
@@ -2546,6 +2608,20 @@
    :name "Prostitution"
    :summary
     "* [Skill]: [Crime]")
+  (base/ability
+   :name "Protective Circle"
+   :titles "Circle of Protection, Protective Circle"
+   :summary
+    "* A protective barrier inscribed on the ground to protect the caster from summoned beings (usually his own).
+     * [Power]: [Abjuration]
+     * A typical size for a circle is nine feet in diameter, though the size can vary depending on the purpose of the circle.
+     * Some practitioners choose to mark the physical boundary of their circle, either before or prior to the actual casting. This can be done using a cord, a chalk line, a line drawn in the soil, or small objects such as stones.
+     * Some practitioners mark the four cardinal points with candles, either white, or of colors representative of the elements:
+     ** North: green for the element of Earth
+     ** East: yellow for the element of Air
+     ** South: red for the element of Fire
+     ** West: blue for the element of Water
+     * Cutting a door - The barrier is fragile and sensitive to things passing through it. Leaving or passing through the circle often weakens or dispels the barrier. This is referred to as 'breaking the circle'. Practitioners should not leave the circle unless absolutely necessary. In order to leave a circle and keep it intact, a door must be cut in the energy of the circle. Using the athame, a doorway is cut in the circle, at which point anything may pass through without harming the circle. This opening must be closed afterwards by reconnecting the lines of the circle.")
   (base/ability
    :name "Psychic Duel"
    :reference
@@ -2995,7 +3071,6 @@
      * Alter the Shields to increase Shielding in a single Arc by 1 by decreasing all other Arcs by 1.")
   (base/ability
    :name "Shield Sacrifice"
-   :summary
    :summary
     "* [Skill]: [Defense]
      * [Resolution] [Block] [Wand]: The shield becomes the target of any [Overrun] damage.")

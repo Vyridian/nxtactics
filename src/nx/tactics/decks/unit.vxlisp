@@ -1275,7 +1275,7 @@ Allseer - Grants resistance to being surprised or flanked."
      * Speed - Senturion moves and reacts with lightning speed and precision. He can run at 80mph and can briefly run on walls. His graceful movements belie his great strength and significant weight.
      * Leaping - Senturion can jump 40ft in the air.
      * Eyes - Senturion's eyes can emit tight-beam lasers or a white sheet of explosive energy. He can sense electromagnetic radiation (including infrared and ultraviolet). He also possesses telescopic and microscopic vision.
-     * Transformation - As Mech-Man he was able to transform from a human-like form to his mechanical form. He has since lost this ability (and a great deal of his human personality). As Senturion he has refined this power to produce specialized weapons like blades and spikes.
+     * Transform - As Mech-Man he was able to transform from a human-like form to his mechanical form. He has since lost this ability (and a great deal of his human personality). As Senturion he has refined this power to produce specialized weapons like blades and spikes.
      * Healing - Senturion's android body rapidly repairs itself.
      * Filaments - In close combat, filaments can emerge from its body which can scramble or override electrical devices on contact.
      * History - Senturion was designed as one of a multitude of multi-purpose exploratory probes. Their natural form is a squirming mass of pale filaments. These probes were packed into artificial comets and launched in all directions from their homeworld. To protect their designers, they possess no memory of their origin or ultimate purpose. Many of these probes have landed on all planets in the solar system and millions more are littered across the galaxy. Most were buried underground by their impact and there they lie dormant. The ones on the surface seek a power source to fuel their growth and adaptation to their environment. They absorb light, heat, electricity or other radiation. When fully charged, they quietly begin exploring and analyzing their environment for possible resources and threats. If the planet is lifeless, they will catalog the available resources and begin creating more identical probes. If the planet is inhabited, they will wait and study the local wildlife until they are confident that they can completely mimic a sample of the apex species. Then they will begin to blend into the local society to learn everything they can. When their analysis no longer produces significant results, they begin to create more probes. Though they are unaware of their creator or purpose, they continue to catalog and expand. Eventually, their data network reaches back to their creators who collect this massive treasure trove of data."
@@ -1332,7 +1332,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :unitskillmap
     (base/unitskillmap<-tactics-keys
      tactics
-     "Riding"))
+     "Animals"))
   (base/unit
    :name "Skeleton"
    :unitpowermap
@@ -1345,7 +1345,7 @@ Allseer - Grants resistance to being surprised or flanked."
        "Skeletal"
        "Undead")))
    :unitskillmap
-    (base/unitskillmap
+    (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Defense" 1
       (stringlist

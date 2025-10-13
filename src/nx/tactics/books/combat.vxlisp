@@ -899,9 +899,8 @@
          (base/item
           :name "Weighted Chain"
           :titles "Meteor Hammer")
-        :Whip
-         (base/item
-          :name "Whip")
+        "Whip"
+         (base/item<-tactics-key tactics "Net")
         "Whip Sword"
          (base/item
           :name "Whip Sword"
@@ -1216,8 +1215,6 @@
         "Hunga Munga"
          (base/item
           :name "Hunga Munga")
-        "Improvised Weapon"
-         (base/item<-tactics-key tactics "Improvised Weapon")
         :Shuriken
          (base/item
           :name "Shuriken")

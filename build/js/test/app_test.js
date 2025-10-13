@@ -37,13 +37,12 @@ import nx_tactics_books_horror_test from "./nx/tactics/books/horror_test.js"
 import nx_tactics_books_land_sea_and_air_test from "./nx/tactics/books/land_sea_and_air_test.js"
 import nx_tactics_books_magic_test from "./nx/tactics/books/magic_test.js"
 import nx_tactics_books_medieval_test from "./nx/tactics/books/medieval_test.js"
-import nx_tactics_books_modern_test from "./nx/tactics/books/modern_test.js"
 import nx_tactics_books_modern_fantasy_test from "./nx/tactics/books/modern_fantasy_test.js"
+import nx_tactics_books_modern_test from "./nx/tactics/books/modern_test.js"
 import nx_tactics_books_powers_test from "./nx/tactics/books/powers_test.js"
 import nx_tactics_books_prehistory_test from "./nx/tactics/books/prehistory_test.js"
 import nx_tactics_books_pulp_fiction_test from "./nx/tactics/books/pulp_fiction_test.js"
 import nx_tactics_books_science_fiction_test from "./nx/tactics/books/science_fiction_test.js"
-import nx_tactics_books_skills_test from "./nx/tactics/books/skills_test.js"
 import nx_tactics_books_space_and_time_test from "./nx/tactics/books/space_and_time_test.js"
 import nx_tactics_books_superheroes_test from "./nx/tactics/books/superheroes_test.js"
 import nx_tactics_books_world_wars_test from "./nx/tactics/books/world_wars_test.js"
@@ -139,13 +138,12 @@ export default class app_test {
       nx_tactics_books_land_sea_and_air_test.test_package(context),
       nx_tactics_books_magic_test.test_package(context),
       nx_tactics_books_medieval_test.test_package(context),
-      nx_tactics_books_modern_test.test_package(context),
       nx_tactics_books_modern_fantasy_test.test_package(context),
+      nx_tactics_books_modern_test.test_package(context),
       nx_tactics_books_powers_test.test_package(context),
       nx_tactics_books_prehistory_test.test_package(context),
       nx_tactics_books_pulp_fiction_test.test_package(context),
       nx_tactics_books_science_fiction_test.test_package(context),
-      nx_tactics_books_skills_test.test_package(context),
       nx_tactics_books_space_and_time_test.test_package(context),
       nx_tactics_books_superheroes_test.test_package(context),
       nx_tactics_books_world_wars_test.test_package(context),

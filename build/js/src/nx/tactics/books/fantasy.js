@@ -27,19 +27,6 @@ export default class nx_tactics_books_fantasy {
       "Fantasy Overview",
       ":sectionmap",
       nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Fantasy Armor",
-          ":summary",
-          "* Cloth Armor - Increases Magical Regeneration\n* Light Armor - Increases Critical Strike change\n* Heavy Armor - Maximum Defense",
-          ":itemmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_itemmap},
-            "Shield:Moon Disc",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield:Moon Disc", ":summary", "* A [Silver] Shield.", ":classification", "Shield")
-          )
-        ),
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Fantasy Weapons", ":summary", "* Faeblades")
       )
     )

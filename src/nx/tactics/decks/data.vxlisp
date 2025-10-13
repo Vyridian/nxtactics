@@ -31,7 +31,6 @@
        (lib prehistory       :path nx/tactics/books/prehistory)
        (lib pulp_fiction     :path nx/tactics/books/pulp_fiction)
        (lib science_fiction  :path nx/tactics/books/science_fiction)
-       (lib skills           :path nx/tactics/books/skills)
        (lib space_and_time   :path nx/tactics/books/space_and_time)
        (lib superheroes      :path nx/tactics/books/superheroes)
        (lib world_wars       :path nx/tactics/books/world_wars))

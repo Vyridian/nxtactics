@@ -962,7 +962,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "* Minor: Dents. Push:1\n* Major: Hull Damage. Push:1 Armor:-1\n* Critical: Frame Crack. Push:1 Armor:-2\n* Extreme: Structural Collapse. Push:1 Armor:-3 Part:DamageAll"
+      "Minor: Heavy Impact. Push:1\nMajor: Structural Fatigue. Fatigue:1 Push:1\nCritical: Shockwave Through Vessel. Body:-1 Push:1 Casualty:25%\nExtreme: Hull Collapse. Body:-3 Push:1 Casualty:75%"
     ))
 
     // (const vehicle-ad)
@@ -973,7 +973,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-ad.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Shield Disruption. Fatigue:1\nMajor: Shield Buckling. Fatigue:1 Shielding Damaged:1\nCritical: Shield Pierced. Fatigue:2 Shielding Damaged:2\nExtreme: Shield Shattered. Fatigue:3 Stress:2 Shielding Broken"
     ))
 
     // (const vehicle-ah)
@@ -984,7 +986,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-ah.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Armor Gouged. Fatigue:1\nMajor: Armor Breach. Fatigue:1 Armor:-1\nCritical: Hull Breach. Body:-1 Armor:-2 Casualty:25%\nExtreme: Split Apart. Body:-3 Speed:-3 Casualty:75%"
     ))
 
     // (const vehicle-as)
@@ -995,7 +999,9 @@ export default class nx_tactics_decks_vehicle {
       ":image",
       "images/damage-vehicle-as.svg",
       ":layout",
-      nx_tactics_base.c_cardlayout_imageonly
+      nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
+      "Minor: Hull Scarring. Fatigue:1\nMajor: Supports Failing. Fatigue:2 Stress:2\nCritical: Supports Severed. Body:-1 Casualty:25%\nExtreme: Structural Failure. Body:-2 Speed:-2 Casualty:50%"
     ))
 
     // (const vehicle-jc)
@@ -1112,7 +1118,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Shockwave. Fatigue:1\nMajor: Spauling Fragments. Fatigue:1 Stress:1 Casualty:25%\nCritical: Wall Collapse. Fatigue:2 Stress:2 Casualty:50%\nExtreme: Cabin Collapse. Fatigue:3 Stress:3 Casualty:75%"
+      "Minor: Shockwave. Fatigue:1\nMajor: Spauling Fragments. Fatigue:1 Casualty:25%\nCritical: Wall Collapse. Fatigue:2 Casualty:50%\nExtreme: Cabin Collapse. Fatigue:3 Casualty:75%"
     ))
 
     // (const vehicle-qd)
@@ -1125,7 +1131,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Cabin Wall Pierced. Stress:1\nMajor: Smoke from Shrapnel. Stress:1 Choking:1 Casualty:25%\nCritical: Fire from Shrapnel. Stress:2 Burning:2 Casualty:50%\nExtreme: Explosion from Shrapnel. Stress:3 Burning:3 Casualty:75%"
+      "Minor: Cabin Wall Pierced. Stress:1\nMajor: Smoke from Shrapnel. Choking:1 Casualty:25%\nCritical: Fire from Shrapnel. Burning:2 Casualty:50%\nExtreme: Explosion from Shrapnel. Burning:3 Casualty:75%"
     ))
 
     // (const vehicle-qh)
@@ -1138,7 +1144,7 @@ export default class nx_tactics_decks_vehicle {
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
-      "Minor: Cabin Wall Crumbling. Stress:1\nMajor: Cabin Wall Cracked. Stress:1 Exposure:1 Casualty:25%\nCritical: Cabin Breach. Stress:2 Exposure:2 Casualty:50%\nExtreme: Cabin Torn Open. Stress:3 Exposure:3 Casualty:75%"
+      "Minor: Cabin Wall Crumbling. Stress:1\nMajor: Cabin Wall Cracked. Exposure:1 Casualty:25%\nCritical: Cabin Breach. Exposure:2 Casualty:50%\nExtreme: Cabin Torn Open. Exposure:3 Casualty:75%"
     ))
 
     // (const vehicle-qs)

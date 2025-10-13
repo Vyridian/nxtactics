@@ -692,9 +692,9 @@ x +1DMG vs. Crouching."
          +1 Accuracy
          +2 Damage
          0 Move")
-     "Neck Break"
+     "Neck Snap"
       (base/ability
-       :name "Neck Break"
+       :name "Neck Snap"
        :summary
         "* The fighter grabs the opponent's head and twists it with the intention to break the neck. For best effect this is used as a surprise attack.
          -2 Initiative
@@ -1172,7 +1172,7 @@ x +1DMG vs. Crouching."
      "Livestock"
      "Mounted Combat"
      "Retrieve"
-     "Ride: Bull"
+     "Ride:Bull"
      "Run Down"
      "Seeing Eye Training"
      "Side Saddle"

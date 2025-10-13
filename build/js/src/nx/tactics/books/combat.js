@@ -484,8 +484,8 @@ export default class nx_tactics_books_combat {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Three Section Staff", ":titles", "Sansetsukon", ":energy", "100J"),
             "Weighted Chain",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Weighted Chain", ":titles", "Meteor Hammer"),
-            ":Whip",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Whip"),
+            "Whip",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Net"),
             "Whip Sword",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Whip Sword", ":titles", "Urumi")
           )
@@ -680,8 +680,6 @@ export default class nx_tactics_books_combat {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Football"),
             "Hunga Munga",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hunga Munga"),
-            "Improvised Weapon",
-            nx_tactics_base.f_item_from_tactics_key(tactics, "Improvised Weapon"),
             ":Shuriken",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shuriken"),
             "Skipping Stone",

@@ -754,9 +754,9 @@
           :summary
            "* This rare herb is believed to return the dead to life. Actually, it is the tiny worm eggs that grow on the plant that infect the host and turn them into a zombie.
             * Infection - The worms can infect a living host if worms, their eggs, or infected flesh are eaten (even cooking is not a guarantee of safety) or the worms transfer via an ghoul bite. A recently deceased host may also be infected if the eggs are injected directly into the brain.
-            * Transformation - Once infected the worms rapidly multiply by division and move through the body. Once fully infected, the worms act as replacement nervous system, stimulating the cells and retarding cell death. The worms stimulate the primitive sections of the brain to cause it to seek more hosts for the worms. The When they first activate the body, its movements are jerky and extreme, but the body quickly adapts and becomes quite agile over time.
+            * Transformation - Once infected the worms rapidly multiply by division and move through the body. Once fully infected, the worms act as a replacement nervous system, stimulating the cells and retarding cell death. The worms stimulate the primitive sections of the brain to cause it to seek more hosts for the worms. When they first activate the body, its movements are jerky and extreme, but the body quickly adapts and becomes quite agile over time.
             * Pack - The worms are a colony creature and are aware of nearby worms in infected creatures. They, therefore, do not attack other infecteds and tend to collect together in groups.
-            * Intelligence Level - Though they are savagely murderous and largely fearless, they do retain an animalistic survival instinct and take shelter and avoid fire and heat which would kill their worms."))
+            * Intelligence - Though they are savagely murderous and largely fearless, they do retain an animalistic survival instinct and take shelter and avoid fire and heat which would kill their worms."))
       :unitmap
        (base/unitmap
         "Kingdom Ghoul"

@@ -38,7 +38,7 @@
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Shield Disruption. Fatigue:1
-    Major: Shield Buckling. Fatigue:1 Stress:1 Shielding Damaged:1
+    Major: Shield Buckling. Fatigue:1 Shielding Damaged:1
     Critical: Shield Pierced. Fatigue:2 Shielding Damaged:2
     Extreme: Shield Shattered. Fatigue:3 Stress:2 Shielding Broken"))
 
@@ -60,7 +60,7 @@
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hull Scarring. Fatigue:1
-    Major: Supports Failing. Fatugue:2 Stress:2
+    Major: Supports Failing. Fatigue:2 Stress:2
     Critical: Supports Severed. Body:-1 Casualty:25%
     Extreme: Structural Failure. Body:-2 Speed:-2 Casualty:50%"))
 

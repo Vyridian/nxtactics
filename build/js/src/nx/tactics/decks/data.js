@@ -33,7 +33,6 @@ import nx_tactics_books_powers from "../../../nx/tactics/books/powers.js"
 import nx_tactics_books_prehistory from "../../../nx/tactics/books/prehistory.js"
 import nx_tactics_books_pulp_fiction from "../../../nx/tactics/books/pulp_fiction.js"
 import nx_tactics_books_science_fiction from "../../../nx/tactics/books/science_fiction.js"
-import nx_tactics_books_skills from "../../../nx/tactics/books/skills.js"
 import nx_tactics_books_space_and_time from "../../../nx/tactics/books/space_and_time.js"
 import nx_tactics_books_superheroes from "../../../nx/tactics/books/superheroes.js"
 import nx_tactics_books_world_wars from "../../../nx/tactics/books/world_wars.js"
@@ -68,7 +67,7 @@ export default class nx_tactics_decks_data {
       {"any-1": nx_tactics_base.t_booklist},
       nx_tactics_books_core_rules.f_tacticsbook(tactics),
       nx_tactics_books_combat.f_tacticsbook(tactics),
-      nx_tactics_books_skills.f_tacticsbook(tactics),
+      nx_tactics_books_advanced_rules.f_tacticsbook(tactics),
       nx_tactics_books_magic.f_tacticsbook(tactics),
       nx_tactics_books_powers.f_tacticsbook(tactics),
       nx_tactics_books_gear.f_tacticsbook(tactics),

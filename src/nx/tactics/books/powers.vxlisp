@@ -12,11 +12,9 @@
     (chapter_special_modifiers tactics)
     (chapter-equipment-powers tactics)
     (chapter_strength_and_weaknesses tactics)
-    (chapter_mental_powers tactics)
     (chapter_movement_powers tactics)
     (chapter_physical_powers tactics)
     (chapter_body_powers tactics)
-    (chapter_energy_and_forces tactics)
     (chapter_alteration_powers tactics)
     (chapter_godlike_powers tactics)
    )))
@@ -367,30 +365,6 @@
        "Weakness:Physical"
        "Weakness:Social")))))
 
-(func chapter_mental_powers : base/chapter
- [tactics : base/tactics]
- (chapter
-  :name "Mental Powers"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Mental Powers"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Charm"
-       "Domination"
-       "Empathy"
-       "Illusion"
-       "Intuition"
-       "Madness"
-       "Mental Combat"
-       "Mental Connection"
-       "Mental Fortitude"
-       "Mind Over Matter"
-       "Presence"
-       "Psychic Power")))))
-
 (func chapter_movement_powers : base/chapter
  [tactics : base/tactics]
  (chapter
@@ -461,7 +435,7 @@
        "Size"
        "Spawning"
        "Toxins"
-       "Transformation"
+       "Transmutation"
        "Vampirism"))
     (base/section
      :name "Cybernetics"
@@ -473,50 +447,8 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Artificial: Arms"
-       "Artificial: Hearing"
-       "Artificial: Implants"
-       "Artificial: Interface"
-       "Artificial: Legs"
-       "Artificial: Vision"
-       "Netrunning")))))
-
-(func chapter_energy_and_forces : base/chapter
- [tactics : base/tactics]
- (chapter
-  :name "Energy and Forces"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Elements"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Air"
-       "Cold"
-       "Earth"
-       "Electricity"
-       "Fire"
-       "Water"
-       "Weather"))
-    (base/section
-     :name "Energy and Forces"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Dimensional"
-       "Energy Manipulation"
-       "Explosive"
-       "Forces"
-       "Gravity"
-       "Heat"
-       "Inertia"
-       "Light"
-       "Magnetism"
-       "Radiation"
-       "Sound"
-       "Time"
-       "Vibration")))))
+       "Computer Control"
+       "Implants")))))
 
 (func chapter_alteration_powers : base/chapter
  [tactics : base/tactics]
@@ -529,23 +461,9 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Atomic Control"
        "Density"
-       "Transfiguration"
-       "Transmutation"))
-    (base/section
-     :name "Power Manipulation"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Power Copy"
-       "Power Disruption"
-       "Power Drain"
-       "Power Feedback"
-       "Power Fluctuation"
-       "Power Reflection"
-       "Power Theft"
-       "Power Vampire")))))
+       "Mutate"
+       "Transmutation")))))
 
 (func chapter_godlike_powers : base/chapter
  [tactics : base/tactics]
@@ -565,12 +483,4 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Bonds"))
-    (base/section
-     :name "Miscellaneous"
-     :powermap
-      (base/powermap
-       "Computer Control"
-        (base/power
-         :name "Computer Control"
-         :summary "Gives ability to control computers like Computer Science."))))))
+       "Bonds")))))

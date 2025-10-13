@@ -376,20 +376,6 @@ export default class nx_tactics_books_advanced_rules {
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
-        "Advanced White Tokens",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Advanced White Tokens",
-          ":summary",
-          "White tokens represent temporary conditions that will pass quickly.\n* [Activate]: Remove one White token.",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            ":Rage",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rage", ":image", "Tokens/RageToken.png", ":summary", "+1 Attack\n-1 Defense\n-1 All other Abilities that are not Attacks\n* Ignore 1 Retreat for each Rage")
-          )
-        ),
         "Advanced Black Tokens",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -399,13 +385,7 @@ export default class nx_tactics_books_advanced_rules {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
             ":Aging",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Aging", ":summary", "* Reduces all Abilites and Life Span."),
-            ":Blindness",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Blindness"),
-            ":Crippled",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Crippled", ":image", "Tokens/CrippledToken.png", ":summary", "[Speed]:-1", ":classification", "Black Token"),
-            ":Curse",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Curse", ":summary", "* [Anytime]: When unit gains a [Red Token] or a [Black Token], roll for each Curse Token.\n* For each [Hit], replace a Curse Token with a Token of any type just gained.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Aging", ":summary", "* Reduces all Abilites and Life Span.")
           )
         )
       )
