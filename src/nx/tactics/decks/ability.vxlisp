@@ -592,6 +592,16 @@
    :summary
     "* [Skill]: [Tradeskill]")
   (base/ability
+   :name "Cast a Long Shadow"
+   :summary
+     "* [Power]: [Darkness]")
+  (base/ability
+   :name "Cast Shadows"
+   :summary
+    "* Animate shadows
+     * [Power]: [Darkness]
+     * Like [Illusions], they have full power but are destroyed on any hit.")
+  (base/ability
    :name "Cat Feet"
    :summary "* Reduce damage from falls"
    :summary
@@ -653,6 +663,10 @@
      * [Power]: [Purity]
      * This powerful magic is sustained by the user's Will and lasted until voluntarily released (cannot be coerced).")
   (base/ability
+   :name "Circle of Darkness"
+   :summary
+     "* [Power]: [Darkness]")
+  (base/ability
    :name "Circular Logic"
    :reference
     "* If such actions were not illegal, then they would not be prohibited by the law."
@@ -680,6 +694,12 @@
    :name "Cloak and Dagger"
    :summary
     "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
+  (base/ability
+   :name "Cloak of Shadows"
+   :titles "Shroud of Night"
+   :summary
+    "* Increase Stealth
+     * [Power]: [Darkness]")
   (base/ability
    :name "Close Assault"
    :summary
@@ -885,6 +905,11 @@
    :summary
     "* A subtle gate that moves a person to a different Realm without them realizing. Both locations must be nearly identical.")
   (base/ability
+   :name "Darkest Hour"
+   :titles "Witching Hour"
+   :summary
+    "* [Power]: [Darkness]")
+  (base/ability
    :name "Dash Attack"
    :summary
     "* [Skill]: [Melee]-1
@@ -1061,6 +1086,10 @@
    :summary
     "* [Skill]: [Military]")
   (base/ability
+   :name "Draw out the Darkness"
+   :summary
+     "* [Power]: [Darkness]")
+  (base/ability
    :name "Dodge"
    :summary
     "* [Skill]: [Evasion]")
@@ -1209,6 +1238,10 @@
    :summary
     "* [Skill]: [Intimidation] vs [Will]")
   (base/ability
+   :name "Dweller in Darkness"
+   :summary
+     "* [Power]: [Darkness]")
+  (base/ability
    :name "Egg Laying"
    :summary
     "Can lay eggs
@@ -1269,6 +1302,10 @@
    :name "English"
    :summary
     "Fluent in the English language")
+  (base/ability
+   :name "Engulfed in Darkness"
+   :summary
+     "* [Power]: [Darkness]")
   (base/ability
    :name "Enslave"
    :reference
@@ -1371,6 +1408,12 @@
    :name "Extra Limbs"
    :summary
     "* [Power]: [Beastial]")
+  (base/ability
+   :name "Eye of Shadow"
+   :titles "Dark Sight, Night Vision"
+   :summary
+    "* See perfectly in any form of darkness.
+     * [Power]: [Darkness]")
   (base/ability
    :name "Eyes of a Child"
    :summary "* All Chimera become visible to those you chose.")
@@ -1615,7 +1658,7 @@
   (base/ability
    :name "Faster than Light"
    :titles "FTL"
-   :summay
+   :summary
     "* [Power]: [Move:Stellar]")
   (base/ability
    :name "Fuel Scoop"
@@ -1771,6 +1814,10 @@
    :name "Harvest Poison"
    :summary
     "* [Skill]: [Animals]")
+  (base/ability
+   :name "Heart of Darkness"
+   :summary
+     "* [Power]: [Darkness]")
   (base/ability
    :name "Herding"
    :titles "Cowboy, Pig Farmer, Rancher, Shepherd"
@@ -3035,6 +3082,10 @@
      * Needlepoint
      * Repair Cloth")
   (base/ability
+   :name "Shadow Boxing"
+   :summary
+     "* [Power]: [Darkness]")
+  (base/ability
    :name "Shadow Step"
    :summary
     "* Step into a shadow and appear from a nearby shadow, though failure will leave the unit trapped in shadow.
@@ -3135,11 +3186,10 @@
      * [Power]: [Weapon]")
   (base/ability
    :name "Sleight of Hand"
-   :summary
+   :titles "Legerdemain"
    :summary
     "* [Skill]: [Deception]
-     * Hide a small object in hand without being noticed."
-   :titles "Legerdemain")
+     * Hide a small object in hand without being noticed.")
   (base/ability
    :name "Sleight of Mind"
    :summary
@@ -3200,7 +3250,6 @@
   (base/ability
    :name "Soulless"
    :summary
-   :summary
     "* [Power]: [Special Ability]
      * A soulless unit is not truly alive. It may not use or gain Spirit skills.")
   (base/ability
@@ -3234,6 +3283,10 @@
    :name "Space Combat"
    :summary
     "* [Skill]: [Military]")
+  (base/ability
+   :name "Speed of Night"
+   :summary
+     "* [Power]: [Darkness]")
   (base/ability
    :name "Speed Reading")
   (base/ability
@@ -3451,6 +3504,10 @@
    :summary
     "* [Power]: [Beastial]")
   (base/ability
+   :name "Tendrils of Night"
+   :summary
+     "* [Power]: [Darkness]")
+  (base/ability
    :name "Terrorize"
    :summary
     "* [Skill]: [Intimidation] vs [Will]
@@ -3468,7 +3525,6 @@
     "* Raiden Shogun, Genshin Impact")
   (base/ability
    :name "Thieves Guild Codes"
-   :summary
    :summary
     "* [Skill]: [Deception]
      * Thieves must conceal their illegal conversations and the guilds have developed a shifting series of hand signals, marks, and code words to communicate simple concepts without arising suspiscion.")
@@ -3652,6 +3708,10 @@
    :name "Wall Crawling"
    :summary
     "* [Power]: [Move:Ground]")
+  (base/ability
+   :name "Wall of Darkness"
+   :summary
+     "* [Power]: [Darkness]")
   (base/ability
    :name "Wall of Wonders"
    :summary

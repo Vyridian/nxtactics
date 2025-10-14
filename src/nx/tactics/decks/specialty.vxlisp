@@ -57,7 +57,7 @@
    :name "Airplanes: Commercial")
   (base/specialty
    :name "Alien Hunter"
-   :references
+   :reference
     "* Men in Black")
   (base/specialty
    :name "Archery"
@@ -200,7 +200,7 @@
    :titles "Hangman, Strangler")
   (base/specialty
    :name "Ghost Hunter"
-   :references
+   :reference
     "* Ghostbusters")
   (base/specialty
    :name "Grappling"

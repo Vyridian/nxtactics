@@ -473,7 +473,7 @@ Hallucin-eye-tion - Induces visual hallucinations; walls become monsters, allies
 Veilpiercer - Sees through lies, glamours, and falsehoods of the world.
 Blinkshield - Redirects spells or projectiles aimed at the eye back at their caster.
 Allseer - Grants resistance to being surprised or flanked."
-   :powermap
+   :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-abilities
       tactics "Hexcraft"
@@ -1180,7 +1180,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :body "5x1"
    :speed "6x1"
    :mass "50kg/100lb"
-   :landspeed "60kph/40mph")
+   :speedland "60kph/40mph")
   (base/unit
    :name "Rat: Huge"
    :body "5x0"

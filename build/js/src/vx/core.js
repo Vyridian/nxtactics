@@ -353,11 +353,13 @@ export default class vx_core {
       const entries = Object.entries(valuemap['vx_value'])
       const values = []
       for (const [key, value] of entries) {
-        const chgvalue = fn([key, value])
-        const chgtype = vx_core.f_typedef_from_any(chgvalue)
-        if (vx_core.vx_is_allowtype(allowtypes, chgtype)) {
-          values.push(key)
-          values.push(chgvalue)
+        if (key != "") {
+          const chgvalue = fn([key, value])
+          const chgtype = vx_core.f_typedef_from_any(chgvalue)
+          if (vx_core.vx_is_allowtype(allowtypes, chgtype)) {
+            values.push(key)
+            values.push(chgvalue)
+          }
         }
       }
       output = vx_core.f_new_from_type(
@@ -1009,9 +1011,6 @@ export default class vx_core {
               if (typedef == valuetype) {
                 propmap = Object.assign(propmap, value['vx_value'])
               } else {
-console.log("error")
-console.log(type)
-console.log(values)
                 const msg = vx_core.f_msg_from_error_2(
                   'vx/core/new',
                   'invalidkey',

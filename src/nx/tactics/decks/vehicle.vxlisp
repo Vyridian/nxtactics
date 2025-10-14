@@ -311,6 +311,7 @@
   :name "Hack: Right Steering"
   :image "images/damage-vehicle-8h.svg"
   :layout base/cardlayout-imageonly
+  :summary
    "Minor: Loud Noises. Slow:1
     Major: Shuddering. Slow:1 Stun:1
     Critical: Vibrations. Slow:2 Turn:Right causes Stun:1
@@ -321,6 +322,7 @@
   :name "Slash: Right Steering"
   :image "images/damage-vehicle-8s.svg"
   :layout base/cardlayout-imageonly
+  :summary
    "Minor: Control Slashed. Slow:1
     Major: Control Unresponsive. Slow:1 Turn:Right max 1/Round
     Critical: Control Sheared. Slow:2. Can't Turn:Right

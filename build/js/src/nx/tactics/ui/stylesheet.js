@@ -1140,7 +1140,7 @@ export default class nx_tactics_ui_stylesheet {
       {"any-1": vx_ui_ui.t_style},
       ":name",
       "body",
-      ":styletype",
+      ":type",
       vx_ui_ui.c_styletype_system,
       ":boundsmargin",
       vx_core.f_new({"any-1": vx_ui_ui.t_bounds}, ":left", 0, ":right", 0, ":top", 0, ":bottom", 0),
@@ -1351,8 +1351,6 @@ export default class nx_tactics_ui_stylesheet {
       "style-clickable",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":styletype",
-      vx_ui_ui.c_styletype_shared,
       ":cursor",
       vx_ui_ui.t_cursor_pointer,
       ":color-bkghover",
@@ -1377,7 +1375,7 @@ export default class nx_tactics_ui_stylesheet {
       {"any-1": vx_ui_ui.t_style},
       ":name",
       "div",
-      ":styletype",
+      ":type",
       vx_ui_ui.c_styletype_system,
       ":layout",
       vx_ui_ui.c_layout_flow_columns
@@ -1399,7 +1397,7 @@ export default class nx_tactics_ui_stylesheet {
       {"any-1": vx_ui_ui.t_style},
       ":name",
       "html",
-      ":styletype",
+      ":type",
       vx_ui_ui.c_styletype_system,
       ":boundsmargin",
       vx_core.f_new({"any-1": vx_ui_ui.t_bounds}, ":left", 0, ":right", 0, ":top", 0, ":bottom", 0),
@@ -1451,7 +1449,7 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_point_suit_pos1,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       vx_core.f_new(
         {"any-1": vx_ui_ui.t_image},
         ":name",
@@ -1476,7 +1474,7 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       vx_core.f_new(
         {"any-1": vx_ui_ui.t_image},
         ":name",
@@ -1499,7 +1497,7 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_point_suit_pos1,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       vx_core.f_new(
         {"any-1": vx_ui_ui.t_image},
         ":name",
@@ -1524,7 +1522,7 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       vx_core.f_new(
         {"any-1": vx_ui_ui.t_image},
         ":name",
@@ -1547,7 +1545,7 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_point_suit_pos1,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       nx_tactics_ui_stylesheet.c_image_jester_black
     ))
 
@@ -1564,7 +1562,7 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       nx_tactics_ui_stylesheet.c_image_jester_black
     ))
 
@@ -1579,7 +1577,7 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_point_suit_pos1,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       nx_tactics_ui_stylesheet.c_image_jester_red
     ))
 
@@ -1596,7 +1594,7 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       nx_tactics_ui_stylesheet.c_image_jester_red
     ))
 
@@ -1611,7 +1609,7 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_point_suit_pos1,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       vx_core.f_new(
         {"any-1": vx_ui_ui.t_image},
         ":name",
@@ -1636,7 +1634,7 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       vx_core.f_new(
         {"any-1": vx_ui_ui.t_image},
         ":name",
@@ -1659,7 +1657,7 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_point_suit_pos1,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       vx_core.f_new(
         {"any-1": vx_ui_ui.t_image},
         ":name",
@@ -1684,7 +1682,7 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
+      ":image-bkg",
       vx_core.f_new(
         {"any-1": vx_ui_ui.t_image},
         ":name",

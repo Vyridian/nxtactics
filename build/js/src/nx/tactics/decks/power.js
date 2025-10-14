@@ -636,47 +636,7 @@ export default class nx_tactics_decks_power {
         ":stat",
         "Shadow",
         ":abilitymap",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_abilitymap},
-          "Cast Shadows",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cast Shadows", ":summary", "* Animate shadows\n* [Power]: [Darkness]\n* Like [Illusions], they have full power but are destroyed on any hit."),
-          "Cast a Long Shadow",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cast a Long Shadow", ":summary", "* [Power]: [Darkness]"),
-          "Circle of Darkness",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Circle of Darkness", ":summary", "* [Power]: [Darkness]"),
-          "Cloak of Shadows",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cloak of Shadows", ":titles", "Shroud of Night", ":summary", "* Increase Stealth\n* [Power]: [Darkness]"),
-          "Darkest Hour",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Darkest Hour", ":titles", "Witching Hour", ":summary", "* [Power]: [Darkness]"),
-          "Draw out the Darkness",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Draw out the Darkness", ":summary", "* [Power]: [Darkness]"),
-          "Dweller in Darkness",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dweller in Darkness", ":summary", "* [Power]: [Darkness]"),
-          "Engulfed in Darkness",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Engulfed in Darkness", ":summary", "* [Power]: [Darkness]"),
-          "Eye of Shadow",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Eye of Shadow", ":titles", "Dark Sight, Night Vision"),
-          ":summary",
-          "* See perfectly in any form of darkness.\n* [Power]: [Darkness]"
-        ),
-        "Heart of Darkness",
-        vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Heart of Darkness", ":summary", "* [Power]: [Darkness]"),
-        "Nightfall",
-        nx_tactics_base.f_ability_from_tactics_key(tactics, "Nightfall"),
-        "Oubliette",
-        nx_tactics_base.f_ability_from_tactics_key(tactics, "Oubliette"),
-        "Shadow Boxing",
-        vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Shadow Boxing", ":summary", "* [Power]: [Darkness]"),
-        "Shadow Step",
-        nx_tactics_base.f_ability_from_tactics_key(tactics, "Shadow Step"),
-        "Shadow Strike",
-        nx_tactics_base.f_ability_from_tactics_key(tactics, "Shadow Strike"),
-        "Speed of Night",
-        vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Speed of Night", ":summary", "* [Power]: [Darkness]"),
-        "Tendrils of Night",
-        vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tendrils of Night", ":summary", "* [Power]: [Darkness]"),
-        "Wall of Darkness",
-        vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wall of Darkness", ":summary", "* [Power]: [Darkness]")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Cast a Long Shadow", "Cast Shadows", "Circle of Darkness", "Cloak of Shadows", "Darkest Hour", "Draw out the Darkness", "Dweller in Darkness", "Engulfed in Darkness", "Eye of Shadow", "Heart of Darkness", "Nightfall", "Oubliette", "Shadow Boxing", "Shadow Step", "Shadow Strike", "Speed of Night", "Tendrils of Night", "Wall of Darkness")
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Demonic", ":titles", "Demon, Demon Soul, Yoki, Yoma", ":reference", "* Claymore\n* Ghost Rider\n* Prototype\n* Yoki - 妖気, or 'demon essence' (the first character means demon, and second character is the same as the Chinese word commonly known as chi).", ":summary", "* Demon Soul is when a user has been partially or completely possessed by a demonic entity.\n* Demon Soul allows the user a number of physical advantages including regeneration and beastial, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit.", ":stat", "Beast"),
       vx_core.f_new(
@@ -2280,10 +2240,10 @@ export default class nx_tactics_decks_power {
           "Bombardier Spray",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bombardier Spray"),
           "Explosive Body",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Explosive Body")
-        ),
-        "Explosive Punch",
-        vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Explosive Punch")
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Explosive Body"),
+          "Explosive Punch",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Explosive Punch")
+        )
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
@@ -2825,7 +2785,7 @@ export default class nx_tactics_decks_power {
         nx_tactics_base.f_specialtymap_from_specialtylist(
           vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Artificial:Arms", ":summary", "* All abilities assume both arms are artificial. If only one is used all abilities are at -1."),
           vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Artificial:Hearing", ":summary", "* All abilities assume both ears are artificial. If only one is used all abilities are at -1."),
-          vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Artificial:Implants", ":stat", "Shadow"),
+          vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Artificial:Implants"),
           vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Artificial:Interface", ":summary", "* Cyber Interface include mostly software-based sensors and systems.", ":titles", "Neuralware"),
           vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Artificial:Legs", ":summary", "* All abilities assume both legs are mechanical. If only one is used all abilities are at -1."),
           vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Artificial:Vision")

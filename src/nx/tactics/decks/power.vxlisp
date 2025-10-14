@@ -1037,92 +1037,26 @@
      * To go in the dark with a light is to know the light. To know the dark, go dark. Go without sight and find that the dark, too, blooms and sings, and is traveled by dark feet and dark wings. - Wendell Berry, To Know the Dark"
    :stat "Shadow"
    :abilitymap
-    (base/abilitymap
-     "Cast Shadows"
-      (base/ability
-       :name "Cast Shadows"
-       :summary
-        "* Animate shadows
-         * [Power]: [Darkness]
-         * Like [Illusions], they have full power but are destroyed on any hit.")
+    (base/abilitymap<-tactics-keys
+     tactics
      "Cast a Long Shadow"
-      (base/ability
-       :name "Cast a Long Shadow"
-       :summary
-         "* [Power]: [Darkness]")
+     "Cast Shadows"
      "Circle of Darkness"
-      (base/ability
-       :name "Circle of Darkness"
-       :summary
-         "* [Power]: [Darkness]")
      "Cloak of Shadows"
-      (base/ability
-       :name "Cloak of Shadows"
-       :titles "Shroud of Night"
-       :summary
-        "* Increase Stealth
-         * [Power]: [Darkness]")
      "Darkest Hour"
-      (base/ability
-       :name "Darkest Hour"
-       :titles "Witching Hour"
-       :summary
-        "* [Power]: [Darkness]")
      "Draw out the Darkness"
-      (base/ability
-       :name "Draw out the Darkness"
-       :summary
-         "* [Power]: [Darkness]")
      "Dweller in Darkness"
-      (base/ability
-       :name "Dweller in Darkness"
-       :summary
-         "* [Power]: [Darkness]")
      "Engulfed in Darkness"
-      (base/ability
-       :name "Engulfed in Darkness"
-       :summary
-         "* [Power]: [Darkness]")
      "Eye of Shadow"
-      (base/ability
-       :name "Eye of Shadow"
-       :titles "Dark Sight, Night Vision")
-       :summary
-        "* See perfectly in any form of darkness.
-         * [Power]: [Darkness]")
      "Heart of Darkness"
-      (base/ability
-       :name "Heart of Darkness"
-       :summary
-         "* [Power]: [Darkness]")
      "Nightfall"
-      (base/ability<-tactics-key tactics "Nightfall")
      "Oubliette"
-      (base/ability<-tactics-key tactics "Oubliette")
      "Shadow Boxing"
-      (base/ability
-       :name "Shadow Boxing"
-       :summary
-         "* [Power]: [Darkness]")
      "Shadow Step"
-      (base/ability<-tactics-key tactics "Shadow Step")
      "Shadow Strike"
-      (base/ability<-tactics-key tactics "Shadow Strike")
      "Speed of Night"
-      (base/ability
-       :name "Speed of Night"
-       :summary
-         "* [Power]: [Darkness]")
      "Tendrils of Night"
-      (base/ability
-       :name "Tendrils of Night"
-       :summary
-         "* [Power]: [Darkness]")
-     "Wall of Darkness"
-      (base/ability
-       :name "Wall of Darkness"
-       :summary
-         "* [Power]: [Darkness]"))
+     "Wall of Darkness"))
   (base/power
    :name "Demonic"
    :titles "Demon, Demon Soul, Yoki, Yoma"
@@ -3992,10 +3926,10 @@
        :name "Bombardier Spray")
      "Explosive Body"
       (base/ability
-       :name "Explosive Body"))
+       :name "Explosive Body")
      "Explosive Punch"
       (base/ability
-       :name "Explosive Punch"))
+       :name "Explosive Punch")))
   (base/power
    :name "Factory"
    :abilitymap
@@ -4882,8 +4816,7 @@
       :summary
        "* All abilities assume both ears are artificial. If only one is used all abilities are at -1.")
      (base/specialty
-      :name "Artificial:Implants"
-      :stat "Shadow")
+      :name "Artificial:Implants")
      (base/specialty
       :name "Artificial:Interface"
       :summary

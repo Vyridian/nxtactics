@@ -885,6 +885,7 @@ export default class nx_tactics_decks_vehicle {
       "images/damage-vehicle-8h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
       "Minor: Loud Noises. Slow:1\nMajor: Shuddering. Slow:1 Stun:1\nCritical: Vibrations. Slow:2 Turn:Right causes Stun:1\nExtreme: Violent Shaking. Speed:-1 Turn:Right causes Damage:1"
     ))
 
@@ -897,6 +898,7 @@ export default class nx_tactics_decks_vehicle {
       "images/damage-vehicle-8s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
+      ":summary",
       "Minor: Control Slashed. Slow:1\nMajor: Control Unresponsive. Slow:1 Turn:Right max 1/Round\nCritical: Control Sheared. Slow:2. Can't Turn:Right\nExtreme: Steering Severed. Speed:-3. Can't Turn:Right"
     ))
 

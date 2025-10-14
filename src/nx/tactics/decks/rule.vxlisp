@@ -1309,6 +1309,8 @@
   (base/deck
    :id "deckrules"
    :name "Rules"
+   :image "images/rule-drawntodestiny.svg"
+   :layout base/cardlayout-imageonly
    :cardmap cardmap)))
 
 (func tactics-rulemap<-tactics : base/tactics

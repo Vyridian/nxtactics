@@ -626,10 +626,11 @@
         (ui/stylelist
          styles/style-textarea)
        :data display1)))
+/*
    ranksuit : base/ranksuit :=
     (if : base/ranksuit
      (then
-      (== layout base/cardlayout-imageonly) (empty ui/ui))
+      (== layout base/cardlayout-imageonly) (empty base/ranksuit))
      (then
       (== datatype base/conflict) (empty base/ranksuit))
      (else
@@ -638,6 +639,7 @@
     (uilist<-ranksuit-parent
      ranksuit
      uid)
+*/
    uilist2 : ui/uilist :=
     (switch : ui/uilist
      datatype
@@ -699,7 +701,7 @@
         uidisplay3
         uidisplay4)))))]
   (ui/uilist
-   uilist1
+//   uilist1
    uilist2
    uititle1
    uititle2
@@ -1593,6 +1595,7 @@
       :path "icons")))
  :doc "")
 
+/*
 (func uilist<-ranksuit-parent : ui/uilist
  [ranksuitarg : base/ranksuit
   parent      : string]
@@ -1646,6 +1649,7 @@
      uisuit1
      uisuit2))))
  :doc "")
+*/
 
 (func uimap<-cardmap-parent-page-size : ui/uimap
  [cardmap : base/cardmap
@@ -1654,13 +1658,13 @@
   size    : int]
  (let : ui/uimap
   [uilist : ui/uilist :=
-    (list<-map : ui/uilist
-     cardmap
-     (fn : ui/ui
-      [key  : string
-       card : base/card]
-      (ui<-card-parent
-       card parent)))]
+   (list<-map : ui/uilist
+    cardmap
+    (fn : ui/ui
+     [key  : string
+      card : base/card]
+     (ui<-card-parent
+      card parent)))]
   (ui/uimap<-uilist
    uilist))
  :doc "Returns a uimap given a cardmap")

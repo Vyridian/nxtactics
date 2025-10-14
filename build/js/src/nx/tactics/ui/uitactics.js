@@ -2253,31 +2253,6 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        const ranksuit = vx_core.f_if_2(
-          {"any-1": nx_tactics_base.t_ranksuit},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
-              layout,
-              nx_tactics_base.c_cardlayout_imageonly
-            )}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
-              vx_ui_ui.t_ui
-            )})
-          ),
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
-              datatype,
-              nx_tactics_base.t_conflict
-            )}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
-              nx_tactics_base.t_ranksuit
-            )})
-          ),
-          vx_core.f_else(
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_ranksuit, "struct-2": nx_tactics_base.t_card}, card, ":ranksuit")})
-          )
-        )
-        const uilist1 = nx_tactics_ui_uitactics.f_uilist_from_ranksuit_parent(ranksuit, uid)
         const uilist2 = vx_core.f_switch(
           {"any-1": vx_ui_ui.t_uilist, "any-2": vx_core.t_any},
           datatype,
@@ -2371,7 +2346,7 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        return vx_core.f_new({"any-1": vx_ui_ui.t_uilist}, uilist1, uilist2, uititle1, uititle2, uidisplay)
+        return vx_core.f_new({"any-1": vx_ui_ui.t_uilist}, uilist2, uititle1, uititle2, uidisplay)
       })
     )
     return output
@@ -2704,85 +2679,6 @@ export default class nx_tactics_ui_uitactics {
         )
         return vx_core.f_new({"any-1": vx_ui_ui.t_uilist}, uiimage, uititles, uidetail)
       })
-    )
-    return output
-  }
-
-  /**
-   * @function uilist_from_ranksuit_parent
-   * @param  {ranksuit} ranksuitarg
-   * @param  {string} parent
-   * @return {uilist}
-   */
-  static t_uilist_from_ranksuit_parent = {
-    vx_type: vx_core.t_type
-  }
-  static e_uilist_from_ranksuit_parent = {
-    vx_type: nx_tactics_ui_uitactics.t_uilist_from_ranksuit_parent
-  }
-
-  // (func uilist<-ranksuit-parent)
-  static f_uilist_from_ranksuit_parent(ranksuitarg, parent) {
-    let output = vx_ui_ui.e_uilist
-    output = vx_core.f_if_2(
-      {"any-1": vx_ui_ui.t_uilist},
-      vx_core.f_then(
-        vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_is_empty_1(ranksuitarg)}),
-        vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
-          nx_tactics_base.t_ranksuit
-        )})
-      ),
-      vx_core.f_else(
-        vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_let(
-          {"any-1": vx_ui_ui.t_uilist},
-          [],
-          vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-            const rank = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_rank, "struct-2": nx_tactics_base.t_ranksuit}, ranksuitarg, ":rank")
-            const suit = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_suit, "struct-2": nx_tactics_base.t_ranksuit}, ranksuitarg, ":suit")
-            const labelrank1 = vx_core.f_new({"any-1": vx_core.t_string}, parent, "/rank1")
-            const labelrank2 = vx_core.f_new({"any-1": vx_core.t_string}, parent, "/rank2")
-            const labelsuit1 = vx_core.f_new({"any-1": vx_core.t_string}, parent, "/suit1")
-            const labelsuit2 = vx_core.f_new({"any-1": vx_core.t_string}, parent, "/suit2")
-            const srank = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_rank}, rank, ":titles")
-            const ssuit = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_suit}, suit, ":titles")
-            const uisuit1 = nx_tactics_ui_uitactics.f_ui_suit_from_uid_rank_suit_pos(parent, rank, suit, 1)
-            const uisuit2 = nx_tactics_ui_uitactics.f_ui_suit_from_uid_rank_suit_pos(parent, rank, suit, 2)
-            return vx_core.f_new(
-              {"any-1": vx_ui_ui.t_uilist},
-              vx_core.f_new(
-                {"any-1": vx_ui_ui.t_ui},
-                ":uid",
-                labelrank1,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_rank,
-                ":stylelist",
-                vx_core.f_new(
-                  {"any-1": vx_ui_ui.t_stylelist},
-                  nx_tactics_ui_stylesheet.c_style_text_rank1
-                ),
-                ":data",
-                srank
-              ),
-              vx_core.f_new(
-                {"any-1": vx_ui_ui.t_ui},
-                ":uid",
-                labelrank2,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_rank,
-                ":stylelist",
-                vx_core.f_new(
-                  {"any-1": vx_ui_ui.t_stylelist},
-                  nx_tactics_ui_stylesheet.c_style_text_rank2
-                ),
-                ":data",
-                srank
-              ),
-              uisuit1,
-              uisuit2
-            )
-          })
-        )})
-      )
     )
     return output
   }
@@ -3179,7 +3075,6 @@ export default class nx_tactics_ui_uitactics {
       "uilist<-cardimage-parent": nx_tactics_ui_uitactics.e_uilist_from_cardimage_parent,
       "uilist<-item-parent": nx_tactics_ui_uitactics.e_uilist_from_item_parent,
       "uilist<-place-parent": nx_tactics_ui_uitactics.e_uilist_from_place_parent,
-      "uilist<-ranksuit-parent": nx_tactics_ui_uitactics.e_uilist_from_ranksuit_parent,
       "uilist<-unit-parent": nx_tactics_ui_uitactics.e_uilist_from_unit_parent,
       "uimap<-cardmap-parent-page-size": nx_tactics_ui_uitactics.e_uimap_from_cardmap_parent_page_size
     })
@@ -3238,7 +3133,6 @@ export default class nx_tactics_ui_uitactics {
       "uilist<-cardimage-parent": nx_tactics_ui_uitactics.t_uilist_from_cardimage_parent,
       "uilist<-item-parent": nx_tactics_ui_uitactics.t_uilist_from_item_parent,
       "uilist<-place-parent": nx_tactics_ui_uitactics.t_uilist_from_place_parent,
-      "uilist<-ranksuit-parent": nx_tactics_ui_uitactics.t_uilist_from_ranksuit_parent,
       "uilist<-unit-parent": nx_tactics_ui_uitactics.t_uilist_from_unit_parent,
       "uimap<-cardmap-parent-page-size": nx_tactics_ui_uitactics.t_uimap_from_cardmap_parent_page_size
     })
@@ -4224,24 +4118,6 @@ export default class nx_tactics_ui_uitactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_uitactics.f_uilist_from_place_parent
-    }
-
-    // (func uilist<-ranksuit-parent)
-    nx_tactics_ui_uitactics.t_uilist_from_ranksuit_parent['vx_value'] = {
-      name          : "uilist<-ranksuit-parent",
-      pkgname       : "nx/tactics/ui/uitactics",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_ui_uitactics.f_uilist_from_ranksuit_parent
     }
 
     // (func uilist<-unit-parent)

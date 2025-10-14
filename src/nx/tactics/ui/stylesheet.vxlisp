@@ -162,7 +162,7 @@
 (const style-html : ui/style
  (ui/style
   :name          "html"
-  :styletype     styletype-system
+  :type          styletype-system
   :boundsmargin  (ui/bounds
                   :left   0
                   :right  0
@@ -179,7 +179,7 @@
 (const style-body : ui/style
  (ui/style
   :name          "body"
-  :styletype     styletype-system
+  :type          styletype-system
   :boundsmargin  (ui/bounds
                   :left   0
                   :right  0
@@ -196,7 +196,7 @@
 (const style-div : ui/style
  (ui/style
   :name      "div"
-  :styletype styletype-system
+  :type      styletype-system
   :layout    ui/layout-flow-columns)
  :doc "Returns the style for app ui.")
 
@@ -522,7 +522,6 @@
  (ui/style
   :name "style-clickable"
   :type ui/styletype-shared
-  :styletype styletype-shared
   :cursor ui/cursor-pointer
   :color-bkghover "E0E0E0")
  :doc "Returns the style for clickable class.")
@@ -565,7 +564,7 @@
   :type ui/styletype-shared
   :pointpos point-suit-pos1
   :pointsize point-suit-size
-  :image-background
+  :image-bkg
    (ui/image
     :name "image-coin1"
     :label "Coins"
@@ -582,7 +581,7 @@
   :pointpos point-suit-pos2
   :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
-  :image-background
+  :image-bkg
    (ui/image
     :name "image-coin2"
     :label "Coins"
@@ -598,7 +597,7 @@
   :type ui/styletype-shared
   :pointpos point-suit-pos1
   :pointsize point-suit-size
-  :image-background
+  :image-bkg
    (ui/image
     :name "image-cup1"
     :label "Cups"
@@ -615,7 +614,7 @@
   :pointpos point-suit-pos2
   :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
-  :image-background
+  :image-bkg
    (ui/image
     :name "image-cup2"
     :label "Cups"
@@ -631,7 +630,7 @@
   :type ui/styletype-shared
   :pointpos point-suit-pos1
   :pointsize point-suit-size
-  :image-background image-jester-black)
+  :image-bkg image-jester-black)
  :doc "")
 
 (const style-image-jester-black2 : ui/style
@@ -641,7 +640,7 @@
   :pointpos point-suit-pos2
   :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
-  :image-background image-jester-black)
+  :image-bkg image-jester-black)
  :doc "")
 
 (const style-image-jester-red1 : ui/style
@@ -650,7 +649,7 @@
   :type ui/styletype-shared
   :pointpos point-suit-pos1
   :pointsize point-suit-size
-  :image-background image-jester-red)
+  :image-bkg image-jester-red)
  :doc "")
 
 (const style-image-jester-red2 : ui/style
@@ -660,7 +659,7 @@
   :pointpos point-suit-pos2
   :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
-  :image-background image-jester-red)
+  :image-bkg image-jester-red)
  :doc "")
 
 (const style-image-sword1 : ui/style
@@ -669,7 +668,7 @@
   :type ui/styletype-shared
   :pointpos point-suit-pos1
   :pointsize point-suit-size
-  :image-background
+  :image-bkg
    (ui/image
     :name "image-sword1"
     :label "Swords"
@@ -686,7 +685,7 @@
   :pointpos point-suit-pos2
   :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
-  :image-background
+  :image-bkg
    (ui/image
     :name "image-sword2"
     :label "Swords"
@@ -702,7 +701,7 @@
   :type ui/styletype-shared
   :pointpos point-suit-pos1
   :pointsize point-suit-size
-  :image-background
+  :image-bkg
    (ui/image
     :name "image-wand1"
     :label "Wands"
@@ -719,7 +718,7 @@
   :pointpos point-suit-pos2
   :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
-  :image-background
+  :image-bkg
    (ui/image
     :name "image-wand1"
     :label "Wands"

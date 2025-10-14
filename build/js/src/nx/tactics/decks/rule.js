@@ -34,7 +34,19 @@ export default class nx_tactics_decks_rule {
           )
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
-        return vx_core.f_new({"any-1": nx_tactics_base.t_deck}, ":id", "deckrules", ":name", "Rules", ":cardmap", cardmap)
+        return vx_core.f_new(
+          {"any-1": nx_tactics_base.t_deck},
+          ":id",
+          "deckrules",
+          ":name",
+          "Rules",
+          ":image",
+          "images/rule-drawntodestiny.svg",
+          ":layout",
+          nx_tactics_base.c_cardlayout_imageonly,
+          ":cardmap",
+          cardmap
+        )
       })
     )
     return output
