@@ -194,6 +194,7 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "Blind represents the inability to see\nPartial - Disadvantage at Range\nTotal - Cannot use Abilities at Range"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Block", ":summary", "* Overkill - Common Blocks still take Weapon Damage\n* Crit:Location - IF Location is needed THEN Blocker chooses a Location and draw until one meets the choice."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -385,7 +386,6 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "Constriction represents squeezing pressure. Add this to related Damage\nMinor - Squeeze\nMajor - Compress. Impaired\nCritical - Crush. Fatigue:1 Impaired\nExtreme - Collapse. Fatigue:2 Immobilized\n* Arm, Leg, Hand, Foot - Useless. Broken\n* Head, Chest, Abdomen - Choking:3 Dying\nDamage - Each Damage dealt to Constrictor reduces Severity by 1\nEscape - IF out of Constrictor reach"
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Cover", ":summary", "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.\n* If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Skill:-1.\n** 50% Cover: Skill:-2.\n** 75% Cover: Skill:-3.\n** 100% Cover: Skill:-4.\n* If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Conflict]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item:Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",

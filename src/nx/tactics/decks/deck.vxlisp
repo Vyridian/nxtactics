@@ -6,11 +6,8 @@
        (lib disorder       :path nx/tactics/decks/disorder)
        (lib reference      :path nx/tactics/decks/reference)
        (lib rule           :path nx/tactics/decks/rule)
-       (lib murintrail     :path nx/tactics/decks/scene-murintrail)
-       (lib nightonthetown :path nx/tactics/decks/scene-nightonthetown)
-       (lib ontherun       :path nx/tactics/decks/scene-ontherun)
        (lib restrain       :path nx/tactics/decks/restrain)
-       (lib scene-starter  :path nx/tactics/decks/scene-starter)
+       (lib scene          :path nx/tactics/decks/scene)
        (lib starter        :path nx/tactics/decks/starter)
        (lib trauma         :path nx/tactics/decks/trauma)
        (lib vehicle        :path nx/tactics/decks/vehicle)
@@ -142,15 +139,16 @@
 
 (func deck-scenes : base/deck
  [tactics : base/tactics]
- (base/deck
-  :name "Scenes"
-  :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist
-     (scene-starter/deck-starter tactics)
-     (murintrail/deck-murintrail tactics)
-     (nightonthetown/deck-nightonthetown tactics)
-     (ontherun/deck-ontherun tactics)))))
+ (let : base/deck
+  [scenemap : base/scenemap :=
+   (:scenemap data/tactics-all)
+   cardmap : base/cardmap :=
+    (map<-map : base/cardmap
+     scenemap)]
+  (base/deck
+   :name "Scenes"
+   :cardmap cardmap))
+ :doc "Scenes Deck")
 
 (func deck-skills : base/deck
  [tactics : base/tactics]

@@ -4,6 +4,12 @@ import nx_tactics_decks_scene from "../../../../src/nx/tactics/decks/scene.js"
 import vx_core from "../../../../src/vx/core.js"
 import vx_test from "../../../../src/vx/test.js"
 import nx_tactics_base from "../../../../src/nx/tactics/base.js"
+import nx_tactics_decks_scene_murintrail from "../../../../src/nx/tactics/decks/scene-murintrail.js"
+import nx_tactics_decks_scene_nightonthetown from "../../../../src/nx/tactics/decks/scene-nightonthetown.js"
+import nx_tactics_decks_scene_ontherun from "../../../../src/nx/tactics/decks/scene-ontherun.js"
+import nx_tactics_decks_scene_starter from "../../../../src/nx/tactics/decks/scene-starter.js"
+import nx_tactics_ui_stylesheet from "../../../../src/nx/tactics/ui/stylesheet.js"
+import vx_ui_ui from "../../../../src/vx/ui/ui.js"
 
 export default class nx_tactics_decks_scene_test {
 
@@ -25,11 +31,11 @@ export default class nx_tactics_decks_scene_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/scene", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 2, ":total", 2), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 2), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 66, ":tests", 2, ":total", 3), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 2), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -50,6 +56,7 @@ export default class nx_tactics_decks_scene_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
+          "cardlayout-connector<-pos-color", 0,
           "scenemap-tactics", 0,
           "tactics-scenemap<-tactics", 0
         )

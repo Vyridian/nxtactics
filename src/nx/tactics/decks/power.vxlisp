@@ -46,15 +46,15 @@
     "Alchemist, Apothecary, Brewer, Chemist, Concocter, Drug Merchant, Libationist, Potioner, Snake Oil Salesman, Witcher"
    :abilitymap
     (base/abilitymap
-     "Animate Colossus"
+     "Animate:Colossus"
       (base/ability
-       :name "Animate Colossus")
-     "Animate Homunculus"
+       :name "Animate:Colossus")
+     "Animate:Homunculus"
       (base/ability
-       :name "Animate Homunculus")
-     "Animate Statue"
+       :name "Animate:Homunculus")
+     "Animate:Statue"
       (base/ability
-       :name "Animate Statue"
+       :name "Animate:Statue"
        :reference
         "* Terra Cotta Warriors
          * Kali - The Golden Voyage of Sinbad")
@@ -63,23 +63,41 @@
        :name "Ashes to Ashes"
        :summary
         "* Force a substance to age as if hundreds of years had passed.  Stone wears to powder, wood turns to ashes, metal corrodes, colors fade.")
+     "Craft:Alchemical Substance"
+      (base/ability
+       :name "Craft:Alchemical Substance"
+       :summary
+        "* Each substance requires a separate ability to be taken.
+         * See Equipment / Alchemical Substances")
+     "Craft:Medicine"
+      (base/ability
+       :name "Craft:Medicine"
+       :summary
+        "* Each medicine requires a separate ability to be taken.
+         * See Equipment / Medicines")
+     "Craft:Powder"
+      (base/ability
+       :name "Craft:Powder"
+       :summary
+        "* Each powder requires a separate ability to be taken.
+         * See Equipment / Powders")
      "Exract Rare Earths"
       (base/ability
        :name "Exract Rare Earths"
        :summary
         "* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the innate powers of other ingredients.
-         * To those without Alchemical skill, they are indistinguishable from normal soil or sand.  An Alchemist, however, may tell the difference and may extract [Hits] drams of Rare Earths from any soil in an hour.")
-     "Forge Orichalcum"
+         * To those without Alchemical skill, they are indistinguishable from normal soil or sand. An Alchemist, however, may tell the difference and may extract [Hits] drams of Rare Earths from any soil in an hour.")
+     "Forge:Orichalcum"
       (base/ability
-       :name "Forge Orichalcum"
+       :name "Forge:Orichalcum"
        :summary "* See Equipment / Metals / Orichalcum")
-     "Forge Rebis"
+     "Forge:Rebis"
       (base/ability
-       :name "Forge Rebis"
+       :name "Forge:Rebis"
        :summary
         "* The Rebis (from the Latin res bina, meaning dual or double matter) is the end product of the alchemical magnum opus or great work.
          * After one has gone through the stages of putrefaction and purification, separating opposing qualities, those qualities are united once more in what is sometimes described as the divine hermaphrodite, a reconciliation of spirit and matter, a being of both male and female qualities as indicated by the male and female head within a single body. The sun and moon correspond to the male and female halves, just as the Red King and White Queen are similarly associated.")
-     :Imbue
+     "Imbue"
       (base/ability
        :name "Imbue")
      "Magnum Opus"
@@ -94,24 +112,6 @@
          ** Albedo - The whitening or leucosis is the perfect purification. The material is further processed removing all blackness until only pure white remains. Then it is said that life has conquered death, that the king has been revived. When one has purified his awareness of Self, during meditation, by eliminating thoughts, or otherwise, then at a certain point, light appears. The light that appears is also metaphoric for an absolute clear, pure awareness of Self. In that state one is in a very fixed position, that is, very stable, very much in the here and now, in total clarity of Self. In Whiteness, the material has attained a degree of Fixedness that fire cannot destroy.
          ** Rubedo - The reddening, purpling, or iosis. When the White stone or the White Elixir has been made, it needs to purified further, sublimated, until the material becomes totally Fixed and is completely stable. Then we have the Red Sulfur, the red stone, the Red Elixir, the Stone of the Wise. When the divine light has emerged during meditation, one needs to make it last. this demands a continued effort of holding one's attention to this pure awareness, not only for the length of the meditation session, but also during every day life. At a certain point the pure awareness of one's divine self will be permanent."
        :titles "The Great Work")
-     "Prepare Alchemical Substance"
-      (base/ability
-       :name "Prepare Alchemical Substance"
-       :summary
-        "* Each substance requires a separate ability to be taken.
-         * See Equipment / Alchemical Substances")
-     "Prepare Medicine"
-      (base/ability
-       :name "Prepare Medicine"
-       :summary
-        "* Each medicine requires a separate ability to be taken.
-         * See Equipment / Medicines")
-     "Prepare Powder"
-      (base/ability
-       :name "Prepare Powder"
-       :summary
-        "* Each powder requires a separate ability to be taken.
-         * See Equipment / Powders")
      "Transmute State"
       (base/ability
        :name "Transmute State"
@@ -201,7 +201,7 @@
        :name "Giant Animal"
        :summary
         "* [Power]: [Animalism]")
-     :Infestation
+     "Infestation"
       (base/ability
        :name "Infestation"
        :summary
@@ -397,7 +397,8 @@
      "Aim of Sagittarius"
       (base/ability
        :name "Aim of Sagittarius"
-       :summary "* [Action]: Target gains [Synergy] for the next ranged [Attack].")
+       :summary
+        "* [Action]: Target gains [Synergy] for the next ranged [Attack].")
      "Astral Projection"
       (base/ability
        :name "Astral Projection"
@@ -436,12 +437,12 @@
        :reference
         "* Aquarius is not a water sign. It's an air sign. The mix up often comes about from Aquarius' overarching symbol, the water-bearer."
        :summary
-        "* [Action]: Remove X [Poison], [Disease], or [Corruption] cards from the target.")
+        "* [Action]: Remove X [Poisoned], [Diseased], or [Corrupted] cards from the target.")
      "Courage of Leo"
       (base/ability
        :name "Courage of Leo"
        :summary "* [Action]: Remove X [Retreat] tokens from all target in range.")
-     :Daybreak
+     "Daybreak"
       (base/ability
        :name "Daybreak"
        :summary
@@ -467,7 +468,7 @@
       (base/ability
        :name "Duality of Gemini"
        :summary "* [Action]: Take on a different personality with different mannerisms. This can be the basis for a very convincing disguise.")
-     :Eclipse
+     "Eclipse"
       (base/ability
        :name "Eclipse"
        :summary
@@ -489,12 +490,17 @@
      "Meteor Shower"
       (base/ability
        :name "Meteor Shower"
-       :summary "* [Extended Action]: Call meteors"
-       :titles "Starfall")
+       :titles "Starfall"
+       :summary
+        "* [Extended Action]: Call meteors")
      "Moon Bridge"
+      (base/ability<-tactics-key tactics "Moon Bridge")
+     "Moon Stride"
       (base/ability
-       :name "Moon Bridge"
-       :summary "* Opens a bridge to the Ethereal version of the Moon.")
+       :name "Moon Stride"
+       :titles "Moonwalk"
+       :summary
+        "* Move rapidly under moonlight.")
      "New Moon"
       (base/ability
        :name "New Moon")
@@ -504,25 +510,29 @@
      "Secrets of Scorpio"
       (base/ability
        :name "Secrets of Scorpio"
-       :summary "* [Extended Action]: Learn a secret about a subject.")
+       :summary
+        "* [Extended Action]: Learn a secret about a subject.")
      "Star of Ill Omen"
       (base/ability
        :name "Star of Ill Omen")
-     :Stargazing
+     "Stargazing"
       (base/ability
        :name "Stargazing")
-     :Starsight
+     "Starsight"
       (base/ability
        :name "Starsight"
-       :summary "* See clearly at night while under the stars.")
+       :summary
+        "* See clearly at night while under the stars.")
      "Steadiness of Capricorn"
       (base/ability
        :name "Steadiness of Capricorn"
-       :summary "* [Action]: Target gains [Synergy] for the next physical, non-attack [Action].")
-     :Sunlight
+       :summary
+        "* [Action]: Target gains [Synergy] for the next physical, non-attack [Action].")
+     "Sunlight"
       (base/ability
        :name "Sunlight"
-       :summary "* [Action]: Cause a light the unit holds to become bright sunlight. The light produces warmth like a campfire and will cause damage to creatures harmed by sunlight.")
+       :summary
+        "* [Action]: Cause a light the unit holds to become bright sunlight. The light produces warmth like a campfire and will cause damage to creatures harmed by sunlight.")
      "Waning Moon"
       (base/ability
        :name "Waning Moon")
@@ -532,11 +542,13 @@
      "Will of Taurus"
       (base/ability
        :name "Will of Taurus"
-       :summary "* [Action]: Targets ignore all attack penalties for the duration of this ability.")
+       :summary
+        "* [Action]: Targets ignore all attack penalties for the duration of this ability.")
      "Written in the Stars"
       (base/ability
        :name "Written in the Stars"
-       :summary "* [Action]: Foresee a random event that will happen in [Time] level.")))
+       :summary
+        "* [Action]: Foresee a random event that will happen in [Time] level.")))
   (base/power
    :name "Beastial"
    :titles "Shapeshifter"
@@ -569,6 +581,7 @@
      "Gills"
      "Hawk Eye"
      "Hawk Form"
+     "Hibernate"
      "Horns"
      "Jaw Lock"
      "Jaws of Death"
@@ -628,18 +641,21 @@
      "Blood Bath"
       (base/ability
        :name "Blood Bath"
-       :summary "* Bathe in the blood of of the young and healthy. Gain [Vampiric Blood] (even if not a [Vampire]) equal to the number of victims drained up to [Blood Magic].")
+       :summary
+        "* Bathe in the blood of of the young and healthy. Gain [Vampiric Blood] (even if not a [Vampire]) equal to the number of victims drained up to [Blood Magic].")
      "Blood Bind"
       (base/ability
        :name "Blood Bind")
      "Blood Blade"
       (base/ability
        :name "Blood Blade"
-       :summary "* Create a sword, knife, or axe from blood. Blood Weapons always cause [Bleeding].")
+       :summary
+        "* Create a sword, knife, or axe from blood. Blood Weapons always cause [Bleeding].")
      "Blood Borne"
       (base/ability
        :name "Blood Borne"
-       :summary "* Target: [Bleeding]. Apply [Sickness] to a [Bleeding] target.")
+       :summary
+        "* Target: [Bleeding]. Apply [Sickness] to a [Bleeding] target.")
      "Blood Brother"
       (base/ability
        :name "Blood Brother")
@@ -649,33 +665,37 @@
      "Blood Lust"
       (base/ability
        :name "Blood Lust"
-       :summary "* Action: +1 [Attack] and +1 [Damage], take -1 [Body]"
-       :titles "Blood Rage")
+       :titles "Blood Rage"
+       :summary
+        "* Action: +1 [Attack] and +1 [Damage], take -1 [Body]")
      "Blood Oath"
       (base/ability
        :name "Blood Oath")
      "Blood Spear"
       (base/ability
        :name "Blood Spear"
-       :summary "* Create a spear or javelin from blood. Blood Weapons always cause [Bleeding].")
+       :summary
+        "* Create a spear or javelin from blood. Blood Weapons always cause [Bleeding].")
      "Blood Whip"
       (base/ability
        :name "Blood Whip"
-       :summary "* Create a whip or rope from blood. Blood Weapons always cause [Bleeding].")
+       :summary
+        "* Create a whip or rope from blood. Blood Weapons always cause [Bleeding].")
      "Boil Blood"
       (base/ability
        :name "Boil Blood"
-       :summary "* Touch, Fire Attack, Criticals are only Damage.")
+       :summary
+        "* Touch, Fire Attack, Criticals are only Damage.")
      "Call for Blood"
       (base/ability
        :name "Call for Blood")
-     :Hecatomb
+     "Hecatomb"
       (base/ability
        :name "Hecatomb"
        :reference
         "* In ancient Greece or Rome, a great public sacrifice, originally of a hundred oxen.
          * An extensive loss of life for some cause.")
-     :Lifeblood
+     "Lifeblood"
       (base/ability
        :name "Lifeblood"
        :summary
@@ -701,25 +721,27 @@
    :stat "Shadow"
    :abilitymap
     (base/abilitymap
-     :Anarchy
+     "Anarchy"
       (base/ability
        :name "Anarchy")
-     :Bedlam
+     "Bedlam"
       (base/ability
        :name "Bedlam")
-     :Breakdown
+     "Breakdown"
       (base/ability
        :name "Breakdown"
        :summary "* Causes machinery to fail.  The more complex the device the more dramatic the failure.")
-     :Deconstruct
+     "Deconstruct"
       (base/ability
        :name "Deconstruct"
-       :reference "* People and planets and stars will become...dust...and the dust will become atoms...and the atoms will become...nothing. - Davros, Doctor Who"
-       :summary "* Break apart an object into simpler pieces. Each successive use breaks down an object further. E.g. Wheel -> Tire -> Rubber -> Chemicals -> Atoms -> Particles")
+       :reference
+        "* People and planets and stars will become...dust...and the dust will become atoms...and the atoms will become...nothing. - Davros, Doctor Who"
+       :summary
+        "* Break apart an object into simpler pieces. Each successive use breaks down an object further. E.g. Wheel -> Tire -> Rubber -> Chemicals -> Atoms -> Particles")
      "Manipulate Luck"
       (base/ability
        :name "Manipulate Luck")
-     :Pandemonium
+     "Pandemonium"
       (base/ability
        :name "Pandemonium")
      "Sea of Chaos"
@@ -734,11 +756,13 @@
      "Wild Ride"
       (base/ability
        :name "Wild Ride"
-       :summary "* Allow the whims of fate to carry you to a destination of their choosing.")
-     :Unravelling
+       :summary
+        "* Allow the whims of fate to carry you to a destination of their choosing.")
+     "Unravelling"
       (base/ability
        :name "Unravelling"
-       :summary "* Knots untie, locks unfasten, etc.")
+       :summary
+        "* Knots untie, locks unfasten, etc.")
      "Winds of Change"
       (base/ability
        :name "Winds of Change")))
@@ -746,10 +770,10 @@
    :name "Chronomancy"
    :abilitymap
     (base/abilitymap
-     :Delay
+     "Delay"
       (base/ability
        :name "Delay")
-     :Predestined
+     "Predestined"
       (base/ability
        :name "Predestined"
        :reference
@@ -825,13 +849,9 @@
      * Limitations - Creation magic is exceedingly difficult with only relatively minor creations possible. The process of Conjuration is different from natural things, so all Conjured things have some imperfection or mark that distinquishes itself from a natural thing.
      * Concidental - Conjuring in ways that appear like the object was already there is [Coincidental Magic]. E.g. Drawing an illusionary sword from a real scabbard."
    :abilitymap
-    (base/abilitymap
-     "Conjure Weapon"
-      (base/ability
-       :name "Conjure Weapon"
-       :summary
-        "* Conjure a weapon out of thin air.
-         * [Limited]: By the user's skill in the weapon created.")))
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Conjure Weapon"))
   (base/power
    :name "Conviction"
    :reference
@@ -1026,6 +1046,7 @@
      tactics
      "Ice Flow"
      "Ice Riding"
+     "Icy Grip"
      "Icy Stare"))
   (base/power
    :name "Darkness"
@@ -1111,12 +1132,20 @@
        :name "Clairvoyance"
        :summary
         "* [Power]: [Divination]")
+     "Delve into the Past"
+      (base/ability<-tactics-key tactics "Delve into the Past")
      "Dowsing"
       (base/ability
        :name "Dowsing"
        :summary
         "* Through the use of a divining rod the user may detect desired items hidden underground below them.
          * [Power]: [Divination]")
+     "Foresight"
+      (base/ability
+       :name "Foresight"
+       :summary
+        "* [Power]: [Divination]
+         * Foresight is a passive form of extra-sensory perception whereby a person spontaneously perceives information, in the form of vision, about future events before they happen. It is distinguished from [Precognition] in that it is passive.")
      "Fortune Telling"
       (base/ability
        :name "Fortune Telling"
@@ -1135,7 +1164,9 @@
          * [Power]: [Divination]")
      "Kismet"
       (base/ability
-       :name "Kismet")
+       :name "Kismet"
+       :summary
+        "* [Power]: [Divination]")
      "Mirror of Truth"
       (base/ability
        :name "Mirror of Truth"
@@ -1143,38 +1174,40 @@
         "* Enchant a reflective surface to show the true nature of the reflected scene.
          * [Power]: [Divination]
          * This reveals illusions, hidden things, and can even reveal the nature of those concealing terrible secrets.")
-     :Portent
+     "Portent"
       (base/ability
        :name "Portent"
+       :titles "Omen"
        :summary
-        "* Determine if a chosen course of action will tend to be beneficial to the user or not. How it might be beneficial is not known."
-       :titles "Omen")
-     :Postcognition
+        "* Determine if a chosen course of action will tend to be beneficial to the user or not. How it might be beneficial is not known.
+         * [Power]: [Divination]")
+     "Postcognition"
       (base/ability
        :name "Postcognition"
        :summary
-        "* [Power]: [Divination]")
-     :Precognition
+        "* See the past
+         * [Power]: [Divination]")
+     "Precognition"
       (base/ability
        :name "Precognition"
        :summary
         "* [Power]: [Divination]")
-     :Prediction
+     "Prediction"
       (base/ability
        :name "Prediction"
        :summary
         "* [Power]: [Divination]")
-     :Premonition
+     "Premonition"
       (base/ability
        :name "Premonition"
        :summary
         "* [Power]: [Divination]")
-     :Prophesy
+     "Prophesy"
       (base/ability
        :name "Prophesy"
        :summary
         "* [Power]: [Divination]")
-     :Providence
+     "Providence"
       (base/ability
        :name "Providence"
        :summary
@@ -1185,21 +1218,21 @@
        :name "Revelation"
        :summary
         "* [Power]: [Divination]")
-     "Foresight"
-      (base/ability
-       :name "Foresight"
-       :summary
-        "* [Power]: [Divination]
-         * Foresight is a passive form of extra-sensory perception whereby a person spontaneously perceives information, in the form of vision, about future events before they happen. It is distinguished from [Precognition] in that it is passive.")
      "Twist of Fate"
       (base/ability
-       :name "Twist of Fate")
+       :name "Twist of Fate"
+       :summary
+        "* [Power]: [Divination]")
      "Visions"
       (base/ability
-       :name "Visions")
+       :name "Visions"
+       :summary
+        "* [Power]: [Divination]")
      "Wyrding"
       (base/ability
-       :name "Wyrding"))
+       :name "Wyrding"
+       :summary
+        "* [Power]: [Divination]"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -1289,12 +1322,12 @@
     (base/abilitymap
      "Barren Loins"
       (base/ability<-tactics-key tactics "Barren Loins")
-     "Craft Incense"
+     "Craft:Incense"
       (base/ability
-       :name "Craft Incense")
-     "Craft Perfume"
+       :name "Craft:Incense")
+     "Craft:Perfume"
       (base/ability
-       :name "Craft Perfume")
+       :name "Craft:Perfume")
      "Death Ward"
       (base/ability
        :name "Death Ward"
@@ -1339,55 +1372,58 @@
      "Nature Ward"
       (base/ability
        :name "Nature Ward"
-       :summary "* Provides increased defense against Animals, and weather.")
-     :Palsy
+       :summary
+        "* Provides increased defense against Animals, and weather.")
+     "Palsy"
       (base/ability
        :name "Palsy"
-       :summary "* Reduces Move")
-     :Pox
+       :summary
+        "* Reduces Move")
+     "Pox"
       (base/ability
        :name "Pox"
-       :summary "* Reduces Social Skills")
+       :summary
+        "* Reduces Social Skills")
      "Rule of Three"
       (base/ability
        :name "Rule of Three"
-       :reference "* Ever mind the Rule of Three, three times what thou givest returns to thee, this lesson well, thou must learn, thee only gets what thou dost earn."
-       :summary "* Whatever energy a person puts out into the world, be it positive or negative, will be returned to that person three times.")
-     :Safekeep
+       :reference
+        "* Ever mind the Rule of Three, three times what thou givest returns to thee, this lesson well, thou must learn, thee only gets what thou dost earn."
+       :summary
+        "* Whatever energy a person puts out into the world, be it positive or negative, will be returned to that person three times.")
+     "Safekeep"
       (base/ability
        :name "Safekeep"
-       :summary "* [Action]: Enchant an item to prevent loss or theft. Any effect that would remove, loose, or damage the item must roll vs. Safekeep or fail in addition to any other checks.")
-     :Slow
-      (base/ability
-       :name "Slow"
        :summary
-        "* [Effect]: -1 Move
-         * [Target]: [Area]
-         * [Duration]: [Hits]")
+        "* [Action]: Enchant an item to prevent loss or theft. Any effect that would remove, loose, or damage the item must roll vs. Safekeep or fail in addition to any other checks.")
      "Spirit Ward"
       (base/ability
        :name "Spirit Ward"
-       :summary "* Provides increased defense against spirit beings and attack against [Will].")
+       :summary
+        "* Provides increased defense against spirit beings and attack against [Will].")
      "Stone Ward"
       (base/ability
        :name "Stone Ward"
-       :summary "* Provides increased defense against predominately stone weapons.")
+       :summary
+        "* Provides increased defense against predominately stone weapons.")
      "Warding Sign"
       (base/ability<-tactics-key tactics "Warding Sign")
      :Weaken
       (base/ability
        :name "Weaken"
-       :summary "* Reduces Body")
+       :summary
+        "* Reduces Body")
      "Wood Ward"
       (base/ability
        :name "Wood Ward"
-       :summary "* Provides increased defense against predominately wooden weapons.")))
+       :summary
+        "* Provides increased defense against predominately wooden weapons.")))
   (base/power
    :name "Fleshcraft"
+   :titles "Bio-Alchemy, Flesh Molder, Sadist"
    :summary
     "* This mastery of the flesh defies traditional life and death. Body parts may be removed, reattched, molded to create abominations or fiendish beauty.
      * Stats may be rearranged depending on the success roll. Only magical healing will repair."
-   :titles "Flesh Molder, Sadist"
    :stat "Shadow"
    :abilitymap
     (base/abilitymap
@@ -1407,11 +1443,13 @@
       (base/ability
        :name "Grafting"
        :reference "Frankenstein's Monster"
-       :summary "* Separate living organs from their host and graft them to another.")
+       :summary
+        "* Separate living organs from their host and graft them to another.")
      "Hybridize"
       (base/ability
        :name "Hybridize"
-       :summary "* Create new lifeforms by growing hybridized cells.")
+       :summary
+        "* Create new lifeforms by growing hybridized cells.")
      "Pain"
       (base/ability
        :name "Pain"
@@ -1457,8 +1495,10 @@
      "Breath of Life"
       (base/ability
        :name "Breath of Life"
-       :summary "* Create an [Animated] creature."
-       :titles "Cursed Corpse")
+       :titles "Cursed Corpse"
+       :summary
+        "* Create an [Animated] creature.
+         * [Power]: [Hexcraft]")
      "Cursed Sight"
       (base/ability
        :name "Cursed Sight"
@@ -1930,6 +1970,8 @@
    :stat "Shadow"
    :abilitymap
     (base/abilitymap
+     "Bone Chill"
+      (base/ability<-tactics-key tactics "Bone Chill")
      "Bone Harvest"
       (base/ability
        :name "Bone Harvest")
@@ -2978,6 +3020,8 @@
       (base/ability
        :name "Ice Storm"
        :titles "Hail Storm")
+     "Icy Grip"
+      (base/ability<-tactics-key tactics "Icy Grip")
      "Icy Prison"
       (base/ability
        :name "Icy Prison")
@@ -3223,10 +3267,12 @@
     "* I reject your reality and substitute my own. - Adam Savage, Mythbusters"
    :abilitymap
     (base/abilitymap
+     "Blur"
+      (base/ability<-tactics-key tactics "Blur")
+     "Dimension Door"
+      (base/ability<-tactics-key tactics "Dimension Door")
      "Dimension Drop"
-      (base/ability
-       :name "Dimension Drop"
-       :summary "* Send a small object through a dimensional portal and immediately close it again. This is most practical for sending messages or explosives.")
+      (base/ability<-tactics-key tactics "Dimension Drop")
      "Dimensional Interference"
       (base/ability
        :name "Dimensional Interference"
@@ -4331,6 +4377,8 @@
    :titles "Illusionist"
    :abilitymap
     (base/abilitymap
+     "Blur"
+      (base/ability<-tactics-key tactics "Blur")
      "Conjure Effigy"
       (base/ability
        :name "Conjure Effigy"
@@ -6023,6 +6071,12 @@
    :name "Transmutation"
    :titles
     "Atomic Control, Molecular Control, Petrifier, Polymorpher, Reality Warper, Shaper, Transmuter"
+   :reference
+    "* Basilisk
+     * Medusa
+     * Molecule Man
+     * Phaser
+     * Reality Stone/Gem"
    :summary
     "* The ability to transform things into other things
      * Note: Ranged Transmutation can be reflected by mirrors"
@@ -6048,35 +6102,35 @@
    :stat "Beast"
    :abilitymap
     (base/abilitymap
-     "Vampire: 15th Generation"
+     "Vampire:Gen15"
       (base/ability
-       :name "Vampire: 15th Generation"
+       :name "Vampire:Gen15"
        :titles "Stray")
-     "Vampire: 14th Generation"
+     "Vampire:14th Generation"
       (base/ability
-       :name "Vampire: 14th Generation"
+       :name "Vampire:14th Generation"
        :summary "* The last generation is known as thin-blooded vampires and start with only basic Vampiric powers. During the Dark Ages the Thirteenth Generation was believed to be the last, but in the Final Nights this is comprised of the 14th and 15th Generations."
        :titles "Thin Blood")
-     "Vampire: 13th Generation"
+     "Vampire:13th Generation"
       (base/ability
-       :name "Vampire: 13th Generation")
-     "Vampire: 12th Generation"
+       :name "Vampire:13th Generation")
+     "Vampire:12th Generation"
       (base/ability
-       :name "Vampire: 12th Generation"
+       :name "Vampire:12th Generation"
        :summary "* Although they lack the powers of the lower generations, the vampires of the 12th and 13th generations stand above men, capable of besting the strongest mortal knight in battle and wielding influence over barons, merchants and courts.")
      "Vampire: 11th Generation"
       (base/ability
-       :name "Vampire: 11th Generation")
-     "Vampire: 10th Generation"
+       :name "Vampire:11th Generation")
+     "Vampire:10th Generation"
       (base/ability
-       :name "Vampire: 10th Generation"
+       :name "Vampire:10th Generation"
        :summary "* While they are comparatively young, most vampires created within the last few centuries belong to the tenth and eleventh generation.")
-     "Vampire: 9th Generation"
+     "Vampire:9th Gen"
       (base/ability
-       :name "Vampire: 9th Generation")
-     "Vampire: 8th Generation"
+       :name "Vampire:9th Gen")
+     "Vampire: 8th Gen"
       (base/ability
-       :name "Vampire: 8th Generation"
+       :name "Vampire:8th Gen"
        :summary "* Achieving a delicate balance between age and generation, these vampires are the most visible ones of the 14th century. They are nowhere near as old as most Cainites of lower generation, which places them in a delicate position. Most Cainites of eighth and ninth generation overcome this disadvantage by siring large covens of childer.")
      "Vampire: 7th Generation"
       (base/ability
@@ -6138,7 +6192,7 @@
        :name "Embrace"
        :reference "* It was magical. The surrender. The exquisite suicide of giving in ... words cannot encompass that experience ... I asked him ... 'What gives you the right?' ... My question had struck no chord of mercy ... Rather, I believe he wanted me to become as he was and see for myself what gave him the right - what gives all of our kind the right."
        :summary "* Sire - When a Vampire creates a another the creator is called its Sire.")
-     :Torpor
+     "Torpor"
       (base/ability
        :name "Torpor"
        :summary
@@ -6730,23 +6784,46 @@
      tactics
      "1-Handed"
      "2-Handed"
+     "Anti-Personnel"
+     "Ammo:6"
+     "Armor Piercing"
      "Arc:1-Side"
      "Arc:Front"
      "Autofire"
      "Bash"
      "Blast"
+     "Bombardment"
      "Burstfire"
+     "Capacitors"
+     "Chemical Rounds"
      "Close Weapon"
+     "Electroshock"
+     "Explosive Rounds"
+     "Extra Ammo"
      "Firearm Weapon"
+     "Flash Surpressor"
+     "Gun Mount"
      "Gunnery Weapon"
+     "Gyrojet Rounds"
      "Hack"
      "High-Explosive"
      "Melee Weapon"
+     "Non-Lethal Rounds"
+     "Overcharge"
+     "Overload Weapon"
+     "Paint Rounds"
      "Pierce"
      "Ranged Weapon"
+     "Rechargable"
+     "Recoil Compensator"
      "Scatter"
+     "Silencer"
      "Slash"
+     "Smoke Rounds"
+     "Targeting Laser"
+     "Telescopic Sight"
      "Tracer Rounds"
+     "Tracking Rounds"
      "Turret"))
   (base/power
    :name "Wealth")

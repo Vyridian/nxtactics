@@ -9,6 +9,7 @@
   :chaptermap
    (base/chaptermap<-chapterlist
     (chapter_age_of_steam_overview tactics)
+    (chapter_age_of_steam_scenes tactics)
     (chapter_age_of_steam_equipment tactics)
     (chapter_steam_age_maps tactics)
     (chapter_civil_war tactics)
@@ -54,7 +55,17 @@
         * Small Ships
         * Solid Shot
         * Burning Shot
+
         * Chain Shot"))))
+
+(func chapter_age_of_steam_scenes : base/chapter
+ [tactics : base/tactics]
+ (base/chapter
+  :name "Age of Steam Scenes"
+  :sectionmap
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Age of Steam Weaponry"))))
 
 (func chapter_age_of_steam_equipment : base/chapter
  [tactics : base/tactics]
@@ -66,39 +77,24 @@
      :name "Age of Steam Weaponry"
      :itemmap
       (base/itemmap
-       ".45 Colt Peacemaker"
+       "Pistol:.45 Colt 1873"
+        (base/item<-tactics-key tactics "Pistol:.45 Colt 1873")
+       "Pistol:.45 S&W 1869"
+        (base/item<-tactics-key tactics "Pistol:.45 S&W 1869")
+       "Pistol:.41 Derringer"
         (base/item
-         :name ".45 Colt Peacemaker"
-         :image "images/age-of-steam/Colt1873.jpg"
-         :reference
-          "US Army issue from 1873-1892 and used by other notables like Wyatt Earp and Bat Masterson. Wyatt Earp's fictional Colt Buntline was supposed to be a long barrel version of the Colt Peacemaker."
-         :summary "Single action, revolver"
-         :classification "Pistol"
-         :range "30m"
-         :rounds "6")
-       ".45 Smith & Wesson Schofield"
-        (base/item
-         :name ".45 Smith & Wesson Schofield"
-         :image "images/age-of-steam/Schofield1869.jpg"
-         :reference
-          "Just meat and potatoes.  Me and Jesse James think it's the best handgun in the world. - Kid, The Quick and the Dead."
-         :summary "Single action, revolver"
-         :classification "Pistol"
-         :range "30m"
-         :rounds "6")
-       ".41 Remington Derringer"
-        (base/item
-         :name ".41 Remington Derringer"
+         :name ".41 Remington"
          :image "images/age-of-steam/Derringer.jpg"
+         :titles "Derringer"
          :reference
           "The classic Remington design is still popular; a Remington pattern derringer in .38 Special is still smaller than the most compact .25 ACP semiautomatic, and provides far superior terminal ballistic performance in its two shots than the .25 ACP does with six or seven."
          :summary "Rimfire, single action"
          :classification "Pistol"
          :range "16m"
          :rounds "2")
-       ".44 Winchester Model 1873"
+       "Rifle:.44 Winchester 1873"
         (base/item
-         :name ".44 Winchester Model 1873"
+         :name "Rifle:.44 Winchester 1873"
          :image "images/age-of-steam/Winchester1873.jpg"
          :reference
           "The Winchester is among the earliest repeating rifles, and has become synonymous with lever-action firearms. Known as 'The Gun that Won the West' for its immense popularity at that time."
@@ -394,25 +390,8 @@
             (base/unitskill
              :name "Survival"
              :level "3")))
-       :Gunslinger
-        (base/unit
-         :name "Gunslinger"
-         :image "images/age-of-steam/GunslingerToken.png"
-         :classification "Lt. Infantry"
-         :unitskillmap
-          (base/unitskillmap
-           :Crime
-            (base/unitskill
-             :name "Crime"
-             :level "3"
-             :unitabilitymap
-              (base/unitabilitymap
-               "Armed Robbery"
-                (base/unitability
-                 :name "Armed Robbery")
-               :Rustling
-                (base/unitability
-                 :name "Rustling")))))
+       "Gunslinger"
+        (base/unit<-tactics-key tactics "Gunslinger")
        "Man with No Name"
         (base/unit
          :name "Man with No Name"
@@ -427,6 +406,8 @@
             (base/unitskill
              :name "Evasion"
              :level "5")))
+       "Outlaw"
+        (base/unit<-tactics-key tactics "Outlaw")
        "Professional Killer"
         (base/unit
          :name "Professional Killer"

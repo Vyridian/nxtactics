@@ -85,6 +85,11 @@
      Partial - Disadvantage at Range
      Total - Cannot use Abilities at Range")
   (base/rule
+   :name "Block"
+   :summary
+    "* Overkill - Common Blocks still take Weapon Damage
+     * Crit:Location - IF Location is needed THEN Blocker chooses a Location and draw until one meets the choice.")
+  (base/rule
    :name "Blood Loss"
    :image "images/rule-bloodloss.svg"
    :layout base/cardlayout-imageonly)
@@ -242,19 +247,6 @@
      * Head, Chest, Abdomen - Choking:3 Dying
      Damage - Each Damage dealt to Constrictor reduces Severity by 1
      Escape - IF out of Constrictor reach")
-  (base/rule
-   :name "Cover"
-   :summary
-    "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.
-     * If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:
-     ** 25% Cover: Skill:-1.
-     ** 50% Cover: Skill:-2.
-     ** 75% Cover: Skill:-3.
-     ** 100% Cover: Skill:-4.
-     * If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Conflict]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.
-     ** Insubstantial: Resolve damage normally.
-     ** Item:Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
-     ** Unit: That unit is the new target. Resolve a new Combat with it instead.")
   (base/rule
    :name "Crits"
    :image "images/rule-crits.svg"

@@ -1938,17 +1938,18 @@
     "Alfar:Dark"
      (base/section
       :name "Alfar, Dark"
+      :titles "Black Elf, Dark Elf, Dark Elv, Dökkálfar, Drow, Svartalfar"
       :reference
-       "* Norse Dökkálfar (Dark Elf), or Svartalfar (Black Elf) - Subterranean creatures who dwell in the world of Svartalfaheim. Dark elves are often said to be responsible for many of the maladies befalling humanity.  In particular, bad dreams are said to be within the domain of the Dökkálfar, as indicated by the German word for nightmare, Albtraum ('Elf-dream').
+       "* Norse Dökkálfar (Dark Elf), or Svartalfar (Black Elf) - Subterranean creatures who dwell in the world of Svartalfaheim. Dark elves are often said to be responsible for many of the maladies befalling humanity. In particular, bad dreams are said to be within the domain of the Dökkálfar, as indicated by the German word for nightmare, Albtraum ('Elf-dream').
         * Drow - Shetland Islands malicious troll-like creatures
         * Seven Deadly Sins: Pride"
       :summary
-       "* Maximum Body - 4
+       "* Maximum Body - 6
         * Preferred Skills - Ranged (Archery), Art, Music, Darkness, Survival
         * Morale - Normal
         * Units - Elite Spies, Light Infantry, Heavy Infantry, Elite Light Archers, Heavy Cavalry, Siege Crews
-        * Long ago, Elvish scholars came to the conclusion that the seaons of the world were changing and that the race of man would eventually drive the Elves from the world. The majority grudgingly accepted this as the way of things, but a vocal minority refused to accept their fate. They began searching for the tools to battle back against men. This search led them to release mind shattering demonic forces. The rest of the elves were horrified by this blashphemy and called the Great Hunt to systematically eradicate the renegades and put an end to their abominations. The renegades fled, but the hunters relentlessly pursued them, until the renegades bargained with the Dwarves for asylum in their caverns. These activities created a deep hatred between the Elves and Dark Elves as well as the deep distrust between the Elves and Dwarves."
-      :titles "Dark Elf, Dark Elv, Dökkálfar, Drow, Svartalfar")
+        * Long ago, before the time of men, Elvish scholars concluded that the seasons of the world were changing and that Elvenkind would slowly fade from the world. The majority grudgingly accepted this as the way of things, but a vocal minority refused to accept their fate. They searched for the tools to change their fate. This search led them to pursue black magic. The other elves were horrified by this blashphemy and called the Wild Hunt to eradicate the renegades and put an end to their abominations. The renegades fled to the subterranean Svartalfaheim. Exposure to the dark radiations of Svartalfaheim changed them into the dark elves. They eventually stopped the Wild Hunt and released them to randomly hunt across the world.
+        * Eclipse - A faction of Dark Elves have rejected a return to Svartalfaheim and are committed to taking the surface world from humankind. To this end, they wish to permanently cut off and darken the moons.")
     "Alfar:Light"
      (base/section
       :name "Alfar:Light"

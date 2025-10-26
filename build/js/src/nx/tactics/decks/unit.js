@@ -815,6 +815,52 @@ export default class nx_tactics_decks_unit {
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Investigation", 1)
         )
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Gunslinger",
+        ":image",
+        "images/cards/unit-gunslinger.svg",
+        ":summary",
+        "A veteran western gunslinger.",
+        ":traits",
+        "Human Male",
+        ":body",
+        "8x1",
+        ":mind",
+        "5x1",
+        ":will",
+        "5x1",
+        ":speed",
+        "5x0",
+        ":speedland",
+        "5kph/3mph",
+        ":mass",
+        "80kg/175",
+        ":height",
+        "1.8m/6ft",
+        ":demeanor",
+        "Sinister",
+        ":nature",
+        "Ruthless",
+        ":beast",
+        "1x0",
+        ":shadow",
+        "4x0",
+        ":value",
+        "1x0",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
+            tactics,
+            "Firearm",
+            5,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Hip Shoot", "Quick Draw", "Sharpshooting"),
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pistol:.45 Colt 1873")
+          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Intimidation", 4, "Unnerve")
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hare", ":image", "images/cards/unit-hare.svg", ":body", "4x0", ":mind", "2x1", ":will", "3x1", ":speed", "6x1", ":speedland", "60kph/40mph", ":mass", "4kg/8lbs", ":length", "60cm", ":secrets", "* Because of their extremely low fat content, they are a poor choice as a survival food.\n* The blood of a freshly killed hare can be collected for consumption in a stew or casserole in a cooking process known as jugging.\n* Jugged hare, known as civet de lièvre in France, is a whole hare, cut into pieces, marinated, and cooked with red wine and juniper berries in a tall jug that stands in a pan of water."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Haunt", ":reference", "* The Sixth Sense\n* Beetlejuice", ":summary", "* Haunts are lesser undead that remain near the places and people from their living life instead of moving on. Haunts attempt to interact with the living to maintain a semblance of their former lives. Haunts are generally not malicious, but their interactions inadvertently drain the [Will] of others over time. There are also cases of Haunts who impersonate loved ones to purposely drain their [Will]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbear"),
@@ -1147,6 +1193,54 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ogre", ":image", "images/cards/unit-ogre.svg", ":reference", "* You small. Me big. - Tarzak the Tribeless, Runeterra", ":summary", "* Gluttony, Wrath\n* Preferred Skills - Close Combat, Hunting\n* Morale - Low\n* Units - Elite Heavy Infantry (Note: Full units are very rare)\n* Description - Ogres appear as huge, overweight, hairless humanoids.\n* Personality - Ogres are perpetually hungry. However, they are limited by their extremely low intelligence and short tempers.", ":body", "3x2", ":mind", "3x1", ":will", "3x1", ":mass", "300kg", ":height", "3m"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Outlaw",
+        ":image",
+        "images/cards/unit-outlaw.svg",
+        ":summary",
+        "A brash western outlaw.",
+        ":traits",
+        "Human Male",
+        ":body",
+        "8x1",
+        ":mind",
+        "5x1",
+        ":will",
+        "5x1",
+        ":speed",
+        "5x0",
+        ":speedland",
+        "5kph/3mph",
+        ":mass",
+        "80kg/175",
+        ":height",
+        "1.8m/6ft",
+        ":demeanor",
+        "Brash",
+        ":nature",
+        "Greedy",
+        ":beast",
+        "1x0",
+        ":shadow",
+        "4x0",
+        ":value",
+        "1x0",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
+            tactics,
+            "Firearm",
+            3,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Guns Blazing"),
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pistol:.45 S&W 1869")
+          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Evasion", 2),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Crime", 2, "Armed Robbery", "Fence Goods", "Rustling"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Animals", 2, "Herding", "Ride")
+        )
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -2013,7 +2107,7 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Animals",
             3,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Harvest Poison", "Snake Charming")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Harvest:Poison", "Snake Charming")
           )
         )
       ),

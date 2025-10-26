@@ -25,12 +25,12 @@ export default class nx_tactics_ui_stylesheet_test {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/stylesheet", 
-      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 95), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 32, ":tests", 31, ":total", 95), 
+      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 99), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 33, ":tests", 33, ":total", 99), 
       "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 95), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 99), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -53,6 +53,7 @@ export default class nx_tactics_ui_stylesheet_test {
           "font-rank", 0,
           "font-text", 0,
           "font-text-2", 0,
+          "font-text-deck", 0,
           "font-textarea", 0,
           "font-title", 0,
           "fontface-rune", 0,
@@ -86,6 +87,7 @@ export default class nx_tactics_ui_stylesheet_test {
           "style-app-titlebar-title", 0,
           "style-body", 0,
           "style-card", 0,
+          "style-card-deck", 0,
           "style-card-display", 0,
           "style-card-display-conflict", 0,
           "style-card-display2", 0,
@@ -113,6 +115,8 @@ export default class nx_tactics_ui_stylesheet_test {
           "style-image-jester-red2", 0,
           "style-image-sword1", 0,
           "style-image-sword2", 0,
+          "style-image-terrain-dot-left", 0,
+          "style-image-terraincard", 0,
           "style-image-wand1", 0,
           "style-image-wand2", 0,
           "style-item-summary", 0,

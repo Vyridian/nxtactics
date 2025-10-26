@@ -50,6 +50,13 @@ export default class nx_tactics_ui_stylesheet {
   static c_font_text_2 = {vx_type: vx_ui_ui.t_font, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'font-text-2', type: vx_ui_ui.t_font}}
 
   /**
+   * Constant: font-text-deck
+   * Returns Deck text Font
+   * {font}
+   */
+  static c_font_text_deck = {vx_type: vx_ui_ui.t_font, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'font-text-deck', type: vx_ui_ui.t_font}}
+
+  /**
    * Constant: font-textarea
    * Returns Textarea Font
    * {font}
@@ -257,6 +264,13 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_card = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card', type: vx_ui_ui.t_style}}
 
   /**
+   * Constant: style-card-deck
+   * Returns the style for the deck label
+   * {style}
+   */
+  static c_style_card_deck = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-deck', type: vx_ui_ui.t_style}}
+
+  /**
    * Constant: style-card-display
    * {style}
    */
@@ -421,6 +435,18 @@ export default class nx_tactics_ui_stylesheet {
    * {style}
    */
   static c_style_image_sword2 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-sword2', type: vx_ui_ui.t_style}}
+
+  /**
+   * Constant: style-image-terrain-dot-left
+   * {style}
+   */
+  static c_style_image_terrain_dot_left = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-terrain-dot-left', type: vx_ui_ui.t_style}}
+
+  /**
+   * Constant: style-image-terraincard
+   * {style}
+   */
+  static c_style_image_terraincard = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-terraincard', type: vx_ui_ui.t_style}}
 
   /**
    * Constant: style-image-wand1
@@ -618,6 +644,7 @@ export default class nx_tactics_ui_stylesheet {
       "font-rank": nx_tactics_ui_stylesheet.c_font_rank,
       "font-text": nx_tactics_ui_stylesheet.c_font_text,
       "font-text-2": nx_tactics_ui_stylesheet.c_font_text_2,
+      "font-text-deck": nx_tactics_ui_stylesheet.c_font_text_deck,
       "font-textarea": nx_tactics_ui_stylesheet.c_font_textarea,
       "font-title": nx_tactics_ui_stylesheet.c_font_title,
       "fontface-rune": nx_tactics_ui_stylesheet.c_fontface_rune,
@@ -651,6 +678,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-app-titlebar-title": nx_tactics_ui_stylesheet.c_style_app_titlebar_title,
       "style-body": nx_tactics_ui_stylesheet.c_style_body,
       "style-card": nx_tactics_ui_stylesheet.c_style_card,
+      "style-card-deck": nx_tactics_ui_stylesheet.c_style_card_deck,
       "style-card-display": nx_tactics_ui_stylesheet.c_style_card_display,
       "style-card-display-conflict": nx_tactics_ui_stylesheet.c_style_card_display_conflict,
       "style-card-display2": nx_tactics_ui_stylesheet.c_style_card_display2,
@@ -678,6 +706,8 @@ export default class nx_tactics_ui_stylesheet {
       "style-image-jester-red2": nx_tactics_ui_stylesheet.c_style_image_jester_red2,
       "style-image-sword1": nx_tactics_ui_stylesheet.c_style_image_sword1,
       "style-image-sword2": nx_tactics_ui_stylesheet.c_style_image_sword2,
+      "style-image-terrain-dot-left": nx_tactics_ui_stylesheet.c_style_image_terrain_dot_left,
+      "style-image-terraincard": nx_tactics_ui_stylesheet.c_style_image_terraincard,
       "style-image-wand1": nx_tactics_ui_stylesheet.c_style_image_wand1,
       "style-image-wand2": nx_tactics_ui_stylesheet.c_style_image_wand2,
       "style-item-summary": nx_tactics_ui_stylesheet.c_style_item_summary,
@@ -790,6 +820,17 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_fontface1,
       ":fontsize",
       40
+    ))
+
+    // (const font-text-deck)
+    Object.assign(nx_tactics_ui_stylesheet.c_font_text_deck, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_font},
+      ":name",
+      "font-text-deck",
+      ":fontface",
+      nx_tactics_ui_stylesheet.c_fontface1,
+      ":fontsize",
+      70
     ))
 
     // (const font-textarea)
@@ -1165,6 +1206,27 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_point_cardsize,
       ":scroll-y",
       true
+    ))
+
+    // (const style-card-deck)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_card_deck, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_style},
+      ":name",
+      "style-text-deck",
+      ":type",
+      vx_ui_ui.c_styletype_shared,
+      ":layout",
+      vx_ui_ui.c_layout_label,
+      ":align",
+      vx_ui_ui.c_align_center,
+      ":color-font",
+      "0000FF",
+      ":font",
+      nx_tactics_ui_stylesheet.c_font_text_deck,
+      ":pointpos",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":y", 82),
+      ":pointsize",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 63)
     ))
 
     // (const style-card-display)
@@ -1643,6 +1705,46 @@ export default class nx_tactics_ui_stylesheet {
         "Swords",
         ":file",
         vx_core.f_new({"any-1": vx_data_file.t_file}, ":name", "icon-sword.svg", ":path", "icons")
+      )
+    ))
+
+    // (const style-image-terrain-dot-left)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_image_terrain_dot_left, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_style},
+      ":name",
+      "style-image-terrain-dot-left",
+      ":layout",
+      vx_ui_ui.c_layout_image,
+      ":color-bkg",
+      "FFFFFF",
+      ":pointorigin",
+      vx_ui_ui.c_point_center,
+      ":pointsize",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 10, ":y", 10)
+    ))
+
+    // (const style-image-terraincard)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_image_terraincard, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_style},
+      ":name",
+      "style-image-terraincard",
+      ":layout",
+      vx_ui_ui.c_layout_image,
+      ":color-bkg",
+      "FFFFFF",
+      ":pointorigin",
+      vx_ui_ui.c_point_center,
+      ":pointsize",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":y", 18),
+      ":image-bkg",
+      vx_core.f_new(
+        {"any-1": vx_ui_ui.t_image},
+        ":name",
+        "image-wand1",
+        ":label",
+        "Wands",
+        ":file",
+        vx_core.f_new({"any-1": vx_data_file.t_file}, ":name", "icon-wand.svg", ":path", "icons")
       )
     ))
 
@@ -2147,6 +2249,7 @@ export default class nx_tactics_ui_stylesheet {
           nx_tactics_ui_stylesheet.c_style_app_titlebar_print,
           nx_tactics_ui_stylesheet.c_style_app_titlebar_title,
           nx_tactics_ui_stylesheet.c_style_card,
+          nx_tactics_ui_stylesheet.c_style_card_deck,
           nx_tactics_ui_stylesheet.c_style_deck,
           nx_tactics_ui_stylesheet.c_style_image_background,
           nx_tactics_ui_stylesheet.c_style_image_coin1,

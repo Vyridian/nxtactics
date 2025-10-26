@@ -1,5 +1,6 @@
 (package nx/tactics/base
  :libs (lib coll :path vx/collection)
+       (lib ui   :path vx/ui/ui)
  :doc "Tactics Base Types")
 
 (type ability : struct
@@ -28,16 +29,16 @@
  :properties
   [id          : string
    name        : string
+   deck        : string
    icon        : string
    image       : string
    imgmirror   : boolean
    layout      : cardlayout
+   ranksuit    : ranksuit
    reference   : string
    secrets     : string
    summary     : string
-   titles      : string
-   orientation : string
-   ranksuit    : ranksuit])
+   titles      : string])
 
 (type cardback : struct
  :traits [card]
@@ -50,7 +51,13 @@
 (type cardimagelist : list
  :allowtypes [cardimage])
 
-(type cardlayout : struct)
+(type cardlayout : struct
+ :properties [card : card
+              cardlayoutlist : cardlayoutlist
+              style : ui/style])
+
+(type cardlayoutlist : list
+ :allowtypes [cardlayout])
 
 (type cardlist : list
  :allowtypes [card])
@@ -221,7 +228,7 @@
  :allowtypes [rule])
 
 (type scene : struct
- :traits     [card]
+ :traits     [card deck]
  :properties [teammap : teammap])
 
 (type scenelist : list
@@ -483,6 +490,8 @@
 (const cardlayout-imagemirror : cardlayout)
 
 (const cardlayout-imageonly : cardlayout)
+
+(const cardlayout-imagesideways : cardlayout)
 
 (const cardlayout-textimage : cardlayout)
 
@@ -998,12 +1007,16 @@
   [name  : string := (:name card)
    image : string := (:image card)
    cardtype : any := (type<-any card)
-   layout : cardlayout :=
-    (switch : cardlayout
-     cardtype
-     (case place cardlayout-textimage)
-     (else (:layout card)))
    imgmirror : boolean := (:imgmirror card)
+   layout : cardlayout :=
+    (if : cardlayout
+     (then (== cardtype place)
+      cardlayout-imageonly)
+     (then imgmirror
+      cardlayout-imagemirror)
+     (then (== cardtype unit)
+      cardlayout-imagesideways)
+     (else (:layout card)))
    id : string := (string name "-image")
    imgname : string := id]
   (cardimage
@@ -1011,9 +1024,32 @@
    :name name
    :origcard card
    :image image
-   :layout layout
-   :imgmirror imgmirror))
+   :layout layout))
  :doc "Returns a cardimage from a given card")
+
+(func cardimage<-tactics-placekey : cardimage
+ [tactics : tactics
+  key     : string]
+ (let : cardimage
+  [place : place := (place<-tactics-key tactics key)]
+  (cardimage<-card place))
+ :doc "Returns a cardimage from a given tactics and place key.")
+
+(func cardimage<-tactics-placekey-num-cardlayout : cardimage
+ [tactics    : tactics
+  key        : string
+  num        : int
+  cardlayout : cardlayout]
+ (let : cardimage
+  [cardimage : cardimage :=
+   (cardimage<-tactics-placekey
+    tactics key)
+   id : string := (string (:id cardimage) "-" num)]
+  (copy
+   cardimage
+   :id id
+   :layout cardlayout))
+ :doc "Returns a cardimage from a given tactics and place key.")
 
 (func cardimage<-tactics-unitkey : cardimage
  [tactics : tactics
@@ -1871,15 +1907,9 @@
    chapterlist : chapterlist :=
     (chapterlist<-booklist
      booklist)
-   chaptermap : chaptermap :=
-    (chaptermap<-chapterlist
-     chapterlist)
    sectionlist : sectionlist :=
     (sectionlist-all<-chapterlist
      chapterlist)
-   sectionmap : sectionmap :=
-    (sectionmap<-sectionlist
-     sectionlist)
    itemlist : itemlist :=
     (itemlist<-sectionlist
      sectionlist)
@@ -1916,6 +1946,8 @@
    abilitymap : abilitymap :=
     (abilitymap<-abilitylist
      abilitylist3)
+   scenemap : scenemap :=
+    (:scenemap tactics)
    specialtymap : specialtymap :=
     (:specialtymap tactics)
    unitlist : unitlist :=
@@ -2150,7 +2182,7 @@
 (func unitpower<-tactics-key-abilities : unitpower
  [tactics   : tactics
   key       : string
-  abilities : stringlist]
+  abilities : stringlist :...]
  (unitpower<-tactics-key-lvl-abilities-items
   tactics key 0 abilities (empty stringlist)))
 
@@ -2165,7 +2197,7 @@
  [tactics   : tactics
   key       : string
   rating    : string
-  abilities : stringlist]
+  abilities : stringlist :...]
  (unitpower<-tactics-key-lvl-rating-abilities-items
   tactics key 0 rating abilities (empty stringlist)))
 
@@ -2180,7 +2212,7 @@
  [tactics   : tactics
   key       : string
   level     : int
-  abilities : stringlist]
+  abilities : stringlist :...]
  (unitpower<-tactics-key-lvl-rating-abilities-items
   tactics key level "" abilities (empty stringlist)))
 
@@ -2199,7 +2231,7 @@
   key       : string
   level     : int
   rating    : string
-  abilities : stringlist]
+  abilities : stringlist :...]
  (unitpower<-tactics-key-lvl-rating-abilities-items
   tactics key level rating abilities (empty stringlist))
  :doc "Returns a unitpower from tactics, skill key, level, ability keys, and item keys")
@@ -2282,14 +2314,14 @@
 (func unitskill<-tactics-key-abilities : unitskill
  [tactics   : tactics
   key       : string
-  abilities : stringlist]
+  abilities : stringlist :...]
  (unitskill<-tactics-key-lvl-abilities-items-specialties
   tactics key 0 abilities (empty stringlist) (empty stringlist)))
 
 (func unitskill<-tactics-key-items : unitskill
  [tactics : tactics
   key     : string
-  items   : stringlist]
+  items   : stringlist :...]
  (unitskill<-tactics-key-lvl-abilities-items-specialties
   tactics key 0 (empty stringlist) items (empty stringlist)))
 
@@ -2304,7 +2336,7 @@
  [tactics   : tactics
   key       : string
   level     : int
-  abilities : stringlist]
+  abilities : stringlist :...]
  (unitskill<-tactics-key-lvl-abilities-items-specialties
   tactics key level abilities (empty stringlist) (empty stringlist)))
 
@@ -2315,7 +2347,7 @@
   abilities : stringlist
   items     : stringlist]
  (unitskill<-tactics-key-lvl-abilities-items-specialties
-  tactics key level abilities (empty stringlist) (empty stringlist)))
+  tactics key level abilities items (empty stringlist)))
 
 (func unitskill<-tactics-key-lvl-abilities-items-specialties : unitskill
  [tactics     : tactics
@@ -2370,7 +2402,7 @@
  [tactics : tactics
   key     : string
   level   : int
-  items   : stringlist]
+  items   : stringlist :...]
  (unitskill<-tactics-key-lvl-abilities-items-specialties
   tactics key level (empty stringlist) items (empty stringlist)))
 
@@ -2378,7 +2410,7 @@
  [tactics     : tactics
   key         : string
   level       : int
-  specialties : stringlist]
+  specialties : stringlist :...]
  (unitskill<-tactics-key-lvl-abilities-items-specialties
   tactics key level (empty stringlist) (empty stringlist) specialties))
 

@@ -704,6 +704,33 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl
       tactics "Investigation" 1)))
   (base/unit
+   :name "Gunslinger"
+   :image "images/cards/unit-gunslinger.svg"
+   :summary
+    "A veteran western gunslinger."
+   :traits "Human Male"
+   :body "8x1"
+   :mind "5x1"
+   :will "5x1"
+   :speed "5x0"
+   :speedland "5kph/3mph"
+   :mass "80kg/175"
+   :height "1.8m/6ft"
+   :demeanor "Sinister"
+   :nature "Ruthless"
+   :beast "1x0"
+   :shadow "4x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities-items
+      tactics "Firearm" 5
+      (stringlist "Hip Shoot" "Quick Draw" "Sharpshooting")
+      (stringlist "Pistol:.45 Colt 1873"))
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Intimidation" 4
+      "Unnerve")))
+  (base/unit
    :name "Hare"
    :image "images/cards/unit-hare.svg"
    :body "4x0"
@@ -1053,6 +1080,42 @@ Allseer - Grants resistance to being surprised or flanked."
    :will "3x1"
    :mass "300kg"
    :height "3m")
+  (base/unit
+   :name "Outlaw"
+   :image "images/cards/unit-outlaw.svg"
+   :summary
+    "A brash western outlaw."
+   :traits "Human Male"
+   :body "8x1"
+   :mind "5x1"
+   :will "5x1"
+   :speed "5x0"
+   :speedland "5kph/3mph"
+   :mass "80kg/175"
+   :height "1.8m/6ft"
+   :demeanor "Brash"
+   :nature "Greedy"
+   :beast "1x0"
+   :shadow "4x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-abilities-items
+      tactics "Firearm" 3
+      (stringlist "Guns Blazing")
+      (stringlist "Pistol:.45 S&W 1869"))
+     (base/unitskill<-tactics-key-lvl
+      tactics "Evasion" 2)
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Crime" 2
+      "Armed Robbery"
+      "Fence Goods"
+      "Rustling")
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Animals" 2
+      "Herding"
+      "Ride")
+    ))
   (base/unit
    :name "Ox"
    :image "images/cards/unit-ox.svg"
@@ -2018,7 +2081,7 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Animals" 3
       (stringlist
-       "Harvest Poison"
+       "Harvest:Poison"
        "Snake Charming"))))
   (base/unit
    :name "Yog-Sothoth"

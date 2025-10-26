@@ -364,14 +364,50 @@
    :length "4m"
    :modifiers "Reach, Piercing")
   (base/item
-   :name "Pistol: Revolver"
-   :image "images/cards/item-pistol-revolver.svg")
+   :name "Pistol:.45 Colt 1873"
+   :image "images/cards/item-pistol-45-colt-1873.svg"
+   :titles "Peacemaker"
+   :reference
+    "US Army issue from 1873-1892 and used by other notables like Wyatt Earp and Bat Masterson. Wyatt Earp's fictional Colt Buntline was supposed to be a long barrel version of the Colt Peacemaker."
+   :summary
+    "* Single action Revolver"
+   :energy "610J"
+   :muzzlevelocity "300mps"
+   :rounds "6"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "6x2"
+      "Pierce"
+      "Slash"
+      "Ammo:6")))
+  (base/item
+   :name "Pistol:.45 S&W 1869"
+   :image "images/cards/item-pistol-45-sw-1869.svg"
+   :titles "Schofield"
+   :reference
+    "Just meat and potatoes.  Me and Jesse James think it's the best handgun in the world. - Kid, The Quick and the Dead."
+   :summary
+    "* Single action Revolver"
+   :energy "610J"
+   :muzzlevelocity "300mps"
+   :rounds "6"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "6x2"
+      "Pierce"
+      "Slash"
+      "Ammo:6")))
+  (base/item
+   :name "Pistol:.45 Revolver"
+   :image "images/cards/item-pistol-45-revolver.svg")
   (base/item
    :name "Quiver: Arrows"
    :image "images/cards/item-quiver-arrows.svg"
    :summary
     "* Holds up to 20 arrows
-     * [Location]: [Shoulders] Back"
+     * [Location]: [Shoulders] [Back]"
    :body "10x-1"
    :mass "1kg/2.2lb"
    :length "6cm/2ft")

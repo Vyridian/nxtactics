@@ -4,6 +4,7 @@ import nx_tactics_base from "../../../src/nx/tactics/base.js"
 import vx_core from "../../../src/vx/core.js"
 import vx_test from "../../../src/vx/test.js"
 import vx_collection from "../../../src/vx/collection.js"
+import vx_ui_ui from "../../../src/vx/ui/ui.js"
 
 export default class nx_tactics_base_test {
 
@@ -24,13 +25,13 @@ export default class nx_tactics_base_test {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
-      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 93), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 120, ":total", 320), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 129), 
+      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 94), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 122, ":total", 324), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 131), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 320), 
-      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 98)
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 324), 
+      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 99)
     )
     return output
   }
@@ -54,6 +55,7 @@ export default class nx_tactics_base_test {
           "cardimage", 0,
           "cardimagelist", 0,
           "cardlayout", 0,
+          "cardlayoutlist", 0,
           "cardlist", 0,
           "cardmap", 0,
           "chapter", 0,
@@ -146,6 +148,7 @@ export default class nx_tactics_base_test {
           vx_core.t_intmap,
           "cardlayout-imagemirror", 0,
           "cardlayout-imageonly", 0,
+          "cardlayout-imagesideways", 0,
           "cardlayout-textimage", 0,
           "rank-ace", 0,
           "rank-eight", 0,
@@ -254,6 +257,8 @@ export default class nx_tactics_base_test {
           "abilitymap<-tactics-keys", 0,
           "bookmap<-booklist", 0,
           "cardimage<-card", 0,
+          "cardimage<-tactics-placekey", 0,
+          "cardimage<-tactics-placekey-num-cardlayout", 0,
           "cardimage<-tactics-unitkey", 0,
           "cardimagelist<-cardlist", 0,
           "cardimagelist<-placelist", 0,

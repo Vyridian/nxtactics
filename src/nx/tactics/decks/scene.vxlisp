@@ -1,13 +1,138 @@
 (package nx/tactics/decks/scene
- :libs (lib base :path nx/tactics/base)
+ :libs (lib base           :path nx/tactics/base)
+       (lib murintrail     :path nx/tactics/decks/scene-murintrail)
+       (lib nightonthetown :path nx/tactics/decks/scene-nightonthetown)
+       (lib ontherun       :path nx/tactics/decks/scene-ontherun)
+       (lib scene-starter  :path nx/tactics/decks/scene-starter)
+       (lib styles         :path nx/tactics/ui/stylesheet)
+       (lib ui             :path vx/ui/ui)
  :doc "Scenes")
+
+(func cardlayout-connector<-pos-color : base/cardlayout
+ [pos   : int
+  color : string]
+ (let : base/cardlayout
+  [scolor : string :=
+    (switch : string
+     color
+     (case "blue" "0000FF")
+     (case "green" "00FF00")
+     (case "red" "FF0000")
+     (case "yellow" "FFFF00")
+     (else color))
+   x : int :=
+    (switch : int
+     pos
+     (case 1 32)
+     (case 2 61)
+     (case 3 32)
+     (case 4 0))
+   y : int :=
+    (switch : int
+     pos
+     (case 1 3)
+     (case 2 47)
+     (case 3 83)
+     (case 4 47))
+   pointpos : ui/point :=
+    (ui/point
+     :x x
+     :y y)
+   pointsize : ui/point :=
+    (ui/point
+     :x 2
+     :y 2)
+   style : ui/style :=
+    (ui/style
+     :color-bkg scolor
+     :pointpos pointpos
+     :pointsize pointsize)]
+  (base/cardlayout
+   :style style))
+ :doc "")
 
 (func scenemap-tactics : base/scenemap
  [tactics : base/tactics]
  (base/scenemap<-scenelist
-  (base/scene
-   :name "scene1")
-  )
+  (base/scenelist
+   (base/scene
+    :name "Quick and the Dead"
+    :cardmap
+     (base/cardmap<-cardlist
+      (base/cardlist
+       (base/rule
+        :id "QandD:Setup"
+        :name "Setup"
+        :deck "Quick and the Dead"
+        :summary
+         "* A young outlaw seeking glory challenges a seasoned gunslinger to a duel. It's almost noon and the town is watching with morbid curiosity. On the first chime of the clock, they'll both open fire.
+          * Place maps connected by blue dots
+          * Gunmen have agreed that when Clock reaches 2 you may open fire")
+       (base/cardimage<-tactics-placekey-num-cardlayout
+        tactics
+        "Terrain:Dirt"
+        1
+        (base/cardlayout
+         :cardlayoutlist
+          (base/cardlayoutlist
+           (cardlayout-connector<-pos-color 2 "blue")
+           (base/cardlayout
+            :card
+             (base/unit<-tactics-key
+              tactics "Gunslinger")
+            :style
+             (copy styles/style-image-terraincard
+              :pointpos
+               (ui/point
+                :y 40)
+              :pointrotate ui/point-rotate-270)))))
+       (base/cardimage<-tactics-placekey-num-cardlayout
+        tactics
+        "Terrain:Dirt"
+        2
+        (base/cardlayout
+         :cardlayoutlist
+          (base/cardlayoutlist
+           (cardlayout-connector<-pos-color 4 "blue")
+           (base/cardlayout
+            :card
+             (base/unit<-tactics-key
+              tactics "Outlaw")
+            :style
+             (copy styles/style-image-terraincard
+              :pointpos
+               (ui/point
+                :x 40
+                :y 40)
+              :pointrotate ui/point-rotate-90)))))
+       (base/cardlist-images<-tactics-units
+        tactics
+        "Gunslinger"
+        "Outlaw")
+       (list<-list : base/cardlist
+        (base/itemlist<-tactics-keys
+         tactics
+         "Pistol:.45 Colt 1873"
+         "Pistol:.45 S&W 1869"))
+       (list<-list : base/cardlist
+        (base/skilllist<-tactics-keys
+         tactics
+         "Crime"
+         "Evasion"
+         "Firearm"
+         "Intimidation"))
+       (list<-list : base/cardlist
+        (base/abilitylist<-tactics-keys
+         tactics
+         "Guns Blazing"
+         "Quick Draw"
+         "Rustling"
+         "Unnerve")))))
+//     (scene-starter/deck-starter tactics)
+//     (murintrail/deck-murintrail tactics)
+//     (nightonthetown/deck-nightonthetown tactics)
+//     (ontherun/deck-ontherun tactics)
+  ))
  :doc "Returns the base scenemap")
 
 (func tactics-scenemap<-tactics : base/tactics

@@ -301,15 +301,6 @@ x +1DMG vs. Crouching."
          -1 Damage
          1 Move"
        :titles "Hundred Hand Slap, Lightning Fist, Rapid Punch")
-     "Jab"
-      (base/ability
-       :name "Jab"
-       :summary
-        "* A quick, weak strike.
-         +2 Initiative
-         +1 Accuracy
-         -2 Damage
-         +1 Move")
      "Knife Hand"
       (base/ability
        :name "Knife Hand"
@@ -502,41 +493,6 @@ x +1DMG vs. Crouching."
        :titles "Foot Sweep")
      "Lightning Leg"
       (base/ability<-tactics-key tactics "Lightning Leg")
-     "Reverse Front Kick"
-      (base/ability
-       :name "Reverse Front Kick"
-       :summary
-        "* Feint kick past head then snap back into the back of the head or neck.
-         -1 Initiative
-         +1 Accuracy
-         -2 Move")
-     "Roundhouse Kick"
-      (base/ability
-       :name "Roundhouse Kick"
-       :summary
-        "* Fighter pivots and kicks using the momentum from the pivot to increase the damage of the kick.
-         -1 Initiative
-         -1 Action
-         +2 Damage")
-     "Scissor Kick"
-      (base/ability
-       :name "Scissor Kick"
-       :summary
-        "* Leap up and kick two opponents in different directions simultaneously.
-         -1 Initiative
-         0 Move [Aerial]
-         -1 Damage")
-     "Side Kick"
-      (base/ability
-       :name "Side Kick")
-     "Slide Kick"
-      (base/ability
-       :name "Slide Kick"
-       :summary
-        "+1 Speed
-         * [Low Attack]
-         * Critical Hits can be [Knockdown]
-         * End Action [Prone]")
      "Spinning Bird Kick"
       (base/ability<-tactics-key tactics "Spinning Bird Kick")
      "Spinning Thrust Kick"
@@ -548,29 +504,9 @@ x +1DMG vs. Crouching."
          -2 Move
          +2 Damage"
        :titles "Amaranth Kick, Mule Kick")
-     "Vault Kick"
-      (base/ability
-       :name "Vault Kick"
-       :summary
-        "* Vault over an obstacle and land a devastating kick with all of your weight.
-         +0 Move - Ignore the terrain penalty of 1 space next to the target.
-         +0 Accuracy - [High Attack]
-         +1 Damage
-         Criticals are [Knockback]")
      "Atomic Drop"
       (base/ability
        :name "Atomic Drop")
-     "Air Throw"
-      (base/ability
-       :name "Air Throw"
-       :summary
-        "* The fighter intercepts a leaping or flying opponent in mid-air, twists, and slams him to the ground, landing on top of him.
-         * [Reaction], [Aerial]
-         +1 Initiative
-         +0 Damage is [Knockdown]. Damage also reduces falling Damage
-         to the fighter.
-         Criticals are [Knockdown]. Criticals also reduces falling Criticals
-         to the fighter.")
      "Backbreaker"
       (base/ability
        :name "Backbreaker"
@@ -581,46 +517,6 @@ x +1DMG vs. Crouching."
          -1 Accuracy
          +2 Damage
          Criticals are [Cripple]")
-     "Backroll Throw"
-      (base/ability
-       :name "Backroll Throw"
-       :summary
-        "* The fighter grabs the opponent and then rolls backwards while using his legs to help lift and throw the opponent over him. The opponent is send directly behind the fighter and the fighter is left [Prone].
-         * Uses a [Hold]
-         -1 Initiative
-         +1 Damage is [Knockdown]
-         Criticals are [Knockdown]")
-     "Bear Hug"
-      (base/ability
-       :name "Bear Hug"
-       :summary
-        "* The fighter wraps his arms around the opponent and crushes him.
-         * [Continuous]
-         * Requires a [Hold]
-         -1 Initiative
-         +1 Damage
-         1 Move")
-     "Choke Hold"
-      (base/ability
-       :name "Choke Hold"
-       :summary
-        "* The fighter wraps his arms around the opponents neck and begins choking him.
-         * [Continuous]
-         * Requires a [Hold]
-         -1 Initiative
-         Criticals are [Asphixiation]
-         1 Move")
-     "Fighting Hold"
-      (base/ability
-       :name "Fighting Hold"
-       :summary
-        "* While holding the opponent, strike him repeatedly.
-         * Requires [Hold]
-         * [Continuous]
-         +1 Initiative
-         +1 Accuracy
-         +1 Damage
-         1 Move")
      "Grappling Defense"
       (base/ability
        :name "Grappling Defense"
@@ -635,17 +531,6 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Ground Fighting"
        :summary "* [Passive]: Ignore penalties for being [Prone].")
-     "Headlock"
-      (base/ability
-       :name "Headlock")
-     "Hip Throw"
-      (base/ability
-       :name "Hip Throw"
-       :summary
-        "* This is a quick move to get an opponent on the ground. The fighter moves a leg behind the opponent's and pushes him past the hip and directly to the floor.
-         -1 Move
-         Damage - [Knockdown]
-         Criticals - [Knockdown]")
      "Hold"
       (base/ability
        :name "Hold"
@@ -654,18 +539,46 @@ x +1DMG vs. Crouching."
          +1 Initiative
          0 Damage - Add a [Hold] token.
          0 Criticals")
-     "Hook"
+     "Hold:Bear Hug"
       (base/ability
-       :name "Hook"
+       :name "Hold:Bear Hug"
        :summary
-        "* The hook is a powerful punch with knockout power.
-         * When throwing a hook, the puncher shifts his body weight to the
-         lead foot, allowing him to pivot his lead foot and generate
-         kinetic energy through the hip/torso/shoulder, swinging his lead
-         fist horizontally toward the opponent.
+        "* The fighter wraps his arms around the opponent and crushes him.
+         * [Continuous]
+         * Requires a [Hold]
          -1 Initiative
          +1 Damage
-         +0 Criticals - [Stun]")
+         1 Move")
+     "Hold:Choke"
+      (base/ability
+       :name "Hold:Choke"
+       :summary
+        "* The fighter wraps his arms around the opponents neck and begins choking him.
+         * [Continuous]
+         * Requires a [Hold]
+         -1 Initiative
+         Criticals are [Asphixiation]
+         1 Move")
+     "Hold:Fighting"
+      (base/ability
+       :name "Hold:Fighting"
+       :summary
+        "* While holding the opponent, strike him repeatedly.
+         * Requires [Hold]
+         * [Continuous]
+         +1 Initiative
+         +1 Accuracy
+         +1 Damage
+         1 Move")
+     "Hold:Headlock"
+      (base/ability
+       :name "Hold:Headlock")
+     "Hold:Nelson"
+      (base/ability
+       :name "Hold:Nelson")
+     "Hold:Sleeper"
+      (base/ability
+       :name "Hold:Sleeper")
      "Iron Claw"
       (base/ability
        :name "Iron Claw"
@@ -681,6 +594,50 @@ x +1DMG vs. Crouching."
          +0 Damage - +1 Stun
          +0 Criticals - [Cripples]"
        :titles "Armbar, Armlock, Hammerlock, Leg Lock")
+     "Kick:Reverse Front"
+      (base/ability
+       :name "Kick:Reverse Front"
+       :summary
+        "* Feint kick past head then snap back into the back of the head or neck.
+         -1 Initiative
+         +1 Accuracy
+         -2 Move")
+     "Kick:Roundhouse"
+      (base/ability
+       :name "Kick:Roundhouse"
+       :summary
+        "* Fighter pivots and kicks using the momentum from the pivot to increase the damage of the kick.
+         -1 Initiative
+         -1 Action
+         +2 Damage")
+     "Kick:Scissor"
+      (base/ability
+       :name "Kick:Scissor"
+       :summary
+        "* Leap up and kick two opponents in different directions simultaneously.
+         -1 Initiative
+         0 Move [Aerial]
+         -1 Damage")
+     "Kick:Side"
+      (base/ability
+       :name "Kick:Side")
+     "Kick:Slide"
+      (base/ability
+       :name "Kick:Slide"
+       :summary
+        "+1 Speed
+         * [Low Attack]
+         * Critical Hits can be [Knockdown]
+         * End Action [Prone]")
+     "Kick:Vault"
+      (base/ability
+       :name "Kick:Vault"
+       :summary
+        "* Vault over an obstacle and land a devastating kick with all of your weight.
+         +0 Move - Ignore the terrain penalty of 1 space next to the target.
+         +0 Accuracy - [High Attack]
+         +1 Damage
+         Criticals are [Knockback]")
      "Knee Bash"
       (base/ability
        :name "Knee Bash"
@@ -701,13 +658,10 @@ x +1DMG vs. Crouching."
          -2 Accuracy
          +4 Damage
          Criticals are [Cripples]")
-     :Nelson
-      (base/ability
-       :name "Nelson")
-     :Piledriver
+     "Piledriver"
       (base/ability
        :name "Piledriver")
-     :Pin
+     "Pin"
       (base/ability
        :name "Pin"
        :summary
@@ -716,25 +670,42 @@ x +1DMG vs. Crouching."
          * [Continuous]
          +1 Damage - Damage is [Stun].
          Criticals are [Slow]")
-     :Reversal
+     "Punch:Cross"
+      (base/ability
+       :name "Punch:Cross"
+       :summary
+        "A straight rear punch with substantial power. Part of the 1-2 punch combo
+         * [Skill]: [Close Combat]")
+     "Punch:Hook"
+      (base/ability
+       :name "Punch:Hook"
+       :summary
+        "The hook is a powerful punch with knockout power.
+         * [Skill]: [Close Combat]
+         * When throwing a hook, the puncher shifts his body weight to the
+         lead foot, allowing him to pivot his lead foot and generate
+         kinetic energy through the hip/torso/shoulder, swinging his lead
+         fist horizontally toward the opponent.
+         -1 Initiative
+         +1 Damage
+         +0 Criticals - [Stun]")
+     "Punch:Jab"
+      (base/ability
+       :name "Punch:Jab"
+       :summary
+        "A quick, weak strike.
+         * [Skill]: [Close Combat]
+         +2 Initiative
+         +1 Accuracy
+         -2 Damage
+         +1 Move")
+     "Reversal"
       (base/ability
        :name "Reversal")
-     "Shoulder Throw"
-      (base/ability
-       :name "Shoulder Throw"
-       :summary
-        "* The fighter lifts the opponent his is holding over a shoulder and hurls him as far as his strength will allow.
-         * Requires a [Hold].
-         -1 Move
-         +1 Damage - [Knockback] in any direction the fighter chooses.
-         Criticals - [Knockback]")
-     "Sleeper Hold"
-      (base/ability
-       :name "Sleeper Hold")
      :Suplex
       (base/ability
        :name "Suplex")
-     :Tackle
+     "Tackle"
       (base/ability
        :name "Tackle"
        :summary
@@ -756,7 +727,44 @@ x +1DMG vs. Crouching."
          0 Criticals")
      "Thigh Press"
       (base/ability
-       :name "Thigh Press"))
+       :name "Thigh Press")
+     "Throw:Air"
+      (base/ability
+       :name "Throw:Air"
+       :summary
+        "* The fighter intercepts a leaping or flying opponent in mid-air, twists, and slams him to the ground, landing on top of him.
+         * [Reaction], [Aerial]
+         +1 Initiative
+         +0 Damage is [Knockdown]. Damage also reduces falling Damage
+         to the fighter.
+         Criticals are [Knockdown]. Criticals also reduces falling Criticals
+         to the fighter.")
+     "Throw:Backroll"
+      (base/ability
+       :name "Throw:Backroll"
+       :summary
+        "* The fighter grabs the opponent and then rolls backwards while using his legs to help lift and throw the opponent over him. The opponent is send directly behind the fighter and the fighter is left [Prone].
+         * Uses a [Hold]
+         -1 Initiative
+         +1 Damage is [Knockdown]
+         Criticals are [Knockdown]")
+     "Throw:Hip"
+      (base/ability
+       :name "Throw:Hip"
+       :summary
+        "* This is a quick move to get an opponent on the ground. The fighter moves a leg behind the opponent's and pushes him past the hip and directly to the floor.
+         -1 Move
+         Damage - [Knockdown]
+         Criticals - [Knockdown]")
+     "Throw:Shoulder"
+      (base/ability
+       :name "Throw:Shoulder"
+       :summary
+        "* The fighter lifts the opponent his is holding over a shoulder and hurls him as far as his strength will allow.
+         * Requires a [Hold].
+         -1 Move
+         +1 Damage - [Knockback] in any direction the fighter chooses.
+         Criticals - [Knockback]"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -865,9 +873,9 @@ x +1DMG vs. Crouching."
    :name "Defense"
    :titles "Armorer, Defender, Shield Bearer, Shield Warden, Warder"
    :summary
-    "Skill emphasizing Block, Shields, Medium, and Heavy Armor.
+    "Skill emphasizing Block, Shields, Medium, and Heavy Armor
      * Armor requires a minimum Defense Level
-     * [Success]: IF you played a [Common] [Block] and your Modified Rank is less than 2 THEN [Fatigue]:-1 for each Rank below 2."
+     * [Success]: IF you played a [Common] [Block] and your Modified Rank is less than 2 THEN [Fatigue]:-1 for each Rank below 2"
    :stat "Body"
    :abilitymap
     (base/abilitymap
@@ -877,6 +885,8 @@ x +1DMG vs. Crouching."
        :summary
         "* [Skill]: [Defense]
          * The ability to repair, improve, or even create armor.")
+     "Bite the Bullet"
+      (base/ability<-tactics-key tactics "Bite the Bullet")
      "Blocked In"
       (base/ability
        :name "Blocked In"
@@ -934,8 +944,7 @@ x +1DMG vs. Crouching."
   (base/skill
    :name "Evasion"
    :summary
-    "* Evasion is a special defense typically used by those that choose to wear light or no Armor.
-     * [Success]: IF you played a [Common] [Evade] and your Modified Rank is less than 2 THEN [Move]:+1 for each Rank below 2."
+    "Skill emphasizing Evade and Counter (often with light or no Armor)"
    :stat "Speed"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -961,8 +970,11 @@ x +1DMG vs. Crouching."
      "Light Armor"))
   (base/skill
    :name "Ranged"
-   :reference "* Good. Bad. I'm the guy with the gun. - Ash, Army of Darkness"
    :titles "Archer, Javelineer, Slinger"
+   :reference
+    "* Good. Bad. I'm the guy with the gun. - Ash, Army of Darkness"
+   :summary
+    "Low tech ranged weapons. Does not include Firearms or Siege Weapons"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -974,6 +986,7 @@ x +1DMG vs. Crouching."
      "Explosive Shot"
      "Flaming Shot"
      "Fletching"
+     "Hip Shoot"
      "Knife Throwing"
      "Piercing Shot"
      "Quick Draw"
@@ -993,119 +1006,21 @@ x +1DMG vs. Crouching."
     "* Captain's orders: Bullet to the face. - Crackshot Corsair, Runeterra
      * Smile! It's called gunPLAY. - Jinx, Runeterra"
    :summary
-    "* Skill in using guns of various types (not including crossbows). IF you shoot in a non-standard way, you have [Disadvantage]."
+    "Skill in using guns of various types (not including crossbows)
+     * Note: IF you shoot in a non-standard way (eg shooting form the hip), you have [Disadvantage]."
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Double Shot"
+     "Dual Pistols"
+     "Dual SMGs"
+     "Guns Blazing"
      "Quick Draw"
-      (base/ability<-tactics-key tactics "Quick Draw")
      "Hip Shoot"
-      (base/ability<-tactics-key tactics "Hip Shoot")
      "Rapid Fire"
-      (base/ability
-       :name "Rapid Fire")
+     "Sharpshooting"
      "Sniper"
-      (base/ability<-tactics-key tactics "Sniper")
-     "Supressive Fire"
-      (base/ability<-tactics-key tactics "Supressive Fire")
-     "Anti-Personnel"
-      (base/ability
-       :name "Anti-Personnel"
-       :summary
-        "* [Action]: [+1 Damage] or [-1 Damage] vs. 2 or more Armor"
-       :titles "Hollow Point")
-     "Armor Piercing"
-      (base/ability
-       :name "Armor Piercing"
-       :summary "* [Action]: Enemy at [-2 Armor]"
-       :titles "Depleted Uraniumn")
-     "Bombardment"
-      (base/ability
-       :name "Bombardment")
-     "Capacitors"
-      (base/ability
-       :name "Capacitors"
-       :summary
-        "* Uses capacitors that can recharge 1 Use a turn from a power source rated at the same power level as a single shot. Cannot be used with lower energy power sources.")
-     "Chemical Rounds"
-      (base/ability
-       :name "Chemical Rounds"
-       :summary
-        "* [Action]: [-1 Damage], [Critical Hits] are [Acid]")
-     "Electroshock"
-      (base/ability
-       :name "Electroshock"
-       :titles "Taser")
-     "Extra Ammo"
-      (base/ability
-       :name "Extra Ammo"
-       :summary "* 2x number of Uses, each time this modifier is taken.")
-     "Flash Surpressor"
-      (base/ability
-       :name "Flash Surpressor"
-       :summary
-        "* Reduces the muzzle flare of the weapon making it more difficult to visually locate the shooter.")
-     "Gun Mount"
-      (base/ability
-       :name "Gun Mount"
-       :titles "Bipod, Tripod")
-     "Gyrojet Rounds"
-      (base/ability
-       :name "Gyrojet Rounds"
-       :summary
-        "* [Action]: [+1 Damage] at Long Range, [-1 Damage] at Short Range"
-       :titles "Rocket Rounds")
-     "High Explosive Rounds"
-      (base/ability
-       :name "High Explosive Rounds"
-       :titles "Explosive Rounds"
-       :summary
-        "* [Action]: Use [Blast] rules for targetting and damage.")
-     "Non-Lethal Rounds"
-      (base/ability
-       :name "Non-Lethal Rounds"
-       :titles "Rubber Bullets"
-       :summary
-        "* [Action]: [-2 Damage] vs. 2 or more Armor. Half of all [Damage] is [Stun] instead.")
-     "Overcharge"
-      (base/ability
-       :name "Overcharge"
-       :summary
-        "* [Action]: Consume 2 Uses to to 1 extra damage. Then Damage is -1 until repaired.")
-     "Overload Weapon"
-      (base/ability
-       :name "Overload Weapon"
-       :summary
-        "* Detonate the entire weapon magazine (and the weapon) as an explosive with force equal to the total power in the magazine.")
-     "Paint Rounds"
-      (base/ability
-       :name "Paint Rounds"
-       :titles "Paintball"
-       :summary
-        "* [Action]: [0 Damage], [Critical Hits] are [Stun]")
-     "Rechargable"
-      (base/ability
-       :name "Rechargable"
-       :summary
-        "* Uses batteries that can be slowly recharged from any power source.")
-     "Recoil Compensator"
-      (base/ability
-       :name "Recoil Compensator"
-       :summary
-        "* Reduces the 'kick' of the weapon and therefore reduces the penalty for continuous fire.")
-     "Silencer"
-      (base/ability
-       :name "Silencer")
-     "Smoke Generator"
-      (base/ability
-       :name "Smoke Generator")
-     "Targeting Laser"
-      (base/ability
-       :name "Targeting Laser")
-     "Telescopic Sight"
-      (base/ability<-tactics-key tactics "Telescopic Sight")
-     "Tracking Rounds"
-      (base/ability
-       :name "Tracking Rounds"))
+     "Supressive Fire")
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
@@ -1165,13 +1080,14 @@ x +1DMG vs. Crouching."
      "Drive Cart"
      "Falconry"
      "Guard Training"
-     "Harvest Poison"
+     "Harvest:Poison"
      "Herding"
      "Horse Archery"
      "Husbandry"
      "Livestock"
      "Mounted Combat"
      "Retrieve"
+     "Ride"
      "Ride:Bull"
      "Run Down"
      "Seeing Eye Training"
@@ -1213,7 +1129,7 @@ x +1DMG vs. Crouching."
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
-     "Harvest Poison"
+     "Harvest:Poison"
      "Kiss of Death"
      "Poisoned Arrow"
      "Poisoned Blade"
@@ -1476,19 +1392,23 @@ x +1DMG vs. Crouching."
      :Fashion
       (base/ability
        :name "Fashion"
-       :summary "* Knows current fashions and what clothing with make the best impact.")
+       :summary
+        "* Knows current fashions and what clothing with make the best impact.")
      :Fiction
       (base/ability
        :name "Fiction"
-       :summary "* Can author, critique, interpret, and detect fiction.")
+       :summary
+        "* Can author, critique, interpret, and detect fiction.")
      "Go Viral"
       (base/ability
        :name "Go Viral"
-       :summary "* Create an interesting message popular enough to be passed around.")
-     :Gossip
+       :summary
+        "* Create an interesting message popular enough to be passed around.")
+     "Gossip"
       (base/ability
        :name "Gossip"
-       :summary "* The single best way to get information, but, given it source, may not be reliable.")
+       :summary
+        "* The single best way to get information, but, given it source, may not be reliable.")
      :Interview
       (base/ability
        :name "Interview"
@@ -2154,7 +2074,6 @@ x +1DMG vs. Crouching."
      "Fury"
      "Grip of Fear"
      "Interrogate"
-     "Intimidate"
      "Hatred"
      "Howl"
      "Oppress"
@@ -2165,6 +2084,7 @@ x +1DMG vs. Crouching."
      "Terrorize"
      "Torment"
      "Torture"
+     "Unnerve"
      "Vengeance"
      "Warcry"))
   (base/skill
@@ -3547,6 +3467,7 @@ x +1DMG vs. Crouching."
      "Administration"
      "Agriculture"
      "Architecture"
+     "Bartending"
      "Blacksmithing"
      "Brewing"
      "Carpentry"
@@ -3556,6 +3477,7 @@ x +1DMG vs. Crouching."
      "Cooping"
      "Glassblowing"
      "House Painting"
+     "Hospitality"
      "Jewelsmithing"
      "Laboring"
      "Landscaping"

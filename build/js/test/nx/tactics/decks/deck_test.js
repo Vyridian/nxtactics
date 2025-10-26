@@ -10,11 +10,8 @@ import nx_tactics_decks_data from "../../../../src/nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../../src/nx/tactics/decks/disorder.js"
 import nx_tactics_decks_reference from "../../../../src/nx/tactics/decks/reference.js"
 import nx_tactics_decks_rule from "../../../../src/nx/tactics/decks/rule.js"
-import nx_tactics_decks_scene_murintrail from "../../../../src/nx/tactics/decks/scene-murintrail.js"
-import nx_tactics_decks_scene_nightonthetown from "../../../../src/nx/tactics/decks/scene-nightonthetown.js"
-import nx_tactics_decks_scene_ontherun from "../../../../src/nx/tactics/decks/scene-ontherun.js"
 import nx_tactics_decks_restrain from "../../../../src/nx/tactics/decks/restrain.js"
-import nx_tactics_decks_scene_starter from "../../../../src/nx/tactics/decks/scene-starter.js"
+import nx_tactics_decks_scene from "../../../../src/nx/tactics/decks/scene.js"
 import nx_tactics_decks_starter from "../../../../src/nx/tactics/decks/starter.js"
 import nx_tactics_decks_trauma from "../../../../src/nx/tactics/decks/trauma.js"
 import nx_tactics_decks_vehicle from "../../../../src/nx/tactics/decks/vehicle.js"
@@ -40,7 +37,7 @@ export default class nx_tactics_decks_deck_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/deck", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 69, ":tests", 9, ":total", 13), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 76, ":tests", 10, ":total", 13), 
       "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 13), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 

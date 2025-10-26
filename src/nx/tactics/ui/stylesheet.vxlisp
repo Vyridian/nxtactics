@@ -45,6 +45,13 @@
   :fontsize 40)
  :doc "Returns Normal text Font")
 
+(const font-text-deck : ui/font
+ (ui/font
+  :name     "font-text-deck"
+  :fontface fontface1
+  :fontsize 70)
+ :doc "Returns Deck text Font")
+
 (const font-textarea : ui/font
  (ui/font
   :name     "font-textarea"
@@ -352,13 +359,29 @@
 
 (const style-card : ui/style
  (ui/style
-  :name             "style-card"
-  :type             ui/styletype-shared
+  :name      "style-card"
+  :type      ui/styletype-shared
   :color-bkg "FFFFFF"
-  :layout           ui/layout-flow-item
-  :pointsize        point-cardsize
-  :scroll-y         true)
+  :layout    ui/layout-flow-item
+  :pointsize point-cardsize
+  :scroll-y  true)
  :doc "")
+
+(const style-card-deck : ui/style
+ (ui/style
+  :name   "style-text-deck"
+  :type   ui/styletype-shared
+  :layout ui/layout-label
+  :align  ui/align-center
+  :color-font "0000FF"
+  :font   font-text-deck
+  :pointpos
+   (ui/point
+    :y 82)
+  :pointsize
+   (ui/point
+    :x 63))
+ :doc "Returns the style for the deck label")
 
 (const style-card-display : ui/style
  (ui/style
@@ -693,6 +716,37 @@
      (file/file
       :name "icon-sword.svg"
       :path "icons")))
+ :doc "")
+
+(const style-image-terraincard : ui/style
+ (ui/style
+  :name "style-image-terraincard"
+  :layout ui/layout-image
+  :color-bkg "FFFFFF"
+  :pointorigin ui/point-center
+  :pointsize
+   (ui/point
+    :y 18)
+  :image-bkg
+   (ui/image
+    :name "image-wand1"
+    :label "Wands"
+    :file
+     (file/file
+      :name "icon-wand.svg"
+      :path "icons")))
+ :doc "")
+
+(const style-image-terrain-dot-left : ui/style
+ (ui/style
+  :name "style-image-terrain-dot-left"
+  :layout ui/layout-image
+  :color-bkg "FFFFFF"
+  :pointorigin ui/point-center
+  :pointsize
+   (ui/point
+    :x 10
+    :y 10))
  :doc "")
 
 (const style-image-wand1 : ui/style
@@ -1064,6 +1118,7 @@
      style-app-titlebar-print
      style-app-titlebar-title
      style-card
+     style-card-deck
      style-deck
      style-image-background
      style-image-coin1

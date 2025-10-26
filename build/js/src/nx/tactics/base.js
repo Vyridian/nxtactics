@@ -2,6 +2,7 @@
 
 import vx_core from "../../vx/core.js"
 import vx_collection from "../../vx/collection.js"
+import vx_ui_ui from "../../vx/ui/ui.js"
 
 
 export default class nx_tactics_base {
@@ -79,6 +80,12 @@ export default class nx_tactics_base {
    */
   static t_cardlayout = {}
   static e_cardlayout = {vx_type: nx_tactics_base.t_cardlayout}
+
+  /**
+   * type: cardlayoutlist
+   */
+  static t_cardlayoutlist = {}
+  static e_cardlayoutlist = vx_core.vx_new_list(nx_tactics_base.t_cardlayoutlist, [])
 
   /**
    * type: cardlist
@@ -611,6 +618,12 @@ export default class nx_tactics_base {
    * {cardlayout}
    */
   static c_cardlayout_imageonly = {vx_type: nx_tactics_base.t_cardlayout, vx_constdef: {pkgname: 'nx/tactics/base', name: 'cardlayout-imageonly', type: nx_tactics_base.t_cardlayout}}
+
+  /**
+   * Constant: cardlayout-imagesideways
+   * {cardlayout}
+   */
+  static c_cardlayout_imagesideways = {vx_type: nx_tactics_base.t_cardlayout, vx_constdef: {pkgname: 'nx/tactics/base', name: 'cardlayout-imagesideways', type: nx_tactics_base.t_cardlayout}}
 
   /**
    * Constant: cardlayout-textimage
@@ -1513,21 +1526,98 @@ export default class nx_tactics_base {
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
         const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":image")
         const cardtype = vx_core.f_type_from_any(card)
-        const layout = vx_core.f_switch(
-          {"any-1": nx_tactics_base.t_cardlayout, "any-2": vx_core.t_any},
-          cardtype,
-          vx_core.f_case_1(
-            nx_tactics_base.t_place,
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_base.c_cardlayout_textimage})
+        const imgmirror = vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": nx_tactics_base.t_card}, card, ":imgmirror")
+        const layout = vx_core.f_if_2(
+          {"any-1": nx_tactics_base.t_cardlayout},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              cardtype,
+              nx_tactics_base.t_place
+            )}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_base.c_cardlayout_imageonly})
+          ),
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return imgmirror}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_base.c_cardlayout_imagemirror})
+          ),
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              cardtype,
+              nx_tactics_base.t_unit
+            )}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_base.c_cardlayout_imagesideways})
           ),
           vx_core.f_else(
             vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_cardlayout, "struct-2": nx_tactics_base.t_card}, card, ":layout")})
           )
         )
-        const imgmirror = vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": nx_tactics_base.t_card}, card, ":imgmirror")
         const id = vx_core.f_new({"any-1": vx_core.t_string}, name, "-image")
         const imgname = id
-        return vx_core.f_new({"any-1": nx_tactics_base.t_cardimage}, ":id", id, ":name", name, ":origcard", card, ":image", image, ":layout", layout, ":imgmirror", imgmirror)
+        return vx_core.f_new({"any-1": nx_tactics_base.t_cardimage}, ":id", id, ":name", name, ":origcard", card, ":image", image, ":layout", layout)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function cardimage_from_tactics_placekey
+   * Returns a cardimage from a given tactics and place key.
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @return {cardimage}
+   */
+  static t_cardimage_from_tactics_placekey = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardimage_from_tactics_placekey = {
+    vx_type: nx_tactics_base.t_cardimage_from_tactics_placekey
+  }
+
+  // (func cardimage<-tactics-placekey)
+  static f_cardimage_from_tactics_placekey(tactics, key) {
+    let output = nx_tactics_base.e_cardimage
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_cardimage},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const place = nx_tactics_base.f_place_from_tactics_key(tactics, key)
+        return nx_tactics_base.f_cardimage_from_card(place)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function cardimage_from_tactics_placekey_num_cardlayout
+   * Returns a cardimage from a given tactics and place key.
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @param  {int} num
+   * @param  {cardlayout} cardlayout
+   * @return {cardimage}
+   */
+  static t_cardimage_from_tactics_placekey_num_cardlayout = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardimage_from_tactics_placekey_num_cardlayout = {
+    vx_type: nx_tactics_base.t_cardimage_from_tactics_placekey_num_cardlayout
+  }
+
+  // (func cardimage<-tactics-placekey-num-cardlayout)
+  static f_cardimage_from_tactics_placekey_num_cardlayout(tactics, key, num, cardlayout) {
+    let output = nx_tactics_base.e_cardimage
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_cardimage},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const cardimage = nx_tactics_base.f_cardimage_from_tactics_placekey(tactics, key)
+        const id = vx_core.f_new(
+          {"any-1": vx_core.t_string},
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_cardimage}, cardimage, ":id"),
+          "-",
+          num
+        )
+        return vx_core.f_copy(cardimage, ":id", id, ":layout", cardlayout)
       })
     )
     return output
@@ -3631,9 +3721,7 @@ export default class nx_tactics_base {
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const bookmap = nx_tactics_base.f_bookmap_from_booklist(booklist)
         const chapterlist = nx_tactics_base.f_chapterlist_from_booklist(booklist)
-        const chaptermap = nx_tactics_base.f_chaptermap_from_chapterlist(chapterlist)
         const sectionlist = nx_tactics_base.f_sectionlist_all_from_chapterlist(chapterlist)
-        const sectionmap = nx_tactics_base.f_sectionmap_from_sectionlist(sectionlist)
         const itemlist = nx_tactics_base.f_itemlist_from_sectionlist(sectionlist)
         const itemmap = nx_tactics_base.f_itemmap_from_itemlist(itemlist)
         const placelist = nx_tactics_base.f_placelist_from_sectionlist(sectionlist)
@@ -3646,30 +3734,11 @@ export default class nx_tactics_base {
         const abilitylist2 = nx_tactics_base.f_abilitylist_from_powerlist(powerlist)
         const abilitylist3 = vx_core.f_new({"any-1": nx_tactics_base.t_abilitylist}, abilitylist1, abilitylist2)
         const abilitymap = nx_tactics_base.f_abilitymap_from_abilitylist(abilitylist3)
+        const scenemap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_scenemap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":scenemap")
         const specialtymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":specialtymap")
         const unitlist = nx_tactics_base.f_unitlist_from_sectionlist(sectionlist)
         const unitmap = nx_tactics_base.f_unitmap_from_unitlist(unitlist)
-        const tacticsbook = vx_core.f_new(
-          {"any-1": nx_tactics_base.t_tactics},
-          ":abilitymap",
-          abilitymap,
-          ":bookmap",
-          bookmap,
-          ":itemmap",
-          itemmap,
-          ":placemap",
-          placemap,
-          ":powermap",
-          powermap,
-          ":scenemap",
-          nx_tactics_base.t_scenemap,
-          ":skillmap",
-          skillmap,
-          ":specialtymap",
-          specialtymap,
-          ":unitmap",
-          unitmap
-        )
+        const tacticsbook = vx_core.f_new({"any-1": nx_tactics_base.t_tactics}, ":abilitymap", abilitymap, ":bookmap", bookmap, ":itemmap", itemmap, ":placemap", placemap, ":powermap", powermap, ":scenemap", scenemap, ":skillmap", skillmap, ":specialtymap", specialtymap, ":unitmap", unitmap)
         return nx_tactics_base.f_tactics_from_tactics_merge(tactics, tacticsbook)
       })
     )
@@ -4175,7 +4244,7 @@ export default class nx_tactics_base {
    * @function unitpower_from_tactics_key_abilities
    * @param  {tactics} tactics
    * @param  {string} key
-   * @param  {stringlist} abilities
+   * @param  {stringlist} ... abilities
    * @return {unitpower}
    */
   static t_unitpower_from_tactics_key_abilities = {
@@ -4186,8 +4255,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitpower<-tactics-key-abilities)
-  static f_unitpower_from_tactics_key_abilities(tactics, key, abilities) {
+  static f_unitpower_from_tactics_key_abilities(tactics, key, ...abilities) {
     let output = nx_tactics_base.e_unitpower
+    abilities = vx_core.f_new_from_type(vx_core.t_stringlist, ...abilities)
     output = nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities_items(
       tactics,
       key,
@@ -4236,7 +4306,7 @@ export default class nx_tactics_base {
    * @param  {tactics} tactics
    * @param  {string} key
    * @param  {int} level
-   * @param  {stringlist} abilities
+   * @param  {stringlist} ... abilities
    * @return {unitpower}
    */
   static t_unitpower_from_tactics_key_lvl_abilities = {
@@ -4247,8 +4317,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitpower<-tactics-key-lvl-abilities)
-  static f_unitpower_from_tactics_key_lvl_abilities(tactics, key, level, abilities) {
+  static f_unitpower_from_tactics_key_lvl_abilities(tactics, key, level, ...abilities) {
     let output = nx_tactics_base.e_unitpower
+    abilities = vx_core.f_new_from_type(vx_core.t_stringlist, ...abilities)
     output = nx_tactics_base.f_unitpower_from_tactics_key_lvl_rating_abilities_items(
       tactics,
       key,
@@ -4302,7 +4373,7 @@ export default class nx_tactics_base {
    * @param  {string} key
    * @param  {int} level
    * @param  {string} rating
-   * @param  {stringlist} abilities
+   * @param  {stringlist} ... abilities
    * @return {unitpower}
    */
   static t_unitpower_from_tactics_key_lvl_rating_abilities = {
@@ -4313,8 +4384,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitpower<-tactics-key-lvl-rating-abilities)
-  static f_unitpower_from_tactics_key_lvl_rating_abilities(tactics, key, level, rating, abilities) {
+  static f_unitpower_from_tactics_key_lvl_rating_abilities(tactics, key, level, rating, ...abilities) {
     let output = nx_tactics_base.e_unitpower
+    abilities = vx_core.f_new_from_type(vx_core.t_stringlist, ...abilities)
     output = nx_tactics_base.f_unitpower_from_tactics_key_lvl_rating_abilities_items(
       tactics,
       key,
@@ -4413,7 +4485,7 @@ export default class nx_tactics_base {
    * @param  {tactics} tactics
    * @param  {string} key
    * @param  {string} rating
-   * @param  {stringlist} abilities
+   * @param  {stringlist} ... abilities
    * @return {unitpower}
    */
   static t_unitpower_from_tactics_key_rating_abilities = {
@@ -4424,8 +4496,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitpower<-tactics-key-rating-abilities)
-  static f_unitpower_from_tactics_key_rating_abilities(tactics, key, rating, abilities) {
+  static f_unitpower_from_tactics_key_rating_abilities(tactics, key, rating, ...abilities) {
     let output = nx_tactics_base.e_unitpower
+    abilities = vx_core.f_new_from_type(vx_core.t_stringlist, ...abilities)
     output = nx_tactics_base.f_unitpower_from_tactics_key_lvl_rating_abilities_items(
       tactics,
       key,
@@ -4558,7 +4631,7 @@ export default class nx_tactics_base {
    * @function unitskill_from_tactics_key_abilities
    * @param  {tactics} tactics
    * @param  {string} key
-   * @param  {stringlist} abilities
+   * @param  {stringlist} ... abilities
    * @return {unitskill}
    */
   static t_unitskill_from_tactics_key_abilities = {
@@ -4569,8 +4642,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitskill<-tactics-key-abilities)
-  static f_unitskill_from_tactics_key_abilities(tactics, key, abilities) {
+  static f_unitskill_from_tactics_key_abilities(tactics, key, ...abilities) {
     let output = nx_tactics_base.e_unitskill
+    abilities = vx_core.f_new_from_type(vx_core.t_stringlist, ...abilities)
     output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
       tactics,
       key,
@@ -4590,7 +4664,7 @@ export default class nx_tactics_base {
    * @function unitskill_from_tactics_key_items
    * @param  {tactics} tactics
    * @param  {string} key
-   * @param  {stringlist} items
+   * @param  {stringlist} ... items
    * @return {unitskill}
    */
   static t_unitskill_from_tactics_key_items = {
@@ -4601,8 +4675,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitskill<-tactics-key-items)
-  static f_unitskill_from_tactics_key_items(tactics, key, items) {
+  static f_unitskill_from_tactics_key_items(tactics, key, ...items) {
     let output = nx_tactics_base.e_unitskill
+    items = vx_core.f_new_from_type(vx_core.t_stringlist, ...items)
     output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
       tactics,
       key,
@@ -4657,7 +4732,7 @@ export default class nx_tactics_base {
    * @param  {tactics} tactics
    * @param  {string} key
    * @param  {int} level
-   * @param  {stringlist} abilities
+   * @param  {stringlist} ... abilities
    * @return {unitskill}
    */
   static t_unitskill_from_tactics_key_lvl_abilities = {
@@ -4668,8 +4743,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitskill<-tactics-key-lvl-abilities)
-  static f_unitskill_from_tactics_key_lvl_abilities(tactics, key, level, abilities) {
+  static f_unitskill_from_tactics_key_lvl_abilities(tactics, key, level, ...abilities) {
     let output = nx_tactics_base.e_unitskill
+    abilities = vx_core.f_new_from_type(vx_core.t_stringlist, ...abilities)
     output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
       tactics,
       key,
@@ -4709,9 +4785,7 @@ export default class nx_tactics_base {
       key,
       level,
       abilities,
-      vx_core.f_empty(
-        vx_core.t_stringlist
-      ),
+      items,
       vx_core.f_empty(
         vx_core.t_stringlist
       )
@@ -4806,7 +4880,7 @@ export default class nx_tactics_base {
    * @param  {tactics} tactics
    * @param  {string} key
    * @param  {int} level
-   * @param  {stringlist} items
+   * @param  {stringlist} ... items
    * @return {unitskill}
    */
   static t_unitskill_from_tactics_key_lvl_items = {
@@ -4817,8 +4891,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitskill<-tactics-key-lvl-items)
-  static f_unitskill_from_tactics_key_lvl_items(tactics, key, level, items) {
+  static f_unitskill_from_tactics_key_lvl_items(tactics, key, level, ...items) {
     let output = nx_tactics_base.e_unitskill
+    items = vx_core.f_new_from_type(vx_core.t_stringlist, ...items)
     output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
       tactics,
       key,
@@ -4839,7 +4914,7 @@ export default class nx_tactics_base {
    * @param  {tactics} tactics
    * @param  {string} key
    * @param  {int} level
-   * @param  {stringlist} specialties
+   * @param  {stringlist} ... specialties
    * @return {unitskill}
    */
   static t_unitskill_from_tactics_key_lvl_specialties = {
@@ -4850,8 +4925,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitskill<-tactics-key-lvl-specialties)
-  static f_unitskill_from_tactics_key_lvl_specialties(tactics, key, level, specialties) {
+  static f_unitskill_from_tactics_key_lvl_specialties(tactics, key, level, ...specialties) {
     let output = nx_tactics_base.e_unitskill
+    specialties = vx_core.f_new_from_type(vx_core.t_stringlist, ...specialties)
     output = nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items_specialties(
       tactics,
       key,
@@ -4984,6 +5060,7 @@ export default class nx_tactics_base {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
       "cardlayout-imagemirror": nx_tactics_base.c_cardlayout_imagemirror,
       "cardlayout-imageonly": nx_tactics_base.c_cardlayout_imageonly,
+      "cardlayout-imagesideways": nx_tactics_base.c_cardlayout_imagesideways,
       "cardlayout-textimage": nx_tactics_base.c_cardlayout_textimage,
       "rank-ace": nx_tactics_base.c_rank_ace,
       "rank-eight": nx_tactics_base.c_rank_eight,
@@ -5089,6 +5166,7 @@ export default class nx_tactics_base {
       "cardimage": nx_tactics_base.e_cardimage,
       "cardimagelist": nx_tactics_base.e_cardimagelist,
       "cardlayout": nx_tactics_base.e_cardlayout,
+      "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
       "cardlist": nx_tactics_base.e_cardlist,
       "cardmap": nx_tactics_base.e_cardmap,
       "chapter": nx_tactics_base.e_chapter,
@@ -5188,6 +5266,8 @@ export default class nx_tactics_base {
       "abilitymap<-tactics-keys": nx_tactics_base.e_abilitymap_from_tactics_keys,
       "bookmap<-booklist": nx_tactics_base.e_bookmap_from_booklist,
       "cardimage<-card": nx_tactics_base.e_cardimage_from_card,
+      "cardimage<-tactics-placekey": nx_tactics_base.e_cardimage_from_tactics_placekey,
+      "cardimage<-tactics-placekey-num-cardlayout": nx_tactics_base.e_cardimage_from_tactics_placekey_num_cardlayout,
       "cardimage<-tactics-unitkey": nx_tactics_base.e_cardimage_from_tactics_unitkey,
       "cardimagelist<-cardlist": nx_tactics_base.e_cardimagelist_from_cardlist,
       "cardimagelist<-placelist": nx_tactics_base.e_cardimagelist_from_placelist,
@@ -5319,6 +5399,8 @@ export default class nx_tactics_base {
       "abilitymap<-tactics-keys": nx_tactics_base.t_abilitymap_from_tactics_keys,
       "bookmap<-booklist": nx_tactics_base.t_bookmap_from_booklist,
       "cardimage<-card": nx_tactics_base.t_cardimage_from_card,
+      "cardimage<-tactics-placekey": nx_tactics_base.t_cardimage_from_tactics_placekey,
+      "cardimage<-tactics-placekey-num-cardlayout": nx_tactics_base.t_cardimage_from_tactics_placekey_num_cardlayout,
       "cardimage<-tactics-unitkey": nx_tactics_base.t_cardimage_from_tactics_unitkey,
       "cardimagelist<-cardlist": nx_tactics_base.t_cardimagelist_from_cardlist,
       "cardimagelist<-placelist": nx_tactics_base.t_cardimagelist_from_placelist,
@@ -5449,6 +5531,7 @@ export default class nx_tactics_base {
       "cardimage": nx_tactics_base.t_cardimage,
       "cardimagelist": nx_tactics_base.t_cardimagelist,
       "cardlayout": nx_tactics_base.t_cardlayout,
+      "cardlayoutlist": nx_tactics_base.t_cardlayoutlist,
       "cardlist": nx_tactics_base.t_cardlist,
       "cardmap": nx_tactics_base.t_cardmap,
       "chapter": nx_tactics_base.t_chapter,
@@ -5569,6 +5652,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -5587,6 +5675,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -5608,21 +5701,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -5708,6 +5791,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -5728,6 +5816,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5746,16 +5839,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "chaptermap": {
@@ -5834,6 +5917,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -5852,6 +5940,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -5873,21 +5966,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -5918,6 +6001,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -5936,6 +6024,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -5957,21 +6050,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -6002,6 +6085,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -6022,6 +6110,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6040,16 +6133,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "origcard": {
@@ -6098,11 +6181,49 @@ export default class nx_tactics_base {
       allowvalues   : [],
       disallowvalues: [],
       traits        : [],
-      properties    : {},
-      proplast      : {}
+      properties    : {
+        "card": {
+          "name" : "card",
+          "type" : nx_tactics_base.t_card,
+          "multi": false
+        },
+        "cardlayoutlist": {
+          "name" : "cardlayoutlist",
+          "type" : nx_tactics_base.t_cardlayoutlist,
+          "multi": false
+        },
+        "style": {
+          "name" : "style",
+          "type" : vx_ui_ui.t_style,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "style",
+        "type" : vx_ui_ui.t_style,
+        "multi": false
+      }
     }
     nx_tactics_base.e_cardlayout['vx_type'] = nx_tactics_base.t_cardlayout
     nx_tactics_base.e_cardlayout['vx_value'] = {}
+
+    // (type cardlayoutlist)
+    nx_tactics_base.t_cardlayoutlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_cardlayoutlist['vx_value'] = {
+      name          : "cardlayoutlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_cardlayout],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_cardlayoutlist['vx_type'] = nx_tactics_base.t_cardlayoutlist
 
     // (type cardlist)
     nx_tactics_base.t_cardlist['vx_type'] = vx_core.t_type
@@ -6165,6 +6286,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -6185,6 +6311,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6203,16 +6334,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "sectionmap": {
@@ -6309,6 +6430,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -6327,6 +6453,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -6348,21 +6479,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -6393,6 +6514,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -6411,6 +6537,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -6432,21 +6563,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -6514,6 +6635,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -6534,6 +6660,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6552,16 +6683,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "cardmap": {
@@ -6603,6 +6724,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -6621,6 +6747,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -6642,21 +6773,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -6687,6 +6808,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -6705,6 +6831,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -6726,21 +6857,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -6771,6 +6892,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -6791,6 +6917,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6809,16 +6940,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "description": {
@@ -6875,6 +6996,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -6895,6 +7021,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6913,16 +7044,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "body": {
@@ -7154,6 +7275,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -7172,6 +7298,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -7193,21 +7324,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -7238,6 +7359,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -7256,6 +7382,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -7277,21 +7408,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -7341,6 +7462,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -7361,6 +7487,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7379,16 +7510,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "length": {
@@ -7534,6 +7655,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -7554,6 +7680,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7572,16 +7703,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "stat": {
@@ -7693,6 +7814,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -7711,6 +7837,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -7732,21 +7863,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -7777,6 +7898,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -7797,6 +7923,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7815,16 +7946,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -7871,6 +7992,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -7891,6 +8017,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7909,16 +8040,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "level": {
@@ -8008,6 +8129,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -8028,6 +8154,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -8046,16 +8177,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "classification": {
@@ -8122,7 +8243,7 @@ export default class nx_tactics_base {
       disallowtypes : [],
       allowvalues   : [],
       disallowvalues: [],
-      traits        : [nx_tactics_base.t_card],
+      traits        : [nx_tactics_base.t_card, nx_tactics_base.t_deck],
       properties    : {
         "id": {
           "name" : "id",
@@ -8131,6 +8252,11 @@ export default class nx_tactics_base {
         },
         "name": {
           "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "deck": {
+          "name" : "deck",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -8154,6 +8280,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -8174,14 +8305,9 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
+        "cardmap": {
+          "name" : "cardmap",
+          "type" : nx_tactics_base.t_cardmap,
           "multi": false
         },
         "teammap": {
@@ -8260,6 +8386,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -8280,6 +8411,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -8298,16 +8434,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "damagemap": {
@@ -8469,6 +8595,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -8489,6 +8620,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -8507,16 +8643,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "stat": {
@@ -8623,6 +8749,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -8641,6 +8772,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -8662,21 +8798,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -8744,6 +8870,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -8762,6 +8893,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -8783,21 +8919,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -8828,6 +8954,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -8846,6 +8977,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -8867,21 +9003,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -9010,6 +9136,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -9028,6 +9159,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -9049,21 +9185,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -9094,6 +9220,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -9114,6 +9245,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -9132,16 +9268,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "completevictory": {
@@ -9217,6 +9343,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -9235,6 +9366,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -9256,21 +9392,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -9320,6 +9446,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -9340,6 +9471,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -9358,16 +9494,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "description": {
@@ -9424,6 +9550,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -9442,6 +9573,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -9463,21 +9599,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -9508,6 +9634,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -9528,6 +9659,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -9546,16 +9682,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "body": {
@@ -9833,6 +9959,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -9853,6 +9984,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -9871,16 +10007,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "name": {
@@ -10039,6 +10165,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -10059,6 +10190,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -10077,16 +10213,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "power": {
@@ -10225,6 +10351,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -10245,6 +10376,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_cardlayout,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -10263,16 +10399,6 @@ export default class nx_tactics_base {
         "titles": {
           "name" : "titles",
           "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "level": {
@@ -10444,6 +10570,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -10462,6 +10593,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -10483,21 +10619,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -10547,6 +10673,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "deck": {
+          "name" : "deck",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "icon": {
           "name" : "icon",
           "type" : vx_core.t_string,
@@ -10565,6 +10696,11 @@ export default class nx_tactics_base {
         "layout": {
           "name" : "layout",
           "type" : nx_tactics_base.t_cardlayout,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "reference": {
@@ -10586,21 +10722,11 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
         }
       },
       proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
+        "name" : "titles",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -10876,6 +11002,42 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_cardimage_from_card
+    }
+
+    // (func cardimage<-tactics-placekey)
+    nx_tactics_base.t_cardimage_from_tactics_placekey['vx_value'] = {
+      name          : "cardimage<-tactics-placekey",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardimage_from_tactics_placekey
+    }
+
+    // (func cardimage<-tactics-placekey-num-cardlayout)
+    nx_tactics_base.t_cardimage_from_tactics_placekey_num_cardlayout['vx_value'] = {
+      name          : "cardimage<-tactics-placekey-num-cardlayout",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardimage_from_tactics_placekey_num_cardlayout
     }
 
     // (func cardimage<-tactics-unitkey)
@@ -12966,6 +13128,394 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_weaknessmap_from_weaknesslist
     }
 
+    // (const cardlayout-imagemirror)
+    Object.assign(nx_tactics_base.c_cardlayout_imagemirror, {
+      "card": {
+        "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
+        "ranksuit": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+      "style": {
+        "boundsmargin": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "boundspadding": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "font": {
+          "fontface": {
+            
+          },
+          "fontsize": 0,
+          "fontstyle": {
+            
+          }
+        },
+        "hidden": false,
+        "image-bkg": {
+          "file": {
+            
+          }
+        },
+        "layout": {
+          
+        },
+        "pin": {
+          
+        },
+        "pointorigin": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointpos": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointrotate": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointsize": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "scroll-x": false,
+        "scroll-y": false
+      }
+    })
+
+    // (const cardlayout-imageonly)
+    Object.assign(nx_tactics_base.c_cardlayout_imageonly, {
+      "card": {
+        "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
+        "ranksuit": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+      "style": {
+        "boundsmargin": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "boundspadding": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "font": {
+          "fontface": {
+            
+          },
+          "fontsize": 0,
+          "fontstyle": {
+            
+          }
+        },
+        "hidden": false,
+        "image-bkg": {
+          "file": {
+            
+          }
+        },
+        "layout": {
+          
+        },
+        "pin": {
+          
+        },
+        "pointorigin": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointpos": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointrotate": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointsize": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "scroll-x": false,
+        "scroll-y": false
+      }
+    })
+
+    // (const cardlayout-imagesideways)
+    Object.assign(nx_tactics_base.c_cardlayout_imagesideways, {
+      "card": {
+        "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
+        "ranksuit": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+      "style": {
+        "boundsmargin": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "boundspadding": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "font": {
+          "fontface": {
+            
+          },
+          "fontsize": 0,
+          "fontstyle": {
+            
+          }
+        },
+        "hidden": false,
+        "image-bkg": {
+          "file": {
+            
+          }
+        },
+        "layout": {
+          
+        },
+        "pin": {
+          
+        },
+        "pointorigin": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointpos": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointrotate": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointsize": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "scroll-x": false,
+        "scroll-y": false
+      }
+    })
+
+    // (const cardlayout-textimage)
+    Object.assign(nx_tactics_base.c_cardlayout_textimage, {
+      "card": {
+        "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
+        "ranksuit": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+      "style": {
+        "boundsmargin": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "boundspadding": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "font": {
+          "fontface": {
+            
+          },
+          "fontsize": 0,
+          "fontstyle": {
+            
+          }
+        },
+        "hidden": false,
+        "image-bkg": {
+          "file": {
+            
+          }
+        },
+        "layout": {
+          
+        },
+        "pin": {
+          
+        },
+        "pointorigin": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointpos": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointrotate": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "pointsize": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "t": 0,
+          "i": 0
+        },
+        "scroll-x": false,
+        "scroll-y": false
+      }
+    })
+
     // (const rank-ace)
     Object.assign(nx_tactics_base.c_rank_ace, vx_core.f_new({"any-1": nx_tactics_base.t_rank}, ":name", "Ace", ":titles", "A"))
 
@@ -13497,10 +14047,69 @@ export default class nx_tactics_base {
     // (const stat-beast)
     Object.assign(nx_tactics_base.c_stat_beast, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13513,12 +14122,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13529,10 +14144,69 @@ export default class nx_tactics_base {
     // (const stat-body)
     Object.assign(nx_tactics_base.c_stat_body, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13545,12 +14219,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13561,10 +14241,69 @@ export default class nx_tactics_base {
     // (const stat-mind)
     Object.assign(nx_tactics_base.c_stat_mind, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13577,12 +14316,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13593,10 +14338,69 @@ export default class nx_tactics_base {
     // (const stat-shadow)
     Object.assign(nx_tactics_base.c_stat_shadow, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13609,12 +14413,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13625,10 +14435,69 @@ export default class nx_tactics_base {
     // (const stat-speed)
     Object.assign(nx_tactics_base.c_stat_speed, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13641,12 +14510,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13657,10 +14532,69 @@ export default class nx_tactics_base {
     // (const stat-will)
     Object.assign(nx_tactics_base.c_stat_will, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13673,12 +14607,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13689,10 +14629,69 @@ export default class nx_tactics_base {
     // (const suit-black)
     Object.assign(nx_tactics_base.c_suit_black, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13705,12 +14704,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13721,10 +14726,69 @@ export default class nx_tactics_base {
     // (const suit-club)
     Object.assign(nx_tactics_base.c_suit_club, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13737,12 +14801,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13753,10 +14823,69 @@ export default class nx_tactics_base {
     // (const suit-diamond)
     Object.assign(nx_tactics_base.c_suit_diamond, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13769,12 +14898,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13785,10 +14920,69 @@ export default class nx_tactics_base {
     // (const suit-heart)
     Object.assign(nx_tactics_base.c_suit_heart, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13801,12 +14995,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13817,10 +15017,69 @@ export default class nx_tactics_base {
     // (const suit-red)
     Object.assign(nx_tactics_base.c_suit_red, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13833,12 +15092,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
@@ -13849,10 +15114,69 @@ export default class nx_tactics_base {
     // (const suit-spade)
     Object.assign(nx_tactics_base.c_suit_spade, {
       "imgmirror": false,
+      "layout": {
+        "card": {
+          "imgmirror": false,
+          "layout": {
+            
+          },
+          "ranksuit": {
+            
+          }
+        },
+        "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+        "style": {
+          "boundsmargin": {
+            
+          },
+          "boundspadding": {
+            
+          },
+          "font": {
+            
+          },
+          "hidden": false,
+          "image-bkg": {
+            
+          },
+          "layout": {
+            
+          },
+          "pin": {
+            
+          },
+          "pointorigin": {
+            
+          },
+          "pointpos": {
+            
+          },
+          "pointrotate": {
+            
+          },
+          "pointsize": {
+            
+          },
+          "scroll-x": false,
+          "scroll-y": false
+        }
+      },
       "ranksuit": {
         "imgmirror": false,
+        "layout": {
+          "card": {
+            
+          },
+          "cardlayoutlist": nx_tactics_base.e_cardlayoutlist,
+          "style": {
+            
+          }
+        },
         "ranksuit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           },
@@ -13865,12 +15189,18 @@ export default class nx_tactics_base {
         },
         "rank": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }
         },
         "suit": {
           "imgmirror": false,
+          "layout": {
+            
+          },
           "ranksuit": {
             
           }

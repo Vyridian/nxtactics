@@ -315,6 +315,11 @@
    :name "Temple"
    :image "images/cards/place-temple.svg")
   (base/place
+   :name "Terrain:Dirt"
+   :image "images/cards/place-terrain-dirt.svg"
+   :summary
+    "* A map for plain dirt. No terrain penalties.")
+  (base/place
    :name "Thera"
    :image "images/cards/place-thera.svg")
   (base/place

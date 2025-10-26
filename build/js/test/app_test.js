@@ -19,12 +19,18 @@ import vx_util_randomize_test from "./vx/util/randomize_test.js"
 import vx_collection_test from "./vx/collection_test.js"
 import vx_data_textblock_test from "./vx/data/textblock_test.js"
 import vx_repl_test from "./vx/repl_test.js"
+import vx_data_file_test from "./vx/data/file_test.js"
+import vx_data_xml_test from "./vx/data/xml_test.js"
+import vx_test_test from "./vx/test_test.js"
+import vx_ui_ui_test from "./vx/ui/ui_test.js"
+import vx_web_htmldoc_test from "./vx/web/htmldoc_test.js"
 import nx_tactics_base_test from "./nx/tactics/base_test.js"
 import nx_tactics_books_advanced_rules_test from "./nx/tactics/books/advanced_rules_test.js"
 import nx_tactics_books_age_of_sail_test from "./nx/tactics/books/age_of_sail_test.js"
 import nx_tactics_books_age_of_steam_test from "./nx/tactics/books/age_of_steam_test.js"
 import nx_tactics_books_ancients_test from "./nx/tactics/books/ancients_test.js"
 import nx_tactics_books_bestiary_test from "./nx/tactics/books/bestiary_test.js"
+import nx_tactics_books_bookloader_test from "./nx/tactics/books/bookloader_test.js"
 import nx_tactics_books_characters_test from "./nx/tactics/books/characters_test.js"
 import nx_tactics_books_combat_test from "./nx/tactics/books/combat_test.js"
 import nx_tactics_books_core_rules_test from "./nx/tactics/books/core_rules_test.js"
@@ -57,9 +63,9 @@ import nx_tactics_decks_reference_test from "./nx/tactics/decks/reference_test.j
 import nx_tactics_decks_restrain_test from "./nx/tactics/decks/restrain_test.js"
 import nx_tactics_decks_rule_test from "./nx/tactics/decks/rule_test.js"
 import nx_tactics_decks_scene_murintrail_test from "./nx/tactics/decks/scene-murintrail_test.js"
+import nx_tactics_decks_scene_nightonthetown_test from "./nx/tactics/decks/scene-nightonthetown_test.js"
 import nx_tactics_decks_scene_ontherun_test from "./nx/tactics/decks/scene-ontherun_test.js"
 import nx_tactics_decks_scene_starter_test from "./nx/tactics/decks/scene-starter_test.js"
-import nx_tactics_decks_scene_test from "./nx/tactics/decks/scene_test.js"
 import nx_tactics_decks_skill_test from "./nx/tactics/decks/skill_test.js"
 import nx_tactics_decks_specialty_test from "./nx/tactics/decks/specialty_test.js"
 import nx_tactics_decks_starter_test from "./nx/tactics/decks/starter_test.js"
@@ -67,14 +73,6 @@ import nx_tactics_decks_trauma_test from "./nx/tactics/decks/trauma_test.js"
 import nx_tactics_decks_unit_test from "./nx/tactics/decks/unit_test.js"
 import nx_tactics_decks_vehicle_test from "./nx/tactics/decks/vehicle_test.js"
 import nx_tactics_decks_wound_test from "./nx/tactics/decks/wound_test.js"
-import vx_data_file_test from "./vx/data/file_test.js"
-import vx_data_xml_test from "./vx/data/xml_test.js"
-import vx_test_test from "./vx/test_test.js"
-import vx_ui_ui_test from "./vx/ui/ui_test.js"
-import vx_web_htmldoc_test from "./vx/web/htmldoc_test.js"
-import nx_tactics_books_bookloader_test from "./nx/tactics/books/bookloader_test.js"
-import nx_tactics_decks_data_test from "./nx/tactics/decks/data_test.js"
-import nx_tactics_decks_scene_nightonthetown_test from "./nx/tactics/decks/scene-nightonthetown_test.js"
 import nx_tactics_ui_stylesheet_test from "./nx/tactics/ui/stylesheet_test.js"
 import vx_data_csv_test from "./vx/data/csv_test.js"
 import vx_translate_test from "./vx/translate_test.js"
@@ -83,10 +81,12 @@ import vx_translation_es_test from "./vx/translation/es_test.js"
 import vx_ui_html_uihtml_test from "./vx/ui/html/uihtml_test.js"
 import vx_ui_svg_uisvg_test from "./vx/ui/svg/uisvg_test.js"
 import vx_web_http_test from "./vx/web/http_test.js"
-import nx_tactics_decks_deck_test from "./nx/tactics/decks/deck_test.js"
+import nx_tactics_decks_scene_test from "./nx/tactics/decks/scene_test.js"
 import nx_tactics_ui_navigation_test from "./nx/tactics/ui/navigation_test.js"
-import nx_tactics_ui_uitactics_test from "./nx/tactics/ui/uitactics_test.js"
 import vx_translation_all_test from "./vx/translation/all_test.js"
+import nx_tactics_decks_data_test from "./nx/tactics/decks/data_test.js"
+import nx_tactics_decks_deck_test from "./nx/tactics/decks/deck_test.js"
+import nx_tactics_ui_uitactics_test from "./nx/tactics/ui/uitactics_test.js"
 import nx_tactics_apptactics_test from "./nx/tactics/apptactics_test.js"
 
 export default class app_test {
@@ -120,12 +120,18 @@ export default class app_test {
       vx_collection_test.test_package(context),
       vx_data_textblock_test.test_package(context),
       vx_repl_test.test_package(context),
+      vx_data_file_test.test_package(context),
+      vx_data_xml_test.test_package(context),
+      vx_test_test.test_package(context),
+      vx_ui_ui_test.test_package(context),
+      vx_web_htmldoc_test.test_package(context),
       nx_tactics_base_test.test_package(context),
       nx_tactics_books_advanced_rules_test.test_package(context),
       nx_tactics_books_age_of_sail_test.test_package(context),
       nx_tactics_books_age_of_steam_test.test_package(context),
       nx_tactics_books_ancients_test.test_package(context),
       nx_tactics_books_bestiary_test.test_package(context),
+      nx_tactics_books_bookloader_test.test_package(context),
       nx_tactics_books_characters_test.test_package(context),
       nx_tactics_books_combat_test.test_package(context),
       nx_tactics_books_core_rules_test.test_package(context),
@@ -158,9 +164,9 @@ export default class app_test {
       nx_tactics_decks_restrain_test.test_package(context),
       nx_tactics_decks_rule_test.test_package(context),
       nx_tactics_decks_scene_murintrail_test.test_package(context),
+      nx_tactics_decks_scene_nightonthetown_test.test_package(context),
       nx_tactics_decks_scene_ontherun_test.test_package(context),
       nx_tactics_decks_scene_starter_test.test_package(context),
-      nx_tactics_decks_scene_test.test_package(context),
       nx_tactics_decks_skill_test.test_package(context),
       nx_tactics_decks_specialty_test.test_package(context),
       nx_tactics_decks_starter_test.test_package(context),
@@ -168,14 +174,6 @@ export default class app_test {
       nx_tactics_decks_unit_test.test_package(context),
       nx_tactics_decks_vehicle_test.test_package(context),
       nx_tactics_decks_wound_test.test_package(context),
-      vx_data_file_test.test_package(context),
-      vx_data_xml_test.test_package(context),
-      vx_test_test.test_package(context),
-      vx_ui_ui_test.test_package(context),
-      vx_web_htmldoc_test.test_package(context),
-      nx_tactics_books_bookloader_test.test_package(context),
-      nx_tactics_decks_data_test.test_package(context),
-      nx_tactics_decks_scene_nightonthetown_test.test_package(context),
       nx_tactics_ui_stylesheet_test.test_package(context),
       vx_data_csv_test.test_package(context),
       vx_translate_test.test_package(context),
@@ -184,10 +182,12 @@ export default class app_test {
       vx_ui_html_uihtml_test.test_package(context),
       vx_ui_svg_uisvg_test.test_package(context),
       vx_web_http_test.test_package(context),
-      nx_tactics_decks_deck_test.test_package(context),
+      nx_tactics_decks_scene_test.test_package(context),
       nx_tactics_ui_navigation_test.test_package(context),
-      nx_tactics_ui_uitactics_test.test_package(context),
       vx_translation_all_test.test_package(context),
+      nx_tactics_decks_data_test.test_package(context),
+      nx_tactics_decks_deck_test.test_package(context),
+      nx_tactics_ui_uitactics_test.test_package(context),
       nx_tactics_apptactics_test.test_package(context)
     )
     return testpackagelist

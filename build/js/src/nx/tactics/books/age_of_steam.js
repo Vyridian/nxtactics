@@ -34,14 +34,14 @@ export default class nx_tactics_books_age_of_steam {
           ":itemmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
-            ".45 Colt Peacemaker",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".45 Colt Peacemaker", ":image", "images/age-of-steam/Colt1873.jpg", ":reference", "US Army issue from 1873-1892 and used by other notables like Wyatt Earp and Bat Masterson. Wyatt Earp's fictional Colt Buntline was supposed to be a long barrel version of the Colt Peacemaker.", ":summary", "Single action, revolver", ":classification", "Pistol", ":range", "30m", ":rounds", "6"),
-            ".45 Smith & Wesson Schofield",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".45 Smith & Wesson Schofield", ":image", "images/age-of-steam/Schofield1869.jpg", ":reference", "Just meat and potatoes.  Me and Jesse James think it's the best handgun in the world. - Kid, The Quick and the Dead.", ":summary", "Single action, revolver", ":classification", "Pistol", ":range", "30m", ":rounds", "6"),
-            ".41 Remington Derringer",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".41 Remington Derringer", ":image", "images/age-of-steam/Derringer.jpg", ":reference", "The classic Remington design is still popular; a Remington pattern derringer in .38 Special is still smaller than the most compact .25 ACP semiautomatic, and provides far superior terminal ballistic performance in its two shots than the .25 ACP does with six or seven.", ":summary", "Rimfire, single action", ":classification", "Pistol", ":range", "16m", ":rounds", "2"),
-            ".44 Winchester Model 1873",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".44 Winchester Model 1873", ":image", "images/age-of-steam/Winchester1873.jpg", ":reference", "The Winchester is among the earliest repeating rifles, and has become synonymous with lever-action firearms. Known as 'The Gun that Won the West' for its immense popularity at that time.", ":summary", "Lever action, repeating", ":classification", "Rifle", ":length", "125.2cm", ":mass", "4.3kg", ":muzzlevelocity", "379m/s", ":range", "100m"),
+            "Pistol:.45 Colt 1873",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Pistol:.45 Colt 1873"),
+            "Pistol:.45 S&W 1869",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Pistol:.45 S&W 1869"),
+            "Pistol:.41 Derringer",
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".41 Remington", ":image", "images/age-of-steam/Derringer.jpg", ":titles", "Derringer", ":reference", "The classic Remington design is still popular; a Remington pattern derringer in .38 Special is still smaller than the most compact .25 ACP semiautomatic, and provides far superior terminal ballistic performance in its two shots than the .25 ACP does with six or seven.", ":summary", "Rimfire, single action", ":classification", "Pistol", ":range", "16m", ":rounds", "2"),
+            "Rifle:.44 Winchester 1873",
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rifle:.44 Winchester 1873", ":image", "images/age-of-steam/Winchester1873.jpg", ":reference", "The Winchester is among the earliest repeating rifles, and has become synonymous with lever-action firearms. Known as 'The Gun that Won the West' for its immense popularity at that time.", ":summary", "Lever action, repeating", ":classification", "Rifle", ":length", "125.2cm", ":mass", "4.3kg", ":muzzlevelocity", "379m/s", ":range", "100m"),
             "12g Winchester Model 1887",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "12g Winchester Model 1887", ":reference", "Considered the first truly successful repeating shotgun", ":summary", "Level action\n* [Skill]: [Firearms]\n* [Scatter]", ":classification", "Shotgun", ":length", "1m", ":mass", "3.6kg", ":range", "30m", ":rounds", "5"),
             ".50 Gatling Gun",
@@ -114,7 +114,34 @@ export default class nx_tactics_books_age_of_steam {
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics: Age of Steam?"),
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Age of Steam Personal Combat", ":summary", "* Dueling\n* Civil War\n* Cowboys\n* Indians\n* Bandits\n* Cattle Rustlers\n* Marksman"),
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Age of Steam Land Warfare", ":summary", "* Infantry\n* Cavalry\n* Pistols\n* Rifles\n* Cannons\n* Artillery\n* Gatling Guns\n* Trains"),
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Age of Steam Naval Warfare", ":summary", "* Wind\n* Large Ships\n* Small Ships\n* Solid Shot\n* Burning Shot\n* Chain Shot")
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Age of Steam Naval Warfare", ":summary", "* Wind\n* Large Ships\n* Small Ships\n* Solid Shot\n* Burning Shot\n\n* Chain Shot")
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function chapter_age_of_steam_scenes
+   * @param  {tactics} tactics
+   * @return {chapter}
+   */
+  static t_chapter_age_of_steam_scenes = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_age_of_steam_scenes = {
+    vx_type: nx_tactics_books_age_of_steam.t_chapter_age_of_steam_scenes
+  }
+
+  // (func chapter_age_of_steam_scenes)
+  static f_chapter_age_of_steam_scenes(tactics) {
+    let output = nx_tactics_base.e_chapter
+    output = vx_core.f_new(
+      {"any-1": nx_tactics_base.t_chapter},
+      ":name",
+      "Age of Steam Scenes",
+      ":sectionmap",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Age of Steam Weaponry")
       )
     )
     return output
@@ -445,36 +472,8 @@ export default class nx_tactics_books_age_of_steam {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Survival", ":level", "3")
               )
             ),
-            ":Gunslinger",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Gunslinger",
-              ":image",
-              "images/age-of-steam/GunslingerToken.png",
-              ":classification",
-              "Lt. Infantry",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Crime",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
-                  "Crime",
-                  ":level",
-                  "3",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Armed Robbery",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Armed Robbery"),
-                    ":Rustling",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Rustling")
-                  )
-                )
-              )
-            ),
+            "Gunslinger",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Gunslinger"),
             "Man with No Name",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -493,6 +492,8 @@ export default class nx_tactics_books_age_of_steam {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Evasion", ":level", "5")
               )
             ),
+            "Outlaw",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Outlaw"),
             "Professional Killer",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -655,6 +656,7 @@ export default class nx_tactics_books_age_of_steam {
       ":chaptermap",
       nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_age_of_steam.f_chapter_age_of_steam_overview(tactics),
+        nx_tactics_books_age_of_steam.f_chapter_age_of_steam_scenes(tactics),
         nx_tactics_books_age_of_steam.f_chapter_age_of_steam_equipment(tactics),
         nx_tactics_books_age_of_steam.f_chapter_steam_age_maps(tactics),
         nx_tactics_books_age_of_steam.f_chapter_civil_war(tactics),
@@ -675,6 +677,7 @@ export default class nx_tactics_books_age_of_steam {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "chapter_age_of_steam_equipment": nx_tactics_books_age_of_steam.e_chapter_age_of_steam_equipment,
       "chapter_age_of_steam_overview": nx_tactics_books_age_of_steam.e_chapter_age_of_steam_overview,
+      "chapter_age_of_steam_scenes": nx_tactics_books_age_of_steam.e_chapter_age_of_steam_scenes,
       "chapter_civil_war": nx_tactics_books_age_of_steam.e_chapter_civil_war,
       "chapter_examples_of_play": nx_tactics_books_age_of_steam.e_chapter_examples_of_play,
       "chapter_steam_age_maps": nx_tactics_books_age_of_steam.e_chapter_steam_age_maps,
@@ -685,6 +688,7 @@ export default class nx_tactics_books_age_of_steam {
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "chapter_age_of_steam_equipment": nx_tactics_books_age_of_steam.t_chapter_age_of_steam_equipment,
       "chapter_age_of_steam_overview": nx_tactics_books_age_of_steam.t_chapter_age_of_steam_overview,
+      "chapter_age_of_steam_scenes": nx_tactics_books_age_of_steam.t_chapter_age_of_steam_scenes,
       "chapter_civil_war": nx_tactics_books_age_of_steam.t_chapter_civil_war,
       "chapter_examples_of_play": nx_tactics_books_age_of_steam.t_chapter_examples_of_play,
       "chapter_steam_age_maps": nx_tactics_books_age_of_steam.t_chapter_steam_age_maps,
@@ -738,6 +742,24 @@ export default class nx_tactics_books_age_of_steam {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_age_of_steam.f_chapter_age_of_steam_overview
+    }
+
+    // (func chapter_age_of_steam_scenes)
+    nx_tactics_books_age_of_steam.t_chapter_age_of_steam_scenes['vx_value'] = {
+      name          : "chapter_age_of_steam_scenes",
+      pkgname       : "nx/tactics/books/age_of_steam",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_age_of_steam.f_chapter_age_of_steam_scenes
     }
 
     // (func chapter_civil_war)

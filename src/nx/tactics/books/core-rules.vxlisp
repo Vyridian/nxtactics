@@ -371,14 +371,6 @@ space under the target that are visible.
 ** 3 points: Highly Obstructed [+2 Defense]
 ** 2 points: Hidden [+3 Defense]
 ** 1 point: Barely Visible [+4 Defense]")
-        :Cover
-         (rule
-          :name "Cover"
-          :summary
-           "* Any [Unit] may hide directly behind an object to reduce their profile.
-** If 50%+ cover: [+1 Defense]
-** If the attack succeeds, roll 1 Cover die if over 50% cover and 1 additional die if over 90% cover. If any Cover die results in a hit, the cover blocks the attack and the [Armor] of the Cover is applied first with any remaining damage rolled against the Unit.
-* For Example: Hiding behind a curtain provides +1 Defense but no other benefit while hiding behind a stone wall may allow the wall's armor to be used before the Unit is struck.")
         "Extended Action"
          (rule
           :name "Extended Action"

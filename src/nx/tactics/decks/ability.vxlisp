@@ -98,11 +98,22 @@
     "* [Action]: Anyone who is within 10m, tests [Investigation] vs. [Stealth] with [Advantage] to detect them.
      * [Downtime]: Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak.")
   (base/ability
+   :name "Ammo:6"
+   :summary
+    "6 Shots before reloading
+     * [Power]: [Weapon]")
+  (base/ability
    :name "Amphibious Assault"
    :summary
     "* [Skill]: [Military]")
   (base/ability
    :name "Analyze Weakness")
+  (base/ability
+   :name "Anti-Personnel"
+   :titles "Hollow Point"
+   :summary
+    "* [Action]: [+1 Damage] or [-1 Damage] vs. 2 or more Armor
+     * [Power]: [Weapon]")
   (base/ability
    :name "Antiquities"
    :reference
@@ -166,6 +177,12 @@
    :name "Armed Robbery"
    :summary
     "* [Skill]: [Crime]")
+  (base/ability
+   :name "Armor Piercing"
+   :titles "Depleted Uraniumn"
+   :summary
+    "* [Action]: Enemy at [-2 Armor]
+     * [Power]: [Weapon]")
   (base/ability
    :name "Armor:Abdomen"
    :summary
@@ -327,6 +344,11 @@
     "* [Power]: [Enchantment]
      * Target cannot conceive a child while under this curse.")
   (base/ability
+   :name "Bartending"
+   :summary
+     "The ability to make drinks and get tips
+      * [Skill]: [Tradeskill]")
+  (base/ability
    :name "Bash"
    :summary
     "* Impact or Explosive Damage. Causes [Fatigue] and [Push].
@@ -380,6 +402,13 @@
    :summary
     "* [Skill]: [Close Combat]
      * IF you have a [Hold] on a target THEN [Damage]: [Body] [Pierce] [Slash] [Hack]")
+  (base/ability
+   :name "Bite the Bullet"
+   :reference
+    "* Harriet Tubman related having once assisted in a Civil War amputation in which the patient was given a bullet to bite down on."
+   :summary
+    "* [Skill]: [Defense]
+     * [Block] 10: Reduce [Block:Overkill] Damage by 1")
   (base/ability
    :name "Blackmail"
    :summary
@@ -447,6 +476,11 @@
   (base/ability
    :name "Blinding Toxin")
   (base/ability
+   :name "Blur"
+   :summary
+    "You become strangely difficult to focus on.
+     * [Power]: [Dimensional] or [Illusion]")
+  (base/ability
    :name "Body Climb"
    :summary
     "* [Requires]: [Melee] or [Close Combat] vs an enemy of larger scale.
@@ -468,6 +502,15 @@
    :reference
     "* I'll tell you a dirty little secret. When you're in the middle of an explosion, it's the ultimate rush. - Haggerty, Obliterated
      * Who has one thumb and just saved Las Vegas? This guy! - Hagerty, Obliterated")
+  (base/ability
+   :name "Bombardment"
+   :summary
+    "* [Power]: [Weapon]")
+  (base/ability
+   :name "Bone Chill"
+   :summary
+    "* [Power]: [Necromancy]
+     * An Undead Minion can use this during [Close Combat] to do [Freezing] Damage")
   (base/ability
    :name "Bootlegger Reverse"
    :summary
@@ -587,6 +630,11 @@
      * [Requires]: Close Combat
      * [Attack]: Each [Critical Hit] may remove a [Damage Token] from this unit.")
   (base/ability
+   :name "Capacitors"
+   :summary
+    "* Uses capacitors that can recharge 1 Use a turn from a power source rated at the same power level as a single shot. Cannot be used with lower energy power sources.
+     * [Power]: [Weapon]")
+  (base/ability
    :name "Carpentry"
    :titles "Carpenter"
    :summary
@@ -662,6 +710,11 @@
     "* A magical barrier prevents unwanted sex.
      * [Power]: [Purity]
      * This powerful magic is sustained by the user's Will and lasted until voluntarily released (cannot be coerced).")
+  (base/ability
+   :name "Chemical Rounds"
+   :summary
+    "* [Action]: [-1 Damage], [Critical Hits] are [Acid]
+     * [Power]: [Weapon]")
   (base/ability
    :name "Circle of Darkness"
    :summary
@@ -778,6 +831,12 @@
    :titles "Con Artist, Swindler"
    :summary
     "* [Skill]: [Deception]")
+  (base/ability
+   :name "Conjure Weapon"
+   :summary
+    "* Conjure a weapon out of thin air.
+     * [Power]: [Conjuration]
+     * [Limited]: By the user's skill in the weapon created.")
   (base/ability
    :name "Constrict"
    :titles "Bear Hug")
@@ -971,6 +1030,12 @@
      * [Skill]: [Close Combat]
      * [Counter] [6]: [Effect]:+1")
   (base/ability
+   :name "Delve into the Past"
+   :summary
+    "* Ritual to have a group relive a moment in the past
+     * [Power]: [Divination]
+     * The group 'exists' in this version of the past and any damage taken is carried into the present. Their existence may seem to alter events, but they cannot otherwise alter the present.")
+  (base/ability
    :name "Demoralize"
    :summary
     "* [Power]: [Empathy]")
@@ -1024,7 +1089,14 @@
   (base/ability
    :name "Dimension Door"
    :summary
-    "* Cross through a doorway or arch of some sort and appear through another similar arch some distance away.")
+    "Cross through a doorway or arch of some sort and appear through another similar arch some distance away.
+     * [Power]: [Dimensional] or [Sorcery]")
+  (base/ability
+   :name "Dimension Drop"
+   :summary
+    "Send a small object through a dimensional portal and immediately close it again.
+     * [Power]: [Dimensional]
+     * This is most practical for sending messages or explosives.")
   (base/ability
    :name "Dimensional Gateway"
    :summary
@@ -1101,7 +1173,7 @@
    :name "Double Shot"
    :summary
     "* May attack two targets in same [Arc].
-     * [Skill]: [Firearms]-2
+     * [Skill]: [Firearm]-2
      * [Piercing]:-1"
    :titles "Double Throw")
   (base/ability
@@ -1223,6 +1295,21 @@
      +2 Move
      +1 Defense")
   (base/ability
+   :name "Dual Pistols"
+   :summary
+    "* Use a pistol in each hand.
+     * [Skill]: [Firearm]
+     * [Requires]: Additional Shots to be used.
+     * Increases Scatter")
+  (base/ability
+   :name "Dual SMGs"
+   :summary
+    "* Use a submachinegun in each hand.
+     * [Skill]: [Firearm]
+     * [Requires]: [Dual SMSs]
+     * [Requires]: Additional Shots to be used.
+     * Increases Scatter")
+  (base/ability
    :name "Dual Wield"
    :reference
     "* Not used on the battlefield where a shield would be more practical.
@@ -1292,6 +1379,11 @@
      * Yoma - Demon")
   (base/ability
    :name "Electromagnetic Pulse")
+  (base/ability
+   :name "Electroshock"
+   :titles "Taser"
+   :summary
+    "* [Power]: [Weapon]")
   (base/ability
    :name "Elvish"
    :summary
@@ -1391,8 +1483,16 @@
    :summary
     "* [Skill]: [Law]")
   (base/ability
+   :name "Explosive Rounds"
+   :titles "High Explosive Rounds"
+   :summary
+    "* [Action]: Use [Blast] rules for targetting and damage.
+     * [Power]: [Weapon]")
+  (base/ability
    :name "Explosive Shot"
-   :summary "* [Requires]: Bow or Crossbow")
+   :summary
+    "* [Requires]: Bow or Crossbow
+     * [Skill]: [Ranged]")
   (base/ability
    :name "Explosives"
    :reference
@@ -1404,6 +1504,11 @@
    :name "Extortion"
    :summary
     "* [Skill]: [Crime]")
+  (base/ability
+   :name "Extra Ammo"
+   :summary
+    "* 2x number of Uses, each time this modifier is taken.
+     * [Power]: [Weapon]")
   (base/ability
    :name "Extra Limbs"
    :summary
@@ -1661,6 +1766,11 @@
    :summary
     "* [Power]: [Move:Stellar]")
   (base/ability
+   :name "Flash Surpressor"
+   :summary
+    "* Reduces the muzzle flare of the weapon making it more difficult to visually locate the shooter.
+     * [Power]: [Weapon]")
+  (base/ability
    :name "Fuel Scoop"
    :summary
     "* Can scoop fuel directly into [Tanker Hold].
@@ -1694,73 +1804,6 @@
    :summary
     "* [Power]: [Beastial]")
   (base/ability
-   :name "Guards and Wards"
-   :summary
-    "* A protective barrier inscribed on the ground to protect the caster from summoned beings (usually his own).
-     * [Power]: [Abjuration]")
-  (base/ability
-   :name "Halo Drop"
-   :summary
-    "* [Skill]: [Military]")
-  (base/ability
-   :name "Handstand Kick"
-   :summary
-    "* The fighter bends over, places his hands on the ground, and then presses his legs up into a handstand. The legs snap up with tremendous kicking force. Can be used while [Prone]
-     * [Skill]: [Close Combat]
-     * Initiative:-1
-     * Move:-1
-     * Rating:+1")
-  (base/ability
-   :name "Harvest:Parts"
-   :titles "Skinning"
-   :summary
-    "* Retrieve skin or other valuable parts from a carcass.
-     * [Skill]: [Hunting]")
-  (base/ability
-   :name "Hatred"
-   :reference
-    "* I killed Wesley. I shot him seven times. Because the clip ran out. He. Deserved. MORE! - Karen Page and Kingpin, Daredevil"
-   :summary
-    "* [Skill]: [Intimidation]
-     * Attack: +1 Speed vs. Tribal or long-standing personal enemies.")
-  (base/ability
-   :name "Hawk Eye"
-   :titles "Eagle Eye"
-   :summary
-    "* [Power]: [Beastial]")
-  (base/ability
-   :name "Hawk Form"
-   :summary
-    "* [Power]: [Beastial]")
-  (base/ability
-   :name "High-Explosive"
-   :titles "HE"
-   :summary
-    "* [Power]: [Weapon:Firearm] or [Weapon:Cannon] or [Weapon:Missile]
-     * [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.
-     * [Damage]: All target's are [+2 Armor] against this attack.
-     * [Damage]: Units surrounding the space are attacked at -1 Damage for each space distant.
-
-     Advanced:
-     * Instead of standard [High Explosive (HE)] rules the following may be used to more accurately simulate the damage exponential decrease in energy of explosives.
-     * [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.
-     * [Damage]: All target's are [+2 Armor] against this attack.
-     * [Damage]: Units surrounding the space are attacked by dividing the energy (in Joules, or tons of TNT) using the following reduction pattern for each space distant: 1/1, 1/3, 1/10, 1/30, 1/100, 1/300, 1/1000, etc. Then look up the new damage based on the new energy level.")
-  (base/ability
-   :name "Horse Archery"
-   :summary
-    "* [Skill]: [Animals]
-     Can use a bow while riding without penalty.")
-  (base/ability
-   :name "Howl"
-   :summary
-    "* [Skill]: [Intimidation]")
-  (base/ability
-   :name "Huge"
-   :summary
-    "* [Power]: [Special Ability]
-     * [Body]:+0x1")
-  (base/ability
    :name "Glassblowing"
    :summary
     "* Blow Bottle
@@ -1791,13 +1834,35 @@
    :summary
     "* [Skill]: [Animals]")
   (base/ability
+   :name "Guards and Wards"
+   :summary
+    "* A protective barrier inscribed on the ground to protect the caster from summoned beings (usually his own).
+     * [Power]: [Abjuration]")
+  (base/ability
+   :name "Gun Mount"
+   :titles "Bipod, Tripod"
+   :summary
+    "* [Power]: [Weapon]")
+  (base/ability
    :name "Gunnery Weapon"
    :summary
-    "* A Gunnery Weapon including Cannons and Rockets.
+    "A Gunnery Weapon including Cannons and Rockets.
      * [Power]: [Weapon]
      * [Skill]: [Gunnery]
      * [Range]: [Skill]
      * [Arc]: [Arc:Front]")
+  (base/ability
+   :name "Guns Blazing"
+   :summary
+    "Shoot fast to increase combo
+     * [Skill]: [Firearm]
+     * [Attack]: 7s in hand can be treated as 6 or 8 for Combos")
+  (base/ability
+   :name "Gyrojet Rounds"
+   :titles "Rocket Rounds"   
+   :summary
+    "* [Action]: [+1 Damage] at Long Range, [-1 Damage] at Short Range
+     * [Power]: [Weapon]")
   (base/ability
    :name "Hack"
    :summary
@@ -1811,9 +1876,43 @@
      -1 Accuracy
      Criticals - [Cripple]")
   (base/ability
-   :name "Harvest Poison"
+   :name "Halo Drop"
    :summary
-    "* [Skill]: [Animals]")
+    "* [Skill]: [Military]")
+  (base/ability
+   :name "Handstand Kick"
+   :summary
+    "* The fighter bends over, places his hands on the ground, and then presses his legs up into a handstand. The legs snap up with tremendous kicking force. Can be used while [Prone]
+     * [Skill]: [Close Combat]
+     * Initiative:-1
+     * Move:-1
+     * Rating:+1")
+  (base/ability
+   :name "Harvest:Parts"
+   :titles "Skinning"
+   :summary
+    "* Retrieve skin or other valuable parts from a carcass.
+     * [Skill]: [Hunting]")
+  (base/ability
+   :name "Harvest:Poison"
+   :summary
+    "* [Skill]: [Animals] or [Assassination]")
+  (base/ability
+   :name "Hatred"
+   :reference
+    "* I killed Wesley. I shot him seven times. Because the clip ran out. He. Deserved. MORE! - Karen Page and Kingpin, Daredevil"
+   :summary
+    "* [Skill]: [Intimidation]
+     * Attack: +1 Speed vs. Tribal or long-standing personal enemies.")
+  (base/ability
+   :name "Hawk Eye"
+   :titles "Eagle Eye"
+   :summary
+    "* [Power]: [Beastial]")
+  (base/ability
+   :name "Hawk Form"
+   :summary
+    "* [Power]: [Beastial]")
   (base/ability
    :name "Heart of Darkness"
    :summary
@@ -1824,17 +1923,41 @@
    :summary
     "* [Skill]: [Animals]")
   (base/ability
+   :name "Hibernate"
+   :summary
+    "Fall unconscious and lower metabolism to survive harsh conditions for extended periods
+     * [Power]: [Beastial]")
+  (base/ability
    :name "Hide in Plain Sight"
    :summary
-    "* A tricky ability to remain hidden despite being in direct sight
+    "A tricky ability to remain hidden despite being in direct sight
      * [Skill]: [Stealth]
      * Requires: [Camouflage]
      * IF you have appropriate camouflage AND you don't move THEN you cannot be detected using normal vision")
   (base/ability
+   :name "High-Explosive"
+   :titles "HE"
+   :summary
+    "* [Power]: [Weapon:Firearm] or [Weapon:Cannon] or [Weapon:Missile]
+     * [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.
+     * [Damage]: All target's are [+2 Armor] against this attack.
+     * [Damage]: Units surrounding the space are attacked at -1 Damage for each space distant.
+
+     Advanced:
+     * Instead of standard [High Explosive (HE)] rules the following may be used to more accurately simulate the damage exponential decrease in energy of explosives.
+     * [Targetting]: Target a space. All units in that space and surrounding spaces are attacked.
+     * [Damage]: All target's are [+2 Armor] against this attack.
+     * [Damage]: Units surrounding the space are attacked by dividing the energy (in Joules, or tons of TNT) using the following reduction pattern for each space distant: 1/1, 1/3, 1/10, 1/30, 1/100, 1/300, 1/1000, etc. Then look up the new damage based on the new energy level.")
+  (base/ability
    :name "Hip Shoot"
    :summary
-    "* [Skill]: [Firearms]
-     * Can shoot at Initiative:-1 without disadvantage from the Hip.")
+    "* Can shoot from the Hip ignoring normal Disadvantage
+     * [Skill]: [Ranged] or [Firearm]")
+  (base/ability
+   :name "Hospitality"
+   :summary
+     "The ability to make serve customers in restaurants or hotels
+      * [Skill]: [Tradeskill]")
   (base/ability
    :name "Honor Among Thieves"
    :reference
@@ -1843,9 +1966,17 @@
     "* [Skill]: [Deception]")
   (base/ability
    :name "Horns"
-   :summary "* Usually they are worn as antlers, but may sprout form anywhere on the body.")
+   :summary
+    "* Usually they are worn as antlers, but may sprout form anywhere on the body.")
   (base/ability
-   :name "House Painting")
+   :name "Horse Archery"
+   :summary
+    "* [Skill]: [Animals]
+     Can use a bow while riding without penalty.")
+  (base/ability
+   :name "House Painting"
+   :summary
+    "* [Skill]: [Tradeskill]")
   (base/ability
    :name "Hover"
    :summary
@@ -1853,9 +1984,18 @@
      * Hovering units may [Move] backwards.
      * Hovering units may use [Vector Movement] rule.")
   (base/ability
+   :name "Howl"
+   :summary
+    "* [Skill]: [Intimidation]")
+  (base/ability
    :name "Hunter's Mark"
    :summary
     "* [Continuous]: Place a mark on target. Initiative:+1 vs. marked target.")
+  (base/ability
+   :name "Huge"
+   :summary
+    "* [Power]: [Special Ability]
+     * [Body]:+0x1")
   (base/ability
    :name "Hurricane Kick"
    :image "MartialArts/HurricaneKick.jpg"
@@ -1913,10 +2053,14 @@
    :summary
     "Create a character with a distinct personality of your choice that only the target can see.")
   (base/ability
+   :name "Icy Grip"
+   :summary
+    "* [Power]: [Cryomancy] or [Cold]
+     * Your [Close Combat] can do [Freezing] Damage")
+  (base/ability
    :name "Icy Stare"
    :summary
-    "* See Cold
-     * [Power]: [Cryo]
+    "* [Power]: [Cryomancy]
      * Your eyes frost over and you can only see in Arc:Forward, but you see different levels of cold like [Heat Sense]. You can also see through ice as if it was clear glass.")
   (base/ability
    :name "Imitation:Creature"
@@ -1982,14 +2126,6 @@
    :name "Intestinal Parasite"
    :summary
     "* [Power]: [Diseases]")
-  (base/ability
-   :name "Intimidate"
-   :reference
-    "* Your timing is impeccable. Pity you were all they sent... The Fatui would do well to update their intelligence concerning me. Ah, but of course, that would require one of you to return in one piece. - Ayato, Genshin Impact
-     * ...to the death. No. To the pain. I don't think I'm quite familiar with that phrase. ... To the pain means the first thing you will lose will be your feet below the ankles. Then your hands at the wrists. Next your nose. ...And then my ears, I understand let's get on with it. WRONG. Your ears you keep and I'll tell you why. So that every shriek of every child at seeing your hideousness will be yours to cherish. Every babe that weeps at your approach, every woman who cries out, 'Dear God! What is that THING?,' will echo in your perfect ears. That is what to the pain means. It means I leave you in anguish, wallowing in freakish misery ... forever. ...I think you're bluffing. It's possible, Pig, I might be bluffing. It's conceivable, you miserable, vomitous mass, that I'm only lying here because I lack the strength to stand. But, then again... perhaps I have the strength after all. - Princess Bride"
-   :summary
-    "* A form of bluffing
-     * [Skill]: [Intimidation] vs [Will]")
   (base/ability
    :name "Investigative Genius")
   (base/ability
@@ -2304,7 +2440,15 @@
     "* Experienced with powered armor.
      * [Skill]: [Military]")
   (base/ability
-   :name "Molecular Alteration")
+   :name "Molecular Alteration"
+   :summary
+    "* [Power]: [Transmutation]")
+  (base/ability
+   :name "Moon Bridge"
+   :titles "Moon Gate"
+   :summary
+    "* Opens a bridge to the Ethereal version of the Moon.
+     * [Power]: [Astrology]")
   (base/ability
    :name "Monstrous"
    :summary
@@ -2337,6 +2481,12 @@
    :name "Nightmare Essence"
    :summary
     "* Nightmares caught with [Dreamcatching] can be contained in a bottle. Opening the bottle releases the experience of the dream to all surrounding it. These can be used as grenades.")
+  (base/ability
+   :name "Non-Lethal Rounds"
+   :titles "Rubber Bullets"
+   :summary
+    "* [Action]: [-2 Damage] vs. 2 or more Armor. Half of all [Damage] is [Stun] instead.
+     * [Power]: [Weapon]")
   (base/ability
    :name "Off Roading")
   (base/ability
@@ -2376,7 +2526,23 @@
     "* Trap a target in a prison of absolute darkness.
      * [Power]: [Darkness]")
   (base/ability
+   :name "Overcharge"
+   :summary
+    "* [Action]: Consume 2 Uses to to 1 extra damage. Then Damage is -1 until repaired.
+     * [Power]: [Weapon]")
+  (base/ability
+   :name "Overload Weapon"
+   :summary
+    "* Detonate the entire weapon magazine (and the weapon) as an explosive with force equal to the total power in the magazine.
+    * [Power]: [Weapon]")
+  (base/ability
    :name "Overwhelm")
+  (base/ability
+   :name "Paint Rounds"
+   :titles "Paintball"
+   :summary
+    "* [Action]: [0 Damage], [Critical Hits] are [Stun]
+     * [Power]: [Weapon]")
   (base/ability
    :name "Painting"
    :summary
@@ -2710,16 +2876,18 @@
   (base/ability
    :name "Quick Draw"
    :summary
-    "* [Skill]: [Ranged] or [Firearm]
-     * [Requires]: [1-Handed] [Weapon:Firearm] or [Weapon:Ranged]
-     * [Free]: Move:-1 to draw a Hand weapon from holster to hip where he can [Hip Shoot].")
+    "Instantly draw a small item from a holster to hip
+     * [Skill]: [Ranged] or [Firearm]
+     * [Requires]: [1-Handed] Item in a holster
+     * [Free]: Draw an Item from holster to hip. Note: Attacks from the hip are at [Disadvantage]")
   (base/ability
    :name "Quick Study"
    :reference
     "I know Kung Fu. - Neo, The Matrix"
    :summary
-    "* [Skill]: [Intellect]
-     * Cram to learn a low level skill very quickly. The skill doesn't last long, but often it doesn't have to.")
+    "Cram to learn a low level skill very quickly
+     * [Skill]: [Intellect]
+     * The skill doesn't last long, but often it doesn't have to.")
   (base/ability
    :name "Quill Attack")
   (base/ability
@@ -2753,6 +2921,10 @@
      * [Arc]: [Arc:Front]
      * [Range]: [Body] + [Skill]
      * [Damage]: [Body] + Item [Body]")
+  (base/ability
+   :name "Rapid Fire"
+   :summary
+    "* [Skill]: [Firearm]")
   (base/ability
    :name "Rapid Gestation"
    :summary
@@ -2808,6 +2980,16 @@
      * [Action]: [Success] indicate the new maximum [Body] of the corpse up to its original [Body]. The closer the corpse gets to its full original [Body], the more alive it will appear.
      * The corpse of a dead unit may be reanimated returning it to an [Undead] semblance of life.
      * This ability does not give any control of the [Undead] to the caster unless the caster is somehow reanimating his own body.")
+  (base/ability
+   :name "Rechargable"
+   :summary
+    "* Uses batteries that can be slowly recharged from any power source.
+     * [Power]: [Weapon]")
+  (base/ability
+   :name "Recoil Compensator"
+   :summary
+    "* Reduces the 'kick' of the weapon and therefore reduces the penalty for continuous fire.
+     * [Power]: [Weapon]")
   (base/ability
    :name "Refinery: Gas"
    :summary
@@ -2935,6 +3117,11 @@
    :name "Richochet"
    :summary "* [Requires]: Thrown Object")
   (base/ability
+   :name "Ride"
+   :summary
+    "* Ride a horse or other similar creature.
+     * [Skill]: [Animals]")
+  (base/ability
    :name "Ride:Bull"
    :summary
     "* [Skill]: [Animals]
@@ -2968,13 +3155,13 @@
      * [Attack], [Damage]: Any [Critical Hits] may be [Retreats]")
   (base/ability
    :name "Rustling"
-   :summary "* Stealing and selling livestock"
    :summary
-    "* [Skill]: [Crime]")
+    "Stealing and selling livestock
+     * [Skill]: [Crime]")
   (base/ability
    :name "Salvo"
    :summary
-    "* The simultaneous discharge of weapons, rather than scattered 'fire at will'.
+    "The simultaneous discharge of weapons, rather than scattered 'fire at will'.
      * Up to 10 weapons of the same type can be in 1 Salvo.
      * All targets in the space are attacked.")
   (base/ability
@@ -3102,6 +3289,11 @@
    :summary
     "* [Skill]: [Law]")
   (base/ability
+   :name "Sharpshooting"
+   :summary
+    "* Effective Range is doubled
+     * [Skill]: [Firearm]")
+  (base/ability
    :name "Shattered Dreams")
   (base/ability
    :name "Skeletal"
@@ -3175,6 +3367,10 @@
      * [Requires]: Bow or Crossbow
      * [Action]: For the rest of the turn, other units adjacent to this unit may be treated as if under the [Sphere of Command] of any allied Commander.")
   (base/ability
+   :name "Silencer"
+   :summary
+    "* [Power]: [Weapon]")
+  (base/ability
    :name "Simplify, Simplify, Simplify"
    :summary
     "* Progressively breakdown a problem into simpler problems which can each be resolved separately.
@@ -3195,6 +3391,10 @@
    :summary
     "* [Power]: [Illusion]
      * [Slow] [Even] [Mind]: +1 [Stress]. Create a distraction.")
+  (base/ability
+   :name "Smoke Rounds"
+   :summary
+    "* [Power]: [Weapon]")
   (base/ability
    :name "Smuggling"
    :summary
@@ -3481,6 +3681,10 @@
     "* The hold is equipped to hold large amounts of liquids or gases at appropriate environments. This can be used for long range vessels to carry their own fuel or act as a fuel tanker.
      * [Power]: [Cargo]")
   (base/ability
+   :name "Targeting Laser"
+   :summary
+    "* [Power]: [Weapon]")
+  (base/ability
    :name "Taunt"
    :titles "Goad"
    :reference
@@ -3497,7 +3701,7 @@
    :name "Telescopic Sight"
    :summary
     "* Improved Long Range accuracy
-     * [Skill]: [Firearms]
+     * [Power]: [Weapon]
      * IF you haven't moved for 1 Round THEN treat Long Range as Medium Range")
   (base/ability
    :name "Tendrils"
@@ -3575,6 +3779,10 @@
   (base/ability
    :name "Tracked")
   (base/ability
+   :name "Tracking Rounds"
+   :summary
+    "* [Power]: [Weapon]")
+  (base/ability
    :name "Train Dog"
    :summary
     "* [Skill]: [Animals]")
@@ -3647,6 +3855,16 @@
    :name "Underwater Operation"
    :summary
     "* Sealed against water and can operate underwater. Small thrusters allow slow movement underwater. Oxygen scrubbers allow extended underwater operation.")
+  (base/ability
+   :name "Unnerve"
+   :reference
+    "* Your timing is impeccable. Pity you were all they sent... The Fatui would do well to update their intelligence concerning me. Ah, but of course, that would require one of you to return in one piece. - Ayato, Genshin Impact
+     * ...to the death. No. To the pain. I don't think I'm quite familiar with that phrase. ... To the pain means the first thing you will lose will be your feet below the ankles. Then your hands at the wrists. Next your nose. ...And then my ears, I understand let's get on with it. WRONG. Your ears you keep and I'll tell you why. So that every shriek of every child at seeing your hideousness will be yours to cherish. Every babe that weeps at your approach, every woman who cries out, 'Dear God! What is that THING?,' will echo in your perfect ears. That is what to the pain means. It means I leave you in anguish, wallowing in freakish misery ... forever. ...I think you're bluffing. It's possible, Pig, I might be bluffing. It's conceivable, you miserable, vomitous mass, that I'm only lying here because I lack the strength to stand. But, then again... perhaps I have the strength after all. - Princess Bride"
+   :summary
+    "Tell your opponent something to instill fear.
+     * [Skill]: [Intimidation]
+     * [Action]: Test [Intimidation] vs [Will]
+     * [Damage]: [Fear]")
   (base/ability
    :name "Unsolvable Problem"
    :reference

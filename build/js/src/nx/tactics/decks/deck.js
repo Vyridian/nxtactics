@@ -8,11 +8,8 @@ import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
 import nx_tactics_decks_reference from "../../../nx/tactics/decks/reference.js"
 import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
-import nx_tactics_decks_scene_murintrail from "../../../nx/tactics/decks/scene-murintrail.js"
-import nx_tactics_decks_scene_nightonthetown from "../../../nx/tactics/decks/scene-nightonthetown.js"
-import nx_tactics_decks_scene_ontherun from "../../../nx/tactics/decks/scene-ontherun.js"
 import nx_tactics_decks_restrain from "../../../nx/tactics/decks/restrain.js"
-import nx_tactics_decks_scene_starter from "../../../nx/tactics/decks/scene-starter.js"
+import nx_tactics_decks_scene from "../../../nx/tactics/decks/scene.js"
 import nx_tactics_decks_starter from "../../../nx/tactics/decks/starter.js"
 import nx_tactics_decks_trauma from "../../../nx/tactics/decks/trauma.js"
 import nx_tactics_decks_vehicle from "../../../nx/tactics/decks/vehicle.js"
@@ -355,6 +352,7 @@ export default class nx_tactics_decks_deck {
 
   /**
    * @function deck_scenes
+   * Scenes Deck
    * @param  {tactics} tactics
    * @return {deck}
    */
@@ -368,20 +366,18 @@ export default class nx_tactics_decks_deck {
   // (func deck-scenes)
   static f_deck_scenes(tactics) {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_deck},
-      ":name",
-      "Scenes",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_scene_starter.f_deck_starter(tactics),
-          nx_tactics_decks_scene_murintrail.f_deck_murintrail(tactics),
-          nx_tactics_decks_scene_nightonthetown.f_deck_nightonthetown(tactics),
-          nx_tactics_decks_scene_ontherun.f_deck_ontherun(tactics)
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const scenemap = vx_core.f_any_from_struct(
+          {"any-1": nx_tactics_base.t_scenemap, "struct-2": nx_tactics_base.t_tactics},
+          nx_tactics_decks_data.c_tactics_all,
+          ":scenemap"
         )
-      )
+        const cardmap = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_scene, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_scenemap}, scenemap)
+        return vx_core.f_new({"any-1": nx_tactics_base.t_deck}, ":name", "Scenes", ":cardmap", cardmap)
+      })
     )
     return output
   }

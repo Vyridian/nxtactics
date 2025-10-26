@@ -1,6 +1,5 @@
 (package nx/tactics/decks/scene-nightonthetown
  :libs (lib base :path nx/tactics/base)
-       (lib data :path nx/tactics/decks/data)
  :doc  "Night On The Town scene")
 
 (func deck-nightonthetown : base/deck
@@ -40,7 +39,7 @@
        "Knife"
        "Accessory: Monocle"
        "Paper: Lock Combination"
-       "Pistol: Revolver"
+       "Pistol:.45 Revolver"
        "Rifle"
        "Shotgun"
        "Spear"))
