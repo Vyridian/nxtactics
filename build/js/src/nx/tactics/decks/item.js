@@ -24,9 +24,9 @@ export default class nx_tactics_decks_item {
     let output = nx_tactics_base.e_itemmap
     output = nx_tactics_base.f_itemmap_from_itemlist(
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Accessory: Monocle", ":image", "images/cards/item-accessory-monocle.svg", ":summary", "* [Passive]: IF examining small objects THEN [Investigation]:+1", ":body", "2x-2", ":mass", "20g/.05lb"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Ammo: Revolver", ":image", "images/cards/item-ammo-revolver.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Ammo: Rifle", ":image", "images/cards/item-ammo-rifle.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Ammo: Shotgun", ":image", "images/cards/item-ammo-shotgun.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Ammo:Revolver", ":image", "images/cards/item-ammo-revolver.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Ammo:Rifle", ":image", "images/cards/item-ammo-rifle.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Ammo:Shotgun", ":image", "images/cards/item-ammo-shotgun.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Armor:Breast Plate", ":summary", "* [Hit Location]: Shoulders Chest Abdomen Vitals", ":armor", "1mm"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Armor:Chain Mail", ":reference", "* Shark expert and underwater filmmaker Valerie Taylor was among the first to develop and test shark suits in 1979 while diving with sharks.\n* Mail is widely used in industrial settings as shrapnel guards and splash guards in metal working operations.\n* Electrical applications for mail include RF leakage testing and being worn as a Faraday cage suit by tesla coil enthusiasts and high voltage electrical workers.", ":summary", "* Chain mail is a type of armor consisting of small metal rings linked together in a pattern to form a mesh. It was generally in common military use between the 3rd century BC and the 16th century AD in Europe, and longer in Asia and North Africa.", ":titles", "Chainmail, Mail, Byrnie, Hauberk", ":armor", "1mm"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Armor:Chain Shirt", ":summary", "* [Hit Location]: Shoulders Chest Abdomen Vitals", ":titles", "Chainmail, Mail", ":armor", "1mm"),
@@ -77,9 +77,41 @@ export default class nx_tactics_decks_item {
           )
         )
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe: Fire", ":image", "images/cards/item-axe-fire.svg", ":summary", "* [Skill]: [Melee]-1\n* [Damage]: [Body]:+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]:2x1", ":body", "3x0", ":mass", "3.1kg/7lb"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe: Hand", ":image", "images/cards/item-axe-hand.svg", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+1 [Hack] [Slash]\n* [Location]: [1-hand]", ":body", "9x-1", ":mass", "900g/2lb"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe: Wood", ":titles", "Splitting Maul", ":image", "images/cards/item-axe-wood.svg", ":summary", "* [Skill]: [Melee]:-1\n* [Damage]: [Body]:+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]: 2x1", ":body", "3x0", ":mass", "3.1kg/7lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Axe:Fire", ":image", "images/cards/item-axe-fire.svg", ":summary", "* [Skill]: [Melee]-1\n* [Damage]: [Body]:+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]:2x1", ":body", "3x0", ":mass", "3.1kg/7lb"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Axe:Hand",
+        ":image",
+        "images/cards/item-axe-hand.svg",
+        ":body",
+        "9x-1",
+        ":mass",
+        "900g/2lb",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "Body+1", "Hack", "Slash", "Handed:1", "Weapon:Melee")
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Axe:Wood",
+        ":titles",
+        "Splitting Maul",
+        ":image",
+        "images/cards/item-axe-wood.svg",
+        ":summary",
+        "* [Skill]: [Melee]:-1\n* [Armor]: 2x1",
+        ":body",
+        "3x0",
+        ":mass",
+        "3.1kg/7lb",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "Body+3", "Hack", "Slash", "Handed:2", "Weapon:Melee")
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Balefire"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_item},
@@ -95,7 +127,7 @@ export default class nx_tactics_decks_item {
             tactics,
             "Weapon",
             "[Body]",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bash", "1-Handed", "Close Weapon")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bash", "Handed:1", "Weapon:Close")
           )
         )
       ),
@@ -104,8 +136,8 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bedroll: Restful Sleep", ":summary", "Providest the [Restful Sleep] ability."),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bomb: C4"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bomb: IED", ":titles", "Improvised Explosive Device"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bottle: Liquor", ":image", "images/cards/item-bottle-liquor.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bottle: Molotov Cocktail", ":image", "images/cards/item-bottle-molotovcocktail.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bottle:Liquor", ":image", "images/cards/item-bottle-liquor.svg", ":summary", "Uses:6\n[Action]: Take a large drink for Mind:-1, Will:+1. Duration:1 hour"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bottle:Molotov Cocktail", ":image", "images/cards/item-bottle-molotovcocktail.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow:Composite", ":summary", "* [Skill]: [Ranged]\n* [Damage]: 10x1 [Pierce] [Slash]\n* [Range]: 10x1 100m/300ft\n* [Location]: [2-hand]\n* The main advantage of composite bows over self bows (made from a single piece of wood) is their combination of smaller size with high power. They are more suitable for use from horseback or chariot.\n* Constructing composite bows requires much more time and materials than self bows, and the animal glue traditionally used can lose strength in humid conditions and be quickly ruined by submersion. For most practical non-mounted archery purposes, composite construction offers no advantage; 'the initial velocity is about the same for all types of bow, the design parameters appear to be less important than is often claimed.' However, their compact size make them superior for horsemen.", ":energy", "170J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bow:Compound"),
       vx_core.f_new(
@@ -124,7 +156,7 @@ export default class nx_tactics_decks_item {
             tactics,
             "Weapon",
             "10x1",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "1-Handed", "Ranged Weapon")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "Handed:1", "Weapon:Ranged")
           )
         )
       ),
@@ -153,14 +185,72 @@ export default class nx_tactics_decks_item {
             tactics,
             "Weapon",
             "8x1",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "1-Handed", "Ranged Weapon")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "Handed:1", "Weapon:Ranged")
           )
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Campfire", ":image", "images/cards/item-campfire.svg", ":body", "2x1", ":mass", "20kg/45lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Candle"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Cannon:75mm KwK40",
+        ":image",
+        "images/wwii/item-cannon-75mm-kwk-40.svg",
+        ":classification",
+        "Cannon",
+        ":body",
+        "7x2",
+        ":mass",
+        "750kg/1650lb",
+        ":energy",
+        "2MJ",
+        ":modifiers",
+        "HE, AP",
+        ":muzzlevelocity",
+        "792m/s",
+        ":range",
+        "7.7km",
+        ":rof",
+        "10/min",
+        ":summary",
+        "Turret or Front Mounted Cannon",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "2x6", "Bash", "Pierce", "Weapon:Gunnery", "Ammo:90")
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Cannon:76mm M1",
+        ":image",
+        "images/wwii/item-cannon-76mm-m1.svg",
+        ":reference",
+        "* While the 76 mm had less High Explosive (HE) and smoke performance than the 75 mm, the higher-velocity 76 mm gave better anti-tank performance, with firepower comparable to the Soviet ZiS-S-5 85 mm gun of the T-34-85 and many of the armoured fighting vehicles it encountered, particularly the Panzer IV and StuG vehicles.",
+        ":classification",
+        "Cannon",
+        ":body",
+        "5x2",
+        ":mass",
+        "520kg/1100lb",
+        ":energy",
+        "2MJ",
+        ":modifiers",
+        "HE, AP",
+        ":muzzlevelocity",
+        "792m/s",
+        ":rof",
+        "8/min",
+        ":range",
+        "14km",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "2x6", "Bash", "Pierce", "Weapon:Gunnery", "Ammo:70")
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Cloak"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Cloak: Fine Woodland", ":image", "images/cards/item-cloak-finewoodland.svg", ":summary", "* [Passive]: [Stealth]:+1 in [Forest]\n* [Passive]: Discard the first [Fatigue] you receive from [Weather] each [Turn].", ":body", "2x0", ":mass", "2kg/4.4lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Cloak:Fine Woodland", ":image", "images/cards/item-cloak-finewoodland.svg", ":summary", "* [Passive]: [Stealth]:+1 in [Forest]\n* [Passive]: Discard the first [Fatigue] you receive from [Weather] each [Turn].", ":body", "2x0", ":mass", "2kg/4.4lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Clothes: Wool", ":image", "images/cards/item-clothes-wood.svg", ":body", "3x0", ":mass", "3kg/7lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Club: Staff", ":titles", "Quarterstaff", ":reference", "* Held at the bottom like a polearm. not in the middle. Holding in the middle was invented by the Boy Scouts in Victorian times for sport fighting."),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Coins:Copper", ":image", "images/cards/item-coins-copper.svg", ":summary", "* A few (~5=$5) coins.\n* A pauper's wealth.\n* 10 Copper = 1 Silver\n* Cheap meal, 2 cheap drinks, night in a common room, a nice tip.", ":body", "5x-2", ":mass", "50g/.1lb"),
@@ -171,13 +261,60 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Door: Wooden", ":image", "images/cards/item-door-wooden.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Drug: Evergreen", ":summary", "A life extending drug"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Grenade: White Phosphorous"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hammer", ":image", "images/cards/item-hammer.svg", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+3 [Bash]\n* [Location]: [1-hand]", ":body", "2x0", ":mass", "2kg/4.4lb"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Hammer",
+        ":image",
+        "images/cards/item-hammer.svg",
+        ":body",
+        "2x0",
+        ":mass",
+        "2kg/4.4lb",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "Body+3", "Bash", "Handed:1", "Weapon:Melee")
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hammer: War", ":energy", "100J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hellchain"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hellfire"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Jerry Can", ":image", "images/cards/item-jerrycan.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Keys", ":image", "images/cards/item-keys.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Knife", ":image", "images/cards/item-knife.svg", ":summary", "* [Combat]: [Close Combat]\n* [Damage]: [Body] [Pierce] [Slash]\n* [Location]: [1-hand]", ":body", "5x-1", ":mass", "500g/1lb", ":length", "25cm/10in"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Knife",
+        ":image",
+        "images/cards/item-knife.svg",
+        ":body",
+        "5x-1",
+        ":mass",
+        "500g/1lb",
+        ":length",
+        "25cm/10in",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "[Body]-1", "Pierce", "Slash", "Handed:1", "Weapon:Close")
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Knife:Bowie",
+        ":image",
+        "images/cards/item-knife-bowie.svg",
+        ":body",
+        "3x-1",
+        ":mass",
+        "300g/.6lb",
+        ":length",
+        "25cm/9in",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "[Body]+1", "Pierce", "Slash", "Handed:1", "Weapon:Close")
+        )
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_item},
         ":name",
@@ -198,7 +335,7 @@ export default class nx_tactics_decks_item {
             tactics,
             "Weapon",
             "[Body]",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "1-Handed", "Close Weapon")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "Handed:1", "Weapon:Close")
           )
         )
       ),
@@ -208,6 +345,89 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lute"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Matrix"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Mirror"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "MG:.30-06 M1919",
+        ":image",
+        "images/wwii/item-mg-30-06-m1919.svg",
+        ":titles",
+        ".30-06 Browning M1919",
+        ":classification",
+        "Hvy. MG",
+        ":body",
+        "1x-1",
+        ":length",
+        ".96m",
+        ":mass",
+        "14kg",
+        ":energy",
+        "3390J",
+        ":muzzlevelocity",
+        "853m/s",
+        ":rof",
+        "500/min",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "3x3", "Pierce", "Slash", "Autofire", "Weapon:Gunnery", "Ammo:250")
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "MG:.50 M2HB",
+        ":image",
+        "images/wwii/item-mg-50-m2hb.svg",
+        ":titles",
+        ".50 Browning M2HB",
+        ":reference",
+        "* While the AP projectiles from the .50-caliber machine guns could not penetrate the front, side, or turret armor of enemy tanks, it could sometimes penetrate the engine grilles and exhaust system of the German Pzkpf Mk IV or Pzkpf V (Panther I), disabling the vehicle.\n* Used extensively from 1920's to present with few modifications. It is the primary MG of NATO countries and has been in use longer than any other small arm in U.S..",
+        ":summary",
+        ".50 cal Browning water cooled machine gun",
+        ":classification",
+        "Hvy. MG",
+        ":body",
+        "4x-1",
+        ":length",
+        "1650mm",
+        ":mass",
+        "38kg",
+        ":energy",
+        "1600J",
+        ":muzzlevelocity",
+        "930m/s",
+        ":rof",
+        "500/min",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "2x3", "Pierce", "Slash", "Autofire", "Weapon:Gunnery", "Ammo:1000")
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "MG:7.92mm MG34",
+        ":image",
+        "images/wwii/item-mg-792mm-mg34.svg",
+        ":classification",
+        "Med. MG",
+        ":length",
+        "1219mm",
+        ":mass",
+        "12.1kg",
+        ":energy",
+        "4000J",
+        ":muzzlevelocity",
+        "765m/s",
+        ":rof",
+        "900/min",
+        ":summary",
+        "Front Mounted Machinegun",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "4x3", "Pierce", "Slash", "Autofire", "Weapon:Gunnery", "Ammo:1500")
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Mushrooms", ":classification", "Plant", ":image", "images/cards/item-mushrooms.svg", ":summary", "* Nutrition for a day. After eating [Reveal Fate]. IF [Coins] THEN you spend 6 hours tripping or sleeping. IF [Cups] THEN Poison:+1"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Net"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Onions: Wild", ":classification", "Plant", ":image", "images/cards/item-onions-wild.svg", ":summary", "* Nutrition for a day."),
@@ -229,11 +449,9 @@ export default class nx_tactics_decks_item {
         "610J",
         ":muzzlevelocity",
         "300mps",
-        ":rounds",
-        "6",
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "6x2", "Pierce", "Slash", "Ammo:6")
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "6x2", "Pierce", "Slash", "Handed:1", "Weapon:Firearm", "Ammo:6")
         )
       ),
       vx_core.f_new(
@@ -252,20 +470,18 @@ export default class nx_tactics_decks_item {
         "610J",
         ":muzzlevelocity",
         "300mps",
-        ":rounds",
-        "6",
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "6x2", "Pierce", "Slash", "Ammo:6")
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "6x2", "Pierce", "Slash", "Handed:1", "Weapon:Firearm", "Ammo:6")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pistol:.45 Revolver", ":image", "images/cards/item-pistol-45-revolver.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Quiver: Arrows", ":image", "images/cards/item-quiver-arrows.svg", ":summary", "* Holds up to 20 arrows\n* [Location]: [Shoulders] [Back]", ":body", "10x-1", ":mass", "1kg/2.2lb", ":length", "6cm/2ft"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Quiver:Arrows", ":image", "images/cards/item-quiver-arrows.svg", ":summary", "* Holds up to 20 arrows\n* [Location]: [Shoulders] [Back]", ":body", "10x-1", ":mass", "1kg/2.2lb", ":length", "6cm/2ft"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Raspberries", ":classification", "Plant", ":image", "images/cards/item-raspberries.svg", ":summary", "* Nutrition for a day. [Reveal Fate]. IF [Coins] THEN they are sour. IF [Cups] THEN they are sweet.", ":body", "10x-1", ":mass", "1kg/2lbs"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rations", ":image", "images/cards/item-rations.svg", ":summary", "* Enough Food for 7-10 days.\n* Cost: [Coins: Silver]\n* An assortment of jerky, dried fruits, hardtack, hardrolls, dried cheese, potatoes, turnips and nuts.\n* Water is heavy, so these are mostly dry. If consumed without water, the unit will be [Dehydrated] after 7 days.", ":body", "4x0", ":mass", "4kg/9lbs"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rifle", ":image", "images/cards/item-rifle.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Safe", ":image", "images/cards/item-safe.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Salve: Healing", ":image", "images/cards/item-salve-healing.svg", ":summary", "* [Uses]: 3\n* [Double Action] Use:1: Reduce a Major Wound to a Minor Wound.", ":body", "5x-1", ":mass", "500g/1.1lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Salve:Healing", ":image", "images/cards/item-salve-healing.svg", ":summary", "* [Uses]: 3\n* [Double Action] Use:1: Reduce a Major Wound to a Minor Wound.", ":body", "5x-1", ":mass", "500g/1.1lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Screen"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield:Buckler", ":classification", "Shield", ":image", "images/cards/item-shield-buckler.svg", ":summary", "* [Armor]: 2x1\n* [Arc]: [Arc:Front]\n* [Location]: [1-hand]", ":armor", "1", ":body", "10x-1", ":mass", "1kg/2lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield:Heater", ":image", "images/cards/item-shield-heater.svg", ":titles", "Aegis", ":classification", "Shield", ":summary", "* [Armor]: 2x1 [Hardened vs Hack]\n* [Arc]: [Arc:Front], [Arc:Left] OR [Arc:Right]\n* [Location]: [1-hand]", ":armor", "2", ":body", "3x0", ":mass", "3.2kg/7lb"),
@@ -292,7 +508,7 @@ export default class nx_tactics_decks_item {
             tactics,
             "Armor",
             "5x2",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Resist:Pierce", "1-Handed")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Resist:Pierce", "Handed:1")
           )
         )
       ),
@@ -300,7 +516,23 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield:Wicker", ":classification", "Shield"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shotgun", ":image", "images/cards/item-shotgun.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Spear", ":image", "images/cards/item-spear.svg", ":summary", "* [Combat]: [Melee] [Reach]\n* [Damage]: [Body]:+3 [Pierce] [Slash]\n* [Location]: [2-hand]\n* [Armor]:2x1", ":body", "3x0", ":mass", "3kg/6lb"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Spear: Short", ":image", "images/cards/item-spear-short.svg", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+1 [Pierce] [Slash]\n* [Location]: [1-hand]\n* [Armor]: 2x1", ":body", "10x-1", ":mass", "1.5kg/4lb"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Spear:Short",
+        ":image",
+        "images/cards/item-spear-short.svg",
+        ":summary",
+        "* [Armor]: 2x1",
+        ":body",
+        "10x-1",
+        ":mass",
+        "1.5kg/4lb",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "Body+1", "Pierce", "Slash", "Handed:1", "Weapon:Melee")
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Stone: Flint", ":image", "images/cards/item-stone-flint.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword:Back", ":classification", "Sword", ":energy", "100J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword:Bastard", ":classification", "Sword", ":energy", "100J"),
@@ -338,7 +570,7 @@ export default class nx_tactics_decks_item {
             tactics,
             "Weapon",
             "[Body]+2",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "1-Handed", "Melee Weapon")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pierce", "Slash", "Handed:1", "Weapon:Melee")
           ),
           nx_tactics_base.f_unitpower_from_tactics_key_rating(tactics, "Armor", "2x1")
         )
@@ -349,8 +581,42 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword:Rapier", ":classification", "Sword", ":energy", "100J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword:Saber", ":classification", "Sword", ":energy", "100J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword:Scimitar", ":classification", "Sword", ":energy", "100J"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword:Short", ":image", "images/cards/item-sword-short.svg", ":classification", "Sword", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+2 [Pierce] [Slash]\n* [Arc]: [Arc:Front]\n* [Location]: [1-hand]\n* [Armor]: 2x1", ":body", "10x-1", ":mass", "1kg/2.2lb", ":energy", "100J"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword:Tanto", ":classification", "Sword", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+2 [Pierce] [Slash]\n* [Arc]: [Arc:Front]\n* [Location]: [1-hand]\n* [Armor]: 2x1", ":energy", "100J"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Sword:Short",
+        ":image",
+        "images/cards/item-sword-short.svg",
+        ":classification",
+        "Sword",
+        ":summary",
+        "* [Arc]: [Arc:Front]\n* [Armor]: 2x1",
+        ":body",
+        "10x-1",
+        ":mass",
+        "1kg/2.2lb",
+        ":energy",
+        "100J",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "Body+2", "Pierce", "Slash", "Handed:1", "Weapon:Melee")
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_item},
+        ":name",
+        "Sword:Tanto",
+        ":classification",
+        "Sword",
+        ":summary",
+        "* [Arc]: [Arc:Front]\n* [Armor]: 2x1",
+        ":energy",
+        "100J",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_rating_abilities(tactics, "Weapon", "Body+2", "Pierce", "Slash", "Handed:1", "Weapon:Melee")
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword:Wakizashi", ":classification", "Sword", ":energy", "100J"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Tooth"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Torch", ":image", "images/cards/item-torch.svg", ":summary", "* Provides poor light for 30 minutes.", ":body", "10x-1", ":mass", "1kg/2lbs"),

@@ -6,17 +6,6 @@
  [tactics : base/tactics]
  (base/abilitymap<-abilitylist
   (base/ability
-   :name "1-Handed"
-   :summary
-    "* Requires: 1 Hand
-     * [Power]: [Weapon] or [Armor]
-     * Usable only to [Arc:Front] and [Arc:Left] or [Arc:Right]")
-  (base/ability
-   :name "2-Handed"
-   :summary
-    "* Requires: 2 Hands
-     * [Power]: [Weapon]")
-  (base/ability
    :name "2-Legged")
   (base/ability
    :name "3 Point Turn"
@@ -98,9 +87,9 @@
     "* [Action]: Anyone who is within 10m, tests [Investigation] vs. [Stealth] with [Advantage] to detect them.
      * [Downtime]: Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak.")
   (base/ability
-   :name "Ammo:6"
+   :name "Ammo"
    :summary
-    "6 Shots before reloading
+    "Shots before reloading
      * [Power]: [Weapon]")
   (base/ability
    :name "Amphibious Assault"
@@ -229,6 +218,11 @@
     "* Protects Vitals [10]
      * [Power]: [Armor]")
   (base/ability
+   :name "Armorsmithing"
+   :summary
+    "* [Skill]: [Defense]
+     * The ability to repair, improve, or even create armor.")
+  (base/ability
    :name "Art Imitates Life"
    :reference "Dorian Gray"
    :summary
@@ -301,7 +295,9 @@
     "* [Fight]: IF [Flanking] double the Flanking Bonus"
    :titles "Back Biter, Back Stabber, Opportunist, Traitor")
   (base/ability
-   :name "Balanced for Throwing")
+   :name "Balanced for Throwing"
+   :summary
+    "* [Power]: [Quality]")
   (base/ability
    :name "Balefire"
    :titles "Hellfire, Witchfire"
@@ -419,6 +415,10 @@
    :summary
     "* [Skill]: [Tradeskill]")
   (base/ability
+   :name "Black Market Ties"
+   :summary
+    "* [Skill]: [Influence]")
+  (base/ability
    :name "Blade Barrier"
    :titles "Wall of Swords"
    :summary
@@ -426,10 +426,10 @@
   (base/ability
    :name "Blade Locking"
    :summary
-    "* [Skill]: [Melee]
-     * [Requires]: [Parry], May only be used against swords, knives or polearms.
-     * [Reaction]: -2
-     * [Success]: Opponent gains a [Broken Defense Token] for each [Hit]")
+    "After a [Block], both weapons are locked together and unusable
+     * [Skill]: [Evasion]
+     * [Requires]: Cannot be used against Rivals with [Body] 3 greater than your [Body]
+     * [Continuous]: Both weapons cannot be used until you take damage")
   (base/ability
    :name "Blend into the Crowd"
    :summary
@@ -512,15 +512,20 @@
     "* [Power]: [Necromancy]
      * An Undead Minion can use this during [Close Combat] to do [Freezing] Damage")
   (base/ability
+   :name "Boon"
+   :summary
+    "* [Skill]: [Influence]")
+  (base/ability
    :name "Bootlegger Reverse"
    :summary
     "* [Skill]: [Driving]")
   (base/ability
    :name "Bowel Raker"
+   :titles "Serrated Arrow"
    :summary
-    "* +1 [Bleeding]
-     * -1 [Piercing]"
-   :titles "Serrated Arrow")
+    "Damage becomes [Slash] only
+     * [Skill]: [Ranged]
+     * [Bleeding]:+1")
   (base/ability
    :name "Brain Drain")
   (base/ability
@@ -532,6 +537,12 @@
    :summary
     "* [Power]: [Domination] vs. [Will]
      * [Effect]: At Will:0 the [Rival] obeys all commands and becomes [Brainwashed].")
+  (base/ability
+   :name "Bravado"
+   :summary
+    "Say something to act cool.
+     * [Skill]: [Intimidation]
+     * [Free]: Ignore the effect of Stress:1 this Round")
   (base/ability
    :name "Brewing"
    :summary
@@ -758,15 +769,6 @@
    :summary
     "* [Skill]: [Military]
      * [Action]: If a [Vehicle] is adjacent to this unit, you may target the Top Armor.  If the unit has explosives, it may target the Under Armor.")
-  (base/ability
-   :name "Close Weapon"
-   :summary
-    "* A Close Combat Weapon.
-     * [Power]: [Weapon]
-     * [Skill]: [Close Combat]
-     * [Arc]: [Arc:Front]
-     * [Range]: 0-1
-     * [Damage]: [Body] + [Energy]")
   (base/ability
    :name "Clothesline"
    :summary
@@ -1268,7 +1270,7 @@
   (base/ability
    :name "Drilling"
    :summary
-    "* [Power]: [Digging]
+    "* [Power]: [Terrestrial]
      * Create a hole")
   (base/ability
    :name "Dragon Strike"
@@ -1320,6 +1322,11 @@
     "* Using a second weapon in the off hand.
      * [Skill]: [Close Combat]+1 or [Melee]+1
      * [Counter]: [Damage]:+1")
+  (base/ability
+   :name "Durable"
+   :summary
+    "This item is exceptionally well constructed and can withstand a suprising amount of punishment compared to a normal item of its type.
+     * [Power]: [Quality]")
   (base/ability
    :name "Duress"
    :summary
@@ -1406,8 +1413,10 @@
     "* [Skill]: [Intimidation] vs [Will]")
   (base/ability
    :name "Entanglement"
-   :summary "Reduces Movement"
-   :titles "Tanglers")
+   :titles "Tanglers"
+   :summary
+    "Reduces Movement
+     * [Power]: [Weapon]")
   (base/ability
    :name "Enthrall"
    :summary
@@ -1468,7 +1477,7 @@
   (base/ability
    :name "Excavating"
    :summary
-    "* [Power]: [Digging]
+    "* [Power]: [Terrestrial]
      * Expose a large buried area.")
   (base/ability
    :name "Exile"
@@ -1493,13 +1502,6 @@
    :summary
     "* [Requires]: Bow or Crossbow
      * [Skill]: [Ranged]")
-  (base/ability
-   :name "Explosives"
-   :reference
-    "Catch! - Jinx, Runeterra"
-   :summary
-    "* Experienced using various small explosives in combat.
-     * [Skill]: [Demolitions]")
   (base/ability
    :name "Extortion"
    :summary
@@ -1531,22 +1533,22 @@
    :summary
     "[Downtime]: Surgically swap appearances with another unit.")
   (base/ability
-   :name "Factory: Manufacturing"
+   :name "Factory:Manufacturing"
    :summary
     "* Can produce manufactured goods. Must be modified for each type of good.
      * [Power]: [Factory]")
   (base/ability
-   :name "Factory: Military"
+   :name "Factory:Military"
    :summary
     "* Can produce military vehicles. Must be modified for each type of vehicles.
      * [Power]: [Factory]")
   (base/ability
-   :name "Factory: Pharmaceutical"
+   :name "Factory:Pharmaceutical"
    :summary
     "* Can produce drugs. Must be modified for each type of drug.
      * [Power]: [Factory]")
   (base/ability
-   :name "Factory: Vehicle"
+   :name "Factory:Vehicle"
    :summary
     "* Can produce vehicles. Must be modified for each type of vehicles.
      * [Power]: [Factory]")
@@ -1554,6 +1556,10 @@
    :name "Falconry"
    :summary
     "* [Skill]: [Animals]")
+  (base/ability
+   :name "Fallout"
+   :summary
+    "* [Power]: [Radiation]")
   (base/ability
    :name "Feather Blades"
    :summary "* Feathers become as hard as steel and may be used as swords.")
@@ -1595,6 +1601,11 @@
   (base/ability
    :name "Financial Genius")
   (base/ability
+   :name "Fine"
+   :summary
+    "This item possesses fine details that are particularly attractive to collectors.
+     * [Power]: [Quality]")
+  (base/ability
    :name "Fire and Stones Cut"
    :reference
     "The Fires and Stones Cut means that when the enemy's sword and your sword clash together you cut as strongly as possible without raising the sword even a little. This means cutting quickly with the hands, body and legs - all three cutting strongly. If you train well enough you will be able to strike strongly. - Miyamoto Mushashi, The Book of Five Rings"
@@ -1602,13 +1613,10 @@
     "* [Reaction]: [+1 Defense]
      * [Action]: [+1 Attack], if you used this ability to [React] last turn.")
   (base/ability
-   :name "Firearm Weapon"
+   :name "Fire Charm"
    :summary
-    "* A Firearm.
-     * [Power]: [Weapon]
-     * [Skill]: [Firearm]
-     * [Arc]: [Arc:Front]
-     * [Range]: [Skill]")
+    "Cause a Rival to stare at a Fire.
+     * [Power]: [Pyromancy]")
   (base/ability
    :name "Fish Eye"
    :summary
@@ -1761,11 +1769,6 @@
    :summary
     "* [Skill]: [Intimidation]")
   (base/ability
-   :name "Faster than Light"
-   :titles "FTL"
-   :summary
-    "* [Power]: [Move:Stellar]")
-  (base/ability
    :name "Flash Surpressor"
    :summary
     "* Reduces the muzzle flare of the weapon making it more difficult to visually locate the shooter.
@@ -1844,14 +1847,6 @@
    :summary
     "* [Power]: [Weapon]")
   (base/ability
-   :name "Gunnery Weapon"
-   :summary
-    "A Gunnery Weapon including Cannons and Rockets.
-     * [Power]: [Weapon]
-     * [Skill]: [Gunnery]
-     * [Range]: [Skill]
-     * [Arc]: [Arc:Front]")
-  (base/ability
    :name "Guns Blazing"
    :summary
     "Shoot fast to increase combo
@@ -1869,6 +1864,15 @@
     "* Chopping and Spliting Damage. Causes ugly wounds and [Stress].
      * [Power]: [Weapon]")
   (base/ability
+   :name "Hall of Mirrors"
+   :summary
+    "Target is forced to confront twisted versions of themselves representing their self doubt and hatred.
+     * [Power]: [Psychic Combat] vs [Will]")
+  (base/ability
+   :name "Halo Drop"
+   :summary
+    "* [Skill]: [Military]")
+  (base/ability
    :name "Hamstring"
    :summary
     "* Attack the legs to slow the opponent.
@@ -1876,9 +1880,16 @@
      -1 Accuracy
      Criticals - [Cripple]")
   (base/ability
-   :name "Halo Drop"
+   :name "Handed:1"
    :summary
-    "* [Skill]: [Military]")
+    "* Requires: 1 Hand
+     * [Power]: [Weapon] or [Armor]
+     * Usable only to [Arc:Front] and [Arc:Left] or [Arc:Right]")
+  (base/ability
+   :name "Handed:2"
+   :summary
+    "* Requires: 2 Hands
+     * [Power]: [Weapon]")
   (base/ability
    :name "Handstand Kick"
    :summary
@@ -1998,6 +2009,7 @@
      * [Body]:+0x1")
   (base/ability
    :name "Hurricane Kick"
+   :titles "Butterfly Kick, Whirlwind Kick"
    :image "MartialArts/HurricaneKick.jpg"
    :reference
     "* Ryu, Ken, Akuma, Street Fighter"
@@ -2005,8 +2017,7 @@
     "* May attack up to 2 units in any surrounding spaces.
      * [Skill]: [Close Combat]
      -1 Speed
-     -2 Attack"
-   :titles "Butterfly Kick, Whirlwind Kick")
+     -2 Attack")
   (base/ability
    :name "Husbandry"
    :summary
@@ -2018,7 +2029,8 @@
    :titles
     "FTL Drive, Gravity Drive, Gravity Lens, Subspace Drive, T-Drive, Tachyon Drive, Warp Drive"
    :summary
-    "* Faster than light travel can be accomplished by warping space into a Wormhole/Black hole, dropping out of normal space and travelling through the parallel universe called Hyperspace/Tachyon Space where physical laws are not bound by the relationship between mass and the speed of light, and finally returning to normal space by creating another space warp.
+    "* [Power]: [Stellar]
+     * Faster than light travel can be accomplished by warping space into a Wormhole/Black hole, dropping out of normal space and travelling through the parallel universe called Hyperspace/Tachyon Space where physical laws are not bound by the relationship between mass and the speed of light, and finally returning to normal space by creating another space warp.
      * Hyperspace/Tachyon Space - Tachyon Space, like other dimensions is at right angles to our existing 3 dimension. In Hyperspace, time and distance have different meanings, all particles are tachyons, and the speed of light is an absolute minimum speed instead of a maximum. Travelling through Hyperspace is exceptionally hazardous. In fact, any deviation from the calculated route cause the corridor to collapse leaving one stranded in Hyperpace forever with no way to calculate a return.
      * Calculating a Route - Once a destination is chosen, complex calculations must be performed to calculate a direct route from the current location to the destination through the shifting reality of Hyperspace. A successful route will be a 'straight' line through Hyperspace. Proximity to a gravity well makes these calculations next to impossible. Typically, all ship computer resources are required for this calculation and the larger the ship fewer the available routes and therefore the greater the complexity. Ships may only enter and exit hyperspace at the edge of a solar system and must use conventional sub light drives within the system. A day or more at sub-light speed is therefore required to reach or leave a planet in an inner solar system. Route calculation time is roughly light years x tons / 10secs e.g. 4 light years x 100 tons / 10 = 40sec.
      * Hyperspace Corridor - Once calculated, the ship must meet the speed defined by the calculation while modulating the Hyperdrive energy signature to match the bridge to Hyperspace. If all goes well, the vast energies in Tachyon Space will form a corridor directly to the destination. Errors in any of the steps usually involve intense gravitional shearing forces that will at best cause damage to the Hyperdrive and leave the traveller stranded in deep space, or worse, Hyperspace.
@@ -2093,6 +2105,11 @@
      * Other units do not block [Line of Sight].
      * See: [Forward Observer]
      * See: [HE - High Explosives]")
+  (base/ability
+   :name "Indominable"
+   :summary
+    "* [Skill]: [Defense]
+     * [Reaction]: Reduce Push or Knockdown by 1")
   (base/ability
    :name "Inertial Dampening"
    :summary
@@ -2260,11 +2277,19 @@
      * Level determines distance travelled.")
   (base/ability
    :name "Line Swinging"
-   :titles "Web Swinging")
+   :titles "Web Swinging"
+   :summary
+    "* [Power]: [Terrestrial]")
   (base/ability
    :name "Linguistic Genius")
- (base/ability
-  :name "Livestock"
+  (base/ability
+   :name "Liquid Courage"
+   :summary
+    "Increase benefits of intoxicants.
+     * [Skill]: [Intimidation]
+     * [Reaction]: When you use an intoxicant increase any one effect by 1.")
+  (base/ability
+   :name "Livestock"
    :summary
     "* The ability to grow livestock.
      * [Skill]: [Animals]")
@@ -2352,15 +2377,6 @@
     "* The user knows thousands of mazes and can choose an optimal course through any maze with minimal trial and error.
      * [Skill]: [Brilliance]")
   (base/ability
-   :name "Melee Weapon"
-   :summary
-    "* A Melee Weapon.
-     * [Power]: [Weapon]
-     * [Skill]: [Melee]
-     * [Arc]: [Arc:Front] and [Arc:Left] or [Arc:Right]
-     * [Range]: 0 or 1
-     * [Damage]: [Body] + [Energy]")
-  (base/ability
    :name "Mental Blast"
    :summary "Attacks Mind.  All tokens are stun.")
   (base/ability
@@ -2405,7 +2421,7 @@
   (base/ability
    :name "Mine Laying"
    :summary
-    "* [Skill]: [Demolitions]")
+    "* [Skill]: [Demolitionss]")
   (base/ability
    :name "Mining Rig"
    :summary
@@ -2855,6 +2871,8 @@
      * [Damage]: [Body] [Bash]")
   (base/ability
    :name "Puzzles"
+   :reference
+    "* Admiral Brindsen: I suppose you're one of those fellows who does the Times crossword puzzle in ten minutes. ffolkes: I have *never* taken *ten* minutes. - ffolkes"
    :summary
     "* Expert at puzzles.
      * [Skill]: [Brilliance]")
@@ -2878,7 +2896,7 @@
    :summary
     "Instantly draw a small item from a holster to hip
      * [Skill]: [Ranged] or [Firearm]
-     * [Requires]: [1-Handed] Item in a holster
+     * [Requires]: [Handed:1] Item in a holster
      * [Free]: Draw an Item from holster to hip. Note: Attacks from the hip are at [Disadvantage]")
   (base/ability
    :name "Quick Study"
@@ -2909,18 +2927,17 @@
     "* By activating this system, the armor emits powerful radar white noise.
      * [Continuous Action] - [-Range] Radar sensors detection to any target within range.")
   (base/ability
+   :name "Radiation Beam"
+   :summary
+    "* [Power]: [Radiation]")
+  (base/ability
+   :name "Radiation Blast"
+   :summary
+    "* [Power]: [Radiation]")
+  (base/ability
    :name "Rally"
    :summary
     "[Action]: Units within Range:Skill are placed into a [Formation] they all share.")
-  (base/ability
-   :name "Ranged Weapon"
-   :summary
-    "* A Manually powered Ranged Weapon including Bows, Crossbows, Darts.
-     * [Power]: [Weapon]
-     * [Skill]: [Ranged]
-     * [Arc]: [Arc:Front]
-     * [Range]: [Body] + [Skill]
-     * [Damage]: [Body] + Item [Body]")
   (base/ability
    :name "Rapid Fire"
    :summary
@@ -2991,17 +3008,17 @@
     "* Reduces the 'kick' of the weapon and therefore reduces the penalty for continuous fire.
      * [Power]: [Weapon]")
   (base/ability
-   :name "Refinery: Gas"
+   :name "Refinery:Gas"
    :summary
     "* Can refine gas. Must be modified for each type of gas.
      * [Power]: [Factory]")
   (base/ability
-   :name "Refinery: Oil"
+   :name "Refinery:Oil"
    :summary
     "* Can refine oil. Must be modified for each type of oil.
      * [Power]: [Factory]")
   (base/ability
-   :name "Refinery: Ore"
+   :name "Refinery:Ore"
    :summary
     "* Can refine ore. Must be modified for each type of ore.
      * [Power]: [Factory]")
@@ -3063,7 +3080,9 @@
   (base/ability
    :name "Resist:Fire"
    :summary
-    "* [Damage]: [Armor]:+1 if attack produces [Fire]")
+    "Reduce Fire Damage
+     * [Power]: [Armor], [Quality] or [Toughness]
+     * [Damage]: [Armor]:+1 if attack produces [Fire]")
   (base/ability
    :name "Resist:Hack"
    :summary
@@ -3324,27 +3343,27 @@
      * [Requires]: Javelin, Target with shield
      * [Attack]: Criticals are [Encumberance] Tokens.")
   (base/ability
-   :name "Shielding: Magical"
+   :name "Shielding:Magical"
    :summary
     "* IF the Shielding falls due to Damage THEN all further Damage is cancelled.
      * [Power]: [Shielding]")
   (base/ability
-   :name "Shipyard: Aircraft"
+   :name "Shipyard:Aircraft"
    :summary
     "* Can produce aircraft. Must be modified for each type of aircraft.
      * [Power]: [Factory]")
   (base/ability
-   :name "Shipyard: Mobile"
+   :name "Shipyard:Mobile"
    :summary
     "* Can produce mobile weapons. Must be modified for each type of mobile.
      * [Power]: [Factory]")
   (base/ability
-   :name "Shipyard: Naval"
+   :name "Shipyard:Naval"
    :summary
     "* Can produce ships. Must be modified for each type of ships.
      * [Power]: [Factory]")
   (base/ability
-   :name "Shipyard: Spaceship"
+   :name "Shipyard:Spaceship"
    :summary
     "* Can produce spaceships. Must be modified for each type of ships.
      * [Power]: [Factory]")
@@ -3435,8 +3454,13 @@
     "* Ignore Snow Move penalty
      * Off Snow Slow:+1.")
   (base/ability
+   :name "Sonar"
+   :summary
+    "* [Power]: [Implants], [Senses] or [Sound]")
+  (base/ability
    :name "Soul Pact"
-   :summary "* Death: Enter a specified Demon Realm. This ability is automatic and is not optional.")
+   :summary
+    "* Death: Enter a specified Demon Realm. This ability is automatic and is not optional.")
   (base/ability
    :name "Soulbind"
    :titles "Soulbond")
@@ -3528,14 +3552,15 @@
   (base/ability
    :name "Stalk"
    :summary
-    "* The ability to move carefully to avoid detection.
+    "The ability to move carefully to avoid detection.
      * [Requires]: No other action may be performed this turn.
      * [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail.")
   (base/ability
    :name "Stare Down"
    :summary
-    "* [Skill]: [Animals] vs. [Will]
-     * Causes an animal to hesitate or back down.")
+    "Lock eyes with a willing target and engage in a battle of Wills
+     * [Skill]: [Animals] or [Intimidation] vs. [Will]
+     * [Damage]: [Stress] only")
   (base/ability
    :name "Steed Trample"
    :summary
@@ -3574,17 +3599,22 @@
      * [Power]: [Air] or [Aeromancy] vs [Speed]
      * [Damage]: [Choking]")
   (base/ability
-   :name "Summon Demon"
-   :titles "Demonic Summoning")
+   :name "Summon:Demon"
+   :titles "Demonic Summoning"
+   :summary
+    "* [Power]: [Sorcery]")
   (base/ability
-   :name "Summon Devil"
-   :titles "Diabolic Summoning")
+   :name "Summon:Devil"
+   :titles "Diabolic Summoning"
+   :summary
+    "* [Power]: [Sorcery]")
   (base/ability
-   :name "Summon Familiar"
+   :name "Summon:Familiar"
    :reference
     "* Animal companions, such as cats, that are either trained to assist in magic, or are used as a mascot."
    :summary
-    "* Summon an animal shaped familiar spirit to serve as a companion, servant, spy, etc.
+    "Summon an animal shaped familiar spirit to serve as a companion, servant, spy, etc.
+     * [Power]: [Sorcery]
      * The Familiar is highly intelligent and must be bargained with before it agrees to serve.
      * Duration: Indefinite.
      * The Familiar will age with its master.
@@ -3593,19 +3623,24 @@
      ** Golden Cord - Connects magical abilities.
      ** Silver Cord - Connects the minds.
      ** Bronze Cord - Connects the bodies.
-     !Familiar Skills
-     * Shapechange to Human Form
-     * Giant Growth (Self)
-     * Communicate with Master
-     * Speech")
+
+     Familiar Skills
+     * Shapechange to Human Form - 1/day
+     * Growth - Grow to a larger version of itself (House Cat->Panther) 1/day
+     * Telepathy with Master
+     * Speak languages Master knows")
   (base/ability
-   :name "Summon Id Monster"
+   :name "Summon:Id Monster"
    :summary "[Call] [Id Monster]"
    :reference
-    "Monsters, John, monsters from the Id! - Ostrow, Forbidden Planet")
+    "Monsters, John, monsters from the Id! - Ostrow, Forbidden Planet
+     * [Power]: [Mental Combat]")
   (base/ability
-   :name "Summon Item"
-   :summary "* A single item may be attuned to a summoning. Later that item may be summoned to the owner's hand.")
+   :name "Summon:Item"
+   :summary
+    "* A single item may be attuned to a summoning. Later that item may be summoned to the owner's hand.
+   :summary
+     * [Power]: [Sorcery]")
   (base/ability
    :name "Supressive Fire"
    :titles "Covering Fire, Pin Down"
@@ -3675,6 +3710,12 @@
    :name "Tainted"
    :summary
     "* [Power]: [Special Ability]")
+  (base/ability
+   :name "Take Down"
+   :summary
+    "Fighter wraps his limbs around the opponent and causes both fighters to fall [Prone].
+     * [Skill]: [Close Combat]
+     * IF Win with [Strong] THEN Both fighters are [Prone] and put [Held] on the other")
   (base/ability
    :name "Tanker Hold"
    :summary
@@ -3822,7 +3863,7 @@
   (base/ability
    :name "Tunneling"
    :summary
-    "* [Power]: [Digging]
+    "* [Power]: [Terrestrial]
      * Create caves underground.")
   (base/ability
    :name "Turbo Booster"
@@ -3830,8 +3871,10 @@
   (base/ability
    :name "Turret"
    :summary
-    "* Turret mounted weapons may turn their turret toward any Arc and fire from the side the turret is facing.
-     * Track the Turret facing. Unit may spend Turn:1 to change the turret facing by 1 side.
+    "* Turret mounted weapons may turn their turret toward any Arc and fire toward its facing.
+     * [Power]: [Weapon]
+     * Turning - Spend Turn:1 to change turret facing by 45 degrees
+     * Facing - IF not facing forward THEN place a Token to show facing
      * Armor - Turrets are considered an additional location and must be Armored separately.")
   (base/ability
    :name "Turret Mount"
@@ -3865,6 +3908,12 @@
      * [Skill]: [Intimidation]
      * [Action]: Test [Intimidation] vs [Will]
      * [Damage]: [Fear]")
+  (base/ability
+   :name "Unsettling Presence"
+   :summary
+    "Your intimidating presence is palapable to everyone near you.
+     * [Skill]: [Intimidation]
+     * [Action]: Place a Token on this card (max:1). The next Unit that attacks you must spend Will:-1 (discard the Token)")
   (base/ability
    :name "Unsolvable Problem"
    :reference
@@ -3925,7 +3974,7 @@
   (base/ability
    :name "Wall Crawling"
    :summary
-    "* [Power]: [Move:Ground]")
+    "* [Power]: [Terrestrial]")
   (base/ability
    :name "Wall of Darkness"
    :summary
@@ -3938,7 +3987,7 @@
   (base/ability
    :name "Wall Running"
    :summary
-    "* [Power]: [Move:Ground]
+    "* [Power]: [Terrestrial]
      * Requires: [Wall Crawling]")
   (base/ability
    :name "War Training"
@@ -3988,6 +4037,55 @@
      +1 Accuracy
      0 Damage - Any successes become -Damage to the weapon. If the weapon has 0 Damage remaining, it is caught.
      Criticals - Any Criticals become -2 Damage to the weapon. If the weapon has 0 Damage remaining and there are still Criticals, the weapon may be immediately used at +[Criticals] Accuracy. Note: The weapon remains in the hands of the attacker.")
+  (base/ability
+   :name "Weapon:Close"
+   :summary
+    "* A Close Combat Weapon.
+     * [Power]: [Weapon]
+     * [Skill]: [Close Combat]
+     * [Arc]: [Arc:Front]
+     * [Range]: 0-1
+     * [Damage]: [Body] + [Energy]")
+  (base/ability
+   :name "Weapon:Demolitions"
+   :summary
+    "* An Explosive Weapon.
+     * [Power]: [Weapon]
+     * [Skill]: [Demolitions]")
+  (base/ability
+   :name "Weapon:Firearm"
+   :summary
+    "* A Firearm.
+     * [Power]: [Weapon]
+     * [Skill]: [Firearm]
+     * [Arc]: [Arc:Front]
+     * [Range]: [Skill]")
+  (base/ability
+   :name "Weapon:Gunnery"
+   :summary
+    "A Gunnery Weapon including Cannons and Rockets.
+     * [Power]: [Weapon]
+     * [Skill]: [Gunnery]
+     * [Range]: [Skill]
+     * [Arc]: [Arc:Front]")
+  (base/ability
+   :name "Weapon:Melee"
+   :summary
+    "* A Melee Weapon.
+     * [Power]: [Weapon]
+     * [Skill]: [Melee]
+     * [Arc]: [Arc:Front] and [Arc:Left] or [Arc:Right]
+     * [Range]: 0 or 1
+     * [Damage]: [Body] + [Energy]")
+  (base/ability
+   :name "Weapon:Ranged"
+   :summary
+    "* A Manually powered Ranged Weapon including Bows, Crossbows, Darts.
+     * [Power]: [Weapon]
+     * [Skill]: [Ranged]
+     * [Arc]: [Arc:Front]
+     * [Range]: [Body] + [Skill]
+     * [Damage]: [Body] + Item [Body]")
   (base/ability
    :name "Weaponsmith"
    :titles "Bladesmith, Swordsmith"

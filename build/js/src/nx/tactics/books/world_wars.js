@@ -270,10 +270,10 @@ export default class nx_tactics_books_world_wars {
           ":itemmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
-            ".30-06 M1919A4 MG",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".30-06 M1919A4 MG", ":image", "WWIIAmerican/MG_1919_Browning.jpg", ":classification", "Hvy. MG", ":length", ".96m", ":mass", "14kg", ":modifiers", "Auto", ":muzzlevelocity", "853m/s", ":rof", "500/min", ":rounds", "250"),
-            ".50 cal M2HB MG",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", ".50 cal M2HB MG", ":image", "WWIIAmerican/MG_BrowningM2.jpg", ":reference", "* While the AP projectiles from the .50-caliber machine guns could not penetrate the front, side, or turret armor of enemy tanks, it could sometimes penetrate the engine grilles and exhaust system of the German Pzkpf Mk IV or Pzkpf V (Panther I), disabling the vehicle.\n* Used extensively from 1920's to present with few modifications. It is the primary MG of NATO countries and has been in use longer than any other small arm in U.S..", ":summary", ".50 cal Browning M2 water cooled machine gun", ":classification", "Hvy. MG", ":length", "1650mm", ":mass", "38kg", ":modifiers", "Auto, AP, Tracer", ":muzzlevelocity", "930m/s", ":rof", "500/min"),
+            "MG:.30-06 M1919",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "MG:.30-06 M1919"),
+            "MG:.50 M2HB",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "MG:.50 M2HB"),
             "M2 Flamethrower",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "M2 Flamethrower", ":image", "WWIIAmerican/Flamethrower_M2.jpg", ":reference", "* With the arrival of tanks, especially flamethrower tanks, the need for infantrymen to expose themselves to fire became unnecessary as tanks offered greater protection while still delivering the effective damage.\n* While some were sold off, the majority of them were scrapped when they were declared obsolete.", ":summary", "* All [Hits] and [Critical Hits] are [Fire] tokens.", ":classification", "Flamethrower", ":crew", "2", ":mass", "31kg", ":modifiers", "Fire, Auto", ":range", "20m"),
             "M1A1 Bazooka",
@@ -294,8 +294,8 @@ export default class nx_tactics_books_world_wars {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "57mm M1 Cannon", ":reference", "* American version of the British QF 6 Pounder\n* Although 17 Pounder guns were rushed to North Africa to combat the Tiger tank, it was in fact a 6-pdr, which claimed the first Tiger 'kill'.", ":classification", "Cannon", ":modifiers", "AP", ":range", "4600m"),
             "75mm M3 L/40 Cannon",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "75mm M3 L/40 Cannon", ":summary", "* The gun was designed to have both powerful HE projectile and good anti-tank capability, however from the middle of the war it was no longer effective in the anti-tank role, due to its low muzzle velocity.", ":classification", "Cannon", ":modifiers", "HE, AP", ":muzzlevelocity", "619m/s"),
-            "76mm M1 Cannon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "76mm M1 Cannon", ":reference", "* While the 76 mm had less High Explosive (HE) and smoke performance than the 75 mm, the higher-velocity 76 mm gave better anti-tank performance, with firepower comparable to the Soviet ZiS-S-5 85 mm gun of the T-34-85 and many of the armoured fighting vehicles it encountered, particularly the Panzer IV and StuG vehicles.", ":classification", "Cannon", ":modifiers", "HE, AP", ":muzzlevelocity", "792m/s"),
+            "Cannon:76mm M1",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Cannon:76mm M1"),
             "76mm M7 Cannon",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "76mm M7 Cannon", ":reference", "* Though successful in Northern Africa, the gun proved to be ineffective against the frontal armor of the newer German Tiger and Panther tanks.", ":classification", "Cannon", ":length", "7.1m", ":mass", "2.2tons", ":modifiers", "AP, HE", ":muzzlevelocity", "820m/s", ":range", "9.6km", ":rof", "12/min"),
             "90mm M1 Cannon",
@@ -625,8 +625,6 @@ export default class nx_tactics_books_world_wars {
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
-                    "Explosives",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Explosives"),
                     "Mine Laying",
                     vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Mine Laying")
                   ),
@@ -649,43 +647,13 @@ export default class nx_tactics_books_world_wars {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            "M4 Sherman",
+            "Sherman M4A1",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Sherman M4A1"),
+            "Sherman Crab M4A4",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M4 Sherman",
-              ":image",
-              "WWIIAmerican/TankMed_M4A3_ShermanToken.png",
-              ":reference",
-              "* As part of the deception plan that drew German attention away from Normandy, inflatable rubber Shermans were deployed in Kent with plywood artillery.",
-              ":classification",
-              "Med. Tank",
-              ":crew",
-              "5",
-              ":mass",
-              "30tons",
-              ":range",
-              "193km",
-              ":speedland",
-              "48kph",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "75mm", ":back", "30mm", ":over", "30mm", ":under", "30mm", ":side", "50mm")
-              ),
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "3")
-              )
-            ),
-            "M4A4 Sherman Crab",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "M4A4 Sherman Crab",
+              "Sherman Crab M4A4",
               ":image",
               "WWIIAmerican/TankMed_ShermanCrabToken.png",
               ":reference",
@@ -725,11 +693,11 @@ export default class nx_tactics_books_world_wars {
                 )
               )
             ),
-            "T34 Sherman Calliope",
+            "Sherman Calliope T34",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "T34 Sherman Calliope",
+              "Sherman Calliope T34",
               ":image",
               "WWIIAmerican/TankMed_T-34Calliope_M4Token.png",
               ":classification",
@@ -755,11 +723,11 @@ export default class nx_tactics_books_world_wars {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "3")
               )
             ),
-            "M4A3E8 Sherman Easy Eight",
+            "Sherman Easy Eight M4A3E8",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M4A3E8 Sherman Easy Eight",
+              "Sherman Easy Eight M4A3E8",
               ":image",
               "WWIIAmerican/TankMed_M4A3E8_EasyEightToken.png",
               ":reference",
@@ -787,11 +755,11 @@ export default class nx_tactics_books_world_wars {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "4")
               )
             ),
-            "M26 Pershing",
+            "Pershing M26",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M26 Pershing",
+              "Pershing M26",
               ":image",
               "WWIIAmerican/TankHvy_M26_PershingToken.png",
               ":reference",
@@ -821,11 +789,11 @@ export default class nx_tactics_books_world_wars {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "4")
               )
             ),
-            "M3 Lee",
+            "Lee M3",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M3 Lee",
+              "Lee M3",
               ":image",
               "WWIIAmerican/TankMed_M3LeeToken.png",
               ":reference",
@@ -855,11 +823,11 @@ export default class nx_tactics_books_world_wars {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "4")
               )
             ),
-            "M5 Stuart",
+            "Stuart M5",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M5 Stuart",
+              "Stuart M5",
               ":image",
               "WWIIAmerican/TankLt_M5A1_StuartToken.png",
               ":reference",
@@ -889,11 +857,11 @@ export default class nx_tactics_books_world_wars {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "3")
               )
             ),
-            "M24 Chaffee",
+            "Chaffee M24",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M24 Chaffee",
+              "Chaffee M24",
               ":image",
               "WWIIAmerican/TankLt_M24ChaffeeToken.png",
               ":reference",
@@ -923,11 +891,11 @@ export default class nx_tactics_books_world_wars {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "4")
               )
             ),
-            "M10 Wolverine",
+            "Wolverine M10",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M10 Wolverine",
+              "Wolverine M10",
               ":image",
               "WWIIAmerican/TD_M10_WolverineToken.png",
               ":reference",
@@ -957,11 +925,11 @@ export default class nx_tactics_books_world_wars {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "3")
               )
             ),
-            "M18 Hellcat",
+            "Hellcat M18",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M18 Hellcat",
+              "Hellcat M18",
               ":image",
               "WWIIAmerican/TD_M18_HellcatToken.png",
               ":reference",
@@ -991,11 +959,11 @@ export default class nx_tactics_books_world_wars {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "4")
               )
             ),
-            "M36 Jackson",
+            "Jackson M36",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M36 Jackson",
+              "Jackson M36",
               ":image",
               "WWIIAmerican/TD_M36JacksonToken.png",
               ":reference",
@@ -1025,11 +993,11 @@ export default class nx_tactics_books_world_wars {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "4")
               )
             ),
-            "M7 Priest",
+            "Priest M7",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "M7 Priest",
+              "Priest M7",
               ":image",
               "WWIIAmerican/SPG_M7_PriestToken.png",
               ":reference",
@@ -3509,8 +3477,8 @@ export default class nx_tactics_books_world_wars {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "7.92mm FG42 Light MG", ":reference", "* The FG42 was developed specifically for the use by paratroopers, who wanted a suitable gun after their experiences in the invasion of Crete.", ":classification", "Lt. MG", ":modifiers", "Auto, +1 Prepare"),
             "7.92mm MG17 MG",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "7.92mm MG17 MG", ":image", "WWIIGerman/MG_MG17.jpg", ":reference", "* A mainstay fixed machine gun in German built aircraft.", ":classification", "Med. MG", ":length", "1175mm", ":mass", "10.2kg", ":modifiers", "Auto", ":muzzlevelocity", "855m/s", ":rof", "1200/min"),
-            "7.92mm MG34 MG",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "7.92mm MG34 MG", ":image", "WWIIGerman/MG_MG34.jpg", ":classification", "Med. MG", ":length", "1219mm", ":mass", "12.1kg", ":modifiers", "Auto", ":muzzlevelocity", "765m/s"),
+            "MG:7.92mm MG34",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "MG:7.92mm MG34"),
             "7.92mm MG81Z MG",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "7.92mm MG81Z MG", ":image", "WWIIGerman/MG_MG81.jpg", ":reference", "* An aircraft mounted derivative of the successful MG34 infantry machine gun.", ":classification", "Med. MG", ":length", "915mm", ":mass", "12.9kg", ":modifiers", "Auto", ":muzzlevelocity", "705m/s", ":rof", "1500/min"),
             "13mm MG131 MG",
@@ -3529,8 +3497,8 @@ export default class nx_tactics_books_world_wars {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "50mm KwK 39 L/60 Cannon", ":classification", "Cannon", ":modifiers", "HE, AP", ":muzzlevelocity", "800m/s"),
             "75mm KwK 39 L/48 Cannon",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "75mm KwK 39 L/48 Cannon", ":classification", "Cannon", ":modifiers", "HE, AP", ":muzzlevelocity", "750m/s"),
-            "75mm KwK 40 L/48 Cannon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "75mm KwK 40 L/48 Cannon", ":classification", "Cannon", ":modifiers", "HE, AP", ":muzzlevelocity", "792m/s", ":range", "1.8km"),
+            "Cannon:75mm KwK40",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Cannon:75mm KwK40"),
             "75mm KwK 42 L/70 Cannon",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "75mm KwK 42 L/70 Cannon", ":classification", "Cannon", ":length", "5.2m", ":mass", "1ton", ":modifiers", "HE, AP", ":muzzlevelocity", "925m/s", ":range", "2km direct, 10km indirect"),
             "88mm KwK 36 L/56 Cannon",
@@ -3931,39 +3899,7 @@ export default class nx_tactics_books_world_wars {
               )
             ),
             "Panzer IV Ausf H",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Panzer IV Ausf H",
-              ":image",
-              "WWIIGerman/TankMed_PanzerPzkpfwIV_Token.png",
-              ":reference",
-              "* Robust and reliable, it saw service in all combat theaters, and has the distinction of being the only German tank to remain in continuous production throughout the war with over 8,500 produced.",
-              ":classification",
-              "Med. Tank",
-              ":crew",
-              "5",
-              ":mass",
-              "25tons",
-              ":length",
-              "7m",
-              ":range",
-              "200km",
-              ":speedland",
-              "42kph",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "80mm")
-              ),
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Military",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Military", ":level", "4")
-              )
-            ),
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Panzer IV Ausf H"),
             "Panther Ausf G",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},

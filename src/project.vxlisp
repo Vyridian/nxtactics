@@ -6,6 +6,9 @@
 // :projects   "../../vxlisp-core/src"
  :javadomain "com.vxlisp"
  :libs
+  (lib cpprandom
+   :path "<random>"
+   :lang :cpp)
   (lib javaniofile
    :path "java.nio.file.*"
    :lang :java)

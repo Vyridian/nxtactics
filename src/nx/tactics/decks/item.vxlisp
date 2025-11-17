@@ -13,13 +13,13 @@
    :body "2x-2"
    :mass "20g/.05lb")
   (base/item
-   :name "Ammo: Revolver"
+   :name "Ammo:Revolver"
    :image "images/cards/item-ammo-revolver.svg")
   (base/item
-   :name "Ammo: Rifle"
+   :name "Ammo:Rifle"
    :image "images/cards/item-ammo-rifle.svg")
   (base/item
-   :name "Ammo: Shotgun"
+   :name "Ammo:Shotgun"
    :image "images/cards/item-ammo-shotgun.svg")
   (base/item
    :name "Armor:Breast Plate"
@@ -74,7 +74,7 @@
        "Armor:Head"
        "Resist:Slash"))))
   (base/item
-   :name "Axe: Fire"
+   :name "Axe:Fire"
    :image "images/cards/item-axe-fire.svg"
    :summary
     "* [Skill]: [Melee]-1
@@ -84,25 +84,35 @@
    :body "3x0"
    :mass "3.1kg/7lb")
   (base/item
-   :name "Axe: Hand"
+   :name "Axe:Hand"
    :image "images/cards/item-axe-hand.svg"
-   :summary
-    "* [Combat]: [Melee]
-     * [Damage]: [Body]:+1 [Hack] [Slash]
-     * [Location]: [1-hand]"
    :body "9x-1"
-   :mass "900g/2lb")
+   :mass "900g/2lb"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "Body+1"
+      "Hack"
+      "Slash"
+      "Handed:1"
+      "Weapon:Melee")))
   (base/item
-   :name "Axe: Wood"
+   :name "Axe:Wood"
    :titles "Splitting Maul"
    :image "images/cards/item-axe-wood.svg"
    :summary
     "* [Skill]: [Melee]:-1
-     * [Damage]: [Body]:+3 [Hack] [Slash]
-     * [Location]: [2-hand]
      * [Armor]: 2x1"
    :body "3x0"
-   :mass "3.1kg/7lb")
+   :mass "3.1kg/7lb"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "Body+3"
+      "Hack"
+      "Slash"
+      "Handed:2"
+      "Weapon:Melee")))
   (base/item
    :name "Balefire")
   (base/item
@@ -116,8 +126,8 @@
       tactics "Weapon" "[Body]"
       (stringlist
        "Bash"
-       "1-Handed"
-       "Close Weapon"))))
+       "Handed:1"
+       "Weapon:Close"))))
   (item
    :name "Beast Claw")
   (base/item
@@ -133,10 +143,13 @@
    :name "Bomb: IED"
    :titles "Improvised Explosive Device")
   (base/item
-   :name "Bottle: Liquor"
-   :image "images/cards/item-bottle-liquor.svg")
+   :name "Bottle:Liquor"
+   :image "images/cards/item-bottle-liquor.svg"
+   :summary
+    "Uses:6
+     [Action]: Take a large drink for Mind:-1, Will:+1. Duration:1 hour")
   (base/item
-   :name "Bottle: Molotov Cocktail"
+   :name "Bottle:Molotov Cocktail"
    :image "images/cards/item-bottle-molotovcocktail.svg")
   (base/item
    :name "Bow:Composite"
@@ -164,8 +177,8 @@
       (stringlist
        "Pierce"
        "Slash"
-       "1-Handed"
-       "Ranged Weapon"))))
+       "Handed:1"
+       "Weapon:Ranged"))))
   (base/item
    :name "Bow:Moon"
    :titles "Cresent Bow"
@@ -190,19 +203,61 @@
       (stringlist
        "Pierce"
        "Slash"
-       "1-Handed"
-       "Ranged Weapon"))))
+       "Handed:1"
+       "Weapon:Ranged"))))
   (base/item
    :name "Campfire"
    :image "images/cards/item-campfire.svg"
    :body "2x1"
    :mass "20kg/45lb")
-  (item
+  (base/item
    :name "Candle")
+  (base/item
+   :name "Cannon:75mm KwK40"
+   :image "images/wwii/item-cannon-75mm-kwk-40.svg"
+   :classification "Cannon"
+   :body "7x2"
+   :mass "750kg/1650lb"
+   :energy "2MJ"
+   :modifiers "HE, AP"
+   :muzzlevelocity "792m/s"
+   :range "7.7km"
+   :rof "10/min"
+   :summary
+    "Turret or Front Mounted Cannon"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "2x6"
+      "Bash"
+      "Pierce"
+      "Weapon:Gunnery"
+      "Ammo:90")))
+  (base/item
+   :name "Cannon:76mm M1"
+   :image "images/wwii/item-cannon-76mm-m1.svg"
+   :reference
+    "* While the 76 mm had less High Explosive (HE) and smoke performance than the 75 mm, the higher-velocity 76 mm gave better anti-tank performance, with firepower comparable to the Soviet ZiS-S-5 85 mm gun of the T-34-85 and many of the armoured fighting vehicles it encountered, particularly the Panzer IV and StuG vehicles."
+   :classification "Cannon"
+   :body "5x2"
+   :mass "520kg/1100lb"
+   :energy "2MJ"
+   :modifiers "HE, AP"
+   :muzzlevelocity "792m/s"
+   :rof "8/min"
+   :range "14km"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "2x6"
+      "Bash"
+      "Pierce"
+      "Weapon:Gunnery"
+      "Ammo:70")))
   (base/item
    :name "Cloak")
   (base/item
-   :name "Cloak: Fine Woodland"
+   :name "Cloak:Fine Woodland"
    :image "images/cards/item-cloak-finewoodland.svg"
    :summary
     "* [Passive]: [Stealth]:+1 in [Forest]
@@ -276,12 +331,15 @@
   (base/item
    :name "Hammer"
    :image "images/cards/item-hammer.svg"
-   :summary
-    "* [Combat]: [Melee]
-     * [Damage]: [Body]:+3 [Bash]
-     * [Location]: [1-hand]"
    :body "2x0"
-   :mass "2kg/4.4lb")
+   :mass "2kg/4.4lb"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "Body+3"
+      "Bash"
+      "Handed:1"
+      "Weapon:Melee")))
   (base/item
    :name "Hammer: War"
    :energy "100J")
@@ -298,13 +356,31 @@
   (base/item
    :name "Knife"
    :image "images/cards/item-knife.svg"
-   :summary
-    "* [Combat]: [Close Combat]
-     * [Damage]: [Body] [Pierce] [Slash]
-     * [Location]: [1-hand]"
    :body "5x-1"
    :mass "500g/1lb"
-   :length "25cm/10in")
+   :length "25cm/10in"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "[Body]-1"
+      "Pierce"
+      "Slash"
+      "Handed:1"
+      "Weapon:Close")))
+  (base/item
+   :name "Knife:Bowie"
+   :image "images/cards/item-knife-bowie.svg"
+   :body "3x-1"
+   :mass "300g/.6lb"
+   :length "25cm/9in"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "[Body]+1"
+      "Pierce"
+      "Slash"
+      "Handed:1"
+      "Weapon:Close")))
   (base/item
    :name "Knife:Dagger"
    :image "images/cards/item-knife-dagger.svg"
@@ -319,8 +395,8 @@
       (stringlist
        "Pierce"
        "Slash"
-       "1-Handed"
-       "Close Weapon"))))
+       "Handed:1"
+       "Weapon:Close"))))
   (base/item
    :name "Knife:Moonblade"
    :titles "Cresent Blade, Faeknife"
@@ -339,6 +415,71 @@
    :name "Matrix")
   (base/item
    :name "Mirror")
+  (base/item
+   :name "MG:.30-06 M1919"
+   :image "images/wwii/item-mg-30-06-m1919.svg"
+   :titles ".30-06 Browning M1919"
+   :classification "Hvy. MG"
+   :body "1x-1"
+   :length ".96m"
+   :mass "14kg"
+   :energy "3390J"
+   :muzzlevelocity "853m/s"
+   :rof "500/min"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "3x3"
+      "Pierce"
+      "Slash"
+      "Autofire"
+      "Weapon:Gunnery"
+      "Ammo:250")))
+  (base/item
+   :name "MG:.50 M2HB"
+   :image "images/wwii/item-mg-50-m2hb.svg"
+   :titles ".50 Browning M2HB"
+   :reference
+    "* While the AP projectiles from the .50-caliber machine guns could not penetrate the front, side, or turret armor of enemy tanks, it could sometimes penetrate the engine grilles and exhaust system of the German Pzkpf Mk IV or Pzkpf V (Panther I), disabling the vehicle.
+     * Used extensively from 1920's to present with few modifications. It is the primary MG of NATO countries and has been in use longer than any other small arm in U.S.."
+   :summary
+    ".50 cal Browning water cooled machine gun"
+   :classification "Hvy. MG"
+   :body "4x-1"
+   :length "1650mm"
+   :mass "38kg"
+   :energy "1600J"
+   :muzzlevelocity "930m/s"
+   :rof "500/min"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "2x3"
+      "Pierce"
+      "Slash"
+      "Autofire"
+      "Weapon:Gunnery"
+      "Ammo:1000")))
+  (base/item
+   :name "MG:7.92mm MG34"
+   :image "images/wwii/item-mg-792mm-mg34.svg"
+   :classification "Med. MG"
+   :length "1219mm"
+   :mass "12.1kg"
+   :energy "4000J"
+   :muzzlevelocity "765m/s"
+   :rof "900/min"
+   :summary
+    "Front Mounted Machinegun"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "4x3"
+      "Pierce"
+      "Slash"
+      "Autofire"
+      "Weapon:Gunnery"
+      "Ammo:1500")))
   (base/item
    :name "Mushrooms"
    :classification "Plant"
@@ -373,13 +514,14 @@
     "* Single action Revolver"
    :energy "610J"
    :muzzlevelocity "300mps"
-   :rounds "6"
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-rating-abilities
       tactics "Weapon" "6x2"
       "Pierce"
       "Slash"
+      "Handed:1"
+      "Weapon:Firearm"
       "Ammo:6")))
   (base/item
    :name "Pistol:.45 S&W 1869"
@@ -391,19 +533,20 @@
     "* Single action Revolver"
    :energy "610J"
    :muzzlevelocity "300mps"
-   :rounds "6"
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-rating-abilities
       tactics "Weapon" "6x2"
       "Pierce"
       "Slash"
+      "Handed:1"
+      "Weapon:Firearm"
       "Ammo:6")))
   (base/item
    :name "Pistol:.45 Revolver"
    :image "images/cards/item-pistol-45-revolver.svg")
   (base/item
-   :name "Quiver: Arrows"
+   :name "Quiver:Arrows"
    :image "images/cards/item-quiver-arrows.svg"
    :summary
     "* Holds up to 20 arrows
@@ -436,14 +579,14 @@
    :name "Safe"
    :image "images/cards/item-safe.svg")
   (base/item
-   :name "Salve: Healing"
+   :name "Salve:Healing"
    :image "images/cards/item-salve-healing.svg"
    :summary
     "* [Uses]: 3
      * [Double Action] Use:1: Reduce a Major Wound to a Minor Wound."
    :body "5x-1"
    :mass "500g/1.1lb")
-  (item
+  (base/item
    :name "Screen")
   (base/item
    :name "Shield:Buckler"
@@ -494,7 +637,7 @@
       tactics "Armor" "5x2"
       (stringlist
        "Resist:Pierce"
-       "1-Handed"))))
+       "Handed:1"))))
   (base/item
    :name "Shield:Tower"
    :titles "Hoplite Shield"
@@ -517,15 +660,20 @@
    :body "3x0"
    :mass "3kg/6lb")
   (base/item
-   :name "Spear: Short"
+   :name "Spear:Short"
    :image "images/cards/item-spear-short.svg"
    :summary
-    "* [Combat]: [Melee]
-     * [Damage]: [Body]:+1 [Pierce] [Slash]
-     * [Location]: [1-hand]
-     * [Armor]: 2x1"
+    "* [Armor]: 2x1"
    :body "10x-1"
-   :mass "1.5kg/4lb")
+   :mass "1.5kg/4lb"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "Body+1"
+      "Pierce"
+      "Slash"
+      "Handed:1"
+      "Weapon:Melee")))
   (base/item
    :name "Stone: Flint"
    :image "images/cards/item-stone-flint.svg")
@@ -601,8 +749,8 @@
       (stringlist
        "Pierce"
        "Slash"
-       "1-Handed"
-       "Melee Weapon"))
+       "Handed:1"
+       "Weapon:Melee"))
      (base/unitpower<-tactics-key-rating
       tactics "Armor" "2x1")))
   (base/item
@@ -635,29 +783,39 @@
    :image "images/cards/item-sword-short.svg"
    :classification "Sword"
    :summary
-    "* [Combat]: [Melee]
-     * [Damage]: [Body]:+2 [Pierce] [Slash]
-     * [Arc]: [Arc:Front]
-     * [Location]: [1-hand]
+    "* [Arc]: [Arc:Front]
      * [Armor]: 2x1"
    :body "10x-1"
    :mass "1kg/2.2lb"
-   :energy "100J")
+   :energy "100J"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "Body+2"
+      "Pierce"
+      "Slash"
+      "Handed:1"
+      "Weapon:Melee")))   
   (base/item
    :name "Sword:Tanto"
    :classification "Sword"
    :summary
-    "* [Combat]: [Melee]
-     * [Damage]: [Body]:+2 [Pierce] [Slash]
-     * [Arc]: [Arc:Front]
-     * [Location]: [1-hand]
+    "* [Arc]: [Arc:Front]
      * [Armor]: 2x1"
-   :energy "100J")
+   :energy "100J"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-rating-abilities
+      tactics "Weapon" "Body+2"
+      "Pierce"
+      "Slash"
+      "Handed:1"
+      "Weapon:Melee")))
   (base/item
    :name "Sword:Wakizashi"
    :classification "Sword"
    :energy "100J")
-  (item
+  (base/item
    :name "Tooth")
   (base/item
    :name "Torch"
@@ -666,7 +824,7 @@
     "* Provides poor light for 30 minutes."
    :body "10x-1"
    :mass "1kg/2lbs")
-  (item
+  (base/item
    :name "Vampire Blood"
    :summary
     "* Black Token
@@ -720,7 +878,7 @@
  [tactics : base/tactics]
  (let : base/tactics
   [itemmap : base/itemmap :=
-   (itemmap-tactics tactics)]
+    (itemmap-tactics tactics)]
   (copy tactics
    :itemmap itemmap))
  :doc "Returns a tactics updated with itemmap")

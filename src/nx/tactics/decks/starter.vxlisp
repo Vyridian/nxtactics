@@ -38,18 +38,6 @@
    :image (string "images/rule-target-" color "-" num ".svg")
   )))
 
-(func card-velocity : base/card
- [tactics : base/tactics
-  color   : string
-  num     : int]
- (let : base/card
-  [rule : base/rule :=
-   (base/rule<-tactics-key tactics "Velocity")]
-  (copy rule
-   :id (string "velocity-" color "-" num)
-   :image (string "images/rule-velocity-" color ".svg")
-  )))
-
 (func card-unit : base/card
  [tactics : base/tactics
   color   : string
@@ -80,12 +68,7 @@
      (card-target tactics color 2)
      (card-target tactics color 3)
      (card-target tactics color 4)
-     (card-target tactics color 5)
-     (card-velocity tactics color 1)
-     (card-velocity tactics color 2)
-     (card-velocity tactics color 3)
-     (card-velocity tactics color 4)
-     (card-velocity tactics color 5))
+     (card-target tactics color 5))
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist
      cardlist)]

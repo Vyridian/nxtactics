@@ -133,12 +133,7 @@ export default class nx_tactics_decks_unit {
         "Taybor the Red",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Melee",
-            5,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Club: Staff")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Melee", 5, "Club: Staff")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Automaton"),
@@ -178,18 +173,8 @@ export default class nx_tactics_decks_unit {
         "1x0",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Melee",
-            3,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword:Short")
-          ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Stealth",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Ambush")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Melee", 3, "Sword:Short"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Stealth", 1, "Ambush")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bane: Disease", ":summary", "* These repulsive Banes appear like blood covered bags of pus. They are drawn to plagues, cesspools, medical waste, etc."),
@@ -255,12 +240,7 @@ export default class nx_tactics_decks_unit {
         "1x0",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Close Combat",
-            2,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Beatdown", "Grab")
-          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Close Combat", 2, "Beatdown", "Grab"),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Intimidation", 1)
         )
       ),
@@ -288,18 +268,8 @@ export default class nx_tactics_decks_unit {
         "5kph/3mph",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Melee",
-            4,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword:Long")
-          ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Close Combat",
-            2,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
-          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Melee", 4, "Sword:Long"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Close Combat", 2, "Grab"),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Investigation", 2),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Intimidation", 1)
         )
@@ -314,12 +284,7 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Fire"),
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_specialties(
-            tactics,
-            "Close Combat",
-            6,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grappling")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_specialties(tactics, "Close Combat", 6, "Grappling")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly: Giant"),
@@ -446,12 +411,7 @@ export default class nx_tactics_decks_unit {
         "Dogged",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Close Combat",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite", "Grab", "Drag")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Close Combat", 1, "Bite", "Grab", "Drag")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon Engine", ":titles", "Steam Engine"),
@@ -507,12 +467,7 @@ export default class nx_tactics_decks_unit {
         "Half-Elven Thief",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Stealth",
-            9,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Backstab")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Stealth", 9, "Backstab")
         )
       ),
       vx_core.f_new(
@@ -547,30 +502,10 @@ export default class nx_tactics_decks_unit {
         "1x0",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Close Combat",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife:Dagger")
-          ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Stealth",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sneak")
-          ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Tradeskill",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "House Painting")
-          ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Communication",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Elvish")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Close Combat", 1, "Knife:Dagger"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Stealth", 1, "Sneak"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Tradeskill", 1, "House Painting"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Communication", 1, "Elvish")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Flying Polyp", ":summary", "* The flying polyps came to Earth from space as conquerors about 750 million years ago. They built basalt cities with high windowless towers. When they attempted to colonize the oceans, the polyps were driven back by the Elder Things. Thereafter, they restricted their habitats to the surface world.\n    * Their senses did not include sight, but what senses they had could penetrate all material obstructions. They were only partially matter, but still solid enough to affect and be stopped by normal materials; this additionally gave them resistance, if not outright invulnerability, to normal means of damage, though they could be destroyed by certain forms of electrical energy. Their minds were so strange that the Great Race of Yith could not perform psychic transfers with them.\n    * They are able to levitate and fly despite lacking any visible means of doing so, and leave telltale massive footprints when on the ground. Their amorphous bodies can turn invisible at will, though this ability appears somewhat negated by whistling noises associated with them in general. In battle, their ability to control and direct powerful winds is put to use as a weapon.\n    * When the Great Race of Yith came to Earth, they warred with the polyps and soon drove them underground with their advanced technology. The Great Race then sealed the entryways to the polyps' subterranean abode with trapdoors, which afterwards were diligently guarded. The polyps' cities were left abandoned, perhaps as a reminder of the horrors that dwelt below.\n    * Eventually, the polyps rose up and almost exterminated the Great Race, afterwards returning to their subterranean haunts. Having no conception of light, the polyps seem content to remain there, annihilating the few intruders that chance upon them. The entrances to their dwellings are mostly deep within ancient ruins where there are great wells sealed over with stone."),
@@ -605,7 +540,7 @@ export default class nx_tactics_decks_unit {
           nx_tactics_base.f_unitpower_from_tactics_key_lvl(tactics, "Beastial", 3),
           nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
             tactics,
-            "Digging",
+            "Terrestrial",
             3,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Tunneling")
           ),
@@ -669,12 +604,7 @@ export default class nx_tactics_decks_unit {
         "* [Role:Attacker]",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Melee",
-            2,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Spear: Short", "Knife:Dagger")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Melee", 2, "Spear:Short", "Knife:Dagger")
         )
       ),
       vx_core.f_new(
@@ -715,18 +645,8 @@ export default class nx_tactics_decks_unit {
         "* [Role:Skirmisher]",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Close Combat",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife:Dagger")
-          ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Stealth",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sneak")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Close Combat", 1, "Knife:Dagger"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Stealth", 1, "Sneak")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Goblin Spider", ":summary", "* Traditional Japanese folk-lore understood that goblin-spiders had the power to transform from ordinary spiders to assume the form of men when night fell."),
@@ -806,12 +726,7 @@ export default class nx_tactics_decks_unit {
         "1x0",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Melee",
-            2,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Spear")
-          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Melee", 2, "Spear"),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Investigation", 1)
         )
       ),
@@ -858,7 +773,7 @@ export default class nx_tactics_decks_unit {
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Hip Shoot", "Quick Draw", "Sharpshooting"),
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pistol:.45 Colt 1873")
           ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Intimidation", 4, "Unnerve")
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Intimidation", 4, "Liquid Courage", "Stare Down", "Unnerve", "Unsettling Presence")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hare", ":image", "images/cards/unit-hare.svg", ":body", "4x0", ":mind", "2x1", ":will", "3x1", ":speed", "6x1", ":speedland", "60kph/40mph", ":mass", "4kg/8lbs", ":length", "60cm", ":secrets", "* Because of their extremely low fat content, they are a poor choice as a survival food.\n* The blood of a freshly killed hare can be collected for consumption in a stew or casserole in a cooking process known as jugging.\n* Jugged hare, known as civet de lièvre in France, is a whole hare, cut into pieces, marinated, and cooked with red wine and juniper berries in a tall jug that stands in a pan of water."),
@@ -875,12 +790,7 @@ export default class nx_tactics_decks_unit {
         "* Orc Assassin\n* A pragmatic, hardened survivalist who began his career as a lowly militia man in the Orc Army who would later form the infamous mercenary guild, the Blackguard.\n* Personality - Hetman is noteworthy for his lack of personal pride or conscience. He dislikes authority.  He strongly believes the ends justify the means and has no compunction about using any means available.\n* The Blackguard - When establishing the Blackguard, he insisted that it should never have a central authority and that all decisions were made by popular vote.",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Melee",
-            5,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword:Long", "Knife:Dagger")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Melee", 5, "Sword:Long", "Knife:Dagger")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hidden", ":image", "images/cards/unit-hidden.svg"),
@@ -930,12 +840,7 @@ export default class nx_tactics_decks_unit {
         "Valen the Hunter",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Defense",
-            5,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor:Chain Mail", "Shield:Round")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Defense", 5, "Armor:Chain Mail", "Shield:Round")
         )
       ),
       vx_core.f_new(
@@ -978,18 +883,8 @@ export default class nx_tactics_decks_unit {
         "1x0",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Melee",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Hammer")
-          ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Tradeskill",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Blacksmithing")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Melee", 1, "Hammer"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Tradeskill", 1, "Blacksmithing")
         )
       ),
       vx_core.f_new(
@@ -1032,18 +927,8 @@ export default class nx_tactics_decks_unit {
         "1x0",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Melee",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Spear")
-          ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Business",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bargain")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Melee", 1, "Spear"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Business", 1, "Bargain")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Juggernaut"),
@@ -1065,12 +950,7 @@ export default class nx_tactics_decks_unit {
         ),
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Survival",
-            3,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Survival: Jungle")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Survival", 3, "Survival: Jungle")
         )
       ),
       vx_core.f_new(
@@ -1126,12 +1006,7 @@ export default class nx_tactics_decks_unit {
         "1x0",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Survival",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Foraging")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Survival", 1, "Foraging")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lion"),
@@ -1236,6 +1111,13 @@ export default class nx_tactics_decks_unit {
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Guns Blazing"),
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "Pistol:.45 S&W 1869")
           ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
+            tactics,
+            "Close Combat",
+            2,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Take Down"),
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife:Bowie")
+          ),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Evasion", 2),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Crime", 2, "Armed Robbery", "Fence Goods", "Rustling"),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Animals", 2, "Herding", "Ride")
@@ -1249,6 +1131,62 @@ export default class nx_tactics_decks_unit {
         "images/cards/unit-ox.svg",
         ":imgmirror",
         true
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Panzer IV Ausf H",
+        ":image",
+        "images/wwii/unit-panzer-iv-ausfh.svg",
+        ":imgmirror",
+        true,
+        ":reference",
+        "* Robust and reliable, it saw service in all combat theaters, and has the distinction of being the only German tank to remain in continuous production throughout the war with over 8,500 produced.",
+        ":classification",
+        "Med. Tank",
+        ":body",
+        "2x4",
+        ":mind",
+        "5x1",
+        ":will",
+        "5x1",
+        ":speed",
+        "4x1",
+        ":crew",
+        "5",
+        ":mass",
+        "25tons",
+        ":length",
+        "7m",
+        ":range",
+        "200km",
+        ":speedland",
+        "42kph",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitpower},
+            ":power",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Armor"),
+            ":front",
+            "80mm",
+            ":side",
+            "30mm",
+            ":back",
+            "20mm",
+            ":turret",
+            "50mm",
+            ":over",
+            "10mm",
+            ":under",
+            "10mm"
+          )
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Gunnery", 4, "Cannon:75mm KwK40 (T)", "MG:7.92mm MG34", "MG:7.92mm MG34 (P)"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Military", 3)
+        )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pattern Spider", ":summary", "Pattern Spiders are primitive beings that are extensions of the [Wyver].\n* Description - They appear as tiny flat squares with four flat legs. Thery visual similarity to computer chips is probably not accidental.\n* Behaviour - The spiders weave webs of pure light that mirror electrical systems and networks. They work diligently to repair any damage to the webs with no concern for their own safety. If they are destroyed, more will appear until the damage is repaired. Destroyed spiders dissolve into light."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pestilence Horse", ":summary", "* A Pestience Horse is a zombie horse that carries deadly diseases. It's decaying body is not as fast as its original body, but may still trot fairly quickly. It is not as agressive as other undead, instead travelling around spreading disease and fleeing when confronted."),
@@ -1272,21 +1210,11 @@ export default class nx_tactics_decks_unit {
         "* Half-Elven Bard\n* Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.\n* Beliefs - Phirax believes that improving the lives of those around him will also improves his own life. He sees this as selfishness through selflessness, therefore it is always in his own interest to help others. He could easily manipulate those around him, but he abhors the idea of exploiting others and is quick to judge abusers of any kind. He follows the lesser god Seker on his mission to destroy undead, specifically those who feed on or otherwise exploit the living (which is pretty much all of them).\n* History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure.",
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
-            tactics,
-            "Empathy",
-            12,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Demoralize")
-          )
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(tactics, "Empathy", 12, "Demoralize")
         ),
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Stealth",
-            9,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Backstab", "Sneak")
-          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Stealth", 9, "Backstab", "Sneak"),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
             tactics,
             "Performance",
@@ -1398,16 +1326,70 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sea Elephant"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sea Lion"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Seal"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi: Dry Van", ":summary", "* A typical enclosed trailer"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi: Day Cab", ":summary", "* A short haul cab without a sleeping area"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi: Flatbed"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi: Reefer", ":summary", "* Refrigerated Trailer"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi: Sleeper", ":summary", "* A cab with sleeping area"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi: Tanker"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi:Dry Van", ":summary", "* A typical enclosed trailer"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi:Day Cab", ":summary", "* A short haul cab without a sleeping area"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi:Flatbed"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi:Reefer", ":summary", "* Refrigerated Trailer"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi:Sleeper", ":summary", "* A cab with sleeping area"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Semi:Tanker"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Senturion", ":titles", "Mech Man", ":summary", "* Senturion is a highly advanced, alien construct with the thought patterns of a human super-imposed upon his programming. He originally believed that he was a young man who could transform into a robot, but he has since learned that his actual body died long ago and that his personality is just an artificial duplicate. After this discovery, his humanity has gradually diminished over time.\n* Synthetic - Senturion does not need to eat, sleep or breathe. He is composed of molecular machines that twist and wrap in layers of ceramic wire filaments. These multipurpose filaments reconfigure into different forms to heal or create custom weapons. These filaments must always remain connected to the main body or they self-destruct to maintain their secrets. If Senturion loses a limb, the resulting explosion can cause significant damage.\n* Body - He has tremendous strength and endurance and can withstand extreme temperatures, pressures, and the vacuum of space. His body is very flexible, and he can contort himself to escape confinement of fit through small gaps.\n* Mind - His computer brain greatly increases his ability to quickly process information and create complex strategies.\n* Speed - Senturion moves and reacts with lightning speed and precision. He can run at 80mph and can briefly run on walls. His graceful movements belie his great strength and significant weight.\n* Leaping - Senturion can jump 40ft in the air.\n* Eyes - Senturion's eyes can emit tight-beam lasers or a white sheet of explosive energy. He can sense electromagnetic radiation (including infrared and ultraviolet). He also possesses telescopic and microscopic vision.\n* Transform - As Mech-Man he was able to transform from a human-like form to his mechanical form. He has since lost this ability (and a great deal of his human personality). As Senturion he has refined this power to produce specialized weapons like blades and spikes.\n* Healing - Senturion's android body rapidly repairs itself.\n* Filaments - In close combat, filaments can emerge from its body which can scramble or override electrical devices on contact.\n* History - Senturion was designed as one of a multitude of multi-purpose exploratory probes. Their natural form is a squirming mass of pale filaments. These probes were packed into artificial comets and launched in all directions from their homeworld. To protect their designers, they possess no memory of their origin or ultimate purpose. Many of these probes have landed on all planets in the solar system and millions more are littered across the galaxy. Most were buried underground by their impact and there they lie dormant. The ones on the surface seek a power source to fuel their growth and adaptation to their environment. They absorb light, heat, electricity or other radiation. When fully charged, they quietly begin exploring and analyzing their environment for possible resources and threats. If the planet is lifeless, they will catalog the available resources and begin creating more identical probes. If the planet is inhabited, they will wait and study the local wildlife until they are confident that they can completely mimic a sample of the apex species. Then they will begin to blend into the local society to learn everything they can. When their analysis no longer produces significant results, they begin to create more probes. Though they are unaware of their creator or purpose, they continue to catalog and expand. Eventually, their data network reaches back to their creators who collect this massive treasure trove of data.", ":body", "3x2", ":mass", "300kg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shade", ":titles", "Aghast, Ghast, Ghastly, Shoryo", ":reference", "The Ring", ":summary", "* Description - lank and ghastly beings with no feet, floating suspended above the ground.\n* Shades are the spirits of those who died in suicide, accident, murder, or wrongful execution. They are bound to this plane by the anger they felt at their deaths.\n* Suicide and accident victims attempt to compel those most like their former selves to die in the same manner.\n* Murder and wrongful death victims attempt to revenge themselves upon the killer or his descendents."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shadow"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sheep", ":image", "images/cards/unit-sheep.svg", ":body", "8x1", ":mass", "80kg"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Sherman M4A1",
+        ":image",
+        "images/wwii/unit-sherman-m4a1.svg",
+        ":imgmirror",
+        true,
+        ":reference",
+        "* As part of the deception plan that drew German attention away from Normandy, inflatable rubber Shermans were deployed in Kent with plywood artillery.",
+        ":classification",
+        "Med. Tank",
+        ":body",
+        "3x4",
+        ":mind",
+        "5x1",
+        ":will",
+        "5x1",
+        ":speed",
+        "4x1",
+        ":crew",
+        "5",
+        ":mass",
+        "30tons",
+        ":range",
+        "193km",
+        ":speedland",
+        "45kph",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitpower},
+            ":power",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Armor"),
+            ":front",
+            "75mm",
+            ":side",
+            "50mm",
+            ":back",
+            "30mm",
+            ":turret",
+            "75mm",
+            ":over",
+            "30mm",
+            ":under",
+            "30mm"
+          )
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Gunnery", 3, "Cannon:76mm M1 (T)", "MG:.30-06 M1919 (T)", "MG:.30-06 M1919", "MG:.50 M2HB (P)"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Military", 3)
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shoggoth", ":image", "Cthulhu/Shoggoth.png", ":reference", "* This was the dream in which I saw a shoggoth for the first time, and the sight set me awake in a frenzy of screaming. - The Shadow Over Innsmouth", ":summary", "* Enormous beings who would measure some fifteen feet across if they formed their bodies into a sphere, Shoggoths are amorphous creatures composed of a malleable protoplasm, something akin to a colossal amoeba. They are capable of forming whatever organs or appendages they require for the task at hand, although their usual state is a writhing mass of eyes, mouths and wriggling tentacles.", ":body", "5x4", ":mass", "50tons", ":height", "4.5m/15ft"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shub-Niggurath", ":image", "cthulhu/shubniggurath.png", ":titles", "The Black Goat of the Woods with a Thousand Young", ":reference", "Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so tenuous in composition that its limbs vanish as quickly as they materialize, its very form dividing constantly into a surplus of smaller abominations that are either reabsorbed into its great form, or that escape to some hideous life elsewhere. Not the spitting image of a fertility goddess but this is as close as the mythos gets. Shub-Niggurath may well be the most widely revered amoung the other gods, infuence reaching not only to the Greeks, Cretans, Egyptions, and some druids, but to races so far-flung across the cosmos as the Mi-go of Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new life, especially intelligent life, is held as a sacred act. Many humans derive joy and self-import from the notion that their kind was toild over by some kind of divine intelligence. Shub-Niggurath with her blind, indifferent, prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's affirmation that life itself is nothing extrodinary. - Tale Foundry", ":summary", "* Mother's Gift - The milk of Shub-Niggurath with powerful healing and corrupting properties."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Skeletal Dragon"),
@@ -1444,12 +1426,7 @@ export default class nx_tactics_decks_unit {
         ),
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Defense",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Shield:Round")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Defense", 1, "Shield:Round")
         )
       ),
       vx_core.f_new(
@@ -1466,12 +1443,7 @@ export default class nx_tactics_decks_unit {
         ),
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Defense",
-            3,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor:Breast Plate", "Shield:Round")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Defense", 3, "Armor:Breast Plate", "Shield:Round")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slave 1", ":image", "images/starwars/unit-slave1.png", ":titles", "Firespray-31", ":classification", "Med. Spacecraft"),
@@ -1518,22 +1490,11 @@ export default class nx_tactics_decks_unit {
         "30cm/1ft",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Stealth",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Ambush", "Camouflage")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Stealth", 1, "Ambush", "Camouflage")
         ),
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl_rating_abilities(
-            tactics,
-            "Toxins",
-            2,
-            "2x2",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Poison Bite")
-          )
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_rating_abilities(tactics, "Toxins", 2, "2x2", "Poison Bite")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake:King Cobra"),
@@ -1553,12 +1514,7 @@ export default class nx_tactics_decks_unit {
         "Dwarven Warrior",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Ranged",
-            7,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow:Short")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Ranged", 7, "Bow:Short")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Strix", ":titles", "Stirges (plural), Vampire Owls", ":summary", "A bird of ill-omen that feeds on human flesh and blood.\n* Description - A large-headed, dark, birdlike creature similar to an owl with transfixed eyes, rapacious beak, hooked claws. They fly and rest inverted with feet above their head."),
@@ -1608,12 +1564,7 @@ export default class nx_tactics_decks_unit {
         "",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Ranged",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bow:Short")
-          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Ranged", 1, "Bow:Short"),
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities_items(
             tactics,
             "Investigation",
@@ -2061,18 +2012,8 @@ export default class nx_tactics_decks_unit {
         "1x0",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
-            tactics,
-            "Melee",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Axe: Wood")
-          ),
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Hunting",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Snare")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Melee", 1, "Axe:Wood"),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Hunting", 1, "Snare")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wolf", ":titles", "Lone Wolf", ":summary", "* Hearing - The upper range of a wolfs' hearing is upwards of 80 kHz. The upper range of humans is only 20 kHz. A wolf can hear up to 6 miles away in forest and 10 miles in open areas, including some high-pitched sounds that a human can't hear. Even when it sleeps, a wolf's ears stand straight up so it can catch sounds. Unlike humans, wolves can easily tell what direction sound is coming from by turning their ears from side to side.\n* Smell - The wolf's sense of smell is about 100 times better than a human's. It can smell prey more than a mile away if the wind is right. It can sense an animal three days after it's gone. Wolves finished a test to locate hidden food in five minutes that domestic dogs took over an hour to finish.\n* Vision - Beyond a short distance their vision must be somewhat blurred. Nevertheless, wolves can see shapes and, especially, movement over long distances, and their peripheral vision is extremely accurate.  They are able to detect even the slightest movements of very small animals, such as a mosquito, at a distance of more than ten feet. There is some controversy as to whether wolves see in color or black and white. Regardless, it is unlikely that they see the various hues of the spectrum as humans see them, because the physical makeup of the eye is different. Nighttime vision for wolves is many times better than human vision in the day or night. Wolves can actually see much better and even much more clearly at night. The eyes of the wolf are like most predators, with a sight-field of nearly 180 degrees and pointed forward."),
@@ -2103,12 +2044,7 @@ export default class nx_tactics_decks_unit {
         "1.78m/5'10",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Animals",
-            3,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Harvest:Poison", "Snake Charming")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Animals", 3, "Harvest:Poison", "Snake Charming")
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Yog-Sothoth", ":image", "Cthulhu/YogSothoth.png", ":titles", "Beyond-One, The Key and the Gate, The Vortex", ":reference", "Locked away at the border of reality, there exists an intelligence. Rather, The Intelligence: All of it. Yog-Sothoth holds the knowledge of all that is, all that was, and all that will be. ... For this reason, he is one of the most heavily worshipped entities among the Other Gods. His name is frequently invoked during the rituals and incantations of those seeking hidden knowledge. And often, he answers. Sadly for the ones who call on him, the knowledge he grants almost always leads to madness and self-destruction. Not because Yog-Sothoth is evil or malevolent. He doesn't force anyone to turn the key or step through the gate. ... He is both the danger of knowledge and the inability of man to handle it. His role in the mythos mirrors Lovecraft's own self-taught obsession with the sciences as well as his acedemic failings. - Tale Foundry"),
@@ -2134,26 +2070,12 @@ export default class nx_tactics_decks_unit {
         "* [Evade]: Flip to [Fast].",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Close Combat",
-            2,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Close Combat", 2, "Grab")
         ),
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
-            tactics,
-            "Beastial",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
-          ),
-          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
-            tactics,
-            "Special Ability",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Zombified")
-          )
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(tactics, "Beastial", 1, "Bite"),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(tactics, "Special Ability", "Zombified")
         )
       ),
       vx_core.f_new(
@@ -2182,26 +2104,12 @@ export default class nx_tactics_decks_unit {
         "* [Evade]: Flip to [Fast].",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Close Combat",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Close Combat", 1, "Grab")
         ),
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
-            tactics,
-            "Beastial",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
-          ),
-          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
-            tactics,
-            "Special Ability",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Zombified")
-          )
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(tactics, "Beastial", 1, "Bite"),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(tactics, "Special Ability", "Zombified")
         )
       ),
       vx_core.f_new(
@@ -2230,26 +2138,12 @@ export default class nx_tactics_decks_unit {
         "* [Evade]: Flip to [Fast].",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Close Combat",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Close Combat", 1, "Grab")
         ),
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
-            tactics,
-            "Beastial",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
-          ),
-          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
-            tactics,
-            "Special Ability",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Zombified")
-          )
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(tactics, "Beastial", 1, "Bite"),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(tactics, "Special Ability", "Zombified")
         )
       ),
       vx_core.f_new(
@@ -2274,26 +2168,12 @@ export default class nx_tactics_decks_unit {
         "* Zombies are nearly mindless animated corpses.\n* They act irrationally and attack all living creatures with no sense of self preservation.\n* [Evade]: Flip to [Fast].",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
-            tactics,
-            "Close Combat",
-            2,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
-          )
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Close Combat", 2, "Grab")
         ),
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
-            tactics,
-            "Beastial",
-            1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
-          ),
-          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
-            tactics,
-            "Special Ability",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Zombified")
-          )
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(tactics, "Beastial", 1, "Bite"),
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(tactics, "Special Ability", "Zombified")
         )
       )
     )

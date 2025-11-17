@@ -6,6 +6,11 @@
  [tactics : base/tactics]
  (base/placemap<-placelist
   (base/place
+   :name "Aaru"
+   :titles "Field of Reeds"
+   :summary
+    "The realm of Aegytan dead spirits")
+  (base/place
    :name "Air Field"
    :image "images/cards/place-airfield.svg"
    :summary
@@ -91,14 +96,6 @@
   (base/place
    :name "Flames"
    :image "images/cards/place-flames.svg")
-  (base/place
-   :name "Forest"
-   :image "images/cards/place-forest.svg"
-   :summary
-    "* [Move]:-1
-     * [Line of Sight]: Blocked
-     * [Block]: [Skill]:+1, [Armor]:+1
-     * [Evade]: [Skill]:+1")
   (base/place
    :name "Fuel Depot"
    :summary "* Required to extend Vehicle Supply Lines")
@@ -316,9 +313,43 @@
    :image "images/cards/place-temple.svg")
   (base/place
    :name "Terrain:Dirt"
-   :image "images/cards/place-terrain-dirt.svg"
+   :image "images/pages/place-terrain-dirt.svg"
    :summary
-    "* A map for plain dirt. No terrain penalties.")
+    "A map for plain dirt. No terrain penalty")
+  (base/place
+   :name "Terrain:Forest"
+   :image "images/pages/place-terrain-forest.svg"
+   :summary
+    "A map for plain dirt. No terrain penalty
+     * [Move]:-1
+     * [Line of Sight]: Blocked
+     * [Block]: [Skill]:+1, [Armor]:+1
+     * [Evade]: [Skill]:+1")
+  (base/place
+   :name "Terrain:Grassland"
+   :image "images/pages/place-terrain-grassland.svg"
+   :summary
+    "A map for plain grass. No terrain penalty")
+  (base/place
+   :name "Terrain:Sea"
+   :image "images/pages/place-terrain-sea.svg"
+   :summary
+    "A map for open sea. No terrain penalty")
+  (base/place
+   :name "Terrain:Sky"
+   :image "images/pages/place-terrain-sky.svg"
+   :summary
+    "A map for open sky. No terrain penalty")
+  (base/place
+   :name "Terrain:Snowfield"
+   :image "images/pages/place-terrain-snowfield.svg"
+   :summary
+    "A map for snowfield. Move:-2")
+  (base/place
+   :name "Terrain:Space"
+   :image "images/pages/place-terrain-space.svg"
+   :summary
+    "A map for open space. No terrain penalty.")
   (base/place
    :name "Thera"
    :image "images/cards/place-thera.svg")
@@ -329,13 +360,21 @@
    :name "Trading Post"
    :image "images/cards/place-tradingpost.svg")
   (base/place
-   :name "Train Car: Engine"
+   :name "Train Car:Engine"
    :summary
     "")
   (base/place
-   :name "Train Car: Passenger"
+   :name "Train Car:Passenger"
    :summary
     "* Train cars are usually 3m/9ft/2spaces wide")
+  (base/place
+   :name "Trees"
+   :image "images/cards/place-trees.svg"
+   :summary
+    "* [Move]:-1
+     * [Line of Sight]: Blocked
+     * [Block]: [Skill]:+1, [Armor]:+1
+     * [Evade]: [Skill]:+1")
   (base/place
    :name "Volcano")
   (base/place
@@ -370,7 +409,7 @@
  [tactics : base/tactics]
  (let : base/tactics
   [placemap : base/placemap :=
-   (placemap-tactics tactics)]
+    (placemap-tactics tactics)]
   (copy tactics
    :placemap placemap))
  :doc "Returns a tactics updated with placemap")

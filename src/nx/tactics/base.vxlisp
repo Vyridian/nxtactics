@@ -1,5 +1,6 @@
 (package nx/tactics/base
  :libs (lib coll :path vx/collection)
+       (lib type :path vx/type)
        (lib ui   :path vx/ui/ui)
  :doc "Tactics Base Types")
 
@@ -424,6 +425,7 @@
    over             : string
    under            : string
    side             : string
+   turret           : string
    strength         : string
    unitabilitymap   : unitabilitymap
    unititemmap      : unititemmap
@@ -486,6 +488,45 @@
 (type trauma : struct
  :traits [card]
  :doc "Lasting Will Damage")
+
+(const armormap : stringmap
+ (stringmap
+  :.1mm  "3x1"  // 30J Minimal Protection (Thick Clothing)
+  :.2mm  "5x1"  // 50J Fragments (Layered Cloth)
+  :.5mm  "1x2"  // 100J Reduces cuts (Leather Jerkin)
+  :1mm   "2x2"  // 200J Some melee weapons, Slows Pistols (Mail, Car Panel)
+  :2mm   "4x2"  // 400J Most melee weapons (Plate Armor, Kevlar (NIJ IIA))
+  :2.5mm "6x2"  // 600J 9mm, .357 Magnum (Kevlar (NIJ II))
+  :3mm   "8x2"  // 800J Light Fragments, Axe, Mace (Heavy Plate Armor)
+  :4mm   "9x2"  // 900J
+  :5mm   "1x3"  // 1000J .44 Magnum (Kevlar (NIJ IIIA))
+  :6mm   "2x3"  // 2000J Pistol, SMG
+  :7mm   "3x3"  // 3000J SMG, Some Rifles at Range
+  :8mm   "3x3"  // 3500J
+  :9mm   "4x3"  // 4000J
+  :10mm  "4x3"  // 4000J Rifle at Range
+  :13mm  "1x4"  // 10000J 7.62 NATO FMJ (Hard plate (NIJ III))
+  :16mm  "2x4"  // 20000J .30-06 AP (Hard Plate (NIJ III/IV))
+  :20mm  "4x4"  // 40000J Hvy MG at Range (APC, Aircraft)
+  :30mm  "1x5"  // 100000J .50 (IFV Side)
+  :40mm  "2x5"  // 200000J (Tank Side)
+  :50mm  "5x5"  // 500000J 20mm Autocannon at Range (Light Tank)
+  :60mm  "7x5"  // 700000J Historic AT guns (Medium tank sides)
+  :70mm  "1x6"  // 1MJ
+  :75mm  "1x6"  // 1MJ
+  :80mm  "2x6"  // 2MJ 75mm at Range (Panzer IV glacis)
+  :90mm  "3x6"  // 3MJ
+  :100mm "3x6"  // 3MJ (Heavy Tank Front)
+  :200mm "1x7"  // 10MJ All WWII rounds
+  :300mm "2x7"  // 20MJ (Heavily protected composite)
+  :400mm "3x7"  // 30MJ (Modern MBT Front)
+  :500mm "5x7"  // 50MJ (High-end modern front composite)
+  :600mm "6x7"  // 60MJ (Top-tier modern front)
+  :700mm "8x7"  // 80MJ (Extreme composite/ERA-equipped)
+  :800mm "9x7"  // 90MJ (Near-max modern protection short of fortification)
+  :900mm "1x8"  // 100MJ (Fortified structures)
+ )
+ :doc "Returns Armor stat from a given armor thickness")
 
 (const cardlayout-imagemirror : cardlayout)
 
@@ -887,13 +928,24 @@
  (let : ability
   [abilitymap : abilitymap :=
     (:abilitymap tactics)
+   isammo : boolean :=
+    (boolean<-string-starts key "Ammo:")
+   skey : string :=
+    (if : string
+     isammo "Ammo" key)
    ability : ability :=
-    (any<-map abilitymap key)
+    (any<-map abilitymap skey)
+   ability2 : ability :=
+    (if : ability
+     isammo
+     (copy ability
+      :name key)
+     ability)
    logit : string :=
     (if : string
      (then (is-empty ability) (log key))
      (else key))]
-  ability)
+  ability2)
  :doc "Returns an ability from tactics")
 
 (func abilitylist<-abilitylistlist : abilitylistlist
@@ -1260,12 +1312,24 @@
  (let : item
   [itemmap : itemmap :=
     (:itemmap tactics)
-   item : item := (any<-map itemmap key)
+   pos : int := (int<-string-find key " (")
+   skey : string :=
+    (if : string
+     (> pos 0)
+     (string<-string-end key (- pos 1))
+     key)
+   item : item := (any<-map itemmap skey)
+   item2 : item :=
+    (if : item
+     (> pos 0)
+     (copy item
+      :name key)
+     item)
    logit : string :=
     (if : string
      (then (is-empty item) (log key))
      (else key))]
-  item)
+  item2)
  :doc "Returns an item from tactics")
 
 (func itemlist<-itemlistlist : itemlist
@@ -1896,6 +1960,16 @@
   (specialtymap<-specialtylist
    specialtylist))
  :doc "Return a specialtymap from keys and tactics")
+
+(func stat<-armor : string
+ [armor : string]
+ (let : string
+  [value : string := (any<-map armormap armor)]
+  value)
+ :doc "Converts armor to a stat")
+
+(func stat<-int : string
+ [value : int])
 
 (func tactics<-tactics-booklist : tactics
  [tactics  : tactics

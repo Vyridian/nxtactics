@@ -4,11 +4,11 @@
    height="1125"
    version="1.1"
    id="svg49"
-   sodipodi:docname="player-green-13.svg"
+   sodipodi:docname="condition-velocity.svg"
    inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
    viewBox="0 0 825 1125"
    xml:space="preserve"
-   inkscape:export-filename="player-green-13.png"
+   inkscape:export-filename="condition-velocity.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -24,9 +24,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.32683122"
-     inkscape:cx="595.10839"
-     inkscape:cy="743.50303"
+     inkscape:zoom="0.92441829"
+     inkscape:cx="167.13213"
+     inkscape:cy="290.99381"
      inkscape:window-width="1302"
      inkscape:window-height="924"
      inkscape:window-x="496"
@@ -796,22 +796,14 @@
          id="stop25" /></linearGradient></defs><g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="background"><rect
+     inkscape:label="background"
+     style="display:inline"><rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.59398;stroke-opacity:0.498188"
        id="rect307"
        width="825"
        height="1125"
        x="0"
-       y="0" /></g><image
-     preserveAspectRatio="xMidYMid"
-     inkscape:svg-dpi="600"
-     width="749.21771"
-     height="1046.0871"
-     xlink:href="../../public/images/rule-velocity-green.svg"
-     id="image1"
-     x="40.30341"
-     y="42.614491"
-     inkscape:label="image" /><g
+       y="0" /></g><g
      id="g1"
      transform="matrix(4.143996,0,0,4.143996,3.1461515,3.1461446)"
      inkscape:label="template"
@@ -831,4 +823,13 @@
    stroke-dasharray="1.44"
    d="m 18.13,21.906 c 0,-2.156 1.714,-3.9 3.828,-3.9 h 154.084 c 2.114,0 3.828,1.744 3.828,3.9 v 226.188 c 0,2.154 -1.714,3.9 -3.828,3.9 H 21.958 c -2.114,0 -3.828,-1.746 -3.828,-3.9 z"
    id="path105" />
-</g></g></svg>
+</g></g><image
+     preserveAspectRatio="xMidYMid"
+     inkscape:svg-dpi="600"
+     width="749.21771"
+     height="1046.0871"
+     xlink:href="../../public/images/rule-velocity.svg"
+     id="image1"
+     x="40.30341"
+     y="42.614491"
+     inkscape:label="image" /></svg>

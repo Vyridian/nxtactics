@@ -476,7 +476,7 @@
   :align ui/align-center
   :pointpos
    (ui/point
-    :x 7
+    :x 6
     :y 2)
   :pointsize
    (ui/point
@@ -955,6 +955,20 @@
     :y 36))
  :doc "")
 
+(const style-unit-extradetail : ui/style
+ (ui/style
+  :name "style-unit-extradetail"
+  :layout ui/layout-label
+  :pointpos
+   (ui/point
+    :x 33
+    :y 18)
+  :pointsize
+   (ui/point
+    :x 29
+    :y 28))
+ :doc "")
+
 (const style-unit-image : ui/style
  (ui/style
   :name "style-unit-image"
@@ -1049,7 +1063,7 @@
   :pointpos
    (ui/point
     :x 33
-    :y 40)
+    :y 41)
   :pointsize
    (ui/point
     :x 29
@@ -1063,7 +1077,7 @@
   :align ui/align-center
   :pointpos
    (ui/point
-    :x 7
+    :x 6
     :y 6)
   :pointsize
    (ui/point

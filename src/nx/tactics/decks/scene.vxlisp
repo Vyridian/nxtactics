@@ -15,10 +15,17 @@
   [scolor : string :=
     (switch : string
      color
-     (case "blue" "0000FF")
-     (case "green" "00FF00")
-     (case "red" "FF0000")
+     (case "black"  "000000")
+     (case "blue"   "0000FF")
+     (case "brown"  "A52A2A")
+     (case "cyan"   "00FFFF")
+     (case "gold"  "FFD700")
+     (case "green"  "00FF00")
+     (case "orange" "FFA500")
+     (case "purple" "800080")
+     (case "red"    "FF0000")
      (case "yellow" "FFFF00")
+     (case "white"  "FFFFFF")
      (else color))
    x : int :=
     (switch : int
@@ -48,6 +55,9 @@
      :pointpos pointpos
      :pointsize pointsize)]
   (base/cardlayout
+   :card
+    (base/card
+     :name (string "cardlayout-connector-" pos))
    :style style))
  :doc "")
 
@@ -61,13 +71,14 @@
      (base/cardmap<-cardlist
       (base/cardlist
        (base/rule
-        :id "QandD:Setup"
+        :id "Quick/Dead:Setup"
         :name "Setup"
         :deck "Quick and the Dead"
         :summary
-         "* A young outlaw seeking glory challenges a seasoned gunslinger to a duel. It's almost noon and the town is watching with morbid curiosity. On the first chime of the clock, they'll both open fire.
+         "A young outlaw seeking glory challenges a seasoned gunslinger to a duel. It's almost noon and the town is watching with morbid curiosity. On the first chime of the clock, they'll both open fire. Last one standing on the field wins.
+          * Start the Clock at 10. When it strikes 12 you may open fire
           * Place maps connected by blue dots
-          * Gunmen have agreed that when Clock reaches 2 you may open fire")
+          * [Map:Personal]")
        (base/cardimage<-tactics-placekey-num-cardlayout
         tactics
         "Terrain:Dirt"
@@ -127,12 +138,136 @@
          "Guns Blazing"
          "Quick Draw"
          "Rustling"
-         "Unnerve")))))
+         "Unnerve"
+         "Unsettling Presence")))))
 //     (scene-starter/deck-starter tactics)
 //     (murintrail/deck-murintrail tactics)
 //     (nightonthetown/deck-nightonthetown tactics)
 //     (ontherun/deck-ontherun tactics)
-  ))
+   (base/scene
+    :name "Panzer Blitz"
+    :cardmap
+     (base/cardmap<-cardlist
+      (base/cardlist
+       (base/rule
+        :id "Panzer Blitz:Setup"
+        :name "Panzer Blitz:Setup"
+        :deck "Panzer Blitz"
+        :summary
+         "World War II Panzers vs Shermans on the field of battle. The victor is the last one on the field. Partial victory to the loser any unit escapes
+          * Place maps so colored squares connect
+          * [Map:Vehicle]")
+       (base/cardimage<-tactics-placekey-num-cardlayout
+        tactics
+        "Terrain:Dirt"
+        1
+        (base/cardlayout
+         :cardlayoutlist
+          (base/cardlayoutlist
+           (cardlayout-connector<-pos-color 2 "blue")
+           (cardlayout-connector<-pos-color 3 "yellow")
+           (base/cardlayout
+            :card
+             (base/unit<-tactics-key
+              tactics "Panzer IV Ausf H")
+            :style
+             (copy styles/style-image-terraincard
+              :pointpos
+               (ui/point
+                :y 40)
+              :pointrotate ui/point-rotate-90)))))
+       (base/cardimage<-tactics-placekey-num-cardlayout
+        tactics
+        "Terrain:Forest"
+        2
+        (base/cardlayout
+         :cardlayoutlist
+          (base/cardlayoutlist
+           (cardlayout-connector<-pos-color 2 "green")
+           (cardlayout-connector<-pos-color 3 "cyan")
+           (cardlayout-connector<-pos-color 4 "blue"))))
+       (base/cardimage<-tactics-placekey-num-cardlayout
+        tactics
+        "Terrain:Dirt"
+        3
+        (base/cardlayout
+         :cardlayoutlist
+          (base/cardlayoutlist
+           (cardlayout-connector<-pos-color 3 "orange")
+           (cardlayout-connector<-pos-color 4 "green")
+           (base/cardlayout
+            :card
+             (base/unit<-tactics-key
+              tactics "Sherman M4A1")
+            :style
+             (copy styles/style-image-terraincard
+              :pointpos
+               (ui/point
+                :x 40
+                :y 40)
+              :pointrotate ui/point-rotate-270)))))
+       (base/cardimage<-tactics-placekey-num-cardlayout
+        tactics
+        "Terrain:Dirt"
+        4
+        (base/cardlayout
+         :cardlayoutlist
+          (base/cardlayoutlist
+           (cardlayout-connector<-pos-color 1 "yellow")
+           (cardlayout-connector<-pos-color 2 "black")
+           (base/cardlayout
+            :card
+             (base/unit<-tactics-key
+              tactics "Panzer IV Ausf H")
+            :style
+             (copy styles/style-image-terraincard
+              :pointpos
+               (ui/point
+                :y 40)
+              :pointrotate ui/point-rotate-90)))))
+       (base/cardimage<-tactics-placekey-num-cardlayout
+        tactics
+        "Terrain:Dirt"
+        5
+        (base/cardlayout
+         :cardlayoutlist
+          (base/cardlayoutlist
+           (cardlayout-connector<-pos-color 1 "cyan")
+           (cardlayout-connector<-pos-color 2 "green")
+           (cardlayout-connector<-pos-color 4 "black"))))
+       (base/cardimage<-tactics-placekey-num-cardlayout
+        tactics
+        "Terrain:Dirt"
+        6
+        (base/cardlayout
+         :cardlayoutlist
+          (base/cardlayoutlist
+           (cardlayout-connector<-pos-color 1 "orange")
+           (cardlayout-connector<-pos-color 4 "green")
+           (base/cardlayout
+            :card
+             (base/unit<-tactics-key
+              tactics "Sherman M4A1")
+            :style
+             (copy styles/style-image-terraincard
+              :pointpos
+               (ui/point
+                :x 40
+                :y 40)
+              :pointrotate ui/point-rotate-270)))))
+       (base/cardlist-images<-tactics-units
+        tactics
+        "Panzer IV Ausf H"
+        "Sherman M4A1")
+       (list<-list : base/cardlist
+        (base/itemlist<-tactics-keys
+         tactics
+         "Cannon:75mm KwK40"
+         "Cannon:76mm M1"
+         "MG:.30-06 M1919"
+         "MG:.50 M2HB"
+         "MG:7.92mm MG34"))
+   )))))
  :doc "Returns the base scenemap")
 
 (func tactics-scenemap<-tactics : base/tactics

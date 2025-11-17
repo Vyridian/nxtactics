@@ -354,9 +354,9 @@ and platinum."
         "Prima Materia"
          (base/item
           :name "Prima Materia"
+          :titles "Aether, Akasha, Ether, Proteus, Quintessence"
           :summary
-           "* The primitive formless base of all matter, the primal substance that may be changed into any other matter."
-          :titles "Aether, Akasha, Ether, Proteus, Quintessence")
+           "* The primitive formless base of all matter, the primal substance that may be changed into any other matter.")
         "Rare Earths"
          (base/item
           :name "Rare Earths"
@@ -726,7 +726,7 @@ and platinum."
         :Nectar
          (base/item
           :name "Nectar")
-        :Whiskey
+        "Whiskey"
          (base/item
           :name "Whiskey")
         :Wine

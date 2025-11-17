@@ -65,7 +65,7 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 5
-      (stringlist "Club: Staff"))))
+      "Club: Staff")))
   (base/unit
    :name "Automaton")
   (base/unit
@@ -90,10 +90,10 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 3
-      (stringlist "Sword:Short"))
+      "Sword:Short")
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 1
-      (stringlist "Ambush"))))
+      "Ambush")))
   (base/unit
    :name "Bane: Disease"
    :summary
@@ -194,9 +194,8 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Close Combat" 2
-      (stringlist
-       "Beatdown"
-       "Grab"))
+      "Beatdown"
+      "Grab")
      (base/unitskill<-tactics-key-lvl
       tactics "Intimidation" 1)))
   (base/unit
@@ -214,10 +213,10 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 4
-      (stringlist "Sword:Long"))
+      "Sword:Long")
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Close Combat" 2
-      (stringlist "Grab"))
+      "Grab")
      (base/unitskill<-tactics-key-lvl
       tactics "Investigation" 2)
      (base/unitskill<-tactics-key-lvl
@@ -238,7 +237,7 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-specialties
       tactics "Close Combat" 6
-      (stringlist "Grappling"))))
+      "Grappling")))
   (base/unit
    :name "Butterfly: Giant")
   (base/unit
@@ -397,10 +396,9 @@
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Close Combat" 1
-      (stringlist
-       "Bite"
-       "Grab"
-       "Drag"))))
+      "Bite"
+      "Grab"
+      "Drag")))
   (base/unit
    :name "Dragon Engine"
    :titles "Steam Engine")
@@ -495,7 +493,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 9
-      (stringlist "Backstab"))))
+      "Backstab")))
   (base/unit
    :name "Flint (Early)"
    :image "images/cards/unit-flint.svg"
@@ -515,16 +513,16 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Close Combat" 1
-      (stringlist "Knife:Dagger"))
+      "Knife:Dagger")
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 1
-      (stringlist "Sneak"))
+      "Sneak")
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Tradeskill" 1
-      (stringlist "House Painting"))
+      "House Painting")
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Communication" 1
-      (stringlist "Elvish"))
+      "Elvish")
     ))
   (base/unit
    :name "Flying Polyp"
@@ -570,7 +568,7 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitpower<-tactics-key-lvl
       tactics "Beastial" 3)
      (base/unitpower<-tactics-key-lvl-abilities
-      tactics "Digging" 3
+      tactics "Terrestrial" 3
       (stringlist "Tunneling"))
      (base/unitpower<-tactics-key-lvl-abilities
       tactics "Special Ability" 2
@@ -615,9 +613,8 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 2
-      (stringlist
-       "Spear: Short"
-       "Knife:Dagger"))))
+      "Spear:Short"
+      "Knife:Dagger")))
   (base/unit
    :name "Goblin Scout"
    :image "images/cards/unit-goblin-scout.svg"
@@ -642,10 +639,10 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Close Combat" 1
-      (stringlist "Knife:Dagger"))
+      "Knife:Dagger")
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 1
-      (stringlist "Sneak"))))
+      "Sneak")))
   (base/unit
    :name "Goblin Spider"
    :summary
@@ -700,7 +697,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 2
-      (stringlist "Spear"))
+      "Spear")
      (base/unitskill<-tactics-key-lvl
       tactics "Investigation" 1)))
   (base/unit
@@ -725,11 +722,16 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities-items
       tactics "Firearm" 5
-      (stringlist "Hip Shoot" "Quick Draw" "Sharpshooting")
-      (stringlist "Pistol:.45 Colt 1873"))
+      (stringlist
+       "Hip Shoot" "Quick Draw" "Sharpshooting")
+      (stringlist
+       "Pistol:.45 Colt 1873"))
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Intimidation" 4
-      "Unnerve")))
+      "Liquid Courage"
+      "Stare Down"
+      "Unnerve"
+      "Unsettling Presence")))
   (base/unit
    :name "Hare"
    :image "images/cards/unit-hare.svg"
@@ -771,9 +773,8 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 5
-      (stringlist
-       "Sword:Long"
-       "Knife:Dagger"))))
+      "Sword:Long"
+      "Knife:Dagger")))
   (base/unit
    :name "Hidden"
    :image "images/cards/unit-hidden.svg")
@@ -835,9 +836,8 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Defense" 5
-      (stringlist
-       "Armor:Chain Mail"
-       "Shield:Round"))))
+      "Armor:Chain Mail"
+      "Shield:Round")))
   (base/unit
    :name "Jes Aveer"
    :titles "Jessana Aveer"
@@ -862,10 +862,10 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 1
-      (stringlist "Hammer"))
+      "Hammer")
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Tradeskill" 1
-      (stringlist "Blacksmithing"))))
+      "Blacksmithing")))
   (base/unit
    :name "Jon Aveer"
    :titles "Ajona Aveer"
@@ -890,10 +890,10 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 1
-      (stringlist "Spear"))
+      "Spear")
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Business" 1
-      (stringlist "Bargain"))))
+      "Bargain")))
   (base/unit
    :name "Juggernaut")
   (base/unit
@@ -915,7 +915,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Survival" 3
-      (stringlist "Survival: Jungle"))))
+      "Survival: Jungle")))
   (base/unit
    :name "Lich"
    :image "images/bestiary/Lich.png"
@@ -953,7 +953,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Survival" 1
-      (stringlist "Foraging"))))
+      "Foraging")))
   (base/unit
    :name "Lion")
   (base/unit
@@ -1104,6 +1104,10 @@ Allseer - Grants resistance to being surprised or flanked."
       tactics "Firearm" 3
       (stringlist "Guns Blazing")
       (stringlist "Pistol:.45 S&W 1869"))
+     (base/unitskill<-tactics-key-lvl-abilities-items
+      tactics "Close Combat" 2
+      (stringlist "Take Down")
+      (stringlist "Knife:Bowie"))
      (base/unitskill<-tactics-key-lvl
       tactics "Evasion" 2)
      (base/unitskill<-tactics-key-lvl-abilities
@@ -1120,6 +1124,41 @@ Allseer - Grants resistance to being surprised or flanked."
    :name "Ox"
    :image "images/cards/unit-ox.svg"
    :imgmirror true)
+  (base/unit
+   :name "Panzer IV Ausf H"
+   :image "images/wwii/unit-panzer-iv-ausfh.svg"
+   :imgmirror true
+   :reference
+    "* Robust and reliable, it saw service in all combat theaters, and has the distinction of being the only German tank to remain in continuous production throughout the war with over 8,500 produced."
+   :classification "Med. Tank"
+   :body "2x4"
+   :mind "5x1"
+   :will "5x1"
+   :speed "4x1"
+   :crew "5"
+   :mass "25tons"
+   :length "7m"
+   :range "200km"
+   :speedland "42kph"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower
+      :power (base/power<-tactics-key tactics "Armor")
+      :front "80mm"
+      :side "30mm"
+      :back "20mm"
+      :turret "50mm"
+      :over "10mm"
+      :under "10mm"))
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Gunnery" 4
+      "Cannon:75mm KwK40 (T)"
+      "MG:7.92mm MG34"
+      "MG:7.92mm MG34 (P)")
+     (base/unitskill<-tactics-key-lvl
+      tactics "Military" 3)))
   (base/unit
    :name "Pattern Spider"
    :summary
@@ -1159,14 +1198,13 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
       tactics "Empathy" 12
-      (stringlist "Demoralize")))
+      "Demoralize"))
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 9
-      (stringlist
-       "Backstab"
-       "Sneak"))
+      "Backstab"
+      "Sneak")
      (base/unitskill<-tactics-key-lvl-abilities-items
       tactics "Performance" 9
       (stringlist
@@ -1229,9 +1267,9 @@ Allseer - Grants resistance to being surprised or flanked."
       tactics "Gunnery" 5))
    :unitpowermap
     (base/unitpowermap<-tactics-keys
-      tactics
-      "Flight"
-      "Transform"))
+     tactics
+     "Flight"
+     "Transform"))
   (base/unit
    :name "Rat"
    :body "5x-1"
@@ -1308,25 +1346,25 @@ Allseer - Grants resistance to being surprised or flanked."
   (base/unit
    :name "Seal")
   (base/unit
-   :name "Semi: Dry Van"
+   :name "Semi:Dry Van"
    :summary
     "* A typical enclosed trailer")
   (base/unit
-   :name "Semi: Day Cab"
+   :name "Semi:Day Cab"
    :summary
     "* A short haul cab without a sleeping area")
   (base/unit
-   :name "Semi: Flatbed")
+   :name "Semi:Flatbed")
   (base/unit
-   :name "Semi: Reefer"
+   :name "Semi:Reefer"
    :summary
     "* Refrigerated Trailer")
   (base/unit
-   :name "Semi: Sleeper"
+   :name "Semi:Sleeper"
    :summary
     "* A cab with sleeping area")
   (base/unit
-   :name "Semi: Tanker")
+   :name "Semi:Tanker")
   (base/unit
    :name "Senturion"
    :titles "Mech Man"
@@ -1360,6 +1398,41 @@ Allseer - Grants resistance to being surprised or flanked."
    :image "images/cards/unit-sheep.svg"
    :body "8x1"
    :mass "80kg")
+  (base/unit
+   :name "Sherman M4A1"
+   :image "images/wwii/unit-sherman-m4a1.svg"
+   :imgmirror true
+   :reference
+    "* As part of the deception plan that drew German attention away from Normandy, inflatable rubber Shermans were deployed in Kent with plywood artillery."
+   :classification "Med. Tank"
+   :body "3x4"
+   :mind "5x1"
+   :will "5x1"
+   :speed "4x1"
+   :crew "5"
+   :mass "30tons"
+   :range "193km"
+   :speedland "45kph"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower
+      :power (base/power<-tactics-key tactics "Armor")
+      :front "75mm"
+      :side "50mm"
+      :back "30mm"
+      :turret "75mm"      
+      :over "30mm"
+      :under "30mm"))
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Gunnery" 3
+      "Cannon:76mm M1 (T)"
+      "MG:.30-06 M1919 (T)"
+      "MG:.30-06 M1919"
+      "MG:.50 M2HB (P)")
+     (base/unitskill<-tactics-key-lvl
+      tactics "Military" 3)))
   (base/unit
    :name "Shoggoth"
    :image "Cthulhu/Shoggoth.png"
@@ -1411,8 +1484,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Defense" 1
-      (stringlist
-       "Shield:Round"))))
+      "Shield:Round")))
   (base/unit
    :name "Skeleton Warrior"
    :unitpowermap
@@ -1428,9 +1500,8 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Defense" 3
-      (stringlist
-       "Armor:Breast Plate"
-       "Shield:Round"))))
+      "Armor:Breast Plate"
+      "Shield:Round")))
   (base/unit
    :name "Slave 1"
    :image "images/starwars/unit-slave1.png"
@@ -1493,12 +1564,13 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Stealth" 1
-      (stringlist "Ambush" "Camouflage")))
+      "Ambush"
+      "Camouflage"))
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-rating-abilities
       tactics "Toxins" 2 "2x2"
-      (stringlist "Poison Bite"))))
+      "Poison Bite")))
   (base/unit
    :name "Snake:King Cobra")
   (base/unit
@@ -1536,7 +1608,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Ranged" 7
-      (stringlist "Bow:Short"))))
+      "Bow:Short")))
   (base/unit
    :name "Strix"
    :titles "Stirges (plural), Vampire Owls"
@@ -1582,7 +1654,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Ranged" 1
-      (stringlist "Bow:Short"))
+      "Bow:Short")
      (base/unitskill<-tactics-key-lvl-abilities-items
       tactics "Investigation" 1
       (stringlist "Detail Oriented")
@@ -2042,10 +2114,10 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
       tactics "Melee" 1
-      (stringlist "Axe: Wood"))
+      "Axe:Wood")
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Hunting" 1
-      (stringlist "Snare"))))
+      "Snare")))
   (base/unit
    :name "Wolf"
    :titles "Lone Wolf"
@@ -2080,9 +2152,8 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Animals" 3
-      (stringlist
-       "Harvest:Poison"
-       "Snake Charming"))))
+      "Harvest:Poison"
+      "Snake Charming")))
   (base/unit
    :name "Yog-Sothoth"
    :image "Cthulhu/YogSothoth.png"
@@ -2104,15 +2175,15 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Close Combat" 2
-      (stringlist "Grab")))
+      "Grab"))
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
       tactics "Beastial" 1
-      (stringlist "Bite"))
+      "Bite")
      (base/unitpower<-tactics-key-abilities
       tactics "Special Ability"
-      (stringlist "Zombified"))))
+      "Zombified")))
   (base/unit
    :name "Zombie: Dog"
    :image "images/cards/unit-zombie-dog.svg"
@@ -2130,15 +2201,15 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Close Combat" 1
-      (stringlist "Grab")))
+      "Grab"))
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
       tactics "Beastial" 1
-      (stringlist "Bite"))
+      "Bite")
      (base/unitpower<-tactics-key-abilities
       tactics "Special Ability"
-      (stringlist "Zombified"))))
+      "Zombified")))
   (base/unit
    :name "Zombie: Runner"
    :image "images/cards/unit-zombie-runner.svg"
@@ -2156,15 +2227,15 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Close Combat" 1
-      (stringlist "Grab")))
+      "Grab"))
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-abilities
       tactics "Beastial" 1
-      (stringlist "Bite"))
+      "Bite")
      (base/unitpower<-tactics-key-abilities
       tactics "Special Ability"
-      (stringlist "Zombified"))))
+      "Zombified")))
  (base/unit
   :name "Zombie: Walker"
   :image "images/cards/unit-zombie-walker.svg"
@@ -2182,15 +2253,15 @@ Allseer - Grants resistance to being surprised or flanked."
    (base/unitskillmap<-unitskilllist
     (base/unitskill<-tactics-key-lvl-abilities
      tactics "Close Combat" 2
-     (stringlist "Grab")))
+     "Grab"))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower<-tactics-key-lvl-abilities
      tactics "Beastial" 1
-     (stringlist "Bite"))
+     "Bite")
     (base/unitpower<-tactics-key-abilities
      tactics "Special Ability"
-     (stringlist "Zombified"))))
+     "Zombified")))
  )
  :doc "Returns the base unitmap")
 

@@ -717,14 +717,7 @@ x +1DMG vs. Crouching."
          Criticals are [Knockdown]"
        :titles "Flying Tackle")
      "Take Down"
-      (base/ability
-       :name "Take Down"
-       :summary
-        "* Fighter wraps his limbs around the opponent and causes both fighters to fall [Prone].
-         +1 Initiative
-         -1 Move
-         0 Damage - Both fighters are [Prone] and puts a [Hold] on the other.
-         0 Criticals")
+      (base/ability<-tactics-key tactics "Take Down")
      "Thigh Press"
       (base/ability
        :name "Thigh Press")
@@ -880,11 +873,7 @@ x +1DMG vs. Crouching."
    :abilitymap
     (base/abilitymap
      "Armorsmithing"
-      (base/ability
-       :name "Armorsmithing"
-       :summary
-        "* [Skill]: [Defense]
-         * The ability to repair, improve, or even create armor.")
+      (base/ability<-tactics-key tactics "Armorsmithing")
      "Bite the Bullet"
       (base/ability<-tactics-key tactics "Bite the Bullet")
      "Blocked In"
@@ -901,6 +890,8 @@ x +1DMG vs. Crouching."
          -1 Speed
          +4 Defense vs. [High Attack]
          +1 Defense vs. other attacks")
+     "Indominable"
+      (base/ability<-tactics-key tactics "Indominable")
      "Low Block"
       (base/ability
        :name "Low Block"
@@ -974,7 +965,7 @@ x +1DMG vs. Crouching."
    :reference
     "* Good. Bad. I'm the guy with the gun. - Ash, Army of Darkness"
    :summary
-    "Low tech ranged weapons. Does not include Firearms or Siege Weapons"
+    "Low tech [Weapon:Ranged]. Does not include Firearms or Siege Weapons"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -1054,13 +1045,14 @@ x +1DMG vs. Crouching."
   (base/skill
    :name "Demolitions"
    :titles "Bomb Disposal, Bomb Squad, Bombardier, Bomber, Combat Engineers"
+   :reference
+    "Catch! - Jinx, Runeterra"
    :summary
-    "* Experienced with setting up large explosives to destroy large structures."
+    "* Experienced with setting up explosives in combat or to destroy structures."
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
      "Bomb Disposal"
-     "Explosives"
      "Mine Laying"
      "Sapping"))
   (base/skill
@@ -1878,15 +1870,9 @@ x +1DMG vs. Crouching."
    :abilitymap
     (base/abilitymap
      "Black Market Ties"
-      (base/ability
-       :name "Black Market Ties"
-       :summary
-        "* [Skill]: [Influence]")
+      (base/ability<-tactics-key tactics "Black Market Ties")
      "Boon"
-      (base/ability
-       :name "Boon"
-       :summary
-        "* [Skill]: [Influence]")
+      (base/ability<-tactics-key tactics "Black Market Ties")
      "Business"
       (base/ability
        :name "Business"
@@ -1911,6 +1897,8 @@ x +1DMG vs. Crouching."
      "Fame"
       (base/ability
        :name "Fame"
+       :reference
+        "* The thing about stars is that they burn themselves out illuminating those around them - Mrs. Miss, Nikke"
        :summary
         "* Your reputation precedes you. People are drawn to the famous and will often do extraordinary things to be near them.
          * [Skill]: [Influence]
@@ -1936,7 +1924,8 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Friends in High Places"
        :reference
-        "* I'm telling you this guy is protected from up on high by the Prince of Darkness. - Jeff Rabin, Usual Suspects"
+        "* I'm telling you this guy is protected from up on high by the Prince of Darkness. - Jeff Rabin, Usual Suspects
+         * Please! I have connections! - Hapless Aristrocrat, Runeterra"
        :summary
         "* [Skill]: [Influence]")
      "Infamy"
@@ -2065,6 +2054,7 @@ x +1DMG vs. Crouching."
     (base/abilitymap<-tactics-keys
      tactics
      "Berserker"
+     "Bravado"
      "Call Out"
      "Coercion"
      "Death March"
@@ -2076,15 +2066,18 @@ x +1DMG vs. Crouching."
      "Interrogate"
      "Hatred"
      "Howl"
+     "Liquid Courage"
      "Oppress"
      "Reign of Terror"
      "Repress"
      "Roar"
+     "Stare Down"
      "Taunt"
      "Terrorize"
      "Torment"
      "Torture"
      "Unnerve"
+     "Unsettling Presence"
      "Vengeance"
      "Warcry"))
   (base/skill
@@ -2277,7 +2270,10 @@ x +1DMG vs. Crouching."
        :name "Decontaminate")
      "Demolition"
       (base/ability
-       :name "Demolition")
+       :name "Demolition"
+       :summary
+        "Tearing down rooms and equipment. Note:does not include explosives (See Demolitions)
+         * [Skill]: [Tradeskill]")
      "Engineering: Aeronautical"
       (base/ability
        :name "Engineering: Aeronautical")

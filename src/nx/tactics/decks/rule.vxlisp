@@ -218,17 +218,64 @@
    :image "images/rule-conflict.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "*Conflict: Approach"
+   :name "*Conflict:Approach"
    :image "images/rule-conflict-approach.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :summary
+    "Choose an Approach to play
+     * Fast - Speed and Finesse. Defeats Strong and Evade. Win: Draw a Card
+     * Strong - Patience and Force. Defeats Block and Counter
+     * Block - Choose hit location. Mitigate Fast. Win: Keep Block and Draw a Card
+     * Evade - Avoid and Move. Defeats Strong. Win/Tie: Regain Action Cost
+     * Counter - Trickery and Reversals. Defeats Fast. Win:Immediate Counterattack
+     * Wild - Fickle Fortune. Defeats Fast/Strong. Win: Draw from Deck or Discard")
   (base/rule
-   :name "Conflict: Chart"
+   :name "Conflict:Chart"
    :image "images/rule-conflict-chart.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Conflict: Sample"
+   :name "Conflict:Sample"
    :image "images/rule-conflict-sample.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Condition"
+   :image "images/rule-condition.svg"
+   :layout base/cardlayout-imageonly
+   :summary
+    "Ability Point
+     Bleeding
+     Blind
+     Blood Loss
+     Bound
+     Broken
+     Burning
+     Character Point
+     Choking
+     Constriction
+     Damaged
+     Deaf
+     Disabled
+     Diseased
+     Dying
+     Electrified
+     Elevation
+     Exposure
+     Freezing
+     Held
+     Hunger
+     Immobilized
+     Impaired
+     Isolation
+     Paralyzed
+     Petrified
+     Poisoned
+     Prone
+     Rising/Sinking
+     Skill Point
+     Stasis
+     Thirst
+     Transformed
+     Velocity")
   (base/rule
    :name "Conscience"
    :summary
@@ -377,6 +424,12 @@
    :name "Falling"
    :image "images/rule-falling.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Fast"
+   :summary
+    "Speed and Finesse during a Conflict
+     * Defeats Strong and Evade
+     * Win: Draw a Card")
   (base/rule
    :name "Features"
    :image "images/rule-features.svg"
@@ -672,9 +725,7 @@
      * Acidic
      * Agility
      * Armor
-     * Bonds
      * Diseases
-     * Implants
      * Longevity
      * Quickness
      * Senses
@@ -682,16 +733,18 @@
      * Strength
      * Toughness
      * Toxins
-     * Weapon
      * Wealth
-     Vehicle
+     Object
      * Cabin
      * Cargo
      * Equipment
      * Factory
      * Hanger
+     * Implants
      * Laboratory
      * Life Support
+     * Quality
+     * Weapon
      Alteration
      * Adaptation
      * Combine
@@ -700,7 +753,7 @@
      * Invisibility
      * Lycanthropy
      * Metamorphose
-     * Mutate
+     * Molding
      * Shapeshift
      * Spawning
      * Special Ability
@@ -756,14 +809,13 @@
      * Presence
      * Psychic Combat
      Travel
-     * Digging
+     * Aquatic
      * Dimensional
      * Flight
-     * Move:Ground
-     * Move:Space
-     * Move:Stellar
-     * Move:Water
+     * Planetary
+     * Stellar
      * Teleportation
+     * Terrestrial
      * Time Travel")
   (base/rule
    :name "Prone"
@@ -979,7 +1031,7 @@
      * Ranged
      * Firearm
      * Gunnery
-     * Explosives
+     * Demolitions
      Body
      * Animals
      * Assassination
@@ -1141,6 +1193,13 @@
      * Driver - Spend an Action each Round to control
      * Passenger - IF unstable or in Combat THEN Spend an Action to remain stable")
   (base/rule
+   :name "Treat:Wounds"
+   :titles "Healing"
+   :summary
+    "Repairing damage to living creatures is difficult and dangerous
+     * Time - 
+     * Surgery - Perform a Task vs 3x[Severity]. If you lack a relevant [Ability], [Specialty] or perfect conditions it is at [Disadvantage]. Beginning the procedure creates a [Severity]:1 Wound at the location. Each failure causes [Blood Loss]:2")
+  (base/rule
    :name "Unit: Guide"
    :image "images/rule-unit-guide.svg"
    :layout base/cardlayout-imageonly)
@@ -1280,8 +1339,8 @@
        "Range"
        "Line of Sight"
        "Conflict"
-       "Conflict: Chart"
-       "Conflict: Sample"
+       "Conflict:Chart"
+       "Conflict:Sample"
        "Hits"
        "Hits: Sample"
        "Crits"

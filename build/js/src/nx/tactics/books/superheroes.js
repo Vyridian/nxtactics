@@ -2268,7 +2268,7 @@ export default class nx_tactics_books_superheroes {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Move:Ground",
+                  "Terrestrial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2565,7 +2565,7 @@ export default class nx_tactics_books_superheroes {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Move:Ground",
+                  "Terrestrial",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -2701,11 +2701,7 @@ export default class nx_tactics_books_superheroes {
               ":titles",
               "Timothy Jericho, Timebomb",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Explosive",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Explosive")
-              )
+              nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Explosive")
             ),
             "Cobalt, Renegade",
             vx_core.f_new(
@@ -2717,11 +2713,7 @@ export default class nx_tactics_books_superheroes {
               ":titles",
               "Ground Zero",
               ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Explosive",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Explosive")
-              )
+              nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Explosive")
             ),
             "Glare, Renegade",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Glare, Renegade", ":summary", "* A strong willed woman with a cynical attitude.\n* Blinding Light - Her power causes the air around her to glow to brillant incandescence. Her entire body is blinding and the area is bathed in so much blinding energy that it is treated as impenetrable darkness.\n* Burning Light - She may focus her power into a concentrated heat ray that causes fires wherever it strikes."),

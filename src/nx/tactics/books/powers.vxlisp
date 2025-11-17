@@ -4,29 +4,7 @@
 (func tacticsbook : base/book
  [tactics : base/tactics]
  (base/book
-  :name "Powers"
-  :image "Powers.jpg"
-  :chaptermap
-   (base/chaptermap<-chapterlist
-    (chapter_powers_overview tactics)
-    (chapter_special_modifiers tactics)
-    (chapter-equipment-powers tactics)
-    (chapter_strength_and_weaknesses tactics)
-    (chapter_movement_powers tactics)
-    (chapter_physical_powers tactics)
-    (chapter_body_powers tactics)
-    (chapter_alteration_powers tactics)
-    (chapter_godlike_powers tactics)
-   )))
-
-(func chapter_powers_overview : base/chapter
- [tactics : base/tactics]
- (chapter
-  :name "Powers Overview"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Why Tactics: Powers?"))))
+  :name "Powers"))
 
 (func chapter_special_modifiers : base/chapter
  [tactics : base/tactics]
@@ -244,55 +222,14 @@
   :sectionmap
    (base/sectionmap<-sectionlist
     (base/section
-     :name "Item Powers"
-     :powermap
-      (base/powermap
-       "Quality Item"
-        (base/power
-         :name "Quality Item"
-         :summary
-          "* An item with this skill is of particularly high quality and possesses unusual abilities.
-           * The level of quality effects the number of abilities as usual.
-           * Each level of quality doubles the original price of the item."
-         :abilitymap
-          (base/abilitymap
-           "Fine Workmanship"
-            (base/ability
-             :name "Fine Workmanship"
-             :summary "* This item possesses fine details that are particularly attractive to collectors.")
-           "Resist:Fire"
-            (base/ability<-tactics-key
-             tactics "Resist:Fire")
-           "High Durability"
-            (base/ability
-             :name "High Durability"
-             :summary "* This item is exceptionally well constructed and can withstand a suprising amount of punishment compared to a normal item of its type.")))
-       "Quality Weapon"
-        (base/power
-         :name "Quality Weapon"
-         :summary
-          "* A weapon with this skill is of particularly high quality and possesses unusual abilities.
-           * The level of quality effects the number of abilities as usual.
-           * Each level of quality doubles the original price of the item."
-         :abilitymap
-          (base/abilitymap<-tactics-keys
-           tactics
-           "Balanced for Throwing"))))
-    (base/section
      :name "Vehicular Systems"
      :summary
-      "** Atmospheric Engine
-       ** Sub-light Drive
-       ** FTL Drive
-
-       * Science Lab w/Sensors
-       * Air Locks
-       ** Magnetic Mooring Lines
-       ** Vacc Suits
+      "* Air Locks
+       * Magnetic Mooring Lines
+       * Vacc Suits
        * Weapons Locker
        * Drop Chamber w/Drop Pods
-       * Cloaking Device
-       * Shields"
+       * Cloaking Device"
      :powermap
       (base/powermap<-tactics-keys
        tactics
@@ -342,145 +279,3 @@
            ** Fusion
            ** Antimatter
            ** Planet Buster"))))))
-
-(func chapter_strength_and_weaknesses : base/chapter
- [tactics : base/tactics]
- (chapter
-  :name "Strength and Weaknesses"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Special Skills"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Special Ability"))
-    (base/section
-     :name "Weaknesses"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Weakness:Cursed"
-       "Weakness:Mental"
-       "Weakness:Physical"
-       "Weakness:Social")))))
-
-(func chapter_movement_powers : base/chapter
- [tactics : base/tactics]
- (chapter
-  :name "Movement Powers"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Travel"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Digging"
-       "Dimensional"
-       "Flight"
-       "Move:Ground"
-       "Move:Space"
-       "Move:Stellar"
-       "Move:Water"
-       "Teleportation"
-       "Time Travel")))))
-
-(func chapter_physical_powers : base/chapter
- [tactics : base/tactics]
- (chapter
-  :name "Physical Powers"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Physical Powers"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Agility"
-       "Appearance"
-       "Armor"
-       "Healing"
-       "Beastial"
-       "Quickness"
-       "Senses"
-       "Shielding"
-       "Strength"
-       "Toughness")))))
-
-(func chapter_body_powers : base/chapter
- [tactics : tactics]
- (chapter
-  :name "Body Powers"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Alteration Powers"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Acidic"
-       "Adaptation"
-       "Altered Skin"
-       "Animalism"
-       "Diseases"
-       "Explosive"
-       "Flexible"
-       "Invisibility"
-       "Longevity"
-       "Lycanthropy"
-       "Phasing"
-       "Reality"
-       "Shapeshift"
-       "Size"
-       "Spawning"
-       "Toxins"
-       "Transmutation"
-       "Vampirism"))
-    (base/section
-     :name "Cybernetics"
-     :reference
-      "* Metal is perfection. - Viktor, Runeterra
-       * Better than mortal: metal. - Mechanized Mimic, Runeterra"
-     :summary
-      "* Faux Flesh (Faux Skin) - The great breakthrough in cybernetics was not in machinery but in synthetic flesh. Faux Flesh is a foam that hardens into soft, realistic flesh that will not be rejected by user's immune system. Faux Flesh can be injected between machine parts and is used at all interface points between living tissue and cyberware. It seals wounds like chalking and is a staple of medical kits."
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Computer Control"
-       "Implants")))))
-
-(func chapter_alteration_powers : base/chapter
- [tactics : base/tactics]
- (base/chapter
-  :name "Alteration Powers"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Material Control"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Density"
-       "Mutate"
-       "Transmutation")))))
-
-(func chapter_godlike_powers : base/chapter
- [tactics : base/tactics]
- (chapter
-  :name "Godlike Powers"
-  :sectionmap
-   (base/sectionmap<-sectionlist
-    (base/section
-     :name "Primal Powers"
-     :titles "Primal Order"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Primordial"))
-    (base/section
-     :name "Projectiles"
-     :powermap
-      (base/powermap<-tactics-keys
-       tactics
-       "Bonds")))))

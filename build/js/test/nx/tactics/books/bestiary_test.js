@@ -56,7 +56,7 @@ export default class nx_tactics_books_bestiary_test {
           "chapter_beastmen", 0,
           "chapter_bestiary_overview", 0,
           "chapter_constructs", 0,
-          "chapter_darkling", 0,
+          "chapter_darkin", 0,
           "chapter_dragons", 0,
           "chapter_elementals", 0,
           "chapter_extra-dimensional", 0,

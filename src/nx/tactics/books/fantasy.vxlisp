@@ -890,7 +890,8 @@
           "Darkling Cutthroat"
            (base/unit
             :name "Darkling Cutthroat"
-            :summary "* The Ur have subjegated the Darkling race and use them as cannon fodder in battle. The Darklings are vile creatures and are extremely difficult to manage, so the Ur are ruthless when administering discipline.")
+            :summary
+             "* The Ur have subjegated the Darkling race and use them as cannon fodder in battle. The Darklings are vile creatures and are extremely difficult to manage, so the Ur are ruthless when administering discipline.")
           "Stryx Spearman"
            (base/unit
             :name "Stryx Spearman"
@@ -1307,7 +1308,10 @@
              * Visitors - Travellers from other lands are rare and stand out like beacons. They are generally treated as inferiors and are only tolerated if their presense is of some advantage to the state.
              * Alms - A person's spiritual enlightenment is measured by the Theocrats in a spiritual value called Alms. Alms are awarded for specific contributions to the church including tithes, military service, good deeds, church titles, pilgrimages, etc. Each rank provides specific perks within society but is also intened to be a direct measure of the quality of the person's afterlife.
              * Light - Light and the Sun are sacred to the Order. Facing East is holy (sunrise). Facing West is sinister (sunset).
-             * Triumvarate - The Order believes in the 3 faced god, The Triumvarate. It is all knowing with the faces representing Past, Present, and Future.
+             * Triumvarate - The Order believes in the 3 faced god, The Triumvarate.
+             ** Truth - A sage with a book. Provide justice. Punish liars and cheats.
+             ** Protection - A soldier with a shield. Protect the flock. Shelter the homeless.
+             ** Mercy - A woman with open hands. Tend the sick and injured. Feed the hungry.
              * Lightkeepers
              * Inquisitors
              * Clash of Champions - The Imperium has tried to invade the Order twice to no avail. The geography and religious zealots of the Order have proven too difficult to overcome. Since the last battle, the Order and Elysia (backed by the Imperium) have waged a propaganda war culminating in the annual event known as the Clash of Champions. Each year both nations scout for worthy (and expendible) warriors to represent their interests in a duel atop the main gates of the Order capital. The winner receives great rewards from their sponsor. Though not technically, a duel to the death, it is expected that the loser will be thrown or forced  off the gates to fall 20 feet below to the roar of the crowds. It is considered a particular coup to cause a vanquished foe to fall amongst his or her own supporters. Since the Order and Elysia could scarsely be more different in their outlooks on life, the winners consider their victory to be a referendum on the virtues of their philosophies. The Order takes the competition very seriously and, of course, gambling and drinking are not allowed within the city walls. Elyisians consider the Clash to be one of the social events of the season. Though they must travel through the mountain pass and they are not permitted entrance to the city, they still come in large numbers with their wagons, children, merchants, wenches, gamblers, acrobats, and performers. For the Elysians, the party is equally large whether they win or not."
@@ -1854,12 +1858,14 @@
          :titles "Wildspace, Wylderlands, Wyldspace")))
     (base/section
      :name "Temporal Realms"
-     :summary "* The Temporal Realms are described by coordinates for +/-x, +/-y, +/-z +/-t (length, height, width, time)"
+     :summary
+      "* The Temporal Realms are described by coordinates for +/-x, +/-y, +/-z +/-t (length, height, width, time)"
      :placemap
       (base/placemap
-       :Vortex
+       "Vortex"
         (base/place
          :name "Vortex"
+         :titles "Axis Mundi, Chronos, Eye of Harmony, Irminsul, Temporal Zero Point, Tree of Life, Tree of Knowledge of Good and Evil, World Pillar, World Tree, Yggdrasil, Yog-Sothoth"
          :reference
           "* The Christmas tree, which can be traced in its origins back to pre-Christian European beliefs, represents an axis mundi.
            * The axis mundi (also cosmic axis, world axis, world pillar and center of the world) is a symbol representing the point of connection between sky and earth. It offers means of travel and correspondence between the two realms. It is also the place where the four compass directions unite.
@@ -1867,17 +1873,16 @@
          :summary
           "* The spiraling tunnel to infinity down all black holes, a corridor where the rules of time and space cease to have meaning. Some theorize that the Vortex is the eye of the storm within [Oblivion] and is the ultimate connection between [Oblivilion] and the [Source].
            * It is said that the World Tree's roots are the [Ley Line]s and its fruit are the stars. It grows up through the [Underworld] and soars into the heavens where it suspends the sky. The World Tree is eternal and is connected through both time and space.
-           * The Norns are found here."
-         :titles "Axis Mundi, Chronos, Eye of Harmony, Irminsul, Temporal Zero Point, Tree of Life, Tree of Knowledge of Good and Evil, World Pillar, World Tree, Yggdrasil, Yog-Sothoth")))
+           * The Norns are found here.")))
    (base/section
     :name "Inner Realms"
+    :titles "Periphery, Realms Within"
     :summary
      "* The Periphery consists of a number of Realms that touch the Material Realm.
       * These Realms are forever separated from the mortal world by thin but strong membrane called the Veil.
-      * Peripheral Vision - Sometimes a glimse of the Outer Realms may be seen at the edge of normal vision.
+      * Peripheral Vision - Sometimes a glimse of the Inner Realms may be seen at the edge of normal vision.
       * Gates - Gates are more easily created when both realms resemble each other at both ends of the Gate.
       * Realm Overlay - Sometimes when an area of both realms closely resembles one another, the areas overlap creating a natural Gate of sorts where one may accidentally wander from one Realm to the other without noticing."
-    :titles "Periphery, Realms Within"
     :placemap
      (base/placemap
       "Ley Line"
@@ -1906,7 +1911,7 @@
         :summary
          "* The Fade is a Mirror Realm that is a sort of Dream Realm but is driven by strong emotions.
           * Fade Curse - A Curse is a spirit that has manifested from strong emotions over a long period of time.")
-      :Luna
+      "Luna"
        (base/place
         :name "Luna"
         :summary "* The Spirit Realm of the Moon"
@@ -1956,10 +1961,10 @@
       "Nexus of Realities"
        (base/place
         :name "Nexus of Realities"
+        :titles "Tanelorn, Waystation"
         :summary
          "* The Nexus of Realities is a place that touches the [Vortex] and through it all other realities. So near the [Vortex], Time is meaningless here, so anyone entering will feel as if they have been in the Nexus for a very long time and may stay here as long as they want with no wants. When they leave, however, no time will have past and their time spent will be remembered like a dream.
-          * Tanelorn - The city Tanelorn has been built at the Nexus and is a sort of waystation for those travelling to other worlds. Tanelorn exists in all inner realms and appears as a simple town native to each reality. One cannot look for Tanelorn for it does not appear on any map, but it can occasionally be stumbled upon by frustrated travellers seeking new horizons. As the existence of Tanelorn can never be proven, it remains a myth throughout the universe."
-        :titles "Tanelorn, Waystation")
+          * Tanelorn - The city Tanelorn has been built at the Nexus and is a sort of waystation for those travelling to other worlds. Tanelorn exists in all inner realms and appears as a simple town native to each reality. One cannot look for Tanelorn for it does not appear on any map, but it can occasionally be stumbled upon by frustrated travellers seeking new horizons. As the existence of Tanelorn can never be proven, it remains a myth throughout the universe.")
       :Pangea
        (base/place
         :name "Pangea"
@@ -2081,6 +2086,7 @@
      :placemap
       (base/placemap<-tactics-keys
        tactics
+       "Aaru"
        "Celestial Realm"
        "Imaginary Space"
        "Realm of Light"

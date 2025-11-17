@@ -1697,32 +1697,10 @@
       :name "WWII American Heavy Weapons"
       :itemmap
        (itemmap
-        ".30-06 M1919A4 MG"
-         (item
-          :name ".30-06 M1919A4 MG"
-          :image "WWIIAmerican/MG_1919_Browning.jpg"
-          :classification "Hvy. MG"
-          :length ".96m"
-          :mass "14kg"
-          :modifiers "Auto"
-          :muzzlevelocity "853m/s"
-          :rof "500/min"
-          :rounds "250")
-        ".50 cal M2HB MG"
-         (item
-          :name ".50 cal M2HB MG"
-          :image "WWIIAmerican/MG_BrowningM2.jpg"
-          :reference
-           "* While the AP projectiles from the .50-caliber machine guns could not penetrate the front, side, or turret armor of enemy tanks, it could sometimes penetrate the engine grilles and exhaust system of the German Pzkpf Mk IV or Pzkpf V (Panther I), disabling the vehicle.
-            * Used extensively from 1920's to present with few modifications. It is the primary MG of NATO countries and has been in use longer than any other small arm in U.S.."
-          :summary
-           ".50 cal Browning M2 water cooled machine gun"
-          :classification "Hvy. MG"
-          :length "1650mm"
-          :mass "38kg"
-          :modifiers "Auto, AP, Tracer"
-          :muzzlevelocity "930m/s"
-          :rof "500/min")
+        "MG:.30-06 M1919"
+         (base/item<-tactics-key tactics "MG:.30-06 M1919")
+        "MG:.50 M2HB"
+         (base/item<-tactics-key tactics "MG:.50 M2HB")
         "M2 Flamethrower"
          (item
           :name "M2 Flamethrower"
@@ -1818,14 +1796,8 @@
           :classification "Cannon"
           :modifiers "HE, AP"
           :muzzlevelocity "619m/s")
-        "76mm M1 Cannon"
-         (item
-          :name "76mm M1 Cannon"
-          :reference
-           "* While the 76 mm had less High Explosive (HE) and smoke performance than the 75 mm, the higher-velocity 76 mm gave better anti-tank performance, with firepower comparable to the Soviet ZiS-S-5 85 mm gun of the T-34-85 and many of the armoured fighting vehicles it encountered, particularly the Panzer IV and StuG vehicles."
-          :classification "Cannon"
-          :modifiers "HE, AP"
-          :muzzlevelocity "792m/s")
+        "Cannon:76mm M1"
+         (base/item<-tactics-key tactics "Cannon:76mm M1")
         "76mm M7 Cannon"
          (item
           :name "76mm M7 Cannon"
@@ -2126,9 +2098,6 @@
               :level "3"
               :unitabilitymap
                (base/unitabilitymap
-                "Explosives"
-                 (base/unitability
-                  :name "Explosives")
                 "Mine Laying"
                  (base/unitability
                   :name "Mine Laying"))
@@ -2142,36 +2111,11 @@
       :name "WWII American Vehicles"
       :unitmap
        (base/unitmap
-        "M4 Sherman"
+        "Sherman M4A1"
+         (base/unit<-tactics-key tactics "Sherman M4A1")
+        "Sherman Crab M4A4"
          (base/unit
-          :name "M4 Sherman"
-          :image "WWIIAmerican/TankMed_M4A3_ShermanToken.png"
-          :reference
-           "* As part of the deception plan that drew German attention away from Normandy, inflatable rubber Shermans were deployed in Kent with plywood artillery."
-          :classification "Med. Tank"
-          :crew "5"
-          :mass "30tons"
-          :range "193km"
-          :speedland "48kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armor"
-              :front "75mm"
-              :back "30mm"
-              :over "30mm"
-              :under "30mm"
-              :side "50mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "3")))
-        "M4A4 Sherman Crab"
-         (base/unit
-          :name "M4A4 Sherman Crab"
+          :name "Sherman Crab M4A4"
           :image "WWIIAmerican/TankMed_ShermanCrabToken.png"
           :reference
            "* Valuable during and after D-Day, especially as the Germans made extensive use of minefields to slow the Allied advance through France."
@@ -2197,9 +2141,9 @@
                 "Mine Clearing"
                  (base/unitability
                   :name "Mine Clearing")))))
-        "T34 Sherman Calliope"
+        "Sherman Calliope T34"
          (base/unit
-          :name "T34 Sherman Calliope"
+          :name "Sherman Calliope T34"
           :image "WWIIAmerican/TankMed_T-34Calliope_M4Token.png"
           :classification "Med. Tank"
           :crew "5"
@@ -2218,9 +2162,9 @@
              (base/unitskill
               :name "Military"
               :level "3")))
-        "M4A3E8 Sherman Easy Eight"
+        "Sherman Easy Eight M4A3E8"
          (base/unit
-          :name "M4A3E8 Sherman Easy Eight"
+          :name "Sherman Easy Eight M4A3E8"
           :image "WWIIAmerican/TankMed_M4A3E8_EasyEightToken.png"
           :reference "* The M4A3 was the first to be factory-produced with the new HVSS (horizontal volute spring suspension) suspension with wider tracks for lower ground pressure, and the smooth ride of the HVSS with its experimental E8 designation led to the nickname Easy Eight for Shermans so equipped."
           :classification "Med. Tank"
@@ -2240,9 +2184,9 @@
              (base/unitskill
               :name "Military"
               :level "4")))
-        "M26 Pershing"
+        "Pershing M26"
          (base/unit
-          :name "M26 Pershing"
+          :name "Pershing M26"
           :image "WWIIAmerican/TankHvy_M26_PershingToken.png"
           :reference "* The Pershing reached the battlefield only in February 1945 and saw very little action in WWII."
           :classification "Hvy. Tank"
@@ -2264,9 +2208,9 @@
              (base/unitskill
               :name "Military"
               :level "4")))
-        "M3 Lee"
+        "Lee M3"
          (base/unit
-          :name "M3 Lee"
+          :name "Lee M3"
           :image "WWIIAmerican/TankMed_M3LeeToken.png"
           :reference
            "* By using the hull mount, the M3 design was brought to production quicker than if a proper turreted mount had been attempted. It was well understood that the M3 design was deeply flawed, but the need for tanks was urgent."
@@ -2288,9 +2232,9 @@
              (base/unitskill
               :name "Military"
               :level "4")))
-        "M5 Stuart"
+        "Stuart M5"
          (base/unit
-          :name "M5 Stuart"
+          :name "Stuart M5"
           :image "WWIIAmerican/TankLt_M5A1_StuartToken.png"
           :reference
            "* The British were the first to use the Stuart in 1941 against Afrika Korps where they suffered high losses. Its gun was too weak and its turret poorly laid out. They did, however, like its high speed and reliability. The Soviets were less generous and turned down the Stuart in Lend-Lease."
@@ -2312,9 +2256,9 @@
              (base/unitskill
               :name "Military"
               :level "3")))
-        "M24 Chaffee"
+        "Chaffee M24"
          (base/unit
-          :name "M24 Chaffee"
+          :name "Chaffee M24"
           :image "WWIIAmerican/TankLt_M24ChaffeeToken.png"
           :reference
            "* The M24 was not up to the challenge of fighting German tanks, but the bigger gun at least gave its crews a chance to fight back when it was required. The M24's light armor made it vulnerable to virtually all of the German tanks, anti-tank guns, and hand-held anti-tank weapons. The contribution of the M24 to winning the war in Europe was insignificant, as they arrived too late and in too few numbers to replace the worn out M5s."
@@ -2337,9 +2281,9 @@
              (base/unitskill
               :name "Military"
               :level "4")))
-        "M10 Wolverine"
+        "Wolverine M10"
          (base/unit
-          :name "M10 Wolverine"
+          :name "Wolverine M10"
           :image "WWIIAmerican/TD_M10_WolverineToken.png"
           :reference
            "* M10s were used in the Pacific for infantry support but were unpopular due to their open-topped turrets, which made them more vulnerable than a fully-enclosed tank to Japanese close-in infantry attacks.
@@ -2364,9 +2308,9 @@
              (base/unitskill
               :name "Military"
               :level "3")))
-        "M18 Hellcat"
+        "Hellcat M18"
          (base/unit
-          :name "M18 Hellcat"
+          :name "Hellcat M18"
           :image "WWIIAmerican/TD_M18_HellcatToken.png"
           :reference "* Recorded as the fastest tracked fighting vehicle of WWII."
           :classification "Tank Destroyer"
@@ -2388,9 +2332,9 @@
              (base/unitskill
               :name "Military"
               :level "4")))
-        "M36 Jackson"
+        "Jackson M36"
          (base/unit
-          :name "M36 Jackson"
+          :name "Jackson M36"
           :image "WWIIAmerican/TD_M36JacksonToken.png"
           :reference
            "* The M36 was well liked by its crews, being one of the few armored fighting vehicles available to US forces that could take out heavy German tanks from a distance."
@@ -2414,9 +2358,9 @@
              (base/unitskill
               :name "Military"
               :level "4")))
-        "M7 Priest"
+        "Priest M7"
          (base/unit
-          :name "M7 Priest"
+          :name "Priest M7"
           :image "WWIIAmerican/SPG_M7_PriestToken.png"
           :reference
            "* In U.S. service the M7 was a great success. Each U.S. armored division had three battalions of M7s, giving them unparalleled mobile artillery support.
@@ -4349,15 +4293,8 @@
           :modifiers "Auto"
           :muzzlevelocity "855m/s"
           :rof "1200/min")
-        "7.92mm MG34 MG"
-         (item
-          :name "7.92mm MG34 MG"
-          :image "WWIIGerman/MG_MG34.jpg"
-          :classification "Med. MG"
-          :length "1219mm"
-          :mass "12.1kg"
-          :modifiers "Auto"
-          :muzzlevelocity "765m/s")
+        "MG:7.92mm MG34"
+         (base/item<-tactics-key tactics "MG:7.92mm MG34")
         "7.92mm MG81Z MG"
          (item
           :name "7.92mm MG81Z MG"
@@ -4442,13 +4379,8 @@
           :classification "Cannon"
           :modifiers "HE, AP"
           :muzzlevelocity "750m/s")
-        "75mm KwK 40 L/48 Cannon"
-         (item
-          :name "75mm KwK 40 L/48 Cannon"
-          :classification "Cannon"
-          :modifiers "HE, AP"
-          :muzzlevelocity "792m/s"
-          :range "1.8km")
+        "Cannon:75mm KwK40"
+         (base/item<-tactics-key tactics "Cannon:75mm KwK40")
         "75mm KwK 42 L/70 Cannon"
          (item
           :name "75mm KwK 42 L/70 Cannon"
@@ -4822,29 +4754,7 @@ of the period."
               :name "Military"
               :level "4")))
         "Panzer IV Ausf H"
-         (base/unit
-          :name "Panzer IV Ausf H"
-          :image "WWIIGerman/TankMed_PanzerPzkpfwIV_Token.png"
-          :reference
-           "* Robust and reliable, it saw service in all combat theaters, and has the distinction of being the only German tank to remain in continuous production throughout the war with over 8,500 produced."
-          :classification "Med. Tank"
-          :crew "5"
-          :mass "25tons"
-          :length "7m"
-          :range "200km"
-          :speedland "42kph"
-          :unitpowermap
-           (base/unitpowermap
-            :Armor
-             (base/unitpower
-              :name "Armor"
-              :front "80mm"))
-          :unitskillmap
-           (base/unitskillmap
-            :Military
-             (base/unitskill
-              :name "Military"
-              :level "4")))
+         (base/unit<-tactics-key tactics "Panzer IV Ausf H")
         "Panther Ausf G"
          (base/unit
           :name "Panther Ausf G"

@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.7454522"
-     inkscape:cx="-5.4427156"
-     inkscape:cy="201.9534"
+     inkscape:zoom="2.4684422"
+     inkscape:cx="58.741502"
+     inkscape:cy="152.93046"
      inkscape:window-width="1904"
      inkscape:window-height="1041"
      inkscape:window-x="0"
@@ -3716,7 +3716,7 @@
        fx="58.925697"
        fy="3.3495736"
        r="3.7013359"
-       gradientTransform="matrix(1.3545253,0,0,0.84266808,-25.117349,2.8189906)"
+       gradientTransform="matrix(1.3545253,0,0,0.84266808,-24.61735,2.8189907)"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        id="linearGradient1"
@@ -3732,40 +3732,16 @@
     </linearGradient>
   </defs>
   <rect
-     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.342632;stroke-dasharray:none"
-     id="rect16-4"
-     width="63.000999"
-     height="88.00071"
+     style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.342627;stroke-dasharray:none"
+     id="rect16-4-8"
+     width="62.999996"
+     height="87.999313"
      x="0"
      y="0"
-     rx="0.14483893"
-     ry="0.14264643"
+     rx="0.14483662"
+     ry="0.14264417"
      inkscape:label="background"
      sodipodi:insensitive="true" />
-  <g
-     id="g1-9"
-     transform="matrix(0.34806697,0,0,0.34782562,-2.958629,-2.9564571)"
-     inkscape:label="template"
-     style="display:none"
-     sodipodi:insensitive="true">
-    <g
-       id="g104">
-      <path
-         fill="none"
-         stroke="#ec1e28"
-         d="m 9,252 c 0,4.971 4.029,9 9,9 h 162 c 4.971,0 9,-4.029 9,-9 V 18 c 0,-4.971 -4.029,-9 -9,-9 H 18 c -4.971,0 -9,4.029 -9,9 z"
-         id="path104-4" />
-    </g>
-    <g
-       id="g105">
-      <path
-         fill="none"
-         stroke="#2ba6de"
-         stroke-dasharray="1.44"
-         d="m 18.13,21.906 c 0,-2.156 1.714,-3.9 3.828,-3.9 h 154.084 c 2.114,0 3.828,1.744 3.828,3.9 v 226.188 c 0,2.154 -1.714,3.9 -3.828,3.9 H 21.958 c -2.114,0 -3.828,-1.746 -3.828,-3.9 z"
-         id="path105-8" />
-    </g>
-  </g>
   <g
      id="move"
      inkscape:label="move"
@@ -4146,7 +4122,33 @@
      id="rect10"
      width="9.868"
      height="6.1131396"
-     x="49.764999"
+     x="50.264999"
      y="2.585"
      inkscape:label="cost" />
+  <g
+     id="g1-8-1"
+     transform="matrix(0.34806628,0,0,0.34782606,-3.1327231,-3.1306812)"
+     inkscape:label="template"
+     style="display:inline">
+    <path
+       id="path104-2-6"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:1.00476"
+       d="m 18.050442,9.0007115 c -4.998613,0 -9.0500762,4.0438615 -9.0500762,9.0345975 V 252.96465 c 0,4.99073 4.0514632,9.03609 9.0500762,9.03609 H 180.95031 c 4.99861,0 9.05007,-4.04536 9.05007,-9.03609 V 18.035309 c 0,-4.990736 -4.05146,-9.0345975 -9.05007,-9.0345975 z m 3.980122,9.0405635 H 176.97018 c 2.12575,0 3.84875,1.75088 3.84875,3.915439 V 249.04324 c 0,2.16255 -1.723,3.91545 -3.84875,3.91545 H 22.030564 c -2.125743,0 -3.850239,-1.7529 -3.850239,-3.91545 V 21.956714 c 0,-2.164559 1.724496,-3.915439 3.850239,-3.915439 z"
+       inkscape:label="stencil" />
+    <path
+       fill="none"
+       stroke="#2ba6de"
+       stroke-dasharray="1.44"
+       d="m 18.13,21.906 c 0,-2.156 1.714,-3.9 3.828,-3.9 h 154.084 c 2.114,0 3.828,1.744 3.828,3.9 v 226.188 c 0,2.154 -1.714,3.9 -3.828,3.9 H 21.958 c -2.114,0 -3.828,-1.746 -3.828,-3.9 z"
+       id="path105-4-8"
+       style="display:none"
+       inkscape:label="blue" />
+    <path
+       fill="none"
+       stroke="#ec1e28"
+       d="m 9.5003657,252.50071 c 0,4.971 4.0290003,9 9.0000003,9 H 180.50037 c 4.971,0 9,-4.029 9,-9 V 18.500711 c 0,-4.971 -4.029,-8.9999996 -9,-8.9999996 H 18.500366 c -4.971,0 -9.0000003,4.0289996 -9.0000003,8.9999996 z"
+       id="path104-4-5"
+       style="display:none"
+       inkscape:label="red" />
+  </g>
 </svg>

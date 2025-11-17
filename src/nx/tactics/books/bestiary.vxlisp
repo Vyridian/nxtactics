@@ -25,7 +25,7 @@
     (chapter_dragons tactics)
     (chapter_elementals tactics)
     (chapter_extra-dimensional tactics)
-    (chapter_darkling tactics)
+    (chapter_darkin tactics)
     (chapter_giant_races tactics)
     (chapter_mythical_beasts tactics)
     (chapter_shapeshifters tactics)
@@ -276,12 +276,12 @@
         "Wasp, Parasite"
          (base/unit
           :name "Wasp, Parasite")
-        "Worm: Giant"
+        "Worm:Giant"
          (base/unit
-          :name "Worm: Giant")
-        "Worm: Giant Sand"
+          :name "Worm:Giant")
+        "Worm:Giant Sand"
          (base/unit
-          :name "Worm: Giant Sand"))))))
+          :name "Worm:Giant Sand"))))))
 
 (func chapter_avians : base/chapter
  [tactics : base/tactics]
@@ -1627,21 +1627,26 @@
       :name "Worms"
       :unitmap
        (base/unitmap
-        "Worm: Maggots"
+        "Worm:Maggots"
          (base/unit
-          :name "Worm: Maggots")))
+          :name "Worm:Maggots")))
     "Fantastic Underground Creatures"
      (base/section
       :name "Fantastic Underground Creatures"
       :unitmap
        (base/unitmap
-        "Worm: Bore"
+        "Worm:Bore"
          (base/unit
-          :name "Worm: Bore"
+          :name "Worm:Bore"
           :reference
            "* Bring me... the Bore Worms. No! Not the BORE WORMS! - Klytus and Princess Aura, Flash Gordon"
           :summary
            "* Small worms that dig through flesh as easily as earth. They are attracted to burrowing creatures.")
+        "Worm:Giant Hammerhead"
+         (base/unit
+          :name "Worm:Giant Hammerhead"
+          :summary
+           "* Perfect Regeneration, Spawning, Neurotoxic Skin")
         "False Hydra"
          (base/unit
           :name "False Hydra"
@@ -1652,15 +1657,15 @@
           :name "Eel: Giant Land"
           :summary "* Giant, sightless creatures related to the Giant Moray Eel, these creatures burrow underground."
           :titles "Land Kra")
-        "Slug: Giant"
+        "Slug:Giant"
          (base/unit
-          :name "Slug: Giant")
-        "Snail: Giant"
+          :name "Slug:Giant")
+        "Snail:Giant"
          (base/unit
-          :name "Snail: Giant")
-        "Worm: Sand"
+          :name "Snail:Giant")
+        "Worm:Sand"
          (base/unit
-          :name "Worm: Sand"))))))
+          :name "Worm:Sand"))))))
 
 (func chapter_humanoids : base/chapter
  [tactics : base/tactics]
@@ -3774,11 +3779,11 @@
        "Mirror Reflection"
        "Mirror Shard")))))
 
-(func chapter_darkling : base/chapter
+(func chapter_darkin : base/chapter
  [tactics : base/tactics]
  (base/chapter
-  :name "Darkling"
-  :titles "Goblinkind, Goblinoid"
+  :name "Darkin"
+  :titles "Darkling, Goblinkind, Goblinoid"
   :sectionmap
    (base/sectionmap<-sectionlist
     (base/section

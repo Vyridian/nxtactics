@@ -461,13 +461,18 @@ export default class nx_tactics_ui_uitactics {
           "",
           vx_core.f_new({"any-1": vx_core.t_string}, " Rating:", rating)
         )
+        const armors = vx_core.f_if(
+          {"any-1": vx_core.t_stringlist},
+          vx_core.f_eq("Armor", name),
+          nx_tactics_ui_uitactics.f_stringlist_armor_from_unitpower(unitpower)
+        )
         const specialties = nx_tactics_ui_uitactics.f_stringlist_display_from_unitspecialtymap(
           vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitspecialtymap, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":unitspecialtymap")
         )
         const abilities = nx_tactics_ui_uitactics.f_stringlist_display_from_unitabilitymap(
           vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitabilitymap, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":unitabilitymap")
         )
-        const extralist = vx_core.f_new({"any-1": vx_core.t_stringlist}, specialties, abilities)
+        const extralist = vx_core.f_new({"any-1": vx_core.t_stringlist}, armors, specialties, abilities)
         const extras = vx_core.f_if_2(
           {"any-1": vx_core.t_string},
           vx_core.f_then(
@@ -479,7 +484,7 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        return vx_core.f_new({"any-1": vx_core.t_string}, "* [", name, "]:", lvl, ratinglvl, extras)
+        return vx_core.f_new({"any-1": vx_core.t_string}, "* ", name, ":", lvl, ratinglvl, extras)
       })
     )
     return output
@@ -529,7 +534,54 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        return vx_core.f_new({"any-1": vx_core.t_string}, "* [", skillname, "]:", level, extras)
+        return vx_core.f_new({"any-1": vx_core.t_string}, "* ", skillname, ":", level, extras)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function string_extradetail_from_item
+   * Returns an extra string from an item
+   * @param  {item} item
+   * @return {string}
+   */
+  static t_string_extradetail_from_item = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_extradetail_from_item = {
+    vx_type: nx_tactics_ui_uitactics.t_string_extradetail_from_item
+  }
+
+  // (func string-extradetail<-item)
+  static f_string_extradetail_from_item(item) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const range = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "range",
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":range")
+        )
+        const energy = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "energy",
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":energy")
+        )
+        const muzzlevelocity = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "muzzlevelocity",
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":muzzlevelocity")
+        )
+        const rof = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "rof",
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":rof")
+        )
+        const slist = vx_core.f_new({"any-1": vx_core.t_stringlist}, range, energy, muzzlevelocity, rof)
+        const sjoin = vx_type.f_string_from_stringlist_join(
+          slist,
+          vx_core.c_newline
+        )
+        return vx_type.f_string_trim(sjoin)
       })
     )
     return output
@@ -557,27 +609,9 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const s1 = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(conscience)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "conscience:", conscience)})
-          )
-        )
-        const s2 = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(beast)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "beast:", beast)})
-          )
-        )
-        const s3 = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(shadow)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "shadow:", shadow)})
-          )
-        )
+        const s1 = nx_tactics_ui_uitactics.f_string_from_label_value("conscience", conscience)
+        const s2 = nx_tactics_ui_uitactics.f_string_from_label_value("beast", beast)
+        const s3 = nx_tactics_ui_uitactics.f_string_from_label_value("shadow", shadow)
         const slist = vx_core.f_new({"any-1": vx_core.t_stringlist}, s1, s2, s3)
         const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
         return vx_type.f_string_trim(sjoin)
@@ -607,24 +641,38 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const sdemeanor = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(demeanor)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "demeanor:", demeanor)})
-          )
-        )
-        const snature = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(nature)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "nature:", nature)})
-          )
-        )
+        const sdemeanor = nx_tactics_ui_uitactics.f_string_from_label_value("demeanor", demeanor)
+        const snature = nx_tactics_ui_uitactics.f_string_from_label_value("nature", nature)
         const slist = vx_core.f_new({"any-1": vx_core.t_stringlist}, sdemeanor, snature)
         const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
         return vx_type.f_string_trim(sjoin)
       })
+    )
+    return output
+  }
+
+  /**
+   * @function string_from_label_value
+   * @param  {string} label
+   * @param  {string} value
+   * @return {string}
+   */
+  static t_string_from_label_value = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_from_label_value = {
+    vx_type: nx_tactics_ui_uitactics.t_string_from_label_value
+  }
+
+  // (func string<-label-value)
+  static f_string_from_label_value(label, value) {
+    let output = vx_core.e_string
+    output = vx_core.f_if_2(
+      {"any-1": vx_core.t_string},
+      vx_core.f_then(
+        vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(value)}),
+        vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, label, ":", value)})
+      )
     )
     return output
   }
@@ -652,34 +700,10 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const s1 = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(land)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "land:", land)})
-          )
-        )
-        const s2 = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(water)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "water:", water)})
-          )
-        )
-        const s3 = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(air)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "air:", air)})
-          )
-        )
-        const s4 = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(space)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "space:", space)})
-          )
-        )
+        const s1 = nx_tactics_ui_uitactics.f_string_from_label_value("land", land)
+        const s2 = nx_tactics_ui_uitactics.f_string_from_label_value("water", water)
+        const s3 = nx_tactics_ui_uitactics.f_string_from_label_value("air", air)
+        const s4 = nx_tactics_ui_uitactics.f_string_from_label_value("space", space)
         const slist = vx_core.f_new({"any-1": vx_core.t_stringlist}, s1, s2, s3, s4)
         const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
         return vx_type.f_string_trim(sjoin)
@@ -711,37 +735,99 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const smass = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(mass)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "mass:", mass)})
-          )
-        )
-        const h = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(height)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "h:", height)})
-          )
-        )
-        const l = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(length)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "l:", length)})
-          )
-        )
-        const w = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(width)}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new({"any-1": vx_core.t_string}, "w:", width)})
-          )
-        )
+        const smass = nx_tactics_ui_uitactics.f_string_from_label_value("mass", mass)
+        const h = nx_tactics_ui_uitactics.f_string_from_label_value("h", height)
+        const l = nx_tactics_ui_uitactics.f_string_from_label_value("l", length)
+        const w = nx_tactics_ui_uitactics.f_string_from_label_value("w", width)
         const slist = vx_core.f_new({"any-1": vx_core.t_stringlist}, smass, h, l, w)
         const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
         return vx_type.f_string_trim(sjoin)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function stringlist_armor_from_unitpower
+   * Returns a stringlist for armors from a unitpower
+   * @param  {unitpower} unitpower
+   * @return {stringlist}
+   */
+  static t_stringlist_armor_from_unitpower = {
+    vx_type: vx_core.t_type
+  }
+  static e_stringlist_armor_from_unitpower = {
+    vx_type: nx_tactics_ui_uitactics.t_stringlist_armor_from_unitpower
+  }
+
+  // (func stringlist-armor<-unitpower)
+  static f_stringlist_armor_from_unitpower(unitpower) {
+    let output = vx_core.e_stringlist
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_stringlist},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const front = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":front")
+        const sfront = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "Front",
+          vx_core.f_new(
+            {"any-1": vx_core.t_string},
+            nx_tactics_base.f_stat_from_armor(front),
+            "/",
+            front
+          )
+        )
+        const side = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":side")
+        const sside = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "Side",
+          vx_core.f_new(
+            {"any-1": vx_core.t_string},
+            nx_tactics_base.f_stat_from_armor(side),
+            "/",
+            side
+          )
+        )
+        const back = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":back")
+        const sback = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "Back",
+          vx_core.f_new(
+            {"any-1": vx_core.t_string},
+            nx_tactics_base.f_stat_from_armor(back),
+            "/",
+            back
+          )
+        )
+        const turret = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":turret")
+        const sturret = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "Turret",
+          vx_core.f_new(
+            {"any-1": vx_core.t_string},
+            nx_tactics_base.f_stat_from_armor(turret),
+            "/",
+            turret
+          )
+        )
+        const over = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":over")
+        const sover = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "Over",
+          vx_core.f_new(
+            {"any-1": vx_core.t_string},
+            nx_tactics_base.f_stat_from_armor(over),
+            "/",
+            over
+          )
+        )
+        const under = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":under")
+        const sunder = nx_tactics_ui_uitactics.f_string_from_label_value(
+          "Under",
+          vx_core.f_new(
+            {"any-1": vx_core.t_string},
+            nx_tactics_base.f_stat_from_armor(under),
+            "/",
+            under
+          )
+        )
+        return vx_core.f_new({"any-1": vx_core.t_stringlist}, sfront, sside, sback, sturret, sover, sunder)
       })
     )
     return output
@@ -2538,6 +2624,7 @@ export default class nx_tactics_ui_uitactics {
           vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":length"),
           vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":width")
         )
+        const extradetail = nx_tactics_ui_uitactics.f_string_extradetail_from_item(item)
         const prefix = vx_core.f_new({"any-1": vx_core.t_string}, parent, "/", name)
         const detail = nx_tactics_ui_uitactics.f_string_display_from_item(item)
         const uiimage = vx_core.f_if_2(
@@ -2635,6 +2722,26 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
+        const uiextradetail = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(extradetail)}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              {"any-1": vx_ui_ui.t_ui},
+              ":uid",
+              vx_core.f_new({"any-1": vx_core.t_string}, prefix, "/extradetail"),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_extradetail,
+              ":stylelist",
+              vx_core.f_new(
+                {"any-1": vx_ui_ui.t_stylelist},
+                nx_tactics_ui_stylesheet.c_style_text_2
+              ),
+              ":data",
+              extradetail
+            )})
+          )
+        )
         const uidetail = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
           vx_core.f_then(
@@ -2655,7 +2762,7 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        return vx_core.f_new({"any-1": vx_ui_ui.t_uilist}, uiimage, uivalue, uititles, uibody, uibodydetail, uidetail)
+        return vx_core.f_new({"any-1": vx_ui_ui.t_uilist}, uiimage, uivalue, uititles, uibody, uibodydetail, uiextradetail, uidetail)
       })
     )
     return output
@@ -3098,10 +3205,13 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-unit": nx_tactics_ui_uitactics.e_string_display_from_unit,
       "string-display<-unitpower": nx_tactics_ui_uitactics.e_string_display_from_unitpower,
       "string-display<-unitskill": nx_tactics_ui_uitactics.e_string_display_from_unitskill,
+      "string-extradetail<-item": nx_tactics_ui_uitactics.e_string_extradetail_from_item,
       "string<-conscience-beast-shadow": nx_tactics_ui_uitactics.e_string_from_conscience_beast_shadow,
       "string<-demeanor-nature": nx_tactics_ui_uitactics.e_string_from_demeanor_nature,
+      "string<-label-value": nx_tactics_ui_uitactics.e_string_from_label_value,
       "string<-land-water-air-space": nx_tactics_ui_uitactics.e_string_from_land_water_air_space,
       "string<-mass-h-l-w": nx_tactics_ui_uitactics.e_string_from_mass_h_l_w,
+      "stringlist-armor<-unitpower": nx_tactics_ui_uitactics.e_stringlist_armor_from_unitpower,
       "stringlist-display<-unitabilitymap": nx_tactics_ui_uitactics.e_stringlist_display_from_unitabilitymap,
       "stringlist-display<-unititemmap": nx_tactics_ui_uitactics.e_stringlist_display_from_unititemmap,
       "stringlist-display<-unitpowermap": nx_tactics_ui_uitactics.e_stringlist_display_from_unitpowermap,
@@ -3158,10 +3268,13 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-unit": nx_tactics_ui_uitactics.t_string_display_from_unit,
       "string-display<-unitpower": nx_tactics_ui_uitactics.t_string_display_from_unitpower,
       "string-display<-unitskill": nx_tactics_ui_uitactics.t_string_display_from_unitskill,
+      "string-extradetail<-item": nx_tactics_ui_uitactics.t_string_extradetail_from_item,
       "string<-conscience-beast-shadow": nx_tactics_ui_uitactics.t_string_from_conscience_beast_shadow,
       "string<-demeanor-nature": nx_tactics_ui_uitactics.t_string_from_demeanor_nature,
+      "string<-label-value": nx_tactics_ui_uitactics.t_string_from_label_value,
       "string<-land-water-air-space": nx_tactics_ui_uitactics.t_string_from_land_water_air_space,
       "string<-mass-h-l-w": nx_tactics_ui_uitactics.t_string_from_mass_h_l_w,
+      "stringlist-armor<-unitpower": nx_tactics_ui_uitactics.t_stringlist_armor_from_unitpower,
       "stringlist-display<-unitabilitymap": nx_tactics_ui_uitactics.t_stringlist_display_from_unitabilitymap,
       "stringlist-display<-unititemmap": nx_tactics_ui_uitactics.t_stringlist_display_from_unititemmap,
       "stringlist-display<-unitpowermap": nx_tactics_ui_uitactics.t_stringlist_display_from_unitpowermap,
@@ -3416,6 +3529,24 @@ export default class nx_tactics_ui_uitactics {
       fn            : nx_tactics_ui_uitactics.f_string_display_from_unitskill
     }
 
+    // (func string-extradetail<-item)
+    nx_tactics_ui_uitactics.t_string_extradetail_from_item['vx_value'] = {
+      name          : "string-extradetail<-item",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_string_extradetail_from_item
+    }
+
     // (func string<-conscience-beast-shadow)
     nx_tactics_ui_uitactics.t_string_from_conscience_beast_shadow['vx_value'] = {
       name          : "string<-conscience-beast-shadow",
@@ -3452,6 +3583,24 @@ export default class nx_tactics_ui_uitactics {
       fn            : nx_tactics_ui_uitactics.f_string_from_demeanor_nature
     }
 
+    // (func string<-label-value)
+    nx_tactics_ui_uitactics.t_string_from_label_value['vx_value'] = {
+      name          : "string<-label-value",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_string_from_label_value
+    }
+
     // (func string<-land-water-air-space)
     nx_tactics_ui_uitactics.t_string_from_land_water_air_space['vx_value'] = {
       name          : "string<-land-water-air-space",
@@ -3486,6 +3635,24 @@ export default class nx_tactics_ui_uitactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_uitactics.f_string_from_mass_h_l_w
+    }
+
+    // (func stringlist-armor<-unitpower)
+    nx_tactics_ui_uitactics.t_stringlist_armor_from_unitpower['vx_value'] = {
+      name          : "stringlist-armor<-unitpower",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_stringlist_armor_from_unitpower
     }
 
     // (func stringlist-display<-unitabilitymap)

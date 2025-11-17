@@ -218,11 +218,11 @@
             * Determine the armor side you are targetting (i.e. Front, Rear, Side, Top, Under) by determining which of your opponents [Firing Arc]s your weapon lies in.
             * If facing still cannot be determined, then it is the defender's choice.
             * Infantry units may attack top or under armor if they are within 1 space of the target (assume grenades or other improvised weapons).")
-        :Explosive
+        :Explosives
          (rule
-          :name "Explosive"
+          :name "Explosives"
           :summary
-           `* 1 gram of TNT releases 1000 calories upon explosion or 4184J.  1 gram of sugar has abour 4x the energy.
+           `* 1 gram of TNT releases 1000 calories upon explosion or 4184J. 1 gram of sugar has abour 4x the energy.
             * 1g=4.184x10^3J, 1kg=4.184x10^6J, 1ton=4.184x10^9J, 1kt=4.184x10^12J, 1Mt=4.184x10^15J
             * Explosions Damage falls off by half (-1 Damage) for every 2m from the center.
             * Following a blast wave is a negative blast of 1/3 strength

@@ -4,6 +4,7 @@ import nx_tactics_base from "../../../src/nx/tactics/base.js"
 import vx_core from "../../../src/vx/core.js"
 import vx_test from "../../../src/vx/test.js"
 import vx_collection from "../../../src/vx/collection.js"
+import vx_type from "../../../src/vx/type.js"
 import vx_ui_ui from "../../../src/vx/ui/ui.js"
 
 export default class nx_tactics_base_test {
@@ -25,12 +26,12 @@ export default class nx_tactics_base_test {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
-      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 94), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 122, ":total", 324), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 131), 
+      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 95), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 124, ":total", 327), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 133), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 324), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 327), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 99)
     )
     return output
@@ -146,6 +147,7 @@ export default class nx_tactics_base_test {
       "constmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
+          "armormap", 0,
           "cardlayout-imagemirror", 0,
           "cardlayout-imageonly", 0,
           "cardlayout-imagesideways", 0,
@@ -333,6 +335,8 @@ export default class nx_tactics_base_test {
           "specialtylist<-tactics-keys", 0,
           "specialtymap<-specialtylist", 0,
           "specialtymap<-tactics-keys", 0,
+          "stat<-armor", 0,
+          "stat<-int", 0,
           "tactics<-tactics-booklist", 0,
           "tactics<-tactics-merge", 0,
           "unit<-tactics-key", 0,

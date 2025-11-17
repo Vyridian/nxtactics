@@ -1586,25 +1586,9 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
      (section
       :name "Cizerack"
       :summary
-       "* Description - A race of large, brown/blue/black cat/bear creatures. They are
-extremely fast and can able to achieve speeds of 40mph for short periods of time.
-Despite their size, they are strong climbers and swimmers. When necessary, they can
-walk erect, but they are clumsy on two feet. They possess excellent hearing and
-vision especially at night. They possess prehensile paws, with retractable fingers
-but have limited manual dexitery. They are stealthy stalkers and are adept at
-scouting, hunting, and ambushing.
-* Combat - Their melee prowess is legendary, but their paws make ranged weapons
-awkward, so instead they tend to mount smart weapons on their backs. They are also
-sometimes willing to allow small creatures (like Mazians) to ride on their backs.
-Cizerack culturally prefer close combat to cowardly ranged weapons, but they are
-gradually overcoming this predjudice.
-* History - The Cizerack evolved on a world with a few continents dominated by
-grassy plains and scrubland. Winters are harsh, and most animals including the
-Cizerack burrow into the ground and hibernate during the winter. There is a polar
-variant of the Cizerack that is adapted to the cold weather and does not usually
-hibernate. The Cizerack have long been at the top of the food chain, and have a long
-cultural history. They only recently developed technology in an effort to solve their
-over-population problem."
+       "* Description - A race of large, brown/blue/black cat/bear creatures. They are extremely fast and can able to achieve speeds of 40mph for short periods of time. Despite their size, they are strong climbers and swimmers. When necessary, they can walk erect, but they are clumsy on two feet. They possess excellent hearing and vision especially at night. They possess prehensile paws, with retractable fingers but have limited manual dexitery. They are stealthy stalkers and are adept at scouting, hunting, and ambushing.
+        * Combat - Their melee prowess is legendary, but their paws make ranged weapons awkward, so instead they tend to mount smart weapons on their backs. They are also sometimes willing to allow small creatures (like Mazians) to ride on their backs. Cizerack culturally prefer close combat to cowardly ranged weapons, but they are gradually overcoming this predjudice.
+        * History - The Cizerack evolved on a world with a few continents dominated by grassy plains and scrubland. Winters are harsh, and most animals including the Cizerack burrow into the ground and hibernate during the winter. There is a polar variant of the Cizerack that is adapted to the cold weather and does not usually hibernate. The Cizerack have long been at the top of the food chain, and have a long cultural history. They only recently developed technology in an effort to solve their over-population problem."
       :titles "Caitian, Felines"
       :unitmap
        (base/unitmap

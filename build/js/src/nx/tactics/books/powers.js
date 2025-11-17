@@ -30,46 +30,9 @@ export default class nx_tactics_books_powers {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Item Powers",
-          ":powermap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_powermap},
-            "Quality Item",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Quality Item",
-              ":summary",
-              "* An item with this skill is of particularly high quality and possesses unusual abilities.\n* The level of quality effects the number of abilities as usual.\n* Each level of quality doubles the original price of the item.",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Fine Workmanship",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fine Workmanship", ":summary", "* This item possesses fine details that are particularly attractive to collectors."),
-                "Resist:Fire",
-                nx_tactics_base.f_ability_from_tactics_key(tactics, "Resist:Fire"),
-                "High Durability",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "High Durability", ":summary", "* This item is exceptionally well constructed and can withstand a suprising amount of punishment compared to a normal item of its type.")
-              )
-            ),
-            "Quality Weapon",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Quality Weapon",
-              ":summary",
-              "* A weapon with this skill is of particularly high quality and possesses unusual abilities.\n* The level of quality effects the number of abilities as usual.\n* Each level of quality doubles the original price of the item.",
-              ":abilitymap",
-              nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Balanced for Throwing")
-            )
-          )
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
           "Vehicular Systems",
           ":summary",
-          "** Atmospheric Engine\n** Sub-light Drive\n** FTL Drive\n\n* Science Lab w/Sensors\n* Air Locks\n** Magnetic Mooring Lines\n** Vacc Suits\n* Weapons Locker\n* Drop Chamber w/Drop Pods\n* Cloaking Device\n* Shields",
+          "* Air Locks\n* Magnetic Mooring Lines\n* Vacc Suits\n* Weapons Locker\n* Drop Chamber w/Drop Pods\n* Cloaking Device",
           ":powermap",
           nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Cabin", "Cargo", "Combine", "Equipment", "Hanger", "Engine", "Factory", "Laboratory", "Life Support", "Transform"),
           ":sectionmap",
@@ -79,218 +42,6 @@ export default class nx_tactics_books_powers {
             vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Weapon Bay", ":summary", "* Main Turrets\n* Point Defense\n** Antiaircraft\n* Grenade Launcher\n* Laser\n* Mass Driver\n* Missiles\n** Micro-missiles\n** Mini-missiles\n** Heavy missiles\n* Particle Beam\n* Plasma Lance\n* Spinfuser\n* Taser\n* Payloads\n** Acid\n** Antimatter\n** Bioweaponry\n** Chemical\n** Explosive\n** Fusion\n** Incendiary\n** Nuclear\n** Nuclear Waste\n* Missile Bay\n* Torpedo Bay\n** Nuclear\n** Fusion\n** Antimatter\n** Planet Buster")
           )
         )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function chapter_alteration_powers
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_alteration_powers = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_alteration_powers = {
-    vx_type: nx_tactics_books_powers.t_chapter_alteration_powers
-  }
-
-  // (func chapter_alteration_powers)
-  static f_chapter_alteration_powers(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Alteration Powers",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Material Control",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Density", "Mutate", "Transmutation")
-        )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function chapter_body_powers
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_body_powers = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_body_powers = {
-    vx_type: nx_tactics_books_powers.t_chapter_body_powers
-  }
-
-  // (func chapter_body_powers)
-  static f_chapter_body_powers(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Body Powers",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Alteration Powers",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Acidic", "Adaptation", "Altered Skin", "Animalism", "Diseases", "Explosive", "Flexible", "Invisibility", "Longevity", "Lycanthropy", "Phasing", "Reality", "Shapeshift", "Size", "Spawning", "Toxins", "Transmutation", "Vampirism")
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Cybernetics",
-          ":reference",
-          "* Metal is perfection. - Viktor, Runeterra\n* Better than mortal: metal. - Mechanized Mimic, Runeterra",
-          ":summary",
-          "* Faux Flesh (Faux Skin) - The great breakthrough in cybernetics was not in machinery but in synthetic flesh. Faux Flesh is a foam that hardens into soft, realistic flesh that will not be rejected by user's immune system. Faux Flesh can be injected between machine parts and is used at all interface points between living tissue and cyberware. It seals wounds like chalking and is a staple of medical kits.",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Computer Control", "Implants")
-        )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function chapter_godlike_powers
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_godlike_powers = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_godlike_powers = {
-    vx_type: nx_tactics_books_powers.t_chapter_godlike_powers
-  }
-
-  // (func chapter_godlike_powers)
-  static f_chapter_godlike_powers(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Godlike Powers",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Primal Powers",
-          ":titles",
-          "Primal Order",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Primordial")
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Projectiles",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Bonds")
-        )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function chapter_movement_powers
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_movement_powers = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_movement_powers = {
-    vx_type: nx_tactics_books_powers.t_chapter_movement_powers
-  }
-
-  // (func chapter_movement_powers)
-  static f_chapter_movement_powers(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Movement Powers",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Travel",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Digging", "Dimensional", "Flight", "Move:Ground", "Move:Space", "Move:Stellar", "Move:Water", "Teleportation", "Time Travel")
-        )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function chapter_physical_powers
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_physical_powers = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_physical_powers = {
-    vx_type: nx_tactics_books_powers.t_chapter_physical_powers
-  }
-
-  // (func chapter_physical_powers)
-  static f_chapter_physical_powers(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Physical Powers",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Physical Powers",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Agility", "Appearance", "Armor", "Healing", "Beastial", "Quickness", "Senses", "Shielding", "Strength", "Toughness")
-        )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function chapter_powers_overview
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_powers_overview = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_powers_overview = {
-    vx_type: nx_tactics_books_powers.t_chapter_powers_overview
-  }
-
-  // (func chapter_powers_overview)
-  static f_chapter_powers_overview(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Powers Overview",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics: Powers?")
       )
     )
     return output
@@ -443,46 +194,6 @@ export default class nx_tactics_books_powers {
   }
 
   /**
-   * @function chapter_strength_and_weaknesses
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_strength_and_weaknesses = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_strength_and_weaknesses = {
-    vx_type: nx_tactics_books_powers.t_chapter_strength_and_weaknesses
-  }
-
-  // (func chapter_strength_and_weaknesses)
-  static f_chapter_strength_and_weaknesses(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Strength and Weaknesses",
-      ":sectionmap",
-      nx_tactics_base.f_sectionmap_from_sectionlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Special Skills",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Special Ability")
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Weaknesses",
-          ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Weakness:Cursed", "Weakness:Mental", "Weakness:Physical", "Weakness:Social")
-        )
-      )
-    )
-    return output
-  }
-
-  /**
    * @function tacticsbook
    * @param  {tactics} tactics
    * @return {book}
@@ -497,25 +208,7 @@ export default class nx_tactics_books_powers {
   // (func tacticsbook)
   static f_tacticsbook(tactics) {
     let output = nx_tactics_base.e_book
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_book},
-      ":name",
-      "Powers",
-      ":image",
-      "Powers.jpg",
-      ":chaptermap",
-      nx_tactics_base.f_chaptermap_from_chapterlist(
-        nx_tactics_books_powers.f_chapter_powers_overview(tactics),
-        nx_tactics_books_powers.f_chapter_special_modifiers(tactics),
-        nx_tactics_books_powers.f_chapter_equipment_powers(tactics),
-        nx_tactics_books_powers.f_chapter_strength_and_weaknesses(tactics),
-        nx_tactics_books_powers.f_chapter_movement_powers(tactics),
-        nx_tactics_books_powers.f_chapter_physical_powers(tactics),
-        nx_tactics_books_powers.f_chapter_body_powers(tactics),
-        nx_tactics_books_powers.f_chapter_alteration_powers(tactics),
-        nx_tactics_books_powers.f_chapter_godlike_powers(tactics)
-      )
-    )
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_book}, ":name", "Powers")
     return output
   }
 
@@ -527,26 +220,12 @@ export default class nx_tactics_books_powers {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "chapter-equipment-powers": nx_tactics_books_powers.e_chapter_equipment_powers,
-      "chapter_alteration_powers": nx_tactics_books_powers.e_chapter_alteration_powers,
-      "chapter_body_powers": nx_tactics_books_powers.e_chapter_body_powers,
-      "chapter_godlike_powers": nx_tactics_books_powers.e_chapter_godlike_powers,
-      "chapter_movement_powers": nx_tactics_books_powers.e_chapter_movement_powers,
-      "chapter_physical_powers": nx_tactics_books_powers.e_chapter_physical_powers,
-      "chapter_powers_overview": nx_tactics_books_powers.e_chapter_powers_overview,
       "chapter_special_modifiers": nx_tactics_books_powers.e_chapter_special_modifiers,
-      "chapter_strength_and_weaknesses": nx_tactics_books_powers.e_chapter_strength_and_weaknesses,
       "tacticsbook": nx_tactics_books_powers.e_tacticsbook
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "chapter-equipment-powers": nx_tactics_books_powers.t_chapter_equipment_powers,
-      "chapter_alteration_powers": nx_tactics_books_powers.t_chapter_alteration_powers,
-      "chapter_body_powers": nx_tactics_books_powers.t_chapter_body_powers,
-      "chapter_godlike_powers": nx_tactics_books_powers.t_chapter_godlike_powers,
-      "chapter_movement_powers": nx_tactics_books_powers.t_chapter_movement_powers,
-      "chapter_physical_powers": nx_tactics_books_powers.t_chapter_physical_powers,
-      "chapter_powers_overview": nx_tactics_books_powers.t_chapter_powers_overview,
       "chapter_special_modifiers": nx_tactics_books_powers.t_chapter_special_modifiers,
-      "chapter_strength_and_weaknesses": nx_tactics_books_powers.t_chapter_strength_and_weaknesses,
       "tacticsbook": nx_tactics_books_powers.t_tacticsbook
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -579,114 +258,6 @@ export default class nx_tactics_books_powers {
       fn            : nx_tactics_books_powers.f_chapter_equipment_powers
     }
 
-    // (func chapter_alteration_powers)
-    nx_tactics_books_powers.t_chapter_alteration_powers['vx_value'] = {
-      name          : "chapter_alteration_powers",
-      pkgname       : "nx/tactics/books/powers",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_alteration_powers
-    }
-
-    // (func chapter_body_powers)
-    nx_tactics_books_powers.t_chapter_body_powers['vx_value'] = {
-      name          : "chapter_body_powers",
-      pkgname       : "nx/tactics/books/powers",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_body_powers
-    }
-
-    // (func chapter_godlike_powers)
-    nx_tactics_books_powers.t_chapter_godlike_powers['vx_value'] = {
-      name          : "chapter_godlike_powers",
-      pkgname       : "nx/tactics/books/powers",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_godlike_powers
-    }
-
-    // (func chapter_movement_powers)
-    nx_tactics_books_powers.t_chapter_movement_powers['vx_value'] = {
-      name          : "chapter_movement_powers",
-      pkgname       : "nx/tactics/books/powers",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_movement_powers
-    }
-
-    // (func chapter_physical_powers)
-    nx_tactics_books_powers.t_chapter_physical_powers['vx_value'] = {
-      name          : "chapter_physical_powers",
-      pkgname       : "nx/tactics/books/powers",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_physical_powers
-    }
-
-    // (func chapter_powers_overview)
-    nx_tactics_books_powers.t_chapter_powers_overview['vx_value'] = {
-      name          : "chapter_powers_overview",
-      pkgname       : "nx/tactics/books/powers",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_powers_overview
-    }
-
     // (func chapter_special_modifiers)
     nx_tactics_books_powers.t_chapter_special_modifiers['vx_value'] = {
       name          : "chapter_special_modifiers",
@@ -703,24 +274,6 @@ export default class nx_tactics_books_powers {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_powers.f_chapter_special_modifiers
-    }
-
-    // (func chapter_strength_and_weaknesses)
-    nx_tactics_books_powers.t_chapter_strength_and_weaknesses['vx_value'] = {
-      name          : "chapter_strength_and_weaknesses",
-      pkgname       : "nx/tactics/books/powers",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_powers.f_chapter_strength_and_weaknesses
     }
 
     // (func tacticsbook)

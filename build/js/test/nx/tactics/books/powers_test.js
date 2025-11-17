@@ -25,11 +25,11 @@ export default class nx_tactics_books_powers_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/books/powers", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 10), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 10), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 10), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -51,14 +51,7 @@ export default class nx_tactics_books_powers_test {
         vx_core.f_new_from_type(
           vx_core.t_intmap,
           "chapter-equipment-powers", 0,
-          "chapter_alteration_powers", 0,
-          "chapter_body_powers", 0,
-          "chapter_godlike_powers", 0,
-          "chapter_movement_powers", 0,
-          "chapter_physical_powers", 0,
-          "chapter_powers_overview", 0,
           "chapter_special_modifiers", 0,
-          "chapter_strength_and_weaknesses", 0,
           "tacticsbook", 0
         )
     )

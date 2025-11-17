@@ -60,20 +60,11 @@
   shadow     : string]
  (let
   [s1 : string :=
-    (if : string
-     (then
-      (!-empty conscience)
-      (string "conscience:" conscience)))
+    (string<-label-value "conscience" conscience)
    s2 : string :=
-    (if : string
-     (then
-      (!-empty beast)
-      (string "beast:" beast)))
+    (string<-label-value "beast" beast)
    s3 : string :=
-    (if : string
-     (then
-      (!-empty shadow)
-      (string "shadow:" shadow)))
+    (string<-label-value "shadow" shadow)
    slist : stringlist :=
     (stringlist s1 s2 s3)
    sjoin : string :=
@@ -91,15 +82,9 @@
   nature   : string]
  (let
   [sdemeanor : string :=
-    (if : string
-     (then
-      (!-empty demeanor)
-      (string "demeanor:" demeanor)))
+    (string<-label-value "demeanor" demeanor)
    snature : string :=
-    (if : string
-     (then
-      (!-empty nature)
-      (string "nature:" nature)))
+    (string<-label-value "nature" nature)
    slist : stringlist :=
     (stringlist sdemeanor snature)
    sjoin : string :=
@@ -112,6 +97,15 @@
          "nice" "naughty"))
  :doc "Returns a string for mind string")
 
+(func string<-label-value : string
+ [label : string
+  value : string]
+ (if : string
+  (then
+   (!-empty value)
+   (string label ":" value)))
+ :doc "")
+
 (func string<-land-water-air-space : string
  [land  : string
   water : string
@@ -119,25 +113,13 @@
   space : string]
  (let
   [s1 : string :=
-    (if : string
-     (then
-      (!-empty land)
-      (string "land:" land)))
+    (string<-label-value "land" land)
    s2 : string :=
-    (if : string
-     (then
-      (!-empty water)
-      (string "water:" water)))
+    (string<-label-value "water" water)
    s3 : string :=
-    (if : string
-     (then
-      (!-empty air)
-      (string "air:" air)))
+    (string<-label-value "air" air)
    s4 : string :=
-    (if : string
-     (then
-      (!-empty space)
-      (string "space:" space)))
+    (string<-label-value "space" space)
    slist : stringlist :=
     (stringlist s1 s2 s3 s4)
    sjoin : string :=
@@ -157,25 +139,13 @@
   width  : string]
  (let
   [smass : string :=
-    (if : string
-     (then
-      (!-empty mass)
-      (string "mass:" mass)))
+    (string<-label-value "mass" mass)
    h : string :=
-    (if : string
-     (then
-      (!-empty height)
-      (string "h:" height)))
+    (string<-label-value "h" height)
    l : string :=
-    (if : string
-     (then
-      (!-empty length)
-      (string "l:" length)))
+    (string<-label-value "l" length)
    w : string :=
-    (if : string
-     (then
-      (!-empty width)
-      (string "w:" width)))
+    (string<-label-value "w" width)
    slist : stringlist :=
     (stringlist smass h l w)
    sjoin : string :=
@@ -381,6 +351,48 @@
    displaylist newline))
  :doc "Returns display text from a unit")
 
+(func stringlist-armor<-unitpower : stringlist
+ [unitpower : unitpower]
+ (let : stringlist
+  [front : string := (:front unitpower)
+   sfront : string :=
+    (string<-label-value
+     "Front"
+     (string (base/stat<-armor front) "/" front))
+   side : string := (:side unitpower)
+   sside : string :=
+    (string<-label-value
+     "Side"
+     (string (base/stat<-armor side) "/" side))
+   back : string := (:back unitpower)
+   sback : string :=
+    (string<-label-value
+     "Back"
+     (string (base/stat<-armor back) "/" back))
+   turret : string := (:turret unitpower)
+   sturret : string :=
+    (string<-label-value
+     "Turret"
+     (string (base/stat<-armor turret) "/" turret))
+   over : string := (:over unitpower)
+   sover : string :=
+    (string<-label-value
+     "Over"
+     (string (base/stat<-armor over) "/" over))
+   under : string := (:under unitpower)
+   sunder : string :=
+    (string<-label-value
+     "Under"
+     (string (base/stat<-armor under) "/" under))]
+  (stringlist
+   sfront
+   sside
+   sback
+   sturret
+   sover
+   sunder))
+ :doc "Returns a stringlist for armors from a unitpower")
+
 (func string-display<-unitpower : string
  [unitpower : base/unitpower]
  (let : string
@@ -398,6 +410,10 @@
      (== "" rating)
      ""
      (string " Rating:" rating))
+   armors : stringlist :=
+    (if : stringlist
+     (= "Armor" name)
+     (stringlist-armor<-unitpower unitpower))
    specialties : stringlist :=
     (stringlist-display<-unitspecialtymap
      (:unitspecialtymap unitpower))
@@ -406,6 +422,7 @@
      (:unitabilitymap unitpower))
    extralist : stringlist :=
     (stringlist
+     armors
      specialties
      abilities)
    extras : string :=
@@ -417,9 +434,9 @@
        (string<-stringlist-join
         extralist " "))))]
   (string
-   "* ["
+   "* "
    name
-   "]:"
+   ":"
    lvl
    ratinglvl
    extras))
@@ -454,12 +471,31 @@
        (string<-stringlist-join
         extralist " "))))]
   (string
-   "* ["
+   "* "
    skillname
-   "]:"
+   ":"
    level
    extras))
  :doc "Returns a string from a unitskill")
+
+(func string-extradetail<-item : string
+ [item : base/item]
+ (let
+  [range : string :=
+    (string<-label-value "range" (:range item))
+   energy : string :=
+    (string<-label-value "energy" (:energy item))
+   muzzlevelocity : string :=
+    (string<-label-value "muzzlevelocity" (:muzzlevelocity item))
+   rof : string :=
+    (string<-label-value "rof" (:rof item))
+   slist : stringlist :=
+    (stringlist range energy muzzlevelocity rof)
+   sjoin : string :=
+    (type/string<-stringlist-join
+     slist newline)]
+  (type/string-trim sjoin))
+ :doc "Returns an extra string from an item")
 
 (func stringlist-display<-unitabilitymap : stringlist
  [unitabilitymap : base/unitabilitymap]
@@ -676,6 +712,8 @@
      (:height item)
      (:length item)
      (:width  item))
+   extradetail : string :=
+    (string-extradetail<-item item)
    prefix : string := (string parent "/" name)
    detail : string :=
     (string-display<-item item)
@@ -733,6 +771,17 @@
         (ui/stylelist
          styles/style-text-2)
        :data bodydetail)))
+   uiextradetail : ui/ui :=
+    (if : ui/ui
+     (then
+      (!-empty extradetail)
+      (ui/ui
+       :uid (string prefix "/extradetail")
+       :style styles/style-unit-extradetail
+       :stylelist
+        (ui/stylelist
+         styles/style-text-2)
+       :data extradetail)))
    uidetail : ui/ui :=
     (if : ui/ui
      (then
@@ -750,6 +799,7 @@
    uititles
    uibody
    uibodydetail
+   uiextradetail
    uidetail))
  :doc "Returns a list of child ui from a item/parent")
 

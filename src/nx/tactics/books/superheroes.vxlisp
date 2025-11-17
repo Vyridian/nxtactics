@@ -2047,7 +2047,7 @@
               :name "Agility")
             :Movement
              (base/unitpower
-              :name "Move:Ground"
+              :name "Terrestrial"
               :unitabilitymap
                (base/unitabilitymap
                 "Wall Crawling"
@@ -2297,7 +2297,7 @@
                   :name "Glide")))
             :Movement
              (base/unitpower
-              :name "Move:Ground"
+              :name "Terrestrial"
               :unitabilitymap
                (base/unitabilitymap
                 "Wall Crawling"
@@ -2456,10 +2456,9 @@
             * Explosives - He carries a number of plastic explosives of different sizes that he plants using Timeslip."
           :titles "Timothy Jericho, Timebomb"
           :unitpowermap
-           (base/unitpowermap
-            :Explosive
-             (base/unitpower
-              :name "Explosive")))
+           (base/unitpowermap<-tactics-keys
+            tactics
+            "Explosive"))
         "Cobalt, Renegade"
          (base/unit
           :name "Cobalt, Renegade"
@@ -2471,10 +2470,9 @@
             * Body Armor - His flesh has transformed into an extra dense rubbery material to survive his powers."
           :titles "Ground Zero"
           :unitpowermap
-           (base/unitpowermap
-            :Explosive
-             (base/unitpower
-              :name "Explosive")))
+           (base/unitpowermap<-tactics-keys
+            tactics
+            "Explosive"))
         "Glare, Renegade"
          (base/unit
           :name "Glare, Renegade"

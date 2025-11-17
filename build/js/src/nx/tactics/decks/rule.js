@@ -30,7 +30,7 @@ export default class nx_tactics_decks_rule {
           {"any-1": nx_tactics_base.t_cardlist},
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Drawn to Destiny", "Disclaimer", "How to Play", "Description", "Features", "Golden Rules", "Terms", "Unit: Sample", "Unit: Guide", "Item:Sample", "Item:Guide", "Stat", "How to Play", "Setup", "Setup: Players", "Scene", "Scene: Map#1", "Scene: Map#2", "Scene: Minis", "Scene: Units", "Scene: Events", "Round: Start", "Move", "Movement", "Action", "Action: Free", "Action: Interact", "Arc", "Range", "Line of Sight", "Conflict", "Conflict: Chart", "Conflict: Sample", "Hits", "Hits: Sample", "Crits", "Crits: Rating", "Crits: Damage", "Crits: Types", "Crits: Person", "Crits: Vehicle", "Resolution", "Round: End", "Conclusion", "Advancement")
+            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Drawn to Destiny", "Disclaimer", "How to Play", "Description", "Features", "Golden Rules", "Terms", "Unit: Sample", "Unit: Guide", "Item:Sample", "Item:Guide", "Stat", "How to Play", "Setup", "Setup: Players", "Scene", "Scene: Map#1", "Scene: Map#2", "Scene: Minis", "Scene: Units", "Scene: Events", "Round: Start", "Move", "Movement", "Action", "Action: Free", "Action: Interact", "Arc", "Range", "Line of Sight", "Conflict", "Conflict:Chart", "Conflict:Sample", "Hits", "Hits: Sample", "Crits", "Crits: Rating", "Crits: Damage", "Crits: Types", "Crits: Person", "Crits: Vehicle", "Resolution", "Round: End", "Conclusion", "Advancement")
           )
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
@@ -350,16 +350,18 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "*Conflict: Approach",
+        "*Conflict:Approach",
         ":image",
         "images/rule-conflict-approach.svg",
         ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Choose an Approach to play\n* Fast - Speed and Finesse. Defeats Strong and Evade. Win: Draw a Card\n* Strong - Patience and Force. Defeats Block and Counter\n* Block - Choose hit location. Mitigate Fast. Win: Keep Block and Draw a Card\n* Evade - Avoid and Move. Defeats Strong. Win/Tie: Regain Action Cost\n* Counter - Trickery and Reversals. Defeats Fast. Win:Immediate Counterattack\n* Wild - Fickle Fortune. Defeats Fast/Strong. Win: Draw from Deck or Discard"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Conflict: Chart",
+        "Conflict:Chart",
         ":image",
         "images/rule-conflict-chart.svg",
         ":layout",
@@ -368,11 +370,22 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Conflict: Sample",
+        "Conflict:Sample",
         ":image",
         "images/rule-conflict-sample.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
+        "Condition",
+        ":image",
+        "images/rule-condition.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Ability Point\nBleeding\nBlind\nBlood Loss\nBound\nBroken\nBurning\nCharacter Point\nChoking\nConstriction\nDamaged\nDeaf\nDisabled\nDiseased\nDying\nElectrified\nElevation\nExposure\nFreezing\nHeld\nHunger\nImmobilized\nImpaired\nIsolation\nParalyzed\nPetrified\nPoisoned\nProne\nRising/Sinking\nSkill Point\nStasis\nThirst\nTransformed\nVelocity"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Conscience", ":summary", "* Conscience"),
       vx_core.f_new(
@@ -570,6 +583,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Fast", ":summary", "Speed and Finesse during a Conflict\n* Defeats Strong and Evade\n* Win: Draw a Card"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -942,7 +956,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Physical\n* Acidic\n* Agility\n* Armor\n* Bonds\n* Diseases\n* Implants\n* Longevity\n* Quickness\n* Senses\n* Size\n* Strength\n* Toughness\n* Toxins\n* Weapon\n* Wealth\nVehicle\n* Cabin\n* Cargo\n* Equipment\n* Factory\n* Hanger\n* Laboratory\n* Life Support\nAlteration\n* Adaptation\n* Combine\n* Flexible\n* Healing\n* Invisibility\n* Lycanthropy\n* Metamorphose\n* Mutate\n* Shapeshift\n* Spawning\n* Special Ability\n* Transform\n* Transmutation\n* Vampirism\nElements\n* Air\n* Cold\n* Earth\n* Electricity\n* Fire\n* Heat\n* Water\n* Weather"
+        "Physical\n* Acidic\n* Agility\n* Armor\n* Diseases\n* Longevity\n* Quickness\n* Senses\n* Size\n* Strength\n* Toughness\n* Toxins\n* Wealth\nObject\n* Cabin\n* Cargo\n* Equipment\n* Factory\n* Hanger\n* Implants\n* Laboratory\n* Life Support\n* Quality\n* Weapon\nAlteration\n* Adaptation\n* Combine\n* Flexible\n* Healing\n* Invisibility\n* Lycanthropy\n* Metamorphose\n* Molding\n* Shapeshift\n* Spawning\n* Special Ability\n* Transform\n* Transmutation\n* Vampirism\nElements\n* Air\n* Cold\n* Earth\n* Electricity\n* Fire\n* Heat\n* Water\n* Weather"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -953,7 +967,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Energies\n* Density\n* Energy Control\n* Explosive\n* Forces\n* Gravity\n* Inertia\n* Light\n* Magnetism\n* Phasing\n* Power Control\n* Radiation\n* Reality\n* Shielding\n* Sound\n* Time\n* Vibration\nWeakness\n* Weakness:Physical\n* Weakness:Mental\n* Weakness:Social\nMental\n* Charm\n* Computer Control\n* Domination\n* Empathy\n// Illusion\n* Intuition\n* Madness\n* Mental Combat\n* Mentalism\n* Mind Over Matter\n* Presence\n* Psychic Combat\nTravel\n* Digging\n* Dimensional\n* Flight\n* Move:Ground\n* Move:Space\n* Move:Stellar\n* Move:Water\n* Teleportation\n* Time Travel"
+        "Energies\n* Density\n* Energy Control\n* Explosive\n* Forces\n* Gravity\n* Inertia\n* Light\n* Magnetism\n* Phasing\n* Power Control\n* Radiation\n* Reality\n* Shielding\n* Sound\n* Time\n* Vibration\nWeakness\n* Weakness:Physical\n* Weakness:Mental\n* Weakness:Social\nMental\n* Charm\n* Computer Control\n* Domination\n* Empathy\n// Illusion\n* Intuition\n* Madness\n* Mental Combat\n* Mentalism\n* Mind Over Matter\n* Presence\n* Psychic Combat\nTravel\n* Aquatic\n* Dimensional\n* Flight\n* Planetary\n* Stellar\n* Teleportation\n* Terrestrial\n* Time Travel"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -1154,7 +1168,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Combat\n* Close Combat\n* Melee\n* Defense\n* Evasion\n* Ranged\n* Firearm\n* Gunnery\n* Explosives\nBody\n* Animals\n* Assassination\n* Athletics\n* Crime\n* Driving\n* Hunting\n* Mechanics\n* Military\n* Seamanship\n* Stealth\n* Survival\n* Tradeskill\nMind\n* Business\n* Computers\n* Electronics\n* Intellect\n* Investigation\n* Knowledge\n* Law\n* Medicine\n* Piloting\n* Science:Life\n* Science:Physical\n* Science:Social\nWill\n* Art\n* Communication\n* Deception\n* Espionage\n* Influence\n* Intimidation\n* Leadership\n* Performance\n* Persuasion\n* Religion"
+        "Combat\n* Close Combat\n* Melee\n* Defense\n* Evasion\n* Ranged\n* Firearm\n* Gunnery\n* Demolitions\nBody\n* Animals\n* Assassination\n* Athletics\n* Crime\n* Driving\n* Hunting\n* Mechanics\n* Military\n* Seamanship\n* Stealth\n* Survival\n* Tradeskill\nMind\n* Business\n* Computers\n* Electronics\n* Intellect\n* Investigation\n* Knowledge\n* Law\n* Medicine\n* Piloting\n* Science:Life\n* Science:Physical\n* Science:Social\nWill\n* Art\n* Communication\n* Deception\n* Espionage\n* Influence\n* Intimidation\n* Leadership\n* Performance\n* Persuasion\n* Religion"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -1309,6 +1323,7 @@ export default class nx_tactics_decks_rule {
         "Transformed represents body transformation. Add this to related Damage\nMinor - Altered\nMajor - Turning. Impaired\nCritical - Mutating. Stress:1 Immobilized\nExtreme - Remade. Stress:2\nDamage - Each Damage dealt to Transformer reduces Severity by 1\nEscape - IF out of Transformer reach"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Transport", ":titles", "Mount, Vehicle", ":summary", "Anything you can ride is a Transport\neg Horses, Cars, Planes\n* Driver - Spend an Action each Round to control\n* Passenger - IF unstable or in Combat THEN Spend an Action to remain stable"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Treat:Wounds", ":titles", "Healing", ":summary", "Repairing damage to living creatures is difficult and dangerous\n* Time - \n* Surgery - Perform a Task vs 3x[Severity]. If you lack a relevant [Ability], [Specialty] or perfect conditions it is at [Disadvantage]. Beginning the procedure creates a [Severity]:1 Wound at the location. Each failure causes [Blood Loss]:2"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",

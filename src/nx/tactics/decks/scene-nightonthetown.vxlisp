@@ -26,13 +26,13 @@
      (list<-list : base/cardlist
       (base/itemlist<-tactics-keys
        tactics
-       "Ammo: Revolver"
-       "Ammo: Rifle"
-       "Ammo: Shotgun"
-       "Axe: Fire"
+       "Ammo:Revolver"
+       "Ammo:Rifle"
+       "Ammo:Shotgun"
+       "Axe:Fire"
        "Bare Handed"
-       "Bottle: Liquor"
-       "Bottle: Molotov Cocktail"
+       "Bottle:Liquor"
+       "Bottle:Molotov Cocktail"
        "Bow:Short"
        "Jerry Can"
        "Keys"

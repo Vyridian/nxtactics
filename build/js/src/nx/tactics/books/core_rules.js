@@ -80,11 +80,7 @@ export default class nx_tactics_books_core_rules {
             "Targeting: Reach",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Targeting: Reach", ":image", "Rules/TargetingReach.png", ":summary", "* Reach"),
             "Targeting: Ranged",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Targeting: Ranged", ":image", "Rules/TargetingRanged.png", ":summary", "* Point Blank - Any attack with a ranged weapon at 10ft (3m) or less.\n+1 [Attack] with pistols, +1 [Defense] with other ranged weapons.\n* Effective Range - Ranged weapons have a normal attack within this\nrange. About 30m for pistols. 90m for submachine guns. 300m+ for rifles.\n* Long Range - Attacks can be made beyond the normal range, but their\naccuracy drops off quickly. +1 [Defense] for each 10% more than effective\nrange."),
-            "Line of Sight",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Line of Sight", ":image", "Rules/LineOfSight.png", ":summary", "* Line of Sight is usually required to use any Ranged Ability.\n* Determine Line of Sight: In order to have line of sight, use a 1 space wide straight edge to connect the\nattacker to one of the spaces of the target.\n* Line of Sight is determined by counting the number of points on the\nspace under the target that are visible.\n** 5-6 points: Clear Line of Sight.\n** 4 points: Obstructed [+1 Defense]\n** 3 points: Highly Obstructed [+2 Defense]\n** 2 points: Hidden [+3 Defense]\n** 1 point: Barely Visible [+4 Defense]"),
-            "Extended Action",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Extended Action", ":summary", "* Extended Actions take more time than ordinary [Action]s.\n* Extended Actions have a Duration which tells how long each [Action] takes to perform.\n* First perform a normal [Action].  Any [Hit]s scored reduce the [Target Number].  Any [Contested Hit]s increase the [Contested Number].\n* The [Target Number] cannot exceed its original value, but instead trigger [Critical Failure]s if any.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Targeting: Ranged", ":image", "Rules/TargetingRanged.png", ":summary", "* Point Blank - Any attack with a [Weapon:Ranged] at 10ft (3m) or less.\n+1 [Attack] with pistols, +1 [Defense] with other [Weapon:Ranged].\n* Effective Range - [Weapon:Ranged] have a normal attack within this range. About 30m for pistols. 90m for submachine guns. 300m+ for rifles.\n* Long Range - Attacks can be made beyond the normal range, but their accuracy drops off quickly. +1 [Defense] for each 10% more than effective range.")
           )
         ),
         ":Reactions",
@@ -97,32 +93,6 @@ export default class nx_tactics_books_core_rules {
             {"any-1": nx_tactics_base.t_rulemap},
             "Opportunity Action",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Opportunity Action")
-          )
-        ),
-        ":Resolution",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Resolution",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            "Attack Roll",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Attack Roll", ":image", "Tokens/SkillToken.png", ":summary", "* Tactics uses large numbers of standard 6 sided dice.  White Dice are preferred for\nmost rolls.\n* Each 4, 5, or 6 rolled is a [Critical Hit].\n* Each 6 rolled lets you roll an additional die.\n* If the modified ability roll is 0, then the ability may not be used."),
-            "Critical Roll",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Critical Roll", ":image", "Tokens/CriticalToken.png"),
-            "Critical Hit",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Critical Hit", ":summary", "* Each Critical Hit can be traded for a [Stun], or any token type that the particular attack used can produce\n(e.g. Flaming Arrows can produce [Fire] tokens)."),
-            "Critical Failure",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Critical Failure"),
-            "Defense Roll",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Defense Roll"),
-            ":Hit",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hit"),
-            "Armor Rating",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Armor Rating", ":summary", "Units with an Armor rating make [Defense Roll]s normally, but if any [Hits] are scored and the Armor Rating exceeds the defense dice rolled, then roll additional defense dice equal to the difference."),
-            "Damage Rating",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Damage Rating", ":summary", "When a weapon has a Damage rating, it makes its [Ability Roll] normally, but if any [Hits] are scored and the Damage Rating exceeds the attack dice rolled, then roll additional attack dice equal to the difference.")
           )
         ),
         "Combat Effects",

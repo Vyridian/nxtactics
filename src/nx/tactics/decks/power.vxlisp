@@ -763,6 +763,11 @@
        :name "Unravelling"
        :summary
         "* Knots untie, locks unfasten, etc.")
+     "Wall of Tentacles"
+      (base/ability
+       :name "Wall of Tentacles"
+       :summary
+        "* [Power]: [Chaos]")
      "Winds of Change"
       (base/ability
        :name "Winds of Change")))
@@ -1522,7 +1527,7 @@
         "* After defeating a target in mental combat, the user possesses the body of the target.
          * [Power]: [Hexcraft]
          * The user keeps his Mind and Will stats and uses the target's Body.")
-     :Effigy
+     "Effigy"
       (base/ability
        :name "Effigy"
        :titles "Straw Man"
@@ -1534,11 +1539,18 @@
          * The ability level of any Spells cast are [Limited] by the skill with which the Effigy is created and the significance of the item linked to the Effigy.")
      "Evil Eye"
       (base/ability<-tactics-key tactics "Evil Eye")
+     "Eye Bite"
+      (base/ability
+       :name "Eye Bite"
+       :summary
+        "Apply a curse on a target simply by looking at them.
+         * [Power]: [Hexcraft]")
      "Fetish"
       (base/ability
        :name "Fetish"
        :summary
         "* A fetish is a small object that can be used to bind a spirit. The item must be unique and may be found or created.
+         * [Power]: [Hexcraft]
          * [Action]: If you killed an extradimensional creatures last turn, you may capture the spirit of that creature in the Fetish.
          * [Action]: Release the spirit in the fetish to perform one task that turn. The spirit must perform the task if it is able though it does so under duress and may twist the intentions or deceive the user. Regardless of outcome, the spirit is released and will disappear.")
      "Figurine"
@@ -1577,7 +1589,7 @@
        :name "Living Weapon"
        :summary
         "* Animates a melee weapon which makes the next attack easier.
-         * [Requires]: A melee weapon with no moving parts.
+         * [Requires]: A [Weapon:Melee] with no moving parts.
          * [Action]: On the next action the weapon may be used at [+1 Skill].")
      "Miniature"
       (base/ability
@@ -2401,7 +2413,11 @@
      * Pyro reacts with Cryo to produce the [Melt] effect.
      * Pyro reacts with Hydro to produce the [Vaporize] effect.
      * Pyro reacts with Electro to produce the [Overload] effect.
-     * Pyro reacts with Aero to produce the [Wildfire] ability.")
+     * Pyro reacts with Aero to produce the [Wildfire] ability."
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Fire Charm"))
   (base/power
    :name "Radiant"
    :titles "Bright, Light, Lightbringer"
@@ -2410,11 +2426,7 @@
      "Blinding Light"
       (base/ability
        :name "Blinding Light")
-     "Blinding Wall"
-      (base/ability
-       :name "Blinding Wall"
-       :titles "Wall of Light")
-     :Daybreak
+     "Daybreak"
       (base/ability
        :name "Daybreak"
        :summary
@@ -2433,9 +2445,9 @@
        :summary
         "* Glowing rays of light appear to emanate from any light the user possesses. Vermin, undead, demons, devils, or any user of [Corruption] will be damaged by the light as if it were [Fire]. All pure beings struck by the rays may remove a [Stun] Token."
        :titles "Divine Light, Holy Light")
-     "Summon Radiance"
+     "Summon:Radiance"
       (base/ability
-       :name "Summon Radiance")
+       :name "Summon:Radiance")
      :Sunbeam
       (base/ability
        :name "Sunbeam")
@@ -2444,7 +2456,11 @@
        :name "Swords of Revealing Light"
        :summary
         "* Blazing rays of light shine around the user, revealing hidden or disguised things.
-         * [Action]: Any hidden or disguised thing directly in front of the user, reduces its chance to stay concealed by the [Successes].")))
+         * [Action]: Any hidden or disguised thing directly in front of the user, reduces its chance to stay concealed by the [Successes].")
+     "Wall of Light"
+      (base/ability
+       :name "Wall of Light"
+       :titles "Blinding Wall")))
   (base/power
    :name "Shamanism"
    :titles "Shaman, Spirit Caller, Witch Doctor"
@@ -2463,7 +2479,7 @@
    :name "Sorcery"
    :reference
     "* This is forbidden. This is a summoning. I cannot speak this!... There is no light here. You came to the darkness for knowledge... And all the knowledge you seek is here. Surrender. Speak the words. Call her home. By three thay come. By three thy way opens. By the blood of the willing. We call thee home. Hail, daughter of hatred. Hail, Lilith. - Diablo IV"
-   :titles "Hell Knight, Sorcerer, Sorceress, Sorceress Queen, Summoner"
+   :titles "Hell Knight, Sorcerer, Sorceress, Sorceress Queen, Summoner, Summoning"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -2472,10 +2488,10 @@
      "Dimensional Gateway"
      "Gateway"
      "Soul Pact"
-     "Summon Demon"
-     "Summon Devil"
-     "Summon Familiar"
-     "Summon Item"))
+     "Summon:Demon"
+     "Summon:Devil"
+     "Summon:Familiar"
+     "Summon:Item"))
   (base/power
    :name "Thaumaturgy"
    :summary
@@ -2560,7 +2576,9 @@
      "Mirror Wall"
       (base/ability
        :name "Mirror Wall"
-       :summary "* Wall that reflects [Energy] attacks lower than level back to their source. Any attack higher than level will destoy the Wall.")
+       :titles "Wall of Mirrors"
+       :summary
+        "* Wall that reflects [Energy] attacks lower than level back to their source. Any attack higher than level will destoy the Wall.")
      "Paradigm Shift"
       (base/ability
        :name "Paradigm Shift"
@@ -2759,20 +2777,21 @@
        :summary "* Wind generates a thick mist above any body of water.")
      "Suffocate"
       (base/ability<-tactics-key tactics "Suffocate")
-     "Summon Cloud"
+     "Summon:Cloud"
       (base/ability
-       :name "Summon Cloud"
-       :summary "* Summons a large living cloud in moisture rich air. This can obscure vision.")
-     "Summon Djinn"
+       :name "Summon:Cloud"
+       :summary
+        "* Summons a large living cloud in moisture rich air. This can obscure vision.")
+     "Summon:Djinn"
       (base/ability
-       :name "Summon Djinn")
-     "Summon Gust"
+       :name "Summon:Djinn")
+     "Summon:Gust"
       (base/ability
-       :name "Summon Gust"
+       :name "Summon:Gust"
        :summary "* Summons a small living wind on items that may be blown in the breeze. Air elementals love nothing more than pushing things around.")
-     "Summon Slyph"
+     "Summon:Slyph"
       (base/ability
-       :name "Summon Slyph")
+       :name "Summon:Slyph")
      "Swirl"
       (base/ability
        :name "Swirl")
@@ -2848,8 +2867,7 @@
     (base/abilitymap
      "Slippery Skin"
       (base/ability
-       :name "Slippery Skin")
-))
+       :name "Slippery Skin")))
   (base/power
    :name "Appearance"
    :abilitymap
@@ -2880,6 +2898,48 @@
       (base/ability
        :name "Fairest of them All")))
   (base/power
+   :name "Aquatic"
+   :titles "Marine"
+   :abilitymap
+    (base/abilitymap
+     :Hydrofoil
+      (base/ability
+       :name "Hydrofoil")
+     :Sailed
+      (base/ability
+       :name "Sailed"
+       :image "Maps/Windsock.png"
+       :reference
+        "Estimated 18ft Skiff speeds at 20mph winds:
+         0 (180deg), 16mph (150deg), 26mph (120deg), 31mph (90deg), 32mph (60deg), 27mph (30deg), 19mph (0deg)
+
+         Estimated ice yacht speeds at 30mph winds:
+         0 (180deg), 95mph (150deg), 144mph (120deg), 165mph (90deg), 155mph (60deg), 115mph (30deg), 30mph (0deg)"
+       :summary
+        "* Wind direction has an effect on all vehicles but it is most pronounced on sailing vessels.
+         * [Setup] - Point Windsock in direction of the wind.  If wind direction is not already determined, roll a die to randomize the wind direction.
+         * [Move] - [-1 Speed] when starting the turn against the wind at an angle.
+         * [Move] - [-2 Speed] when starting the turn directly against the wind.
+
+         * Sailing speed is based on Wind speed, direction, angle of motion and vesselsize.
+         * Same direction as wind (Running Downwind): Max Speed = Wind Speed
+         * 30 degrees off direction (Broad Reach): Max Speed = Wind Speed * 1.3 (* 4 on ice)
+         * 60 degrees off direction (Broad Reach): Max Speed = Wind Speed * 1.5 (* 5 on ice)
+         * 90 degrees off direction (Beam Reach): Max Speed = Wind Speed * 1.4  (* 5.5 on ice)
+         * 120 degrees off direction (Close Reach): Max Speed = Wind Speed * 1.2 (* 4.8 on ice)
+         * 150 degrees off direction (Close Hauled): Max Speed = Wind Speed * .7 (* 4 on ice)
+         * 180 degrees (Head To Wind or In Irons): Max Speed = 0
+
+         * Over distance, sailboats average speed over distance is further limited by their length at waterline:
+         * This is estimated to be about 1.34 x the square root of the waterline length.
+         * For a 144 ft sailboat at the waterline, the square root is 12, and the boat will probably not exceed 12 x 1.34, or about 16 knots/18mph/30kph.
+         * A 100 footer should do 13.4 knots/15mph/25kph.
+         * A 30 footer should do 7.34 knots/8mph/13kph.
+         * A 16 footer should do 5.36 knots/6mph/10kph.")
+     :Submersible
+      (base/ability
+       :name "Submersible")))
+  (base/power
    :name "Armor"
    :summary
     "* Armor normally alters appearance and may be a permanent alteration or a suit that may be donned.
@@ -2889,7 +2949,6 @@
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
-     "1-Handed"
      "Ablative Armor"
      "Armor:Abdomen"
      "Armor:Arms"
@@ -2907,6 +2966,7 @@
      "Environmental Independence"
      "Floation Device"
      "Grappling Hoist"
+     "Handed:1"
      "Infrared Dampener"
      "Missile Mount"
      "Radar Dampener"
@@ -2928,13 +2988,6 @@
      "Turret Mount"
      "Ultraviolet Jammer"
      "Underwater Operation"))
-  (base/power
-   :name "Bonds"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Entanglement"
-     "Line Swinging"))
   (base/power
    :name "Charm"
    :titles "Glamour"
@@ -3253,14 +3306,6 @@
    :name "Density"
    :summary
     "* Your mass is increased or decreased. This is normally permanent but may be altered. Related Powers: [Phasing], [Size].")
-  (base/power
-   :name "Digging"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Drilling"
-     "Excavating"
-     "Tunneling"))
   (base/power
    :name "Dimensional"
    :reference
@@ -3981,21 +4026,22 @@
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
-     "Factory: Manufacturing"
-     "Factory: Military"
-     "Factory: Pharmaceutical"
-     "Factory: Vehicle"
+     "Factory:Manufacturing"
+     "Factory:Military"
+     "Factory:Pharmaceutical"
+     "Factory:Vehicle"
      "Mining Rig"
      "Oil Rig"
-     "Refinery: Gas"
-     "Refinery: Oil"
-     "Refinery: Ore"
-     "Shipyard: Aircraft"
-     "Shipyard: Mobile"
-     "Shipyard: Naval"
-     "Shipyard: Spaceship"))
+     "Refinery:Gas"
+     "Refinery:Oil"
+     "Refinery:Ore"
+     "Shipyard:Aircraft"
+     "Shipyard:Mobile"
+     "Shipyard:Naval"
+     "Shipyard:Spaceship"))
   (base/power
    :name "Fire"
+   :titles "Arsonist, Fire Lord, Firebomber, Firestarter, Firewalker, Pyrokinetic, Pyromancer, Pyromaniac, Volcanist"
    :reference
     "* Fire. It's a living thing, Brian. It breathes, it eats, and it hates. The only way to beat it is to think like it. To know that this flame will spread this way across the door and up across the ceiling, not because of the physics of flammable liquids, but because it wants to. Some guys on this job, the fire owns them, makes 'em fight it on it's level, but the only way to truly kill it is to love it a little. - Donald Rimgate, Backdraft
      * Dry is good and wind is better. Count the years you always knew it. Strike a match go on and do it...Oh light the sky and hold on tight, the world is burning down. - Shawn Colvin, Sunny Came Home"
@@ -4003,7 +4049,6 @@
     "* Fire is the element of power. Fire Elementalists must have desire, passion, and the energy and drive to achieve it.
      * Symbol - Red Flame
      * Passionate, Fiery, Explosive, Incendiary, Violent"
-   :titles "Arsonist, Fire Lord, Firebomber, Firestarter, Firewalker, Pyrokinetic, Pyromancer, Pyromaniac, Volcanist"
    :abilitymap
     (base/abilitymap
      "Burning Eyes"
@@ -4024,7 +4069,7 @@
      "Cleansing Fire"
       (base/ability
        :name "Cleansing Fire")
-     :Combustion
+     "Combustion"
       (base/ability
        :name "Combustion"
        :summary "* Summons a small living flame on combustible material. Fire elementals love nothing more than creating fires.")
@@ -4109,12 +4154,12 @@
      :Smother
       (base/ability
        :name "Smother")
-     "Summon Efreet"
+     "Summon:Efreet"
       (base/ability
-       :name "Summon Efreet")
-     "Summon Salamander"
+       :name "Summon:Efreet")
+     "Summon:Salamander"
       (base/ability
-       :name "Summon Salamander")
+       :name "Summon:Salamander")
      "Wall of Fire"
       (base/ability
        :name "Wall of Fire"
@@ -4179,15 +4224,11 @@
       (base/ability
        :name "Amplify Repulsion"
        :summary "* Massively increase the repulsive force between two objects. This can increase magnetic repulsion and also increase the movement of two objects that have just collided to increase Knockback.")
-     "Control Force"
+     "Force Bands"
       (base/ability
-       :name "Control Force"
-       :summary
-        "* [Reaction]: Redirect a force effect to another target.")
-     "Bands of Force"
-      (base/ability
-       :name "Bands of Force"
-       :titles "Crimson Bands of Cyttorak")
+       :name "Force Bands"
+       :reference
+        "Crimson Bands of Cyttorak")
      "Force Blast"
       (base/ability
        :name "Force Blast")
@@ -4196,16 +4237,29 @@
        :name "Force Break")
      "Force Wall"
       (base/ability
-       :name "Force Wall")
+       :name "Force Wall"
+       :titles "Force Field")
+     "Force Control"
+      (base/ability
+       :name "Force Control"
+       :summary
+        "* [Reaction]: Redirect a force effect to another target.")
      "Pressor Force"
       (base/ability
        :name "Pressor Force"
        :summary "* Apply low but steady pressure pushing an object away.")))
   (base/power
    :name "Flight"
+   :titles "Aerial"
    :image "Rules/Images/MoveFlight.png"
    :abilitymap
     (base/abilitymap
+     "Aerodynamic"
+      (base/ability
+       :name "Aerodynamic"
+       :summary
+        "Highly efficient at atmospheric flight
+         * [Power]: [Flight]")
      :Afterburner
       (base/ability
        :name "Afterburner")
@@ -4379,21 +4433,21 @@
     (base/abilitymap
      "Blur"
       (base/ability<-tactics-key tactics "Blur")
-     "Conjure Effigy"
+     "Conjure:Effigy"
       (base/ability
-       :name "Conjure Effigy"
+       :name "Conjure:Effigy"
        :summary
         "* Create a phantasmal copy of an object touched. The Effigy appears real in most ways, but does not function as the original and will shatter to dust if force is applied to it.")
-     "Conjure Phantasmal Force"
+     "Conjure:Phantasmal Force"
       (base/ability
-       :name "Conjure Phantasmal Force"
+       :name "Conjure:Phantasmal Force"
        :summary "Conjures a phantasmal minion.")
-     "Conjure Phantom Monster"
+     "Conjure:Phantom Monster"
       (base/ability
-       :name "Conjure Phantom Monster")
-     "Conjure Simulacrum"
+       :name "Conjure:Phantom Monster")
+     "Conjure:Simulacrum"
       (base/ability
-       :name "Conjure Simulacrum")
+       :name "Conjure:Simulacrum")
      "Dazzling Beauty"
       (base/ability
        :name "Dazzling Beauty"
@@ -4401,12 +4455,12 @@
      "Disembodied Voice"
       (base/ability
        :name "Disembodied Voice")
-     :Forgetfulness
+     "Forgetfulness"
       (base/ability
        :name "Forgetfulness"
        :summary
         "* Roll vs. Spirit. Target forgets a specific fact or time period.")
-     :Foxfire
+     "Foxfire"
       (base/ability
        :name "Foxfire")
      "Hidden Thing"
@@ -4501,6 +4555,11 @@
        :name "Vertigo")))
   (base/power
    :name "Implants"
+   :reference
+    "* Metal is perfection. - Viktor, Runeterra
+     * Better than mortal: metal. - Mechanized Mimic, Runeterra"
+   :summary
+    "* Faux Flesh (Faux Skin) - The great breakthrough in cybernetics was not in machinery but in synthetic flesh. Faux Flesh is a foam that hardens into soft, realistic flesh that will not be rejected by the immune system. Faux Flesh can be injected between machine parts and is used at all interface points between living tissue and cyberware. It seals wounds like chalking and is a staple of medical kits."
    :stat "Shadow"
    :abilitymap
     (base/abilitymap
@@ -4585,7 +4644,7 @@
      "Tool Hand"
       (base/ability
        :name "Tool Hand")
-     :Antideafening
+     "Antideafening"
       (base/ability
        :name "Antideafening")
      "Bug Detector"
@@ -4604,9 +4663,8 @@
      "Radar Sensor"
       (base/ability
        :name "Radar Sensor")
-     "Sonar Sensor"
-      (base/ability
-       :name "Sonar Sensor")
+     "Sonar"
+      (base/ability<-tactics-key tactics "Sonar")
      "Stethoscope Hearing"
       (base/ability
        :name "Stethoscope Hearing")
@@ -5231,7 +5289,7 @@
      "Lobotomize"
      "Mental Blast"
      "Mental Prison"
-     "Summon Id Monster"
+     "Summon:Id Monster"
      "Tabula Rasa"))
   (base/power
    :name "Mentalism"
@@ -5407,38 +5465,21 @@
        :name "Telekinetic Touch"
        :summary "* Feel items from a distance.")))
   (base/power
-   :name "Move:Ground"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "2-Legged"
-     "3-Legged"
-     "4-Legged"
-     "6-Legged"
-     "8-Legged"
-     "Hover"
-     "Jump Jets"
-     "Off Roading"
-     "Snowcraft"
-     "Tracked"
-     "Turbo Booster"
-     "Wall Crawling"
-     "Wall Running"
-     "Water Walking"
-     "Water Running"
-     "Wheeled"))
-  (base/power
-   :name "Move:Space"
+   :name "Planetary"
    :abilitymap
     (base/abilitymap
      "Chemical Rockets"
       (base/ability
-       :name "Chemical Rockets")
+       :name "Chemical Rockets"
+       :summary
+        "* [Power]: [Planetary]")
      "Impulse Drive"
       (base/ability
        :name "Impulse Drive"
+       :titles "Impulse, Ripple Drive, Wave Drive"
        :summary
         "* The Impulse Drive is a drive system based upon the concept that repeated energy releases at the same harmonic frequency will cause small ripples in the fabric of space.
+         * [Power]: [Planetary]
          * By rhythmic repetition, the Drive can cause an action/reaction effect against the fabric of space itself, therefore no longer needing reaction mass to travel large distances.
          * Further, the ripples in space cause space itself to slightly change orientation on each wave. Anything crossing a wave will suffer minor disruption. Light, lasers, radio waves, radiation, and relativistic particles are increasingly scattered as they strike each wave effectively dispersing them.
 
@@ -5446,101 +5487,57 @@
          * High energy radiation becomes unfocused effectively creating radiation shielding proportionate to the distance from the source.
          * Energy weapons, relativistic particle weapons, and railguns become unfocused and scattered effectively increasing the armor of the vessel proportionate to the distance of the weapon.
          * At long distances, the energy detected by radar and other detection devices (even telescopes) become diffused. This effectively provides the vessel with increased stealth proportionate to the distance of the detector.
-         * At closer distances, microcircuitry becomes prone to failure and damage. This makes computer chips, the foundation of modern computer science, next to useless. Therefore, computer systems must be turned off when the wave drive is active. Piloting, weaponry, and navigation must therefore be performed manually with limited automation."
-       :titles "Impulse, Ripple Drive, Wave Drive")
+         * At closer distances, microcircuitry becomes prone to failure and damage. This makes computer chips, the foundation of modern computer science, next to useless. Therefore, computer systems must be turned off when the wave drive is active. Piloting, weaponry, and navigation must therefore be performed manually with limited automation.")
      "Ion Drive"
       (base/ability
-       :name "Ion Drive")
+       :name "Ion Drive"
+       :summary
+        "* [Power]: [Planetary]")
      "Nuclear Rockets"
       (base/ability
-       :name "Nuclear Rockets")
+       :name "Nuclear Rockets"
+       :summary
+        "* [Power]: [Planetary]")
      "Reaction Mass"
       (base/ability
-       :name "Reaction Mass")
+       :name "Reaction Mass"
+       :summary
+        "* [Power]: [Planetary]")
      "Subspace Drive"
       (base/ability
        :name "Subspace Drive"
        :reference
         "* Comet Empire Subspace Attack Submarine"
        :summary
-        "* By creating a minor fold in space, a unit may drop almost completely out of normal space while maintaining a small window through which it may still interact with normal space.")
+        "By creating a minor fold in space, a unit may drop almost completely out of normal space while maintaining a small window through which it may still interact with normal space.
+         * [Power]: [Planetary]")
      "Torch Drive"
       (base/ability
        :name "Torch Drive"
+       :titles "TISA, Trans-Gravitic, Interphased, Sub-Light Anamoly Drive"
        :summary
-        "* This drive creates a tight gravity well around the ship dropping it partially out of normal space. Because the ship is no longer in normal space, it does not actually move. What does move is the interface between normal space and the ship. Speed and direction are adjusted by controlling the depth and shape of the field.
+        "This drive creates a tight gravity well around the ship dropping it partially out of normal space. Because the ship is no longer in normal space, it does not actually move. What does move is the interface between normal space and the ship. Speed and direction are adjusted by controlling the depth and shape of the field.
+         * [Power]: [Planetary]
          * There are a number of distinct advantages to this drive system. Because the ship in not moving, it is not subject to inertia or problems incurred at relativistic speeds.
          * Combat with the Torch drive is unique for several reasons. The occupants are not subject to the enormous stress of maneuvering at relativistic speeds. Conventional weapons have greatly reduced effect because only damage that crosses the interface has any effect on the ship.
-         * Weaknesses - The Torch drive must also maintain a protective gravity bubble to defend against its own gravity well. Weapons designed to disrupt the Torch drive have a strong effect by making the ship more vulnerable to damage, by reducing its speed, by subjecting it to increased stress from travelling at relativistic speeds, and by exposing it to its own gravity well."
-       :titles "TISA, Trans-Gravitic, Interphased, Sub-Light Anamoly Drive")
+         * Weaknesses - The Torch drive must also maintain a protective gravity bubble to defend against its own gravity well. Weapons designed to disrupt the Torch drive have a strong effect by making the ship more vulnerable to damage, by reducing its speed, by subjecting it to increased stress from travelling at relativistic speeds, and by exposing it to its own gravity well.")
      "Rocket Booster"
       (base/ability
        :name "Rocket Booster"
-       :titles "Boost, Turbo Booster")
+       :titles "Boost, Turbo Booster"
+       :summary
+        "* [Power]: [Planetary]")
      "Vernier Thruster"
       (base/ability
        :name "Vernier Thruster"
-       :titles "Apogee Motor")))
-  (base/power
-   :name "Move:Stellar"
-   :reference
-    "* I created the Event Horizon to reach the stars, but she's gone much, much farther than that. She tore a hole in our universe, a gateway to another dimension. A dimension of pure chaos. Pure... evil. When she crossed over, she was just a ship. But when she came back... she was alive! - Dr. Weir, Event Horizon"
-   :summary
-    "* Jump Drives generate energy pulses in the ship's drive to create ripples in the fabric of space.  Each pulse must be precisely timed to the apex of each ripple to create an increasing harmonic wave (the 'Wave Motion' effect). Eventually, the energy of the occillation becomes too great, a tear in space is produced, and the starship falls in."
-   :titles "Gate Drive, Stargate, Wave Motion Engine, Wormhole"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Faster than Light"
-     "Hyperdrive"
-     "Strategic Warp Jump"
-     "Tactical Warp Jump"))
-  (base/power
-   :name "Move:Water"
-   :abilitymap
-    (base/abilitymap
-     :Hydrofoil
-      (base/ability
-       :name "Hydrofoil")
-     :Sailed
-      (base/ability
-       :name "Sailed"
-       :image "Maps/Windsock.png"
-       :reference
-        "Estimated 18ft Skiff speeds at 20mph winds:
-         0 (180deg), 16mph (150deg), 26mph (120deg), 31mph (90deg), 32mph (60deg), 27mph (30deg), 19mph (0deg)
-
-         Estimated ice yacht speeds at 30mph winds:
-         0 (180deg), 95mph (150deg), 144mph (120deg), 165mph (90deg), 155mph (60deg), 115mph (30deg), 30mph (0deg)"
+       :titles "Apogee Motor"
        :summary
-        "* Wind direction has an effect on all vehicles but it is most pronounced on sailing vessels.
-         * [Setup] - Point Windsock in direction of the wind.  If wind direction is not already determined, roll a die to randomize the wind direction.
-         * [Move] - [-1 Speed] when starting the turn against the wind at an angle.
-         * [Move] - [-2 Speed] when starting the turn directly against the wind.
-
-         * Sailing speed is based on Wind speed, direction, angle of motion and vesselsize.
-         * Same direction as wind (Running Downwind): Max Speed = Wind Speed
-         * 30 degrees off direction (Broad Reach): Max Speed = Wind Speed * 1.3 (* 4 on ice)
-         * 60 degrees off direction (Broad Reach): Max Speed = Wind Speed * 1.5 (* 5 on ice)
-         * 90 degrees off direction (Beam Reach): Max Speed = Wind Speed * 1.4  (* 5.5 on ice)
-         * 120 degrees off direction (Close Reach): Max Speed = Wind Speed * 1.2 (* 4.8 on ice)
-         * 150 degrees off direction (Close Hauled): Max Speed = Wind Speed * .7 (* 4 on ice)
-         * 180 degrees (Head To Wind or In Irons): Max Speed = 0
-
-         * Over distance, sailboats average speed over distance is further limited by their length at waterline:
-         * This is estimated to be about 1.34 x the square root of the waterline length.
-         * For a 144 ft sailboat at the waterline, the square root is 12, and the boat will probably not exceed 12 x 1.34, or about 16 knots/18mph/30kph.
-         * A 100 footer should do 13.4 knots/15mph/25kph.
-         * A 30 footer should do 7.34 knots/8mph/13kph.
-         * A 16 footer should do 5.36 knots/6mph/10kph.")
-     :Submersible
-      (base/ability
-       :name "Submersible")))
+        "* [Power]: [Planetary]")))
   (base/power
-   :name "Mutate"
+   :name "Molding"
+   :titles "Fleshcrafting, Fleshmolder, Mutate, Transfiguration, Vissisitude"
    :summary
     "* The ability to mold flesh."
-   :titles "Fleshcrafting, Fleshmolder, Transfiguration, Vissisitude"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -5606,9 +5603,23 @@
     (base/abilitymap<-tactics-keys
      tactics
      "Ego Whip"
+     "Hall of Mirrors"
      "Psychic Duel"
      "Psychic Knife"
      "Tower of Iron Will"))
+  (base/power
+   :name "Quality"
+   :summary
+    "* An item of particularly high quality and possesses unusual abilities.
+     * [Requires]: [Item]
+     * Each level of quality doubles the original price of the item."
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Balanced for Throwing"
+     "Durable"
+     "Fine"
+     "Resist:Fire"))
   (base/power
    :name "Quickness"
    :titles "Celerity, Hyperspeed, Quickening, High Speed"
@@ -5646,16 +5657,11 @@
   (base/power
    :name "Radiation"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Fallout"
-      (base/ability
-       :name "Fallout")
      "Radiation Beam"
-      (base/ability
-       :name "Radiation Beam")
-     "Radiation Blast"
-      (base/ability
-       :name "Radiation Blast")))
+     "Radiation Blast"))
   (base/power
    :name "Reality"
    :titles "Reality Warping"
@@ -5725,10 +5731,8 @@
        :name "Radio Sense"
        :summary
         "* May hear radio, television, shortwave, and even cellular telephone communications when concentrating.")
-     :Sonar
-      (base/ability
-       :name "Sonar"
-       :titles "Echo Location")
+     "Sonar"
+      (base/ability<-tactics-key tactics "Sonar")
      "Telescopic Hearing"
       (base/ability
        :name "Telescopic Hearing")
@@ -5773,7 +5777,7 @@
      "Point Defense"
      "Shield Modulation"
      "Shield Redirection"
-     "Shielding: Magical"))
+     "Shielding:Magical"))
   (base/power
    :name "Size"
    :reference
@@ -5782,18 +5786,18 @@
     "* Grow or Shrink. This change does not change your Mass. Combine with [Density] to actually change [Body] stat."
    :abilitymap
     (base/abilitymap
-     :Big
+     "Big"
       (base/ability
        :name "Big"
        :summary
         "* You are permenantly larger and heavier.")
-     :Growth
+     "Growth"
       (base/ability
        :name "Growth")
-     :Shrinking
+     "Shrinking"
       (base/ability
        :name "Shrinking")
-     :Big
+     "Small"
       (base/ability
        :name "Small"
        :summary
@@ -5805,17 +5809,30 @@
    :titles "Sonic"
    :abilitymap
     (base/abilitymap
-     :Mimicry
+     "Echolocation"
+      (base/ability
+       :name "Echolocation"
+       :summary
+        "* [Power]: [Sound]")
+     "Mimicry"
       (base/ability
        :name "Mimicry"
        :summary
-        "* Exactly duplicate sounds you have just heard or committed to memory.  At high levels, even modem communication can be duplicated.")
+        "Exactly duplicate sounds you have just heard or committed to memory.
+         * [Power]: [Sound]
+         * At high levels, even modem communication can be duplicated.")
+     "Sonar"
+      (base/ability<-tactics-key tactics "Sonar")
      "Sonic Wave"
       (base/ability
-       :name "Sonic Wave")
+       :name "Sonic Wave"
+       :summary
+        "* [Power]: [Sound]")
      "Sound Carries"
       (base/ability
-       :name "Sound Carries")))
+       :name "Sound Carries"
+       :summary
+        "* [Power]: [Sound]")))
   (base/power
    :name "Spawning"
    :stat "Body"
@@ -5857,12 +5874,29 @@
      "Undead"
      "Zombified"))
   (base/power
+   :name "Stellar"
+   :reference
+    "* I created the Event Horizon to reach the stars, but she's gone much, much farther than that. She tore a hole in our universe, a gateway to another dimension. A dimension of pure chaos. Pure... evil. When she crossed over, she was just a ship. But when she came back... she was alive! - Dr. Weir, Event Horizon"
+   :summary
+    "* Jump Drives generate energy pulses in the ship's drive to create ripples in the fabric of space.  Each pulse must be precisely timed to the apex of each ripple to create an increasing harmonic wave (the 'Wave Motion' effect). Eventually, the energy of the occillation becomes too great, a tear in space is produced, and the starship falls in."
+   :titles "Gate Drive, Stargate, Wave Motion Engine, Wormhole"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Hyperdrive"
+     "Strategic Warp Jump"
+     "Tactical Warp Jump"))
+  (base/power
    :name "Stormcraft"
    :summary
     "* Stormcraft is the magical version of Weather Control")
   (base/power
    :name "Strength"
-   :reference "* Technique is for lightweights. - Sett, Runeterra"
+   :reference
+    "* Technique is for lightweights. - Sett, Runeterra"
+   :summary
+    "Superhuman strength
+     * Note: Large objects tend to break when lifted unless [Area Effect] is used"
    :stat "Body"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -5896,6 +5930,31 @@
        :summary
         "* Teleport an object/objects that you know the exact location of to your location.
          * Level determines size of object/objects and distance.")))
+  (base/power
+   :name "Terrestrial"
+   :titles "Ground Movement"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "2-Legged"
+     "3-Legged"
+     "4-Legged"
+     "6-Legged"
+     "8-Legged"
+     "Drilling"
+     "Excavating"
+     "Hover"
+     "Jump Jets"
+     "Line Swinging"
+     "Off Roading"
+     "Snowcraft"
+     "Tracked"
+     "Turbo Booster"
+     "Wall Crawling"
+     "Wall Running"
+     "Water Walking"
+     "Water Running"
+     "Wheeled"))
   (base/power
    :name "Time"
    :reference
@@ -5988,11 +6047,7 @@
       (base/ability
        :name "Resist:Exposure")
      "Resist:Fire"
-      (base/ability
-       :name "Resist:Fire"
-       :summary
-        "[Reduce Damage]: Reduce [Weapon Rating] by [Rating].
-         Note: Not the same as Resist Heat")
+      (base/ability<-tactics-key tactics "Resist:Fire")
      "Resist:Gravity"
       (base/ability
        :name "Resist:Gravity")
@@ -6264,13 +6319,13 @@
        :name "Scrying Pool"
        :summary
         "* Look at your reflection in any pool of water, drop something in, and when the ripples recede you may see the current reflection from any other body of water that you have seen your reflection in.")
-     "Summon Current"
+     "Summon:Current"
       (base/ability
-       :name "Summon Current"
+       :name "Summon:Current"
        :summary "* Summons a small living water flow in moving water. Water elementals love nothing more than pushing things around.")
-     "Summon Undine"
+     "Summon:Undine"
       (base/ability
-       :name "Summon Undine")
+       :name "Summon:Undine")
      "Tides"
       (base/ability
        :name "Tides"
@@ -6695,38 +6750,44 @@
       (base/ability
        :name "Vulnerability"
        :summary "* Take additional damage from certain effects")
-     "Vulnerable: Bleeding"
+     "Vulnerable:Bash"
       (base/ability
-       :name "Vulnerable: Bleeding")
-     "Vulnerable: Electricity"
+       :name "Vulnerable:Bash")
+     "Vulnerable:Bleeding"
       (base/ability
-       :name "Vulnerable: Electricity")
-     "Vulnerable: Fire"
+       :name "Vulnerable:Bleeding")
+     "Vulnerable:Electricity"
       (base/ability
-       :name "Vulnerable: Fire")
-     "Vulnerable: Heat"
+       :name "Vulnerable:Electricity")
+     "Vulnerable:Fire"
       (base/ability
-       :name "Vulnerable: Heat")
-     "Vulnerable: Impact"
+       :name "Vulnerable:Fire")
+     "Vulnerable:Hack"
       (base/ability
-       :name "Vulnerable: Impact")
-     "Vulnerable: Piercing"
+       :name "Vulnerable:Hack")
+     "Vulnerable:Heat"
       (base/ability
-       :name "Vulnerable: Piercing")
-     "Vulnerable: Radiation"
+       :name "Vulnerable:Heat")
+     "Vulnerable:Pierce"
       (base/ability
-       :name "Vulnerable: Radiation")
-     "Vulnerable: Slashing"
+       :name "Vulnerable:Pierce")
+     "Vulnerable:Radiation"
       (base/ability
-       :name "Vulnerable: Slashing")
-     "Vulnerable: Unusual"
+       :name "Vulnerable:Radiation")
+     "Vulnerable:Slash"
       (base/ability
-       :name "Vulnerable: Unusual"
+       :name "Vulnerable:Slash")
+     "Vulnerable:Unusual"
+      (base/ability
+       :name "Vulnerable:Unusual"
        :reference "Kryptonite, Severe Allergies"
        :summary "* Take damage from things that are not dangerous to ordinary people.")
      "Wasting"
       (base/ability
-       :name "Wasting")))
+       :name "Wasting"
+       :titles "Tuberculosis"
+       :summary
+        "* [Power]: [Weakness:Physical]")))
   (base/power
    :name "Weakness:Social"
    :abilitymap
@@ -6782,8 +6843,6 @@
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
-     "1-Handed"
-     "2-Handed"
      "Anti-Personnel"
      "Ammo:6"
      "Armor Piercing"
@@ -6796,24 +6855,22 @@
      "Burstfire"
      "Capacitors"
      "Chemical Rounds"
-     "Close Weapon"
      "Electroshock"
+     "Entanglement"
      "Explosive Rounds"
      "Extra Ammo"
-     "Firearm Weapon"
      "Flash Surpressor"
      "Gun Mount"
-     "Gunnery Weapon"
      "Gyrojet Rounds"
      "Hack"
+     "Handed:1"
+     "Handed:2"
      "High-Explosive"
-     "Melee Weapon"
      "Non-Lethal Rounds"
      "Overcharge"
      "Overload Weapon"
      "Paint Rounds"
      "Pierce"
-     "Ranged Weapon"
      "Rechargable"
      "Recoil Compensator"
      "Scatter"
@@ -6824,7 +6881,13 @@
      "Telescopic Sight"
      "Tracer Rounds"
      "Tracking Rounds"
-     "Turret"))
+     "Turret"
+     "Weapon:Close"
+     "Weapon:Demolitions"
+     "Weapon:Firearm"
+     "Weapon:Gunnery"
+     "Weapon:Melee"
+     "Weapon:Ranged"))
   (base/power
    :name "Wealth")
   (base/power
@@ -6836,7 +6899,7 @@
  [tactics : base/tactics]
  (let : base/tactics
   [powermap : base/powermap :=
-   (powermap-tactics tactics)]
+    (powermap-tactics tactics)]
   (copy tactics
    :powermap powermap))
  :doc "Returns a tactics updated with powermap")

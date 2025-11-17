@@ -2166,9 +2166,7 @@
        id="text9-0-4-34-9-6-9-8-8-2-4"
        inkscape:label="text"><tspan
          sodipodi:role="line"
-         id="tspan26"
-         x="49.944153"
-         y="44.767551">- Hunger:-1</tspan></text><text
+         id="tspan7">- Thirst:-1</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
        x="10.920952"
@@ -2189,9 +2187,7 @@
        id="text9-0-4-34-9-6-9-8-8-2"
        inkscape:label="text"><tspan
          sodipodi:role="line"
-         id="tspan24"
-         x="49.943806"
-         y="44.767551">- Hunger:+1</tspan></text><text
+         id="tspan6">- Thirst:+1</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.986124;stroke-dasharray:none"
        x="11.880936"

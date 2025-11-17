@@ -2,6 +2,7 @@
 
 import vx_core from "../../vx/core.js"
 import vx_collection from "../../vx/collection.js"
+import vx_type from "../../vx/type.js"
 import vx_ui_ui from "../../vx/ui/ui.js"
 
 
@@ -608,6 +609,13 @@ export default class nx_tactics_base {
   static t_weaknessmap = {}
   static e_weaknessmap = {vx_type: nx_tactics_base.t_weaknessmap}
   /**
+   * Constant: armormap
+   * Returns Armor stat from a given armor thickness
+   * {stringmap}
+   */
+  static c_armormap = {vx_type: vx_core.t_stringmap, vx_constdef: {pkgname: 'nx/tactics/base', name: 'armormap', type: vx_core.t_stringmap}}
+
+  /**
    * Constant: cardlayout-imagemirror
    * {cardlayout}
    */
@@ -1195,7 +1203,15 @@ export default class nx_tactics_base {
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const abilitymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":abilitymap")
-        const ability = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_ability, "map-1": nx_tactics_base.t_abilitymap}, abilitymap, key)
+        const isammo = vx_type.f_boolean_from_string_starts(key, "Ammo:")
+        const skey = vx_core.f_if_1({"any-1": vx_core.t_string}, isammo, "Ammo", key)
+        const ability = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_ability, "map-1": nx_tactics_base.t_abilitymap}, abilitymap, skey)
+        const ability2 = vx_core.f_if_1(
+          {"any-1": nx_tactics_base.t_ability},
+          isammo,
+          vx_core.f_copy(ability, ":name", key),
+          ability
+        )
         const logit = vx_core.f_if_2(
           {"any-1": vx_core.t_string},
           vx_core.f_then(
@@ -1204,7 +1220,7 @@ export default class nx_tactics_base {
           ),
           vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return key}))
         )
-        return ability
+        return ability2
       })
     )
     return output
@@ -2166,7 +2182,23 @@ export default class nx_tactics_base {
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const itemmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_itemmap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":itemmap")
-        const item = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_item, "map-1": nx_tactics_base.t_itemmap}, itemmap, key)
+        const pos = vx_type.f_int_from_string_find(key, " (")
+        const skey = vx_core.f_if_1(
+          {"any-1": vx_core.t_string},
+          vx_core.f_gt(pos, 0),
+          vx_type.f_string_from_string_end(
+            key,
+            vx_core.f_minus(pos, 1)
+          ),
+          key
+        )
+        const item = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_item, "map-1": nx_tactics_base.t_itemmap}, itemmap, skey)
+        const item2 = vx_core.f_if_1(
+          {"any-1": nx_tactics_base.t_item},
+          vx_core.f_gt(pos, 0),
+          vx_core.f_copy(item, ":name", key),
+          item
+        )
         const logit = vx_core.f_if_2(
           {"any-1": vx_core.t_string},
           vx_core.f_then(
@@ -2175,7 +2207,7 @@ export default class nx_tactics_base {
           ),
           vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return key}))
         )
-        return item
+        return item2
       })
     )
     return output
@@ -3699,6 +3731,55 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function stat_from_armor
+   * Converts armor to a stat
+   * @param  {string} armor
+   * @return {string}
+   */
+  static t_stat_from_armor = {
+    vx_type: vx_core.t_type
+  }
+  static e_stat_from_armor = {
+    vx_type: nx_tactics_base.t_stat_from_armor
+  }
+
+  // (func stat<-armor)
+  static f_stat_from_armor(armor) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const value = vx_core.f_any_from_map(
+          {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+          nx_tactics_base.c_armormap,
+          armor
+        )
+        return value
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function stat_from_int
+   * @param  {int} value
+   * @return {string}
+   */
+  static t_stat_from_int = {
+    vx_type: vx_core.t_type
+  }
+  static e_stat_from_int = {
+    vx_type: nx_tactics_base.t_stat_from_int
+  }
+
+  // (func stat<-int)
+  static f_stat_from_int(value) {
+    let output = vx_core.e_string
+    return output
+  }
+
+  /**
    * @function tactics_from_tactics_booklist
    * Return a ready tactics from a booklist.
    * @param  {tactics} tactics
@@ -5058,6 +5139,7 @@ export default class nx_tactics_base {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
+      "armormap": nx_tactics_base.c_armormap,
       "cardlayout-imagemirror": nx_tactics_base.c_cardlayout_imagemirror,
       "cardlayout-imageonly": nx_tactics_base.c_cardlayout_imageonly,
       "cardlayout-imagesideways": nx_tactics_base.c_cardlayout_imagesideways,
@@ -5342,6 +5424,8 @@ export default class nx_tactics_base {
       "specialtylist<-tactics-keys": nx_tactics_base.e_specialtylist_from_tactics_keys,
       "specialtymap<-specialtylist": nx_tactics_base.e_specialtymap_from_specialtylist,
       "specialtymap<-tactics-keys": nx_tactics_base.e_specialtymap_from_tactics_keys,
+      "stat<-armor": nx_tactics_base.e_stat_from_armor,
+      "stat<-int": nx_tactics_base.e_stat_from_int,
       "tactics<-tactics-booklist": nx_tactics_base.e_tactics_from_tactics_booklist,
       "tactics<-tactics-merge": nx_tactics_base.e_tactics_from_tactics_merge,
       "unit<-tactics-key": nx_tactics_base.e_unit_from_tactics_key,
@@ -5475,6 +5559,8 @@ export default class nx_tactics_base {
       "specialtylist<-tactics-keys": nx_tactics_base.t_specialtylist_from_tactics_keys,
       "specialtymap<-specialtylist": nx_tactics_base.t_specialtymap_from_specialtylist,
       "specialtymap<-tactics-keys": nx_tactics_base.t_specialtymap_from_tactics_keys,
+      "stat<-armor": nx_tactics_base.t_stat_from_armor,
+      "stat<-int": nx_tactics_base.t_stat_from_int,
       "tactics<-tactics-booklist": nx_tactics_base.t_tactics_from_tactics_booklist,
       "tactics<-tactics-merge": nx_tactics_base.t_tactics_from_tactics_merge,
       "unit<-tactics-key": nx_tactics_base.t_unit_from_tactics_key,
@@ -10255,6 +10341,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "turret": {
+          "name" : "turret",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "strength": {
           "name" : "strength",
           "type" : vx_core.t_string,
@@ -12372,6 +12463,42 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_specialtymap_from_tactics_keys
     }
 
+    // (func stat<-armor)
+    nx_tactics_base.t_stat_from_armor['vx_value'] = {
+      name          : "stat<-armor",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_stat_from_armor
+    }
+
+    // (func stat<-int)
+    nx_tactics_base.t_stat_from_int['vx_value'] = {
+      name          : "stat<-int",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_stat_from_int
+    }
+
     // (func tactics<-tactics-booklist)
     nx_tactics_base.t_tactics_from_tactics_booklist['vx_value'] = {
       name          : "tactics<-tactics-booklist",
@@ -13127,6 +13254,9 @@ export default class nx_tactics_base {
       proplast      : {},
       fn            : nx_tactics_base.f_weaknessmap_from_weaknesslist
     }
+
+    // (const armormap)
+    Object.assign(nx_tactics_base.c_armormap, vx_core.f_new({"any-1": vx_core.t_stringmap}, ":.1mm", "3x1", ":.2mm", "5x1", ":.5mm", "1x2", ":1mm", "2x2", ":2mm", "4x2", ":2.5mm", "6x2", ":3mm", "8x2", ":4mm", "9x2", ":5mm", "1x3", ":6mm", "2x3", ":7mm", "3x3", ":8mm", "3x3", ":9mm", "4x3", ":10mm", "4x3", ":13mm", "1x4", ":16mm", "2x4", ":20mm", "4x4", ":30mm", "1x5", ":40mm", "2x5", ":50mm", "5x5", ":60mm", "7x5", ":70mm", "1x6", ":75mm", "1x6", ":80mm", "2x6", ":90mm", "3x6", ":100mm", "3x6", ":200mm", "1x7", ":300mm", "2x7", ":400mm", "3x7", ":500mm", "5x7", ":600mm", "6x7", ":700mm", "8x7", ":800mm", "9x7", ":900mm", "1x8"))
 
     // (const cardlayout-imagemirror)
     Object.assign(nx_tactics_base.c_cardlayout_imagemirror, {

@@ -249,10 +249,10 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wasp, Huge"),
             "Wasp, Parasite",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wasp, Parasite"),
-            "Worm: Giant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm: Giant"),
-            "Worm: Giant Sand",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm: Giant Sand")
+            "Worm:Giant",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm:Giant"),
+            "Worm:Giant Sand",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm:Giant Sand")
           )
         )
       )
@@ -767,26 +767,26 @@ export default class nx_tactics_books_bestiary {
   }
 
   /**
-   * @function chapter_darkling
+   * @function chapter_darkin
    * @param  {tactics} tactics
    * @return {chapter}
    */
-  static t_chapter_darkling = {
+  static t_chapter_darkin = {
     vx_type: vx_core.t_type
   }
-  static e_chapter_darkling = {
-    vx_type: nx_tactics_books_bestiary.t_chapter_darkling
+  static e_chapter_darkin = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_darkin
   }
 
-  // (func chapter_darkling)
-  static f_chapter_darkling(tactics) {
+  // (func chapter_darkin)
+  static f_chapter_darkin(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
-      "Darkling",
+      "Darkin",
       ":titles",
-      "Goblinkind, Goblinoid",
+      "Darkling, Goblinkind, Goblinoid",
       ":sectionmap",
       nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Bugbear", ":reference", "* Serial Killer", ":summary", "* Appearance - Bugbears are the largest of the goblin races. They are 7ft tall, are covered in fur, have long ears, and have long fangs. They have a tough hide and dislike armor.\n* Personality - Brutal hunters and survivalists. They are butish like other goblins, but they are shrewd hunters and trappers. They are strictly carnivorous and treat everything as prey. They have been known to eat goblin in a pinch and would probably do so more if the flavor agreed with them more. They have little patience and are easily provoked. They are usually encountered alone while hunting or in a goblin nest acting as champion or leader.\n* Morale - Normal\n* Units - Skimisher, Trapper, Berserker, Light Axeman, Light Spearman, Light Polearm\n* Skills - Melee, Spear, Axe, Net, Hunting, Stealth, Survival, Close Combat, Knife\n* 7ft 400lbs.", ":titles", "Babau, Bogy, Bogey, Bogeyman, Bogill, Boogeyman, Bugaboo"),
@@ -3390,8 +3390,8 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            "Worm: Maggots",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm: Maggots")
+            "Worm:Maggots",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm:Maggots")
           )
         ),
         "Fantastic Underground Creatures",
@@ -3402,18 +3402,20 @@ export default class nx_tactics_books_bestiary {
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            "Worm: Bore",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm: Bore", ":reference", "* Bring me... the Bore Worms. No! Not the BORE WORMS! - Klytus and Princess Aura, Flash Gordon", ":summary", "* Small worms that dig through flesh as easily as earth. They are attracted to burrowing creatures."),
+            "Worm:Bore",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm:Bore", ":reference", "* Bring me... the Bore Worms. No! Not the BORE WORMS! - Klytus and Princess Aura, Flash Gordon", ":summary", "* Small worms that dig through flesh as easily as earth. They are attracted to burrowing creatures."),
+            "Worm:Giant Hammerhead",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm:Giant Hammerhead", ":summary", "* Perfect Regeneration, Spawning, Neurotoxic Skin"),
             "False Hydra",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "False Hydra", ":summary", "* An insane monster that grows under towns can erase memories. It is said that it is born of lies. Perhaps it is a [Curse]."),
             "Eel: Giant Land",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Eel: Giant Land", ":summary", "* Giant, sightless creatures related to the Giant Moray Eel, these creatures burrow underground.", ":titles", "Land Kra"),
-            "Slug: Giant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slug: Giant"),
-            "Snail: Giant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snail: Giant"),
-            "Worm: Sand",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm: Sand")
+            "Slug:Giant",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slug:Giant"),
+            "Snail:Giant",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snail:Giant"),
+            "Worm:Sand",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Worm:Sand")
           )
         )
       )
@@ -3461,7 +3463,7 @@ export default class nx_tactics_books_bestiary {
         nx_tactics_books_bestiary.f_chapter_dragons(tactics),
         nx_tactics_books_bestiary.f_chapter_elementals(tactics),
         nx_tactics_books_bestiary.f_chapter_extra_dimensional(tactics),
-        nx_tactics_books_bestiary.f_chapter_darkling(tactics),
+        nx_tactics_books_bestiary.f_chapter_darkin(tactics),
         nx_tactics_books_bestiary.f_chapter_giant_races(tactics),
         nx_tactics_books_bestiary.f_chapter_mythical_beasts(tactics),
         nx_tactics_books_bestiary.f_chapter_shapeshifters(tactics),
@@ -3484,7 +3486,7 @@ export default class nx_tactics_books_bestiary {
       "chapter_beastmen": nx_tactics_books_bestiary.e_chapter_beastmen,
       "chapter_bestiary_overview": nx_tactics_books_bestiary.e_chapter_bestiary_overview,
       "chapter_constructs": nx_tactics_books_bestiary.e_chapter_constructs,
-      "chapter_darkling": nx_tactics_books_bestiary.e_chapter_darkling,
+      "chapter_darkin": nx_tactics_books_bestiary.e_chapter_darkin,
       "chapter_dragons": nx_tactics_books_bestiary.e_chapter_dragons,
       "chapter_elementals": nx_tactics_books_bestiary.e_chapter_elementals,
       "chapter_extra-dimensional": nx_tactics_books_bestiary.e_chapter_extra_dimensional,
@@ -3509,7 +3511,7 @@ export default class nx_tactics_books_bestiary {
       "chapter_beastmen": nx_tactics_books_bestiary.t_chapter_beastmen,
       "chapter_bestiary_overview": nx_tactics_books_bestiary.t_chapter_bestiary_overview,
       "chapter_constructs": nx_tactics_books_bestiary.t_chapter_constructs,
-      "chapter_darkling": nx_tactics_books_bestiary.t_chapter_darkling,
+      "chapter_darkin": nx_tactics_books_bestiary.t_chapter_darkin,
       "chapter_dragons": nx_tactics_books_bestiary.t_chapter_dragons,
       "chapter_elementals": nx_tactics_books_bestiary.t_chapter_elementals,
       "chapter_extra-dimensional": nx_tactics_books_bestiary.t_chapter_extra_dimensional,
@@ -3647,9 +3649,9 @@ export default class nx_tactics_books_bestiary {
       fn            : nx_tactics_books_bestiary.f_chapter_constructs
     }
 
-    // (func chapter_darkling)
-    nx_tactics_books_bestiary.t_chapter_darkling['vx_value'] = {
-      name          : "chapter_darkling",
+    // (func chapter_darkin)
+    nx_tactics_books_bestiary.t_chapter_darkin['vx_value'] = {
+      name          : "chapter_darkin",
       pkgname       : "nx/tactics/books/bestiary",
       extends       : ":func",
       idx           : 0,
@@ -3662,7 +3664,7 @@ export default class nx_tactics_books_bestiary {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_books_bestiary.f_chapter_darkling
+      fn            : nx_tactics_books_bestiary.f_chapter_darkin
     }
 
     // (func chapter_dragons)
