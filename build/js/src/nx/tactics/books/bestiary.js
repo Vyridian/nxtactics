@@ -1920,11 +1920,11 @@ export default class nx_tactics_books_bestiary {
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
-                "Demon Soul",
+                "Demonic",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Demon Soul",
+                  "Demonic",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},
@@ -1946,8 +1946,8 @@ export default class nx_tactics_books_bestiary {
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
-                "Demon Soul",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Demon Soul"),
+                "Demonic",
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Demonic"),
                 "Quickness",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
@@ -3290,7 +3290,7 @@ export default class nx_tactics_books_bestiary {
           ":name",
           "Noncorporeal Undead",
           ":unitmap",
-          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Haunt", "Lemure", "Lost Soul", "Phantom", "Poltergeist", "Reaper", "Shade", "Shadow", "Sluagh", "Spectral Horse", "Spectre", "Will-O-Wisp", "Wraith")
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Haunt", "Lemure", "Living Shadow", "Lost Soul", "Phantom", "Poltergeist", "Reaper", "Shade", "Sluagh", "Spectral Horse", "Spectre", "Will-O-Wisp", "Wraith")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

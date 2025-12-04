@@ -313,12 +313,12 @@
    :image "images/cards/place-temple.svg")
   (base/place
    :name "Terrain:Dirt"
-   :image "images/pages/place-terrain-dirt.svg"
+   :image "images/terrain/terrain-dirt.svg"
    :summary
     "A map for plain dirt. No terrain penalty")
   (base/place
    :name "Terrain:Forest"
-   :image "images/pages/place-terrain-forest.svg"
+   :image "images/terrain/terrain-forest.svg"
    :summary
     "A map for plain dirt. No terrain penalty
      * [Move]:-1
@@ -327,27 +327,27 @@
      * [Evade]: [Skill]:+1")
   (base/place
    :name "Terrain:Grassland"
-   :image "images/pages/place-terrain-grassland.svg"
+   :image "images/terrain/terrain-grassland.svg"
    :summary
     "A map for plain grass. No terrain penalty")
   (base/place
    :name "Terrain:Sea"
-   :image "images/pages/place-terrain-sea.svg"
+   :image "images/terrain/terrain-sea.svg"
    :summary
     "A map for open sea. No terrain penalty")
   (base/place
    :name "Terrain:Sky"
-   :image "images/pages/place-terrain-sky.svg"
+   :image "images/terrain/terrain-sky.svg"
    :summary
     "A map for open sky. No terrain penalty")
   (base/place
    :name "Terrain:Snowfield"
-   :image "images/pages/place-terrain-snowfield.svg"
+   :image "images/terrain/terrain-snowfield.svg"
    :summary
     "A map for snowfield. Move:-2")
   (base/place
    :name "Terrain:Space"
-   :image "images/pages/place-terrain-space.svg"
+   :image "images/terrain/terrain-space.svg"
    :summary
     "A map for open space. No terrain penalty.")
   (base/place

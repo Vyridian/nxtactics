@@ -33,7 +33,10 @@
   (base/rule
    :name "Advantage"
    :image "images/rule-advantage.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :summary
+    "A positive modifier to a single Conflict
+     Conflict Reveal - Reveal Fate. You may use that card instead")
   (base/rule
    :name "Arc"
    :image "images/rule-arc.svg"
@@ -357,7 +360,10 @@
   (base/rule
    :name "Disadvantage"
    :image "images/rule-disadvantage.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :summary
+    "A negative modifier to a single Conflict
+     Conflict Reveal - Reveal Fate. Rival decides which you use")
   (base/rule
    :name "Disclaimer"
    :image "images/rule-disclaimer.svg"
@@ -558,7 +564,7 @@
      * Beastial
      * Herbalism
      * Naturalism
-     Black
+     Dark Arts
      * Bloodcraft
      * Chaos
      * Corruption

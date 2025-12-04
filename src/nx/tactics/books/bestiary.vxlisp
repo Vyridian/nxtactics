@@ -1746,9 +1746,9 @@
           :titles "Number 47"
           :unitpowermap
            (base/unitpowermap
-            "Demon Soul"
+            "Demonic"
              (base/unitpower
-              :name "Demon Soul"
+              :name "Demonic"
               :unitabilitymap
                (base/unitabilitymap
                 "Demonic Defense"
@@ -1763,9 +1763,9 @@
           :titles "Phantom Miria"
           :unitpowermap
            (base/unitpowermap
-            "Demon Soul"
+            "Demonic"
              (base/unitpower
-              :name "Demon Soul")
+              :name "Demonic")
             "Quickness"
              (base/unitpower
               :name "Quickness"
@@ -4457,12 +4457,12 @@
        tactics
        "Haunt"
        "Lemure"
+       "Living Shadow"
        "Lost Soul"
        "Phantom"
        "Poltergeist"
        "Reaper"
        "Shade"
-       "Shadow"
        "Sluagh"
        "Spectral Horse"
        "Spectre"

@@ -56,6 +56,9 @@ import nx_tactics_decks_ability_test from "./nx/tactics/decks/ability_test.js"
 import nx_tactics_decks_condition_test from "./nx/tactics/decks/condition_test.js"
 import nx_tactics_decks_conflict_test from "./nx/tactics/decks/conflict_test.js"
 import nx_tactics_decks_disorder_test from "./nx/tactics/decks/disorder_test.js"
+import nx_tactics_decks_dungeon_test from "./nx/tactics/decks/dungeon_test.js"
+import nx_tactics_decks_encounter_test from "./nx/tactics/decks/encounter_test.js"
+import nx_tactics_decks_highway_test from "./nx/tactics/decks/highway_test.js"
 import nx_tactics_decks_item_test from "./nx/tactics/decks/item_test.js"
 import nx_tactics_decks_place_test from "./nx/tactics/decks/place_test.js"
 import nx_tactics_decks_power_test from "./nx/tactics/decks/power_test.js"
@@ -72,6 +75,7 @@ import nx_tactics_decks_starter_test from "./nx/tactics/decks/starter_test.js"
 import nx_tactics_decks_trauma_test from "./nx/tactics/decks/trauma_test.js"
 import nx_tactics_decks_unit_test from "./nx/tactics/decks/unit_test.js"
 import nx_tactics_decks_vehicle_test from "./nx/tactics/decks/vehicle_test.js"
+import nx_tactics_decks_wilderness_test from "./nx/tactics/decks/wilderness_test.js"
 import nx_tactics_decks_wound_test from "./nx/tactics/decks/wound_test.js"
 import nx_tactics_ui_stylesheet_test from "./nx/tactics/ui/stylesheet_test.js"
 import vx_data_csv_test from "./vx/data/csv_test.js"
@@ -157,6 +161,9 @@ export default class app_test {
       nx_tactics_decks_condition_test.test_package(context),
       nx_tactics_decks_conflict_test.test_package(context),
       nx_tactics_decks_disorder_test.test_package(context),
+      nx_tactics_decks_dungeon_test.test_package(context),
+      nx_tactics_decks_encounter_test.test_package(context),
+      nx_tactics_decks_highway_test.test_package(context),
       nx_tactics_decks_item_test.test_package(context),
       nx_tactics_decks_place_test.test_package(context),
       nx_tactics_decks_power_test.test_package(context),
@@ -173,6 +180,7 @@ export default class app_test {
       nx_tactics_decks_trauma_test.test_package(context),
       nx_tactics_decks_unit_test.test_package(context),
       nx_tactics_decks_vehicle_test.test_package(context),
+      nx_tactics_decks_wilderness_test.test_package(context),
       nx_tactics_decks_wound_test.test_package(context),
       nx_tactics_ui_stylesheet_test.test_package(context),
       vx_data_csv_test.test_package(context),

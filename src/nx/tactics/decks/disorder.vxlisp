@@ -728,6 +728,6 @@
       disorder-2d
       disorder-2h
       disorder-2s))
-   (base/cardmap-copy<-card-count-isnum
-    stun 54 false)))
+    (base/cardmap-copy<-card-count-isnum
+     stun 54 false)))
  :doc "Damage to the Mind")

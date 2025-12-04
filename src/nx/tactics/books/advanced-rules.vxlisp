@@ -204,14 +204,6 @@
      :name "Effect Rules"
      :rulemap
       (rulemap
-       :Cold
-        (rule
-         :name "Cold"
-         :summary "* [Critical Hits] may be used for [Slow Tokens]")
-       :Flame
-        (rule
-         :name "Flame"
-         :summary "* [Critical Hits] may be used for [Fire Tokens]")
        :Infection
         (rule
          :name "Infection")
@@ -222,14 +214,6 @@
         (rule
          :name "Permanent Disability"
          :titles "Aneurysm, Brain Damage, Crippling, Nerve Damage, Paralysis, Stroke")
-       :Piercing
-        (rule
-         :name "Piercing"
-         :summary "* [Damage]: [Critical Hits] may be used to roll 2 more [Damage] dice each.")
-       :Slashing
-        (rule
-         :name "Slashing"
-         :summary "* [Damage]: [Critical Hits] may be used for [Bleeding Tokens].")
        :Smoke
         (rule
          :name "Smoke")

@@ -334,7 +334,7 @@
    :unitpowermap
     (base/unitpowermap<-tactics-keys
      tactics
-     "Cold"))
+     "Darkness"))
   (base/unit
    :name "Dead of Winter"
    :reference
@@ -957,6 +957,19 @@ Allseer - Grants resistance to being surprised or flanked."
   (base/unit
    :name "Lion")
   (base/unit
+   :name "Living Shadow"
+   :titles "Shadow Cursed"
+   :summary
+    "* Living Shadows are strange undead creatures that appear as physical shadows.
+     * Personality - They are manifestations of the host's suppressed nature given form.
+     * Shadowblight - Shadows are a curse spread through contact with other Shadows like a disease. After contact, the host's Shadow slowly gains in strength until it can begin to act independently. If it chooses, it may communicate with its host. Eventually, it can interact with physical objects. It is bound to the host and may only escape with the host's death or by swapping consciousness with the host.
+     * Types - There are two types of Living Shadow:
+     ** Bound Shadow - Those still bound to their hosts
+     ** Severed Shadow - Those that have been released after their host's death. The Shadow is now an Undead creature free to spread its curse to others.
+     * Skills - All the host possessed
+     * Powers - Stretching
+     * Weakness - All Shadows are driven off by light and powerful magical light can destroy them.")
+  (base/unit
    :name "Lost Soul")
   (base/unit
    :name "Luminary"
@@ -1391,8 +1404,6 @@ Allseer - Grants resistance to being surprised or flanked."
      * Shades are the spirits of those who died in suicide, accident, murder, or wrongful execution. They are bound to this plane by the anger they felt at their deaths.
      * Suicide and accident victims attempt to compel those most like their former selves to die in the same manner.
      * Murder and wrongful death victims attempt to revenge themselves upon the killer or his descendents.")
-  (base/unit
-   :name "Shadow")
   (base/unit
    :name "Sheep"
    :image "images/cards/unit-sheep.svg"

@@ -1092,8 +1092,8 @@
      * Prototype
      * Yoki - 妖気, or 'demon essence' (the first character means demon, and second character is the same as the Chinese word commonly known as chi)."
    :summary
-    "* Demon Soul is when a user has been partially or completely possessed by a demonic entity.
-     * Demon Soul allows the user a number of physical advantages including regeneration and beastial, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit."
+    "* Demonic is when a user has been partially or completely possessed by a demonic entity.
+     * Demonic allows the user a number of physical advantages including regeneration and beastial, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit."
    :stat "Beast")
   (base/power
    :name "Divination"
@@ -3002,7 +3002,9 @@
      "Entrance"))
   (base/power
    :name "Cold"
-   :reference "Cold Miser, Frozen"
+   :reference
+    "* You come on like a flame then you turn a cold shoulder. Fire and Ice. - Pat Benetar, Fire and Ice
+     * Cold Miser, Frozen"
    :summary
     "* Cold abilities slow the movement of particles in the target. This slowing causes heat to leave the target. Therefore, cold powers also trigger a rush of hot air to rise from the target swirling wind all around.
      * Symbol - Bluish White Snowflake
@@ -5195,8 +5197,6 @@
   (base/power
    :name "Madness"
    :titles "Lunatic, Madman, Manic"
-   :reference
-    "* Rules were made to be broken, like buildings, and people. - Jinx, Runeterra"
    :abilitymap
     (base/abilitymap
      :Delirium
@@ -5645,10 +5645,14 @@
         "* Action: Perform a basic [Attack] on a single target. If the attack succeeds, roll additional damage dice up to level.")
      "Hyper Running"
       (base/ability
-       :name "Hyper Running")
+       :name "Hyper Running"
+       :summary
+        "Spend 1 Move to gain 2 Move that can only be used for ground movement (Max half your Level in Quickness)")
      "Hyper Swimming"
       (base/ability
-       :name "Hyper Swimming")
+       :name "Hyper Swimming"
+       :summary
+        "Spend 1 Move to gain 2 Move that can only be used for water movement (Max half your Level in Quickness)")
      "Hyper Storm"
       (base/ability
        :name "Hyper Storm"

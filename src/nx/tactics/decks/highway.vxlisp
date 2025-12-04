@@ -1,0 +1,291 @@
+(package nx/tactics/decks/highway
+ :libs (lib base :path nx/tactics/base)
+ :doc "Highway Deck")
+
+(func deck-highway : base/deck
+ (base/deck
+  :name "Highway"
+  :image "images/highway/highway-back.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      (base/card
+       :name "Highway:wb"
+       :ranksuit base/ranksuit-jokerblack
+       :image "images/highway/highway-wb.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:wr"
+       :ranksuit base/ranksuit-jokerred
+       :image "images/highway/highway-wr.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:ac"
+       :ranksuit base/ranksuit-ac
+       :image "images/highway/highway-ac.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:ad"
+       :ranksuit base/ranksuit-ad
+       :image "images/highway/highway-ad.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:ah"
+       :ranksuit base/ranksuit-ah
+       :image "images/highway/highway-ah.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:as"
+       :ranksuit base/ranksuit-as
+       :image "images/highway/highway-as.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:kc"
+       :ranksuit base/ranksuit-kc
+       :image "images/highway/highway-kc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:kd"
+       :ranksuit base/ranksuit-kd
+       :image "images/highway/highway-kd.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:kh"
+       :ranksuit base/ranksuit-kh
+       :image "images/highway/highway-kh.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:ks"
+       :ranksuit base/ranksuit-ks
+       :image "images/highway/highway-ks.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:qc"
+       :ranksuit base/ranksuit-qc
+       :image "images/highway/highway-qc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:qd"
+       :ranksuit base/ranksuit-qd
+       :image "images/highway/highway-qd.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:qh"
+       :ranksuit base/ranksuit-qh
+       :image "images/highway/highway-qh.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:qs"
+       :ranksuit base/ranksuit-qs
+       :image "images/highway/highway-qs.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:jc"
+       :ranksuit base/ranksuit-jc
+       :image "images/highway/highway-jc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:jd"
+       :ranksuit base/ranksuit-jd
+       :image "images/highway/highway-jd.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:jh"
+       :ranksuit base/ranksuit-jh
+       :image "images/highway/highway-jh.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:js"
+       :ranksuit base/ranksuit-js
+       :image "images/highway/highway-js.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:tc"
+       :ranksuit base/ranksuit-tc
+       :image "images/highway/highway-tc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:td"
+       :ranksuit base/ranksuit-td
+       :image "images/highway/highway-td.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:th"
+       :ranksuit base/ranksuit-th
+       :image "images/highway/highway-th.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:ts"
+       :ranksuit base/ranksuit-ts
+       :image "images/highway/highway-ts.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:9c"
+       :ranksuit base/ranksuit-9c
+       :image "images/highway/highway-9c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:9d"
+       :ranksuit base/ranksuit-9d
+       :image "images/highway/highway-9d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:9h"
+       :ranksuit base/ranksuit-9h
+       :image "images/highway/highway-9h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:9s"
+       :ranksuit base/ranksuit-9s
+       :image "images/highway/highway-9s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:8c"
+       :ranksuit base/ranksuit-8c
+       :image "images/highway/highway-8c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:8d"
+       :ranksuit base/ranksuit-8d
+       :image "images/highway/highway-8d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:8h"
+       :ranksuit base/ranksuit-8h
+       :image "images/highway/highway-8h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:8s"
+       :ranksuit base/ranksuit-8s
+       :image "images/highway/highway-8s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:7c"
+       :ranksuit base/ranksuit-7c
+       :image "images/highway/highway-7c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:7d"
+       :ranksuit base/ranksuit-7d
+       :image "images/highway/highway-7d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:7h"
+       :ranksuit base/ranksuit-7h
+       :image "images/highway/highway-7h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:7s"
+       :ranksuit base/ranksuit-7s
+       :image "images/highway/highway-7s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:6c"
+       :ranksuit base/ranksuit-6c
+       :image "images/highway/highway-6c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:6d"
+       :ranksuit base/ranksuit-6d
+       :image "images/highway/highway-6d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:6h"
+       :ranksuit base/ranksuit-6h
+       :image "images/highway/highway-6h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:6s"
+       :ranksuit base/ranksuit-6s
+       :image "images/highway/highway-6s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:5c"
+       :ranksuit base/ranksuit-5c
+       :image "images/highway/highway-5c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:5d"
+       :ranksuit base/ranksuit-5d
+       :image "images/highway/highway-5d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:5h"
+       :ranksuit base/ranksuit-5h
+       :image "images/highway/highway-5h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:5s"
+       :ranksuit base/ranksuit-5s
+       :image "images/highway/highway-5s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:4c"
+       :ranksuit base/ranksuit-4c
+       :image "images/highway/highway-4c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:4d"
+       :ranksuit base/ranksuit-4d
+       :image "images/highway/highway-4d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:4h"
+       :ranksuit base/ranksuit-4h
+       :image "images/highway/highway-4h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:4s"
+       :ranksuit base/ranksuit-4s
+       :image "images/highway/highway-4s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:3c"
+       :ranksuit base/ranksuit-3c
+       :image "images/highway/highway-3c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:3d"
+       :ranksuit base/ranksuit-3d
+       :image "images/highway/highway-3d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:3h"
+       :ranksuit base/ranksuit-3h
+       :image "images/highway/highway-3h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:3s"
+       :ranksuit base/ranksuit-3s
+       :image "images/highway/highway-3s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:2c"
+       :ranksuit base/ranksuit-2c
+       :image "images/highway/highway-2c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:2d"
+       :ranksuit base/ranksuit-2d
+       :image "images/highway/highway-2d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:2h"
+       :ranksuit base/ranksuit-2h
+       :image "images/highway/highway-2h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Highway:2s"
+       :ranksuit base/ranksuit-2s
+       :image "images/highway/highway-2s.svg"
+       :layout base/cardlayout-imageonly)))
+    (base/cardmap-copy<-card-count-isnum
+     (base/card
+      :name "Highway:Back"
+      :image "images/highway/highway-back.svg"
+      :layout base/cardlayout-imageonly)
+     54
+     false)))
+ :doc "Highway Deck")

@@ -8,6 +8,8 @@ import nx_tactics_decks_condition from "../../../../src/nx/tactics/decks/conditi
 import nx_tactics_decks_conflict from "../../../../src/nx/tactics/decks/conflict.js"
 import nx_tactics_decks_data from "../../../../src/nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../../src/nx/tactics/decks/disorder.js"
+import nx_tactics_decks_dungeon from "../../../../src/nx/tactics/decks/dungeon.js"
+import nx_tactics_decks_highway from "../../../../src/nx/tactics/decks/highway.js"
 import nx_tactics_decks_reference from "../../../../src/nx/tactics/decks/reference.js"
 import nx_tactics_decks_rule from "../../../../src/nx/tactics/decks/rule.js"
 import nx_tactics_decks_restrain from "../../../../src/nx/tactics/decks/restrain.js"
@@ -15,6 +17,7 @@ import nx_tactics_decks_scene from "../../../../src/nx/tactics/decks/scene.js"
 import nx_tactics_decks_starter from "../../../../src/nx/tactics/decks/starter.js"
 import nx_tactics_decks_trauma from "../../../../src/nx/tactics/decks/trauma.js"
 import nx_tactics_decks_vehicle from "../../../../src/nx/tactics/decks/vehicle.js"
+import nx_tactics_decks_wilderness from "../../../../src/nx/tactics/decks/wilderness.js"
 import nx_tactics_decks_wound from "../../../../src/nx/tactics/decks/wound.js"
 
 export default class nx_tactics_decks_deck_test {

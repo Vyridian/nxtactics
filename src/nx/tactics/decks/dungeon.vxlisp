@@ -1,0 +1,291 @@
+(package nx/tactics/decks/dungeon
+ :libs (lib base :path nx/tactics/base)
+ :doc "Dungeon Deck")
+
+(func deck-dungeon : base/deck
+ (base/deck
+  :name "Dungeon"
+  :image "images/dungeon/dungeon-back.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      (base/card
+       :name "Dungeon:wb"
+       :ranksuit base/ranksuit-jokerblack
+       :image "images/dungeon/dungeon-wb.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:wr"
+       :ranksuit base/ranksuit-jokerred
+       :image "images/dungeon/dungeon-wr.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:ac"
+       :ranksuit base/ranksuit-ac
+       :image "images/dungeon/dungeon-ac.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:ad"
+       :ranksuit base/ranksuit-ad
+       :image "images/dungeon/dungeon-ad.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:ah"
+       :ranksuit base/ranksuit-ah
+       :image "images/dungeon/dungeon-ah.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:as"
+       :ranksuit base/ranksuit-as
+       :image "images/dungeon/dungeon-as.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:kc"
+       :ranksuit base/ranksuit-kc
+       :image "images/dungeon/dungeon-kc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:kd"
+       :ranksuit base/ranksuit-kd
+       :image "images/dungeon/dungeon-kd.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:kh"
+       :ranksuit base/ranksuit-kh
+       :image "images/dungeon/dungeon-kh.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:ks"
+       :ranksuit base/ranksuit-ks
+       :image "images/dungeon/dungeon-ks.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:qc"
+       :ranksuit base/ranksuit-qc
+       :image "images/dungeon/dungeon-qc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:qd"
+       :ranksuit base/ranksuit-qd
+       :image "images/dungeon/dungeon-qd.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:qh"
+       :ranksuit base/ranksuit-qh
+       :image "images/dungeon/dungeon-qh.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:qs"
+       :ranksuit base/ranksuit-qs
+       :image "images/dungeon/dungeon-qs.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:jc"
+       :ranksuit base/ranksuit-jc
+       :image "images/dungeon/dungeon-jc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:jd"
+       :ranksuit base/ranksuit-jd
+       :image "images/dungeon/dungeon-jd.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:jh"
+       :ranksuit base/ranksuit-jh
+       :image "images/dungeon/dungeon-jh.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:js"
+       :ranksuit base/ranksuit-js
+       :image "images/dungeon/dungeon-js.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:tc"
+       :ranksuit base/ranksuit-tc
+       :image "images/dungeon/dungeon-tc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:td"
+       :ranksuit base/ranksuit-td
+       :image "images/dungeon/dungeon-td.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:th"
+       :ranksuit base/ranksuit-th
+       :image "images/dungeon/dungeon-th.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:ts"
+       :ranksuit base/ranksuit-ts
+       :image "images/dungeon/dungeon-ts.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:9c"
+       :ranksuit base/ranksuit-9c
+       :image "images/dungeon/dungeon-9c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:9d"
+       :ranksuit base/ranksuit-9d
+       :image "images/dungeon/dungeon-9d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:9h"
+       :ranksuit base/ranksuit-9h
+       :image "images/dungeon/dungeon-9h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:9s"
+       :ranksuit base/ranksuit-9s
+       :image "images/dungeon/dungeon-9s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:8c"
+       :ranksuit base/ranksuit-8c
+       :image "images/dungeon/dungeon-8c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:8d"
+       :ranksuit base/ranksuit-8d
+       :image "images/dungeon/dungeon-8d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:8h"
+       :ranksuit base/ranksuit-8h
+       :image "images/dungeon/dungeon-8h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:8s"
+       :ranksuit base/ranksuit-8s
+       :image "images/dungeon/dungeon-8s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:7c"
+       :ranksuit base/ranksuit-7c
+       :image "images/dungeon/dungeon-7c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:7d"
+       :ranksuit base/ranksuit-7d
+       :image "images/dungeon/dungeon-7d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:7h"
+       :ranksuit base/ranksuit-7h
+       :image "images/dungeon/dungeon-7h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:7s"
+       :ranksuit base/ranksuit-7s
+       :image "images/dungeon/dungeon-7s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:6c"
+       :ranksuit base/ranksuit-6c
+       :image "images/dungeon/dungeon-6c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:6d"
+       :ranksuit base/ranksuit-6d
+       :image "images/dungeon/dungeon-6d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:6h"
+       :ranksuit base/ranksuit-6h
+       :image "images/dungeon/dungeon-6h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:6s"
+       :ranksuit base/ranksuit-6s
+       :image "images/dungeon/dungeon-6s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:5c"
+       :ranksuit base/ranksuit-5c
+       :image "images/dungeon/dungeon-5c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:5d"
+       :ranksuit base/ranksuit-5d
+       :image "images/dungeon/dungeon-5d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:5h"
+       :ranksuit base/ranksuit-5h
+       :image "images/dungeon/dungeon-5h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:5s"
+       :ranksuit base/ranksuit-5s
+       :image "images/dungeon/dungeon-5s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:4c"
+       :ranksuit base/ranksuit-4c
+       :image "images/dungeon/dungeon-4c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:4d"
+       :ranksuit base/ranksuit-4d
+       :image "images/dungeon/dungeon-4d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:4h"
+       :ranksuit base/ranksuit-4h
+       :image "images/dungeon/dungeon-4h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:4s"
+       :ranksuit base/ranksuit-4s
+       :image "images/dungeon/dungeon-4s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:3c"
+       :ranksuit base/ranksuit-3c
+       :image "images/dungeon/dungeon-3c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:3d"
+       :ranksuit base/ranksuit-3d
+       :image "images/dungeon/dungeon-3d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:3h"
+       :ranksuit base/ranksuit-3h
+       :image "images/dungeon/dungeon-3h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:3s"
+       :ranksuit base/ranksuit-3s
+       :image "images/dungeon/dungeon-3s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:2c"
+       :ranksuit base/ranksuit-2c
+       :image "images/dungeon/dungeon-2c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:2d"
+       :ranksuit base/ranksuit-2d
+       :image "images/dungeon/dungeon-2d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:2h"
+       :ranksuit base/ranksuit-2h
+       :image "images/dungeon/dungeon-2h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Dungeon:2s"
+       :ranksuit base/ranksuit-2s
+       :image "images/dungeon/dungeon-2s.svg"
+       :layout base/cardlayout-imageonly)))
+    (base/cardmap-copy<-card-count-isnum
+     (base/card
+      :name "Dungeon:Back"
+      :image "images/dungeon/dungeon-back.svg"
+      :layout base/cardlayout-imageonly)
+     54
+     false)))
+ :doc "Dungeon Deck")

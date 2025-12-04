@@ -1,0 +1,171 @@
+(package nx/tactics/decks/encounter
+ :libs (lib base :path nx/tactics/base)
+ :doc "Encounter Deck")
+
+(func rulemap-tactics : base/rulemap
+ [tactics : base/tactics]
+ (base/rulemap<-rulelist
+  (base/rulelist
+   (base/rule
+    :name "Strange:Anomaly"
+    :summary
+     "* Freakish Weather
+      * Myterious Barrier
+      * Omen/Portent
+      * Strange Presence
+      * Strange Lights or Sounds
+      * Unusual Animal Activity")
+   (base/rule
+    :name "Event:Adventurers"
+    :summary
+     "* Amateurs
+      * Bounty Hunters")
+   (base/rule
+    :name "Event:Local"
+    :summary
+     "* Guide
+      * Information")
+   (base/rule
+    :name "Event:Merchant"
+    :summary
+     "* Caravan
+      * Lone Merchant")
+   (base/rule
+    :name "Event:Messenger"
+    :summary
+     "* Diplomatic Envoy
+      * Lone Messenger")
+   (base/rule
+    :name "Event:Pilgrims"
+    :summary
+     "* Cultists
+      * Peaceful
+      * Zealots")
+   (base/rule
+    :name "Event:Refugees"
+    :summary
+     "* Beggar
+      * Deserter
+      * Lost Traveller
+      * Runaway")
+   (base/rule
+    :name "Hazard:Falling"
+    :summary
+     "* Falling Debris
+      * Quicksand
+      * Pit Trap
+      * Rockslide
+      * Sinkhole
+      * Spiked Pit")
+   (base/rule
+    :name "Hazard:Fire"
+    :summary
+     "* Forest Fire
+      * Wildfire")
+   (base/rule
+    :name "Hazard:Ground"
+    :summary
+     "* Test [Survival] or [Athletics] or slide to the other end of the space
+      * Cliff
+      * Obstacle
+      * Ravine
+      * Rockslide
+      * Slippery Ground
+      * Unstable Ground")
+   (base/rule
+    :name "Hazard:Trap"
+    :summary
+     "* Darts
+      * Explosives
+      * Fire Trap
+      * Tripwire")
+   (base/rule
+    :name "Hazard:Water"
+    :summary
+     "* Current
+      * Disease
+      * Flash Flood
+      * Flooding
+      * Parasites
+      * Polluted Pool
+      * Rapids
+      * Rising Water
+      * Stream
+      * Swamp")
+   (base/rule
+    :name "Hazard:Weather"
+    :summary
+     "Use the Weather Rules and adjust 1 by 2")
+   (base/rule
+    :name "Item:Clue"
+    :summary
+     "* Evidence
+      * Map
+      * Papers
+      * Traces of Conflict
+      * Tracks")
+   (base/rule
+    :name "Item:Food"
+    :summary
+     "* Abandoned Food
+      * Herbs
+      * Fruits and Berries
+      * Tubers")
+   (base/rule
+    :name "Item:Money")
+   (base/rule
+    :name "Item:Shelter"
+    :summary
+     "Sheltered Rest Spot
+      * Abandoned Building
+      * Cave
+      * Overhang")
+   (base/rule
+    :name "Item:Treasure")
+   (base/rule
+    :name "Item:Water")
+   (base/rule
+    :name "Threat:Ambush")
+   (base/rule
+    :name "Threat:Bandits"
+    :summary
+     "* Cutthroats
+      * Thieves")
+   (base/rule
+    :name "Threat:Creature"
+    :summary
+     "* Powerful Creature
+      * Predator
+      * Rogue Beast")
+   (base/rule
+    :name "Threat:Desparate"
+    :summary
+     "* Diseased
+      * Madmen
+      * Starving")
+   (base/rule
+    :name "Threat:Herd")
+   (base/rule
+    :name "Threat:Operatives"
+    :summary
+     "* Murderers
+      * Saboteurs
+      * Spies")
+   (base/rule
+    :name "Threat:Pack")
+   (base/rule
+    :name "Threat:Patrol"
+    :summary
+     "* Amateurs
+      * Military
+      * Paramilitary")
+   (base/rule
+    :name "Threat:Plants"
+    :summary
+     "* Poisonous
+      * Tangle Vines
+      * Thorn Bushes")
+   (base/rule
+    :name "Threat:Swarm")
+   ))
+ :doc "Returns the base encountermap")

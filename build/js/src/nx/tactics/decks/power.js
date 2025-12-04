@@ -638,7 +638,7 @@ export default class nx_tactics_decks_power {
         ":abilitymap",
         nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Cast a Long Shadow", "Cast Shadows", "Circle of Darkness", "Cloak of Shadows", "Darkest Hour", "Draw out the Darkness", "Dweller in Darkness", "Engulfed in Darkness", "Eye of Shadow", "Heart of Darkness", "Nightfall", "Oubliette", "Shadow Boxing", "Shadow Step", "Shadow Strike", "Speed of Night", "Tendrils of Night", "Wall of Darkness")
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Demonic", ":titles", "Demon, Demon Soul, Yoki, Yoma", ":reference", "* Claymore\n* Ghost Rider\n* Prototype\n* Yoki - 妖気, or 'demon essence' (the first character means demon, and second character is the same as the Chinese word commonly known as chi).", ":summary", "* Demon Soul is when a user has been partially or completely possessed by a demonic entity.\n* Demon Soul allows the user a number of physical advantages including regeneration and beastial, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit.", ":stat", "Beast"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Demonic", ":titles", "Demon, Demon Soul, Yoki, Yoma", ":reference", "* Claymore\n* Ghost Rider\n* Prototype\n* Yoki - 妖気, or 'demon essence' (the first character means demon, and second character is the same as the Chinese word commonly known as chi).", ":summary", "* Demonic is when a user has been partially or completely possessed by a demonic entity.\n* Demonic allows the user a number of physical advantages including regeneration and beastial, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit.", ":stat", "Beast"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
@@ -1643,7 +1643,7 @@ export default class nx_tactics_decks_power {
         ":name",
         "Cold",
         ":reference",
-        "Cold Miser, Frozen",
+        "* You come on like a flame then you turn a cold shoulder. Fire and Ice. - Pat Benetar, Fire and Ice\n* Cold Miser, Frozen",
         ":summary",
         "* Cold abilities slow the movement of particles in the target. This slowing causes heat to leave the target. Therefore, cold powers also trigger a rush of hot air to rise from the target swirling wind all around.\n* Symbol - Bluish White Snowflake\n* Personality: Cold Elementalist personalities are influenced by their link to Cold.\n** Examples: Cold, Icy, Chilly, Severe, Harsh, Brutal, Reserved",
         ":titles",
@@ -2998,8 +2998,6 @@ export default class nx_tactics_decks_power {
         "Madness",
         ":titles",
         "Lunatic, Madman, Manic",
-        ":reference",
-        "* Rules were made to be broken, like buildings, and people. - Jinx, Runeterra",
         ":abilitymap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_abilitymap},
@@ -3282,9 +3280,9 @@ export default class nx_tactics_decks_power {
           "Hyper Punch",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hyper Punch", ":summary", "* Action: Perform a basic [Attack] on a single target. If the attack succeeds, roll additional damage dice up to level."),
           "Hyper Running",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hyper Running"),
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hyper Running", ":summary", "Spend 1 Move to gain 2 Move that can only be used for ground movement (Max half your Level in Quickness)"),
           "Hyper Swimming",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hyper Swimming"),
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hyper Swimming", ":summary", "Spend 1 Move to gain 2 Move that can only be used for water movement (Max half your Level in Quickness)"),
           "Hyper Storm",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hyper Storm", ":summary", "Action: Use a Move and perform a basic [Attack] up to 1 target per level on each target along your path. If the attack succeeds, roll additional damage dice up to level.")
         )

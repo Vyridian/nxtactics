@@ -129,7 +129,9 @@ export default class nx_tactics_decks_rule {
         ":image",
         "images/rule-advantage.svg",
         ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "A positive modifier to a single Conflict\nConflict Reveal - Reveal Fate. You may use that card instead"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -502,7 +504,9 @@ export default class nx_tactics_decks_rule {
         ":image",
         "images/rule-disadvantage.svg",
         ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "A negative modifier to a single Conflict\nConflict Reveal - Reveal Fate. Rival decides which you use"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -737,7 +741,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Arcane\n* Abjuration\n* Alchemy\n* Artifice\n* Artistry\n* Astrology\n* Chronomancy\n* Conjuration\n* Sorcery\n* Thaumaturgy\n* Wizardry\nElemental\n* Aeromancy\n* Cryomancy\n* Electromancy\n* Geomancy\n* Pyromancy\n* Stormcraft\nNature\n* Animalism\n* Beastial\n* Herbalism\n* Naturalism\nBlack\n* Bloodcraft\n* Chaos\n* Corruption\n* Darkness\n* Demonic\n* Fleshcraft\n* Necromancy\nSpiritualism\n* Divination\n* Dreaming\n* Enchantment\n* Hexcraft\n* Mysticism\n* Shamanism\nThergy\n* Blessing\n* Conviction\n* Invocation\n* Life\n* Primordial\n* Purity\n* Radiant"
+        "Arcane\n* Abjuration\n* Alchemy\n* Artifice\n* Artistry\n* Astrology\n* Chronomancy\n* Conjuration\n* Sorcery\n* Thaumaturgy\n* Wizardry\nElemental\n* Aeromancy\n* Cryomancy\n* Electromancy\n* Geomancy\n* Pyromancy\n* Stormcraft\nNature\n* Animalism\n* Beastial\n* Herbalism\n* Naturalism\nDark Arts\n* Bloodcraft\n* Chaos\n* Corruption\n* Darkness\n* Demonic\n* Fleshcraft\n* Necromancy\nSpiritualism\n* Divination\n* Dreaming\n* Enchantment\n* Hexcraft\n* Mysticism\n* Shamanism\nThergy\n* Blessing\n* Conviction\n* Invocation\n* Life\n* Primordial\n* Purity\n* Radiant"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map"),
       vx_core.f_new(

@@ -548,7 +548,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_2c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Fortune",
+      "Anger:Fortune",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":image",
@@ -563,7 +563,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_2d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Fortune",
+      "Despair:Fortune",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2d,
       ":image",
@@ -578,7 +578,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_2h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Fortune",
+      "Desire:Fortune",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2h,
       ":image",
@@ -593,7 +593,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_2s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Fortune",
+      "Fear:Fortune",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
       ":image",
@@ -608,15 +608,13 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_3c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Things",
+      "Anger:Things",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
       ":image",
       "images/damage-trauma-3c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
-      ":reference",
-      "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra",
       ":summary",
       "Minor: Graffiti Artist. Make your mark. Stress:1\nMajor: Vandal. Deface and damage objects. Stress:1 Beast:1\nCritical: Arsonist. Kill them with fire. Stress:2 Beast:2\nExtreme: Destroyer. Burn it all down. Beast:Unleashed"
     ))
@@ -625,7 +623,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_3d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Things",
+      "Despair:Things",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3d,
       ":image",
@@ -640,7 +638,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_3h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Things",
+      "Desire:Things",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3h,
       ":image",
@@ -655,7 +653,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_3s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Things",
+      "Fear:Things",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3s,
       ":image",
@@ -670,7 +668,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_4c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Change",
+      "Anger:Change",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":image",
@@ -685,7 +683,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_4d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Change",
+      "Despair:Change",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4d,
       ":image",
@@ -700,7 +698,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_4h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Change",
+      "Desire:Change",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4h,
       ":image",
@@ -715,7 +713,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_4s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Change",
+      "Fear:Change",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4s,
       ":image",
@@ -730,7 +728,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Love",
+      "Anger:Love",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
@@ -745,7 +743,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_5d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Love",
+      "Despair:Love",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5d,
       ":image",
@@ -760,7 +758,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_5h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Love",
+      "Desire:Love",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5h,
       ":image",
@@ -775,7 +773,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_5s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Love",
+      "Fear:Love",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5s,
       ":image",
@@ -790,7 +788,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_6c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Strangers",
+      "Anger:Strangers",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":image",
@@ -805,7 +803,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_6d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Strangers",
+      "Despair:Strangers",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6d,
       ":image",
@@ -820,7 +818,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_6h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Strangers",
+      "Desire:Strangers",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6h,
       ":image",
@@ -835,7 +833,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_6s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Strangers",
+      "Fear:Strangers",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s,
       ":image",
@@ -850,7 +848,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_7c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Companions",
+      "Anger:Companions",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":image",
@@ -865,7 +863,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_7d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Companions",
+      "Despair:Companions",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7d,
       ":image",
@@ -880,7 +878,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_7h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Companions",
+      "Desire:Companions",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h,
       ":image",
@@ -895,7 +893,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_7s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Companions",
+      "Fear:Companions",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7s,
       ":image",
@@ -910,7 +908,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_8c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Status",
+      "Anger:Status",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":image",
@@ -925,7 +923,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_8d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Status",
+      "Despair:Status",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8d,
       ":image",
@@ -942,7 +940,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_8h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Status",
+      "Desire:Status",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8h,
       ":image",
@@ -957,7 +955,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_8s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Status",
+      "Fear:Status",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8s,
       ":image",
@@ -972,7 +970,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_9c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Belief",
+      "Anger:Belief",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":image",
@@ -987,7 +985,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_9d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Belief",
+      "Despair:Belief",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9d,
       ":image",
@@ -1002,7 +1000,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_9h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Belief",
+      "Desire:Belief",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9h,
       ":image",
@@ -1017,7 +1015,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_9s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Belief",
+      "Fear:Belief",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9s,
       ":image",
@@ -1032,7 +1030,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_ac, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Death",
+      "Anger:Death",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":image",
@@ -1047,7 +1045,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_ad, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Death",
+      "Despair:Death",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":image",
@@ -1062,7 +1060,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_ah, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Death",
+      "Desire:Death",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":image",
@@ -1077,7 +1075,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_as, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Death",
+      "Fear:Death",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":image",
@@ -1094,7 +1092,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_jc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Violence",
+      "Anger:Violence",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":image",
@@ -1109,7 +1107,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_jd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Violence",
+      "Despair:Violence",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jd,
       ":image",
@@ -1124,7 +1122,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_jh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Violence",
+      "Desire:Violence",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jh,
       ":image",
@@ -1141,7 +1139,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_js, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Violence",
+      "Fear:Violence",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_js,
       ":image",
@@ -1156,7 +1154,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_kc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Power",
+      "Anger:Power",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kc,
       ":image",
@@ -1171,7 +1169,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_kd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Power",
+      "Despair:Power",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kd,
       ":image",
@@ -1186,7 +1184,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_kh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Power",
+      "Desire:Power",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kh,
       ":image",
@@ -1201,7 +1199,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_ks, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Power",
+      "Fear:Power",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ks,
       ":image",
@@ -1216,7 +1214,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_qc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Self",
+      "Anger:Self",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
       ":image",
@@ -1233,7 +1231,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_qd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Self",
+      "Despair:Self",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qd,
       ":image",
@@ -1248,7 +1246,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_qh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Self",
+      "Desire:Self",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qh,
       ":image",
@@ -1263,7 +1261,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_qs, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Self",
+      "Fear:Self",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qs,
       ":image",
@@ -1278,7 +1276,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_tc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Anger: Reality",
+      "Anger:Reality",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
       ":image",
@@ -1293,7 +1291,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_td, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Despair: Reality",
+      "Despair:Reality",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_td,
       ":image",
@@ -1308,7 +1306,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_th, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Desire: Reality",
+      "Desire:Reality",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_th,
       ":image",
@@ -1323,7 +1321,7 @@ export default class nx_tactics_decks_trauma {
     Object.assign(nx_tactics_decks_trauma.c_trauma_ts, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Fear: Reality",
+      "Fear:Reality",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ts,
       ":image",

@@ -37,7 +37,7 @@
 
 (const trauma-ac : base/damage
  (base/damage
-  :name "Anger: Death"
+  :name "Anger:Death"
   :ranksuit base/ranksuit-ac
   :image "images/damage-trauma-ac.svg"
   :layout base/cardlayout-imageonly
@@ -49,7 +49,7 @@
 
 (const trauma-ad : base/damage
  (base/damage
-  :name "Despair: Death"
+  :name "Despair:Death"
   :ranksuit base/ranksuit-ad
   :image "images/damage-trauma-ad.svg"
   :layout base/cardlayout-imageonly
@@ -61,7 +61,7 @@
 
 (const trauma-ah : base/damage
  (base/damage
-  :name "Desire: Death"
+  :name "Desire:Death"
   :ranksuit base/ranksuit-ah
   :image "images/damage-trauma-ah.svg"
   :layout base/cardlayout-imageonly
@@ -73,7 +73,7 @@
 
 (const trauma-as : base/damage
  (base/damage
-  :name "Fear: Death"
+  :name "Fear:Death"
   :ranksuit base/ranksuit-as
   :image "images/damage-trauma-as.svg"
   :layout base/cardlayout-imageonly
@@ -87,7 +87,7 @@
 
 (const trauma-kc : base/damage
  (base/damage
-  :name "Anger: Power"
+  :name "Anger:Power"
   :ranksuit base/ranksuit-kc
   :image "images/damage-trauma-kc.svg"
   :layout base/cardlayout-imageonly
@@ -99,7 +99,7 @@
 
 (const trauma-kd : base/damage
  (base/damage
-  :name "Despair: Power"
+  :name "Despair:Power"
   :ranksuit base/ranksuit-kd
   :image "images/damage-trauma-kd.svg"
   :layout base/cardlayout-imageonly
@@ -111,7 +111,7 @@
 
 (const trauma-kh : base/damage
  (base/damage
-  :name "Desire: Power"
+  :name "Desire:Power"
   :ranksuit base/ranksuit-kh
   :image "images/damage-trauma-kh.svg"
   :layout base/cardlayout-imageonly
@@ -123,7 +123,7 @@
 
 (const trauma-ks : base/damage
  (base/damage
-  :name "Fear: Power"
+  :name "Fear:Power"
   :ranksuit base/ranksuit-ks
   :image "images/damage-trauma-ks.svg"
   :layout base/cardlayout-imageonly
@@ -135,7 +135,7 @@
 
 (const trauma-qc : base/damage
  (base/damage
-  :name "Anger: Self"
+  :name "Anger:Self"
   :ranksuit base/ranksuit-qc
   :image "images/damage-trauma-qc.svg"
   :layout base/cardlayout-imageonly
@@ -149,7 +149,7 @@
 
 (const trauma-qd : base/damage
  (base/damage
-  :name "Despair: Self"
+  :name "Despair:Self"
   :ranksuit base/ranksuit-qd
   :image "images/damage-trauma-qd.svg"
   :layout base/cardlayout-imageonly
@@ -161,7 +161,7 @@
 
 (const trauma-qh : base/damage
  (base/damage
-  :name "Desire: Self"
+  :name "Desire:Self"
   :ranksuit base/ranksuit-qh
   :image "images/damage-trauma-qh.svg"
   :layout base/cardlayout-imageonly
@@ -173,7 +173,7 @@
 
 (const trauma-qs : base/damage
  (base/damage
-  :name "Fear: Self"
+  :name "Fear:Self"
   :ranksuit base/ranksuit-qs
   :image "images/damage-trauma-qs.svg"
   :layout base/cardlayout-imageonly
@@ -185,7 +185,7 @@
 
 (const trauma-jc : base/damage
  (base/damage
-  :name "Anger: Violence"
+  :name "Anger:Violence"
   :ranksuit base/ranksuit-jc
   :image "images/damage-trauma-jc.svg"
   :layout base/cardlayout-imageonly
@@ -197,7 +197,7 @@
 
 (const trauma-jd : base/damage
  (base/damage
-  :name "Despair: Violence"
+  :name "Despair:Violence"
   :ranksuit base/ranksuit-jd
   :image "images/damage-trauma-jd.svg"
   :layout base/cardlayout-imageonly
@@ -209,7 +209,7 @@
 
 (const trauma-jh : base/damage
  (base/damage
-  :name "Desire: Violence"
+  :name "Desire:Violence"
   :ranksuit base/ranksuit-jh
   :image "images/damage-trauma-jh.svg"
   :layout base/cardlayout-imageonly
@@ -223,7 +223,7 @@
 
 (const trauma-js : base/damage
  (base/damage
-  :name "Fear: Violence"
+  :name "Fear:Violence"
   :ranksuit base/ranksuit-js
   :image "images/damage-trauma-js.svg"
   :layout base/cardlayout-imageonly
@@ -235,7 +235,7 @@
 
 (const trauma-tc : base/damage
  (base/damage
-  :name "Anger: Reality"
+  :name "Anger:Reality"
   :ranksuit base/ranksuit-tc
   :image "images/damage-trauma-tc.svg"
   :layout base/cardlayout-imageonly
@@ -247,7 +247,7 @@
 
 (const trauma-td : base/damage
  (base/damage
-  :name "Despair: Reality"
+  :name "Despair:Reality"
   :ranksuit base/ranksuit-td
   :image "images/damage-trauma-td.svg"
   :layout base/cardlayout-imageonly
@@ -259,7 +259,7 @@
 
 (const trauma-th : base/damage
  (base/damage
-  :name "Desire: Reality"
+  :name "Desire:Reality"
   :ranksuit base/ranksuit-th
   :image "images/damage-trauma-th.svg"
   :layout base/cardlayout-imageonly
@@ -271,7 +271,7 @@
 
 (const trauma-ts : base/damage
  (base/damage
-  :name "Fear: Reality"
+  :name "Fear:Reality"
   :ranksuit base/ranksuit-ts
   :image "images/damage-trauma-ts.svg"
   :layout base/cardlayout-imageonly
@@ -283,7 +283,7 @@
 
 (const trauma-9c : base/damage
  (base/damage
-  :name "Anger: Belief"
+  :name "Anger:Belief"
   :ranksuit base/ranksuit-9c
   :image "images/damage-trauma-9c.svg"
   :layout base/cardlayout-imageonly
@@ -295,7 +295,7 @@
 
 (const trauma-9d : base/damage
  (base/damage
-  :name "Despair: Belief"
+  :name "Despair:Belief"
   :ranksuit base/ranksuit-9d
   :image "images/damage-trauma-9d.svg"
   :layout base/cardlayout-imageonly
@@ -307,7 +307,7 @@
 
 (const trauma-9h : base/damage
  (base/damage
-  :name "Desire: Belief"
+  :name "Desire:Belief"
   :ranksuit base/ranksuit-9h
   :image "images/damage-trauma-9h.svg"
   :layout base/cardlayout-imageonly
@@ -319,7 +319,7 @@
 
 (const trauma-9s : base/damage
  (base/damage
-  :name "Fear: Belief"
+  :name "Fear:Belief"
   :ranksuit base/ranksuit-9s
   :image "images/damage-trauma-9s.svg"
   :layout base/cardlayout-imageonly
@@ -331,7 +331,7 @@
 
 (const trauma-8c : base/damage
  (base/damage
-  :name "Anger: Status"
+  :name "Anger:Status"
   :ranksuit base/ranksuit-8c
   :image "images/damage-trauma-8c.svg"
   :layout base/cardlayout-imageonly
@@ -343,7 +343,7 @@
 
 (const trauma-8d : base/damage
  (base/damage
-  :name "Despair: Status"
+  :name "Despair:Status"
   :ranksuit base/ranksuit-8d
   :image "images/damage-trauma-8d.svg"
   :layout base/cardlayout-imageonly
@@ -357,7 +357,7 @@
 
 (const trauma-8h : base/damage
  (base/damage
-  :name "Desire: Status"
+  :name "Desire:Status"
   :ranksuit base/ranksuit-8h
   :image "images/damage-trauma-8h.svg"
   :layout base/cardlayout-imageonly
@@ -369,7 +369,7 @@
 
 (const trauma-8s : base/damage
  (base/damage
-  :name "Fear: Status"
+  :name "Fear:Status"
   :ranksuit base/ranksuit-8s
   :image "images/damage-trauma-8s.svg"
   :layout base/cardlayout-imageonly
@@ -381,7 +381,7 @@
 
 (const trauma-7c : base/damage
  (base/damage
-  :name "Anger: Companions"
+  :name "Anger:Companions"
   :ranksuit base/ranksuit-7c
   :image "images/damage-trauma-7c.svg"
   :layout base/cardlayout-imageonly
@@ -393,7 +393,7 @@
 
 (const trauma-7d : base/damage
  (base/damage
-  :name "Despair: Companions"
+  :name "Despair:Companions"
   :ranksuit base/ranksuit-7d
   :image "images/damage-trauma-7d.svg"
   :layout base/cardlayout-imageonly
@@ -405,7 +405,7 @@
 
 (const trauma-7h : base/damage
  (base/damage
-  :name "Desire: Companions"
+  :name "Desire:Companions"
   :ranksuit base/ranksuit-7h
   :image "images/damage-trauma-7h.svg"
   :layout base/cardlayout-imageonly
@@ -417,7 +417,7 @@
 
 (const trauma-7s : base/damage
  (base/damage
-  :name "Fear: Companions"
+  :name "Fear:Companions"
   :ranksuit base/ranksuit-7s
   :image "images/damage-trauma-7s.svg"
   :layout base/cardlayout-imageonly
@@ -429,7 +429,7 @@
 
 (const trauma-6c : base/damage
  (base/damage
-  :name "Anger: Strangers"
+  :name "Anger:Strangers"
   :ranksuit base/ranksuit-6c
   :image "images/damage-trauma-6c.svg"
   :layout base/cardlayout-imageonly
@@ -441,7 +441,7 @@
 
 (const trauma-6d : base/damage
  (base/damage
-  :name "Despair: Strangers"
+  :name "Despair:Strangers"
   :ranksuit base/ranksuit-6d
   :image "images/damage-trauma-6d.svg"
   :layout base/cardlayout-imageonly
@@ -453,7 +453,7 @@
 
 (const trauma-6h : base/damage
  (base/damage
-  :name "Desire: Strangers"
+  :name "Desire:Strangers"
   :ranksuit base/ranksuit-6h
   :image "images/damage-trauma-6h.svg"
   :layout base/cardlayout-imageonly
@@ -465,7 +465,7 @@
 
 (const trauma-6s : base/damage
  (base/damage
-  :name "Fear: Strangers"
+  :name "Fear:Strangers"
   :ranksuit base/ranksuit-6s
   :image "images/damage-trauma-6s.svg"
   :layout base/cardlayout-imageonly
@@ -477,7 +477,7 @@
 
 (const trauma-5c : base/damage
  (base/damage
-  :name "Anger: Love"
+  :name "Anger:Love"
   :ranksuit base/ranksuit-5c
   :image "images/damage-trauma-5c.svg"
   :layout base/cardlayout-imageonly
@@ -489,7 +489,7 @@
 
 (const trauma-5d : base/damage
  (base/damage
-  :name "Despair: Love"
+  :name "Despair:Love"
   :ranksuit base/ranksuit-5d
   :image "images/damage-trauma-5d.svg"
   :layout base/cardlayout-imageonly
@@ -501,7 +501,7 @@
 
 (const trauma-5h : base/damage
  (base/damage
-  :name "Desire: Love"
+  :name "Desire:Love"
   :ranksuit base/ranksuit-5h
   :image "images/damage-trauma-5h.svg"
   :layout base/cardlayout-imageonly
@@ -513,7 +513,7 @@
 
 (const trauma-5s : base/damage
  (base/damage
-  :name "Fear: Love"
+  :name "Fear:Love"
   :ranksuit base/ranksuit-5s
   :image "images/damage-trauma-5s.svg"
   :layout base/cardlayout-imageonly
@@ -525,7 +525,7 @@
 
 (const trauma-4c : base/damage
  (base/damage
-  :name "Anger: Change"
+  :name "Anger:Change"
   :ranksuit base/ranksuit-4c
   :image "images/damage-trauma-4c.svg"
   :layout base/cardlayout-imageonly
@@ -537,7 +537,7 @@
 
 (const trauma-4d : base/damage
  (base/damage
-  :name "Despair: Change"
+  :name "Despair:Change"
   :ranksuit base/ranksuit-4d
   :image "images/damage-trauma-4d.svg"
   :layout base/cardlayout-imageonly
@@ -549,7 +549,7 @@
 
 (const trauma-4h : base/damage
  (base/damage
-  :name "Desire: Change"
+  :name "Desire:Change"
   :ranksuit base/ranksuit-4h
   :image "images/damage-trauma-4h.svg"
   :layout base/cardlayout-imageonly
@@ -561,7 +561,7 @@
 
 (const trauma-4s : base/damage
  (base/damage
-  :name "Fear: Change"
+  :name "Fear:Change"
   :ranksuit base/ranksuit-4s
   :image "images/damage-trauma-4s.svg"
   :layout base/cardlayout-imageonly
@@ -573,12 +573,10 @@
 
 (const trauma-3c : base/damage
  (base/damage
-  :name "Anger: Things"
+  :name "Anger:Things"
   :ranksuit base/ranksuit-3c
   :image "images/damage-trauma-3c.svg"
   :layout base/cardlayout-imageonly
-  :reference
-   "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra"
   :summary
    "Minor: Graffiti Artist. Make your mark. Stress:1
     Major: Vandal. Deface and damage objects. Stress:1 Beast:1
@@ -587,7 +585,7 @@
 
 (const trauma-3d : base/damage
  (base/damage
-  :name "Despair: Things"
+  :name "Despair:Things"
   :ranksuit base/ranksuit-3d
   :image "images/damage-trauma-3d.svg"
   :layout base/cardlayout-imageonly
@@ -599,7 +597,7 @@
 
 (const trauma-3h : base/damage
  (base/damage
-  :name "Desire: Things"
+  :name "Desire:Things"
   :ranksuit base/ranksuit-3h
   :image "images/damage-trauma-3h.svg"
   :layout base/cardlayout-imageonly
@@ -611,7 +609,7 @@
 
 (const trauma-3s : base/damage
  (base/damage
-  :name "Fear: Things"
+  :name "Fear:Things"
   :ranksuit base/ranksuit-3s
   :image "images/damage-trauma-3s.svg"
   :layout base/cardlayout-imageonly
@@ -623,7 +621,7 @@
 
 (const trauma-2c : base/damage
  (base/damage
-  :name "Anger: Fortune"
+  :name "Anger:Fortune"
   :ranksuit base/ranksuit-2c
   :image "images/damage-trauma-2c.svg"
   :layout base/cardlayout-imageonly
@@ -635,7 +633,7 @@
 
 (const trauma-2d : base/damage
  (base/damage
-  :name "Despair: Fortune"
+  :name "Despair:Fortune"
   :ranksuit base/ranksuit-2d
   :image "images/damage-trauma-2d.svg"
   :layout base/cardlayout-imageonly
@@ -647,7 +645,7 @@
 
 (const trauma-2h : base/damage
  (base/damage
-  :name "Desire: Fortune"
+  :name "Desire:Fortune"
   :ranksuit base/ranksuit-2h
   :image "images/damage-trauma-2h.svg"
   :layout base/cardlayout-imageonly
@@ -659,7 +657,7 @@
 
 (const trauma-2s : base/damage
  (base/damage
-  :name "Fear: Fortune"
+  :name "Fear:Fortune"
   :ranksuit base/ranksuit-2s
   :image "images/damage-trauma-2s.svg"
   :layout base/cardlayout-imageonly

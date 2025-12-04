@@ -1,0 +1,291 @@
+(package nx/tactics/decks/wilderness
+ :libs (lib base :path nx/tactics/base)
+ :doc "Wilderness Deck")
+
+(func deck-wilderness : base/deck
+ (base/deck
+  :name "Wilderness"
+  :image "images/wilderness/wilderness-back.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      (base/card
+       :name "Wilderness:wb"
+       :ranksuit base/ranksuit-jokerblack
+       :image "images/wilderness/wilderness-wb.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:wr"
+       :ranksuit base/ranksuit-jokerred
+       :image "images/wilderness/wilderness-wr.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:ac"
+       :ranksuit base/ranksuit-ac
+       :image "images/wilderness/wilderness-ac.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:ad"
+       :ranksuit base/ranksuit-ad
+       :image "images/wilderness/wilderness-ad.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:ah"
+       :ranksuit base/ranksuit-ah
+       :image "images/wilderness/wilderness-ah.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:as"
+       :ranksuit base/ranksuit-as
+       :image "images/wilderness/wilderness-as.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:kc"
+       :ranksuit base/ranksuit-kc
+       :image "images/wilderness/wilderness-kc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:kd"
+       :ranksuit base/ranksuit-kd
+       :image "images/wilderness/wilderness-kd.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:kh"
+       :ranksuit base/ranksuit-kh
+       :image "images/wilderness/wilderness-kh.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:ks"
+       :ranksuit base/ranksuit-ks
+       :image "images/wilderness/wilderness-ks.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:qc"
+       :ranksuit base/ranksuit-qc
+       :image "images/wilderness/wilderness-qc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:qd"
+       :ranksuit base/ranksuit-qd
+       :image "images/wilderness/wilderness-qd.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:qh"
+       :ranksuit base/ranksuit-qh
+       :image "images/wilderness/wilderness-qh.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:qs"
+       :ranksuit base/ranksuit-qs
+       :image "images/wilderness/wilderness-qs.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:jc"
+       :ranksuit base/ranksuit-jc
+       :image "images/wilderness/wilderness-jc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:jd"
+       :ranksuit base/ranksuit-jd
+       :image "images/wilderness/wilderness-jd.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:jh"
+       :ranksuit base/ranksuit-jh
+       :image "images/wilderness/wilderness-jh.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:js"
+       :ranksuit base/ranksuit-js
+       :image "images/wilderness/wilderness-js.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:tc"
+       :ranksuit base/ranksuit-tc
+       :image "images/wilderness/wilderness-tc.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:td"
+       :ranksuit base/ranksuit-td
+       :image "images/wilderness/wilderness-td.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:th"
+       :ranksuit base/ranksuit-th
+       :image "images/wilderness/wilderness-th.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:ts"
+       :ranksuit base/ranksuit-ts
+       :image "images/wilderness/wilderness-ts.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:9c"
+       :ranksuit base/ranksuit-9c
+       :image "images/wilderness/wilderness-9c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:9d"
+       :ranksuit base/ranksuit-9d
+       :image "images/wilderness/wilderness-9d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:9h"
+       :ranksuit base/ranksuit-9h
+       :image "images/wilderness/wilderness-9h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:9s"
+       :ranksuit base/ranksuit-9s
+       :image "images/wilderness/wilderness-9s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:8c"
+       :ranksuit base/ranksuit-8c
+       :image "images/wilderness/wilderness-8c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:8d"
+       :ranksuit base/ranksuit-8d
+       :image "images/wilderness/wilderness-8d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:8h"
+       :ranksuit base/ranksuit-8h
+       :image "images/wilderness/wilderness-8h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:8s"
+       :ranksuit base/ranksuit-8s
+       :image "images/wilderness/wilderness-8s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:7c"
+       :ranksuit base/ranksuit-7c
+       :image "images/wilderness/wilderness-7c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:7d"
+       :ranksuit base/ranksuit-7d
+       :image "images/wilderness/wilderness-7d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:7h"
+       :ranksuit base/ranksuit-7h
+       :image "images/wilderness/wilderness-7h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:7s"
+       :ranksuit base/ranksuit-7s
+       :image "images/wilderness/wilderness-7s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:6c"
+       :ranksuit base/ranksuit-6c
+       :image "images/wilderness/wilderness-6c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:6d"
+       :ranksuit base/ranksuit-6d
+       :image "images/wilderness/wilderness-6d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:6h"
+       :ranksuit base/ranksuit-6h
+       :image "images/wilderness/wilderness-6h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:6s"
+       :ranksuit base/ranksuit-6s
+       :image "images/wilderness/wilderness-6s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:5c"
+       :ranksuit base/ranksuit-5c
+       :image "images/wilderness/wilderness-5c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:5d"
+       :ranksuit base/ranksuit-5d
+       :image "images/wilderness/wilderness-5d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:5h"
+       :ranksuit base/ranksuit-5h
+       :image "images/wilderness/wilderness-5h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:5s"
+       :ranksuit base/ranksuit-5s
+       :image "images/wilderness/wilderness-5s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:4c"
+       :ranksuit base/ranksuit-4c
+       :image "images/wilderness/wilderness-4c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:4d"
+       :ranksuit base/ranksuit-4d
+       :image "images/wilderness/wilderness-4d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:4h"
+       :ranksuit base/ranksuit-4h
+       :image "images/wilderness/wilderness-4h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:4s"
+       :ranksuit base/ranksuit-4s
+       :image "images/wilderness/wilderness-4s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:3c"
+       :ranksuit base/ranksuit-3c
+       :image "images/wilderness/wilderness-3c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:3d"
+       :ranksuit base/ranksuit-3d
+       :image "images/wilderness/wilderness-3d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:3h"
+       :ranksuit base/ranksuit-3h
+       :image "images/wilderness/wilderness-3h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:3s"
+       :ranksuit base/ranksuit-3s
+       :image "images/wilderness/wilderness-3s.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:2c"
+       :ranksuit base/ranksuit-2c
+       :image "images/wilderness/wilderness-2c.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:2d"
+       :ranksuit base/ranksuit-2d
+       :image "images/wilderness/wilderness-2d.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:2h"
+       :ranksuit base/ranksuit-2h
+       :image "images/wilderness/wilderness-2h.svg"
+       :layout base/cardlayout-imageonly)
+      (base/card
+       :name "Wilderness:2s"
+       :ranksuit base/ranksuit-2s
+       :image "images/wilderness/wilderness-2s.svg"
+       :layout base/cardlayout-imageonly)))
+    (base/cardmap-copy<-card-count-isnum
+     (base/card
+      :name "Wilderness:Back"
+      :image "images/wilderness/wilderness-back.svg"
+      :layout base/cardlayout-imageonly)
+     54
+     false)))
+ :doc "Wilderness Deck")

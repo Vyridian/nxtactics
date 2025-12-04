@@ -4,7 +4,7 @@
    height="88mm"
    version="1.1"
    id="svg49"
-   sodipodi:docname="card-2s.svg"
+   sodipodi:docname="card-ranksuit-2s.svg"
    inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
    viewBox="0 0 238.11024 332.59843"
    xml:space="preserve"
@@ -25,7 +25,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="2.6146498"
-     inkscape:cx="70.563943"
+     inkscape:cx="70.372713"
      inkscape:cy="156.61753"
      inkscape:window-width="1904"
      inkscape:window-height="1041"
@@ -202,7 +202,7 @@
      id="g1-8"
      transform="matrix(1.3155261,0,0,1.3146182,-11.840216,-11.832499)"
      inkscape:label="template"
-     style="display:inline"><path
+     style="display:none"><path
        id="path104-2"
        style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:1.00476"
        d="m 18.050442,9.0007115 c -4.998613,0 -9.0500762,4.0438615 -9.0500762,9.0345975 V 252.96465 c 0,4.99073 4.0514632,9.03609 9.0500762,9.03609 H 180.95031 c 4.99861,0 9.05007,-4.04536 9.05007,-9.03609 V 18.035309 c 0,-4.990736 -4.05146,-9.0345975 -9.05007,-9.0345975 z m 3.980122,9.0405635 H 176.97018 c 2.12575,0 3.84875,1.75088 3.84875,3.915439 V 249.04324 c 0,2.16255 -1.723,3.91545 -3.84875,3.91545 H 22.030564 c -2.125743,0 -3.850239,-1.7529 -3.850239,-3.91545 V 21.956714 c 0,-2.164559 1.724496,-3.915439 3.850239,-3.915439 z"
