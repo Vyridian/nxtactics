@@ -583,7 +583,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":image",
-      "images/card-conflict-c2.svg"
+      "images/player/conflict-2c.svg"
     ))
 
     // (const conflict-2d)
@@ -594,7 +594,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2d,
       ":image",
-      "images/card-conflict-d2.svg"
+      "images/player/conflict-2d.svg"
     ))
 
     // (const conflict-2h)
@@ -605,7 +605,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2h,
       ":image",
-      "images/card-conflict-h2.svg"
+      "images/player/conflict-2h.svg"
     ))
 
     // (const conflict-2s)
@@ -616,7 +616,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
       ":image",
-      "images/card-conflict-s2.svg"
+      "images/player/conflict-2s.svg"
     ))
 
     // (const conflict-3c)
@@ -627,7 +627,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
       ":image",
-      "images/card-conflict-c3.svg"
+      "images/player/conflict-3c.svg"
     ))
 
     // (const conflict-3d)
@@ -638,7 +638,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3d,
       ":image",
-      "images/card-conflict-d3.svg"
+      "images/player/conflict-3d.svg"
     ))
 
     // (const conflict-3h)
@@ -649,7 +649,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3h,
       ":image",
-      "images/card-conflict-h3.svg"
+      "images/player/conflict-3h.svg"
     ))
 
     // (const conflict-3s)
@@ -660,7 +660,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3s,
       ":image",
-      "images/card-conflict-s3.svg"
+      "images/player/conflict-3s.svg"
     ))
 
     // (const conflict-4c)
@@ -671,7 +671,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":image",
-      "images/card-conflict-c4.svg"
+      "images/player/conflict-4c.svg"
     ))
 
     // (const conflict-4d)
@@ -682,7 +682,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4d,
       ":image",
-      "images/card-conflict-d4.svg"
+      "images/player/conflict-4d.svg"
     ))
 
     // (const conflict-4h)
@@ -693,7 +693,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4h,
       ":image",
-      "images/card-conflict-h4.svg"
+      "images/player/conflict-4h.svg"
     ))
 
     // (const conflict-4s)
@@ -704,7 +704,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4s,
       ":image",
-      "images/card-conflict-s4.svg"
+      "images/player/conflict-4s.svg"
     ))
 
     // (const conflict-5c)
@@ -715,7 +715,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
-      "images/card-conflict-c5.svg"
+      "images/player/conflict-5c.svg"
     ))
 
     // (const conflict-5d)
@@ -726,7 +726,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5d,
       ":image",
-      "images/card-conflict-d5.svg"
+      "images/player/conflict-5d.svg"
     ))
 
     // (const conflict-5h)
@@ -737,7 +737,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5h,
       ":image",
-      "images/card-conflict-h5.svg"
+      "images/player/conflict-5h.svg"
     ))
 
     // (const conflict-5s)
@@ -748,7 +748,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5s,
       ":image",
-      "images/card-conflict-s5.svg"
+      "images/player/conflict-5s.svg"
     ))
 
     // (const conflict-6c)
@@ -759,7 +759,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":image",
-      "images/card-conflict-c6.svg"
+      "images/player/conflict-6c.svg"
     ))
 
     // (const conflict-6d)
@@ -770,7 +770,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6d,
       ":image",
-      "images/card-conflict-d6.svg"
+      "images/player/conflict-6d.svg"
     ))
 
     // (const conflict-6h)
@@ -781,7 +781,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6h,
       ":image",
-      "images/card-conflict-h6.svg"
+      "images/player/conflict-6h.svg"
     ))
 
     // (const conflict-6s)
@@ -792,7 +792,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s,
       ":image",
-      "images/card-conflict-s6.svg"
+      "images/player/conflict-6s.svg"
     ))
 
     // (const conflict-7c)
@@ -803,7 +803,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":image",
-      "images/card-conflict-c7.svg"
+      "images/player/conflict-7c.svg"
     ))
 
     // (const conflict-7d)
@@ -814,7 +814,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7d,
       ":image",
-      "images/card-conflict-d7.svg"
+      "images/player/conflict-7d.svg"
     ))
 
     // (const conflict-7h)
@@ -825,7 +825,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h,
       ":image",
-      "images/card-conflict-h7.svg"
+      "images/player/conflict-7h.svg"
     ))
 
     // (const conflict-7s)
@@ -836,7 +836,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7s,
       ":image",
-      "images/card-conflict-s7.svg"
+      "images/player/conflict-7s.svg"
     ))
 
     // (const conflict-8c)
@@ -847,7 +847,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":image",
-      "images/card-conflict-c8.svg"
+      "images/player/conflict-8c.svg"
     ))
 
     // (const conflict-8d)
@@ -858,7 +858,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8d,
       ":image",
-      "images/card-conflict-d8.svg"
+      "images/player/conflict-8d.svg"
     ))
 
     // (const conflict-8h)
@@ -869,7 +869,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8h,
       ":image",
-      "images/card-conflict-h8.svg"
+      "images/player/conflict-8h.svg"
     ))
 
     // (const conflict-8s)
@@ -880,7 +880,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8s,
       ":image",
-      "images/card-conflict-s8.svg"
+      "images/player/conflict-8s.svg"
     ))
 
     // (const conflict-9c)
@@ -891,7 +891,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":image",
-      "images/card-conflict-c9.svg"
+      "images/player/conflict-9c.svg"
     ))
 
     // (const conflict-9d)
@@ -902,7 +902,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9d,
       ":image",
-      "images/card-conflict-d9.svg"
+      "images/player/conflict-9d.svg"
     ))
 
     // (const conflict-9h)
@@ -913,7 +913,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9h,
       ":image",
-      "images/card-conflict-h9.svg"
+      "images/player/conflict-9h.svg"
     ))
 
     // (const conflict-9s)
@@ -924,7 +924,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9s,
       ":image",
-      "images/card-conflict-s9.svg"
+      "images/player/conflict-9s.svg"
     ))
 
     // (const conflict-ac)
@@ -935,7 +935,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":image",
-      "images/card-conflict-ca.svg"
+      "images/player/conflict-ac.svg"
     ))
 
     // (const conflict-ad)
@@ -946,7 +946,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":image",
-      "images/conflict-ad.svg"
+      "images/player/conflict-ad.svg"
     ))
 
     // (const conflict-ah)
@@ -957,7 +957,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":image",
-      "images/card-conflict-ha.svg"
+      "images/player/conflict-ah.svg"
     ))
 
     // (const conflict-as)
@@ -968,7 +968,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":image",
-      "images/card-conflict-sa.svg"
+      "images/player/conflict-as.svg"
     ))
 
     // (const conflict-jc)
@@ -981,7 +981,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":image",
-      "images/card-conflict-cj.svg"
+      "images/player/conflict-jc.svg"
     ))
 
     // (const conflict-jd)
@@ -994,7 +994,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jd,
       ":image",
-      "images/card-conflict-dj.svg"
+      "images/player/conflict-jd.svg"
     ))
 
     // (const conflict-jh)
@@ -1007,7 +1007,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jh,
       ":image",
-      "images/card-conflict-hj.svg"
+      "images/player/conflict-jh.svg"
     ))
 
     // (const conflict-js)
@@ -1020,7 +1020,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_js,
       ":image",
-      "images/card-conflict-sj.svg"
+      "images/player/conflict-js.svg"
     ))
 
     // (const conflict-kc)
@@ -1031,7 +1031,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kc,
       ":image",
-      "images/card-conflict-ck.svg"
+      "images/player/conflict-kc.svg"
     ))
 
     // (const conflict-kd)
@@ -1042,7 +1042,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kd,
       ":image",
-      "images/card-conflict-dk.svg"
+      "images/player/conflict-kd.svg"
     ))
 
     // (const conflict-kh)
@@ -1053,7 +1053,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kh,
       ":image",
-      "images/card-conflict-hk.svg"
+      "images/player/conflict-kh.svg"
     ))
 
     // (const conflict-ks)
@@ -1064,7 +1064,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ks,
       ":image",
-      "images/card-conflict-sk.svg"
+      "images/player/conflict-ks.svg"
     ))
 
     // (const conflict-qc)
@@ -1075,7 +1075,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
       ":image",
-      "images/card-conflict-cq.svg"
+      "images/player/conflict-qc.svg"
     ))
 
     // (const conflict-qd)
@@ -1086,7 +1086,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qd,
       ":image",
-      "images/card-conflict-dq.svg"
+      "images/player/conflict-qd.svg"
     ))
 
     // (const conflict-qh)
@@ -1097,7 +1097,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qh,
       ":image",
-      "images/card-conflict-hq.svg"
+      "images/player/conflict-qh.svg"
     ))
 
     // (const conflict-qs)
@@ -1108,7 +1108,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qs,
       ":image",
-      "images/card-conflict-sq.svg"
+      "images/player/conflict-qs.svg"
     ))
 
     // (const conflict-tc)
@@ -1121,7 +1121,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
       ":image",
-      "images/card-conflict-ct.svg"
+      "images/player/conflict-tc.svg"
     ))
 
     // (const conflict-td)
@@ -1134,7 +1134,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_td,
       ":image",
-      "images/card-conflict-dt.svg"
+      "images/player/conflict-td.svg"
     ))
 
     // (const conflict-th)
@@ -1147,7 +1147,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_th,
       ":image",
-      "images/card-conflict-ht.svg"
+      "images/player/conflict-th.svg"
     ))
 
     // (const conflict-ts)
@@ -1160,7 +1160,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ts,
       ":image",
-      "images/card-conflict-st.svg"
+      "images/player/conflict-ts.svg"
     ))
 
     // (const conflict-wildblack)
@@ -1171,7 +1171,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerblack,
       ":image",
-      "images/card-conflict-wb.svg"
+      "images/player/conflict-wb.svg"
     ))
 
     // (const conflict-wildred)
@@ -1182,7 +1182,7 @@ export default class nx_tactics_decks_conflict {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerred,
       ":image",
-      "images/card-conflict-wr.svg"
+      "images/player/conflict-wr.svg"
     ))
 
   }

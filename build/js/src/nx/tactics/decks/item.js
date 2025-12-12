@@ -411,6 +411,8 @@ export default class nx_tactics_decks_item {
         "images/wwii/item-mg-792mm-mg34.svg",
         ":classification",
         "Med. MG",
+        ":body",
+        "1x1",
         ":length",
         "1219mm",
         ":mass",

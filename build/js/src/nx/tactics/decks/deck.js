@@ -193,9 +193,11 @@ export default class nx_tactics_decks_deck {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
           nx_tactics_decks_starter.f_deck_player(tactics, "blue"),
-          nx_tactics_decks_starter.f_deck_player(tactics, "green"),
+          nx_tactics_decks_starter.f_deck_player(tactics, "gold"),
+          nx_tactics_decks_starter.f_deck_player(tactics, "orange"),
+          nx_tactics_decks_starter.f_deck_player(tactics, "purple"),
           nx_tactics_decks_starter.f_deck_player(tactics, "red"),
-          nx_tactics_decks_starter.f_deck_player(tactics, "yellow"),
+          nx_tactics_decks_starter.f_deck_player(tactics, "teal"),
           nx_tactics_decks_conflict.f_deck_conflict(),
           nx_tactics_decks_wound.f_deck_wound(),
           nx_tactics_decks_disorder.f_deck_disorder(),

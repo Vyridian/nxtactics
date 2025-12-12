@@ -464,6 +464,7 @@
    :name "MG:7.92mm MG34"
    :image "images/wwii/item-mg-792mm-mg34.svg"
    :classification "Med. MG"
+   :body "1x1"
    :length "1219mm"
    :mass "12.1kg"
    :energy "4000J"

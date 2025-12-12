@@ -4,10 +4,33 @@ This is the first project authored in vxlisp. It is designed to be a universal b
 
 It is also a test bed for new features for vxlisp. Obvious ones are UI and database.
 
-## Links
-* [Rules](DrawnToDestiny.pdf)
-* [Reference](DrawnToDestinyReference.pdf)
-* [Blank Map](page-map.svg)
+## Basics
+* [Rules](docs/drawn-to-destiny-rules.pdf)
+* [Reference](docs/drawn-to-destiny-reference.pdf)
+* [Condition](docs/drawn-to-destiny-condition.pdf)
+* [Clock](docs/drawn-to-destiny-clock.pdf)
+
+## Damage
+* [Wound](docs/drawn-to-destiny-wound.pdf)
+* [Disorder](docs/drawn-to-destiny-disorder.pdf)
+* [Trauma](docs/drawn-to-destiny-trauma.pdf)
+* [Restrain](docs/drawn-to-destiny-restrain.pdf)
+* [Vehicle](docs/drawn-to-destiny-vehicle.pdf)
+
+## Terrain Maps
+** [Blank](public/images/terrain/terrain-white.svg)
+** [Desert](public/images/terrain/terrain-desert.pdf)
+** [Dirt](public/images/terrain/terrain-dirt.pdf)
+** [Forest](public/images/terrain/terrain-forest.pdf)
+** [Grassland](public/images/terrain/terrain-grassland.pdf)
+** [Mountains](public/images/terrain/terrain-mountainrange.pdf)
+** [Sea](public/images/terrain/terrain-sea.pdf)
+** [Sky](public/images/terrain/terrain-sky.pdf)
+** [Snowfield](public/images/terrain/terrain-snowfield.pdf)
+** [Space](public/images/terrain/terrain-space.pdf)
+** [Swamp](public/images/terrain/terrain-swamp.pdf)
+
+## Online Application
 * [Main Application](public/runjs.html)
 * [Test Suite Js](public/testjs.html)
 * [API Documentation](doc/doc.html)

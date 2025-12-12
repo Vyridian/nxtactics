@@ -1480,11 +1480,11 @@
   (base/power
    :name "Hexcraft"
    :titles
-    "Animism Correspondence, Curses, Fetishism, Hexer, Shintoist, Soulcraft, Sympathy, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor"
+    "Animism Correspondence, Curses, Fetishism, Hexblade Warlock, Hexer, Shintoist, Soulcraft, Sympathy, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor"
    :reference
     "* Synchronicity is a phenomenon where people interpret two seemingly unrelated experiences as being meaningfully intertwined."
    :summary
-    "* Fetishism is using a symbol to represent the thing you want to affect with your magic. Whatever you do to the symbol, you do to the target. The object and the thing it represents are 'in sympathy'; they are aligned. Sympathetic magic is a useful idea because often, your target is something non-physical, or something you can’t otherwise interact with directly. You could banish negative thoughts directly, but it’s easier to tie them to something physical by writing them down and then burning the paper. As the paper burns, so does the negativity. Correspondences are related to this. For example, different-colored candles represent different desires (like green for money, red for love, black for banishment, etc.) and as the candle burns down, your spell is cast. Wearing different stones or crystals can attract luck or success to you.   
+    "* Fetishism is using a symbol to represent the thing you want to affect with your magic. Whatever you do to the symbol, you do to the target. The object and the thing it represents are 'in sympathy'; they are aligned. Sympathetic magic is a useful idea because often, your target is something non-physical, or something you can’t otherwise interact with directly. You could banish negative thoughts directly, but it’s easier to tie them to something physical by writing them down and then burning the paper. As the paper burns, so does the negativity. Correspondences are related to this. For example, different-colored candles represent different desires (like green for money, red for love, black for banishment, etc.) and as the candle burns down, your spell is cast. Wearing different stones or crystals can attract luck or success to you.
      * Cursed Energy - Cursed energy is born from negative emotions such as grief and anger. These negative feelings are common in human society so almost everyone possesses cursed energy. Cursed Energy can be controlled and focused to perform various magical feats.
      * Cursed Spirit - Cursed Spirits are apparitions manifested entirely from cursed energy. Even their bodies are composed of cursed energy, making cursed spirits invisible to non-sorcerers. The emission of cursed energy from humans collects like sediment until a cursed spirit is born from the collective negative energy. Cursed Spirits born with strong feelings directed toward a certain aspect are especially strong. The stronger humanity's fear and anger is directed at cursing a certain aspect of the world, like natural disasters, the more powerful Curse Spirits spawned from those negative sentiments will be.
      * Law of Similarity - Like produces like. An effect resembles its cause.
@@ -1558,6 +1558,11 @@
        :name "Figurine"
        :summary
         "* A miniature of a small creature grows into a full size version.")
+     "Hexblade"
+      (base/ability
+       :name "Hexblade"
+       :summary
+        "* Enchant an item with cursed power.")
      "Iron Maiden"
       (base/ability
        :name "Iron Maiden"

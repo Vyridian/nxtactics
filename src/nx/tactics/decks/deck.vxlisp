@@ -200,9 +200,11 @@
    (base/cardmap<-cardlist
     (base/cardlist
      (starter/deck-player tactics "blue")
-     (starter/deck-player tactics "green")
+     (starter/deck-player tactics "gold")
+     (starter/deck-player tactics "orange")
+     (starter/deck-player tactics "purple")
      (starter/deck-player tactics "red")
-     (starter/deck-player tactics "yellow")
+     (starter/deck-player tactics "teal")
      (conflict/deck-conflict)
      (wound/deck-wound)
      (disorder/deck-disorder)

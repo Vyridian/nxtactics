@@ -11,7 +11,7 @@
    (base/rule<-tactics-key tactics "Player")]
   (copy rule
    :id (string "player-" color)
-   :image (string "images/rule-player-" color ".svg")
+   :image (string "images/player/rule-player-" color ".svg")
   )))
 
 (func card-rotated : base/card
@@ -75,6 +75,6 @@
   (base/deck
    :id (string "deck-player-" color)
    :name "Player Deck"
-   :image (string "images/rule-player-" color "-deck.svg")
+   :image (string "images/player/rule-player-" color "-deck.svg")
    :layout base/cardlayout-imageonly
    :cardmap cardmap)))

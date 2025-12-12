@@ -19,7 +19,7 @@
      (case "blue"   "0000FF")
      (case "brown"  "A52A2A")
      (case "cyan"   "00FFFF")
-     (case "gold"  "FFD700")
+     (case "gold"   "FFD700")
      (case "green"  "00FF00")
      (case "orange" "FFA500")
      (case "purple" "800080")
