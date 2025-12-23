@@ -332,6 +332,7 @@ export default class nx_tactics_decks_conflict {
 
   /**
    * @function card_conflict_back
+   * @param  {string} color
    * @return {cardback}
    */
   static t_card_conflict_back = {
@@ -342,16 +343,16 @@ export default class nx_tactics_decks_conflict {
   }
 
   // (func card-conflict-back)
-  static f_card_conflict_back() {
+  static f_card_conflict_back(color) {
     let output = nx_tactics_base.e_cardback
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_cardback},
       ":id",
-      "card-conflict-back",
+      vx_core.f_new({"any-1": vx_core.t_string}, "card-conflict-back-", color),
       ":name",
       "Conflict Back",
       ":image",
-      vx_core.f_new({"any-1": vx_core.t_string}, "images/conflict.svg"),
+      vx_core.f_new({"any-1": vx_core.t_string}, "images/player/conflict-back-", color, ".svg"),
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     )
@@ -359,103 +360,107 @@ export default class nx_tactics_decks_conflict {
   }
 
   /**
-   * @function deck_conflict
-   * Conflict Deck
-   * @return {deck}
+   * @function conflictbacklist
+   * Conflict Card Back List
+   * @param  {string} color
+   * @return {cardlist}
    */
-  static t_deck_conflict = {
+  static t_conflictbacklist = {
     vx_type: vx_core.t_type
   }
-  static e_deck_conflict = {
-    vx_type: nx_tactics_decks_conflict.t_deck_conflict
+  static e_conflictbacklist = {
+    vx_type: nx_tactics_decks_conflict.t_conflictbacklist
   }
 
-  // (func deck-conflict)
-  static f_deck_conflict() {
-    let output = nx_tactics_base.e_deck
+  // (func conflictbacklist)
+  static f_conflictbacklist(color) {
+    let output = nx_tactics_base.e_cardlist
     output = vx_core.f_let(
-      {"any-1": nx_tactics_base.t_deck},
+      {"any-1": nx_tactics_base.t_cardlist},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const card = nx_tactics_decks_conflict.f_card_conflict_back()
-        return vx_core.f_new(
-          {"any-1": nx_tactics_base.t_deck},
-          ":name",
-          "Conflict Deck",
-          ":image",
-          "images/conflict.svg",
-          ":layout",
-          nx_tactics_base.c_cardlayout_imageonly,
-          ":cardmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_cardmap},
-            nx_tactics_base.f_cardmap_from_cardlist(
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_cardlist},
-                nx_tactics_decks_conflict.c_conflict_wildblack,
-                nx_tactics_decks_conflict.c_conflict_wildred,
-                nx_tactics_decks_conflict.c_conflict_ac,
-                nx_tactics_decks_conflict.c_conflict_ad,
-                nx_tactics_decks_conflict.c_conflict_ah,
-                nx_tactics_decks_conflict.c_conflict_as,
-                nx_tactics_decks_conflict.c_conflict_kc,
-                nx_tactics_decks_conflict.c_conflict_kd,
-                nx_tactics_decks_conflict.c_conflict_kh,
-                nx_tactics_decks_conflict.c_conflict_ks,
-                nx_tactics_decks_conflict.c_conflict_qc,
-                nx_tactics_decks_conflict.c_conflict_qd,
-                nx_tactics_decks_conflict.c_conflict_qh,
-                nx_tactics_decks_conflict.c_conflict_qs,
-                nx_tactics_decks_conflict.c_conflict_jc,
-                nx_tactics_decks_conflict.c_conflict_jd,
-                nx_tactics_decks_conflict.c_conflict_jh,
-                nx_tactics_decks_conflict.c_conflict_js,
-                nx_tactics_decks_conflict.c_conflict_tc,
-                nx_tactics_decks_conflict.c_conflict_td,
-                nx_tactics_decks_conflict.c_conflict_th,
-                nx_tactics_decks_conflict.c_conflict_ts,
-                nx_tactics_decks_conflict.c_conflict_9c,
-                nx_tactics_decks_conflict.c_conflict_9d,
-                nx_tactics_decks_conflict.c_conflict_9h,
-                nx_tactics_decks_conflict.c_conflict_9s,
-                nx_tactics_decks_conflict.c_conflict_8c,
-                nx_tactics_decks_conflict.c_conflict_8d,
-                nx_tactics_decks_conflict.c_conflict_8h,
-                nx_tactics_decks_conflict.c_conflict_8s,
-                nx_tactics_decks_conflict.c_conflict_7c,
-                nx_tactics_decks_conflict.c_conflict_7d,
-                nx_tactics_decks_conflict.c_conflict_7h,
-                nx_tactics_decks_conflict.c_conflict_7s,
-                nx_tactics_decks_conflict.c_conflict_6c,
-                nx_tactics_decks_conflict.c_conflict_6d,
-                nx_tactics_decks_conflict.c_conflict_6h,
-                nx_tactics_decks_conflict.c_conflict_6s,
-                nx_tactics_decks_conflict.c_conflict_5c,
-                nx_tactics_decks_conflict.c_conflict_5d,
-                nx_tactics_decks_conflict.c_conflict_5h,
-                nx_tactics_decks_conflict.c_conflict_5s,
-                nx_tactics_decks_conflict.c_conflict_4c,
-                nx_tactics_decks_conflict.c_conflict_4d,
-                nx_tactics_decks_conflict.c_conflict_4h,
-                nx_tactics_decks_conflict.c_conflict_4s,
-                nx_tactics_decks_conflict.c_conflict_3c,
-                nx_tactics_decks_conflict.c_conflict_3d,
-                nx_tactics_decks_conflict.c_conflict_3h,
-                nx_tactics_decks_conflict.c_conflict_3s,
-                nx_tactics_decks_conflict.c_conflict_2c,
-                nx_tactics_decks_conflict.c_conflict_2d,
-                nx_tactics_decks_conflict.c_conflict_2h,
-                nx_tactics_decks_conflict.c_conflict_2s
-              )
-            ),
-            nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
-              card,
-              54,
-              false
-            )
-          )
+        const card = nx_tactics_decks_conflict.f_card_conflict_back(color)
+        return nx_tactics_base.f_cardlist_copy_from_card_count_isnum(
+          card,
+          54,
+          false
         )
       })
+    )
+    return output
+  }
+
+  /**
+   * @function conflictcardlist
+   * Conflict Card List
+   * @return {cardlist}
+   */
+  static t_conflictcardlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_conflictcardlist = {
+    vx_type: nx_tactics_decks_conflict.t_conflictcardlist
+  }
+
+  // (func conflictcardlist)
+  static f_conflictcardlist() {
+    let output = nx_tactics_base.e_cardlist
+    output = vx_core.f_new(
+      {"any-1": nx_tactics_base.t_cardlist},
+      nx_tactics_decks_conflict.c_conflict_wildblack,
+      nx_tactics_decks_conflict.c_conflict_wildred,
+      nx_tactics_decks_conflict.c_conflict_ac,
+      nx_tactics_decks_conflict.c_conflict_ad,
+      nx_tactics_decks_conflict.c_conflict_ah,
+      nx_tactics_decks_conflict.c_conflict_as,
+      nx_tactics_decks_conflict.c_conflict_kc,
+      nx_tactics_decks_conflict.c_conflict_kd,
+      nx_tactics_decks_conflict.c_conflict_kh,
+      nx_tactics_decks_conflict.c_conflict_ks,
+      nx_tactics_decks_conflict.c_conflict_qc,
+      nx_tactics_decks_conflict.c_conflict_qd,
+      nx_tactics_decks_conflict.c_conflict_qh,
+      nx_tactics_decks_conflict.c_conflict_qs,
+      nx_tactics_decks_conflict.c_conflict_jc,
+      nx_tactics_decks_conflict.c_conflict_jd,
+      nx_tactics_decks_conflict.c_conflict_jh,
+      nx_tactics_decks_conflict.c_conflict_js,
+      nx_tactics_decks_conflict.c_conflict_tc,
+      nx_tactics_decks_conflict.c_conflict_td,
+      nx_tactics_decks_conflict.c_conflict_th,
+      nx_tactics_decks_conflict.c_conflict_ts,
+      nx_tactics_decks_conflict.c_conflict_9c,
+      nx_tactics_decks_conflict.c_conflict_9d,
+      nx_tactics_decks_conflict.c_conflict_9h,
+      nx_tactics_decks_conflict.c_conflict_9s,
+      nx_tactics_decks_conflict.c_conflict_8c,
+      nx_tactics_decks_conflict.c_conflict_8d,
+      nx_tactics_decks_conflict.c_conflict_8h,
+      nx_tactics_decks_conflict.c_conflict_8s,
+      nx_tactics_decks_conflict.c_conflict_7c,
+      nx_tactics_decks_conflict.c_conflict_7d,
+      nx_tactics_decks_conflict.c_conflict_7h,
+      nx_tactics_decks_conflict.c_conflict_7s,
+      nx_tactics_decks_conflict.c_conflict_6c,
+      nx_tactics_decks_conflict.c_conflict_6d,
+      nx_tactics_decks_conflict.c_conflict_6h,
+      nx_tactics_decks_conflict.c_conflict_6s,
+      nx_tactics_decks_conflict.c_conflict_5c,
+      nx_tactics_decks_conflict.c_conflict_5d,
+      nx_tactics_decks_conflict.c_conflict_5h,
+      nx_tactics_decks_conflict.c_conflict_5s,
+      nx_tactics_decks_conflict.c_conflict_4c,
+      nx_tactics_decks_conflict.c_conflict_4d,
+      nx_tactics_decks_conflict.c_conflict_4h,
+      nx_tactics_decks_conflict.c_conflict_4s,
+      nx_tactics_decks_conflict.c_conflict_3c,
+      nx_tactics_decks_conflict.c_conflict_3d,
+      nx_tactics_decks_conflict.c_conflict_3h,
+      nx_tactics_decks_conflict.c_conflict_3s,
+      nx_tactics_decks_conflict.c_conflict_2c,
+      nx_tactics_decks_conflict.c_conflict_2d,
+      nx_tactics_decks_conflict.c_conflict_2h,
+      nx_tactics_decks_conflict.c_conflict_2s
     )
     return output
   }
@@ -521,11 +526,13 @@ export default class nx_tactics_decks_conflict {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "card-conflict-back": nx_tactics_decks_conflict.e_card_conflict_back,
-      "deck-conflict": nx_tactics_decks_conflict.e_deck_conflict
+      "conflictbacklist": nx_tactics_decks_conflict.e_conflictbacklist,
+      "conflictcardlist": nx_tactics_decks_conflict.e_conflictcardlist
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "card-conflict-back": nx_tactics_decks_conflict.t_card_conflict_back,
-      "deck-conflict": nx_tactics_decks_conflict.t_deck_conflict
+      "conflictbacklist": nx_tactics_decks_conflict.t_conflictbacklist,
+      "conflictcardlist": nx_tactics_decks_conflict.t_conflictcardlist
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -557,9 +564,9 @@ export default class nx_tactics_decks_conflict {
       fn            : nx_tactics_decks_conflict.f_card_conflict_back
     }
 
-    // (func deck-conflict)
-    nx_tactics_decks_conflict.t_deck_conflict['vx_value'] = {
-      name          : "deck-conflict",
+    // (func conflictbacklist)
+    nx_tactics_decks_conflict.t_conflictbacklist['vx_value'] = {
+      name          : "conflictbacklist",
       pkgname       : "nx/tactics/decks/conflict",
       extends       : ":func",
       idx           : 0,
@@ -572,7 +579,25 @@ export default class nx_tactics_decks_conflict {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_conflict.f_deck_conflict
+      fn            : nx_tactics_decks_conflict.f_conflictbacklist
+    }
+
+    // (func conflictcardlist)
+    nx_tactics_decks_conflict.t_conflictcardlist['vx_value'] = {
+      name          : "conflictcardlist",
+      pkgname       : "nx/tactics/decks/conflict",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_conflict.f_conflictcardlist
     }
 
     // (const conflict-2c)

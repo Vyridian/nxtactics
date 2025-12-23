@@ -5,17 +5,17 @@ This is the first project authored in vxlisp. It is designed to be a universal b
 It is also a test bed for new features for vxlisp. Obvious ones are UI and database.
 
 ## Basics
-* [Rules](docs/drawn-to-destiny-rules.pdf)
-* [Reference](docs/drawn-to-destiny-reference.pdf)
-* [Condition](docs/drawn-to-destiny-condition.pdf)
-* [Clock](docs/drawn-to-destiny-clock.pdf)
+* [Rules](docs/drawn-to-destiny-rules.pdf),
+ [Reference](docs/drawn-to-destiny-reference.pdf),
+ [Condition](docs/drawn-to-destiny-condition.pdf),
+ [Clock](docs/drawn-to-destiny-clock.pdf)
 
 ## Damage
-* [Wound](docs/drawn-to-destiny-wound.pdf)
-* [Disorder](docs/drawn-to-destiny-disorder.pdf)
-* [Trauma](docs/drawn-to-destiny-trauma.pdf)
-* [Restrain](docs/drawn-to-destiny-restrain.pdf)
-* [Vehicle](docs/drawn-to-destiny-vehicle.pdf)
+* [Wound](public/images/wound/wound.pdf),
+ [Disorder](public/images/disorder/disorder.pdf),
+ [Trauma](public/images/trauma/trauma.pdf),
+ [Restrain](public/images/restrain/restrain.pdf),
+ [Vehicle](public/images/vehicle/vehicle.pdf)
 
 ## Terrain Maps
 * [Blank](public/images/terrain/terrain-white.svg),
@@ -30,12 +30,13 @@ It is also a test bed for new features for vxlisp. Obvious ones are UI and datab
  [Space](public/images/terrain/terrain-space.pdf),
  [Swamp](public/images/terrain/terrain-swamp.pdf)
 
-## Generated Maps
-* [Dungeon](public/images/dungeon/dungeon.pdf)
-* [Highway](public/images/highway/highway.pdf)
+## Dynamic Maps
+* [Dungeon](public/images/dungeon/dungeon.pdf),
+ [Highway](public/images/highway/highway.pdf),
+ [Wilderness](public/images/wilderness/wilderness.pdf)
 
 ## Online Application
-* [Main Application](public/runjs.html)
+* [Run Now](public/runjs.html)
 * [Test Suite Js](public/testjs.html)
 * [API Documentation](doc/doc.html)
 * [Source Code](https://github.com/Vyridian/nxtactics)

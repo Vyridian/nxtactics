@@ -164,6 +164,9 @@
      * [Requires]: Bow or Javelin")
   (base/ability
    :name "Armed Robbery"
+   :reference
+    "* My friend an I are.. toll collectors. - Navori Highwayman, Runeterra
+     * Stand and Deliver! You're money or your life. - Adam and the Ants, Stand and Deliver"
    :summary
     "* [Skill]: [Crime]")
   (base/ability
@@ -1899,6 +1902,11 @@
      * Move:-1
      * Rating:+1")
   (base/ability
+   :name "Hard Headed"
+   :summary
+    "* [Skill]: [Close Combat]
+     * [Reaction]: Take one less Damage when giving or receiving a [Head Butt]")
+  (base/ability
    :name "Harvest:Parts"
    :titles "Skinning"
    :summary
@@ -2207,6 +2215,12 @@
    :name "Kidnapping"
    :summary
     "* [Skill]: [Crime]")
+  (base/ability
+   :name "Kippup"
+   :summary
+    "Stand up from Prone
+     * [Skill]: [Athletics]
+     * Move:-2 to change from [Prone] to [Standing].")
   (base/ability
    :name "Kiss of Death")
   (base/ability

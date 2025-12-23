@@ -1,0 +1,83 @@
+(package nx/tactics/decks/player
+ :libs (lib base     :path nx/tactics/base)
+       (lib conflict :path nx/tactics/decks/conflict)
+       (lib typ      :path vx/type)
+ :doc  "Player Decks")
+
+(func card-player : base/card
+ [tactics : base/tactics
+  color   : string]
+ (let : base/card
+  [rule : base/rule :=
+   (base/rule<-tactics-key tactics "Player")]
+  (copy rule
+   :id (string "player-" color)
+   :image (string "images/player/rule-player-" color ".svg")
+  )))
+
+(func card-rotated : base/card
+ [tactics : base/tactics
+  color   : string]
+ (let : base/card
+  [rule : base/rule :=
+   (base/rule<-tactics-key tactics "Rotated Cards")]
+  (copy rule
+   :id (string "rotatedcards-" color)
+   :image (string "images/player/rule-rotated-" color ".svg")
+  )))
+
+(func card-target : base/card
+ [tactics : base/tactics
+  color   : string
+  num     : int]
+ (let : base/card
+  [rule : base/rule :=
+   (base/rule<-tactics-key tactics "Target#")]
+  (copy rule
+   :id (string "target-" color "-" num)
+   :name (string "Target#" num)
+   :image (string "images/player/rule-target-" num "-" color ".svg")
+  )))
+
+(func card-unit : base/card
+ [tactics : base/tactics
+  color   : string
+  num     : int]
+ (let : base/card
+  [rule : base/rule :=
+    (base/rule<-tactics-key tactics "Unit#")]
+  (copy rule
+   :id (string "unit-" color "-" num)
+   :name (string "Unit#" num)
+   :image (string "images/player/rule-unit-num-" num "-" color ".svg")
+  )))
+
+(func deck-player : base/deck
+ [tactics : base/tactics
+  color   : string]
+ (let : base/deck
+  [cardlist : base/cardlist :=
+    (base/cardlist
+     (card-player tactics color)
+     (card-rotated tactics color)
+     (card-unit tactics color 1)
+     (card-unit tactics color 2)
+     (card-unit tactics color 3)
+     (card-unit tactics color 4)
+     (card-unit tactics color 5)
+     (card-target tactics color 1)
+     (card-target tactics color 2)
+     (card-target tactics color 3)
+     (card-target tactics color 4)
+     (card-target tactics color 5)
+     (conflict/conflictcardlist)
+     (conflict/conflictbacklist color))
+   cardmap : base/cardmap :=
+    (base/cardmap<-cardlist
+     cardlist)]
+  (base/deck
+   :id (string "deck-player-" color)
+   :name "Player Deck"
+   :image (string "images/player/player-deck-" color ".svg")
+   :layout base/cardlayout-imageonly
+   :cardmap cardmap)))

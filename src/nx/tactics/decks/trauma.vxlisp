@@ -1,12 +1,12 @@
 (package nx/tactics/decks/trauma
  :libs (lib base :path nx/tactics/base)
- :doc  "Tactics Trauma Decks")
+ :doc  "Trauma Deck")
 
 (const stress : base/cardback
  (base/cardback
   :name "Stress"
   :titles "Emotional Trauma/Stress/Duress/Horror"
-  :image "images/damage-trauma-stress.svg"
+  :image "images/trauma/trauma-stress.svg"
   :layout base/cardlayout-imageonly
   :reference
    "Because love's such an old-fashioned word
@@ -19,18 +19,18 @@
 
 (const trauma-wild-black : base/damage
  (base/damage
-  :name "Trauma: Deck"
+  :name "Trauma:Deck"
   :ranksuit base/ranksuit-jokerblack
-  :image "images/damage-trauma-wb.svg"
+  :image "images/trauma/trauma-wb.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
 
 (const trauma-wild-red : base/damage
  (base/damage
-  :name "Trauma: Discard"
+  :name "Trauma:Discard"
   :ranksuit base/ranksuit-jokerred
-  :image "images/damage-trauma-wr.svg"
+  :image "images/trauma/trauma-wr.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
@@ -39,7 +39,7 @@
  (base/damage
   :name "Anger:Death"
   :ranksuit base/ranksuit-ac
-  :image "images/damage-trauma-ac.svg"
+  :image "images/trauma/trauma-ac.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Frustrated by unfairness of death. Stress:1
@@ -51,7 +51,7 @@
  (base/damage
   :name "Despair:Death"
   :ranksuit base/ranksuit-ad
-  :image "images/damage-trauma-ad.svg"
+  :image "images/trauma/trauma-ad.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Grieving. Focused on death. Stress:1
@@ -63,7 +63,7 @@
  (base/damage
   :name "Desire:Death"
   :ranksuit base/ranksuit-ah
-  :image "images/damage-trauma-ah.svg"
+  :image "images/trauma/trauma-ah.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Macabre. Study wounds and death. Stress:1
@@ -75,7 +75,7 @@
  (base/damage
   :name "Fear:Death"
   :ranksuit base/ranksuit-as
-  :image "images/damage-trauma-as.svg"
+  :image "images/trauma/trauma-as.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Anxiety. Agitated around death. Stress:1
@@ -89,7 +89,7 @@
  (base/damage
   :name "Anger:Power"
   :ranksuit base/ranksuit-kc
-  :image "images/damage-trauma-kc.svg"
+  :image "images/trauma/trauma-kc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Rebel. Hate those who control others. Stress:1
@@ -101,7 +101,7 @@
  (base/damage
   :name "Despair:Power"
   :ranksuit base/ranksuit-kd
-  :image "images/damage-trauma-kd.svg"
+  :image "images/trauma/trauma-kd.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Indifferent. Ignore authority. Stress:1
@@ -113,7 +113,7 @@
  (base/damage
   :name "Desire:Power"
   :ranksuit base/ranksuit-kh
-  :image "images/damage-trauma-kh.svg"
+  :image "images/trauma/trauma-kh.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Bossy. If they only listened. Stress:1
@@ -125,7 +125,7 @@
  (base/damage
   :name "Fear:Power"
   :ranksuit base/ranksuit-ks
-  :image "images/damage-trauma-ks.svg"
+  :image "images/trauma/trauma-ks.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Cowed. Unnerved by authority. Stress:1
@@ -137,7 +137,7 @@
  (base/damage
   :name "Anger:Self"
   :ranksuit base/ranksuit-qc
-  :image "images/damage-trauma-qc.svg"
+  :image "images/trauma/trauma-qc.svg"
   :layout base/cardlayout-imageonly
   :reference
    "* And, oh, my love remind me, what was it that I said? I can't help but pull the earth around me to make my bed. And, oh, my love remind me, what was it that I did? Did I drink too much? Am I losing touch? Did I build a ship to wreck? - Florence and the Machine, Ship to Wreck"
@@ -151,7 +151,7 @@
  (base/damage
   :name "Despair:Self"
   :ranksuit base/ranksuit-qd
-  :image "images/damage-trauma-qd.svg"
+  :image "images/trauma/trauma-qd.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Self Doubt. No confidence. Stress:1
@@ -163,7 +163,7 @@
  (base/damage
   :name "Desire:Self"
   :ranksuit base/ranksuit-qh
-  :image "images/damage-trauma-qh.svg"
+  :image "images/trauma/trauma-qh.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Vainglory. Brag constantly. Stress:1
@@ -175,7 +175,7 @@
  (base/damage
   :name "Fear:Self"
   :ranksuit base/ranksuit-qs
-  :image "images/damage-trauma-qs.svg"
+  :image "images/trauma/trauma-qs.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Self-conscious. Uneasy with praise. Stress:1
@@ -187,7 +187,7 @@
  (base/damage
   :name "Anger:Violence"
   :ranksuit base/ranksuit-jc
-  :image "images/damage-trauma-jc.svg"
+  :image "images/trauma/trauma-jc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Viscious. Revel in the kill. Stress:1
@@ -199,7 +199,7 @@
  (base/damage
   :name "Despair:Violence"
   :ranksuit base/ranksuit-jd
-  :image "images/damage-trauma-jd.svg"
+  :image "images/trauma/trauma-jd.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Mediator. Alternative to violence. Stress:1
@@ -211,7 +211,7 @@
  (base/damage
   :name "Desire:Violence"
   :ranksuit base/ranksuit-jh
-  :image "images/damage-trauma-jh.svg"
+  :image "images/trauma/trauma-jh.svg"
   :layout base/cardlayout-imageonly
   :reference
    "* And to think... I hesitated. - Dr. Channard, Hellraiser II"
@@ -225,7 +225,7 @@
  (base/damage
   :name "Fear:Violence"
   :ranksuit base/ranksuit-js
-  :image "images/damage-trauma-js.svg"
+  :image "images/trauma/trauma-js.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Watched. You're being watched. Stress:1
@@ -237,7 +237,7 @@
  (base/damage
   :name "Anger:Reality"
   :ranksuit base/ranksuit-tc
-  :image "images/damage-trauma-tc.svg"
+  :image "images/trauma/trauma-tc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Angry drunk. Obnoxious and pushy. Stress:1
@@ -249,7 +249,7 @@
  (base/damage
   :name "Despair:Reality"
   :ranksuit base/ranksuit-td
-  :image "images/damage-trauma-td.svg"
+  :image "images/trauma/trauma-td.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Demoralized. Life is unfair. Stress:1
@@ -261,7 +261,7 @@
  (base/damage
   :name "Desire:Reality"
   :ranksuit base/ranksuit-th
-  :image "images/damage-trauma-th.svg"
+  :image "images/trauma/trauma-th.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Boozer. Need alcohol and drugs. Stress:1
@@ -273,7 +273,7 @@
  (base/damage
   :name "Fear:Reality"
   :ranksuit base/ranksuit-ts
-  :image "images/damage-trauma-ts.svg"
+  :image "images/trauma/trauma-ts.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Unnerved. Jumpy. Stress:1
@@ -285,7 +285,7 @@
  (base/damage
   :name "Anger:Belief"
   :ranksuit base/ranksuit-9c
-  :image "images/damage-trauma-9c.svg"
+  :image "images/trauma/trauma-9c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Skeptic. Dismissive of religions. Stress:1
@@ -297,7 +297,7 @@
  (base/damage
   :name "Despair:Belief"
   :ranksuit base/ranksuit-9d
-  :image "images/damage-trauma-9d.svg"
+  :image "images/trauma/trauma-9d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Questioning. Doubt beliefs. Stress:1
@@ -309,7 +309,7 @@
  (base/damage
   :name "Desire:Belief"
   :ranksuit base/ranksuit-9h
-  :image "images/damage-trauma-9h.svg"
+  :image "images/trauma/trauma-9h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Gullible. Crave a religion. Stress:1
@@ -321,7 +321,7 @@
  (base/damage
   :name "Fear:Belief"
   :ranksuit base/ranksuit-9s
-  :image "images/damage-trauma-9s.svg"
+  :image "images/trauma/trauma-9s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Guilt over your sins. Stress:1
@@ -333,7 +333,7 @@
  (base/damage
   :name "Anger:Status"
   :ranksuit base/ranksuit-8c
-  :image "images/damage-trauma-8c.svg"
+  :image "images/trauma/trauma-8c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Jealous. Frustrated by showoffs. Stress:1
@@ -345,7 +345,7 @@
  (base/damage
   :name "Despair:Status"
   :ranksuit base/ranksuit-8d
-  :image "images/damage-trauma-8d.svg"
+  :image "images/trauma/trauma-8d.svg"
   :layout base/cardlayout-imageonly
   :reference
    "Outcast unclean. - Thomas Covenant"
@@ -359,7 +359,7 @@
  (base/damage
   :name "Desire:Status"
   :ranksuit base/ranksuit-8h
-  :image "images/damage-trauma-8h.svg"
+  :image "images/trauma/trauma-8h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Poser. Crave status. Stress:1
@@ -371,7 +371,7 @@
  (base/damage
   :name "Fear:Status"
   :ranksuit base/ranksuit-8s
-  :image "images/damage-trauma-8s.svg"
+  :image "images/trauma/trauma-8s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Performance Anxiety. Stress:1
@@ -383,7 +383,7 @@
  (base/damage
   :name "Anger:Companions"
   :ranksuit base/ranksuit-7c
-  :image "images/damage-trauma-7c.svg"
+  :image "images/trauma/trauma-7c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Vindictive. Aggressive protector. Stress:1
@@ -395,7 +395,7 @@
  (base/damage
   :name "Despair:Companions"
   :ranksuit base/ranksuit-7d
-  :image "images/damage-trauma-7d.svg"
+  :image "images/trauma/trauma-7d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Withdrawn. Eroded bonds. Stress:1
@@ -407,7 +407,7 @@
  (base/damage
   :name "Desire:Companions"
   :ranksuit base/ranksuit-7h
-  :image "images/damage-trauma-7h.svg"
+  :image "images/trauma/trauma-7h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Unsure. Needs others support. Stress:1
@@ -419,7 +419,7 @@
  (base/damage
   :name "Fear:Companions"
   :ranksuit base/ranksuit-7s
-  :image "images/damage-trauma-7s.svg"
+  :image "images/trauma/trauma-7s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Distrustful. Fear others motives. Stress:1
@@ -431,7 +431,7 @@
  (base/damage
   :name "Anger:Strangers"
   :ranksuit base/ranksuit-6c
-  :image "images/damage-trauma-6c.svg"
+  :image "images/trauma/trauma-6c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Resentful. Stereotype others. Stress:1
@@ -443,7 +443,7 @@
  (base/damage
   :name "Despair:Strangers"
   :ranksuit base/ranksuit-6d
-  :image "images/damage-trauma-6d.svg"
+  :image "images/trauma/trauma-6d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Shy. Withdraws from strangers. Stress:1
@@ -455,7 +455,7 @@
  (base/damage
   :name "Desire:Strangers"
   :ranksuit base/ranksuit-6h
-  :image "images/damage-trauma-6h.svg"
+  :image "images/trauma/trauma-6h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Nosy. Study others. Stress:1
@@ -467,7 +467,7 @@
  (base/damage
   :name "Fear:Strangers"
   :ranksuit base/ranksuit-6s
-  :image "images/damage-trauma-6s.svg"
+  :image "images/trauma/trauma-6s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Suspicious of 'others'. Stress:1
@@ -479,7 +479,7 @@
  (base/damage
   :name "Anger:Love"
   :ranksuit base/ranksuit-5c
-  :image "images/damage-trauma-5c.svg"
+  :image "images/trauma/trauma-5c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Possessive. Abusive relationships. Stress:1
@@ -491,7 +491,7 @@
  (base/damage
   :name "Despair:Love"
   :ranksuit base/ranksuit-5d
-  :image "images/damage-trauma-5d.svg"
+  :image "images/trauma/trauma-5d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Insecure. Feel unattractive. Stress:1
@@ -503,7 +503,7 @@
  (base/damage
   :name "Desire:Love"
   :ranksuit base/ranksuit-5h
-  :image "images/damage-trauma-5h.svg"
+  :image "images/trauma/trauma-5h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Infatuated. Fixate on someone. Stress:1
@@ -515,7 +515,7 @@
  (base/damage
   :name "Fear:Love"
   :ranksuit base/ranksuit-5s
-  :image "images/damage-trauma-5s.svg"
+  :image "images/trauma/trauma-5s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Prudish about affection. Stress:1
@@ -527,7 +527,7 @@
  (base/damage
   :name "Anger:Change"
   :ranksuit base/ranksuit-4c
-  :image "images/damage-trauma-4c.svg"
+  :image "images/trauma/trauma-4c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Curmudgeon. New things frustrate. Stress:1
@@ -539,7 +539,7 @@
  (base/damage
   :name "Despair:Change"
   :ranksuit base/ranksuit-4d
-  :image "images/damage-trauma-4d.svg"
+  :image "images/trauma/trauma-4d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Remorseful. Replay past mistakes. Stress:1
@@ -551,7 +551,7 @@
  (base/damage
   :name "Desire:Change"
   :ranksuit base/ranksuit-4h
-  :image "images/damage-trauma-4h.svg"
+  :image "images/trauma/trauma-4h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hyperactive. Anxious when inactive. Stress:1
@@ -563,7 +563,7 @@
  (base/damage
   :name "Fear:Change"
   :ranksuit base/ranksuit-4s
-  :image "images/damage-trauma-4s.svg"
+  :image "images/trauma/trauma-4s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Unnerved by change. Stress:1
@@ -575,7 +575,7 @@
  (base/damage
   :name "Anger:Things"
   :ranksuit base/ranksuit-3c
-  :image "images/damage-trauma-3c.svg"
+  :image "images/trauma/trauma-3c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Graffiti Artist. Make your mark. Stress:1
@@ -587,7 +587,7 @@
  (base/damage
   :name "Despair:Things"
   :ranksuit base/ranksuit-3d
-  :image "images/damage-trauma-3d.svg"
+  :image "images/trauma/trauma-3d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hollow. Spark is missing. Stress:1
@@ -599,7 +599,7 @@
  (base/damage
   :name "Desire:Things"
   :ranksuit base/ranksuit-3h
-  :image "images/damage-trauma-3h.svg"
+  :image "images/trauma/trauma-3h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Collector. Keep mementoes. Stress:1
@@ -611,7 +611,7 @@
  (base/damage
   :name "Fear:Things"
   :ranksuit base/ranksuit-3s
-  :image "images/damage-trauma-3s.svg"
+  :image "images/trauma/trauma-3s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Terrified of heights. Stress:1
@@ -623,7 +623,7 @@
  (base/damage
   :name "Anger:Fortune"
   :ranksuit base/ranksuit-2c
-  :image "images/damage-trauma-2c.svg"
+  :image "images/trauma/trauma-2c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Frustrated by an arbitrary world. Stress:1
@@ -635,7 +635,7 @@
  (base/damage
   :name "Despair:Fortune"
   :ranksuit base/ranksuit-2d
-  :image "images/damage-trauma-2d.svg"
+  :image "images/trauma/trauma-2d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Pessimist. Glass half empty. Stress:1
@@ -647,7 +647,7 @@
  (base/damage
   :name "Desire:Fortune"
   :ranksuit base/ranksuit-2h
-  :image "images/damage-trauma-2h.svg"
+  :image "images/trauma/trauma-2h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Frugal. A penny saved. Stress:1
@@ -659,7 +659,7 @@
  (base/damage
   :name "Fear:Fortune"
   :ranksuit base/ranksuit-2s
-  :image "images/damage-trauma-2s.svg"
+  :image "images/trauma/trauma-2s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Superstitious. Lucky/unlucky items. Stress:1
@@ -670,7 +670,7 @@
 (func deck-trauma : base/deck
  (base/deck
   :name "Trauma"
-  :image "images/damage-trauma-stress.svg"
+  :image "images/trauma/trauma-stress.svg"
   :layout base/cardlayout-imageonly
   :summary
    "* C-Anger/Fury/Surly/Suicidal Rage

@@ -3828,7 +3828,7 @@ export default class nx_tactics_decks_power {
           "Martyr Syndrome",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Martyr Syndrome"),
           "Masochism",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Masochism", ":summary", "* Dislikes self. Will go out of way to injure oneself. May seek verbal, physical, psychological, or sexual abuse. May seek life threatening abuse."),
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Masochism", ":reference", "* Harder? Mmm. Okay. - Evelynn, Runeterra", ":summary", "* Dislikes self. Will go out of way to injure oneself. May seek verbal, physical, psychological, or sexual abuse. May seek life threatening abuse."),
           "Megalomania",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Megalomania", ":titles", "Delusions of Grandeur, Messiah Complex", ":summary", "* A specific form of delusion that you are more important than you are. May believe you are destined for greatness, a Messiah, or even God."),
           "Mental Decay",

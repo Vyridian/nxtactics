@@ -274,6 +274,8 @@ x +1DMG vs. Crouching."
      "Fists of Fire"
       (base/ability
        :name "Fists of Fire")
+     "Hard Headed"
+      (base/ability<-tactics-key tactics "Hard Headed")
      "Haymaker"
       (base/ability
        :name "Haymaker"
@@ -1190,10 +1192,8 @@ x +1DMG vs. Crouching."
      "Ice Climbing"
       (base/ability
        :name "Ice Climbing")
-     :Kippup
-      (base/ability
-       :name "Kippup"
-       :summary "* [Move]: Change from [Prone] to [Standing].")
+     "Kippup"
+      (base/ability<-tactics-key tactics "Kippup")
      "Leap Attack"
       (base/ability
        :name "Leap Attack")

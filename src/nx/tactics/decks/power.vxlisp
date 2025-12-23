@@ -6497,6 +6497,8 @@
      "Masochism"
       (base/ability
        :name "Masochism"
+       :reference
+        "* Harder? Mmm. Okay. - Evelynn, Runeterra"
        :summary
         "* Dislikes self. Will go out of way to injure oneself. May seek verbal, physical, psychological, or sexual abuse. May seek life threatening abuse.")
      "Megalomania"
