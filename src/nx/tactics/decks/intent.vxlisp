@@ -3,75 +3,88 @@
  :doc "Intent Deck")
 
 /*
-Aggressive
-Disruptive
-Defensive
-Mobile
+Suit:
+C - Assault
+D - Disrupt
+H - Defend
+S - Manuever
 
- AC - Barrage - Use best damage option
- AD - Shock and Awe - Use best disruption/control option
- AH - Power Up - Use best support/defense option
- AS - Strike and Fade - Use best movement/attack option
- KC - Blitz - Attack a leader/objective
- KD - Decapitate - Disrupt/control a Leader/objective
- KH - Guard - Aid/Guard a Leader/objective
- KS - Assassinate - Threaten a Leader/objective
- QC - Barrage - Attack backrow
- QD - Shutdown - Disrupt/control backrow
- QH - Bolster - Aid/Guard backrow
- QS - Strafe - Threated Rival backrow
- JC - Challenge - Attack a Champion
- JD - ? - Stop a Champion
- JH - Empower - Aid/Guard a Champion
- JS - Intercept - Threated a Champion
- TC - Breach - Attempt to split Rival line
- TD - Scatter - Attempt to break Rival formation
- TH - Hold the Line - Reinfoce Allied line
- TD - End Around - Circle the Line
- 9C - Cleave - Attack multiple
- 9D - Debilitate - Disrupt/control multiple
- 9H - Gather Around - Aid/Guard multiple
- 9S - Harass - Interfere with multiple
- 8C - Strike - Attack the closest
- 8D - Disrupt - Disrupt/control the closest
- 8H - Support - Aid/Guard the closest
- 8S - Flank - Flank the closest
-* 7C - Rally - Inspire Allies
- 7D - ? - ?
- 7H - Taunt - Draw Rival from Allies
- 7S - High Ground - Move to advantageous position
- 6C - Pick Off - Attack isolated threat
- 6D - Weaken - Disrupt/control the most vulnerable
- 6H - Protect - Aid/Guard the most vulnerable
- 6S - Isolate - Separate a threat from the group
- 5C - Push - Force Rival back
- 5D - Delay - Slow advancing threat
- 5H - Regroup - Reform a defense
- 5S - Hit and Run - Attack and stay at distance
- 4C - Probe - Body under half: Lesser attack
- 4D - Distract - Mind under half: Lesser distraction/control
- 4H - Brace - Will under half: Lesser aid/guard
- 4S - Sidestep - Avoid strong threat
- 3C - Fall Back - Move back while fighting
- 3D - Step Back - Increase range to threats
- 3H - Encourage - Help from a safe distance
- 3S - Take Cover - Move to Cover or defensible position
- 2C - Pull Back - Fighting retreat
- 2D - Disengage - Move to maximum range
- 2H - ? - ?
- 2S - Withdraw - Full retreat to safety/cover
+Rank:
+A - All Out
+K - Leader
+Q - Support
+J - Champion
+T - Line
+9 - Multiple
+8 - Closest
+7 - Strongest
+6 - Weakest
+5 - Reinforce
+4 - Self
+3 - Caution
+2 - Withdraw
+
+WB - 
+WR - 
+
+AC - Assault:All Out - All Out Attack - Use most damaging attack
+AD - Disrupt:All Out - Shock and Awe - Use most disruptive ability
+AH - Defend:All Out - Last Stand - Use most supporting or defensive ability
+AS - Manuever:All Out - Out of Nowhere - Use best movement/attack ability
+
+KC - Assault:Leader - Blitz - Attack a leader/objective
+KD - Disrupt:Leader - Decapitate - Disrupt/control a Leader/objective
+KH - Defend:Leader - Guard - Aid/Guard a Leader/objective
+
+KS - Eliminate - Manuever:Leader - Move to threaten a Leader/objective
+QC - Barrage - Assault:Support - Attack backrow
+QD - ?Shutdown - Disrupt:Support - Disrupt/control backrow
+QH - Bolster - Defend:Support - Aid/Guard backrow
+QS - ?Strafe - Manuever:Support - Move to threaten Rival backrow
+JC - Challenge - Assault:Champion - Attack a Champion
+JD - ?Interrupt - Disrupt:Champion - Stop a Champion
+JH - Empower - Defend:Champion - Aid/Guard a Champion
+JS - Intercept - Manuever:Champion - Move to threaten a Champion
+TC - Breach - Assault:Line - Attempt to split Rival line
+TD - Barricade - Disrupt:Line - Attempt to break Rival formation
+TH - Hold the Line - Defend:Line - Reinforce Allied line
+TD - End Around - Manuever:Line - Circle the Line
+9C - Cleave - Assault:Multiple - Attack multiple
+9D - Debilitate - Disrupt/control multiple
+9H - Gather Around - Aid/Guard multiple
+9S - Harass - Interfere with multiple
+8C - Strike - Attack the closest
+8D - Disrupt - Disrupt/control the closest
+8H - Support - Aid/Guard the closest
+8S - Flank - Flank the closest
+7C - Overbear - Attack and force Rival movement
+7D - Suppress - Interfere with Rival movement or attacks
+7H - Taunt - Draw Rival from Allies
+7S - High Ground - Move to advantageous position
+6C - Pick Off - Attack isolated threat
+6D - Weaken - Disrupt/control the most vulnerable
+6H - Protect - Aid/Guard the most vulnerable
+6S - Isolate - Separate a threat from the group
+5C - Push - Force Rival back
+5D - Delay - Slow advancing threat
+5H - Regroup - Reform a defense
+5S - Hit and Run - Attack and stay at distance
+4C - Probe - Body < 4: Lesser attack
+4D - Distract - Mind < 4: Lesser distraction/control
+4H - Brace - Will < 4: Lesser aid/guard
+4S - Sidestep - Speed < 4: Avoid strong threat
+3C - Fall Back - Body < 3: Move back while fighting
+3D - Step Back - Mind < 3: Increase range to threats
+3H - Encourage - Will < 3: Help from a safe distance
+3S - Take Cover - Speed < 3: Move to Cover or defensible position
+2C - Pull Back - Body < 2: Flee using full Move
+2D - Disoriented - Move in a random direction using 1/2 Move Points IF Mind < 2 THEN Attack Random target
+2H - Withdraw - Full Move to safety/cover. IF Will < 2 THEN Surrender
+2S - Hunker Down - Recover Twice. Speed < 2: Fall Prone
 Berserk
-Wildeyed
-Lash Out
+Intervene
+Strike and Fade
 Lost
-Disoriented
-Confused
-Wasteful
-Surrender
-Flee
-Hide
-Hunker Down
-Stay and Pray
 */
 
 (func deck-intent : base/deck
@@ -84,277 +97,337 @@ Stay and Pray
     (base/cardmap<-cardlist
      (base/cardlist
       (base/card
-       :name "Intent:wb"
+       :name "Intent:Wildeyed"
        :deck "Intent"
        :ranksuit base/ranksuit-jokerblack
        :summary
-        "Wild - Use the next Intent regardless of Role. Shuffle")
+        "Wildeyed
+         * Use the next Intent regardless of Role. Shuffle")
       (base/card
-       :name "Intent:wr"
+       :name "Intent:Inspired"
        :deck "Intent"
        :ranksuit base/ranksuit-jokerred
        :summary
-        "Wild - Use the next Intent regardless of Role. Shuffle")
+        "Inspired
+         * Use the next Intent regardless of Role. Shuffle")
       (base/card
-       :name "Intent:ac"
+       :name "Assault:All Out"
+       :deck "Intent"
        :ranksuit base/ranksuit-ac
-       :image "images/intent/intent-ac.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "All Out Attack
+         * Use most damaging attack")
       (base/card
-       :name "Intent:ad"
+       :name "Disrupt:All Out"
+       :deck "Intent"
        :ranksuit base/ranksuit-ad
-       :image "images/intent/intent-ad.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "Shock and Awe
+         * Use most disruptive ability")
       (base/card
-       :name "Intent:ah"
+       :name "Defend:All Out"
+       :deck "Intent"
        :ranksuit base/ranksuit-ah
-       :image "images/intent/intent-ah.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "Last Stand
+         * Use most supporting or defensive ability")
       (base/card
-       :name "Intent:as"
+       :name "Manuever:All Out"
+       :deck "Intent"
        :ranksuit base/ranksuit-as
-       :image "images/intent/intent-as.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "Out of Nowhere
+         * Use best movement/attack ability")
       (base/card
-       :name "Intent:kc"
+       :name "Assault:Leader"
+       :deck "Intent"
        :ranksuit base/ranksuit-kc
-       :image "images/intent/intent-kc.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "Blitz
+         * Attack a leader/objective")
       (base/card
-       :name "Intent:kd"
+       :name "Disrupt:Leader"
+       :deck "Intent"
        :ranksuit base/ranksuit-kd
-       :image "images/intent/intent-kd.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "Decapitate
+         * Disrupt/control a Leader/objective")
       (base/card
        :name "Intent:kh"
+       :deck "Intent"
        :ranksuit base/ranksuit-kh
-       :image "images/intent/intent-kh.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:ks"
+       :deck "Intent"
        :ranksuit base/ranksuit-ks
-       :image "images/intent/intent-ks.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:qc"
+       :deck "Intent"
        :ranksuit base/ranksuit-qc
-       :image "images/intent/intent-qc.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:qd"
+       :deck "Intent"
        :ranksuit base/ranksuit-qd
-       :image "images/intent/intent-qd.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:qh"
+       :deck "Intent"
        :ranksuit base/ranksuit-qh
-       :image "images/intent/intent-qh.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:qs"
+       :deck "Intent"
        :ranksuit base/ranksuit-qs
-       :image "images/intent/intent-qs.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:jc"
+       :deck "Intent"
        :ranksuit base/ranksuit-jc
-       :image "images/intent/intent-jc.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:jd"
+       :deck "Intent"
        :ranksuit base/ranksuit-jd
-       :image "images/intent/intent-jd.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:jh"
+       :deck "Intent"
        :ranksuit base/ranksuit-jh
-       :image "images/intent/intent-jh.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:js"
+       :deck "Intent"
        :ranksuit base/ranksuit-js
-       :image "images/intent/intent-js.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:tc"
+       :deck "Intent"
        :ranksuit base/ranksuit-tc
-       :image "images/intent/intent-tc.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:td"
+       :deck "Intent"
        :ranksuit base/ranksuit-td
-       :image "images/intent/intent-td.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:th"
+       :deck "Intent"
        :ranksuit base/ranksuit-th
-       :image "images/intent/intent-th.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:ts"
+       :deck "Intent"
        :ranksuit base/ranksuit-ts
-       :image "images/intent/intent-ts.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:9c"
+       :deck "Intent"
        :ranksuit base/ranksuit-9c
-       :image "images/intent/intent-9c.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:9d"
+       :deck "Intent"
        :ranksuit base/ranksuit-9d
-       :image "images/intent/intent-9d.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:9h"
+       :deck "Intent"
        :ranksuit base/ranksuit-9h
-       :image "images/intent/intent-9h.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:9s"
+       :deck "Intent"
        :ranksuit base/ranksuit-9s
-       :image "images/intent/intent-9s.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:8c"
+       :deck "Intent"
        :ranksuit base/ranksuit-8c
-       :image "images/intent/intent-8c.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:8d"
+       :deck "Intent"
        :ranksuit base/ranksuit-8d
-       :image "images/intent/intent-8d.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:8h"
+       :deck "Intent"
        :ranksuit base/ranksuit-8h
-       :image "images/intent/intent-8h.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:8s"
+       :deck "Intent"
        :ranksuit base/ranksuit-8s
-       :image "images/intent/intent-8s.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:7c"
+       :deck "Intent"
        :ranksuit base/ranksuit-7c
-       :image "images/intent/intent-7c.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:7d"
+       :deck "Intent"
        :ranksuit base/ranksuit-7d
-       :image "images/intent/intent-7d.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:7h"
+       :deck "Intent"
        :ranksuit base/ranksuit-7h
-       :image "images/intent/intent-7h.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:7s"
+       :deck "Intent"
        :ranksuit base/ranksuit-7s
-       :image "images/intent/intent-7s.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:6c"
+       :deck "Intent"
        :ranksuit base/ranksuit-6c
-       :image "images/intent/intent-6c.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:6d"
+       :deck "Intent"
        :ranksuit base/ranksuit-6d
-       :image "images/intent/intent-6d.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:6h"
+       :deck "Intent"
        :ranksuit base/ranksuit-6h
-       :image "images/intent/intent-6h.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:6s"
+       :deck "Intent"
        :ranksuit base/ranksuit-6s
-       :image "images/intent/intent-6s.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:5c"
+       :deck "Intent"
        :ranksuit base/ranksuit-5c
-       :image "images/intent/intent-5c.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:5d"
+       :deck "Intent"
        :ranksuit base/ranksuit-5d
-       :image "images/intent/intent-5d.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:5h"
+       :deck "Intent"
        :ranksuit base/ranksuit-5h
-       :image "images/intent/intent-5h.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:5s"
+       :deck "Intent"
        :ranksuit base/ranksuit-5s
-       :image "images/intent/intent-5s.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:4c"
+       :deck "Intent"
        :ranksuit base/ranksuit-4c
-       :image "images/intent/intent-4c.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:4d"
+       :deck "Intent"
        :ranksuit base/ranksuit-4d
-       :image "images/intent/intent-4d.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:4h"
+       :deck "Intent"
        :ranksuit base/ranksuit-4h
-       :image "images/intent/intent-4h.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:4s"
+       :deck "Intent"
        :ranksuit base/ranksuit-4s
-       :image "images/intent/intent-4s.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:3c"
+       :deck "Intent"
        :ranksuit base/ranksuit-3c
-       :image "images/intent/intent-3c.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:3d"
+       :deck "Intent"
        :ranksuit base/ranksuit-3d
-       :image "images/intent/intent-3d.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:3h"
+       :deck "Intent"
        :ranksuit base/ranksuit-3h
-       :image "images/intent/intent-3h.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:3s"
+       :deck "Intent"
        :ranksuit base/ranksuit-3s
-       :image "images/intent/intent-3s.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:2c"
+       :deck "Intent"
        :ranksuit base/ranksuit-2c
-       :image "images/intent/intent-2c.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:2d"
+       :deck "Intent"
        :ranksuit base/ranksuit-2d
-       :image "images/intent/intent-2d.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:2h"
+       :deck "Intent"
        :ranksuit base/ranksuit-2h
-       :image "images/intent/intent-2h.svg"
-       :layout base/cardlayout-imageonly)
+       :summary
+        "")
       (base/card
        :name "Intent:2s"
+       :deck "Intent"
        :ranksuit base/ranksuit-2s
-       :image "images/intent/intent-2s.svg"
-       :layout base/cardlayout-imageonly)))
+       :summary
+        "")))
     (base/cardmap-copy<-card-count-isnum
      (base/card
       :name "Intent:Back"

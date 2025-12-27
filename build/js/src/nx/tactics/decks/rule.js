@@ -237,10 +237,10 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "Broken represents a broken limb, Item, Ability, or Skill/Power. Add this to related Damage\nLimb - Cannot use Ability/Item with that limb\nItem - Can only be used as Weapon:Improvised\nAbility/Skill/Power - Cannot use"
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Character", ":summary", ""),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Item", ":summary", ""),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Unit", ":summary", ""),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build: Vehicle", ":summary", ""),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build:Character", ":summary", "Building a Character goes beyond just building a Unit\nPhysical Description\nMental State\nEmotional State\nOccupation - Eg A cartographer\nMotive:\n* Need - What do they want? - Eg to be recognized\n* Method - How do they pursue it? - Meticulous and obsessive\n* Now - What current event is motivating them right now? A rival is going to publish before them.\n* Secret - What are they not sharing?\nPerformance Hooks:\n* A physical detail - Something unique that comes up regularly. Eg Fingers stained with ink and sketches everything\n* A speech pattern - Not an accent but a particular behavior when speaking (eg regularly correcting themself)"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build:Item", ":summary", ""),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build:Unit", ":summary", ""),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Build:Vehicle", ":summary", ""),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -1005,6 +1005,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rank", ":summary", "* The number on a card or the part of a Value before the x."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rating", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reach", ":summary", "* Can target one additional Space away [Scaled]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Research", ":deck", "Reference", ":summary", "Tests may be made easier by carefully researching the problem. A test may be attempted after each Research level. Research requires specialized research material (eg a library). Beyond 3 months, research hits a dead end.\n* Level:+1 - 1 Hour\n* Level:+2 - 5 Hours\n* Level:+3 - 24 Hours (3 days)\n* Level:+4 - 120 Hours (2 weeks)\n* Level:+5 - 720 Hours (3 months)"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -1254,7 +1255,8 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "Stasis represents a time freeze effect. Add this to related Damage\nMinor - Skipping\nMajor - Stuck. Impaired\nCritical - Anchored. Slow:1 Impaired\nExtreme - Stopped. Slow:2 Immobilized\n* Head, Chest, Abdomen - Choking:3 Dying\nAction - Each Damage dealt to Binder reduces Severity by 1\nEscape - IF out of reach\nDead - A Unit that dies by Stasis instead is perfectly preserved until released"
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Subtle", ":summary", "* Subtle Abilities are not obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Study", ":deck", "Reference", ":summary", "Tests may be made easier by carefully studying the problem.A test may be attempted after each Study level. Study requires specialized equipment (eg an Alchemical Kit). Beyond 6 Hours, outside [Research] will be necessary.\n* Level:+1 - 2 Minutes\n* Level:+2 - 10 Minutes\n* Level:+3 - 1 Hour\n* Level:+4 - 6 Hours"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Subtle", ":summary", "Subtle Abilities are not obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suit", ":summary", "Each Suit represents a Stat:\n* Wands - Power. Body\n* Coins - Planning. Mind\n* Cups - Perseverance. Will\n* Swords - Skill. Speed"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},

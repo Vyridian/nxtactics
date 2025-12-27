@@ -8,16 +8,9 @@
   :image "Magick.jpg"
   :chaptermap
    (base/chaptermap<-chapterlist
-    (chapter_magic_overview)
     (chapter_magic_skills tactics)
     (chapter_magic_items tactics)
    )))
-
-(func chapter_magic_overview : base/chapter
- (base/chapter
-  :name "Magic Overview"
-  :summary
-   "* The Art"))
 
 (func chapter_magic_skills : base/chapter
  [tactics : base/tactics]

@@ -38,12 +38,12 @@
      "Air Bubble"))
   (base/power
    :name "Alchemy"
+   :titles
+    "Alchemist, Apothecary, Brewer, Chemist, Concocter, Drug Merchant, Libationist, Potioner, Snake Oil Salesman, Witcher"
    :summary
     "* Alchemy is the art of creating acids, dusts, philter, and potions.
      * Benefits: Alchemical substances may be prepared ahead of time, used by others, and sold for profit. Their signature talent is the creation of the Philosopher's Stone that transmutes lead into gold. Because their talents benefit others, Alchemists are in high demand.
      * Penalties: Alchemical substances MUST be prepared ahead of time and require exotic ingredients. Their preparation normally requires the use of a laboratory and special equipment (See Equipment / Alchemical Devices)."
-   :titles
-    "Alchemist, Apothecary, Brewer, Chemist, Concocter, Drug Merchant, Libationist, Potioner, Snake Oil Salesman, Witcher"
    :abilitymap
     (base/abilitymap
      "Animate:Colossus"
@@ -81,9 +81,14 @@
        :summary
         "* Each powder requires a separate ability to be taken.
          * See Equipment / Powders")
-     "Exract Rare Earths"
+     "Extract:Essence"
       (base/ability
-       :name "Exract Rare Earths"
+       :name "Extract:Essence"
+       :summary
+        "* Gem, magical items, and magical beings hold [Essence]. Through Alchemy, this Essence can be removed and repurposed.")
+     "Extract:Rare Earth"
+      (base/ability
+       :name "Extract:Rare Earth"
        :summary
         "* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the innate powers of other ingredients.
          * To those without Alchemical skill, they are indistinguishable from normal soil or sand. An Alchemist, however, may tell the difference and may extract [Hits] drams of Rare Earths from any soil in an hour.")

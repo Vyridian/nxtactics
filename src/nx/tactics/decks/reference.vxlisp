@@ -86,10 +86,11 @@
      "Blatant"
      "Subtle"
      "Reach"
-     "Build: Unit"
-     "Build: Character"
-     "Build: Item"
-     "Build: Vehicle"
+     "Build:Unit"
+     "Build:Character"
+     "Build:Item"
+     "Build:NPC"
+     "Build:Vehicle"
  */
     )
    cardmap : base/cardmap :=

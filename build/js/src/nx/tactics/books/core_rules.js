@@ -42,25 +42,7 @@ export default class nx_tactics_books_core_rules {
             ":Mind",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Mind", ":image", "Tokens/MindToken.png", ":reference", "* You're that smart? Let me put it this way. Have you ever heard of Plato, Aristotle, Socrates? Yes. Morons. - Princess Bride\n* The nature of existence is misleading. The atoms of our bodies are 99.99% empty space. The actual particles making up every human alive could be compressed to the size of a sugar cube. We are walking, talking electromagnetic fields.", ":summary", "* Mental - The mental strength of the unit. This is equal to the unit's highest Mental skill. Units with low Mind are easily fooled.\n* Mind is vaguely defined by IQ. IQ=Mind+50. Typical human Mind: 5:1 (100IQ). Brilliant human: 10:1 (150IQ).", ":titles", "Intelligence, Mental Clarity, Mental Strength, Perception, Problem Solving, Learning, Reason, Wits"),
             ":Level",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Level", ":image", "Tokens/CoinToken.png", ":summary", "* The overall power of the unit as well as its cost to purchase or develop.\n* Level is calcuated as follows:\n** List each [Skill] level and [Power] level ordered by descending level.\n** For each [Weakness], go down the list reducing top level by 1.\n** Repeat the following until only 2 skills remain:\n    *** Take the bottom 2 level numbers and replace them with the higher number + 1. E.g. 4 and 2 become 5, 4 and 4 become 5.\n** When 2 skills remain the Level is the highest of the 2. E.g. 5 and 3 become Level 5.", ":titles", "Cost, Level, Value"),
-            "Skills, Powers, Abilities, and Specialties",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Skills, Powers, Abilities, and Specialties", ":summary", "* Skills - Skills describe the different skillsets that the unit possesses including combat skills.\n** Examples - Melee, Mechanics, Physics, Medicine, and Military are Skills.\n** Advancement - Raising Skill Levels becomes progressively harder the higher the level.\n* Powers - Powers are similar to skills, but normal humans cannot normally have powers. Powers include Magic and Superpowers as well. Creatures, vehicles and equipment may have powers.\n** Examples - Wizardry, Fire, and Flight are Powers.\n** Advancement - Raising Power Levels does not become progressively harder unlike Skill Levels.\n* Abilities - Abilities are perks that can be activated when the related Skill or Power is used.\n** Examples - Roundhouse Kick is an Ability under the Close Combat Skill.\n** Advancement - Gaining additional Abilities and Specialties is relatively easy.\n* Specialties - Specialties are similar to abilities, but instead of giving perks, specialties make it easier to gain abilities within that specialty.\n** Examples - Swords is a Specialty under the Melee Skill.\n** Advancement - Gaining additional Abilities and Specialties is relatively easy."),
-            ":Weaknesses",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weaknesses", ":summary", "* Weaknesses are optional. They provide character flavor and reduce the [Level] of the unit/item."),
-            "Flavor Text",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Flavor Text", ":summary", "Whenever possible, interesting quotes or facts are included with the unit to help establish a mood.")
-          )
-        ),
-        "Core Movement",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Core Movement",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            "Movement - Infantry",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Movement - Infantry", ":image", "Rules/MoveInfantry.png", ":summary", "* [Move]: [-1 Speed] to move 1 Space in any direction. The [Unit] may change [Facing] to any side before or after moving.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Level", ":image", "Tokens/CoinToken.png", ":summary", "* The overall power of the unit as well as its cost to purchase or develop.\n* Level is calcuated as follows:\n** List each [Skill] level and [Power] level ordered by descending level.\n** For each [Weakness], go down the list reducing top level by 1.\n** Repeat the following until only 2 skills remain:\n    *** Take the bottom 2 level numbers and replace them with the higher number + 1. E.g. 4 and 2 become 5, 4 and 4 become 5.\n** When 2 skills remain the Level is the highest of the 2. E.g. 5 and 3 become Level 5.", ":titles", "Cost, Level, Value")
           )
         ),
         "Core Actions",

@@ -38,596 +38,596 @@ export default class nx_tactics_decks_intent {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Intent:wb",
+              "Intent:Wildeyed",
               ":deck",
               "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_jokerblack,
               ":summary",
-              "Wild - Use the next Intent regardless of Role. Shuffle"
+              "Wildeyed\n* Use the next Intent regardless of Role. Shuffle"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Intent:wr",
+              "Intent:Inspired",
               ":deck",
               "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_jokerred,
               ":summary",
-              "Wild - Use the next Intent regardless of Role. Shuffle"
+              "Inspired\n* Use the next Intent regardless of Role. Shuffle"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Intent:ac",
+              "Assault:All Out",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_ac,
-              ":image",
-              "images/intent/intent-ac.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              "All Out Attack\n* Use most damaging attack"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Intent:ad",
+              "Disrupt:All Out",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_ad,
-              ":image",
-              "images/intent/intent-ad.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              "Shock and Awe\n* Use most disruptive ability"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Intent:ah",
+              "Defend:All Out",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_ah,
-              ":image",
-              "images/intent/intent-ah.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              "Last Stand\n* Use most supporting or defensive ability"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Intent:as",
+              "Manuever:All Out",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_as,
-              ":image",
-              "images/intent/intent-as.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              "Out of Nowhere\n* Use best movement/attack ability"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Intent:kc",
+              "Assault:Leader",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_kc,
-              ":image",
-              "images/intent/intent-kc.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              "Blitz\n* Attack a leader/objective"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Intent:kd",
+              "Disrupt:Leader",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_kd,
-              ":image",
-              "images/intent/intent-kd.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              "Decapitate\n* Disrupt/control a Leader/objective"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:kh",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_kh,
-              ":image",
-              "images/intent/intent-kh.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:ks",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_ks,
-              ":image",
-              "images/intent/intent-ks.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:qc",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_qc,
-              ":image",
-              "images/intent/intent-qc.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:qd",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_qd,
-              ":image",
-              "images/intent/intent-qd.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:qh",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_qh,
-              ":image",
-              "images/intent/intent-qh.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:qs",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_qs,
-              ":image",
-              "images/intent/intent-qs.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:jc",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_jc,
-              ":image",
-              "images/intent/intent-jc.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:jd",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_jd,
-              ":image",
-              "images/intent/intent-jd.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:jh",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_jh,
-              ":image",
-              "images/intent/intent-jh.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:js",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_js,
-              ":image",
-              "images/intent/intent-js.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:tc",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_tc,
-              ":image",
-              "images/intent/intent-tc.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:td",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_td,
-              ":image",
-              "images/intent/intent-td.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:th",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_th,
-              ":image",
-              "images/intent/intent-th.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:ts",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_ts,
-              ":image",
-              "images/intent/intent-ts.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:9c",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_9c,
-              ":image",
-              "images/intent/intent-9c.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:9d",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_9d,
-              ":image",
-              "images/intent/intent-9d.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:9h",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_9h,
-              ":image",
-              "images/intent/intent-9h.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:9s",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_9s,
-              ":image",
-              "images/intent/intent-9s.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:8c",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_8c,
-              ":image",
-              "images/intent/intent-8c.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:8d",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_8d,
-              ":image",
-              "images/intent/intent-8d.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:8h",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_8h,
-              ":image",
-              "images/intent/intent-8h.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:8s",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_8s,
-              ":image",
-              "images/intent/intent-8s.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:7c",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_7c,
-              ":image",
-              "images/intent/intent-7c.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:7d",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_7d,
-              ":image",
-              "images/intent/intent-7d.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:7h",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_7h,
-              ":image",
-              "images/intent/intent-7h.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:7s",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_7s,
-              ":image",
-              "images/intent/intent-7s.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:6c",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_6c,
-              ":image",
-              "images/intent/intent-6c.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:6d",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_6d,
-              ":image",
-              "images/intent/intent-6d.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:6h",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_6h,
-              ":image",
-              "images/intent/intent-6h.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:6s",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_6s,
-              ":image",
-              "images/intent/intent-6s.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:5c",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_5c,
-              ":image",
-              "images/intent/intent-5c.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:5d",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_5d,
-              ":image",
-              "images/intent/intent-5d.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:5h",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_5h,
-              ":image",
-              "images/intent/intent-5h.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:5s",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_5s,
-              ":image",
-              "images/intent/intent-5s.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:4c",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_4c,
-              ":image",
-              "images/intent/intent-4c.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:4d",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_4d,
-              ":image",
-              "images/intent/intent-4d.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:4h",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_4h,
-              ":image",
-              "images/intent/intent-4h.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:4s",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_4s,
-              ":image",
-              "images/intent/intent-4s.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:3c",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_3c,
-              ":image",
-              "images/intent/intent-3c.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:3d",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_3d,
-              ":image",
-              "images/intent/intent-3d.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:3h",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_3h,
-              ":image",
-              "images/intent/intent-3h.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:3s",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_3s,
-              ":image",
-              "images/intent/intent-3s.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:2c",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_2c,
-              ":image",
-              "images/intent/intent-2c.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:2d",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_2d,
-              ":image",
-              "images/intent/intent-2d.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:2h",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_2h,
-              ":image",
-              "images/intent/intent-2h.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
               "Intent:2s",
+              ":deck",
+              "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_2s,
-              ":image",
-              "images/intent/intent-2s.svg",
-              ":layout",
-              nx_tactics_base.c_cardlayout_imageonly
+              ":summary",
+              ""
             )
           )
         ),

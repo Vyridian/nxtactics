@@ -327,6 +327,18 @@
    :summary
     "A life extending drug")
   (base/item
+   :name "Essence"
+   :summary
+    "An intangible quality that is the fundamental form of magic.")
+  (base/item
+   :name "Essential:Earth"
+   :summary
+    "The fundamental magical quality of Earth")
+  (base/item
+   :name "Gemstone"
+   :summary
+    "A gemstone of modest value")
+  (base/item
    :name "Grenade: White Phosphorous")
   (base/item
    :name "Hammer"

@@ -260,6 +260,9 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Door: Heavy Wooden", ":image", "images/cards/item-door-heavy-wooden.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Door: Wooden", ":image", "images/cards/item-door-wooden.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Drug: Evergreen", ":summary", "A life extending drug"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Essence", ":summary", "An intangible quality that is the fundamental form of magic."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Essential:Earth", ":summary", "The fundamental magical quality of Earth"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Gemstone", ":summary", "A gemstone of modest value"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Grenade: White Phosphorous"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_item},

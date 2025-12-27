@@ -282,41 +282,7 @@
 ** Repeat the following until only 2 skills remain:
                 *** Take the bottom 2 level numbers and replace them with the higher number + 1. E.g. 4 and 2 become 5, 4 and 4 become 5.
 ** When 2 skills remain the Level is the highest of the 2. E.g. 5 and 3 become Level 5."
-          :titles "Cost, Level, Value")
-        "Skills, Powers, Abilities, and Specialties"
-         (rule
-          :name "Skills, Powers, Abilities, and Specialties"
-          :summary
-           "* Skills - Skills describe the different skillsets that the unit possesses including combat skills.
-** Examples - Melee, Mechanics, Physics, Medicine, and Military are Skills.
-** Advancement - Raising Skill Levels becomes progressively harder the higher the level.
-* Powers - Powers are similar to skills, but normal humans cannot normally have powers. Powers include Magic and Superpowers as well. Creatures, vehicles and equipment may have powers.
-** Examples - Wizardry, Fire, and Flight are Powers.
-** Advancement - Raising Power Levels does not become progressively harder unlike Skill Levels.
-* Abilities - Abilities are perks that can be activated when the related Skill or Power is used.
-** Examples - Roundhouse Kick is an Ability under the Close Combat Skill.
-** Advancement - Gaining additional Abilities and Specialties is relatively easy.
-* Specialties - Specialties are similar to abilities, but instead of giving perks, specialties make it easier to gain abilities within that specialty.
-** Examples - Swords is a Specialty under the Melee Skill.
-** Advancement - Gaining additional Abilities and Specialties is relatively easy.")
-        :Weaknesses
-         (rule
-          :name "Weaknesses"
-          :summary "* Weaknesses are optional. They provide character flavor and reduce the [Level] of the unit/item.")
-        "Flavor Text"
-         (rule
-          :name "Flavor Text"
-          :summary "Whenever possible, interesting quotes or facts are included with the unit to help establish a mood.")))
-    "Core Movement"
-     (section
-      :name "Core Movement"
-      :rulemap
-       (rulemap
-        "Movement - Infantry"
-         (rule
-          :name "Movement - Infantry"
-          :image "Rules/MoveInfantry.png"
-          :summary "* [Move]: [-1 Speed] to move 1 Space in any direction. The [Unit] may change [Facing] to any side before or after moving.")))
+          :titles "Cost, Level, Value")))
     "Core Actions"
      (section
       :name "Core Actions"

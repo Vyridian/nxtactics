@@ -66,24 +66,6 @@ export default class nx_tactics_books_magic {
   }
 
   /**
-   * @function chapter_magic_overview
-   * @return {chapter}
-   */
-  static t_chapter_magic_overview = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_magic_overview = {
-    vx_type: nx_tactics_books_magic.t_chapter_magic_overview
-  }
-
-  // (func chapter_magic_overview)
-  static f_chapter_magic_overview() {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Magic Overview", ":summary", "* The Art")
-    return output
-  }
-
-  /**
    * @function chapter_magic_skills
    * @param  {tactics} tactics
    * @return {chapter}
@@ -186,7 +168,6 @@ export default class nx_tactics_books_magic {
       "Magick.jpg",
       ":chaptermap",
       nx_tactics_base.f_chaptermap_from_chapterlist(
-        nx_tactics_books_magic.f_chapter_magic_overview(),
         nx_tactics_books_magic.f_chapter_magic_skills(tactics),
         nx_tactics_books_magic.f_chapter_magic_items(tactics)
       )
@@ -202,13 +183,11 @@ export default class nx_tactics_books_magic {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "chapter_magic_items": nx_tactics_books_magic.e_chapter_magic_items,
-      "chapter_magic_overview": nx_tactics_books_magic.e_chapter_magic_overview,
       "chapter_magic_skills": nx_tactics_books_magic.e_chapter_magic_skills,
       "tacticsbook": nx_tactics_books_magic.e_tacticsbook
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "chapter_magic_items": nx_tactics_books_magic.t_chapter_magic_items,
-      "chapter_magic_overview": nx_tactics_books_magic.t_chapter_magic_overview,
       "chapter_magic_skills": nx_tactics_books_magic.t_chapter_magic_skills,
       "tacticsbook": nx_tactics_books_magic.t_tacticsbook
     })
@@ -240,24 +219,6 @@ export default class nx_tactics_books_magic {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_magic.f_chapter_magic_items
-    }
-
-    // (func chapter_magic_overview)
-    nx_tactics_books_magic.t_chapter_magic_overview['vx_value'] = {
-      name          : "chapter_magic_overview",
-      pkgname       : "nx/tactics/books/magic",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_magic.f_chapter_magic_overview
     }
 
     // (func chapter_magic_skills)

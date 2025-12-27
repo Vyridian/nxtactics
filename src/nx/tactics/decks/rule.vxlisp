@@ -123,19 +123,31 @@
      Item - Can only be used as Weapon:Improvised
      Ability/Skill/Power - Cannot use")
   (base/rule
-   :name "Build: Character"
+   :name "Build:Character"
+   :summary
+    "Building a Character goes beyond just building a Unit
+     Physical Description
+     Mental State
+     Emotional State
+     Occupation - Eg A cartographer
+     Motive:
+     * Need - What do they want? - Eg to be recognized
+     * Method - How do they pursue it? - Meticulous and obsessive
+     * Now - What current event is motivating them right now? A rival is going to publish before them.
+     * Secret - What are they not sharing?
+     Performance Hooks:
+     * A physical detail - Something unique that comes up regularly. Eg Fingers stained with ink and sketches everything
+     * A speech pattern - Not an accent but a particular behavior when speaking (eg regularly correcting themself)")
+  (base/rule
+   :name "Build:Item"
    :summary
     "")
   (base/rule
-   :name "Build: Item"
+   :name "Build:Unit"
    :summary
     "")
   (base/rule
-   :name "Build: Unit"
-   :summary
-    "")
-  (base/rule
-   :name "Build: Vehicle"
+   :name "Build:Vehicle"
    :summary
     "")
   (base/rule
@@ -852,6 +864,16 @@
    :summary
     "* Can target one additional Space away [Scaled]")
   (base/rule
+   :name "Research"
+   :deck "Reference"
+   :summary
+    "Tests may be made easier by carefully researching the problem. A test may be attempted after each Research level. Research requires specialized research material (eg a library). Beyond 3 months, research hits a dead end.
+     * Level:+1 - 1 Hour
+     * Level:+2 - 5 Hours
+     * Level:+3 - 24 Hours (3 days)
+     * Level:+4 - 120 Hours (2 weeks)
+     * Level:+5 - 720 Hours (3 months)")
+  (base/rule
    :name "Resolution"
    :image "images/rule-resolution.svg"
    :layout base/cardlayout-imageonly)
@@ -1132,9 +1154,18 @@
      Escape - IF out of reach
      Dead - A Unit that dies by Stasis instead is perfectly preserved until released")
   (base/rule
+   :name "Study"
+   :deck "Reference"
+   :summary
+    "Tests may be made easier by carefully studying the problem.A test may be attempted after each Study level. Study requires specialized equipment (eg an Alchemical Kit). Beyond 6 Hours, outside [Research] will be necessary.
+     * Level:+1 - 2 Minutes
+     * Level:+2 - 10 Minutes
+     * Level:+3 - 1 Hour
+     * Level:+4 - 6 Hours")
+  (base/rule
    :name "Subtle"
    :summary
-    "* Subtle Abilities are not obviously linked to the user.
+    "Subtle Abilities are not obviously linked to the user.
      * [Blatant] is the opposite of [Subtle]")
   (base/rule
    :name "Suit"
