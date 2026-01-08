@@ -2,6 +2,7 @@
 
 import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
+import nx_tactics_decks_character from "../../../nx/tactics/decks/character.js"
 import nx_tactics_decks_condition from "../../../nx/tactics/decks/condition.js"
 import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
@@ -13,6 +14,9 @@ import nx_tactics_decks_reference from "../../../nx/tactics/decks/reference.js"
 import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
 import nx_tactics_decks_restrain from "../../../nx/tactics/decks/restrain.js"
 import nx_tactics_decks_scene from "../../../nx/tactics/decks/scene.js"
+import nx_tactics_decks_story from "../../../nx/tactics/decks/story.js"
+import nx_tactics_decks_storyarc from "../../../nx/tactics/decks/storyarc.js"
+import nx_tactics_decks_storyevent from "../../../nx/tactics/decks/storyevent.js"
 import nx_tactics_decks_trauma from "../../../nx/tactics/decks/trauma.js"
 import nx_tactics_decks_vehicle from "../../../nx/tactics/decks/vehicle.js"
 import nx_tactics_decks_wilderness from "../../../nx/tactics/decks/wilderness.js"
@@ -209,7 +213,11 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_dungeon.f_deck_dungeon(),
           nx_tactics_decks_highway.f_deck_highway(),
           nx_tactics_decks_wilderness.f_deck_wilderness(),
-          nx_tactics_decks_intent.f_deck_intent()
+          nx_tactics_decks_intent.f_deck_intent(),
+          nx_tactics_decks_character.f_deck_character(),
+          nx_tactics_decks_story.f_deck_story(),
+          nx_tactics_decks_storyarc.f_deck_storyarc(),
+          nx_tactics_decks_storyevent.f_deck_storyevent()
         )
       )
     )

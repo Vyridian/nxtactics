@@ -6,33 +6,33 @@
  (base/cardback
   :name "Stun"
   :titles "Mental Damage/Strain/Distraction/Surprise/Shock"
-  :image "images/damage-disorder-stun.svg"
+  :image "images/disorder/disorder-stun.svg"
   :layout base/cardlayout-imageonly))
 
 (const disorder-wild-black : base/damage
  (base/damage
-  :name "Disorder: Deck"
+  :name "Disorder:Deck"
   :ranksuit base/ranksuit-jokerblack
   :image "images/card-hitlocation-jester-black.svg"
-  :image "images/damage-disorder-wb.svg"
+  :image "images/disorder/disorder-wb.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
 
 (const disorder-wild-red : base/damage
  (base/damage
-  :name "Disorder: Discard"
+  :name "Disorder:Discard"
   :ranksuit base/ranksuit-jokerred
-  :image "images/damage-disorder-wr.svg"
+  :image "images/disorder/disorder-wr.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
 
 (const disorder-ac : base/damage
  (base/damage
-  :name "Loss: Awareness"
+  :name "Loss:Awareness"
   :ranksuit base/ranksuit-ac
-  :image "images/damage-disorder-ac.svg"
+  :image "images/disorder/disorder-ac.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Space out. Fatigue:1
@@ -42,9 +42,9 @@
 
 (const disorder-ad : base/damage
  (base/damage
-  :name "Delusion: Death"
+  :name "Delusion:Death"
   :ranksuit base/ranksuit-ad
-  :image "images/damage-disorder-ad.svg"
+  :image "images/disorder/disorder-ad.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hear voices of the dead. Stun:1
@@ -54,9 +54,9 @@
 
 (const disorder-ah : base/damage
  (base/damage
-  :name "Compulsion: Death"
+  :name "Compulsion:Death"
   :ranksuit base/ranksuit-ah
-  :image "images/damage-disorder-ah.svg"
+  :image "images/disorder/disorder-ah.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Contemplate killing. Stun:1
@@ -68,7 +68,7 @@
  (base/damage
   :name "Nervous: Head"
   :ranksuit base/ranksuit-as
-  :image "images/damage-disorder-as.svg"
+  :image "images/disorder/disorder-as.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Headache. Stun:1
@@ -78,9 +78,9 @@
 
 (const disorder-kc : base/damage
  (base/damage
-  :name "Loss: Concentration"
+  :name "Loss:Concentration"
   :ranksuit base/ranksuit-kc
-  :image "images/damage-disorder-kc.svg"
+  :image "images/disorder/disorder-kc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Perplexed. Hard to focus Stun:1
@@ -90,9 +90,9 @@
 
 (const disorder-kd : base/damage
  (base/damage
-  :name "Delusion: Power"
+  :name "Delusion:Power"
   :ranksuit base/ranksuit-kd
-  :image "images/damage-disorder-kd.svg"
+  :image "images/disorder/disorder-kd.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Powermonger. Must lead. Stun:1
@@ -102,9 +102,9 @@
 
 (const disorder-kh : base/damage
  (base/damage
-  :name "Compulsion: Power"
+  :name "Compulsion:Power"
   :ranksuit base/ranksuit-kh
-  :image "images/damage-disorder-kh.svg"
+  :image "images/disorder/disorder-kh.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Rebellious. Challenge the system. Stun:1
@@ -116,7 +116,7 @@
  (base/damage
   :name "Nervous: Shoulders"
   :ranksuit base/ranksuit-ks
-  :image "images/damage-disorder-ks.svg"
+  :image "images/disorder/disorder-ks.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Back Pain. Stun:1
@@ -126,9 +126,9 @@
 
 (const disorder-qc : base/damage
  (base/damage
-  :name "Loss: Personality"
+  :name "Loss:Personality"
   :ranksuit base/ranksuit-qc
-  :image "images/damage-disorder-qc.svg"
+  :image "images/disorder/disorder-qc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Irritable and Emotional. Stress:1
@@ -138,9 +138,9 @@
 
 (const disorder-qd : base/damage
  (base/damage
-  :name "Delusion: Self"
+  :name "Delusion:Self"
   :ranksuit base/ranksuit-qd
-  :image "images/damage-disorder-qd.svg"
+  :image "images/disorder/disorder-qd.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Affected. Change mannerisms. Stun:1
@@ -150,9 +150,9 @@
 
 (const disorder-qh : base/damage
  (base/damage
-  :name "Compulsion: Self"
+  :name "Compulsion:Self"
   :ranksuit base/ranksuit-qh
-  :image "images/damage-disorder-qh.svg"
+  :image "images/disorder/disorder-qh.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Compulsive Body Picking. Stun:1
@@ -164,7 +164,7 @@
  (base/damage
   :name "Nervous: Chest"
   :ranksuit base/ranksuit-qs
-  :image "images/damage-disorder-qs.svg"
+  :image "images/disorder/disorder-qs.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Chest Tightness. Stun:1
@@ -174,9 +174,9 @@
 
 (const disorder-jc : base/damage
  (base/damage
-  :name "Loss: Vitality"
+  :name "Loss:Vitality"
   :ranksuit base/ranksuit-jc
-  :image "images/damage-disorder-jc.svg"
+  :image "images/disorder/disorder-jc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Periodic Weakness. Fatigue:1
@@ -186,9 +186,9 @@
 
 (const disorder-jd : base/damage
  (base/damage
-  :name "Delusion: Violence"
+  :name "Delusion:Violence"
   :ranksuit base/ranksuit-jd
-  :image "images/damage-disorder-jd.svg"
+  :image "images/disorder/disorder-jd.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Daydream of violence. Stun:1
@@ -198,9 +198,9 @@
 
 (const disorder-jh : base/damage
  (base/damage
-  :name "Compulsion: Violence"
+  :name "Compulsion:Violence"
   :ranksuit base/ranksuit-jh
-  :image "images/damage-disorder-jh.svg"
+  :image "images/disorder/disorder-jh.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Nasty. Enjoy misfortune. Stun:1
@@ -212,7 +212,7 @@
  (base/damage
   :name "Nervous: Abdomen"
   :ranksuit base/ranksuit-js
-  :image "images/damage-disorder-js.svg"
+  :image "images/disorder/disorder-js.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Nausea and Stomach Pain. Stun:1
@@ -222,9 +222,9 @@
 
 (const disorder-tc : base/damage
  (base/damage
-  :name "Loss: Balance"
+  :name "Loss:Balance"
   :ranksuit base/ranksuit-tc
-  :image "images/damage-disorder-tc.svg"
+  :image "images/disorder/disorder-tc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Clumsy. Stun:1
@@ -234,9 +234,9 @@
 
 (const disorder-td : base/damage
  (base/damage
-  :name "Delusion: Reality"
+  :name "Delusion:Reality"
   :ranksuit base/ranksuit-td
-  :image "images/damage-disorder-td.svg"
+  :image "images/disorder/disorder-td.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Daydreamer. Stun:1
@@ -246,9 +246,9 @@
 
 (const disorder-th : base/damage
  (base/damage
-  :name "Compulsion: Reality"
+  :name "Compulsion:Reality"
   :ranksuit base/ranksuit-th
-  :image "images/damage-disorder-th.svg"
+  :image "images/disorder/disorder-th.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: White Lies. Keep your privacy. Stun:1
@@ -260,7 +260,7 @@
  (base/damage
   :name "Nervous: Vitals"
   :ranksuit base/ranksuit-ts
-  :image "images/damage-disorder-ts.svg"
+  :image "images/disorder/disorder-ts.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Groin Pain. Stun:1
@@ -270,9 +270,9 @@
 
 (const disorder-9c : base/damage
  (base/damage
-  :name "Loss: Memory"
+  :name "Loss:Memory"
   :ranksuit base/ranksuit-9c
-  :image "images/damage-disorder-9c.svg"
+  :image "images/disorder/disorder-9c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forgetful. Stun:1
@@ -282,9 +282,9 @@
 
 (const disorder-9d : base/damage
  (base/damage
-  :name "Delusion: Belief"
+  :name "Delusion:Belief"
   :ranksuit base/ranksuit-9d
-  :image "images/damage-disorder-9d.svg"
+  :image "images/disorder/disorder-9d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Theorist. Connect the dots. Stun:1
@@ -294,9 +294,9 @@
 
 (const disorder-9h : base/damage
  (base/damage
-  :name "Compulsion: Belief"
+  :name "Compulsion:Belief"
   :ranksuit base/ranksuit-9h
-  :image "images/damage-disorder-9h.svg"
+  :image "images/disorder/disorder-9h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Rituals. Formalize your beliefs. Stun:1
@@ -308,7 +308,7 @@
  (base/damage
   :name "Nervous: Left Arm"
   :ranksuit base/ranksuit-9s
-  :image "images/damage-disorder-9s.svg"
+  :image "images/disorder/disorder-9s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Arm Pain. Stun:1
@@ -318,9 +318,9 @@
 
 (const disorder-8c : base/damage
  (base/damage
-  :name "Loss: Understanding"
+  :name "Loss:Understanding"
   :ranksuit base/ranksuit-8c
-  :image "images/damage-disorder-8c.svg"
+  :image "images/disorder/disorder-8c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Slow to Recognize Items. Stun:1
@@ -330,9 +330,9 @@
 
 (const disorder-8d : base/damage
  (base/damage
-  :name "Delusion: Status"
+  :name "Delusion:Status"
   :ranksuit base/ranksuit-8d
-  :image "images/damage-disorder-8d.svg"
+  :image "images/disorder/disorder-8d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: I'm amazing. Remind everyone. Stun:1
@@ -342,9 +342,9 @@
 
 (const disorder-8h : base/damage
  (base/damage
-  :name "Compulsion: Status"
+  :name "Compulsion:Status"
   :ranksuit base/ranksuit-8h
-  :image "images/damage-disorder-8h.svg"
+  :image "images/disorder/disorder-8h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Super fan. Study the famous. Stun:1
@@ -356,7 +356,7 @@
  (base/damage
   :name "Nervous: Right Arm"
   :ranksuit base/ranksuit-8s
-  :image "images/damage-disorder-8s.svg"
+  :image "images/disorder/disorder-8s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Arm Pain. Stun:1
@@ -366,9 +366,9 @@
 
 (const disorder-7c : base/damage
  (base/damage
-  :name "Loss: Language"
+  :name "Loss:Language"
   :ranksuit base/ranksuit-7c
-  :image "images/damage-disorder-7c.svg"
+  :image "images/disorder/disorder-7c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Dyslexia. Difficulty with words. Stun:1
@@ -378,9 +378,9 @@
 
 (const disorder-7d : base/damage
  (base/damage
-  :name "Delusion: Companions"
+  :name "Delusion:Companions"
   :ranksuit base/ranksuit-7d
-  :image "images/damage-disorder-7d.svg"
+  :image "images/disorder/disorder-7d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Guardian Angel. Unseen protector. Stun:1
@@ -390,9 +390,9 @@
 
 (const disorder-7h : base/damage
  (base/damage
-  :name "Compulsion: Companions"
+  :name "Compulsion:Companions"
   :ranksuit base/ranksuit-7h
-  :image "images/damage-disorder-7h.svg"
+  :image "images/disorder/disorder-7h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Demanding. Pushy. Stun:1
@@ -404,7 +404,7 @@
  (base/damage
   :name "Nervous: Left Hand"
   :ranksuit base/ranksuit-7s
-  :image "images/damage-disorder-7s.svg"
+  :image "images/disorder/disorder-7s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hand Tremors. Stun:1
@@ -414,9 +414,9 @@
 
 (const disorder-6c : base/damage
  (base/damage
-  :name "Loss: Vision"
+  :name "Loss:Vision"
   :ranksuit base/ranksuit-6c
-  :image "images/damage-disorder-6c.svg"
+  :image "images/disorder/disorder-6c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Light Sensitivity. Stun:1
@@ -426,9 +426,9 @@
 
 (const disorder-6d : base/damage
  (base/damage
-  :name "Delusion: Strangers"
+  :name "Delusion:Strangers"
   :ranksuit base/ranksuit-6d
-  :image "images/damage-disorder-6d.svg"
+  :image "images/disorder/disorder-6d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Watchful. Strangers seem sinister. Stress:1
@@ -438,9 +438,9 @@
 
 (const disorder-6h : base/damage
  (base/damage
-  :name "Compulsion: Strangers"
+  :name "Compulsion:Strangers"
   :ranksuit base/ranksuit-6h
-  :image "images/damage-disorder-6h.svg"
+  :image "images/disorder/disorder-6h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Superficial. Label others at a glance. Stun:1
@@ -452,7 +452,7 @@
  (base/damage
   :name "Nervous: Right Hand"
   :ranksuit base/ranksuit-6s
-  :image "images/damage-disorder-6s.svg"
+  :image "images/disorder/disorder-6s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hand Tremors. Stun:1
@@ -462,9 +462,9 @@
 
 (const disorder-5c : base/damage
  (base/damage
-  :name "Loss: Hearing"
+  :name "Loss:Hearing"
   :ranksuit base/ranksuit-5c
-  :image "images/damage-disorder-5c.svg"
+  :image "images/disorder/disorder-5c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Sound Sensitivity. Stun:1
@@ -474,9 +474,9 @@
 
 (const disorder-5d : base/damage
  (base/damage
-  :name "Delusion: Love"
+  :name "Delusion:Love"
   :ranksuit base/ranksuit-5d
-  :image "images/damage-disorder-5d.svg"
+  :image "images/disorder/disorder-5d.svg"
   :layout base/cardlayout-imageonly
   :reference
    "* What's love got to do, got to do with it? what's love but a second-hand emotion. What's love got to do, got to do with? Who needs a heart when a heart can be browen? - Tina Turner, What's Love Got to do with it?"
@@ -488,9 +488,9 @@
 
 (const disorder-5h : base/damage
  (base/damage
-  :name "Compulsion: Love"
+  :name "Compulsion:Love"
   :ranksuit base/ranksuit-5h
-  :image "images/damage-disorder-5h.svg"
+  :image "images/disorder/disorder-5h.svg"
   :layout base/cardlayout-imageonly
   :reference
    "* Sometimes I wish that I could stop you from talking. When I hear the silly things that you say. I think somebody better put out the big light. 'Cause I can't stand to see you this way - Elvis Costello, Allison"
@@ -504,7 +504,7 @@
  (base/damage
   :name "Nervous: Left Leg"
   :ranksuit base/ranksuit-5s
-  :image "images/damage-disorder-5s.svg"
+  :image "images/disorder/disorder-5s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Leg Pain. Stun:1
@@ -514,9 +514,9 @@
 
 (const disorder-4c : base/damage
  (base/damage
-  :name "Loss: Sensation"
+  :name "Loss:Sensation"
   :ranksuit base/ranksuit-5c
-  :image "images/damage-disorder-5c.svg"
+  :image "images/disorder/disorder-5c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Temperature Sensitivity. Stress:1
@@ -526,9 +526,9 @@
 
 (const disorder-4d : base/damage
  (base/damage
-  :name "Delusion: Change"
+  :name "Delusion:Change"
   :ranksuit base/ranksuit-4d
-  :image "images/damage-disorder-4d.svg"
+  :image "images/disorder/disorder-4d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Unnerved. Something is off. Stress:1
@@ -538,9 +538,9 @@
 
 (const disorder-4h : base/damage
  (base/damage
-  :name "Compulsion: Change"
+  :name "Compulsion:Change"
   :ranksuit base/ranksuit-4h
-  :image "images/damage-disorder-4h.svg"
+  :image "images/disorder/disorder-4h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Trendy. Change appearance daily. Stun:1
@@ -552,7 +552,7 @@
  (base/damage
   :name "Nervous: Right Leg"
   :ranksuit base/ranksuit-4s
-  :image "images/damage-disorder-4s.svg"
+  :image "images/disorder/disorder-4s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Leg Pain. Stun:1
@@ -562,9 +562,9 @@
 
 (const disorder-3c : base/damage
  (base/damage
-  :name "Loss: Social"
+  :name "Loss:Social"
   :ranksuit base/ranksuit-3c
-  :image "images/damage-disorder-3c.svg"
+  :image "images/disorder/disorder-3c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Anxious. Butterflies. Stress:1
@@ -574,9 +574,9 @@
 
 (const disorder-3d : base/damage
  (base/damage
-  :name "Delusion: Things"
+  :name "Delusion:Things"
   :ranksuit base/ranksuit-3d
-  :image "images/damage-disorder-3d.svg"
+  :image "images/disorder/disorder-3d.svg"
   :layout base/cardlayout-imageonly
   :reference
    "* If I could talk to the animals - Doctor Dolittle, Talk to the Animals
@@ -589,9 +589,9 @@
 
 (const disorder-3h : base/damage
  (base/damage
-  :name "Compulsion: Things"
+  :name "Compulsion:Things"
   :ranksuit base/ranksuit-3h
-  :image "images/damage-disorder-3h.svg"
+  :image "images/disorder/disorder-3h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Trophy Collector. Stun:1
@@ -603,7 +603,7 @@
  (base/damage
   :name "Nervous: Left Foot"
   :ranksuit base/ranksuit-3s
-  :image "images/damage-disorder-3s.svg"
+  :image "images/disorder/disorder-3s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Foot Pain. Slow:1
@@ -613,9 +613,9 @@
 
 (const disorder-2c : base/damage
  (base/damage
-  :name "Loss: Sleep"
+  :name "Loss:Sleep"
   :ranksuit base/ranksuit-2c
-  :image "images/damage-disorder-2c.svg"
+  :image "images/disorder/disorder-2c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hypersomnia. Fatigue:1 Sleep excessively
@@ -625,9 +625,9 @@
 
 (const disorder-2d : base/damage
  (base/damage
-  :name "Delusion: Fortune"
+  :name "Delusion:Fortune"
   :ranksuit base/ranksuit-2d
-  :image "images/damage-disorder-2d.svg"
+  :image "images/disorder/disorder-2d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Lucky. Take chances. Stun:1
@@ -637,9 +637,9 @@
 
 (const disorder-2h : base/damage
  (base/damage
-  :name "Compulsion: Fortune"
+  :name "Compulsion:Fortune"
   :ranksuit base/ranksuit-2h
-  :image "images/damage-disorder-2h.svg"
+  :image "images/disorder/disorder-2h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Gamer. Play games a lot. Stress:1
@@ -651,7 +651,7 @@
  (base/damage
   :name "Nervous: Right Foot"
   :ranksuit base/ranksuit-2s
-  :image "images/damage-disorder-2s.svg"
+  :image "images/disorder/disorder-2s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Foot Pain. Slow:1
@@ -663,7 +663,7 @@
  (base/deck
   :name "Disorder"
   :titles "Crazed, Insane, Nonsensical, Obsessed, Unhinged"
-  :image "images/damage-disorder-stun.svg"
+  :image "images/disorder/disorder-stun.svg"
   :layout base/cardlayout-imageonly
   :summary
    "* C-Loss/Dysfunction/Misunderstand/Miscommunicate/Amnesia/Aphasia

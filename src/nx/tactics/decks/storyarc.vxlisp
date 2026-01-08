@@ -1,0 +1,845 @@
+(package nx/tactics/decks/storyarc
+ :libs (lib base :path nx/tactics/base)
+ :doc "Story Arc Deck")
+
+/*
+Drama
+People, emotions, relationships, romance, comedy, tragedy
+
+Action
+Fighting, chases, physical confrontation, War
+
+Suspense
+Danger, Mystery, Fear, Crime, Horror, Thriller, Heist
+
+Adventure
+Journeys, Exploration, Trials, Survival, Quests, Epic
+
+
+Story Circle:
+1: You - The character is established in their comfort zone, living life as usual, even if it is not perfect.This 'zone of comfort' represents the status quo, which may be miserable but is familiar
+2: Need - The character develops a desire or need-something they want or a problem they wish to resolve-that creates tension and motivates them to act
+3: Go - The character leaves their familiar world and enters an unfamiliar situation, crossing the threshold into the unknown
+4: Search - The character faces trials, new rules, and rising conflict in the unfamiliar world, adapting to challenges and navigating the chaos of the second act
+5: Find - The character achieves their goal or obtains what they wanted, but this victory often comes with unintended consequences or 'strings attached'
+6: Take - The character must pay a heavy price for their success, facing a sacrifice or loss that marks a turning point in their journey
+7: Return - The character returns to their original world or familiar situation, bringing back what they gained or learned
+8: Change - The character completes the circle by returning to the starting point but is now transformed, having undergone personal growth or change.
+Quadrants:
+1-5:Lie
+5-1:Truth
+7-3:Familiar World
+3-7:Unfamiliar World
+
+Hero's Journey:
+Departure:
+1: The Call to Adventure
+2: Refusal of the Call
+3: Supernatural Aid
+4: The Crossing of the First Threshold
+5: The Belly of the Whale
+Initiation:
+6: The Road of Trials
+7: The Meeting with the Goddess
+8: Woman as the Temptress
+9: Atonement with the Father
+10: Apotheosis
+11: The Ultimate Boon
+Return:
+12: Refusal of the Return
+13: The Magic Flight
+14: Rescue from Without
+15: The Crossing of the Return Threshold
+16: Master of the Two Worlds
+17: Freedom to Live
+
+Story Elements:
+* Character: Who its about
+* Conflict: What's in the way
+* Plot: What happens
+* Stakes: Why it matters
+* Setting: Where and when it happens
+* Theme: What really happens
+* Tone: 
+
+*/
+
+(func deck-storyarc : base/deck
+ (base/deck
+  :name "Story Arc"
+  :image "images/storyarc/storyarc-back.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      (base/card
+       :name "Story Arc:How-To"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-jokerblack
+       :image "icons/card-ranksuit-wb.svg"
+       :summary
+        "1) Choose a random Plot card
+         2) Read the 'You' section
+         3) If you dislike it, choose again
+         4) If you like it, GM reads the rest
+         5) If coop, reveal the rest only as needed
+
+         * Rank: A=Drive, K=Authority, Q=Revelation, J=Agency, 8-10=Escalation, 5-7=Commitment, 2-4=Instability
+         * Suit: C=Social / Institutional, D=Material / Survival, H=Emotional / Relational, S=Existential / Internal")
+      (base/card
+       :name "Story Circle"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-jokerred
+       :image "icons/card-ranksuit-wr.svg"
+       :reference
+        "* Dan Harmon's Story Circle"
+       :summary
+        "1: You - Character in status quo
+         2: Need - Desire motivates action
+         3: Go - Cross into the unknown
+         4: Search - Face trials, new rules, and rising conflict
+         5: Find - Achieve goal but with consequences
+         6: Take - Pay the price that marks a turning point
+         7: Return - Return to familiar bringing what was learned
+         8: Change - Return to the beginning but transformed with growth or change")
+      (base/card
+       :name "Social Presence"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-ac
+       :image "icons/card-ranksuit-ac.svg"
+       :summary
+        "You join a group
+         * You: An outsider (You stand near the door)
+         * Need: Belonging (Scan faces)
+         * Go: Introduce yourself (Step forward)
+         * Search: Read norms (Watch reactions)
+         * Find: Reception (A few nods)
+         * Take: Social position assigned (Offered a seat)
+         * Return: Group acknowledged (People include you)
+         * Change: You exist socially (Not invisible anymore)")
+      (base/card
+       :name "Material Want"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-ad
+       :summary
+        "You want something concrete
+         * You: Defined by lack (Check your balance again)
+         * Need: Desire sharpens (Price goes up)
+         * Go: Chase opportunity (Submit application)
+         * Search: Optimize path (Compare options)
+         * Find: Commit resources (Pay the deposit)
+         * Take: Stakes attach (Save the receipt)
+         * Return: Life reorganizes (Your calendar fills)
+         * Change: Goal locked (Stop browsing alternatives)")
+      (base/card
+       :name "Emotional Hunger"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-ah
+       :image "icons/card-ranksuit-ah.svg"
+       :summary
+        "You long for connection
+         * You: Emotionally guarded (You keep conversations short)
+         * Need: Loneliness grows (Evenings stretch quietly)
+         * Go: Reach out (Send the message)
+         * Search: Test safety (Add a joke)
+         * Find: Risk attachment (Wait for the reply)
+         * Take: Vulnerability exposed (Your phone stays in your hand)
+         * Return: Bonds matter now (Check for responses)
+         * Change: Heart engaged (You care if they answer)")
+      (base/card
+       :name "Moral Fault Line"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-as
+       :image "icons/card-ranksuit-as.svg"
+       :summary
+        "You fear becoming something worse
+         * You: Defined by restraint (Refuse an easy bribe)
+         * Need: Pressure tests your code (Rent is overdue)
+         * Go: Enter temptation (Return the call)
+         * Search: Seek clean options (Ask for legal alternatives)
+         * Find: No clean path exists (They shake their head)
+         * Take: Tension builds (Don't answer yet)
+         * Return: Life narrows (Bills stack on the table)
+         * Change: Core conflict set (You stop saying 'never')")
+      (base/card
+       :name "Institutional Authority"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-kc
+       :image "icons/card-ranksuit-kc.svg"
+       :summary
+        "You embody the system
+         * You: Central figure (Others wait for cues)
+         * Need: Stability depends on you (Conflicts escalate upward)
+         * Go: Enforce structure (Make the call)
+         * Search: Balance fairness and order (Weigh impact)
+         * Find: Compliance achieved (Resistance fades)
+         * Take: Responsibility absorbed (Blame flows to you)
+         * Return: System steadies (Operations resume)
+         * Change: You are the institution (Power and burden unite)")
+      (base/card
+       :name "Material Authority"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-kd
+       :summary
+        "You control resources
+         * You: Hardened by loss (Experience shows)
+         * Need: System requires leadership (Decisions pile up)
+         * Go: Allocate decisively (Approve budgets)
+         * Search: Perfect outcomes (Stop chasing them)
+         * Find: Functional stability (Cash flow steadies)
+         * Take: Burden of control (Sign daily)
+         * Return: Order restored (Processes resume)
+         * Change: You are the gatekeeper (Final approval rests with you)")
+      (base/card
+       :name "Emotional Steward"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-kh
+       :summary
+        "You carry others' hearts
+         * You: Emotionally mature (You stay calm)
+         * Need: Stability needed (They look to you)
+         * Go: Offer consistent care (You show up daily)
+         * Search: Personal gratification (You set it aside)
+         * Find: Trust deepens (They confide freely)
+         * Take: Emotional labor accepted (You listen again)
+         * Return: Relationships stabilize (Conflict softens)
+         * Change: You become an anchor (They rely on you)")
+      (base/card
+       :name "Moral Authority"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-ks
+       :summary
+        "You embody the consequence
+         * You: Fully formed (You no longer flinch)
+         * Need: Final stance required (They ask what to do)
+         * Go: Act consistently with self (Answer immediately)
+         * Search: External validation (Ignore the room)
+         * Find: Inner alignment achieved (The answer fits)
+         * Take: Responsibility accepted (Sign your name)
+         * Return: Others respond accordingly (They obey or leave)
+         * Change: You are what you chose (Nothing left to hide)")
+      (base/card
+       :name "Social Insight"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-qc
+       :summary
+        "You see how power actually works
+         * You: Observant (You stop reacting emotionally)
+         * Need: Pattern clarity (Repeated outcomes align)
+         * Go: Reinterpret past events (Motives become obvious)
+         * Search: Ignore rhetoric (Track actions)
+         * Find: Real authority located (Not titles)
+         * Take: Calm acceptance (Stop chasing approval)
+         * Return: Strategic posture (Act deliberately)
+         * Change: Social wisdom gained (You understand the game)")
+      (base/card
+       :name "Material Truth"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-qd
+       :summary
+        "You see the real cost
+         * You: Numbers-focused (You avoid emotion)
+         * Need: Full accounting appears (Audit completes)
+         * Go: Review outcomes honestly (Read line by line)
+         * Search: Minimize damage (Highlight excuses)
+         * Find: Trade-offs exposed (Patterns emerge)
+         * Take: Regret or pride (Lean back)
+         * Return: Goals reassessed (Plans rewritten)
+         * Change: Values recalibrated (Different priorities chosen)")
+      (base/card
+       :name "Emotional Truth"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-qh
+       :summary
+        "You understand the real bond
+         * You: Confused (Mixed signals linger)
+         * Need: Clarity arrives (Overhear the truth)
+         * Go: Reinterpret past moments (Memories reframe)
+         * Search: Excuses dissolve (Details align)
+         * Find: Love or illusion revealed (It's obvious now)
+         * Take: Acceptance settles in (Exhale)
+         * Return: Relationship redefined (Act accordingly)
+         * Change: Emotional honesty achieved (No more pretending)")
+      (base/card
+       :name "Moral Truth"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-qs
+       :summary
+        "You see what you've become
+         * You: Defensive (Justify past choices)
+         * Need: Reflection forced (Evidence lands on your desk)
+         * Go: Face consequences honestly (Read it all)
+         * Search: Deny responsibility (Try to argue)
+         * Find: Self-awareness hits (Your signature repeats)
+         * Take: Shame or resolve (Close your eyes)
+         * Return: Past reframed (See the pattern)
+         * Change: Moral reckoning complete (Stop pretending)")
+      (base/card
+       :name "Tactical Influence"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-jc
+       :summary
+        "You work the system
+         * You: Repositioning (You've learned the rules)
+         * Need: Change requires leverage (Support is split)
+         * Go: Act strategically (File at the right moment)
+         * Search: Exploit process (Quote policy)
+         * Find: Advantage gained (They hesitate)
+         * Take: Risk embraced (Push harder)
+         * Return: Momentum shifts (Meetings reschedule)
+         * Change: You wield structure (Not just subject to it)")
+      (base/card
+       :name "Strategic Control"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-jd
+       :summary
+        "You seize financial initiative
+         * You: Cornered but clever (You prepare quietly)
+         * Need: Survival requires bold move (Time nearly out)
+         * Go: Execute risky plan (You trigger the transfer)
+         * Search: Maximize leverage (You time the release)
+         * Find: Control shifts (Numbers jump)
+         * Take: Pressure peaks (Calls flood in)
+         * Return: Opponents respond (Meetings scheduled fast)
+         * Change: You drive the game (For now)")
+      (base/card
+       :name "Emotional Declaration"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-jh
+       :summary
+        "You assert your feelings
+         * You: Tired of hiding (You stop deflecting)
+         * Need: Ambiguity hurts too much (They press you)
+         * Go: Speak plainly (You state what you want)
+         * Search: Avoid manipulation (You don't soften it)
+         * Find: Emotional truth lands (They go quiet)
+         * Take: Consequences accepted (You don't backtrack)
+         * Return: Relationship clarified (Yes or no)
+         * Change: Emotional agency claimed (You chose honesty)")
+      (base/card
+       :name "Ruthless Choice"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-js
+       :summary
+        "You act without hesitation
+         * You: Hardened (You don't ask permission)
+         * Need: Crisis demands action (Clock is ticking)
+         * Go: Take command (Interrupt the meeting)
+         * Search: Ignore doubt (Cut objections off)
+         * Find: Decisive strike (Shut it down)
+         * Take: Moral cost accepted (Don't apologize)
+         * Return: Order imposed (People follow silently)
+         * Change: You become the blade (They fear you)")
+      (base/card
+       :name "Total Marginalization"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-tc
+       :summary
+        "You are crushed by the system
+         * You: Isolated (No one meets your eyes)
+         * Need: Final decision issued (Notice published)
+         * Go: Absorb consequences (Pack your desk)
+         * Search: Appeal paths (Skim the handbook)
+         * Find: None viable (Deadlines passed)
+         * Take: Identity loss (Badge deactivates)
+         * Return: Social void (Former peers avoid you)
+         * Change: Institutional erasure (You no longer belong)")
+      (base/card
+       :name "Total Loss"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-td
+       :summary
+        "You lose what you built
+         * You: Overleveraged (Nothing left untouched)
+         * Need: Failure finalizes (Notice arrives)
+         * Go: Face consequences (Attend the hearing)
+         * Search: Hidden escape (Call favors)
+         * Find: Assets seized (Boxes are labeled)
+         * Take: Shock lands (Sit silently)
+         * Return: Life stripped down (Rooms feel empty)
+         * Change: Survival mode engaged (You plan tomorrow only)")
+      (base/card
+       :name "Emotional Ruin"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-th
+       :summary
+        "Everything spills at once
+         * You: Emotionally exposed (You stop filtering)
+         * Need: Truth erupts (Old wounds surface)
+         * Go: Endure confrontation (Don't interrupt)
+         * Search: Hold anything intact (Reach out)
+         * Find: Bonds shatter (Multiple people walk away)
+         * Take: Grief floods in (Sit alone crying)
+         * Return: Silence follows (Phone stays dark)
+         * Change: Emotional landscape reset (Nothing familiar remains)")
+      (base/card
+       :name "Irreversible Harm"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-ts
+       :summary
+        "The damage spreads beyond control
+         * You: Past restraint (No one expects mercy)
+         * Need: Fallout accelerates (Reports stack hourly)
+         * Go: Make brutal choices (Triage who matters)
+         * Search: Prevent worst outcome (Cancel evacuations)
+         * Find: Multiple losses occur (Names cross your desk)
+         * Take: Weight overwhelms (Sit in silence)
+         * Return: World altered (Neighborhoods are empty)
+         * Change: Endgame triggered (There's no fixing this)")
+      (base/card
+       :name "Institutional Crisis"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-9c
+       :summary
+        "The system threatens you
+         * You: Exposed (Your record is reviewed)
+         * Need: Formal judgment imminent (Panel convenes)
+         * Go: Prepare defense (Organize evidence)
+         * Search: Procedural fairness (Cite policy)
+         * Find: Outcome uncertain (Questions turn sharp)
+         * Take: Authority asserts itself (Deliberation begins)
+         * Return: Suspension or warning (You're escorted out)
+         * Change: Status hangs by thread (Everything paused)")
+      (base/card
+       :name "Financial Freefall"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-9d
+       :summary
+        "Losses outrun recovery
+         * You: Desperate (You stop eating out)
+         * Need: Final chance appears (One risky option remains)
+         * Go: Gamble everything (You move all funds)
+         * Search: Miracle angle (You watch the market)
+         * Find: Odds against you (Numbers slide)
+         * Take: Panic spikes (You hit refresh repeatedly)
+         * Return: Systems close in (Accounts lock temporarily)
+         * Change: Collapse or reversal imminent (Hours matter)")
+      (base/card
+       :name "Emotional Crisis"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-9h
+       :summary
+        "You can't sustain the bond
+         * You: Overextended (You look exhausted)
+         * Need: Emotional reckoning (They demand honesty)
+         * Go: Confront the truth (Sit down)
+         * Search: Salvage connection (Bargain)
+         * Find: Limits exposed (You can't promise)
+         * Take: Heartbreak hits (They stand to leave)
+         * Return: Emotional vacuum (Door closes)
+         * Change: Attachment broken or remade (Nothing in between)")
+      (base/card
+       :name "Moral Collapse"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-9s
+       :summary
+        "Your code barely exists
+         * You: Exhausted (You stop arguing)
+         * Need: One more decision (They push paperwork at you)
+         * Go: Act automatically (You sign without reading)
+         * Search: Justify nothing (You don't explain)
+         * Find: You don't hesitate (That scares you)
+         * Take: Self-disgust peaks (You scrub your hands raw)
+         * Return: Identity frays (Old photos feel unfamiliar)
+         * Change: Collapse imminent (Something will break)")
+      (base/card
+       :name "Political Entanglement"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-8c
+       :summary
+        "Everything is factional
+         * You: Marginalized or powerful (Either way watched)
+         * Need: Competing agendas collide (Rumors spread)
+         * Go: Navigate alliances (Meet privately)
+         * Search: Strategic neutrality (Hedge statements)
+         * Find: No safe position (Each side notes silence)
+         * Take: Pressure mounts (Deadlines weaponized)
+         * Return: Tension saturates space (Meetings feel hostile)
+         * Change: Politics unavoidable (Every action signals)")
+      (base/card
+       :name "Spiraling Costs"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-8d
+       :summary
+        "Expenses exceed plans
+         * You: Stretched thin (You juggle accounts)
+         * Need: New losses emerge (Equipment fails)
+         * Go: Secure more resources (Request a loan)
+         * Search: Short-term fixes (Delay payments)
+         * Find: Long-term damage (Penalties accrue)
+         * Take: Stability erodes (Miss a deadline)
+         * Return: Life reorganizes (Bills dominate conversations)
+         * Change: Risk dominates decisions (Survival thinking)")
+      (base/card
+       :name "Emotional Overload"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-8h
+       :summary
+        "You're pulled too many ways
+         * You: Emotionally invested (Everyone needs you)
+         * Need: Competing needs clash (Two calls come at once)
+         * Go: Try to satisfy all (Say yes twice)
+         * Search: Balance feelings (Rush between them)
+         * Find: Someone neglected (They wait alone)
+         * Take: Guilt intensifies (See the missed call)
+         * Return: Relationships strain (Voices harden)
+         * Change: Emotional limits reached (Something must drop)")
+      (base/card
+       :name "Consequences Multiply"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-8s
+       :summary
+        "You can't contain the damage
+         * You: Already compromised (You're known for it now)
+         * Need: Fallout spreads (2nd incident occurs)
+         * Go: Intervene again (step in personally)
+         * Search: Limit exposure (Silence a witness)
+         * Find: New harm caused (Another innocent suffers)
+         * Take: Moral weight spikes (Nausea afterward)
+         * Return: Normal collapses (Routines break down)
+         * Change: Crisis mode engaged (You stop sleeping)")
+      (base/card
+       :name "Social Exile"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-7c
+       :summary
+        "You're pushed out
+         * You: Vulnerable (Support already thin)
+         * Need: Group chooses sides (Vote is called)
+         * Go: Argue your case (Speak last)
+         * Search: Salvage standing (Appeal to fairness)
+         * Find: Decision made (Hands raise)
+         * Take: Exclusion hits (You're removed from the channel)
+         * Return: Access revoked (Invites stop coming)
+         * Change: Social removal complete (You're out)")
+      (base/card
+       :name "Irreversible Deal"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-7d
+       :summary
+        "You sign away options
+         * You: Calculating (Last chance)
+         * Need: Deadline hits (Contract expires today)
+         * Go: Finalize agreement (You sign digitally)
+         * Search: Escape clauses (You scroll fast)
+         * Find: Terms bind (Signature locks in)
+         * Take: Relief and fear (Your hands shake)
+         * Return: Freedom reduced (Obligations populate your inbox)
+         * Change: Future constrained (Your path narrows)")
+      (base/card
+       :name "Emotional Betrayal"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-7h
+       :summary
+        "You hurt someone you love
+         * You: Caring (You promised otherwise)
+         * Need: Conflict forces choice (Both can't be spared)
+         * Go: Act anyway (Choose one)
+         * Search: Soften blow (Explain yourself)
+         * Find: Trust breaks (They stop listening)
+         * Take: Pain immediate (Tears fall)
+         * Return: Bond damaged (Messages go unanswered)
+         * Change: Relationship transformed (Never the same)")
+      (base/card
+       :name "Point of No Return"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-7s
+       :summary
+        "You cross a line you cannot uncross
+         * You: Defined by a personal rule (Swore you wouldn't do this)
+         * Need: Obedience now costs too much (Refusal ends everything)
+         * Go: Enter the moral gray (Show up anyway)
+         * Search: Rationalize exceptions (Just this once)
+         * Find: Break the rule (Pull the trigger)
+         * Take: Immediate price paid (Someone screams)
+         * Return: Old life feels wrong (home feels awry)
+         * Change: New self locked in (Don't look away next time)")
+      (base/card
+       :name "Institutional Weight"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-6c
+       :summary
+        "The system leans in
+         * You: Known quantity (Your name circulates)
+         * Need: Accountability demanded (An email arrives)
+         * Go: Respond formally (You draft carefully)
+         * Search: Follow procedure (You attach documentation)
+         * Find: Process slow (No immediate reply)
+         * Take: Anxiety grows (Weeks pass)
+         * Return: Oversight normalizes (Check-ins scheduled)
+         * Change: You're monitored now (Freedom narrows)")
+      (base/card
+       :name "Compounding Risk"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-6d
+       :summary
+        "One bet forces another
+         * You: Committed (Too much invested)
+         * Need: Loss threatens (Numbers turn red)
+         * Go: Double down (Inject more funds)
+         * Search: Smarter angle (Change strategy)
+         * Find: Exposure grows (Safety net shrinks)
+         * Take: Volatility spikes (Check prices hourly)
+         * Return: Sleep suffers (Wake at night)
+         * Change: Exit difficult (Walking away feels worse)")
+      (base/card
+       :name "Deep Bond"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-6h
+       :summary
+        "You rely on someone
+         * You: Attached (You text without thinking)
+         * Need: Support required (A problem overwhelms you)
+         * Go: Ask for help (You call late)
+         * Search: Avoid burdening (You apologize)
+         * Find: Dependence forms (They stay on the line)
+         * Take: Stakes double (They know too much now)
+         * Return: Separation costly (You dread silence)
+         * Change: Intertwined fates (Choices affect both)")
+      (base/card
+       :name "Escalating Acts"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-6s
+       :summary
+        "You repeat the wrong choice
+         * You: Uneasy (You avoid eye contact)
+         * Need: Situation worsens (Another problem surfaces)
+         * Go: Act similarly (Issue the same command)
+         * Search: Limit damage (Add conditions)
+         * Find: Harm increases (More people affected)
+         * Take: Guilt accumulates (Drink alone)
+         * Return: Life constricts (Fewer calls returned)
+         * Change: Descent underway (Stopping feels impossible)")
+      (base/card
+       :name "Public Challenge"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-5c
+       :summary
+        "You are confronted
+         * You: Established member (You speak freely)
+         * Need: Authority questioned (Someone objects)
+         * Go: Defend position (Explain yourself)
+         * Search: Allies in room (Make eye contact)
+         * Find: Division exposed (Whispers spread)
+         * Take: Social risk spikes (Silence follows)
+         * Return: Status uncertain (Meeting adjourns abruptly)
+         * Change: Power contested (You're no longer secure)")
+      (base/card
+       :name "Major Spend"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-5d
+       :summary
+        "You commit resources heavily
+         * You: Conservative (You triple-check)
+         * Need: Opportunity peaks (Clock ticking)
+         * Go: Invest fully (Authorize payment)
+         * Search: Final checks (Skim the contract)
+         * Find: Funds transferred (Confirmation appears)
+         * Take: Exposure locked (Account dips sharply)
+         * Return: Waiting begins (Nothing to do now)
+         * Change: Outcome matters deeply (This must work)")
+      (base/card
+       :name "Confession"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-5h
+       :summary
+        "You reveal true feeling
+         * You: Reserved (You rehearse silently)
+         * Need: Silence hurts more (Can't sleep)
+         * Go: Open up (Ask to talk)
+         * Search: Gentle phrasing (Hedge your words)
+         * Find: Truth lands (Say it plainly)
+         * Take: Emotional impact (They stare at you)
+         * Return: Relationship redefined (Nothing is casual now)
+         * Change: Vulnerability real (You've said it)")
+      (base/card
+       :name "Line Crossed"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-5s
+       :summary
+        "You do something irreversible
+         * You: Rule-bound (You hesitate)
+         * Need: Cost too high (They start counting down)
+         * Go: Act decisively (Nod once)
+         * Search: None left (Moment passes)
+         * Find: Boundary broken (Give the order)
+         * Take: Immediate fallout (Someone protests)
+         * Return: Reality altered (People look at you differently)
+         * Change: Path narrowed (There's no undo)")
+      (base/card
+       :name "Rule Pressure"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-4c
+       :summary
+        "Expectation tightens
+         * You: Comfortable (You know the routine)
+         * Need: Standards enforced (Policy is cited)
+         * Go: Comply publicly (You nod)
+         * Search: Work within limits (Adjust your approach)
+         * Find: Little flexibility (Exceptions denied)
+         * Take: Constraint felt (Redo work)
+         * Return: System dominates (Process matters more than people)
+         * Change: Autonomy reduced (You follow rules now)")
+      (base/card
+       :name "Risk Threshold"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-4d
+       :summary
+        "You reach tolerance limit
+         * You: Risk-aware (You hesitate)
+         * Need: Pay more or quit (They ask directly)
+         * Go: Reassess position (Open spreadsheets)
+         * Search: Last-minute savings (Cut corners)
+         * Find: All-in required (They won't budge)
+         * Take: Stress peaks (Rub your temples)
+         * Return: Moment stretches (Call goes quiet)
+         * Change: Commitment unavoidable (You must choose)")
+      (base/card
+       :name "Emotional Choice"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-4h
+       :summary
+        "You must decide how much to care
+         * You: Hesitant (You don't label it)
+         * Need: Relationship deepens (They ask what this is)
+         * Go: Stay close (Don't pull away)
+         * Search: Emotional boundaries (Set rules)
+         * Find: Boundaries fail (Break them first)
+         * Take: Exposure increases (Share a secret)
+         * Return: Normal shifts (Closeness is assumed)
+         * Change: Heart engaged (Neutrality gone)")
+      (base/card
+       :name "Line Approached"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-4s
+       :summary
+        "You near a boundary
+         * You: Aware of limits (You say I won't)
+         * Need: Stakes sharpen (They name the consequences)
+         * Go: Stay in situation (Don't leave)
+         * Search: Final alternatives (Call a contact)
+         * Find: Choice looming (No help comes)
+         * Take: Anxiety spikes (Pace the room)
+         * Return: Calm before decision (Silence hangs)
+         * Change: Commitment imminent (Take a breath)")
+      (base/card
+       :name "Role Formation"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-3c
+       :summary
+        "You find a place
+         * You: Regular presence (People expect you)
+         * Need: Structure emerges (Tasks divide naturally)
+         * Go: Accept responsibility (Take notes)
+         * Search: Perform well (Arrive early)
+         * Find: Role solidifies (They defer to you)
+         * Take: Obligation grows (You're relied upon)
+         * Return: Identity shifts (You're the organizer)
+         * Change: Social utility defined (You're known for this)")
+      (base/card
+       :name "Investment Made"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-3d
+       :summary
+        "You put something in
+         * You: Calculating (You run the numbers)
+         * Need: Opportunity demands buy-in (Deadline looms)
+         * Go: Commit partially (You transfer funds)
+         * Search: Hedge risk (You keep some back)
+         * Find: No refunds (The terms update)
+         * Take: Anxiety rises (You refresh the page)
+         * Return: Waiting period (Days drag)
+         * Change: Skin in game (Loss would hurt)")
+      (base/card
+       :name "Attachment Forms"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-3h
+       :summary
+        "You start to care
+         * You: Guarded (You limit contact)
+         * Need: Presence feels good (Stay longer)
+         * Go: Spend time (Accept another invitation)
+         * Search: Control exposure (Avoid deeper topics)
+         * Find: Bond deepens (Laugh easily)
+         * Take: Dependence begins (Miss them afterward)
+         * Return: Absence hurts (Notice the quiet)
+         * Change: Emotional stake set (Distance now matters)")
+      (base/card
+       :name "Growing Discomfort"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-3s
+       :summary
+        "You sense future cost
+         * You: Still resisting (You insist it's fine)
+         * Need: Pressure repeats (Request comes again)
+         * Go: Face it directly (Attend the meeting)
+         * Search: Delay decision (Ask for more time)
+         * Find: Delay fails (They want an answer now)
+         * Take: Stress accumulates (Hands shake)
+         * Return: Life tightens (Sleep gets shorter)
+         * Change: Conflict active (Avoidance stops working)")
+      (base/card
+       :name "Social Friction"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-2c
+       :summary
+        "You have a misstep
+         * You: Accepted enough (You relax)
+         * Need: Norm violation noticed (Joke falls flat)
+         * Go: Recover standing (Laugh it off)
+         * Search: Adjust behavior (Mirror others)
+         * Find: Unease lingers (Side glances persist)
+         * Take: Reputation dented (Someone corrects you)
+         * Return: Caution increases (Speak less)
+         * Change: Awareness sharpened (You're more careful)")
+      (base/card
+       :name "Resource Strain"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-2d
+       :summary
+        "You lose something small
+         * You: Stable enough (You shrug it off)
+         * Need: Loss pinches (A fee posts overnight)
+         * Go: Cover the gap (You move money around)
+         * Search: Cheap fix (You cancel a subscription)
+         * Find: Hidden cost (Another bill arrives)
+         * Take: Pressure rises (You tighten spending)
+         * Return: Routine stressed (Small luxuries vanish)
+         * Change: Security weakened (You start tracking closely)")
+      (base/card
+       :name "Emotional Friction"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-2h
+       :summary
+        "You feel unexpectedly affected
+         * You: Detached (You keep it professional)
+         * Need: Feelings intrude (Their comment lingers)
+         * Go: Stay present (You don't end the conversation)
+         * Search: Suppress emotion (You change the subject)
+         * Find: Reaction slips (Your tone sharpens)
+         * Take: Awkwardness grows (They pause)
+         * Return: Relationship altered (Future talks feel cautious)
+         * Change: Detachment cracked (You replay the moment)")
+      (base/card
+       :name "Small Compromise"
+       :deck "Story Arc"
+       :ranksuit base/ranksuit-2s
+       :summary
+        "You bend a rule slightly
+         * You: Principled but flexible (You skip one safety check)
+         * Need: Convenience tempts (Everyone's watching the clock)
+         * Go: Allow exception (You wave it through)
+         * Search: Minimize harm (You double-check later)
+         * Find: Rule weakens (Others notice)
+         * Take: Unease lingers (You replay it that night)
+         * Return: Normal resumes (Work continues)
+         * Change: Line thinned (Next time feels easier)")))
+    (base/cardmap-copy<-card-count-isnum
+     (base/card
+      :name "StoryArc:Back"
+      :image "images/storyarc/storyarc-back.svg"
+      :layout base/cardlayout-imageonly)
+     54
+     false)))
+ :doc "Story Arc Deck")

@@ -1,0 +1,1050 @@
+(package nx/tactics/decks/story
+ :libs (lib base :path nx/tactics/base)
+ :doc "Story Deck")
+
+/*
+
+
+Story Elements:
+* Character: Who its about
+
+*/
+
+(func deck-story : base/deck
+ (base/deck
+  :name "Story"
+  :image "images/story/story-back.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      (base/card
+       :name "Story:How To"
+       :deck "Story"
+       :ranksuit base/ranksuit-jokerblack
+       :image "icons/card-ranksuit-wb.svg"
+       :summary
+        "Steps for Story Inspiration:
+         * Separate Story deck by Rank
+         * Starting with Rank 2, for each Rank choose or randomize result
+
+         Randomize:
+         * For each Rank (eg Rank=2)
+         * Reveal Fate (eg K of Swords)
+         * Match Suit of Story and Fate (eg 2 of Swords)
+         * Match Rank of Story and Fate (eg K on the 2 of Swords)")
+      (base/card
+       :name "Story:Key"
+       :deck "Story"
+       :ranksuit base/ranksuit-jokerred
+       :image "icons/card-ranksuit-wr.svg"
+       :summary
+        "2. Opening - What's happening
+         3. Setting - Where it happens
+         4. Theme - What really happens
+         5. Mood - How the world feels
+         6. Tone - How the story should feel
+         7. Conflict - What's in the way
+         8. Key - What we want
+         9. Stakes - Why it matters
+         T. Complication - But it's harder
+         J. Antagonist - What opposes us
+         Q. Ally - Who can help
+         K. Twist - This changes everything
+         A. Payoff - Success finally")
+      (base/card
+       :name "Opening:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-2c
+       :image "icons/card-ranksuit-2c.svg"
+       :summary
+        "A. Plea for protection
+         K. Authority summons group
+         Q. Public disturbance erupts
+         J. Competition announced
+         T. Leader returns dramatically
+         9. Agreement violated
+         8. Conflict declared
+         7. Recruitment drive starts
+         6. Environment turns dangerous
+         5. Incident blamed on group
+         4. Honor challenged publicly
+         3. Fight breaks out
+         2. Claim disputed")
+      (base/card
+       :name "Opening:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-2d
+       :image "icons/card-ranksuit-2d.svg"
+       :summary
+        "A. Inheritance contested
+         K. Secret partnership offered
+         Q. Valuable item stolen
+         J. Rivalry declared
+         T. Investment fails suddenly
+         9. Job opportunity
+         8. Intelligence tip received
+         7. Opportunity deadline looms
+         6. Business raided
+         5. Competitor challenges directly
+         4. Mentor leaves warning
+         3. Market shift noticed
+         2. System flaw revealed")
+      (base/card
+       :name "Opening:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-2h
+       :image "icons/card-ranksuit-2h.svg"
+       :summary
+        "A. Close friend disappears
+         K. Family heirloom missing
+         Q. Anonymous message
+         J. Old favor called in
+         T. Reputation threatened
+         9. Past mistake exposed
+         8. Romantic advance rejected
+         7. Sudden personal crisis
+         6. Secret discovered accidentally
+         5. Personal loss announced
+         4. Confrontation with past
+         3. Unexpected homecoming
+         2. Life change forced")
+      (base/card
+       :name "Opening:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-2s
+       :image "icons/card-ranksuit-2s.svg"
+       :summary
+        "A. Crisis vision or warning
+         K. Secret meeting interrupted
+         Q. Mass betrayal revealed
+         J. Uprising begins
+         T. Difficult choice forced
+         9. Deadline suddenly imposed
+         8. Critical information leaked
+         7. Resistance exposed
+         6. Objective changes
+         5. Revenge target appears
+         4. Identity questioned
+         3. Opportunity vanishes
+         2. Threat emerges suddenly")
+      (base/card
+       :name "Setting:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-3c
+       :image "icons/card-ranksuit-3c.svg"
+       :summary
+        "A. Resistance headquarters
+         K. Sports stadium
+         Q. Fortified port city
+         J. Nomadic caravan camp
+         T. Criminal headquarters
+         9. Legislative assembly hall
+         8. War memorial
+         7. Overcrowded refugee camp
+         6. Festival grounds
+         5. Walled military base
+         4. Bar or Tavern
+         3. Border checkpoint
+         2. Dark Alley")
+      (base/card
+       :name "Setting:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-3d
+       :image "icons/card-ranksuit-3d.svg"
+       :summary
+        "A. Corporate headquarters
+         K. Remote mining site
+         Q. Grand banking vault
+         J. Hidden smuggling harbor
+         T. Busy trade hub marketplace
+         9. Industrial production zone
+         8. Gambling establishment
+         7. Farming estate
+         6. Luxury residence
+         5. Secure storage facility
+         4. Long-distance trade route
+         3. Modest home
+         2. Crowded shopping district")
+      (base/card
+       :name "Setting:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-3h
+       :image "icons/card-ranksuit-3h.svg"
+       :summary
+        "A. Sacred ancestral burial ground
+         K. Starlit rooftop observatory
+         Q. Riverside hut
+         J. Tranquil meadow sanctuary
+         T. Woodland shrine
+         9. Cliffside perch
+         8. Herbalist's garden
+         7. Serene lakeside cabin
+         6. Abandoned childhood home
+         5. Enchanting forest glade
+         4. Cozy village tavern
+         3. Hidden mountain retreat
+         2. Secluded family homestead")
+      (base/card
+       :name "Setting:Dark"
+       :deck "Story"
+       :ranksuit base/ranksuit-3s
+       :image "icons/card-ranksuit-3s.svg"
+       :summary
+        "A. Vast empty wasteland
+         K. Restricted zone
+         Q. Devastated urban ruins
+         J. Twisted maze of passages
+         T. Abandoned facility
+         9. Deep underground tunnels
+         8. Derelict ghost town
+         7. Harsh volcanic badlands
+         6. Hostile wilderness
+         5. Prison facilities
+         4. Frozen barren landscape
+         3. Storm-battered coastline
+         2. Overgrown ancient structures")
+      (base/card
+       :name "Theme:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-4c
+       :image "icons/card-ranksuit-4c.svg"
+       :summary
+        "A. Protect the vulnerable
+         K. Navigate intrigue
+         Q. Survive a disaster
+         J. Compete in a tournament
+         T. Exile's triumphant return
+         9. Make a risky pact
+         8. Build a new domain
+         7. Quest for enlightenment
+         6. Survive hostile environment
+         5. Plot assassination
+         4. Reclaim lost honor
+         3. Defend personal honor
+         2. Claim disputed inheritance")
+      (base/card
+       :name "Theme:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-4d
+       :image "icons/card-ranksuit-4d.svg"
+       :summary
+        "A. Haunted by dark past
+         K. Form unlikely alliance
+         Q. Escape captivity or pursuit
+         J. Escalate family feud
+         T. Fallen grace reclaimed
+         9. Seek immortality
+         8. Covert espionage
+         7. Heroism
+         6. Infiltrate an organization
+         5. Rivalry with a peer
+         4. Betrayal
+         3. Fulfill/defying destiny
+         2. Trigger paradigm shift")
+      (base/card
+       :name "Theme:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-4h
+       :image "icons/card-ranksuit-4h.svg"
+       :summary
+        "A. Betrayal by a trusted ally
+         K. Hunt for lost treasure
+         Q. Confront prophecy
+         J. Break generational curse
+         T. Rise from obscurity
+         9. Lead popular revolution
+         8. Forbidden or star-crossed love
+         7. Quest for power
+         6. Uncover a dangerous secret
+         5. Overcome famine
+         4. Rise of dark antagonist
+         3. Return from exile
+         2. Personal transformation")
+      (base/card
+       :name "Theme:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-4s
+       :image "icons/card-ranksuit-4s.svg"
+       :summary
+        "A. Quest for enlightenment
+         K. Staging coup d'état
+         Q. Tournament of champions
+         J. Overthrow ruling power
+         T. Moral dilemma
+         9. Race against time
+         8. Moral choice
+         7. Rising against oppression
+         6. Daring heist
+         5. Revenge for injustice
+         4. Crisis of identity
+         3. Personal redemption
+         2. Preventing catastrophe")
+      (base/card
+       :name "Mood:Tense"
+       :deck "Story"
+       :ranksuit base/ranksuit-5c
+       :image "icons/card-ranksuit-5c.svg"
+       :summary
+        "A. Grim unrelenting hardship
+         K. Political maneuvering
+         Q. Heavy tragic inevitability
+         J. Gritty everyday struggle
+         T. Charged and confrontational
+         9. Bleak cold indifference
+         8. Urgent mounting pressure
+         7. Somber with serious gravity
+         6. Raw with visceral intensity
+         5. Strained simmering conflict
+         4. Harsh unyielding reality
+         3. Suspicious creeping paranoia
+         2. Stark unflinching pragmatism")
+      (base/card
+       :name "Mood:Stylish"
+       :deck "Story"
+       :ranksuit base/ranksuit-5d
+       :image "icons/card-ranksuit-5d.svg"
+       :summary
+        "A. Opulent and lavish
+         K. Thrumming with excitement
+         Q. Polished with sophisticated
+         J. Crackling with sharp wit
+         T. Flashy with ostentatious display
+         9. Electric with cinematic grandeur
+         8. Smoky with shadowy intrigue
+         7. Buzzing with triumphant energy
+         6. Crisp with inventive ingenuity
+         5. Rich with decadent indulgence
+         4. Sleek with confident style
+         3. Vibrant with charismatic bustle
+         2. Bold with unbridled ambition")
+      (base/card
+       :name "Mood:Intimate"
+       :deck "Story"
+       :ranksuit base/ranksuit-5h
+       :image "icons/card-ranksuit-5h.svg"
+       :summary
+        "A. Heavy unspoken grief
+         K. Warm quiet affection
+         Q. Thick unresolved longing
+         J. Soft nostalgic reminiscence
+         T. Bright tentative hope
+         9. Tender heartfelt closeness
+         8. Charged romantic tension
+         7. Calm gentle forgiveness
+         6. Hushed intimate secrets
+         5. Bittersweet fading memories
+         4. Raw vulnerable openness
+         3. Comforting familiar warmth
+         2. Gentle empathetic sorrow")
+      (base/card
+       :name "Mood:Dark"
+       :deck "Story"
+       :ranksuit base/ranksuit-5s
+       :image "icons/card-ranksuit-5s.svg"
+       :summary
+        "A. Overwhelming, existential dread
+         K. Oppressive, suffocating fear
+         Q. Surreal, distortion
+         J. Chaotic, anarchic frenzy
+         T. Desperate, apocalyptic panic
+         9. Eerie, unnatural stillness
+         8. Macabre, grotesque unease
+         7. Foreboding, looming threat
+         6. Mysterious, enigmatic shadows
+         5. Haunting, lingering ghosts
+         4. Bleak, crushing nihilism
+         3. Frenzied, nightmarish terror
+         2. Cold, detached emptiness")
+      (base/card
+       :name "Tone:Grounded"
+       :deck "Story"
+       :ranksuit base/ranksuit-6c
+       :image "icons/card-ranksuit-6c.svg"
+       :summary
+        "A. Grim and unflinching
+         K. Politically charged
+         Q. Tragic and inevitable
+         J. Gritty and realistic
+         T. Tense and confrontational
+         9. Bleak and unforgiving
+         8. Urgent and high-pressure
+         7. Serious and weighty
+         6. Raw and visceral
+         5. Strained and conflicted
+         4. Harsh and uncompromising
+         3. Suspenseful and paranoid
+         2. Stark and matter-of-fact")
+      (base/card
+       :name "Tone:Stylish"
+       :deck "Story"
+       :ranksuit base/ranksuit-6d
+       :image "icons/card-ranksuit-6d.svg"
+       :summary
+        "A. Grandiose and operatic
+         K. Swashbuckling and daring
+         Q. Sleek and sophisticated
+         J. Witty and satirical
+         T. Flashy and extravagant
+         9. Cinematic and larger-than-life
+         8. Noir and shadowy
+         7. Ambitious and triumphant
+         6. Clever and inventive
+         5. Opulent and decadent
+         4. Sharp and stylish
+         3. Confident and charismatic
+         2. Bold and unapologetic")
+      (base/card
+       :name "Tone:Intimate"
+       :deck "Story"
+       :ranksuit base/ranksuit-6h
+       :image "icons/card-ranksuit-6h.svg"
+       :summary
+        "A. Profoundly melancholic
+         K. Bittersweet and tender
+         Q. Deeply introspective
+         J. Warm and nostalgic
+         T. Quietly hopeful
+         9. Poignant and heartfelt
+         8. Passionate and romantic
+         7. Gentle and forgiving
+         6. Reflective and serene
+         5. Wistful and longing
+         4. Vulnerable and raw
+         3. Comforting and familiar
+         2. Soft and empathetic")
+      (base/card
+       :name "Tone:Dark"
+       :deck "Story"
+       :ranksuit base/ranksuit-6s
+       :image "icons/card-ranksuit-6s.svg"
+       :summary
+        "A. Cosmic and existential
+         K. Dreadful and oppressive
+         Q. Surreal and dreamlike
+         J. Chaotic and anarchic
+         T. Apocalyptic and desperate
+         9. Eerie and unsettling
+         8. Macabre and twisted
+         7. Foreboding and ominous
+         6. Mysterious and enigmatic
+         5. Haunting and spectral
+         4. Bleak and nihilistic
+         3. Frenzied and nightmarish
+         2. Cold and detached")
+      (base/card
+       :name "Conflict:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-7c
+       :image "icons/card-ranksuit-7c.svg"
+       :summary
+        "A. Political power struggles
+         K. Ideological clashes
+         Q. Social injustice protests
+         J. Factional or gang warfare
+         T. Legal system navigation
+         9. Propaganda and misinformation
+         8. Tradition vs. progress
+         7. Community division
+         6. Organized crime
+         5. Bureaucratic obstruction
+         4. Class or cultural conflict
+         3. Public opinion sway
+         2. Mob justice vs. law")
+      (base/card
+       :name "Conflict:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-7d
+       :image "icons/card-ranksuit-7d.svg"
+       :summary
+        "A. Financial risk
+         K. Corporate rivalry
+         Q. Legal dispute
+         J. Resource competition
+         T. Intellectual property theft
+         9. Market manipulation
+         8. Professional sabotage
+         7. Ambition vs. ethics
+         6. Investment fraud
+         5. Status and reputation battles
+         4. Inheritance or ownership fights
+         3. Economic survival pressure
+         2. Opportunity cost dilemmas")
+      (base/card
+       :name "Conflict:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-7h
+       :image "icons/card-ranksuit-7h.svg"
+       :summary
+        "A. Emotional turmoil
+         K. Family obligations
+         Q. Romantic entanglement
+         J. Loyalty tested
+         T. Identity crisis
+         9. Past trauma
+         8. Conflicting desires
+         7. Emotional manipulation
+         6. Secrets relationships
+         5. Fear of vulnerability
+         4. Trust issues
+         3. Conflicting values
+         2. Self-acceptance struggle")
+      (base/card
+       :name "Conflict:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-7s
+       :image "icons/card-ranksuit-7s.svg"
+       :summary
+        "A. Overwhelming odds
+         K. Conspiracy unraveling
+         Q. Moral corruption spread
+         J. Ideological extremism
+         T. Betrayal and paranoia
+         9. Relentless pursuit/hunt
+         8. Psychological breakdown
+         7. Cycle of vengeance
+         6. Manipulation of truth
+         5. Desperation-driven choices
+         4. Inevitable tragic flaws
+         3. Existential crisis
+         2. Race against collapse")
+      (base/card
+       :name "Key:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-8c
+       :image "icons/card-ranksuit-8c.svg"
+       :summary
+        "A. Official alliance document
+         K. Authority insignia
+         Q. Signed peace treaty
+         J. Rallying signal device
+         T. Voting record or ballot
+         9. Printed propaganda material
+         8. Prisoner transfer list
+         7. Supply distribution log
+         6. Written oath of loyalty
+         5. Inciting public notice
+         4. Legal judgment document
+         3. Group leadership emblem
+         2. Organization charter")
+      (base/card
+       :name "Key:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-8d
+       :image "icons/card-ranksuit-8d.svg"
+       :summary
+        "A. Gem/jewelry
+         K. Forged deed
+         Q. Sealed vault manifest
+         J. Counterfeit currency cache
+         T. Rare artifact
+         9. Investment ledger
+         8. Stolen prototype
+         7. Auctioned masterpiece
+         6. Treasure map
+         5. Valuable Contract
+         4. Status insignia
+         3. Resource crate
+         2. Collectible item")
+      (base/card
+       :name "Key:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-8h
+       :image "icons/card-ranksuit-8h.svg"
+       :summary
+        "A. Family heirloom
+         K. Handwritten private letter
+         Q. Hidden personal confession
+         J. Childhood memento
+         T. Old family picture
+         9. Broken promise reminder
+         8. Shared symbolic keepsake
+         7. Wedding or commitment ring
+         6. Confidential journal
+         5. Emotional farewell message
+         4. Blood-stained reminder
+         3. Identity document or badge
+         2. Recorded private conversation")
+      (base/card
+       :name "Key:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-8s
+       :image "icons/card-ranksuit-8s.svg"
+       :summary
+        "A. Cursed foreboding idol
+         K. Doomed prophecy tablet
+         Q. Tainted ritual dagger
+         J. Shadow-bound soul vessel
+         T. Fractured fate mirror
+         9. Whispering death mask
+         8. Entombed plague vial
+         7. Ominous eclipse amulet
+         6. Haunting echo horn
+         5. Bleak void key
+         4. Nihilistic ruin stone
+         3. Spectral chain link
+         2. Forbidden apocalypse seal")
+      (base/card
+       :name "Stakes:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-9c
+       :image "icons/card-ranksuit-9c.svg"
+       :summary
+        "A. Complete societal chaos
+         K. Betrayal by leadership
+         Q. Escalation to open conflict
+         J. Oppression of the powerless
+         T. Sacred agreements broken
+         9. Seizure of all power
+         8. Total breakdown of order
+         7. Loss of community safety
+         6. Rebellion violently crushed
+         5. Justice system corrupted
+         4. War becomes unavoidable
+         3. Key alliances shattered
+         2. Local community destroyed")
+      (base/card
+       :name "Stakes:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-9d
+       :image "icons/card-ranksuit-9d.svg"
+       :summary
+        "A. Total financial ruin
+         K. Loss of all holdings
+         Q. Generational wealth lost
+         J. Irreplaceable asset lost
+         T. Collapse of influence network
+         9. Business empire dismantled
+         8. Priceless treasure stolen
+         7. Critical opportunity lost
+         6. Success foundation crumbling
+         5. Hard-earned legacy erased
+         4. Permanent drop in status
+         3. Valuable possession lost
+         2. Severe resource depletion")
+      (base/card
+       :name "Stakes:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-9h
+       :image "icons/card-ranksuit-9h.svg"
+       :summary
+        "A. Descent into madness
+         K. Closest ties severed
+         Q. Torment of unresolved guilt
+         J. Sacrifice of innocence
+         T. Personal identity crisis
+         9. Isolation from friends
+         8. Heartbreak from lost romance
+         7. Loss of cherished memories
+         6. Exile from beloved home
+         5. Erosion of personal sanity
+         4. Betrayal of deepest trust
+         3. Shattered family bonds
+         2. Loss of a close loved one")
+      (base/card
+       :name "Stakes:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-9s
+       :image "icons/card-ranksuit-9s.svg"
+       :summary
+        "A. Fracture of inner circle
+         K. Takeover of personal domain
+         Q. Loss of group cohesion
+         J. Erosion of shared values
+         T. Imminent personal catastrophe
+         9. Deep-rooted corruption
+         8. Rise of internal rival
+         7. Forced submission of allies
+         6. Perpetual infighting cycle
+         5. Devastating loss among peers
+         4. Trust irreparably broken
+         3. Inevitable personal downfall
+         2. Sudden betrayal from within")
+      (base/card
+       :name "Complication:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-tc
+       :image "icons/card-ranksuit-tc.svg"
+       :summary
+        "A. Public scandal erupts
+         K. Divided loyalties fracture group
+         Q. Crippling resource shortage
+         J. Internal betrayal poisons ranks
+         T. Legal injunction blocks action
+         9. Propaganda sows doubt
+         8. Mob violence derails plans
+         7. Authority crackdown intensifies
+         6. Communication blackout
+         5. Key defector switches sides
+         4. Rival mounts counterattack
+         3. Morale plummets critically
+         2. Logistical nightmare unfolds")
+      (base/card
+       :name "Complication:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-td
+       :image "icons/card-ranksuit-td.svg"
+       :summary
+        "A. Rival claims prize
+         K. Financial setback
+         Q. Bureaucratic red tape
+         J. Forged documents
+         T. Market crash devalues goal
+         9. Insider sabotage
+         8. Theft preempts acquisition
+         7. Legal dispute halts progress
+         6. Supply chain disruption delays
+         5. Counteroffer tempts defection
+         4. Appraisal reveals hidden flaw
+         3. Negotiation stalls indefinitely
+         2. Opportunity window slams shut")
+      (base/card
+       :name "Complication:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-th
+       :image "icons/card-ranksuit-th.svg"
+       :summary
+        "A. Overwhelming paralyzing doubt
+         K. Lingering emotional baggage
+         Q. Unspoken misunderstanding
+         J. Family disapproval looms large
+         T. Sudden crisis of confidence
+         9. Past heartbreak resurfaces
+         8. Awkward timing
+         7. Inner conflict tears apart
+         6. Secret vulnerability exposed
+         5. Fear of rejection intensifies
+         4. Emotional walls unyielding
+         3. Hesitation breeds regret
+         2. Personal flaw undermines effort")
+      (base/card
+       :name "Complication:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-ts
+       :summary
+        "A. No escape from consequences
+         K. Warning signs ignored
+         Q. Trap already sprung
+         J. Outcome worse than expected
+         T. Situation deteriorates rapidly
+         9. Persistent bad timing
+         8. External force intervenes
+         7. Misleading evidence appears
+         6. Action has backlash
+         5. Wrong target identified
+         4. Despair clouds judgment
+         3. Collapse accelerates
+         2. Random event disrupts")
+      (base/card
+       :name "Antagonist:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-jc
+       :image "icons/card-ranksuit-jc.svg"
+       :summary
+        "A. Tyrannical local ruler
+         K. Corrupt council leader
+         Q. Warmongering general
+         J. Fanatical revolutionary
+         T. Brutal law enforcer
+         9. Demagogue agitator
+         8. Rigid traditionalist
+         7. Oppressive elder
+         6. Violent gang boss
+         5. Biased judge
+         4. Aggressive faction leader
+         3. Zealous inquisitor
+         2. Mob-inciting agitator")
+      (base/card
+       :name "Antagonist:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-jd
+       :image "icons/card-ranksuit-jd.svg"
+       :summary
+        "A. Ruthless corporate magnate
+         K. Ambitious heir rival
+         Q. Greedy treasure guardian
+         J. Scheming business rival
+         T. Corrupt official
+         9. Opportunistic profiteer
+         8. Hired professional saboteur
+         7. Wealth-hoarding collector
+         6. Insider trading manipulator
+         5. Cutthroat competitor
+         4. Status-obsessed climber
+         3. Monopolizing merchant
+         2. Crippling debt pressure")
+      (base/card
+       :name "Antagonist:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-jh
+       :image "icons/card-ranksuit-jh.svg"
+       :summary
+        "A. Obsessive former lover
+         K. Overbearing family head
+         Q. Manipulative confidant
+         J. Jealous childhood friend
+         T. Bitter ex-partner
+         9. Guilt-tripped former ally
+         8. Clingy romantic rival
+         7. Controlling mentor
+         6. Secretive betrayer
+         5. Emotionally abusive figure
+         4. Grudge-holding acquaintance
+         3. Envious close peer
+         2. Crushing self-doubt")
+      (base/card
+       :name "Antagonist:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-js
+       :image "icons/card-ranksuit-js.svg"
+       :summary
+        "A. Relentless personal nemesis
+         K. Mastermind puppet-master
+         Q. Cold-blooded betrayer
+         J. Extremist ideologue
+         T. Traitor in the group
+         9. Vengeful outcast
+         8. Ruthless predator
+         7. Twisted fanatic
+         6. Calculating power broker
+         5. Sadistic tormentor
+         4. Unrepentant destroyer
+         3. Harbinger of ruin
+         2. Downward spiral")
+      (base/card
+       :name "Ally:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-qc
+       :image "icons/card-ranksuit-qc.svg"
+       :summary
+        "A. Expert fighter
+         K. Tactical commander
+         Q. Field medic
+         J. Agile skirmisher
+         T. Veteran warrior
+         9. Diplomatic mediator
+         8. Organized planner
+         7. Community leader
+         6. Survival expert
+         5. Investigative specialist
+         4. Honor-bound defender
+         3. Rallying motivator
+         2. Disciplined trainee")
+      (base/card
+       :name "Ally:Ambition"
+       :deck "Story"
+       :ranksuit base/ranksuit-qd
+       :image "icons/card-ranksuit-qd.svg"
+       :summary
+        "A. Resourceful scout/explorer
+         K. Skilled negotiator
+         Q. Expert artisan/crafter
+         J. Stealthy infiltrator
+         T. Influential patron/contact
+         9. Profitable business partner
+         8. Reliable information broker
+         7. Ambitious project supporter
+         6. Knowledgeable researcher
+         5. Resource provider
+         4. Reputation defender
+         3. Strategic planner
+         2. Innovative problem-solver")
+      (base/card
+       :name "Ally:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-qh
+       :image "icons/card-ranksuit-qh.svg"
+       :summary
+        "A. Loyal lifelong companion
+         K. Protective guardian figure
+         Q. Empathetic healer/caregiver
+         J. Trusted childhood friend
+         T. Devoted romantic partner
+         9. Reconciling family member
+         8. Passionate moral supporter
+         7. Wise personal counselor
+         6. Discreet confidant
+         5. Resilient emotional anchor
+         4. Steadying old acquaintance
+         3. Returning close contact
+         2. Reflective listener")
+      (base/card
+       :name "Ally:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-qs
+       :image "icons/card-ranksuit-qs.svg"
+       :summary
+        "A. Seasoned survivor
+         K. Shadowy insider
+         Q. Steady guide
+         J. Cunning trickster
+         T. Hardened veteran
+         9. Insightful observer
+         8. Critical information source
+         7. Resistance operative
+         6. Precise specialist
+         5. Calculated risk-taker
+         4. Stalwart guardian
+         3. Skilled healer
+         2. Keen-eyed scout")
+      (base/card
+       :name "Twist:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-kc
+       :image "icons/card-ranksuit-kc.svg"
+       :summary
+        "A. Protected group starts conflict
+         K. Intrigue originates internally
+         Q. Crisis deliberately created
+         J. Competition fixed
+         T. Imposter revealed
+         9. Agreement traps signers
+         8. Structure fails from within
+         7. Knowledge misleads
+         6. Situation hides ambush
+         5. Action framed on group
+         4. Honor falsely claimed
+         3. Challenge is an illusion
+         2. Gain divides group")
+      (base/card
+       :name "Twist:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-kd
+       :image "icons/card-ranksuit-kd.svg"
+       :summary
+        "A. Wealth is fake
+         K. Alliance seeks control
+         Q. Goal proves worthless
+         J. Claim is disputed
+         T. Success destroys something
+         9. Reward demands payment
+         8. Intelligence was planted
+         7. Backed the wrong side
+         6. Infiltration exposes group
+         5. Rivalry is family
+         4. Mentor staged events
+         3. Plan was anticipated
+         2. Change favors opponent")
+      (base/card
+       :name "Twist:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-kh
+       :image "icons/card-ranksuit-kh.svg"
+       :summary
+        "A. Ally is hidden relative
+         K. Partner conceals major secret
+         Q. Victim actually the instigator
+         J. Mistaken identity
+         T. Own actions caused guilt
+         9. Bond hides ulterior motive
+         8. Promise was never sincere
+         7. Past event misinterpreted
+         6. Revelation changes relationship
+         5. Loyalty has hidden cost
+         4. Emotion clouds judgment
+         3. Rival is former close friend
+         2. Change brings loss")
+      (base/card
+       :name "Twist:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-ks
+       :image "icons/card-ranksuit-ks.svg"
+       :summary
+        "A. Victory creates bigger problem
+         K. Action aids real enemy
+         Q. Allies serve hidden agenda
+         J. Success installs worse leader
+         T. Choice offers no good outcome
+         9. Time pressure is artificial
+         8. Decision triggers backlash
+         7. Action strengthens opposition
+         6. Goal activates trap
+         5. Revenge targets wrong person
+         4. Identity fabricated
+         3. Help comes too late
+         2. Prevention causes event")
+      (base/card
+       :name "Payoff:Society"
+       :deck "Story"
+       :ranksuit base/ranksuit-ac
+       :image "icons/card-ranksuit-ac.svg"
+       :summary
+        "A. Hard-won peace
+         K. Political compromise reached
+         Q. Open conflict de-escalated
+         J. Vulnerable group protected
+         T. Broken promises mended
+         9. Power balance shifted
+         8. Order restored
+         7. Hope restored
+         6. Rebellion gains ground
+         5. Justice served
+         4. War averted
+         3. Alliances formed
+         2. Community rebuilt")
+      (base/card
+       :name "Payoff:Material"
+       :deck "Story"
+       :ranksuit base/ranksuit-ad
+       :image "icons/card-ranksuit-ad.svg"
+       :summary
+        "A. Heritage preserved
+         K. Holdings noticeably expanded
+         Q. Wealth increased substantially
+         J. Artifact secured
+         T. Network influence grown
+         9. Enterprise turned profitable
+         8. Treasure claimed
+         7. Key opportunity seized
+         6. Empire foundations laid
+         5. Legacy advanced
+         4. Status raised
+         3. Valuable possession kept
+         2. Fortune modestly increased")
+      (base/card
+       :name "Payoff:Personal"
+       :deck "Story"
+       :ranksuit base/ranksuit-ah
+       :image "icons/card-ranksuit-ah.svg"
+       :summary
+        "A. Quiet acceptance of self
+         K. Deeper bond formed
+         Q. Guilt eased
+         J. Innocence reclaimed
+         T. Identity better understood
+         9. Old friendships renewed
+         8. Romance advances
+         7. Cherished memory recovered
+         6. A warm homecoming
+         5. Sanity steadied
+         4. Trust rebuilt
+         3. Family ties mended
+         2. Loved one returned safely")
+      (base/card
+       :name "Payoff:Fateful"
+       :deck "Story"
+       :ranksuit base/ranksuit-as
+       :image "icons/card-ranksuit-as.svg"
+       :summary
+        "A. Crisis resolved
+         K. Dangerous force contained
+         Q. Crisis under control
+         J. Corrupt system overturned
+         T. Disaster prevented
+         9. Corruption exposed
+         8. Immediate threat neutralized
+         7. Trapped individuals freed
+         6. Painful cycle broken
+         5. Severe threat reduced
+         4. Fragile stability restored
+         3. Imminent collapse averted
+         2. Powerful enemy defeated")))
+    (base/cardmap-copy<-card-count-isnum
+     (base/card
+      :name "Story:Back"
+      :image "images/story/story-back.svg"
+      :layout base/cardlayout-imageonly)
+     54
+     false)))
+ :doc "Story Deck")

@@ -2224,7 +2224,11 @@
   (base/ability
    :name "Kiss of Death")
   (base/ability
-   :name "Knife Throwing")
+   :name "Knife Throwing"
+   :summary
+    "Can throw any small blade using [Close Combat] or [Ranged]
+     * [Skill]: [Close Combat] or [Ranged]
+     * Such accuracy has many non-combat applications as well")
   (base/ability
    :name "Laboring"
    :titles "Laborer, Worker")
@@ -2390,6 +2394,15 @@
    :summary
     "* The user knows thousands of mazes and can choose an optimal course through any maze with minimal trial and error.
      * [Skill]: [Brilliance]")
+  (base/ability
+   :name "Melting Beam"
+   :summary
+    "* Place [Melted] counters on the target body location.
+     * [Power]: [Transmutation] vs [Will]
+     * Any body location with a [Melted] becomes soft and liquidy. Any area that suffers 3 [Melted] turns completely to stone.
+     * Additional Effects: A melted arm cannot move. A melted leg reduces Move by half. A melted head is unable to see or hear. Other melted areas have no additional effect. Melted Arms or legs can drop off like a clean amputation without blood loss.
+     * This ability can also be used to restore a melted target back to its original form if the skill is at least equal to the original. Lost limbs may also be restored by reattaching the limb before restoration.
+     * This ability can also be used on any sort of earth to soften the earth to equivalent mud.")
   (base/ability
    :name "Mental Blast"
    :summary "Attacks Mind.  All tokens are stun.")

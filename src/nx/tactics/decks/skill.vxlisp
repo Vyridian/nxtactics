@@ -8,9 +8,11 @@
   (base/skill
    :name "Close Combat"
    :summary
-    "* [Target]: Close combat may only be used to attack the space directly ahead or the space you are on.
-     * Fighting very close to the opponent. This includes most martial arts, brawling, and knife fighting.
-     * If you don't have a weapon, use the [Bare Handed] item."
+    "* [Target]: Close Combat may only attack the space directly ahead or the space you are on
+     * Fighting very close to the opponent. Includes most martial arts, brawling, and knife fighting
+     * If you don't have a weapon, use the [Bare Handed] item
+     * Note:Melee is at disadvantage if you are in the same Space
+     * Note:Ranged/Firearms are at disadvantage if you are within 1 Space"
    :reference
     "* The usefulness of kicks in self-defense and actual combat has been debated. Kicks are powerful but risk balance, expose the groin, and risk take downs.
      * Joker, there is nothing wrong with you that I can't fix. With my hands. - Batman, The Dark Knight Returns
@@ -47,14 +49,6 @@ THRUSTING FORWARD KICK		+  1		+  2		+  1		S, C		(1 W)		K2, A1			*  Aerial Maneuv
 Punch
 
 Name             Speed      Damage     Move      Defense
-
-Jab                  +2          -1         +0       S,C,A
-
-Strong Punch        +0          +1         +0       S,C,A
-
-Fierce Punch        -1          +3         -1       S,C,A
-
-----------------------------------------------------------------
 
 Boshi-Ken(Thumb Drive)-1          +2          +0      S,C,A
 P2,A2
@@ -651,6 +645,8 @@ x +1DMG vs. Crouching."
          +1 Accuracy
          +2 Damage
          0 Move")
+     "Knife Throwing"
+      (base/ability<-tactics-key tactics "Knife Throwing")
      "Neck Snap"
       (base/ability
        :name "Neck Snap"
@@ -810,8 +806,10 @@ x +1DMG vs. Crouching."
      * Steel has always carried with it a myster. You must learn its riddle Conan.. No one in this world can you trust, not men, not women, not beasts. This you can trust. - Conan's father, Conan the Barbarian"
    :summary
     "* Fighting near the opponent. This includes most hand to hand weapons.
-     * [Target]: Melee combat may only be used to attack the 3 space directly ahead of you or the space you are on.
-     * Allows the use of all Melee weapons, but unfamiliar weapons follow the [Unfamiliar Item] rule."
+     * [Target]: Melee combat may only attack within your [Arc:Forward] or the space you are on
+     * Allows the use of all Melee weapons, but unfamiliar weapons follow the [Unfamiliar Item] rule
+     * Note:Melee is at disadvantage if you are in the same Space
+     * Note:Ranged/Firearms are at disadvantage if you are within 1 Space"
    :stat "Body"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -930,10 +928,10 @@ x +1DMG vs. Crouching."
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
-     "Medium Armor"
-     "Heavy Armor"
-     "Powered Armor"
-     "Shields"))
+     "Armor:Heavy"
+     "Armor:Medium"
+     "Armor:Powered"
+     "Armor:Shields"))
   (base/skill
    :name "Evasion"
    :summary
@@ -959,15 +957,16 @@ x +1DMG vs. Crouching."
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
-     "Bucklers"
-     "Light Armor"))
+     "Armor:Bucklers"
+     "Armor:Light"))
   (base/skill
    :name "Ranged"
    :titles "Archer, Javelineer, Slinger"
    :reference
     "* Good. Bad. I'm the guy with the gun. - Ash, Army of Darkness"
    :summary
-    "Low tech [Weapon:Ranged]. Does not include Firearms or Siege Weapons"
+    "Low tech [Weapon:Ranged]. Does not include Firearms or Siege Weapons
+     * Note:Ranged is at disadvantage if a Rival is within 1 Space"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -1000,7 +999,8 @@ x +1DMG vs. Crouching."
      * Smile! It's called gunPLAY. - Jinx, Runeterra"
    :summary
     "Skill in using guns of various types (not including crossbows)
-     * Note: IF you shoot in a non-standard way (eg shooting form the hip), you have [Disadvantage]."
+     * Note: IF you shoot in a non-standard way (eg shooting form the hip), you have [Disadvantage]
+     * Note:Ranged/Firearms are at disadvantage if you are within 1 Space"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics

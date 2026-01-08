@@ -53,6 +53,7 @@ import nx_tactics_books_space_and_time_test from "./nx/tactics/books/space_and_t
 import nx_tactics_books_superheroes_test from "./nx/tactics/books/superheroes_test.js"
 import nx_tactics_books_world_wars_test from "./nx/tactics/books/world_wars_test.js"
 import nx_tactics_decks_ability_test from "./nx/tactics/decks/ability_test.js"
+import nx_tactics_decks_character_test from "./nx/tactics/decks/character_test.js"
 import nx_tactics_decks_condition_test from "./nx/tactics/decks/condition_test.js"
 import nx_tactics_decks_conflict_test from "./nx/tactics/decks/conflict_test.js"
 import nx_tactics_decks_disorder_test from "./nx/tactics/decks/disorder_test.js"
@@ -73,6 +74,9 @@ import nx_tactics_decks_scene_ontherun_test from "./nx/tactics/decks/scene-onthe
 import nx_tactics_decks_scene_starter_test from "./nx/tactics/decks/scene-starter_test.js"
 import nx_tactics_decks_skill_test from "./nx/tactics/decks/skill_test.js"
 import nx_tactics_decks_specialty_test from "./nx/tactics/decks/specialty_test.js"
+import nx_tactics_decks_story_test from "./nx/tactics/decks/story_test.js"
+import nx_tactics_decks_storyarc_test from "./nx/tactics/decks/storyarc_test.js"
+import nx_tactics_decks_storyevent_test from "./nx/tactics/decks/storyevent_test.js"
 import nx_tactics_decks_trauma_test from "./nx/tactics/decks/trauma_test.js"
 import nx_tactics_decks_unit_test from "./nx/tactics/decks/unit_test.js"
 import nx_tactics_decks_vehicle_test from "./nx/tactics/decks/vehicle_test.js"
@@ -159,6 +163,7 @@ export default class app_test {
       nx_tactics_books_superheroes_test.test_package(context),
       nx_tactics_books_world_wars_test.test_package(context),
       nx_tactics_decks_ability_test.test_package(context),
+      nx_tactics_decks_character_test.test_package(context),
       nx_tactics_decks_condition_test.test_package(context),
       nx_tactics_decks_conflict_test.test_package(context),
       nx_tactics_decks_disorder_test.test_package(context),
@@ -179,6 +184,9 @@ export default class app_test {
       nx_tactics_decks_scene_starter_test.test_package(context),
       nx_tactics_decks_skill_test.test_package(context),
       nx_tactics_decks_specialty_test.test_package(context),
+      nx_tactics_decks_story_test.test_package(context),
+      nx_tactics_decks_storyarc_test.test_package(context),
+      nx_tactics_decks_storyevent_test.test_package(context),
       nx_tactics_decks_trauma_test.test_package(context),
       nx_tactics_decks_unit_test.test_package(context),
       nx_tactics_decks_vehicle_test.test_package(context),

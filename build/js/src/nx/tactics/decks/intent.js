@@ -82,7 +82,7 @@ export default class nx_tactics_decks_intent {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Defend:All Out",
+              "Aid:All Out",
               ":deck",
               "Intent",
               ":ranksuit",
@@ -93,7 +93,7 @@ export default class nx_tactics_decks_intent {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Manuever:All Out",
+              "Maneuver:All Out",
               ":deck",
               "Intent",
               ":ranksuit",
@@ -126,13 +126,13 @@ export default class nx_tactics_decks_intent {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Intent:kh",
+              "Aid:Leader",
               ":deck",
               "Intent",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_kh,
               ":summary",
-              ""
+              "Guard\n* Aid/Guard a Leader/objective"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},

@@ -389,11 +389,11 @@
   :layout ui/layout-label
   :pointpos
    (ui/point
-    :x 8
+    :x 10
     :y 7)
   :pointsize
    (ui/point
-    :x 49))
+    :x 44))
  :doc "")
 
 (const style-card-display2 : ui/style
@@ -450,7 +450,7 @@
   :layout ui/layout-label
   :pointpos
    (ui/point
-    :x 8
+    :x 5
     :y 7)
   :pointsize
    (ui/point

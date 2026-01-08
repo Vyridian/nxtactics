@@ -6,223 +6,223 @@
  (base/cardback
   :name "Fatigue"
   :titles "Physical Damage/Fatigue/Weaken/Exertion"
-  :image "images/damage-wound-fatigue.svg"
+  :image "images/wound/wound-fatigue.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-wild-black : base/damage
  (base/damage
-  :name "Wild: Black"
-  :image "images/damage-wound-wb.svg"
+  :name "Wild:Black"
+  :image "images/wound/wound-wb.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-wild-red : base/damage
  (base/damage
-  :name "Wild: Red"
-  :image "images/damage-wound-wr.svg"
+  :name "Wild:Red"
+  :image "images/wound/wound-wr.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-ac : base/damage
  (base/damage
-  :name "Bash: Head"
-  :image "images/damage-wound-ac.svg"
+  :name "Bash:Head"
+  :image "images/wound/wound-ac.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-ad : base/damage
  (base/damage
-  :name "Pierce: Head"
-  :image "images/damage-wound-ad.svg"
+  :name "Pierce:Head"
+  :image "images/wound/wound-ad.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-ah : base/damage
  (base/damage
-  :name "Hack: Head"
-  :image "images/damage-wound-ah.svg"
+  :name "Hack:Head"
+  :image "images/wound/wound-ah.svg"
   :layout base/cardlayout-imageonly
   :reference
    "* Not the face!"))
 
 (const wound-as : base/damage
  (base/damage
-  :name "Slash: Head"
-  :image "images/damage-wound-as.svg"
+  :name "Slash:Head"
+  :image "images/wound/wound-as.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-kc : base/damage
  (base/damage
-  :name "Bash: Shoulders"
-  :image "images/damage-wound-kc.svg"
+  :name "Bash:Shoulders"
+  :image "images/wound/wound-kc.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-kd : base/damage
  (base/damage
-  :name "Pierce: Shoulders"
-  :image "images/damage-wound-kd.svg"
+  :name "Pierce:Shoulders"
+  :image "images/wound/wound-kd.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-kh : base/damage
  (base/damage
-  :name "Hack: Shoulders"
-  :image "images/damage-wound-kh.svg"
+  :name "Hack:Shoulders"
+  :image "images/wound/wound-kh.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-ks : base/damage
  (base/damage
-  :name "Slash: Shoulders"
-  :image "images/damage-wound-ks.svg"
+  :name "Slash:Shoulders"
+  :image "images/wound/wound-ks.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-qc : base/damage
  (base/damage
-  :name "Bash: Chest"
-  :titles "Bash: Middle Chest/Back/Lungs/Heart"
-  :image "images/damage-wound-qc.svg"
+  :name "Bash:Chest"
+  :titles "Bash:Middle Chest/Back/Lungs/Heart"
+  :image "images/wound/wound-qc.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-qd : base/damage
  (base/damage
-  :name "Pierce: Chest"
-  :titles "Pierce: Middle Chest/Back/Lungs/Heart"
-  :image "images/damage-wound-qd.svg"
+  :name "Pierce:Chest"
+  :titles "Pierce:Middle Chest/Back/Lungs/Heart"
+  :image "images/wound/wound-qd.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-qh : base/damage
  (base/damage
-  :name "Hack: Chest"
-  :titles "Hack: Middle Chest/Back/Lungs/Heart"
-  :image "images/damage-wound-qh.svg"
+  :name "Hack:Chest"
+  :titles "Hack:Middle Chest/Back/Lungs/Heart"
+  :image "images/wound/wound-qh.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-qs : base/damage
  (base/damage
-  :name "Slash: Chest"
-  :titles "Slash: Middle Chest/Back/Lungs/Heart"
-  :image "images/damage-wound-qs.svg"
+  :name "Slash:Chest"
+  :titles "Slash:Middle Chest/Back/Lungs/Heart"
+  :image "images/wound/wound-qs.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-jc : base/damage
  (base/damage
-  :name "Bash: Abdomen"
-  :titles "Bash: Abdomen/Lower Back"
-  :image "images/damage-wound-jc.svg"
+  :name "Bash:Abdomen"
+  :titles "Bash:Abdomen/Lower Back"
+  :image "images/wound/wound-jc.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-jd : base/damage
  (base/damage
-  :name "Pierce: Abdomen"
-  :titles "Pierce: Abdomen/Lower Back"
-  :image "images/damage-wound-jd.svg"
+  :name "Pierce:Abdomen"
+  :titles "Pierce:Abdomen/Lower Back"
+  :image "images/wound/wound-jd.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-jh : base/damage
  (base/damage
-  :name "Hack: Abdomen"
-  :titles "Hack: Abdomen/Lower Back"
-  :image "images/damage-wound-jh.svg"
+  :name "Hack:Abdomen"
+  :titles "Hack:Abdomen/Lower Back"
+  :image "images/wound/wound-jh.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-js : base/damage
  (base/damage
-  :name "Slash: Abdomen"
-  :titles "Slash: Abdomen/Lower Back"
-  :image "images/damage-wound-js.svg"
+  :name "Slash:Abdomen"
+  :titles "Slash:Abdomen/Lower Back"
+  :image "images/wound/wound-js.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-tc : base/damage
  (base/damage
-  :name "Bash: Vitals"
-  :titles "Bash: Hips/Groin"
-  :image "images/damage-wound-tc.svg"
+  :name "Bash:Vitals"
+  :titles "Bash:Hips/Groin"
+  :image "images/wound/wound-tc.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-td : base/damage
  (base/damage
-  :name "Pierce: Vitals"
-  :titles "Pierce: Hips/Groin"
-  :image "images/damage-wound-td.svg"
+  :name "Pierce:Vitals"
+  :titles "Pierce:Hips/Groin"
+  :image "images/wound/wound-td.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-th : base/damage
  (base/damage
-  :name "Hack: Vitals"
-  :titles "Hack: Hips/Groin"
-  :image "images/damage-wound-th.svg"
+  :name "Hack:Vitals"
+  :titles "Hack:Hips/Groin"
+  :image "images/wound/wound-th.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-ts : base/damage
  (base/damage
-  :name "Slash: Vitals"
-  :titles "Slash: Hips/Groin"
-  :image "images/damage-wound-ts.svg"
+  :name "Slash:Vitals"
+  :titles "Slash:Hips/Groin"
+  :image "images/wound/wound-ts.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-9c : base/damage
  (base/damage
-  :name "Bash: Left Arm"
-  :titles "Bash: Left Upper Arm/Elbow"
-  :image "images/damage-wound-9c.svg"
+  :name "Bash:Left Arm"
+  :titles "Bash:Left Upper Arm/Elbow"
+  :image "images/wound/wound-9c.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-9d : base/damage
  (base/damage
-  :name "Pierce: Left Arm"
-  :titles "Pierce: Left Upper Arm/Elbow"
-  :image "images/damage-wound-9d.svg"
+  :name "Pierce:Left Arm"
+  :titles "Pierce:Left Upper Arm/Elbow"
+  :image "images/wound/wound-9d.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-9h : base/damage
  (base/damage
-  :name "Hack: Left Arm"
-  :titles "Hack: Left Upper Arm/Elbow"
-  :image "images/damage-wound-9h.svg"
+  :name "Hack:Left Arm"
+  :titles "Hack:Left Upper Arm/Elbow"
+  :image "images/wound/wound-9h.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-9s : base/damage
  (base/damage
-  :name "Slash: Left Arm"
-  :titles "Slash: Left Upper Arm/Elbow"
-  :image "images/damage-wound-9s.svg"
+  :name "Slash:Left Arm"
+  :titles "Slash:Left Upper Arm/Elbow"
+  :image "images/wound/wound-9s.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-8c : base/damage
  (base/damage
-  :name "Bash: Right Arm"
-  :titles "Bash: Right Upper Arm/Elbow"
-  :image "images/damage-wound-8c.svg"
+  :name "Bash:Right Arm"
+  :titles "Bash:Right Upper Arm/Elbow"
+  :image "images/wound/wound-8c.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-8d : base/damage
  (base/damage
-  :name "Pierce: Right Arm"
-  :titles "Pierce: Right Upper Arm/Elbow"
-  :image "images/damage-wound-8d.svg"
+  :name "Pierce:Right Arm"
+  :titles "Pierce:Right Upper Arm/Elbow"
+  :image "images/wound/wound-8d.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-8h : base/damage
  (base/damage
-  :name "Hack: Right Arm"
-  :titles "Hack: Right Upper Arm/Elbow"
-  :image "images/damage-wound-8h.svg"
+  :name "Hack:Right Arm"
+  :titles "Hack:Right Upper Arm/Elbow"
+  :image "images/wound/wound-8h.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-8s : base/damage
  (base/damage
-  :name "Slash: Right Arm"
-  :titles "Slash: Right Upper Arm/Elbow"
-  :image "images/damage-wound-8s.svg"
+  :name "Slash:Right Arm"
+  :titles "Slash:Right Upper Arm/Elbow"
+  :image "images/wound/wound-8s.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-7c : base/damage
  (base/damage
-  :name "Bash: Left Hand"
-  :titles "Bash: Left Lower Arm/Wrist/Hand"
-  :image "images/damage-wound-7c.svg"
+  :name "Bash:Left Hand"
+  :titles "Bash:Left Lower Arm/Wrist/Hand"
+  :image "images/wound/wound-7c.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-7d : base/damage
  (base/damage
-  :name "Pierce: Left Hand"
-  :titles "Pierce: Left Lower Arm/Wrist/Hand"
-  :image "images/damage-wound-7d.svg"
+  :name "Pierce:Left Hand"
+  :titles "Pierce:Left Lower Arm/Wrist/Hand"
+  :image "images/wound/wound-7d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Graze. Stun:1
@@ -232,9 +232,9 @@
 
 (const wound-7h : base/damage
  (base/damage
-  :name "Hack: Left Hand"
-  :titles "Hack: Left Lower Arm/Wrist/Hand"
-  :image "images/damage-wound-7h.svg"
+  :name "Hack:Left Hand"
+  :titles "Hack:Left Lower Arm/Wrist/Hand"
+  :image "images/wound/wound-7h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Graze. Withdraw:1
@@ -244,9 +244,9 @@
 
 (const wound-7s : base/damage
  (base/damage
-  :name "Slash: Left Hand"
-  :titles "Slash: Left Lower Arm/Wrist/Hand"
-  :image "images/damage-wound-7s.svg"
+  :name "Slash:Left Hand"
+  :titles "Slash:Left Lower Arm/Wrist/Hand"
+  :image "images/wound/wound-7s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Cut. Bleeding:1
@@ -256,16 +256,16 @@
 
 (const wound-6c : base/damage
  (base/damage
-  :name "Bash: Right Hand"
-  :titles "Bash: Right Lower Arm/Wrist/Hand"
-  :image "images/damage-wound-6c.svg"
+  :name "Bash:Right Hand"
+  :titles "Bash:Right Lower Arm/Wrist/Hand"
+  :image "images/wound/wound-6c.svg"
   :layout base/cardlayout-imageonly))
 
 (const wound-6d : base/damage
  (base/damage
-  :name "Pierce: Right Hand"
-  :titles "Pierce: Right Lower Arm/Wrist/Hand"
-  :image "images/damage-wound-6d.svg"
+  :name "Pierce:Right Hand"
+  :titles "Pierce:Right Lower Arm/Wrist/Hand"
+  :image "images/wound/wound-6d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Graze. Stun:1
@@ -275,9 +275,9 @@
 
 (const wound-6h : base/damage
  (base/damage
-  :name "Hack: Right Hand"
-  :titles "Hack: Right Lower Arm/Wrist/Hand"
-  :image "images/damage-wound-6h.svg"
+  :name "Hack:Right Hand"
+  :titles "Hack:Right Lower Arm/Wrist/Hand"
+  :image "images/wound/wound-6h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Graze. Withdraw:1
@@ -287,9 +287,9 @@
 
 (const wound-6s : base/damage
  (base/damage
-  :name "Slash: Right Hand"
-  :titles "Slash: Right Lower Arm/Wrist/Hand"
-  :image "images/damage-wound-6s.svg"
+  :name "Slash:Right Hand"
+  :titles "Slash:Right Lower Arm/Wrist/Hand"
+  :image "images/wound/wound-6s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Cut. Bleeding:1
@@ -299,9 +299,9 @@
 
 (const wound-5c : base/damage
  (base/damage
-  :name "Bash: Left Leg"
-  :titles "Bash: Left Upper Leg/Thigh/Knee"
-  :image "images/damage-wound-5c.svg"
+  :name "Bash:Left Leg"
+  :titles "Bash:Left Upper Leg/Thigh/Knee"
+  :image "images/wound/wound-5c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Bruise. Fatigue:1
@@ -311,9 +311,9 @@
 
 (const wound-5d : base/damage
  (base/damage
-  :name "Pierce: Left Leg"
-  :titles "Pierce: Left Upper Leg/Thigh/Knee"
-  :image "images/damage-wound-5d.svg"
+  :name "Pierce:Left Leg"
+  :titles "Pierce:Left Upper Leg/Thigh/Knee"
+  :image "images/wound/wound-5d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Graze. Stun:1
@@ -323,9 +323,9 @@
 
 (const wound-5h : base/damage
  (base/damage
-  :name "Hack: Left Leg"
-  :titles "Hack: Left Upper Leg/Thigh/Knee"
-  :image "images/damage-wound-5h.svg"
+  :name "Hack:Left Leg"
+  :titles "Hack:Left Upper Leg/Thigh/Knee"
+  :image "images/wound/wound-5h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Graze. Withdraw:1
@@ -335,9 +335,9 @@
 
 (const wound-5s : base/damage
  (base/damage
-  :name "Slash: Left Leg"
-  :titles "Slash: Left Upper Leg/Thigh/Knee"
-  :image "images/damage-wound-5s.svg"
+  :name "Slash:Left Leg"
+  :titles "Slash:Left Upper Leg/Thigh/Knee"
+  :image "images/wound/wound-5s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Cut. Bleeding:1
@@ -347,9 +347,9 @@
 
 (const wound-4c : base/damage
  (base/damage
-  :name "Bash: Right Leg"
-  :titles "Bash: Right Upper Leg/Thigh/Knee"
-  :image "images/damage-wound-4c.svg"
+  :name "Bash:Right Leg"
+  :titles "Bash:Right Upper Leg/Thigh/Knee"
+  :image "images/wound/wound-4c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Bruise. Fatigue:1
@@ -359,9 +359,9 @@
 
 (const wound-4d : base/damage
  (base/damage
-  :name "Pierce: Right Leg"
-  :titles "Pierce: Right Upper Leg/Thigh/Knee"
-  :image "images/damage-wound-4d.svg"
+  :name "Pierce:Right Leg"
+  :titles "Pierce:Right Upper Leg/Thigh/Knee"
+  :image "images/wound/wound-4d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Graze. Stun:1
@@ -371,9 +371,9 @@
 
 (const wound-4h : base/damage
  (base/damage
-  :name "Hack: Right Leg"
-  :titles "Hack: Right Upper Leg/Thigh/Knee"
-  :image "images/damage-wound-4h.svg"
+  :name "Hack:Right Leg"
+  :titles "Hack:Right Upper Leg/Thigh/Knee"
+  :image "images/wound/wound-4h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Graze. Withdraw:1
@@ -383,9 +383,9 @@
 
 (const wound-4s : base/damage
  (base/damage
-  :name "Slash: Right Leg"
-  :titles "Slash: Right Upper Leg/Thigh/Knee"
-  :image "images/damage-wound-4s.svg"
+  :name "Slash:Right Leg"
+  :titles "Slash:Right Upper Leg/Thigh/Knee"
+  :image "images/wound/wound-4s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Cut. Bleeding:1
@@ -395,9 +395,9 @@
 
 (const wound-3c : base/damage
  (base/damage
-  :name "Bash: Left Foot"
-  :titles "Bash: Left Lower Leg/Shin/Ankle/Foot"
-  :image "images/damage-wound-3c.svg"
+  :name "Bash:Left Foot"
+  :titles "Bash:Left Lower Leg/Shin/Ankle/Foot"
+  :image "images/wound/wound-3c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Shin Bruise. Fatigue:1
@@ -407,9 +407,9 @@
 
 (const wound-3d : base/damage
  (base/damage
-  :name "Pierce: Left Foot"
-  :titles "Pierce: Left Lower Leg/Shin/Ankle/Foot"
-  :image "images/damage-wound-3d.svg"
+  :name "Pierce:Left Foot"
+  :titles "Pierce:Left Lower Leg/Shin/Ankle/Foot"
+  :image "images/wound/wound-3d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Ankle Graze. Stun:1
@@ -419,9 +419,9 @@
 
 (const wound-3h : base/damage
  (base/damage
-  :name "Hack: Left Foot"
-  :titles "Hack: Left Lower Leg/Shin/Ankle/Foot"
-  :image "images/damage-wound-3h.svg"
+  :name "Hack:Left Foot"
+  :titles "Hack:Left Lower Leg/Shin/Ankle/Foot"
+  :image "images/wound/wound-3h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Ankle Grazed. Withdraw:1
@@ -431,9 +431,9 @@
 
 (const wound-3s : base/damage
  (base/damage
-  :name "Slash: Left Foot"
-  :titles "Slash: Left Lower Leg/Shin/Ankle/Foot"
-  :image "images/damage-wound-3s.svg"
+  :name "Slash:Left Foot"
+  :titles "Slash:Left Lower Leg/Shin/Ankle/Foot"
+  :image "images/wound/wound-3s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Foot Cut. Bleeding:1
@@ -443,9 +443,9 @@
 
 (const wound-2c : base/damage
  (base/damage
-  :name "Bash: Right Foot"
-  :titles "Bash: Right Lower Leg/Shin/Ankle/Foot"
-  :image "images/damage-wound-2c.svg"
+  :name "Bash:Right Foot"
+  :titles "Bash:Right Lower Leg/Shin/Ankle/Foot"
+  :image "images/wound/wound-2c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Shin Bruise. Fatigue:1
@@ -455,9 +455,9 @@
 
 (const wound-2d : base/damage
  (base/damage
-  :name "Pierce: Right Foot"
-  :titles "Pierce: Right Lower Leg/Shin/Ankle/Foot"
-  :image "images/damage-wound-2d.svg"
+  :name "Pierce:Right Foot"
+  :titles "Pierce:Right Lower Leg/Shin/Ankle/Foot"
+  :image "images/wound/wound-2d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Ankle Graze. Stun:1
@@ -467,9 +467,9 @@
 
 (const wound-2h : base/damage
  (base/damage
-  :name "Hack: Right Foot"
-  :titles "Hack: Right Lower Leg/Shin/Ankle/Foot"
-  :image "images/damage-wound-2h.svg"
+  :name "Hack:Right Foot"
+  :titles "Hack:Right Lower Leg/Shin/Ankle/Foot"
+  :image "images/wound/wound-2h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Ankle Grazed. Withdraw:1
@@ -479,9 +479,9 @@
 
 (const wound-2s : base/damage
  (base/damage
-  :name "Slash: Right Foot"
-  :titles "Slash: Right Lower Leg/Shin/Ankle/Foot"
-  :image "images/damage-wound-2s.svg"
+  :name "Slash:Right Foot"
+  :titles "Slash:Right Lower Leg/Shin/Ankle/Foot"
+  :image "images/wound/wound-2s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Foot Cut. Bleeding:1
@@ -492,7 +492,7 @@
 (func deck-wound : base/deck
  (base/deck
   :name "Wounds"
-  :image "images/damage-wound-fatigue.svg"
+  :image "images/wound/wound-fatigue.svg"
   :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap

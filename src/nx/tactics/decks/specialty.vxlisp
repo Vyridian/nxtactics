@@ -64,6 +64,33 @@
    :summary "* Bowel Raker, Double Shot, Flaming Arrow"
    :titles "Archer, Archer Elite, Bowman, Crossbowman, Longbowman")
   (base/specialty
+   :name "Armor:Bucklers")
+  (base/specialty
+   :name "Armor:Heavy"
+   :summary
+    "* [Skill]: [Defense]
+     * Proficient with Heavy Armor")
+  (base/specialty
+   :name "Armor:Light"
+   :summary
+    "* [Skill]: [Defense]
+     * Specialized in Light Armor")
+  (base/specialty
+   :name "Armor:Medium"
+   :summary
+    "* [Skill]: [Defense]
+     * Specialized in Medium Armor")
+  (base/specialty
+   :name "Armor:Powered"
+   :summary
+    "* [Skill]: [Defense]
+     * Specialized in Powered Armor")
+  (base/specialty
+   :name "Armor:Shields"
+   :summary
+    "* [Skill]: [Defense]
+     * Specialized in Shields")
+  (base/specialty
    :name "Axes"
    :reference
     "* Run to the bedroom,
@@ -99,8 +126,6 @@
    :name "Brawling"
    :summary "* Brawling is no holds bars, no rules hand to hand fighting."
    :titles "Bruiser, Pit Fighter, Street Fighter, Thug")
-  (base/specialty
-   :name "Bucklers")
   (base/specialty
    :name "Cannons")
   (base/specialty
@@ -249,11 +274,6 @@
      * Grapples - [Back Roll Throw], [Grappling Defense], [Joint Lock], [Choke Hold], [Pin], [Shoulder Throw], [Takedown]
      * Strikes - [Deflecting Punch], [Nerve Strike], [Phoenix Strike], [Spinning Back Fist], [Strike Defense]
      * Kicks - [Axe Kick], [Crescent Kick], [Double Kick], [Flying Kick], [Kick Defense], [Leg Sweep], [Roundhouse Kick], [Spinning Thrust Kick]")
-  (base/specialty
-   :name "Heavy Armor"
-   :summary
-    "* [Skill]: [Defense]
-     * Proficient with Heavy Armor")
   (base/specialty
    :name "Helicopters")
   (base/specialty
@@ -514,11 +534,6 @@
    :summary
     "* Wing Chung, literally 'singing spring', is a Southern Chinese kung fu style and a form of self-defense originating in Qing China, which requires quick arm movements and strong legs. Softness (via relaxation) and performance of techniques in a relaxed manner is fundamental to Wing Chun.")
   (base/specialty
-   :name "Light Armor"
-   :summary
-    "* [Skill]: [Defense]
-     * Specialized in Light Armor")
-  (base/specialty
    :name "Linguistics"
    :reference
     "* So we put her on the hit list, of a common, cunning linguist: a master of many tongues. - Deep Purple, Knocking at Your Backdoor"
@@ -531,11 +546,6 @@
    :name "Mage Hunter"
    :reference
     "* Templars, Dragon Age")
-  (base/specialty
-   :name "Medium Armor"
-   :summary
-    "* [Skill]: [Defense]
-     * Specialized in Medium Armor")
   (base/specialty
    :name "Monster Hunter"
    :reference
@@ -621,11 +631,6 @@
    :summary "Fend Off"
    :titles "Glaivemaster, Halberdier, Poleman")
   (base/specialty
-   :name "Powered Armor"
-   :summary
-    "* [Skill]: [Defense]
-     * Specialized in Powered Armor")
-  (base/specialty
    :name "Race Cars")
   (base/specialty
    :name "Riding"
@@ -659,11 +664,6 @@
    :name "Scrying"
    :summary
     "* This is the art of divining by gazing into a reflecting surface.")
-  (base/specialty
-   :name "Shields"
-   :summary
-    "* [Skill]: [Defense]
-     * Specialized in Shields")
   (base/specialty
    :name "Short Blades"
    :summary

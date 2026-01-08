@@ -3413,10 +3413,10 @@ export default class nx_tactics_decks_power {
         {"any-1": nx_tactics_base.t_power},
         ":name",
         "Sound",
-        ":summary",
-        "* Sonic attacks are a form of vibration/explosive attack that generaly does [Concussive Damage]. They also can cause temporary or permanent deafness.",
         ":titles",
-        "Sonic",
+        "Sonics",
+        ":summary",
+        "* Sonic attacks are a form of vibration/explosive attack that generaly does [Concussive Damage]. They also can cause temporary or permanent deafness.\n* They generally form in a [Blast] or [Cone] shaped area diminishing over distance\n* They strike friend or foe, but some sounds have different effects on allies or enemies",
         ":abilitymap",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_abilitymap},
@@ -3625,7 +3625,7 @@ export default class nx_tactics_decks_power {
         ":name",
         "Transmutation",
         ":titles",
-        "Atomic Control, Molecular Control, Petrifier, Polymorpher, Reality Warper, Shaper, Transmuter",
+        "Atomic Control, Melter, Molecular Control, Petrifier, Polymorpher, Reality Warper, Shaper, Transmuter",
         ":reference",
         "* Basilisk\n* Medusa\n* Molecule Man\n* Phaser\n* Reality Stone/Gem",
         ":summary",
@@ -3633,7 +3633,7 @@ export default class nx_tactics_decks_power {
         ":stat",
         "Mind",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Destruction", "Disintegrate", "Molecular Alteration", "Petrifying Breath", "Petrifying Stare", "Petrifying Touch", "Polymorph")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Destruction", "Disintegrate", "Melting Beam", "Molecular Alteration", "Petrifying Breath", "Petrifying Stare", "Petrifying Touch", "Polymorph")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},

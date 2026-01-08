@@ -10,19 +10,19 @@
 
 (const vehicle-wild-black : base/damage
  (base/damage
-  :name "Wild: Black"
+  :name "Wild:Black"
   :image "images/damage-vehicle-wb.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-wild-red : base/damage
  (base/damage
-  :name "Wild: Red"
+  :name "Wild:Red"
   :image "images/damage-vehicle-wr.svg"
   :layout base/cardlayout-imageonly))
 
 (const vehicle-ac : base/damage
  (base/damage
-  :name "Bash: Frame"
+  :name "Bash:Frame"
   :image "images/damage-vehicle-ac.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -33,7 +33,7 @@
 
 (const vehicle-ad : base/damage
  (base/damage
-  :name "Pierce: Frame"
+  :name "Pierce:Frame"
   :image "images/damage-vehicle-ad.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -44,7 +44,7 @@
 
 (const vehicle-ah : base/damage
  (base/damage
-  :name "Hack: Frame"
+  :name "Hack:Frame"
   :image "images/damage-vehicle-ah.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -55,7 +55,7 @@
 
 (const vehicle-as : base/damage
  (base/damage
-  :name "Slash: Frame"
+  :name "Slash:Frame"
   :image "images/damage-vehicle-as.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -66,7 +66,7 @@
 
 (const vehicle-kc : base/damage
  (base/damage
-  :name "Bash: Controls"
+  :name "Bash:Controls"
   :image "images/damage-vehicle-kc.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -77,7 +77,7 @@
 
 (const vehicle-kd : base/damage
  (base/damage
-  :name "Pierce: Controls"
+  :name "Pierce:Controls"
   :image "images/damage-vehicle-kd.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -88,7 +88,7 @@
 
 (const vehicle-kh : base/damage
  (base/damage
-  :name "Hack: Controls"
+  :name "Hack:Controls"
   :image "images/damage-vehicle-kh.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -99,7 +99,7 @@
 
 (const vehicle-ks : base/damage
  (base/damage
-  :name "Slash: Controls"
+  :name "Slash:Controls"
   :image "images/damage-vehicle-ks.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -110,7 +110,7 @@
 
 (const vehicle-qc : base/damage
  (base/damage
-  :name "Bash: Cabin"
+  :name "Bash:Cabin"
   :image "images/damage-vehicle-qc.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -121,7 +121,7 @@
 
 (const vehicle-qd : base/damage
  (base/damage
-  :name "Pierce: Cabin"
+  :name "Pierce:Cabin"
   :image "images/damage-vehicle-qd.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -132,7 +132,7 @@
 
 (const vehicle-qh : base/damage
  (base/damage
-  :name "Hack: Cabin"
+  :name "Hack:Cabin"
   :image "images/damage-vehicle-qh.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -143,7 +143,7 @@
 
 (const vehicle-qs : base/damage
  (base/damage
-  :name "Slash: Cabin"
+  :name "Slash:Cabin"
   :image "images/damage-vehicle-qs.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -154,7 +154,7 @@
 
 (const vehicle-jc : base/damage
  (base/damage
-  :name "Bash: Engine"
+  :name "Bash:Engine"
   :image "images/damage-vehicle-jc.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -165,7 +165,7 @@
 
 (const vehicle-jd : base/damage
  (base/damage
-  :name "Pierce: Engine"
+  :name "Pierce:Engine"
   :image "images/damage-vehicle-jd.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -176,7 +176,7 @@
 
 (const vehicle-jh : base/damage
  (base/damage
-  :name "Hack: Engine"
+  :name "Hack:Engine"
   :image "images/damage-vehicle-jh.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -187,7 +187,7 @@
 
 (const vehicle-js : base/damage
  (base/damage
-  :name "Slash: Engine"
+  :name "Slash:Engine"
   :image "images/damage-vehicle-js.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -198,7 +198,7 @@
 
 (const vehicle-tc : base/damage
  (base/damage
-  :name "Bash: Supply"
+  :name "Bash:Supply"
   :image "images/damage-vehicle-tc.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -209,7 +209,7 @@
 
 (const vehicle-td : base/damage
  (base/damage
-  :name "Pierce: Supply"
+  :name "Pierce:Supply"
   :image "images/damage-vehicle-td.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -220,7 +220,7 @@
 
 (const vehicle-th : base/damage
  (base/damage
-  :name "Hack: Supply"
+  :name "Hack:Supply"
   :image "images/damage-vehicle-th.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -231,7 +231,7 @@
 
 (const vehicle-ts : base/damage
  (base/damage
-  :name "Slash: Supply"
+  :name "Slash:Supply"
   :image "images/damage-vehicle-ts.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -242,7 +242,7 @@
 
 (const vehicle-9c : base/damage
  (base/damage
-  :name "Bash: Left Steering"
+  :name "Bash:Left Steering"
   :image "images/damage-vehicle-9c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -253,7 +253,7 @@
 
 (const vehicle-9d : base/damage
  (base/damage
-  :name "Pierce: Left Steering"
+  :name "Pierce:Left Steering"
   :image "images/damage-vehicle-9d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -264,7 +264,7 @@
 
 (const vehicle-9h : base/damage
  (base/damage
-  :name "Hack: Left Steering"
+  :name "Hack:Left Steering"
   :image "images/damage-vehicle-9h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -275,7 +275,7 @@
 
 (const vehicle-9s : base/damage
  (base/damage
-  :name "Slash: Left Steering"
+  :name "Slash:Left Steering"
   :image "images/damage-vehicle-9s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -286,7 +286,7 @@
 
 (const vehicle-8c : base/damage
  (base/damage
-  :name "Bash: Right Steering"
+  :name "Bash:Right Steering"
   :image "images/damage-vehicle-8c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -297,7 +297,7 @@
 
 (const vehicle-8d : base/damage
  (base/damage
-  :name "Pierce: Right Steering"
+  :name "Pierce:Right Steering"
   :image "images/damage-vehicle-8d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -308,7 +308,7 @@
 
 (const vehicle-8h : base/damage
  (base/damage
-  :name "Hack: Right Steering"
+  :name "Hack:Right Steering"
   :image "images/damage-vehicle-8h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -319,7 +319,7 @@
 
 (const vehicle-8s : base/damage
  (base/damage
-  :name "Slash: Right Steering"
+  :name "Slash:Right Steering"
   :image "images/damage-vehicle-8s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -330,7 +330,7 @@
 
 (const vehicle-7c : base/damage
  (base/damage
-  :name "Bash: Left Lift"
+  :name "Bash:Left Lift"
   :image "images/damage-vehicle-7c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -341,7 +341,7 @@
 
 (const vehicle-7d : base/damage
  (base/damage
-  :name "Pierce: Left Lift"
+  :name "Pierce:Left Lift"
   :image "images/damage-vehicle-7d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -352,7 +352,7 @@
 
 (const vehicle-7h : base/damage
  (base/damage
-  :name "Hack: Left Lift"
+  :name "Hack:Left Lift"
   :image "images/damage-vehicle-7h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -363,7 +363,7 @@
 
 (const vehicle-7s : base/damage
  (base/damage
-  :name "Slash: Left Lift"
+  :name "Slash:Left Lift"
   :image "images/damage-vehicle-7s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -374,7 +374,7 @@
 
 (const vehicle-6c : base/damage
  (base/damage
-  :name "Bash: Right Lift"
+  :name "Bash:Right Lift"
   :image "images/damage-vehicle-6c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -385,7 +385,7 @@
 
 (const vehicle-6d : base/damage
  (base/damage
-  :name "Pierce: Right Lift"
+  :name "Pierce:Right Lift"
   :image "images/damage-vehicle-6d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -396,7 +396,7 @@
 
 (const vehicle-6h : base/damage
  (base/damage
-  :name "Hack: Right Lift"
+  :name "Hack:Right Lift"
   :image "images/damage-vehicle-6h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -407,7 +407,7 @@
 
 (const vehicle-6s : base/damage
  (base/damage
-  :name "Slash: Right Lift"
+  :name "Slash:Right Lift"
   :image "images/damage-vehicle-6s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -418,7 +418,7 @@
 
 (const vehicle-5c : base/damage
  (base/damage
-  :name "Bash: Left System"
+  :name "Bash:Left System"
   :image "images/damage-vehicle-5c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -429,7 +429,7 @@
 
 (const vehicle-5d : base/damage
  (base/damage
-  :name "Pierce: Left System"
+  :name "Pierce:Left System"
   :image "images/damage-vehicle-5d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -440,7 +440,7 @@
 
 (const vehicle-5h : base/damage
  (base/damage
-  :name "Hack: Left System"
+  :name "Hack:Left System"
   :image "images/damage-vehicle-5h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -451,7 +451,7 @@
 
 (const vehicle-5s : base/damage
  (base/damage
-  :name "Slash: Left System"
+  :name "Slash:Left System"
   :image "images/damage-vehicle-5s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -462,7 +462,7 @@
 
 (const vehicle-4c : base/damage
  (base/damage
-  :name "Bash: Right System"
+  :name "Bash:Right System"
   :image "images/damage-vehicle-4c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -473,7 +473,7 @@
 
 (const vehicle-4d : base/damage
  (base/damage
-  :name "Pierce: Right System"
+  :name "Pierce:Right System"
   :image "images/damage-vehicle-4d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -484,7 +484,7 @@
 
 (const vehicle-4h : base/damage
  (base/damage
-  :name "Hack: Right System"
+  :name "Hack:Right System"
   :image "images/damage-vehicle-4h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -495,7 +495,7 @@
 
 (const vehicle-4s : base/damage
  (base/damage
-  :name "Slash: Right System"
+  :name "Slash:Right System"
   :image "images/damage-vehicle-4s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -506,7 +506,7 @@
 
 (const vehicle-3c : base/damage
  (base/damage
-  :name "Bash: Left Thrust"
+  :name "Bash:Left Thrust"
   :image "images/damage-vehicle-3c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -517,7 +517,7 @@
 
 (const vehicle-3d : base/damage
  (base/damage
-  :name "Pierce: Left Thrust"
+  :name "Pierce:Left Thrust"
   :image "images/damage-vehicle-3d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -528,7 +528,7 @@
 
 (const vehicle-3h : base/damage
  (base/damage
-  :name "Hack: Left Thrust"
+  :name "Hack:Left Thrust"
   :image "images/damage-vehicle-3h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -539,7 +539,7 @@
 
 (const vehicle-3s : base/damage
  (base/damage
-  :name "Slash: Left Thrust"
+  :name "Slash:Left Thrust"
   :image "images/damage-vehicle-3s.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -550,7 +550,7 @@
 
 (const vehicle-2c : base/damage
  (base/damage
-  :name "Bash: Right Thrust"
+  :name "Bash:Right Thrust"
   :image "images/damage-vehicle-2c.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -561,7 +561,7 @@
 
 (const vehicle-2d : base/damage
  (base/damage
-  :name "Pierce: Right Thrust"
+  :name "Pierce:Right Thrust"
   :image "images/damage-vehicle-2d.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -572,7 +572,7 @@
 
 (const vehicle-2h : base/damage
  (base/damage
-  :name "Hack: Right Thrust"
+  :name "Hack:Right Thrust"
   :image "images/damage-vehicle-2h.svg"
   :layout base/cardlayout-imageonly
   :summary
@@ -583,7 +583,7 @@
 
 (const vehicle-2s : base/damage
  (base/damage
-  :name "Slash: Right Thrust"
+  :name "Slash:Right Thrust"
   :image "images/damage-vehicle-2s.svg"
   :layout base/cardlayout-imageonly
   :summary

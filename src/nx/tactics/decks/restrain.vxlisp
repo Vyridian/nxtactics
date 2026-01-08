@@ -5,33 +5,33 @@
 (const slow : base/cardback
  (base/cardback
   :name "Slow"
-  :image "images/damage-restrain-slow.svg"
+  :image "images/restrain/restrain-slow.svg"
   :layout base/cardlayout-imageonly))
 
 (const restrain-wild-black : base/damage
  (base/damage
-  :id "damage-restrain-wb"
+  :id "restrain-wb"
   :name "Restrain: Deck"
-  :image "images/damage-restrain-wb.svg"
+  :image "images/restrain/restrain-wb.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
 
 (const restrain-wild-red : base/damage
  (base/damage
-  :id "damage-restrain-wr"
+  :id "restrain-wr"
   :name "Restrain: Discard"
-  :image "images/damage-restrain-wr.svg"
+  :image "images/restrain/restrain-wr.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
 
 (const restrain-ac : base/damage
  (base/damage
-  :id "damage-restrain-ac"
+  :id "restrain-ac"
   :name "Restrain: Head"
   :ranksuit base/ranksuit-ac
-  :image "images/damage-restrain-ac.svg"
+  :image "images/restrain/restrain-ac.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hair Caught. Stress:1
@@ -41,10 +41,10 @@
 
 (const restrain-ad : base/damage
  (base/damage
-  :id "damage-restrain-ad"
+  :id "restrain-ad"
   :name "Restrain: Head"
   :ranksuit base/ranksuit-ad
-  :image "images/damage-restrain-ad.svg"
+  :image "images/restrain/restrain-ad.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hair Caught. Stress:1
@@ -54,10 +54,10 @@
 
 (const restrain-ah : base/damage
  (base/damage
-  :id "damage-restrain-ah"
+  :id "restrain-ah"
   :name "Restrain: Head"
   :ranksuit base/ranksuit-ah
-  :image "images/damage-restrain-ah.svg"
+  :image "images/restrain/restrain-ah.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hair Caught. Stress:1
@@ -67,10 +67,10 @@
 
 (const restrain-as : base/damage
  (base/damage
-  :id "damage-restrain-as"
+  :id "restrain-as"
   :name "Restrain: Head"
   :ranksuit base/ranksuit-as
-  :image "images/damage-restrain-as.svg"
+  :image "images/restrain/restrain-as.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hair Caught. Stress:1
@@ -80,10 +80,10 @@
 
 (const restrain-kc : base/damage
  (base/damage
-  :id "damage-restrain-kc"
+  :id "restrain-kc"
   :name "Restrain: Shoulders"
   :ranksuit base/ranksuit-kc
-  :image "images/damage-restrain-kc.svg"
+  :image "images/restrain/restrain-kc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Shoulder Hold. Fatigue:1
@@ -93,10 +93,10 @@
 
 (const restrain-kd : base/damage
  (base/damage
-  :id "damage-restrain-kd"
+  :id "restrain-kd"
   :name "Restrain: Shoulders"
   :ranksuit base/ranksuit-kd
-  :image "images/damage-restrain-kd.svg"
+  :image "images/restrain/restrain-kd.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Shoulder Hold. Fatigue:1
@@ -106,10 +106,10 @@
 
 (const restrain-kh : base/damage
  (base/damage
-  :id "damage-restrain-kh"
+  :id "restrain-kh"
   :name "Restrain: Shoulders"
   :ranksuit base/ranksuit-kh
-  :image "images/damage-restrain-kh.svg"
+  :image "images/restrain/restrain-kh.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Shoulder Hold. Fatigue:1
@@ -119,10 +119,10 @@
 
 (const restrain-ks : base/damage
  (base/damage
-  :id "damage-restrain-ks"
+  :id "restrain-ks"
   :name "Restrain: Shoulders"
   :ranksuit base/ranksuit-ks
-  :image "images/damage-restrain-ks.svg"
+  :image "images/restrain/restrain-ks.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Shoulder Hold. Fatigue:1
@@ -132,10 +132,10 @@
 
 (const restrain-qc : base/damage
  (base/damage
-  :id "damage-restrain-qc"
+  :id "restrain-qc"
   :name "Restrain: Chest"
   :ranksuit base/ranksuit-qc
-  :image "images/damage-restrain-qc.svg"
+  :image "images/restrain/restrain-qc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Chest Hold. Fatigue:1
@@ -145,10 +145,10 @@
 
 (const restrain-qd : base/damage
  (base/damage
-  :id "damage-restrain-qd"
+  :id "restrain-qd"
   :name "Restrain: Chest"
   :ranksuit base/ranksuit-qd
-  :image "images/damage-restrain-qd.svg"
+  :image "images/restrain/restrain-qd.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Chest Hold. Fatigue:1
@@ -158,10 +158,10 @@
 
 (const restrain-qh : base/damage
  (base/damage
-  :id "damage-restrain-qh"
+  :id "restrain-qh"
   :name "Restrain: Chest"
   :ranksuit base/ranksuit-qh
-  :image "images/damage-restrain-qh.svg"
+  :image "images/restrain/restrain-qh.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Chest Hold. Fatigue:1
@@ -171,10 +171,10 @@
 
 (const restrain-qs : base/damage
  (base/damage
-  :id "damage-restrain-qs"
+  :id "restrain-qs"
   :name "Restrain: Chest"
   :ranksuit base/ranksuit-qs
-  :image "images/damage-restrain-qs.svg"
+  :image "images/restrain/restrain-qs.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Chest Hold. Fatigue:1
@@ -184,10 +184,10 @@
 
 (const restrain-jc : base/damage
  (base/damage
-  :id "damage-restrain-jc"
+  :id "restrain-jc"
   :name "Restrain: Abdomen"
   :ranksuit base/ranksuit-jc
-  :image "images/damage-restrain-jc.svg"
+  :image "images/restrain/restrain-jc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Abdomen Hold. Fatigue:1
@@ -197,10 +197,10 @@
 
 (const restrain-jd : base/damage
  (base/damage
-  :id "damage-restrain-jd"
+  :id "restrain-jd"
   :name "Restrain: Abdomen"
   :ranksuit base/ranksuit-jd
-  :image "images/damage-restrain-js.svg"
+  :image "images/restrain/restrain-js.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Abdomen Hold. Fatigue:1
@@ -210,10 +210,10 @@
 
 (const restrain-jh : base/damage
  (base/damage
-  :id "damage-restrain-jh"
+  :id "restrain-jh"
   :name "Restrain: Abdomen"
   :ranksuit base/ranksuit-jh
-  :image "images/damage-restrain-jc.svg"
+  :image "images/restrain/restrain-jc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Abdomen Hold. Fatigue:1
@@ -223,10 +223,10 @@
 
 (const restrain-js : base/damage
  (base/damage
-  :id "damage-restrain-js"
+  :id "restrain-js"
   :name "Restrain: Abdomen"
   :ranksuit base/ranksuit-js
-  :image "images/damage-restrain-js.svg"
+  :image "images/restrain/restrain-js.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Abdomen Hold. Fatigue:1
@@ -236,10 +236,10 @@
 
 (const restrain-tc : base/damage
  (base/damage
-  :id "damage-restrain-tc"
+  :id "restrain-tc"
   :name "Restrain: Vitals"
   :ranksuit base/ranksuit-tc
-  :image "images/damage-restrain-tc.svg"
+  :image "images/restrain/restrain-tc.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hip Hold. Stress:1
@@ -249,10 +249,10 @@
 
 (const restrain-td : base/damage
  (base/damage
-  :id "damage-restrain-td"
+  :id "restrain-td"
   :name "Restrain: Vitals"
   :ranksuit base/ranksuit-td
-  :image "images/damage-restrain-td.svg"
+  :image "images/restrain/restrain-td.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hip Hold. Stress:1
@@ -262,10 +262,10 @@
 
 (const restrain-th : base/damage
  (base/damage
-  :id "damage-restrain-th"
+  :id "restrain-th"
   :name "Restrain: Vitals"
   :ranksuit base/ranksuit-th
-  :image "images/damage-restrain-th.svg"
+  :image "images/restrain/restrain-th.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hip Hold. Stress:1
@@ -275,10 +275,10 @@
 
 (const restrain-ts : base/damage
  (base/damage
-  :id "damage-restrain-ts"
+  :id "restrain-ts"
   :name "Restrain: Vitals"
   :ranksuit base/ranksuit-ts
-  :image "images/damage-restrain-ts.svg"
+  :image "images/restrain/restrain-ts.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Hip Hold. Stress:1
@@ -288,11 +288,11 @@
 
 (const restrain-9c : base/damage
  (base/damage
-  :id "damage-restrain-9c"
+  :id "restrain-9c"
   :name "Restrain: Left Arm"
   :titles "Restrain: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9c
-  :image "images/damage-restrain-9c.svg"
+  :image "images/restrain/restrain-9c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Upper Arm Hold. Stun:1
@@ -302,11 +302,11 @@
 
 (const restrain-9d : base/damage
  (base/damage
-  :id "damage-restrain-9d"
+  :id "restrain-9d"
   :name "Restrain: Left Arm"
   :titles "Restrain: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9d
-  :image "images/damage-restrain-9d.svg"
+  :image "images/restrain/restrain-9d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Upper Arm Hold. Stun:1
@@ -316,11 +316,11 @@
 
 (const restrain-9h : base/damage
  (base/damage
-  :id "damage-restrain-9h"
+  :id "restrain-9h"
   :name "Restrain: Left Arm"
   :titles "Restrain: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9h
-  :image "images/damage-restrain-9h.svg"
+  :image "images/restrain/restrain-9h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Upper Arm Hold. Stun:1
@@ -330,11 +330,11 @@
 
 (const restrain-9s : base/damage
  (base/damage
-  :id "damage-restrain-9s"
+  :id "restrain-9s"
   :name "Restrain: Left Arm"
   :titles "Restrain: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9s
-  :image "images/damage-restrain-9s.svg"
+  :image "images/restrain/restrain-9s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Upper Arm Hold. Stun:1
@@ -344,11 +344,11 @@
 
 (const restrain-8c : base/damage
  (base/damage
-  :id "damage-restrain-8c"
+  :id "restrain-8c"
   :name "Restrain: Right Arm"
   :titles "Restrain: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8c
-  :image "images/damage-restrain-8c.svg"
+  :image "images/restrain/restrain-8c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Upper Arm Hold. Stun:1
@@ -358,11 +358,11 @@
 
 (const restrain-8d : base/damage
  (base/damage
-  :id "damage-restrain-8d"
+  :id "restrain-8d"
   :name "Restrain: Right Arm"
   :titles "Restrain: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8d
-  :image "images/damage-restrain-8d.svg"
+  :image "images/restrain/restrain-8d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Upper Arm Hold. Stun:1
@@ -372,11 +372,11 @@
 
 (const restrain-8h : base/damage
  (base/damage
-  :id "damage-restrain-8h"
+  :id "restrain-8h"
   :name "Restrain: Right Arm"
   :titles "Restrain: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8h
-  :image "images/damage-restrain-8h.svg"
+  :image "images/restrain/restrain-8h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Upper Arm Hold. Stun:1
@@ -386,11 +386,11 @@
 
 (const restrain-8s : base/damage
  (base/damage
-  :id "damage-restrain-8s"
+  :id "restrain-8s"
   :name "Restrain: Right Arm"
   :titles "Restrain: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8s
-  :image "images/damage-restrain-8s.svg"
+  :image "images/restrain/restrain-8s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Upper Arm Hold. Stun:1
@@ -400,11 +400,11 @@
 
 (const restrain-7c : base/damage
  (base/damage
-  :id "damage-restrain-7c"
+  :id "restrain-7c"
   :name "Restrain: Left Hand"
   :titles "Restrain: Left Hand/Wrist"
   :ranksuit base/ranksuit-7c
-  :image "images/damage-restrain-7c.svg"
+  :image "images/restrain/restrain-7c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Hold. Stun:1
@@ -414,11 +414,11 @@
 
 (const restrain-7d : base/damage
  (base/damage
-  :id "damage-restrain-7d"
+  :id "restrain-7d"
   :name "Restrain: Left Hand"
   :titles "Restrain: Left Hand/Wrist"
   :ranksuit base/ranksuit-7d
-  :image "images/damage-restrain-7d.svg"
+  :image "images/restrain/restrain-7d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Hold. Stun:1
@@ -428,11 +428,11 @@
 
 (const restrain-7h : base/damage
  (base/damage
-  :id "damage-restrain-7h"
+  :id "restrain-7h"
   :name "Restrain: Left Hand"
   :titles "Restrain: Left Hand/Wrist"
   :ranksuit base/ranksuit-7h
-  :image "images/damage-restrain-7h.svg"
+  :image "images/restrain/restrain-7h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Hold. Stun:1
@@ -442,11 +442,11 @@
 
 (const restrain-7s : base/damage
  (base/damage
-  :id "damage-restrain-7s"
+  :id "restrain-7s"
   :name "Restrain: Left Hand"
   :titles "Restrain: Left Hand/Wrist"
   :ranksuit base/ranksuit-7s
-  :image "images/damage-restrain-7s.svg"
+  :image "images/restrain/restrain-7s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Hold. Stun:1
@@ -456,11 +456,11 @@
 
 (const restrain-6c : base/damage
  (base/damage
-  :id "damage-restrain-6c"
+  :id "restrain-6c"
   :name "Restrain: Right Hand"
   :titles "Restrain: Right Hand/Wrist"
   :ranksuit base/ranksuit-6c
-  :image "images/damage-restrain-6c.svg"
+  :image "images/restrain/restrain-6c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Hold. Stun:1
@@ -470,11 +470,11 @@
 
 (const restrain-6d : base/damage
  (base/damage
-  :id "damage-restrain-6d"
+  :id "restrain-6d"
   :name "Restrain: Right Hand"
   :titles "Restrain: Right Hand/Wrist"
   :ranksuit base/ranksuit-6d
-  :image "images/damage-restrain-6d.svg"
+  :image "images/restrain/restrain-6d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Hold. Stun:1
@@ -484,11 +484,11 @@
 
 (const restrain-6h : base/damage
  (base/damage
-  :id "damage-restrain-6h"
+  :id "restrain-6h"
   :name "Restrain: Right Hand"
   :titles "Restrain: Right Hand/Wrist"
   :ranksuit base/ranksuit-6h
-  :image "images/damage-restrain-6h.svg"
+  :image "images/restrain/restrain-6h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Hold. Stun:1
@@ -498,11 +498,11 @@
 
 (const restrain-6s : base/damage
  (base/damage
-  :id "damage-restrain-6s"
+  :id "restrain-6s"
   :name "Restrain: Right Hand"
   :titles "Restrain: Right Hand/Wrist"
   :ranksuit base/ranksuit-6s
-  :image "images/damage-restrain-6s.svg"
+  :image "images/restrain/restrain-6s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Forearm Hold. Stun:1
@@ -512,11 +512,11 @@
 
 (const restrain-5c : base/damage
  (base/damage
-  :id "damage-restrain-5c"
+  :id "restrain-5c"
   :name "Restrain: Left Leg"
   :titles "Restrain: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5c
-  :image "images/damage-restrain-5c.svg"
+  :image "images/restrain/restrain-5c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Hold. Slow:1
@@ -526,11 +526,11 @@
 
 (const restrain-5d : base/damage
  (base/damage
-  :id "damage-restrain-5d"
+  :id "restrain-5d"
   :name "Restrain: Left Leg"
   :titles "Restrain: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5d
-  :image "images/damage-restrain-5d.svg"
+  :image "images/restrain/restrain-5d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Hold. Slow:1
@@ -540,11 +540,11 @@
 
 (const restrain-5h : base/damage
  (base/damage
-  :id "damage-restrain-5h"
+  :id "restrain-5h"
   :name "Restrain: Left Leg"
   :titles "Restrain: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5h
-  :image "images/damage-restrain-5h.svg"
+  :image "images/restrain/restrain-5h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Hold. Slow:1
@@ -554,11 +554,11 @@
 
 (const restrain-5s : base/damage
  (base/damage
-  :id "damage-restrain-5s"
+  :id "restrain-5s"
   :name "Restrain: Left Leg"
   :titles "Restrain: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5s
-  :image "images/damage-restrain-5s.svg"
+  :image "images/restrain/restrain-5s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Hold. Slow:1
@@ -568,11 +568,11 @@
 
 (const restrain-4c : base/damage
  (base/damage
-  :id "damage-restrain-4c"
+  :id "restrain-4c"
   :name "Restrain: Right Leg"
   :titles "Restrain: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4c
-  :image "images/damage-restrain-4c.svg"
+  :image "images/restrain/restrain-4c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Hold. Slow:1
@@ -582,11 +582,11 @@
 
 (const restrain-4d : base/damage
  (base/damage
-  :id "damage-restrain-4d"
+  :id "restrain-4d"
   :name "Restrain: Right Leg"
   :titles "Restrain: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4d
-  :image "images/damage-restrain-4d.svg"
+  :image "images/restrain/restrain-4d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Hold. Slow:1
@@ -596,11 +596,11 @@
 
 (const restrain-4h : base/damage
  (base/damage
-  :id "damage-restrain-4h"
+  :id "restrain-4h"
   :name "Restrain: Right Leg"
   :titles "Restrain: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4h
-  :image "images/damage-restrain-4h.svg"
+  :image "images/restrain/restrain-4h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Hold. Slow:1
@@ -610,11 +610,11 @@
 
 (const restrain-4s : base/damage
  (base/damage
-  :id "damage-restrain-4s"
+  :id "restrain-4s"
   :name "Restrain: Right Leg"
   :titles "Restrain: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4s
-  :image "images/damage-restrain-4s.svg"
+  :image "images/restrain/restrain-4s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Thigh Hold. Slow:1
@@ -624,11 +624,11 @@
 
 (const restrain-3c : base/damage
  (base/damage
-  :id "damage-restrain-3c"
+  :id "restrain-3c"
   :name "Restrain: Left Foot"
   :titles "Restrain: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3c
-  :image "images/damage-restrain-3c.svg"
+  :image "images/restrain/restrain-3c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Toe Hold. Slow:1
@@ -638,11 +638,11 @@
 
 (const restrain-3d : base/damage
  (base/damage
-  :id "damage-restrain-3d"
+  :id "restrain-3d"
   :name "Restrain: Left Foot"
   :titles "Restrain: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3d
-  :image "images/damage-restrain-3d.svg"
+  :image "images/restrain/restrain-3d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Toe Hold. Slow:1
@@ -652,11 +652,11 @@
 
 (const restrain-3h : base/damage
  (base/damage
-  :id "damage-restrain-3h"
+  :id "restrain-3h"
   :name "Restrain: Left Foot"
   :titles "Restrain: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3h
-  :image "images/damage-restrain-3h.svg"
+  :image "images/restrain/restrain-3h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Toe Hold. Slow:1
@@ -666,11 +666,11 @@
 
 (const restrain-3s : base/damage
  (base/damage
-  :id "damage-restrain-3s"
+  :id "restrain-3s"
   :name "Restrain: Left Foot"
   :titles "Restrain: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3s
-  :image "images/damage-restrain-3s.svg"
+  :image "images/restrain/restrain-3s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Toe Hold. Slow:1
@@ -680,11 +680,11 @@
 
 (const restrain-2c : base/damage
  (base/damage
-  :id "damage-restrain-2c"
+  :id "restrain-2c"
   :name "Restrain: Right Foot"
   :titles "Restrain: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2c
-  :image "images/damage-restrain-2c.svg"
+  :image "images/restrain/restrain-2c.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Toe Hold. Slow:1
@@ -694,11 +694,11 @@
 
 (const restrain-2d : base/damage
  (base/damage
-  :id "damage-restrain-2d"
+  :id "restrain-2d"
   :name "Restrain: Right Foot"
   :titles "Restrain: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2d
-  :image "images/damage-restrain-2d.svg"
+  :image "images/restrain/restrain-2d.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Toe Hold. Slow:1
@@ -708,11 +708,11 @@
 
 (const restrain-2h : base/damage
  (base/damage
-  :id "damage-restrain-2h"
+  :id "restrain-2h"
   :name "Restrain: Right Foot"
   :titles "Restrain: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2h
-  :image "images/damage-restrain-2h.svg"
+  :image "images/restrain/restrain-2h.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Toe Hold. Slow:1
@@ -722,11 +722,11 @@
 
 (const restrain-2s : base/damage
  (base/damage
-  :id "damage-restrain-2s"
+  :id "restrain-2s"
   :name "Restrain: Right Foot"
   :titles "Restrain: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2s
-  :image "images/damage-restrain-2s.svg"
+  :image "images/restrain/restrain-2s.svg"
   :layout base/cardlayout-imageonly
   :summary
    "Minor: Toe Hold. Slow:1
@@ -737,7 +737,7 @@
 (func deck-restrain : base/deck
  (base/deck
   :name "Restrain"
-  :image "images/damage-restrain-slow.svg"
+  :image "images/restrain/restrain-slow.svg"
   :layout base/cardlayout-imageonly
   :cardmap
    (base/cardmap

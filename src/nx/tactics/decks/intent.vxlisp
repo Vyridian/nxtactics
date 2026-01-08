@@ -7,7 +7,7 @@ Suit:
 C - Assault
 D - Disrupt
 H - Defend
-S - Manuever
+S - Maneuver
 
 Rank:
 A - All Out
@@ -24,63 +24,60 @@ T - Line
 3 - Caution
 2 - Withdraw
 
-WB - 
-WR - 
-
+WB - Intent:Wildeyed - Use the next Intent regardless of Role. Shuffle
+WR - Intent:Inspired - Use the next Intent regardless of Role. Shuffle
 AC - Assault:All Out - All Out Attack - Use most damaging attack
 AD - Disrupt:All Out - Shock and Awe - Use most disruptive ability
-AH - Defend:All Out - Last Stand - Use most supporting or defensive ability
-AS - Manuever:All Out - Out of Nowhere - Use best movement/attack ability
-
+AH - Aid:All Out - Last Stand - Use most supporting or defensive ability
+AS - Maneuver:All Out - Out of Nowhere - Use best movement/attack ability
 KC - Assault:Leader - Blitz - Attack a leader/objective
 KD - Disrupt:Leader - Decapitate - Disrupt/control a Leader/objective
-KH - Defend:Leader - Guard - Aid/Guard a Leader/objective
-
-KS - Eliminate - Manuever:Leader - Move to threaten a Leader/objective
-QC - Barrage - Assault:Support - Attack backrow
-QD - ?Shutdown - Disrupt:Support - Disrupt/control backrow
-QH - Bolster - Defend:Support - Aid/Guard backrow
-QS - ?Strafe - Manuever:Support - Move to threaten Rival backrow
-JC - Challenge - Assault:Champion - Attack a Champion
-JD - ?Interrupt - Disrupt:Champion - Stop a Champion
-JH - Empower - Defend:Champion - Aid/Guard a Champion
-JS - Intercept - Manuever:Champion - Move to threaten a Champion
-TC - Breach - Assault:Line - Attempt to split Rival line
-TD - Barricade - Disrupt:Line - Attempt to break Rival formation
-TH - Hold the Line - Defend:Line - Reinforce Allied line
-TD - End Around - Manuever:Line - Circle the Line
-9C - Cleave - Assault:Multiple - Attack multiple
-9D - Debilitate - Disrupt/control multiple
-9H - Gather Around - Aid/Guard multiple
-9S - Harass - Interfere with multiple
-8C - Strike - Attack the closest
-8D - Disrupt - Disrupt/control the closest
-8H - Support - Aid/Guard the closest
-8S - Flank - Flank the closest
-7C - Overbear - Attack and force Rival movement
-7D - Suppress - Interfere with Rival movement or attacks
-7H - Taunt - Draw Rival from Allies
-7S - High Ground - Move to advantageous position
-6C - Pick Off - Attack isolated threat
-6D - Weaken - Disrupt/control the most vulnerable
-6H - Protect - Aid/Guard the most vulnerable
-6S - Isolate - Separate a threat from the group
-5C - Push - Force Rival back
-5D - Delay - Slow advancing threat
-5H - Regroup - Reform a defense
-5S - Hit and Run - Attack and stay at distance
-4C - Probe - Body < 4: Lesser attack
-4D - Distract - Mind < 4: Lesser distraction/control
-4H - Brace - Will < 4: Lesser aid/guard
-4S - Sidestep - Speed < 4: Avoid strong threat
-3C - Fall Back - Body < 3: Move back while fighting
-3D - Step Back - Mind < 3: Increase range to threats
-3H - Encourage - Will < 3: Help from a safe distance
-3S - Take Cover - Speed < 3: Move to Cover or defensible position
-2C - Pull Back - Body < 2: Flee using full Move
-2D - Disoriented - Move in a random direction using 1/2 Move Points IF Mind < 2 THEN Attack Random target
-2H - Withdraw - Full Move to safety/cover. IF Will < 2 THEN Surrender
-2S - Hunker Down - Recover Twice. Speed < 2: Fall Prone
+KH - Aid:Leader - Guard - Aid/Guard a Leader/objective
+KS - Maneuver:Leader - Assasinate - Move to threaten a Leader/objective
+QC - Assault:Support - Barrage - Attack backrow
+QD - Disrupt:Support - ?Shutdown - Disrupt/control backrow
+QH - Aid:Support - Bolster - Aid/Guard backrow
+QS - Maneuver:Support - ?Strafe - Move to threaten Rival backrow
+JC - Assault:Champion - Challenge - Attack a Champion
+JD - Disrupt:Champion - ?Interrupt - Stop a Champion
+JH - Aid:Champion - Empower - Aid/Guard a Champion
+JS - Maneuver:Champion - Intercept - Move to threaten a Champion
+TC - Assault:Line - Breach - Attempt to split Rival line
+TD - Disrupt:Line - Barricade - Attempt to break Rival formation
+TH - Aid:Line - Hold the Line - Reinforce Allied line
+TD - Maneuver:Line - End Around - Circle the Line
+9C - Assault:Multiple - Cleave - Attack multiple
+9D - Disrupt:Multiple - ?Debilitate - Disrupt/control multiple
+9H - Aid:Multiple - Gather Around - Aid/Guard multiple
+9S - Maneuver:Multiple - ?Harass - Interfere with multiple
+8C - Assault:Closest - Strike - Attack the closest
+8D - Disrupt:Closest - ?Disrupt - Disrupt/control the closest
+8H - Aid:Closest - Support - Aid/Guard the closest
+8S - Maneuver:Closest - Flank - Flank the closest
+7C - Assault:Distract - Overbear - Attack and force Rival movement
+7D - Disrupt:Distract - Suppress - Interfere with Rival movement or attacks
+7H - Aid:Distract - Taunt - Draw Rival from Allies
+7S - Maneuver:Distract  - ?Hit and Run - Attack and stay at distance
+6C - Assault:Weakest - Pick Off - Attack isolated threat
+6D - Disrupt:Weakest - Weaken - Disrupt/control the most vulnerable
+6H - Aid:Weakest - Protect - Aid/Guard the most vulnerable
+6S - Maneuver:Weakest - Isolate - Separate a threat from the group
+5C - Assault:Position - Push - Force threat back
+5D - Disrupt:Position - Delay - Slow advancing threat
+5H - Aid:Position - Regroup - Reform a defense
+5S - Maneuver:Position - High Ground - Move to advantageous position
+4C - Assault:Wary - Probe - Body < 4: Lesser attack
+4D - Disrupt:Wary - Distract - Mind < 4: Lesser distraction/control
+4H - Aid:Wary - Brace - Will < 4: Lesser aid/guard
+4S - Maneuver:Wary - Sidestep - Speed < 4: Avoid strong threat
+3C - Assault:Safe - Fall Back - Body < 3: Move back while fighting
+3D - Disrupt:Safe - Step Back - Mind < 3: Increase range to threats
+3H - Aid:Safe - Encourage - Will < 3: Help from a safe distance
+3S - Maneuver:Safe - Take Cover - Speed < 3: Move to Cover or defensible position
+2C - Assault:Retreat - Pull Back - Body < 2: Flee using full Move
+2D - Disrupt:Retreat - Disoriented - Move in a random direction using 1/2 Move Points IF Mind < 2 THEN Attack Random target
+2H - Aid:Retreat - Withdraw - Full Move to safety/cover. IF Will < 2 THEN Surrender
+2S - Maneuver:Retreat - Hunker Down - Recover Twice. Speed < 2: Fall Prone
 Berserk
 Intervene
 Strike and Fade
@@ -125,14 +122,14 @@ Lost
         "Shock and Awe
          * Use most disruptive ability")
       (base/card
-       :name "Defend:All Out"
+       :name "Aid:All Out"
        :deck "Intent"
        :ranksuit base/ranksuit-ah
        :summary
         "Last Stand
          * Use most supporting or defensive ability")
       (base/card
-       :name "Manuever:All Out"
+       :name "Maneuver:All Out"
        :deck "Intent"
        :ranksuit base/ranksuit-as
        :summary
@@ -153,11 +150,12 @@ Lost
         "Decapitate
          * Disrupt/control a Leader/objective")
       (base/card
-       :name "Intent:kh"
+       :name "Aid:Leader"
        :deck "Intent"
        :ranksuit base/ranksuit-kh
        :summary
-        "")
+        "Guard
+         * Aid/Guard a Leader/objective")
       (base/card
        :name "Intent:ks"
        :deck "Intent"

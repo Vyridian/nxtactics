@@ -5818,9 +5818,11 @@
         "* You are permenantly smaller and lighter.")))
   (base/power
    :name "Sound"
+   :titles "Sonics"
    :summary
-    "* Sonic attacks are a form of vibration/explosive attack that generaly does [Concussive Damage]. They also can cause temporary or permanent deafness."
-   :titles "Sonic"
+    "* Sonic attacks are a form of vibration/explosive attack that generaly does [Concussive Damage]. They also can cause temporary or permanent deafness.
+     * They generally form in a [Blast] or [Cone] shaped area diminishing over distance
+     * They strike friend or foe, but some sounds have different effects on allies or enemies"
    :abilitymap
     (base/abilitymap
      "Echolocation"
@@ -6139,7 +6141,7 @@
   (base/power
    :name "Transmutation"
    :titles
-    "Atomic Control, Molecular Control, Petrifier, Polymorpher, Reality Warper, Shaper, Transmuter"
+    "Atomic Control, Melter, Molecular Control, Petrifier, Polymorpher, Reality Warper, Shaper, Transmuter"
    :reference
     "* Basilisk
      * Medusa
@@ -6155,6 +6157,7 @@
      tactics
      "Destruction"
      "Disintegrate"
+     "Melting Beam"
      "Molecular Alteration"
      "Petrifying Breath"
      "Petrifying Stare"

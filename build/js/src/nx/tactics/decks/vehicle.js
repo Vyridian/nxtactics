@@ -542,7 +542,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_2c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Thrust",
+      "Bash:Right Thrust",
       ":image",
       "images/damage-vehicle-2c.svg",
       ":layout",
@@ -555,7 +555,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_2d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Thrust",
+      "Pierce:Right Thrust",
       ":image",
       "images/damage-vehicle-2d.svg",
       ":layout",
@@ -568,7 +568,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_2h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Thrust",
+      "Hack:Right Thrust",
       ":image",
       "images/damage-vehicle-2h.svg",
       ":layout",
@@ -581,7 +581,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_2s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Thrust",
+      "Slash:Right Thrust",
       ":image",
       "images/damage-vehicle-2s.svg",
       ":layout",
@@ -594,7 +594,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_3c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Thrust",
+      "Bash:Left Thrust",
       ":image",
       "images/damage-vehicle-3c.svg",
       ":layout",
@@ -607,7 +607,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_3d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Thrust",
+      "Pierce:Left Thrust",
       ":image",
       "images/damage-vehicle-3d.svg",
       ":layout",
@@ -620,7 +620,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_3h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Thrust",
+      "Hack:Left Thrust",
       ":image",
       "images/damage-vehicle-3h.svg",
       ":layout",
@@ -633,7 +633,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_3s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Thrust",
+      "Slash:Left Thrust",
       ":image",
       "images/damage-vehicle-3s.svg",
       ":layout",
@@ -646,7 +646,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right System",
+      "Bash:Right System",
       ":image",
       "images/damage-vehicle-4c.svg",
       ":layout",
@@ -659,7 +659,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right System",
+      "Pierce:Right System",
       ":image",
       "images/damage-vehicle-4d.svg",
       ":layout",
@@ -672,7 +672,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right System",
+      "Hack:Right System",
       ":image",
       "images/damage-vehicle-4h.svg",
       ":layout",
@@ -685,7 +685,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_4s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right System",
+      "Slash:Right System",
       ":image",
       "images/damage-vehicle-4s.svg",
       ":layout",
@@ -698,7 +698,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left System",
+      "Bash:Left System",
       ":image",
       "images/damage-vehicle-5c.svg",
       ":layout",
@@ -711,7 +711,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left System",
+      "Pierce:Left System",
       ":image",
       "images/damage-vehicle-5d.svg",
       ":layout",
@@ -724,7 +724,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left System",
+      "Hack:Left System",
       ":image",
       "images/damage-vehicle-5h.svg",
       ":layout",
@@ -737,7 +737,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_5s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left System",
+      "Slash:Left System",
       ":image",
       "images/damage-vehicle-5s.svg",
       ":layout",
@@ -750,7 +750,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_6c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Lift",
+      "Bash:Right Lift",
       ":image",
       "images/damage-vehicle-6c.svg",
       ":layout",
@@ -763,7 +763,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_6d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Lift",
+      "Pierce:Right Lift",
       ":image",
       "images/damage-vehicle-6d.svg",
       ":layout",
@@ -776,7 +776,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_6h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Lift",
+      "Hack:Right Lift",
       ":image",
       "images/damage-vehicle-6h.svg",
       ":layout",
@@ -789,7 +789,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_6s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Lift",
+      "Slash:Right Lift",
       ":image",
       "images/damage-vehicle-6s.svg",
       ":layout",
@@ -802,7 +802,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_7c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Lift",
+      "Bash:Left Lift",
       ":image",
       "images/damage-vehicle-7c.svg",
       ":layout",
@@ -815,7 +815,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_7d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Lift",
+      "Pierce:Left Lift",
       ":image",
       "images/damage-vehicle-7d.svg",
       ":layout",
@@ -828,7 +828,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_7h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Lift",
+      "Hack:Left Lift",
       ":image",
       "images/damage-vehicle-7h.svg",
       ":layout",
@@ -841,7 +841,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_7s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Lift",
+      "Slash:Left Lift",
       ":image",
       "images/damage-vehicle-7s.svg",
       ":layout",
@@ -854,7 +854,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_8c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Steering",
+      "Bash:Right Steering",
       ":image",
       "images/damage-vehicle-8c.svg",
       ":layout",
@@ -867,7 +867,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_8d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Steering",
+      "Pierce:Right Steering",
       ":image",
       "images/damage-vehicle-8d.svg",
       ":layout",
@@ -880,7 +880,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_8h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Steering",
+      "Hack:Right Steering",
       ":image",
       "images/damage-vehicle-8h.svg",
       ":layout",
@@ -893,7 +893,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_8s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Steering",
+      "Slash:Right Steering",
       ":image",
       "images/damage-vehicle-8s.svg",
       ":layout",
@@ -906,7 +906,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_9c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Steering",
+      "Bash:Left Steering",
       ":image",
       "images/damage-vehicle-9c.svg",
       ":layout",
@@ -919,7 +919,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_9d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Steering",
+      "Pierce:Left Steering",
       ":image",
       "images/damage-vehicle-9d.svg",
       ":layout",
@@ -932,7 +932,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_9h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Steering",
+      "Hack:Left Steering",
       ":image",
       "images/damage-vehicle-9h.svg",
       ":layout",
@@ -945,7 +945,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_9s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Steering",
+      "Slash:Left Steering",
       ":image",
       "images/damage-vehicle-9s.svg",
       ":layout",
@@ -958,7 +958,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ac, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Frame",
+      "Bash:Frame",
       ":image",
       "images/damage-vehicle-ac.svg",
       ":layout",
@@ -971,7 +971,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ad, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Frame",
+      "Pierce:Frame",
       ":image",
       "images/damage-vehicle-ad.svg",
       ":layout",
@@ -984,7 +984,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ah, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Frame",
+      "Hack:Frame",
       ":image",
       "images/damage-vehicle-ah.svg",
       ":layout",
@@ -997,7 +997,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_as, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Frame",
+      "Slash:Frame",
       ":image",
       "images/damage-vehicle-as.svg",
       ":layout",
@@ -1010,7 +1010,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_jc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Engine",
+      "Bash:Engine",
       ":image",
       "images/damage-vehicle-jc.svg",
       ":layout",
@@ -1023,7 +1023,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_jd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Engine",
+      "Pierce:Engine",
       ":image",
       "images/damage-vehicle-jd.svg",
       ":layout",
@@ -1036,7 +1036,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_jh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Engine",
+      "Hack:Engine",
       ":image",
       "images/damage-vehicle-jh.svg",
       ":layout",
@@ -1049,7 +1049,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_js, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Engine",
+      "Slash:Engine",
       ":image",
       "images/damage-vehicle-js.svg",
       ":layout",
@@ -1062,7 +1062,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_kc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Controls",
+      "Bash:Controls",
       ":image",
       "images/damage-vehicle-kc.svg",
       ":layout",
@@ -1075,7 +1075,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_kd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Controls",
+      "Pierce:Controls",
       ":image",
       "images/damage-vehicle-kd.svg",
       ":layout",
@@ -1088,7 +1088,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_kh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Controls",
+      "Hack:Controls",
       ":image",
       "images/damage-vehicle-kh.svg",
       ":layout",
@@ -1101,7 +1101,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ks, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Controls",
+      "Slash:Controls",
       ":image",
       "images/damage-vehicle-ks.svg",
       ":layout",
@@ -1114,7 +1114,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_qc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Cabin",
+      "Bash:Cabin",
       ":image",
       "images/damage-vehicle-qc.svg",
       ":layout",
@@ -1127,7 +1127,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_qd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Cabin",
+      "Pierce:Cabin",
       ":image",
       "images/damage-vehicle-qd.svg",
       ":layout",
@@ -1140,7 +1140,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_qh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Cabin",
+      "Hack:Cabin",
       ":image",
       "images/damage-vehicle-qh.svg",
       ":layout",
@@ -1153,7 +1153,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_qs, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Cabin",
+      "Slash:Cabin",
       ":image",
       "images/damage-vehicle-qs.svg",
       ":layout",
@@ -1166,7 +1166,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_tc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Supply",
+      "Bash:Supply",
       ":image",
       "images/damage-vehicle-tc.svg",
       ":layout",
@@ -1179,7 +1179,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_td, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Supply",
+      "Pierce:Supply",
       ":image",
       "images/damage-vehicle-td.svg",
       ":layout",
@@ -1192,7 +1192,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_th, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Supply",
+      "Hack:Supply",
       ":image",
       "images/damage-vehicle-th.svg",
       ":layout",
@@ -1205,7 +1205,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_ts, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Supply",
+      "Slash:Supply",
       ":image",
       "images/damage-vehicle-ts.svg",
       ":layout",
@@ -1218,7 +1218,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_wild_black, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Wild: Black",
+      "Wild:Black",
       ":image",
       "images/damage-vehicle-wb.svg",
       ":layout",
@@ -1229,7 +1229,7 @@ export default class nx_tactics_decks_vehicle {
     Object.assign(nx_tactics_decks_vehicle.c_vehicle_wild_red, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Wild: Red",
+      "Wild:Red",
       ":image",
       "images/damage-vehicle-wr.svg",
       ":layout",

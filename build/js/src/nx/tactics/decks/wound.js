@@ -356,7 +356,7 @@ export default class nx_tactics_decks_wound {
       ":name",
       "Wounds",
       ":image",
-      "images/damage-wound-fatigue.svg",
+      "images/wound/wound-fatigue.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":cardmap",
@@ -535,7 +535,7 @@ export default class nx_tactics_decks_wound {
       ":titles",
       "Physical Damage/Fatigue/Weaken/Exertion",
       ":image",
-      "images/damage-wound-fatigue.svg",
+      "images/wound/wound-fatigue.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -544,11 +544,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_2c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Foot",
+      "Bash:Right Foot",
       ":titles",
-      "Bash: Right Lower Leg/Shin/Ankle/Foot",
+      "Bash:Right Lower Leg/Shin/Ankle/Foot",
       ":image",
-      "images/damage-wound-2c.svg",
+      "images/wound/wound-2c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -559,11 +559,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_2d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Foot",
+      "Pierce:Right Foot",
       ":titles",
-      "Pierce: Right Lower Leg/Shin/Ankle/Foot",
+      "Pierce:Right Lower Leg/Shin/Ankle/Foot",
       ":image",
-      "images/damage-wound-2d.svg",
+      "images/wound/wound-2d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -574,11 +574,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_2h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Foot",
+      "Hack:Right Foot",
       ":titles",
-      "Hack: Right Lower Leg/Shin/Ankle/Foot",
+      "Hack:Right Lower Leg/Shin/Ankle/Foot",
       ":image",
-      "images/damage-wound-2h.svg",
+      "images/wound/wound-2h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -589,11 +589,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_2s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Foot",
+      "Slash:Right Foot",
       ":titles",
-      "Slash: Right Lower Leg/Shin/Ankle/Foot",
+      "Slash:Right Lower Leg/Shin/Ankle/Foot",
       ":image",
-      "images/damage-wound-2s.svg",
+      "images/wound/wound-2s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -604,11 +604,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_3c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Foot",
+      "Bash:Left Foot",
       ":titles",
-      "Bash: Left Lower Leg/Shin/Ankle/Foot",
+      "Bash:Left Lower Leg/Shin/Ankle/Foot",
       ":image",
-      "images/damage-wound-3c.svg",
+      "images/wound/wound-3c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -619,11 +619,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_3d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Foot",
+      "Pierce:Left Foot",
       ":titles",
-      "Pierce: Left Lower Leg/Shin/Ankle/Foot",
+      "Pierce:Left Lower Leg/Shin/Ankle/Foot",
       ":image",
-      "images/damage-wound-3d.svg",
+      "images/wound/wound-3d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -634,11 +634,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_3h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Foot",
+      "Hack:Left Foot",
       ":titles",
-      "Hack: Left Lower Leg/Shin/Ankle/Foot",
+      "Hack:Left Lower Leg/Shin/Ankle/Foot",
       ":image",
-      "images/damage-wound-3h.svg",
+      "images/wound/wound-3h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -649,11 +649,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_3s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Foot",
+      "Slash:Left Foot",
       ":titles",
-      "Slash: Left Lower Leg/Shin/Ankle/Foot",
+      "Slash:Left Lower Leg/Shin/Ankle/Foot",
       ":image",
-      "images/damage-wound-3s.svg",
+      "images/wound/wound-3s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -664,11 +664,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_4c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Leg",
+      "Bash:Right Leg",
       ":titles",
-      "Bash: Right Upper Leg/Thigh/Knee",
+      "Bash:Right Upper Leg/Thigh/Knee",
       ":image",
-      "images/damage-wound-4c.svg",
+      "images/wound/wound-4c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -679,11 +679,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_4d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Leg",
+      "Pierce:Right Leg",
       ":titles",
-      "Pierce: Right Upper Leg/Thigh/Knee",
+      "Pierce:Right Upper Leg/Thigh/Knee",
       ":image",
-      "images/damage-wound-4d.svg",
+      "images/wound/wound-4d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -694,11 +694,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_4h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Leg",
+      "Hack:Right Leg",
       ":titles",
-      "Hack: Right Upper Leg/Thigh/Knee",
+      "Hack:Right Upper Leg/Thigh/Knee",
       ":image",
-      "images/damage-wound-4h.svg",
+      "images/wound/wound-4h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -709,11 +709,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_4s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Leg",
+      "Slash:Right Leg",
       ":titles",
-      "Slash: Right Upper Leg/Thigh/Knee",
+      "Slash:Right Upper Leg/Thigh/Knee",
       ":image",
-      "images/damage-wound-4s.svg",
+      "images/wound/wound-4s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -724,11 +724,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Leg",
+      "Bash:Left Leg",
       ":titles",
-      "Bash: Left Upper Leg/Thigh/Knee",
+      "Bash:Left Upper Leg/Thigh/Knee",
       ":image",
-      "images/damage-wound-5c.svg",
+      "images/wound/wound-5c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -739,11 +739,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_5d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Leg",
+      "Pierce:Left Leg",
       ":titles",
-      "Pierce: Left Upper Leg/Thigh/Knee",
+      "Pierce:Left Upper Leg/Thigh/Knee",
       ":image",
-      "images/damage-wound-5d.svg",
+      "images/wound/wound-5d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -754,11 +754,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_5h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Leg",
+      "Hack:Left Leg",
       ":titles",
-      "Hack: Left Upper Leg/Thigh/Knee",
+      "Hack:Left Upper Leg/Thigh/Knee",
       ":image",
-      "images/damage-wound-5h.svg",
+      "images/wound/wound-5h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -769,11 +769,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_5s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Leg",
+      "Slash:Left Leg",
       ":titles",
-      "Slash: Left Upper Leg/Thigh/Knee",
+      "Slash:Left Upper Leg/Thigh/Knee",
       ":image",
-      "images/damage-wound-5s.svg",
+      "images/wound/wound-5s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -784,11 +784,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_6c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Hand",
+      "Bash:Right Hand",
       ":titles",
-      "Bash: Right Lower Arm/Wrist/Hand",
+      "Bash:Right Lower Arm/Wrist/Hand",
       ":image",
-      "images/damage-wound-6c.svg",
+      "images/wound/wound-6c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -797,11 +797,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_6d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Hand",
+      "Pierce:Right Hand",
       ":titles",
-      "Pierce: Right Lower Arm/Wrist/Hand",
+      "Pierce:Right Lower Arm/Wrist/Hand",
       ":image",
-      "images/damage-wound-6d.svg",
+      "images/wound/wound-6d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -812,11 +812,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_6h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Hand",
+      "Hack:Right Hand",
       ":titles",
-      "Hack: Right Lower Arm/Wrist/Hand",
+      "Hack:Right Lower Arm/Wrist/Hand",
       ":image",
-      "images/damage-wound-6h.svg",
+      "images/wound/wound-6h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -827,11 +827,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_6s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Hand",
+      "Slash:Right Hand",
       ":titles",
-      "Slash: Right Lower Arm/Wrist/Hand",
+      "Slash:Right Lower Arm/Wrist/Hand",
       ":image",
-      "images/damage-wound-6s.svg",
+      "images/wound/wound-6s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -842,11 +842,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_7c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Hand",
+      "Bash:Left Hand",
       ":titles",
-      "Bash: Left Lower Arm/Wrist/Hand",
+      "Bash:Left Lower Arm/Wrist/Hand",
       ":image",
-      "images/damage-wound-7c.svg",
+      "images/wound/wound-7c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -855,11 +855,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_7d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Hand",
+      "Pierce:Left Hand",
       ":titles",
-      "Pierce: Left Lower Arm/Wrist/Hand",
+      "Pierce:Left Lower Arm/Wrist/Hand",
       ":image",
-      "images/damage-wound-7d.svg",
+      "images/wound/wound-7d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -870,11 +870,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_7h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Hand",
+      "Hack:Left Hand",
       ":titles",
-      "Hack: Left Lower Arm/Wrist/Hand",
+      "Hack:Left Lower Arm/Wrist/Hand",
       ":image",
-      "images/damage-wound-7h.svg",
+      "images/wound/wound-7h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -885,11 +885,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_7s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Hand",
+      "Slash:Left Hand",
       ":titles",
-      "Slash: Left Lower Arm/Wrist/Hand",
+      "Slash:Left Lower Arm/Wrist/Hand",
       ":image",
-      "images/damage-wound-7s.svg",
+      "images/wound/wound-7s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":summary",
@@ -900,11 +900,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_8c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Right Arm",
+      "Bash:Right Arm",
       ":titles",
-      "Bash: Right Upper Arm/Elbow",
+      "Bash:Right Upper Arm/Elbow",
       ":image",
-      "images/damage-wound-8c.svg",
+      "images/wound/wound-8c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -913,11 +913,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_8d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Right Arm",
+      "Pierce:Right Arm",
       ":titles",
-      "Pierce: Right Upper Arm/Elbow",
+      "Pierce:Right Upper Arm/Elbow",
       ":image",
-      "images/damage-wound-8d.svg",
+      "images/wound/wound-8d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -926,11 +926,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_8h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Right Arm",
+      "Hack:Right Arm",
       ":titles",
-      "Hack: Right Upper Arm/Elbow",
+      "Hack:Right Upper Arm/Elbow",
       ":image",
-      "images/damage-wound-8h.svg",
+      "images/wound/wound-8h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -939,11 +939,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_8s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Right Arm",
+      "Slash:Right Arm",
       ":titles",
-      "Slash: Right Upper Arm/Elbow",
+      "Slash:Right Upper Arm/Elbow",
       ":image",
-      "images/damage-wound-8s.svg",
+      "images/wound/wound-8s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -952,11 +952,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_9c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Left Arm",
+      "Bash:Left Arm",
       ":titles",
-      "Bash: Left Upper Arm/Elbow",
+      "Bash:Left Upper Arm/Elbow",
       ":image",
-      "images/damage-wound-9c.svg",
+      "images/wound/wound-9c.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -965,11 +965,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_9d, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Left Arm",
+      "Pierce:Left Arm",
       ":titles",
-      "Pierce: Left Upper Arm/Elbow",
+      "Pierce:Left Upper Arm/Elbow",
       ":image",
-      "images/damage-wound-9d.svg",
+      "images/wound/wound-9d.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -978,11 +978,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_9h, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Left Arm",
+      "Hack:Left Arm",
       ":titles",
-      "Hack: Left Upper Arm/Elbow",
+      "Hack:Left Upper Arm/Elbow",
       ":image",
-      "images/damage-wound-9h.svg",
+      "images/wound/wound-9h.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -991,11 +991,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_9s, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Left Arm",
+      "Slash:Left Arm",
       ":titles",
-      "Slash: Left Upper Arm/Elbow",
+      "Slash:Left Upper Arm/Elbow",
       ":image",
-      "images/damage-wound-9s.svg",
+      "images/wound/wound-9s.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1004,9 +1004,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_ac, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Head",
+      "Bash:Head",
       ":image",
-      "images/damage-wound-ac.svg",
+      "images/wound/wound-ac.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1015,9 +1015,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_ad, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Head",
+      "Pierce:Head",
       ":image",
-      "images/damage-wound-ad.svg",
+      "images/wound/wound-ad.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1026,9 +1026,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_ah, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Head",
+      "Hack:Head",
       ":image",
-      "images/damage-wound-ah.svg",
+      "images/wound/wound-ah.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly,
       ":reference",
@@ -1039,9 +1039,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_as, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Head",
+      "Slash:Head",
       ":image",
-      "images/damage-wound-as.svg",
+      "images/wound/wound-as.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1050,11 +1050,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_jc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Abdomen",
+      "Bash:Abdomen",
       ":titles",
-      "Bash: Abdomen/Lower Back",
+      "Bash:Abdomen/Lower Back",
       ":image",
-      "images/damage-wound-jc.svg",
+      "images/wound/wound-jc.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1063,11 +1063,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_jd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Abdomen",
+      "Pierce:Abdomen",
       ":titles",
-      "Pierce: Abdomen/Lower Back",
+      "Pierce:Abdomen/Lower Back",
       ":image",
-      "images/damage-wound-jd.svg",
+      "images/wound/wound-jd.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1076,11 +1076,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_jh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Abdomen",
+      "Hack:Abdomen",
       ":titles",
-      "Hack: Abdomen/Lower Back",
+      "Hack:Abdomen/Lower Back",
       ":image",
-      "images/damage-wound-jh.svg",
+      "images/wound/wound-jh.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1089,11 +1089,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_js, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Abdomen",
+      "Slash:Abdomen",
       ":titles",
-      "Slash: Abdomen/Lower Back",
+      "Slash:Abdomen/Lower Back",
       ":image",
-      "images/damage-wound-js.svg",
+      "images/wound/wound-js.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1102,9 +1102,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_kc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Shoulders",
+      "Bash:Shoulders",
       ":image",
-      "images/damage-wound-kc.svg",
+      "images/wound/wound-kc.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1113,9 +1113,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_kd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Shoulders",
+      "Pierce:Shoulders",
       ":image",
-      "images/damage-wound-kd.svg",
+      "images/wound/wound-kd.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1124,9 +1124,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_kh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Shoulders",
+      "Hack:Shoulders",
       ":image",
-      "images/damage-wound-kh.svg",
+      "images/wound/wound-kh.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1135,9 +1135,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_ks, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Shoulders",
+      "Slash:Shoulders",
       ":image",
-      "images/damage-wound-ks.svg",
+      "images/wound/wound-ks.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1146,11 +1146,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_qc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Chest",
+      "Bash:Chest",
       ":titles",
-      "Bash: Middle Chest/Back/Lungs/Heart",
+      "Bash:Middle Chest/Back/Lungs/Heart",
       ":image",
-      "images/damage-wound-qc.svg",
+      "images/wound/wound-qc.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1159,11 +1159,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_qd, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Chest",
+      "Pierce:Chest",
       ":titles",
-      "Pierce: Middle Chest/Back/Lungs/Heart",
+      "Pierce:Middle Chest/Back/Lungs/Heart",
       ":image",
-      "images/damage-wound-qd.svg",
+      "images/wound/wound-qd.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1172,11 +1172,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_qh, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Chest",
+      "Hack:Chest",
       ":titles",
-      "Hack: Middle Chest/Back/Lungs/Heart",
+      "Hack:Middle Chest/Back/Lungs/Heart",
       ":image",
-      "images/damage-wound-qh.svg",
+      "images/wound/wound-qh.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1185,11 +1185,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_qs, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Chest",
+      "Slash:Chest",
       ":titles",
-      "Slash: Middle Chest/Back/Lungs/Heart",
+      "Slash:Middle Chest/Back/Lungs/Heart",
       ":image",
-      "images/damage-wound-qs.svg",
+      "images/wound/wound-qs.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1198,11 +1198,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_tc, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Bash: Vitals",
+      "Bash:Vitals",
       ":titles",
-      "Bash: Hips/Groin",
+      "Bash:Hips/Groin",
       ":image",
-      "images/damage-wound-tc.svg",
+      "images/wound/wound-tc.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1211,11 +1211,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_td, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Pierce: Vitals",
+      "Pierce:Vitals",
       ":titles",
-      "Pierce: Hips/Groin",
+      "Pierce:Hips/Groin",
       ":image",
-      "images/damage-wound-td.svg",
+      "images/wound/wound-td.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1224,11 +1224,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_th, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Hack: Vitals",
+      "Hack:Vitals",
       ":titles",
-      "Hack: Hips/Groin",
+      "Hack:Hips/Groin",
       ":image",
-      "images/damage-wound-th.svg",
+      "images/wound/wound-th.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1237,11 +1237,11 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_ts, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Slash: Vitals",
+      "Slash:Vitals",
       ":titles",
-      "Slash: Hips/Groin",
+      "Slash:Hips/Groin",
       ":image",
-      "images/damage-wound-ts.svg",
+      "images/wound/wound-ts.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1250,9 +1250,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_wild_black, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Wild: Black",
+      "Wild:Black",
       ":image",
-      "images/damage-wound-wb.svg",
+      "images/wound/wound-wb.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))
@@ -1261,9 +1261,9 @@ export default class nx_tactics_decks_wound {
     Object.assign(nx_tactics_decks_wound.c_wound_wild_red, vx_core.f_new(
       {"any-1": nx_tactics_base.t_damage},
       ":name",
-      "Wild: Red",
+      "Wild:Red",
       ":image",
-      "images/damage-wound-wr.svg",
+      "images/wound/wound-wr.svg",
       ":layout",
       nx_tactics_base.c_cardlayout_imageonly
     ))

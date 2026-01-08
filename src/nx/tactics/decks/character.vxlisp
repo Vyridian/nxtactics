@@ -1,0 +1,1043 @@
+(package nx/tactics/decks/character
+ :libs (lib base :path nx/tactics/base)
+ :doc "Character Deck")
+
+(func deck-character : base/deck
+ (base/deck
+  :name "Character"
+  :image "images/character/character-back.svg"
+  :layout base/cardlayout-imageonly
+  :cardmap
+   (base/cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      (base/card
+       :name "Character:How-To"
+       :deck "Character"
+       :ranksuit base/ranksuit-jokerblack
+       :image "icons/card-ranksuit-wb.svg"
+       :summary
+        "Steps for Character Inspiration:
+         * Separate Character deck by Rank
+         * Starting with Rank 2, for each Rank choose or randomize result
+
+         Randomize:
+         * For each Rank (eg Rank=2)
+         * Reveal Fate (eg K of Swords)
+         * Match Suit of Character and Fate (eg 2 of Swords)
+         * Match Rank of Character and Fate (eg K on the 2 of Swords)")
+      (base/card
+       :name "Character:Key"
+       :deck "Character"
+       :ranksuit base/ranksuit-jokerred
+       :image "icons/card-ranksuit-wr.svg"
+       :summary
+        "A. Occupation: Job/Role
+         K. Reputation: Public Image
+         Q. Appearance: Visual Trait
+         J. Quirks: Physical Habits
+         T. Speech: Verbal Style
+         9. Demeanor: Outward Attitude
+         8. Nature: True Personality
+         7. Motivation: Deep Drive
+         6. Goal: Current Priority
+         5. Bias: Prejudice/Blind Spot
+         4. Strength: Special Virtue
+         3. Flaw: Core Weakness
+         2. Secret: Hidden Truth")
+      (base/card
+       :name "Occupation:Labor"
+       :deck "Character"
+       :ranksuit base/ranksuit-ac
+       :image "icons/card-ranksuit-ac.svg"
+       :summary
+        "A. Leader
+         K. Guard
+         Q. Farmer
+         J. Builder
+         T. Soldier
+         9. Laborer
+         8. Artisan
+         7. Driver
+         6. Miner
+         5. Fisher
+         4. Courier
+         3. Performer
+         2. Bartender")
+      (base/card
+       :name "Occupation:Professional"
+       :deck "Character"
+       :ranksuit base/ranksuit-ad
+       :image "icons/card-ranksuit-ad.svg"
+       :summary
+        "A. Scientist/Wizard
+         K. Inventor/Artificer
+         Q. Chemist/Alchemist
+         J. Researcher/Sage
+         T. Executive
+         9. Merchant
+         8. Banker
+         7. Engineer
+         6. Lawyer
+         5. Broker
+         4. Jeweller
+         3. Manager
+         2. Salesperson")
+      (base/card
+       :name "Occupation:Personal"
+       :deck "Character"
+       :ranksuit base/ranksuit-ah
+       :image "icons/card-ranksuit-ah.svg"
+       :summary
+        "A. Caregiver
+         K. Teacher
+         Q. Healer/Cleric
+         J. Host/Barkeep/Innkeeper
+         T. Counselor
+         9. Artist
+         8. Musician
+         7. Cook
+         6. Gardener
+         5. Storyteller
+         4. Librarian
+         3. Nanny
+         2. Companion")
+      (base/card
+       :name "Occupation:Dark"
+       :deck "Character"
+       :ranksuit base/ranksuit-as
+       :summary
+        "A. Enforcer
+         K. Spy
+         Q. Smuggler
+         J. Thief
+         T. Assassin
+         9. Informant
+         8. Gambler
+         7. Fence
+         6. Tracker
+         5. Bounty Hunter
+         4. Jailor
+         3. Gravedigger
+         2. Beggar")
+      (base/card
+       :name "Reputation:Everyday"
+       :deck "Character"
+       :ranksuit base/ranksuit-kc
+       :image "icons/card-ranksuit-kc.svg"
+       :summary
+        "A. Respected community leader
+         K. Strict but fair authority
+         Q. Hardworking role model
+         J. Loyal neighborhood protector
+         T. Dependable worker
+         9. Average, unremarkable citizen
+         8. Stubborn traditionalist
+         7. Nosy rule-enforcer
+         6. Rough, crude type
+         5. Hot-tempered brawler
+         4. Lazy slacker
+         3. Gossiping troublemaker
+         2. Known petty criminal")
+      (base/card
+       :name "Reputation:Ambition"
+       :deck "Character"
+       :ranksuit base/ranksuit-kd
+       :image "icons/card-ranksuit-kd.svg"
+       :summary
+        "A. Powerful industry titan
+         K. Respected elite heir
+         Q. Polished social star
+         J. Ambitious rising talent
+         T. Successful professional
+         9. Competent but boring
+         8. Work-obsessed machine
+         7. Ruthless opportunist
+         6. Cold social climber
+         5. Arrogant show-off
+         4. Shallow status-seeker
+         3. Greedy money-grubber
+         2. Failed wannabe")
+      (base/card
+       :name "Reputation:Personal"
+       :deck "Character"
+       :ranksuit base/ranksuit-kh
+       :image "icons/card-ranksuit-kh.svg"
+       :summary
+        "A. Beloved family head
+         K. Warm neighborhood fixture
+         Q. Gentle, well-liked soul
+         J. Cheerful local favorite
+         T. Reliable friend to all
+         9. Quiet, harmless type
+         8. Meddlesome but kind
+         7. Overly emotional pushover
+         6. Naive and gullible
+         5. Clingy and needy
+         4. Fragile and helpless
+         3. Nosy busybody
+         2. Pitied lonely figure")
+      (base/card
+       :name "Reputation:Dark"
+       :deck "Character"
+       :ranksuit base/ranksuit-ks
+       :image "icons/card-ranksuit-ks.svg"
+       :summary
+        "A. Feared hidden power
+         K. Dangerous lone wolf
+         Q. Mysterious enigma
+         J. Brooding dark horse
+         T. Intense, capable survivor
+         9. Suspicious recluse
+         8. Bitter failed dreamer
+         7. Ruthless manipulator
+         6. Cold-hearted schemer
+         5. Volatile loose cannon
+         4. Haunted tragic figure
+         3. Notorious outcast
+         2. Despised traitor")
+      (base/card
+       :name "Appearance:Everyday"
+       :deck "Character"
+       :ranksuit base/ranksuit-qc
+       :image "icons/card-ranksuit-qc.svg"
+       :summary
+        "A. Strong, muscular build
+         K. Thick, brown braid
+         Q. Large, capable hands
+         J. Rugged, tanned face
+         T. Thick, powerful arms
+         9. Warm amber eyes
+         8. Short, dark haircut
+         7. Sturdy, curvy frame
+         6. Prominent muscle definition
+         5. Visible old scars
+         4. Thick, strong neck
+         3. Long, black tied-back hair
+         2. Storm-gray eyes")
+      (base/card
+       :name "Appearance:Striking"
+       :deck "Character"
+       :ranksuit base/ranksuit-qd
+       :image "icons/card-ranksuit-qd.svg"
+       :summary
+        "A. Tall, commanding stature
+         K. Sleek, jet-black long hair
+         Q. Prominent full bust
+         J. Strong, defined jaw
+         T. Elegant, long fingers
+         9. Striking blue eyes
+         8. Athletic, toned build
+         7. Pronounced curvy hips
+         6. Neat, platinum blonde
+         5. Sharp green eyes
+         4. Straight, confident posture
+         3. High cheekbones
+         2. Dark, piercing eyes")
+      (base/card
+       :name "Appearance:Warm"
+       :deck "Character"
+       :ranksuit base/ranksuit-qh
+       :image "icons/card-ranksuit-qh.svg"
+       :summary
+        "A. Tall, protective stature
+         K. Long, flowing auburn hair
+         Q. Soft, full bossum
+         J. Broad, strong shoulders
+         T. Large, expressive hands
+         9. Warm, hazel eyes
+         8. Tall, comforting height
+         7. Curvy hips and waist
+         6. Thick, blonde wavy hair
+         5. Big, capable hands
+         4. Wide, open posture
+         3. Deep brown eyes
+         2. Soft, red curly locks")
+      (base/card
+       :name "Appearance:Dark"
+       :deck "Character"
+       :ranksuit base/ranksuit-qs
+       :image "icons/card-ranksuit-qs.svg"
+       :summary
+        "A. Tall, gaunt frame
+         K. Long, raven-black hair
+         Q. Sharp, defined torso
+         J. Pale, drawn complexion
+         T. Deep-set violet eyes
+         9. Visible faded tattoo
+         8. Tense, rigid posture
+         7. Large old wound scar
+         6. Long, silver-streaked hair
+         5. Sharp hip bones
+         4. Thin, angular build
+         3. Wild, crimson spiked hair
+         2. Icy pale blue eyes")
+      (base/card
+       :name "Quirk:Energetic"
+       :deck "Character"
+       :ranksuit base/ranksuit-jc
+       :image "icons/card-ranksuit-jc.svg"
+       :summary
+        "A. Forceful fist pump
+         K. Slap table when emphasizing
+         Q. Exaggerated arm stretches
+         J. Head scratch when confused
+         T. Rolled-up sleeves flex
+         9. Big, circular arm waves
+         8. Pointing at self proudly
+         7. Energetic finger snaps
+         6. Rough neck crack
+         5. Dramatic face palm
+         4. Chest thump salute
+         3. Victory V-sign
+         2. Exaggerated shrug")
+      (base/card
+       :name "Quirk:Dramatic"
+       :deck "Character"
+       :ranksuit base/ranksuit-jd
+       :image "icons/card-ranksuit-jd.svg"
+       :summary
+        "A. Hair sweep with one hand
+         K. Smug chin lift
+         Q. Dramatic wrist flick
+         J. Slow, deliberate glasses push
+         T. Elegant finger steeple
+         9. Dramatic coat flip
+         8. Sharp eyebrow arch
+         7. Hand-through-hair confidently
+         6. Precise necktie adjustment
+         5. Slow, knowing head tilt
+         4. Quick, dismissive hand wave
+         3. Proud crossed-arms stance
+         2. Slow, elegant hand fan")
+      (base/card
+       :name "Quirk:Endearing"
+       :deck "Character"
+       :ranksuit base/ranksuit-jh
+       :image "icons/card-ranksuit-jh.svg"
+       :summary
+        "A. Dramatic hand-to-heart clutch
+         K. Exaggerated grateful bowing
+         Q. Big, sparkling eye widenings
+         J. Playful hair flip
+         T. Enthusiastic double thumbs-up
+         9. Frequent cheek-puffing pout
+         8. Shoulder bounces when excited
+         7. Covering mouth when laughing
+         6. Twirling a lock of hair
+         5. Claps hands in delight
+         4. Exaggerated hand wringing
+         3. Finger-to-lips 'shh' gesture
+         2. Big, sweeping hugs")
+      (base/card
+       :name "Quirk:Intense"
+       :deck "Character"
+       :ranksuit base/ranksuit-js
+       :image "icons/card-ranksuit-js.svg"
+       :summary
+        "A. Slow, menacing finger crack
+         K. Hood pull-over
+         Q. Sharp tongue click
+         J. Dramatic hair ruffle
+         T. Slow, anxious pacing
+         9. Slow head turn stare
+         8. Arms crossed, finger tap
+         7. Slow, mocking head shake
+         6. Slow, fist clenching
+         5. Sudden intense lean forward
+         4. Sharp collar pop
+         3. Slow, threatening neck roll
+         2. Exaggerated eye roll")
+      (base/card
+       :name "Speech:Direct"
+       :deck "Character"
+       :ranksuit base/ranksuit-tc
+       :image "icons/card-ranksuit-tc.svg"
+       :summary
+        "A. Blunt - Cut to it
+         K. Commanding - Do it now
+         Q. Loud - Listen up!
+         J. Challenging - You sure?
+         T. Practical - Fix it
+         9. Casual - Whatever
+         8. Traditional - Back in my day
+         7. Inclusive - We're in this
+         6. Stingy - That costs extra
+         5. Suspicious - What's the catch?
+         4. Motivational - Get moving
+         3. Passionate - No way!
+         2. Clipped - Yes / No")
+      (base/card
+       :name "Speech:Confident"
+       :deck "Character"
+       :ranksuit base/ranksuit-td
+       :image "icons/card-ranksuit-td.svg"
+       :summary
+        "A. Authoritative - That is final
+         K. Sophisticated - Quite so
+         Q. Elegant - How delightful
+         J. Persuasive - Trust me on this
+         T. Precise - To be exact
+         9. Visionary - Picture this
+         8. Assertive - Make it happen
+         7. Pompous - One does not simply
+         6. Professional - As agreed
+         5. Competitive - I expected better
+         4. Charming - Allow me
+         3. Proud - Naturally
+         2. Efficient - Proceed")
+      (base/card
+       :name "Emotional Ruin"
+       :deck "Character"
+       :ranksuit base/ranksuit-th
+       :image "icons/card-ranksuit-th.svg"
+       :summary
+        "Speech:Warm
+         A. Caring - It'll be alright
+         K. Gentle - Take your time
+         Q. Reassuring - You're not alone
+         J. Playful - Oh, come on!
+         T. Optimistic - Things will improve
+         9. Affectionate - My dear
+         8. Comforting - I've got you
+         7. Encouraging - You can do this
+         6. Casual - No worries
+         5. Empathetic - I understand
+         4. Hesitant - Well, maybe
+         3. Cheerful - That's great!
+         2. Sincere - I mean it")
+      (base/card
+       :name "Speech:Guarded"
+       :deck "Character"
+       :ranksuit base/ranksuit-ts
+       :image "icons/card-ranksuit-ts.svg"
+       :summary
+        "A. Detached - Irrelevant
+         K. Menacing - Choose carefully
+         Q. Mysterious - You don't know
+         J. Sarcastic - How original
+         T. Brooding - It doesn't matter
+         9. Skeptical - Prove it
+         8. Disdain - How quaint
+         7. Cruel - Pathetic
+         6. Guarded - Not your business
+         5. Volatile - Watch yourself
+         4. Restrained - Enough
+         3. Cutting - Spare me
+         2. Secretive - You don't need to know")
+      (base/card
+       :name "Demeanor:Direct"
+       :deck "Character"
+       :ranksuit base/ranksuit-9c
+       :image "icons/card-ranksuit-9c.svg"
+       :summary
+        "A. Blunt and straightforward
+         K. Commanding and decisive
+         Q. Loud and outgoing
+         J. Challenging and competitive
+         T. Practical and no-nonsense
+         9. Gossip-prone and chatty
+         8. Traditional and respectful
+         7. Group-oriented and inclusive
+         6. Rough and unpolished
+         5. Accusatory and suspicious
+         4. Loyal and protective
+         3. Passionate and fiery
+         2. Quiet and observant")
+      (base/card
+       :name "Demeanor:Professional"
+       :deck "Character"
+       :ranksuit base/ranksuit-9d
+       :image "icons/card-ranksuit-9d.svg"
+       :summary
+        "A. Confident and authoritative
+         K. Polished and sophisticated
+         Q. Composed and elegant
+         J. Ambitious and driven
+         T. Formal and reserved
+         9. Calculating and strategic
+         8. Energetic and assertive
+         7. Visionary and inspiring
+         6. Precise and organized
+         5. Competitive and sharp
+         4. Witty and charming
+         3. Proud and self-assured
+         2. Direct and efficient")
+      (base/card
+       :name "Demeanor:Warm"
+       :deck "Character"
+       :ranksuit base/ranksuit-9h
+       :image "icons/card-ranksuit-9h.svg"
+       :summary
+        "A. Open and welcoming
+         K. Affectionate and touchy
+         Q. Gentle and nurturing
+         J. Playful and teasing
+         T. Calm and reassuring
+         9. Cheerful and optimistic
+         8. Relaxed and easygoing
+         7. Kind and attentive
+         6. Casual and friendly
+         5. Emotional and expressive
+         4. Hesitant but warm
+         3. Bubbly and enthusiastic
+         2. Sincere and earnest")
+      (base/card
+       :name "Demeanor:Guarded"
+       :deck "Character"
+       :ranksuit base/ranksuit-9s
+       :image "icons/card-ranksuit-9s.svg"
+       :summary
+        "A. Cold and distant
+         K. Threatening and intimidating
+         Q. Mysterious and evasive
+         J. Sarcastic and mocking
+         T. Brooding and intense
+         9. Suspicious and paranoid
+         8. Condescending and superior
+         7. Bitter and resentful
+         6. Deceptive and manipulative
+         5. Angry and volatile
+         4. Withdrawn and silent
+         3. Cutting and cruel
+         2. Secretive and guarded")
+      (base/card
+       :name "Nature:Direct"
+       :deck "Character"
+       :ranksuit base/ranksuit-8c
+       :image "icons/card-ranksuit-8c.svg"
+       :summary
+        "A. Honorable
+         K. Dutiful
+         Q. Blunt
+         J. Protective
+         T. Hardworking
+         9. Traditional
+         8. Reliable
+         7. Community-minded
+         6. Stubborn
+         5. Suspicious
+         4. Courageous
+         3. Passionate
+         2. Straightforward")
+      (base/card
+       :name "Nature:Driven"
+       :deck "Character"
+       :ranksuit base/ranksuit-8d
+       :image "icons/card-ranksuit-8d.svg"
+       :summary
+        "A. Ruthlessly ambitious
+         K. Proud
+         Q. Perfectionist
+         J. Competitive
+         T. Strategic
+         9. Disciplined
+         8. Visionary
+         7. Calculating
+         8. Resourceful
+         5. Independent
+         4. Charismatic
+         3. Arrogant
+         2. Pragmatic")
+      (base/card
+       :name "Nature:Warm"
+       :deck "Character"
+       :ranksuit base/ranksuit-8h
+       :image "icons/card-ranksuit-8h.svg"
+       :summary
+        "A. Deeply loyal
+         K. Self-sacrificing
+         Q. Empathetic
+         J. Optimistic
+         T. Forgiving
+         9. Romantic
+         8. Generous
+         7. Nurturing
+         6. Trusting
+         5. Sentimental
+         4. Vulnerable
+         3. Cheerful
+         2. Innocent")
+      (base/card
+       :name "Nature:Wounded"
+       :deck "Character"
+       :ranksuit base/ranksuit-8s
+       :image "icons/card-ranksuit-8s.svg"
+       :summary
+        "A. Brooding
+         K. Vengeful
+         Q. Secretive
+         J. Cynical
+         T. Tormented
+         9. Resentful
+         8. Manipulative
+         7. Bitter
+         6. Guarded
+         5. Volatile
+         4. Lonely
+         3. Ruthless
+         2. Haunted")
+      (base/card
+       :name "Motivation:Duty"
+       :deck "Character"
+       :ranksuit base/ranksuit-7c
+       :image "icons/card-ranksuit-7c.svg"
+       :summary
+        "A. Uphold family honor
+         K. Fulfill sworn duty
+         Q. Serve the community
+         J. Protect the weak
+         T. Live by personal code
+         9. Maintain traditions
+         8. Earn respect through work
+         7. Repay debt of gratitude
+         6. Defend what's right
+         5. Achieve justice
+         4. Lead others well
+         3. Sacrifice for greater good
+         2. Follow the rules always")
+      (base/card
+       :name "Motivation:Status"
+       :deck "Character"
+       :ranksuit base/ranksuit-7d
+       :image "icons/card-ranksuit-7d.svg"
+       :summary
+        "A. Rise to the very top
+         K. Secure family legacy
+         Q. Overcome humble origins
+         J. Gain respect of peers
+         T. Build an empire
+         9. Prove personal worth
+         8. Achieve financial independence
+         7. Surpass rivals
+         6. Attain perfect success
+         5. Redeem family name
+         4. Control own destiny
+         3. Amass power and influence
+         2. Escape poverty forever")
+      (base/card
+       :name "Motivation:Bond"
+       :deck "Character"
+       :ranksuit base/ranksuit-7h
+       :image "icons/card-ranksuit-7h.svg"
+       :summary
+        "A. Protect loved ones at all costs
+         K. Restore broken family ties
+         Q. Find or reunite with lost love
+         J. Earn forgiveness from family
+         T. Honor parent's memory
+         9. Build a warm home
+         8. Repay old kindness
+         7. Keep childhood promise
+         6. Shield others from pain
+         5. Prove unwavering loyalty
+         4. Heal emotional wounds
+         3. Live for close relationships
+         2. Seek true emotional connection")
+      (base/card
+       :name "Motivation:Redemption"
+       :deck "Character"
+       :ranksuit base/ranksuit-7s
+       :image "icons/card-ranksuit-7s.svg"
+       :summary
+        "A. Avenge past wrong
+         K. Uncover hidden truth
+         Q. Redeem past mistake
+         J. Break cycle of suffering
+         T. Confront old betrayer
+         9. Atone for guilt
+         8. Survive despite odds
+         7. Expose corruption
+         6. Reclaim lost dignity
+         5. Endure to prove strength
+         4. Hide from past
+         3. Seek final closure
+         2. Carry burden alone")
+      (base/card
+       :name "Goal:Duty"
+       :deck "Character"
+       :ranksuit base/ranksuit-6c
+       :image "icons/card-ranksuit-6c.svg"
+       :summary
+        "A. Defend family name publicly
+         K. Complete assigned task
+         Q. Organize community event
+         J. Rescue someone in danger
+         T. Uphold honor in duel
+         9. Preserve dying tradition
+         8. Gain elder's blessing
+         7. Return borrowed item
+         6. Stop local injustice
+         5. Mediate current dispute
+         4. Train successor
+         3. Perform required sacrifice
+         2. Obey latest order")
+      (base/card
+       :name "Goal:Status"
+       :deck "Character"
+       :ranksuit base/ranksuit-6d
+       :image "icons/card-ranksuit-6d.svg"
+       :summary
+        "A. Win promotion
+         K. Close inheritance deal
+         Q. Secure marriage proposal
+         J. Sabotage rival's project
+         T. Sign major contract
+         9. Pass crucial exam
+         8. Buy key property
+         7. Launch product
+         6. Expand business branch
+         5. Recover lost investment
+         4. Attend elite event
+         3. Eliminate direct competitor
+         2. Pay off urgent debt")
+      (base/card
+       :name "Goal:Relationship"
+       :deck "Character"
+       :ranksuit base/ranksuit-6h
+       :image "icons/card-ranksuit-6h.svg"
+       :summary
+        "A. Reunite with estranged family
+         K. Confess hidden feelings
+         Q. Secretly help loved one
+         J. Apologize to old friend
+         T. Locate missing person
+         9. Deliver final message
+         8. Repay favor
+         7. Keep promise
+         6. Save failing marriage
+         5. Prove loyalty in crisis
+         4. Share hidden truth
+         3. Arrange family reunion
+         2. Make someone smile")
+      (base/card
+       :name "Goal:Redemption"
+       :deck "Character"
+       :ranksuit base/ranksuit-6s
+       :image "icons/card-ranksuit-6s.svg"
+       :summary
+        "A. Confront betrayer face-to-face
+         K. Steal back evidence
+         Q. Confess past sin
+         J. Break harmful pattern
+         T. Track down enemy
+         9. Execute revenge plan
+         8. Survive current threat
+         7. Clear name in hearing
+         6. Retrieve stolen item
+         5. Face personal fear
+         4. Destroy old reminder
+         3. Force final confrontation
+         2. Bury the secret deeper")
+      (base/card
+       :name "Bias:Social"
+       :deck "Character"
+       :ranksuit base/ranksuit-5c
+       :image "icons/card-ranksuit-5c.svg"
+       :summary
+        "A. Honors tradition
+         K. Respects authority
+         Q. Values hard work
+         J. Distrusts outsiders
+         T. Favors the practical
+         9. Judges by reputation
+         8. Believes in community rules
+         7. Prioritizes duty
+         6. Suspicious of change
+         5. Dislikes rule-breakers
+         4. Favors the loyal
+         3. Passionate about fairness
+         2. Believes actions speak louder")
+      (base/card
+       :name "Bias:Status"
+       :deck "Character"
+       :ranksuit base/ranksuit-5d
+       :image "icons/card-ranksuit-5d.svg"
+       :summary
+        "A. Respects wealth and power
+         K. Looks down on the poor
+         Q. Values education highly
+         J. Judges by appearance
+         T. Favors winners
+         9. Distrusts the uneducated
+         8. Believes in meritocracy
+         7. Prioritizes ambition
+         6. Suspicious of laziness
+         5. Dislikes failure
+         4. Favors the well-connected
+         3. Proud of own achievements
+         2. Believes money solves problems")
+      (base/card
+       :name "Bias:Emotional"
+       :deck "Character"
+       :ranksuit base/ranksuit-5h
+       :image "icons/card-ranksuit-5h.svg"
+       :summary
+        "A. Trusts family above all
+         K. Believes in true love
+         Q. Sees good in everyone
+         J. Favors the underdog
+         T. Judges by kindness shown
+         9. Romanticizes the past
+         8. Dislikes emotional coldness
+         7. Prioritizes close relationships
+         6. Suspicious of loners
+         5. Forgives too easily
+         4. Distrusts those who hide feelings
+         3. Favors cheerful people
+         2. Believes everyone deserves second chances")
+      (base/card
+       :name "Bias:Wounded"
+       :deck "Character"
+       :ranksuit base/ranksuit-5s
+       :image "icons/card-ranksuit-5s.svg"
+       :summary
+        "A. Trusts no one
+         K. Sees threats everywhere
+         Q. Believes people are selfish
+         J. Distrusts kindness
+         T. Judges harshly
+         9. Resents the privileged
+         8. Believes in survival of fittest
+         7. Prioritizes self-preservation
+         6. Suspicious of motives
+         5. Dislikes weakness
+         4. Favors the cunning
+         3. Bitter toward the fortunate
+         2. Believes betrayal is inevitable")
+      (base/card
+       :name "Strength:Direct"
+       :deck "Character"
+       :ranksuit base/ranksuit-4c
+       :image "icons/card-ranksuit-4c.svg"
+       :summary
+        "A. Steadfast honor
+         K. Unwavering duty
+         Q. Blunt honesty
+         J. Fierce protectiveness
+         T. Tireless work ethic
+         9. Deep respect for tradition
+         8. Reliable stability
+         7. Strong community spirit
+         6. Stubborn endurance
+         5. Keen suspicion
+         4. Raw courage
+         3. Passionate conviction
+         2. Clear directness")
+      (base/card
+       :name "Strength:Drive"
+       :deck "Character"
+       :ranksuit base/ranksuit-4d
+       :image "icons/card-ranksuit-4d.svg"
+       :summary
+        "A. Ruthless determination
+         K. Unyielding pride
+         Q. Flawless discipline
+         J. Sharp competitiveness
+         T. Brilliant strategy
+         9. Iron self-control
+         8. Clear vision
+         7. Resourceful cunning
+         6. Perfect organization
+         5. Relentless drive
+         4. Magnetic charisma
+         3. Confident arrogance
+         2. Practical efficiency")
+      (base/card
+       :name "Strength:Warm"
+       :deck "Character"
+       :ranksuit base/ranksuit-4h
+       :image "icons/card-ranksuit-4h.svg"
+       :summary
+        "A. Unbreakable loyalty
+         K. Selfless sacrifice
+         Q. Deep empathy
+         J. Endless optimism
+         T. Infinite forgiveness
+         9. Gentle wisdom
+         8. Quiet generosity
+         7. Nurturing care
+         6. Steadfast trust
+         5. Emotional resilience
+         4. Pure vulnerability
+         3. Infectious cheer
+         2. Innocent heart")
+      (base/card
+       :name "Strength:Dark"
+       :deck "Character"
+       :ranksuit base/ranksuit-4s
+       :image "icons/card-ranksuit-4s.svg"
+       :summary
+        "A. Cold resilience
+         K. Ruthless cunning
+         Q. Hidden depth
+         J. Sharp cynicism
+         T. Intense focus
+         9. Quiet endurance
+         8. Masterful manipulation
+         7. Bitter wisdom
+         6. Iron guardedness
+         5. Volatile energy
+         4. Profound solitude
+         3. Merciless efficiency
+         2. Haunted insight")
+      (base/card
+       :name "Flaw:Direct"
+       :deck "Character"
+       :ranksuit base/ranksuit-3c
+       :image "icons/card-ranksuit-3c.svg"
+       :summary
+        "A. Rigid honor
+         K. Blind duty
+         Q. Brutal bluntness
+         J. Overprotective
+         T. Exhausting workaholic
+         9. Stifling tradition
+         8. Stubborn reliability
+         7. Narrow community focus
+         6. Immovable stubbornness
+         5. Paralyzing suspicion
+         4. Reckless courage
+         3. Fiery temper
+         2. Harsh directness")
+      (base/card
+       :name "Flaw:Drive"
+       :deck "Character"
+       :ranksuit base/ranksuit-3d
+       :image "icons/card-ranksuit-3d.svg"
+       :summary
+        "A. Ruthless ambition
+         K. Crushing pride
+         Q. Cold perfectionism
+         J. Cutthroat rivalry
+         T. Manipulative strategy
+         9. Obsessive control
+         8. Blind vision
+         7. Arrogant cunning
+         6. Rigid organization
+         5. Relentless greed
+         4. Shallow charisma
+         3. Insufferable arrogance
+         2. Soulless efficiency")
+      (base/card
+       :name "Flaw:Emotional"
+       :deck "Character"
+       :ranksuit base/ranksuit-3h
+       :image "icons/card-ranksuit-3h.svg"
+       :summary
+        "A. Blind loyalty
+         K. Excessive sacrifice
+         Q. Overwhelming empathy
+         J. Naïve optimism
+         T. Too forgiving
+         9. Clinging sentimentality
+         8. Hidden insecurity
+         7. Smothering care
+         6. Gullible trust
+         5. Emotional fragility
+         4. Painful vulnerability
+         3. Forced cheer
+         2. Childlike innocence")
+      (base/card
+       :name "Flaw:Wounded"
+       :deck "Character"
+       :ranksuit base/ranksuit-3s
+       :image "icons/card-ranksuit-3s.svg"
+       :summary
+        "A. Emotional detachment
+         K. Consuming vengeance
+         Q. Dangerous secrecy
+         J. Corrosive cynicism
+         T. Self-destructive intensity
+         9. Deep resentment
+         8. Ruthless manipulation
+         7. Bitter isolation
+         6. Impenetrable guardedness
+         5. Explosive volatility
+         4. Crippling loneliness
+         3. Merciless cruelty
+         2. Haunting guilt")
+      (base/card
+       :name "Secret:Duty"
+       :deck "Character"
+       :ranksuit base/ranksuit-2c
+       :image "icons/card-ranksuit-2c.svg"
+       :summary
+        "A. Betrayed old comrade
+         K. Deserted duty
+         Q. Covered up community crime
+         J. Lost family honor
+         T. Took blame for another
+         9. Broke sacred promise
+         8. Hid shameful failure
+         7. Protected criminal relative
+         6. Falsified war record
+         5. Caused workplace tragedy
+         4. Abandoned post in crisis
+         3. Stole from community
+         2. Framed innocent person")
+      (base/card
+       :name "Secret:Status"
+       :deck "Character"
+       :ranksuit base/ranksuit-2d
+       :image "icons/card-ranksuit-2d.svg"
+       :summary
+        "A. Born illegitimate heir
+         K. Faked entire background
+         Q. Stole family fortune
+         J. Married for money
+         T. Bankrupted own company
+         9. Blackmailed way to top
+         8. Hidden poverty origins
+         7. Paid for false credentials
+         6. Abandoned poor family
+         5. Secret gambling debt
+         4. Bribed for position
+         3. Real name erased
+         2. Impersonating successor")
+      (base/card
+       :name "Secret:Family"
+       :deck "Character"
+       :ranksuit base/ranksuit-2h
+       :image "icons/card-ranksuit-2h.svg"
+       :summary
+        "A. Caused family separation
+         K. Hidden sibling exists
+         Q. Gave up child long ago
+         J. First love never ended
+         T. Sacrificed dream for family
+         9. Carries parent's dying wish
+         8. Protected someone at great cost
+         7. Never told true feelings
+         6. Faked own death
+         5. Bears unshared grief
+         4. Changed name to escape past
+         3. Keeps forbidden love letter
+         2. Raised wrong child as own")
+      (base/card
+       :name "Secret:Dark"
+       :deck "Character"
+       :ranksuit base/ranksuit-2s
+       :image "icons/card-ranksuit-2s.svg"
+       :summary
+        "A. Responsible for parent's death
+         K. Seeks revenge quietly
+         Q. Witnessed unforgivable act
+         J. Survived supposed death
+         T. Committed past crime
+         9. Knows killer's identity
+         8. Betrayed first love
+         7. Caused sibling's ruin
+         6. Escaped prison
+         5. Lives under false identity
+         4. Destroyed evidence
+         3. Abandoned dying friend
+         2. Hides fatal knowledge")))
+    (base/cardmap-copy<-card-count-isnum
+     (base/card
+      :name "StoryArc:Back"
+      :image "images/character/character-back.svg"
+      :layout base/cardlayout-imageonly)
+     54
+     false)))
+ :doc "Character Deck")
