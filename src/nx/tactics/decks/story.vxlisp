@@ -2,14 +2,6 @@
  :libs (lib base :path nx/tactics/base)
  :doc "Story Deck")
 
-/*
-
-
-Story Elements:
-* Character: Who its about
-
-*/
-
 (func deck-story : base/deck
  (base/deck
   :name "Story"

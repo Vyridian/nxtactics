@@ -106,6 +106,7 @@
        :name "Occupation:Dark"
        :deck "Character"
        :ranksuit base/ranksuit-as
+       :image "icons/card-ranksuit-as.svg"
        :summary
         "A. Enforcer
          K. Spy
@@ -242,7 +243,7 @@
        :summary
         "A. Tall, protective stature
          K. Long, flowing auburn hair
-         Q. Soft, full bossum
+         Q. Soft, motherly frame
          J. Broad, strong shoulders
          T. Large, expressive hands
          9. Warm, hazel eyes

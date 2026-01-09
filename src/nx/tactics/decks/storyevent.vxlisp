@@ -3,54 +3,246 @@
  :doc "Story Event Deck")
 
 /*
-Suits:
-* C Threats - External dangers and hostile events
-* S Challenge
+C Action
+A. Disaster
+K. War (Military, Invasion)
+Q. Monsters
+J. Combat (Brawls, Duels, Martial Arts)
+T. Tournament (Contest, Arena, Gladiators)
+9. Chase
+8. Criminal (Armed Robbery, Gangs, Mob)
+7. Revenge
+6. Ambush
+5. Assault (Siege)
+4. Last Stand
+3. Escape
+2. Rescue (Extraction)
 
-QS
-Ace
-Bottomless Chasm
-Sheer, endless drop with no visible bottom; one misstep means certain death (abyssal crevasse).
-King
-Sheer Cliff Face
-Vertical rock wall requiring expert climbing; falls are fatal (mountain face, canyon wall).
-Queen
-Narrow Ledge Path
-Crumbling, narrow trail along precipice; balance failure means plunge (gorge crossing).
-Jack
-Steep Scree Slope
-Loose, shifting gravel makes ascent/descent exhausting and prone to dangerous slides (alpine field).
-10
-Broken Rubble Field
-Jagged boulders and unstable debris slow movement and risk serious injury (landslide zone).
-9
-Swamp/Marsh
-Waterlogged ground with hidden pools, sucking mud, and tangled roots (treacherous bog).
-8
-Slippery Wet Surfaces
-Slick moss, mud, or saturated rock causes sudden loss of footing (stream bed, cave floor).
-7
-Thick Underbrush
-Dense bushes and vines hinder movement and visibility (jungle thicket, overgrown forest).
-6
-Rocky Uneven Ground
-Jagged stones and sudden dips make footing treacherous (badlands, natural cave floor).
-5
-Winding Narrow Trail
-Tight, twisting path forces single file and demands careful steps (canyon slot, ridge).
-4
-Loose Gravel Path
-Shifting small stones reduce traction and increase stumble risk (dry riverbed, trail).
-3
-Tall Grass
-Waist-high vegetation conceals holes and slows progress (prairie, meadow ambush zone).
-2
-Soft Sandy Ground
-Deep sand or dust tires legs quickly and hampers swift movement (desert dune, beach).
+D Suspense
+A. Mystery – uncovering hidden truths; investigation-driven tension
+K. Fear – terror, panic
+Q. Cat-and-Mouse – tactical pursuit and reversals
+J. Conspiracy – hidden networks, layered schemes
+T. Crime – illegal acts with high stakes
+9. Heist – planning, deception, timing-based tension
+8. Deception – spycraft, false identities, lying
+7. Thriller – visceral, non-supernatural dread; includes trapped or cornered situations
+6. Horror – extreme, supernatural, or existential dread
+5. Legal – procedural, bureaucratic, or rules-based tension
+4. Ticking Clock – deadlines or time pressure creating urgency
+3. Intrigue – hidden motives, plotting, political / social scheming
+2. Exposure – risk of secrets being revealed, blackmail, cover-ups, public discovery
+
+S Adventure
+A. Quest (Legacy, Prophesy)
+K. Expedition (Pilgrimage, Migration, Odyssey, Exodus)
+Q. Journey (Traversal, Escort, Passage)
+J. Exploration (Expedition, Ruins, Lost World)
+T. Heroic (Sword and Sorcery, Swashbucklers, Picaresque)
+9. Survival (Wilderness, Desert, Climbing, Foraging)
+8. Frontier (Wasteland, Post Apocalypse, Exile, Settlement)
+7. Discovery
+6. Treasure
+5. Trials
+4. Hazards
+3. Mazes (Labyrinths, Ruins, Navigation Puzzles, Hedge Maze)
+2. Traps (Hazards, Ancient Defenses)
+
+H Hearts
+Drama
+A. Character
+K. Relationship
+Q. Family
+J. Come-of-Age
+T. Social
+9. Class-Power
+8. Morality
+7. Redemption
+6. Tragedy
+5. Psychological
+4. Identity
+3. Grief
+2. Comedy
+
+
+         Diamonds  Suspense/Horror
+ 
+         6D Suspense:Horror
+         A. Unseen presence felt
+         K. Strange mark appears
+         Q. Reflection moves wrong
+         J. Whispered name heard
+         T. Object moves alone
+         9. Cold spot in room
+         8. Door opens itself
+         7. Vision of future horror
+         6. Possession signs begin
+         5. Nightmare bleeds real
+         4. Entity mimics voice
+         3. Dreadful silence falls
+         2. Inevitable doom approaches
+         
+         4D Suspense:Ticking Clock
+         A. Ticking Timebomb
+         K. Ransom deadline approaches
+         Q. Cure needed before dawn
+         J. Escape before alarm sounds
+         T. Auction ends soon
+         9. Transport leaves w/o passenger
+         8. Contract expires soon
+         7. Evidence destroys itself
+         6. Poison takes effect gradually
+         5. Building demolition imminent
+         ?4. Message self-deletes
+         3. Race against closing gate
+         ?2. Final chance slipping away
+
+         
+
+
+         Clubs  Action
+
+         JC Action:Combat
+         A. Sword duel begins
+         K. Bare-knuckle brawl erupts
+         Q. Martial arts showdown
+         J. Gunfight breaks out
+         T. Knife fight in close quarters
+         9. Staff vs sword clash
+         8. Wrestling takedown struggle
+         7. Archery contest turns deadly
+         6. Improvised weapon frenzy
+         5. One vs many beatdown
+         4. Honor-bound fistfight
+         3. Street gang rumble
+         2. Tavern bar fight
+
+         Spades  Adventure
+         
+         QS Adventure:Journey
+         A. Road trip revelation
+         K. Train journey encounters
+         Q. Forced detour
+         J. Walking pilgrimage
+         T. Boat passage on lake
+         9. Horseback trail ride
+         8. Caravan trade route
+         7. Escort traveler
+         6. Mountain passage
+         5. River raft descent
+         4. Night journey escape
+         3. Day-by-day progress
+         2. 
+
+         TS Adventure:Heroic
+         A. Against all odds
+         K. Champion the oppressed
+         Q. Duel legendary foe
+         J. Lead ragtag heroes
+         T. Perform impossible feat
+         9. Inspire hopeless villagers
+         8. Face personal demon
+         7. Sacrifice for others
+         6. Become the legend
+         5. Defeat great evil
+         4. Earn hero title
+         3. Epic deed remembered
+         2. Rise from obscurity
+
+         8S Adventure:Frontier
+         A. Arrive at lawless town
+         K. Claim uncharted land
+         Q. Face frontier justice
+         J. Build new settlement
+         T. Deal with outlaws
+         9. Survive harsh environment
+         8. Trade with natives
+         7. Defend against raiders
+         6. Discover new resources
+         5. Establish new home
+         4. Face unknown dangers
+         3. Adapt to wild life
+         2. Carve out territory
+
+         7S Adventure:Discovery
+         A. Find ancient artifact
+         K. Uncover hidden truth
+         Q. Reveal lost knowledge
+         J. Meet unknown people
+         T. Locate hidden entrance
+         9. Decipher ancient text
+         8. Witness rare phenomenon
+         7. Find new species
+         6. Discover underground network
+         5. Reveal buried history
+         4. First view of wonder
+         3. Unlock forgotten mechanism
+         2. Stumble upon secret place
+
+         6S Adventure:Treasure
+         A. Locate buried chest
+         K. Decrypt treasure map
+         Q. Recover stolen riches
+         J. Win prize vault
+         T. Find hidden cache
+         9. Claim legendary hoard
+         8. Solve treasure riddle
+         7. Navigate to X mark
+         6. Outwit treasure guardians
+         5. Dig up family fortune
+         4. Discover sunken wreck
+         3. Win tournament prize
+         2. Find lost inheritance
+
+         5S Adventure:Trials
+         A. Face series of tests
+         K. Prove worth through challenges
+         Q. Endure physical ordeals
+         J. Solve sequential puzzles
+         T. Overcome personal fears
+         9. Complete ritual tasks
+         8. Survive elemental trials
+         7. Answer guardian riddles
+         6. Balance scale judgment
+         5. Strength vs cunning choice
+         4. Moral test presented
+         3. Endurance challenge begins
+         2. Final judgment awaits
+
+         4S Adventure:Hazards
+         A. Navigate treacherous terrain
+         K. Avoid natural disasters
+         Q. Cross dangerous waters
+         J. Deal with environmental threats
+         T. Face sudden weather change
+         9. Evade rockfall/avalanche
+         8. Cross unstable ground
+         7. Survive toxic area
+         6. Avoid lightning strikes
+         5. Escape rising flood
+         4. Deal with extreme heat/cold
+         3. Navigate fog blindness
+         2. Cross rickety bridge
+
+         3S Adventure:Mazes
+         A. Enter complex labyrinth
+         K. Navigate twisting corridors
+         Q. Solve hedge maze puzzle
+         J. Find path through ruins
+         T. Underground tunnel network
+         9. Mirror maze confusion
+         8. Shifting wall maze
+         7. Riddle-guided turns
+         6. Darkness maze navigation
+         5. Trap-filled corridors
+         4. Multi-level maze climb
+         3. Illusion wall deception
+         ?2. Exit seems impossible
+
 
 */
 
-(func deck-storyevent : base/deck
+(func deck-storyevent . base/deck
  (base/deck
   :name "Story Event"
   :image "images/storyevent/storyevent-back.svg"
@@ -71,8 +263,8 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
          4) If you like it, the GM may read the rest
          5) If coop, reveal the rest only as needed
 
-         * Rank: A=Drive, K=Authority, Q=Revelation, J=Agency, 8-10=Escalation, 5-7=Commitment, 2-4=Instability
-         * Suit: C=Social / Institutional, D=Material / Survival, H=Emotional / Relational, S=Existential / Internal")
+         * Rank. A=Drive, K=Authority, Q=Revelation, J=Agency, 8-10=Escalation, 5-7=Commitment, 2-4=Instability
+         * Suit. C=Social / Institutional, D=Material / Survival, H=Emotional / Relational, S=Existential / Internal")
       (base/card
        :name "Story Circle"
        :deck "Story Event"
@@ -81,193 +273,221 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :reference
         "* Dan Harmon's Story Circle"
        :summary
-        "1: You - Character in status quo
-         2: Need - Desire that motivates action
-         3: Go - Crosses into the unknown
-         4: Search - Faces trials, new rules, and rising conflict
-         5: Find - Achieves goal, but with consequences
-         6: Take - Pays the price for success that marks a turning point
-         7: Return - Returns to familiar bringing back what was gained or learned
-         8: Change - Returns to the beginning but transformed with growth or change")
+        "1. You - Character in status quo
+         2. Need - Desire that motivates action
+         3. Go - Crosses into the unknown
+         4. Search - Faces trials, new rules, and rising conflict
+         5. Find - Achieves goal, but with consequences
+         6. Take - Pays the price for success that marks a turning point
+         7. Return - Returns to familiar bringing back what was gained or learned
+         8. Change - Returns to the beginning but transformed with growth or change")
       (base/card
-       :name "Domination"
+       :name "Action:Disaster"
        :deck "Story Event"
        :ranksuit base/ranksuit-ac
        :image "icons/card-ranksuit-ac.svg"
        :summary
-        "Power through force and fear
-         A. Absolute obedience enforced
-         K. Detention imposed without appeal
-         Q. Forced removal begins
-         J. Personal freedoms stripped
-         T. Constant surveillance imposed
-         9. Movement tightly controlled
-         8. Isolation from allies enforced
-         7. Forced service begins
-         6. Identity or role erased
-         5. Loved ones seized as leverage
-         4. Violence used to compel
-         3. Coercive ultimatum delivered
-         2. Intimidation displayed")
+        "A. Building collapses suddenly
+         K. Flood waters rise fast
+         Q. Fire spreads uncontrollably
+         J. Earthquake shakes ground
+         T. Storm destroys everything
+         9. Explosion rocks area
+         8. Landslide blocks path
+         7. Power failure in crisis
+         6. Gas leak ignites
+         5. Bridge fails under weight
+         4. Vehicle crash chaos
+         3. Crowd panic stampede
+         2. Structural failure imminent")
       (base/card
-       :name "Material Want"
+       :name "Suspense:Mystery"
        :deck "Story Event"
        :ranksuit base/ranksuit-ad
        :image "icons/card-ranksuit-ad.svg"
        :summary
-        "You want something concrete
-         * You: Defined by lack (Check your balance again)
-         * Need: Desire sharpens (Price goes up)
-         * Go: Chase opportunity (Submit application)
-         * Search: Optimize path (Compare options)
-         * Find: Commit resources (Pay the deposit)
-         * Take: Stakes attach (Save the receipt)
-         * Return: Life reorganizes (Your calendar fills)
-         * Change: Goal locked (Stop browsing alternatives)")
+        "A. Clues in locked diary
+         K. Witness with partial memory
+         Q. Disappearing evidence trail
+         J. Forged letter surfaces
+         T. Anonymous tip leads astray
+         9. Timeline doesn't match
+         8. Hidden compartment discovered
+         7. Suspect's alibi crumbles
+         6. Coded message deciphered
+         5. Family portrait hides clue
+         4. Forgotten phone call recalled
+         3. Shadowy figure in photo
+         2. Truth buried below")
       (base/card
-       :name "Emotional Hunger"
+       :name "Drama:Character"
        :deck "Story Event"
        :ranksuit base/ranksuit-ah
        :image "icons/card-ranksuit-ah.svg"
        :summary
-        "You long for connection
-         * You: Emotionally guarded (You keep conversations short)
-         * Need: Loneliness grows (Evenings stretch quietly)
-         * Go: Reach out (Send the message)
-         * Search: Test safety (Add a joke)
-         * Find: Risk attachment (Wait for the reply)
-         * Take: Vulnerability exposed (Your phone stays in your hand)
-         * Return: Bonds matter now (Check for responses)
-         * Change: Heart engaged (You care if they answer)")
+        "A. Flawed hero's quiet self-reflection
+         K. Side character's hidden vulnerability exposed
+         Q. Protagonist's internal contradiction surfaces
+         J. Supporting role's unspoken pain revealed
+         T. Antagonist's private moment of doubt
+         9. Mentor's past failure confessed
+         8. Love interest's inner struggle shown
+         6. Friend's long-carried burden shared
+         5. Family member's secret fear admitted
+         4. Rival's unexpected humanity glimpsed
+         3. Child character's growing self-awareness
+         2. Comic relief's serious hidden depth")
       (base/card
-       :name "Moral Fault Line"
+       :name "Adventure:Quest"
        :deck "Story Event"
        :ranksuit base/ranksuit-as
        :summary
-        "You fear becoming something worse
-         * You: Defined by restraint (Refuse an easy bribe)
-         * Need: Pressure tests your code (Rent is overdue)
-         * Go: Enter temptation (Return the call)
-         * Search: Seek clean options (Ask for legal alternatives)
-         * Find: No clean path exists (They shake their head)
-         * Take: Tension builds (Don't answer yet)
-         * Return: Life narrows (Bills stack on the table)
-         * Change: Core conflict set (You stop saying 'never')")
+        "A. Retrieve legendary artifact
+         K. Fulfill ancient prophecy
+         Q. Recover lost family heirloom
+         J. Seek ultimate knowledge
+         T. Deliver critical message
+         9. Find cure for plague
+         8. Claim throne rightfully
+         7. Break ancient curse
+         6. Unite scattered allies
+         5. Recover stolen crown
+         4. Map to hidden realm
+         3. Prove worthiness
+         2. Final piece of puzzle")
       (base/card
-       :name "Authority & Law"
+       :name "Action:War"
        :deck "Story Event"
        :ranksuit base/ranksuit-kc
        :image "icons/card-ranksuit-kc.svg"
        :summary
-        "Legitimized power through rule
-         A. Extraordinary authority invoked
-         K. Law twisted to target you
-         Q. Council orders coordinated action
-         J. Formal charges brought
-         T. Arrest order issued
-         9. Property seizure ordered
-         8. Rights or status revoked
-         7. Binding judgment delivered
-         6. Obedience formally demanded
-         5. Inspection demanded
-         4. Inquiry opened
-         3. Summons delivered
-         2. Formal warning issued")
+        "A. Invasion force arrives
+         K. Border conflict erupts
+         Q. Civil war breaks out
+         J. Guerrilla ambush strikes
+         T. Aerial bombardment begins
+         9. Siege weapons deployed
+         8. Troop movement detected
+         7. Spy network compromised
+         6. Supply lines cut
+         5. Defenses breached
+         4. Retreat ordered under fire
+         3. Counterattack launched
+         2. Truce breaks dramatically")
       (base/card
-       :name "Material Authority"
+       :name "Suspense:Fear"
        :deck "Story Event"
        :ranksuit base/ranksuit-kd
        :image "icons/card-ranksuit-kd.svg"
        :summary
-        "You control resources
-         * You: Hardened by loss (Experience shows)
-         * Need: System requires leadership (Decisions pile up)
-         * Go: Allocate decisively (Approve budgets)
-         * Search: Perfect outcomes (Stop chasing them)
-         * Find: Functional stability (Cash flow steadies)
-         * Take: Burden of control (Sign daily)
-         * Return: Order restored (Processes resume)
-         * Change: You are the gatekeeper (Final approval rests with you)")
+        "A. Surprise attack in safe place
+         K. Hidden predator strikes
+         Q. Sudden body change
+         J. Impossible phenomenon
+         T. Silence violently broken
+         9. Creepy figure appears
+         8. Grotesque body transformation
+         7. Monster appears from nowhere
+         6. Sudden apparition
+         5. Mechanical disaster strikes
+         4. Object becomes threatening
+         3. Trapped in confined space
+         2. Shear drop appears")
       (base/card
-       :name "Emotional Steward"
+       :name "Drama:Relationship"
        :deck "Story Event"
        :ranksuit base/ranksuit-kh
        :image "icons/card-ranksuit-kh.svg"
        :summary
-        "You carry others' hearts
-         * You: Emotionally mature (You stay calm)
-         * Need: Stability needed (They look to you)
-         * Go: Offer consistent care (You show up daily)
-         * Search: Personal gratification (You set it aside)
-         * Find: Trust deepens (They confide freely)
-         * Take: Emotional labor accepted (You listen again)
-         * Return: Relationships stabilize (Conflict softens)
-         * Change: You become an anchor (They rely on you)")
+        "A. Tense lovers' confrontation
+         K. Old friends drifting apart
+         Q. Siblings arguing over duty
+         J. Mentor-protégé bond tested
+         T. Forbidden attraction acknowledged
+         9. Ex-partners forced together
+         8. Parent-child misunderstanding deepens
+         7. Best friends hiding feelings
+         6. Rivals developing respect
+         5. Marriage hitting emotional crisis
+         4. Teacher-student connection grows
+         3. Neighbors becoming allies
+         2. Strangers sharing quiet moment")
       (base/card
-       :name "Moral Authority"
+       :name "Adventure:Expedition"
        :deck "Story Event"
        :ranksuit base/ranksuit-ks
        :image "icons/card-ranksuit-ks.svg"
        :summary
-        "You embody the consequence
-         * You: Fully formed (You no longer flinch)
-         * Need: Final stance required (They ask what to do)
-         * Go: Act consistently with self (Answer immediately)
-         * Search: External validation (Ignore the room)
-         * Find: Inner alignment achieved (The answer fits)
-         * Take: Responsibility accepted (Sign your name)
-         * Return: Others respond accordingly (They obey or leave)
-         * Change: You are what you chose (Nothing left to hide)")
+        "A. Cross vast desert
+         K. Scale impossible mountain
+         Q. Navigate dangerous seas
+         J. Trek through jungle
+         T. Arctic ice crossing
+         9. Underground cavern descent
+         8. Long march home
+         7. Escort VIP through peril
+         6. Migration to new land
+         5. Pilgrimage to sacred site
+         4. Explore uncharted territory
+         3. Forced exile march
+         2. Odyssey of return")
       (base/card
-       :name "Conspiracy"
+       :name "Action:Monsters"
        :deck "Story Event"
        :ranksuit base/ranksuit-qc
        :image "icons/card-ranksuit-qc.svg"
        :summary
-        "Hidden coordination and deceit
-         A. Reality-scale deception begins
-         K. Deep conspiracy exposed
-         Q. Institutional cover-up begins
-         J. Trusted betrayal revealed
-         T. Coordinated deception launched
-         9. False narrative spreads
-         8. Evidence planted
-         7. Frame job initiated
-         6. Misinformation campaign
-         5. Secret meetings held
-         4. Hidden agendas surface
-         3. Quiet lies spread
-         2. Suspicious coincidence")
+        "A. Creature emerges from shadows
+         K. Pack surrounds group
+         Q. Giant beast attacks town
+         J. Swarm overwhelms defenses
+         T. Shapeshifter revealed
+         9. Unnatural horde rises
+         8. Flying horror swoops down
+         7. Burrowing monster surfaces
+         6. Parasite infects host
+         5. Angry guardian awakens
+         4. Mutated animal charges
+         3. Demonic entity manifests
+         2. Legendary beast sighted")
       (base/card
-       :name "Material Truth"
+       :name "Suspense:Cat-and-Mouse"
        :deck "Story Event"
        :ranksuit base/ranksuit-qd
        :image "icons/card-ranksuit-qd.svg"
        :summary
-        "You see the real cost
-         * You: Numbers-focused (You avoid emotion)
-         * Need: Full accounting appears (Audit completes)
-         * Go: Review outcomes honestly (Read line by line)
-         * Search: Minimize damage (Highlight excuses)
-         * Find: Trade-offs exposed (Patterns emerge)
-         * Take: Regret or pride (Lean back)
-         * Return: Goals reassessed (Plans rewritten)
-         * Change: Values recalibrated (Different priorities chosen)")
+        "A. Hunter becomes the prey
+         K. Bait and switch
+         Q. Hunter toys with prey
+         J. Hunter one step ahead
+         T. Prey exploits oversight
+         9. Prey lures in hunter
+         8. Prey anticipates a trap
+         7. Prey bluffs
+         6. Hunter tightens the noose
+         5. Opportunity appears
+         4. Forced decision
+         3. A mask revealed
+         2. Trail ends")
       (base/card
-       :name "Emotional Truth"
+       :name "Drama:Family"
        :deck "Story Event"
        :ranksuit base/ranksuit-qh
        :image "icons/card-ranksuit-qh.svg"
        :summary
-        "You understand the real bond
-         * You: Confused (Mixed signals linger)
-         * Need: Clarity arrives (Overhear the truth)
-         * Go: Reinterpret past moments (Memories reframe)
-         * Search: Excuses dissolve (Details align)
-         * Find: Love or illusion revealed (It's obvious now)
-         * Take: Acceptance settles in (Exhale)
-         * Return: Relationship redefined (Act accordingly)
-         * Change: Emotional honesty achieved (No more pretending)")
+        "A. Family reunion turns emotional
+         K. Parent's sacrifice for child
+         Q. Sibling rivalry intensifies
+         J. Child discovers hidden relative
+         T. Grandparent's final wish
+         9. In-law conflict erupts
+         8. Family business succession fight
+         7. Adopted child seeks origins
+         6. Holiday gathering disaster
+         5. Parent hides serious illness
+         4. Child leaves home dramatically
+         3. Family covers scandal
+         2. Long-lost relative returns")
       (base/card
        :name "Moral Truth"
        :deck "Story Event"
@@ -275,14 +495,14 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :image "icons/card-ranksuit-qs.svg"
        :summary
         "You see what you've become
-         * You: Defensive (Justify past choices)
-         * Need: Reflection forced (Evidence lands on your desk)
-         * Go: Face consequences honestly (Read it all)
-         * Search: Deny responsibility (Try to argue)
-         * Find: Self-awareness hits (Your signature repeats)
-         * Take: Shame or resolve (Close your eyes)
-         * Return: Past reframed (See the pattern)
-         * Change: Moral reckoning complete (Stop pretending)")
+         * You. Defensive (Justify past choices)
+         * Need. Reflection forced (Evidence lands on your desk)
+         * Go. Face consequences honestly (Read it all)
+         * Search. Deny responsibility (Try to argue)
+         * Find. Self-awareness hits (Your signature repeats)
+         * Take. Shame or resolve (Close your eyes)
+         * Return. Past reframed (See the pattern)
+         * Change. Moral reckoning complete (Stop pretending)")
       (base/card
        :name "Nemesis"
        :deck "Story Event"
@@ -304,100 +524,119 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
          3. Hostile competitor appears
          2. Irritating antagonist")
       (base/card
-       :name "Strategic Control"
+       :name "Suspense:Conspiracy"
        :deck "Story Event"
        :ranksuit base/ranksuit-jd
        :image "icons/card-ranksuit-jd.svg"
        :summary
-        "You seize financial initiative
-         * You: Cornered but clever (You prepare quietly)
-         * Need: Survival requires bold move (Time nearly out)
-         * Go: Execute risky plan (You trigger the transfer)
-         * Search: Maximize leverage (You time the release)
-         * Find: Control shifts (Numbers jump)
-         * Take: Pressure peaks (Calls flood in)
-         * Return: Opponents respond (Meetings scheduled fast)
-         * Change: You drive the game (For now)")
+        "A. Everyone seems connected
+         K. Official story contradicted
+         Q. Evidence systematically destroyed
+         J. Witnesses disappear quietly
+         T. Pattern too perfect
+         9. Puppet masters hinted
+         8. Web of lies exposed
+         7. Trusted institution involved
+         6. Connections run deep
+         5. Cover-up reaches high
+         4. Truth suppressed violently
+         3. Group silences leaker
+         2. Expose wider conspiracy")
       (base/card
-       :name "Emotional Declaration"
+       :name "Drama:Come-of-Age"
        :deck "Story Event"
        :ranksuit base/ranksuit-jh
        :image "icons/card-ranksuit-jh.svg"
        :summary
-        "You assert your feelings
-         * You: Tired of hiding (You stop deflecting)
-         * Need: Ambiguity hurts too much (They press you)
-         * Go: Speak plainly (You state what you want)
-         * Search: Avoid manipulation (You don't soften it)
-         * Find: Emotional truth lands (They go quiet)
-         * Take: Consequences accepted (You don't backtrack)
-         * Return: Relationship clarified (Yes or no)
-         * Change: Emotional agency claimed (You chose honesty)")
+        "A. First heartbreak changes outlook
+         K. Teen defies family expectations
+         Q. Young adult leaves home
+         J. Student faces first moral choice
+         T. Graduation revelation moment
+         9. First job teaches harsh truth
+         8. Friendship group fractures
+         7. Discovering personal truth
+         6. Taking real responsibility
+         5. Losing childhood illusions
+         4. Standing up to authority
+         3. Making irreversible choice
+         2. First taste of freedom")
       (base/card
-       :name "Ruthless Choice"
+       :name "Adventure:Exploration"
        :deck "Story Event"
        :ranksuit base/ranksuit-js
        :image "icons/card-ranksuit-js.svg"
        :summary
-        "You act without hesitation
-         * You: Hardened (You don't ask permission)
-         * Need: Crisis demands action (Clock is ticking)
-         * Go: Take command (Interrupt the meeting)
-         * Search: Ignore doubt (Cut objections off)
-         * Find: Decisive strike (Shut it down)
-         * Take: Moral cost accepted (Don't apologize)
-         * Return: Order imposed (People follow silently)
-         * Change: You become the blade (They fear you)")
+        "A. Enter ancient ruins
+         K. Discover lost civilization
+         Q. Map unknown island
+         J. Delve forbidden temple
+         T. Search hidden cave system
+         9. Investigate strange phenomenon
+         8. Survey new territory
+         7. Find hidden oasis
+         6. Explore abandoned city
+         5. Uncover buried secrets
+         4. Venture into fog forest
+         3. Locate hidden valley
+         2. First contact with unknown")
       (base/card
-       :name "Collapse"
+       :name "Action:Tournament"
        :deck "Story Event"
        :ranksuit base/ranksuit-tc
        :image "icons/card-ranksuit-tc.svg"
        :summary
-        "Failure and breakdown
-         A. Total systemic collapse
-         K. Ruling structure fails
-         Q. Institutional breakdown
-         J. Organization collapses
-         T. Infrastructure fails
-         9. Supply systems break
-         8. Financial structure collapses
-         7. Mass panic erupts
-         6. Widespread disorder
-         5. Rioting begins
-         4. Local breakdown
-         3. Operational failure
-         2. Minor disruption")
+        "A. Championship match starts
+         K. Arena crowd roars
+         Q. Gladiator combat announced
+         J. Martial arts bracket revealed
+         T. Prize fight betting heavy
+         9. Elimination round begins
+         8. Team competition heats up
+         7. Skill contest judged
+         6. Underground fight club
+         5. Sports championship final
+         4. Duel of champions
+         3. Winner-take-all bout
+         2. Exhibition match turns serious")
       (base/card
-       :name "Total Loss"
+       :name "Suspense:Crime"
        :deck "Story Event"
        :ranksuit base/ranksuit-td
        :image "icons/card-ranksuit-td.svg"
        :summary
-        "You lose what you built
-         * You: Overleveraged (Nothing left untouched)
-         * Need: Failure finalizes (Notice arrives)
-         * Go: Face consequences (Attend the hearing)
-         * Search: Hidden escape (Call favors)
-         * Find: Assets seized (Boxes are labeled)
-         * Take: Shock lands (Sit silently)
-         * Return: Life stripped down (Rooms feel empty)
-         * Change: Survival mode engaged (You plan tomorrow only)")
+        "A. Bank vault breached
+         K. Kidnapping for ransom
+         Q. Drug deal ambush
+         J. Corporate espionage theft
+         T. Black market transaction
+         9. Identity theft scheme
+         8. Arson to cover tracks
+         7. Smuggling ring bust
+         6. Forgery of documents
+         5. Home invasion robbery
+         4. Bribery attempt fails
+         3. Money laundering operation
+         2. Petty theft escalates")
       (base/card
-       :name "Emotional Ruin"
+       :name "Drama:Social"
        :deck "Story Event"
        :ranksuit base/ranksuit-th
        :image "icons/card-ranksuit-th.svg"
        :summary
-        "Everything spills at once
-         * You: Emotionally exposed (You stop filtering)
-         * Need: Truth erupts (Old wounds surface)
-         * Go: Endure confrontation (Don't interrupt)
-         * Search: Hold anything intact (Reach out)
-         * Find: Bonds shatter (Multiple people walk away)
-         * Take: Grief floods in (Sit alone crying)
-         * Return: Silence follows (Phone stays dark)
-         * Change: Emotional landscape reset (Nothing familiar remains)")
+        "A. Class divide causes pain
+         K. Workplace prejudice exposed
+         Q. Social media rumor spreads
+         J. Neighborhood judgment surfaces
+         T. Cultural clash in group
+         9. Gender expectation challenged
+         8. Age gap causes misunderstanding
+         7. Accommodation denied quietly
+         6. Immigrant family struggles
+         5. Acceptance tested privately
+         4. Religious difference strains bond
+         3. Poverty vs wealth tension
+         2. Rural vs urban conflict")
       (base/card
        :name "Irreversible Harm"
        :deck "Story Event"
@@ -405,129 +644,147 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :image "icons/card-ranksuit-ts.svg"
        :summary
         "The damage spreads beyond control
-         * You: Past restraint (No one expects mercy)
-         * Need: Fallout accelerates (Reports stack hourly)
-         * Go: Make brutal choices (Triage who matters)
-         * Search: Prevent worst outcome (Cancel evacuations)
-         * Find: Multiple losses occur (Names cross your desk)
-         * Take: Weight overwhelms (Sit in silence)
-         * Return: World altered (Neighborhoods are empty)
-         * Change: Endgame triggered (There's no fixing this)")
+         * You. Past restraint (No one expects mercy)
+         * Need. Fallout accelerates (Reports stack hourly)
+         * Go. Make brutal choices (Triage who matters)
+         * Search. Prevent worst outcome (Cancel evacuations)
+         * Find. Multiple losses occur (Names cross your desk)
+         * Take. Weight overwhelms (Sit in silence)
+         * Return. World altered (Neighborhoods are empty)
+         * Change. Endgame triggered (There's no fixing this)")
       (base/card
-       :name "Containment"
+       :name "Action:Chase"
        :deck "Story Event"
        :ranksuit base/ranksuit-9c
        :image "icons/card-ranksuit-9c.svg"
        :summary
-        "Restriction and enclosure
-         A. Total lockdown imposed
-         K. Martial control declared
-         Q. Forced relocation begins
-         J. Targeted isolation imposed
-         T. Quarantine enforced
-         9. Borders sealed
-         8. Communication cut
-         7. Checkpoints established
-         6. Curfew imposed
-         5. Movement restricted
-         4. Area confined
-         3. Limited access imposed
-         2. Temporary isolation")
+        "A. Street pursuit
+         K. High-speed chase
+         Q. Rooftop parkour
+         J. Horseback pursuit
+         T. Boat chase
+         9. Chase between vehicles
+         8. Cliffside chase
+         7. Woodland chase
+         6. Crowd-weaving getaway
+         5. Market scramble
+         4. Stairwell sprint
+         3. Shortcut gamble
+         2. Sewer dash")
       (base/card
-       :name "Financial Freefall"
+       :name "Suspense:Heist"
        :deck "Story Event"
        :ranksuit base/ranksuit-9d
        :image "icons/card-ranksuit-9d.svg"
        :summary
-        "Losses outrun recovery
-         * You: Desperate (You stop eating out)
-         * Need: Final chance appears (One risky option remains)
-         * Go: Gamble everything (You move all funds)
-         * Search: Miracle angle (You watch the market)
-         * Find: Odds against you (Numbers slide)
-         * Take: Panic spikes (You hit refresh repeatedly)
-         * Return: Systems close in (Accounts lock temporarily)
-         * Change: Collapse or reversal imminent (Hours matter)")
+        "A. Vault blueprint studied
+         K. Team roles assigned
+         Q. Security mapped out
+         J. Inside man recruited
+         T. Timing rehearsal critical
+         9. Disguise prepared meticulously
+         8. Getaway route planned
+         7. Alarm bypass tested
+         6. Safe cracking practiced
+         5. Distraction team ready
+         4. Double-cross suspected
+         3. Final countdown begins
+         2. Complication arises")
       (base/card
-       :name "Emotional Crisis"
+       :name "Drama:Class-Power"
        :deck "Story Event"
        :ranksuit base/ranksuit-9h
        :image "icons/card-ranksuit-9h.svg"
        :summary
-        "You can't sustain the bond
-         * You: Overextended (You look exhausted)
-         * Need: Emotional reckoning (They demand honesty)
-         * Go: Confront the truth (Sit down)
-         * Search: Salvage connection (Bargain)
-         * Find: Limits exposed (You can't promise)
-         * Take: Heartbreak hits (They stand to leave)
-         * Return: Emotional vacuum (Door closes)
-         * Change: Attachment broken or remade (Nothing in between)")
+        "A. Poor meets wealthy dramatically
+         K. Humble background hidden
+         Q. Servant overhears secrets
+         J. Self-made threatens old elite
+         T. Corporate takeover affects lives
+         9. Arranged partnership for status
+         8. Social climbing through connection
+         7. Inherited burden weighs heavy
+         6. Class revenge begins quietly
+         5. Power imbalance in bond
+         4. Status symbol causes envy
+         3. Elite excludes newcomer
+         2. Rags-to-riches backlash")
       (base/card
-       :name "Moral Collapse"
+       :name "Adventure:Survival"
        :deck "Story Event"
        :ranksuit base/ranksuit-9s
        :image "icons/card-ranksuit-9s.svg"
        :summary
-        "Your code barely exists
-         * You: Exhausted (You stop arguing)
-         * Need: One more decision (They push paperwork at you)
-         * Go: Act automatically (You sign without reading)
-         * Search: Justify nothing (You don't explain)
-         * Find: You don't hesitate (That scares you)
-         * Take: Self-disgust peaks (You scrub your hands raw)
-         * Return: Identity frays (Old photos feel unfamiliar)
-         * Change: Collapse imminent (Something will break)")
+        "A. Stranded in wilderness
+         K. Food and water scarce
+         Q. Harsh weather hits
+         J. Injured and alone
+         T. Build shelter from nothing
+         9. Hunt for food
+         8. Signal for rescue
+         7. Avoid predators
+         6. Navigate without map
+         5. Conserve dwindling supplies
+         4. Treat own wounds
+         3. Endure extreme cold/heat
+         2. Wait out the storm")
       (base/card
-       :name "Organized Opposition"
+       :name "Action:Criminal"
        :deck "Story Event"
        :ranksuit base/ranksuit-8c
        :image "icons/card-ranksuit-8c.svg"
        :summary
-        "Collective hostile forces
-         A. System-wide opposition mobilized
-         K. Powerful institution intervenes
-         Q. Coordinated factions align
-         J. Criminal syndicate acts
-         T. Paramilitary group mobilizes
-         9. Cartel or network intervenes
-         8. Militant cell activates
-         7. Organized gang acts
-         6. Rival organization opposes
-         5. Political faction resists
-         4. Trade group pressures
-         3. Local clique mobilizes
-         2. Hostile group forms")
+        "A. Bank robbery in progress
+         K. Gang territory war
+         Q. Mob meeting interrupted
+         J. Drug deal gone bad
+         T. Armed home invasion
+         9. Vehicle theft ring exposed
+         8. Protection racket collection
+         7. Smuggling operation busted
+         6. Counterfeit money scheme
+         5. Kidnapping ransom demand
+         4. Arson for insurance
+         3. Street mugging turns violent
+         2. Pickpocket team")
       (base/card
-       :name "Spiraling Costs"
+       :name "Suspense:Deception"
        :deck "Story Event"
        :ranksuit base/ranksuit-8d
        :image "icons/card-ranksuit-8d.svg"
        :summary
-        "Expenses exceed plans
-         * You: Stretched thin (You juggle accounts)
-         * Need: New losses emerge (Equipment fails)
-         * Go: Secure more resources (Request a loan)
-         * Search: Short-term fixes (Delay payments)
-         * Find: Long-term damage (Penalties accrue)
-         * Take: Stability erodes (Miss a deadline)
-         * Return: Life reorganizes (Bills dominate conversations)
-         * Change: Risk dominates decisions (Survival thinking)")
+        "A. False identity assumed
+         K. Double agent infiltrates
+         Q. Forged documents used
+         J. Alibi carefully constructed
+         T. Impersonation discovered
+         9. Lie unravels slowly
+         8. Hidden camera catches truth
+         7. Betrayer confesses under pressure
+         6. Pattern of deception emerges
+         5. Slip in cover story
+         4. Disguise fails at worst moment
+         3. Truth too obvious
+         2. Deception costs everything")
       (base/card
-       :name "Emotional Overload"
+       :name "Drama:Morality"
        :deck "Story Event"
        :ranksuit base/ranksuit-8h
        :image "icons/card-ranksuit-8h.svg"
        :summary
-        "You're pulled too many ways
-         * You: Emotionally invested (Everyone needs you)
-         * Need: Competing needs clash (Two calls come at once)
-         * Go: Try to satisfy all (Say yes twice)
-         * Search: Balance feelings (Rush between them)
-         * Find: Someone neglected (They wait alone)
-         * Take: Guilt intensifies (See the missed call)
-         * Return: Relationships strain (Voices harden)
-         * Change: Emotional limits reached (Something must drop)")
+        "A. No clean choice available
+         K. Lesser evil haunts character
+         Q. Whistleblower faces fallout
+         J. Lie to protect loved one
+         T. Ends justify means question
+         9. Moral compromise for good
+         8. Gray area decision
+         7. Values vs norms conflict
+         6. Forgiveness vs justice debate
+         5. Truth vs kindness struggle
+         4. Loyalty vs honesty test
+         3. Self-interest vs altruism
+         2. Right choice costs everything")
       (base/card
        :name "Consequences Multiply"
        :deck "Story Event"
@@ -535,64 +792,71 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :image "icons/card-ranksuit-8s.svg"
        :summary
         "You can't contain the damage
-         * You: Already compromised (You're known for it now)
-         * Need: Fallout spreads (2nd incident occurs)
-         * Go: Intervene again (step in personally)
-         * Search: Limit exposure (Silence a witness)
-         * Find: New harm caused (Another innocent suffers)
-         * Take: Moral weight spikes (Nausea afterward)
-         * Return: Normal collapses (Routines break down)
-         * Change: Crisis mode engaged (You stop sleeping)")
+         * You. Already compromised (You're known for it now)
+         * Need. Fallout spreads (2nd incident occurs)
+         * Go. Intervene again (step in personally)
+         * Search. Limit exposure (Silence a witness)
+         * Find. New harm caused (Another innocent suffers)
+         * Take. Moral weight spikes (Nausea afterward)
+         * Return. Normal collapses (Routines break down)
+         * Change. Crisis mode engaged (You stop sleeping)")
       (base/card
-       :name "Enforcers"
+       :name "Action:Revenge"
        :deck "Story Event"
        :ranksuit base/ranksuit-7c
        :image "icons/card-ranksuit-7c.svg"
        :summary
-        "Agents of violence or control
-         A. Execution squad deployed
-         K. State enforcers dispatched
-         Q. Elite task force
-         J. Personal enforcer confronts you
-         T. Special operatives engage
-         9. Mercenary unit intervenes
-         8. Hit team deployed
-         7. Armed guards confront you
-         6. Trained fighters engage
-         5. Security detail blocks you
-         4. Thugs intimidate
-         3. Strong-arm agents threaten
-         2. Threatening messengers")
+        "A. Vengeance oath sworn
+         K. Target finally located
+         Q. Revenge plan executed
+         J. Old enemy confronted
+         T. Family honor avenged
+         9. Past wrong repaid
+         8. Cold dish served
+         7. Betrayer hunted down
+         6. Score settled violently
+         5. Justice outside law
+         4. Cycle of vengeance continues
+         3. Final payback delivered
+         2. Revenge consumes character")
       (base/card
-       :name "Irreversible Deal"
+       :name "Suspense:Thriller"
        :deck "Story Event"
        :ranksuit base/ranksuit-7d
        :image "icons/card-ranksuit-7d.svg"
        :summary
-        "You sign away options
-         * You: Calculating (Last chance)
-         * Need: Deadline hits (Contract expires today)
-         * Go: Finalize agreement (You sign digitally)
-         * Search: Escape clauses (You scroll fast)
-         * Find: Terms bind (Signature locks in)
-         * Take: Relief and fear (Your hands shake)
-         * Return: Freedom reduced (Obligations populate your inbox)
-         * Change: Future constrained (Your path narrows)")
+        "A. 
+         K. Burning building
+         Q. Trapped underground
+         J. Cornered in dead end
+         T. Communications cut
+         9. Hostage endangered
+         8. Runaway vehicle
+         7. Poison progressing
+         6. Collapsing path
+         5. Rising water
+         4. Lights go out
+         3. Fragile floor
+         2. Running out of air")
       (base/card
-       :name "Emotional Betrayal"
+       :name "Drama:Redemption"
        :deck "Story Event"
        :ranksuit base/ranksuit-7h
        :image "icons/card-ranksuit-7h.svg"
        :summary
-        "You hurt someone you love
-         * You: Caring (You promised otherwise)
-         * Need: Conflict forces choice (Both can't be spared)
-         * Go: Act anyway (Choose one)
-         * Search: Soften blow (Explain yourself)
-         * Find: Trust breaks (They stop listening)
-         * Take: Pain immediate (Tears fall)
-         * Return: Bond damaged (Messages go unanswered)
-         * Change: Relationship transformed (Never the same)")
+        "A. Seeking forgiveness from past
+         K. Atoning for old wrong
+         Q. Former wrongdoer helps others
+         J. Reforming through connection
+         T. Making amends with family
+         9. Public apology for mistake
+         8. Mentor redeems past failure
+         7. Finding purpose after fall
+         6. Overcoming personal shame
+         5. Returning what was taken
+         4. Protecting once harmed
+         3. Proving changed self
+         2. Final good act")
       (base/card
        :name "Point of No Return"
        :deck "Story Event"
@@ -600,34 +864,33 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :image "icons/card-ranksuit-7s.svg"
        :summary
         "You cross a line you cannot uncross
-         * You: Defined by a personal rule (Swore you wouldn't do this)
-         * Need: Obedience now costs too much (Refusal ends everything)
-         * Go: Enter the moral gray (Show up anyway)
-         * Search: Rationalize exceptions (Just this once)
-         * Find: Break the rule (Pull the trigger)
-         * Take: Immediate price paid (Someone screams)
-         * Return: Old life feels wrong (home feels awry)
-         * Change: New self locked in (Don't look away next time)")
+         * You. Defined by a personal rule (Swore you wouldn't do this)
+         * Need. Obedience now costs too much (Refusal ends everything)
+         * Go. Enter the moral gray (Show up anyway)
+         * Search. Rationalize exceptions (Just this once)
+         * Find. Break the rule (Pull the trigger)
+         * Take. Immediate price paid (Someone screams)
+         * Return. Old life feels wrong (home feels awry)
+         * Change. New self locked in (Don't look away next time)")
       (base/card
-       :name "Pursuit"
+       :name "Action:Ambush"
        :deck "Story Event"
        :ranksuit base/ranksuit-6c
        :image "icons/card-ranksuit-6c.svg"
        :summary
-        "Hunting and capture
-         A. No-escape manhunt
-         K. Authority-led pursuit
-         Q. Coordinated tracking effort
-         J. Professional hunter deployed
-         T. Bounty hunt begins
-         9. Regional search launched
-         8. Coordinated chase
-         7. Surveillance operation
-         6. Persistent tail
-         5. Locals questioned
-         4. Identity challenged
-         3. Brief pursuit
-         2. Casual observation")
+        "A. Surprise attack from shadows
+         K. Roadside trap sprung
+         Q. Building entrance blocked
+         J. Sniper fire opens
+         T. Alley surround complete
+         9. Vehicle ram attack
+         8. Poisoned food/drink
+         7. Fake surrender trap
+         6. Hidden attackers emerge
+         5. Bridge ambush point
+         4. Sleep attack on camp
+         3. Meeting turns deadly
+         2. Betrayal leads to trap")
       (base/card
        :name "Compounding Risk"
        :deck "Story Event"
@@ -635,29 +898,33 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :image "icons/card-ranksuit-6d.svg"
        :summary
         "One bet forces another
-         * You: Committed (Too much invested)
-         * Need: Loss threatens (Numbers turn red)
-         * Go: Double down (Inject more funds)
-         * Search: Smarter angle (Change strategy)
-         * Find: Exposure grows (Safety net shrinks)
-         * Take: Volatility spikes (Check prices hourly)
-         * Return: Sleep suffers (Wake at night)
-         * Change: Exit difficult (Walking away feels worse)")
+         * You. Committed (Too much invested)
+         * Need. Loss threatens (Numbers turn red)
+         * Go. Double down (Inject more funds)
+         * Search. Smarter angle (Change strategy)
+         * Find. Exposure grows (Safety net shrinks)
+         * Take. Volatility spikes (Check prices hourly)
+         * Return. Sleep suffers (Wake at night)
+         * Change. Exit difficult (Walking away feels worse)")
       (base/card
-       :name "Deep Bond"
+       :name "Drama:Tragedy"
        :deck "Story Event"
        :ranksuit base/ranksuit-6h
        :image "icons/card-ranksuit-6h.svg"
        :summary
-        "You rely on someone
-         * You: Attached (You text without thinking)
-         * Need: Support required (A problem overwhelms you)
-         * Go: Ask for help (You call late)
-         * Search: Avoid burdening (You apologize)
-         * Find: Dependence forms (They stay on the line)
-         * Take: Stakes double (They know too much now)
-         * Return: Separation costly (You dread silence)
-         * Change: Intertwined fates (Choices affect both)")
+        "A. Inevitable downfall starts
+         K. Fatal flaw exposed
+         Q. Loved one lost unnecessarily
+         J. Good intentions cause harm
+         T. Misunderstanding leads to loss
+         9. Sacrifice fails to save
+         8. Betrayal destroys bond
+         7. Victory feels empty
+         6. Family torn apart
+         5. Love never reconciled
+         4. Child suffers parent's choice
+         3. Cycle of pain continues
+         2. Everything falls apart")
       (base/card
        :name "Escalating Acts"
        :deck "Story Event"
@@ -665,64 +932,72 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :image "icons/card-ranksuit-6s.svg"
        :summary
         "You repeat the wrong choice
-         * You: Uneasy (You avoid eye contact)
-         * Need: Situation worsens (Another problem surfaces)
-         * Go: Act similarly (Issue the same command)
-         * Search: Limit damage (Add conditions)
-         * Find: Harm increases (More people affected)
-         * Take: Guilt accumulates (Drink alone)
-         * Return: Life constricts (Fewer calls returned)
-         * Change: Descent underway (Stopping feels impossible)")
+         * You. Uneasy (You avoid eye contact)
+         * Need. Situation worsens (Another problem surfaces)
+         * Go. Act similarly (Issue the same command)
+         * Search. Limit damage (Add conditions)
+         * Find. Harm increases (More people affected)
+         * Take. Guilt accumulates (Drink alone)
+         * Return. Life constricts (Fewer calls returned)
+         * Change. Descent underway (Stopping feels impossible)")
       (base/card
-       :name "Violence"
+       :name "Action:Assault"
        :deck "Story Event"
        :ranksuit base/ranksuit-5c
        :image "icons/card-ranksuit-5c.svg"
        :summary
-        "Direct physical harm
-         A. Mass killing attempt
-         K. Authorized lethal force
-         Q. Coordinated assault
-         J. Assassination attempt
-         T. Armed attack
-         9. Group beating
-         8. Attempted murder
-         7. Severe assault
-         6. Armed confrontation
-         5. Street fight
-         4. Physical attack
-         3. Threatened violence
-         2. Rough handling")
+        "A. Full building invasion
+         K. Siege engines fire
+         Q. Breach and clear operation
+         J. Storm the gates
+         T. Room-by-room sweep
+         9. Overwhelm defenses
+         8. Coordinated multi-front attack
+         7. Night raid begins
+         6. Wall scaling assault
+         5. Tunnel infiltration
+         4. Air drop insertion
+         3. Vehicle assault ram
+         2. Direct charge forward")
       (base/card
        :name "Major Spend"
        :deck "Story Event"
        :ranksuit base/ranksuit-5d
        :image "icons/card-ranksuit-5d.svg"
        :summary
-        "You commit resources heavily
-         * You: Conservative (You triple-check)
-         * Need: Opportunity peaks (Clock ticking)
-         * Go: Invest fully (Authorize payment)
-         * Search: Final checks (Skim the contract)
-         * Find: Funds transferred (Confirmation appears)
-         * Take: Exposure locked (Account dips sharply)
-         * Return: Waiting begins (Nothing to do now)
-         * Change: Outcome matters deeply (This must work)")
+        "5D Suspense:Legal
+         A. Court case opens
+         K. Evidence submitted
+         Q. Witness testimony challenged
+         J. Legal loophole exploited
+         T. Appeal filed urgently
+         9. Lawyer conflict of interest
+         8. Jury selection drama
+         7. Procedural delay requested
+         6. Confession admissibility debated
+         5. Statute limitation argued
+         4. Technicality raised
+         3. Judge bias questioned
+         2. Verdict deliberation begins")
       (base/card
-       :name "Confession"
+       :name "Drama:Psychological"
        :deck "Story Event"
        :ranksuit base/ranksuit-5h
        :image "icons/card-ranksuit-5h.svg"
        :summary
-        "You reveal true feeling
-         * You: Reserved (You rehearse silently)
-         * Need: Silence hurts more (Can't sleep)
-         * Go: Open up (Ask to talk)
-         * Search: Gentle phrasing (Hedge your words)
-         * Find: Truth lands (Say it plainly)
-         * Take: Emotional impact (They stare at you)
-         * Return: Relationship redefined (Nothing is casual now)
-         * Change: Vulnerability real (You've said it)")
+        "A. Obsessive thoughts dominate
+         K. Denial of obvious truth
+         Q. Trauma flashback triggers
+         J. Distorted reality perception
+         T. Guilt manifests strongly
+         9. Paranoia about others
+         8. Repressed memory returns
+         7. Self-destructive pattern
+         6. Identity crisis deepens
+         5. Manipulation erodes trust
+         4. Addiction controls choices
+         3. Delusion grows
+         2. Inner doubt overwhelms")
       (base/card
        :name "Line Crossed"
        :deck "Story Event"
@@ -730,33 +1005,33 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :image "icons/card-ranksuit-5s.svg"
        :summary
         "You do something irreversible
-         * You: Rule-bound (You hesitate)
-         * Need: Cost too high (They start counting down)
-         * Go: Act decisively (Nod once)
-         * Search: None left (Moment passes)
-         * Find: Boundary broken (Give the order)
-         * Take: Immediate fallout (Someone protests)
-         * Return: Reality altered (People look at you differently)
-         * Change: Path narrowed (There's no undo)")
+         * You. Rule-bound (You hesitate)
+         * Need. Cost too high (They start counting down)
+         * Go. Act decisively (Nod once)
+         * Search. None left (Moment passes)
+         * Find. Boundary broken (Give the order)
+         * Take. Immediate fallout (Someone protests)
+         * Return. Reality altered (People look at you differently)
+         * Change. Path narrowed (There's no undo)")
       (base/card
-       :name "Theft"
+       :name "Action:Last-Stand"
        :deck "Story Event"
        :ranksuit base/ranksuit-4c
        :image "icons/card-ranksuit-4c.svg"
        :summary
-        "A. Human trafficking operation
-         K. Kidnapping for ransom
-         Q. Organized armed robbery
-         J. Bandit ambush
-         T. Home invasion robbery
-         9. Carjacking
-         8. Mugging
-         7. Embezzlement
-         6. Burglary
-         5. Extortion
-         4. Blackmail attempt
-         3. Pickpocketing
-         2. Shoplifting")
+        "A. Final defense position
+         K. Back to wall fight
+         Q. Outnumbered hold line
+         J. No retreat possible
+         T. Ammo running low
+         9. Wounded but fighting
+         8. Surrounded completely
+         7. Sacrifice to buy time
+         6. Heroic final charge
+         5. Defend the vulnerable
+         4. Bridge hold against horde
+         3. Rooftop last defense
+         2. One against many")
       (base/card
        :name "Risk Threshold"
        :deck "Story Event"
@@ -764,98 +1039,97 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :image "icons/card-ranksuit-4d.svg"
        :summary
         "You reach tolerance limit
-         * You: Risk-aware (You hesitate)
-         * Need: Pay more or quit (They ask directly)
-         * Go: Reassess position (Open spreadsheets)
-         * Search: Last-minute savings (Cut corners)
-         * Find: All-in required (They won't budge)
-         * Take: Stress peaks (Rub your temples)
-         * Return: Moment stretches (Call goes quiet)
-         * Change: Commitment unavoidable (You must choose)")
+         * You. Risk-aware (You hesitate)
+         * Need. Pay more or quit (They ask directly)
+         * Go. Reassess position (Open spreadsheets)
+         * Search. Last-minute savings (Cut corners)
+         * Find. All-in required (They won't budge)
+         * Take. Stress peaks (Rub your temples)
+         * Return. Moment stretches (Call goes quiet)
+         * Change. Commitment unavoidable (You must choose)")
       (base/card
-       :name "Emotional Choice"
+       :name "Drama:Identity"
        :deck "Story Event"
        :ranksuit base/ranksuit-4h
        :image "icons/card-ranksuit-4h.svg"
        :summary
-        "You must decide how much to care
-         * You: Hesitant (You don't label it)
-         * Need: Relationship deepens (They ask what this is)
-         * Go: Stay close (Don't pull away)
-         * Search: Emotional boundaries (Set rules)
-         * Find: Boundaries fail (Break them first)
-         * Take: Exposure increases (Share a secret)
-         * Return: Normal shifts (Closeness is assumed)
-         * Change: Heart engaged (Neutrality gone)")
+        "A. Discovering hidden background
+         K. Fake self exposed
+         Q. Personal truth journey
+         J. Impersonating another
+         T. Cultural conflict internal
+         9. Name change to escape
+         8. Mistaken for someone else
+         7. Finding authentic self
+         6. Alienation from roots
+         5. Reinventing completely
+         4. Questioning life path
+         3. Mask vs truth struggle
+         2. Authenticity vs expectation")
       (base/card
        :name "Trap"
        :deck "Story Event"
        :ranksuit base/ranksuit-4s
        :image "icons/card-ranksuit-4s.svg"
        :summary
-        "A. Crushing Walls
-         K. Descending Spikes
-         Q. Flooding Room
-         J. Poison Gas
-         T. Slicing Pendulums
-         9. Collapsing Ceiling
-         8. Spiked Pitfall
-         7. Poison Darts
-         6. Flame Jets
-         5. Swinging Log
-         4. Arrow Trap
-         3. Pit Trap
-         2. Tripwire Alarm")
+        "")
       (base/card
-       :name "Intimidation"
+       :name "Action:Escape"
        :deck "Story Event"
        :ranksuit base/ranksuit-3c
        :image "icons/card-ranksuit-3c.svg"
        :summary
-        "Threats meant to coerce
-         A. Terror campaign initiated
-         K. Authority-backed intimidation begins
-         Q. Organized intimidation effort
-         J. Personal intimidation attempt
-         T. Credible death threat issued
-         9. Stalking campaign begins
-         8. Threats against loved ones
-         7. Public threats delivered
-         6. Repeated warnings issued
-         5. Coercive messages sent
-         4. Menacing presence displayed
-         3. Verbal threats made
-         2. Hostile remarks")
+        "A. Escape captivity
+         K. Flee burning building
+         Q. Evade capture in city
+         J. Tunnel escape route
+         T. Jump from moving vehicle
+         9. Disguise and slip away
+         8. Hostage escape attempt
+         7. Race through crowds
+         6. Swim to freedom
+         5. Climb down wall
+         4. Hide in plain sight
+         3. Fake death escape
+         2. Dash to safety")
       (base/card
-       :name "Investment Made"
+       :name "Suspense:Intrigue"
        :deck "Story Event"
        :ranksuit base/ranksuit-3d
        :image "icons/card-ranksuit-3d.svg"
        :summary
-        "You put something in
-         * You: Calculating (You run the numbers)
-         * Need: Opportunity demands buy-in (Deadline looms)
-         * Go: Commit partially (You transfer funds)
-         * Search: Hedge risk (You keep some back)
-         * Find: No refunds (The terms update)
-         * Take: Anxiety rises (You refresh the page)
-         * Return: Waiting period (Days drag)
-         * Change: Skin in game (Loss would hurt)")
+        "A. Secret deal bypasses authority
+         K. Allies quietly align interests
+         Q. Project progress stalled
+         J. Engineered crisis
+         T. Favors shift opinions
+         9. Rivals position for succession
+         8. Policy details leak
+         7. Data passed via dead drop
+         6. Misleading action staged
+         5. Agent exposed or turned
+         4. Search for infiltrator
+         3. Evidence covertly altered
+         2. Operative disavowed/targeted")
       (base/card
-       :name "Attachment Forms"
+       :name "Drama:Grief"
        :deck "Story Event"
        :ranksuit base/ranksuit-3h
        :image "icons/card-ranksuit-3h.svg"
        :summary
-        "You start to care
-         * You: Guarded (You limit contact)
-         * Need: Presence feels good (Stay longer)
-         * Go: Spend time (Accept another invitation)
-         * Search: Control exposure (Avoid deeper topics)
-         * Find: Bond deepens (Laugh easily)
-         * Take: Dependence begins (Miss them afterward)
-         * Return: Absence hurts (Notice the quiet)
-         * Change: Emotional stake set (Distance now matters)")
+        "A. Fresh loss overwhelms
+         K. Anniversary triggers memories
+         Q. Unable to move on
+         J. Grief turns to anger
+         T. Empty space felt deeply
+         9. Mourning lost time
+         8. Illness acceptance struggle
+         7. Sudden death shock
+         6. Loss of future dreams
+         5. Pet death devastates
+         4. Aging parent decline
+         3. Regret over past
+         2. Fear of own end")
       (base/card
        :name "Growing Discomfort"
        :deck "Story Event"
@@ -863,79 +1137,90 @@ Deep sand or dust tires legs quickly and hampers swift movement (desert dune, be
        :image "icons/card-ranksuit-3s.svg"
        :summary
         "You sense future cost
-         * You: Still resisting (You insist it's fine)
-         * Need: Pressure repeats (Request comes again)
-         * Go: Face it directly (Attend the meeting)
-         * Search: Delay decision (Ask for more time)
-         * Find: Delay fails (They want an answer now)
-         * Take: Stress accumulates (Hands shake)
-         * Return: Life tightens (Sleep gets shorter)
-         * Change: Conflict active (Avoidance stops working)")
+         * You. Still resisting (You insist it's fine)
+         * Need. Pressure repeats (Request comes again)
+         * Go. Face it directly (Attend the meeting)
+         * Search. Delay decision (Ask for more time)
+         * Find. Delay fails (They want an answer now)
+         * Take. Stress accumulates (Hands shake)
+         * Return. Life tightens (Sleep gets shorter)
+         * Change. Conflict active (Avoidance stops working)")
       (base/card
-       :name "Obstruction"
+       :name "Action:Rescue"
        :deck "Story Event"
        :ranksuit base/ranksuit-2c
        :image "icons/card-ranksuit-2c.svg"
        :summary
-        "Non-violent interference
-         A. Systemic shutdown imposed
-         K. Ruler blocks all access
-         Q. Coordinated obstruction begins
-         J. Legal restraint imposed
-         T. Infrastructure sabotaged
-         9. Supplies deliberately denied
-         8. Permit or passage revoked
-         7. Access forcibly restricted
-         6. Equipment tampered with
-         5. Route deliberately blocked
-         4. Critical resource withheld
-         3. Deliberate delay imposed
-         2. Minor interference")
+        "A. Save captive from danger
+         K. Extract wounded comrade
+         Q. Child in peril
+         J. Hostage negotiation fails
+         T. Infiltrate to extract
+         9. Carry injured to safety
+         8. Dive into water rescue
+         7. Pull from burning structure
+         6. Fight through to target
+         5. Medical emergency extraction
+         4. Kidnapped loved one
+         3. Trapped in collapse
+         2. Last-minute save")
       (base/card
-       :name "Resource Strain"
+       :name "Suspense:Exposure"
        :deck "Story Event"
        :ranksuit base/ranksuit-2d
        :image "icons/card-ranksuit-2d.svg"
        :summary
-        "You lose something small
-         * You: Stable enough (You shrug it off)
-         * Need: Loss pinches (A fee posts overnight)
-         * Go: Cover the gap (You move money around)
-         * Search: Cheap fix (You cancel a subscription)
-         * Find: Hidden cost (Another bill arrives)
-         * Take: Pressure rises (You tighten spending)
-         * Return: Routine stressed (Small luxuries vanish)
-         * Change: Security weakened (You start tracking closely)")
+        "A. Secret picture leaked
+         K. Anonymous tip sent
+         Q. Recording surfaces
+         J. Witness comes forward
+         T. Past mistake publicized
+         9. Cover-up unravels
+         8. Recording leaked as warning
+         7. Reputation on line
+         6. Truth about to break
+         5. Scandal headline ready
+         4. Mourning lost time
+         3. Mourning lost time
+         2. Secret no longer safe")
       (base/card
-       :name "Emotional Friction"
+       :name "Drama:Comedy"
        :deck "Story Event"
        :ranksuit base/ranksuit-2h
        :image "icons/card-ranksuit-2h.svg"
        :summary
-        "You feel unexpectedly affected
-         * You: Detached (You keep it professional)
-         * Need: Feelings intrude (Their comment lingers)
-         * Go: Stay present (You don't end the conversation)
-         * Search: Suppress emotion (You change the subject)
-         * Find: Reaction slips (Your tone sharpens)
-         * Take: Awkwardness grows (They pause)
-         * Return: Relationship altered (Future talks feel cautious)
-         * Change: Detachment cracked (You replay the moment)")
+        "A. Hilarious misunderstanding chain
+         K. Fake relationship pretense
+         Q. Embarrassing public blunder
+         J. Clumsy romantic attempt
+         T. Family gathering chaos
+         9. Workplace mistake cascade
+         8. Mistaken identity comedy
+         7. Exaggerated jealousy scene
+         6. Drunken honest confession
+         5. Food-related mishap
+         4. Timing-perfect wardrobe fail
+         3. Slapstick physical humor
+         2. Pun-filled awkward talk")
       (base/card
-       :name "Small Compromise"
+       :name "Adventure:Traps"
        :deck "Story Event"
        :ranksuit base/ranksuit-2s
        :image "icons/card-ranksuit-2s.svg"
        :summary
-        "You bend a rule slightly
-         * You: Principled but flexible (You skip one safety check)
-         * Need: Convenience tempts (Everyone's watching the clock)
-         * Go: Allow exception (You wave it through)
-         * Search: Minimize harm (You double-check later)
-         * Find: Rule weakens (Others notice)
-         * Take: Unease lingers (You replay it that night)
-         * Return: Normal resumes (Work continues)
-         * Change: Line thinned (Next time feels easier)")))
+        "A. Crushing walls
+         K. Descending spikes
+         Q. Flooding room
+         J. Poison gas
+         T. Slicing blades
+         9. Collapsing ceiling
+         8. Pitfall
+         7. Poison darts
+         6. Flame jets
+         5. Swinging log
+         4. Arrow trap
+         3. Net trap
+         2. Tripwire alarm")))
     (base/cardmap-copy<-card-count-isnum
      (base/card
       :name "StoryArc:Back"
