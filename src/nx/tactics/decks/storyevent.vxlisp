@@ -242,7 +242,7 @@ T. Social
 
 */
 
-(func deck-storyevent . base/deck
+(func deck-storyevent : base/deck
  (base/deck
   :name "Story Event"
   :image "images/storyevent/storyevent-back.svg"

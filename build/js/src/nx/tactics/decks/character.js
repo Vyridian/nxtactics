@@ -108,6 +108,8 @@ export default class nx_tactics_decks_character {
               "Character",
               ":ranksuit",
               nx_tactics_base.c_ranksuit_as,
+              ":image",
+              "icons/card-ranksuit-as.svg",
               ":summary",
               "A. Enforcer\nK. Spy\nQ. Smuggler\nJ. Thief\nT. Assassin\n9. Informant\n8. Gambler\n7. Fence\n6. Tracker\n5. Bounty Hunter\n4. Jailor\n3. Gravedigger\n2. Beggar"
             ),
@@ -200,7 +202,7 @@ export default class nx_tactics_decks_character {
               ":image",
               "icons/card-ranksuit-qh.svg",
               ":summary",
-              "A. Tall, protective stature\nK. Long, flowing auburn hair\nQ. Soft, full bossum\nJ. Broad, strong shoulders\nT. Large, expressive hands\n9. Warm, hazel eyes\n8. Tall, comforting height\n7. Curvy hips and waist\n6. Thick, blonde wavy hair\n5. Big, capable hands\n4. Wide, open posture\n3. Deep brown eyes\n2. Soft, red curly locks"
+              "A. Tall, protective stature\nK. Long, flowing auburn hair\nQ. Soft, motherly frame\nJ. Broad, strong shoulders\nT. Large, expressive hands\n9. Warm, hazel eyes\n8. Tall, comforting height\n7. Curvy hips and waist\n6. Thick, blonde wavy hair\n5. Big, capable hands\n4. Wide, open posture\n3. Deep brown eyes\n2. Soft, red curly locks"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
