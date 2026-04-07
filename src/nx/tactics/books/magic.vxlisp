@@ -47,7 +47,7 @@
      :powermap
       (base/powermap<-tactics-keys
        tactics
-       "Bloodcraft"
+       "Blood"
        "Chaos"
        "Corruption"
        "Darkness"

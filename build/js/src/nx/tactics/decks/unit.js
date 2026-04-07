@@ -287,7 +287,7 @@ export default class nx_tactics_decks_unit {
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_specialties(tactics, "Close Combat", 6, "Grappling")
         )
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly: Giant"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly:Giant"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Capybara", ":body", "5x1", ":mass", "50kg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -303,7 +303,7 @@ export default class nx_tactics_decks_unit {
         "200kg/440lb"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cat", ":image", "images/cards/unit-cat.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar: Giant"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar:Giant"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -375,15 +375,6 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dhampyr", ":reference", "* A dhampir in Balkan folklore is the child of a vampire father and a human mother, with vampire powers but none of the weaknesses. A dhampir is believed to have the unique ability to see vampires, even when these are invisible, and is unusually adept at killing them.\n** A dhampir is always paid well for his services. The amount of money varies, but there is never bickering over the price. Standard pay for a dhampir may also include a meal or a suit of clothing. Sometimes a dhampir is paid in cattle, jewelry or women.\n** Charlatans traveling the regions around the Carpathian Mountains, Balkans and elsewhere in Eastern Europe would claim to be dhampirs. They were believed to be the only ones who could see the spirit and would put on elaborate shows for villages. Once fear, grief and superstition took hold in a village following a recent death, the dhampir would 'come to the rescue'.\n* Blood: The Last Vampire\n* Vampire Hunter D\n* Blade\n* BloodRayne", ":summary", "* Dhampyrs, can function both day and night, although they find sunlight uncomfortable.\n* Dhampyrs are mortal but can live for centuries. Once mature, they age at roughly 1/10 the rate of humans.\n* They can breed with humans, but not with Kuei-jin or other dhampyrs.\n* They are not dead, so they must breath, eat, drink, and sleep. They may bleed, and they may die.\n* By using [Will], they can perform feats not possible for humans. They can regain [Will] through rest or by eating flesh (usually they cannot by drinking blood).\n* The [Beast] is weaker in a Dhampyr than in their Vampire kin, but this makes their powers weaker as well."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dhole", ":titles", "Bhole", ":summary", "* Huge slimy, worm-like creatures several hundred meters long."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dolphin", ":reference", "Man had always assumed that he was more intelligent than dolphins because he had a achieved so much: the wheel, New York, Wars. Whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphin thought they were more intelligent than man for precisely same reasonse. - Hitchhikers Guide to the Galaxy"),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_unit},
-        ":name",
-        "Donkey",
-        ":image",
-        "images/cards/unit-donkey.svg",
-        ":imgmirror",
-        true
-      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dog", ":image", "images/cards/unit-dog.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -414,6 +405,17 @@ export default class nx_tactics_decks_unit {
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Close Combat", 1, "Bite", "Grab", "Drag")
         )
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Donkey",
+        ":image",
+        "images/cards/unit-donkey.svg",
+        ":imgmirror",
+        true
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Doppleganger", ":summary", "Shapeshifter parasites\n* Skills - Deception\n* Powers - Shapeshift\n* Description - Their forms are maleable and they can change their shape and height but not their weight. Transforming into another form is a painful process and it can also take on the form of clothing and weapons if it chooses (though these items cannot be removed)\n* Ecology - Dopplegangers cannot reproduce with their own kind. Instead they mate with other species and half of the children are Dopplegangers. A child Doppleganger is unaware that it is not a normal member of the species"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dractyl", ":summary", "* Dractyl are horse-sized lesser dragons. They have a greyish scaly hide and large membranous wings. They live on cliffs and normally eat insects and vermin but will eat almost anything that does not require too much work. They can be trained as steeds, but they are clumsy flyers and only obey under duress so they cannot be relied on in battle. They have been known to throw their riders from altitudes to escape their servitude."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon Engine", ":titles", "Steam Engine"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Apophis", ":reference", "Egyptian Mythology"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Ladon"),
@@ -421,6 +423,11 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Pytho"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Stoorworm"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dragon: Tiamat", ":reference", "Babylonian Mythology", ":titles", "Avatar of Chaos, Avatar of the Wyrm, The Beast, Mother of All Life"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drake:Chameleon"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drake:Fire"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drake:Shadow"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drake:Spindrift", ":summary", "* Spindrift Drakes are aquatic, horse-sized, lesser dragons. They hunt the near the surface of large water bodies. Their beautiful, thin, irridescent wings are adapted to swimming, but they are known to launch themselves from the seas and glide close to the surface at high speeds. Their preferred tactic is to burst from the waves, build up speed, and then knock their prey into the water and kill them underwater.", ":titles", "Spindrake"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drake:Storm", ":titles", "Azure Drake"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Drowned", ":titles", "Drowner, Kappa", ":reference", "* The Ring", ":summary", "* The Drowned are the spirits of those who have died by drowning. They are completely fixated on their drowning death and are compelled to reenact the experience with others."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Duck", ":image", "images/cards/unit-duck.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Elder Thing", ":image", "Cthulhu/ElderThing.png", ":reference", "* The toughness of the things was almost incredible. Even the terrific pressure of the deepest sea bottoms appeared powerless to harm them. Very few seemed to die at all except for violence, and their burial places were very limited. - At the Mountains of Madness", ":summary", "* Their metabolism is based on carbon dioxide instead of oxygen; their blood is dark green in color. The nervous system of the Elder Things is quite complex, with five-lobed brains and many ganglial centers. The prismatic cilia on top of the creatures' head suggest that they have senses other than sight, smell, touch, hearing, and taste. Elder Things reproduce through spores. They can derive nourishment from inorganic substances, but prefer to feed on organic life."),
@@ -527,6 +534,18 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ghost Ship", ":titles", "Chaos Fleet, Skeleton Crew", ":reference", "* Pirates of the Caribbean\n* The Fog\n* Pyaray - Elric of Melnibone", ":summary", "* Ghost Ships are doomed ships crewed by the [Drowned]. When they encounter the living, they are compelled to kill them so they raise again to add to their crew."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Armor", ":titles", "Animated Armor", ":summary", "* An Armor [Golem] is an suit of armor animated using [Alchemy] or [Sorcery]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Blood", ":reference", "Diablo Necromancer", ":summary", "* A Blood [Golem] is created using [Blood Magic]\n* A Blood Golem is a large humanoid composed of animated blood. All of its attacks cause [Bleeding] and whenever a [Bleeding] critical inflicts [Damage] on a nearby unit, the Blood Golem may heal a [Damage] or [Critical].\n* When created, the summoner must be suffering from at least 4 [Bleeding] criticals from other sources or self-inflicted. These wounds may be bound or the summoner may allow the Blood Golem to draw from the wounds."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Bone", ":summary", "* A Bone [Golem] is a bulky, mindless [Undead] created using [Necromancy]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Clay", ":reference", "* Golem of Prague\n* Terra Cotta Warrior", ":summary", "* A Clay [Golem] is a clay statue animated using [Sorcery] or [Thaumaturgy]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Colossus", ":titles", "Animated Statue, Stone Golem", ":reference", "* Colossus of Rhodes\n* Colossus of Sardia\n* Pygmalion\n* Talos\n* Exodia, Obliterate! - Yugi, Yu-Gi-Oh!", ":summary", "* A Colossus is a massive form of [Golem] [Golem:Iron] or [Golem:Stone]", ":height", "30m"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Flesh", ":titles", "Corpse Golem", ":reference", "Franenstein's Monster", ":summary", "* A Flesh [Golem] is created using [Necromancy] or [Fleshcraft]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Ice", ":summary", "* An Ice [Golem] is created using [Cryomancy]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Iron", ":reference", "* Robots\n* Automatons of Hephaestus", ":summary", "An Iron [Golem] is created using [Artifice]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Paper", ":summary", "* A Paper [Golem] is a mass of paper, books, or paintings created using [Artistry]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Puppet", ":reference", "Pinocchio", ":summary", "* A small [Golem] constructed from wood or metal and animated using [Artifice]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Stone", ":titles", "Animated Statue, Stone Golem", ":reference", "* Hrungnir", ":summary", "* A Stone [Golem] is a stone statue animated using [Alchemy]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Golem:Wood", ":titles", "Animated Tree", ":reference", "* Ents - Lord of the Rings\n* Man-Thing\n* Swamp Thing", ":summary", "* A Wood [Golem] is created from a living or dead tree or vines using [Nature]"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -1009,9 +1028,27 @@ export default class nx_tactics_decks_unit {
           nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(tactics, "Survival", 1, "Foraging")
         )
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lindwyrm", ":summary", "* Lindwyrm are forest serpents that are connected with the forest. Everything around a Lindwyrm slowly grows, supposedly including treasure.", ":titles", "Lindworm"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lion"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Living Shadow", ":titles", "Shadow Cursed", ":summary", "* Living Shadows are strange undead creatures that appear as physical shadows.\n* Personality - They are manifestations of the host's suppressed nature given form.\n* Shadowblight - Shadows are a curse spread through contact with other Shadows like a disease. After contact, the host's Shadow slowly gains in strength until it can begin to act independently. If it chooses, it may communicate with its host. Eventually, it can interact with physical objects. It is bound to the host and may only escape with the host's death or by swapping consciousness with the host.\n* Types - There are two types of Living Shadow:\n** Bound Shadow - Those still bound to their hosts\n** Severed Shadow - Those that have been released after their host's death. The Shadow is now an Undead creature free to spread its curse to others.\n* Skills - All the host possessed\n* Powers - Stretching\n* Weakness - All Shadows are driven off by light and powerful magical light can destroy them."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lost Soul"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Lovelorn",
+        ":titles",
+        "Broken Heart, Lovelost",
+        ":summary",
+        "An undead creature consumed by the miser of lost love\n* Description - At first glance the Lovelorn appears to be a spider but is actually a disembodied heart with ribs for legs",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Special Ability",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Skeletal", "Undead")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Luminary", ":titles", "Tachyons", ":summary", "Luminaries are spirits of the Astral Realm.\n* Luminaries appear as crackling motes of energy.\n* Touching a luminary fills one with energy and inspiration, but contacting too many too quickly will overload the body in a violent explosion."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mi-Go", ":image", "cthulhu/unit-migo.png", ":titles", "Fungi from Yuggoth", ":reference", "* Fact: Migoi or Mi-go (pronounced mey-goo) is a Tibetan name for the Yeti and translates as 'wild man'.", ":summary", "* Mi-go are an alien race of fungus-like creatures, approximately man-sized, pinkish in color, with crustaceous bodies bearing vast pairs of membranous wings and several sets of articulate limbs. The Mi-Go have a sort of convoluted ellipsoid where its head should be, covered with a multitude of very short antennae.\n    * They have a colony on Pluto (i.e. Yuggoth) and have mining colonies in high mountains looking for rare minerals.\n    * The Mi-go are not wholly native to our phyical universe. Thus, they cannot eat food from Earth, and photographs of them are blurry and indistinct. They can also fly unassisted through interstellar space at fantastic speeds. They dissolve shortly after death.\n    * They are unaccustomed to light which confuses them.\n    * They seem to be highly focused on their scientific pursuits and are most often encountered in search of obscure minerals in remote places. Trespassers are usually eliminated, though they have been known to have human agents work on their behalf.\n    * Mi-go have access to a number of advanced weapons. The mist projector releases a cloud of frigid gas. They have an organic 'armor' that humans can use, but it is extremely sticky and will damage the user each time it is removed. The armor will also weaken each day unless immersed in the proper nutrient bath.\n    * The Mi-Go are advanced in the sphere of surgery. With surgical alterations the Mi-Go are able to speak human languages, though their voice is buzzy and irritating. They can also surgically move the brain of other species into metal cylinders for transportation to other worlds through space.\n    * Essentially a space fungus, the crablike form we're accustom to is actually a pressure suit that allows them to walk around, speak and fly in Earth's atmosphere. They grow their 'bodies' likes coral and can form appendages to anything they require - wings, arms, shells. Each of these shells is alive and using grafting, they can switch out limbs as needed. The discarded limbs are kept alive like potted plants until they are needed again.\n    * They are alien extremophiles, perfectly suited for deep space travel. They don't require air to breathe, are capable of periods of hibernation lasting hundreds of thousands of years, feed off minerals and cosmic radiation, using something like photosynthesis to make food.\n    * They procreate by budding, a form of cloning, to make copies of the older, mature individuals and use spores to create their workforce - bred to labor and die in the mines. They can bore deep into the mantel of worlds, and as they don't require air to breath and can survive incredible heat, cold and pressure, they can just keep going deeper while most species would die in moments.\n    * They communicate and see via radiation, the flowerlike sensory organ we view as their head, emits and receives radioactive wavelengths, allowing them to see through walls and for miles clearly as they have no eyes to focus. They can see the background radiation of the universe and use it to travel with precision between stars. This also means they can see the elemental make up of asteroids and planets just by looking at them.", ":body", "6x1", ":mass", "60kg/130lb", ":height", "1.5m/5ft"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Mirror Reflection", ":summary", "* A Mirror Reflection is being from the Mirrorlands that has no personal definition but longs for the definition of others. To this end, they become a mirror image of another being and try to impersonate the person though they lack any memories of the original. It would be practical to dispose of the original, but they are always only a reflection so they would die as well."),
@@ -1281,9 +1318,12 @@ export default class nx_tactics_decks_unit {
         nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Flight", "Transform")
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat", ":body", "5x-1", ":mass", ".5kg/1lb"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Giant", ":reference", "* What about the R.O.U.S.'s? Rodents Of Unusual Size? I don't think they exist. Raghh! - Westley, Buttercup, and ROUS - The Princess Bride", ":body", "5x1", ":speed", "6x1", ":mass", "50kg/100lb", ":speedland", "60kph/40mph"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat: Huge", ":body", "5x0", ":mass", "5kg/10lb"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Reaper", ":reference", "Charon the Ferryman", ":summary", "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat:Giant", ":reference", "* What about the R.O.U.S.'s? Rodents Of Unusual Size? I don't think they exist. Raghh! - Westley, Buttercup, and ROUS - The Princess Bride", ":body", "5x1", ":speed", "6x1", ":mass", "50kg/100lb", ":speedland", "60kph/40mph"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat:Huge", ":body", "5x0", ":mass", "5kg/10lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat:Plague"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat:Rabid"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rat:Sewer"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Reaper", ":titles", "Death, Knight-Gaunt", ":reference", "Charon the Ferryman", ":summary", "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rukh", ":titles", "Roc", ":reference", "* Rukh Egg - Magic the Gathering\n* Sindbad observed that when a karkadann spears an elephant on its horn, the elephant’s fat runs into the rhino’s eyes and blinds it; a rukh will then swoop down and carry both combatants off to feed its chicks.", ":summary", "* Appearance - Rukhs are monstrously large birds vaguely similar in a appearance to a vulture.\n    * Feeding - Rukhs are uncontested predators capable of feeding on the largest and most dangerous land animals. They have a particular fondness for giant serpents, elephants, and karkadanns or rhinoceroses.\n    * Intelligence - Rukhs also appear to have some degree of intelligence, using boulders to smash prey."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rukh Hatchling"),
       vx_core.f_new(
@@ -1391,12 +1431,47 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shoggoth", ":image", "Cthulhu/Shoggoth.png", ":reference", "* This was the dream in which I saw a shoggoth for the first time, and the sight set me awake in a frenzy of screaming. - The Shadow Over Innsmouth", ":summary", "* Enormous beings who would measure some fifteen feet across if they formed their bodies into a sphere, Shoggoths are amorphous creatures composed of a malleable protoplasm, something akin to a colossal amoeba. They are capable of forming whatever organs or appendages they require for the task at hand, although their usual state is a writhing mass of eyes, mouths and wriggling tentacles.", ":body", "5x4", ":mass", "50tons", ":height", "4.5m/15ft"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shrike:Iron", ":summary", "* A long beaked bird with metallic plumage. Their metallic feathers make them very hardy but also poor flyers. They hunt by diving at full speed from high altitudes and impaling their prey on their dagger-like beaks."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shrike:Spitting", ":summary", "* A variant of the [Shrike:Iron] that can spit Poison"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shrike:Vomiting", ":summary", "* A variant of the [Shrike:Iron] that can reguritate a surprising amount of acid from its stomach"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shub-Niggurath", ":image", "cthulhu/shubniggurath.png", ":titles", "The Black Goat of the Woods with a Thousand Young", ":reference", "Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so tenuous in composition that its limbs vanish as quickly as they materialize, its very form dividing constantly into a surplus of smaller abominations that are either reabsorbed into its great form, or that escape to some hideous life elsewhere. Not the spitting image of a fertility goddess but this is as close as the mythos gets. Shub-Niggurath may well be the most widely revered amoung the other gods, infuence reaching not only to the Greeks, Cretans, Egyptions, and some druids, but to races so far-flung across the cosmos as the Mi-go of Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new life, especially intelligent life, is held as a sacred act. Many humans derive joy and self-import from the notion that their kind was toild over by some kind of divine intelligence. Shub-Niggurath with her blind, indifferent, prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's affirmation that life itself is nothing extrodinary. - Tale Foundry", ":summary", "* Mother's Gift - The milk of Shub-Niggurath with powerful healing and corrupting properties."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Skeletal Dragon"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
-        "Skeletal Knight",
+        "Skeleton",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Special Ability",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Mindless", "Savage", "Skeletal", "Undead")
+          )
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Skeleton:Archer",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
+            tactics,
+            "Special Ability",
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Mindless", "Savage", "Skeletal", "Undead")
+          )
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Ranged", 3, "Bow:Short")
+        )
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Skeleton:Colossal"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Skeleton:Dragon"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Skeleton:Giant"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Skeleton:Knight",
         ":summary",
         "* Morale - High",
         ":titles",
@@ -1410,29 +1485,14 @@ export default class nx_tactics_decks_unit {
           )
         ),
         ":unitskillmap",
-        nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Animals")
-      ),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_unit},
-        ":name",
-        "Skeleton",
-        ":unitpowermap",
-        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          nx_tactics_base.f_unitpower_from_tactics_key_abilities(
-            tactics,
-            "Special Ability",
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Mindless", "Savage", "Skeletal", "Undead")
-          )
-        ),
-        ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Defense", 1, "Shield:Round")
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(tactics, "Defense", 5, "Armor:Plate", "Shield:Wall")
         )
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
-        "Skeleton Warrior",
+        "Skeleton:Warrior",
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           nx_tactics_base.f_unitpower_from_tactics_key_abilities(
@@ -1718,9 +1778,11 @@ export default class nx_tactics_decks_unit {
           nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Military", 3)
         )
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valusian Primitive", ":image", "images/cards/unit-valusian-primitive.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valusian Sorcerer", ":image", "images/cards/unit-valusian-warrior.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Valusian Warrior", ":image", "images/cards/unit-valusian-warrior.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Vaalus:Assassin"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Vaalus:Savage", ":image", "images/cards/unit-valus-savage.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Vaalus:Skinshifter"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Vaalus:Sorcerer", ":image", "images/cards/unit-valus-warrior.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Vaalus:Warrior", ":image", "images/cards/unit-valus-warrior.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -1812,7 +1874,7 @@ export default class nx_tactics_decks_unit {
         ":summary",
         "* The Tremere is the second youngest clan having appeared in the Dark Ages.\n* History - The Tremere began as House Tremere, mages of the Order of Hermes named for their leader and founder, Tremere. At the end of the first millennium, the members of House Tremere realized the Hermetic arts were failing and found its immortality potions no longer working. House Tremere undertook numerous experiments, but it was Goratrix who devised a solution in his investigation of vampires. In 1022, Goratrix invited Tremere and six of the founder's closest advisers to participate in the completed ritual, which promised true immortality. Whether Goratrix knew what would happen is known only by him and, perhaps, Tremere, but at the completion of the ritual the participants fell unconscious and were reborn as vampires, their avatars destroyed and magical abilities lost. The mages had gained their immortality but lost the power they lived for. In time, the Tzimisce made war against House Tremere in retribution for the Fiends that had been made part of Goratrix's experiments. The Order of Hermes also became suspicious of diabolical practices being performed by the increasingly secretive House. In 1037 Tremere gathered the seven newly-made Cainites and forced the blood bond upon them. He then declared to them that House Tremere would be restructured with a new pyramid hierarchy, placing himself at the top as Primus of House and clan Tremere and his seven closest followers forming the Inner Council of Seven directly under him. They would slowly begin Embracing the rest of the House, with each initiate being bound to the Inner Council to ensure their loyalty. In time, all members of House Tremere would die or become vampires. While Tremere and Etrius pursued their own research throughout Europe in converting the hermetic arts into Thaumaturgy, Goratrix once again returned to his laboratories with his apprentices at hand. After years of experimentation on captured Tzimisce, Nosferatu, and Gangrel, he succeeded in creating a Gargoyle in 1121, and by 1125 the hybrids were serving as shock troops against the Fiends. Nevertheless, the Tremere found themselves third-class citizens among the undead. Whatever boldness Tremere had shown in entering the night was ignored by the staunchly traditionalist clans, and they were often forced from cities by princes who did not look kindly on their presumption. As he and Etrius rapidly acquired more vampiric lore they discovered the history of Caine and the Antediluvians, as well as the benefits of diablerie. Seeking to establish themselves as a clan proper, the Tremere sought a clan founder to diablerize and settled on Saulot, the enigmatic founder of the Salubri clan. In 1133, Tremere and the Inner Council discovered Saulot's tomb in the Anatolian desert. Tremere diablerized the Antediluvian and promptly entered torpor, leaving the Inner Council to lead the clan and destroy the remaining Salubri. As with everything else that the Tremere had done to this point, the result was a mixed blessing. The Tremere were entrenched in many Cainite courts, their services as mages making them indispensable to princes across Europe. They were now accepted as one of the Low Clans, albeit considered usurpers, distrusted warlocks, and known diablerists. In the early years of the 21st century, the Intellegence agencies of the United States managed to gain access to SchreckNet and gained firsthand knowledge of the existence of a race of undead bloodsuckers that were spread in all corners of the world. Sharing their knowledge with other intelligence agencies, the united secret services contacted the Vatican, whom they knew to have experience fighting the undead. After years of careful research, the Second Inquisition had targeted Vienna as the 'capital of vampires' and prepared a strike against their headquarters. In 2008, a united USSOCOM and Vatican ESOG force stormed the Vienna Chantry of Clan Tremere and destroyed it, blaming it to an ISIS terror attack to the public. London, Las Vegas, Paris, and Marseilles were largely cleared of vampiric activity, with numerous captured vampires being placed in black sites and experimented upon to discover their weaknesses. The Inner Council of Seven were slain and their Blood Bonds shattered. Since then the once monolithic Tremere structure has completely fallen apart.",
         ":unitpowermap",
-        nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Bloodcraft")
+        nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Vampirism", "Blood")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
@@ -2017,7 +2079,9 @@ export default class nx_tactics_decks_unit {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wolf", ":titles", "Lone Wolf", ":summary", "* Hearing - The upper range of a wolfs' hearing is upwards of 80 kHz. The upper range of humans is only 20 kHz. A wolf can hear up to 6 miles away in forest and 10 miles in open areas, including some high-pitched sounds that a human can't hear. Even when it sleeps, a wolf's ears stand straight up so it can catch sounds. Unlike humans, wolves can easily tell what direction sound is coming from by turning their ears from side to side.\n* Smell - The wolf's sense of smell is about 100 times better than a human's. It can smell prey more than a mile away if the wind is right. It can sense an animal three days after it's gone. Wolves finished a test to locate hidden food in five minutes that domestic dogs took over an hour to finish.\n* Vision - Beyond a short distance their vision must be somewhat blurred. Nevertheless, wolves can see shapes and, especially, movement over long distances, and their peripheral vision is extremely accurate.  They are able to detect even the slightest movements of very small animals, such as a mosquito, at a distance of more than ten feet. There is some controversy as to whether wolves see in color or black and white. Regardless, it is unlikely that they see the various hues of the spectrum as humans see them, because the physical makeup of the eye is different. Nighttime vision for wolves is many times better than human vision in the day or night. Wolves can actually see much better and even much more clearly at night. The eyes of the wolf are like most predators, with a sight-field of nearly 180 degrees and pointed forward."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wraith", ":summary", "* Wraiths normally exist in the [Underworld] where their numbers are legion.\n* Those with strong connections to the world of the living can walk among the living but are [Invisible] and [Ethereal] and can indistinctly see the living world through the [Shroud]. Skilled Wraiths may even temporarily breech the [Shroud].\n!Abilities\n* Keening\n* Manifestation\n* Poltergeist\n* Possession", ":titles", "Ghost"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wraith", ":titles", "Ghost", ":summary", "* Wraiths normally exist in the [Underworld] where their numbers are legion.\n* Those with strong connections to the world of the living can walk among the living but are [Invisible] and [Ethereal] and can indistinctly see the living world through the [Shroud]. Skilled Wraiths may even temporarily breech the [Shroud].\n!Abilities\n* Keening\n* Manifestation\n* Poltergeist\n* Possession"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wurm"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wyvern"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",

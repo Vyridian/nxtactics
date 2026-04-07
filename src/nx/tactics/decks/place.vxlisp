@@ -62,6 +62,76 @@
    :name "Clinic"
    :image "images/cards/place-clinic.svg")
   (base/place
+   :name "Cloud:Acidic"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Acid] Damage")
+  (base/place
+   :name "Cloud:Corruption"
+   :titles "Miasma"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Wither] Damage")
+  (base/place
+   :name "Cloud:Darkness"
+   :summary
+    "* [Terrain:Obscuring]")
+  (base/place
+   :name "Cloud:Dust"
+   :titles "Dust storm"
+   :summary
+    "* [Terrain:Obscuring]")
+  (base/place
+   :name "Cloud:Fear"
+   :summary
+    "* [Terrain:Obscuring]")
+  (base/place
+   :name "Cloud:Insects"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Will] Damage")
+  (base/place
+   :name "Cloud:Noxious"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Stun] Damage")
+  (base/place
+   :name "Cloud:Poison"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Poison] Damage")
+  (base/place
+   :name "Cloud:Psychedelic"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Disorder] Damage")
+  (base/place
+   :name "Cloud:Radiated"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Radiation] Damage")
+  (base/place
+   :name "Cloud:Smoke"
+   :summary
+    "* [Terrain:Obscuring]")
+  (base/place
+   :name "Cloud:Spore"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Choking] or [Disease] Damage")
+  (base/place
+   :name "Cloud:Suffocating"
+   :titles "Sandstorm"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Choking] Damage")
+  (base/place
+   :name "Cloud:Thunder"
+   :titles "Thunder Cloud"
+   :summary
+    "* [Terrain:Obscuring]
+     * [Terrain:Hazardous] [Electricity] Damage")
+  (base/place
    :name "Command Post"
    :image "images/cards/place-commandpost.svg")
   (base/place
@@ -277,6 +347,67 @@
    :name "Supply Depot"
    :summary "* Required to extend Soldier Supply Lines")
   (base/place
+   :name "Surface:Burning"
+   :summary
+    "A burning surface
+     * [Terrain:Hazardous] Fire Damage
+     * [Terrain:Rough]")
+  (base/place
+   :name "Surface:Electrified"
+   :summary
+    "An electrified surface
+     * [Terrain:Hazardous] Shock Damage
+     * [Terrain:Rough]")
+  (base/place
+   :name "Surface:Icy"
+   :summary
+    "A slippery, icy surface
+     * [Terrain:Unstable]")
+  (base/place
+   :name "Surface:Molten"
+   :summary
+    "An extremely hot surface
+     * [Terrain:Hazardous] Fire Damage
+     * [Terrain:Rough]")
+  (base/place
+   :name "Surface:Radiated"
+   :summary
+    "* [Terrain:Hazardous] [Radiation] Damage")
+  (base/place
+   :name "Surface:Slippery"
+   :summary
+    "A slippery surface
+     * [Terrain:Unstable]")
+  (base/place
+   :name "Surface:Spiked"
+   :summary
+    "* [Terrain:Hazardous] [Piercing] Damage
+     * [Terrain:Rough]")
+  (base/place
+   :name "Surface:Sticky"
+   :summary
+    "A sticky, glue-like surface
+     * [Terrain:Demanding]")
+  (base/place
+   :name "Surface:Swampy"
+   :summary
+    "A thick, waist deep surface
+     * [Terrain:Demanding]")
+  (base/place
+   :name "Surface:Tangled"
+   :titles "Entangling Vines"
+   :summary
+    "* [Terrain:Demanding]")
+  (base/place
+   :name "Surface:Watery"
+   :summary
+    "A deep, watery surface that requires swimming
+     * [Terrain:Demanding]")
+  (base/place
+   :name "Surface:Wet"
+   :summary
+    "A wet surface")
+  (base/place
    :name "Swamp"
    :titles "Bog, Fen, Murk"
    :image "images/cards/place-swamp.svg")
@@ -317,19 +448,30 @@
    :summary
     "A map for plain dirt. No terrain penalty")
   (base/place
+   :name "Terrain:Flames"
+   :summary
+    "An area engulfed in flames")
+  (base/place
+   :name "Terrain:Flooded"
+   :summary
+    "An waist deep liquid surface
+     * [Terrain:Demanding]")
+  (base/place
    :name "Terrain:Forest"
    :image "images/terrain/terrain-forest.svg"
    :summary
     "A map for plain dirt. No terrain penalty
-     * [Move]:-1
-     * [Line of Sight]: Blocked
-     * [Block]: [Skill]:+1, [Armor]:+1
-     * [Evade]: [Skill]:+1")
+     * [Terrain:Blocking] [Terrain:Rough]")
   (base/place
    :name "Terrain:Grassland"
    :image "images/terrain/terrain-grassland.svg"
    :summary
     "A map for plain grass. No terrain penalty")
+  (base/place
+   :name "Terrain:Rocky"
+   :summary
+    "An unstable, rocky surface
+     * [Terrain:Unstable]")
   (base/place
    :name "Terrain:Sea"
    :image "images/terrain/terrain-sea.svg"
@@ -351,6 +493,12 @@
    :summary
     "A map for open space. No terrain penalty.")
   (base/place
+   :name "Terrain:Wavy"
+   :summary
+    "A wavy, deep, watery terrain
+     * [Terrain:Demanding]
+     * [Terrain:Unstable]")
+  (base/place
    :name "Thera"
    :image "images/cards/place-thera.svg")
   (base/place
@@ -360,11 +508,11 @@
    :name "Trading Post"
    :image "images/cards/place-tradingpost.svg")
   (base/place
-   :name "Train Car:Engine"
+   :name "Train:Engine"
    :summary
     "")
   (base/place
-   :name "Train Car:Passenger"
+   :name "Train:Passenger Car"
    :summary
     "* Train cars are usually 3m/9ft/2spaces wide")
   (base/place
@@ -378,8 +526,21 @@
   (base/place
    :name "Volcano")
   (base/place
-   :name "Wall: Stone"
+   :name "Wall:Fire"
+   :titles "Firestorm"
+   :summary
+    "* [Terrain:Hazardous] [Burning] Damage")
+  (base/place
+   :name "Wall:Stone"
    :image "images/cards/place-wall-stone.svg")
+  (base/place
+   :name "Wall:Thorns"
+   :summary
+    "* [Terrain:Hazardous] [Piercing] Damage")
+  (base/place
+   :name "Wall:Water"
+   :summary
+    "* [Terrain:Hazardous] [Choking] Damage")
   (base/place
    :name "Wave")
   (base/place

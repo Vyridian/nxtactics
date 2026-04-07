@@ -3,6 +3,163 @@
  :doc "Story Event Deck")
 
 /*
+Clubs - Physical
+
+A. Accident
+
+
+
+K. Ambush
+* Hidden attackers strike
+* Sudden attack from cover
+* Attack triggered by proximity
+* Strike from above or behind
+* Attack timed to distraction
+
+Q. Barrier
+* Locked door
+* Fallen tree blocks passage
+* Debris-choked corridor
+* Vehicle blocks the route
+* Collapsed accessway
+
+J. Contest
+
+
+T. Disease
+* Lingering illness spreads
+* Spores released into air
+* Contaminated food or water
+* Parasite exposure
+* Fever weakens endurance
+
+9. Explosion
+* Sudden loud bang nearby
+* Concussive blast shakes area
+* Flashing burst disorients senses
+* Thunderous detonation at distance
+* Explosive device goes off
+
+8. Floor Collapse
+* Ground gives way beneath weight
+* Rotten support breaks
+* Ceiling drops debris
+* Hidden void opens below
+* Surface crumbles under stress
+
+7. Foe Appears
+* Armed individual steps into view
+* Group emerges from hiding
+* Known enemy confronts openly
+* Unidentified hostile presence
+* Threat blocks forward progress
+
+6. Poison
+* Tainted food consumed
+* Toxic substance in air
+* Venom transferred by contact
+* Spoiled supplies cause sickness
+* Chemical residue on surface
+
+5. Police Action
+* Guards enforce lockdown
+* Patrols sweep the area
+* Armed response arrives
+* Checkpoints activated
+* Area placed under control
+
+4. Resources
+* Food supply dwindles
+* Water access cut off
+* Fuel nearly exhausted
+* Power source failing
+* Ammunition running low
+
+3. Trail Left
+* Footprints remain visible
+* Broken foliage marks passage
+* Blood or fluid stains path
+* Noise echoes behind
+* Distinctive scent lingers
+
+2. Wildlife
+* Territorial animal confronts group
+* Predators stalk from distance
+* Herd blocks passage
+* Nest disturbed nearby
+* Swarm reacts defensively
+
+Accident - Bump, Fall, Slip, Spill, Trip
+Ambush - Social or Physical, Bandits, Animal
+Barrier - Checkpoint, Fallen Tree, Locked Door, Roadblock
+Crossroads - Decision, Separated
+Disease - Cold, Flu, Fungus, Parasite
+Explosion - Loud, Near, Direct
+Floor Collapse - Literal or Metaphorical
+Foe Appears - Single or Group
+Poison - Allergies, Toadstools
+Police Action - Guards, Paramilitary
+Resources - Food, Water, Gas, Power
+Trail Left - Breadcrumbs, Clues, Odors, Sounds, Tracking
+Wildlife - Herd Animals, Stray
+
+Diamonds - Mental
+
+Backup Plan
+Body - Sleeping, Unconscious, Dead, Animal, Human
+Discovery - Clue, Evidence, Information, Misinformation
+Exposed - Hideout found, Plan discovered
+Item Misplaced
+Lights Out
+Malfunction
+Misunderstanding
+Mystery
+Opportunity - Merchant, Old Contact
+Public - Hanging, Street Fair, Performance, Protest, Public Announcement, Trial
+Suspicious Act - Witnessed or Performed
+Witness - Helpful info, Must be silenced
+
+Hearts - Social
+A. Reinforcements
+K. Benefactor
+Q. Aid
+J. Mutual Interest
+
+Betrayal
+Bystander
+Conflict - Argument, Drunkeness, Wandered Off
+Confrontation
+Crowd
+Dilemma - Hostage
+Enemy
+Formal Affair
+Interference
+Threat - Blackmail, Duel, Extortion, Intimidation
+Time Limit - Bomb, Timer, Delay
+Watched - Scout, Surveilence
+
+Spades - Speed/Stealth
+A. Shortcut
+K. Extra Time
+Q. Opportunity
+J. Safe Passage
+
+Choke Point
+Cornered
+Crossroads
+Eavesdropping
+Fire Hazard
+Lost
+Pursuit - Chase, Hunter, Hunted
+Sabotage
+Terrain
+Theft
+Trap
+Warning
+Weather
+
+
+
 C Action
 A. Disaster
 K. War (Military, Invasion)
@@ -325,17 +482,17 @@ T. Social
        :ranksuit base/ranksuit-ah
        :image "icons/card-ranksuit-ah.svg"
        :summary
-        "A. Flawed hero's quiet self-reflection
-         K. Side character's hidden vulnerability exposed
-         Q. Protagonist's internal contradiction surfaces
-         J. Supporting role's unspoken pain revealed
-         T. Antagonist's private moment of doubt
-         9. Mentor's past failure confessed
-         8. Love interest's inner struggle shown
-         6. Friend's long-carried burden shared
-         5. Family member's secret fear admitted
-         4. Rival's unexpected humanity glimpsed
-         3. Child character's growing self-awareness
+        "A. Flawed hero self-reflection
+         K. Supporter vulnerability exposed
+         Q. Internal contradiction surfaces
+         J. Supporter unspoken pain revealed
+         T. Antagonist moment of doubt
+         9. Mentor past failure confessed
+         8. Love interest inner struggle
+         6. Friend long-carried burden
+         5. Family secret fear admitted
+         4. Rival unexpected humanity viewed
+         3. Child growing self-awareness
          2. Comic relief's serious hidden depth")
       (base/card
        :name "Adventure:Quest"
@@ -451,7 +608,7 @@ T. Social
          3. Demonic entity manifests
          2. Legendary beast sighted")
       (base/card
-       :name "Suspense:Cat-and-Mouse"
+       :name "Suspense:Cat/Mouse"
        :deck "Story Event"
        :ranksuit base/ranksuit-qd
        :image "icons/card-ranksuit-qd.svg"
@@ -531,7 +688,7 @@ T. Social
        :summary
         "A. Everyone seems connected
          K. Official story contradicted
-         Q. Evidence systematically destroyed
+         Q. Evidence being destroyed
          J. Witnesses disappear quietly
          T. Pattern too perfect
          9. Puppet masters hinted
@@ -548,7 +705,7 @@ T. Social
        :ranksuit base/ranksuit-jh
        :image "icons/card-ranksuit-jh.svg"
        :summary
-        "A. First heartbreak changes outlook
+        "A. First heartbreak changes you
          K. Teen defies family expectations
          Q. Young adult leaves home
          J. Student faces first moral choice
@@ -696,13 +853,13 @@ T. Social
        :ranksuit base/ranksuit-9h
        :image "icons/card-ranksuit-9h.svg"
        :summary
-        "A. Poor meets wealthy dramatically
+        "A. Poor meets wealthy
          K. Humble background hidden
          Q. Servant overhears secrets
          J. Self-made threatens old elite
          T. Corporate takeover affects lives
          9. Arranged partnership for status
-         8. Social climbing through connection
+         8. Social climbing with connections
          7. Inherited burden weighs heavy
          6. Class revenge begins quietly
          5. Power imbalance in bond
@@ -760,7 +917,7 @@ T. Social
          T. Impersonation discovered
          9. Lie unravels slowly
          8. Hidden camera catches truth
-         7. Betrayer confesses under pressure
+         7. Betrayer interrogated
          6. Pattern of deception emerges
          5. Slip in cover story
          4. Disguise fails at worst moment
@@ -1189,7 +1346,7 @@ T. Social
        :ranksuit base/ranksuit-2h
        :image "icons/card-ranksuit-2h.svg"
        :summary
-        "A. Hilarious misunderstanding chain
+        "A. Hilarious misunderstandings
          K. Fake relationship pretense
          Q. Embarrassing public blunder
          J. Clumsy romantic attempt

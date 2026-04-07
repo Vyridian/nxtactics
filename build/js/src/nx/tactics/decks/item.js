@@ -132,8 +132,8 @@ export default class nx_tactics_decks_item {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Beast Claw"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bedroll", ":summary", ""),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bedroll: Restful Sleep", ":summary", "Providest the [Restful Sleep] ability."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bedroll", ":summary", "Ignore the normal Exposure from sleeping outdoors"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bedroll:Restful Sleep", ":summary", "Providest the [Restful Sleep] ability."),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bomb: C4"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bomb: IED", ":titles", "Improvised Explosive Device"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bottle:Liquor", ":image", "images/cards/item-bottle-liquor.svg", ":summary", "Uses:6\n[Action]: Take a large drink for Mind:-1, Will:+1. Duration:1 hour"),
@@ -623,6 +623,7 @@ export default class nx_tactics_decks_item {
         )
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sword:Wakizashi", ":classification", "Sword", ":energy", "100J"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Tent", ":summary", "Ignore the normal Exposure from sleeping in cool and/or rainy weather"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Tooth"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Torch", ":image", "images/cards/item-torch.svg", ":summary", "* Provides poor light for 30 minutes.", ":body", "10x-1", ":mass", "1kg/2lbs"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Vampire Blood", ":summary", "* Black Token\n* Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].\n* [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.\n* [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.\n* [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.\n* [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns."),
@@ -634,7 +635,9 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Wall: Stone", ":image", "images/cards/item-wall-stone.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Water: Pond", ":image", "images/cards/item-water-pond.svg", ":summary", "* IF drank [Reveal Fate] THEN IF [Cups] THEN [Diseased]:+1", ":body", "2x0", ":mass", "2kg/4.4lbs"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Waterskin", ":image", "images/cards/item-waterskin.svg", ":summary", "* 2 liters/.5 gallon. Enough Water for 2 days.\n* Cost: [Copper Coins]. Can be refilled from any clean water source.", ":body", "2x0", ":mass", "2kg/4.4lbs"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Whip"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Whip", ":summary", "* [Weapon:Melee] [Reach] [Slash]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Whip:Barbed", ":summary", "* [Weapon:Melee] [Reach] [Pierce]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Whip:Viper", ":summary", "* [Weapon:Melee] [Reach] [Slash] [Poison]\n* Description - An unusual magical whip that appears to be made of snake skin instead of leather and is split at the end like a forked tongue"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Yams: Wild", ":classification", "Plant", ":image", "images/cards/item-yams-wild.svg", ":summary", "* Nutrition for a day.", ":body", "10x-1", ":mass", "1kg/2lbs")
     )
     return output

@@ -86,6 +86,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Absorb", ":summary", "An Absorb Ability can Recover a Hit when they take Damage from a particular Damage Type"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -133,6 +134,7 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "A positive modifier to a single Conflict\nConflict Reveal - Reveal Fate. You may use that card instead"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Animate", ":summary", "Animate an inanimate object"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -145,12 +147,13 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
-        "Area Effect",
+        "Area",
         ":image",
-        "images/rule-areaeffect.svg",
+        "images/rule-area.svg",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Aura", ":summary", "An Aura is a field that surrounds the user's Space\n* Power [Rating] may be reduced to increase the radius of the Aura, but the effect of the Aura reduces by 1 for each Space away from the center"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -164,6 +167,7 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "The Beast represents our raw, primitive mind buried beneath reason and morality. It knows only rage, fear, hunger, and instinct. Pain and fear can release the Beast. Bold or desperate people might harness its power.\n* Unleashed - The Beast gains control. It cannot use Mind Skills and will only fight or flee.\n* Beast:X - IF Beast > Will THEN test Will vs Beast or gain Unleashed\n* Soothed - IF Unleashed Unit is in a peaceful situation and Will > Beast THEN test Will vs Beast to remove Unleashed"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Binding", ":summary", "A ritual that creates a connection between a user and a being or object\n* IF it is a being THEN it must agree to the Binding whether voluntary or through coercion\n* Terms - The Binding may have terms added that increase the difficulty. Typical terms include: Do not attack me, Do not attack my allies, Attack my foes, Defend me, Obey a command, Obey all my commands, Steal an object, Capture a being"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -206,6 +210,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Blood Thirsty", ":summary", "Unit is drawn to blood\n* [Target]: Unit targets a [Bleeding] Foe within reach"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -252,6 +257,7 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "An open bleeding wound. For Vehicles this can be an energy leak\n* Bind Wound - Action x2 to remove a Bleeding\n* Round End - Slow:1 for each Bleeding. IF Speed:0 THEN Blood Loss:1 instead"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Call", ":summary", "Call an object/creature from the environment"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -276,6 +282,7 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "Casualty represent crew and equipment losses on a vehicle.\nStress - Gain Stress:+1 for each 25%\nDetermine - Draw Fate for each crew or item\n* Cups - 25%+ is a Casualty\n* Coins - 50%+ is a Casualty\n* Swords - 75%+ is a Casualty\nEffect\n* Crew - Missing:25% Extreme Damage:25% Critical Damage:25% Major Damage:25%\n* Equipment - Missing:25% Irreparable:25% Broken:25% Damaged:25%"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Catalyst", ":titles", "Channeling, Conduit, Focus, Symbolic", ":summary", "A Catalyst is a physical conduit that allows a magical [Power] or [Ability] to flow\n* Magic is the art of gathering ambient, magical currents and focusing them into a specific effect. However, magic cannot create effects from nothing. Some kind of catalyst must be the spark that transforms your will into an effect. That catalyst must be symbolic of the power it will manifest and allow some plausible denyability that magic did not exist at all.\n\nExamples: \n* Alcohol+Torch=Firebreathing stunt\n* Severed power line=freak electrical accident\n* Spilled water=Ground water seeps up"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Character"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -389,6 +396,7 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "Ability Point\nBleeding\nBlind\nBlood Loss\nBound\nBroken\nBurning\nCharacter Point\nChoking\nConstriction\nDamaged\nDeaf\nDisabled\nDiseased\nDying\nElectrified\nElevation\nExposure\nFreezing\nHeld\nHunger\nImmobilized\nImpaired\nIsolation\nParalyzed\nPetrified\nPoisoned\nProne\nRising/Sinking\nSkill Point\nStasis\nThirst\nTransformed\nVelocity"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Conjure", ":summary", "Create an object/creature"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Conscience", ":summary", "* Conscience"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -506,7 +514,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "A negative modifier to a single Conflict\nConflict Reveal - Reveal Fate. Rival decides which you use"
+        "A negative modifier to a single Conflict\nConflict Reveal - You must draw from Shared Fate instead of playing from hand"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -587,6 +595,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Familiar", ":summary", "A Familiar is a Spirit given physical form from a [Power]\n* Appearance - It appears as a small creature typical of the area that subtly reflects the Power that created it\n* Stats - Body:2x1 Mind:Same as User Will:Same as User Speed:6x0\n* Language - The familiar and User understand each other's speech\n* Senses - At will, the User may shift their senses into the familiar and guide its actions, though the senses will be dulled and the User will be inactive during this time\n* Death - If the familiar is killed, only its body dies and it can be recreated again later."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Fast", ":summary", "Speed and Finesse during a Conflict\n* Defeats Strong and Evade\n* Win: Draw a Card"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -617,6 +626,7 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "Freezing represents extreme cold. Add this to related Damage\nMinor - Chill\nMajor - Frost Caked. Exposure:1\nCritical - Ice Caked. Exposure:2\nExtreme - Frozen. Exposure:3 Frostbite\n* Arm, Leg, Hand, Foot - Useless\n* Head, Chest - Choking:3 Dying\n* Other Parts - Dying\nAction - Use heat to reduce Severity by 1"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Glide", ":summary", "Your movement appears smooth and effortless. You may move one more Space this Round"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -626,6 +636,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Golem", ":summary", "A Golem is a powerful artificial creature created from a [Power].\n* Stats - Body:2x2 Mind:2x1 Will:5x1 Speed:4x0\n* Powers - Immune to Fear"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Haywire", ":image", "images/rule-haywire.svg", ":summary", "System Out of Control\n* Round Start - Reveal Fate IF Coins/Cups THEN\n** Item/Ability - Cooldown with no effect\n** Steering - Spend Turn:-1 to Turn:Left/Right\n** Lift - Spend to Elevation:+1/-1\n** Engine - Burning:+1/+2\n** Thrust - Spend to Accelerate:1/Decelerate:1"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -731,7 +742,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Magic", ":summary", "Magic is indirect. It allows one to do the unlikely, not the impossible. Magic must always have a grounded source, so creating things from nothing is the hardest form of magic."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Magic", ":summary", ""),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -741,8 +752,11 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Arcane\n* Abjuration\n* Alchemy\n* Artifice\n* Artistry\n* Astrology\n* Chronomancy\n* Conjuration\n* Sorcery\n* Thaumaturgy\n* Wizardry\nElemental\n* Aeromancy\n* Cryomancy\n* Electromancy\n* Geomancy\n* Pyromancy\n* Stormcraft\nNature\n* Animalism\n* Beastial\n* Herbalism\n* Naturalism\nDark Arts\n* Bloodcraft\n* Chaos\n* Corruption\n* Darkness\n* Demonic\n* Fleshcraft\n* Necromancy\nSpiritualism\n* Divination\n* Dreaming\n* Enchantment\n* Hexcraft\n* Mysticism\n* Shamanism\nThergy\n* Blessing\n* Conviction\n* Invocation\n* Life\n* Primordial\n* Purity\n* Radiant"
+        "Arcane\n* Abjuration\n* Alchemy\n* Artifice\n* Artistry\n* Astrology\n* Chronomancy\n* Conjuration\n* Sorcery\n* Thaumaturgy\n* Wizardry\nElemental\n* Aeromancy\n* Cryomancy\n* Electromancy\n* Geomancy\n* Pyromancy\n* Stormcraft\nNature\n* Animalism\n* Beastial\n* Herbalism\n* Naturalism\nDark Arts\n* Blood\n* Chaos\n* Corruption\n* Darkness\n* Demonic\n* Flesh\n* Necromancy\nSpiritualism\n* Divination\n* Dreaming\n* Enchantment\n* Hexcraft\n* Mysticism\n* Shamanism\nThergy\n* Blessing\n* Conviction\n* Invocation\n* Life\n* Primordial\n* Purity\n* Radiant"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Magic:Casting", ":summary", "Magic is indirect. It allows one to do the unlikely, not the impossible. Magic must always have a grounded source, so creating things from nothing is the hardest form of magic\n* Words -\n* Gestures - \n* Focus -\n* Component - \n* Ritual - "),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Magic:Learning", ":summary", "* Adept - \n* Recipe - \n* Experience - "),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Magic:Ritual", ":summary", "A Ritural is an extended magical casting that makes difficult magic easie\n* Time - Repeating the spell over and over like a chant make the spell stronger\n* Numbers - More casters or followers combine their abilites to make the spell stronger\n* Preparation - More investment in quality and expense of the Ritural makes the spell stronger"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -960,7 +974,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Physical\n* Acidic\n* Agility\n* Armor\n* Diseases\n* Longevity\n* Quickness\n* Senses\n* Size\n* Strength\n* Toughness\n* Toxins\n* Wealth\nObject\n* Cabin\n* Cargo\n* Equipment\n* Factory\n* Hanger\n* Implants\n* Laboratory\n* Life Support\n* Quality\n* Weapon\nAlteration\n* Adaptation\n* Combine\n* Flexible\n* Healing\n* Invisibility\n* Lycanthropy\n* Metamorphose\n* Molding\n* Shapeshift\n* Spawning\n* Special Ability\n* Transform\n* Transmutation\n* Vampirism\nElements\n* Air\n* Cold\n* Earth\n* Electricity\n* Fire\n* Heat\n* Water\n* Weather"
+        "Physical\n* Acidic\n* Agility\n* Armor\n* Diseases\n* Longevity\n* Quickness\n* Senses\n* Size\n* Strength\n* Toughness\n* Toxins\n* Wealth\nObject\n* Cabin\n* Cargo\n* Equipment\n* Factory\n* Hanger\n* Implants\n* Laboratory\n* Life Support\n* Quality\n* Weapon\nAlteration\n* Adaptation\n* Combine\n* Flesh\n* Flexible\n* Healing\n* Invisibility\n* Lycanthropy\n* Metamorphose\n* Shapeshift\n* Spawning\n* Special Ability\n* Transform\n* Transmutation\n* Vampirism\nElements\n* Air\n* Cold\n* Earth\n* Electricity\n* Fire\n* Heat\n* Water\n* Weather"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -982,7 +996,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Unit is lying flat and is 1 Elevation lower\n* Cover - Usually offers additional cover\n* Elevation - Note Elevation modifiers"
+        "Unit is lying flat and is 1 Elevation lower\n* Cover - Cover:+25% vs. Ranged\n* Elevation - Note Elevation modifiers"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -1005,7 +1019,10 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rank", ":summary", "* The number on a card or the part of a Value before the x."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rating", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reach", ":summary", "* Can target one additional Space away [Scaled]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reaction", ":summary", "* During Conflict Resolution, each Unit has a Reaction equal to their Conflict card Rank modified by Skill Bonus"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reflect", ":summary", "When a User takes particular Damage the source also takes Damage\n* The source takes Damage equal to Damage Taken or User Intensity whichever is lower"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Research", ":deck", "Reference", ":summary", "Tests may be made easier by carefully researching the problem. A test may be attempted after each Research level. Research requires specialized research material (eg a library). Beyond 3 months, research hits a dead end.\n* Level:+1 - 1 Hour\n* Level:+2 - 5 Hours\n* Level:+3 - 24 Hours (3 days)\n* Level:+4 - 120 Hours (2 weeks)\n* Level:+5 - 720 Hours (3 months)"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Resist", ":summary", "The Ability to resist a certain type of Damage\n* IF you take Damage of that type THEN a Crit of that type is flipped to a normal Hit"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -1026,7 +1043,6 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "A Rising/Sinking Unit is rapidly gaining/losing Elevation\n* Round End - Elevation:+1/-1 for each Rising/Sinking:1"
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Ritual", ":summary", "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Attacker", ":summary", "Attacker Units usually do the following:\n* Target weak points in the enemy from lines\n* Move into Range\n* Attack"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Blaster", ":summary", "Blaster Units usually do the following:\n* Target groups of enemies\n* Move into Range\n* Attack to maximize enemy losses\n* Move to safety"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Role:Defender", ":summary", "Defender Units usually do the following:\n* Target an enemy threatening a nearby vulnerable ally\n* Move into Range protecting the ally\n* Attack"),
@@ -1066,6 +1082,7 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rule"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Run", ":summary", "Move over half of your Starting Speed this Round"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scale", ":summary", "* Each stat/skill/power has a number after the letter 'x'.\n* This is the scale of that ability.\n* The number represents the number of zeroes. E.g. 5x3 translates to 5000.\n* x1 denotes human scale. E.g. 2x1=20kg, 20IQ+50, 20Will, 20kph"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scaled", ":summary", "* Scaled refers to the comparison between the Scale of a stat/ability/map to another.\n* If the scales are the same, no change is required.\n* If the scales are different, multiple or divide the Level by 10 for each difference in scale.\n* E.g. On an x1 map a Speed:3x2 would move 30 spaces instead of 3."),
       vx_core.f_new(
@@ -1258,6 +1275,8 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Study", ":deck", "Reference", ":summary", "Tests may be made easier by carefully studying the problem.A test may be attempted after each Study level. Study requires specialized equipment (eg an Alchemical Kit). Beyond 6 Hours, outside [Research] will be necessary.\n* Level:+1 - 2 Minutes\n* Level:+2 - 10 Minutes\n* Level:+3 - 1 Hour\n* Level:+4 - 6 Hours"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Subtle", ":summary", "Subtle Abilities are not obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suit", ":summary", "Each Suit represents a Stat:\n* Wands - Power. Body\n* Coins - Planning. Mind\n* Cups - Perseverance. Will\n* Swords - Skill. Speed"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Summon", ":summary", "Instantly opens a hazy portal to a specific being or object that has previously been connected to the user with a [Binding]. A summoned being may choose not to cross through the portal."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Summoning", ":summary", "A long ritual that opens a hazy portal to a specific being. This is much slower than a [Summon] and is typically used when a [Binding] does not exist. The summoned being may choose not to cross through the portal."),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -1303,7 +1322,12 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Touch"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Terrain:Blocking", ":summary", "Dangerous Terrain requires Skill Tests to travel safely or take damage\n* [Move]:-1\n* IF a Unit moves more than 3 Spaces in the terrain in one Round THEN treat it as [Terrain:Unstable]\n* [Line of Sight]: Blocked\n* [Block]: [Skill]:+1, [Armor]:+1\n* [Evade]: [Skill]:+1"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Terrain:Dangerous", ":summary", "Dangerous Terrain requires Skill Tests to travel safely or take damage"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Terrain:Hazardous", ":summary", "Hazardous Terrain does damage to anyone inside"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Terrain:Obscuring", ":summary", "Obscuring Terrain proves Cover\n* [Cover]:+25% within the Terrain\n* Line of Sight is blocked beyond the Terrain"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Terrain:Rough", ":summary", "Difficult Terrain slows movement\n* [Move]:-1"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Terrain:Unstable", ":summary", "Dangerous Terrain requires Skill Tests to avoid falling down"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -1313,10 +1337,13 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time: Afternoon"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time: Evening"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time: Morning"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time: Night"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Thorns", ":summary", "Create an [Aura] in your Space that can attack anything inside\n* Once per Round: Use the [Ability] to attack a Rival within the Aura without spend any [Move]\n* [Continuous]"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time:Afternoon"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time:Evening"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time:Morning"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time:Night"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Totem", ":summary", "A Totem is a focus for remotely manifesting a [Power]. Powers may used as if the Totem were the User"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Touch"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -1367,6 +1394,8 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Velocity", ":image", "images/rule-velocity.svg", ":summary", "Velocity represents the speed and momentum of fast Units. It replaces normal movement\nRound Start\n Velocity - Starts at 0\n Momentum = Velocity\nCountdown - When Count is called, MAY spend Momentum:-1 instead of Move:-1 to move straight or Drift Forward\n IF Count >= Momentum THEN not optional\nFree Actions\n Accelerate:X - Spend Move:X to gain Velocity:+1 (Min=2)\n Brake:X - Spend Move:X to lose Velocity:-1 (Min=1)"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Walk", ":summary", "Move up to half of your Starting Speed this Round\n* [Ability] - Walk Abilities keyed to a terrain (eg Walk:Water) allow the user to ignore the movement penalties while walking through the given terrain"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Wall", ":summary", "A Wall is a type of terrain\n* [Ability] - Wall Abilities keyed to a terrain (eg Wall:Fire) allow the user to place a terrain of the given type (eg Terrain:Fire) of the given type\n* [Area] - The Area can be increased by using Area rules"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",

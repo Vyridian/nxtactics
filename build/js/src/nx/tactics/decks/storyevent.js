@@ -100,7 +100,7 @@ export default class nx_tactics_decks_storyevent {
               ":image",
               "icons/card-ranksuit-ah.svg",
               ":summary",
-              "A. Flawed hero's quiet self-reflection\nK. Side character's hidden vulnerability exposed\nQ. Protagonist's internal contradiction surfaces\nJ. Supporting role's unspoken pain revealed\nT. Antagonist's private moment of doubt\n9. Mentor's past failure confessed\n8. Love interest's inner struggle shown\n6. Friend's long-carried burden shared\n5. Family member's secret fear admitted\n4. Rival's unexpected humanity glimpsed\n3. Child character's growing self-awareness\n2. Comic relief's serious hidden depth"
+              "A. Flawed hero self-reflection\nK. Supporter vulnerability exposed\nQ. Internal contradiction surfaces\nJ. Supporter unspoken pain revealed\nT. Antagonist moment of doubt\n9. Mentor past failure confessed\n8. Love interest inner struggle\n6. Friend long-carried burden\n5. Family secret fear admitted\n4. Rival unexpected humanity viewed\n3. Child growing self-awareness\n2. Comic relief's serious hidden depth"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
@@ -181,7 +181,7 @@ export default class nx_tactics_decks_storyevent {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Suspense:Cat-and-Mouse",
+              "Suspense:Cat/Mouse",
               ":deck",
               "Story Event",
               ":ranksuit",
@@ -241,7 +241,7 @@ export default class nx_tactics_decks_storyevent {
               ":image",
               "icons/card-ranksuit-jd.svg",
               ":summary",
-              "A. Everyone seems connected\nK. Official story contradicted\nQ. Evidence systematically destroyed\nJ. Witnesses disappear quietly\nT. Pattern too perfect\n9. Puppet masters hinted\n8. Web of lies exposed\n7. Trusted institution involved\n6. Connections run deep\n5. Cover-up reaches high\n4. Truth suppressed violently\n3. Group silences leaker\n2. Expose wider conspiracy"
+              "A. Everyone seems connected\nK. Official story contradicted\nQ. Evidence being destroyed\nJ. Witnesses disappear quietly\nT. Pattern too perfect\n9. Puppet masters hinted\n8. Web of lies exposed\n7. Trusted institution involved\n6. Connections run deep\n5. Cover-up reaches high\n4. Truth suppressed violently\n3. Group silences leaker\n2. Expose wider conspiracy"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
@@ -254,7 +254,7 @@ export default class nx_tactics_decks_storyevent {
               ":image",
               "icons/card-ranksuit-jh.svg",
               ":summary",
-              "A. First heartbreak changes outlook\nK. Teen defies family expectations\nQ. Young adult leaves home\nJ. Student faces first moral choice\nT. Graduation revelation moment\n9. First job teaches harsh truth\n8. Friendship group fractures\n7. Discovering personal truth\n6. Taking real responsibility\n5. Losing childhood illusions\n4. Standing up to authority\n3. Making irreversible choice\n2. First taste of freedom"
+              "A. First heartbreak changes you\nK. Teen defies family expectations\nQ. Young adult leaves home\nJ. Student faces first moral choice\nT. Graduation revelation moment\n9. First job teaches harsh truth\n8. Friendship group fractures\n7. Discovering personal truth\n6. Taking real responsibility\n5. Losing childhood illusions\n4. Standing up to authority\n3. Making irreversible choice\n2. First taste of freedom"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
@@ -358,7 +358,7 @@ export default class nx_tactics_decks_storyevent {
               ":image",
               "icons/card-ranksuit-9h.svg",
               ":summary",
-              "A. Poor meets wealthy dramatically\nK. Humble background hidden\nQ. Servant overhears secrets\nJ. Self-made threatens old elite\nT. Corporate takeover affects lives\n9. Arranged partnership for status\n8. Social climbing through connection\n7. Inherited burden weighs heavy\n6. Class revenge begins quietly\n5. Power imbalance in bond\n4. Status symbol causes envy\n3. Elite excludes newcomer\n2. Rags-to-riches backlash"
+              "A. Poor meets wealthy\nK. Humble background hidden\nQ. Servant overhears secrets\nJ. Self-made threatens old elite\nT. Corporate takeover affects lives\n9. Arranged partnership for status\n8. Social climbing with connections\n7. Inherited burden weighs heavy\n6. Class revenge begins quietly\n5. Power imbalance in bond\n4. Status symbol causes envy\n3. Elite excludes newcomer\n2. Rags-to-riches backlash"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
@@ -397,7 +397,7 @@ export default class nx_tactics_decks_storyevent {
               ":image",
               "icons/card-ranksuit-8d.svg",
               ":summary",
-              "A. False identity assumed\nK. Double agent infiltrates\nQ. Forged documents used\nJ. Alibi carefully constructed\nT. Impersonation discovered\n9. Lie unravels slowly\n8. Hidden camera catches truth\n7. Betrayer confesses under pressure\n6. Pattern of deception emerges\n5. Slip in cover story\n4. Disguise fails at worst moment\n3. Truth too obvious\n2. Deception costs everything"
+              "A. False identity assumed\nK. Double agent infiltrates\nQ. Forged documents used\nJ. Alibi carefully constructed\nT. Impersonation discovered\n9. Lie unravels slowly\n8. Hidden camera catches truth\n7. Betrayer interrogated\n6. Pattern of deception emerges\n5. Slip in cover story\n4. Disguise fails at worst moment\n3. Truth too obvious\n2. Deception costs everything"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
@@ -722,7 +722,7 @@ export default class nx_tactics_decks_storyevent {
               ":image",
               "icons/card-ranksuit-2h.svg",
               ":summary",
-              "A. Hilarious misunderstanding chain\nK. Fake relationship pretense\nQ. Embarrassing public blunder\nJ. Clumsy romantic attempt\nT. Family gathering chaos\n9. Workplace mistake cascade\n8. Mistaken identity comedy\n7. Exaggerated jealousy scene\n6. Drunken honest confession\n5. Food-related mishap\n4. Timing-perfect wardrobe fail\n3. Slapstick physical humor\n2. Pun-filled awkward talk"
+              "A. Hilarious misunderstandings\nK. Fake relationship pretense\nQ. Embarrassing public blunder\nJ. Clumsy romantic attempt\nT. Family gathering chaos\n9. Workplace mistake cascade\n8. Mistaken identity comedy\n7. Exaggerated jealousy scene\n6. Drunken honest confession\n5. Food-related mishap\n4. Timing-perfect wardrobe fail\n3. Slapstick physical humor\n2. Pun-filled awkward talk"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},

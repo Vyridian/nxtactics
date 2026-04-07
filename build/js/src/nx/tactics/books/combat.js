@@ -628,14 +628,6 @@ export default class nx_tactics_books_combat {
           ":itemmap",
           nx_tactics_base.f_itemmap_from_tactics_keys(tactics, "Sword:Back", "Sword:Bastard", "Sword:Bokken", "Sword:Broad", "Sword:Butterfly", "Sword:Cavalry", "Sword:Cutlass", "Sword:Epee", "Sword:Falchion", "Sword:Foil", "Sword:Great", "Sword:Hook", "Sword:Katana", "Sword:Katar", "Sword:Long", "Sword:Ninjato", "Sword:No-Dachi", "Sword:Rapier", "Sword:Saber", "Sword:Scimitar", "Sword:Short", "Sword:Tanto", "Sword:Wakizashi")
         ),
-        ":Archery",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Archery",
-          ":itemmap",
-          nx_tactics_base.f_itemmap_from_tactics_keys(tactics, "Bow:Composite", "Bow:Compound", "Bow:Long", "Bow:Moon", "Bow:Short")
-        ),
         ":Crossbows",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

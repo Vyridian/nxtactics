@@ -390,24 +390,10 @@ Altitude until the end of the [Turn].
         :Hazard
          (rule
           :name "Hazard")
-        :Prone
-         (rule
-          :name "Prone")
         "Stand Your Ground"
          (rule
           :name "Stand Your Ground"
-          :summary "* [Action]: [+1 Action] if you do not move this turn.")
-        :Surrounded
-         (rule
-          :name "Surrounded"
-          :image "Maps/Surrounded.png"
-          :titles "Outnumbered")
-        :Terrain
-         (rule
-          :name "Terrain")
-        "Terrain Hazard"
-         (rule
-          :name "Terrain Hazard")))
+          :summary "* [Action]: [+1 Action] if you do not move this turn.")))
     "Core Terms"
      (section
       :name "Core Terms"

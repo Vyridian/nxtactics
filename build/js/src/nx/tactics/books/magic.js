@@ -104,7 +104,7 @@ export default class nx_tactics_books_magic {
           ":name",
           "Black Magic",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Bloodcraft", "Chaos", "Corruption", "Darkness", "Demonic", "Fleshcraft", "Necromancy")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Blood", "Chaos", "Corruption", "Darkness", "Demonic", "Fleshcraft", "Necromancy")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},

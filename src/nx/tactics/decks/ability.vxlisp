@@ -298,6 +298,23 @@
     "* [Fight]: IF [Flanking] double the Flanking Bonus"
    :titles "Back Biter, Back Stabber, Opportunist, Traitor")
   (base/ability
+   :name "Balance"
+   :summary
+    "* User has extensive experience balancing under difficult circumstances.
+     * [Skill]: [Athletics]
+     * [Action]: Roll vs. difficulty to maintain balance. If any [Hits] are rolled, balance is maintained. Movement is at half speed while balancing, but additional [Hits] or [Criticals] improve movement speed by 10% each up to full speed.")
+  (base/ability
+   :name "Balance:Beam"
+   :summary
+    "* User can walk on a 15cm/6in beam as if it were flat ground
+     * [Skill]: [Athletics]")
+  (base/ability
+   :name "Balance:Rope"
+   :summary
+    "* User can walk on a rope as if it were flat ground
+     * [Skill]: [Athletics]
+     * Requires: [Balance:Beam]")
+  (base/ability
    :name "Balanced for Throwing"
    :summary
     "* [Power]: [Quality]")
@@ -377,7 +394,7 @@
   (base/ability
    :name "Berserker"
    :summary
-    "* [Skill]: [Intimidation]")
+    "* [Power]: [Rage]")
   (base/ability
    :name "Besiege"
    :summary
@@ -479,6 +496,24 @@
   (base/ability
    :name "Blinding Toxin")
   (base/ability
+   :name "Blood Bath"
+   :summary
+    "* Bathe in the blood of of the young and healthy
+     * [Power]: [Blood]
+     * Gain [Vampiric Blood] (even if not a [Vampire]) equal to the number of victims drained up to [Blood]")
+  (base/ability
+   :name "Blood Blade"
+   :summary
+    "Create a sword, knife, or axe from blood
+     * [Power]: [Blood]
+     * Blood Weapons always cause [Bleeding].")
+  (base/ability
+   :name "Blood Borne"
+   :summary
+    "Sicken a bleeding target
+     * [Power]: [Blood]
+     * Target: [Bleeding]. Apply [Sickness] to a [Bleeding] target.")
+  (base/ability
    :name "Blur"
    :summary
     "You become strangely difficult to focus on.
@@ -498,6 +533,12 @@
    :summary
     "* Detects and distracts heat seaking missiles,
      * [Passive] - +1 Defense vs. Heat-Seaking Missiles (3 uses)")
+ (base/ability
+  :name "Body Building"
+  :summary
+   "* Character is distinctly powerful looking.
+    * [Skill]: [Athletics]
+    * [Passive]: Unit may reroll any failed attempt to lift, push, or pull an object.")
   (base/ability
    :name "Body Morph")
   (base/ability
@@ -529,6 +570,11 @@
     "Damage becomes [Slash] only
      * [Skill]: [Ranged]
      * [Bleeding]:+1")
+  (base/ability
+   :name "Bracer Block"
+   :summary
+    "Block with a worn bracer as if it were a [Shield:Buckler]
+     * [Skill]: [Evasion]")
   (base/ability
    :name "Brain Drain")
   (base/ability
@@ -684,6 +730,31 @@
    :summary
     "* Vehicles may land without perfectly matching the movement of the mothership.
      * [Power]: [Hanger]")
+  (base/ability
+   :name "Catch:Ball"
+   :summary
+    "Catch a thrown ball shaped object (eg a grenade) within reach
+     * [Skill]: [Athletics] [Evasion]
+     * [Evade]: IF your [Reaction] was faster THEN catch the item")
+  (base/ability
+   :name "Catch:Knife"
+   :summary
+    "Catch a thrown knife/dart shaped object within reach
+     * [Skill]: [Athletics] [Evasion]
+     * [Evade]: IF your [Reaction] was faster THEN catch the item")
+  (base/ability
+   :name "Catch:Return"
+   :summary
+    "After catching an item, immediately attack with it
+     * [Skill]: [Athletics] [Evasion]
+     * [Requires]: a different Catch:X ability
+     * [Counter]: Catch and attack with the item")
+  (base/ability
+   :name "Catch:Weapon"
+   :summary
+    "Catch a melee weapon in your bare hands
+     * [Skill]: [Evasion]
+     * [Evade]: IF your [Reaction] was faster THEN catch the item")
   (base/ability
    :name "Centrifuge Chamber"
    :summary
@@ -1345,9 +1416,11 @@
      * [Power]: [Spawning]")
   (base/ability
    :name "Ego Whip"
+   :titles "Mind Whip"
+   :reference
+    "* L: If only Fiora could see me now. F: She can. She's not impressed. - Laurent Protege and Fiora, Runeterra"
    :summary
-    "* [Skill]: [Mental Combat] vs. [Will]."
-   :titles "Mind Whip")
+    "* [Power]: [Mental Combat] vs. [Will].")
   (base/ability
    :name "Ejection System"
    :summary
@@ -1398,6 +1471,26 @@
    :name "Elvish"
    :summary
     "Fluent in the Elvish/Alfar language")
+  (base/ability
+   :name "Enchantment:+1"
+   :summary
+    "This item is masterfully crafted and touched with the faintest breath of magic. It feels subtly stronger, lighter, or more reliable than any mundane counterpart. A quiet aura of power clings to it, noticeable only to those sensitive to the arcane. It is an exceptional work, still very much of this world, yet already carrying the smallest seed of something more.")
+  (base/ability
+   :name "Enchantment:+2"
+   :summary
+    "Magic flows visibly through this finely wrought item. Runes glow softly in moonlight, or faint sparks dance along its surface when struck. It carries subtle blessings or wards, and over time the bearer may notice it behaving in small, almost coincidental ways - settling perfectly into the hand or seeming to favor certain actions. It stands at the threshold between exceptional skill and true enchantment, where something deeper may quietly stir.")
+  (base/ability
+   :name "Enchantment:+3"
+   :summary
+    "This item resonates with genuine arcane power. Its presence warms the air or hums with latent energy. Crafted with rare materials and powerful rituals, it performs with uncanny reliability. With prolonged use, an owner might sense faint intuitive nudges or a growing sense that the item knows its bearer's habits. Such pieces mark the boundary of magical excellence.")
+  (base/ability
+   :name "Enchantment:+4"
+   :summary
+    "A masterpiece of art and magic, intricate engravings shift and shimmer as if alive. It feels almost like an extension of the user's will, and over many encounters the bearer may gradually realize it possesses its own subtle preferences and quiet will. Such relics are the stuff of bardic tales; they are partners as much as possessions, though their true nature reveals itself slowly.")
+  (base/ability
+   :name "Enchantment:+5"
+   :summary
+    "This is magic given form, an artifact of divine potency. It radiates an aura of awe and otherworldly beauty. Light bends around it, colors seem richer in its presence, and it sings softly in the language of creation itself. Truly priceless, its consciousness is profound and independent, capable of great benevolence or terrible malice. It does not merely serve - it chooses, and it is tied to a destiny that may take years to fully reveal itself. Owning such an item forever changes its bearer.")
   (base/ability
    :name "Engineering Genius")
   (base/ability
@@ -1788,7 +1881,7 @@
   (base/ability
    :name "Fury"
    :summary
-    "* [Skill]: [Intimidation]")
+    "* [Power]: [Rage]")
   (base/ability
    :name "Gambling"
    :titles "Gambler, High Roller"
@@ -2134,6 +2227,11 @@
    :summary
     "* [Skill]: [Performance]")
   (base/ability
+   :name "Improvised Block"
+   :summary
+    "Block with anything you hold in your hand as if it was a [Shield:Buckler]
+     * [Skill]: [Evasion]")
+  (base/ability
    :name "Inspire"
    :summary
     "* Allies in Radius are Continuously inspired to greater feats by this ability.
@@ -2311,6 +2409,10 @@
    :summary
     "* The ability to grow livestock.
      * [Skill]: [Animals]")
+  (base/ability
+   :name "Living Lightning"
+   :summary
+    "* A creature of living electricity")
   (base/ability
    :name "Living Nightmare"
    :summary "* A chimerical monster formed from nightmares or madness."
@@ -2762,7 +2864,7 @@
    :reference
     "* She turned me into a newt. A newt? Well I got better. - Monty Python and the Holy Grail"
    :summary
-    "* [Skill]: [Transmutation] vs. [Will].
+    "* [Power]: [Transmutation] vs. [Will].
      * A unit with 0 Spirit due to polymorph changes into any creature desired of equal Body. When the damage inflicted by Polymorph is removed, the unit returns to normal.")
   (base/ability
    :name "Porting"
@@ -2770,6 +2872,10 @@
     "* Bear Litter
      * Port Boat"
    :titles "Bearer, Porter")
+  (base/ability
+   :name "Postcognition"
+   :summary
+    "* [Power]: [Time]")
   (base/ability
    :name "Pottery"
    :titles "Potter")
@@ -2837,6 +2943,10 @@
    :name "Precedent"
    :summary
     "* [Skill]: [Law]")
+  (base/ability
+   :name "Precognition"
+   :summary
+    "* [Power]: [Time]")
   (base/ability
    :name "Prepare Acid")
   (base/ability
@@ -3006,6 +3116,12 @@
     "* Increases resistance to all forms of mental attack by reinterpreting and rationalizing commands to render them meaningless.
      * [Skill]: [Brilliance]")
   (base/ability
+   :name "Ravages of Time"
+   :titles "Age Up"
+   :summary
+    "* A target becomes older
+     * [Power]: [Chronomancy], [Time], or [Transmutation]")
+  (base/ability
    :name "Ravaging"
    :summary
     "* Drain creativity from a subject. The subject must be well known and a good knowledge of how the subject dreams is required. After that, the subject must simply be touched and he/she will experience a wave of depression and fear as the Glamour is drained from them.
@@ -3034,6 +3150,18 @@
    :summary
     "* Reduces the 'kick' of the weapon and therefore reduces the penalty for continuous fire.
      * [Power]: [Weapon]")
+  (base/ability
+   :name "Recover Lost Time"
+   :titles "Age Down"
+   :summary
+    "* Restore a target to a younger state
+     * [Power]: [Chronomancy], [Time], or [Transmutation]
+     * Reverses [Ravages of Time].")
+  (base/ability
+   :name "Redirect Time"
+   :summary
+    "* [Power]: [Time]
+     * [Reaction]: Redirect a time effect to another target.")
   (base/ability
    :name "Refinery:Gas"
    :summary
@@ -3200,6 +3328,11 @@
      * [Damage]: +1 Damage when attacking from the rear.
      * [Attack], [Damage]: Any [Critical Hits] may be [Retreats]")
   (base/ability
+   :name "Runaround"
+   :summary
+    "After Evading a Foe in Range:1 or less, you may use the Evade movement to move to any space around the Foe using any [Facing]
+     * [Skill]: [Evasion]")
+  (base/ability
    :name "Rustling"
    :summary
     "Stealing and selling livestock
@@ -3294,9 +3427,22 @@
    :summary
     "* [Skill]: [Persuation]")
   (base/ability
-   :name "Sensory Deprivation")
+   :name "Sensory Deprivation"
+   :summary
+    "* [Power]: [Flesh]")
   (base/ability
-   :name "Sensory Overload")
+   :name "Sensory Overload"
+   :summary
+    "* [Power]: [Flesh]")
+  (base/ability
+   :name "Skinriding"
+   :reference
+    "* Edgar, Men in Black
+     * Dracula (2020)
+     * Sorcerer, Sword and the Sorcerer"
+   :summary
+    "Butcher a victim and wear its skin to masquerade as it
+     * [Power]: [Flesh]")
   (base/ability
    :name "Servant"
    :titles "Butler, Footman, Lady in Waiting")
@@ -3405,7 +3551,10 @@
     "* [Skill]: [Animals]
      * Can ride side saddle without penalty.")
   (base/ability
-   :name "Sidestep")
+   :name "Sidestep"
+   :summary
+    "After Evading, you may use the Evade movement to move directly sideways ignoring movement penalties
+     * [Skill]: [Evasion]")
   (base/ability
    :name "Signal Shot"
    :summary
@@ -3437,6 +3586,10 @@
    :summary
     "* [Power]: [Illusion]
      * [Slow] [Even] [Mind]: +1 [Stress]. Create a distraction.")
+  (base/ability
+   :name "Slow Time"
+   :summary
+    "* [Power]: [Time]")
   (base/ability
    :name "Smoke Rounds"
    :summary
@@ -3485,9 +3638,15 @@
    :summary
     "* [Power]: [Implants], [Senses] or [Sound]")
   (base/ability
+   :name "Soul Feast"
+   :summary
+    "Attack a foe's [Will]
+     * [Power]: [Necromancy]")
+  (base/ability
    :name "Soul Pact"
    :summary
-    "* Death: Enter a specified Demon Realm. This ability is automatic and is not optional.")
+    "* Death: Enter a specified Demon Realm. This ability is automatic and is not optional
+     * [Power]: [Sorcery]")
   (base/ability
    :name "Soulbind"
    :titles "Soulbond")
@@ -3812,6 +3971,17 @@
     "* [Power]: [Strength]
      * Stun everyone in the area.")
   (base/ability
+   :name "Time Lapse"
+   :summary
+    "* [Power]: [Time]")
+  (base/ability
+   :name "Time Stop"
+   :titles "Freeze Time, Time Slip"
+   :summary
+    "* Ability to briefly exit the normal timestream. 
+     * [Power]: [Time]
+     * This effectively freezes time for a few seconds. The user is can move freely, but nothing but air can be moved or harmed. Note that doors cannot be opened and air is thick to move through or breathe.")
+  (base/ability
    :name "To Apply Stickiness"
    :reference
     "When the enemy attacks and you also attack with the long sword, you should go in with a sticky feeling and fix your long sword against the enemy's as you receive his cut. The spirit of stickiness is not hitting very strongly, but hitting so that the long swords do not separate easily. It is best to approach as calmly as possible when hitting the enemy's long sword with stickiness. The difference between 'Stickiness' and 'Entanglement' is that stickiness is firm and entanglement is weak. - Miyamoto Mushashi, The Book of Five Rings")
@@ -3918,6 +4088,12 @@
    :summary
     "* Immune to [Bleeding] and [Fear]. Does not target other [Undead].")
   (base/ability
+   :name "Undeath"
+   :summary
+    "* Similar to [Resurrect], this ritual allows a being to permanently transform a [Living] being into an [Undying] one
+     * [Power]: [Necromancy]
+     * This can be used to create [Zombie] and [Skeletons] servants or create indepenent undead like [Ghouls] and [Vampires].")
+  (base/ability
    :name "Undermine"
    :summary
     "Damage walls.")
@@ -4001,6 +4177,17 @@
    :summary
     "* [Power]: [Shamanism]")
   (base/ability
+   :name "Walk:Fire"
+   :reference
+    "* I touch the fire and freezes me. I look into it and its black. Why can't I feel? My skin should crack and peel. I want the fire back. Now through the smoke, she calls to me, to make my way across the flame. To save the day or maybe melt away. I guess it's all the same. So I will walk through the fire, cause whereelse can I turn. I will walk through the fire and let it... The torch I bear is scorthing me, and Buffy's laughing I've no doubt. I hope she fries. I'm free if that bitch dies. I'd better help her out. Cause she is drawn to the fire. Some people never learn, and she will walk through the fire and let it... These endless days are finally ending in a blaze. And we are caught in the fire. The point of no return. So we will walk through the fire and let it burn. - Buffy the Vampire Slayer, Once More with Feeling"
+   :summary
+    "* [Walk] through flames. Gain [Armor] vs. Fire and ignore [Burning] effects.")
+  (base/ability
+   :name "Walk:Water"
+   :summary
+    "* [Continuous]: May move over water at Move:-1 penalty.
+     * [Power]: [Hydromancy] or [Water]")
+  (base/ability
    :name "Wall Crawling"
    :summary
     "* [Power]: [Terrestrial]")
@@ -4034,11 +4221,6 @@
      * [Requires]: Target cannot have any [Charm] Tokens.
      * [Action]: Roll vs. Spirit and add a Black [Charm] Token for each [Hit].")
   (base/ability
-   :name "Water Walking"
-   :summary
-    "* [Continuous]: May move over water at Move:-1 penalty.
-     * [Power]: [Hydromancy] or [Water]")
-  (base/ability
    :name "Water Running"
    :summary
     "* [Continuous]: May move over water.
@@ -4066,6 +4248,26 @@
      +1 Accuracy
      0 Damage - Any successes become -Damage to the weapon. If the weapon has 0 Damage remaining, it is caught.
      Criticals - Any Criticals become -2 Damage to the weapon. If the weapon has 0 Damage remaining and there are still Criticals, the weapon may be immediately used at +[Criticals] Accuracy. Note: The weapon remains in the hands of the attacker.")
+  (base/ability
+   :name "Weapon:+1"
+   :summary
+    "A weapon of surpassing quality, forged by a true artisan and lightly kissed by magic. The edge never dulls, the balance feels perfect in the hand, and it cuts just a little deeper than steel alone should allow. It is the prized heirloom of a master duelist or the signature weapon of an elite guard.")
+  (base/ability
+   :name "Weapon:+2"
+   :summary
+    "Runes of power are inlaid along the blade or haft, glowing with soft inner light when drawn. This weapon strikes with unnatural precision and force. Over time the wielder might notice it seeming to favor certain strikes or moving with an almost intuitive grace. Minor enchantments make it resistant to damage and far deadlier than any ordinary arm.")
+  (base/ability
+   :name "Weapon:+3"
+   :summary
+    "True magic courses through every part of this weapon. It leaves trails of light or sparks with each swing and cleaves through armor and enchantments alike. With extended use, an attentive bearer may sense it responding in ways that go beyond mere enchantment—subtle shifts in balance or a growing harmony that feels almost personal. Heroes and villains of renown wield such blades, and their names become entwined with the weapon's own in quiet, unfolding ways.")
+  (base/ability
+   :name "Weapon:+4"
+   :summary
+    "This is a weapon of epic stature. Powerful runes burn brightly along it, and it seems to hum with barely contained power. Bards compose entire sagas about weapons of this caliber, though the full truth of their nature emerges only with time and trust.")
+  (base/ability
+   :name "Weapon:+5"
+   :summary
+    "A weapon of legend and destiny, spoken of in awe by gods and mortals alike. It is perfection incarnate both exquistely beautiful and deadly. The air itself parts before its edge; light itself seems reluctant to leave its surface. It is physically unbreakable and possesses an equally unbreakable will. A weapon such as Stormbringer or Excalibur does not belong to its wielder. In many ways, the wielder belongs to the weapon. It carries an air of inevitability, and both men and gods may be pawns in its powerful fate.")
   (base/ability
    :name "Weapon:Close"
    :summary

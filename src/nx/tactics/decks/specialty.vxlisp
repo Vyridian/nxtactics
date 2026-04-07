@@ -30,6 +30,48 @@
    :titles
     "Drama Queen, Master Thespian, Theater Brat, Thespian")
   (base/specialty
+   :name "Activate:Always On"
+   :summary
+    "Power cannot be turned off
+     * Power: Any
+     * Level:+1 Intensity:+1x0")
+  (base/specialty
+   :name "Activate:At Will"
+   :summary
+    "Power only activates when desired
+     * Power: Any
+     * No modifier
+     * Power will deactivate automatically if not maintained")
+  (base/specialty
+   :name "Activate:Concentration"
+   :summary
+    "Power only activates when desired and requires concentration
+     * Power: Any
+     * Level:+1 Intensity:+1x0
+     * Power will deactivate automatically if not maintained with [Price of Power]")
+  (base/specialty
+   :name "Activate:Obvious"
+   :titles "Blatant, Vulgar"
+   :summary
+    "Power manifests in an obvious way
+     * Power: Any
+     * No modifier
+     * By default all Powers are Obvious")
+  (base/specialty
+   :name "Activate:Subtle"
+   :titles "Coincidental, Silencer"
+   :summary
+    "Power manifests in a way that can be argued was a coincidence
+     * Power: Any
+     * No modifier
+     * It is difficult to tell where the Power came from")
+  (base/specialty
+   :name "Activate:Triggered"
+   :summary
+    "Power can only be used when a certain circumstance occurs
+     * Power: Any
+     * Level:+1 Intensity:+1x0")
+  (base/specialty
    :name "Aikido"
    :reference "* Water flows and takes any shape or course, yet it is always consistant with its own nature."
    :summary
@@ -61,8 +103,23 @@
     "* Men in Black")
   (base/specialty
    :name "Archery"
-   :summary "* Bowel Raker, Double Shot, Flaming Arrow"
-   :titles "Archer, Archer Elite, Bowman, Crossbowman, Longbowman")
+   :titles "Archer, Archer Elite, Bowman, Crossbowman, Longbowman"
+   :summary
+    "* [Skill]: [Ranged]"
+   :abilitymap
+    (base/itemmap<-tactics-keys
+     tactics
+     "Bowel Raker"
+     "Double Shot"
+     "Flaming Arrow")
+   :itemmap
+    (base/itemmap<-tactics-keys
+     tactics
+     "Bow:Composite"
+     "Bow:Compound"
+     "Bow:Long"
+     "Bow:Moon"
+     "Bow:Short"))
   (base/specialty
    :name "Armor:Bucklers")
   (base/specialty

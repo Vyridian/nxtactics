@@ -67,15 +67,15 @@
       :name "Fantastic Amphibians"
       :unitmap
        (base/unitmap
-        "Frog: Giant"
+        "Frog:Giant"
          (base/unit
-          :name "Frog: Giant")
-        "Toad: Giant"
+          :name "Frog:Giant")
+        "Toad:Giant"
          (base/unit
-          :name "Toad: Giant")
-        "Toad: Giant Poisonous"
+          :name "Toad:Giant")
+        "Toad:Giant Poisonous"
          (base/unit
-          :name "Toad: Giant Poisonous"))))))
+          :name "Toad:Giant Poisonous"))))))
 
 (func chapter_arthropods : base/chapter
  [tactics : base/tactics]
@@ -165,104 +165,110 @@
       :name "Fantastic Arthropods"
       :unitmap
        (base/unitmap
-        "Ant: Giant"
+        "Ant:Giant"
          (base/unit
-          :name "Ant: Giant")
-        "Ant, Huge"
+          :name "Ant:Giant")
+        "Ant:Huge"
          (base/unit
-          :name "Ant, Huge")
-        "Ant, Huge Fire"
+          :name "Ant:Huge")
+        "Ant:Huge Fire"
          (base/unit
-          :name "Ant, Huge Fire")
-        "Ant Lion: Giant"
+          :name "Ant:Huge Fire")
+        "Ant Lion:Giant"
          (base/unit
-          :name "Ant Lion: Giant")
-        "Ant Lion, Huge"
+          :name "Ant Lion:Giant")
+        "Ant Lion:Huge"
          (base/unit
-          :name "Ant Lion, Huge")
-        "Beetle: Giant"
+          :name "Ant Lion:Huge")
+        "Beetle:Giant"
          (base/unit
-          :name "Beetle: Giant")
-        "Beetle: Giant Pincher"
+          :name "Beetle:Giant")
+        "Beetle:Giant Pincher"
          (base/unit
-          :name "Beetle: Giant Pincher")
-        "Beetle: Giant Rinoceros"
+          :name "Beetle:Giant Pincher")
+        "Beetle:Giant Rinoceros"
          (base/unit
-          :name "Beetle: Giant Rinoceros")
+          :name "Beetle:Giant Rinoceros")
         "Beetle, Hugh"
          (base/unit
           :name "Beetle, Hugh")
         "Beetle, Hugh Fire"
          (base/unit
           :name "Beetle, Hugh Fire")
-        "Caterpillar: Giant"
+        "Caterpillar:Giant"
          (base/unit
-          :name "Caterpillar: Giant")
-        "Centipede: Giant"
+          :name "Caterpillar:Giant")
+        "Centipede:Giant"
          (base/unit
-          :name "Centipede: Giant")
+          :name "Centipede:Giant")
         "Centipede, Hugh Poisonous"
          (base/unit
           :name "Centipede, Hugh Poisonous")
-        "Cockroach: Giant"
+        "Cockroach:Giant"
          (base/unit
-          :name "Cockroach: Giant")
-        "Dragonfly: Giant"
+          :name "Cockroach:Giant")
+        "Dragonfly:Giant"
          (base/unit
-          :name "Dragonfly: Giant")
-        "Dragonfly, Huge"
+          :name "Dragonfly:Giant")
+        "Dragonfly:Huge"
          (base/unit
-          :name "Dragonfly, Huge")
+          :name "Dragonfly:Huge")
         "Fire Bug"
          (base/unit
           :name "Fire Bug")
-        "Firefly, Huge"
+        "Firefly:Huge"
          (base/unit
-          :name "Firefly, Huge")
-        "Lightning Bug, Huge"
+          :name "Firefly:Huge")
+        "Lightning Bug:Huge"
          (base/unit
-          :name "Lightning Bug, Huge")
-        "Mantis: Giant"
+          :name "Lightning Bug:Huge")
+        "Mantis:Giant"
          (base/unit
-          :name "Mantis: Giant")
-        "Mantis, Huge"
+          :name "Mantis:Giant")
+        "Mantis:Huge"
          (base/unit
-          :name "Mantis, Huge")
-        "Mosquito: Giant"
+          :name "Mantis:Huge")
+        "Mosquito:Giant"
          (base/unit
-          :name "Mosquito: Giant")
-        "Mosquito, Huge"
+          :name "Mosquito:Giant")
+        "Mosquito:Huge"
          (base/unit
-          :name "Mosquito, Huge")
-        "Scarab, Huge"
+          :name "Mosquito:Huge")
+        "Scarab:Huge"
          (base/unit
-          :name "Scarab, Huge")
-        "Scorpion: Giant"
+          :name "Scarab:Huge")
+        "Scorpion:Giant"
          (base/unit
-          :name "Scorpion: Giant")
-        "Scorpion, Huge"
+          :name "Scorpion:Giant")
+        "Scorpion:Huge"
          (base/unit
-          :name "Scorpion, Huge")
-        "Spider: Giant"
+          :name "Scorpion:Huge")
+        "Spider:Giant"
          (base/unit
-          :name "Spider: Giant")
-        "Spider, Huge"
+          :name "Spider:Giant")
+        "Spider:Huge"
          (base/unit
-          :name "Spider, Huge")
-        "Spider, Huge Spitting"
+          :name "Spider:Huge")
+        "Spider:Huge Spitting"
          (base/unit
-          :name "Spider, Huge Spitting")
-        "Spider, Huge Trap Door"
+          :name "Spider:Huge Spitting")
+        "Spider:Huge Trap Door"
          (base/unit
-          :name "Spider, Huge Trap Door")
-        "Spider, Huge Water"
+          :name "Spider:Huge Trap Door")
+        "Spider:Huge Water"
          (base/unit
-          :name "Spider, Huge Water")
-        "Spider, Phase"
+          :name "Spider:Huge Water")
+        "Spider:Phase"
          (base/unit
-          :name "Spider, Phase"
+          :name "Spider:Phase"
           :titles "Dimension Spider")
-        :Vasp
+        "Spider:Strider"
+         (base/unit
+          :name "Spider:Strider"
+          :titles "Black Strider"
+          :summary
+           "The Stider is an giant daddy long legs spider with a 2m/6ft torso that is lifted 3m/10ft off the ground by its enormous legs")
+        "Vasp"
          (base/unit
           :name "Vasp"
           :summary
@@ -270,9 +276,9 @@
             * Vasps are solitary nocturnal creatures that usually attack by leaping on its victim, pining it to the ground, and stinging it to death with its tail. Its stinger exudes a caustic venom that slowly dissolves the internal organs. While the toxin is taking effect, the Vasp wraps it prey in a silky cocoon and drags it back to its lair."
           :mass "250kg"
           :height "3m")
-        "Wasp, Huge"
+        "Wasp:Huge"
          (base/unit
-          :name "Wasp, Huge")
+          :name "Wasp:Huge")
         "Wasp, Parasite"
          (base/unit
           :name "Wasp, Parasite")
@@ -317,7 +323,9 @@
           :name "Raven")
         :Shrike
          (base/unit
-          :name "Shrike")
+          :name "Shrike"
+          :summary
+           "Male shrikes are known for their habit of catching insects and small vertebrates and impaling them on thorns, branches, the spikes on barbed-wire fences, or any available sharp point")
         :Vulture
          (base/unit
           :name "Vulture")))
@@ -332,11 +340,12 @@
           :summary
            "* The Hekler is a pestiferous variety of bird identified by its spiked plummage and awful, shrill cry they produce when hungry. Heklers have the annoying habit of following travellers scrounging for handouts and leftovers. They are extremely persistent and will pursue their victims for miles, swawking incessently. Worse, the call is audible for two miles and is known to attract predatory beasts. If fed, they become silent while they eat, providing an opportunity to escape."
           :titles "Nag-Bird")
-        "Iron Shrike"
-         (base/unit
-          :name "Iron Shrike"
-          :summary
-           "* A long beaked bird with metallic plumage. Their metallic feathers make them very hardy but also poor flyers. They hunt by diving at full speed from high altitudes and impaling their prey on their dagger-like beaks.")
+        "Shrike:Iron"
+         (base/unit<-tactics-key tactics "Shrike:Iron")
+        "Shrike:Spitting"
+         (base/unit<-tactics-key tactics "Shrike:Spitting")
+        "Shrike:Vomiting"
+         (base/unit<-tactics-key tactics "Shrike:Vomiting")
         "Sky Jelly"
          (base/unit
           :name "Sky Jelly")
@@ -582,19 +591,16 @@
           :name "Rabbit")
         "Rat"
          (base/unit<-tactics-key tactics "Rat")
-        "Rat: Giant"
-         (base/unit<-tactics-key tactics "Rat: Giant")
-        "Rat: Huge"
-         (base/unit<-tactics-key tactics "Rat: Huge")
-        "Rat: Plague"
-         (base/unit
-          :name "Rat: Plague")
-        "Rat: Rabid"
-         (base/unit
-          :name "Rat: Rabid")
-        "Rat: Sewer"
-         (base/unit
-          :name "Rat: Sewer")))
+        "Rat:Giant"
+         (base/unit<-tactics-key tactics "Rat:Giant")
+        "Rat:Huge"
+         (base/unit<-tactics-key tactics "Rat:Huge")
+        "Rat:Plague"
+         (base/unit<-tactics-key tactics "Rat:Plague")
+        "Rat:Rabid"
+         (base/unit<-tactics-key tactics "Rat:Rabid")
+        "Rat:Sewer"
+         (base/unit<-tactics-key tactics "Rat:Sewer")))
     :Swine
      (base/section
       :name "Swine"
@@ -653,30 +659,27 @@
       :name "Fantastic Mammals"
       :unitmap
        (base/unitmap
-        "Bat: Giant"
+        "Bat:Giant"
          (base/unit
-          :name "Bat: Giant")
-        "Bat: Huge"
+          :name "Bat:Giant")
+        "Bat:Huge"
          (base/unit
-          :name "Bat: Huge")
-        "Ferret: Keen"
+          :name "Bat:Huge")
+        "Ferret:Keen"
          (base/unit
-          :name "Ferret: Keen"
+          :name "Ferret:Keen"
           :summary
            "* These furred scavengers are hoarders and theives by nature robbing nests and homes alike. They have uncanny manual dexterity and are natural thieves able to squeeze into tight places, evade detection, and untie knots.
             * If caputured at infancy, they can be raised as pets and taught to steal for its master. For this reason, they are valuable to professional thieves.
             * With training they can be taught to pick pockets and even pick simple locks."
           :mass "2kg"
           :length ".5m")
-        "Rat: Bog"
+        "Rat:Bog"
          (base/unit
-          :name "Rat: Bog")
-        "Rat: Crypt"
+          :name "Rat:Bog")
+        "Rat:Crypt"
          (base/unit
-          :name "Rat: Crypt")
-        "Rat: Plague"
-         (base/unit
-          :name "Rat: Plague")
+          :name "Rat:Crypt")
         :Terrorphant
          (base/unit
           :name "Terrorphant"
@@ -685,15 +688,15 @@
          (base/unit
           :name "Terrorpotmus"
           :summary "* A giant, carnivorous hippopotamus. An keenly intelligent alpha predator.")
-        "Wolf, Dire"
+        "Wolf:Dire"
          (base/unit
-          :name "Wolf, Dire")
-        "Wolf, Warg"
+          :name "Wolf:Dire")
+        "Wolf:Warg"
          (base/unit
-          :name "Wolf, Warg")
-        "Wolverine, Huge"
+          :name "Wolf:Warg")
+        "Wolverine:Huge"
          (base/unit
-          :name "Wolverine, Huge"))))))
+          :name "Wolverine:Huge"))))))
 
 (func chapter_marine_creatures : base/chapter
  [tactics : base/tactics]
@@ -816,32 +819,32 @@
         "Octopus"
          (base/unit
           :name "Octopus")
-        "Octopus: Giant"
+        "Octopus:Giant"
          (base/unit
-          :name "Octopus: Giant")
+          :name "Octopus:Giant")
         "Squid"
          (base/unit
           :name "Squid")
-        "Squid: Giant"
+        "Squid:Giant"
          (base/unit
-          :name "Squid: Giant")))
+          :name "Squid:Giant")))
     "Fantastic Marine Creatures"
      (base/section
       :name "Fantastic Marine Creatures"
       :unitmap
        (base/unitmap
-        "Crab: Giant"
+        "Crab:Giant"
          (base/unit
-          :name "Crab: Giant")
-        "Eel: Giant Maray"
+          :name "Crab:Giant")
+        "Eel:Giant Maray"
          (base/unit
-          :name "Eel: Giant Maray"
+          :name "Eel:Giant Maray"
           :summary
            "* Giant, sightless eels native to deep undersea caves and grottos. These aggressive predators measure over 20 feet and have rows of sharp jagged teeth."
           :titles "Kra")
-        "Kingfisher: Giant"
+        "Kingfisher:Giant"
          (base/unit
-          :name "Kingfisher: Giant")
+          :name "Kingfisher:Giant")
         "Lamprey: Huge"
          (base/unit
           :name "Lamprey: Huge")
@@ -920,16 +923,16 @@
          (base/unit
           :name "Balizard"
           :summary "* A large, magical variety of lizard that survives in arctic climates. Its body temperature matches the surrounding. It has a special form of gaze ability where it can draw heat from any target it is facing into its nose and mouth. It uses this ability to freeze opponents before eating their icy remains.")
-        "Crocodile: Giant"
+        "Crocodile:Giant"
          (base/unit
-          :name "Crocodile: Giant")
+          :name "Crocodile:Giant")
         "Desert Strider"
          (base/unit
           :name "Desert Strider"
           :summary "* Striders are large bipedal desert creatures resembling a cross between a lizard and a flightless bird. Striders are perfectly acclimated to desert life. They can go for months without water, have protective lenses over their eyes, and actually process sunlight to supplement the insects and reptiles they normally consume. Conversely, they cannot survive outside a desert environment.")
-        "Lizard: Giant"
+        "Lizard:Giant"
          (base/unit
-          :name "Lizard: Giant")
+          :name "Lizard:Giant")
         "Serpent: Great"
          (base/unit
           :name "Serpent: Great")
@@ -943,9 +946,9 @@
            "* This seemingly normal Cobra has the enhanced ability to hypnotise its victim.
             * Hypnotism - By slowly swaying back and forth and removing all hostile intent from its mind, the Cobra creates the illusion that it is peaceful and harmless. Its victim becomes enthralled and simply watches as the Cobra slowly advances. When the Cobra is face to face with its victim, it attacks with lightning speed to bite the face or throat to deposit its venom near the victim's brain."
           :titles "Hypnotic Cobra")
-        "Tortoise: Giant"
+        "Tortoise:Giant"
          (base/unit
-          :name "Tortoise: Giant"))))))
+          :name "Tortoise:Giant"))))))
 
 (func chapter_plants : base/chapter
  [tactics : base/tactics]
@@ -1306,7 +1309,7 @@
         Vanilla -- Love, Lust, Mental Powers
         Venus Flytrap -- Protection, Love
         Vervain -- The Witches Herb. Love, Protection, Purification, Peace, Money, Youth, Chastity, Sleep. Healing. Empowers any magick, especially love spells. Enhances the dreaming process and is recommended for dream quests. Used to consecrate and empower any ritual tools. Protects from negative emotions and depression. Used in house and home blessings. Turns back negativity. In love spells: add to recipes to attract mates, find true love, achieve sexual fulfilment, work sexual magick, an for bringing extra bliss on the wedding night. The herb of poets, singers, and bards. Inspires artistry. Instills a love of learning. Best when gathered at Midsummer.
-        Vetch: Giant -- Fidelity
+        Vetch:Giant -- Fidelity
         Vetivert -- Love, Hex Breaking, Luck, Money, Anti-Theft
         Violet -- Protection, Love, Lust, Luck, Wishes, Peace, Healing
         Walnut -- Health, Mental Powers, Infertility, Wishes
@@ -1529,9 +1532,9 @@
            "* A corrupted spirit that resembles a twisted humanoid composed of dead decaying wood. Deadwood is created when a woodland area is exposed to powerful corruption. Once established in an area, it begins to absorb life energies from all living creatures around it. All vegetation around will become warped and withered. Living creatures will fall sick developing strange ailments. Meanwhile, the Deadwood grows in power.
             * Deadwood can control plant life and unliving wood. They cannot be destroyed except by enchanted weapons, fire, or by starving it by destroying the surrounding plant life."
           :titles "Plant Demon, Wood Grue")
-        "Fisher Plant: Giant"
+        "Fisher Plant:Giant"
          (base/unit
-          :name "Fisher Plant: Giant"
+          :name "Fisher Plant:Giant"
           :summary
            "* A huge creeper vine plant that covers mulitple nearby trees and has enormous blossoms hanging from high branches. The plant attacks living creatures by dropping vines from the bottom of the blossums that entwine and drag prey into the canaopy above where they die of strangulation or dehydration and are eventually digested. Bones and bits of carcass are dropped below to lure more prey.")
         "Shambler"
@@ -1549,9 +1552,9 @@
         "Triffid"
          (base/unit
           :name "Triffid")
-        "Venus Flytrap: Giant"
+        "Venus Flytrap:Giant"
          (base/unit
-          :name "Venus Flytrap: Giant"))))))
+          :name "Venus Flytrap:Giant"))))))
 
 (func chapter_microorganisms : base/chapter
  [tactics : base/tactics]
@@ -1652,9 +1655,9 @@
           :name "False Hydra"
           :summary
            "* An insane monster that grows under towns can erase memories. It is said that it is born of lies. Perhaps it is a [Curse].")
-        "Eel: Giant Land"
+        "Eel:Giant Land"
          (base/unit
-          :name "Eel: Giant Land"
+          :name "Eel:Giant Land"
           :summary "* Giant, sightless creatures related to the Giant Moray Eel, these creatures burrow underground."
           :titles "Land Kra")
         "Slug:Giant"
@@ -2372,26 +2375,26 @@
      :titles "Gryphon, Harpy"
      :unitmap
       (base/unitmap
-       "Gryph Javelineer"
+       "Gryph:Javelineer"
         (base/unit
-         :name "Gryph Javelineer"
+         :name "Gryph:Javelineer"
          :traits "Gryph")
-       "Gryph Light Infantry"
+       "Gryph:Light Infantry"
         (base/unit
-         :name "Gryph Light Infantry"
+         :name "Gryph:Light Infantry"
          :traits "Gryph")))
     (base/section
-     :name "Krukan"
+     :name "Krokhan"
      :summary
-      "* Krukans are heavy, intelligent frog creatures. They appear very similar to enormous bullfrogs. Seated they are about 5ft all around. They possess manipulative fingers, powerful legs, and long tongues. Their weight and leg strength make them dangerous combatants. They are also notorious for attempting to swallow victims alive.
+      "* Krokhan are heavy, intelligent frog creatures. They appear very similar to enormous bullfrogs. Seated they are about 5ft all around. They possess manipulative fingers, powerful legs, and long tongues. Their weight and leg strength make them dangerous combatants. They are also notorious for attempting to swallow victims alive.
        * Society - Their culture is tribal and semi-nomadic with many small emcampments both above and below the water.
        * It is said that a purely land-based version exists that more resemble toads."
      :titles "Anuran, Bullywug, Croaker, Froglok, Krokan"
      :unitmap
       (base/unitmap
-       "Bull Krukan"
+       "Krokhan:Bull"
         (base/unit
-         :name "Bull Krukan"
+         :name "Krokhan:Bull"
          :reference "* I don't believe I require a menu. - Tahm Kench, Runeterra"
          :unitpowermap
           (base/unitpowermap
@@ -2403,38 +2406,39 @@
                "Swallow Whole"
                 (base/unitability
                  :name "Swallow Whole")))))
-       "Poison Krukan"
+       "Krokhan:Poison"
         (base/unit
-         :name "Poison Krukan"
+         :name "Krokhan:Poison"
          :unitpowermap
           (base/unitpowermap
            :Toxins
             (base/unitpower
              :name "Toxins")))
-       "Krukan Chemist"
+       "Krokhan:Chemist"
         (base/unit
-         :name "Krukan Chemist"
+         :name "Krokhan:Chemist"
          :unitpowermap
           (base/unitpowermap
            :Alchemy
             (base/unitpower
              :name "Alchemy")))
-       "Krukan Shaman"
+       "Krokhan:Shaman"
         (base/unit
-         :name "Krukan Shaman")
-       "Krukan Skirmisher"
+         :name "Krokhan:Shaman")
+       "Krokhan:Skirmisher"
         (base/unit
-         :name "Krukan Skirmisher")
-       "Krukan Trapper"
+         :name "Krokhan:Skirmisher")
+       "Krokhan:Trapper"
         (base/unit
-         :name "Krukan Trapper")))
+         :name "Krokhan:Trapper")))
     (base/section
      :name "Mantids"
+     :titles "Ant Men, Insect Men, Mantis Men"
      :summary
       "* The Mantids are a warlike, insectoid race. They walk on four legs and have large sickle-like claws with limited dexterity. They are capable of relatively fine work using the mandibles about their mouths.
        * Civilization - They live in large complexes deep underground where they wage war on other species including other tribes of Mantids.
-       * Combat - They mostly rely on their natural weaponry, but they have been seen using simple spears and axes. There are also many specialized warriors capable of spitting poison or acid or explosives."
-     :titles "Ant Men, Insect Men, Mantis Men")
+       * Combat - They mostly rely on their natural weaponry, but they have been seen using simple spears and axes. There are also many specialized warriors capable of spitting poison or acid or explosives.
+       * Powers - Some of their kind have wings that appear like a large cloak when folded")
     (base/section
      :name "Mycans"
      :reference
@@ -2520,43 +2524,49 @@
      :summary
       "* A race of man-like beings resembling a cross between a vulture and a horned devil. They stand under six feet tall with a 20 foot wingspan. They excel at gliding and can cover great distances and remain aloft for hours. They have superior nightvision but see poorly in daylight. They feed on carrion and have little appetite for fighting. Their manual dexerity is limited, but they can use simple spears and polearms when necessary using either their hands on land or their feet in the air.")
     (base/section
-     :name "Tritons"
+     :name "Merrow"
+     :titles "Melusine, Mermaid, Merman, Tritons"
      :reference "Little Mermaid"
-     :titles "Melusine, Mermaid, Merman"
      :summary
-      "* The Tritons are group of aquatic species distantly related to man. They are adapted to life underwater, but are still able to breathe air for a few minutes. They have innumerable sub species with drastically different appearances, some human-like, some fish-like, some with tentacles."
+      "* The Merrow are group of aquatic species distantly related to man. They are adapted to life underwater, but are still able to breathe air for a few minutes. They have innumerable sub species with drastically different appearances, some human-like, some fish-like, some with tentacles.
+       * Merrow tradition states that long ago, a merrow hunting party discovered a great forgotten city in a deep trench. The discovery brought madness and destruction to the merrow city. The survivors of those nights moved from their city, abandoned their gods, and faithfully serve the Old Ones that dwell in that forgotten city of madness. They became the Vodyanoy and their descendants are the Deep Ones."
      :unitmap
       (base/unitmap
-       "Merrow Hydromancer"
+       "Merrow:Hydromancer"
         (base/unit
-         :name "Merrow Hydromancer")
-       "Merrow Necromancer"
+         :name "Merrow:Hydromancer")
+       "Merrow:Necromancer"
         (base/unit
-         :name "Merrow Necromancer")
-       "Vodyanoy Soldier"
+         :name "Merrow:Necromancer")
+       "Merrow:Siren"
         (base/unit
-         :name "Vodyanoy Soldier"
-         :summary
-          "* The Merrow have sloping shoulders, scaly yellow-green skin and dark deep-set eyes. Their hands and feet are webbed, and their powerful jaws are lined with a double row of sharp teeth. Having both gills and rudimentary lungs, the amphibians are capable of living on land or sea though the land tires them. They are powerful swimmers but are somewhat slow and awkward on land.
-           * Slavers by trade, they prey upon the primitive tribes which dwell along the coasts and islands. Their weapons are mostly designed to capture instead of kill. They also traffic in narcotic herbs, exotic beasts and all manner of contraband.
-           * Merrow tradition states that long ago, a merrow hunting party discovered a great forgotten city in a deep trench. The discovery brought madness and destruction to the merrow city. The survivors of those nights moved from their city, abandoned their gods, and faithfully serve the Old Ones that dwell in that forgotten city of madnesss. Their descendants are known as the Deep Ones. They are primitive, blasphemous, deformed fish creatures and are known to kidnap both Merrow and Humans for slaves and breeding."
-         :titles "Deep One, Deeper, Imrian, Sahagin, Slithery Dee")
-       "Vodyanoy Slaver"
-        (base/unit
-         :name "Vodyanoy Slaver")
-       :Siren
-        (base/unit
-         :name "Siren"
+         :name "Merrow:Siren"
          :unitskillmap
           (base/unitskillmap
            :Persuasion
             (base/unitskill
              :name "Persuasion")))
-       :Selkie
+       "Merrow:Selkie"
         (base/unit
-         :name "Selkie"
+         :name "Merrow:Selkie"
          :summary
           "* A seal that can shed its skin and appear human. In human form, the Selkie can only breathe air. If its seal skin is lost or destroyed, the Selkie cannot resume seal form.")))
+    (base/section
+     :name "Vodyanoy"
+     :titles "Deep One, Deeper, Imrian, Sahuagin, Slithery Dee"
+     :reference "Dagon"
+     :summary
+      "* The Vodyanoy have sloping shoulders, scaly yellow-green skin and dark deep-set eyes. Their hands and feet are webbed, and their powerful jaws are lined with a double row of sharp teeth. Having both gills and rudimentary lungs, the amphibians are capable of living on land or sea though the land tires them. They are powerful swimmers but are somewhat slow and awkward on land.
+       * Slavers by trade, they prey upon the primitive tribes which dwell along the coasts and islands. Their weapons are mostly designed to capture instead of kill. They also traffic in narcotic herbs, exotic beasts and all manner of contraband.
+       * They are primitive, blasphemous, deformed fish creatures and are known to kidnap both Merrow and Humans for slaves and breeding."     
+     :unitmap
+      (base/unitmap
+       "Vodyanoy:Soldier"
+        (base/unit
+         :name "Vodyanoy:Soldier")
+       "Vodyanoy:Slaver"
+        (base/unit
+         :name "Vodyanoy:Slaver")))
     (base/section
      :name "Wildman"
      :reference "Chewbacca"
@@ -2572,17 +2582,32 @@
            * Personality - The Jaka are solitary beings, sullen and introspective in nature. They have been known to become steadfast companions to those they trust, but have also been known to become cold-blooded killers to those who cross them.
            * Lifestyle - They are cunning and have excellent senses, so they make are superb hunters. They typically live off the land but also trade their extra hides and animal parts for useful gear. Some have extended their tracking and hunting skills to become bounty hunters: tracking and capturing fugitives from justice and living off the bounty.")))
     (base/section
-     :name "Valusian"
+     :name "Vaalus"
+     :titles "Dragon Kings, Serpent People, Ssathari, The First Blood of the Earth, Vaal, Valus, Valusian"
+     :reference
+      "* Silurians - Doctor Who
+       * Enik and Sleestak - Land of the Lost
+       * Your arrogance was your undoing. - Ambessa, Runeterra"
      :summary
-      ""
-     :titles "Dragon Kings, Serpent People"
+      "* Personality - The Sorcerers are cautious, cold, calculating, lazy, and supremely arrogant, considering all others beneath them. They have learned many sciences, but they have no interest in democratizing or sharing power with others, so individuals hoard knowledge. The savages are tribal and almost beastial.
+       * Skills - [Communications], [Deception], [Espionage], [Knowledge], [Mathmatics], [Science:Life] (especially Genetics), [Science:Physical], [Stealth], [Subterfuge]
+       * Powers - [Alchemy], [Corruption] (especially Radiation and [Balefire]), [Flesh] (especially [Skinriding]), [Sorcery], [Toxins], [Wealth]
+       * Society - Social hierarchy is through power and genetic purity.
+       * Civilization - Cities are generally low buildings built of heavy stone. Serpent motifs and snake towers are common. Ancient Mezoamerican cities were influenced by Valus designs
+       * Religion - Most revere their serpent god Yig
+       * History - The Serpent People are an unimaginably ancient race. Diviners claim that the serpent cities with their distinctive snake towers exist before the dinosaurs. Their history is turbulent with calamaties, court intrigue, assasination, coups, and civil wars. Surface catastrophes have wiped out their civilization except those underground. Their obsession with elitism leads to inbreeding and reduced population over the eons. By the Hyperborean era, only a few sorcerers remained with the rest of the population on the brink of savagery. In the modern era, they have almost completely devolved. Ironically as they devolve their numbers increased."
+     :secrets
+      "* Yig is a genetically manipulated Vaalus under the mental domination of an the ancient Vaalus sorcerer that created it. It was created to make rulership easier
+       * They were created by the Elder Things from Shoggoth protomatter to maintain their empire, but with the Elder Things retreat, the Serpent People inherited their cities
+       * Weakness - They think in a cautious, calculating way. This along with their fear of deception and betrayal can lead to inaction. Despite this, when challenged, their arrogance can lead to sudden rash actions and predictability"
      :unitmap
       (base/unitmap<-tactics-keys
        tactics
-       "Valusian Primitive"
-       "Valusian Sorcerer"
-       "Valusian Warrior")))))
-
+       "Vaalus:Assassin"
+       "Vaalus:Savage"
+       "Vaalus:Skinshifter"
+       "Vaalus:Sorcerer"
+       "Vaalus:Warrior")))))
 (func chapter_constructs : base/chapter
  [tactics : base/tactics]
  (base/chapter
@@ -2602,9 +2627,6 @@
       "* Created though [Alchemy] or [Sympathetic Magic]"
      :unitmap
       (base/unitmap
-       "Animated Armor"
-        (base/unit
-         :name "Animated Armor")
        "Animated Furniture"
         (base/unit
          :name "Animated Furniture")
@@ -2613,13 +2635,7 @@
          :name "Flying Carpet")
        "Flying Boat"
         (base/unit
-         :name "Flying Boat")
-       "Living Statue"
-        (base/unit
-         :name "Living Statue")
-       "Terra Cotta Warrior"
-        (base/unit
-         :name "Terra Cotta Warrior")))
+         :name "Flying Boat")))
     (base/section
      :name "Dreams"
      :reference "Sandman"
@@ -2656,37 +2672,20 @@
     (base/section
      :name "Golems"
      :unitmap
-      (base/unitmap
-       "Blood Golem"
-        (base/unit
-         :name "Blood Golem"
-         :summary
-          "* A Blood Golem is created using [Blood Magic] instead of [Artifice].
-           * A Blood Golem is a large humanoid composed of animated blood. All of its attacks cause [Bleeding] and whenever a [Bleeding] critical inflicts [Damage] on a nearby unit, the Blood Golem may heal a [Damage] or [Critical].
-           * When created, the summoner must be suffering from at least 4 [Bleeding] criticals from other sources or self-inflicted. These wounds may be bound or the summoner may allow the Blood Golem to draw from the wounds.")
-       "Clay Golem"
-        (base/unit
-         :name "Clay Golem")
-       "Flesh Golem"
-        (base/unit
-         :name "Flesh Golem"
-         :reference "Franenstein's Monster"
-         :summary "* A Flesh Golem is created using [Necromancy] instead of [Artifice]."
-         :titles "Corpse Golem")
-       "Iron Golem"
-        (base/unit
-         :name "Iron Golem")
-       :Colossus
-        (base/unit
-         :name "Colossus"
-         :reference
-          "* Colossus of Rhodes
-           * Colossus of Sardia
-           * Pygmalion
-           * Talos
-           * Exodia, Obliterate! - Yugi, Yu-Gi-Oh!"
-         :titles "Animated Statue, Stone Golem"
-         :height "30m")))
+      (base/unitmap<-tactics-keys
+       tactics
+       "Golem:Armor"
+       "Golem:Blood"
+       "Golem:Bone"
+       "Golem:Clay"
+       "Golem:Colossus"
+       "Golem:Flesh"
+       "Golem:Ice"
+       "Golem:Iron"
+       "Golem:Paper"
+       "Golem:Puppet"
+       "Golem:Stone"
+       "Golem:Wood"))
     (base/section
      :name "Machina"
      :summary
@@ -2753,37 +2752,17 @@
      :name "Lesser Dragons"
      :reference "Thank you for nothing, you useless reptile. - Hiccup, How to Train Your Dragon"
      :unitmap
-      (base/unitmap
-       :Dractyl
-        (base/unit
-         :name "Dractyl"
-         :summary
-          "* Dractyl are horse-sized lesser dragons. They have a greyish scaly hide and large membranous wings. They live on cliffs and normally eat insects and vermin but will eat almost anything that does not require too much work. They can be trained as steeds, but they are clumsy flyers and only obey under duress so they cannot be relied on in battle. They have been known to throw their riders from altitudes to escape their servitude.")
-       "Drake: Fire"
-        (base/unit
-         :name "Drake: Fire")
-       "Drake: Spindrift"
-        (base/unit
-         :name "Drake: Spindrift"
-         :summary
-          "* Spindrift Drakes are aquatic, horse-sized, lesser dragons. They hunt the near the surface of large water bodies. Their beautiful, thin, irridescent wings are adapted to swimming, but they are known to launch themselves from the seas and glide close to the surface at high speeds. Their preferred tactic is to burst from the waves, build up speed, and then knock their prey into the water and kill them underwater."
-         :titles "Spindrake")
-       "Drake: Storm"
-        (base/unit
-         :name "Drake: Storm"
-         :titles "Azure Drake")
-       :Lindwyrm
-        (base/unit
-         :name "Lindwyrm"
-         :summary
-          "* Lindwyrm are forest serpents that are connected with the forest. Everything around a Lindwyrm slowly grows, supposedly including treasure."
-         :titles "Lindworm")
-       :Wurm
-        (base/unit
-         :name "Wurm")
-       :Wyvern
-        (base/unit
-         :name "Wyvern")))
+      (base/unitmap<-tactics-keys
+       tactics
+       "Dractyl"
+       "Drake:Chameleon"
+       "Drake:Fire"
+       "Drake:Shadow"
+       "Drake:Spindrift"
+       "Drake:Storm"
+       "Lindwyrm"
+       "Wurm"
+       "Wyvern"))
     (base/section
      :name "Greater Dragons"
      :reference
@@ -2872,7 +2851,7 @@
          :unitpowermap
           (base/unitpowermap<-unitpowerlist
            (base/unitpower<-tactics-key-abilities
-            tactics "Electricity"
+            tactics "Electric"
             (stringlist "Absorb Electricity"))))
        "Dragon: Under"
         (base/unit
@@ -2922,11 +2901,11 @@
            "* Greater Air Elementals are enormous creatures that can fill the sky. They appear as cloudbanks or can be completely invisible depending on their mood. They have complete mastery over the Air, can perform any Air Power at maximum ability and can cancel any other being attempting to use Air."
           :unitpowermap
            (base/unitpowermap
-            :Air
+            "Wind"
              (base/unitpower
-              :name "Air"
+              :name "Wind"
               :level "20")))
-        :Jinn
+        "Jinn"
          (base/unit
           :name "Jinn"
           :summary
@@ -3782,8 +3761,11 @@
 (func chapter_darkin : base/chapter
  [tactics : base/tactics]
  (base/chapter
-  :name "Darkin"
-  :titles "Darkling, Goblinkind, Goblinoid"
+  :name "Darkspawn"
+  :titles "Darkin, Darkling, Goblinkind, Goblinoid"
+  :summary
+   "Darkspawn live underground and are well adapted to darkness
+    * History - The term Darkspawn comes from old legends claiming Goblins were spontaneously born from darkness itself."
   :sectionmap
    (base/sectionmap<-sectionlist
     (base/section
@@ -3792,7 +3774,7 @@
       "* Serial Killer"
      :summary
       "* Appearance - Bugbears are the largest of the goblin races. They are 7ft tall, are covered in fur, have long ears, and have long fangs. They have a tough hide and dislike armor.
-       * Personality - Brutal hunters and survivalists. They are butish like other goblins, but they are shrewd hunters and trappers. They are strictly carnivorous and treat everything as prey. They have been known to eat goblin in a pinch and would probably do so more if the flavor agreed with them more. They have little patience and are easily provoked. They are usually encountered alone while hunting or in a goblin nest acting as champion or leader.
+       * Personality - Brutal hunters and survivalists. They are brutish like other goblins, but they are shrewd hunters and trappers. They are strictly carnivorous and treat everything as prey. They have been known to eat goblin in a pinch and would probably do so more if the flavor agreed with them. They have little patience and are easily provoked. They are usually encountered alone while hunting or in a goblin nest acting as enforcer, champion or leader.
        * Morale - Normal
        * Units - Skimisher, Trapper, Berserker, Light Axeman, Light Spearman, Light Polearm
        * Skills - Melee, Spear, Axe, Net, Hunting, Stealth, Survival, Close Combat, Knife
@@ -4438,14 +4420,18 @@
        "Ghoul"
        "Husk"
        "Lich"
+       "Lovelorn"
        "Mummy"
        "Night Terror"
        "Pestilence Horse"
        "Scarecrow"
-       "Skeletal Dragon"
-       "Skeletal Knight"
        "Skeleton"
-       "Skeleton Warrior"
+       "Skeleton:Archer"
+       "Skeleton:Colossal"
+       "Skeleton:Dragon"
+       "Skeleton:Giant"
+       "Skeleton:Knight"
+       "Skeleton:Warrior"
        "Slayer Dead"
        "Wendigo"
        "Wight"

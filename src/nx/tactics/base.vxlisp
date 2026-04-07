@@ -282,7 +282,10 @@
  :allowtypes [skilllist])
 
 (type specialty : struct
- :traits [card])
+ :traits [card]
+ :properties
+  [abilitymap : abilitymap
+   itemmap : itemmap])
 
 (type specialtylist : list
  :allowtypes [specialty])

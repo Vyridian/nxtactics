@@ -4,8 +4,8 @@
    height="88mm"
    version="1.1"
    id="svg4669"
-   sodipodi:docname="rule-areaeffect.svg"
-   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   sodipodi:docname="rule-area.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,9 +20,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.9943253"
-     inkscape:cx="64.288273"
-     inkscape:cy="228.59908"
+     inkscape:zoom="1.0586539"
+     inkscape:cx="15.113533"
+     inkscape:cy="294.24159"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -15897,14 +15897,14 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Caladea;-inkscape-font-specification:'Caladea, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:1.28883;stroke-dasharray:none"
-     x="82.140366"
+     x="101.41593"
      y="23.594677"
      id="text9-0"
      inkscape:label="title"><tspan
        sodipodi:role="line"
        id="tspan6"
-       x="82.140366"
-       y="23.594677">Area Effect</tspan></text>
+       x="101.41593"
+       y="23.594677">Area</tspan></text>
   <g
      id="g17-5-7-2"
      inkscape:label="section"

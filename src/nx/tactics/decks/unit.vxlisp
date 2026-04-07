@@ -239,7 +239,7 @@
       tactics "Close Combat" 6
       "Grappling")))
   (base/unit
-   :name "Butterfly: Giant")
+   :name "Butterfly:Giant")
   (base/unit
    :name "Capybara"
    :body "5x1"
@@ -254,7 +254,7 @@
    :name "Cat"
    :image "images/cards/unit-cat.svg")
   (base/unit
-   :name "Caterpillar: Giant")
+   :name "Caterpillar:Giant")
   (base/unit
    :name "Charn Aramel"
    :summary "Human Dread Knight"
@@ -373,10 +373,6 @@
    :reference
     "Man had always assumed that he was more intelligent than dolphins because he had a achieved so much: the wheel, New York, Wars. Whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphin thought they were more intelligent than man for precisely same reasonse. - Hitchhikers Guide to the Galaxy")
   (base/unit
-   :name "Donkey"
-   :image "images/cards/unit-donkey.svg"
-   :imgmirror true)
-  (base/unit
    :name "Dog"
    :image "images/cards/unit-dog.svg")
   (base/unit
@@ -400,6 +396,22 @@
       "Grab"
       "Drag")))
   (base/unit
+   :name "Donkey"
+   :image "images/cards/unit-donkey.svg"
+   :imgmirror true)
+  (base/unit
+   :name "Doppleganger"
+   :summary
+    "Shapeshifter parasites
+     * Skills - Deception
+     * Powers - Shapeshift
+     * Description - Their forms are maleable and they can change their shape and height but not their weight. Transforming into another form is a painful process and it can also take on the form of clothing and weapons if it chooses (though these items cannot be removed)
+     * Ecology - Dopplegangers cannot reproduce with their own kind. Instead they mate with other species and half of the children are Dopplegangers. A child Doppleganger is unaware that it is not a normal member of the species")
+  (base/unit
+   :name "Dractyl"
+   :summary
+    "* Dractyl are horse-sized lesser dragons. They have a greyish scaly hide and large membranous wings. They live on cliffs and normally eat insects and vermin but will eat almost anything that does not require too much work. They can be trained as steeds, but they are clumsy flyers and only obey under duress so they cannot be relied on in battle. They have been known to throw their riders from altitudes to escape their servitude.")
+  (base/unit
    :name "Dragon Engine"
    :titles "Steam Engine")
   (base/unit
@@ -418,6 +430,20 @@
    :name "Dragon: Tiamat"
    :reference "Babylonian Mythology"
    :titles "Avatar of Chaos, Avatar of the Wyrm, The Beast, Mother of All Life")
+  (base/unit
+   :name "Drake:Chameleon")
+  (base/unit
+   :name "Drake:Fire")
+  (base/unit
+   :name "Drake:Shadow")
+  (base/unit
+   :name "Drake:Spindrift"
+   :summary
+    "* Spindrift Drakes are aquatic, horse-sized, lesser dragons. They hunt the near the surface of large water bodies. Their beautiful, thin, irridescent wings are adapted to swimming, but they are known to launch themselves from the seas and glide close to the surface at high speeds. Their preferred tactic is to burst from the waves, build up speed, and then knock their prey into the water and kill them underwater."
+   :titles "Spindrake")
+  (base/unit
+   :name "Drake:Storm"
+   :titles "Azure Drake")
   (base/unit
    :name "Drowned"
    :titles "Drowner, Kappa"
@@ -554,6 +580,85 @@ Allseer - Grants resistance to being surprised or flanked."
      * Pyaray - Elric of Melnibone"
    :summary
     "* Ghost Ships are doomed ships crewed by the [Drowned]. When they encounter the living, they are compelled to kill them so they raise again to add to their crew.")
+  (base/unit
+   :name "Golem:Armor"
+   :titles "Animated Armor"
+   :summary
+    "* An Armor [Golem] is an suit of armor animated using [Alchemy] or [Sorcery]")
+  (base/unit
+   :name "Golem:Blood"
+   :reference
+    "Diablo Necromancer"
+   :summary
+    "* A Blood [Golem] is created using [Blood Magic]
+     * A Blood Golem is a large humanoid composed of animated blood. All of its attacks cause [Bleeding] and whenever a [Bleeding] critical inflicts [Damage] on a nearby unit, the Blood Golem may heal a [Damage] or [Critical].
+     * When created, the summoner must be suffering from at least 4 [Bleeding] criticals from other sources or self-inflicted. These wounds may be bound or the summoner may allow the Blood Golem to draw from the wounds.")
+  (base/unit
+   :name "Golem:Bone"
+   :summary
+    "* A Bone [Golem] is a bulky, mindless [Undead] created using [Necromancy]")
+  (base/unit
+   :name "Golem:Clay"
+   :reference
+    "* Golem of Prague
+     * Terra Cotta Warrior"
+   :summary
+    "* A Clay [Golem] is a clay statue animated using [Sorcery] or [Thaumaturgy]")
+  (base/unit
+   :name "Golem:Colossus"
+   :titles "Animated Statue, Stone Golem"
+   :reference
+    "* Colossus of Rhodes
+     * Colossus of Sardia
+     * Pygmalion
+     * Talos
+     * Exodia, Obliterate! - Yugi, Yu-Gi-Oh!"
+   :summary
+    "* A Colossus is a massive form of [Golem] [Golem:Iron] or [Golem:Stone]"
+   :height "30m")
+  (base/unit
+   :name "Golem:Flesh"
+   :titles "Corpse Golem"
+   :reference "Franenstein's Monster"
+   :summary
+    "* A Flesh [Golem] is created using [Necromancy] or [Fleshcraft]")
+  (base/unit
+   :name "Golem:Ice"
+   :summary
+    "* An Ice [Golem] is created using [Cryomancy]")
+  (base/unit
+   :name "Golem:Iron"
+   :reference
+    "* Robots
+     * Automatons of Hephaestus"
+   :summary
+    "An Iron [Golem] is created using [Artifice]")
+  (base/unit
+   :name "Golem:Paper"
+   :summary
+    "* A Paper [Golem] is a mass of paper, books, or paintings created using [Artistry]")
+  (base/unit
+   :name "Golem:Puppet"
+  :reference
+   "Pinocchio"
+   :summary
+    "* A small [Golem] constructed from wood or metal and animated using [Artifice]")
+  (base/unit
+   :name "Golem:Stone"
+   :titles "Animated Statue, Stone Golem"
+   :reference
+    "* Hrungnir"
+   :summary
+    "* A Stone [Golem] is a stone statue animated using [Alchemy]")
+  (base/unit
+   :name "Golem:Wood"
+   :titles "Animated Tree"
+   :reference
+    "* Ents - Lord of the Rings
+     * Man-Thing
+     * Swamp Thing"
+   :summary
+    "* A Wood [Golem] is created from a living or dead tree or vines using [Nature]")
   (base/unit
    :name "Ghoul"
    :summary
@@ -955,6 +1060,11 @@ Allseer - Grants resistance to being surprised or flanked."
       tactics "Survival" 1
       "Foraging")))
   (base/unit
+   :name "Lindwyrm"
+   :summary
+    "* Lindwyrm are forest serpents that are connected with the forest. Everything around a Lindwyrm slowly grows, supposedly including treasure."
+   :titles "Lindworm")
+  (base/unit
    :name "Lion")
   (base/unit
    :name "Living Shadow"
@@ -971,6 +1081,19 @@ Allseer - Grants resistance to being surprised or flanked."
      * Weakness - All Shadows are driven off by light and powerful magical light can destroy them.")
   (base/unit
    :name "Lost Soul")
+  (base/unit
+   :name "Lovelorn"
+   :titles "Broken Heart, Lovelost"
+   :summary
+    "An undead creature consumed by the miser of lost love
+     * Description - At first glance the Lovelorn appears to be a spider but is actually a disembodied heart with ribs for legs"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Special Ability"
+      (stringlist
+       "Skeletal"
+       "Undead"))))
   (base/unit
    :name "Luminary"
    :titles "Tachyons"
@@ -1288,7 +1411,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :body "5x-1"
    :mass ".5kg/1lb")
   (base/unit
-   :name "Rat: Giant"
+   :name "Rat:Giant"
    :reference
     "* What about the R.O.U.S.'s? Rodents Of Unusual Size? I don't think they exist. Raghh! - Westley, Buttercup, and ROUS - The Princess Bride"
    :body "5x1"
@@ -1296,11 +1419,18 @@ Allseer - Grants resistance to being surprised or flanked."
    :mass "50kg/100lb"
    :speedland "60kph/40mph")
   (base/unit
-   :name "Rat: Huge"
+   :name "Rat:Huge"
    :body "5x0"
    :mass "5kg/10lb")
   (base/unit
+   :name "Rat:Plague")
+  (base/unit
+   :name "Rat:Rabid")
+  (base/unit
+   :name "Rat:Sewer")
+  (base/unit
    :name "Reaper"
+   :titles "Death, Knight-Gaunt"
    :reference "Charon the Ferryman"
    :summary
     "* Reapers are dark, hooded entities that are terrifying to behold. Their arms are skeletal though though the rest of their bodies appear to be made of solid blackess. They carry large scythes which they can use to deadly effect. Their purpose appears to be to escort the sould of the recently dead to the afterlife, and their presense almost always means someone has died or will die soon.")
@@ -1455,6 +1585,18 @@ Allseer - Grants resistance to being surprised or flanked."
    :mass "50tons"
    :height "4.5m/15ft")
   (base/unit
+   :name "Shrike:Iron"
+   :summary
+    "* A long beaked bird with metallic plumage. Their metallic feathers make them very hardy but also poor flyers. They hunt by diving at full speed from high altitudes and impaling their prey on their dagger-like beaks.")
+  (base/unit
+   :name "Shrike:Spitting"
+   :summary
+    "* A variant of the [Shrike:Iron] that can spit Poison")
+  (base/unit
+   :name "Shrike:Vomiting"
+   :summary
+    "* A variant of the [Shrike:Iron] that can reguritate a surprising amount of acid from its stomach")
+  (base/unit
    :name "Shub-Niggurath"
    :image "cthulhu/shubniggurath.png"
    :titles "The Black Goat of the Woods with a Thousand Young"
@@ -1463,25 +1605,18 @@ Allseer - Grants resistance to being surprised or flanked."
    :summary
     "* Mother's Gift - The milk of Shub-Niggurath with powerful healing and corrupting properties.")
   (base/unit
-   :name "Skeletal Dragon")
-  (base/unit
-   :name "Skeletal Knight"
-   :summary "* Morale - High"
-   :titles "Death Knight"
+   :name "Skeleton"
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-abilities
       tactics "Special Ability"
       (stringlist
+       "Mindless"
        "Savage"
        "Skeletal"
-       "Undead")))
-   :unitskillmap
-    (base/unitskillmap<-tactics-keys
-     tactics
-     "Animals"))
+       "Undead"))))
   (base/unit
-   :name "Skeleton"
+   :name "Skeleton:Archer"
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-abilities
@@ -1494,10 +1629,34 @@ Allseer - Grants resistance to being surprised or flanked."
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-items
-      tactics "Defense" 1
-      "Shield:Round")))
+      tactics "Ranged" 3
+      "Bow:Short")))
   (base/unit
-   :name "Skeleton Warrior"
+   :name "Skeleton:Colossal")
+  (base/unit
+   :name "Skeleton:Dragon")
+  (base/unit
+   :name "Skeleton:Giant")
+  (base/unit
+   :name "Skeleton:Knight"
+   :summary "* Morale - High"
+   :titles "Death Knight"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower<-tactics-key-abilities
+      tactics "Special Ability"
+      (stringlist
+       "Savage"
+       "Skeletal"
+       "Undead")))
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Defense" 5
+      "Armor:Plate"
+      "Shield:Wall")))
+  (base/unit
+   :name "Skeleton:Warrior"
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-abilities
@@ -1808,14 +1967,18 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl
       tactics "Military" 3)))
   (base/unit
-   :name "Valusian Primitive"
-   :image "images/cards/unit-valusian-primitive.svg")
+   :name "Vaalus:Assassin")
   (base/unit
-   :name "Valusian Sorcerer"
-   :image "images/cards/unit-valusian-warrior.svg")
+   :name "Vaalus:Savage"
+   :image "images/cards/unit-valus-savage.svg")
   (base/unit
-   :name "Valusian Warrior"
-   :image "images/cards/unit-valusian-warrior.svg")
+   :name "Vaalus:Skinshifter")
+  (base/unit
+   :name "Vaalus:Sorcerer"
+   :image "images/cards/unit-valus-warrior.svg")
+  (base/unit
+   :name "Vaalus:Warrior"
+   :image "images/cards/unit-valus-warrior.svg")
   (base/unit
    :name "Vampire: Brujah"
    :titles "Bully, Bruiser"
@@ -1921,7 +2084,7 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitpowermap<-tactics-keys
      tactics
      "Vampirism"
-     "Bloodcraft"))
+     "Blood"))
   (base/unit
    :name "Vampire: Tzimisce"
    :image "images/bestiary/vampire-tzimisce.png"
@@ -2138,6 +2301,7 @@ Allseer - Grants resistance to being surprised or flanked."
      * Vision - Beyond a short distance their vision must be somewhat blurred. Nevertheless, wolves can see shapes and, especially, movement over long distances, and their peripheral vision is extremely accurate.  They are able to detect even the slightest movements of very small animals, such as a mosquito, at a distance of more than ten feet. There is some controversy as to whether wolves see in color or black and white. Regardless, it is unlikely that they see the various hues of the spectrum as humans see them, because the physical makeup of the eye is different. Nighttime vision for wolves is many times better than human vision in the day or night. Wolves can actually see much better and even much more clearly at night. The eyes of the wolf are like most predators, with a sight-field of nearly 180 degrees and pointed forward.")
   (base/unit
    :name "Wraith"
+   :titles "Ghost"   
    :summary
     "* Wraiths normally exist in the [Underworld] where their numbers are legion.
      * Those with strong connections to the world of the living can walk among the living but are [Invisible] and [Ethereal] and can indistinctly see the living world through the [Shroud]. Skilled Wraiths may even temporarily breech the [Shroud].
@@ -2145,8 +2309,11 @@ Allseer - Grants resistance to being surprised or flanked."
      * Keening
      * Manifestation
      * Poltergeist
-     * Possession"
-   :titles "Ghost")
+     * Possession")
+  (base/unit
+   :name "Wurm")
+  (base/unit
+   :name "Wyvern")
   (base/unit
    :name "Xeib Honower"
    :image "images/cards/unit-xeibhanower.svg"

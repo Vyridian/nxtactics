@@ -203,76 +203,76 @@
        :ranksuit base/ranksuit-4c
        :image "icons/card-ranksuit-4c.svg"
        :summary
-        "A. Protect the vulnerable
-         K. Navigate intrigue
-         Q. Survive a disaster
-         J. Compete in a tournament
-         T. Exile's triumphant return
-         9. Make a risky pact
-         8. Build a new domain
-         7. Quest for enlightenment
-         6. Survive hostile environment
-         5. Plot assassination
-         4. Reclaim lost honor
-         3. Defend personal honor
-         2. Claim disputed inheritance")
+        "A. Conspiracy
+         K. Corruption
+         Q. Cycle of Violence
+         J. Depravity
+         T. Indifferent World
+         9. Inequality
+         8. Inevitability
+         7. Legacy
+         6. Moral Ambiguity
+         5. Price of Power
+         4. Secrets / Discovery
+         3. Tradition vs Progress
+         2. Unreliable Truth")
       (base/card
-       :name "Theme:Material"
+       :name "Theme:Conditions"
        :deck "Story"
        :ranksuit base/ranksuit-4d
        :image "icons/card-ranksuit-4d.svg"
        :summary
-        "A. Haunted by dark past
-         K. Form unlikely alliance
-         Q. Escape captivity or pursuit
-         J. Escalate family feud
-         T. Fallen grace reclaimed
-         9. Seek immortality
-         8. Covert espionage
-         7. Heroism
-         6. Infiltrate an organization
-         5. Rivalry with a peer
-         4. Betrayal
-         3. Fulfill/defying destiny
-         2. Trigger paradigm shift")
+        "A. Decay
+         K. Defiance
+         Q. Escalation
+         J. Exposure
+         T. Fragility
+         9. Exploration
+         8. Forbidden Knowledge
+         7. Impending Doom
+         6. Isolation
+         5. Mortality
+         4. Scarcity
+         3. Survival
+         2. Transformation")
       (base/card
-       :name "Theme:Personal"
+       :name "Theme:Social"
        :deck "Story"
        :ranksuit base/ranksuit-4h
        :image "icons/card-ranksuit-4h.svg"
        :summary
-        "A. Betrayal by a trusted ally
-         K. Hunt for lost treasure
-         Q. Confront prophecy
-         J. Break generational curse
-         T. Rise from obscurity
-         9. Lead popular revolution
-         8. Forbidden or star-crossed love
-         7. Quest for power
-         6. Uncover a dangerous secret
-         5. Overcome famine
-         4. Rise of dark antagonist
-         3. Return from exile
-         2. Personal transformation")
+        "A. Betrayal / Vengeance
+         K. Deception
+         Q. Distrust
+         J. Found Family
+         T. Forbidden Bonds
+         9. Greater Good
+         8. Honor / Dishonor
+         7. Individual vs Society
+         6. Outsiders
+         5. Rivalry
+         4. Responsibility
+         3. Silence and Complicity
+         2. Subverting Norms")
       (base/card
-       :name "Theme:Fateful"
+       :name "Theme:Personal"
        :deck "Story"
        :ranksuit base/ranksuit-4s
        :image "icons/card-ranksuit-4s.svg"
        :summary
-        "A. Quest for enlightenment
-         K. Staging coup d'état
-         Q. Tournament of champions
-         J. Overthrow ruling power
-         T. Moral dilemma
-         9. Race against time
-         8. Moral choice
-         7. Rising against oppression
-         6. Daring heist
-         5. Revenge for injustice
-         4. Crisis of identity
-         3. Personal redemption
-         2. Preventing catastrophe")
+        "A. Abandonment
+         K. Ambition
+         Q. Forgiveness
+         J. Hope
+         T. Hubris
+         9. Identity
+         8. Loyalty
+         7. Madness
+         6. Maturity
+         5. Misplaced Faith
+         4. Regret / Atonement
+         3. Redemption
+         2. Trauma / Recovery")
       (base/card
        :name "Mood:Tense"
        :deck "Story"

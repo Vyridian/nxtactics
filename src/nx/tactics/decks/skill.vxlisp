@@ -11,6 +11,7 @@
     "* [Target]: Close Combat may only attack the space directly ahead or the space you are on
      * Fighting very close to the opponent. Includes most martial arts, brawling, and knife fighting
      * If you don't have a weapon, use the [Bare Handed] item
+     * During the [Conflict], the defender may choose to use their [Body] instead of another Skill.
      * Note:Melee is at disadvantage if you are in the same Space
      * Note:Ranged/Firearms are at disadvantage if you are within 1 Space"
    :reference
@@ -808,6 +809,7 @@ x +1DMG vs. Crouching."
     "* Fighting near the opponent. This includes most hand to hand weapons.
      * [Target]: Melee combat may only attack within your [Arc:Forward] or the space you are on
      * Allows the use of all Melee weapons, but unfamiliar weapons follow the [Unfamiliar Item] rule
+     * During the [Conflict], the defender may choose to use their [Body] instead of another Skill.
      * Note:Melee is at disadvantage if you are in the same Space
      * Note:Ranged/Firearms are at disadvantage if you are within 1 Space"
    :stat "Body"
@@ -942,6 +944,11 @@ x +1DMG vs. Crouching."
      tactics
      "Blade Locking"
      "Body Climb"
+     "Bracer Block"
+     "Catch:Ball"
+     "Catch:Knife"
+     "Catch:Return"
+     "Catch:Weapon"
      "Counterattack"
      "Deflect"
      "Dirty Fighting"
@@ -953,6 +960,7 @@ x +1DMG vs. Crouching."
      "Drunken Monkey Roll"
      "Iron Horse"
      "Iron Skin"
+     "Runaround"
      "Sidestep")
    :specialtymap
     (base/specialtymap<-tactics-keys
@@ -966,6 +974,7 @@ x +1DMG vs. Crouching."
     "* Good. Bad. I'm the guy with the gun. - Ash, Army of Darkness"
    :summary
     "Low tech [Weapon:Ranged]. Does not include Firearms or Siege Weapons
+     * During the [Conflict], the defender may choose to use their [Speed] instead of another Skill.
      * Note:Ranged is at disadvantage if a Rival is within 1 Space"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -990,6 +999,7 @@ x +1DMG vs. Crouching."
     (base/specialtymap<-tactics-keys
      tactics
      "Archery"
+     "Crossbowman"
      "Thrown Weapons"))
   (base/skill
    :name "Firearm"
@@ -999,6 +1009,7 @@ x +1DMG vs. Crouching."
      * Smile! It's called gunPLAY. - Jinx, Runeterra"
    :summary
     "Skill in using guns of various types (not including crossbows)
+     * During the [Conflict], the defender may choose to use their [Speed] instead of another Skill.
      * Note: IF you shoot in a non-standard way (eg shooting form the hip), you have [Disadvantage]
      * Note:Ranged/Firearms are at disadvantage if you are within 1 Space"
    :abilitymap
@@ -1153,54 +1164,57 @@ x +1DMG vs. Crouching."
          +0 Speed (Can only move backward, ignores terrain movement penalties)
          * A showy move that allows the unit to move directly backward without turning.")
      "Balance"
-      (base/ability
-       :name "Balance"
-       :summary
-        "* User has extensive experience balancing under difficult circumstances.
-         * [Action]: Roll vs. difficulty to maintain balance. If any [Hits] are rolled, balance is maintained. Movement is at half speed while balancing, but additional [Hits] or [Criticals] improve movement speed by 10% each up to full speed.")
+      (base/ability<-tactics-key tactics "Balance")
+     "Balance:Beam"
+      (base/ability<-tactics-key tactics "Balance:Beam")
+     "Balance:Rope"
+      (base/ability<-tactics-key tactics "Balance:Rope")
      "Body Building"
-      (base/ability
-       :name "Body Building"
-       :summary
-        "* Character is distinctly powerful looking.
-         * [Passive]: Unit may reroll any failed attempt to lift, push, or pull an object.")
-     :Breakfall
+      (base/ability<-tactics-key tactics "Body Building")
+     "Breakfall"
       (base/ability
        :name "Breakfall"
        :summary
         "* Reduces Critical Hits to Hits from impacts during Knockback, Knockdown, or Falling
          * [Reaction]")
-     :Contortion
+     "Catch:Ball"
+      (base/ability<-tactics-key tactics "Catch:Ball")
+     "Climb:Rocks"
+      (base/ability
+       :name "Climb:Rocks")
+     "Contortion"
       (base/ability
        :name "Contortion")
      "Escape Artistry"
       (base/ability
        :name "Escape Artistry")
-     "Freestyle Running"
+     "Free Running"
       (base/ability
-       :name "Freestyle Running"
-       :summary "* [Action]: Ignore 1 [Hazard] from each space of [Forest], [Broken Ground], [Jungle], [Swamp], or [Obstacle].")
+       :name "Free Running"
+       :titles "Parkor"
+       :summary
+        "* [Action]: Ignore 1 [Hazard] from each space of [Forest], [Broken Ground], [Jungle], [Swamp], or [Obstacle].")
      :Golf
       (base/ability
        :name "Golf")
      :Gymnastics
       (base/ability
        :name "Gymnastics")
-     "High Jump"
-      (base/ability
-       :name "High Jump")
      "Ice Climbing"
       (base/ability
        :name "Ice Climbing")
+     "Jump:High"
+      (base/ability
+       :name "Jump:High")
+     "Jump:Long"
+      (base/ability
+       :name "Jump:Long")
      "Kippup"
       (base/ability<-tactics-key tactics "Kippup")
      "Leap Attack"
       (base/ability
        :name "Leap Attack")
-     "Long Jump"
-      (base/ability
-       :name "Long Jump")
-     :Marathon
+     "Marathon"
       (base/ability
        :name "Marathon")
      "Pole Vault"
@@ -1209,9 +1223,6 @@ x +1DMG vs. Crouching."
      :Rappelling
       (base/ability
        :name "Rappelling")
-     "Rock Climbing"
-      (base/ability
-       :name "Rock Climbing")
      :Skateboarding
       (base/ability
        :name "Skateboarding")
@@ -1384,6 +1395,8 @@ x +1DMG vs. Crouching."
      :Fashion
       (base/ability
        :name "Fashion"
+       :reference
+        "T: Darling, you look dressed to kill! L:Oh, is it really that obvious? - Thorn of the Rose and Leblanc, Runeterra"
        :summary
         "* Knows current fashions and what clothing with make the best impact.")
      :Fiction
@@ -2047,13 +2060,12 @@ x +1DMG vs. Crouching."
    :name "Intimidation"
    :reference
     "* I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain. - Bene Gesserit Litany, Dune
-     * They tell him they want his territory: all his business. Soze looks over the faces of his family, then he showed these men of will what will really was. He tells him he would rather see his family dead, than live another day after this. ... He waits until his wife and kids are in the ground, and then he goes after the rest of the mob. He kills their kids. He kills their wives. He kills their parents and their parents friends. He burns down the houses they live in and the stores they work in. He kills people who owe them money. And like that, he's gone. - Verbal Kint, Usual Suspects"
+     * They tell him they want his territory: all his business. Soze looks over the faces of his family, then he showed these men of will what will really was. He tells them he would rather see his family dead, than live another day after this. ... He waits until his wife and kids are in the ground, and then he goes after the rest of the mob. He kills their kids. He kills their wives. He kills their parents and their parents friends. He burns down the houses they live in and the stores they work in. He kills people who owe them money. And like that, he's gone. - Verbal Kint, Usual Suspects"
    :titles "Berserker, Demagogue, Enforcer, Fearmonger, Marauder, Overseer, Pimp, Slave Lord, Slaver, Tormentor, Torturer, Wildman"
    :stat "Beast"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
-     "Berserker"
      "Bravado"
      "Call Out"
      "Coercion"
@@ -2061,7 +2073,6 @@ x +1DMG vs. Crouching."
      "Duress"
      "Enslave"
      "Frenzy"
-     "Fury"
      "Grip of Fear"
      "Interrogate"
      "Hatred"

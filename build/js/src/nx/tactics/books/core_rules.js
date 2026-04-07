@@ -115,16 +115,8 @@ export default class nx_tactics_books_core_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Flanking", ":image", "Maps/Flanking.png", ":summary", "* 4 - Left Flank: [+1 Attack]\n* 5 - Right Flank: [+1 Attack]\n* 6 - Blind Spot: [+2 Attack]"),
             ":Hazard",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hazard"),
-            ":Prone",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Prone"),
             "Stand Your Ground",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Stand Your Ground", ":summary", "* [Action]: [+1 Action] if you do not move this turn."),
-            ":Surrounded",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Surrounded", ":image", "Maps/Surrounded.png", ":titles", "Outnumbered"),
-            ":Terrain",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Terrain"),
-            "Terrain Hazard",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Terrain Hazard")
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Stand Your Ground", ":summary", "* [Action]: [+1 Action] if you do not move this turn.")
           )
         ),
         "Core Terms",

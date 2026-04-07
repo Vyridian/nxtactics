@@ -8884,11 +8884,21 @@ export default class nx_tactics_base {
           "name" : "titles",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "abilitymap": {
+          "name" : "abilitymap",
+          "type" : nx_tactics_base.t_abilitymap,
+          "multi": false
+        },
+        "itemmap": {
+          "name" : "itemmap",
+          "type" : nx_tactics_base.t_itemmap,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "titles",
-        "type" : vx_core.t_string,
+        "name" : "itemmap",
+        "type" : nx_tactics_base.t_itemmap,
         "multi": false
       }
     }

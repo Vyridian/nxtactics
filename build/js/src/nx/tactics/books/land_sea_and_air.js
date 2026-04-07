@@ -403,66 +403,6 @@ export default class nx_tactics_books_land_sea_and_air {
   }
 
   /**
-   * @function chapter_maps
-   * @return {chapter}
-   */
-  static t_chapter_maps = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_maps = {
-    vx_type: nx_tactics_books_land_sea_and_air.t_chapter_maps
-  }
-
-  // (func chapter_maps)
-  static f_chapter_maps() {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_chapter},
-      ":name",
-      "Maps",
-      ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Maps",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Maps",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            "Air Map",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Air Map"),
-            "Ocean Map",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Ocean Map"),
-            "Swamp Map",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Swamp Map"),
-            "Underwater Map",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Underwater Map")
-          )
-        ),
-        ":Terrain",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Terrain",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            ":Cave",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Cave", ":summary", "[Hazard]: Cave in."),
-            ":Jungle",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Jungle", ":summary", "[Hazard]: Difficulty starts at 2 for a sparse, mostly safe jungle."),
-            ":Snow",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Snow", ":summary", "[Hazard]: Avalanche.")
-          )
-        )
-      )
-    )
-    return output
-  }
-
-  /**
    * @function tacticsbook
    * @param  {tactics} tactics
    * @return {book}
@@ -487,8 +427,7 @@ export default class nx_tactics_books_land_sea_and_air {
       nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_overview(),
         nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_unit_types(),
-        nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_rules(),
-        nx_tactics_books_land_sea_and_air.f_chapter_maps()
+        nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_rules()
       )
     )
     return output
@@ -504,14 +443,12 @@ export default class nx_tactics_books_land_sea_and_air {
       "chapter_land_sea_and_air_overview": nx_tactics_books_land_sea_and_air.e_chapter_land_sea_and_air_overview,
       "chapter_land_sea_and_air_rules": nx_tactics_books_land_sea_and_air.e_chapter_land_sea_and_air_rules,
       "chapter_land_sea_and_air_unit_types": nx_tactics_books_land_sea_and_air.e_chapter_land_sea_and_air_unit_types,
-      "chapter_maps": nx_tactics_books_land_sea_and_air.e_chapter_maps,
       "tacticsbook": nx_tactics_books_land_sea_and_air.e_tacticsbook
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "chapter_land_sea_and_air_overview": nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_overview,
       "chapter_land_sea_and_air_rules": nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_rules,
       "chapter_land_sea_and_air_unit_types": nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_unit_types,
-      "chapter_maps": nx_tactics_books_land_sea_and_air.t_chapter_maps,
       "tacticsbook": nx_tactics_books_land_sea_and_air.t_tacticsbook
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -578,24 +515,6 @@ export default class nx_tactics_books_land_sea_and_air {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_unit_types
-    }
-
-    // (func chapter_maps)
-    nx_tactics_books_land_sea_and_air.t_chapter_maps['vx_value'] = {
-      name          : "chapter_maps",
-      pkgname       : "nx/tactics/books/land_sea_and_air",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_land_sea_and_air.f_chapter_maps
     }
 
     // (func tacticsbook)

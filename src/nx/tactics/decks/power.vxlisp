@@ -25,7 +25,7 @@
   (base/power
    :name "Aeromancy"
    :summary
-    "* Aero is the magical version of Air.
+    "* Aero is the magical version of [Wind]
      * Aero effects can be sustained without a source, but they can also be canceled by counter-magic.
      * Aero reacts with Pyro to produce the [Wildfire] effect.
      * Aero reacts with Cryo to produce the [Chill] effect.
@@ -313,15 +313,15 @@
        :name "Speak with Machines")))
   (base/power
    :name "Artistry"
-   :titles "Artomancy, Imagomancy, Ofuda, Papercraft, Sigilmancy"
+   :titles "Artisan, Artomancy, Imagomancy, Ofuda, Papercraft, Sigilmancy"
    :abilitymap
     (base/abilitymap
-     "Animate Painting"
+     "Animate:Painting"
       (base/ability
-       :name "Animate Painting")
-     "Animate Tatoo"
+       :name "Animate:Painting")
+     "Animate:Tatoo"
       (base/ability
-       :name "Animate Tatoo")
+       :name "Animate:Tatoo")
      "Art Imitates Life"
       (base/ability<-tactics-key tactics "Art Imitates Life")
      "Binding Paper"
@@ -330,6 +330,13 @@
      "Binding Symbol"
       (base/ability
        :name "Binding Symbol")
+     "Body Art"
+      (base/ability
+       :name "Body Art"
+       :titles "Body Painting, Tattoo"
+       :summary
+        "Meticulously paint a [Catalyst] of another [Artistry] [Ability] onto a body
+         * [Power]: [Artistry]")
      "Giant Kite"
       (base/ability
        :name "Giant Kite")
@@ -352,7 +359,13 @@
       (base/ability
        :name "Image Walk"
        :summary
-        "* Travel through a painting/drawing or yourself.
+        "* Travel through a painting/drawing of yourself
+         * [Power]: [Artistry]")
+     "Painted World"
+      (base/ability
+       :name "Painted World"
+       :summary
+        "Create an artificial world in a painting
          * [Power]: [Artistry]")
      "Paper Airplane"
       (base/ability
@@ -635,35 +648,41 @@
      tactics
      "Enhance Blessing"))
   (base/power
-   :name "Bloodcraft"
+   :name "Blood"
+   :titles "Blood Magic, Blood Brother, Blood Mage, Blood Witch, Bloodcraft, Bloodbending, Bloodstained, Sanguineous, Sanguimancy, Vampire"
    :summary
-    "* Each use of Blood Magic requires a blood sacrifice. The user immediately suffers one [Blood Loss], or if a captured sacrifice is available, the user may instead use the blood of the sacrifice.
-     * Blood magic is a favorite of Vampires who can recover from [Blood Loss] quickly."
-   :titles "Blood Magic, Blood Brother, Blood Mage, Blood Witch, Sanguineous, Vampire"
+    "The power to control blood is a bizarre and terrifying power
+     * Blood Sacrifice - Each use of Blood requires a blood sacrifice. The [Price of Power] is always [Bleeding]:1 or [Blood Loss]:1, or if a captured sacrifice is available, the user may instead use the blood of the sacrifice
+     * Vampires - Vampires often use Blood and they can recover from [Blood Loss] quickly"
    :stat "Shadow"
    :abilitymap
     (base/abilitymap
      "Blood Bath"
+      (base/ability<-tactics-key tactics "Blood Bath")
+     "Blood Coated"
       (base/ability
-       :name "Blood Bath"
+       :name "Blood Coated"
        :summary
-        "* Bathe in the blood of of the young and healthy. Gain [Vampiric Blood] (even if not a [Vampire]) equal to the number of victims drained up to [Blood Magic].")
+        "* An equipped weapon becomes coated in blood
+         * Blood coated weapons always cause [Bleeding]")
      "Blood Bind"
       (base/ability
        :name "Blood Bind")
      "Blood Blade"
-      (base/ability
-       :name "Blood Blade"
-       :summary
-        "* Create a sword, knife, or axe from blood. Blood Weapons always cause [Bleeding].")
+      (base/ability<-tactics-key tactics "Blood Blade")
      "Blood Borne"
-      (base/ability
-       :name "Blood Borne"
-       :summary
-        "* Target: [Bleeding]. Apply [Sickness] to a [Bleeding] target.")
+      (base/ability<-tactics-key tactics "Blood Borne")
      "Blood Brother"
       (base/ability
        :name "Blood Brother")
+     "Blood Burn"
+      (base/ability
+       :name "Blood Burn"
+       :summary
+        "Your blood burns when exposed to air")
+     "Blood Burst"
+      (base/ability
+       :name "Blood Burst")
      "Blood Feud"
       (base/ability
        :name "Blood Feud")
@@ -676,24 +695,52 @@
      "Blood Oath"
       (base/ability
        :name "Blood Oath")
+     "Blood Sight"
+      (base/ability
+       :name "Blood Sight"
+       :titles "Bloodshot"
+       :summary
+        "Your eyes grow bloodshot and you can see the blood flowing in the area in front of you
+         * [Power]: [Blood]
+         * Levels increase [Area] or [Range]")
      "Blood Spear"
       (base/ability
        :name "Blood Spear"
        :summary
-        "* Create a spear or javelin from blood. Blood Weapons always cause [Bleeding].")
+        "* Create a spear or javelin from blood. Blood Weapons always cause [Bleeding]
+         * [Power]: [Blood]")
+     "Blood Walk"
+      (base/ability
+       :name "Blood Walk")
      "Blood Whip"
       (base/ability
        :name "Blood Whip"
        :summary
-        "* Create a whip or rope from blood. Blood Weapons always cause [Bleeding].")
-     "Boil Blood"
+        "Create a whip or rope from blood
+         * [Power]: [Blood]
+         * Blood Weapons always cause [Bleeding].")
+     "Blood Boil"
       (base/ability
-       :name "Boil Blood"
+       :name "Blood Boil"
        :summary
-        "* Touch, Fire Attack, Criticals are only Damage.")
+        "Touch, Fire Attack
+         * [Power]: [Blood]
+         * Flip [Crit] to [Hits]")
+     "Bloodletting"
+      (base/ability
+       :name "Bloodletting"
+       :summary
+        "Cause Bleeding to remove foreign objects from the body including bullets, parasites, poison, and disease
+         * [Power]: [Blood]")
      "Call for Blood"
       (base/ability
        :name "Call for Blood")
+     "Heartstopper"
+      (base/ability
+       :name "Heartstopper"
+       :summary
+        "* Pressure a Foe's heart
+         * [Power]: [Blood]")
      "Hecatomb"
       (base/ability
        :name "Hecatomb"
@@ -708,7 +755,10 @@
          * [Action]: Take a [Blood Loss]. Change 1 [Critical Damage] to a normal [Damage] or change 1 [Damage] to a [Blood Loss].")
      "Out for Blood"
       (base/ability
-       :name "Out for Blood")))
+       :name "Out for Blood")
+     "Wall of Blood"
+      (base/ability
+       :name "Wall of Blood")))
   (base/power
    :name "Chaos"
    :reference
@@ -789,14 +839,9 @@
        :reference
         "Y: Why do you even bother playing games? If you know how turns out? T:I only know what will happen because it will happen. Y:So you control everything. T:I control nothing... T:Here. This mirror reflects one second into the future... I could set the mirror two minutes into the future, or an hour. Do you want to know how this ends, and drive yourself crazy trying to avoid the inevitable? - Tiangong and Yi Xing, Honor of Kings, Secret Level Island in the Sun")
      "Ravages of Time"
-      (base/ability
-       :name "Ravages of Time"
-       :summary "* A target appears older than it is.")
+      (base/ability<-tactics-key tactics "Ravages of Time")
      "Recover Lost Time"
-      (base/ability
-       :name "Recover Lost Time"
-       :summary
-        "* Restore a target to a younger state. Reverses [Ravages of Time].")
+      (base/ability<-tactics-key tactics "Recover Lost Time")
      "Reverse Time"
       (base/ability
        :name "Reverse Time"
@@ -1321,6 +1366,7 @@
      "Lightning Lash"
      "Lightning Pillar"
      "Lightning Warp"
+     "Living Lightning"
      "Resist:Electricity"))
   (base/power
    :name "Enchantment"
@@ -1338,10 +1384,6 @@
      "Craft:Perfume"
       (base/ability
        :name "Craft:Perfume")
-     "Death Ward"
-      (base/ability
-       :name "Death Ward"
-       :summary "* Provides increased defense against undead beings.")
      "Fertile Field"
       (base/ability
        :name "Fertile Field"
@@ -1367,23 +1409,6 @@
        :summary
         "* The opposite of [Charm]. Malediction increases the severity of negative effects.
          * [Action]: Roll vs. Spirit and add a Black [Curse] Token for each [Hit].")
-     "Magic Ward"
-      (base/ability
-       :name "Magic Ward"
-       :summary "* Provides increased defense against magical creatures.")
-     "Mental Ward"
-      (base/ability
-       :name "Mental Ward"
-       :summary "* Provides increased defense against mental attacks.")
-     "Metal Ward"
-      (base/ability
-       :name "Metal Ward"
-       :summary "* Provides increased defense against predominately metal weapons.")
-     "Nature Ward"
-      (base/ability
-       :name "Nature Ward"
-       :summary
-        "* Provides increased defense against Animals, and weather.")
      "Palsy"
       (base/ability
        :name "Palsy"
@@ -1406,31 +1431,52 @@
        :name "Safekeep"
        :summary
         "* [Action]: Enchant an item to prevent loss or theft. Any effect that would remove, loose, or damage the item must roll vs. Safekeep or fail in addition to any other checks.")
-     "Spirit Ward"
+     "Ward:Death"
       (base/ability
-       :name "Spirit Ward"
+       :name "Ward:Death"
+       :summary "* Provides increased defense against undead beings.")
+     "Ward:Magic"
+      (base/ability
+       :name "Ward:Magic"
+       :summary "* Provides increased defense against magical creatures.")
+     "Ward:Mental"
+      (base/ability
+       :name "Ward:Mental"
+       :summary "* Provides increased defense against mental attacks.")
+     "Ward:Metal"
+      (base/ability
+       :name "Ward:Metal"
+       :summary "* Provides increased defense against predominately metal weapons.")
+     "Ward:Nature"
+      (base/ability
+       :name "Ward:Nature"
+       :summary
+        "* Provides increased defense against Animals, and weather.")
+     "Ward:Spirit"
+      (base/ability
+       :name "Ward:Spirit"
        :summary
         "* Provides increased defense against spirit beings and attack against [Will].")
-     "Stone Ward"
+     "Ward:Stone"
       (base/ability
-       :name "Stone Ward"
+       :name "Ward:Stone"
        :summary
         "* Provides increased defense against predominately stone weapons.")
+     "Ward:Wood"
+      (base/ability
+       :name "Ward:Wood"
+       :summary
+        "* Provides increased defense against predominately wooden weapons.")
      "Warding Sign"
       (base/ability<-tactics-key tactics "Warding Sign")
      :Weaken
       (base/ability
        :name "Weaken"
        :summary
-        "* Reduces Body")
-     "Wood Ward"
-      (base/ability
-       :name "Wood Ward"
-       :summary
-        "* Provides increased defense against predominately wooden weapons.")))
+        "* Reduces Body")))
   (base/power
    :name "Fleshcraft"
-   :titles "Bio-Alchemy, Flesh Molder, Sadist"
+   :titles "Bio-Alchemy, Flesh, Fleshart, Flesh Artist, Flesh Molder, Sadist"
    :summary
     "* This mastery of the flesh defies traditional life and death. Body parts may be removed, reattched, molded to create abominations or fiendish beauty.
      * Stats may be rearranged depending on the success roll. Only magical healing will repair."
@@ -1878,7 +1924,7 @@
   (base/power
    :name "Naturalism"
    :summary
-    "* Restrictions - Must not harm plants."
+    "* Restrictions - Must not purposely harm plants."
    :titles "Botomancy, Druid, Hierophant, Nature Master"
    :abilitymap
     (base/abilitymap
@@ -1947,7 +1993,19 @@
        :summary
         "* Travel at exceptional speed through forests while appearing to walk calmly appearing and reappearing at greater distances.
          * [Continuous]: Ignore [Success] movement penalties in [Forest], [Jungle], [Swamp] and other overgrown terrain. Additionally, [Success] is applied as a penalty for anything attempting to [Track] you.")
-     :Overgroth
+     "Nature's Grasp"
+      (base/ability
+       :name "Nature's Grasp"
+       :summary
+        "Create a [Surface:Vines] directly in front of you")
+     "Nature's Wrath"
+      (base/ability
+       :name "Nature's Wrath"
+       :summary
+        "Create a dangerous [Surface:Vines] directly in front of you
+         * This is [Terrain:Hazardous] [Bash] except to you
+         * [Requires]: [Nature's Grasp]")
+     "Overgroth"
       (base/ability
        :name "Overgroth")
      "Plant Lore"
@@ -1964,10 +2022,7 @@
       (base/ability
        :name "Plant Ward"
        :summary "* Defends against Plants")
-     :Purification
-      (base/ability
-       :name "Purification")
-     :Root
+     "Root"
       (base/ability
        :name "Root")
      "Tree Form"
@@ -2105,11 +2160,7 @@
         "* [Requires]: Target whose spirit has left its body.
          * [Action]: Cut the connection between the spirit and its body.  The spirit may become lost, and the body falls into a coma. The soulless body is now an attractive target for possession.")
      "Undeath"
-      (base/ability
-       :name "Undeath"
-       :summary
-        "* Similar to [Resurrect], this ritual allows a being to permanently transform a [Living] being into an [Undying] one.
-         * This can be used to create [Zombie] and [Skeletons] servants or create indepenent undead like [Ghouls] and [Vampires].")))
+      (base/ability<-tactics-key tactics "Undeath")))
   (base/power
    :name "Primordial"
    :titles
@@ -2320,41 +2371,49 @@
        :name "Cleaning"
        :summary
         "* By simply rubbing any dirty surface with a wet cloth, the material immediately becomes cleaner regardless of the contamination. All harmful contaminents are cleaned off as well.")
-     :Cleanse
+     "Cleanse"
       (base/ability
        :name "Cleanse"
        :summary
         "* Those who believe see a silvery shower wash over the target and cleaning away [Disease] or [Poison] like dirt.
          * Reduces [Poison] and [Disease] damage rolls by the skill level.")
-     :Exorcism
+     "Exorcism"
       (base/ability
        :name "Exorcism"
        :summary "* Banish a spirit that is possessing a person, item, or location.")
-     :Halo
+     "Halo"
       (base/ability
        :name "Halo"
        :summary
         "* Magnificient halo of light appears behind the user's head.  Observers are awed by the sight.
          * [Action] - +1 on Social abiliites."
        :titles "Godshead")
-     :Introspection
+     "Introspection"
       (base/ability
        :name "Introspection")
-     :Pacifism
+     "Pacifism"
       (base/ability
        :name "Pacifism")
-     :Penance
+     "Penance"
       (base/ability
        :name "Penance")
-     :Purify
+     "Purge"
+      (base/ability
+       :name "Purge")
+     "Purify"
       (base/ability
        :name "Purify"
        :summary
         "* Contamination including filth, [Disease], [Poison], or [Raditation] may be cleansed in a small area.")
-     :Purge
+     "Purify Water"
       (base/ability
-       :name "Purge")
-     :Sanctuary
+       :name "Purify Water"
+       :summary
+        "* [Power]: [Purity] or [Water]")
+     "Purification"
+      (base/ability
+       :name "Purification")
+     "Sanctuary"
       (base/ability
        :name "Sanctuary"
        :summary
@@ -2698,180 +2757,6 @@
    :name "Agility"
    :stat "Body")
   (base/power
-   :name "Air"
-   :reference
-    "* But still the clever north wind was not satisfied. It spoke to Vianne of towns yet to be visited, friends in need yet to be discovered, battles yet to be fought... - Chocolat
-     * You're really going to trust me ... My mind is like the wind on the waves. It could change in an instant. - Kazuha, Genshin Impact"
-   :summary
-    "* Air is the element of freedom. Air elementalists remain distant from worldly concerns. They are always in continous motion, moving from place to place and never putting down roots.
-     * Symbol - White Swirling Wind
-     * Personality - Airy, Flighty, Emphemeral, Ethereal, Gossamer"
-   :titles "Aeromancer. Storm Lord, Storm Shaman, Weather Witch, Wind Rider, Wind Walker"
-   :abilitymap
-    (base/abilitymap
-     "Acid Cloud"
-      (base/ability
-       :name "Acid Cloud"
-       :summary
-        "* Creates a cloud of acid.
-         * [Damage Type]: [Corrosive]")
-     "Acid Rain"
-      (base/ability
-       :name "Acid Rain"
-       :summary
-        "* Calls acid rain from an existing cloud.
-         * [Damage Type]: [Corrosive]")
-     "Air Bubble"
-      (base/ability<-tactics-key tactics "Air Bubble")
-     "Air Breathing"
-      (base/ability
-       :name "Air Breathing"
-       :summary "* Can breath in any kind of air without ill effect including poison gases.")
-     "Alter Temperature"
-      (base/ability
-       :name "Alter Temperature")
-     "Alter Weather"
-      (base/ability
-       :name "Alter Weather")
-     "Call Hailstorm"
-      (base/ability
-       :name "Call Hailstorm")
-     "Call Hurricane"
-      (base/ability
-       :name "Call Hurricane"
-       :summary "* Buildup"
-       :titles "Divine Wind")
-     "Call Storm"
-      (base/ability
-       :name "Call Storm"
-       :summary "* Calls a storm cloud.")
-     "Carried on the Wind"
-      (base/ability
-       :name "Carried on the Wind"
-       :summary "* By focusing, the user can detect small things carried on the wind. Smoke, pollen, poison, unusual smells, ash, dust, faint sounds, etc. may be detected with uncanny ability. Higher levels detect more distanct and faint things.")
-     "Control Storm"
-      (base/ability
-       :name "Control Storm")
-     "Clean Air"
-      (base/ability
-       :name "Clean Air")
-     "Choking Cloud"
-      (base/ability
-       :name "Choking Cloud")
-     "Control Winds"
-      (base/ability
-       :name "Control Winds"
-       :summary "* Effect: Raise or lower Wind strength.")
-     "Downdraft"
-      (base/ability
-       :name "Downdraft")
-     "Eye of the Storm"
-      (base/ability
-       :name "Eye of the Storm"
-       :summary
-        "* [Action]: Create an eye in the storm that reduces [Wind Intensity] in 1 space radius for each Hit.
-         * [Continue]: Reroll wind reduction and radius increases by 2 up to Level radius.
-         * [Discontinue]: Wind returns to normal at same rate it was reduced.")
-     "Fan the Flames"
-      (base/ability
-       :name "Fan the Flames")
-     "Fog Bank"
-      (base/ability
-       :name "Fog Bank")
-     "Smother"
-      (base/ability
-       :name "Smother")
-     "Spindrift"
-      (base/ability
-       :name "Spindrift"
-       :summary "* Wind generates a thick mist above any body of water.")
-     "Suffocate"
-      (base/ability<-tactics-key tactics "Suffocate")
-     "Summon:Cloud"
-      (base/ability
-       :name "Summon:Cloud"
-       :summary
-        "* Summons a large living cloud in moisture rich air. This can obscure vision.")
-     "Summon:Djinn"
-      (base/ability
-       :name "Summon:Djinn")
-     "Summon:Gust"
-      (base/ability
-       :name "Summon:Gust"
-       :summary "* Summons a small living wind on items that may be blown in the breeze. Air elementals love nothing more than pushing things around.")
-     "Summon:Slyph"
-      (base/ability
-       :name "Summon:Slyph")
-     "Swirl"
-      (base/ability
-       :name "Swirl")
-     "Temperature Control"
-      (base/ability
-       :name "Temperature Control"
-       :summary "* Effect: Raise or lower Temperature, Humidity.")
-     "Tempest"
-      (base/ability
-       :name "Tempest")
-     "Tempest in a Teapot"
-      (base/ability
-       :name "Tempest in a Teapot"
-       :summary "* Hits have no effect.  Criticals change Weather Intensity.")
-     "Thunderstorm"
-      (base/ability
-       :name "Thunderstorm")
-     "Voices Carry"
-      (base/ability
-       :name "Voices Carry"
-       :summary "Listen to conversation within line of sight.")
-     "Weather Sight"
-      (base/ability
-       :name "Weather Sight"
-       :summary "* Analyze and predict weather")
-     "Wind Lash"
-      (base/ability
-       :name "Wind Lash"
-       :titles "Wind Whip")
-     "Whirlwind"
-      (base/ability
-       :name "Whirlwind"
-       :titles "Cyclone, Tornado")
-     "Whispering Winds"
-      (base/ability
-       :name "Whispering Winds"
-       :summary
-        "* [Power]: [Air] or [Aero]
-         * Speak to others (one way) over long distances.")
-     "Wind Blade"
-      (base/ability
-       :name "Wind Blade"
-       :summary "* Create an ephemeral Sword created from thin air. It acts as a normal sword except that it does [Knockback] instead of [Bleeding].")
-     "Wind Blast"
-      (base/ability
-       :name "Wind Blast"
-       :reference "* Where the two winds meet, there I will see the Wind Scar - Inuyasha")
-     "Wind Form"
-      (base/ability
-       :name "Wind Form"
-       :summary
-        "* [Requires]: Stand in a breeze.
-         * [Action]: Gain attributes of Wind as well as [Wind Walk] for the turn.
-         * [Continue]: May make [Strike] and [Grab] Wind Close Combat attacks at Level.")
-     "Wind Slash"
-      (base/ability
-       :name "Wind Slash")
-     "Wind Walk"
-      (base/ability
-       :name "Wind Walk")
-     "Wind Wall"
-      (base/ability
-       :name "Wind Wall"
-       :summary "* Wall that deflects missles and strikes aerial units.")
-     "Updraft"
-      (base/ability
-       :name "Updraft"
-       :summary
-        "* [Action]: Apply [Wind] in a radius around user, lift enemies off the ground with Level weight, and hurl them down, if they strike a surface they take Level damage .")))
-  (base/power
    :name "Altered Skin"
    :abilitymap
     (base/abilitymap
@@ -2890,10 +2775,6 @@
        :name "Another Face in the Crowd")
      "Chameleon Skin"
       (base/ability<-tactics-key tactics "Chameleon Skin")
-     "Doppleganger"
-      (base/ability
-       :name "Doppleganger"
-       :summary "Take on the appearance of someone else.")
      "Enhanced Beauty"
       (base/ability
        :name "Enhanced Beauty")
@@ -2906,7 +2787,11 @@
        :name "Face of Terror")
      "Fairest of them All"
       (base/ability
-       :name "Fairest of them All")))
+       :name "Fairest of them All")
+     "Replicate"
+      (base/ability
+       :name "Replicate"
+       :summary "Take on the appearance of someone else.")))
   (base/power
    :name "Aquatic"
    :titles "Marine"
@@ -3562,12 +3447,12 @@
       (base/ability
        :name "Volcanic Eruption")))
   (base/power
-   :name "Electricity"
+   :name "Electric"
+   :titles "Electricity, Lightning"
    :summary
     "* Electric Elementalist personalities are influenced by their link to Electricity.
      * Energetic, Explosive, Dynamic, Animated, Spark of Life, High Strung
      * [Crits] may be used to place 2 [Stun] each (or 2 [Damage] each if the target is [Mechanical])"
-   :titles "Lightning"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
@@ -3582,6 +3467,7 @@
      "Lightning Lash"
      "Lightning Pillar"
      "Lightning Warp"
+     "Living Lightning"
      "Resist:Electricity"))
   (base/power
    :name "Empathy"
@@ -4114,12 +4000,8 @@
       (base/ability
        :name "Fire Storm"
        :titles "Rain of Fire")
-     "Fire Walk"
-      (base/ability
-       :name "Fire Walk"
-       :reference
-        "* I touch the fire and freezes me. I look into it and its black. Why can't I feel? My skin should crack and peel. I want the fire back. Now through the smoke, she calls to me, to make my way across the flame. To save the day or maybe melt away. I guess it's all the same. So I will walk through the fire, cause whereelse can I turn. I will walk through the fire and let it... The torch I bear is scorthing me, and Buffy's laughing I've no doubt. I hope she fries. I'm free if that bitch dies. I'd better help her out. Cause she is drawn to the fire. Some people never learn, and she will walk through the fire and let it... These endless days are finally ending in a blaze. And we are caught in the fire. The point of no return. So we will walk through the fire and let it burn. - Buffy the Vampire Slayer, Once More with Feeling"
-       :summary "* Walk through flames. Gain [Armor] vs. Fire and ignore [Burning] effects.")
+     "Walk:Fire"
+      (base/ability<-tactics-key tactics "Walk:Fire")
      "Fire Ward"
       (base/ability
        :name "Fire Ward")
@@ -4182,6 +4064,23 @@
       (base/ability
        :name "Wildfire"
        :summary "* Air in the area becomes bone dry and overheated. +1 [Fire] or [Air] abilities.")))
+  (base/power
+   :name "Flesh"
+   :titles "Fleshcrafting, Fleshmolder, Molding, Mutate, Transfiguration, Vissisitude"
+   :summary
+    "* The ability to mold flesh."
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Blinding"
+     "Body Morph"
+     "Deafening"
+     "Face Molding"
+     "Face Off"
+     "Malleate"
+     "Sensory Deprivation"
+     "Sensory Overload"
+     "Skinriding"))
   (base/power
    :name "Flexible"
    :reference
@@ -4426,17 +4325,16 @@
    :reference
     "* Fantasy... can only survive with an underlying reality. Reality... is the stillness buried deep beneath the illusion. This is eternity. - Raiden Shogun, Genshin Impact"
    :summary
-    "* Illusion is the art of fooling the target into believing in something that is not really there.
+    "* Illusion is the art of fooling someone into believing in something that is not really there.
      * [Synergy]: [Art]
      * Illusions [Distract] and [Taunt].
      * Illusions
-     ** Illusions are a trick of perception to see and hear things that are not real. Illusions appear as a trick of the light on recording devises and are obviously not real.
-     ** Creation - Illusions are manifested in the Astral Realm, and their image leaks into the current Realm. Illusions are real in the Astral Realm, and Illusions dominate there.
+     ** Illusions are a trick of perception to see and hear things that are not real. Illusions appear as a trick of the light on recording devices and are obviously not real.
+     ** Creation - Illusions are manifested in the Astral or Dream Realm, and their image leaks into the current Realm. Illusions are real in the Astral Realm, and Illusions dominate there.
      ** Detection - Illusions are considered to be [Hidden] things. Anyone who [Detect]s the Illusion may act as if it was not there, but even those who detect the Illusion cannot see through the illusion including the caster.
      ** Illusions may be enormous, altering terrain and populating it with any number of creatures.
      ** Illusions may cover real things, but cannot make them disappear.
      ** Illusions may not do damage or take damage since they are not really there.
-     ** Note: unliving creatures cannot detect or be influenced by illusions.
      * Phantasms
      ** Phantasmal objects appear insubstantial, but they are partially real and are destroyed with a single [Damage Token].
      ** [Phantasm]s move independently each time the creator Moves. [Phantasm]s perform the same actions as the unit but no effect. [Phantasm] Damage normally but ignore effects except [Wound]s which immediately destroy them."
@@ -4484,23 +4382,29 @@
       (base/ability
        :name "Hypnotic Eyes"
        :summary "Criticals: [Fascination]")
-     "Illusion Shattered"
+     "Illusion:Image"
       (base/ability
-       :name "Illusion Shattered"
-       :reference "* Raiden Shogun, Genshin Impact")
-     "Illusionary Image"
-      (base/ability
-       :name "Illusionay Image"
+       :name "Illusion:Image"
        :summary
         "A permanent realistic image. Skill determines size and realism. Advanced versions are 3D or moving.")
-     "Illusionary Meal"
+     "Illusion:Meal"
       (base/ability
-       :name "Illusionary Meal"
+       :name "Illusion:Meal"
        :summary
-        "* Creates a tasty meal out of other less appetizing things. The meal appears and tastes anyway the user wishes. The meal serves level squared human sized persons. The original ingredients may be unpleasant but cannot be harmful.")
-     "Illusionary Wall"
+        "* Creates a tasty meal out of other less appetizing things. The meal appears and tastes anyway the user wishes. The meal serves Level^2 human sized persons.
+         * Requires: The original ingredients may be unpleasant but cannot be harmful.")
+     "Illusion:Script"
       (base/ability
-       :name "Illusionary Wall"
+       :name "Illusion:Script"
+       :summary
+        "* Creates illusory writing that is normally invisible, but it can appear under conditions determined by the caster. After it appears and is read, it will begin to fade away")
+     "Illusion:Shattered"
+      (base/ability
+       :name "Illusion:Shattered"
+       :reference "* Raiden Shogun, Genshin Impact")
+     "Illusion:Wall"
+      (base/ability
+       :name "Illusion:Wall"
        :summary
         "* Appears to be a real wall of any sort including magical ones, but has no real effect except to obscure or block line of sight.")
      "Mental Block"
@@ -5544,22 +5448,6 @@
        :summary
         "* [Power]: [Planetary]")))
   (base/power
-   :name "Molding"
-   :titles "Fleshcrafting, Fleshmolder, Mutate, Transfiguration, Vissisitude"
-   :summary
-    "* The ability to mold flesh."
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Blinding"
-     "Body Morph"
-     "Deafening"
-     "Face Molding"
-     "Face Off"
-     "Malleate"
-     "Sensory Deprivation"
-     "Sensory Overload"))
-  (base/power
    :name "Phasing"
    :titles "Intangibility"
    :abilitymap
@@ -5676,6 +5564,13 @@
      "Fallout"
      "Radiation Beam"
      "Radiation Blast"))
+  (base/power
+   :name "Rage"
+   :titles "Berserker, Savage"
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Berserker"
+     "Fury"))
   (base/power
    :name "Reality"
    :titles "Reality Warping"
@@ -5966,9 +5861,9 @@
      "Snowcraft"
      "Tracked"
      "Turbo Booster"
+     "Walk:Water"
      "Wall Crawling"
      "Wall Running"
-     "Water Walking"
      "Water Running"
      "Wheeled"))
   (base/power
@@ -5976,35 +5871,16 @@
    :reference
     "* Time abides no reason, for it deprives us all equally, yet brooks not a second to be reclaimed. - Genshin Impact"
    :abilitymap
-    (base/abilitymap
-     "Age Alteration"
-      (base/ability
-       :name "Age Alteration")
-     "Freeze Time"
-      (base/ability
-       :name "Freeze Time")
-     :Postcognition
-      (base/ability
-       :name "Postcognition")
-     :Precognition
-      (base/ability
-       :name "Precognition")
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Postcognition"
+     "Precognition"
+     "Ravages of Time"
+     "Recover Lost Time"
      "Redirect Time"
-      (base/ability
-       :name "Redirect Time"
-       :summary "* [Reaction]: Redirect a time effect to another target.")
      "Slow Time"
-      (base/ability
-       :name "Slow Time")
      "Time Lapse"
-      (base/ability
-       :name "Time Lapse")
-     "Time Stop"
-      (base/ability
-       :name "Time Stop"
-       :summary
-        "* Ability to briefly exit the normal timestream. This effectively freezes time for a few seconds. The user is can move freely, but nothing but air can be moved or harmed. Note that doors cannot be opened and air is thick to move through or breathe."
-       :titles "Freeze Time, Time Slip")))
+     "Time Stop"))
   (base/power
    :name "Time Travel"
    :image "Units/SpaceAndTime/Vortex.jpg"
@@ -6018,7 +5894,9 @@
      "Reverse Time"
       (base/ability
        :name "Reverse Time"
-       :summary "* Rewind recent events within the surrounding area and possibly choose a different [Action].")
+       :titles "Do Over"
+       :summary
+        "* Rewind recent events within the surrounding area and possibly choose a different [Action].")
      :Rewind
       (base/ability
        :name "Rewind")
@@ -6162,7 +6040,9 @@
      "Petrifying Breath"
      "Petrifying Stare"
      "Petrifying Touch"
-     "Polymorph"))
+     "Polymorph"
+     "Ravages of Time"
+     "Recover Lost Time"))
   (base/power
    :name "Vampirism"
    :summary
@@ -6355,6 +6235,8 @@
        :name "Undertow"
        :summary
         "* Creates a strong downward current that can suck things downward.")
+     "Walk:Water"
+      (base/ability<-tactics-key tactics "Walk:Water")
      "Wall of Water"
       (base/ability
        :name "Wall of Water"
@@ -6377,10 +6259,6 @@
      "Water Spout"
       (base/ability
        :name "Water Spout")
-     "Water Walk"
-      (base/ability
-       :name "Water Walk"
-       :summary "* Move on or under water as if it were solid ground of any desired slope.")
      "Waters of Life"
       (base/ability
        :name "Waters of Life")
@@ -6911,6 +6789,180 @@
    :name "Wealth")
   (base/power
    :name "Weather")
+  (base/power
+   :name "Wind"
+   :titles "Aeromancer. Storm Lord, Storm Shaman, Weather Witch, Wind Rider, Wind Walker"
+   :reference
+    "* But still the clever north wind was not satisfied. It spoke to Vianne of towns yet to be visited, friends in need yet to be discovered, battles yet to be fought... - Chocolat
+     * You're really going to trust me ... My mind is like the wind on the waves. It could change in an instant. - Kazuha, Genshin Impact"
+   :summary
+    "* Air is the element of freedom. Air elementalists remain distant from worldly concerns. They are always in continous motion, moving from place to place and never putting down roots.
+     * Symbol - White Swirling Wind
+     * Personality - Airy, Flighty, Emphemeral, Ethereal, Gossamer"
+   :abilitymap
+    (base/abilitymap
+     "Acid Cloud"
+      (base/ability
+       :name "Acid Cloud"
+       :summary
+        "* Creates a cloud of acid.
+         * [Damage Type]: [Corrosive]")
+     "Acid Rain"
+      (base/ability
+       :name "Acid Rain"
+       :summary
+        "* Calls acid rain from an existing cloud.
+         * [Damage Type]: [Corrosive]")
+     "Air Bubble"
+      (base/ability<-tactics-key tactics "Air Bubble")
+     "Air Breathing"
+      (base/ability
+       :name "Air Breathing"
+       :summary "* Can breath in any kind of air without ill effect including poison gases.")
+     "Alter Temperature"
+      (base/ability
+       :name "Alter Temperature")
+     "Alter Weather"
+      (base/ability
+       :name "Alter Weather")
+     "Call Hailstorm"
+      (base/ability
+       :name "Call Hailstorm")
+     "Call Hurricane"
+      (base/ability
+       :name "Call Hurricane"
+       :summary "* Buildup"
+       :titles "Divine Wind")
+     "Call Storm"
+      (base/ability
+       :name "Call Storm"
+       :summary "* Calls a storm cloud.")
+     "Carried on the Wind"
+      (base/ability
+       :name "Carried on the Wind"
+       :summary "* By focusing, the user can detect small things carried on the wind. Smoke, pollen, poison, unusual smells, ash, dust, faint sounds, etc. may be detected with uncanny ability. Higher levels detect more distanct and faint things.")
+     "Control Storm"
+      (base/ability
+       :name "Control Storm")
+     "Clean Air"
+      (base/ability
+       :name "Clean Air")
+     "Choking Cloud"
+      (base/ability
+       :name "Choking Cloud")
+     "Control Winds"
+      (base/ability
+       :name "Control Winds"
+       :summary "* Effect: Raise or lower Wind strength.")
+     "Downdraft"
+      (base/ability
+       :name "Downdraft")
+     "Eye of the Storm"
+      (base/ability
+       :name "Eye of the Storm"
+       :summary
+        "* [Action]: Create an eye in the storm that reduces [Wind Intensity] in 1 space radius for each Hit.
+         * [Continue]: Reroll wind reduction and radius increases by 2 up to Level radius.
+         * [Discontinue]: Wind returns to normal at same rate it was reduced.")
+     "Fan the Flames"
+      (base/ability
+       :name "Fan the Flames")
+     "Fog Bank"
+      (base/ability
+       :name "Fog Bank")
+     "Smother"
+      (base/ability
+       :name "Smother")
+     "Spindrift"
+      (base/ability
+       :name "Spindrift"
+       :summary "* Wind generates a thick mist above any body of water.")
+     "Suffocate"
+      (base/ability<-tactics-key tactics "Suffocate")
+     "Summon:Cloud"
+      (base/ability
+       :name "Summon:Cloud"
+       :summary
+        "* Summons a large living cloud in moisture rich air. This can obscure vision.")
+     "Summon:Djinn"
+      (base/ability
+       :name "Summon:Djinn")
+     "Summon:Gust"
+      (base/ability
+       :name "Summon:Gust"
+       :summary "* Summons a small living wind on items that may be blown in the breeze. Air elementals love nothing more than pushing things around.")
+     "Summon:Slyph"
+      (base/ability
+       :name "Summon:Slyph")
+     "Swirl"
+      (base/ability
+       :name "Swirl")
+     "Temperature Control"
+      (base/ability
+       :name "Temperature Control"
+       :summary "* Effect: Raise or lower Temperature, Humidity.")
+     "Tempest"
+      (base/ability
+       :name "Tempest")
+     "Tempest in a Teapot"
+      (base/ability
+       :name "Tempest in a Teapot"
+       :summary "* Hits have no effect.  Criticals change Weather Intensity.")
+     "Thunderstorm"
+      (base/ability
+       :name "Thunderstorm")
+     "Voices Carry"
+      (base/ability
+       :name "Voices Carry"
+       :summary "Listen to conversation within line of sight.")
+     "Weather Sight"
+      (base/ability
+       :name "Weather Sight"
+       :summary "* Analyze and predict weather")
+     "Wind Lash"
+      (base/ability
+       :name "Wind Lash"
+       :titles "Wind Whip")
+     "Whirlwind"
+      (base/ability
+       :name "Whirlwind"
+       :titles "Cyclone, Tornado")
+     "Whispering Winds"
+      (base/ability
+       :name "Whispering Winds"
+       :summary
+        "* [Power]: [Air] or [Aero]
+         * Speak to others (one way) over long distances.")
+     "Wind Blade"
+      (base/ability
+       :name "Wind Blade"
+       :summary "* Create an ephemeral Sword created from thin air. It acts as a normal sword except that it does [Knockback] instead of [Bleeding].")
+     "Wind Blast"
+      (base/ability
+       :name "Wind Blast"
+       :reference "* Where the two winds meet, there I will see the Wind Scar - Inuyasha")
+     "Wind Form"
+      (base/ability
+       :name "Wind Form"
+       :summary
+        "* [Requires]: Stand in a breeze.
+         * [Action]: Gain attributes of Wind as well as [Wind Walk] for the turn.
+         * [Continue]: May make [Strike] and [Grab] Wind Close Combat attacks at Level.")
+     "Wind Slash"
+      (base/ability
+       :name "Wind Slash")
+     "Wind Walk"
+      (base/ability
+       :name "Wind Walk")
+     "Wind Wall"
+      (base/ability
+       :name "Wind Wall"
+       :summary "* Wall that deflects missles and strikes aerial units.")
+     "Updraft"
+      (base/ability
+       :name "Updraft"
+       :summary
+        "* [Action]: Apply [Wind] in a radius around user, lift enemies off the ground with Level weight, and hurl them down, if they strike a surface they take Level damage .")))
  )
  :doc "Returns the base powermap")
 

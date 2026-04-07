@@ -15,6 +15,10 @@
    :image "images/rule-ability-point.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Absorb"
+   :summary
+    "An Absorb Ability can Recover a Hit when they take Damage from a particular Damage Type")
+  (base/rule
    :name "Action"
    :image "images/rule-action.svg"
    :layout base/cardlayout-imageonly)
@@ -38,13 +42,22 @@
     "A positive modifier to a single Conflict
      Conflict Reveal - Reveal Fate. You may use that card instead")
   (base/rule
+   :name "Animate"
+   :summary
+    "Animate an inanimate object")
+  (base/rule
    :name "Arc"
    :image "images/rule-arc.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Area Effect"
-   :image "images/rule-areaeffect.svg"
+   :name "Area"
+   :image "images/rule-area.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Aura"
+   :summary
+     "An Aura is a field that surrounds the user's Space
+      * Power [Rating] may be reduced to increase the radius of the Aura, but the effect of the Aura reduces by 1 for each Space away from the center")
   (base/rule
    :name "Beast"
    :image "images/rule-beast.svg"
@@ -56,6 +69,12 @@
      * Unleashed - The Beast gains control. It cannot use Mind Skills and will only fight or flee.
      * Beast:X - IF Beast > Will THEN test Will vs Beast or gain Unleashed
      * Soothed - IF Unleashed Unit is in a peaceful situation and Will > Beast THEN test Will vs Beast to remove Unleashed")
+  (base/rule
+   :name "Binding"
+   :summary
+    "A ritual that creates a connection between a user and a being or object
+     * IF it is a being THEN it must agree to the Binding whether voluntary or through coercion
+     * Terms - The Binding may have terms added that increase the difficulty. Typical terms include: Do not attack me, Do not attack my allies, Attack my foes, Defend me, Obey a command, Obey all my commands, Steal an object, Capture a being")
   (base/rule
    :name "Blast"
    :image "images/rule-blast.svg"
@@ -96,6 +115,11 @@
    :name "Blood Loss"
    :image "images/rule-bloodloss.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Blood Thirsty"
+   :summary
+    "Unit is drawn to blood
+     * [Target]: Unit targets a [Bleeding] Foe within reach")
   (base/rule
    :name "Body"
    :image "images/rule-body.svg"
@@ -159,6 +183,10 @@
      * Bind Wound - Action x2 to remove a Bleeding
      * Round End - Slow:1 for each Bleeding. IF Speed:0 THEN Blood Loss:1 instead")
   (base/rule
+   :name "Call"
+   :summary
+    "Call an object/creature from the environment")
+  (base/rule
    :name "Called Shot"
    :image "images/rule-calledshot.svg"
    :layout base/cardlayout-imageonly
@@ -198,6 +226,17 @@
      Effect
      * Crew - Missing:25% Extreme Damage:25% Critical Damage:25% Major Damage:25%
      * Equipment - Missing:25% Irreparable:25% Broken:25% Damaged:25%")
+  (base/rule
+   :name "Catalyst"
+   :titles "Channeling, Conduit, Focus, Symbolic"
+   :summary
+     "A Catalyst is a physical conduit that allows a magical [Power] or [Ability] to flow
+      * Magic is the art of gathering ambient, magical currents and focusing them into a specific effect. However, magic cannot create effects from nothing. Some kind of catalyst must be the spark that transforms your will into an effect. That catalyst must be symbolic of the power it will manifest and allow some plausible denyability that magic did not exist at all.
+
+      Examples: 
+      * Alcohol+Torch=Firebreathing stunt
+      * Severed power line=freak electrical accident
+      * Spilled water=Ground water seeps up")
   (base/rule
    :name "Character")
   (base/rule
@@ -292,6 +331,10 @@
      Transformed
      Velocity")
   (base/rule
+   :name "Conjure"
+   :summary
+    "Create an object/creature")
+  (base/rule
    :name "Conscience"
    :summary
     "* Conscience")
@@ -375,7 +418,7 @@
    :layout base/cardlayout-imageonly
    :summary
     "A negative modifier to a single Conflict
-     Conflict Reveal - Reveal Fate. Rival decides which you use")
+     Conflict Reveal - You must draw from Shared Fate instead of playing from hand")
   (base/rule
    :name "Disclaimer"
    :image "images/rule-disclaimer.svg"
@@ -443,6 +486,15 @@
    :image "images/rule-falling.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
+   :name "Familiar"
+   :summary
+    "A Familiar is a Spirit given physical form from a [Power]
+     * Appearance - It appears as a small creature typical of the area that subtly reflects the Power that created it
+     * Stats - Body:2x1 Mind:Same as User Will:Same as User Speed:6x0
+     * Language - The familiar and User understand each other's speech
+     * Senses - At will, the User may shift their senses into the familiar and guide its actions, though the senses will be dulled and the User will be inactive during this time
+     * Death - If the familiar is killed, only its body dies and it can be recreated again later.")
+  (base/rule
    :name "Fast"
    :summary
     "Speed and Finesse during a Conflict
@@ -471,9 +523,19 @@
      * Other Parts - Dying
      Action - Use heat to reduce Severity by 1")
   (base/rule
+   :name "Glide"
+   :summary
+    "Your movement appears smooth and effortless. You may move one more Space this Round")
+  (base/rule
    :name "Golden Rules"
    :image "images/rule-goldenrules.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Golem"
+   :summary
+    "A Golem is a powerful artificial creature created from a [Power].
+     * Stats - Body:2x2 Mind:2x1 Will:5x1 Speed:4x0
+     * Powers - Immune to Fear")
   (base/rule
    :name "Haywire"
    :image "images/rule-haywire.svg"
@@ -547,7 +609,7 @@
 //   :image "images/rule-magic.svg"
 //   :layout base/cardlayout-imageonly
    :summary
-    "Magic is indirect. It allows one to do the unlikely, not the impossible. Magic must always have a grounded source, so creating things from nothing is the hardest form of magic.")
+    "")
   (base/rule
    :name "Magic List"
    :image "images/rule-magic-list.svg"
@@ -577,12 +639,12 @@
      * Herbalism
      * Naturalism
      Dark Arts
-     * Bloodcraft
+     * Blood
      * Chaos
      * Corruption
      * Darkness
      * Demonic
-     * Fleshcraft
+     * Flesh
      * Necromancy
      Spiritualism
      * Divination
@@ -599,6 +661,28 @@
      * Primordial
      * Purity
      * Radiant")
+  (base/rule
+   :name "Magic:Casting"
+   :summary
+    "Magic is indirect. It allows one to do the unlikely, not the impossible. Magic must always have a grounded source, so creating things from nothing is the hardest form of magic
+     * Words -
+     * Gestures - 
+     * Focus -
+     * Component - 
+     * Ritual - ")
+  (base/rule
+   :name "Magic:Learning"
+   :summary
+    "* Adept - 
+     * Recipe - 
+     * Experience - ")
+  (base/rule
+   :name "Magic:Ritual"
+   :summary
+    "A Ritural is an extended magical casting that makes difficult magic easie
+     * Time - Repeating the spell over and over like a chant make the spell stronger
+     * Numbers - More casters or followers combine their abilites to make the spell stronger
+     * Preparation - More investment in quality and expense of the Ritural makes the spell stronger")
   (base/rule
    :name "Map")
   (base/rule
@@ -766,12 +850,12 @@
      Alteration
      * Adaptation
      * Combine
+     * Flesh
      * Flexible
      * Healing
      * Invisibility
      * Lycanthropy
      * Metamorphose
-     * Molding
      * Shapeshift
      * Spawning
      * Special Ability
@@ -841,7 +925,7 @@
    :layout base/cardlayout-imageonly
    :summary
     "Unit is lying flat and is 1 Elevation lower
-     * Cover - Usually offers additional cover
+     * Cover - Cover:+25% vs. Ranged
      * Elevation - Note Elevation modifiers")
   (base/rule
    :name "Pull/Push"
@@ -864,6 +948,15 @@
    :summary
     "* Can target one additional Space away [Scaled]")
   (base/rule
+   :name "Reaction"
+   :summary
+    "* During Conflict Resolution, each Unit has a Reaction equal to their Conflict card Rank modified by Skill Bonus")
+  (base/rule
+   :name "Reflect"
+   :summary
+    "When a User takes particular Damage the source also takes Damage
+     * The source takes Damage equal to Damage Taken or User Intensity whichever is lower")
+  (base/rule
    :name "Research"
    :deck "Reference"
    :summary
@@ -873,6 +966,11 @@
      * Level:+3 - 24 Hours (3 days)
      * Level:+4 - 120 Hours (2 weeks)
      * Level:+5 - 720 Hours (3 months)")
+  (base/rule
+   :name "Resist"
+   :summary
+    "The Ability to resist a certain type of Damage
+     * IF you take Damage of that type THEN a Crit of that type is flipped to a normal Hit")
   (base/rule
    :name "Resolution"
    :image "images/rule-resolution.svg"
@@ -884,10 +982,6 @@
    :summary
     "A Rising/Sinking Unit is rapidly gaining/losing Elevation
      * Round End - Elevation:+1/-1 for each Rising/Sinking:1")
-  (base/rule
-   :name "Ritual"
-   :summary
-    "A magical effect that must be performed during Downtime. It can be a form of magical trap that can be triggered by an event.")
   (base/rule
    :name "Role:Attacker"
    :summary
@@ -978,6 +1072,10 @@
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Rule")
+  (base/rule
+   :name "Run"
+   :summary
+    "Move over half of your Starting Speed this Round")
   (base/rule
    :name "Scale"
    :summary
@@ -1176,6 +1274,14 @@
      * Cups - Perseverance. Will
      * Swords - Skill. Speed")
   (base/rule
+   :name "Summon"
+   :summary
+    "Instantly opens a hazy portal to a specific being or object that has previously been connected to the user with a [Binding]. A summoned being may choose not to cross through the portal.")
+  (base/rule
+   :name "Summoning"
+   :summary
+    "A long ritual that opens a hazy portal to a specific being. This is much slower than a [Summon] and is typically used when a [Binding] does not exist. The summoned being may choose not to cross through the portal.")
+  (base/rule
    :name "Surprise"
    :image "images/rule-surprise.svg"
    :layout base/cardlayout-imageonly)
@@ -1196,19 +1302,61 @@
    :image "images/rule-terms.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Touch")
+   :name "Terrain:Blocking"
+   :summary
+    "Dangerous Terrain requires Skill Tests to travel safely or take damage
+     * [Move]:-1
+     * IF a Unit moves more than 3 Spaces in the terrain in one Round THEN treat it as [Terrain:Unstable]
+     * [Line of Sight]: Blocked
+     * [Block]: [Skill]:+1, [Armor]:+1
+     * [Evade]: [Skill]:+1")
+  (base/rule
+   :name "Terrain:Dangerous"
+   :summary
+    "Dangerous Terrain requires Skill Tests to travel safely or take damage")
+  (base/rule
+   :name "Terrain:Hazardous"
+   :summary
+    "Hazardous Terrain does damage to anyone inside")
+  (base/rule
+   :name "Terrain:Obscuring"
+   :summary
+    "Obscuring Terrain proves Cover
+     * [Cover]:+25% within the Terrain
+     * Line of Sight is blocked beyond the Terrain")
+  (base/rule
+   :name "Terrain:Rough"
+   :summary
+    "Difficult Terrain slows movement
+     * [Move]:-1")
+  (base/rule
+   :name "Terrain:Unstable"
+   :summary
+    "Dangerous Terrain requires Skill Tests to avoid falling down")
   (base/rule
    :name "Thirst"
    :image "images/rule-thirst.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Time: Afternoon")
+   :name "Thorns"
+   :summary
+    "Create an [Aura] in your Space that can attack anything inside
+     * Once per Round: Use the [Ability] to attack a Rival within the Aura without spend any [Move]
+     * [Continuous]")
   (base/rule
-   :name "Time: Evening")
+   :name "Time:Afternoon")
   (base/rule
-   :name "Time: Morning")
+   :name "Time:Evening")
   (base/rule
-   :name "Time: Night")
+   :name "Time:Morning")
+  (base/rule
+   :name "Time:Night")
+  (base/rule
+   :name "Totem"
+   :summary
+    "A Totem is a focus for remotely manifesting a [Power]. Powers may used as if the Totem were the User")
+  (base/rule
+   :name "Touch")
   (base/rule
    :name "Transformed"
    :image "images/rule-transformed.svg"
@@ -1265,6 +1413,17 @@
      Free Actions
       Accelerate:X - Spend Move:X to gain Velocity:+1 (Min=2)
       Brake:X - Spend Move:X to lose Velocity:-1 (Min=1)")
+  (base/rule
+   :name "Walk"
+   :summary
+    "Move up to half of your Starting Speed this Round
+     * [Ability] - Walk Abilities keyed to a terrain (eg Walk:Water) allow the user to ignore the movement penalties while walking through the given terrain")
+  (base/rule
+   :name "Wall"
+   :summary
+    "A Wall is a type of terrain
+     * [Ability] - Wall Abilities keyed to a terrain (eg Wall:Fire) allow the user to place a terrain of the given type (eg Terrain:Fire) of the given type
+     * [Area] - The Area can be increased by using Area rules")
   (base/rule
    :name "Weapon:Barehanded"
    :image "images/rule-weapon-barehanded.svg"

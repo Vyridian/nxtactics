@@ -11,7 +11,6 @@
     (chapter_land_sea_and_air_overview)
     (chapter_land_sea_and_air_unit_types)
     (chapter_land_sea_and_air_rules)
-    (chapter_maps)
    )))
 
 (func chapter_land_sea_and_air_overview : base/chapter
@@ -770,43 +769,3 @@
            Final Top Speed = Design Top Speed x (1 - ((AC x 5) / 100))
            Once we have decided on an acceleration of 7, we can determine the final top speed. (7 x 5) = 35, divided by 100 = 0.35. (1 - 0.35) = 0.65... 218.62 x 0.65 = 142 mph. Plus 10% for a sport body puts that up to 156 mph. Not bad at all.
            Once the final TS is calculated, add the percentages for accessories and body style, if so equipped. Mileage at 65 mph (or top speed, if lower) is in miles per gallon and is equal to: Mileage = (9000 / (hp + (weight / 20)))"))))))
-
-(func chapter_maps : base/chapter
- (base/chapter
-  :name "Maps"
-  :sectionmap
-   (sectionmap
-    :Maps
-     (section
-      :name "Maps"
-      :rulemap
-       (rulemap
-        "Air Map"
-         (rule
-          :name "Air Map")
-        "Ocean Map"
-         (rule
-          :name "Ocean Map")
-        "Swamp Map"
-         (rule
-          :name "Swamp Map")
-        "Underwater Map"
-         (rule
-          :name "Underwater Map")))
-    :Terrain
-     (section
-      :name "Terrain"
-      :rulemap
-       (rulemap
-        :Cave
-         (rule
-          :name "Cave"
-          :summary "[Hazard]: Cave in.")
-        :Jungle
-         (rule
-          :name "Jungle"
-          :summary "[Hazard]: Difficulty starts at 2 for a sparse, mostly safe jungle.")
-        :Snow
-         (rule
-          :name "Snow"
-          :summary "[Hazard]: Avalanche."))))))

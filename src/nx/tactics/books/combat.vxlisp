@@ -1147,17 +1147,6 @@
         "Sword:Tanto"
         "Sword:Wakizashi"
        ))
-    :Archery
-     (section
-      :name "Archery"
-      :itemmap
-       (base/itemmap<-tactics-keys
-        tactics
-        "Bow:Composite"
-        "Bow:Compound"
-        "Bow:Long"
-        "Bow:Moon"
-        "Bow:Short"))
     :Crossbows
      (section
       :name "Crossbows"

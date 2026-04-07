@@ -132,9 +132,10 @@
    :name "Beast Claw")
   (base/item
    :name "Bedroll"
-   :summary "")
+   :summary
+    "Ignore the normal Exposure from sleeping outdoors")
   (base/item
-   :name "Bedroll: Restful Sleep"
+   :name "Bedroll:Restful Sleep"
    :summary
     "Providest the [Restful Sleep] ability.")
   (base/item
@@ -829,6 +830,10 @@
    :classification "Sword"
    :energy "100J")
   (base/item
+   :name "Tent"
+   :summary
+    "Ignore the normal Exposure from sleeping in cool and/or rainy weather")
+  (base/item
    :name "Tooth")
   (base/item
    :name "Torch"
@@ -876,7 +881,18 @@
    :body "2x0"
    :mass "2kg/4.4lbs")
   (base/item
-   :name "Whip")
+   :name "Whip"
+   :summary
+    "* [Weapon:Melee] [Reach] [Slash]")
+  (base/item
+   :name "Whip:Barbed"
+   :summary
+    "* [Weapon:Melee] [Reach] [Pierce]")
+  (base/item
+   :name "Whip:Viper"
+   :summary
+    "* [Weapon:Melee] [Reach] [Slash] [Poison]
+     * Description - An unusual magical whip that appears to be made of snake skin instead of leather and is split at the end like a forked tongue")
   (base/item
    :name "Yams: Wild"
    :classification "Plant"

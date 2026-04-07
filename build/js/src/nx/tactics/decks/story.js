@@ -176,12 +176,12 @@ export default class nx_tactics_decks_story {
               ":image",
               "icons/card-ranksuit-4c.svg",
               ":summary",
-              "A. Protect the vulnerable\nK. Navigate intrigue\nQ. Survive a disaster\nJ. Compete in a tournament\nT. Exile's triumphant return\n9. Make a risky pact\n8. Build a new domain\n7. Quest for enlightenment\n6. Survive hostile environment\n5. Plot assassination\n4. Reclaim lost honor\n3. Defend personal honor\n2. Claim disputed inheritance"
+              "A. Conspiracy\nK. Corruption\nQ. Cycle of Violence\nJ. Depravity\nT. Indifferent World\n9. Inequality\n8. Inevitability\n7. Legacy\n6. Moral Ambiguity\n5. Price of Power\n4. Secrets / Discovery\n3. Tradition vs Progress\n2. Unreliable Truth"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Theme:Material",
+              "Theme:Conditions",
               ":deck",
               "Story",
               ":ranksuit",
@@ -189,7 +189,20 @@ export default class nx_tactics_decks_story {
               ":image",
               "icons/card-ranksuit-4d.svg",
               ":summary",
-              "A. Haunted by dark past\nK. Form unlikely alliance\nQ. Escape captivity or pursuit\nJ. Escalate family feud\nT. Fallen grace reclaimed\n9. Seek immortality\n8. Covert espionage\n7. Heroism\n6. Infiltrate an organization\n5. Rivalry with a peer\n4. Betrayal\n3. Fulfill/defying destiny\n2. Trigger paradigm shift"
+              "A. Decay\nK. Defiance\nQ. Escalation\nJ. Exposure\nT. Fragility\n9. Exploration\n8. Forbidden Knowledge\n7. Impending Doom\n6. Isolation\n5. Mortality\n4. Scarcity\n3. Survival\n2. Transformation"
+            ),
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_card},
+              ":name",
+              "Theme:Social",
+              ":deck",
+              "Story",
+              ":ranksuit",
+              nx_tactics_base.c_ranksuit_4h,
+              ":image",
+              "icons/card-ranksuit-4h.svg",
+              ":summary",
+              "A. Betrayal / Vengeance\nK. Deception\nQ. Distrust\nJ. Found Family\nT. Forbidden Bonds\n9. Greater Good\n8. Honor / Dishonor\n7. Individual vs Society\n6. Outsiders\n5. Rivalry\n4. Responsibility\n3. Silence and Complicity\n2. Subverting Norms"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
@@ -198,24 +211,11 @@ export default class nx_tactics_decks_story {
               ":deck",
               "Story",
               ":ranksuit",
-              nx_tactics_base.c_ranksuit_4h,
-              ":image",
-              "icons/card-ranksuit-4h.svg",
-              ":summary",
-              "A. Betrayal by a trusted ally\nK. Hunt for lost treasure\nQ. Confront prophecy\nJ. Break generational curse\nT. Rise from obscurity\n9. Lead popular revolution\n8. Forbidden or star-crossed love\n7. Quest for power\n6. Uncover a dangerous secret\n5. Overcome famine\n4. Rise of dark antagonist\n3. Return from exile\n2. Personal transformation"
-            ),
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_card},
-              ":name",
-              "Theme:Fateful",
-              ":deck",
-              "Story",
-              ":ranksuit",
               nx_tactics_base.c_ranksuit_4s,
               ":image",
               "icons/card-ranksuit-4s.svg",
               ":summary",
-              "A. Quest for enlightenment\nK. Staging coup d'état\nQ. Tournament of champions\nJ. Overthrow ruling power\nT. Moral dilemma\n9. Race against time\n8. Moral choice\n7. Rising against oppression\n6. Daring heist\n5. Revenge for injustice\n4. Crisis of identity\n3. Personal redemption\n2. Preventing catastrophe"
+              "A. Abandonment\nK. Ambition\nQ. Forgiveness\nJ. Hope\nT. Hubris\n9. Identity\n8. Loyalty\n7. Madness\n6. Maturity\n5. Misplaced Faith\n4. Regret / Atonement\n3. Redemption\n2. Trauma / Recovery"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
