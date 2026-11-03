@@ -18,6 +18,38 @@
      * Repairs Aircraft
      * Required to extend Aircraft Range")
   (base/place
+   :name "Amber Realms"
+   :titles "Amber Space, Crytalline Space, Geometric Space"
+   :summary
+    "* Amber Space - The expansion phase of the multiverse near the beginning of spacetime. Space and time are still forming, entropy has just been created, and order rules. Real space exists but order tends to crytallize and calcify existence.
+     * Denizens - [Leviathan], [Weaver]"
+  (base/place
+   :name "Angular"
+   :titles "Angular Space, Angular Time, Point Time, Tindalos"
+   :summary
+    "* Angular time - An eternal moment after [Creation], before expansion. Space and time had not yet formed. No matter, no curves, no time. Only intense energy, eternally reflected back upon itself. Ultimate power. Ultimate Order. Forever.
+     * Denizens - [Hounds of Tindalos], [Langoliers], [Norns], [Radiance]. The beings if you can call them that are pure energy that know only Order. Mindless and infallible. Drawn across spacetime like electric current to 'correct' disorders in time.")
+  (base/place
+   :name "Astral"
+   :titles "Astral Plane, Astral Realm, Complex Space, Dream, Hyperreal, Hyperspace, I-Space, Imaginary Realm, Imaginary Space, Luminal Realm, Overrealms, Possibility, Positive Space, Probability, Reason Realm, Science, Subjective Reality, Sublime, Superspace, Superreal, The Pale, Ultrareal, Ultraspace"
+   :reference
+    "* Astral - Of the Stars
+     * Ad Astra - To the Stars
+     * Though the story is fictional, as far as the characters are concerned, their fate is real. Therein lies the rub, are you and I the audience? Or characters on the stage? Nobody can know for sure. Afterall, nothing is easier to fool than the senses. - Furina, Genshin Impact"
+   :summary
+    "* The Astral Realm is the realm of the Mind and of possibilities. It connects all of the upper realms, and some believe all realms are birthed from the infinite potential of the Astral.
+     * Layers - The Astral is a continuous space but is logically divided into sections:
+     ** [Angular] - The 'moment' of Angular time before spacetime exists
+     ** [Amber Realms] - Realms are frozen in rigid order.
+     ** [Celestial] - Realms conform to the rules of a clear mind
+     ** [Periphery] - The mind realms nearest the [Material]
+     ** [Firmament] - The barrier between the Astral and Material
+     * Description - The realm appears as a dense starfield filled with a glowing fog and motes of crackling energy called Luminaries (Tachyons). Touching a luminary fills one with energy and inspiration, but contacting too many too quickly will overload the body in a violent explosion.
+     * Transition - When entering the Imaginary Realm, there is a sudden, frightening sensation of flipping forward and sideways at once and then it is over.
+     * Speed - In the Imaginary Realm, the speed of light is the lowest speed that an object can move. Due to relativity, the speed of light is effectively zero speed. Here physical objects move at wildly accelerated speeds and can easily become lost or destroyed in the insane speeds and energies of this Realm.
+     * Mind and Will - Everyone seems to experience the Imaginary Realm differently with many experiencing wild and terrible hallicinations. Those entering this Realm with just their minds find that their abilities are vastly increased. They are filled with a sense of power and appear massive in this realm, dwarfing stars. They appear as an idealized version of themselves with Body equal to Mind and all abilities may use Mind instead.
+     * Body - Physical rules barely apply. Resistences use Mind instead of Body.")
+  (base/place
    :name "Barracks"
    :image "images/cards/place-barracks.svg"
    :summary
@@ -28,6 +60,8 @@
   (base/place
    :name "Brambles"
    :image "images/cards/place-brambles.svg")
+  (base/place
+   :name "Brewery")
   (base/place
    :name "Broken Ground")
   (base/place
@@ -48,8 +82,8 @@
    :image "images/cards/place-cave.svg"
    :titles "Cavern")
   (base/place
-   :name "Celestial Realm"
-   :titles "Afterworld, Angelic Realm, Celestine Realm"
+   :name "Celestial"
+   :titles "Afterworld, Angelic Realm, Celestial Realm, Celestine Realm, Realm of Order"
    :summary
     "* Powerful beings of order inhabit this Realm. They are not overtly hostile, but they unyielding and have a severe approach to justice that makes one wonder if anyone can survive their scrutiny.")
   (base/place
@@ -141,6 +175,16 @@
    :name "Corridor"
    :titles "Passageway")
   (base/place
+   :name "Creation"
+   :titles "Absolute, Alpha, Ascension, Azathoth, Atropos, Apep, Apophis, Beginning, Big Bang, Creation, Birth, Cosmic Egg, Jormungand (Midgard Serpent), The Light, One, Phoenix, Potential, Primal Chaos, Rebirth, Source, Sublime, Truth, White Hot Room"
+   :reference
+    "* ...I started with loathing when told of the monstrous nuclear chaos beyond angled space which the Necronomicon had mercifully cloaked under the name of Azathoth. - The Whisperer in Darkness
+     * Cross over children. All are welcome. All welcome. Go into the Light... There is peace and serenity in the Light - Tangina, Poltergeist"
+   :summary
+    "* Creation is the bubbling font at the beginning of existence. It lies at the opposite end of all existence from [Oblivion]. Creation is bursting with the densely packed proto matter/energy of the multiverse in the septillionth of a second before exploding into all realities. It is also, necessarily, the most destructive place in all existence.
+     * Sublime - Those who somehow survive entering the Sublime find a very different existence. Where our multiverse is a vast empty space containing trace motes of dust, the Sublime is an endless fountain of possiblities. Everywhere you gaze, the Sublime offers a kaleidescope of intriguing details. Even infinity is meaningless where time, distance, and reality cease to matter.
+     * Sublimating - Nothing physical can survive exposure to the Source, but it is possible to transcend the physical and enter Source. This is called Sublimating. There are many magical, spiritual and technological ways to enter the Sublime and entire civilizations have done so. Any who enter the Sublime begin to expand themselves. Absorbing and evolving with each eternal instant. Almost none who enter ever returns regardless of promises or bonds. The few that have returned are very different and almost always quickly return to the Sublime. After being exposed to the endless possiblities of existence, perhaps they no longer see the our existence or our way of understanding our existence as real or important anymore.")
+  (base/place
    :name "Desert"
    :image "images/cards/place-desert.svg"
    :summary
@@ -153,6 +197,71 @@
    :name "Dock"
    :summary
     "* Required to extend Naval Supply Lines")
+  (base/place
+   :name "Earth:Africa"
+   :image "images/earth/earth-africa.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:Antarctica"
+   :image "images/earth/earth-antarctica.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:Arctic"
+   :image "images/earth/earth-arctic.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:Asia"
+   :image "images/earth/earth-asia.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:Europe"
+   :image "images/earth/earth-europe.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:Globe"
+   :image "images/earth/earth-globe.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:Indian Ocean"
+   :image "images/earth/earth-indian-ocean.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:North America"
+   :image "images/earth/earth-north-america.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:North Atlantic"
+   :image "images/earth/earth-north-atlantic.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:North Pacific"
+   :image "images/earth/earth-north-pacific.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:Oceania"
+   :image "images/earth/earth-oceania.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:South America"
+   :image "images/earth/earth-south-america.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:South Atlantic"
+   :image "images/earth/earth-south-atlantic.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Earth:South Pacific"
+   :image "images/earth/earth-south-pacific.svg"
+   :layout base/cardlayout-imageonly)
+  (base/place
+   :name "Ethereal"
+   :titles "Art, Ether, Etheral Plane, Etheral Realm, Infraspace, Impossible, Magic Realm, Negative Space, Nightmare, Subliminal Realm, Subreal, Subrealm, Subspace, Subverse, Surreal, Underrealm, Unreal, Unrealm"
+   :summary
+    "* The Etheral is the realm of the Spirit and of fates. It connects the Spirit realms.
+     * Layers - Ethereal includes [Penumbra], [Infernal], [Tempest], [Void]
+     * Description - The realm appears as a featureless realm of swirling mists.
+     * Mind and Will - Everyone seems to experience the Ethereal differently with many experiencing wild and terrible hallicinations. Those entering this Realm with just their spirits find that their abilities are vastly increased. They are filled with a sense of power. They appear as a reflection of their inner selves with Body equal to Spirit and all abilities may use Spirit instead.
+     * Body - Physical rules barely apply. Resistences use Spirit instead of Body.")
   (base/place
    :name "Field"
    :image "images/cards/place-field.svg")
@@ -176,26 +285,14 @@
    :name "Guardpost"
    :image "images/cards/place-guardpost.svg")
   (base/place
-   :name "Hall: Wooden"
+   :name "Hall:Wooden"
    :image "images/cards/place-hall-wooden.svg")
   (base/place
-   :name "House: Farm"
+   :name "House:Farm"
    :image "images/cards/place-house-farm.svg")
   (base/place
    :name "Ice"
    :image "images/cards/place-ice.svg")
-  (base/place
-   :name "Imaginary Space"
-   :titles "Astral Plane, Astral Realm, Complex Space, Ether, Etheral Plane, Etheral Realm, Hyperspace, I-Space, Imaginary Realm, Liminal Realm, Subjective Reality, Sublime, Subliminal Realm, Subspace, Superspace, The Pale, Ultraspace"
-   :reference
-    "* Though the story is fictional, as far as the characters are concerned, their fate is real. Therein lies the rub, are you and I the audience? Or characters on the stage? Nobody can know for sure. Afterall, nothing is easier to fool than the senses. - Furina, Genshin Impact"
-   :summary
-    "* The Imaginary Realm is the realm of the Mind and of possibilities. It connects all other realms, and some believe all realms are birthed from the infinite potential of the Imaginary Realm.
-     * Description - The realm is filled with a glowing fog and motes of crackling energy called Luminaries (Tachyons). Touching a luminary fills one with energy and inspiration, but contacting too many too quickly will overload the body in a violent explosion.
-     * Transition - When entering the Imaginary Realm, there is a sudden, frightening sensation of fliping forward and sideways at once and then it is over.
-     * Speed - In the Imaginary Realm, the speed of light is the lowest speed that an object can move. Due to relativity, the speed of light is effectively zero speed. Here physical objects move at wildly accelerated speeds and can easily become lost or destroyed in the insane speeds and energies of this Realm.
-     * Mind and Will - Everyone seems to experience the Imaginary Realm differently with many experiencing wild and terrible hallicinations. Those entering this Realm with just their minds find that their abilities are vastly increased. They are filled with a sense of power and appear massive in this realm, dwarfing stars. They appear as an idealized version of themselves with Body equal to Mind and all abilities may use Mind instead.
-     * Body - Physical rules barely apply. Resistences use Mind instead of Body.")
   (base/place
    :name "Island")
   (base/place
@@ -212,11 +309,36 @@
    :name "Lava"
    :image "images/cards/place-lava.svg")
   (base/place
+   :name "Leviathan"
+   :titles "The Revealer"
+   :summary
+    "* Powers
+     ** Sin Reflection - By emitting black beams of light, Leviathan forces victims to physically and mentally experience every sin and wrongdoing they have ever committed, often driving them insane
+     ** Memory Manipulation - It can trap souls in infinite memory loops, forcing them to relive specific traumatic or significant moments repeatedly
+     ** Soul Absorption - It can keep souls captive within its geometric form
+     ** Shapeshifting - It typically appears as a colossal, spinning diamond rhombus but can transform into a larger-scale version of the Lament Configuration puzzle box.
+     * Denizens - [Cenobite]")
+  (base/place
    :name "Marsh"
    :image "images/cards/place-marsh.svg")
   (base/place
+   :name "Material"
+   :titles "Material World, Mirrors, The Real"
+   :reference
+    "* Living in the Material World, Madonna"
+   :summary
+    "The Material is a series of worlds dominated by physical laws. It includes [Earth], [Terra], [Thera] and other alternate physical universes collectively known as the [Mirrors].
+    * Types - Mirrors can be alternate worlds, times, or histories.
+    * Travel - Travel between the different worlds can be done in various ways, but the Body must always go through. No mental or spiritual projections can cross. Equipment that does not exist in the target world cannot cross.")
+  (base/place
+   :name "Meeting House")
+  (base/place
    :name "Mill"
    :image "images/cards/place-mill.svg")
+  (base/place
+   :name "Mindspace"
+   :summary
+    "A [Realm] in the [Periphery] where intellect molds the rules. Mages and [AI:Mind]s carve out microrealms in this space")
   (base/place
    :name "Motor Pool"
    :summary
@@ -231,20 +353,30 @@
   (base/place
    :name "Oblivion"
    :reference
-    "* Leviathan - Hellraiser II
-     * The Great Evil - The Fifth Element"
-   :titles "Abyss, End of All Things, Heat Death of the Universe, Lakhesis, Order, Pattern, Primal Destroyer, Primal Void, The End"
+    "* The Great Evil - The Fifth Element"
+   :titles "Abyss, End of All Things, Heat Death of the Universe, Lakhesis, Omega, Order, Pattern, Primal Destroyer, Primal Void, The End"
    :summary
-    "* At the end of the Universe, lies a metaphysical Black Hole, the Anti-Sun: Oblivion.
-     * It is null, ultimate order, ultimate death, the beginning and the end of the Universe.
+    "* At the end of the Universe, lies its Heat Death, a metaphysical Black Hole, the Anti-Sun: Oblivion. It is the representation of absolute nothing.
+     * It is null, ultimate order, ultimate death, the final end of all Universes.
      * Few living beings have managed to survive being close enough to see Oblivion.
      * As the [Underworld] is in many ways the reverse of the living world, Oblivion hangs above the [Underworld] like a massive Sun. Unlike a sun, however, Oblivion devours light and steals warmth. What little light and warmth that exists in the [Underworld] seeps instead from the land of the living.
      * Some believe that through Oblivion lies rebirth, but few are willing to personally put that theory to the test, and none who enter has ever returned.")
   (base/place
    :name "Open Water")
   (base/place
-   :name "Path: Dirt"
+   :name "Path:Dirt"
    :image "images/cards/place-path-dirt.svg")
+  (base/place
+   :name "Penumbra"
+   :summary
+    "The Penumbra is an area of the [Ethereal] that directly touches the [Material].
+     It includes [Dreamlands], [Underworld], [Unseen], [Wyld] and other magical and spiritual realms.")
+  (base/place
+   :name "Periphery"
+   :titles "Bright Realms, Near Realms"
+   :summary
+    "The Periphery is an area of the [Astral] that directly touches the [Material].
+     It includes the [Cyberspace], [Mindspace], and other imaginary or constructed realms.")
   (base/place
    :name "Pit"
    :image "images/cards/place-pit.svg")
@@ -270,16 +402,16 @@
    :name "River"
    :image "images/cards/place-river.svg")
   (base/place
-   :name "Road: Asphalt"
+   :name "Road:Asphalt"
    :image "images/cards/place-road-asphalt.svg")
   (base/place
-   :name "Road: Gravel"
+   :name "Road:Gravel"
    :image "images/cards/place-road-gravel.svg")
   (base/place
-   :name "Road: Intersection"
+   :name "Road:Intersection"
    :image "images/cards/place-road-intersection.svg")
   (base/place
-   :name "Road: Stone"
+   :name "Road:Stone"
    :image "images/cards/place-road-stone.svg")
   (base/place
    :name "Rock"
@@ -290,10 +422,15 @@
   (base/place
    :name "Sand")
   (base/place
-   :name "Sandalstad"
+   :name "Sandalton"
    :summary
-    "* A small settlement nestled near the Sandal Forest and Mt. Murin.
-     * It was established to harvest Sandalwood trees and the oils they produces. Transporting the wood is difficult, so the settlement is more focused on trading oils, creams, and perfumes. Local wheat farming, breads, and goat and sheep herding make up the main diet.")
+    "* A small settlement nestled in [Sandalvale] surrounded by the [Sandal Forest] and near the towering [Mt. Murin].
+     * The settlement is small, isolated and relatively poor. It was established to harvest [Sandalwood] trees and the oils they produces. Transporting the wood is difficult, so the settlement is more focused on trading oils, creams, and perfumes. Local wheat farming, breads, and goat and sheep herding make up the main diet.")
+  (base/place
+   :name "Sandalvale"
+   :summary
+    "* A valley within the Murin mountains. It is named for the [Sandalwood] growing in the [Sandal Forest] within.
+     * Sandalvale is isolated but suprisingly safe though [Wolf] packs and [Wildcat]s roam the area.")
   (base/place
    :name "Scrubland")
   (base/place
@@ -302,10 +439,10 @@
     "* May [Deploy] Ships
      * Repairs Ships")
   (base/place
-   :name "Shop: General"
+   :name "Shop:General"
    :image "images/cards/place-shop-general.svg")
   (base/place
-   :name "Shop: Herbalist"
+   :name "Shop:Herbalist"
    :image "images/cards/place-shop-herbalist.svg")
   (base/place
    :name "Shrine"
@@ -318,14 +455,6 @@
    :image "images/cards/place-snow.svg"
    :summary
     "* Accumulation: Each token on Snow is 10cm/4in of snow. Move:-1/Accumulation")
-  (base/place
-   :name "Source, The"
-   :titles "Ascension, Azathoth, Atropos, Apep, Apophis, Jormungand (Midgard Serpent), Primal Chaos, The Beginning, The Big Bang, The First Thing, Truth, Sublime"
-   :reference "...I started with loathing when told of the monstrous nuclear chaos beyond angled space which the Necronomicon had mercifully cloaked under the name of Azathoth. - The Whisperer in Darkness"
-   :summary
-    "* The Source is the bubbling font at the beginning of existence. It lies at the opposite end of all existence from [Oblivion]. The Source is bursting with the densely packed proto matter/energy of all creation in the septillionth of a second before exploding into all realities. It is also, necessarily, the most destructive place in all existence.
-     * Sublime - Those who somehow survive entering the Sublime find a very different existence. Where our multiverse is a vast empty space containing trace motes of dust, the Sublime is an endless fountain of possiblities. Everywhere you gaze, the Sublime offers a kaleidescope of intriguing details. Even infinity is meaningless where time, distance, and reality cease to matter.
-     * Sublimating - Nothing physical can survive exposure to the Source, but it is possible to transcend the physical and enter Source. This is called Sublimating. There are many magical, spiritual and technological ways to enter the Sublime and entire civilizations have done so. Any who enter the Sublime begin to expand themselves. Absorbing and evolving with each eternal instant. Almost none who enter ever returns regardless of promises or bonds. The few that have returned are very different and almost always quickly return to the Sublime. After being exposed to the endless possiblities of existence, perhaps they no longer see the our existence or our way of understanding our existence as real or important anymore.")
   (base/place
    :name "Stables"
    :image "images/cards/place-stables.svg")
@@ -358,6 +487,10 @@
     "An electrified surface
      * [Terrain:Hazardous] Shock Damage
      * [Terrain:Rough]")
+  (base/place
+   :name "Surface:Frozen"
+   :summary
+    "A very hard cold surface")
   (base/place
    :name "Surface:Icy"
    :summary
@@ -415,25 +548,25 @@
    :name "Tavern"
    :image "images/cards/place-tavern.svg")
   (base/place
-   :name "Tavern Bar"
+   :name "Tavern:Bar"
    :image "images/cards/place-tavern-bar.svg")
   (base/place
-   :name "Tavern Bedroom"
+   :name "Tavern:Bedroom"
    :image "images/cards/place-tavern-bedroom.svg")
   (base/place
-   :name "Tavern Common"
+   :name "Tavern:Common"
    :image "images/cards/place-tavern-common.svg")
   (base/place
-   :name "Tavern Dining"
+   :name "Tavern:Dining"
    :image "images/cards/place-tavern-dining.svg")
   (base/place
-   :name "Tempest, The"
-   :titles "Event Horizon, The Great Barrier, The Edge of the World"
+   :name "Tempest"
+   :titles "Event Horizon, Horizon, The Great Barrier, The Edge of the World, Neverwhere, True Chaos"
    :reference "* The Galactic Barrier - Star Trek"
    :summary
     "* The final line before ultimate chaos. A swirling mass of chaos and fear on the border of annihilation.
      * Like a Black Hole, [Oblivion] has a swirling event horizon at its surface. It is the interface between substance and nothingness.
-     * The [Tempest] is a sea of souls and madness. The dreams and memories of those lost within sometimes drift like flotsam in the Tempest.
+     * The Tempest is a sea of souls and madness. The dreams and memories of those lost within sometimes drift like flotsam in the Tempest.
      * The Tempest usually manifests as an roiling ocean, sometimes of water, sometimes of blood or souls.
      * It is rare to see the Tempest calm except in the presence of a [Ferryman].
      * Often it is a storm-tossed sea of towering waves and shrieking winds. Fog, foam, and spray obscures vision and rips the words from ones mouth.
@@ -502,6 +635,12 @@
    :name "Thera"
    :image "images/cards/place-thera.svg")
   (base/place
+   :name "Thera:Mediterra"
+   :image "images/cards/place-thera-mediterra.svg")
+  (base/place
+   :name "Thrust"
+   :image "images/part/part-thrust.svg")
+  (base/place
    :name "Tile"
    :image "images/cards/place-tile.svg")
   (base/place
@@ -524,12 +663,33 @@
      * [Block]: [Skill]:+1, [Armor]:+1
      * [Evade]: [Skill]:+1")
   (base/place
+   :name "Unseen"
+   :titles "Faelorn, Faewyld, Spiritland"
+   :summary
+    "The hidden Spirit land of the nature spirits, elementals, and the Fae")
+  (base/place
+   :name "Void"
+   :titles "Evernight"
+   :reference
+    "* Over strange eons, even death may die. - HP Lovecraft
+     * Your evil is my good. I am Sutekh the Destroyer. Where I tread, I leave nothing but dust and darkness. I find that good. - Sutekh, Doctor Who"
+   :summary
+    "After the last suns burn out, only black holes and dust remain for untold eons before [Oblivion]")
+  (base/place
    :name "Volcano")
+  (base/place
+   :name "Wall:Bramble")
   (base/place
    :name "Wall:Fire"
    :titles "Firestorm"
    :summary
     "* [Terrain:Hazardous] [Burning] Damage")
+  (base/place
+   :name "Wall:Force")
+  (base/place
+   :name "Wall:Hedge")
+  (base/place
+   :name "Wall:Metal")
   (base/place
    :name "Wall:Stone"
    :image "images/cards/place-wall-stone.svg")
@@ -546,6 +706,9 @@
   (base/place
    :name "Whitewater")
   (base/place
+   :name "Wing"
+   :image "images/part/part-wing.svg")
+  (base/place
    :name "Wyver"
    :summary
     "* Wyver is the Creator Being that manifests as a mirror dimension reflecting the world of order.
@@ -553,24 +716,24 @@
    :titles "Weaver")
   (base/place
    :name "Wyld"
+   :titles "Lower World, Manitou, Wellspring"
    :summary
     "* Wyld is the Life Bringer Being that manifests as a mirror dimension reflecting the natural world. It is thought that Wyld is the source of all life.
      * The Wild has stunning natural beauty, but is also a merciless place dominated by natural selection.
-     * Travel - Natural creatures can enter Wyld through any reflective surface."
-   :titles "Manitou, Wellspring")
+     * Travel - Natural creatures can enter Wyld through any reflective surface including water and mirrors.")
   (base/place
    :name "Wyrm"
    :reference
     "* Sitting in a bunker, here behind my wall. Waiting for the worms to come. In perfect isolation, , here behind my wall. Waiting for the worms to come. Waiting, to cut out the dead wood. Waiting, to clean up the city. Waiting, to follow the worms. Waiting, to put on a black shirt. Waiting, to weed out the weaklings. Waiting, to smash in their windows and kick in their doors. Waiting, for the final solution to strengthen the strain. Waiting, to follow the worms. - Waiting for the Worms, Pink Floyd"
    :summary
-    "* Wyrm is the Time/Destructor Being that manifests as mirror dimension reflecting the world of entropy and  and corruption. Corrupted creatures can enter Wyrm through any reflective surface."))
+    "* Wyrm is the Time/Destructor Being that manifests as mirror dimension reflecting the world of entropy and corruption. Corrupted creatures can enter Wyrm through any reflective surface."))
  :doc "Returns the base placemap")
 
 (func tactics-placemap<-tactics : base/tactics
  [tactics : base/tactics]
  (let : base/tactics
   [placemap : base/placemap :=
-    (placemap-tactics tactics)]
+   (placemap-tactics tactics)]
   (copy tactics
    :placemap placemap))
  :doc "Returns a tactics updated with placemap")

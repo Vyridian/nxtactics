@@ -16,8 +16,8 @@ export default class nx_tactics_decks_vehicle_test {
       ":caselist", testcaselist,
       ":coveragesummary", nx_tactics_decks_vehicle_test.test_coveragesummary(),
       ":coveragedetail", nx_tactics_decks_vehicle_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {
@@ -25,11 +25,11 @@ export default class nx_tactics_decks_vehicle_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/vehicle", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 55), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 1, ":total", 56), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 3, ":tests", 2, ":total", 57), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 2), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 56), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 57), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -105,7 +105,8 @@ export default class nx_tactics_decks_vehicle_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
-          "deck-vehicle", 0
+          "deck-vehicle", 0,
+          "deck-vehicle-design", 0
         )
     )
     return output

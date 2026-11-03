@@ -16,8 +16,8 @@ export default class nx_tactics_decks_encounter_test {
       ":caselist", testcaselist,
       ":coveragesummary", nx_tactics_decks_encounter_test.test_coveragesummary(),
       ":coveragedetail", nx_tactics_decks_encounter_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {
@@ -50,7 +50,7 @@ export default class nx_tactics_decks_encounter_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
-          "rulemap-tactics", 0
+          "encountermap-tactics", 0
         )
     )
     return output

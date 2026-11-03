@@ -18,8 +18,8 @@ export default class nx_tactics_base_test {
       ":caselist", testcaselist,
       ":coveragesummary", nx_tactics_base_test.test_coveragesummary(),
       ":coveragedetail", nx_tactics_base_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {
@@ -27,12 +27,12 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 95), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 124, ":total", 327), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 133), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 36, ":tests", 126, ":total", 347), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 135), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 327), 
-      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 99)
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 347), 
+      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 117)
     )
     return output
   }
@@ -48,9 +48,13 @@ export default class nx_tactics_base_test {
           "abilitylist", 0,
           "abilitylistlist", 0,
           "abilitymap", 0,
+          "act", 0,
+          "actlist", 0,
           "book", 0,
           "booklist", 0,
           "bookmap", 0,
+          "campaign", 0,
+          "campaignlist", 0,
           "card", 0,
           "cardback", 0,
           "cardimage", 0,
@@ -70,11 +74,18 @@ export default class nx_tactics_base_test {
           "deck", 0,
           "deckmap", 0,
           "disorder", 0,
+          "encounter", 0,
+          "encounterlist", 0,
+          "encountermap", 0,
           "goal", 0,
+          "goallist", 0,
+          "goalmap", 0,
           "item", 0,
           "itemlist", 0,
           "itemlistlist", 0,
           "itemmap", 0,
+          "milestone", 0,
+          "milestonelist", 0,
           "mind", 0,
           "modifier", 0,
           "modifiermap", 0,
@@ -83,6 +94,8 @@ export default class nx_tactics_base_test {
           "placelistlist", 0,
           "placemap", 0,
           "playingcard", 0,
+          "plot", 0,
+          "plotlist", 0,
           "power", 0,
           "powerlist", 0,
           "powerlistlist", 0,
@@ -110,6 +123,8 @@ export default class nx_tactics_base_test {
           "specialtylist", 0,
           "specialtymap", 0,
           "stat", 0,
+          "story", 0,
+          "storylist", 0,
           "suit", 0,
           "suitmap", 0,
           "tactics", 0,
@@ -140,6 +155,9 @@ export default class nx_tactics_base_test {
           "unitspecialtymap", 0,
           "unitweakness", 0,
           "unitweaknessmap", 0,
+          "universe", 0,
+          "universelist", 0,
+          "universemap", 0,
           "weakness", 0,
           "weaknesslist", 0,
           "weaknessmap", 0
@@ -279,6 +297,8 @@ export default class nx_tactics_base_test {
           "chapterlist<-chapterlistlist", 0,
           "chapterlistlist<-booklist", 0,
           "chaptermap<-chapterlist", 0,
+          "encountermap<-encounterlist", 0,
+          "goalmap<-goallist", 0,
           "item<-tactics-key", 0,
           "itemlist<-itemlistlist", 0,
           "itemlist<-itemmap", 0,

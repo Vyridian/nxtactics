@@ -1332,28 +1332,35 @@ x +1DMG vs. Crouching."
      "Business Management"
       (base/ability
        :name "Business Management")
-     :Distribution
+     "Distribution"
       (base/ability
        :name "Distribution")
-     :Economics
+     "Economics"
       (base/ability
        :name "Economics"
        :reference "* In 5 minutes, you learn what the average University student remembers 5 years after learning school ... Economics: Supply and Demand. That's it. - Father Guido Sarducci, Five Minute University")
-     :Finance
+     "Finance"
       (base/ability
        :name "Finance")
-     :Investing
+     "Investing"
       (base/ability
        :name "Investing")
      :Marketing
       (base/ability
        :name "Marketing")
-     :Procure
+     "Procurement"
       (base/ability
-       :name "Procure"
+       :name "Procurement"
        :summary "The ability to find rare, exotic or illegal items for sale or trade."
        :titles "Procurer")
-     :Sales
+     "Risk Management"
+      (base/ability
+       :name "Risk Management"
+       :reference
+        "If those assesets decrease by just 25% and remain on our books, that loss would be greater than the market capitalization of our company. So, what you're telling me is that the music is about to stop and we're gonna be left holding the biggest bag of odorous excrement ever assembled in the history of... capitalism. ... What this model shows is the music, so to speak, just slowing. If the music were to stop, as you put it, then this model wouldn't be even close to that scenario. It would be considerable worse... I'm here to guess what the music might do a week, a month, a year from now. That's it. Nothing more. And standing here tonight, I'm afraid I don't.. hear.. a.. thing, just.. silence. - Margin Call"
+       :summary
+        "The ability to find access the risk level vs profitability of a venture.")
+     "Sales"
       (base/ability
        :name "Sales"
        :reference
@@ -1389,7 +1396,7 @@ x +1DMG vs. Crouching."
      :Drugs
       (base/ability
        :name "Drugs")
-     :Etiquette
+     "Etiquette"
       (base/ability
        :name "Etiquette")
      :Fashion
@@ -1404,6 +1411,8 @@ x +1DMG vs. Crouching."
        :name "Fiction"
        :summary
         "* Can author, critique, interpret, and detect fiction.")
+     "Flattery"
+      (base/ability<-tactics-key tactics "Flattery")
      "Go Viral"
       (base/ability
        :name "Go Viral"
@@ -1560,9 +1569,9 @@ x +1DMG vs. Crouching."
      :Russian
       (base/ability
        :name "Russian")
-     "Sign Language"
+     "Language:Sign"
       (base/ability
-       :name "Sign Language")
+       :name "Language:Sign")
      :Spanish
       (base/ability
        :name "Spanish"))
@@ -1570,6 +1579,7 @@ x +1DMG vs. Crouching."
     (base/specialtymap<-tactics-keys
      tactics
      "Linguistics"
+     "Polyglot"
      "Writing"))
   (base/skill
    :name "Computers"
@@ -1808,7 +1818,9 @@ x +1DMG vs. Crouching."
      (base/ability
       :name "Misdirection"
       :reference
-       "* Smoke and Mirrors... Classic Misdirection - Leblanc, Runeterra")
+       "* Smoke and Mirrors... Classic Misdirection - Leblanc, Runeterra"
+      :summary
+       "* [Skill]: [Deception]")
      (base/ability
       :name "Open Source Intelligence"
       :summary
@@ -1862,18 +1874,18 @@ x +1DMG vs. Crouching."
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics
-     "Alien Hunter"
-     "Bounty Hunter"
-     "Demon Hunter"
-     "Devil Hunter"
-     "Ghost Hunter"
-     "Mage Hunter"
-     "Monster Hunter"
-     "Trapper"
-     "Treasure Hunter"
-     "Vampire Hunter"
-     "Werewolf Hunter"
-     "Witch Hunter"))
+     "Hunter:Alien"
+     "Hunter:Bounty"
+     "Hunter:Demon"
+     "Hunter:Devil"
+     "Hunter:Ghost"
+     "Hunter:Mage"
+     "Hunter:Monster"
+     "Hunter:Treasure"
+     "Hunter:Vampire"
+     "Hunter:Werewolf"
+     "Hunter:Witch"
+     "Trapper"))
   (base/skill
    :name "Influence"
    :reference
@@ -2393,6 +2405,11 @@ x +1DMG vs. Crouching."
      "Diagnose"
       (base/ability
        :name "Diagnose")
+     "Draw Blood"
+      (base/ability
+       :name "Draw Blood"
+       :summary
+        "* [Skill]: [Medicine]")
      "Emergency Treatment"
       (base/ability
        :name "Emergency Treatment")
@@ -2405,6 +2422,8 @@ x +1DMG vs. Crouching."
      "Leeching"
       (base/ability
        :name "Leeching")
+     "Medical Evac"
+      (base/ability<-tactics-key tactics "Medical Evac")
      "Medical Practice"
       (base/ability
        :name "Medical Practice")
@@ -2418,6 +2437,8 @@ x +1DMG vs. Crouching."
      "Physiology"
       (base/ability
        :name "Physiology")
+     "Stabilize"
+      (base/ability<-tactics-key tactics "Stabilize")
      "Surgery:Abdominal"
       (base/ability
        :name "Surgery:Abdominal")
@@ -2445,6 +2466,16 @@ x +1DMG vs. Crouching."
      "Surgery:Veterinary"
       (base/ability
        :name "Surgery:Veterinary")
+     "Teeth Cleaning"
+      (base/ability
+       :name "Teeth Cleaning"
+       :summary
+        "* [Skill]: [Medicine]")
+     "Transfusion"
+      (base/ability
+       :name "Transfusion"
+       :summary
+        "* [Skill]: [Medicine]")
      "Treat:Disease"
       (base/ability
        :name "Treat:Disease")
@@ -2457,9 +2488,20 @@ x +1DMG vs. Crouching."
      "Treat:Radiation"
       (base/ability
        :name "Treat:Radiation")
+     "Triage"
+      (base/ability<-tactics-key tactics "Triage")
      "Veterinary:Medicine"
       (base/ability
-       :name "Veterinary:Medicine")))
+       :name "Veterinary:Medicine"))
+   :specialtymap
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Dentist"
+     "Medic"
+     "Surgeon:Field"
+     "Surgeon:Neural"
+     "Surgeon:Oral"
+     "Veterinarian"))
   (base/skill
    :name "Military"
    :reference
@@ -3409,6 +3451,11 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Detect Hollow Rock"
        :summary "* Detect trap doors, secret doors, and unstable rocks.")
+     "Ever Vigilant"
+      (base/ability
+       :name "Ever Vigilant"
+       :summary
+        "* [Skill]: [Survival]")
      "Foraging"
       (base/ability<-tactics-key tactics "Foraging")
      "Forestry"
@@ -3427,26 +3474,33 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Motion Sense"
        :summary "* Detect air movements and faint sounds to detect moving things even when they are around corners or in the dark.")
-     "Survival: Cold Weather"
+     "One Eye Open"
       (base/ability
-       :name "Survival: Cold Weather"
+       :name "One Eye Open"
+       :summary
+        "Can sleep sitting up in full gear without penalty
+         * [Skill]: [Survival]
+         * Bonus to avoid surprise while sleeping")
+     "Survival:Altitude"
+      (base/ability
+       :name "Survival:Altitude")
+     "Survival:Cold"
+      (base/ability
+       :name "Survival:Cold"
        :summary "* Hazards - Blizzard, Avalanche, Frostbite")
-     "Survival: Desert"
+     "Survival:Desert"
       (base/ability
-       :name "Desert Survival"
+       :name "Survival:Desert"
        :titles "Desert Bandit, Desert Dweller, Desert Fox, Desert Nomad, Dune Raider, Dune Rider")
-     "Survival: High Altitude"
+     "Survival:Jungle"
+      (base/ability<-tactics-key tactics "Survival:Jungle")
+     "Survival:Radiation"
       (base/ability
-       :name "Survival: High Altitude")
-     "Survival: Jungle"
-      (base/ability<-tactics-key tactics "Survival: Jungle")
-     "Survival: Radiation"
-      (base/ability
-       :name "Survival: Radiation"
+       :name "Survival:Radiation"
        :summary "* Hazards - Radioactive")
-     "Survival: Swamp"
+     "Survival:Swamp"
       (base/ability
-       :name "Survival: Swamp"
+       :name "Survival:Swamp"
        :summary
         "* This ability is used to avoid or mitigate the common hazards encountered while delving into swampland. This can also be used to avoid the attention of random predators.
          * [Requires]: Unit must be a [Light Unit]
@@ -3454,12 +3508,12 @@ x +1DMG vs. Crouching."
          * [Stealth]: IF Level>1 THEN [Stealth]:+1 in [Swamp]
          * [Combat]: IF Level>2 THEN [Inititiative]:+1 vs Ranged in [Swamp]"
        :titles "Murk Dweller, Murk Lord, Swamp Lord, Swamp Knight, Swamp Thing")
-     "Survival: Underground"
+     "Survival:Underground"
       (base/ability
-       :name "Survival: Underground")
-     "Survival: Underwater"
+       :name "Survival:Underground")
+     "Survival:Underwater"
       (base/ability
-       :name "Survival: Underwater"))
+       :name "Survival:Underwater"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics

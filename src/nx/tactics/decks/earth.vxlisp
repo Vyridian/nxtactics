@@ -1,0 +1,26 @@
+(package nx/tactics/decks/earth
+ :libs (lib base :path nx/tactics/base)
+ :doc "Earth")
+
+(func deck-earth : base/deck
+ [tactics : base/tactics]
+ (base/deck
+  :name "Earth Map"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist-images<-tactics-places
+     tactics
+     "Earth:Globe"
+     "Earth:Africa"
+     "Earth:Antarctica"
+     "Earth:Arctic"
+     "Earth:Asia"
+     "Earth:Europe"
+     "Earth:Indian Ocean"
+     "Earth:North America"
+     "Earth:North Atlantic"
+     "Earth:North Pacific"
+     "Earth:Oceania"
+     "Earth:South America"
+     "Earth:South Atlantic"
+     "Earth:South Pacific"))))

@@ -20,8 +20,8 @@ export default class nx_tactics_apptactics_test {
       ":caselist", testcaselist,
       ":coveragesummary", nx_tactics_apptactics_test.test_coveragesummary(),
       ":coveragedetail", nx_tactics_apptactics_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {

@@ -16,8 +16,8 @@ export default class nx_tactics_books_modern_fantasy_test {
       ":caselist", testcaselist,
       ":coveragesummary", nx_tactics_books_modern_fantasy_test.test_coveragesummary(),
       ":coveragedetail", nx_tactics_books_modern_fantasy_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {
@@ -25,11 +25,11 @@ export default class nx_tactics_books_modern_fantasy_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/books/modern_fantasy", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 8), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 8), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 9), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 9), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 8), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 9), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -51,13 +51,14 @@ export default class nx_tactics_books_modern_fantasy_test {
         vx_core.f_new_from_type(
           vx_core.t_intmap,
           "chapter_buffy_the_vampire_slayer", 0,
-          "chapter_chronicles_of_amber", 0,
           "chapter_kengan_ashura", 0,
           "chapter_matrix_the", 0,
           "chapter_modern_fantasy_overview", 0,
           "chapter_street_fighter", 0,
+          "chapter_universes_of_amber", 0,
           "chapter_world_of_darkness", 0,
-          "tacticsbook", 0
+          "tacticsbook", 0,
+          "universe_matrix_universe", 0
         )
     )
     return output

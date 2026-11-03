@@ -37,7 +37,7 @@
          Q. Appearance: Visual Trait
          J. Quirks: Physical Habits
          T. Speech: Verbal Style
-         9. Demeanor: Outward Attitude
+         9. Persona: Outward Attitude
          8. Nature: True Personality
          7. Motivation: Deep Drive
          6. Goal: Current Priority
@@ -427,7 +427,7 @@
          3. Cutting - Spare me
          2. Secretive - You don't need to know")
       (base/card
-       :name "Demeanor:Direct"
+       :name "Persona:Direct"
        :deck "Character"
        :ranksuit base/ranksuit-9c
        :image "icons/card-ranksuit-9c.svg"
@@ -446,7 +446,7 @@
          3. Passionate and fiery
          2. Quiet and observant")
       (base/card
-       :name "Demeanor:Professional"
+       :name "Persona:Professional"
        :deck "Character"
        :ranksuit base/ranksuit-9d
        :image "icons/card-ranksuit-9d.svg"
@@ -465,7 +465,7 @@
          3. Proud and self-assured
          2. Direct and efficient")
       (base/card
-       :name "Demeanor:Warm"
+       :name "Persona:Warm"
        :deck "Character"
        :ranksuit base/ranksuit-9h
        :image "icons/card-ranksuit-9h.svg"
@@ -484,7 +484,7 @@
          3. Bubbly and enthusiastic
          2. Sincere and earnest")
       (base/card
-       :name "Demeanor:Guarded"
+       :name "Persona:Guarded"
        :deck "Character"
        :ranksuit base/ranksuit-9s
        :image "icons/card-ranksuit-9s.svg"

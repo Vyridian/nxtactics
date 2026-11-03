@@ -328,10 +328,6 @@
    :summary
     "A life extending drug")
   (base/item
-   :name "Essence"
-   :summary
-    "An intangible quality that is the fundamental form of magic.")
-  (base/item
    :name "Essential:Earth"
    :summary
     "The fundamental magical quality of Earth")
@@ -589,6 +585,10 @@
   (base/item
    :name "Rifle"
    :image "images/cards/item-rifle.svg")
+  (base/item
+   :name "Runestone"
+   :summary
+    "A magical item that holds a [Rune]. Anyone can activate the Runestone to etch the Rune without a specialist. Such items are very convenient and valuable")
   (base/item
    :name "Safe"
    :image "images/cards/item-safe.svg")
@@ -851,20 +851,6 @@
      * [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
      * [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
      * [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.")
-  (base/item
-   :name "Wall: Bramble")
-  (base/item
-   :name "Wall: Fire"
-   :image "images/cards/item-wall-fire.svg")
-  (base/item
-   :name "Wall: Force")
-  (base/item
-   :name "Wall: Hedge")
-  (base/item
-   :name "Wall: Metal")
-  (base/item
-   :name "Wall: Stone"
-   :image "images/cards/item-wall-stone.svg")
   (base/item
    :name "Water: Pond"
    :image "images/cards/item-water-pond.svg"

@@ -9,6 +9,7 @@ import nx_tactics_decks_condition from "../../../../src/nx/tactics/decks/conditi
 import nx_tactics_decks_data from "../../../../src/nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../../src/nx/tactics/decks/disorder.js"
 import nx_tactics_decks_dungeon from "../../../../src/nx/tactics/decks/dungeon.js"
+import nx_tactics_decks_earth from "../../../../src/nx/tactics/decks/earth.js"
 import nx_tactics_decks_highway from "../../../../src/nx/tactics/decks/highway.js"
 import nx_tactics_decks_intent from "../../../../src/nx/tactics/decks/intent.js"
 import nx_tactics_decks_player from "../../../../src/nx/tactics/decks/player.js"
@@ -35,8 +36,8 @@ export default class nx_tactics_decks_deck_test {
       ":caselist", testcaselist,
       ":coveragesummary", nx_tactics_decks_deck_test.test_coveragesummary(),
       ":coveragedetail", nx_tactics_decks_deck_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {

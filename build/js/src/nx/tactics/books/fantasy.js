@@ -964,7 +964,9 @@ export default class nx_tactics_books_fantasy {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Mediterranea",
+          "Mediterra",
+          ":titles",
+          "Middle Earth, Midgard",
           ":sectionmap",
           nx_tactics_base.f_sectionmap_from_sectionlist(
             vx_core.f_new(
@@ -978,14 +980,14 @@ export default class nx_tactics_books_fantasy {
               ":placemap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_placemap},
-                ":Crete",
+                "Crete",
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Crete"),
-                ":Hellas",
+                "Hellas",
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Hellas", ":summary", "* Description - Currently a territory of the Imperium, Hellas is an orderly and socially advanced nation. They have a partial democracy (answerable to the Imperium) and a complex legal system that is surprisingly fair.\n* Universities - Hellan Universities are famous for acedemia, sciences, and philosophy. They do, however, share their Imperial neighbor's prejudices against Naturalism and the Arcane (except for Alchemy and Artifice which are considered sciences)."),
-                ":Knossus",
+                "Knossus",
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Knossus"),
-                ":Labyrinth",
-                vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Labyrinth", ":summary", "A natural maze of cracked basalt"),
+                "Minos",
+                vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Minos", ":summary", "An island covered by a natural maze of cracked basalt that are now inhabited by the bull-like Minotaurs"),
                 "Mount Parnassus",
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Mount Parnassus", ":summary", "* The Oracle of Delphi is on the slopes of Parnassus."),
                 ":Minoa",

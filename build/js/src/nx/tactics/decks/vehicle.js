@@ -431,6 +431,99 @@ export default class nx_tactics_decks_vehicle {
     return output
   }
 
+  /**
+   * @function deck_vehicle_design
+   * Vehicle Deck
+   * @return {deck}
+   */
+  static t_deck_vehicle_design = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_vehicle_design = {
+    vx_type: nx_tactics_decks_vehicle.t_deck_vehicle_design
+  }
+
+  // (func deck-vehicle-design)
+  static f_deck_vehicle_design() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      {"any-1": nx_tactics_base.t_deck},
+      ":name",
+      "Ship Design",
+      ":cardmap",
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_cardmap},
+        nx_tactics_base.f_cardmap_from_cardlist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_cardlist},
+            nx_tactics_base.f_placelist_from_tactics_keys(
+              nx_tactics_base.t_tactics,
+              "Air Lock",
+              "Armory",
+              "Ballast",
+              "Beam:Fixed",
+              "Beam:Fixed",
+              "Cabin:Crew",
+              "Cabin:Luxury",
+              "Cabin:Premium",
+              "Cabin:Economy",
+              "Cargo Hold",
+              "Command Center",
+              "Corridor",
+              "Damage Control",
+              "Engine",
+              "Engineering",
+              "Fire Control",
+              "Floatation",
+              "Fuel Tank",
+              "Generator",
+              "Gun:Fixed",
+              "Gun:Turret",
+              "Hanger Bay",
+              "Hazardous",
+              "Helm",
+              "Magazine",
+              "Medical",
+              "Lab:Biology",
+              "Lab:Mechanical",
+              "Lab:Physics",
+              "Lift",
+              "Lounge:Luxury",
+              "Lounge:Premium",
+              "Lounge:Economy",
+              "Magazine",
+              "Missile:Fixed",
+              "Missile:Turret",
+              "Navigation",
+              "Oars",
+              "Plow",
+              "Point Defense",
+              "Prison",
+              "Ram",
+              "Sail",
+              "Seats:Luxury",
+              "Seats:Premium",
+              "Seats:Economy",
+              "Sensor",
+              "Shield",
+              "Skid",
+              "Stasis Chamber",
+              "Storage Tank",
+              "Supply",
+              "Thrust",
+              "Hover",
+              "Treads",
+              "Vault",
+              "Wheel",
+              "Wing"
+            )
+          )
+        )
+      )
+    )
+    return output
+  }
+
 
 
   static {
@@ -492,10 +585,12 @@ export default class nx_tactics_decks_vehicle {
       "vehicle-wild-red": nx_tactics_decks_vehicle.c_vehicle_wild_red
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "deck-vehicle": nx_tactics_decks_vehicle.e_deck_vehicle
+      "deck-vehicle": nx_tactics_decks_vehicle.e_deck_vehicle,
+      "deck-vehicle-design": nx_tactics_decks_vehicle.e_deck_vehicle_design
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "deck-vehicle": nx_tactics_decks_vehicle.t_deck_vehicle
+      "deck-vehicle": nx_tactics_decks_vehicle.t_deck_vehicle,
+      "deck-vehicle-design": nx_tactics_decks_vehicle.t_deck_vehicle_design
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -525,6 +620,24 @@ export default class nx_tactics_decks_vehicle {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_vehicle.f_deck_vehicle
+    }
+
+    // (func deck-vehicle-design)
+    nx_tactics_decks_vehicle.t_deck_vehicle_design['vx_value'] = {
+      name          : "deck-vehicle-design",
+      pkgname       : "nx/tactics/decks/vehicle",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_vehicle.f_deck_vehicle_design
     }
 
     // (const malfunction)

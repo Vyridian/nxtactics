@@ -29,7 +29,7 @@ export default class nx_tactics_decks_scene_murintrail {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_base.f_cardlist_images_from_tactics_units(tactics, "Flint (Early)", "Jes Aveer", "Jon Aveer", "Xeib Hanower", "Wilm Ducon", "Lili Ducon", "Brunhil Virden", "Goblin Scout", "Bandit", "Bruiser", "Guardsman", "Herbalist", "Innkeeper", "Pilgrim", "Urchin", "Waif", "Cat", "Chicken", "Dog", "Dog: Wild", "Duck", "Goat", "Goose", "Pig", "Donkey", "Sheep", "Horse", "Ox", "Cart: Wooden", "Plough"),
+          nx_tactics_base.f_cardlist_images_from_tactics_units(tactics, "Flint (Early)", "Jes Aveer", "Jon Aveer", "Xeib Hanower", "Wilm Ducon", "Lili Ducon", "Brunhil Virden", "Goblin Scout", "Bandit", "Bruiser", "Guardsman", "Herbalist", "Innkeeper", "Pilgrim", "Urchin", "Waif", "Cat", "Chicken", "Dog", "Dog:Wild", "Duck", "Goat", "Goose", "Pig", "Donkey", "Sheep", "Horse", "Ox", "Cart: Wooden", "Plough"),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_skilllist},
             nx_tactics_base.f_skilllist_from_tactics_keys(tactics, "Close Combat", "Melee", "Stealth", "Business", "Tradeskill")
@@ -42,7 +42,7 @@ export default class nx_tactics_decks_scene_murintrail {
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
             nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife:Dagger", "Sword:Long", "Sword:Short", "Hammer", "Axe:Hand", "Axe:Wood", "Spear", "Spear:Short", "Bow:Short", "Quiver:Arrows", "Shield:Buckler", "Shield:Heater", "Armor:Leather Cuirass", "Coins:Copper", "Coins:Silver", "Coins:Gold", "Coins:Platinum", "Salve:Healing", "Cloak:Fine Woodland", "Rations", "Waterskin")
           ),
-          nx_tactics_base.f_cardlist_images_from_tactics_places(tactics, "Sandalstad", "Field", "Mountain", "Trees", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Shop: General", "Shop: Herbalist", "Shrine", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
+          nx_tactics_base.f_cardlist_images_from_tactics_places(tactics, "Sandalton", "Field", "Mountain", "Trees", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Shop: General", "Shop: Herbalist", "Shrine", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
         )
       )
     )
@@ -64,7 +64,7 @@ export default class nx_tactics_decks_scene_murintrail {
   // (func scene-murintrail)
   static f_scene_murintrail(tactics) {
     let output = nx_tactics_base.e_scene
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Murin Trail Scene", ":secrets", "* The local lord is a young man (Damyen Brushaus) has recently inherited his title, preoccupied with person interests and largely ignores the town.\n* The town watch is a small militia run by a veteran sergeant (Brunhil Virden).\n* Brunhil runs a tight ship, and is not popular in town or among the watch.\n* The area is mostly safe except for numerous venomous snakes.\n* The local inn/pub is basically a large house. There are outdoor tables for food and drink.\n* The innkeeper/cook (Hamal) runs the place with his 12 year old daughter (Rena).\n* The land is mountainous and rocky, but the weather is fair and crops are reasonable.\n* A small religious group is staying in the city until they move on. They locals don't care for them.\n* A priest (Xeib) in town makes and sells anti-venom.\n* Xeib is travelling to Murintown, but he does not want to travel unguarded.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Murin Trail Scene", ":secrets", "* The local lord is a young man (Damyen Brushaus) has recently inherited his title, preoccupied with person interests and largely ignores the town.\n* The town watch is a small militia run by a veteran sergeant (Brunhil Virden).\n* Brunhil runs a tight ship, and is not popular in town or among the watch.\n* The area is mostly safe except for numerous venomous snakes.\n* The local inn/pub is basically a large house. There are outdoor tables for food and drink.\n* The innkeeper/cook (Hamal) runs the place with his 12 year old daughter (Rena).\n* The land is mountainous and rocky, but the weather is fair and crops are reasonable.\n* A small religious group is staying in the city until they move on. They locals don't care for them.\n* A priest (Xeib) in town makes and sells anti-venom.\n* Xeib is travelling to Murintown, but he does not want to travel unguarded.\n* Stars Chasing - A few months ago, three shooting stars have repeastedly been seen crossing the sky. Astrologers have no compelling explanation. Locals see it as an ill omen.\n* Factions:\n** Nobles\n** Watchtower - The Watch, City Watch, City Guards\n** Banks - Bankers give loans and collect taxes for the lords. They are very popular in high society and very unpopular with the commoners.\n** Customs House (Port Authority)\n** Templars\n** Cultists\n** Military (Warlord) - Includes Blacksmiths, Fletchers, and Swordsmiths\n** Mage Tower\n** Craft Guild - Includes Alchemists, Artificiers, Artisans, and other non-magical craftsmen and artists\n** Masons - Includes stonemasons, carpenters, siege engine builders\n** Trade Union\n** Landsmen - Large landowners, landlords and farmers\n** Mercenary Guild\n** Assassins Guild\n** Thieves Guild\n** Collegium (University/Law/History/Library)\n** Poor Houses - for the Poor, Injured or Sick\n** Enclaves - Subdivisions dominated by ethnic groups")
     return output
   }
 
@@ -83,7 +83,7 @@ export default class nx_tactics_decks_scene_murintrail {
   // (func scene-zurakthal)
   static f_scene_zurakthal(tactics) {
     let output = nx_tactics_base.e_scene
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Zurak'Thal Scene", ":titles", "Coiling Depths", ":secrets", "* Zurak'Thal (Coiling Depths) - The city of serpents.\n* Dvergholt (Dwarven Forest hold) - The abandoned dwarven outpost\n* Sandvagr (Sand Place) - The human settlement with fragrant sandalwood.\n* Wolfshafen (Wolf's Haven) - The human town\n* Stahlgrim (Steel Fortress) - The distant dwarven city")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Zurak'Thal Scene", ":titles", "Coiling Depths", ":secrets", "* Zurak'Thal (Coiling Depths) - The city of serpents.\n* Sandalholt (Dwarven Forest hold) - The abandoned dwarven outpost\n* Sandalton (Sandal Town) - The human settlement with fragrant sandalwood.\n* Wolfshaven (Wolf's Haven) - The human town\n* Stahlgrim (Steel Fortress) - The distant dwarven city")
     return output
   }
 

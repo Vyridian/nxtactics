@@ -15,8 +15,8 @@ export default class nx_crypto_cryptosheet_test {
       ":caselist", testcaselist,
       ":coveragesummary", nx_crypto_cryptosheet_test.test_coveragesummary(),
       ":coveragedetail", nx_crypto_cryptosheet_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {

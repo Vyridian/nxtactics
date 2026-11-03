@@ -15,8 +15,8 @@ export default class vx_util_randomize_test {
       ":caselist", testcaselist,
       ":coveragesummary", vx_util_randomize_test.test_coveragesummary(),
       ":coveragedetail", vx_util_randomize_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {

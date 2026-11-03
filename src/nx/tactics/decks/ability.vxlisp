@@ -355,11 +355,6 @@
 
      * The barrage was developed in World War I, with the infantry following the advancing barrage. Its employment in this way recognised the importance of artillery fire in neutralising, rather than destroying, the enemy. A creeping barrage immediately followed by an infantry assault could be far more effective than weeks of preliminary bombardment.")
   (base/ability
-   :name "Barren Loins"
-   :summary
-    "* [Power]: [Enchantment]
-     * Target cannot conceive a child while under this curse.")
-  (base/ability
    :name "Bartending"
    :summary
      "The ability to make drinks and get tips
@@ -394,7 +389,10 @@
   (base/ability
    :name "Berserker"
    :summary
-    "* [Power]: [Rage]")
+    "Reduce Mind/Speed to gain Body/Will
+     * [Power]: [Rage]
+     * [Continuous]
+     * Mind or Speed:-1 and Body or Will:+1 up to Level/2 (round down) times")
   (base/ability
    :name "Besiege"
    :summary
@@ -1145,6 +1143,14 @@
    :summary
     "* [Skill]: [Investigation]")
   (base/ability
+   :name "Devotion"
+   :reference
+    "* You make me feel like I'm so close to my dreams, and then suddenly its all there. Suddenly, the wheels are in motion. And I.. I'm ready to sail any ocean. Suddenly, I don't need the answers. Cause I.. I'm ready to take all my chances with you. - Olivia Newton John and Cliff Richards, Suddenly"
+   :summary
+    "Total commitment to another person.
+     * [Power]: [Conviction]
+     * The first Will spent aiding that person is immediately returned.")
+  (base/ability
    :name "Dialect-Enlisted"
    :summary "Dialect of enlisted soldiers")
   (base/ability
@@ -1870,6 +1876,13 @@
     "* Reduces the muzzle flare of the weapon making it more difficult to visually locate the shooter.
      * [Power]: [Weapon]")
   (base/ability
+   :name "Flattery"
+   :reference
+    "* A:Cool eyepatch. You think so? Wait, shut up and fight! - Akshan and  , Runeterra"
+   :summary
+    "* [Skill]: [Deception]")
+
+  (base/ability
    :name "Fuel Scoop"
    :summary
     "* Can scoop fuel directly into [Tanker Hold].
@@ -2012,7 +2025,8 @@
   (base/ability
    :name "Hatred"
    :reference
-    "* I killed Wesley. I shot him seven times. Because the clip ran out. He. Deserved. MORE! - Karen Page and Kingpin, Daredevil"
+    "* I killed Wesley. I shot him seven times, because the clip ran out. He.. Deserved.. MORE! - Karen Page and Kingpin, Daredevil
+     * I'm done being scared. It's their turn. - The Prefect, Runeterra"
    :summary
     "* [Skill]: [Intimidation]
      * Attack: +1 Speed vs. Tribal or long-standing personal enemies.")
@@ -2241,8 +2255,9 @@
   (base/ability
    :name "Interrogate"
    :reference
-    "* I'm gonna ask you one more goddamn time, and if you still 'respectfully refuse,' I'm callin' the Bear Jew over here, and he's gonna take that big-ole bat of his, and he's gonna beat you to death with it. Now take your wiener schnitzel lickin' finger and point out on this map what I want to know...We got a German here who wants to die for his country! Oblige him! - Lt. Aldo Raine, Inglourious Basterds
-     * You don't need that. I'll tell you everything. Yes...I know you will. - Raiders of the Lost Ark"
+    "* I'm gonna ask you one more goddamn time, and if you still 'respectfully refuse,' I'm callin' the Bear Jew over here, and he's gonna take that big-ole bat of his, and he's gonna beat you to death with it. ... We got a German here who wants to die for his country. Oblige him. - Lt. Aldo Raine, Inglourious Basterds
+     * You don't need that. I'll tell you everything. Yes...I know you will. - Raiders of the Lost Ark
+     * Will you comply or are you complicit? - Mageseeker Investigator, Runeterra"
    :summary
     "* [Skill]: [Intimidation] vs [Will]")
   (base/ability
@@ -2496,6 +2511,11 @@
    :summary
     "* The user knows thousands of mazes and can choose an optimal course through any maze with minimal trial and error.
      * [Skill]: [Brilliance]")
+  (base/ability
+   :name "Medical Evac"
+   :summary
+    "Prepare a victim for safe transportation
+     * [Skill]: [Medicine]")
   (base/ability
    :name "Melting Beam"
    :summary
@@ -3076,6 +3096,90 @@
    :summary
     "[Action]: Units within Range:Skill are placed into a [Formation] they all share.")
   (base/ability
+   :name "Range:Artillery"
+   :summary
+    "[Range] similar to a Field guns, howitzers, mortars (heavy)
+     * Short Range: 5km/3mi/Spaces:3k")
+  (base/ability
+   :name "Range:Assault"
+   :summary
+    "[Range] similar to a Long Bow, Heavy Crossbow, Light Rifle (AR-15/M4), RPG
+     * Short Range: 80m/250ft/Spaces:50")
+  (base/ability
+   :name "Range:Ballistic"
+   :summary
+    "[Range] similar to Cruise and Ballistic Missiles
+     * Short Range: 150km/100mi/Spaces:100k")
+  (base/ability
+   :name "Range:Close"
+   :summary
+    "[Range] similar to touch, brawling, or a knife
+     * Range: 0m/0ft/Spaces:0
+     * Typically uses [Close Combat] [Skill]")
+  (base/ability
+   :name "Range:Heavy"
+   :summary
+    "[Range] similar to a Heavy Rifle (M14), Machine Guns (M249/M240)
+     * Short Range: 300m/1000ft/Spaces:200")
+  (base/ability
+   :name "Range:Marksman"
+   :summary
+    "[Range] similar to a Designated Marksman Rifle (DMR), Battle Rifles, Lever-action carbines
+     * Short Range: 150m/500ft/Spaces:100")
+  (base/ability
+   :name "Range:Melee"
+   :summary
+    "[Range] similar to a Sword, Club, Axe, Short Spear
+     * Range: 1.5m/5ft/Spaces:1 (or height x 1)
+     * Typically uses [Melee] [Skill]")
+  (base/ability
+   :name "Range:Naval"
+   :summary
+    "[Range] similar to a Ship-mounted large caliber guns
+     * Short Range: 8km/5mi/Spaces:5k")
+  (base/ability
+   :name "Range:Orbital"
+   :summary
+    "[Range] similar to a Mass drivers, railguns, kinetic rods, unguided projectiles
+     * Short Range: 15km/10mi/Spaces:10k")
+  (base/ability
+   :name "Range:Reach"
+   :summary
+    "[Range] similar to a Polearm, Spear, Staff
+     * Range: 3m/10ft/Spaces:2 (or height x 2)
+     * Typically uses [Melee] [Skill]")
+  (base/ability
+   :name "Range:Rocket"
+   :summary
+    "[Range] similar to a Javelin, TOW, Recoilless rifles, MANPADS
+     * Short Range: 1.5km/5000ft/Spaces:1k")
+  (base/ability
+   :name "Range:Skirmish"
+   :summary
+    "[Range] similar to an SMG, Short Bow, Light Crossbow
+     * Short Range: 50m/150ft/Spaces:30")
+  (base/ability
+   :name "Range:Sidearm"
+   :summary
+    "[Range] similar to a Pistol or Javelin
+     * Short Range: 15m/50ft/Spaces:10")
+  (base/ability
+   :name "Range:Sniper"
+   :summary
+    "[Range] similar to a Bolt-action / Semi-auto sniper rifles
+     * Short Range: 500m/1500ft/Spaces:300")
+  (base/ability
+   :name "Range:Space"
+   :summary
+    "[Range] similar to Lasers, near light speed particles and projectiles. Round trip spotting and travel lag is 3/4 sec.
+     * Short Range: 5000km/30000mi")
+  (base/ability
+   :name "Range:Thrown"
+   :summary
+    "[Range] similar to a small thrown weapon like a knife or club
+     * Short Range: 8m/25ft/Spaces:5
+     * If actually throwing an object the distance is Body meters for objects weight kg=1/4 Body")
+  (base/ability
    :name "Rapid Fire"
    :summary
     "* [Skill]: [Firearm]")
@@ -3397,6 +3501,13 @@
    :name "Sculpture"
    :summary
     "* [Skill]: [Art]")
+  (base/ability
+   :name "Seal:Fertility"
+   :titles "Barren Loins"
+   :summary
+    "Target cannot conceive a child while under this curse (or blessing)
+     * [Power]: [Enchantment]
+     * This [Seal] is [Permanent] until dispelled and does not require  does not require [Concentration]. It is, however, easily magically removed")
   (base/ability
    :name "Search"
    :summary
@@ -3728,6 +3839,11 @@
     "* [Power]: [Shamanism]
      * Death: Enter the Spirit Realm")
   (base/ability
+   :name "Stabilize"
+   :summary
+    "Attempt to prevent futher degradation from shock and bloodloss
+     * [Skill]: [Medicine]")
+  (base/ability
    :name "Stage Magic"
    :summary
     "* [Skill]: [Deception]")
@@ -3837,7 +3953,7 @@
      * [Action]: Target a unit that has not been activated this turn, all [Hits] and [Critical Hits] are [Stun] tokens.
      +1 Attack")
   (base/ability
-   :name "Survival: Jungle"
+   :name "Survival:Jungle"
    :titles "Jungle Dweller, Lord of the Jungle"
    :reference "Tarzan"
    :summary
@@ -3975,10 +4091,15 @@
    :summary
     "* [Power]: [Time]")
   (base/ability
-   :name "Time Stop"
-   :titles "Freeze Time, Time Slip"
+   :name "Time Slip"
    :summary
-    "* Ability to briefly exit the normal timestream. 
+    "Your consciousness wanders through your history/future
+     * [Power]: [Time]")
+  (base/ability
+   :name "Time Stop"
+   :titles "Freeze Time"
+   :summary
+    "Briefly exit the normal timestream. 
      * [Power]: [Time]
      * This effectively freezes time for a few seconds. The user is can move freely, but nothing but air can be moved or harmed. Note that doors cannot be opened and air is thick to move through or breathe.")
   (base/ability
@@ -4038,6 +4159,12 @@
    :name "Transparent"
    :summary
     "* [Power]: [Invisibility]")
+  (base/ability
+   :name "Triage"
+   :summary
+    "Quickly determine the best order of treatment
+     * [Skill]: [Medicine]
+     * This includes deprioritizing hopeless cases")
   (base/ability
    :name "Trial"
    :summary

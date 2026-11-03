@@ -59,7 +59,7 @@ export default class nx_tactics_decks_character {
               ":image",
               "icons/card-ranksuit-wr.svg",
               ":summary",
-              "A. Occupation: Job/Role\nK. Reputation: Public Image\nQ. Appearance: Visual Trait\nJ. Quirks: Physical Habits\nT. Speech: Verbal Style\n9. Demeanor: Outward Attitude\n8. Nature: True Personality\n7. Motivation: Deep Drive\n6. Goal: Current Priority\n5. Bias: Prejudice/Blind Spot\n4. Strength: Special Virtue\n3. Flaw: Core Weakness\n2. Secret: Hidden Truth"
+              "A. Occupation: Job/Role\nK. Reputation: Public Image\nQ. Appearance: Visual Trait\nJ. Quirks: Physical Habits\nT. Speech: Verbal Style\n9. Persona: Outward Attitude\n8. Nature: True Personality\n7. Motivation: Deep Drive\n6. Goal: Current Priority\n5. Bias: Prejudice/Blind Spot\n4. Strength: Special Virtue\n3. Flaw: Core Weakness\n2. Secret: Hidden Truth"
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
@@ -324,7 +324,7 @@ export default class nx_tactics_decks_character {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Demeanor:Direct",
+              "Persona:Direct",
               ":deck",
               "Character",
               ":ranksuit",
@@ -337,7 +337,7 @@ export default class nx_tactics_decks_character {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Demeanor:Professional",
+              "Persona:Professional",
               ":deck",
               "Character",
               ":ranksuit",
@@ -350,7 +350,7 @@ export default class nx_tactics_decks_character {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Demeanor:Warm",
+              "Persona:Warm",
               ":deck",
               "Character",
               ":ranksuit",
@@ -363,7 +363,7 @@ export default class nx_tactics_decks_character {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_card},
               ":name",
-              "Demeanor:Guarded",
+              "Persona:Guarded",
               ":deck",
               "Character",
               ":ranksuit",

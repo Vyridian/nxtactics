@@ -23,11 +23,11 @@
    :image "images/rule-action.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Action: Interact"
+   :name "Action:Interact"
    :image "images/rule-action-interact.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Action: Free"
+   :name "Action:Free"
    :image "images/rule-action-free.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -123,6 +123,7 @@
   (base/rule
    :name "Body"
    :image "images/rule-body.svg"
+   :titles "Physical, Power, Earth, Clubs, Wands"
    :layout base/cardlayout-imageonly)
   (base/rule
    :name "Bound"
@@ -240,10 +241,6 @@
   (base/rule
    :name "Character")
   (base/rule
-   :name "Character Point"
-   :image "images/rule-character-point.svg"
-   :layout base/cardlayout-imageonly)
-  (base/rule
    :name "Choking"
    :image "images/rule-choking.svg"
    :layout base/cardlayout-imageonly)
@@ -303,7 +300,6 @@
      Bound
      Broken
      Burning
-     Character Point
      Choking
      Constriction
      Damaged
@@ -319,6 +315,7 @@
      Hunger
      Immobilized
      Impaired
+     Inspiration
      Isolation
      Paralyzed
      Petrified
@@ -353,27 +350,31 @@
      Damage - Each Damage dealt to Constrictor reduces Severity by 1
      Escape - IF out of Constrictor reach")
   (base/rule
+   :name "Craft"
+   :summary
+    "A procedure for creating an item.")
+  (base/rule
    :name "Crits"
    :image "images/rule-crits.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Crits: Damage"
+   :name "Crits:Damage"
    :image "images/rule-crits-damage.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Crits: Person"
+   :name "Crits:Person"
    :image "images/rule-crits-person.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Crits: Rating"
+   :name "Crits:Rating"
    :image "images/rule-crits-rating.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Crits: Types"
+   :name "Crits:Types"
    :image "images/rule-crits-types.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Crits: Vehicle"
+   :name "Crits:Vehicle"
    :image "images/rule-crits-vehicle.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -393,9 +394,22 @@
      Partial - Disadvantage to communicate or perceive by hearing
      Total - Unable to communicate or perceive by hearing")
   (base/rule
+   :name "Deflect"
+   :summary
+    "Deflect a specific item/force that was going to hit you
+     * [Evade]: Apply one [Turn] to the path of the item")
+  (base/rule
    :name "Description"
    :image "images/rule-description.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Detect"
+   :summary
+    "Detect a specific item/force within range even through walls
+     * [Skill] + Size (Power, Body, Mind, or Will) vs Mind
+     * Range: [Skill] [Level]
+     * [Passive]: Notice when an obvious item appears
+     * [Active]: Notice when a sublte item exists")
   (base/rule
    :name "Disabled"
    :image "images/rule-disabled.svg"
@@ -478,6 +492,11 @@
    :summary
     "* A gradual loss of personality and individualality.")
   (base/rule
+   :name "Essence"
+   :summary
+    "An intangible quality that is the fundamental form of magic.
+     * Each element, energy, and force has a unique Essence that defines its properties")
+  (base/rule
    :name "Exposure"
    :image "images/rule-exposure.svg"
    :layout base/cardlayout-imageonly)
@@ -527,6 +546,39 @@
    :summary
     "Your movement appears smooth and effortless. You may move one more Space this Round")
   (base/rule
+   :name "Goal"
+   :summary
+    "Goal
+     * D - Escape - Find your way out
+     * D - Find - 
+     * H - Protect - 
+     * H - Persuade - 
+     * H - Rescue - 
+     * Search - 
+     * S - Stealth - 
+    Obstacle
+     * C - Physical Opposition
+     * D - Mental Challenge
+     * H - Emotional Dilemma
+     * S - Movement Hinderance
+     * CS - Boss
+     * CK - Leader
+     * CQ - Lieutenant
+     * CJ - Elite
+     * D - Minefield
+     * D - Captured
+     * D - Puzzle
+     * D - Lost
+     * D - Trapped
+     * D - Locked
+     * D - Blocked
+     * H - Law Enforcement
+     * H - Hostages
+     * H - Innocents
+     * H - Exposed
+     * H - Crowd
+     * AS - Cave In")
+  (base/rule
    :name "Golden Rules"
    :image "images/rule-goldenrules.svg"
    :layout base/cardlayout-imageonly)
@@ -562,7 +614,7 @@
    :image "images/rule-hits.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Hits: Sample"
+   :name "Hits:Sample"
    :image "images/rule-hits-sample.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -581,6 +633,15 @@
    :name "Impaired"
    :image "images/rule-impaired.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Inspiration"
+   :titles "Character Point"
+   :image "images/rule-character-point.svg"
+   :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Intercept"
+   :summary
+    "Intercept a specific item/force within Range and change its Target to you instead")
   (base/rule
    :name "Isolation"
    :image "images/rule-isolation.svg"
@@ -659,7 +720,7 @@
      * Invocation
      * Life
      * Primordial
-     * Purity
+     * Purityff
      * Radiant")
   (base/rule
    :name "Magic:Casting"
@@ -744,7 +805,8 @@
   (base/rule
    :name "Mind"
    :image "images/rule-mind.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :titles "Intellectual, Material, Fire, Diamonds, Coins, Intellectual, Rational")
   (base/rule
    :name "Mitigation"
    :summary
@@ -800,7 +862,7 @@
      * Other Parts - Dying
      Damage - Each Damage dealt to Petrifier reduces Severity by 1
      Escape - IF out of Petrifier reach
-     Dead - A Unit that dies by Petrified instead is preserved and transforms to stone")
+     Dead - A being that dies by Petrified instead is preserved and transforms to stone. Death only occurs when the majority of their body is reduced to sand.")
   (base/rule
    :name "Place")
   (base/rule
@@ -934,11 +996,33 @@
   (base/rule
    :name "Range"
    :image "images/rule-range.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :summary
+    "Short/Medium/Long has a 1-2-4 progression
+     * Short: Range:x is the normal effective range of the item/power
+     * Medium: Shortx2 Disadvantage
+     * Long: Mediumx2 Disadvantage, requires an extra Action and can only be attempted if shooter and target are stationary.
+     * [Range:Close] 0m/0ft/Space:0
+     * [Range:Melee] 1.5m/5ft/Spaces:1 (Height)
+     * [Range:Reach] 3m/10ft/Spaces:2 (Heightx2)
+     * [Range:Thrown] 8m/25ft/Spaces:5
+     * [Range:Sidearm] 15m/50ft/Spaces:10
+     * [Range:Skirmish] 50m/150ft/Spaces:30
+     * [Range:Assault] 80m/250ft/Spaces:50
+     * [Range:Marksman] 150m/500ft/Spaces:100
+     * [Range:Heavy] 300m/1000ft/Spaces:200
+     * [Range:Sniper] 500m/1500ft/Spaces:300
+     * [Range:Rocket] 1.5km/5000ft/Spaces:1k
+     * [Range:Artillery] 5km/3mi/Spaces:3k
+     * [Range:Naval] 8km/5mi/Spaces:5k
+     * [Range:Orbital] 15km/10mi/Spaces:10k
+     * [Range:Ballistic] 150km/100mi/Spaces:100k
+     * [Range:Space] 5000km/30000mi")
   (base/rule
    :name "Rank"
    :summary
-    "* The number on a card or the part of a Value before the x.")
+    "* The number on a card or the part of a Value before the x.
+     * Cards hve 3 types: Specials (A), Rares (K-J), and Commons (10-2)")
   (base/rule
    :name "Rating"
    :summary
@@ -946,16 +1030,46 @@
   (base/rule
    :name "Reach"
    :summary
-    "* Can target one additional Space away [Scaled]")
+    "* The distance a weapon can be used. [Scaled]    
+     * Reach:0 the same space. The default for Close Combat
+     * Reach:1 1 space away. The default for Melee
+     * Reach:2 2 spaces away. Polearms, chains, etc.
+     * Scale - [Scaled] by the unit's [Body]")
   (base/rule
    :name "Reaction"
    :summary
     "* During Conflict Resolution, each Unit has a Reaction equal to their Conflict card Rank modified by Skill Bonus")
   (base/rule
+   :name "Recipe"
+   :summary
+    "A procedure for a ceremony or casting a spell.")
+  (base/rule
    :name "Reflect"
    :summary
     "When a User takes particular Damage the source also takes Damage
      * The source takes Damage equal to Damage Taken or User Intensity whichever is lower")
+  (base/rule
+   :name "Relationship"
+   :summary
+    "How a person relates or wants to relate to another
+     * Family
+     * Friend - 
+     * Relative - Loose connection
+     * Authority - 
+     * Merchant - Profit motive
+     * Dealer - Illicit merchant including scammers
+     * Network - I know a guy who knows a guy
+     * Mercenary - In it for the money. Includes gold diggers and hanger ons
+     * Opportunist - Includes Thieves
+     * Worker - Actively doing their job
+     * Coworker -
+     * Subordinate - 
+     * Gang - Mob, Group, Club, Clique
+     * Rival - 
+     * Enemy - 
+     * Stranger - Mysterious person
+     * Bystander - Includes shoppers, tourists, and people in transit
+     ")
   (base/rule
    :name "Research"
    :deck "Reference"
@@ -966,6 +1080,22 @@
      * Level:+3 - 24 Hours (3 days)
      * Level:+4 - 120 Hours (2 weeks)
      * Level:+5 - 720 Hours (3 months)")
+  (base/rule
+   :name "Relic"
+   :summary
+    "A Relic is a body part of a powerful person or monster placed inside an item to imbue it with power.")
+  (base/rule
+   :name "Ritual"
+   :summary
+    "A procedure for a ceremony or casting a spell.")
+  (base/rule
+   :name "Runes"
+   :summary
+    "A Rune is a series of magical characters permanently inscribed on an item. The Rune imbues the item with an [Ability].
+     * Use: Anyone equipping the item may use the the Rune's [Ability] as if they had the Ability themself. The Skill/Power of the Ability is equal to the user's.
+     * Quality: The quality of an item determines the number of Runes it can hold. Abilities must be appropriate to the item (eg Stealth on a Cloak)
+     * Etching: Artificers and Enchanters excel at etching Runes on items
+     * Runestone: A special item called a Runestone hold a Rune. Anyone can activate the Runestone to etch the Rune without a specialist. Such items are very convenient and valuable")
   (base/rule
    :name "Resist"
    :summary
@@ -1059,15 +1189,14 @@
    :image "images/rule-rotated.svg"
    :layout base/cardlayout-imageonly
    :summary
-    "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated card.
-
+    "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated cards.
      * [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation.")
   (base/rule
-   :name "Round: End"
+   :name "Round:End"
    :image "images/rule-round-end.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Round: Start"
+   :name "Round:Start"
    :image "images/rule-round-start.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -1095,31 +1224,35 @@
    :image "images/rule-scene.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Scene: Events"
+   :name "Scene:Events"
    :image "images/rule-scene-events.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Scene: Minis"
+   :name "Scene:Minis"
    :image "images/rule-scene-minis.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Scene: Map#1"
+   :name "Scene:Map#1"
    :image "images/rule-scene-map-1.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Scene: Map#2"
+   :name "Scene:Map#2"
    :image "images/rule-scene-map-2.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Scene: Units"
+   :name "Scene:Units"
    :image "images/rule-scene-units.svg"
    :layout base/cardlayout-imageonly)
+  (base/rule
+   :name "Seal"
+   :summary
+    "A magical lock that can prevent specific beings from opening the sealed door/lock/etc")
   (base/rule
    :name "Setup"
    :image "images/rule-setup.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Setup: Players"
+   :name "Setup:Players"
    :image "images/rule-setup-players.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -1220,7 +1353,8 @@
   (base/rule
    :name "Speed"
    :image "images/rule-speed.svg"
-   :layout base/cardlayout-imageonly)
+   :layout base/cardlayout-imageonly
+   :titles "Agility, Movement, Air, Spades, Swords, Quickness")
   (base/rule
    :name "Stat"
    :image "images/rule-stat.svg"
@@ -1251,6 +1385,19 @@
      Action - Each Damage dealt to Binder reduces Severity by 1
      Escape - IF out of reach
      Dead - A Unit that dies by Stasis instead is perfectly preserved until released")
+  (base/rule
+   :name "Storytelling"
+   :summary
+    "Storytelling is composed of multiple nested parts:
+     * Universe - A distinct universal setting and timeline. Different Universes can potentially crossover. Significant Milestones form the History of this Universe. A Universe contains any number of Campaigns.
+     * Campaign - A set of connected Stories with an overall introduction, progression, and finale. A well structured Campaign will take characters on a journey of physical, mental, and psychological challenges, losses, and growth. Different Campaigns can take place at different time periods. A movie trilogy would form a campaign. A Campaign contains a series of Stories.
+     * Story - A set of connected Chapters with a distinct introduction, progression, and conclusion. A well structured Story will include classic story structures such as Hero's Journey, 3 Act Structure, Dan Harmon's Story Circle, etc. A Story contains a series of Chapters.
+     * Chapter - A distinct Story narrative that progresses the Story. A Chapter should be analogous to a game session. A Chapter can start and end at any point, usually for dramatic effect including cliffhangers. A well structured Chapter will include classic story structures like 3 Act Structure, 5 Room Dungeon, etc. A character, perspective, time shift may occur between Chapters. A Chapter contains a series of Plots and Acts. When all Plots OR all Acts resolve then the Chapter resolves with partial or complete success or failure.
+     * Plot - A distinct dramatic situation occurring at a specific Scene. This may be an actual plot that someone is attempting or some other not ideal situation that is progressing. As in Tarot, this represents the future if the Characters do not Act. Each Plot contains a series of Encounters. When all Encounters are resolved, the Plot progresses (The Plot Thickens).
+     * Encounter - A distinct obstacle/challenge to the Characters. It can be physical, intellectual, psychological, or social (a blend of each type is ideal). Encounters are distractions from or obstacles to completing the Charaters' Goals. Encounters may be scripted or random. Examples include Darkness, Smoke, Fire, Barrier, Locked Door, Terrain, Wildlife, Crowds, Social Obligations, Criminals, Law Enforcement, Rivals, Enemies, and Monsters.
+     * Act - The opportunity for Character agency and action during the Chapter. As in Tarot, this represents the future if the Characters successfully Act. Each Act contains a series of Goals. When all Goals are resolved, the Act progresses.
+     * Goal - A distinct desired outcome for the Characters. Like Encounters, it can be physical, intellectual, phychological, or social (a blend of each type is ideal). Goals may be scripted or random. Examples include obtaining an item, finding a person, acquiring information, travelling to/escaping from a location, convincing/defeating opposition, rescuing/protecting someone/something, solving a mystery.")
+
   (base/rule
    :name "Study"
    :deck "Reference"
@@ -1352,6 +1499,10 @@
   (base/rule
    :name "Time:Night")
   (base/rule
+   :name "Tone Pivot"
+   :summary
+    "H - Silence/Noise - A threat is made. Everyone goes silent looking for who made it")
+  (base/rule
    :name "Totem"
    :summary
     "A Totem is a focus for remotely manifesting a [Power]. Powers may used as if the Totem were the User")
@@ -1383,13 +1534,13 @@
    :summary
     "Repairing damage to living creatures is difficult and dangerous
      * Time - 
-     * Surgery - Perform a Task vs 3x[Severity]. If you lack a relevant [Ability], [Specialty] or perfect conditions it is at [Disadvantage]. Beginning the procedure creates a [Severity]:1 Wound at the location. Each failure causes [Blood Loss]:2")
+     * Surgery - Perform a [Task] vs 3x[Severity]. If you lack a relevant [Ability], [Specialty] or perfect conditions it is at [Disadvantage]. Beginning the procedure creates a [Severity]:1 Wound at the location. Each failure causes [Blood Loss]:2")
   (base/rule
-   :name "Unit: Guide"
+   :name "Unit:Guide"
    :image "images/rule-unit-guide.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
-   :name "Unit: Sample"
+   :name "Unit:Sample"
    :image "images/rule-unit-sample.svg"
    :layout base/cardlayout-imageonly)
   (base/rule
@@ -1413,6 +1564,174 @@
      Free Actions
       Accelerate:X - Spend Move:X to gain Velocity:+1 (Min=2)
       Brake:X - Spend Move:X to lose Velocity:-1 (Min=1)")
+  (base/rule
+   :name "Vice"
+   :summary
+    "Clubs:
+     Cowardly
+     Reckless
+     Impulsive
+     Lazy
+     Gluttonous
+     Procrastinating
+     Irresponsible
+     Stubborn
+     Furious
+     Violent
+     Wasteful
+     Addicted
+     Despairing
+
+     Diamonds:
+     Proud
+     Arrogant
+     Hubristic
+     Ignorant
+     Narrow-minded
+     Paranoid
+     Delusional
+     Obsessive
+     Indecisive
+     Gullible
+     Cynical
+     Apathetic
+     Foolish
+
+     Hearts:
+     Jealous
+     Envious
+     Hateful
+     Bitter
+     Spiteful
+     Cruel
+     Callous
+     Selfish
+     Vain
+     Lustful
+     Needy
+     Sentimental
+     Melancholic
+
+     Spades:
+     Dishonest  
+     Deceitful
+     Hypocritical
+     Treacherous
+     Corrupt
+     Bigoted
+     Intolerant
+     Greedy
+     Wrathful
+     Vengeful
+     Malicious
+     Impious
+     Traitorous")
+  (base/rule
+   :name "Virtue"
+   :summary
+    "Wands (Jock):
+     A Competitive/Cooperative
+     2 Proud/Humble
+     3 Loyal/Rebellious
+     4 Traditional/Open-Minded
+     5 Stoic/Expressive
+     6 Assertive/Thoughtful
+     7 Ambitious/Satisfied
+     8 Protective/Independent
+     9 Outgoing/Reserved
+     T Honorable/Elusive
+
+     Coins (Nerd):
+     A Idealistic/Pragmatic
+     2 Pragmatic/Idealistic
+     3 Frugal/Generous
+     4 Open-Minded/Traditional
+     5 Methodical/Creative
+     6 Skeptical/Spiritual
+     7 Reserved/Outgoing
+     8 Thoughtful/Assertive
+     9 Cautious/Brave
+    	T Patient/Urgent
+     J Reliable/Impulsive
+
+     Cups (Goodie/Goodie):
+     A Brave/Cautious
+     2 Generous/Frugal
+     3 Spiritual/Skeptical
+     4 Cooperative/Competitive
+     5 Humble/Proud
+     5 Forgiving/Vengeful
+     6 Expressive/Stoic
+     7 Trusting/Suspicious
+     8 Satisfied/Ambitious
+     9 Disciplined/Spontaneous
+     T Determined/Flexible (Consistent/Stubborn)
+
+     Spades (Artistic/Outsider):
+     A Creative/Methodical
+     2 Rebellious/Loyal
+     3 Vengeful/Forgiving
+     4 Suspicious/Trusting
+     5 Spontaneous/Disciplined
+     6 Flexible/Determined
+    	7 Urgent/Patient
+     8 Independent/Protective
+     9 Impulsive/Reliable
+     T Elusive/Honorable
+
+2	Compassionate	Ruthless
+23	Tolerant	Judgmental
+
+     Clubs:
+     Courageous
+     Resilient
+     Persevering
+     Determined
+     Bold
+     Optimistic
+     Confident
+     Enthusiastic
+     Vigilant
+
+     Diamonds:
+     Prudent
+     Wise
+     Curious
+     Insightful
+     Discerning
+     Foresighted
+     Knowledgeable
+     Clear-minded
+     Open-minded
+     Resourceful
+     Focused
+
+     Hearts:
+     Kind
+     Empathetic
+     Generous
+     Charitable
+     Forgiving
+     Grateful
+     Merciful
+     Gentle
+     Patient
+     Selfless
+
+     Spades:
+     Just
+     Honorable
+     Honest
+     Fair
+     Righteous
+     Trustworthy
+     Accountable
+     Pure
+     Altruistic
+     Temperate  
+     Diligent  
+     Disciplined
+     Principled")
   (base/rule
    :name "Walk"
    :summary
@@ -1486,7 +1805,7 @@
    :image "images/rule-will.svg"
    :layout base/cardlayout-imageonly
    :titles
-    "Chi, Confidence, Determination, Ego, Emotion, Faith, Grit, Guts, Heart, Instinct, Ki, Mana, Perseverence, Resolve, Spirit, Spiritualism, Will, Willpower"
+    "Emotion, Social, Water, Hearts, Cups, Bravery, Chi, Confidence, Courage, Determination, Ego, Faith, Grit, Guts, Heart, Instinct, Ki, Mana, Perseverence, Psychological, Resolve, Spirit, Spiritualism, Willpower"
    :reference
     "* I think, therefore I am. - Descartes, Cogito Ergo Sum
      * The nature of existence is subjective. I have experience and thoughts in this precise moment, beyond that I can prove nothing. Does time actually pass as I understand it? Is anything else but me real? Am I living in a dream/hallucination/simulation? Am I just insane? Our experience is the only thing we can be sure of. Therefore, we may as well choose to live as we see fit. No amount of evidence can definitively prove otherwise.")
@@ -1511,26 +1830,26 @@
        "Features"
        "Golden Rules"
        "Terms"
-       "Unit: Sample"
-       "Unit: Guide"
+       "Unit:Sample"
+       "Unit:Guide"
        "Item:Sample"
        "Item:Guide"
        "Stat"
        "How to Play"
        "Setup"
-       "Setup: Players"
+       "Setup:Players"
        "Scene"
-       "Scene: Map#1"
-       "Scene: Map#2"
-       "Scene: Minis"
-       "Scene: Units"
-       "Scene: Events"
-       "Round: Start"
+       "Scene:Map#1"
+       "Scene:Map#2"
+       "Scene:Minis"
+       "Scene:Units"
+       "Scene:Events"
+       "Round:Start"
        "Move"
        "Movement"
        "Action"
-       "Action: Free"
-       "Action: Interact"
+       "Action:Free"
+       "Action:Interact"
        "Arc"
        "Range"
        "Line of Sight"
@@ -1538,15 +1857,15 @@
        "Conflict:Chart"
        "Conflict:Sample"
        "Hits"
-       "Hits: Sample"
+       "Hits:Sample"
        "Crits"
-       "Crits: Rating"
-       "Crits: Damage"
-       "Crits: Types"
-       "Crits: Person"
-       "Crits: Vehicle"
+       "Crits:Rating"
+       "Crits:Damage"
+       "Crits:Types"
+       "Crits:Person"
+       "Crits:Vehicle"
        "Resolution"
-       "Round: End"
+       "Round:End"
        "Conclusion"
        "Advancement"
       )))

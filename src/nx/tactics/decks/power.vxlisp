@@ -347,7 +347,7 @@
       (base/ability
        :name "Image Animate"
        :summary
-        "* Animate a painting/drawing.
+        "* Animate a painting/drawing
          * [Power]: [Artistry]")
      "Image Embody"
       (base/ability
@@ -909,9 +909,9 @@
      "Conjure Weapon"))
   (base/power
    :name "Conviction"
+   :titles "Crusader, Faithful, Fanatic, Grand Inquisitor, Inquisitor, Paladin, Zealot"
    :reference
     "* Being religious is a form of conceit. the faith in which I was brought up assured me that I was better than other people; I was 'saved,' they were 'damned'... Our hymns were loaded with arrogance - self-congratulation... With a touch more confidence and a liberal helping of ignorance, I would have been a famous evangelist... A confidence man knows he's lying; that limits his scope. But a successful shaman believes what he says - and belief is contagious; there is no limit to his scope. - Jubal, Stranger in a Strange Land"
-   :titles "Crusader, Faithful, Fanatic, Grand Inquisitor, Inquisitor, Paladin, Zealot"
    :stat "Will"
    :abilitymap
     (base/abilitymap
@@ -925,9 +925,8 @@
      :Demonize
       (base/ability
        :name "Demonize")
-     :Devotion
-      (base/ability
-       :name "Devotion")
+     "Devotion"
+      (base/ability<-tactics-key tactics "Devotion")
      "Do or Die"
       (base/ability
        :name "Do or Die")
@@ -938,7 +937,7 @@
       (base/ability
        :name "Faith Sustains Me"
        :summary "* May fast as long as skill roll exceeds number of weeks of fasting.")
-     :Fanaticism
+     "Fanaticism"
       (base/ability
        :name "Fanaticism")
      "Holy Armor"
@@ -950,22 +949,25 @@
      "Holy Strength"
       (base/ability
        :name "Holy Strength")
-     :Persecute
+     "Leap of Faith"
+      (base/ability
+       :name "Leap of Faith")
+     "Persecute"
       (base/ability
        :name "Persecute")
-     :Rapture
+     "Rapture"
       (base/ability
        :name "Rapture")
      "Righteous Fury"
       (base/ability
        :name "Righteous Fury")
-     :Righteousness
+     "Righteousness"
       (base/ability
        :name "Righteousness")
-     :Sacrifice
+     "Sacrifice"
       (base/ability
        :name "Sacrifice")
-     :Smite
+     "Smite"
       (base/ability
        :name "Smite"
        :summary
@@ -979,22 +981,22 @@
      "Soul Blast"
       (base/ability
        :name "Soul Blast")
-     :Tithing
+     "Tithing"
       (base/ability
        :name "Tithing"
        :summary
         "* Pay 10% of your income to your superior and gain 10% of the income of your followers. This income must be completely spent on the faith.")
-     :Zeal
+     "Zeal"
       (base/ability
        :name "Zeal")))
   (base/power
    :name "Corruption"
-   :reference
-    "* How do we begin to covet? We begin by coveting what we see every day. - The Silence of the Lambs
-     * Deadite: I'll swallow your soul! Ash: Come get some. - Ash, Army of Darkness
-     * There is nothin' fair in this world... No... There is nothin' safe in this world... And there's nothin' sure in this world... And there's nothin' pure in this world... Look for something left in this world... Start again! - Billy Idol, White Wedding"
    :titles
     "Blight Caster, Contaminator, Corrupter, Defiler, Filth, Plague Bearer, Plague Lord, Plague Walker, Sin, Sin Lord, Scourge, Tainted"
+   :reference
+    "* How do we begin to covet? We begin by coveting what we see every day. - Hannibal Lecter, The Silence of the Lambs
+     * Deadite: I'll swallow your soul! Ash: Come get some. - Ash, Army of Darkness
+     * There is nothin' fair in this world... No... There is nothin' safe in this world... And there's nothin' sure in this world... And there's nothin' pure in this world... Look for something left in this world... Start again! - Billy Idol, White Wedding"
    :stat "Shadow"
    :abilitymap
     (base/abilitymap
@@ -1370,23 +1372,22 @@
      "Resist:Electricity"))
   (base/power
    :name "Enchantment"
+   :titles
+    "Beguiler, Enchanter, Enchantress, Entrancer, Sealer, Warlock, Witch, Witchcraft, Witchdoctor"
    :summary
     "* Enchantment/Witchcraft focuses on enchantments that alter the fate of the target.
      * The deities of Witchcraft are embodiments of a life-force manifest in nature. The Goddess and God are seen as complementary polarities and this balance is seen in nature. They are sometimes symbolised as the Sun and Moon, and from her lunar associations the Goddess becomes a Triple Goddess with aspects of Maiden, Mother, and Crone. Some hold the Goddess to be pre-eminent, since she contains and conceives all. The God is the spark of life and inspiration within her, simultaneously her lover and her child."
-   :titles "Beguiler, Enchanter, Enchantress, Entrancer, Warlock, Witch, Witchcraft, Witchdoctor"
    :abilitymap
     (base/abilitymap
-     "Barren Loins"
-      (base/ability<-tactics-key tactics "Barren Loins")
      "Craft:Incense"
       (base/ability
        :name "Craft:Incense")
      "Craft:Perfume"
       (base/ability
        :name "Craft:Perfume")
-     "Fertile Field"
+     "Fertile:Field"
       (base/ability
-       :name "Fertile Field"
+       :name "Fertile:Field"
        :summary "* Target has double chance to conceive a child.")
      "Haste"
       (base/ability
@@ -1403,7 +1404,7 @@
       (base/ability
        :name "Inscribe Sigil"
        :summary "* Allows the temporary addition of magical properties to an item, portal, or area.")
-     :Malediction
+     "Malediction"
       (base/ability
        :name "Malediction"
        :summary
@@ -1431,6 +1432,8 @@
        :name "Safekeep"
        :summary
         "* [Action]: Enchant an item to prevent loss or theft. Any effect that would remove, loose, or damage the item must roll vs. Safekeep or fail in addition to any other checks.")
+     "Seal:Fertility"
+      (base/ability<-tactics-key tactics "Seal:Fertility")
      "Ward:Death"
       (base/ability
        :name "Ward:Death"
@@ -2042,7 +2045,8 @@
    :name "Necromancy"
    :reference
     "* Necromancy is the communication with the spirits of the dead sometimes via a ouija board, on which messages are spelled out and interpreted.
-     * Death abides no reason, for it cannot be defied even by those who see it coming. - Genshin Impact"
+     * Death abides no reason, for it cannot be defied even by those who see it coming. - Genshin Impact
+     * The dark side of the Force is a pathway to many abilities some consider to be unnatural. - Palpatine, Star Wars: Revenge of the Sith"
    :titles "Black Savant, Bone Caster, Grave Robber, Necromancer, Necrosavant"
    :stat "Shadow"
    :abilitymap
@@ -2055,18 +2059,33 @@
      "Brush with Death"
       (base/ability
        :name "Brush with Death")
-     "Call the Dead"
+     "Call:Dead"
       (base/ability
-       :name "Call the Dead"
+       :name "Call:Dead"
        :reference
         "* Bring out your dead! - Monty Python and the Holy Grail"
        :summary
         "* Attract undead creatures to your location.")
      "Command the Dead"
       (base/ability<-tactics-key tactics "Command the Dead")
+     "Breath:Corpse"
+      (base/ability
+       :name "Breath:Corpse"
+       :titles "Corpse Breath, Death Breath"
+       :summary
+        "Change normal breath into a horrific breath attack
+         * [Power]: [Necromancy]
+         * [Necromancy] vs [Will] [Corruption], [Range:Close]
+         * [Continous]
+         * While active the user does not need to breath")
      "Corpse Explosion"
       (base/ability
        :name "Corpse Explosion")
+     "Corpse Fire"
+      (base/ability
+       :name "Corpse Fire"
+       :summary
+        "Corpses in the area become highly flammable")
      "Dance of the Dead"
       (base/ability
        :name "Dance of the Dead"
@@ -2133,7 +2152,8 @@
      "Mummification"
       (base/ability
        :name "Mummification"
-       :summary "* A complex ritual to turn the target into a [Mummy] or [Lich].  A perfectly created undead appears like a completely normal living being (though it is no longer alive).  Flaws is the casting make the being more monstrous.")
+       :summary
+        "* A complex ritual to turn the target into a [Mummy] or [Lich].  A perfectly created undead appears like a completely normal living being (though it is no longer alive).  Flaws is the casting make the being more monstrous.")
      "Necropotence"
       (base/ability
        :name "Necropotence"
@@ -2421,7 +2441,7 @@
      "Sense Corruption"
       (base/ability
        :name "Sense Corruption")
-     :Serenity
+     "Serenity"
       (base/ability
        :name "Serenity")
      "Throw Salt"
@@ -2470,6 +2490,12 @@
      "Vow of Silence"
       (base/ability
        :name "Vow of Silence")
+     "Wall:Salt"
+      (base/ability
+       :name "Wall:Salt"
+       :summary
+        "Pour a line of salt that repels impure Spirits and Undead
+        * [Power]: [Purity]")
      "Ward Undead"
       (base/ability
        :name "Ward Undead")))
@@ -2651,7 +2677,11 @@
      "Paradigm Shift"
       (base/ability
        :name "Paradigm Shift"
-       :summary "* Change one rule of nature for a moment.")
+       :reference
+        "* Paradigm Shift Time! - Zoe, Runeterra"
+       :summary
+        "* Change one rule of nature for this round
+         * Light and Dark, Up and Down, Left and Right, Forward and Backwards")
      "Power Sink"
       (base/ability
        :name "Power Sink")
@@ -2797,10 +2827,16 @@
    :titles "Marine"
    :abilitymap
     (base/abilitymap
-     :Hydrofoil
+     "Hydrodynamic"
+      (base/ability
+       :name "Hydrodynamic"
+       :summary
+        "Highly efficient at surface water movement
+         * [Power]: [Aquatic]")
+     "Hydrofoil"
       (base/ability
        :name "Hydrofoil")
-     :Sailed
+     "Sailed"
       (base/ability
        :name "Sailed"
        :image "Maps/Windsock.png"
@@ -2831,9 +2867,19 @@
          * A 100 footer should do 13.4 knots/15mph/25kph.
          * A 30 footer should do 7.34 knots/8mph/13kph.
          * A 16 footer should do 5.36 knots/6mph/10kph.")
-     :Submersible
+     "Submerged Hydrodynamic"
       (base/ability
-       :name "Submersible")))
+       :name "Submerged Hydrodynamic"
+       :summary
+        "Highly efficient at underwater movement
+         * [Power]: [Aquatic]")
+     "Submersible"
+      (base/ability
+       :name "Submersible"
+       :summary
+        "Capable of underwater movement
+        * [Power]: [Aquatic]
+        * Depth: Dive to (Level) meters")))
   (base/power
    :name "Armor"
    :summary
@@ -3279,6 +3325,8 @@
      * I know this steak doesn't exist. I know that when I put it in my mouth, the Matrix is telling my brain that it is juicy and delicious. After nine years, you know what I realize? Ignorance is bliss. - Cypher, The Matrix
      * Kotodama - Power of language in Japanese"
    :titles "Dominator, Master, Puppet Master, Puppeteer"
+   :summary
+    "The method can take the form of pheromones, sweet breath, song, mental influence, perfect wording, etc."
    :abilitymap
     (base/abilitymap
      "Brainwashing"
@@ -3323,6 +3371,7 @@
      "Suggestion"
       (base/ability
        :name "Suggestion"
+       :titles "Sweet Talk"
        :summary "Change")
      "Word of Command"
       (base/ability<-tactics-key tactics "Brainwashing"))
@@ -5575,7 +5624,8 @@
    :name "Reality"
    :titles "Reality Warping"
    :reference
-    "* Franklin Richards"
+    "* Franklin Richards
+     * The Universe demands change, I think. Hm, I'm doing it ANYway! - Zoe, Runeterra"
    :summary
     "* Perhaps equal to Time Travel as the most powerful of all abilities. By altering reality, seemingly nothing is beyond possibility."
    :abilitymap
@@ -5880,6 +5930,7 @@
      "Redirect Time"
      "Slow Time"
      "Time Lapse"
+     "Time Slip"
      "Time Stop"))
   (base/power
    :name "Time Travel"
@@ -6461,7 +6512,9 @@
        :name "Refuses to Kill")
      "Sadistic"
       (base/ability
-       :name "Sadistic")
+       :name "Sadistic"
+       :reference
+        "* As long as I'm enjoying myself, that's all that matters. And enjoyment? It only comes when someone else is suffering. - Mustang, Nikke")
      "Sex Crazed"
       (base/ability
        :name "Sex Crazed"
@@ -6768,6 +6821,22 @@
      "Overload Weapon"
      "Paint Rounds"
      "Pierce"
+     "Range:Artillery"
+     "Range:Assault"
+     "Range:Ballistic"
+     "Range:Close"
+     "Range:Heavy"
+     "Range:Marksman"
+     "Range:Melee"
+     "Range:Naval"
+     "Range:Orbital"
+     "Range:Reach"
+     "Range:Rocket"
+     "Range:Skirmish"
+     "Range:Sidearm"
+     "Range:Spiper"
+     "Range:Space"
+     "Range:Thrown"
      "Rechargable"
      "Recoil Compensator"
      "Scatter"

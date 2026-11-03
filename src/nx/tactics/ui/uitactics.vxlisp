@@ -77,23 +77,23 @@
          "2x1" "2x1" "3x1"))
  :doc "Returns a string for will string")
 
-(func string<-demeanor-nature : string
- [demeanor : string
+(func string<-persona-nature : string
+ [persona : string
   nature   : string]
  (let
-  [sdemeanor : string :=
-    (string<-label-value "demeanor" demeanor)
+  [spersona : string :=
+    (string<-label-value "persona" persona)
    snature : string :=
     (string<-label-value "nature" nature)
    slist : stringlist :=
-    (stringlist sdemeanor snature)
+    (stringlist spersona snature)
    sjoin : string :=
     (type/string<-stringlist-join
      slist " ")]
   (type/string-trim sjoin))
  :test (test
-        "demeanor:nice nature:naughty"
-        (string<-demeanor-nature
+        "persona:nice nature:naughty"
+        (string<-persona-nature
          "nice" "naughty"))
  :doc "Returns a string for mind string")
 
@@ -930,8 +930,8 @@
      (:width  unit))
    mind : string := (:mind unit)
    minddetail : string :=
-    (string<-demeanor-nature
-     (:demeanor unit)
+    (string<-persona-nature
+     (:persona unit)
      (:nature unit))
    will : string := (:will unit)
    willdetail : string :=

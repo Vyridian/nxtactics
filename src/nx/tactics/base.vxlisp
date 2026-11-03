@@ -16,6 +16,13 @@
 (type abilitymap : map
  :allowtypes [ability])
 
+(type act : struct
+ :traits     [card]
+ :properties [goallist : goallist])
+
+(type actlist : list
+ :allowtypes [act])
+
 (type book : struct
  :traits     [card]
  :properties [chaptermap : chaptermap])
@@ -25,6 +32,13 @@
 
 (type bookmap : map
  :allowtypes [book])
+
+(type campaign : struct
+ :traits     [card]
+ :properties [storylist : storylist])
+
+(type campaignlist : list
+ :allowtypes [campaign])
 
 (type card : struct
  :properties
@@ -68,7 +82,9 @@
 
 (type chapter : struct
  :traits     [card]
- :properties [sectionmap : sectionmap])
+ :properties [actlist    : actlist
+              plotlist   : plotlist
+              sectionmap : sectionmap])
 
 (type chapterlist : list
  :allowtypes [chapter])
@@ -100,6 +116,15 @@
  :traits     [card]
  :allowtypes [deck])
 
+(type encounter : struct
+ :traits [card])
+
+(type encounterlist : list
+ :allowtypes [encounter])
+
+(type encountermap : map
+ :allowtypes [encounter])
+
 (type goal : struct
  :properties
   [description : string
@@ -107,6 +132,12 @@
    complete    : int
    reward      : string]
  :traits [card])
+
+(type goallist : list
+ :allowtypes [goal])
+
+(type goalmap : map
+ :allowtypes [goal])
 
 (type item : struct
  :traits     [card]
@@ -149,6 +180,22 @@
 (type itemmap : map
  :allowtypes [item])
 
+(type milestone : struct
+ :traits [card])
+
+(type milestonelist : list
+ :allowtypes [milestone])
+
+(type mind : struct
+ :traits [card]
+ :doc "The ability to use rational thought to do tasks. This is the opposite of the [Shadow].")
+
+(type modifier : struct
+ :traits [card])
+
+(type modifiermap : map
+ :allowtypes [modifier])
+
 (type place : struct
  :traits     [card]
  :properties
@@ -166,19 +213,15 @@
 (type placemap : map
  :allowtypes [place])
 
-(type mind : struct
- :traits [card]
- :doc "The ability to use rational thought to do tasks. This is the opposite of the [Shadow].")
-
-(type modifier : struct
- :traits [card])
-
-(type modifiermap : map
- :allowtypes [modifier])
-
 (type playingcard : struct
  :properties [rank : rank
               suit : suit])
+
+(type plot : struct
+ :traits [card])
+
+(type plotlist : list
+ :allowtypes [plot])
 
 (type power : struct
  :traits [card]
@@ -296,6 +339,13 @@
 (type stat : struct
  :traits [card])
 
+(type story : struct
+ :traits     [card]
+ :properties [chapterlist : chapterlist])
+
+(type storylist : list
+ :allowtypes [story])
+
 (type suit : struct
  :traits [card])
 
@@ -307,6 +357,9 @@
   [bookmap      : bookmap
    abilitymap   : abilitymap
    cardmap      : cardmap
+   universemap  : universemap
+   encountermap : encountermap
+   goalmap      : goalmap
    itemmap      : itemmap
    placemap     : placemap
    powermap     : powermap
@@ -354,7 +407,7 @@
    shadow          : string
    conscience      : string
    beast           : string
-   demeanor        : string
+   persona         : string
    nature          : string
    passions        : string
    fears           : string
@@ -474,6 +527,17 @@
 
 (type unitweaknessmap : map
  :allowtypes [unitweakness])
+
+(type universe : struct
+ :traits     [card]
+ :properties [milestonelist : milestonelist
+              campaignlist      : campaignlist])
+
+(type universelist : list
+ :allowtypes [universe])
+
+(type universemap : map
+ :allowtypes [universe])
 
 (type weakness : struct
  :traits [card])
@@ -1308,6 +1372,24 @@
    [chapter : chapter]
    (:name chapter)))
  :doc "Returns a chaptermap from a given chapterlist")
+
+(func encountermap<-encounterlist : encountermap
+ [encounterlist : encounterlist :...]
+ (map<-list : encountermap
+  encounterlist
+  (fn : string
+   [encounter : encounter]
+   (:name encounter)))
+ :doc "Returns an encountermap from an encounterlist.")
+
+(func goalmap<-goallist : goalmap
+ [goallist : goallist :...]
+ (map<-list : goalmap
+  goallist
+  (fn : string
+   [goal : goal]
+   (:name goal)))
+ :doc "Returns a goalmap from a goallist.")
 
 (func item<-tactics-key : item
  [tactics : tactics

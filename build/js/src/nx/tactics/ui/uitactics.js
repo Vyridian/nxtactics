@@ -621,37 +621,6 @@ export default class nx_tactics_ui_uitactics {
   }
 
   /**
-   * @function string_from_demeanor_nature
-   * Returns a string for mind string
-   * @param  {string} demeanor
-   * @param  {string} nature
-   * @return {string}
-   */
-  static t_string_from_demeanor_nature = {
-    vx_type: vx_core.t_type
-  }
-  static e_string_from_demeanor_nature = {
-    vx_type: nx_tactics_ui_uitactics.t_string_from_demeanor_nature
-  }
-
-  // (func string<-demeanor-nature)
-  static f_string_from_demeanor_nature(demeanor, nature) {
-    let output = vx_core.e_string
-    output = vx_core.f_let(
-      {"any-1": vx_core.t_string},
-      [],
-      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const sdemeanor = nx_tactics_ui_uitactics.f_string_from_label_value("demeanor", demeanor)
-        const snature = nx_tactics_ui_uitactics.f_string_from_label_value("nature", nature)
-        const slist = vx_core.f_new({"any-1": vx_core.t_stringlist}, sdemeanor, snature)
-        const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
-        return vx_type.f_string_trim(sjoin)
-      })
-    )
-    return output
-  }
-
-  /**
    * @function string_from_label_value
    * @param  {string} label
    * @param  {string} value
@@ -740,6 +709,37 @@ export default class nx_tactics_ui_uitactics {
         const l = nx_tactics_ui_uitactics.f_string_from_label_value("l", length)
         const w = nx_tactics_ui_uitactics.f_string_from_label_value("w", width)
         const slist = vx_core.f_new({"any-1": vx_core.t_stringlist}, smass, h, l, w)
+        const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
+        return vx_type.f_string_trim(sjoin)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function string_from_persona_nature
+   * Returns a string for mind string
+   * @param  {string} persona
+   * @param  {string} nature
+   * @return {string}
+   */
+  static t_string_from_persona_nature = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_from_persona_nature = {
+    vx_type: nx_tactics_ui_uitactics.t_string_from_persona_nature
+  }
+
+  // (func string<-persona-nature)
+  static f_string_from_persona_nature(persona, nature) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const spersona = nx_tactics_ui_uitactics.f_string_from_label_value("persona", persona)
+        const snature = nx_tactics_ui_uitactics.f_string_from_label_value("nature", nature)
+        const slist = vx_core.f_new({"any-1": vx_core.t_stringlist}, spersona, snature)
         const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
         return vx_type.f_string_trim(sjoin)
       })
@@ -2890,8 +2890,8 @@ export default class nx_tactics_ui_uitactics {
           vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":width")
         )
         const mind = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":mind")
-        const minddetail = nx_tactics_ui_uitactics.f_string_from_demeanor_nature(
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":demeanor"),
+        const minddetail = nx_tactics_ui_uitactics.f_string_from_persona_nature(
+          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":persona"),
           vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":nature")
         )
         const will = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":will")
@@ -3207,10 +3207,10 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-unitskill": nx_tactics_ui_uitactics.e_string_display_from_unitskill,
       "string-extradetail<-item": nx_tactics_ui_uitactics.e_string_extradetail_from_item,
       "string<-conscience-beast-shadow": nx_tactics_ui_uitactics.e_string_from_conscience_beast_shadow,
-      "string<-demeanor-nature": nx_tactics_ui_uitactics.e_string_from_demeanor_nature,
       "string<-label-value": nx_tactics_ui_uitactics.e_string_from_label_value,
       "string<-land-water-air-space": nx_tactics_ui_uitactics.e_string_from_land_water_air_space,
       "string<-mass-h-l-w": nx_tactics_ui_uitactics.e_string_from_mass_h_l_w,
+      "string<-persona-nature": nx_tactics_ui_uitactics.e_string_from_persona_nature,
       "stringlist-armor<-unitpower": nx_tactics_ui_uitactics.e_stringlist_armor_from_unitpower,
       "stringlist-display<-unitabilitymap": nx_tactics_ui_uitactics.e_stringlist_display_from_unitabilitymap,
       "stringlist-display<-unititemmap": nx_tactics_ui_uitactics.e_stringlist_display_from_unititemmap,
@@ -3270,10 +3270,10 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-unitskill": nx_tactics_ui_uitactics.t_string_display_from_unitskill,
       "string-extradetail<-item": nx_tactics_ui_uitactics.t_string_extradetail_from_item,
       "string<-conscience-beast-shadow": nx_tactics_ui_uitactics.t_string_from_conscience_beast_shadow,
-      "string<-demeanor-nature": nx_tactics_ui_uitactics.t_string_from_demeanor_nature,
       "string<-label-value": nx_tactics_ui_uitactics.t_string_from_label_value,
       "string<-land-water-air-space": nx_tactics_ui_uitactics.t_string_from_land_water_air_space,
       "string<-mass-h-l-w": nx_tactics_ui_uitactics.t_string_from_mass_h_l_w,
+      "string<-persona-nature": nx_tactics_ui_uitactics.t_string_from_persona_nature,
       "stringlist-armor<-unitpower": nx_tactics_ui_uitactics.t_stringlist_armor_from_unitpower,
       "stringlist-display<-unitabilitymap": nx_tactics_ui_uitactics.t_stringlist_display_from_unitabilitymap,
       "stringlist-display<-unititemmap": nx_tactics_ui_uitactics.t_stringlist_display_from_unititemmap,
@@ -3565,24 +3565,6 @@ export default class nx_tactics_ui_uitactics {
       fn            : nx_tactics_ui_uitactics.f_string_from_conscience_beast_shadow
     }
 
-    // (func string<-demeanor-nature)
-    nx_tactics_ui_uitactics.t_string_from_demeanor_nature['vx_value'] = {
-      name          : "string<-demeanor-nature",
-      pkgname       : "nx/tactics/ui/uitactics",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_ui_uitactics.f_string_from_demeanor_nature
-    }
-
     // (func string<-label-value)
     nx_tactics_ui_uitactics.t_string_from_label_value['vx_value'] = {
       name          : "string<-label-value",
@@ -3635,6 +3617,24 @@ export default class nx_tactics_ui_uitactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_uitactics.f_string_from_mass_h_l_w
+    }
+
+    // (func string<-persona-nature)
+    nx_tactics_ui_uitactics.t_string_from_persona_nature['vx_value'] = {
+      name          : "string<-persona-nature",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_string_from_persona_nature
     }
 
     // (func stringlist-armor<-unitpower)

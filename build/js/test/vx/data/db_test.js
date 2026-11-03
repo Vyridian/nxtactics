@@ -15,8 +15,8 @@ export default class vx_data_db_test {
       ":caselist", testcaselist,
       ":coveragesummary", vx_data_db_test.test_coveragesummary(),
       ":coveragedetail", vx_data_db_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {

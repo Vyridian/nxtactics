@@ -16,8 +16,8 @@ export default class nx_tactics_books_land_sea_and_air_test {
       ":caselist", testcaselist,
       ":coveragesummary", nx_tactics_books_land_sea_and_air_test.test_coveragesummary(),
       ":coveragedetail", nx_tactics_books_land_sea_and_air_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {

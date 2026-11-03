@@ -24,8 +24,8 @@ export default class nx_tactics_ui_uitactics_test {
       ":caselist", testcaselist,
       ":coveragesummary", nx_tactics_ui_uitactics_test.test_coveragesummary(),
       ":coveragedetail", nx_tactics_ui_uitactics_test.test_coveragedetail()
-    );
-    return output;
+    )
+    return output
   }
 
   static test_coveragesummary() {
@@ -74,10 +74,10 @@ export default class nx_tactics_ui_uitactics_test {
           "string-display<-unitskill", 0,
           "string-extradetail<-item", 0,
           "string<-conscience-beast-shadow", 1,
-          "string<-demeanor-nature", 1,
           "string<-label-value", 0,
           "string<-land-water-air-space", 1,
           "string<-mass-h-l-w", 1,
+          "string<-persona-nature", 1,
           "stringlist-armor<-unitpower", 0,
           "stringlist-display<-unitabilitymap", 0,
           "stringlist-display<-unititemmap", 0,
@@ -151,30 +151,6 @@ export default class nx_tactics_ui_uitactics_test {
     return output
   }
 
-  static f_string_from_demeanor_nature(context) {
-    const output = vx_core.f_new_from_type(
-      vx_test.t_testcase,
-      ":passfail", false,
-      ":testpkg", "nx/tactics/ui/uitactics",
-      ":casename", "string<-demeanor-nature",
-      ":describelist",
-        vx_core.f_new_from_type(
-          vx_test.t_testdescribelist,
-          vx_core.f_new_from_type(
-            vx_test.t_testdescribe,
-            ":describename", "(test\n \"demeanor:nice nature:naughty\"\n (string<-demeanor-nature\n  \"nice\" \"naughty\"))",
-            ":testresult",
-            vx_test.f_test(
-              context,
-              "demeanor:nice nature:naughty",
-              nx_tactics_ui_uitactics.f_string_from_demeanor_nature("nice", "naughty")
-            )
-          )
-        )
-    )
-    return output
-  }
-
   static f_string_from_land_water_air_space(context) {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcase,
@@ -223,13 +199,37 @@ export default class nx_tactics_ui_uitactics_test {
     return output
   }
 
+  static f_string_from_persona_nature(context) {
+    const output = vx_core.f_new_from_type(
+      vx_test.t_testcase,
+      ":passfail", false,
+      ":testpkg", "nx/tactics/ui/uitactics",
+      ":casename", "string<-persona-nature",
+      ":describelist",
+        vx_core.f_new_from_type(
+          vx_test.t_testdescribelist,
+          vx_core.f_new_from_type(
+            vx_test.t_testdescribe,
+            ":describename", "(test\n \"persona:nice nature:naughty\"\n (string<-persona-nature\n  \"nice\" \"naughty\"))",
+            ":testresult",
+            vx_test.f_test(
+              context,
+              "persona:nice nature:naughty",
+              nx_tactics_ui_uitactics.f_string_from_persona_nature("nice", "naughty")
+            )
+          )
+        )
+    )
+    return output
+  }
+
   static test_cases(context) {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcaselist,
       nx_tactics_ui_uitactics_test.f_string_from_conscience_beast_shadow(context),
-      nx_tactics_ui_uitactics_test.f_string_from_demeanor_nature(context),
       nx_tactics_ui_uitactics_test.f_string_from_land_water_air_space(context),
-      nx_tactics_ui_uitactics_test.f_string_from_mass_h_l_w(context)
+      nx_tactics_ui_uitactics_test.f_string_from_mass_h_l_w(context),
+      nx_tactics_ui_uitactics_test.f_string_from_persona_nature(context)
     )
     return output
   }

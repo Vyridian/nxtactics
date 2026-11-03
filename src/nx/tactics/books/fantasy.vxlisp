@@ -167,13 +167,14 @@
       (base/sectionmap<-sectionlist
        (base/section
         :name "Aegyptus"
+        :titles "Aegypta, Helios, Kemet, Shurima"
         :reference "Ancient Egypt"
         :summary
          "* Units - Charioteer, Necromancer, Pharoh, Sun Priest, Sorceror/Hieolphant
-          * The Empire of the Sun - Aegyptus worship the sun and the nile river that brings life.
+          * The Empire of the Sun - Aegyptus worship the sun and the nile river that brings life
+          * Azir - Emperor of the Sands. Azir was Emperor of ancient Shurima. He has returned as a [Mummy] after thousands of years and has named himself God-King. He uses [Necromancy] to raise troops for conquest of Aegytpus.
           * Sun Disc - Round shield with the image of the sun is a standard decoration.
           * Sun Spear - Spear with the image of the sun near its point."
-        :titles "Aegypta, Helios, Kemet"
         :placemap
          (base/placemap
           :Alexandria
@@ -207,6 +208,9 @@
             :name "Kemet Tomb Robber"
             :summary "* The tomb robbers are nomadic folk who have found a profitable lifestyle by digging in dangerous tombs for untold riches. They can act as guides for expeditions into the desert.")))
        (base/section
+        :name "Barbary"
+        :titles "Barbary Coast")
+       (base/section
         :name "Batrea"
         :summary
          "* Home of the Batrean people. The Batrean males and females visually appear to be entirely different races. The males are brutish and ugly while the females are graceful and incredibly beautiful. It is the peculiar custom of Batrean males to sell their females as concubines. The females do not seem to mind leaving their brutish husbands and thatch and mud hovels.
@@ -230,6 +234,54 @@
          "* The Burning Waste is a massive desert (the largest in the world) that stretches across the northern Africana continent. Where the desert meet the Mediterrainean, the water creates a long strip of jungles or swamps. These are also the only inhabited areas near the Burning Waste.
           * Red Iron - The sand of the Burning Wastes has a high iron content in the form of rust dust. With difficulty, the sand can be smelted back into iron. Typically, the red tinge is left in to show its origination.
           * Politics - Many nations claim large sections of the desert, but no one really maintains any ownership over such a harsh realm.")
+       (base/section
+        :name "Carthage"
+        :summary
+         "* City/State
+          * Worship the Devil King [Baal Moloch].")
+       (base/section
+        :name "Chana Jungles"
+        :summary
+         "* Home of the Chana Wildmen, the jungles are also home numerous dangerous and noisome insects, snakes, leeches, and even plants.
+          * Wildmen - Many large tribes of Wildmen live throughout the jungle living off of the rich vegetation and animal-life. The Wildmen are deeply addicted to [Skullcap] mushrooms and have been driven violently insane from its hallucinatory effects. They are also warlike in the extreme with tribes constantly ambushing one another to gain territory. In battle, they thrive on brutality, and mercy is considered a weakness. Prisoners are publicly skinned alive to the delight of the tribe."
+        :unitmap
+         (base/unitmap
+          "Chana Warlord"
+           (base/unit
+            :name "Chana Warlord"
+            :summary "* The leaders of the wildmen tribes are horrible and immensely obese creatures that have gained power through demonic pacts and are said to be part demon themselves.")
+          "Chana Wildman"
+           (base/unit
+            :name "Chana Wildman"
+            :summary "* The Wildmen are savage cannibals who cover themselves with terrifying body paints. They only respect bravery and any who show fear are ritually slain to their fearsome gods. They are very superstition and in awe of magic, so they obey the Witchmen without question. They live a nocturnal lifestyle and are skilled at axes, spears, and bolas.")
+          "Chana Witchman"
+           (base/unit
+            :name "Chana Witchman"
+            :summary
+             "* The Witchmen revere the forces of darkness and despise the enemies of their gods the forces of light. They live a completely nocturnal lifestyle and are skilled at witchcraft and herbalism.
+              * They sing songs of fear and death that are said to strike madness in those that hear them.
+              * They create shrunken heads from their victims and wear them as jujus. It is said that they can capture a person's soul and control their body like a mindless zombie.
+              * Some have trained Death's Head Vipers as pets and wear them as bracelets."
+            :unitpowermap
+             (base/unitpowermap<-tactics-keys
+              tactics
+              "Enchantment"
+              "Hexcraft"
+              "Naturalism"
+              "Madness")
+            :unitskillmap
+             (base/unitskillmap<-unitskilllist
+              (base/unitskill<-tactics-key-abilities
+               tactics "Animals"
+               (stringlist "Snake Charming"))))
+          "Snake:Death's Head Viper"
+           (base/unit
+            :name "Snake:Death's Head Viper"
+            :titles "Wrist Viper"
+            :summary
+             "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled.")))
+       (base/section
+        :name "Congo")
        (base/section
         :name "Djaffa"
         :summary
@@ -289,51 +341,7 @@
               * The forward section of the hull can be lowered to allow mounts to enter and exit.
               * The duneships are expensive to use and maintain, so they are only deployed in special occassions, especially when a show of force is required.")))
        (base/section
-        :name "Carthage"
-        :summary
-         "* City/State
-          * Worship the Devil King [Baal Moloch].")
-       (base/section
-        :name "Chana Jungles"
-        :summary
-         "* Home of the Chana Wildmen, the jungles are also home numerous dangerous and noisome insects, snakes, leeches, and even plants.
-          * Wildmen - Many large tribes of Wildmen live throughout the jungle living off of the rich vegetation and animal-life. The Wildmen are deeply addicted to [Skullcap] mushrooms and have been driven violently insane from its hallucinatory effects. They are also warlike in the extreme with tribes constantly ambushing one another to gain territory. In battle, they thrive on brutality, and mercy is considered a weakness. Prisoners are publicly skinned alive to the delight of the tribe."
-        :unitmap
-         (base/unitmap
-          "Chana Warlord"
-           (base/unit
-            :name "Chana Warlord"
-            :summary "* The leaders of the wildmen tribes are horrible and immensely obese creatures that have gained power through demonic pacts and are said to be part demon themselves.")
-          "Chana Wildman"
-           (base/unit
-            :name "Chana Wildman"
-            :summary "* The Wildmen are savage cannibals who cover themselves with terrifying body paints. They only respect bravery and any who show fear are ritually slain to their fearsome gods. They are very superstition and in awe of magic, so they obey the Witchmen without question. They live a nocturnal lifestyle and are skilled at axes, spears, and bolas.")
-          "Chana Witchman"
-           (base/unit
-            :name "Chana Witchman"
-            :summary
-             "* The Witchmen revere the forces of darkness and despise the enemies of their gods the forces of light. They live a completely nocturnal lifestyle and are skilled at witchcraft and herbalism.
-              * They sing songs of fear and death that are said to strike madness in those that hear them.
-              * They create shrunken heads from their victims and wear them as jujus. It is said that they can capture a person's soul and control their body like a mindless zombie.
-              * Some have trained Death's Head Vipers as pets and wear them as bracelets."
-            :unitpowermap
-             (base/unitpowermap<-tactics-keys
-              tactics
-              "Enchantment"
-              "Hexcraft"
-              "Naturalism"
-              "Madness")
-            :unitskillmap
-             (base/unitskillmap<-unitskilllist
-              (base/unitskill<-tactics-key-abilities
-               tactics "Animals"
-               (stringlist "Snake Charming"))))
-          "Snake:Death's Head Viper"
-           (base/unit
-            :name "Snake:Death's Head Viper"
-            :titles "Wrist Viper"
-            :summary
-             "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled.")))
+        :name "Guinea")
        (base/section
         :name "Jhagara"
         :summary
@@ -349,6 +357,8 @@
           "Jhagaran Outcast"
            (base/unit
             :name "Jhagaran Outcast")))
+       (base/section
+        :name "Nubia")
        (base/section
         :name "Serpentine River"
         :summary
@@ -1078,7 +1088,8 @@
         :name "Worlds Edge"
         :summary "*")))
     (base/section
-     :name "Mediterranea"
+     :name "Mediterra"
+     :titles "Middle Earth, Midgard"
      :sectionmap
       (base/sectionmap<-sectionlist
        (base/section
@@ -1094,22 +1105,23 @@
           * History - The Aegean city states used to be individual monarchies until the Imperium swept in and conquered Hellas, the capital. During the invasion, the Hellenic leadership fled with its navy and united the other city states under the name Aegea. Since then, the Imperium sent it navy to conquer Crete and 	was disasterously routed by the Aegean navy. The Aegeans subsequently attempted to retake Hellas and was easily repelled. Now an uneasy truce exists with the Imperials unable to create the navy it needs for conquest and the Aegeans unable to create the army it needs to drive out the Imperials."
         :placemap
          (base/placemap
-          :Crete
+          "Crete"
            (base/place
             :name "Crete")
-          :Hellas
+          "Hellas"
            (base/place
             :name "Hellas"
             :summary
              "* Description - Currently a territory of the Imperium, Hellas is an orderly and socially advanced nation. They have a partial democracy (answerable to the Imperium) and a complex legal system that is surprisingly fair.
               * Universities - Hellan Universities are famous for acedemia, sciences, and philosophy. They do, however, share their Imperial neighbor's prejudices against Naturalism and the Arcane (except for Alchemy and Artifice which are considered sciences).")
-          :Knossus
+          "Knossus"
            (base/place
             :name "Knossus")
-          :Labyrinth
+          "Minos"
            (base/place
-            :name "Labyrinth"
-            :summary "A natural maze of cracked basalt")
+            :name "Minos"
+            :summary
+             "An island covered by a natural maze of cracked basalt that are now inhabited by the bull-like Minotaurs")
           "Mount Parnassus"
            (base/place
             :name "Mount Parnassus"
@@ -1825,7 +1837,8 @@
        :Source
         (base/place
          :name "Source"
-         :reference "* I am kindness. I am unity. I am bigotry. I am expansion. I am the end! The DEATH that comes for expansion! For existence! The NULL that comes unto us all. Because I AM the PHOENIX! Life and death INCARNATE! The resurrection and renewal that will never end. Memories reawakened. A life lived and ended, again and again. A perpetual cycle of joy and sorrow. Anger and gratitude. Bliss and grief. All of them, just small parts of what relentlessly perseveres. Infinite, Absolute, Unconditional. - Madelyn Prior, X-men"
+         :reference
+          "* I am kindness. I am unity. I am bigotry. I am expansion. I am the end! The DEATH that comes for expansion! For existence! The NULL that comes unto us all. Because I AM the PHOENIX! Life and death INCARNATE! The resurrection and renewal that will never end. Memories reawakened. A life lived and ended, again and again. A perpetual cycle of joy and sorrow. Anger and gratitude. Bliss and grief. All of them, just small parts of what relentlessly perseveres. Infinite, Absolute, Unconditional. - Madelyn Prior, X-men"
          :summary
           "* Location: 0x, 0y, 0z, t, +infinity-i
            * The White Hot Room is a single point at the infinite edge of [Positive Space]. As such, it holds infinite energy.
@@ -2087,8 +2100,8 @@
       (base/placemap<-tactics-keys
        tactics
        "Aaru"
-       "Celestial Realm"
-       "Imaginary Space"
+       "Astral"
+       "Celestial"
        "Realm of Light"
        "Wyver"
        "Wyld"
@@ -2099,10 +2112,10 @@
      :titles "Under Realms"
      :placemap
       (base/placemap
+       "Creation"
+        (base/place<-tactics-key tactics "Creation")
        "Oblivion"
         (base/place<-tactics-key tactics "Oblivion")
-       "Source, The"
-        (base/place<-tactics-key tactics "Source, The")
        "Tempest, The"
         (base/place<-tactics-key tactics "Tempest, The")
        "Underworld"

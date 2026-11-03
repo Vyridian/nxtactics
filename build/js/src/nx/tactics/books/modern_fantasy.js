@@ -56,7 +56,7 @@ export default class nx_tactics_books_modern_fantasy {
             "Cordelia Chase",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cordelia Chase", ":image", "Buffy/Cordelia.png", ":reference", "Cordelia: Xander, I know you take pride in being the voice of the common wuss, but the truth is, certain people deserve special priviledges - they're called winners. Xander: And what about that nutty 'all men are created equal' thing?  Cordelia: Propaganda spouted out by the ugly and less deserving."),
             "Faith Lehane",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Faith Lehane", ":image", "Buffy/Faith.png", ":reference", "Faith: ... You're still not seeing the big picture, B. Something made us different.  We're warriors.  We're built to kill. Buffy: To kill demons! But it does not mean that we get to pass judgment on people like we're better than everybody else!  Faith: We are better!", ":titles", "The Slayer"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Faith Lehane", ":image", "Buffy/Faith.png", ":reference", "Faith: ... You're still not seeing the big picture, B. Something made us different.  We're warriors. We're built to kill. Buffy: To kill demons! But it does not mean that we get to pass judgment on people like we're better than everybody else! Faith: We are better!", ":titles", "The Slayer"),
             ":Spike",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Spike", ":image", "Buffy/Spike.png", ":reference", "Spike: I'll give you a choice. Now I'm going to kill you - no choice in that. But I can let you stay dead... or bring you back, to be like me. Willow: I'll scream! Spike: Bonus. [A short time later]  Spike: I don't understand. This sort of thing's never happened to me before. Willow: Maybe you were nervous. Spike: I felt all right when I started. Let's try again. Spike: Ow ow ow! Dammit!! Willow: Maybe you're trying too hard. Doesn't this happen to every vampire? Spike: Not to me it doesn't!", ":titles", "William the Bloody")
           )
@@ -82,25 +82,6 @@ export default class nx_tactics_books_modern_fantasy {
         )
       )
     )
-    return output
-  }
-
-  /**
-   * @function chapter_chronicles_of_amber
-   * @param  {tactics} tactics
-   * @return {chapter}
-   */
-  static t_chapter_chronicles_of_amber = {
-    vx_type: vx_core.t_type
-  }
-  static e_chapter_chronicles_of_amber = {
-    vx_type: nx_tactics_books_modern_fantasy.t_chapter_chronicles_of_amber
-  }
-
-  // (func chapter_chronicles_of_amber)
-  static f_chapter_chronicles_of_amber(tactics) {
-    let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Chronicles of Amber")
     return output
   }
 
@@ -569,6 +550,25 @@ export default class nx_tactics_books_modern_fantasy {
   }
 
   /**
+   * @function chapter_universes_of_amber
+   * @param  {tactics} tactics
+   * @return {chapter}
+   */
+  static t_chapter_universes_of_amber = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_universes_of_amber = {
+    vx_type: nx_tactics_books_modern_fantasy.t_chapter_universes_of_amber
+  }
+
+  // (func chapter_universes_of_amber)
+  static f_chapter_universes_of_amber(tactics) {
+    let output = nx_tactics_base.e_chapter
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Chronicles of Amber")
+    return output
+  }
+
+  /**
    * @function chapter_world_of_darkness
    * @param  {tactics} tactics
    * @return {chapter}
@@ -871,11 +871,108 @@ export default class nx_tactics_books_modern_fantasy {
       nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_modern_fantasy.f_chapter_modern_fantasy_overview(tactics),
         nx_tactics_books_modern_fantasy.f_chapter_buffy_the_vampire_slayer(tactics),
-        nx_tactics_books_modern_fantasy.f_chapter_chronicles_of_amber(tactics),
+        nx_tactics_books_modern_fantasy.f_chapter_universes_of_amber(tactics),
         nx_tactics_books_modern_fantasy.f_chapter_kengan_ashura(tactics),
         nx_tactics_books_modern_fantasy.f_chapter_matrix_the(tactics),
         nx_tactics_books_modern_fantasy.f_chapter_street_fighter(tactics),
         nx_tactics_books_modern_fantasy.f_chapter_world_of_darkness(tactics)
+      ),
+      ":universelist",
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_universelist},
+        nx_tactics_books_modern_fantasy.f_universe_matrix_universe(tactics)
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function universe_matrix_universe
+   * @param  {tactics} tactics
+   * @return {universe}
+   */
+  static t_universe_matrix_universe = {
+    vx_type: vx_core.t_type
+  }
+  static e_universe_matrix_universe = {
+    vx_type: nx_tactics_books_modern_fantasy.t_universe_matrix_universe
+  }
+
+  // (func universe_matrix_universe)
+  static f_universe_matrix_universe(tactics) {
+    let output = nx_tactics_base.e_universe
+    output = vx_core.f_new(
+      {"any-1": nx_tactics_base.t_universe},
+      ":name",
+      "Matrix Universe",
+      ":campaignlist",
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_campaignlist},
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_campaign},
+          ":name",
+          "Matrix Saga",
+          ":storylist",
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_storylist},
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_story},
+              ":name",
+              "Matrix, The",
+              ":chapterlist",
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_chapterlist},
+                vx_core.f_new(
+                  {"any-1": nx_tactics_base.t_chapter},
+                  ":name",
+                  "Raid",
+                  ":plotlist",
+                  vx_core.f_new(
+                    {"any-1": nx_tactics_base.t_plotlist},
+                    vx_core.f_new(
+                      {"any-1": nx_tactics_base.t_plot},
+                      ":name",
+                      "You're Under Arrest",
+                      ":summary",
+                      "Advance:Clock=3",
+                      ":encounterlist",
+                      vx_core.f_new(
+                        {"any-1": nx_tactics_base.t_encounterlist},
+                        vx_core.f_new({"any-1": nx_tactics_base.t_encounter}, ":name", "Arrest", ":summary", "Deploy 3 [Police:Officer]s/Player\n* They are armed and are under orders to arrest the Players")
+                      )
+                    ),
+                    vx_core.f_new(
+                      {"any-1": nx_tactics_base.t_plot},
+                      ":name",
+                      "Agents",
+                      ":summary",
+                      "Advance:Clock=3",
+                      ":encounterlist",
+                      vx_core.f_new(
+                        {"any-1": nx_tactics_base.t_encounterlist},
+                        vx_core.f_new({"any-1": nx_tactics_base.t_encounter}, ":name", "Lieutenant", ":summary", "Deploy 1 Elite Unit/Player\n* They are armed and will take the Players, dead or live")
+                      )
+                    )
+                  ),
+                  ":actlist",
+                  vx_core.f_new(
+                    {"any-1": nx_tactics_base.t_actlist},
+                    vx_core.f_new(
+                      {"any-1": nx_tactics_base.t_act},
+                      ":name",
+                      "Clear the Room",
+                      ":goallist",
+                      vx_core.f_new(
+                        {"any-1": nx_tactics_base.t_goallist},
+                        vx_core.f_new({"any-1": nx_tactics_base.t_goal}, ":name", "Neutralize", ":summary", "Disable or slay aggressive foes")
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
       )
     )
     return output
@@ -889,23 +986,25 @@ export default class nx_tactics_books_modern_fantasy {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "chapter_buffy_the_vampire_slayer": nx_tactics_books_modern_fantasy.e_chapter_buffy_the_vampire_slayer,
-      "chapter_chronicles_of_amber": nx_tactics_books_modern_fantasy.e_chapter_chronicles_of_amber,
       "chapter_kengan_ashura": nx_tactics_books_modern_fantasy.e_chapter_kengan_ashura,
       "chapter_matrix_the": nx_tactics_books_modern_fantasy.e_chapter_matrix_the,
       "chapter_modern_fantasy_overview": nx_tactics_books_modern_fantasy.e_chapter_modern_fantasy_overview,
       "chapter_street_fighter": nx_tactics_books_modern_fantasy.e_chapter_street_fighter,
+      "chapter_universes_of_amber": nx_tactics_books_modern_fantasy.e_chapter_universes_of_amber,
       "chapter_world_of_darkness": nx_tactics_books_modern_fantasy.e_chapter_world_of_darkness,
-      "tacticsbook": nx_tactics_books_modern_fantasy.e_tacticsbook
+      "tacticsbook": nx_tactics_books_modern_fantasy.e_tacticsbook,
+      "universe_matrix_universe": nx_tactics_books_modern_fantasy.e_universe_matrix_universe
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "chapter_buffy_the_vampire_slayer": nx_tactics_books_modern_fantasy.t_chapter_buffy_the_vampire_slayer,
-      "chapter_chronicles_of_amber": nx_tactics_books_modern_fantasy.t_chapter_chronicles_of_amber,
       "chapter_kengan_ashura": nx_tactics_books_modern_fantasy.t_chapter_kengan_ashura,
       "chapter_matrix_the": nx_tactics_books_modern_fantasy.t_chapter_matrix_the,
       "chapter_modern_fantasy_overview": nx_tactics_books_modern_fantasy.t_chapter_modern_fantasy_overview,
       "chapter_street_fighter": nx_tactics_books_modern_fantasy.t_chapter_street_fighter,
+      "chapter_universes_of_amber": nx_tactics_books_modern_fantasy.t_chapter_universes_of_amber,
       "chapter_world_of_darkness": nx_tactics_books_modern_fantasy.t_chapter_world_of_darkness,
-      "tacticsbook": nx_tactics_books_modern_fantasy.t_tacticsbook
+      "tacticsbook": nx_tactics_books_modern_fantasy.t_tacticsbook,
+      "universe_matrix_universe": nx_tactics_books_modern_fantasy.t_universe_matrix_universe
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -935,24 +1034,6 @@ export default class nx_tactics_books_modern_fantasy {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_modern_fantasy.f_chapter_buffy_the_vampire_slayer
-    }
-
-    // (func chapter_chronicles_of_amber)
-    nx_tactics_books_modern_fantasy.t_chapter_chronicles_of_amber['vx_value'] = {
-      name          : "chapter_chronicles_of_amber",
-      pkgname       : "nx/tactics/books/modern_fantasy",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_modern_fantasy.f_chapter_chronicles_of_amber
     }
 
     // (func chapter_kengan_ashura)
@@ -1027,6 +1108,24 @@ export default class nx_tactics_books_modern_fantasy {
       fn            : nx_tactics_books_modern_fantasy.f_chapter_street_fighter
     }
 
+    // (func chapter_universes_of_amber)
+    nx_tactics_books_modern_fantasy.t_chapter_universes_of_amber['vx_value'] = {
+      name          : "chapter_universes_of_amber",
+      pkgname       : "nx/tactics/books/modern_fantasy",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_modern_fantasy.f_chapter_universes_of_amber
+    }
+
     // (func chapter_world_of_darkness)
     nx_tactics_books_modern_fantasy.t_chapter_world_of_darkness['vx_value'] = {
       name          : "chapter_world_of_darkness",
@@ -1061,6 +1160,24 @@ export default class nx_tactics_books_modern_fantasy {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_modern_fantasy.f_tacticsbook
+    }
+
+    // (func universe_matrix_universe)
+    nx_tactics_books_modern_fantasy.t_universe_matrix_universe['vx_value'] = {
+      name          : "universe_matrix_universe",
+      pkgname       : "nx/tactics/books/modern_fantasy",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_modern_fantasy.f_universe_matrix_universe
     }
 
   }

@@ -58,7 +58,9 @@ import nx_tactics_decks_condition_test from "./nx/tactics/decks/condition_test.j
 import nx_tactics_decks_conflict_test from "./nx/tactics/decks/conflict_test.js"
 import nx_tactics_decks_disorder_test from "./nx/tactics/decks/disorder_test.js"
 import nx_tactics_decks_dungeon_test from "./nx/tactics/decks/dungeon_test.js"
+import nx_tactics_decks_earth_test from "./nx/tactics/decks/earth_test.js"
 import nx_tactics_decks_encounter_test from "./nx/tactics/decks/encounter_test.js"
+import nx_tactics_decks_goal_test from "./nx/tactics/decks/goal_test.js"
 import nx_tactics_decks_highway_test from "./nx/tactics/decks/highway_test.js"
 import nx_tactics_decks_intent_test from "./nx/tactics/decks/intent_test.js"
 import nx_tactics_decks_item_test from "./nx/tactics/decks/item_test.js"
@@ -168,7 +170,9 @@ export default class app_test {
       nx_tactics_decks_conflict_test.test_package(context),
       nx_tactics_decks_disorder_test.test_package(context),
       nx_tactics_decks_dungeon_test.test_package(context),
+      nx_tactics_decks_earth_test.test_package(context),
       nx_tactics_decks_encounter_test.test_package(context),
+      nx_tactics_decks_goal_test.test_package(context),
       nx_tactics_decks_highway_test.test_package(context),
       nx_tactics_decks_intent_test.test_package(context),
       nx_tactics_decks_item_test.test_package(context),

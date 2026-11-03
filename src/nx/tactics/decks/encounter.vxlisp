@@ -2,11 +2,144 @@
  :libs (lib base :path nx/tactics/base)
  :doc "Encounter Deck")
 
-(func rulemap-tactics : base/rulemap
+(func encountermap-tactics : base/encountermap
  [tactics : base/tactics]
- (base/rulemap<-rulelist
-  (base/rulelist
-   (base/rule
+ (base/encountermap<-encounterlist
+  (base/encounterlist
+   (base/encounter
+    :name "Arrest"
+    :summary
+     "* Ambush - Bandits, Snake, Social Ambush, Surrounded
+      * Cloudy - Choking, Darkness, Dust, Obscurced, Smoke, Toxic
+      * Guarded - Bodyguards, Guardian, Guardpost, Public Relations
+      * Stormy - Cold, Electricity, Fire, Flooding, Heat, Rain, Sprinklers, Wind
+      * Hazard:Explosive Gas
+      * Hazard:Noxious Gas
+      * WB - Serendipity - 
+      * WR - Tragedy - 
+      * C - Champion -
+      * C - Explosion
+      * Q - Extortion, Blackmail, Hostage, Manipulation
+      * J - Lieutenant -
+      * T - Thugs - 
+      * ? - Mob, , , Crowd (Bystanders)
+      * ? - Blocked (Barrier, Chasm, Landslide, Locked Door, Wall), Maze, , Tight Space
+
+      * CA - Juggernaut - A powerful, seemingly unstoppable foe appears. Eg. A dragon, a tank a semi-truck, a rolling bolder, a bull, a battleship, a star destroyer.
+      * CQ - Extortion
+      * C - Horde - 
+      * C - Stampede - 
+      * C - Swarm - 
+      * DA - Checkmate - Turning Point. The opposition is much farther along than expected.
+      * D - Strategist - A foe engages in a contest of planning, prediction, negotiation, or tactical thinking. 
+      * DQ - Blackmail
+      * D - Locked - The way ahead is barred by a lock, puzzle, spell or some other mechanism
+      * D - Timebomb - The area is about to be destroyed, find a way to defuse it or a way to get what you want and escape
+      * D - Mystery - 
+      * D - Research - 
+      * D - Law - Arrest - [Player]x3 Enforcers with orders to arrest the Players
+      * D - Lost - 
+      * D - Dilemma - 
+      * D - Decipher - Complex text, instructions, language or Runes need to be deciphered, translated, followed, or activated.
+      * D - Map - A treasure map of sorts
+      * D - Malfunction - A system fails to act as expected
+      * D - Improvise - The current plan breaks down
+      * D - Riddle - A particular phrasing, password, or etiquette is required
+      * D - Etiquette - 
+      * HQ - Hostage - 
+      * H - Rumors - Whispering Campaign
+      * H - Crisis - A personal crisis
+      * H - Family - 
+      * S - Collapse - Ground gives way
+      * SQ - Intimidation
+      * S - No Man's Land - Lockdown
+      * S - Roadblock - 
+      * S - Blackout - 
+      * S - Fire - 
+      * S - Broken Ground - 
+      * S - Water - 
+
+      * D - Blackmail - 
+      * D - Marksmen - 
+      * D - Bandits - 
+      * D - Sabotage -
+      * D - Thieves -  
+      * D - Lost - 
+      * HA - Betrayal - 
+      * H - Desperate - 
+      * H - Etiquette - 
+      * H - Hostages - 
+      * H - Predator - 
+      * H - Pack - 
+      * H - Reveal - A secret is revealed
+      * H - Watched - 
+      * H - Eagar Ally - An ally is a little too eagar for their own good. They act on their own, attract attention, or a just annoying.
+      * H - Pest - Vermin
+      * H - Watched -
+      * SA - Pinned Down - The area is too dangerous to cross. Sniper, firefight, etc.
+      * S - Runaway - Catch a errant person, animal, or vehicle
+      * S - Pursued - Chased, Hunted, Tailed, Tracked
+      * S - Cornered - Dead End
+      * S - Crowd - 
+      * S - Falling - 
+      * S - Unstable - Balance Beam, Bridge, Broken Ground")
+   (base/encounter
+    :name "Champion")
+   (base/encounter
+    :name "Guards")
+   (base/encounter
+    :name "Lieutenant")
+   (base/encounter
+    :name "Hunter")
+   (base/encounter
+    :name "Marksmen")
+   (base/encounter
+    :name "Predator")
+   (base/encounter
+    :name "Pack")
+   (base/encounter
+    :name "Vermin"
+    :summary
+     "* [Player]x3 Vermin packs defend their territory")
+   (base/encounter
+    :name "Ambush")
+   (base/encounter
+    :name "Betrayal")
+   (base/encounter
+    :name "Fire Spreads")
+   (base/encounter
+    :name "Flooding")
+   (base/encounter
+    :name "Obscured")
+   (base/encounter
+    :name "Storm"
+    :summary
+     "This can be physical or a change in the way you are seen")
+   (base/encounter
+    :name "Explosion")
+   (base/encounter
+    :name "Barrier"
+    :summary
+     "A large gap appears between you and your goal
+      * This can be physical or metaphorical
+      * Chasm, Locked Door, Wall")
+   (base/encounter
+    :name "Cornered")
+   (base/encounter
+    :name "Dead End")
+   (base/encounter
+    :name "Etiquette")
+   (base/encounter
+    :name "Law")
+   (base/encounter
+    :name "Lost")
+   (base/encounter
+    :name "Robbery")
+   (base/encounter
+    :name "Sabotage")
+   (base/encounter
+    :name "Watched")
+   (base/encounter
     :name "Strange:Anomaly"
     :summary
      "* Freakish Weather
@@ -15,40 +148,40 @@
       * Strange Presence
       * Strange Lights or Sounds
       * Unusual Animal Activity")
-   (base/rule
+   (base/encounter
     :name "Event:Adventurers"
     :summary
      "* Amateurs
       * Bounty Hunters")
-   (base/rule
+   (base/encounter
     :name "Event:Local"
     :summary
      "* Guide
       * Information")
-   (base/rule
+   (base/encounter
     :name "Event:Merchant"
     :summary
      "* Caravan
       * Lone Merchant")
-   (base/rule
+   (base/encounter
     :name "Event:Messenger"
     :summary
      "* Diplomatic Envoy
       * Lone Messenger")
-   (base/rule
+   (base/encounter
     :name "Event:Pilgrims"
     :summary
      "* Cultists
       * Peaceful
       * Zealots")
-   (base/rule
+   (base/encounter
     :name "Event:Refugees"
     :summary
      "* Beggar
       * Deserter
       * Lost Traveller
       * Runaway")
-   (base/rule
+   (base/encounter
     :name "Hazard:Falling"
     :summary
      "* Falling Debris
@@ -57,12 +190,12 @@
       * Rockslide
       * Sinkhole
       * Spiked Pit")
-   (base/rule
+   (base/encounter
     :name "Hazard:Fire"
     :summary
      "* Forest Fire
       * Wildfire")
-   (base/rule
+   (base/encounter
     :name "Hazard:Ground"
     :summary
      "* Test [Survival] or [Athletics] or slide to the other end of the space
@@ -72,14 +205,14 @@
       * Rockslide
       * Slippery Ground
       * Unstable Ground")
-   (base/rule
+   (base/encounter
     :name "Hazard:Trap"
     :summary
      "* Darts
       * Explosives
       * Fire Trap
       * Tripwire")
-   (base/rule
+   (base/encounter
     :name "Hazard:Water"
     :summary
      "* Current
@@ -92,11 +225,11 @@
       * Rising Water
       * Stream
       * Swamp")
-   (base/rule
+   (base/encounter
     :name "Hazard:Weather"
     :summary
      "Use the Weather Rules and adjust 1 by 2")
-   (base/rule
+   (base/encounter
     :name "Item:Clue"
     :summary
      "* Evidence
@@ -104,68 +237,68 @@
       * Papers
       * Traces of Conflict
       * Tracks")
-   (base/rule
+   (base/encounter
     :name "Item:Food"
     :summary
      "* Abandoned Food
       * Herbs
       * Fruits and Berries
       * Tubers")
-   (base/rule
+   (base/encounter
     :name "Item:Money")
-   (base/rule
+   (base/encounter
     :name "Item:Shelter"
     :summary
      "Sheltered Rest Spot
       * Abandoned Building
       * Cave
       * Overhang")
-   (base/rule
+   (base/encounter
     :name "Item:Treasure")
-   (base/rule
+   (base/encounter
     :name "Item:Water")
-   (base/rule
+   (base/encounter
     :name "Threat:Ambush")
-   (base/rule
+   (base/encounter
     :name "Threat:Bandits"
     :summary
      "* Cutthroats
       * Thieves")
-   (base/rule
+   (base/encounter
     :name "Threat:Creature"
     :summary
      "* Powerful Creature
       * Predator
       * Rogue Beast")
-   (base/rule
+   (base/encounter
     :name "Threat:Desparate"
     :summary
      "* Diseased
       * Madmen
       * Starving")
-   (base/rule
+   (base/encounter
     :name "Threat:Herd")
-   (base/rule
+   (base/encounter
     :name "Threat:Operatives"
     :summary
      "* Murderers
       * Saboteurs
       * Spies")
-   (base/rule
+   (base/encounter
     :name "Threat:Pack")
-   (base/rule
+   (base/encounter
     :name "Threat:Patrol"
     :summary
      "* Amateurs
       * Military
       * Paramilitary")
-   (base/rule
+   (base/encounter
     :name "Threat:Plants"
     :summary
      "* Poisonous
       * Tangle Vines
       * Thorn Bushes")
-   (base/rule
+   (base/encounter
     :name "Threat:Swarm")
    ))
  :doc "Returns the base encountermap")

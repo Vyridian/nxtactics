@@ -16,18 +16,38 @@
     * The land is mountainous and rocky, but the weather is fair and crops are reasonable.
     * A small religious group is staying in the city until they move on. They locals don't care for them.
     * A priest (Xeib) in town makes and sells anti-venom.
-    * Xeib is travelling to Murintown, but he does not want to travel unguarded."))
+    * Xeib is travelling to Murintown, but he does not want to travel unguarded.
+    * Stars Chasing - A few months ago, three shooting stars have repeastedly been seen crossing the sky. Astrologers have no compelling explanation. Locals see it as an ill omen.
+    * Factions:
+    ** Nobles
+    ** Watchtower - The Watch, City Watch, City Guards
+    ** Banks - Bankers give loans and collect taxes for the lords. They are very popular in high society and very unpopular with the commoners.
+    ** Customs House (Port Authority)
+    ** Templars
+    ** Cultists
+    ** Military (Warlord) - Includes Blacksmiths, Fletchers, and Swordsmiths
+    ** Mage Tower
+    ** Craft Guild - Includes Alchemists, Artificiers, Artisans, and other non-magical craftsmen and artists
+    ** Masons - Includes stonemasons, carpenters, siege engine builders
+    ** Trade Union
+    ** Landsmen - Large landowners, landlords and farmers
+    ** Mercenary Guild
+    ** Assassins Guild
+    ** Thieves Guild
+    ** Collegium (University/Law/History/Library)
+    ** Poor Houses - for the Poor, Injured or Sick
+    ** Enclaves - Subdivisions dominated by ethnic groups"))
 
 (func scene-zurakthal : base/scene
  [tactics : base/tactics]
  (base/scene
   :name "Zurak'Thal Scene"
-  :titles "Coiling Depths"
+  :titles "Coiling Depths, Serpent Empire"
   :secrets
    "* Zurak'Thal (Coiling Depths) - The city of serpents.
-    * Dvergholt (Dwarven Forest hold) - The abandoned dwarven outpost
-    * Sandvagr (Sand Place) - The human settlement with fragrant sandalwood.
-    * Wolfshafen (Wolf's Haven) - The human town
+    * Sandalholt (Dwarven Forest hold) - The abandoned dwarven outpost
+    * Sandalton (Sandal Town) - The human settlement with fragrant sandalwood.
+    * Wolfshaven (Wolf's Haven) - The human town
     * Stahlgrim (Steel Fortress) - The distant dwarven city"))
 
 (func deck-murintrail : base/deck
@@ -58,7 +78,7 @@
       "Cat"
       "Chicken"
       "Dog"
-      "Dog: Wild"
+      "Dog:Wild"
       "Duck"
       "Goat"
       "Goose"
@@ -112,7 +132,7 @@
        ))
      (base/cardlist-images<-tactics-places
       tactics
-      "Sandalstad"
+      "Sandalton"
       "Field"
       "Mountain"
       "Trees"
@@ -120,22 +140,22 @@
       "Campsite"
       "Cave"
       "Guardpost"
-      "Hall: Wooden"
-      "House: Farm"
+      "Hall:Wooden"
+      "House:Farm"
       "Mill"
-      "Path: Dirt"
-      "Road: Gravel"
-      "Road: Stone"
-      "Shop: General"
-      "Shop: Herbalist"
+      "Path:Dirt"
+      "Road:Gravel"
+      "Road:Stone"
+      "Shop:General"
+      "Shop:Herbalist"
       "Shrine"
       "Stables"
       "Stairs"
       "Tavern"
-      "Tavern Bar"
-      "Tavern Bedroom"
-      "Tavern Common"
-      "Tavern Dining"
+      "Tavern:Bar"
+      "Tavern:Bedroom"
+      "Tavern:Common"
+      "Tavern:Dining"
       "Temple"
       "Trading Post"
      )))))

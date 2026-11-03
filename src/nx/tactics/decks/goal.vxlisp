@@ -1,0 +1,20 @@
+(package nx/tactics/decks/goal
+ :libs (lib base :path nx/tactics/base)
+ :doc "Goals")
+
+(func goalmap-tactics : base/goalmap
+ [tactics : base/tactics]
+ (base/goalmap<-goallist
+  (base/goallist
+   (base/goal
+    :name "Research")))
+ :doc "Returns the base goalmap")
+
+(func tactics-goalmap<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+  [goalmap : base/goalmap :=
+   (goalmap-tactics tactics)]
+  (copy tactics
+   :goalmap goalmap))
+ :doc "Returns a tactics updated with goalmap")

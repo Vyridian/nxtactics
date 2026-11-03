@@ -7,6 +7,7 @@ import nx_tactics_decks_condition from "../../../nx/tactics/decks/condition.js"
 import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
 import nx_tactics_decks_dungeon from "../../../nx/tactics/decks/dungeon.js"
+import nx_tactics_decks_earth from "../../../nx/tactics/decks/earth.js"
 import nx_tactics_decks_highway from "../../../nx/tactics/decks/highway.js"
 import nx_tactics_decks_intent from "../../../nx/tactics/decks/intent.js"
 import nx_tactics_decks_player from "../../../nx/tactics/decks/player.js"
@@ -210,6 +211,7 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_reference.f_deck_reference(tactics),
           nx_tactics_decks_condition.f_deck_condition(tactics),
           nx_tactics_decks_deck.f_deck_clock(tactics),
+          nx_tactics_decks_earth.f_deck_earth(tactics),
           nx_tactics_decks_dungeon.f_deck_dungeon(),
           nx_tactics_decks_highway.f_deck_highway(),
           nx_tactics_decks_wilderness.f_deck_wilderness(),

@@ -10,12 +10,70 @@
    (base/chaptermap<-chapterlist
     (chapter_modern_fantasy_overview tactics)
     (chapter_buffy_the_vampire_slayer tactics)
-    (chapter_chronicles_of_amber tactics)
+    (chapter_universes_of_amber tactics)
     (chapter_kengan_ashura tactics)
     (chapter_matrix_the tactics)
     (chapter_street_fighter tactics)
     (chapter_world_of_darkness tactics)
+   )
+  :universelist
+   (base/universelist
+    (universe_matrix_universe tactics)
    )))
+
+(func universe_matrix_universe : base/universe
+ [tactics : base/tactics]
+ (base/universe
+  :name "Matrix Universe"
+  :campaignlist
+   (base/campaignlist
+    (base/campaign
+     :name "Matrix Saga"
+     :storylist
+      (base/storylist
+       (base/story
+        :name "Matrix, The"
+        :chapterlist
+         (base/chapterlist
+          (base/chapter
+           :name "Raid"
+           :plotlist
+            (base/plotlist
+             (base/plot
+              :name "You're Under Arrest"
+              :summary
+               "Advance:Clock=3"
+              :encounterlist
+               (base/encounterlist
+                (base/encounter
+                 :name "Arrest"
+                 :summary
+                  "Deploy 3 [Police:Officer]s/Player
+                   * They are armed and are under orders to arrest the Players")))
+             (base/plot
+              :name "Agents"
+              :summary
+               "Advance:Clock=3"
+              :encounterlist
+               (base/encounterlist
+                (base/encounter
+                 :name "Lieutenant"
+                 :summary
+                  "Deploy 1 Elite Unit/Player
+                   * They are armed and will take the Players, dead or live")))
+            )
+           :actlist
+            (base/actlist
+             (base/act
+              :name "Clear the Room"
+              :goallist
+               (base/goallist
+                (base/goal
+                 :name "Neutralize"
+                 :summary
+                  "Disable or slay aggressive foes")))))
+           )))))
+))
 
 (func chapter_modern_fantasy_overview : base/chapter
  [tactics : base/tactics]
@@ -81,7 +139,7 @@
          :name "Faith Lehane"
          :image "Buffy/Faith.png"
          :reference
-          "Faith: ... You're still not seeing the big picture, B. Something made us different.  We're warriors.  We're built to kill. Buffy: To kill demons! But it does not mean that we get to pass judgment on people like we're better than everybody else!  Faith: We are better!"
+          "Faith: ... You're still not seeing the big picture, B. Something made us different.  We're warriors. We're built to kill. Buffy: To kill demons! But it does not mean that we get to pass judgment on people like we're better than everybody else! Faith: We are better!"
          :titles "The Slayer")
        :Spike
         (base/unit
@@ -126,7 +184,7 @@
          :reference
           "I can bring whole cities to ruin and still have time to get a soft shoe in ... Something's cooking. I'm at the griddle. I bought Nero his very first fiddle."))))))
 
-(func chapter_chronicles_of_amber : base/chapter
+(func chapter_universes_of_amber : base/chapter
  [tactics : base/tactics]
  (base/chapter
   :name "Chronicles of Amber"))

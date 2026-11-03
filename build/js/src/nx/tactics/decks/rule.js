@@ -217,6 +217,8 @@ export default class nx_tactics_decks_rule {
         "Body",
         ":image",
         "images/rule-body.svg",
+        ":titles",
+        "Physical, Power, Earth, Clubs, Wands",
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
@@ -284,15 +286,6 @@ export default class nx_tactics_decks_rule {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Catalyst", ":titles", "Channeling, Conduit, Focus, Symbolic", ":summary", "A Catalyst is a physical conduit that allows a magical [Power] or [Ability] to flow\n* Magic is the art of gathering ambient, magical currents and focusing them into a specific effect. However, magic cannot create effects from nothing. Some kind of catalyst must be the spark that transforms your will into an effect. That catalyst must be symbolic of the power it will manifest and allow some plausible denyability that magic did not exist at all.\n\nExamples: \n* Alcohol+Torch=Firebreathing stunt\n* Severed power line=freak electrical accident\n* Spilled water=Ground water seeps up"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Character"),
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_rule},
-        ":name",
-        "Character Point",
-        ":image",
-        "images/rule-character-point.svg",
-        ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
-      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -394,7 +387,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Ability Point\nBleeding\nBlind\nBlood Loss\nBound\nBroken\nBurning\nCharacter Point\nChoking\nConstriction\nDamaged\nDeaf\nDisabled\nDiseased\nDying\nElectrified\nElevation\nExposure\nFreezing\nHeld\nHunger\nImmobilized\nImpaired\nIsolation\nParalyzed\nPetrified\nPoisoned\nProne\nRising/Sinking\nSkill Point\nStasis\nThirst\nTransformed\nVelocity"
+        "Ability Point\nBleeding\nBlind\nBlood Loss\nBound\nBroken\nBurning\nChoking\nConstriction\nDamaged\nDeaf\nDisabled\nDiseased\nDying\nElectrified\nElevation\nExposure\nFreezing\nHeld\nHunger\nImmobilized\nImpaired\nInspiration\nIsolation\nParalyzed\nPetrified\nPoisoned\nProne\nRising/Sinking\nSkill Point\nStasis\nThirst\nTransformed\nVelocity"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Conjure", ":summary", "Create an object/creature"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Conscience", ":summary", "* Conscience"),
@@ -485,6 +478,7 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "Deaf represents the inability to hear\nPartial - Disadvantage to communicate or perceive by hearing\nTotal - Unable to communicate or perceive by hearing"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Deflect", ":summary", "Deflect a specific item/force that was going to hit you\n* [Evade]: Apply one [Turn] to the path of the item"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -494,6 +488,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Detect", ":summary", "Detect a specific item/force within range even through walls\n* [Skill] + Size (Power, Body, Mind, or Will) vs Mind\n* Range: [Skill] [Level]\n* [Passive]: Notice when an obvious item appears\n* [Active]: Notice when a sublte item exists"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -627,6 +622,7 @@ export default class nx_tactics_decks_rule {
         "Freezing represents extreme cold. Add this to related Damage\nMinor - Chill\nMajor - Frost Caked. Exposure:1\nCritical - Ice Caked. Exposure:2\nExtreme - Frozen. Exposure:3 Frostbite\n* Arm, Leg, Hand, Foot - Useless\n* Head, Chest - Choking:3 Dying\n* Other Parts - Dying\nAction - Use heat to reduce Severity by 1"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Glide", ":summary", "Your movement appears smooth and effortless. You may move one more Space this Round"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Goal", ":summary", "Goal\n* D - Escape - Find your way out\n* D - Find - \n* H - Protect - \n* H - Persuade - \n* H - Rescue - \n* Search - \n* S - Stealth - \n    Obstacle\n* C - Physical Opposition\n* D - Mental Challenge\n* H - Emotional Dilemma\n* S - Movement Hinderance\n* CS - Boss\n* CK - Leader\n* CQ - Lieutenant\n* CJ - Elite\n* D - Minefield\n* D - Captured\n* D - Puzzle\n* D - Lost\n* D - Trapped\n* D - Locked\n* D - Blocked\n* H - Law Enforcement\n* H - Hostages\n* H - Innocents\n* H - Exposed\n* H - Crowd\n* AS - Cave In"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -706,6 +702,18 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
+        "Inspiration",
+        ":titles",
+        "Character Point",
+        ":image",
+        "images/rule-character-point.svg",
+        ":layout",
+        nx_tactics_base.c_cardlayout_imageonly
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Intercept", ":summary", "Intercept a specific item/force within Range and change its Target to you instead"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_rule},
+        ":name",
         "Isolation",
         ":image",
         "images/rule-isolation.svg",
@@ -752,7 +760,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Arcane\n* Abjuration\n* Alchemy\n* Artifice\n* Artistry\n* Astrology\n* Chronomancy\n* Conjuration\n* Sorcery\n* Thaumaturgy\n* Wizardry\nElemental\n* Aeromancy\n* Cryomancy\n* Electromancy\n* Geomancy\n* Pyromancy\n* Stormcraft\nNature\n* Animalism\n* Beastial\n* Herbalism\n* Naturalism\nDark Arts\n* Blood\n* Chaos\n* Corruption\n* Darkness\n* Demonic\n* Flesh\n* Necromancy\nSpiritualism\n* Divination\n* Dreaming\n* Enchantment\n* Hexcraft\n* Mysticism\n* Shamanism\nThergy\n* Blessing\n* Conviction\n* Invocation\n* Life\n* Primordial\n* Purity\n* Radiant"
+        "Arcane\n* Abjuration\n* Alchemy\n* Artifice\n* Artistry\n* Astrology\n* Chronomancy\n* Conjuration\n* Sorcery\n* Thaumaturgy\n* Wizardry\nElemental\n* Aeromancy\n* Cryomancy\n* Electromancy\n* Geomancy\n* Pyromancy\n* Stormcraft\nNature\n* Animalism\n* Beastial\n* Herbalism\n* Naturalism\nDark Arts\n* Blood\n* Chaos\n* Corruption\n* Darkness\n* Demonic\n* Flesh\n* Necromancy\nSpiritualism\n* Divination\n* Dreaming\n* Enchantment\n* Hexcraft\n* Mysticism\n* Shamanism\nThergy\n* Blessing\n* Conviction\n* Invocation\n* Life\n* Primordial\n* Purityff\n* Radiant"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Magic:Casting", ":summary", "Magic is indirect. It allows one to do the unlikely, not the impossible. Magic must always have a grounded source, so creating things from nothing is the hardest form of magic\n* Words -\n* Gestures - \n* Focus -\n* Component - \n* Ritual - "),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Magic:Learning", ":summary", "* Adept - \n* Recipe - \n* Experience - "),
@@ -891,7 +899,9 @@ export default class nx_tactics_decks_rule {
         ":image",
         "images/rule-mind.svg",
         ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":titles",
+        "Intellectual, Material, Fire, Diamonds, Coins, Intellectual, Rational"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Mitigation", ":summary", "* Obstacles\n* Cover\n* Shields\n* Armor\n* Toughness\n* Body"),
       vx_core.f_new(
@@ -933,7 +943,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":summary",
-        "Petrified represents being turned to stone. Add this to related Damage\nMinor - Encrusted\nMajor - Confined. Impaired\nCritical - Enveloped. Stress:1 Impaired\nExtreme - Entombed. Stress:2 Immobilized\n* Arm, Leg, Hand, Foot - Useless\n* Head, Chest - Choking:3 Dying\n* Other Parts - Dying\nDamage - Each Damage dealt to Petrifier reduces Severity by 1\nEscape - IF out of Petrifier reach\nDead - A Unit that dies by Petrified instead is preserved and transforms to stone"
+        "Petrified represents being turned to stone. Add this to related Damage\nMinor - Encrusted\nMajor - Confined. Impaired\nCritical - Enveloped. Stress:1 Impaired\nExtreme - Entombed. Stress:2 Immobilized\n* Arm, Leg, Hand, Foot - Useless\n* Head, Chest - Choking:3 Dying\n* Other Parts - Dying\nDamage - Each Damage dealt to Petrifier reduces Severity by 1\nEscape - IF out of Petrifier reach\nDead - A being that dies by Petrified instead is preserved and transforms to stone. Death only occurs when the majority of their body is reduced to sand."
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Place"),
       vx_core.f_new(
@@ -1014,14 +1024,18 @@ export default class nx_tactics_decks_rule {
         ":image",
         "images/rule-range.svg",
         ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":summary",
+        "Short/Medium/Long has a 1-2-4 progression\n* Short: Range:x is the normal effective range of the item/power\n* Medium: Shortx2 Disadvantage\n* Long: Mediumx2 Disadvantage, requires an extra Action and can only be attempted if shooter and target are stationary.\n* [Range:Close] 0m/0ft/Space:0\n* [Range:Melee] 1.5m/5ft/Spaces:1 (Height)\n* [Range:Reach] 3m/10ft/Spaces:2 (Heightx2)\n* [Range:Thrown] 8m/25ft/Spaces:5\n* [Range:Sidearm] 15m/50ft/Spaces:10\n* [Range:Skirmish] 50m/150ft/Spaces:30\n* [Range:Assault] 80m/250ft/Spaces:50\n* [Range:Marksman] 150m/500ft/Spaces:100\n* [Range:Heavy] 300m/1000ft/Spaces:200\n* [Range:Sniper] 500m/1500ft/Spaces:300\n* [Range:Rocket] 1.5km/5000ft/Spaces:1k\n* [Range:Artillery] 5km/3mi/Spaces:3k\n* [Range:Naval] 8km/5mi/Spaces:5k\n* [Range:Orbital] 15km/10mi/Spaces:10k\n* [Range:Ballistic] 150km/100mi/Spaces:100k\n* [Range:Space] 5000km/30000mi"
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rank", ":summary", "* The number on a card or the part of a Value before the x."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rank", ":summary", "* The number on a card or the part of a Value before the x.\n* Cards hve 3 types: Specials (A), Rares (K-J), and Commons (10-2)"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rating", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reach", ":summary", "* Can target one additional Space away [Scaled]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reaction", ":summary", "* During Conflict Resolution, each Unit has a Reaction equal to their Conflict card Rank modified by Skill Bonus"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reflect", ":summary", "When a User takes particular Damage the source also takes Damage\n* The source takes Damage equal to Damage Taken or User Intensity whichever is lower"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Relationship", ":summary", "How a person relates or wants to relate to another\n* Family\n* Friend - \n* Relative - Loose connection\n* Authority - \n* Merchant - Profit motive\n* Dealer - Illicit merchant including scammers\n* Network - I know a guy who knows a guy\n* Mercenary - In it for the money. Includes gold diggers and hanger ons\n* Opportunist - Includes Thieves\n* Worker - Actively doing their job\n* Coworker -\n* Subordinate - \n* Gang - Mob, Group, Club, Clique\n* Rival - \n* Enemy - \n* Stranger - Mysterious person\n* Bystander - Includes shoppers, tourists, and people in transit\n"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Research", ":deck", "Reference", ":summary", "Tests may be made easier by carefully researching the problem. A test may be attempted after each Research level. Research requires specialized research material (eg a library). Beyond 3 months, research hits a dead end.\n* Level:+1 - 1 Hour\n* Level:+2 - 5 Hours\n* Level:+3 - 24 Hours (3 days)\n* Level:+4 - 120 Hours (2 weeks)\n* Level:+5 - 720 Hours (3 months)"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Runes", ":summary", "A Rune is a series of magical characters permanently inscribed on an item. The Rune imbues the item with an [Ability].\n* Use: Anyone equipping the item may use the the Rune's [Ability] as if they had the Ability themself. The Skill/Power of the Ability is equal to the user's.\n* Quality: The quality of an item determines the number of Runes it can hold. Abilities must be appropriate to the item (eg Stealth on a Cloak)\n* Etching: Artificers and Enchanters excel at etching Runes on items\n* Runestone: A special item called a Runestone hold a Rune. Anyone can activate the Runestone to etch the Rune without a specialist. Such items are very convenient and valuable"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Resist", ":summary", "The Ability to resist a certain type of Damage\n* IF you take Damage of that type THEN a Crit of that type is flipped to a normal Hit"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -1223,7 +1237,9 @@ export default class nx_tactics_decks_rule {
         ":image",
         "images/rule-speed.svg",
         ":layout",
-        nx_tactics_base.c_cardlayout_imageonly
+        nx_tactics_base.c_cardlayout_imageonly,
+        ":titles",
+        "Agility, Movement, Air, Spades, Swords, Quickness"
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
@@ -1272,6 +1288,7 @@ export default class nx_tactics_decks_rule {
         ":summary",
         "Stasis represents a time freeze effect. Add this to related Damage\nMinor - Skipping\nMajor - Stuck. Impaired\nCritical - Anchored. Slow:1 Impaired\nExtreme - Stopped. Slow:2 Immobilized\n* Head, Chest, Abdomen - Choking:3 Dying\nAction - Each Damage dealt to Binder reduces Severity by 1\nEscape - IF out of reach\nDead - A Unit that dies by Stasis instead is perfectly preserved until released"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Storytelling", ":summary", "Storytelling is composed of multiple nested parts:\n* Universe - A distinct universal setting and timeline. Different Universes can potentially crossover. Significant Milestones form the History of this Universe. A Universe contains any number of Campaigns.\n* Campaign - A set of connected Stories with an overall introduction, progression, and finale. A well structured Campaign will take characters on a journey of physical, mental, and psychological challenges, losses, and growth. Different Campaigns can take place at different time periods. A movie trilogy would form a campaign. A Campaign contains a series of Stories.\n* Story - A set of connected Chapters with a distinct introduction, progression, and conclusion. A well structured Story will include classic story structures such as Hero's Journey, 3 Act Structure, Dan Harmon's Story Circle, etc. A Story contains a series of Chapters.\n* Chapter - A distinct Story narrative that progresses the Story. A Chapter should be analogous to a game session. A Chapter can start and end at any point, usually for dramatic effect including cliffhangers. A well structured Chapter will include classic story structures like 3 Act Structure, 5 Room Dungeon, etc. A character, perspective, time shift may occur between Chapters. A Chapter contains a series of Plots and Acts. When all Plots OR all Acts resolve then the Chapter resolves with partial or complete success or failure.\n* Plot - A distinct dramatic situation occurring at a specific Scene. This may be an actual plot that someone is attempting or some other not ideal situation that is progressing. As in Tarot, this represents the future if the Characters do not Act. Each Plot contains a series of Encounters. When all Encounters are resolved, the Plot progresses (The Plot Thickens).\n* Encounter - A distinct obstacle/challenge to the Characters. It can be physical, intellectual, psychological, or social (a blend of each type is ideal). Encounters are distractions from or obstacles to completing the Charaters' Goals. Encounters may be scripted or random. Examples include Darkness, Smoke, Fire, Barrier, Locked Door, Terrain, Wildlife, Crowds, Social Obligations, Criminals, Law Enforcement, Rivals, Enemies, and Monsters.\n* Act - The opportunity for Character agency and action during the Chapter. As in Tarot, this represents the future if the Characters successfully Act. Each Act contains a series of Goals. When all Goals are resolved, the Act progresses.\n* Goal - A distinct desired outcome for the Characters. Like Encounters, it can be physical, intellectual, phychological, or social (a blend of each type is ideal). Goals may be scripted or random. Examples include obtaining an item, finding a person, acquiring information, travelling to/escaping from a location, convincing/defeating opposition, rescuing/protecting someone/something, solving a mystery."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Study", ":deck", "Reference", ":summary", "Tests may be made easier by carefully studying the problem.A test may be attempted after each Study level. Study requires specialized equipment (eg an Alchemical Kit). Beyond 6 Hours, outside [Research] will be necessary.\n* Level:+1 - 2 Minutes\n* Level:+2 - 10 Minutes\n* Level:+3 - 1 Hour\n* Level:+4 - 6 Hours"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Subtle", ":summary", "Subtle Abilities are not obviously linked to the user.\n* [Blatant] is the opposite of [Subtle]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suit", ":summary", "Each Suit represents a Stat:\n* Wands - Power. Body\n* Coins - Planning. Mind\n* Cups - Perseverance. Will\n* Swords - Skill. Speed"),
@@ -1342,6 +1359,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time:Evening"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time:Morning"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Time:Night"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Tone Pivot", ":summary", "H - Silence/Noise - A threat is made. Everyone goes silent looking for who made it"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Totem", ":summary", "A Totem is a focus for remotely manifesting a [Power]. Powers may used as if the Totem were the User"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Touch"),
       vx_core.f_new(
@@ -1356,7 +1374,7 @@ export default class nx_tactics_decks_rule {
         "Transformed represents body transformation. Add this to related Damage\nMinor - Altered\nMajor - Turning. Impaired\nCritical - Mutating. Stress:1 Immobilized\nExtreme - Remade. Stress:2\nDamage - Each Damage dealt to Transformer reduces Severity by 1\nEscape - IF out of Transformer reach"
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Transport", ":titles", "Mount, Vehicle", ":summary", "Anything you can ride is a Transport\neg Horses, Cars, Planes\n* Driver - Spend an Action each Round to control\n* Passenger - IF unstable or in Combat THEN Spend an Action to remain stable"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Treat:Wounds", ":titles", "Healing", ":summary", "Repairing damage to living creatures is difficult and dangerous\n* Time - \n* Surgery - Perform a Task vs 3x[Severity]. If you lack a relevant [Ability], [Specialty] or perfect conditions it is at [Disadvantage]. Beginning the procedure creates a [Severity]:1 Wound at the location. Each failure causes [Blood Loss]:2"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Treat:Wounds", ":titles", "Healing", ":summary", "Repairing damage to living creatures is difficult and dangerous\n* Time - \n* Surgery - Perform a [Task] vs 3x[Severity]. If you lack a relevant [Ability], [Specialty] or perfect conditions it is at [Disadvantage]. Beginning the procedure creates a [Severity]:1 Wound at the location. Each failure causes [Blood Loss]:2"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_rule},
         ":name",
@@ -1394,6 +1412,8 @@ export default class nx_tactics_decks_rule {
         nx_tactics_base.c_cardlayout_imageonly
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Velocity", ":image", "images/rule-velocity.svg", ":summary", "Velocity represents the speed and momentum of fast Units. It replaces normal movement\nRound Start\n Velocity - Starts at 0\n Momentum = Velocity\nCountdown - When Count is called, MAY spend Momentum:-1 instead of Move:-1 to move straight or Drift Forward\n IF Count >= Momentum THEN not optional\nFree Actions\n Accelerate:X - Spend Move:X to gain Velocity:+1 (Min=2)\n Brake:X - Spend Move:X to lose Velocity:-1 (Min=1)"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Vice", ":summary", "Clubs:\nCowardly\nReckless\nImpulsive\nLazy\nGluttonous\nProcrastinating\nIrresponsible\nStubborn\nFurious\nViolent\nWasteful\nAddicted\nDespairing\n\nDiamonds:\nProud\nArrogant\nHubristic\nIgnorant\nNarrow-minded\nParanoid\nDelusional\nObsessive\nIndecisive\nGullible\nCynical\nApathetic\nFoolish\n\nHearts:\nJealous\nEnvious\nHateful\nBitter\nSpiteful\nCruel\nCallous\nSelfish\nVain\nLustful\nNeedy\nSentimental\nMelancholic\n\nSpades:\nDishonest  \nDeceitful\nHypocritical\nTreacherous\nCorrupt\nBigoted\nIntolerant\nGreedy\nWrathful\nVengeful\nMalicious\nImpious\nTraitorous"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Virtue", ":summary", "Wands (Jock):\nA Competitive/Cooperative\n2 Proud/Humble\n3 Loyal/Rebellious\n4 Traditional/Open-Minded\n5 Stoic/Expressive\n6 Assertive/Thoughtful\n7 Ambitious/Satisfied\n8 Protective/Independent\n9 Outgoing/Reserved\nT Honorable/Elusive\n\nCoins (Nerd):\nA Idealistic/Pragmatic\n2 Pragmatic/Idealistic\n3 Frugal/Generous\n4 Open-Minded/Traditional\n5 Methodical/Creative\n6 Skeptical/Spiritual\n7 Reserved/Outgoing\n8 Thoughtful/Assertive\n9 Cautious/Brave\n    	T Patient/Urgent\nJ Reliable/Impulsive\n\nCups (Goodie/Goodie):\nA Brave/Cautious\n2 Generous/Frugal\n3 Spiritual/Skeptical\n4 Cooperative/Competitive\n5 Humble/Proud\n5 Forgiving/Vengeful\n6 Expressive/Stoic\n7 Trusting/Suspicious\n8 Satisfied/Ambitious\n9 Disciplined/Spontaneous\nT Determined/Flexible (Consistent/Stubborn)\n\nSpades (Artistic/Outsider):\nA Creative/Methodical\n2 Rebellious/Loyal\n3 Vengeful/Forgiving\n4 Suspicious/Trusting\n5 Spontaneous/Disciplined\n6 Flexible/Determined\n    	7 Urgent/Patient\n8 Independent/Protective\n9 Impulsive/Reliable\nT Elusive/Honorable\n\n2	Compassionate	Ruthless\n23	Tolerant	Judgmental\n\nClubs:\nCourageous\nResilient\nPersevering\nDetermined\nBold\nOptimistic\nConfident\nEnthusiastic\nVigilant\n\nDiamonds:\nPrudent\nWise\nCurious\nInsightful\nDiscerning\nForesighted\nKnowledgeable\nClear-minded\nOpen-minded\nResourceful\nFocused\n\nHearts:\nKind\nEmpathetic\nGenerous\nCharitable\nForgiving\nGrateful\nMerciful\nGentle\nPatient\nSelfless\n\nSpades:\nJust\nHonorable\nHonest\nFair\nRighteous\nTrustworthy\nAccountable\nPure\nAltruistic\nTemperate  \nDiligent  \nDisciplined\nPrincipled"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Walk", ":summary", "Move up to half of your Starting Speed this Round\n* [Ability] - Walk Abilities keyed to a terrain (eg Walk:Water) allow the user to ignore the movement penalties while walking through the given terrain"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Wall", ":summary", "A Wall is a type of terrain\n* [Ability] - Wall Abilities keyed to a terrain (eg Wall:Fire) allow the user to place a terrain of the given type (eg Terrain:Fire) of the given type\n* [Area] - The Area can be increased by using Area rules"),
       vx_core.f_new(
@@ -1474,7 +1494,7 @@ export default class nx_tactics_decks_rule {
         ":layout",
         nx_tactics_base.c_cardlayout_imageonly,
         ":titles",
-        "Chi, Confidence, Determination, Ego, Emotion, Faith, Grit, Guts, Heart, Instinct, Ki, Mana, Perseverence, Resolve, Spirit, Spiritualism, Will, Willpower",
+        "Emotion, Social, Water, Hearts, Cups, Bravery, Chi, Confidence, Courage, Determination, Ego, Faith, Grit, Guts, Heart, Instinct, Ki, Mana, Perseverence, Psychological, Resolve, Spirit, Spiritualism, Willpower",
         ":reference",
         "* I think, therefore I am. - Descartes, Cogito Ergo Sum\n* The nature of existence is subjective. I have experience and thoughts in this precise moment, beyond that I can prove nothing. Does time actually pass as I understand it? Is anything else but me real? Am I living in a dream/hallucination/simulation? Am I just insane? Our experience is the only thing we can be sure of. Therefore, we may as well choose to live as we see fit. No amount of evidence can definitively prove otherwise."
       ),

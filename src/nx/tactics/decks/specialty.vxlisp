@@ -98,10 +98,6 @@
   (base/specialty
    :name "Airplanes: Commercial")
   (base/specialty
-   :name "Alien Hunter"
-   :reference
-    "* Men in Black")
-  (base/specialty
    :name "Archery"
    :titles "Archer, Archer Elite, Bowman, Crossbowman, Longbowman"
    :summary
@@ -161,17 +157,6 @@
    :name "Bladedancer"
    :summary
     "* A combat technique focusing on elegant moves that efficiently combine attack and defense. Heavy armor may not be used with this technique.")
-  (base/specialty
-   :name "Bounty Hunter"
-   :reference
-    "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway
-     * Fixing the world one scroundrel at a time. - Akshan, Runeterra"
-   :summary
-    "* Bounty Hunting represents experience in stalking and capturing a target in an urban setting. This is traditionally done for money and can be quite profitable.
-     * Bounties are placed on people for whom the law lacks the resources or inclination to pursue.
-     * Bounties are placed by insurance companies, bail bondsmen, armies, the F.B.I., and individuals.
-     * The reward can be paid for information, the capture of the target in a reasonably uninjured state, or even dead or alive.
-     * The reward obviously needs to be commensurate with the difficulty or no one will take it. Capturing is harder than killing, so captures gain a bonus.")
   (base/specialty
    :name "Boxing"
    :summary
@@ -242,13 +227,9 @@
    :summary
     "Ballroom Dance, Break Dance, Hip Hop Dance, Pole Dance, Salsa Dance, Tango, Waltz")
   (base/specialty
-   :name "Demon Hunter"
-   :reference
-    "* Ash Williams, Evil Dead
-     * Claymore
-     * Demon Hunter, Diablo
-     * Demon Slayer: Kimetsu no Yaiba
-     * Sango, Inuyasha")
+   :name "Dentist"
+   :summary
+    "* [Skill]: [Medicine]")
   (base/specialty
    :name "Duelling"
    :reference
@@ -256,12 +237,6 @@
    :summary
     "* Accomplished at one-on-one formal combat
      * [Skill]: [Melee] or [Firearms]")
-  (base/specialty
-   :name "Devil Hunter"
-   :reference
-    "* Chainsawman
-     * Devil Hunter Youko
-     * Devil May Cry")
   (base/specialty
    :name "Energy Weapons"
    :reference "Whoa, whoa, whoa! Nice shootin', Tex! - Ghostbusters")
@@ -280,10 +255,6 @@
    :name "Flexible Weaponry"
    :summary "* Backlash, Disarm, Trip"
    :titles "Hangman, Strangler")
-  (base/specialty
-   :name "Ghost Hunter"
-   :reference
-    "* Ghostbusters")
   (base/specialty
    :name "Grappling"
    :summary
@@ -349,6 +320,73 @@
      * Kicks - [Kick Defense], [Leg Sweep]
      * Strikes - [Grab Punch], [Nerve Strike], [Phoenix Strike], [Strike Defense]"
    :titles "Heart and Mind")
+  (base/specialty
+   :name "Hunter:Alien"
+   :reference
+    "* Men in Black"
+   :summary
+    "* [Skill]: [Hunting]")
+  (base/specialty
+   :name "Hunter:Bounty"
+   :reference
+    "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway
+     * Fixing the world one scroundrel at a time. - Akshan, Runeterra"
+   :summary
+    "Experience in stalking and capturing a target in an urban setting
+     * [Skill]: [Hunting]
+     * This is traditionally done for money and can be quite profitable
+     * Bounties are placed on people for whom the law lacks the resources or inclination to pursue.
+     * Bounties are placed by insurance companies, bail bondsmen, armies, the F.B.I., and individuals.
+     * The reward can be paid for information, the capture of the target in a reasonably uninjured state, or even dead or alive.
+     * The reward obviously needs to be commensurate with the difficulty or no one will take it. Capturing is harder than killing, so captures gain a bonus.")
+  (base/specialty
+   :name "Hunter:Demon"
+   :reference
+    "* Ash Williams, Evil Dead
+     * Claymore
+     * Demon Hunter, Diablo
+     * Demon Slayer: Kimetsu no Yaiba
+     * Sango, Inuyasha"
+   :summary
+    "* [Skill]: [Hunting]")
+  (base/specialty
+   :name "Hunter:Devil"
+   :reference
+    "* Chainsawman
+     * Devil Hunter Youko
+     * Devil May Cry"
+   :summary
+    "* [Skill]: [Hunting]")
+  (base/specialty
+   :name "Hunter:Ghost"
+   :reference
+    "* Ghostbusters"
+   :summary
+    "* [Skill]: [Hunting]")
+  (base/specialty
+   :name "Hunter:Mage"
+   :reference
+    "* Templars, Dragon Age"
+   :summary
+    "* [Skill]: [Hunting]")
+  (base/specialty
+   :name "Hunter:Monster"
+   :reference
+    "* Grey Wardens, Dragon Age
+     * Witcher"
+   :summary
+    "* [Skill]: [Hunting]")
+  (base/specialty
+   :name "Hunter:Treasure"
+   :titles "Tomb Raider, Treasure Seeker"
+   :reference
+    "* Indiana Jones
+     * Lara Croft"
+   :summary
+    "The dangerous and profitable world of lost tombs and ancient relics
+     * [Skill]: [Hunting]
+     * Rare relics hold high presitge and are usually sold (in the form of a finders fee) to museaums, governments or private collectors. Raiding tombs is a fairly lawless and perilous activity to start with, and such high value items tend to attract disreputable characters of all kinds. As a result, treasure hunters often end their careers in unfortunate accidents.
+     * +1 while researching or navigating inside a crypt or tomb.")
   (base/specialty
    :name "Hwarang-Do"
    :summary
@@ -592,22 +630,25 @@
     "* Wing Chung, literally 'singing spring', is a Southern Chinese kung fu style and a form of self-defense originating in Qing China, which requires quick arm movements and strong legs. Softness (via relaxation) and performance of techniques in a relaxed manner is fundamental to Wing Chun.")
   (base/specialty
    :name "Linguistics"
-   :reference
-    "* So we put her on the hit list, of a common, cunning linguist: a master of many tongues. - Deep Purple, Knocking at Your Backdoor"
    :summary
-    "* Philosophy - The 'common tongue' concept is boring and unrealistic.
+    "The study of language structure
+     * [Skill]: [Communication]
+     * Linguists are skilled at deciphering unknown languages (spoken or written)
+     * They gain a bonus for each similar language they already possess
+     * Philosophy - The 'common tongue' concept is boring and unrealistic.
      * Simulate the limitations of language by reducing usable vocabulary. This can be done by limiting a conversation to 2, 3, 4, or 5 letter words depending on the fluency of those involved. Having a conversation using only 2 letter words is going to require a fair amount of hand gesturing or drawing to get a point across. If a person is overhearing a conversation, bleep out the big words and let them guess at the missing words.")
   (base/specialty
    :name "Machineguns")
   (base/specialty
-   :name "Mage Hunter"
-   :reference
-    "* Templars, Dragon Age")
-  (base/specialty
-   :name "Monster Hunter"
-   :reference
-    "* Grey Wardens, Dragon Age
-     * Witcher")
+   :name "Medic"
+   :summary
+    "Trained to stabilize victims and transport them for further treatment"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Medical Evac"
+     "Stabilize"
+     "Triage"))
   (base/specialty
    :name "Motorcycles")
   (base/specialty
@@ -688,6 +729,15 @@
    :summary "Fend Off"
    :titles "Glaivemaster, Halberdier, Poleman")
   (base/specialty
+   :name "Polyglot"
+   :reference
+    "* So we put her on the hit list, of a common, cunning linguist: a master of many tongues. - Deep Purple, Knocking at Your Backdoor
+     * We met a random waitress in Prague who knew 12 languages - Real Life"
+   :summary
+    "Fluency in multiple languages
+     * [Skill]: [Communication]
+     * A polygot can speak equally fluently in all known languages as if they were a native")
+  (base/specialty
    :name "Race Cars")
   (base/specialty
    :name "Riding"
@@ -760,6 +810,18 @@
      * Kicks - [Double Kick], [Dragon Tail], [Leg Sweep]
      * Strikes - [Ear Pop], [Head Butt], [Hyperfist], [One Two Punch], [Palm Strike], [Sword Hand]"
    :titles "Cireum")
+  (base/specialty
+   :name "Surgeon:Field"
+   :summary
+    "* [Skill]: [Medicine]")
+  (base/specialty
+   :name "Surgeon:Neural"
+   :summary
+    "* [Skill]: [Medicine]")
+  (base/specialty
+   :name "Surgeon:Oral"
+   :summary
+    "* [Skill]: [Medicine]")
   (base/specialty
    :name "Swords"
    :reference
@@ -842,15 +904,6 @@
   (base/specialty
    :name "Trapper")
   (base/specialty
-   :name "Treasure Hunter"
-   :reference
-    "* Indiana Jones
-     * Lara Croft"
-   :summary
-    "* Treasure Hunting represents experience in the dangerous and profitable world of lost tombs and ancient relics. Rare relics hold high presitge and are usually sold (in the form of a finders fee) to museaums, governments or private collectors. Raiding tombs is a fairly lawless and perilous activity to start with, and such high value items tend to attract disreputable characters of all kinds. As a result, treasure hunters often end their careers in unfortunate accidents.
-     * +1 while researching or navigating inside a crypt or tomb."
-   :titles "Tomb Raider, Treasure Seeker")
-  (base/specialty
    :name "Trickery"
    :summary
     "* Blinding Powder, Confidence Game, Decoy, Distraction, Flash Powder, Gambling, Irritating Powder, Misdirection, Sleight of Hand, Stage Magic, Swindling, Vanish, Ventriloquism"
@@ -871,6 +924,10 @@
      * Lost Boys
      * Vampire Hunter D
      * Making the deadm, deader. Senna, Runeterra")
+  (base/specialty
+   :name "Veterinarian"
+   :summary
+    "* [Skill]: [Medicine]")
   (base/specialty
    :name "Werewolf Hunter")
   (base/specialty

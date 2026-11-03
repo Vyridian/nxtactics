@@ -81,7 +81,7 @@
    :speedland "6kph/4mph"
    :mass "80kg/175"
    :height "1.8m/6ft"
-   :demeanor "Opportunistic"
+   :persona "Opportunistic"
    :nature "Ruthless"
    :beast "2x0"
    :shadow "5x0"
@@ -185,7 +185,7 @@
    :speedland "5kph/3mph"
    :mass "100kg/220lb"
    :height "1.9m/6'3ft"
-   :demeanor "Glaring"
+   :persona "Glaring"
    :nature "Callous"
    :beast "5x0"
    :shadow "1x0"
@@ -255,6 +255,10 @@
    :image "images/cards/unit-cat.svg")
   (base/unit
    :name "Caterpillar:Giant")
+  (base/unit
+   :name "Cenobite"
+   :reference
+    "* I hurt myself today. To see if I still feel. I focus on the pain. The only thing that's real. The needle tears a hole. The old familiar sting - Johnny Cash, Hurt"
   (base/unit
    :name "Charn Aramel"
    :summary "Human Dread Knight"
@@ -326,7 +330,11 @@
     "In terms of matter I suppose the thing Ammi described would be called a gas, but this gas obeyed the laws that are not of our cosmos ... This was no breath from the skies whose motions and dimensions our astronomers measure or deem too vast to measure. It was just a colour out of space - a frightful messenger from unformed realms of infinity beyond all Nature as we know it. - The Colour Out of Space")
   (base/unit
    :name "Cthonian"
-   :image "Cthulhu/Cthonian.png")
+   :image "cthulhu/cthonian.png"
+   :summary
+    "Huge worm shaped intelligent beings
+     * Powers - They are impervious to acid and extraordinarily resistant to heat.They can melt earth and rock around them and move through the ground without resistence. They leave large tunnels behind them. They are harmed by water.
+     * Details - They feed on the blood of animals and can also sustain themselves on rocks and minerals")
   (base/unit
    :name "Dead of Night"
    :summary
@@ -367,7 +375,8 @@
    :name "Dhole"
    :titles "Bhole"
    :summary
-    "* Huge slimy, worm-like creatures several hundred meters long.")
+    "* Huge slimy, worm-like creatures several hundred meters long.
+     * Powers - They can melt earth and rock around them and move through the ground without resistence. They leave large tunnels behind them.")
   (base/unit
    :name "Dolphin"
    :reference
@@ -376,7 +385,7 @@
    :name "Dog"
    :image "images/cards/unit-dog.svg")
   (base/unit
-   :name "Dog: Wild"
+   :name "Dog:Wild"
    :image "images/cards/unit-dog-wild.svg"
    :summary
     "The Wild Dog is one of the fastest runners in the animal kingdom."
@@ -415,19 +424,19 @@
    :name "Dragon Engine"
    :titles "Steam Engine")
   (base/unit
-   :name "Dragon: Apophis"
+   :name "Dragon:Apophis"
    :reference "Egyptian Mythology")
   (base/unit
-   :name "Dragon: Ladon")
+   :name "Dragon:Ladon")
   (base/unit
-   :name "Dragon: Midgard Serpent"
+   :name "Dragon:Midgard Serpent"
    :reference "Norse Mythology")
   (base/unit
-   :name "Dragon: Pytho")
+   :name "Dragon:Pytho")
   (base/unit
-   :name "Dragon: Stoorworm")
+   :name "Dragon:Stoorworm")
   (base/unit
-   :name "Dragon: Tiamat"
+   :name "Dragon:Tiamat"
    :reference "Babylonian Mythology"
    :titles "Avatar of Chaos, Avatar of the Wyrm, The Beast, Mother of All Life")
   (base/unit
@@ -561,7 +570,7 @@ Allseer - Grants resistance to being surprised or flanked."
   (base/unit
    :name "Galamir Mirlesem"
    :image "images/fantasy/GalamirMirlesem.png"
-   :demeanor "Imperious"
+   :persona "Imperious"
    :nature "Self-Absorbed"
    :summary
     "* Human Mage
@@ -725,7 +734,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :image "images/cards/unit-goblin-scout.svg"
    :reference
     "* The only information I will let them have is that their scouts are not coming back. This will be their grave. - Goblin Slayer"
-   :demeanor "Depraved"
+   :persona "Depraved"
    :nature "Cowardly Envious"
    :conscience "2x1"
    :beast "2x0"
@@ -781,6 +790,11 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl
       tactics "Military" 3)))
   (base/unit
+   :name "Grudge"
+   :titles "Grief, Vengeful Dead"
+   :summary
+    "A non-corporeal Undead created when someone dies with such intense emotions of fear, hate, vengeance, or desire that it curses itself into an Undead form to continue its mission")
+  (base/unit
    :name "Guardsman"
    :image "images/cards/unit-guardsman.svg"
    :summary
@@ -793,7 +807,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speedland "5kph/3mph"
    :mass "80kg/175"
    :height "1.8m/6ft"
-   :demeanor "Indifferent"
+   :persona "Indifferent"
    :nature "Lazy"
    :beast "1x0"
    :shadow "2x0"
@@ -818,7 +832,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speedland "5kph/3mph"
    :mass "80kg/175"
    :height "1.8m/6ft"
-   :demeanor "Sinister"
+   :persona "Sinister"
    :nature "Ruthless"
    :beast "1x0"
    :shadow "4x0"
@@ -901,7 +915,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speed "2x2"
    :mass "450kg/1000lb"
    :speedland "20kph/12mph"
-   :demeanor "Aloof"
+   :persona "Aloof"
    :nature "Skitish")
   (base/unit
    :name "Hound of Tindalos"
@@ -958,7 +972,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speedland "5kph/3mph"
    :mass "63kg"
    :height "1.72m/5ft7"
-   :demeanor "Willful"
+   :persona "Willful"
    :nature "Nuturing"
    :beast "1x0"
    :shadow "1x0"
@@ -986,7 +1000,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speedland "4kph/2.5mph"
    :mass "75kg"
    :height "1.78m/5ft10"
-   :demeanor "Frivolous"
+   :persona "Frivolous"
    :nature "Loyal"
    :beast "1x0"
    :shadow "1x0"
@@ -1020,13 +1034,13 @@ Allseer - Grants resistance to being surprised or flanked."
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
       tactics "Survival" 3
-      "Survival: Jungle")))
+      "Survival:Jungle")))
   (base/unit
    :name "Lich"
    :image "images/bestiary/Lich.png"
    :titles "Liche, Lych, Lyche, Lyke"
    :reference
-    "* His eyes turn unshutting, unblinking... Thus have I beheld him for the space of a whole year and a month... And never have I discerned the least movement of his lips, nor any turning or tremor of his body. For these reasons, I deem that Malygris is dead, but by virtue of his supremacy in evil and in art magical, he sits defying the worm, still undecayed an incorrupt. And his monsters and familiars attend him still. - The Death of Malygris, Clark Ashton Smith"
+    "* His eyes turn unshutting, unblinking... Thus have I beheld him for the space of a whole year and a month... And never have I discerned the least movement of his lips, nor any turning or tremor of his body. For these reasons, I deem that Malygris is dead, but by virtue of his supremacy in evil and in art magical, he sits defying the worm, still undecayed and incorrupt. And his monsters and familiars attend him still. - The Death of Malygris, Clark Ashton Smith"
    :summary
     "* A lich is a powerful animated corpse created by [Necromancy] through the use of [Lich Form]. The necromaner curses itself to a horrific undead existence in exchange for eternal 'life'. The lich retains most of the abilities of its former life and gains some additional undead powers as well.
      * Because of their solitary nature, a lich cannot gain social skills nor increase their existing skills. Further these skills have a tendency to degrade the longer the lich exists."
@@ -1035,6 +1049,13 @@ Allseer - Grants resistance to being surprised or flanked."
      tactics
      "Beastial"
      "Necromancy"))
+  (base/unit
+   :name "Lightning Fury"
+   :summary
+    "Extradimensional beings of pure energy
+     * Description - Appear to be a column of energy emanating arcs of electricity. They have never been recorded communicating in any way but violence. They seem to singlemindedly pursue their goals and then fortunately depart.
+     * Combat - If travels instantly in a bolt of lightning to touch engulf its target in its violent energies, electrocuting and roasting them alive. Their attacks seem precisely callibrated to their targets with no known upper limit. If they can somehow be defeated or dispelled, nothing remains except scorch marks and melted material.
+     * Origin - It is believed these being originate from [Angular] space in the distant past")
   (base/unit
    :name "Lili Ducon"
    :image "images/cards/unit-liliducon.svg"
@@ -1049,7 +1070,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speedland "3kph/2mph"
    :mass "40kg/88lb"
    :height "1.5m/5ft"
-   :demeanor "Pleasant"
+   :persona "Pleasant"
    :nature "Anxious"
    :beast "1x0"
    :shadow "1x0"
@@ -1085,7 +1106,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :name "Lovelorn"
    :titles "Broken Heart, Lovelost"
    :summary
-    "An undead creature consumed by the miser of lost love
+    "An undead creature consumed by the misery of lost love
      * Description - At first glance the Lovelorn appears to be a spider but is actually a disembodied heart with ribs for legs"
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
@@ -1133,7 +1154,9 @@ Allseer - Grants resistance to being surprised or flanked."
      * [Action] [Target]: The Mirror Shard becomes the same [Mass] as the target. Then choose one [Skill] or [Power] to copy. The Mirror Shard gains that Skill/Power and loses all other Skills and Powers. It [Body], [Mind], and [Will] are altered accordingly.")
   (base/unit
    :name "Mummy"
-   :reference "The Mummy"
+   :reference
+    "* The Mummy
+     * Ancient spirits of Evil. Transform this decayed form to Mumm-Ra, the Ever Living! - Mumm-Ra, Thundercats"
    :summary
     "* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.
      * Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk."
@@ -1229,7 +1252,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speedland "5kph/3mph"
    :mass "80kg/175"
    :height "1.8m/6ft"
-   :demeanor "Brash"
+   :persona "Brash"
    :nature "Greedy"
    :beast "1x0"
    :shadow "4x0"
@@ -1323,7 +1346,7 @@ Allseer - Grants resistance to being surprised or flanked."
   (base/unit
    :name "Phirax Alganon"
    :image "images/fantasy/PhiraxAlganon.png"
-   :demeanor "Personable"
+   :persona "Personable"
    :nature "Self Righteous"
    :summary
     "* Half-Elven Bard
@@ -1817,7 +1840,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speedland "7kph/4.5mph"
    :mass "70kg/155lb"
    :height "1.7m/5'6"
-   :demeanor "Foolish"
+   :persona "Foolish"
    :nature "Cowardly"
    :summary ""
    :unitskillmap
@@ -1967,17 +1990,22 @@ Allseer - Grants resistance to being surprised or flanked."
      (base/unitskill<-tactics-key-lvl
       tactics "Military" 3)))
   (base/unit
-   :name "Vaalus:Assassin")
+   :name "Vaal:Assassin")
   (base/unit
-   :name "Vaalus:Savage"
+   :name "Vaal:Savage"
    :image "images/cards/unit-valus-savage.svg")
   (base/unit
-   :name "Vaalus:Skinshifter")
+   :name "Vaal:Skinshifter")
   (base/unit
-   :name "Vaalus:Sorcerer"
-   :image "images/cards/unit-valus-warrior.svg")
+   :name "Vaal:Sorcerer"
+   :image "images/cards/unit-valus-warrior.svg"
+   :unitpowermap
+    (base/unitpowermap<-tactics-keys
+     tactics
+     "Corruption"
+     "Sorcery"))
   (base/unit
-   :name "Vaalus:Warrior"
+   :name "Vaal:Warrior"
    :image "images/cards/unit-valus-warrior.svg")
   (base/unit
    :name "Vampire: Brujah"
@@ -2279,7 +2307,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speedland "5kph/3mph"
    :mass "80kg/180"
    :height "1.8m/6ft"
-   :demeanor "Gruff"
+   :persona "Gruff"
    :nature "Tortured"
    :beast "1x0"
    :shadow "1x0"
@@ -2398,7 +2426,7 @@ Allseer - Grants resistance to being surprised or flanked."
    :speedland "5kph/3mph"
    :mass "70kg/155lb"
    :height "1.8m/6ft"
-   :demeanor "Aloof"
+   :persona "Aloof"
    :summary
     "* [Evade]: Flip to [Fast]."
    :unitskillmap

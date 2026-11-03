@@ -19,7 +19,7 @@
     (chapter_microorganisms tactics)
     (chapter_underground_creatures tactics)
     (chapter_humanoids tactics)
-    (chapter_humanoids_fantastic tactics)
+    (chapter_demihumans tactics)
     (chapter_beastmen tactics)
     (chapter_constructs tactics)
     (chapter_dragons tactics)
@@ -459,36 +459,36 @@
        (base/unitmap
         "Dog"
          (base/unit<-tactics-key tactics "Dog")
-        "Dog: Akita"
+        "Dog:Akita"
          (base/unit
-          :name "Dog: Akita")
-        "Dog: Bloodhound"
+          :name "Dog:Akita")
+        "Dog:Bloodhound"
          (base/unit
-          :name "Dog: Bloodhound")
-        "Dog: Doberman"
+          :name "Dog:Bloodhound")
+        "Dog:Doberman"
          (base/unit
-          :name "Dog: Doberman")
-        "Dog: German Shepherd"
+          :name "Dog:Doberman")
+        "Dog:German Shepherd"
          (base/unit
-          :name "Dog: German Shepherd"
+          :name "Dog:German Shepherd"
           :mass "40kg")
-        "Dog: Guard"
+        "Dog:Guard"
          (base/unit
-          :name "Dog: Guard")
-        "Dog: Husky"
+          :name "Dog:Guard")
+        "Dog:Husky"
          (base/unit
-          :name "Dog: Husky")
-        "Dog: Mad"
+          :name "Dog:Husky")
+        "Dog:Mad"
          (base/unit
-          :name "Dog: Mad")
-        "Dog: Sheepdog"
+          :name "Dog:Mad")
+        "Dog:Sheepdog"
          (base/unit
-          :name "Dog: Sheepdog")
-        "Dog: War"
+          :name "Dog:Sheepdog")
+        "Dog:War"
          (base/unit
-          :name "Dog: War")
-        "Dog: Wild"
-         (base/unit<-tactics-key tactics "Dog: Wild")
+          :name "Dog:War")
+        "Dog:Wild"
+         (base/unit<-tactics-key tactics "Dog:Wild")
         "Wolf"
          (base/unit<-tactics-key tactics "Wolf")))
     :Elephants
@@ -680,13 +680,15 @@
         "Rat:Crypt"
          (base/unit
           :name "Rat:Crypt")
-        :Terrorphant
+        :Terrophant
          (base/unit
-          :name "Terrorphant"
-          :summary "* A giant, carnivorous elephant. An evily, intelligent alpha predator.")
-        :Terrorpotmus
+          :name "Terrophant"
+          :summary
+           "* A giant, carnivorous elephant. An evily, intelligent alpha predator.
+            * Description - The Terraphant has a thick hide like a rhino, huge tusks, and a powerful trunk with another curved tusk at the end.")
+        :Terropotmus
          (base/unit
-          :name "Terrorpotmus"
+          :name "Terropotmus"
           :summary "* A giant, carnivorous hippopotamus. An keenly intelligent alpha predator.")
         "Wolf:Dire"
          (base/unit
@@ -735,18 +737,18 @@
         "Eel"
          (base/unit
           :name "Eel")
-        "Eel: Moray"
+        "Eel:Moray"
          (base/unit
-          :name "Eel: Moray")
-        "Eel: Electic"
+          :name "Eel:Moray")
+        "Eel:Electic"
          (base/unit
-          :name "Eel: Electic")
-        "Manta Ray"
-         (base/unit
-          :name "Manta Ray")
-        :Piranha
+          :name "Eel:Electic")
+        "Piranha"
          (base/unit
           :name "Piranha")
+        "Ray:Manta"
+         (base/unit
+          :name "Ray:Manta")
         "Sting Ray"
          (base/unit
           :name "Sting Ray")))
@@ -933,9 +935,9 @@
         "Lizard:Giant"
          (base/unit
           :name "Lizard:Giant")
-        "Serpent: Great"
+        "Serpent:Great"
          (base/unit
-          :name "Serpent: Great")
+          :name "Serpent:Great")
         "Snake:Crypt Cobra"
          (base/unit
           :name "Snake:Crypt Cobra")
@@ -1525,7 +1527,7 @@
           :name "Creeping Mold"
           :reference
            "*  I'm a goner already, Daddy.  Ain't I? I've got that stuff out of the meteor on me... and I'm gone.  Ain't I? - Jordy, Creepshow")
-        :Deadwood
+        "Deadwood"
          (base/unit
           :name "Deadwood"
           :summary
@@ -1681,26 +1683,26 @@
       :name "Humans"
       :unitmap
        (base/unitmap
-        "Human Female"
+        "Human:Female"
          (base/unit
-          :name "Human Female"
+          :name "Human:Female"
           :summary
            "* Their extra [Mind] represents their extra need to work the system instead of using force.
             * Their extra [Will] represents their ability to endure hardship without breaking."
           :mind "6:1"
           :will "6:1"
           :mass "60kg")
-        "Human Male"
+        "Human:Male"
          (base/unit
-          :name "Human Male"
+          :name "Human:Male"
           :mind "5:1"
           :will "5:1"
           :mass "80kg"))))))
 
-(func chapter_humanoids_fantastic : base/chapter
+(func chapter_demihumans : base/chapter
  [tactics : base/tactics]
  (chapter
-  :name "Humanoids, Fantastic"
+  :name "Demihumans"
   :summary
    "This book subscribes to a more nuanced version of humanoid creatures than the classic Elves and Dwarves:
     * Like Great Danes and Poodles are just dogs that have rapidly changed in the face of selective breeding, these beings are still human.
@@ -1710,7 +1712,7 @@
     ** Each nation has its own language. Most travellers learn many languages in addition to tradespeak."
   :sectionmap
    (base/sectionmap
-    :Claymores
+    "Claymores"
      (base/section
       :name "Claymores"
       :summary
@@ -1821,9 +1823,9 @@
            "* Yoma that live for a long time grow to enormous size and need to eat more humans to survive.
             * Size - Voracious Eaters are hulking giants easily 15ft/3m tall.
             * Stretching - Voracious Eaters have more control of their bodies and can stretch parts of themselves to create spearlike stabbing weapons that can attack in a large area.")))
-    "Stone Kingdoms"
+    "Iron Kingdoms"
      (base/section
-      :name "Stone Kingdoms"
+      :name "Iron Kingdoms"
       :reference
        "* Down and down into the deep,
         Who knows what we'll find beneath,
@@ -1854,7 +1856,7 @@
         I am a dwarf and I'm digging a hole,
         Diggy, diggy hole, diggy, diggy hole - Diggy Diggy Hole, Wind Rose"
       :summary
-       "* The Stone Kingdom is an old race of stout humanoids. They live almost exclusively in subterranean complexes spanning across mountainous regions. They are shorter but much broader than regular humans.
+       "* The Iron Kingdom is popluated by an old race of stout humanoids. They live almost exclusively in subterranean complexes spanning across mountainous regions. They are shorter but much broader than regular humans.
         * Maximum Body - 1:0
         * Morale - Very High
         * Preferred Skills - Caving, Armor, Melee, Siegecraft, Tradeskills - Blacksmithing, Armorsmithing, Animals, Farming
@@ -2582,32 +2584,35 @@
            * Personality - The Jaka are solitary beings, sullen and introspective in nature. They have been known to become steadfast companions to those they trust, but have also been known to become cold-blooded killers to those who cross them.
            * Lifestyle - They are cunning and have excellent senses, so they make are superb hunters. They typically live off the land but also trade their extra hides and animal parts for useful gear. Some have extended their tracking and hunting skills to become bounty hunters: tracking and capturing fugitives from justice and living off the bounty.")))
     (base/section
-     :name "Vaalus"
-     :titles "Dragon Kings, Serpent People, Ssathari, The First Blood of the Earth, Vaal, Valus, Valusian"
+     :name "Vaal"
+     :titles "Dragon Kings, Serpent People, Ssathari, The First Blood of the Earth, Vaalus, Valusian"
      :reference
       "* Silurians - Doctor Who
        * Enik and Sleestak - Land of the Lost
-       * Your arrogance was your undoing. - Ambessa, Runeterra"
+       * Your arrogance was your undoing. - Ambessa, Runeterra
+       * What have I become. My sweetest friend? Everyone I know. Goes away in the end. And you could have it all. My empire of dirt... I wear this crown of thorns. Upon my liar's chair. Full of broken thoughts. I cannot repair. Beneath the stains of time. The feelings disappear. You are someone else. I am still right here - Johnny Cash, Hurt"
      :summary
-      "* Personality - The Sorcerers are cautious, cold, calculating, lazy, and supremely arrogant, considering all others beneath them. They have learned many sciences, but they have no interest in democratizing or sharing power with others, so individuals hoard knowledge. The savages are tribal and almost beastial.
+      "* Personality - The Sorcerers are cautious, cold, calculating, lazy, and supremely arrogant, considering all others beneath them. They have learned many sciences, but they have no interest in democratizing or sharing power with others, so individuals hoard knowledge. The savages are tribal and almost beastial. They are not naturally social creatures, so society is highly transactional.
+       * Description - They normally stand about 5ft tall, but they naturally slouch, so they are over 6ft when fully extended. Their biology is DNA based, but was created without evolution, so it is radically simpler and more direct in design.
        * Skills - [Communications], [Deception], [Espionage], [Knowledge], [Mathmatics], [Science:Life] (especially Genetics), [Science:Physical], [Stealth], [Subterfuge]
        * Powers - [Alchemy], [Corruption] (especially Radiation and [Balefire]), [Flesh] (especially [Skinriding]), [Sorcery], [Toxins], [Wealth]
+       * Weakness - They are not cold-blooded, but they are still sensitive to [Cold]
        * Society - Social hierarchy is through power and genetic purity.
        * Civilization - Cities are generally low buildings built of heavy stone. Serpent motifs and snake towers are common. Ancient Mezoamerican cities were influenced by Valus designs
        * Religion - Most revere their serpent god Yig
        * History - The Serpent People are an unimaginably ancient race. Diviners claim that the serpent cities with their distinctive snake towers exist before the dinosaurs. Their history is turbulent with calamaties, court intrigue, assasination, coups, and civil wars. Surface catastrophes have wiped out their civilization except those underground. Their obsession with elitism leads to inbreeding and reduced population over the eons. By the Hyperborean era, only a few sorcerers remained with the rest of the population on the brink of savagery. In the modern era, they have almost completely devolved. Ironically as they devolve their numbers increased."
      :secrets
-      "* Yig is a genetically manipulated Vaalus under the mental domination of an the ancient Vaalus sorcerer that created it. It was created to make rulership easier
-       * They were created by the Elder Things from Shoggoth protomatter to maintain their empire, but with the Elder Things retreat, the Serpent People inherited their cities
+      "* Yig - Yig is a genetically manipulated Vaal under the mental domination of the ancient Vaal sorcerer that created it. It was created to make rulership easier
+       * Origin - The Vaal were created by the Elder Things from Shoggoth protomatter to maintain their empire, but with the Elder Things retreat, the Serpent People inherited their cities
        * Weakness - They think in a cautious, calculating way. This along with their fear of deception and betrayal can lead to inaction. Despite this, when challenged, their arrogance can lead to sudden rash actions and predictability"
      :unitmap
       (base/unitmap<-tactics-keys
        tactics
-       "Vaalus:Assassin"
-       "Vaalus:Savage"
-       "Vaalus:Skinshifter"
-       "Vaalus:Sorcerer"
-       "Vaalus:Warrior")))))
+       "Vaal:Assassin"
+       "Vaal:Savage"
+       "Vaal:Skinshifter"
+       "Vaal:Sorcerer"
+       "Vaal:Warrior")))))
 (func chapter_constructs : base/chapter
  [tactics : base/tactics]
  (base/chapter
@@ -2773,41 +2778,41 @@
        * They tend to live near ley lines (dragon lines) to accumulate magical energy. They further collect precious things to bask in their spiritual energy."
      :unitmap
       (base/unitmap
-       "Dragon: Celestial"
+       "Dragon:Celestial"
         (base/unit
-         :name "Dragon: Celestial"
+         :name "Dragon:Celestial"
          :image "images/bestiary/Dragon_Celestial.png"
          :reference "Shenron - Dragon Ball"
          :titles "Gilded Dragon, Gold Dragon, Silver Dragon")
-       "Dragon: Turtle"
+       "Dragon:Turtle"
         (base/unit
-         :name "Dragon: Turtle"
+         :name "Dragon:Turtle"
+         :titles "Zaratan"         
          :reference
           "* Gamera
            * Lion Turtle - Avatar The Last Airbender"
          :summary
-          "* Dragon Turtles are enormous turtles that live most of their lives at sea and are sometimes mistaken for small islands. They are extremely long lived and are among the most ancient creatures living. They will occasionally float on the surface so long that plants and even trees grow on them.
-           * Steam Breath - They produce extreme heat inside their bodies that can be expelled as steam, a boiling geyser, or fire."
-         :titles "Zaratan")
-       "Dragon: Earth"
+          "* Dragon Turtles are enormous turtles that live most of their lives at sea and are sometimes mistaken for small islands. They are extremely long lived and are perhaps the largest and most ancient living creatures. They often float on the surface so long that plants and trees grow on them.
+           * Steam Breath - They produce extreme heat inside their bodies that can be expelled as steam, a boiling geyser, or fire.")
+       "Dragon:Earth"
         (base/unit
-         :name "Dragon: Earth"
+         :name "Dragon:Earth"
          :summary
           "* Earth Dragons are physically more like worms than typical dragons.
            * Heat Breath - The body of an Earth Dragon is scorching hot from friction as it moves. If it exhales strongly, that heat is released as a scorching blast.
            * Earth Moving - They move through sand by breathing in air and sand and blowing it out through the gaps in their long body in a similar way to gills. The air liquifies the surrounding sand and allows the Dragon to slide through the ground at relatively high speeds."
          :titles "Desert Dragon, Dune Dragon, Earth Wyrm, Sand Dragon, Sand Wyrm")
-       "Dragon: Forest"
+       "Dragon:Forest"
         (base/unit
-         :name "Dragon: Forest"
+         :name "Dragon:Forest"
          :summary
           "* Poison Spit - Has poison glands in its mouth that let it spit [Poison] like a Cobra.
            * Poison Cloud - Exhales while emitting poison from its glands to create a deadly poison cloud. This cloud provides cover and can be dropped behind the dragon while flying.
            * Poison Immunity - The dragon is immune to its own poison."
          :titles "Green Dragon, Emerald Dragon")
-       "Dragon: Frost"
+       "Dragon:Frost"
         (base/unit
-         :name "Dragon: Frost"
+         :name "Dragon:Frost"
          :image "images/bestiary/Dragon_Frost.png"
          :summary
           "* Inhales Heat - The Frost Dragon survives by draining heat sources. Its lair is always incredibly cold with its own body temperature matching the surroundings.
@@ -2815,61 +2820,63 @@
            * Cold Immunity - Cold has no effect on Frost Dragons
            * Heat Vulnerability - Heat attacks overwhelm its heat absorption ability."
          :titles "Chromium, Ice Dragon, Whiteflame")
-       "Dragon: Mountain"
+       "Dragon:Mountain"
         (base/unit
-         :name "Dragon: Mountain"
+         :name "Dragon:Mountain"
          :summary
           "* Red/Orange, Lives in Volcanic regions
            * Firebreathing: The dragon produces 2 fluids in venom sacs in its neck. When released during an exhale, these combine and ignite to form a napalm-like cloud."
          :titles "Crimson Dragon, Fire Dragon, Lava Dragon")
-       "Dragon: Sea"
+       "Dragon:Sea"
         (base/unit
-         :name "Dragon: Sea"
+         :name "Dragon:Sea"
          :summary
           "* Sea dragons are gigantic serpentine sea creatures with lengths over 60 feet. The great jaws of these creatures are lined with 10 inch teeth and can swallow longboats whole. They are the apex predators of the sea and they consume almost everything they encounter.
            * They are the oldest (along with Dragon Turtles) and largest of the dragon species but also the most primitive. Some have learned to communicate though they have little need to interact with others. Some believe that Sea Dragons may be incredibly ancient, predating almost every other creature of the world.
            * Sonic Roar - The roar of a Sea Dragon can be heard for leagues. It causes deafness and massive internal damage to anything in front of its maw. Like other sonic attacks, the roar has increased effect underwater."
          :titles "Sea Serpent")
-       "Dragon: Dragon"
+       "Dragon:Shadow"
         (base/unit
-         :name "Dragon: Dragon"
+         :name "Dragon:Shadow"
+         :titles "Black Dragon, Marsh Dragon, Obsidian Dragon, Swamp Dragon"         
          :image "images/bestiary/Dragon_Obsidian.png"
          :summary
           "* Spits Acid - The Shadow Dragon can belch stomach acid from its mouth to burn targets.
-           * Acid Cloud - By exhaling while belching acid, the Shadow Dragon can"
-         :titles "Black Dragon, Marsh Dragon, Obsidian Dragon, Swamp Dragon")
-       "Dragon: Sky"
+           * Acid Cloud - By exhaling while belching acid, the Shadow Dragon can")
+       "Dragon:Storm"
         (base/unit
-         :name "Dragon: Sky"
+         :name "Dragon:Storm"
+         :titles "Blue-Eyes White Dragon, Night Fury, Rodan, Slifer the Sky Dragon, Cloud Dragon, Sky Dragon"
          :summary
-          "* Sky Dragons make their homes high in the clouds. Their massive wings allow them to fly without ever landing and they sleep while soaring. They are drawn to storms where their unique metallic scales attract and absorb lightning strikes and static electricity. It is unclear what these massive creatures consume, but their large teeth implies they are carnivorous.
-           * Lightning Breath - When angered, their scales become ionized and they spit a conductive spray that carries enormous electric potential.
+          "* Storm Dragons make their homes high in the clouds. Their massive wings allow them to fly without ever landing and they sleep while soaring. They are drawn to storms where their unique metallic scales attract and absorb lightning strikes and static electricity. It is unclear what these massive creatures consume, but their large teeth imply they are carnivorous.
+           * Description - They are vaguely bat-shaped with a long neck and fanned tail. The tail is used to steer or provide thrust like a fish in water.
+           * Lightning Storm - When angered, their scales become ionized and lightning arcs from their wings carrying enormous electric potential.
            * Lightning Armor - As might be expected, their scales also carry deadly electric charge which releases on contact.
            * Lightning Immunity
+           * Camoflage - Their metallic scales are silvery and somewhat reflective. These scales make them blend into the sky and clouds.
            * If forged into armor, their scales absorb electricity while their hide protects the wearer from that same electricity. Scales can also be used as alchemical batteries and magical focuses."
-         :titles "Blue-Eyes White Dragon, Night Fury, Rodan, Slifer the Sky Dragon, Cloud Dragon, Storm Dragon"
          :unitpowermap
           (base/unitpowermap<-unitpowerlist
            (base/unitpower<-tactics-key-abilities
             tactics "Electric"
             (stringlist "Absorb Electricity"))))
-       "Dragon: Under"
+       "Dragon:Under"
         (base/unit
-         :name "Dragon: Under"
+         :name "Dragon:Under"
+         :titles "Corpse Dragon, Skeletal Dragon, Necrodragon, Undead Dragon, Underdragon, Zombie Dragon"
          :summary
-          "* Dragons are bursting with magical energies, so even dead dragons can become undead (either purposely or accidentally). Since corpse dragons are no longer living, their normal breath weapon is usually lost, but instead they can exhale a billowing, decaying mist."
-         :titles "Corpse Dragon, Skeletal Dragon, Necrodragon, Undead Dragon, Underdragon, Zombie Dragon")))
+          "* Dragons are bursting with magical energies, so even dead dragons can become undead (either purposely or accidentally). Since corpse dragons are no longer living, their normal breath weapon is usually lost, but instead they can exhale a billowing, decaying mist.")))
     (base/section
      :name "Monstrous Dragons"
      :unitmap
       (base/unitmap<-tactics-keys
        tactics
-       "Dragon: Apophis"
-       "Dragon: Ladon"
-       "Dragon: Midgard Serpent"
-       "Dragon: Pytho"
-       "Dragon: Stoorworm"
-       "Dragon: Tiamat")))))
+       "Dragon:Apophis"
+       "Dragon:Ladon"
+       "Dragon:Midgard Serpent"
+       "Dragon:Pytho"
+       "Dragon:Stoorworm"
+       "Dragon:Tiamat")))))
 
 (func chapter_elementals : base/chapter
  [tactics : base/tactics]
@@ -2884,19 +2891,19 @@
       :name "Air Elementals"
       :unitmap
        (base/unitmap
-        "Aero Essence"
+        "Essence:Air"
          (base/unit
-          :name "Aero Essence"
+          :name "Essence:Air"
+          :titles "Aero Ichor, Aero Slime, Aerolon, Puff, Wind Slime"
           :summary
            "* A mindless, condensed blob of Aero energy.
-            * Since slimes store magical energy they are highly sought after by mages and alchemists."
-          :titles "Aero Slime, Aerolon, Wind Slime")
-        "Air Elemental"
+            * Since slimes store magical energy they are highly sought after by mages and alchemists.")
+        "Elemental:Air"
          (base/unit
-          :name "Air Elemental")
-        "Air Elemental Lord"
+          :name "Elemental:Air")
+        "Elemental:Air Lord"
          (base/unit
-          :name "Air Elemental Lord"
+          :name "Elemental:Air Lord"
           :summary
            "* Greater Air Elementals are enormous creatures that can fill the sky. They appear as cloudbanks or can be completely invisible depending on their mood. They have complete mastery over the Air, can perform any Air Power at maximum ability and can cancel any other being attempting to use Air."
           :unitpowermap
@@ -3044,11 +3051,22 @@
    (base/sectionmap<-sectionlist
     (base/section
      :name "Celestine"
+     :titles "Archons, Aeons, Angels, Angelic Host, Angelics, Devas, Malaikah, Watchers"
      :summary
-      "* The Angels have been fighting a cold war against the Fiends for millenia. Each side claims their right over the mortal realm, and each side recruits souls to increase their faction's power.
-       * The Archangels are the oldest and most powerful of the Angels. Individually, they can lay waste to armies.
-       * The Aeons are the primal concepts of divinity and are beyond physicality."
-     :titles "Archons, Aeons, Angels, Angelics, Devas, Malaikah, Watchers"
+      "* Angels - Angels are two-dimensional beings of pure light and order. The Angels have declared a cold war against the Fiends and have been fighting for millennia. Each side recruits souls to increase their faction's power.
+       * Description - Their default appearance is a 2-dimensional geometric plane of blinding light. They may change their shape into any flat geometry and can project any image of themselves as they choose (typically immitating those they meet). They have appeared like stained glass in the past.
+       * Personality - They are highly intelligent, but they are direct and lack patience for inaction. Everything an Angel does is measured, exact, and uncompromising. Their geometry is never approximate; their judgments are never soft. They speak in clean distinctions, enforce clear boundaries, and expect the same clarity from those who deal with them. Severity is not cruelty for its own sake-it is the refusal to tolerate disorder, ambiguity, or half-measures. A promise is absolute. A failure to meet the standard is acted upon without sentiment. They will not invent facts, but they will heighten consequences, sharpen contrasts, and present the most ordered (and most advantageous) interpretation of events when seeking followers. The exaggeration is never random; it is a precise rhetorical tool aimed at guiding a mortal toward willing alignment. From their perspective this is not deception-it is clarifying the hierarchy of truths so the listener can choose correctly.
+       * Light - Because they are beings of light, when a being is touched by their light they feel the contact of the Angel. Blinding, sunburning light can be produced in front of them. They may form weapons of light for direct attacks. They attack by angling their form toward the target and reshaping their form into a pointed weapon. All damage is [Pierce] [Light]
+       * Flight - They naturally float, but only when they emit large amounts of light
+       * Chameleon - Their 2d form and light changing allows them to appear as others (at a distance) or hide in terrain. By turning sideways, they are nearly invisible
+       * Illusion - Their 2d form and light changing allows them to create any moving 2d image limited by the size of their surface
+       * Soul Absorbtion - A willing being may allow their soul to be brought to their realm where their worship powers the Angelic Host
+       * Resist - [Pierce] [Slash] [Light] [Fire] [Radiation]
+       * Vulnerable - [Bash] [Hack] [Chaos] [Corruption] [Dark]
+       * Immune - [Poison]
+       * Magic - Angels consider magic to defy the rules of nature and, therefore, must be eliminated
+       * Archangels - The Archangels are the oldest, rarest, and most powerful of the Angels. Individually, they can lay waste to armies
+       * Aeons - The Aeons are the primal concepts of divinity and are beyond physicality."
      :unitmap
       (base/unitmap
        "Aeon Demiurge"
@@ -3060,27 +3078,29 @@
        "Aeon Sophia"
         (base/unit
          :name "Aeon Sophia")
-       "Archangel Auriel"
+       "Archangel:Auriel"
         (base/unit
-         :name "Archangel Auriel"
+         :name "Archangel:Auriel"
+         :titles "Archangel of Hope"
          :reference "Diablo 3"
-         :summary "* Al'maiesh, the Cord of Hope - Twin whips of burning light."
-         :titles "Archangel of Hope")
-       "Archangel Gabriel"
+         :summary
+          "* Al'maiesh, the Cord of Hope - Twin whips of burning light.")
+       "Archangel:Gabriel"
         (base/unit
-         :name "Archangel Gabriel"
-         :summary "* Performs acts of justice and power"
-         :titles "Translation: God is my strength")
-       "Archangel Itherael"
+         :name "Archangel:Gabriel"
+         :titles "Translation: God is my strength"
+         :summary
+          "* Performs acts of justice and power")
+       "Archangel:Itherael"
         (base/unit
-         :name "Archangel Itherael"
+         :name "Archangel:Itherael"
+         :titles "Archangel of Fate, Archangel of Balance"         
          :reference "Diablo 3"
          :summary
           "* Neither male nor female, Itherael remains neutral at all times.
            * He always teleport instead of moving.
            * Talus'ar, the Scroll of Fate - Allows him to predict the actions of others.
-           * Presides over the Library of Fate where possible futures are divined."
-         :titles "Archangel of Fate, Archangel of Balance")
+           * Presides over the Library of Fate where possible futures are divined.")
        "Archangel Jophiel"
         (base/unit
          :name "Archangel Jophiel"
@@ -3318,19 +3338,23 @@
          :reference
           "John Milton's Paradise Lost")))
     (base/section
-     :name "Infernal"
-     :titles "Devilish, Devils, Diabolic, Fiends, Shaitan, Shayatin"
+     :name "Fiends"
+     :titles "Devilish, Devils, Diabolic, Infernal, Shaitan, Shayatin"
      :reference
-      "* The greatest trick the Devil ever pulled was convincing the world he didn't exist. - Verbal, The Usual Suspects"
+      "* The greatest trick the Devil ever pulled was convincing the world he didn't exist. - Verbal, The Usual Suspects
+       * Sins - All of them"
      :summary
-      "* Fiends are dangerous creatures both physically and mentally. They are sometimes mistaken for Demons, but Demons are forces of random destruction while Fiends possess a sinister intellect and seek to install their own order on the mortal realm.
-       * Conflict - Fiends are powerful creatures that have been engaged in a cold war with the Angels for millenia. As in any longstanding dipute, their history is convuluted and both sides maintain conflicting claims why their causes are just. They both seek to recruit souls from the mortal realm to increase their faction's power. The Angels promise protection while the Fiends see this protection as oppressive control. The Fiends promise freedom while the Angels see this as freedom to suffer. Essentially, their conflict is socialism vs. capitalism.
+      "Fiends are dangerous creatures both physically and mentally
+      * Description - They take many different forms but usually possess their signature horns and tails. They are sometimes mistaken for Demons, but Demons are forces of random destruction while Fiends possess a sinister intellect and seek to install their own order on the mortal realm. Fiends were originally mortals who were corrupted by their desires
+       * Location - They inhabit many Realms in [Infernal] space
+       * Conflict - Fiends are powerful creatures that have been engaged in a cold war with the [Angel]s for millenia. As in any longstanding dipute, their history is convuluted and both sides maintain conflicting claims why their causes are just. They both seek to recruit souls from the mortal realm to increase their faction's power. The Angels promise protection while the Fiends see this protection as oppressive control. The Fiends promise freedom while the Angels see this as freedom to suffer. Essentially, their conflict is socialism vs. capitalism.
        * Soul Collection - The prime motivation for fiends is collecting corrupted souls. Fiends cannot corrupt a soul by forcing one to do evil. Instead they must manipulate and tempt. Therefore, fiends spend most of their time on earth in mortal form stalking people, learning their secrets, poisoning their emotions, and gaining their trust in any way they can. The best minions of Hell are never noticed at all. With their powers, fiends could cause tremendous destruction, but that would drive people away. They would have the corpses but not the souls.
        * Contract - Devil's Bargain. Fiends are willing to engage in contracts with mortals, usually in exchange for their soul but sometimes for lesser mischief. The fiend hierarchy ensures that these contracts are always binding to both parties. Some magi believe they can deal with fiends, learn from them, and not be corrupted themselves. This rarely goes to plan and fiends are more than willing to pit their intelligence against a mage's.
        * Deceiver - Fiends are deceivers first and foremost. No ability can reveal whether they are telling the truth.
        * Corrupted - No ability can change them into virtuous beings. They are too far gone to turn.
+       * Torment - A Fiend extracts worship from a soul through torment (physical, mental, or psychological)
        * Tormented - Though fiends appear to be all-powerful embodiments of evil, they are ruled by their [Shadow] and forever tormented by the remnants of their [Will]. They are secretly filled with regret and self-loathing and have even been known to strangely act in ways that lead to their own defeat.
-       * Shaitan are the original and most powerful fiends. Most are ancient fallen angels, who through millenia of worship now possess godlike power.
+       * Shaitan are the original and most powerful fiends who through millenia of worship now possess godlike power.
        * Archfiends are the most powerful sorts of Fiends below the godlike Shaitan. They stand 10 to 20 feet tall and have red or coal black skin. They live in stone castles and observe a medieval heirarchy of princes, 	princesses, barons, ministers, and knights. They profess undying loyalty to the Shaitan, though, in fact, they crave power, wealth, and position and are throughly unscrupulous and untrustworthy in all their dealings."
      :unitmap
       (base/unitmap
@@ -3469,6 +3493,11 @@
           "* The Grimalkin is a small, black, furry devil with glowing eyes and sharp claws. It is wickedly, intelligent but lazy and weak, so it prefers to get involved in the schemes of others. It takes the role of scout, messenger, and advisor. It enjoys providing information that causes suffering and sitting 	back and watching their handiwork unfold.
            * The Grimalkin is commonly used as a familiar by black magicians. In order to remain on the mortal plane, it must possess a small animal. It will choose a creature which closely suits its personality, often an old or evil-looking female cat."
          :titles "Greymalkin, Shadowcat")
+       "Hellboar"
+        (base/unit
+         :name "Hellboar"
+         :titles "Devilpig, Hellpig"
+         :traits "Devil")
        "Hellchain Devil"
         (base/unit
          :name "Hellchain Devil"
@@ -3487,12 +3516,12 @@
            * In combat, they may take a more monstrous form and may spawn up to 2 additional heads and have been known to breathe fire.
            * Be aware that Hellhounds only appear as dogs. Like all devils, they are corrupted souls of humanoids and possess a calm, calculating intelligence. They often work as a pack, creating ambushes and using decoys to lure their prey to their doom."
          :titles "Cereberus, Devil Dog, Fenris Wolf, Garm, Kerberos")
-       :Hellion
+       "Hellion"
         (base/unit
          :name "Hellion"
          :titles "Hellcat"
          :traits "Devil")
-       :Hellspawn
+       "Hellspawn"
         (base/unit
          :name "Hellspawn"
          :titles "Lemure"
@@ -4030,12 +4059,13 @@
      :name "Uruks"
      :reference
       "* Cro-magnon Man, Goths, Huns, Mongols, Vandals
+       * Ancient Uruk in Sumeria/Iraq
        * Seven Deadly Sins: Wrath"
      :summary
-      "* Description - Uruks are a relatively primitive species of barrel-chested humanoids distantly related to Humans. They are sturdy and imposing figures, trained by hard labor and warfare since birth. They range in height from 5 feet to 7 feet tall and typically have yellowish/grey/green skin, red/black/brown eyes, and long black/grey/white hair. Their noses are flat and they have a notably large mouth with uneven teeth.
-       * Personality - Uruks are typically violent, impatient, and crude. They take what they want by force and are difficult to bargain with. Their culture and leaders claim that they are destined to take over the world and take back all that has been taken from them. Now they are consumed with wrath and envy of the achievements of other races and other orc tribes.
-       * Culture - Their civilization is still in a hunter/gatherer stage. They lack the patience and desire to read, cultivate crops, domesticate herd animals, or invent sophisticated equipment. They live a semi-nomadic existence depending on the availability of resources and the charisma of their leaders. Uruk 'kingdoms' are short lived. The race's genius for battle does not extend itself to statecraft, and their conquests inevitably collapse under a struggle for power between rival leaders. Uruk society is completely male dominated. Females are expected to find a male to support them and begin their life's purpose: breeding. Any female of breeding age that has no male protector is considered available to any male that chooses to take her and support her. Other cultures consider this to be rape. Uruks call it marriage. They extend this practice to captured females from other races.
-       * Warfare - Uruks wage constant war on any group near them until they take what is 'rightfully' theirs. When warbands grow large enough, they spill down into neighboring settlements to rape, murder, raid, and pillage. These bands can take on the proportions of a large town or small city, and roll across the countryside leaving burning wreckage in their wake.
+      "* Description - Uruks are a relatively primitive species of barrel-chested humanoids distantly related to Humans. They are sturdy and imposing figures, trained by hard labor and warfare since birth. They range in height from 5 feet to 7 feet tall and typically have redish/grey skin, red/black/brown eyes, and long black/grey/white hair. Their noses are flat and they have a notably large mouth with sharp, uneven teeth.
+       * Personality - Uruks are typically violent, impatient, and crude. They take what they want by force and are difficult to bargain with. Their culture and leaders claim that they are destined to take over the world and take back all that has been taken from them. Now they are consumed with wrath and envy of the achievements of other races and other Uruk tribes.
+       * Culture - They live in a semi-nomadic, hunter/gatherer existence depending on the availability of resources and the charisma of their leaders. They lack the patience and desire to read, cultivate crops, domesticate herd animals, or invent sophisticated equipment. Uruk 'kingdoms' are short lived. The race's genius for battle does not extend itself to statecraft, and their conquests inevitably collapse under a struggle for power between rival leaders. Uruk society is completely male dominated. Females are expected to find a male to support them and begin their life's purpose: breeding. Any female of breeding age that has no male protector is considered available to any male that chooses to take her and importantly to support her. Other cultures consider this to be rape and slavery. Uruks call it marriage. They extend this practice to captured females from other races. Note that abandoning a taken wife is so shameful a crime that only exile or lynching can restore the tribe's honor.
+       * Warfare - Uruks wage constant war on any group near them until they take what is 'rightfully' theirs. When warbands grow large enough, they spill down into neighboring settlements to enslave, murder, and pillage. These bands can take on the proportions of a large town, and roll across the countryside leaving burning wreckage in their wake.
        * Language - Uruks speak the rough and unflattering Uruk tongue, which has no alphabet. Uruk culture and history is passed along in an oral tradition.
        * Morale - Normal
        * Preferred Skills - Melee, Rage
@@ -4297,6 +4327,11 @@
          :name "Phoenix")
        "Primal Ooze"
         (base/unit<-tactics-key tactics "Primal Ooze")
+       "Ray:Mist"
+        (base/unit
+         :name "Ray:Mist"
+         :summary
+          "A magical stingray that can somehow float in fog")
        "Rukh"
         (base/unit<-tactics-key tactics "Rukh")
        "Rukh Hatchling"
@@ -4473,6 +4508,9 @@
        * Biology - Vampires are created when one Vampire drains a person to the brink of death and then feeds their own blood to the victim. This is called: The Embrace. At this moment, the victim has a chance to reject the Embrace, and die peacefully. If the victim accepts the Embrace, the blood will rapidly reach the victim's heart and the transformation to Vampire will immediately begin.
        * Nature - There is much conjecture about how a Vampire functions, but it is certain that the blood of a Vampire is the source of its unnatural existence. Some believe that the blood itself is a form of evil, magical, parasite centered on the heart that animates the Vampire's body.
        * Masquerade - During the day, Vampires are completely vulnerable. Therefore, they avoid drawing attention to themselves. They pretend to be normal people while manipulating from behind the scenes. Vampires appear as near perfect humans, but this too is a mask. Vampires pretend at being sophisticated and refined, but always behind this is their true, savage, bestial nature.
+       * Kindred - A euphemism for Vampires implying that they are a tight-knit familial group
+       * Mortals - The term for normal humans implying that Vampires are immortal (only partially true) and above them
+       * Kine - A derogatory term for humans implying they are a herd of cattle
        * Sire - The vampire's creator.
        * Childer - The relationship of a vampire to a Sire.
        * Book of Nod - The vampiric history/bible.
